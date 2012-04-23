@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="85"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="85"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1abddbaa0d42b46847b679464b485654be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -63,7 +63,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="96"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="96"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1a643df4d651b5394b8a674067aef4dd04" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -76,7 +76,7 @@
 <para>Remember that wxTopLevelWindows do not get immediately destroyed when the user (or the app) closes them; they have a <bold>delayed</bold> destruction.</para><para>See <ref refid="overview_windowdeletion" kindref="compound">Window Deletion</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="105"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="105"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1a3a03f383ee3a98f62b3419463f27f346" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -126,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="116"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="116"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1a392cf325512c5558d776ca85abc0c451" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -141,7 +141,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="123"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="123"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1a576b03af8fa7ee6a6eacba9f39339196" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -158,7 +158,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="128"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="128"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1a1d28df1d739af6a3d5d2ec9e43b03c29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -185,7 +185,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="139"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="139"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1a78a9441746702894fba7653c2d98cb8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -203,7 +203,7 @@
 <para>Currently only implemented for wxMSW and wxGTK.</para><para>Returns true if operation was successful. This may be wrong on X11 (including GTK+) where the window manager may not support this operation and there is no way to find out. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="152"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="152"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1a23d4891fff947cd3676c205dfbb59762" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -216,7 +216,7 @@
 <para>The default button is the one activated by pressing the Enter key. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="159"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="159"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1a8d348a7243dcdabafdd02999120f0fa4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_icon" kindref="compound">wxIcon</ref></type>
@@ -230,7 +230,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="180"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="180"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1a9ba40d042855f8f547d1845502ff4598" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_icon_bundle" kindref="compound">wxIconBundle</ref> &amp;</type>
@@ -244,7 +244,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="189"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="189"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1ac9dd7cd78a4cdb7870152d9af7360d9b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -258,7 +258,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="196"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="196"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1ac804159a17302c7e805d70ff4911318c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -279,7 +279,7 @@
 <para>Responds to showing/hiding SIP (soft input panel) area and resize window accordingly. Override this if you want to avoid resizing or do additional operations. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="204"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="204"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1ae461559192e33ef111c3f147999a26bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -307,7 +307,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="214"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="214"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1afa58f411cf488eb9279683b1d20a74b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -320,7 +320,7 @@
 <para>if the user is currently working with it. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="220"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="220"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1ac0c7a7cb6e6dfdf7e59300ee5d476ce3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -334,7 +334,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="227"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="227"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1a8239216e113ae811ad5f517f256e2bed" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -348,7 +348,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="234"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="234"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1a33ceb758bdf94d5e30d39180bb4cb284" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -362,7 +362,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="239"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="239"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1a0cefec818c018b44435d32a5cb78893c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -375,7 +375,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="244"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="244"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1a305c48ddb8e45f89add1694053185a7d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -389,7 +389,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="255"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="255"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1adfe7e3f4a32f3ed178968f64431bbfe0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -403,7 +403,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="261"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="261"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1addb1612e9f00ac82c2e19c2bac6ffc4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -431,7 +431,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="271"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="271"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1a503565e9c0a1f37a281b52e1d53029b6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu" kindref="compound">wxMenu</ref> *</type>
@@ -446,7 +446,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="298"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="298"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1a749d23ea08f6273fb93fe2c003b650b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -461,11 +461,11 @@
         <briefdescription>
 <para>Use a system-dependent way to attract users attention to the window when it is in background. </para>        </briefdescription>
         <detaileddescription>
-<para><emphasis>flags</emphasis> may have the value of either <computeroutput><ref refid="toplevel_8h_1aaf8fd5f0e57d456151c951e0f3715fc4a8108db1470990d8ff6bf08c195f11c4f" kindref="member">wxUSER_ATTENTION_INFO</ref></computeroutput> (default) or <computeroutput><ref refid="toplevel_8h_1aaf8fd5f0e57d456151c951e0f3715fc4ab5eb31d93125653334ffbe901c1a2135" kindref="member">wxUSER_ATTENTION_ERROR</ref></computeroutput> which results in a more drastic action. When in doubt, use the default value.</para><para><simplesect kind="note"><para>This function should normally be only used when the application is not already in foreground.</para></simplesect>
+<para><emphasis>flags</emphasis> may have the value of either <computeroutput><ref refid="toplevel_8h_1a458e651af6690959efa2afb96be7d609a8108db1470990d8ff6bf08c195f11c4f" kindref="member">wxUSER_ATTENTION_INFO</ref></computeroutput> (default) or <computeroutput><ref refid="toplevel_8h_1a458e651af6690959efa2afb96be7d609ab5eb31d93125653334ffbe901c1a2135" kindref="member">wxUSER_ATTENTION_ERROR</ref></computeroutput> which results in a more drastic action. When in doubt, use the default value.</para><para><simplesect kind="note"><para>This function should normally be only used when the application is not already in foreground.</para></simplesect>
 This function is currently implemented for Win32 where it flashes the window icon in the taskbar, and for wxGTK with task bars supporting it. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="317"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="317"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1ae27318a65876ca787c0483c960bdbb01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -483,7 +483,7 @@ This function is currently implemented for Win32 where it flashes the window ico
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="324"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="324"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1a03d21174f2a9a527d6483c7562339167" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -500,7 +500,7 @@ This function is currently implemented for Win32 where it flashes the window ico
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="327"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="327"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1a9a48e119913454f2b548daeb1b093bc7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -513,7 +513,7 @@ This function is currently implemented for Win32 where it flashes the window ico
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="328"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="328"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1a33dc013a7cb33384f631b2764ca53b06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -542,7 +542,7 @@ This function is currently implemented for Win32 where it flashes the window ico
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="345"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="345"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1a34270084ea5a46c12309abbb99f2004c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -570,7 +570,7 @@ This function is currently implemented for Win32 where it flashes the window ico
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="361"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="361"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1a198cff4212ff5342c0c4358b59274fd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -621,7 +621,7 @@ This function is currently implemented for Win32 where it flashes the window ico
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="379"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="379"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1afd6d2cccfe0ba0ff91e36f4d16cf3c7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -639,7 +639,7 @@ This function is currently implemented for Win32 where it flashes the window ico
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="384"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="384"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1ac491313979c027b67526786b06167e6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -657,7 +657,7 @@ This function is currently implemented for Win32 where it flashes the window ico
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="389"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="389"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1a98e95b1b10f44b80f9b29a03ab09a879" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -708,7 +708,7 @@ This function is currently implemented for Win32 where it flashes the window ico
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="407"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="407"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1ac01a45e5d82e4e3be22a4841c1217e11" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -794,7 +794,7 @@ This function is currently implemented for Win32 where it flashes the window ico
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="435"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="435"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1a4ddaae1bebf05a2bc474a192a5b30e42" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -845,7 +845,7 @@ This function is currently implemented for Win32 where it flashes the window ico
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="457"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="457"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1afb944376c19d735a8251654ee4ac276f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -871,7 +871,7 @@ This function is currently implemented for Win32 where it flashes the window ico
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="467"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="467"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1a8e37aff45a001a83ff49745298a6978e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -897,7 +897,7 @@ This function is currently implemented for Win32 where it flashes the window ico
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="478"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="478"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1a8a0024cce99199bc3ba70bbfb10ec620" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -910,7 +910,7 @@ This function is currently implemented for Win32 where it flashes the window ico
 <para>By default, the application stays alive as long as there are any open top level windows. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="487"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="487"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1a6d102c9180b115a7a72b2e21f56cbc3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -928,7 +928,7 @@ This function is currently implemented for Win32 where it flashes the window ico
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="496"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="496"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1a5890684b71321e27e8f3a223ad3c2445" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -942,7 +942,7 @@ This function is currently implemented for Win32 where it flashes the window ico
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="504"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="504"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1a82afa6f09dd5faef6330807ef59374e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -960,7 +960,7 @@ This function is currently implemented for Win32 where it flashes the window ico
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="518"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="518"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1ab4089f1274bcb74e5f7763d1fb84ee28" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -980,13 +980,13 @@ This function is currently implemented for Win32 where it flashes the window ico
 <para>Depending on the value of <emphasis>show</emphasis> parameter the window is either shown full screen or restored to its normal state. </para>        </briefdescription>
         <detaileddescription>
 <para><emphasis>style</emphasis> is a bit list containing some or all of the following values, which indicate what elements of the window to hide in full-screen mode:</para><para><itemizedlist>
-<listitem><para><computeroutput><ref refid="toplevel_8h_1a94798fdadfbf49a7c658ace669a1d310a4625145320cb6292879930fddaec9846" kindref="member">wxFULLSCREEN_NOMENUBAR</ref></computeroutput> </para></listitem><listitem><para><computeroutput><ref refid="toplevel_8h_1a94798fdadfbf49a7c658ace669a1d310a201b1534be9376afa9f9bbd8d0f747e0" kindref="member">wxFULLSCREEN_NOTOOLBAR</ref></computeroutput> </para></listitem><listitem><para><computeroutput><ref refid="toplevel_8h_1a94798fdadfbf49a7c658ace669a1d310ae24e5651560ad32e4defd3fae63c8249" kindref="member">wxFULLSCREEN_NOSTATUSBAR</ref></computeroutput> </para></listitem><listitem><para><computeroutput><ref refid="toplevel_8h_1a94798fdadfbf49a7c658ace669a1d310aaa20e9333ae71a20f1f82d93b1384f2e" kindref="member">wxFULLSCREEN_NOBORDER</ref></computeroutput> </para></listitem><listitem><para><computeroutput><ref refid="toplevel_8h_1a94798fdadfbf49a7c658ace669a1d310af4ce9818046a65150e66be67072e85e6" kindref="member">wxFULLSCREEN_NOCAPTION</ref></computeroutput> </para></listitem><listitem><para><computeroutput><ref refid="toplevel_8h_1a94798fdadfbf49a7c658ace669a1d310a72ce60840ea903bc619581af981dab15" kindref="member">wxFULLSCREEN_ALL</ref></computeroutput> (all of the above)</para></listitem></itemizedlist>
+<listitem><para><computeroutput><ref refid="toplevel_8h_1a1f9aebf1de3ebbf4283a4dcf73308562a4625145320cb6292879930fddaec9846" kindref="member">wxFULLSCREEN_NOMENUBAR</ref></computeroutput> </para></listitem><listitem><para><computeroutput><ref refid="toplevel_8h_1a1f9aebf1de3ebbf4283a4dcf73308562a201b1534be9376afa9f9bbd8d0f747e0" kindref="member">wxFULLSCREEN_NOTOOLBAR</ref></computeroutput> </para></listitem><listitem><para><computeroutput><ref refid="toplevel_8h_1a1f9aebf1de3ebbf4283a4dcf73308562ae24e5651560ad32e4defd3fae63c8249" kindref="member">wxFULLSCREEN_NOSTATUSBAR</ref></computeroutput> </para></listitem><listitem><para><computeroutput><ref refid="toplevel_8h_1a1f9aebf1de3ebbf4283a4dcf73308562aaa20e9333ae71a20f1f82d93b1384f2e" kindref="member">wxFULLSCREEN_NOBORDER</ref></computeroutput> </para></listitem><listitem><para><computeroutput><ref refid="toplevel_8h_1a1f9aebf1de3ebbf4283a4dcf73308562af4ce9818046a65150e66be67072e85e6" kindref="member">wxFULLSCREEN_NOCAPTION</ref></computeroutput> </para></listitem><listitem><para><computeroutput><ref refid="toplevel_8h_1a1f9aebf1de3ebbf4283a4dcf73308562a72ce60840ea903bc619581af981dab15" kindref="member">wxFULLSCREEN_ALL</ref></computeroutput> (all of the above)</para></listitem></itemizedlist>
 </para><para>This function has not been tested with MDI frames.</para><para><simplesect kind="note"><para>Showing a window full screen also actually <ref refid="classwx_window_1a7fbc92ce240a8d4f6956b6e0276ef07f" kindref="member">Show()</ref>s the window if it isn&apos;t shown.</para></simplesect>
 <simplesect kind="see"><para><ref refid="classwx_top_level_window_1a8239216e113ae811ad5f517f256e2bed" kindref="member">IsFullScreen()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="540"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="540"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1a4d13f215c9b4fbad26fced00eff20d90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1008,7 +1008,7 @@ This function is currently implemented for Win32 where it flashes the window ico
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="558"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="558"/>
       </memberdef>
       <memberdef kind="function" id="classwx_top_level_window_1afd809e099fdd7cef3d9892167a477531" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1027,7 +1027,7 @@ This function is currently implemented for Win32 where it flashes the window ico
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="577"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="577"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -1043,7 +1043,7 @@ This function is currently implemented for Win32 where it flashes the window ico
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="172"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="172"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1061,271 +1061,265 @@ This function is currently implemented for Win32 where it flashes the window ico
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__managedwnd" kindref="compound">Managed Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_dialog" kindref="compound">wxDialog</ref>, <ref refid="classwx_frame" kindref="compound">wxFrame</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10982">
+      <node id="11171">
         <label>wxDocChildFrame</label>
         <link refid="classwx_doc_child_frame"/>
-        <childnode refid="10981" relation="public-inheritance">
+        <childnode refid="11170" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10957">
+      <node id="11147">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="10958" relation="public-inheritance">
+        <childnode refid="11148" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10986">
+      <node id="11175">
         <label>wxMDIChildFrame</label>
         <link refid="classwx_m_d_i_child_frame"/>
-        <childnode refid="10981" relation="public-inheritance">
+        <childnode refid="11170" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10960">
+      <node id="11158">
+        <label>wxGenericProgressDialog</label>
+        <link refid="classwx_generic_progress_dialog"/>
+        <childnode refid="11152" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="11150">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10967">
+      <node id="11157">
         <label>wxFontDialog</label>
         <link refid="classwx_font_dialog"/>
-        <childnode refid="10962" relation="public-inheritance">
+        <childnode refid="11152" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10965">
+      <node id="11155">
         <label>wxFileDialog</label>
         <link refid="classwx_file_dialog"/>
-        <childnode refid="10962" relation="public-inheritance">
+        <childnode refid="11152" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10959">
+      <node id="11149">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10960" relation="public-inheritance">
+        <childnode refid="11150" relation="public-inheritance">
         </childnode>
-        <childnode refid="10961" relation="public-inheritance">
+        <childnode refid="11151" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10972">
+      <node id="11159">
         <label>wxProgressDialog</label>
         <link refid="classwx_progress_dialog"/>
-        <childnode refid="10962" relation="public-inheritance">
+        <childnode refid="11158" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10975">
+      <node id="11164">
         <label>wxRichTextStyleOrganiserDialog</label>
         <link refid="classwx_rich_text_style_organiser_dialog"/>
-        <childnode refid="10962" relation="public-inheritance">
+        <childnode refid="11152" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10983">
+      <node id="11172">
         <label>wxDocParentFrame</label>
         <link refid="classwx_doc_parent_frame"/>
-        <childnode refid="10981" relation="public-inheritance">
+        <childnode refid="11170" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10969">
+      <node id="11161">
         <label>wxMultiChoiceDialog</label>
         <link refid="classwx_multi_choice_dialog"/>
-        <childnode refid="10962" relation="public-inheritance">
+        <childnode refid="11152" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10971">
-        <label>wxPrintDialog</label>
-        <link refid="classwx_print_dialog"/>
-        <childnode refid="10962" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="10980">
+      <node id="11169">
         <label>wxWizard</label>
         <link refid="classwx_wizard"/>
-        <childnode refid="10962" relation="public-inheritance">
+        <childnode refid="11152" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10961">
+      <node id="11151">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10958">
+      <node id="11148">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10959" relation="public-inheritance">
+        <childnode refid="11149" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10989">
+      <node id="11178">
         <label>wxDocMDIParentFrame</label>
         <link refid="classwx_doc_m_d_i_parent_frame"/>
-        <childnode refid="10988" relation="public-inheritance">
+        <childnode refid="11177" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10962">
+      <node id="11152">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="10956" relation="public-inheritance">
+        <childnode refid="11146" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10968">
+      <node id="11160">
         <label>wxMessageDialog</label>
         <link refid="classwx_message_dialog"/>
-        <childnode refid="10962" relation="public-inheritance">
+        <childnode refid="11152" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10966">
+      <node id="11156">
         <label>wxFindReplaceDialog</label>
         <link refid="classwx_find_replace_dialog"/>
-        <childnode refid="10962" relation="public-inheritance">
+        <childnode refid="11152" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10981">
+      <node id="11170">
         <label>wxFrame</label>
         <link refid="classwx_frame"/>
-        <childnode refid="10956" relation="public-inheritance">
+        <childnode refid="11146" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10991">
+      <node id="11180">
         <label>wxPreviewFrame</label>
         <link refid="classwx_preview_frame"/>
-        <childnode refid="10981" relation="public-inheritance">
+        <childnode refid="11170" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10976">
+      <node id="11165">
         <label>wxSingleChoiceDialog</label>
         <link refid="classwx_single_choice_dialog"/>
-        <childnode refid="10962" relation="public-inheritance">
+        <childnode refid="11152" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10964">
+      <node id="11154">
         <label>wxDirDialog</label>
         <link refid="classwx_dir_dialog"/>
-        <childnode refid="10962" relation="public-inheritance">
+        <childnode refid="11152" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10984">
+      <node id="11173">
         <label>wxHtmlHelpDialog</label>
         <link refid="classwx_html_help_dialog"/>
-        <childnode refid="10981" relation="public-inheritance">
+        <childnode refid="11170" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10963">
+      <node id="11153">
         <label>wxColourDialog</label>
         <link refid="classwx_colour_dialog"/>
-        <childnode refid="10962" relation="public-inheritance">
+        <childnode refid="11152" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10990">
+      <node id="11179">
         <label>wxMiniFrame</label>
         <link refid="classwx_mini_frame"/>
-        <childnode refid="10981" relation="public-inheritance">
+        <childnode refid="11170" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10956">
+      <node id="11146">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="10957" relation="public-inheritance">
+        <childnode refid="11147" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10974">
+      <node id="11163">
         <label>wxRichTextFormattingDialog</label>
         <link refid="classwx_rich_text_formatting_dialog"/>
-        <childnode refid="10973" relation="public-inheritance">
+        <childnode refid="11162" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10978">
+      <node id="11167">
         <label>wxTextEntryDialog</label>
         <link refid="classwx_text_entry_dialog"/>
-        <childnode refid="10962" relation="public-inheritance">
+        <childnode refid="11152" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10985">
+      <node id="11174">
         <label>wxHtmlHelpFrame</label>
         <link refid="classwx_html_help_frame"/>
-        <childnode refid="10981" relation="public-inheritance">
+        <childnode refid="11170" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10992">
+      <node id="11181">
         <label>wxSplashScreen</label>
         <link refid="classwx_splash_screen"/>
-        <childnode refid="10981" relation="public-inheritance">
+        <childnode refid="11170" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10988">
+      <node id="11177">
         <label>wxMDIParentFrame</label>
         <link refid="classwx_m_d_i_parent_frame"/>
-        <childnode refid="10981" relation="public-inheritance">
+        <childnode refid="11170" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10987">
+      <node id="11176">
         <label>wxDocMDIChildFrame</label>
         <link refid="classwx_doc_m_d_i_child_frame"/>
-        <childnode refid="10986" relation="public-inheritance">
+        <childnode refid="11175" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10979">
+      <node id="11168">
         <label>wxPasswordEntryDialog</label>
         <link refid="classwx_password_entry_dialog"/>
-        <childnode refid="10978" relation="public-inheritance">
+        <childnode refid="11167" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10977">
+      <node id="11166">
         <label>wxSymbolPickerDialog</label>
         <link refid="classwx_symbol_picker_dialog"/>
-        <childnode refid="10962" relation="public-inheritance">
+        <childnode refid="11152" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10973">
+      <node id="11162">
         <label>wxPropertySheetDialog</label>
         <link refid="classwx_property_sheet_dialog"/>
-        <childnode refid="10962" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="10970">
-        <label>wxPageSetupDialog</label>
-        <link refid="classwx_page_setup_dialog"/>
-        <childnode refid="10962" relation="public-inheritance">
+        <childnode refid="11152" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10994">
+      <node id="11183">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="10995" relation="public-inheritance">
+        <childnode refid="11184" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10997">
+      <node id="11186">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10998" relation="usage">
+        <childnode refid="11187" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10996">
+      <node id="11185">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10997" relation="public-inheritance">
+        <childnode refid="11186" relation="public-inheritance">
         </childnode>
-        <childnode refid="10999" relation="public-inheritance">
+        <childnode refid="11188" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10999">
+      <node id="11188">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10995">
+      <node id="11184">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10996" relation="public-inheritance">
+        <childnode refid="11185" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10993">
+      <node id="11182">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="10994" relation="public-inheritance">
+        <childnode refid="11183" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10998">
+      <node id="11187">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="80" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" bodystart="79" bodyend="578"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="80" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" bodystart="79" bodyend="578"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxTopLevelWindow</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxTopLevelWindow</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -1497,6 +1491,7 @@ This function is currently implemented for Win32 where it flashes the window ico
       <member refid="classwx_top_level_window_1afa58f411cf488eb9279683b1d20a74b6" prot="public" virt="virtual"><scope>wxTopLevelWindow</scope><name>IsActive</name></member>
       <member refid="classwx_top_level_window_1ac0c7a7cb6e6dfdf7e59300ee5d476ce3" prot="public" virt="virtual"><scope>wxTopLevelWindow</scope><name>IsAlwaysMaximized</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxTopLevelWindow</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxTopLevelWindow</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxTopLevelWindow</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxTopLevelWindow</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxTopLevelWindow</scope><name>IsExposed</name></member>
@@ -1515,6 +1510,7 @@ This function is currently implemented for Win32 where it flashes the window ico
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxTopLevelWindow</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxTopLevelWindow</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxTopLevelWindow</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxTopLevelWindow</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxTopLevelWindow</scope><name>IsUnlinked</name></member>
       <member refid="classwx_top_level_window_1a305c48ddb8e45f89add1694053185a7d" prot="public" virt="non-virtual"><scope>wxTopLevelWindow</scope><name>IsUsingNativeDecorations</name></member>
       <member refid="classwx_top_level_window_1adfe7e3f4a32f3ed178968f64431bbfe0" prot="public" virt="virtual"><scope>wxTopLevelWindow</scope><name>Layout</name></member>
@@ -1522,7 +1518,6 @@ This function is currently implemented for Win32 where it flashes the window ico
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxTopLevelWindow</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxTopLevelWindow</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxTopLevelWindow</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxTopLevelWindow</scope><name>MakeModal</name></member>
       <member refid="classwx_top_level_window_1addb1612e9f00ac82c2e19c2bac6ffc4f" prot="public" virt="virtual"><scope>wxTopLevelWindow</scope><name>Maximize</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxTopLevelWindow</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxTopLevelWindow</scope><name>Move</name></member>
@@ -1657,7 +1652,6 @@ This function is currently implemented for Win32 where it flashes the window ico
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxTopLevelWindow</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxTopLevelWindow</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxTopLevelWindow</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxTopLevelWindow</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxTopLevelWindow</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxTopLevelWindow</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxTopLevelWindow</scope><name>Unlink</name></member>

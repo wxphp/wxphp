@@ -24,7 +24,7 @@
 <para><emphasis>Flags</emphasis> may be combination of <computeroutput>wxRE_NOTBOL</computeroutput> and <computeroutput>wxRE_NOTEOL</computeroutput>, see <ref refid="regex_8h_1wxRE_NOT_FLAGS" kindref="member">wxRE_NOT_FLAGS</ref>.</para><para>Some regex libraries assume that the text given is null terminated, while others require the length be given as a separate parameter. Therefore for maximum portability assume that <emphasis>text</emphasis> cannot contain embedded nulls.</para><para>When the <bold>Matches(const wxChar *text, int flags = 0)</bold> form is used, a <ref refid="group__group__funcmacro__crt_1ga8ee0fe62cfc16ac60a217e825dcf4ba5" kindref="member">wxStrlen()</ref> will be done internally if the regex library requires the length. When using <ref refid="classwx_reg_ex_1a4f63e65c83d19d7f4115e0cb46d797f2" kindref="member">Matches()</ref> in a loop the <bold>Matches(text, flags, len)</bold> form can be used instead, making it possible to avoid a <ref refid="group__group__funcmacro__crt_1ga8ee0fe62cfc16ac60a217e825dcf4ba5" kindref="member">wxStrlen()</ref> inside the loop.</para><para>May only be called after successful call to <ref refid="classwx_reg_ex_1acd01c4ab52213184f89a1e9a36bc1a24" kindref="member">Compile()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" line="200"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/regex.h" line="200"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_ex_1a761c31d59bc171d4c526e7d1da76ec9f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -49,7 +49,7 @@
 <para><emphasis>Flags</emphasis> may be combination of <computeroutput>wxRE_NOTBOL</computeroutput> and <computeroutput>wxRE_NOTEOL</computeroutput>, see <ref refid="regex_8h_1wxRE_NOT_FLAGS" kindref="member">wxRE_NOT_FLAGS</ref>.</para><para>Some regex libraries assume that the text given is null terminated, while others require the length be given as a separate parameter. Therefore for maximum portability assume that <emphasis>text</emphasis> cannot contain embedded nulls.</para><para>When the <bold>Matches(const wxChar *text, int flags = 0)</bold> form is used, a <ref refid="group__group__funcmacro__crt_1ga8ee0fe62cfc16ac60a217e825dcf4ba5" kindref="member">wxStrlen()</ref> will be done internally if the regex library requires the length. When using <ref refid="classwx_reg_ex_1a4f63e65c83d19d7f4115e0cb46d797f2" kindref="member">Matches()</ref> in a loop the <bold>Matches(text, flags, len)</bold> form can be used instead, making it possible to avoid a <ref refid="group__group__funcmacro__crt_1ga8ee0fe62cfc16ac60a217e825dcf4ba5" kindref="member">wxStrlen()</ref> inside the loop.</para><para>May only be called after successful call to <ref refid="classwx_reg_ex_1acd01c4ab52213184f89a1e9a36bc1a24" kindref="member">Compile()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" line="201"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/regex.h" line="201"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -64,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" line="120"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/regex.h" line="120"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_ex_1a840f38773d86b3e8d6b02c120331c2cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -86,7 +86,7 @@
 <para>As for the flags, please see <ref refid="regex_8h_1wxRE_FLAGS" kindref="member">wxRE_FLAGS</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" line="128"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/regex.h" line="128"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_ex_1aaf75e99c2dbe5fe8e798c64b1e510355" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -99,7 +99,7 @@
 <para>It&apos;s not virtual, don&apos;t derive from this class. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" line="134"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/regex.h" line="134"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_ex_1acd01c4ab52213184f89a1e9a36bc1a24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -121,7 +121,7 @@
 <para>As for the flags, please see <ref refid="regex_8h_1wxRE_FLAGS" kindref="member">wxRE_FLAGS</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" line="142"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/regex.h" line="142"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_ex_1a7b2b15b023a36603084a6b8b9fcf84fd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -147,7 +147,7 @@
 <para>May only be called after successful call to <ref refid="classwx_reg_ex_1a4f63e65c83d19d7f4115e0cb46d797f2" kindref="member">Matches()</ref> and only if <computeroutput>wxRE_NOSUB</computeroutput> was <bold>not</bold> used in <ref refid="classwx_reg_ex_1acd01c4ab52213184f89a1e9a36bc1a24" kindref="member">Compile()</ref>.</para><para>Returns false if no match or if an error occurred. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" line="154"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/regex.h" line="154"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_ex_1abccca0f3b75c5fe54b02deeb90c09f4d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -169,7 +169,7 @@
 <para>Empty string is returned if match failed.</para><para>May only be called after successful call to <ref refid="classwx_reg_ex_1a4f63e65c83d19d7f4115e0cb46d797f2" kindref="member">Matches()</ref> and only if <computeroutput>wxRE_NOSUB</computeroutput> was <bold>not</bold> used in <ref refid="classwx_reg_ex_1acd01c4ab52213184f89a1e9a36bc1a24" kindref="member">Compile()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" line="163"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/regex.h" line="163"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_ex_1ab6b4ab7bcb567c452b04549ebff81bba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -182,7 +182,7 @@
 <para>the number of bracketed subexpressions plus one for the expression itself, or 0 on error.</para><para>May only be called after successful call to <ref refid="classwx_reg_ex_1acd01c4ab52213184f89a1e9a36bc1a24" kindref="member">Compile()</ref>. and only if <computeroutput>wxRE_NOSUB</computeroutput> was <bold>not</bold> used. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" line="172"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/regex.h" line="172"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_ex_1ae19a386efd8c012bdcfdd1548dd64dfc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -195,7 +195,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" line="178"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/regex.h" line="178"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_ex_1aac3f3acd35f8daf37ab2837473188e6a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -217,7 +217,7 @@
 <para><emphasis>Flags</emphasis> may be combination of <computeroutput>wxRE_NOTBOL</computeroutput> and <computeroutput>wxRE_NOTEOL</computeroutput>, see <ref refid="regex_8h_1wxRE_NOT_FLAGS" kindref="member">wxRE_NOT_FLAGS</ref>.</para><para>May only be called after successful call to <ref refid="classwx_reg_ex_1acd01c4ab52213184f89a1e9a36bc1a24" kindref="member">Compile()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" line="213"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/regex.h" line="213"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_ex_1a6b581649802549cb7c9c9774f0367fe0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -243,7 +243,7 @@
 <para>The replacement text may contain back references <computeroutput>\number</computeroutput> which will be replaced with the value of the corresponding subexpression in the pattern match. <computeroutput>\0</computeroutput> corresponds to the entire match and <computeroutput>&amp;</computeroutput> is a synonym for it. Backslash may be used to quote itself or <computeroutput>&amp;</computeroutput> character.</para><para><emphasis>maxMatches</emphasis> may be used to limit the number of replacements made, setting it to 1, for example, will only replace first occurrence (if any) of the pattern in the text while default value of 0 means replace all. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" line="230"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/regex.h" line="230"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_ex_1aeda59d47a50f59511a9b5b14aa847ac2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -265,7 +265,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" line="238"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/regex.h" line="238"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_ex_1a22d68765f9807178f537edc04849e6e8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -286,7 +286,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" line="243"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/regex.h" line="243"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -310,7 +310,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>count<sp/>=<sp/>reEmail.<ref refid="classwx_reg_ex_1aeda59d47a50f59511a9b5b14aa847ac2" kindref="member" tooltip="Replace all occurrences: this is actually a synonym for Replace().">ReplaceAll</ref>(text,<sp/></highlight><highlight class="stringliteral">&quot;HIDDEN@\\2\\3&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;text<sp/>now<sp/>contains<sp/>%u<sp/>hidden<sp/>addresses&quot;</highlight><highlight class="normal">,<sp/>count);</highlight></codeline>
 </programlisting> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" line="114" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/regex.h" bodystart="113" bodyend="244"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/regex.h" line="114" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/regex.h" bodystart="113" bodyend="244"/>
     <listofallmembers>
       <member refid="classwx_reg_ex_1acd01c4ab52213184f89a1e9a36bc1a24" prot="public" virt="non-virtual"><scope>wxRegEx</scope><name>Compile</name></member>
       <member refid="classwx_reg_ex_1a7b2b15b023a36603084a6b8b9fcf84fd" prot="public" virt="non-virtual"><scope>wxRegEx</scope><name>GetMatch</name></member>

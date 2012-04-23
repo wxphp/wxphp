@@ -19,7 +19,7 @@
 <para>It may return <ref refid="dir_8h_1a54f52ca9f3bca0591ddf75afa78aeb0da938579fa180c2d21b30fddf3276053b6" kindref="member">wxDIR_STOP</ref> to abort traversing completely, <ref refid="dir_8h_1a54f52ca9f3bca0591ddf75afa78aeb0da36240c61083cad086982265b04d32a0c" kindref="member">wxDIR_IGNORE</ref> to skip this directory but continue with others or <ref refid="dir_8h_1a54f52ca9f3bca0591ddf75afa78aeb0da9ad0e17cc680b15c92bc475ee2dd883e" kindref="member">wxDIR_CONTINUE</ref> to enumerate all files and subdirectories in this directory.</para><para>This is a pure virtual function and must be implemented in the derived class. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h" line="71"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dir.h" line="71"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dir_traverser_1ad51354154a38c89d288a933866501ea8" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="dir_8h_1a54f52ca9f3bca0591ddf75afa78aeb0d" kindref="member">wxDirTraverseResult</ref></type>
@@ -36,7 +36,7 @@
 <para>It may return <ref refid="dir_8h_1a54f52ca9f3bca0591ddf75afa78aeb0da938579fa180c2d21b30fddf3276053b6" kindref="member">wxDIR_STOP</ref> to abort traversing (for example, if the file being searched is found) or <ref refid="dir_8h_1a54f52ca9f3bca0591ddf75afa78aeb0da9ad0e17cc680b15c92bc475ee2dd883e" kindref="member">wxDIR_CONTINUE</ref> to proceed.</para><para>This is a pure virtual function and must be implemented in the derived class. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h" line="81"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dir.h" line="81"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dir_traverser_1a0cf17e9c925c17bef9e77bbc185c90a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="dir_8h_1a54f52ca9f3bca0591ddf75afa78aeb0d" kindref="member">wxDirTraverseResult</ref></type>
@@ -53,7 +53,7 @@
 <para>It may return <ref refid="dir_8h_1a54f52ca9f3bca0591ddf75afa78aeb0da938579fa180c2d21b30fddf3276053b6" kindref="member">wxDIR_STOP</ref> to abort traversing completely, <ref refid="dir_8h_1a54f52ca9f3bca0591ddf75afa78aeb0da36240c61083cad086982265b04d32a0c" kindref="member">wxDIR_IGNORE</ref> to skip this directory but continue with others or <ref refid="dir_8h_1a54f52ca9f3bca0591ddf75afa78aeb0da9ad0e17cc680b15c92bc475ee2dd883e" kindref="member">wxDIR_CONTINUE</ref> to retry opening this directory once again.</para><para>The base class version always returns <ref refid="dir_8h_1a54f52ca9f3bca0591ddf75afa78aeb0da36240c61083cad086982265b04d32a0c" kindref="member">wxDIR_IGNORE</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h" line="91"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dir.h" line="91"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -87,7 +87,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>dir.Traverse(traverser);</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__file" kindref="compound">File Handling</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h" line="60" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dir.h" bodystart="59" bodyend="92"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dir.h" line="60" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dir.h" bodystart="59" bodyend="92"/>
     <listofallmembers>
       <member refid="classwx_dir_traverser_1a1a63d55b08f7da5c39269f649db32aeb" prot="public" virt="pure-virtual"><scope>wxDirTraverser</scope><name>OnDir</name></member>
       <member refid="classwx_dir_traverser_1ad51354154a38c89d288a933866501ea8" prot="public" virt="pure-virtual"><scope>wxDirTraverser</scope><name>OnFile</name></member>

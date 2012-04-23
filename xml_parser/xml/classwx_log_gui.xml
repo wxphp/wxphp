@@ -17,7 +17,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="397" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="397" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="352" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" bodystart="352" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classwx_log_gui_1ae758e9ec94d5da1449b2eb464e0dcfdf" prot="protected" static="no" mutable="no">
         <type><ref refid="dynarray_8h_1add87f199292e36ee87efd6d7f0d4ee66" kindref="member">wxArrayInt</ref></type>
@@ -30,7 +30,7 @@
 <para>This array is synchronized with <ref refid="classwx_log_gui_1a0b96986ca22948a65f4f008aa5dfb21b" kindref="member">wxLogGui::m_aMessages</ref>, i.e. the n-th element of this array corresponds to the severity of the n-th message. The possible severity values are <computeroutput>wxLOG_XXX</computeroutput> constants, e.g. wxLOG_Error, wxLOG_Warning, wxLOG_Message etc. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="407" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="407" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="362" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" bodystart="362" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classwx_log_gui_1a375444936724944ea5b3c003e8b10b79" prot="protected" static="no" mutable="no">
         <type><ref refid="dynarray_8h_1aae5ab96217f8797a82373b4126a6b254" kindref="member">wxArrayLong</ref></type>
@@ -43,7 +43,7 @@
 <para>The elements of this array are time_t values corresponding to the time when the message was logged. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="415" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="415" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="370" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" bodystart="370" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classwx_log_gui_1a6473c08ffb5f78c16e79ce403dd192b4" prot="protected" static="no" mutable="no">
         <type>bool</type>
@@ -56,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="420" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="420" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="375" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" bodystart="375" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classwx_log_gui_1a71f2d224ac87ea48fa1da4059f9e4f5d" prot="protected" static="no" mutable="no">
         <type>bool</type>
@@ -69,7 +69,7 @@
 <para>If both <ref refid="classwx_log_gui_1a6473c08ffb5f78c16e79ce403dd192b4" kindref="member">wxLogGui::m_bErrors</ref> and this member are false, there are only informational messages to be shown. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="428" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="428" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="383" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" bodystart="383" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classwx_log_gui_1a73f4fb41c5cd832193a38c6fb2439af3" prot="protected" static="no" mutable="no">
         <type>bool</type>
@@ -82,7 +82,7 @@
 <para>This variable is used instead of simply checking whether <ref refid="classwx_log_gui_1a0b96986ca22948a65f4f008aa5dfb21b" kindref="member">wxLogGui::m_aMessages</ref> array is empty to allow blocking further calls to <ref refid="classwx_log_gui_1ac7614396e348c3472bd8d28ba86d782a" kindref="member">Flush()</ref> while a log dialog is already being shown, even if the messages array hasn&apos;t been emptied yet. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="438" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="438" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="393" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" bodystart="393" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -97,7 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="306"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="306"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_gui_1ac7614396e348c3472bd8d28ba86d782a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -111,7 +111,7 @@
 <para>This method is called during the idle time and should show any messages accumulated in <ref refid="classwx_log_gui_1a0b96986ca22948a65f4f008aa5dfb21b" kindref="member">wxLogGui::m_aMessages</ref> field to the user. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="314"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="314"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -126,7 +126,7 @@
 <para>The title is constructed from <ref refid="classwx_app_console_1a83aa5fdf1e636dc441b62ceb95c8bf5a" kindref="member">wxApp::GetAppDisplayName()</ref> and the severity string (e.g. &quot;error&quot; or &quot;warning&quot;) appropriate for the current <ref refid="classwx_log_gui_1a6473c08ffb5f78c16e79ce403dd192b4" kindref="member">wxLogGui::m_bErrors</ref> and <ref refid="classwx_log_gui_1a71f2d224ac87ea48fa1da4059f9e4f5d" kindref="member">wxLogGui::m_bWarnings</ref> values. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="324"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="324"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_gui_1aeba49b098d8273387f61d96787b70a73" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -136,10 +136,10 @@
         <briefdescription>
 <para>Returns wxICON_ERROR, wxICON_WARNING or wxICON_INFORMATION depending on the current maximal severity. </para>        </briefdescription>
         <detaileddescription>
-<para>This value is suitable to be used in the style parameter of <ref refid="group__group__funcmacro__dialog_1gaf8a6b7e1e34eae82d3d75e3721298b26" kindref="member">wxMessageBox()</ref> function. </para>        </detaileddescription>
+<para>This value is suitable to be used in the style parameter of <ref refid="group__group__funcmacro__dialog_1ga193c64ed4802e379799cdb42de252647" kindref="member">wxMessageBox()</ref> function. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="333"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="333"/>
       </memberdef>
       <memberdef kind="function" id="classwx_log_gui_1afe6c69e43a85c3cd233e16deb62ed9ef" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -152,9 +152,11 @@
 <para>If you override <ref refid="classwx_log_gui_1ac7614396e348c3472bd8d28ba86d782a" kindref="member">Flush()</ref> (and don&apos;t call the base class version), you must call this method to avoid messages being logged over and over again. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="342"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="342"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_log_gui_1ad336562c034b857d97bbf2142d89ae82" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classwx_log_gui_1ad336562c034b857d97bbf2142d89ae82" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>virtual void wxLogGui::DoShowSingleLogMessage</definition>
         <argsstring>(const wxString &amp;message, const wxString &amp;title, int style)</argsstring>
@@ -174,7 +176,7 @@
         <briefdescription>
 <para>Method called by <ref refid="classwx_log_gui_1ac7614396e348c3472bd8d28ba86d782a" kindref="member">Flush()</ref> to show a single log message. </para>        </briefdescription>
         <detaileddescription>
-<para>This function can be overridden to show the message in a different way. By default a simple <ref refid="group__group__funcmacro__dialog_1gaf8a6b7e1e34eae82d3d75e3721298b26" kindref="member">wxMessageBox()</ref> call is used.</para><para><parameterlist kind="param"><parameteritem>
+<para>This function can be overridden to show the message in a different way. By default a simple <ref refid="group__group__funcmacro__dialog_1ga193c64ed4802e379799cdb42de252647" kindref="member">wxMessageBox()</ref> call is used.</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>message</parametername>
 </parameternamelist>
@@ -199,9 +201,9 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="361"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="412"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_log_gui_1af44915ce558909520c03e32831e366a4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classwx_log_gui_1af44915ce558909520c03e32831e366a4" prot="private" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
         <definition>virtual void wxLogGui::DoShowMultipleLogMessages</definition>
         <argsstring>(const wxArrayString &amp;messages, const wxArrayInt &amp;severities, const wxArrayLong &amp;times, const wxString &amp;title, int style)</argsstring>
@@ -268,46 +270,46 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="387"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="438"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>This is the default log target for the GUI wxWidgets applications. </para>    </briefdescription>
     <detaileddescription>
-<para>Please see <ref refid="overview_log_1overview_log_customize" kindref="member">Logging Customization</ref> for explanation of how to change the default log target.</para><para>An object of this class is used by default to show the log messages created by using <ref refid="group__group__funcmacro__log_1ga249358701f3c2d410088ddf7a61d8564" kindref="member">wxLogMessage()</ref>, <ref refid="group__group__funcmacro__log_1ga0dd3c633f990f794e76065c9a7af4c87" kindref="member">wxLogError()</ref> and other logging functions. It doesn&apos;t display the messages logged by them immediately however but accumulates all messages logged during an event handler execution and then shows them all at once when its <ref refid="classwx_log_gui_1ac7614396e348c3472bd8d28ba86d782a" kindref="member">Flush()</ref> method is called during the idle time processing. This has the important advantage of showing only a single dialog to the user even if several messages were logged because of a single error as it often happens (e.g. a low level function could log a message because it failed to open a file resulting in its caller logging another message due to the failure of higher level operation requiring the use of this file). If you need to force the display of all previously logged messages immediately you can use <ref refid="classwx_log_1ab0808092c4ec1d503e261d9d226d7e90" kindref="member">wxLog::FlushActive()</ref> to force the dialog display.</para><para>Also notice that if an error message is logged when several informative messages had been already logged before, the informative messages are discarded on the assumption that they are not useful -- and may be confusing and hence harmful -- any more after the error. The warning and error messages are never discarded however and any informational messages logged after the first error one are also kept (as they may contain information about the error recovery). You may override DoLog() method to change this behaviour.</para><para>At any rate, it is possible that that several messages were accumulated before this class <ref refid="classwx_log_gui_1ac7614396e348c3472bd8d28ba86d782a" kindref="member">Flush()</ref> method is called. If this is the case, <ref refid="classwx_log_gui_1ac7614396e348c3472bd8d28ba86d782a" kindref="member">Flush()</ref> uses a custom dialog which shows the last message directly and allows the user to view the previously logged ones by expanding the &quot;Details&quot; <ref refid="classwx_collapsible_pane" kindref="compound">wxCollapsiblePane</ref> inside it. This custom dialog also provides the buttons for copying the log messages to the clipboard and saving them to a file.</para><para>However if only a single message is present when <ref refid="classwx_log_gui_1ac7614396e348c3472bd8d28ba86d782a" kindref="member">Flush()</ref> is called, just a <ref refid="group__group__funcmacro__dialog_1gaf8a6b7e1e34eae82d3d75e3721298b26" kindref="member">wxMessageBox()</ref> is used to show it. This has the advantage of being closer to the native behaviour but it doesn&apos;t give the user any possibility to copy or save the message (except for the recent Windows versions where <computeroutput>Ctrl-C</computeroutput> may be pressed in the message box to copy its contents to the clipboard) so you may want to override DoShowSingleMessage() to customize <ref refid="classwx_log_gui" kindref="compound">wxLogGui</ref> -- the dialogs sample shows how to do this.</para><para><heading level="2"></heading>
+<para>Please see <ref refid="overview_log_1overview_log_customize" kindref="member">Logging Customization</ref> for explanation of how to change the default log target.</para><para>An object of this class is used by default to show the log messages created by using <ref refid="group__group__funcmacro__log_1ga249358701f3c2d410088ddf7a61d8564" kindref="member">wxLogMessage()</ref>, <ref refid="group__group__funcmacro__log_1ga0dd3c633f990f794e76065c9a7af4c87" kindref="member">wxLogError()</ref> and other logging functions. It doesn&apos;t display the messages logged by them immediately however but accumulates all messages logged during an event handler execution and then shows them all at once when its <ref refid="classwx_log_gui_1ac7614396e348c3472bd8d28ba86d782a" kindref="member">Flush()</ref> method is called during the idle time processing. This has the important advantage of showing only a single dialog to the user even if several messages were logged because of a single error as it often happens (e.g. a low level function could log a message because it failed to open a file resulting in its caller logging another message due to the failure of higher level operation requiring the use of this file). If you need to force the display of all previously logged messages immediately you can use <ref refid="classwx_log_1ab0808092c4ec1d503e261d9d226d7e90" kindref="member">wxLog::FlushActive()</ref> to force the dialog display.</para><para>Also notice that if an error message is logged when several informative messages had been already logged before, the informative messages are discarded on the assumption that they are not useful -- and may be confusing and hence harmful -- any more after the error. The warning and error messages are never discarded however and any informational messages logged after the first error one are also kept (as they may contain information about the error recovery). You may override DoLog() method to change this behaviour.</para><para>At any rate, it is possible that that several messages were accumulated before this class <ref refid="classwx_log_gui_1ac7614396e348c3472bd8d28ba86d782a" kindref="member">Flush()</ref> method is called. If this is the case, <ref refid="classwx_log_gui_1ac7614396e348c3472bd8d28ba86d782a" kindref="member">Flush()</ref> uses a custom dialog which shows the last message directly and allows the user to view the previously logged ones by expanding the &quot;Details&quot; <ref refid="classwx_collapsible_pane" kindref="compound">wxCollapsiblePane</ref> inside it. This custom dialog also provides the buttons for copying the log messages to the clipboard and saving them to a file.</para><para>However if only a single message is present when <ref refid="classwx_log_gui_1ac7614396e348c3472bd8d28ba86d782a" kindref="member">Flush()</ref> is called, just a <ref refid="group__group__funcmacro__dialog_1ga193c64ed4802e379799cdb42de252647" kindref="member">wxMessageBox()</ref> is used to show it. This has the advantage of being closer to the native behaviour but it doesn&apos;t give the user any possibility to copy or save the message (except for the recent Windows versions where <computeroutput>Ctrl-C</computeroutput> may be pressed in the message box to copy its contents to the clipboard) so you may want to override DoShowSingleLogMessage() to customize <ref refid="classwx_log_gui" kindref="compound">wxLogGui</ref> -- the dialogs sample shows how to do this.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7514">
+      <node id="7712">
         <label>wxLog</label>
         <link refid="classwx_log"/>
       </node>
-      <node id="7513">
+      <node id="7711">
         <label>wxLogGui</label>
         <link refid="classwx_log_gui"/>
-        <childnode refid="7514" relation="public-inheritance">
+        <childnode refid="7712" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7517">
+      <node id="7715">
         <label>wxArrayString</label>
         <link refid="classwx_array_string"/>
       </node>
-      <node id="7516">
+      <node id="7714">
         <label>wxLog</label>
         <link refid="classwx_log"/>
       </node>
-      <node id="7515">
+      <node id="7713">
         <label>wxLogGui</label>
         <link refid="classwx_log_gui"/>
-        <childnode refid="7516" relation="public-inheritance">
+        <childnode refid="7714" relation="public-inheritance">
         </childnode>
-        <childnode refid="7517" relation="usage">
+        <childnode refid="7715" relation="usage">
           <edgelabel>m_aMessages</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="301" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="300" bodyend="439"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="301" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" bodystart="300" bodyend="439"/>
     <listofallmembers>
       <member refid="classwx_log_1a4c11ee23ce5264b6c5921a17610cda13" prot="public" virt="non-virtual"><scope>wxLogGui</scope><name>AddTraceMask</name></member>
       <member refid="classwx_log_gui_1afe6c69e43a85c3cd233e16deb62ed9ef" prot="protected" virt="non-virtual"><scope>wxLogGui</scope><name>Clear</name></member>
@@ -317,8 +319,8 @@
       <member refid="classwx_log_1a18c877e0038afe284757512b866b0aac" prot="protected" virt="virtual"><scope>wxLogGui</scope><name>DoLogText</name></member>
       <member refid="classwx_log_1a3fafbd3b87ff2d08dfdd1378d35013bb" prot="protected" virt="virtual"><scope>wxLogGui</scope><name>DoLogTextAtLevel</name></member>
       <member refid="classwx_log_1af51afebbfa375827936ba3c93c78857a" prot="public" virt="non-virtual"><scope>wxLogGui</scope><name>DontCreateOnDemand</name></member>
-      <member refid="classwx_log_gui_1af44915ce558909520c03e32831e366a4" prot="protected" virt="virtual"><scope>wxLogGui</scope><name>DoShowMultipleLogMessages</name></member>
-      <member refid="classwx_log_gui_1ad336562c034b857d97bbf2142d89ae82" prot="protected" virt="virtual"><scope>wxLogGui</scope><name>DoShowSingleLogMessage</name></member>
+      <member refid="classwx_log_gui_1af44915ce558909520c03e32831e366a4" prot="private" virt="virtual"><scope>wxLogGui</scope><name>DoShowMultipleLogMessages</name></member>
+      <member refid="classwx_log_gui_1ad336562c034b857d97bbf2142d89ae82" prot="private" virt="virtual"><scope>wxLogGui</scope><name>DoShowSingleLogMessage</name></member>
       <member refid="classwx_log_1a58bbfc0831eb47f0d88c9350d1f6e02d" prot="public" virt="non-virtual"><scope>wxLogGui</scope><name>EnableLogging</name></member>
       <member refid="classwx_log_gui_1ac7614396e348c3472bd8d28ba86d782a" prot="public" virt="virtual"><scope>wxLogGui</scope><name>Flush</name></member>
       <member refid="classwx_log_1ab0808092c4ec1d503e261d9d226d7e90" prot="public" virt="non-virtual"><scope>wxLogGui</scope><name>FlushActive</name></member>

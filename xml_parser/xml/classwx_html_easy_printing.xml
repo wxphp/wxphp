@@ -41,7 +41,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="191"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="191"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_easy_printing_1a0fb229c0c7b3a8f97da34a9fd98ed1d0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -55,7 +55,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="199"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="199"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_easy_printing_1a2768d48d2843bf679afafd88f52ce14e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_page_setup_dialog_data" kindref="compound">wxPageSetupDialogData</ref> *</type>
@@ -68,7 +68,7 @@
 <para>You can set its parameters (via SetXXXX methods). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="205"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="205"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_easy_printing_1a9a6989264e4e5cd81fd0c4cd5547fcb3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="210"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="210"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_easy_printing_1a00233ff9e1fde0c9094e1d5213979170" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_print_data" kindref="compound">wxPrintData</ref> *</type>
@@ -94,7 +94,7 @@
 <para>You can set its parameters (via SetXXXX methods). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="216"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="216"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_easy_printing_1ab18d043bee2862b9d98ebbe21c9b0cdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -107,7 +107,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="221"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="221"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_easy_printing_1ab96c0fe063a0ffce10786c7e9838de31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -124,7 +124,7 @@
 <para>Returns false in case of error -- call <ref refid="classwx_printer_1ac050c7cdfa1d43dee1617c298980624c" kindref="member">wxPrinter::GetLastError</ref> to get detailed information about the kind of the error. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="229"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="229"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_easy_printing_1af6f4da4b9e104e42883994a237a9f3fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -161,7 +161,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="244"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="244"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_easy_printing_1a92b6832eb9c9e939b236090340dac6f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -178,7 +178,7 @@
 <para>Returns false in case of error -- call <ref refid="classwx_printer_1ac050c7cdfa1d43dee1617c298980624c" kindref="member">wxPrinter::GetLastError</ref> to get detailed information about the kind of the error. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="252"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="252"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_easy_printing_1a55a26cc29673c5c3aa0dc385e8bd26fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -215,7 +215,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="267"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="267"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_easy_printing_1a97c87a4d821277bde06b805e6c991fd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -241,7 +241,7 @@
 <para>See <ref refid="classwx_html_d_c_renderer_1a70cfd1cd9f25f91afe40694466b70f7a" kindref="member">wxHtmlDCRenderer::SetFonts</ref> for detailed description. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="273"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="273"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_easy_printing_1a4d738f1511b6da10882719cba8324762" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -259,7 +259,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="280"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="280"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_easy_printing_1a663a594acc27f7479edbe2225375886b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -288,7 +288,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="289"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="289"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_easy_printing_1a257994099a541c9043cf92a42b4f396f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -325,7 +325,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="304"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="304"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_easy_printing_1acc8ff19a98718b22d73a6224537b02f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -364,7 +364,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="319"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="319"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_easy_printing_1af788066cba7ec33fe89bb66475729500" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -381,7 +381,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="324"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="324"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -406,7 +406,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="347"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="347"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -416,37 +416,37 @@
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref>, <ref refid="group__group__class__printing" kindref="compound">Printing Framework</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7002">
+      <node id="7184">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7001">
+      <node id="7183">
         <label>wxHtmlEasyPrinting</label>
         <link refid="classwx_html_easy_printing"/>
-        <childnode refid="7002" relation="public-inheritance">
+        <childnode refid="7184" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7004">
+      <node id="7186">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7005" relation="usage">
+        <childnode refid="7187" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7003">
+      <node id="7185">
         <label>wxHtmlEasyPrinting</label>
         <link refid="classwx_html_easy_printing"/>
-        <childnode refid="7004" relation="public-inheritance">
+        <childnode refid="7186" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7005">
+      <node id="7187">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="179" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" bodystart="178" bodyend="348"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="179" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" bodystart="178" bodyend="348"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxHtmlEasyPrinting</scope><name>AllocExclusive</name></member>
       <member refid="classwx_html_easy_printing_1a61a80a7e27e90cbd59f99d706a4d4021" prot="private" virt="virtual"><scope>wxHtmlEasyPrinting</scope><name>CheckFit</name></member>

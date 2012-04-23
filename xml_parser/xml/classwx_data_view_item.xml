@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="624"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="624"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_item_1a355faeb0fd910141a8621c34b884153c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="625"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="625"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_item_1aa8c216134b8e17a742c070e39753be59" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
         <type></type>
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="626"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="626"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -64,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="632"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="632"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_item_1ae20043204863f0ca26254773833e5a70" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -77,7 +77,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="637"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="637"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -85,7 +85,7 @@
     <detaileddescription>
 <para>independent of the position of the item in the control or changes to its contents.</para><para>It must hold a unique ID of type <emphasis>void*</emphasis> in its only field and can be converted to and from it.</para><para>If the ID is NULL the <ref refid="classwx_data_view_item" kindref="compound">wxDataViewItem</ref> is invalid and <ref refid="classwx_data_view_item_1ae20043204863f0ca26254773833e5a70" kindref="member">wxDataViewItem::IsOk</ref> will return false which used in many places in the API of <ref refid="classwx_data_view_ctrl" kindref="compound">wxDataViewCtrl</ref> to indicate that e.g. no item was found. An ID of NULL is also used to indicate the invisible root. Examples for this are <ref refid="classwx_data_view_model_1a4e12a582dffdc40bf043a48e1c12a9fb" kindref="member">wxDataViewModel::GetParent</ref> and <ref refid="classwx_data_view_model_1a945bbb0523166c6b092af62c7ba7b2ac" kindref="member">wxDataViewModel::GetChildren</ref>.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dvc" kindref="compound">wxDataViewCtrl Related Classes</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="618" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="617" bodyend="638"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="618" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="617" bodyend="638"/>
     <listofallmembers>
       <member refid="classwx_data_view_item_1a367189fccbc3d0aba73d3a22a5024e90" prot="public" virt="non-virtual"><scope>wxDataViewItem</scope><name>GetID</name></member>
       <member refid="classwx_data_view_item_1ae20043204863f0ca26254773833e5a70" prot="public" virt="non-virtual"><scope>wxDataViewItem</scope><name>IsOk</name></member>

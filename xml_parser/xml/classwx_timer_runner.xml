@@ -19,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" line="151"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" line="151"/>
       </memberdef>
       <memberdef kind="function" id="classwx_timer_runner_1aef72fea66b65696f0b5303c8fdf3d944" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" line="152"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" line="152"/>
       </memberdef>
       <memberdef kind="function" id="classwx_timer_runner_1ac2688370ab5fd68adfc7902d45447a5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" line="153"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" line="153"/>
       </memberdef>
       <memberdef kind="function" id="classwx_timer_runner_1ac57a93cad7dad65c84a1cb241e537195" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -80,14 +80,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" line="154"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" line="154"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Starts the timer in its ctor, stops in the dtor. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" line="149" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/timer.h" bodystart="148" bodyend="155"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" line="149" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/timer.h" bodystart="148" bodyend="155"/>
     <listofallmembers>
       <member refid="classwx_timer_runner_1ac2688370ab5fd68adfc7902d45447a5f" prot="public" virt="non-virtual"><scope>wxTimerRunner</scope><name>Start</name></member>
       <member refid="classwx_timer_runner_1ac46e9da1e390840d1a77c60cdba29f11" prot="public" virt="non-virtual"><scope>wxTimerRunner</scope><name>wxTimerRunner</name></member>

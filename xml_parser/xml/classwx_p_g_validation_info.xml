@@ -16,7 +16,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="285"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="285"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_validation_info_1aad5addc4cc99b429696f17c385e0dc54" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="290"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="290"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_validation_info_1ad843cd1a8a7617e204f9904966c0e2ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_variant" kindref="compound">wxVariant</ref> &amp;</type>
@@ -42,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="295"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="295"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_validation_info_1af4c043f9529a0093573447687b708cfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -67,7 +67,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="302"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="302"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_validation_info_1aacfab519e8fa07006c6e24bd62e490a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -84,14 +84,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="307"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="307"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para><ref refid="classwx_p_g_validation_info" kindref="compound">wxPGValidationInfo</ref> </para>    </briefdescription>
     <detaileddescription>
 <para>Used to convey validation information to and from functions that actually perform validation. Mostly used in custom property classes. </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="279" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" bodystart="278" bodyend="308"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="279" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" bodystart="278" bodyend="308"/>
     <listofallmembers>
       <member refid="classwx_p_g_validation_info_1a97b2ff830dae7b2153dfdab8fb047f05" prot="public" virt="non-virtual"><scope>wxPGValidationInfo</scope><name>GetFailureBehavior</name></member>
       <member refid="classwx_p_g_validation_info_1aad5addc4cc99b429696f17c385e0dc54" prot="public" virt="non-virtual"><scope>wxPGValidationInfo</scope><name>GetFailureMessage</name></member>

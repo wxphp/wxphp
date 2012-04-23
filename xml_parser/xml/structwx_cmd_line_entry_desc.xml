@@ -15,7 +15,7 @@
 <para>See <ref refid="cmdline_8h_1a8d2905d549d4a4f566a97755c9e4ec7b" kindref="member">wxCmdLineEntryType</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="120" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" bodystart="120" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="120" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" bodystart="120" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_cmd_line_entry_desc_1a1fa5b1fb90ff3051a011a6ce10261796" prot="public" static="no" mutable="no">
         <type>const char *</type>
@@ -28,7 +28,7 @@
 <para>It may contain only letters, digits and the underscores. This field is unused if <computeroutput>kind == wxCMD_LINE_PARAM</computeroutput>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="128" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" bodystart="128" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="128" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" bodystart="128" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_cmd_line_entry_desc_1a5fcb0ae1c1420a1836e1ed0a0908fec6" prot="public" static="no" mutable="no">
         <type>const char *</type>
@@ -41,7 +41,7 @@
 <para>It may contain only letters, digits and the underscores. This field is unused if <computeroutput>kind == wxCMD_LINE_PARAM</computeroutput>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="137" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" bodystart="137" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="137" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" bodystart="137" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_cmd_line_entry_desc_1a4b33cc723bac93c1221ed2a8104f5096" prot="public" static="no" mutable="no">
         <type>const char *</type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="143" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" bodystart="143" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="143" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" bodystart="143" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_cmd_line_entry_desc_1ab37bbf61b24d4cbea96f42cac315f0ea" prot="public" static="no" mutable="no">
         <type><ref refid="cmdline_8h_1a25a5da7d58fcc0da36cd70c859306994" kindref="member">wxCmdLineParamType</ref></type>
@@ -67,7 +67,7 @@
 <para>See <ref refid="cmdline_8h_1a25a5da7d58fcc0da36cd70c859306994" kindref="member">wxCmdLineParamType</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="149" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" bodystart="149" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="149" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" bodystart="149" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_cmd_line_entry_desc_1aae2c78bcbd5312cf511f674c083cf4d3" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -80,14 +80,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="154" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" bodystart="154" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="154" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" bodystart="154" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>The structure <ref refid="structwx_cmd_line_entry_desc" kindref="compound">wxCmdLineEntryDesc</ref> is used to describe a command line switch, option or parameter. </para>    </briefdescription>
     <detaileddescription>
 <para>An array of such structures should be passed to <ref refid="classwx_cmd_line_parser_1ac7281e9d5dfb7e41c1bf5f9fb959bbee" kindref="member">wxCmdLineParser::SetDesc()</ref>.</para><para>Note that the meanings of parameters of the wxCmdLineParser::AddXXX() functions are the same as of the corresponding fields in this structure. </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="115" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" bodystart="114" bodyend="155"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="115" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" bodystart="114" bodyend="155"/>
     <listofallmembers>
       <member refid="structwx_cmd_line_entry_desc_1a4b33cc723bac93c1221ed2a8104f5096" prot="public" virt="non-virtual"><scope>wxCmdLineEntryDesc</scope><name>description</name></member>
       <member refid="structwx_cmd_line_entry_desc_1aae2c78bcbd5312cf511f674c083cf4d3" prot="public" virt="non-virtual"><scope>wxCmdLineEntryDesc</scope><name>flags</name></member>

@@ -26,7 +26,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3731"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3734"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_capture_changed_event_1af29e1a9dc2aa24c9a42b97f774cb40d1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -39,7 +39,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3737"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3740"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -53,49 +53,49 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_mouse_capture_lost_event" kindref="compound">wxMouseCaptureLostEvent</ref>, <ref refid="overview_events" kindref="compound">Events and Event Handling</ref>, <ref refid="classwx_window_1a5c72c6260a73ef77bb0b1f7ec85fcfef" kindref="member">wxWindow::CaptureMouse</ref>, <ref refid="classwx_window_1adcc538819c11ecb3bd3e4e5d13c5ba7a" kindref="member">wxWindow::ReleaseMouse</ref>, <ref refid="classwx_window_1a483d3f73925bd38c3964dad058672f0a" kindref="member">wxWindow::GetCapture</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7827">
+      <node id="8020">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7825">
+      <node id="8018">
         <label>wxMouseCaptureChangedEvent</label>
         <link refid="classwx_mouse_capture_changed_event"/>
-        <childnode refid="7826" relation="public-inheritance">
+        <childnode refid="8019" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7826">
+      <node id="8019">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="7827" relation="public-inheritance">
+        <childnode refid="8020" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7830">
+      <node id="8023">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7831" relation="usage">
+        <childnode refid="8024" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7828">
+      <node id="8021">
         <label>wxMouseCaptureChangedEvent</label>
         <link refid="classwx_mouse_capture_changed_event"/>
-        <childnode refid="7829" relation="public-inheritance">
+        <childnode refid="8022" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7829">
+      <node id="8022">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="7830" relation="public-inheritance">
+        <childnode refid="8023" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7831">
+      <node id="8024">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3725" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3724" bodyend="3738"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3728" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="3727" bodyend="3741"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxMouseCaptureChangedEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxMouseCaptureChangedEvent</scope><name>Clone</name></member>

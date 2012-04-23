@@ -70,7 +70,7 @@
 <para><xrefsect id="todo_1_todo000015"><xreftitle>Todo</xreftitle><xrefdescription><para><ref refid="classwx_aui_pane_info" kindref="compound">wxAuiPaneInfo</ref> dock direction types used with <ref refid="classwx_aui_manager" kindref="compound">wxAuiManager</ref>.</para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="14" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" bodystart="13" bodyend="22"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="14" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" bodystart="13" bodyend="22"/>
       </memberdef>
       <memberdef kind="enum" id="framemanager_8h_1a79f21eb4f287efb5bc66e4a04deedf89" prot="public" static="no">
         <name>wxAuiManagerOption</name>
@@ -163,13 +163,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="29" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" bodystart="28" bodyend="55"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="29" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" bodystart="28" bodyend="55"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h"/>
   </compounddef>
 </doxygen>

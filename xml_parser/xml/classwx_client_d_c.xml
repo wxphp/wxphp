@@ -3,6 +3,7 @@
   <compounddef id="classwx_client_d_c" kind="class" prot="public">
     <compoundname>wxClientDC</compoundname>
     <basecompoundref refid="classwx_window_d_c" prot="public" virt="non-virtual">wxWindowDC</basecompoundref>
+    <derivedcompoundref refid="classwx_paint_d_c" prot="public" virt="non-virtual">wxPaintDC</derivedcompoundref>
     <includes local="no">wx/dcclient.h</includes>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="classwx_client_d_c_1ac2deeb91c3d7f8dd755e6f6166159501" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -20,7 +21,7 @@
 <para>Pass a pointer to the window on which you wish to paint. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcclient.h" line="75"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcclient.h" line="75"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -30,61 +31,67 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref></para><para><simplesect kind="see"><para><ref refid="classwx_d_c" kindref="compound">wxDC</ref>, <ref refid="classwx_memory_d_c" kindref="compound">wxMemoryDC</ref>, <ref refid="classwx_paint_d_c" kindref="compound">wxPaintDC</ref>, <ref refid="classwx_window_d_c" kindref="compound">wxWindowDC</ref>, <ref refid="classwx_screen_d_c" kindref="compound">wxScreenDC</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4798">
+      <node id="4889">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4796">
+      <node id="4887">
         <label>wxWindowDC</label>
         <link refid="classwx_window_d_c"/>
-        <childnode refid="4797" relation="public-inheritance">
+        <childnode refid="4888" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4795">
+      <node id="4886">
         <label>wxClientDC</label>
         <link refid="classwx_client_d_c"/>
-        <childnode refid="4796" relation="public-inheritance">
+        <childnode refid="4887" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4797">
+      <node id="4888">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="4798" relation="public-inheritance">
+        <childnode refid="4889" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4890">
+        <label>wxPaintDC</label>
+        <link refid="classwx_paint_d_c"/>
+        <childnode refid="4886" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4802">
+      <node id="4894">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4803" relation="usage">
+        <childnode refid="4895" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4800">
+      <node id="4892">
         <label>wxWindowDC</label>
         <link refid="classwx_window_d_c"/>
-        <childnode refid="4801" relation="public-inheritance">
+        <childnode refid="4893" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4799">
+      <node id="4891">
         <label>wxClientDC</label>
         <link refid="classwx_client_d_c"/>
-        <childnode refid="4800" relation="public-inheritance">
+        <childnode refid="4892" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4801">
+      <node id="4893">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="4802" relation="public-inheritance">
+        <childnode refid="4894" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4803">
+      <node id="4895">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcclient.h" line="70" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcclient.h" bodystart="69" bodyend="76"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcclient.h" line="70" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dcclient.h" bodystart="69" bodyend="76"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxClientDC</scope><name>AllocExclusive</name></member>
       <member refid="classwx_d_c_1a12bed94a15136b9080683f4151042a34" prot="public" virt="non-virtual"><scope>wxClientDC</scope><name>Blit</name></member>

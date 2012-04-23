@@ -84,7 +84,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="11" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" bodystart="10" bodyend="14"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="11" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" bodystart="10" bodyend="14"/>
       </memberdef>
       <memberdef kind="enum" id="layout_8h_1a9f3a78fa78c99c527b87047207a7b3a1" prot="public" static="no">
         <name>wxRelationship</name>
@@ -157,7 +157,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="17" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" bodystart="16" bodyend="27"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="17" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" bodystart="16" bodyend="27"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -173,13 +173,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" line="29" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h" bodystart="29" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" line="29" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h" bodystart="29" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/layout.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/layout.h"/>
   </compounddef>
 </doxygen>

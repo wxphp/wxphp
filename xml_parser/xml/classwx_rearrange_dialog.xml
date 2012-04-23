@@ -15,7 +15,7 @@
 <para><ref refid="classwx_rearrange_dialog_1ae6bddbc5d1fc41031f518a266f62591b" kindref="member">Create()</ref> must be called later to effectively create the control. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" line="280"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rearrangectrl.h" line="280"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rearrange_dialog_1ad91c63bf702f87b4727994d255743719" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -58,7 +58,7 @@
 <para>Please see <ref refid="classwx_rearrange_dialog_1ae6bddbc5d1fc41031f518a266f62591b" kindref="member">Create()</ref> for the parameters description. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" line="293"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rearrangectrl.h" line="293"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rearrange_dialog_1ae6bddbc5d1fc41031f518a266f62591b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -152,7 +152,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" line="324"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rearrangectrl.h" line="324"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rearrange_dialog_1af3f804a35d4df4c22546d80c691474d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -195,7 +195,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" line="363"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rearrangectrl.h" line="363"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rearrange_dialog_1af71529585b2dd1cd8805255d57cc13f1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rearrange_list" kindref="compound">wxRearrangeList</ref> *</type>
@@ -209,7 +209,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" line="370"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rearrangectrl.h" line="370"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rearrange_dialog_1a9891a64bf392de430c790ad773799b55" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dynarray_8h_1add87f199292e36ee87efd6d7f0d4ee66" kindref="member">wxArrayInt</ref></type>
@@ -222,7 +222,7 @@
 <para>Please notice that the array will contain negative items if any items were unchecked. See <ref refid="classwx_rearrange_list" kindref="compound">wxRearrangeList</ref> for more information about the convention used for this array. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" line="380"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rearrangectrl.h" line="380"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -257,7 +257,7 @@
 </programlisting></para><para><simplesect kind="since"><para>2.9.0</para></simplesect>
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" line="273" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" bodystart="272" bodyend="381"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rearrangectrl.h" line="273" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/rearrangectrl.h" bodystart="272" bodyend="381"/>
     <listofallmembers>
       <member refid="classwx_rearrange_dialog_1af3f804a35d4df4c22546d80c691474d3" prot="public" virt="non-virtual"><scope>wxRearrangeDialog</scope><name>AddExtraControls</name></member>
       <member refid="classwx_rearrange_dialog_1ae6bddbc5d1fc41031f518a266f62591b" prot="public" virt="non-virtual"><scope>wxRearrangeDialog</scope><name>Create</name></member>

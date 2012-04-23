@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="188"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="188"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_entry_1abffa0697f9350ceaeec1d8ab1f2a7667" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="189"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="189"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -50,7 +50,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="206"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="206"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_entry_1ad7a93f88746b23a506a36c1f623607da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -69,7 +69,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="207"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="207"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -84,7 +84,7 @@
 <para>The extra field is used to store platform or application specific data. See Pkware&apos;s document &apos;appnote.txt&apos; for information on its format. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="217"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="217"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_entry_1a1c09280669acc563f3f78ba97d6af0d4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -97,7 +97,7 @@
 <para>The extra field is used to store platform or application specific data. See Pkware&apos;s document &apos;appnote.txt&apos; for information on its format. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="218"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="218"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_entry_1adb77972b55bd00416fc4fd891f580f61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -118,7 +118,7 @@
 <para>The extra field is used to store platform or application specific data. See Pkware&apos;s document &apos;appnote.txt&apos; for information on its format. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="219"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="219"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -133,7 +133,7 @@
 <para>The extra field is used to store platform or application specific data. See Pkware&apos;s document &apos;appnote.txt&apos; for information on its format. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="229"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="229"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_entry_1ab79c7f7bfddd2e4e2634654d047d897d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -146,7 +146,7 @@
 <para>The extra field is used to store platform or application specific data. See Pkware&apos;s document &apos;appnote.txt&apos; for information on its format. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="230"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="230"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_entry_1afd66a8fef1bb88a9e4041e9c381f14d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -167,7 +167,7 @@
 <para>The extra field is used to store platform or application specific data. See Pkware&apos;s document &apos;appnote.txt&apos; for information on its format. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="231"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="231"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -182,7 +182,7 @@
 <para>The enumeration <ref refid="zipstrm_8h_1aaafb80310260054ee9eef14fa77a4326" kindref="member">wxZipMethod</ref> lists the possible values.</para><para>The default constructor sets this to <computeroutput>wxZIP_METHOD_DEFAULT</computeroutput>, which allows <ref refid="classwx_zip_output_stream" kindref="compound">wxZipOutputStream</ref> to choose the method when writing the entry. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="242"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="242"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_entry_1a2a99240b415c3f3f6f8bd367f051e8b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -199,7 +199,7 @@
 <para>The enumeration <ref refid="zipstrm_8h_1aaafb80310260054ee9eef14fa77a4326" kindref="member">wxZipMethod</ref> lists the possible values.</para><para>The default constructor sets this to <computeroutput>wxZIP_METHOD_DEFAULT</computeroutput>, which allows <ref refid="classwx_zip_output_stream" kindref="compound">wxZipOutputStream</ref> to choose the method when writing the entry. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="243"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="243"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -214,7 +214,7 @@
 <para>Otherwise synthesises them from the DOS attributes. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="251"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="251"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_entry_1aafe0497294d75794f5dfab9ac895a309" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -231,7 +231,7 @@
 <para>If <ref refid="classwx_zip_entry_1ae0ba9cdf0ad2957f681f4371ae3ca416" kindref="member">IsMadeByUnix()</ref> is true then also stores <emphasis>mode</emphasis> in <ref refid="classwx_zip_entry_1ab7fa02cb759a2f88f7228f78375cbb54" kindref="member">GetExternalAttributes()</ref>. Note that the default constructor sets <ref refid="classwx_zip_entry_1a37a7ed180a9fdc9170da8960df6184f6" kindref="member">GetSystemMadeBy()</ref> to <computeroutput>wxZIP_SYSTEM_MSDOS</computeroutput> by default. So to be able to store unix permissions when creating zips, call SetSystemMadeBy(wxZIP_SYSTEM_UNIX). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="262"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="262"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -246,7 +246,7 @@
 <para>The default constructor sets this to <computeroutput>wxZIP_SYSTEM_MSDOS</computeroutput>. Set it to <computeroutput>wxZIP_SYSTEM_UNIX</computeroutput> in order to be able to store unix permissions using <ref refid="classwx_zip_entry_1aafe0497294d75794f5dfab9ac895a309" kindref="member">SetMode()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="273"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="273"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_entry_1ace658575f86e8d4a6c51b2b6d7f628c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -263,7 +263,7 @@
 <para>The default constructor sets this to <computeroutput>wxZIP_SYSTEM_MSDOS</computeroutput>. Set it to <computeroutput>wxZIP_SYSTEM_UNIX</computeroutput> in order to be able to store unix permissions using <ref refid="classwx_zip_entry_1aafe0497294d75794f5dfab9ac895a309" kindref="member">SetMode()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="274"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="274"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -293,7 +293,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="303"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="303"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_entry_1a74d8509df7beb653ab2e22c05f0cdb3d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -307,7 +307,7 @@
 <para>The name can include directory components, i.e. it can be a full path.</para><para>The names of directory entries are returned without any trailing path separator. This gives a canonical name that can be used in comparisons. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="311"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="311"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -322,7 +322,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="323"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="323"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_entry_1a289438d747a209f605c5b363a21b3466" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -340,7 +340,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="324"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="324"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -360,7 +360,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="339"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="339"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_entry_1a86eb2049bacf2398b878ff4021c9259f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -375,7 +375,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="340"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="340"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -405,7 +405,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="172"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="172"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_entry_1add18fffda035c7fea78c89229a2965e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -422,7 +422,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="177"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="177"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_entry_1a68e373a438ed047c9cb20d0bf868572d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_zip_entry" kindref="compound">wxZipEntry</ref> *</type>
@@ -436,7 +436,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="182"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="182"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_entry_1a555b265c0f5467e89664c7ef638ac963" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__group__funcmacro__file_1ga69d831b3febabc149c67b716c8e22de5" kindref="member">wxFileOffset</ref></type>
@@ -449,7 +449,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="280"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="280"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_entry_1ae657051edf6b33416605657e05102ba3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref></type>
@@ -462,7 +462,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="285"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="285"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_entry_1a7eb6956b467862f6f2067e085956f53c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -475,7 +475,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="290"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="290"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_entry_1ae0ba9cdf0ad2957f681f4371ae3ca416" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -488,7 +488,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="317"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="317"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zip_entry_1a4b53e2dd0d079234035d2ca3803cdf2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_zip_entry" kindref="compound">wxZipEntry</ref> &amp;</type>
@@ -505,7 +505,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="346"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="346"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -524,49 +524,49 @@
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="11755">
+      <node id="11953">
         <label>wxArchiveEntry</label>
         <link refid="classwx_archive_entry"/>
-        <childnode refid="11756" relation="public-inheritance">
+        <childnode refid="11954" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11756">
+      <node id="11954">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11754">
+      <node id="11952">
         <label>wxZipEntry</label>
         <link refid="classwx_zip_entry"/>
-        <childnode refid="11755" relation="public-inheritance">
+        <childnode refid="11953" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11758">
+      <node id="11956">
         <label>wxArchiveEntry</label>
         <link refid="classwx_archive_entry"/>
-        <childnode refid="11759" relation="public-inheritance">
+        <childnode refid="11957" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11759">
+      <node id="11957">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11760" relation="usage">
+        <childnode refid="11958" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11757">
+      <node id="11955">
         <label>wxZipEntry</label>
         <link refid="classwx_zip_entry"/>
-        <childnode refid="11758" relation="public-inheritance">
+        <childnode refid="11956" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11760">
+      <node id="11958">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" line="168" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zipstrm.h" bodystart="167" bodyend="347"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" line="168" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/zipstrm.h" bodystart="167" bodyend="347"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxZipEntry</scope><name>AllocExclusive</name></member>
       <member refid="classwx_zip_entry_1a68e373a438ed047c9cb20d0bf868572d" prot="public" virt="non-virtual"><scope>wxZipEntry</scope><name>Clone</name></member>

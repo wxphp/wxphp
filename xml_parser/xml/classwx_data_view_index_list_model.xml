@@ -22,76 +22,75 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="518"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="518"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para><ref refid="classwx_data_view_index_list_model" kindref="compound">wxDataViewIndexListModel</ref> is a specialized data model which lets you address an item by its position (row) rather than its <ref refid="classwx_data_view_item" kindref="compound">wxDataViewItem</ref> (which you can obtain from this class). </para>    </briefdescription>
     <detaileddescription>
-<para>This model also provides its own <ref refid="classwx_data_view_list_model_1ab03f9bfb9b4b8c0ba5d09034532416f1" kindref="member">wxDataViewIndexListModel::Compare</ref> method which sorts the model&apos;s data by the index.</para><para>This model is not a virtual model since the control stores each <ref refid="classwx_data_view_item" kindref="compound">wxDataViewItem</ref>. Use <ref refid="classwx_data_view_virtual_list_model" kindref="compound">wxDataViewVirtualListModel</ref> if you need to display millions of items or have other reason to use a virtual control.</para><para><simplesect kind="see"><para><ref refid="classwx_data_view_list_model" kindref="compound">wxDataViewListModel</ref> for the API.</para></simplesect>
+<para>This model also provides its own <ref refid="classwx_data_view_list_model_1ab0b63073a19c0c4fee8a9ca7121590a0" kindref="member">wxDataViewIndexListModel::Compare</ref> method which sorts the model&apos;s data by the index.</para><para>This model is not a virtual model since the control stores each <ref refid="classwx_data_view_item" kindref="compound">wxDataViewItem</ref>. Use <ref refid="classwx_data_view_virtual_list_model" kindref="compound">wxDataViewVirtualListModel</ref> if you need to display millions of items or have other reason to use a virtual control.</para><para><simplesect kind="see"><para><ref refid="classwx_data_view_list_model" kindref="compound">wxDataViewListModel</ref> for the API.</para></simplesect>
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dvc" kindref="compound">wxDataViewCtrl Related Classes</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5344">
+      <node id="5439">
         <label>wxDataViewListStore</label>
         <link refid="classwx_data_view_list_store"/>
-        <childnode refid="5340" relation="public-inheritance">
+        <childnode refid="5435" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5343">
+      <node id="5438">
         <label>wxRefCounter</label>
         <link refid="classwx_ref_counter"/>
       </node>
-      <node id="5340">
+      <node id="5435">
         <label>wxDataViewIndexListModel</label>
         <link refid="classwx_data_view_index_list_model"/>
-        <childnode refid="5341" relation="public-inheritance">
+        <childnode refid="5436" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5342">
+      <node id="5437">
         <label>wxDataViewModel</label>
         <link refid="classwx_data_view_model"/>
-        <childnode refid="5343" relation="public-inheritance">
+        <childnode refid="5438" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5341">
+      <node id="5436">
         <label>wxDataViewListModel</label>
         <link refid="classwx_data_view_list_model"/>
-        <childnode refid="5342" relation="public-inheritance">
+        <childnode refid="5437" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5348">
+      <node id="5443">
         <label>wxRefCounter</label>
         <link refid="classwx_ref_counter"/>
       </node>
-      <node id="5345">
+      <node id="5440">
         <label>wxDataViewIndexListModel</label>
         <link refid="classwx_data_view_index_list_model"/>
-        <childnode refid="5346" relation="public-inheritance">
+        <childnode refid="5441" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5347">
+      <node id="5442">
         <label>wxDataViewModel</label>
         <link refid="classwx_data_view_model"/>
-        <childnode refid="5348" relation="public-inheritance">
+        <childnode refid="5443" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5346">
+      <node id="5441">
         <label>wxDataViewListModel</label>
         <link refid="classwx_data_view_list_model"/>
-        <childnode refid="5347" relation="public-inheritance">
+        <childnode refid="5442" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="513" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="512" bodyend="520"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="513" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="512" bodyend="520"/>
     <listofallmembers>
       <member refid="classwx_data_view_model_1af975c0a3afb970a21b9691a92f44c6c8" prot="public" virt="non-virtual"><scope>wxDataViewIndexListModel</scope><name>AddNotifier</name></member>
       <member refid="classwx_data_view_model_1ab52b55596d0724047be8cf62184f4468" prot="public" virt="non-virtual"><scope>wxDataViewIndexListModel</scope><name>ChangeValue</name></member>
       <member refid="classwx_data_view_model_1ad7f3023ee6166eb6f5bafececb4fff0c" prot="public" virt="virtual"><scope>wxDataViewIndexListModel</scope><name>Cleared</name></member>
-      <member refid="classwx_data_view_list_model_1ab03f9bfb9b4b8c0ba5d09034532416f1" prot="public" virt="non-virtual"><scope>wxDataViewIndexListModel</scope><name>Compare</name></member>
-      <member refid="classwx_data_view_model_1ab0f18be7f0ad4ba413342aa765279aed" prot="public" virt="virtual" ambiguityscope="wxDataViewModel::"><scope>wxDataViewIndexListModel</scope><name>Compare</name></member>
+      <member refid="classwx_data_view_list_model_1ab0b63073a19c0c4fee8a9ca7121590a0" prot="public" virt="virtual"><scope>wxDataViewIndexListModel</scope><name>Compare</name></member>
       <member refid="classwx_ref_counter_1a803eb5be907b1a342082ceb59c01d8c5" prot="public" virt="non-virtual"><scope>wxDataViewIndexListModel</scope><name>DecRef</name></member>
       <member refid="classwx_data_view_model_1aa90d4fbc48f42f3c2565a3843dd4c71b" prot="public" virt="virtual"><scope>wxDataViewIndexListModel</scope><name>GetAttr</name></member>
       <member refid="classwx_data_view_list_model_1a91b1e3f8850b27663ca9f2d384599e4e" prot="public" virt="virtual"><scope>wxDataViewIndexListModel</scope><name>GetAttrByRow</name></member>

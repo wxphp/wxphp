@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="581" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" bodystart="581" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="581" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" bodystart="581" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_renderer_version_1ab91a12e1c5def44a3f3d08a744094c55" prot="public" static="no" mutable="no">
         <type>const int</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="586" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" bodystart="586" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="586" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" bodystart="586" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -47,7 +47,7 @@
 <para>This method is used by <ref refid="classwx_renderer_native_1a0536cd4ed40c392859d2e8ae37a3eaca" kindref="member">wxRendererNative::Load()</ref> to determine whether a renderer can be used. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="576"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="576"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -55,7 +55,7 @@
     <detaileddescription>
 <para>The version has two components: the version itself and the age. If the main program and the renderer have different versions they are never compatible with each other because the version is only changed when an existing virtual function is modified or removed. The age, on the other hand, is incremented each time a new virtual method is added and so, at least for the compilers using a common C++ object model, the calling program is compatible with any renderer which has the age greater or equal to its age. This verification is done by <ref refid="structwx_renderer_version_1ab9793f73e37789350c6843d08d3390d3" kindref="member">IsCompatible()</ref> method.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="568" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" bodystart="567" bodyend="587"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="568" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" bodystart="567" bodyend="587"/>
     <listofallmembers>
       <member refid="structwx_renderer_version_1a633486ac153923375764e8e6b23d942f" prot="public" virt="non-virtual"><scope>wxRendererVersion</scope><name>age</name></member>
       <member refid="structwx_renderer_version_1ab9793f73e37789350c6843d08d3390d3" prot="public" virt="non-virtual"><scope>wxRendererVersion</scope><name>IsCompatible</name></member>

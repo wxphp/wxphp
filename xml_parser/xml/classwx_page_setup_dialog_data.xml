@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="29"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="29"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1a23491aa9e7e0139d570922549f558170" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="34"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="34"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1a678ae50ce7cc90e9fc89a44c614524e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -50,7 +50,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="39"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="39"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1a896889f283079d93fa6078a9dbaa7935" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -63,7 +63,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="44"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="44"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1a718a48c0c04a359ed59aa4eceed8dcb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="49"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="49"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1a94bd54b3a42e1c7ae3b8aaba30a72b5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -97,7 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="54"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="54"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1aeaa85b49557bb1417014675274cce0ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -114,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="59"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="59"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1af24c96ed1371a23f2d525f1f52be4ba0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -131,7 +131,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="64"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="64"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1a8dcb3eb004919f9f45d83f20aa5190f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -148,7 +148,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="70"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="70"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1a6920955ac82bae272d41c5a167ae04c9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -161,7 +161,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="77"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="77"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1ace48e40ada3cef56e3acc7b1e2ebe709" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -174,7 +174,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="83"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="83"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1a89f3793d50bac0e3e10ea04bf70e69d6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -187,7 +187,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="88"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="88"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1a134bc8484d62107e78efd8c444e69fe3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -200,7 +200,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="93"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="93"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1a23b095fbc9a7fb5f968eb567fbf07881" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -213,7 +213,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="98"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="98"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1ac0a390ef325f43ca6043ab0f926ac499" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -226,7 +226,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="103"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="103"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1accee08d0a6b4e91708f6e8f19c1e6422" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -239,7 +239,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="108"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="108"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1afe2cb7600f88d80a2817e9a69b578ac4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
@@ -252,7 +252,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="113"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="113"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1a889a1a084fbf59112f5a3858493b0b82" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
@@ -265,7 +265,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="118"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="118"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1a715a097f418b4e3eabeff06ae2edc137" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
@@ -278,7 +278,7 @@
 <para>Units are in millimetres. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="124"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="124"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1a7b463aa45597ad2fc5e9a4eb6c13844e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
@@ -291,7 +291,7 @@
 <para>Units are in millimetres. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="130"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="130"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1a807b188e0dc0e70728e664f09d2d9071" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a2f01b8ae721520dff55dee68a882629a" kindref="member">wxPaperSize</ref></type>
@@ -305,7 +305,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="137"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="137"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1a9b98bb215d1b6939ab13e6cdcb1b12b4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -318,7 +318,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="142"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="142"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1aaeffb69a92ed13fd52015fcd9b13e483" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_print_data" kindref="compound">wxPrintData</ref> &amp;</type>
@@ -331,7 +331,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="147"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="147"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1a2fa9999337fe4698746e2356e13138a6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_print_data" kindref="compound">wxPrintData</ref> &amp;</type>
@@ -344,7 +344,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="148"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="148"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1a4106c2ac4fcd4e67699140145a4d73f8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -357,7 +357,7 @@
 <para>This can return false on Windows if the current printer is not set, for example. On all other platforms, it returns true. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="155"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="155"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1a2d0a1c80cfa2e6024ed13c3b39462080" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -374,7 +374,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="161"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="161"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1ac092b0fadf7cf25157b9ab2f3c50c1fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -391,7 +391,7 @@
 <para>Units are in millimetres. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="168"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="168"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1a9408861607563770543cc8f627db0a7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -408,7 +408,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="173"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="173"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1a28370147ac0f0e82250651f4fdb5c47b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -425,7 +425,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="178"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="178"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1a03a5cc66f6b27f91c9e95b14d48e79ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -442,7 +442,7 @@
 <para>Units are in millimetres. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="184"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="184"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1ad15163c356139b7ce1063cea87f2829d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -459,7 +459,7 @@
 <para>Units are in millimetres. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="190"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="190"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1afeddcd2351ca5a164a1100e5c9589a2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -477,7 +477,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="198"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="198"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1ac6b8016ceefe62d0020098ed99f2ff17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -494,7 +494,7 @@
 <para>If a corresponding paper id is found, it will be set in the internal <ref refid="classwx_print_data" kindref="compound">wxPrintData</ref> object, otherwise the paper size overrides the paper id. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="205"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="205"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1a66d1bc76a519612e124044a594ac4afe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -511,7 +511,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="210"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="210"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1ad4bccfd3e1aacce2a6dc0be8ea3303c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_page_setup_dialog_data" kindref="compound">wxPageSetupDialogData</ref> &amp;</type>
@@ -528,7 +528,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="215"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="215"/>
       </memberdef>
       <memberdef kind="function" id="classwx_page_setup_dialog_data_1aded3a9b587b8cd91cc5ab1b8ab1b66ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_page_setup_dialog_data" kindref="compound">wxPageSetupDialogData</ref> &amp;</type>
@@ -545,7 +545,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="220"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="220"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -555,37 +555,37 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__printing" kindref="compound">Printing Framework</ref>, <ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="overview_printing" kindref="compound">Printing Framework Overview</ref>, <ref refid="classwx_page_setup_dialog" kindref="compound">wxPageSetupDialog</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8517">
+      <node id="8708">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8516">
+      <node id="8707">
         <label>wxPageSetupDialogData</label>
         <link refid="classwx_page_setup_dialog_data"/>
-        <childnode refid="8517" relation="public-inheritance">
+        <childnode refid="8708" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8519">
+      <node id="8710">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8520" relation="usage">
+        <childnode refid="8711" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8518">
+      <node id="8709">
         <label>wxPageSetupDialogData</label>
         <link refid="classwx_page_setup_dialog_data"/>
-        <childnode refid="8519" relation="public-inheritance">
+        <childnode refid="8710" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8520">
+      <node id="8711">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="24" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" bodystart="23" bodyend="221"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="24" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" bodystart="23" bodyend="221"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxPageSetupDialogData</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxPageSetupDialogData</scope><name>CloneRefData</name></member>

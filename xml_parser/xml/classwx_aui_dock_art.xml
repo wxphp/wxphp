@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="100"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/dockart.h" line="100"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_dock_art_1acbcfd4caba9681f99b80da29e1fa5809" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="105"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/dockart.h" line="105"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_dock_art_1a9bac6e12be7cc862edfb71d115c6a022" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="111"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/dockart.h" line="111"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_dock_art_1ae889690f8f9ccc46a45fa3c11a2030b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -86,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="117"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/dockart.h" line="117"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_dock_art_1a2beeb9e8b4497cd0bd9120039969a73a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -119,7 +119,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="123"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/dockart.h" line="123"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_dock_art_1a443759a14c9808739cfec4c4f92d0e8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -148,7 +148,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="129"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/dockart.h" line="129"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_dock_art_1a63c5420456511a83b6646d44fc8c56ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -185,7 +185,7 @@
 <para><emphasis>button</emphasis> can be one of the values of <bold>wxAuiButtonId</bold>. <emphasis>button_state</emphasis> can be one of the values of <bold>wxAuiPaneButtonState</bold>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="138"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/dockart.h" line="138"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_dock_art_1a412e8a03632e93ac7447a0083cd7d238" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -214,7 +214,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="144"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/dockart.h" line="144"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_dock_art_1a210231fe31b1b0dafe6ea66bd4a28518" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -231,7 +231,7 @@
 <para><emphasis>id</emphasis> can be one of the colour values of <bold>wxAuiPaneDockArtSetting</bold>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="149"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/dockart.h" line="149"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_dock_art_1ab3a4c743fc3168f054788e10e3100050" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
@@ -248,7 +248,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="154"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/dockart.h" line="154"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_dock_art_1aea3a8a0b0eb98b9009e0b32e6cc7fd11" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>int</type>
@@ -265,7 +265,7 @@
 <para><emphasis>id</emphasis> can be one of the size values of <bold>wxAuiPaneDockArtSetting</bold>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="160"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/dockart.h" line="160"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_dock_art_1a906319d1191daf62148f3fa25b6d1fcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -286,7 +286,7 @@
 <para><emphasis>id</emphasis> can be one of the colour values of <bold>wxAuiPaneDockArtSetting</bold>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="166"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/dockart.h" line="166"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_dock_art_1a66e1b9f358aa5ec62e1ecbb16a2225dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -307,7 +307,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="171"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/dockart.h" line="171"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_dock_art_1a28e0bfc7853f098ba3bb551002e4ac03" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -328,7 +328,7 @@
 <para><emphasis>id</emphasis> can be one of the size values of <bold>wxAuiPaneDockArtSetting</bold>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="177"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/dockart.h" line="177"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -337,7 +337,7 @@
 <para>See also <ref refid="overview_aui" kindref="compound">wxAUI Overview</ref>.</para><para><ref refid="classwx_aui_dock_art" kindref="compound">wxAuiDockArt</ref> is the art provider: provides all drawing functionality to the wxAui dock manager. This allows the dock manager to have a plugable look-and-feel.</para><para>By default, a <ref refid="classwx_aui_manager" kindref="compound">wxAuiManager</ref> uses an instance of this class called wxAuiDefaultDockArt which provides bitmap art and a colour scheme that is adapted to the major platforms&apos; look. You can either derive from that class to alter its behaviour or write a completely new dock art class. Call <ref refid="classwx_aui_manager_1ac9969d2f9dd5e4e0050d790ad0ac6bb7" kindref="member">wxAuiManager::SetArtProvider</ref> to force wxAUI to use your new dock art provider.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxaui" kindref="member">wxAui</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__aui" kindref="compound">Window Docking (wxAUI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_aui_manager" kindref="compound">wxAuiManager</ref>, <ref refid="classwx_aui_pane_info" kindref="compound">wxAuiPaneInfo</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" line="95" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/dockart.h" bodystart="94" bodyend="178"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/dockart.h" line="95" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/dockart.h" bodystart="94" bodyend="178"/>
     <listofallmembers>
       <member refid="classwx_aui_dock_art_1a9bac6e12be7cc862edfb71d115c6a022" prot="public" virt="pure-virtual"><scope>wxAuiDockArt</scope><name>DrawBackground</name></member>
       <member refid="classwx_aui_dock_art_1ae889690f8f9ccc46a45fa3c11a2030b4" prot="public" virt="pure-virtual"><scope>wxAuiDockArt</scope><name>DrawBorder</name></member>

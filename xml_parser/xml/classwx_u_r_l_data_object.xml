@@ -21,7 +21,7 @@
 <para>If <emphasis>url</emphasis> is empty, <ref refid="classwx_u_r_l_data_object_1a6eb3ac7f0aea65eb54d005b91181bed2" kindref="member">SetURL()</ref> can be used later. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="674"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="637"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_l_data_object_1ad3359959cc67b7e8d7610959952c6f8f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="679"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="642"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_l_data_object_1a6eb3ac7f0aea65eb54d005b91181bed2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -51,7 +51,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="684"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="647"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -63,54 +63,54 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="overview_dnd" kindref="compound">Drag and Drop Overview</ref>, <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11274">
+      <node id="11463">
         <label>wxURLDataObject</label>
         <link refid="classwx_u_r_l_data_object"/>
-        <childnode refid="11275" relation="public-inheritance">
+        <childnode refid="11464" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11277">
+      <node id="11466">
         <label>wxDataObject</label>
         <link refid="classwx_data_object"/>
       </node>
-      <node id="11275">
+      <node id="11464">
         <label>wxTextDataObject</label>
         <link refid="classwx_text_data_object"/>
-        <childnode refid="11276" relation="public-inheritance">
+        <childnode refid="11465" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11276">
+      <node id="11465">
         <label>wxDataObjectSimple</label>
         <link refid="classwx_data_object_simple"/>
-        <childnode refid="11277" relation="public-inheritance">
+        <childnode refid="11466" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11278">
+      <node id="11467">
         <label>wxURLDataObject</label>
         <link refid="classwx_u_r_l_data_object"/>
-        <childnode refid="11279" relation="public-inheritance">
+        <childnode refid="11468" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11281">
+      <node id="11470">
         <label>wxDataObject</label>
         <link refid="classwx_data_object"/>
       </node>
-      <node id="11279">
+      <node id="11468">
         <label>wxTextDataObject</label>
         <link refid="classwx_text_data_object"/>
-        <childnode refid="11280" relation="public-inheritance">
+        <childnode refid="11469" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11280">
+      <node id="11469">
         <label>wxDataObjectSimple</label>
         <link refid="classwx_data_object_simple"/>
-        <childnode refid="11281" relation="public-inheritance">
+        <childnode refid="11470" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="668" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" bodystart="667" bodyend="685"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="631" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" bodystart="630" bodyend="648"/>
     <listofallmembers>
       <member refid="classwx_data_object_1a7623fd02a6bef5dba7c96ff0a1a692efa1f94b69e55238c5470f85e252b5fd8df" prot="public" virt="non-virtual"><scope>wxURLDataObject</scope><name>Both</name></member>
       <member refid="classwx_data_object_1a7623fd02a6bef5dba7c96ff0a1a692ef" prot="public" virt="non-virtual"><scope>wxURLDataObject</scope><name>Direction</name></member>
@@ -121,8 +121,7 @@
       <member refid="classwx_data_object_simple_1aac4311ab34deb1028d471c6a435574ff" prot="public" virt="virtual"><scope>wxURLDataObject</scope><name>GetDataSize</name></member>
       <member refid="classwx_data_object_1a10674c65e59f08ba318f942e410b8627" prot="public" virt="pure-virtual" ambiguityscope="wxDataObject::"><scope>wxURLDataObject</scope><name>GetDataSize</name></member>
       <member refid="classwx_text_data_object_1a73b44708bbca270fb80dbf2ca267488e" prot="public" virt="non-virtual"><scope>wxURLDataObject</scope><name>GetFormat</name></member>
-      <member refid="classwx_text_data_object_1ab1a9ad66f48fed3e8eeea799d798eb95" prot="public" virt="virtual"><scope>wxURLDataObject</scope><name>GetFormatCount</name></member>
-      <member refid="classwx_data_object_1a3f82815810bf4dcc34e1a5783c9b8a62" prot="public" virt="pure-virtual" ambiguityscope="wxDataObjectSimple::"><scope>wxURLDataObject</scope><name>GetFormatCount</name></member>
+      <member refid="classwx_text_data_object_1aeb197612bcadc2f37aecdfc4acee9b55" prot="public" virt="virtual"><scope>wxURLDataObject</scope><name>GetFormatCount</name></member>
       <member refid="classwx_data_object_1a47570ed6123bbebec195a2b7f843103c" prot="public" virt="pure-virtual"><scope>wxURLDataObject</scope><name>GetPreferredFormat</name></member>
       <member refid="classwx_text_data_object_1a6b43294c05885cc8981b37f3c42815bd" prot="public" virt="virtual"><scope>wxURLDataObject</scope><name>GetText</name></member>
       <member refid="classwx_text_data_object_1a15a488fff1040695932831cbf91dc5c8" prot="public" virt="virtual"><scope>wxURLDataObject</scope><name>GetTextLength</name></member>

@@ -20,10 +20,10 @@
         <briefdescription>
 <para>This function can be used to perform the initialization of wxWidgets if you can&apos;t use the default initialization code for any reason. </para>        </briefdescription>
         <detaileddescription>
-<para>If the function returns true, the initialization was successful and the global <ref refid="classwx_app" kindref="compound">wxApp</ref> object <ref refid="interface_2wx_2app_8h_1a01fd2cb0a8fbaade87800e71a50e855d" kindref="member">wxTheApp</ref> has been created. Moreover, <ref refid="group__group__funcmacro__appinitterm_1gaca1c6e45c8241bb2b16bee8f09401bc8" kindref="member">wxEntryCleanup()</ref> must be called afterwards. If the function returns false, a catastrophic initialization error occured and (at least the GUI part of) the library can&apos;t be used at all.</para><para>Notice that parameters <computeroutput>argc</computeroutput> and <computeroutput>argv</computeroutput> may be modified by this function.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/init.h&gt; </verbatim> </para>        </detaileddescription>
+<para>If the function returns true, the initialization was successful and the global <ref refid="classwx_app" kindref="compound">wxApp</ref> object <ref refid="interface_2wx_2app_8h_1a01fd2cb0a8fbaade87800e71a50e855d" kindref="member">wxTheApp</ref> has been created. Moreover, <ref refid="group__group__funcmacro__appinitterm_1gaca1c6e45c8241bb2b16bee8f09401bc8" kindref="member">wxEntryCleanup()</ref> must be called afterwards. If the function returns false, a catastrophic initialization error occurred and (at least the GUI part of) the library can&apos;t be used at all.</para><para>Notice that parameters <computeroutput>argc</computeroutput> and <computeroutput>argv</computeroutput> may be modified by this function.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/init.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/init.h" line="62"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/init.h" line="62"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__appinitterm_1gabb589cfa967f83fa867544cd13cd0b53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -56,7 +56,7 @@
 Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/init.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/init.h" line="80"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/init.h" line="80"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__appinitterm_1gaca1c6e45c8241bb2b16bee8f09401bc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -69,7 +69,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/init.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/init.h" line="87"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/init.h" line="87"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__appinitterm_1ga5f7f9359731d567d05c472caabcda979" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -92,7 +92,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 <para>With this function you may avoid <ref refid="group__group__funcmacro__rtti_1ga1523a2d553dea288d66cd35e8a0ffd5c" kindref="member">wxDECLARE_APP()</ref> and <ref refid="group__group__funcmacro__rtti_1ga967aafaa261481fe2d2e1cf599e3e003" kindref="member">wxIMPLEMENT_APP()</ref> macros and use <ref refid="group__group__funcmacro__appinitterm_1gaa7b284f57a94442126d1e45faca5b4ad" kindref="member">wxInitialize()</ref> and <ref refid="group__group__funcmacro__appinitterm_1ga6aa1674945da924183f65de703aeafa3" kindref="member">wxUninitialize()</ref> dynamically in the program startup and termination.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/init.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/init.h" line="99"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/init.h" line="99"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__appinitterm_1ga6aa1674945da924183f65de703aeafa3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -105,13 +105,13 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 <para>Clean up; the library can&apos;t be used any more after the last call to <ref refid="group__group__funcmacro__appinitterm_1ga6aa1674945da924183f65de703aeafa3" kindref="member">wxUninitialize()</ref>.</para><para>It must be called once for each previous successful call to <ref refid="group__group__funcmacro__appinitterm_1gaa7b284f57a94442126d1e45faca5b4ad" kindref="member">wxInitialize()</ref>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/app.h&gt; </verbatim></para><para>See <ref refid="group__group__funcmacro__appinitterm_1gaa7b284f57a94442126d1e45faca5b4ad" kindref="member">wxInitialize()</ref> for more info.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/init.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="989"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/app.h" line="978"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/init.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/init.h"/>
   </compounddef>
 </doxygen>

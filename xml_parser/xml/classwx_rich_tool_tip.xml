@@ -20,7 +20,7 @@
 <para>The icon can be either one of the standard information/warning/error ones, i.e. wxICON_INFORMATION, wxICON_WARNING or wxICON_ERROR respectively (the question icon doesn&apos;t make sense for a tooltip so wxICON_QUESTION can&apos;t be used here) or a custom icon. The latter is unsupported by the native MSW implementation of this class so the use of a standard icon is preferred. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtooltip.h" line="131"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtooltip.h" line="131"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_tool_tip_1ac47b9f9896867acf933326e64e9cd260" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -37,7 +37,7 @@
 <para>The icon can be either one of the standard information/warning/error ones, i.e. wxICON_INFORMATION, wxICON_WARNING or wxICON_ERROR respectively (the question icon doesn&apos;t make sense for a tooltip so wxICON_QUESTION can&apos;t be used here) or a custom icon. The latter is unsupported by the native MSW implementation of this class so the use of a standard icon is preferred. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtooltip.h" line="132"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtooltip.h" line="132"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -60,7 +60,7 @@
 <para>The main message can contain embedded new lines. Both the title and message must be non-empty.</para><para>Additional attributes can be set later. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtooltip.h" line="105"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtooltip.h" line="105"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_tool_tip_1abc2ac6aff7ca4404622b8e5a24a7d6df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -82,7 +82,7 @@
 <para>If two colours are specified, the background is drawn using a gradient from top to bottom, otherwise a single solid colour is used.</para><para>By default the colour or colours most appropriate for the current platform are used. If a colour is explicitly set, native MSW version won&apos;t be used as it doesn&apos;t support setting the colour. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtooltip.h" line="118"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtooltip.h" line="118"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_tool_tip_1a27e80dc507f2edf3cbb0416edf2cd2d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -99,7 +99,7 @@
 <para>By default the tooltip is hidden after system-dependent interval of time elapses but this method can be used to change this or also disable hiding the tooltip automatically entirely by passing 0 in this parameter (but doing this will prevent the native MSW version from being used).</para><para>Notice that the tooltip will always be hidden if the user presses a key or clicks a mouse button. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtooltip.h" line="146"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtooltip.h" line="146"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_tool_tip_1aaac181d1f2eb1cc1c962c9d27528b6dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -116,7 +116,7 @@
 <para>See wxTipKind documentation for the possible choices here.</para><para>By default the tip is positioned automatically, as if wxTipKind_Auto was used. Native MSW implementation doesn&apos;t support setting the tip kind explicitly and won&apos;t be used if this method is called with any value other than wxTipKind_Auto.</para><para>Notice that using non automatic tooltip kind may result in the tooltip being positioned partially off screen and it&apos;s the callers responsibility to ensure that this doesn&apos;t happen in this case. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtooltip.h" line="162"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtooltip.h" line="162"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_tool_tip_1a3268339723ba6bf65c0eb3809b9914eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -133,7 +133,7 @@
 <para>By default it&apos;s emphasized using the font style or colour appropriate for the current platform. Calling this method prevents the native MSW implementation from being used as it doesn&apos;t support changing the font. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtooltip.h" line="171"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtooltip.h" line="171"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_tool_tip_1a2472ccfce72065f8e1768bedf6e410a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -150,7 +150,7 @@
 <para>The tooltip tip points to the (middle of the) specified window which must be non-NULL.</para><para>Currently the native MSW implementation is used only if <emphasis>win</emphasis> is a <ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref>. This limitation may be removed in the future. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtooltip.h" line="182"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtooltip.h" line="182"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_tool_tip_1a5181e48b3834ca6d834b9a2399a64a8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -163,7 +163,7 @@
 <para>Notice that destroying this object does not hide the tooltip if it&apos;s currently shown, it will be hidden and destroyed when the user dismisses it or the timeout expires.</para><para>The destructor is non-virtual as this class is not supposed to be derived from. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtooltip.h" line="194"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtooltip.h" line="194"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -181,7 +181,7 @@
 </programlisting></para><para>Currently this class has generic implementation that can be used with any window and implements all the functionality but doesn&apos;t exactly match the appearance of the native tooltips (even though it makes some efforts to use the style most appropriate for the current platform) and a native MSW version which can be only used with text controls and doesn&apos;t provide as much in the way of customization. Because of this, it&apos;s inadvisable to customize the tooltips unnecessarily as doing this turns off auto-detection of the native style in the generic version and may prevent the native MSW version from being used at all.</para><para>Notice that this class is not derived from <ref refid="classwx_window" kindref="compound">wxWindow</ref> and hence doesn&apos;t represent a window, even if its <ref refid="classwx_rich_tool_tip_1a2472ccfce72065f8e1768bedf6e410a0" kindref="member">ShowFor()</ref> method does create one internally to show the tooltip.</para><para>The images below show some examples of rich tooltips on different platforms, with various customizations applied.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/richtooltip.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/richtooltip.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/richtooltip.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="since"><para>2.9.3 </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtooltip.h" line="95" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtooltip.h" bodystart="94" bodyend="195"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtooltip.h" line="95" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtooltip.h" bodystart="94" bodyend="195"/>
     <listofallmembers>
       <member refid="classwx_rich_tool_tip_1abc2ac6aff7ca4404622b8e5a24a7d6df" prot="public" virt="non-virtual"><scope>wxRichToolTip</scope><name>SetBackgroundColour</name></member>
       <member refid="classwx_rich_tool_tip_1a51e540bf634f3e0fdd457f49abb11021" prot="public" virt="non-virtual"><scope>wxRichToolTip</scope><name>SetIcon</name></member>

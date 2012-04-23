@@ -37,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="646" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="646" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="646" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="646" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dataview_8h_1af83b7e09f249047a58f92d705936736b" prot="public" static="no">
         <name>wxDVC_DEFAULT_WIDTH</name>
@@ -48,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="649" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="649" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="649" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="649" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dataview_8h_1aa168b03bd1e4e0cc16f210ca9ed15a84" prot="public" static="no">
         <name>wxDVC_TOGGLE_DEFAULT_WIDTH</name>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="652" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="652" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="652" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="652" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dataview_8h_1add69dc9e5372e241bd1ee7b82a878301" prot="public" static="no">
         <name>wxDVC_DEFAULT_MINWIDTH</name>
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="655" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="655" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="655" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="655" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dataview_8h_1a77ad20c54ebb9682cd3cbd1f7c90affe" prot="public" static="no">
         <name>wxDVR_DEFAULT_ALIGNMENT</name>
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="659" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="659" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="659" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="659" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dataview_8h_1a075415db603ace41f4473303993cbc6b" prot="public" static="no">
         <name>wxDV_SINGLE</name>
@@ -92,7 +92,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="661" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="661" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="661" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="661" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dataview_8h_1aceddbd4f590643b3ac64c8c4df2160de" prot="public" static="no">
         <name>wxDV_MULTIPLE</name>
@@ -103,7 +103,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="662" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="662" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="662" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="662" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dataview_8h_1a11a8b6d5101172dc8acea83252cf9afd" prot="public" static="no">
         <name>wxDV_NO_HEADER</name>
@@ -114,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="664" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="664" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="664" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="664" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dataview_8h_1ad8cd4bc7d60556cfef1d80d0601d0873" prot="public" static="no">
         <name>wxDV_HORIZ_RULES</name>
@@ -125,7 +125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="665" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="665" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="665" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="665" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dataview_8h_1a7253326651fe62affaea492a1028e20d" prot="public" static="no">
         <name>wxDV_VERT_RULES</name>
@@ -136,7 +136,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="666" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="666" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="666" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="666" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dataview_8h_1ad5b809360b4fcaf1eb5ad286b5b69981" prot="public" static="no">
         <name>wxDV_ROW_LINES</name>
@@ -147,7 +147,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="668" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="668" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="668" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="668" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="dataview_8h_1aacd67b2eb820758743de2aa3ec434e53" prot="public" static="no">
         <name>wxDV_VARIABLE_LINE_HEIGHT</name>
@@ -158,7 +158,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="669" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="669" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="669" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="669" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="enum">
@@ -194,7 +194,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1374" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="1373" bodyend="1425"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="1374" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="1373" bodyend="1425"/>
       </memberdef>
       <memberdef kind="enum" id="dataview_8h_1ac165875cd54c065f2aebcc7cd795ff6e" prot="public" static="no">
         <name>wxDataViewCellRenderState</name>
@@ -236,7 +236,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1432" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="1431" bodyend="1437"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="1432" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="1431" bodyend="1437"/>
       </memberdef>
       <memberdef kind="enum" id="dataview_8h_1a156305189c948da3fa8fa0268d9774f9" prot="public" static="no">
         <name>wxDataViewColumnFlags</name>
@@ -278,7 +278,7 @@
 <para>Can be combined together. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1966" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="1965" bodyend="1971"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="1966" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="1965" bodyend="1971"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -293,7 +293,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="673" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="673" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="673" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="673" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="dataview_8h_1a1b7039f39f9298e3a7ad70d09aee6657" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -306,7 +306,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="675" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="675" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="675" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="675" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="dataview_8h_1a2cbdc1d81b3ad03fea634715e581c20f" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -319,7 +319,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="676" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="676" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="676" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="676" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="dataview_8h_1aa5fc64d7050cc3c4c3664528a96a67e3" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -332,7 +332,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="677" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="677" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="677" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="677" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="dataview_8h_1ac47619f9b5b29071fdbd3a6958817b4d" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -345,7 +345,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="678" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="678" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="678" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="678" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="dataview_8h_1a703104aa71ac0eedaabbc2145d88d681" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -358,7 +358,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="679" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="679" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="679" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="679" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="dataview_8h_1abc257b056d241eb57b6abadf68e4e4cd" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -371,7 +371,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="680" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="680" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="680" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="680" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="dataview_8h_1a99343f534abaff4ef0534c578182fa3b" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -384,7 +384,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="681" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="681" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="681" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="681" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="dataview_8h_1af091e33ef1a85393af309a4aab4e9f5c" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -397,7 +397,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="682" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="682" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="682" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="682" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="dataview_8h_1a6f4e755bc3384c416a56dcc392774986" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -410,7 +410,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="683" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="683" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="683" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="683" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="dataview_8h_1aebbf3e6559b2e436d832be7bbbfe1106" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -423,7 +423,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="685" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="685" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="685" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="685" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="dataview_8h_1a2eea2002f949432eb38fb1cec2e96e69" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -436,7 +436,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="687" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="687" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="687" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="687" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="dataview_8h_1ad86749180ed3a98458348eda6ade8f53" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -449,7 +449,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="688" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="688" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="688" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="688" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="dataview_8h_1a3898581281b3c2804976ab287bd1de47" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -462,7 +462,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="689" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="689" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="689" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="689" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="dataview_8h_1a3e938fdcc012e53f3ff27d393d8a58ea" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -475,7 +475,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="690" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="690" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="690" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="690" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="dataview_8h_1a90a3b154bfdb827bf5e82e0bc285c9e8" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -488,7 +488,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="691" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="691" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="691" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="691" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="dataview_8h_1aee4f85a4533c810282e5a831738976be" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -501,7 +501,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="693" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="693" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="693" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="693" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="dataview_8h_1ab06b6817c66a319c737c447392b83b74" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -514,7 +514,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="694" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="694" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="694" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="694" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="dataview_8h_1ad07bd5e73afb2af6e29feaa0a151cc93" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -527,13 +527,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="695" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="695" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="695" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="695" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h"/>
   </compounddef>
 </doxygen>

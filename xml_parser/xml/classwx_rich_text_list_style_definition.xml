@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="453"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="448"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_list_style_definition_1ad815b51172c284982126d9ffd5079ba9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="458"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="453"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_list_style_definition_1abc99a276e09958f7192eb669ae241ba7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_text_attr" kindref="compound">wxTextAttr</ref></type>
@@ -60,7 +60,7 @@
 <para>If <emphasis>styleSheet</emphasis> is specified, the base style for this definition will also be included in the result. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="469"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="464"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_list_style_definition_1aeb0eb1462e1c723d337d53e2649dc40d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -77,7 +77,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="475"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="470"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_list_style_definition_1a99e1bce6545cc65ab3706c47b515dbeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_text_attr" kindref="compound">wxTextAttr</ref></type>
@@ -99,13 +99,13 @@
 <para>If <emphasis>styleSheet</emphasis> is specified, the base style for this definition will also be included in the result. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="485"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="480"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_rich_text_list_style_definition_1af066f83c2366ac5776c72ec5d3040535" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_rich_text_list_style_definition_1a0aaa94af5609196bc34ebc1f0b849059" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_text_attr" kindref="compound">wxTextAttr</ref></type>
-        <definition>wxTextAttr wxRichTextListStyleDefinition::GetCombinedStyleLevel</definition>
+        <definition>wxTextAttr wxRichTextListStyleDefinition::GetCombinedStyleForLevel</definition>
         <argsstring>(int level, wxRichTextStyleSheet *styleSheet=NULL) const </argsstring>
-        <name>GetCombinedStyleLevel</name>
+        <name>GetCombinedStyleForLevel</name>
         <param>
           <type>int</type>
           <declname>level</declname>
@@ -121,7 +121,7 @@
 <para>If <emphasis>styleSheet</emphasis> is specified, the base style for this definition will also be included in the result. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="495"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="491"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_list_style_definition_1a551527add8a7626339218256c0f5172a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_text_attr" kindref="compound">wxTextAttr</ref> *</type>
@@ -138,7 +138,7 @@
 <para><emphasis>level</emphasis> is a number between 0 and 9. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="500"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="496"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_list_style_definition_1a557963f1703f1d51d9a8970b90d4051b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -151,7 +151,7 @@
 <para>This is hard-wired to 10. Returns the style for the given level. <emphasis>level</emphasis> is a number between 0 and 9. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="506"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="502"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_list_style_definition_1a4bad223140e5a0a31721938283bcd80b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -168,7 +168,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="511"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="507"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_list_style_definition_1a4f47566cd4aaa6c74a9a76670af4bf78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -189,7 +189,7 @@
 <para><emphasis>level</emphasis> is a number between 0 and 9. The first and most flexible form uses a <ref refid="classwx_text_attr" kindref="compound">wxTextAttr</ref> object, while the second form is for convenient setting of the most commonly-used attributes. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="518"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="514"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -198,61 +198,61 @@
 <para>The class inherits paragraph attributes from wxRichTextStyleParagraphDefinition, and adds 10 further attribute objects, one for each level of a list. When applying a list style to a paragraph, the list style&apos;s base and appropriate level attributes are merged with the paragraph&apos;s existing attributes.</para><para>You can apply a list style to one or more paragraphs using <ref refid="classwx_rich_text_ctrl_1a15e151f9cd434826444ab554dd43bef3" kindref="member">wxRichTextCtrl::SetListStyle</ref>. You can also use the functions <ref refid="classwx_rich_text_ctrl_1a23b8f0b42ba7f128127d749c13ede06e" kindref="member">wxRichTextCtrl::NumberList</ref>, <ref refid="classwx_rich_text_ctrl_1a9dd10bf2c0e23dbd51f4d27cc7f2f9f8" kindref="member">wxRichTextCtrl::PromoteList</ref> and <ref refid="classwx_rich_text_ctrl_1a02d1ffb4bf82f96b041889235c4bc441" kindref="member">wxRichTextCtrl::ClearListStyle</ref>.</para><para>As usual, there are <ref refid="classwx_rich_text_buffer" kindref="compound">wxRichTextBuffer</ref> versions of these functions so that you can apply them directly to a buffer without requiring a control.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9692">
+      <node id="9875">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="9690">
+      <node id="9873">
         <label>wxRichTextParagraphStyleDefinition</label>
         <link refid="classwx_rich_text_paragraph_style_definition"/>
-        <childnode refid="9691" relation="public-inheritance">
+        <childnode refid="9874" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9689">
+      <node id="9872">
         <label>wxRichTextListStyleDefinition</label>
         <link refid="classwx_rich_text_list_style_definition"/>
-        <childnode refid="9690" relation="public-inheritance">
+        <childnode refid="9873" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9691">
+      <node id="9874">
         <label>wxRichTextStyleDefinition</label>
         <link refid="classwx_rich_text_style_definition"/>
-        <childnode refid="9692" relation="public-inheritance">
+        <childnode refid="9875" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9696">
+      <node id="9879">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9697" relation="usage">
+        <childnode refid="9880" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9694">
+      <node id="9877">
         <label>wxRichTextParagraphStyleDefinition</label>
         <link refid="classwx_rich_text_paragraph_style_definition"/>
-        <childnode refid="9695" relation="public-inheritance">
+        <childnode refid="9878" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9693">
+      <node id="9876">
         <label>wxRichTextListStyleDefinition</label>
         <link refid="classwx_rich_text_list_style_definition"/>
-        <childnode refid="9694" relation="public-inheritance">
+        <childnode refid="9877" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9695">
+      <node id="9878">
         <label>wxRichTextStyleDefinition</label>
         <link refid="classwx_rich_text_style_definition"/>
-        <childnode refid="9696" relation="public-inheritance">
+        <childnode refid="9879" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9697">
+      <node id="9880">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="448" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" bodystart="447" bodyend="519"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="443" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" bodystart="442" bodyend="515"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxRichTextListStyleDefinition</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxRichTextListStyleDefinition</scope><name>CloneRefData</name></member>
@@ -262,7 +262,7 @@
       <member refid="classwx_rich_text_style_definition_1a738696e84705cfa5408f1df73a4c0e6a" prot="public" virt="non-virtual"><scope>wxRichTextListStyleDefinition</scope><name>GetBaseStyle</name></member>
       <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxRichTextListStyleDefinition</scope><name>GetClassInfo</name></member>
       <member refid="classwx_rich_text_list_style_definition_1a99e1bce6545cc65ab3706c47b515dbeb" prot="public" virt="non-virtual"><scope>wxRichTextListStyleDefinition</scope><name>GetCombinedStyle</name></member>
-      <member refid="classwx_rich_text_list_style_definition_1af066f83c2366ac5776c72ec5d3040535" prot="public" virt="non-virtual"><scope>wxRichTextListStyleDefinition</scope><name>GetCombinedStyleLevel</name></member>
+      <member refid="classwx_rich_text_list_style_definition_1a0aaa94af5609196bc34ebc1f0b849059" prot="public" virt="non-virtual"><scope>wxRichTextListStyleDefinition</scope><name>GetCombinedStyleForLevel</name></member>
       <member refid="classwx_rich_text_style_definition_1a1b43cb6485a25cd777ab0ae258f1e10b" prot="public" virt="non-virtual"><scope>wxRichTextListStyleDefinition</scope><name>GetDescription</name></member>
       <member refid="classwx_rich_text_list_style_definition_1a551527add8a7626339218256c0f5172a" prot="public" virt="non-virtual"><scope>wxRichTextListStyleDefinition</scope><name>GetLevelAttributes</name></member>
       <member refid="classwx_rich_text_list_style_definition_1a557963f1703f1d51d9a8970b90d4051b" prot="public" virt="non-virtual"><scope>wxRichTextListStyleDefinition</scope><name>GetLevelCount</name></member>

@@ -26,7 +26,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1205"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1201"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_event_1aff44b6165180088ba1f493bd73bb2cfd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1208"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1204"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_event_1add8088c3d42a76a2e728f300f2cb01da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -56,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1211"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1207"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_event_1aebf868380eef99a405f9576b69742f12" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1216"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1212"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_event_1a81b6be281edd0fe170b80dc9f592334a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned int</type>
@@ -82,7 +82,7 @@
 <para>For the column dragging events, it is the column to the left of the splitter being dragged </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1223"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1219"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_event_1a6f31d0996895c1cd8b38c5c264b2921d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -96,7 +96,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1233"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1229"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_event_1a6038b47795f707535e61b3716e1b34ca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -110,7 +110,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1243"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1239"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_event_1a0f8c03ab723a6671f9ad3fa98fca95fe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2propgrid_2propgrid_8h_1ae6021bf370bb7766e513f49649dee232" kindref="member">wxPGVFBFlags</ref></type>
@@ -123,7 +123,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1248"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1244"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_event_1a4dc67c4487b509f823f434a6b6d77ec7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -137,7 +137,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1257"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1253"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_event_1a577d7fb277be169e295726878dcbb7db" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_variant" kindref="compound">wxVariant</ref></type>
@@ -152,7 +152,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1274"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1270"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_event_1a5a1e16f9b4b79be5e26823b2d7a538f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -169,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1279"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1275"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_event_1a272ce7849a1f2c11aa22dfc354e89bf3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -186,7 +186,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1282"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1278"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_event_1af0e3f38f5f6ba53f734aeff32c13a3b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -203,7 +203,7 @@
 <para>Only effective if <ref refid="classwx_property_grid_event_1a5e35bf2aeaad48147c0270e9b04426c8" kindref="member">Veto()</ref> was also called, and only allowed if event type is <computeroutput>wxEVT_PG_CHANGING</computeroutput>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1288"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1284"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_event_1a3e8036ea8f867f0d94548165bc2914cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -220,7 +220,7 @@
 <para>Only applies if wxPG_VFB_SHOW_MESSAGE is set in validation failure flags. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1294"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1290"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_event_1a5e35bf2aeaad48147c0270e9b04426c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -239,7 +239,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1303"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1299"/>
       </memberdef>
       <memberdef kind="function" id="classwx_property_grid_event_1af70e7f2f95460c9505cf06be170f5b85" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -252,7 +252,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1308"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1304"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -261,61 +261,61 @@
 <para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxpropgrid" kindref="member">wxPropertyGrid</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__propgrid" kindref="compound">wxPropertyGrid</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8885">
+      <node id="9068">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8883">
+      <node id="9066">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="8884" relation="public-inheritance">
+        <childnode refid="9067" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8882">
+      <node id="9065">
         <label>wxPropertyGridEvent</label>
         <link refid="classwx_property_grid_event"/>
-        <childnode refid="8883" relation="public-inheritance">
+        <childnode refid="9066" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8884">
+      <node id="9067">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="8885" relation="public-inheritance">
+        <childnode refid="9068" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8889">
+      <node id="9072">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8890" relation="usage">
+        <childnode refid="9073" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8887">
+      <node id="9070">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="8888" relation="public-inheritance">
+        <childnode refid="9071" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8886">
+      <node id="9069">
         <label>wxPropertyGridEvent</label>
         <link refid="classwx_property_grid_event"/>
-        <childnode refid="8887" relation="public-inheritance">
+        <childnode refid="9070" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8888">
+      <node id="9071">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="8889" relation="public-inheritance">
+        <childnode refid="9072" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8890">
+      <node id="9073">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" line="1201" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/propgrid.h" bodystart="1200" bodyend="1309"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" line="1197" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/propgrid.h" bodystart="1196" bodyend="1305"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxPropertyGridEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_property_grid_event_1aebf868380eef99a405f9576b69742f12" prot="public" virt="non-virtual"><scope>wxPropertyGridEvent</scope><name>CanVeto</name></member>

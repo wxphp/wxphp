@@ -17,7 +17,7 @@
 <para>Use <ref refid="classwx_m_d_i_parent_frame_1a72bf23c5e4ad28a8954b37e4951a3b73" kindref="member">Create()</ref> for the objects created using this constructor. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mdi.h" line="125"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mdi.h" line="125"/>
       </memberdef>
       <memberdef kind="function" id="classwx_m_d_i_parent_frame_1a2a0474f15d906269b8d26381f4701209" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -114,7 +114,7 @@ Under wxMSW, the client window will automatically have a sunken border style whe
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mdi.h" line="171"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mdi.h" line="171"/>
       </memberdef>
       <memberdef kind="function" id="classwx_m_d_i_parent_frame_1a491f605f0656a75cc8c9b639bb53e021" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -127,7 +127,7 @@ Under wxMSW, the client window will automatically have a sunken border style whe
 <para>Destroys all child windows and menu bar if present. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mdi.h" line="178"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mdi.h" line="178"/>
       </memberdef>
       <memberdef kind="function" id="classwx_m_d_i_parent_frame_1a2a0bef9cdd7faa9d95d40a27c1b30a16" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -141,7 +141,7 @@ Under wxMSW, the client window will automatically have a sunken border style whe
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mdi.h" line="189"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mdi.h" line="189"/>
       </memberdef>
       <memberdef kind="function" id="classwx_m_d_i_parent_frame_1a4041e26dedf4da4cf42c2fc6f222aabf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -155,7 +155,7 @@ Under wxMSW, the client window will automatically have a sunken border style whe
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mdi.h" line="196"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mdi.h" line="196"/>
       </memberdef>
       <memberdef kind="function" id="classwx_m_d_i_parent_frame_1afea822ee3bea12c7bbaee953d9ffbc04" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -169,7 +169,7 @@ Under wxMSW, the client window will automatically have a sunken border style whe
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mdi.h" line="206"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mdi.h" line="206"/>
       </memberdef>
       <memberdef kind="function" id="classwx_m_d_i_parent_frame_1ac832b392f22a3156797aa03e9c11530c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -183,7 +183,7 @@ Under wxMSW, the client window will automatically have a sunken border style whe
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mdi.h" line="216"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mdi.h" line="216"/>
       </memberdef>
       <memberdef kind="function" id="classwx_m_d_i_parent_frame_1a72bf23c5e4ad28a8954b37e4951a3b73" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -229,7 +229,7 @@ Under wxMSW, the client window will automatically have a sunken border style whe
 <para>See <ref refid="classwx_m_d_i_parent_frame_1aa3c4ce92f07f8a699c433a911a6634a9" kindref="member">wxMDIParentFrame()</ref> for further details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mdi.h" line="229"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mdi.h" line="229"/>
       </memberdef>
       <memberdef kind="function" id="classwx_m_d_i_parent_frame_1a981df3eae1daa82772fe10e3bcba7215" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_m_d_i_child_frame" kindref="compound">wxMDIChildFrame</ref> *</type>
@@ -242,7 +242,7 @@ Under wxMSW, the client window will automatically have a sunken border style whe
 <para>If there are any children at all this function returns a non-NULL pointer. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mdi.h" line="237"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mdi.h" line="237"/>
       </memberdef>
       <memberdef kind="function" id="classwx_m_d_i_parent_frame_1ad56178287336d30e658c636a8cb096da" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>wxMDIClientWindowBase *</type>
@@ -256,7 +256,7 @@ Under wxMSW, the client window will automatically have a sunken border style whe
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mdi.h" line="244"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mdi.h" line="244"/>
       </memberdef>
       <memberdef kind="function" id="classwx_m_d_i_parent_frame_1a269756cc08549cc14cee518a1cde784a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu" kindref="compound">wxMenu</ref> *</type>
@@ -270,7 +270,7 @@ Under wxMSW, the client window will automatically have a sunken border style whe
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mdi.h" line="259"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mdi.h" line="259"/>
       </memberdef>
       <memberdef kind="function" id="classwx_m_d_i_parent_frame_1a218d7f590ee36e9a113b5321eb4a83cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_m_d_i_client_window" kindref="compound">wxMDIClientWindow</ref> *</type>
@@ -287,7 +287,7 @@ You might wish to derive from <ref refid="classwx_m_d_i_client_window" kindref="
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mdi.h" line="299"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mdi.h" line="299"/>
       </memberdef>
       <memberdef kind="function" id="classwx_m_d_i_parent_frame_1ae90c299c5709d5a3940165cc36ff3ad5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -314,7 +314,7 @@ You might wish to derive from <ref refid="classwx_m_d_i_client_window" kindref="
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mdi.h" line="329"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mdi.h" line="329"/>
       </memberdef>
       <memberdef kind="function" id="classwx_m_d_i_parent_frame_1a7f1eff1bf46b4f7a399d1d20ca3ed374" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -332,7 +332,7 @@ You might wish to derive from <ref refid="classwx_m_d_i_client_window" kindref="
 <para>This method is only implemented in MSW MDI implementation and does nothing under the other platforms. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mdi.h" line="339"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mdi.h" line="339"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -347,7 +347,7 @@ You might wish to derive from <ref refid="classwx_m_d_i_client_window" kindref="
 <para>Currently only the MSW port uses the real MDI. In Mac ports the usual SDI is used, as common under this platforms, and all the other ports use TDI implementation.</para><para>TDI-based MDI applications have different appearance and functionality (e.g. child frames can&apos;t be minimized and only one of them is visible at any given time) so the application may need to adapt its interface somewhat depending on the return value of this function. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mdi.h" line="273"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mdi.h" line="273"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -359,115 +359,115 @@ Although it is possible to have multiple MDI parent frames, a typical MDI applic
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__managedwnd" kindref="compound">Managed Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_m_d_i_child_frame" kindref="compound">wxMDIChildFrame</ref>, <ref refid="classwx_m_d_i_client_window" kindref="compound">wxMDIClientWindow</ref>, <ref refid="classwx_frame" kindref="compound">wxFrame</ref>, <ref refid="classwx_dialog" kindref="compound">wxDialog</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7632">
+      <node id="7825">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="7633" relation="public-inheritance">
+        <childnode refid="7826" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7635">
+      <node id="7828">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7634">
+      <node id="7827">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7635" relation="public-inheritance">
+        <childnode refid="7828" relation="public-inheritance">
         </childnode>
-        <childnode refid="7636" relation="public-inheritance">
+        <childnode refid="7829" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7636">
+      <node id="7829">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7633">
+      <node id="7826">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7634" relation="public-inheritance">
+        <childnode refid="7827" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7637">
+      <node id="7830">
         <label>wxDocMDIParentFrame</label>
         <link refid="classwx_doc_m_d_i_parent_frame"/>
-        <childnode refid="7629" relation="public-inheritance">
+        <childnode refid="7822" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7630">
+      <node id="7823">
         <label>wxFrame</label>
         <link refid="classwx_frame"/>
-        <childnode refid="7631" relation="public-inheritance">
+        <childnode refid="7824" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7631">
+      <node id="7824">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="7632" relation="public-inheritance">
+        <childnode refid="7825" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7629">
+      <node id="7822">
         <label>wxMDIParentFrame</label>
         <link refid="classwx_m_d_i_parent_frame"/>
-        <childnode refid="7630" relation="public-inheritance">
+        <childnode refid="7823" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7641">
+      <node id="7834">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="7642" relation="public-inheritance">
+        <childnode refid="7835" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7644">
+      <node id="7837">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7645" relation="usage">
+        <childnode refid="7838" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7643">
+      <node id="7836">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7644" relation="public-inheritance">
+        <childnode refid="7837" relation="public-inheritance">
         </childnode>
-        <childnode refid="7646" relation="public-inheritance">
+        <childnode refid="7839" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7646">
+      <node id="7839">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7642">
+      <node id="7835">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7643" relation="public-inheritance">
+        <childnode refid="7836" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7639">
+      <node id="7832">
         <label>wxFrame</label>
         <link refid="classwx_frame"/>
-        <childnode refid="7640" relation="public-inheritance">
+        <childnode refid="7833" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7640">
+      <node id="7833">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="7641" relation="public-inheritance">
+        <childnode refid="7834" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7638">
+      <node id="7831">
         <label>wxMDIParentFrame</label>
         <link refid="classwx_m_d_i_parent_frame"/>
-        <childnode refid="7639" relation="public-inheritance">
+        <childnode refid="7832" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7645">
+      <node id="7838">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mdi.h" line="117" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mdi.h" bodystart="116" bodyend="340"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mdi.h" line="117" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/mdi.h" bodystart="116" bodyend="340"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxMDIParentFrame</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxMDIParentFrame</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -509,7 +509,7 @@ Although it is possible to have multiple MDI parent frames, a typical MDI applic
       <member refid="classwx_m_d_i_parent_frame_1a72bf23c5e4ad28a8954b37e4951a3b73" prot="public" virt="non-virtual"><scope>wxMDIParentFrame</scope><name>Create</name></member>
       <member refid="classwx_window_1a95b7ca8faa033f5ab35458887c07bf38" prot="public" virt="non-virtual" ambiguityscope="wxNonOwnedWindow::"><scope>wxMDIParentFrame</scope><name>Create</name></member>
       <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxMDIParentFrame</scope><name>CreateRefData</name></member>
-      <member refid="classwx_frame_1ae8a54b5e9eed1ed7483be05e0706e346" prot="public" virt="virtual"><scope>wxMDIParentFrame</scope><name>CreateStatusBar</name></member>
+      <member refid="classwx_frame_1aaa5134dcecc1ec77386465a327dd0a21" prot="public" virt="virtual"><scope>wxMDIParentFrame</scope><name>CreateStatusBar</name></member>
       <member refid="classwx_frame_1a529698edc2fd2037ac8578dadafad0e2" prot="public" virt="virtual"><scope>wxMDIParentFrame</scope><name>CreateToolBar</name></member>
       <member refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" prot="public" virt="non-virtual"><scope>wxMDIParentFrame</scope><name>DeletePendingEvents</name></member>
       <member refid="classwx_window_1a6bf0c5be864544d9ce0560087667b7fc" prot="public" virt="virtual"><scope>wxMDIParentFrame</scope><name>Destroy</name></member>
@@ -652,6 +652,7 @@ Although it is possible to have multiple MDI parent frames, a typical MDI applic
       <member refid="classwx_top_level_window_1afa58f411cf488eb9279683b1d20a74b6" prot="public" virt="virtual"><scope>wxMDIParentFrame</scope><name>IsActive</name></member>
       <member refid="classwx_top_level_window_1ac0c7a7cb6e6dfdf7e59300ee5d476ce3" prot="public" virt="virtual"><scope>wxMDIParentFrame</scope><name>IsAlwaysMaximized</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxMDIParentFrame</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxMDIParentFrame</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxMDIParentFrame</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxMDIParentFrame</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxMDIParentFrame</scope><name>IsExposed</name></member>
@@ -671,6 +672,7 @@ Although it is possible to have multiple MDI parent frames, a typical MDI applic
       <member refid="classwx_m_d_i_parent_frame_1a6ce1a36e785251e359a551cee9c72585" prot="public" virt="non-virtual"><scope>wxMDIParentFrame</scope><name>IsTDI</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxMDIParentFrame</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxMDIParentFrame</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxMDIParentFrame</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxMDIParentFrame</scope><name>IsUnlinked</name></member>
       <member refid="classwx_top_level_window_1a305c48ddb8e45f89add1694053185a7d" prot="public" virt="non-virtual"><scope>wxMDIParentFrame</scope><name>IsUsingNativeDecorations</name></member>
       <member refid="classwx_top_level_window_1adfe7e3f4a32f3ed178968f64431bbfe0" prot="public" virt="virtual"><scope>wxMDIParentFrame</scope><name>Layout</name></member>
@@ -678,7 +680,6 @@ Although it is possible to have multiple MDI parent frames, a typical MDI applic
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxMDIParentFrame</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxMDIParentFrame</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxMDIParentFrame</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxMDIParentFrame</scope><name>MakeModal</name></member>
       <member refid="classwx_top_level_window_1addb1612e9f00ac82c2e19c2bac6ffc4f" prot="public" virt="virtual"><scope>wxMDIParentFrame</scope><name>Maximize</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxMDIParentFrame</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxMDIParentFrame</scope><name>Move</name></member>
@@ -827,7 +828,6 @@ Although it is possible to have multiple MDI parent frames, a typical MDI applic
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxMDIParentFrame</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxMDIParentFrame</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxMDIParentFrame</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxMDIParentFrame</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxMDIParentFrame</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxMDIParentFrame</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxMDIParentFrame</scope><name>Unlink</name></member>

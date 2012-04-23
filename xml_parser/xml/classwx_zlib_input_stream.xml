@@ -25,7 +25,7 @@
 <para>If it is passed by reference then it does not.</para><para>The <emphasis>flags</emphasis> wxZLIB_ZLIB and wxZLIB_GZIP specify whether the input data is in zlib or gzip format. If wxZLIB_AUTO is used, then zlib will autodetect the stream type, this is the default.</para><para>If <emphasis>flags</emphasis> is wxZLIB_NO_HEADER, then the data is assumed to be a raw deflate stream without either zlib or gzip headers. This is a lower level mode, which is not usually used directly. It can be used to read a raw deflate stream embedded in a higher level protocol.</para><para>The values of the <ref refid="zstream_8h_1a64bea75633419f58a90931e19349c384" kindref="member">wxZLibFlags</ref> enumeration can be used. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zstream.h" line="130"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zstream.h" line="130"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zlib_input_stream_1a8b6b2584a50395c041a0244cb0c56f1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -47,7 +47,7 @@
 <para>If it is passed by reference then it does not.</para><para>The <emphasis>flags</emphasis> wxZLIB_ZLIB and wxZLIB_GZIP specify whether the input data is in zlib or gzip format. If wxZLIB_AUTO is used, then zlib will autodetect the stream type, this is the default.</para><para>If <emphasis>flags</emphasis> is wxZLIB_NO_HEADER, then the data is assumed to be a raw deflate stream without either zlib or gzip headers. This is a lower level mode, which is not usually used directly. It can be used to read a raw deflate stream embedded in a higher level protocol.</para><para>The values of the <ref refid="zstream_8h_1a64bea75633419f58a90931e19349c384" kindref="member">wxZLibFlags</ref> enumeration can be used. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zstream.h" line="131"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zstream.h" line="131"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -70,7 +70,7 @@
 <para>This can improve compression rate but note that the dictionary has to be the same when you deflate the data as when you inflate the data, otherwise you will inflate corrupted data.</para><para>Returns true if the dictionary was successfully set. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zstream.h" line="148"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zstream.h" line="148"/>
       </memberdef>
       <memberdef kind="function" id="classwx_zlib_input_stream_1adf2c29e2c34ca19bbe3ac7147f346ffc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -87,7 +87,7 @@
 <para>This can improve compression rate but note that the dictionary has to be the same when you deflate the data as when you inflate the data, otherwise you will inflate corrupted data.</para><para>Returns true if the dictionary was successfully set. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zstream.h" line="149"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zstream.h" line="149"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -102,7 +102,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zstream.h" line="137"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zstream.h" line="137"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -112,54 +112,54 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref>, <ref refid="classwx_zlib_output_stream" kindref="compound">wxZlibOutputStream</ref>. </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11785">
+      <node id="11983">
         <label>wxInputStream</label>
         <link refid="classwx_input_stream"/>
-        <childnode refid="11786" relation="public-inheritance">
+        <childnode refid="11984" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11783">
+      <node id="11981">
         <label>wxZlibInputStream</label>
         <link refid="classwx_zlib_input_stream"/>
-        <childnode refid="11784" relation="public-inheritance">
+        <childnode refid="11982" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11786">
+      <node id="11984">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="11784">
+      <node id="11982">
         <label>wxFilterInputStream</label>
         <link refid="classwx_filter_input_stream"/>
-        <childnode refid="11785" relation="public-inheritance">
+        <childnode refid="11983" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11789">
+      <node id="11987">
         <label>wxInputStream</label>
         <link refid="classwx_input_stream"/>
-        <childnode refid="11790" relation="public-inheritance">
+        <childnode refid="11988" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11787">
+      <node id="11985">
         <label>wxZlibInputStream</label>
         <link refid="classwx_zlib_input_stream"/>
-        <childnode refid="11788" relation="public-inheritance">
+        <childnode refid="11986" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11790">
+      <node id="11988">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="11788">
+      <node id="11986">
         <label>wxFilterInputStream</label>
         <link refid="classwx_filter_input_stream"/>
-        <childnode refid="11789" relation="public-inheritance">
+        <childnode refid="11987" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zstream.h" line="112" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/zstream.h" bodystart="111" bodyend="151"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/zstream.h" line="112" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/zstream.h" bodystart="111" bodyend="151"/>
     <listofallmembers>
       <member refid="classwx_zlib_input_stream_1a4f8cb76aa59dece9a7709ce50f08bef7" prot="public" virt="non-virtual"><scope>wxZlibInputStream</scope><name>CanHandleGZip</name></member>
       <member refid="classwx_input_stream_1a72111c617db403344a2dd6b8c13330c3" prot="public" virt="virtual"><scope>wxZlibInputStream</scope><name>CanRead</name></member>

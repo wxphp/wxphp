@@ -29,7 +29,7 @@
 <para>The first form takes a method name, number of arguments, and an array of variants. The second form takes a method name and zero to six constant references to variants. Since the variant class has constructors for the basic data types, and C++ provides temporary objects automatically, both of the following lines are syntactically valid:</para><para>Note that <emphasis>method</emphasis> can contain dot-separated property names, to save the application needing to call GetProperty several times using several temporary objects. For example: </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/automtn.h" line="110"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/ole/automtn.h" line="110"/>
       </memberdef>
       <memberdef kind="function" id="classwx_automation_object_1a79da1577b6a74b3c14707a046ae3f274" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_variant" kindref="compound">wxVariant</ref></type>
@@ -49,7 +49,7 @@
 <para>The first form takes a method name, number of arguments, and an array of variants. The second form takes a method name and zero to six constant references to variants. Since the variant class has constructors for the basic data types, and C++ provides temporary objects automatically, both of the following lines are syntactically valid:</para><para>Note that <emphasis>method</emphasis> can contain dot-separated property names, to save the application needing to call GetProperty several times using several temporary objects. For example: </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/automtn.h" line="111"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/ole/automtn.h" line="111"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -77,7 +77,7 @@
 <para>The first form takes a property name, number of arguments, and an array of variants. The second form takes a property name and zero to six constant references to variants. Since the variant class has constructors for the basic data types, and C++ provides temporary objects automatically, both of the following lines are syntactically valid:</para><para>Note that <emphasis>property</emphasis> can contain dot-separated property names, to save the application needing to call GetProperty several times using several temporary objects. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/automtn.h" line="198"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/ole/automtn.h" line="198"/>
       </memberdef>
       <memberdef kind="function" id="classwx_automation_object_1a23d27dd79e2411574c7373d95116e11f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_variant" kindref="compound">wxVariant</ref></type>
@@ -97,7 +97,7 @@
 <para>The first form takes a property name, number of arguments, and an array of variants. The second form takes a property name and zero to six constant references to variants. Since the variant class has constructors for the basic data types, and C++ provides temporary objects automatically, both of the following lines are syntactically valid:</para><para>Note that <emphasis>property</emphasis> can contain dot-separated property names, to save the application needing to call GetProperty several times using several temporary objects. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/automtn.h" line="199"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/ole/automtn.h" line="199"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -125,7 +125,7 @@
 <para>The first form takes a property name, number of arguments, and an array of variants. The second form takes a property name and zero to six constant references to variants. Since the variant class has constructors for the basic data types, and C++ provides temporary objects automatically, both of the following lines are syntactically valid:</para><para>Note that <emphasis>property</emphasis> can contain dot-separated property names, to save the application needing to call GetProperty several times using several temporary objects. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/automtn.h" line="249"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/ole/automtn.h" line="249"/>
       </memberdef>
       <memberdef kind="function" id="classwx_automation_object_1a02b78f7b3edde1b82c556ead38e8db2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const bool</type>
@@ -145,7 +145,7 @@
 <para>The first form takes a property name, number of arguments, and an array of variants. The second form takes a property name and zero to six constant references to variants. Since the variant class has constructors for the basic data types, and C++ provides temporary objects automatically, both of the following lines are syntactically valid:</para><para>Note that <emphasis>property</emphasis> can contain dot-separated property names, to save the application needing to call GetProperty several times using several temporary objects. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/automtn.h" line="250"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/ole/automtn.h" line="250"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -165,7 +165,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/automtn.h" line="85"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/ole/automtn.h" line="85"/>
       </memberdef>
       <memberdef kind="function" id="classwx_automation_object_1a00e8e37330ef24c4b6384ac856a27fbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -178,7 +178,7 @@
 <para>If the internal IDispatch pointer is non-null, it will be released. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/automtn.h" line="90"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/ole/automtn.h" line="90"/>
       </memberdef>
       <memberdef kind="function" id="classwx_automation_object_1abc1f526f1bacf08b86626d44b875520c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -195,7 +195,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/automtn.h" line="119"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/ole/automtn.h" line="119"/>
       </memberdef>
       <memberdef kind="function" id="classwx_automation_object_1ab7db3eea0487ac018927171b7924eaea" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -209,7 +209,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/automtn.h" line="129"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/ole/automtn.h" line="129"/>
       </memberdef>
       <memberdef kind="function" id="classwx_automation_object_1a4bf512e7aab0a8cde352897427ff62c8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -222,7 +222,7 @@
 <para>Notice that the return value of this function is an untyped pointer but it can be safely cast to <computeroutput>IDispatch</computeroutput>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/automtn.h" line="137"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/ole/automtn.h" line="137"/>
       </memberdef>
       <memberdef kind="function" id="classwx_automation_object_1ac5c1db0ad00feadf6531dce1d6ef4bc8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -259,7 +259,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/automtn.h" line="163"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/ole/automtn.h" line="163"/>
       </memberdef>
       <memberdef kind="function" id="classwx_automation_object_1ab1cdb285de77858814cf91eab3be592f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -292,7 +292,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/automtn.h" line="179"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/ole/automtn.h" line="179"/>
       </memberdef>
       <memberdef kind="function" id="classwx_automation_object_1adefdc1369350c2a737e6772848f28106" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -377,7 +377,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/automtn.h" line="230"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/ole/automtn.h" line="230"/>
       </memberdef>
       <memberdef kind="function" id="classwx_automation_object_1a4b27e2bce9aaac9f05261ac5cc0e695b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -394,7 +394,7 @@
 <para>This function does not check if there is already an IDispatch pointer. You may need to cast from IDispatch* to WXIDISPATCH* when calling this function. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/automtn.h" line="258"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/ole/automtn.h" line="258"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -407,37 +407,37 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_variant" kindref="compound">wxVariant</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4454">
+      <node id="4544">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4453">
+      <node id="4543">
         <label>wxAutomationObject</label>
         <link refid="classwx_automation_object"/>
-        <childnode refid="4454" relation="public-inheritance">
+        <childnode refid="4544" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4456">
+      <node id="4546">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4457" relation="usage">
+        <childnode refid="4547" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4455">
+      <node id="4545">
         <label>wxAutomationObject</label>
         <link refid="classwx_automation_object"/>
-        <childnode refid="4456" relation="public-inheritance">
+        <childnode refid="4546" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4457">
+      <node id="4547">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/automtn.h" line="78" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/automtn.h" bodystart="77" bodyend="259"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/ole/automtn.h" line="78" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/ole/automtn.h" bodystart="77" bodyend="259"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxAutomationObject</scope><name>AllocExclusive</name></member>
       <member refid="classwx_automation_object_1ab79635adfce3cfc9cb369f539d09c925" prot="public" virt="non-virtual"><scope>wxAutomationObject</scope><name>CallMethod</name></member>

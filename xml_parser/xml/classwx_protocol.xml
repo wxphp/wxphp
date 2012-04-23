@@ -33,7 +33,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/protocol.h" line="127"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/protocol.h" line="127"/>
       </memberdef>
       <memberdef kind="function" id="classwx_protocol_1ac258796f356769a4c66bce207f3ad7bc" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classwx_protocol_log" kindref="compound">wxProtocolLog</ref> *</type>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/protocol.h" line="132" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/protocol.h" bodystart="132" bodyend="132"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/protocol.h" line="132" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/protocol.h" bodystart="132" bodyend="132"/>
       </memberdef>
       <memberdef kind="function" id="classwx_protocol_1a5b385ca23b57e99fd6ff41e455efe736" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_protocol_log" kindref="compound">wxProtocolLog</ref> *</type>
@@ -59,7 +59,7 @@
 <para>The caller is responsible for deleting the returned pointer if it&apos;s non-<computeroutput>NULL</computeroutput>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/protocol.h" line="140"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/protocol.h" line="140"/>
       </memberdef>
       <memberdef kind="function" id="classwx_protocol_1a99159e95daa826e4b74b229f652a3766" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -76,7 +76,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/protocol.h" line="146"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/protocol.h" line="146"/>
       </memberdef>
       <memberdef kind="function" id="classwx_protocol_1a03c4ee18cd126eeec76fd79c016de2fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/protocol.h" line="152"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/protocol.h" line="152"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -111,7 +111,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/protocol.h" line="52"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/protocol.h" line="52"/>
       </memberdef>
       <memberdef kind="function" id="classwx_protocol_1a114954376b6de808141f6cd56bb972a9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -124,7 +124,7 @@
 <para>It is a mime-type. May be an empty string if the content-type is unknown. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/protocol.h" line="58"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/protocol.h" line="58"/>
       </memberdef>
       <memberdef kind="function" id="classwx_protocol_1a06994af171fb3f497f384a4002dbfc3c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="protocol_8h_1ad89a82eacf487f3cc4ff9016c7c18087" kindref="member">wxProtocolError</ref></type>
@@ -138,7 +138,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/protocol.h" line="65"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/protocol.h" line="65"/>
       </memberdef>
       <memberdef kind="function" id="classwx_protocol_1a1adc6bb4d61c1ef993cc17006562acae" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> *</type>
@@ -159,7 +159,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/protocol.h" line="82"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/protocol.h" line="82"/>
       </memberdef>
       <memberdef kind="function" id="classwx_protocol_1a98f5d494d988353de194104bd7e83fe1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -173,7 +173,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/protocol.h" line="90"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/protocol.h" line="90"/>
       </memberdef>
       <memberdef kind="function" id="classwx_protocol_1adde2801803a01311e8911e9f5c30607b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -191,7 +191,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/protocol.h" line="95"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/protocol.h" line="95"/>
       </memberdef>
       <memberdef kind="function" id="classwx_protocol_1ab1f11044077ce6755e17eab0b0b461a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -209,7 +209,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/protocol.h" line="100"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/protocol.h" line="100"/>
       </memberdef>
       <memberdef kind="function" id="classwx_protocol_1ab1e5d1001c2a7b4c6cf50b8e26829985" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -227,7 +227,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/protocol.h" line="109"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/protocol.h" line="109"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -237,73 +237,73 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref>, <ref refid="classwx_u_r_l" kindref="compound">wxURL</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8949">
+      <node id="9132">
         <label>wxSocketBase</label>
         <link refid="classwx_socket_base"/>
-        <childnode refid="8950" relation="public-inheritance">
+        <childnode refid="9133" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8950">
+      <node id="9133">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8948">
+      <node id="9131">
         <label>wxSocketClient</label>
         <link refid="classwx_socket_client"/>
-        <childnode refid="8949" relation="public-inheritance">
+        <childnode refid="9132" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8951">
+      <node id="9134">
         <label>wxFTP</label>
         <link refid="classwx_f_t_p"/>
-        <childnode refid="8947" relation="public-inheritance">
+        <childnode refid="9130" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8952">
+      <node id="9135">
         <label>wxHTTP</label>
         <link refid="classwx_h_t_t_p"/>
-        <childnode refid="8947" relation="public-inheritance">
+        <childnode refid="9130" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8947">
+      <node id="9130">
         <label>wxProtocol</label>
         <link refid="classwx_protocol"/>
-        <childnode refid="8948" relation="public-inheritance">
+        <childnode refid="9131" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8955">
+      <node id="9138">
         <label>wxSocketBase</label>
         <link refid="classwx_socket_base"/>
-        <childnode refid="8956" relation="public-inheritance">
+        <childnode refid="9139" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8956">
+      <node id="9139">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8957" relation="usage">
+        <childnode refid="9140" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8954">
+      <node id="9137">
         <label>wxSocketClient</label>
         <link refid="classwx_socket_client"/>
-        <childnode refid="8955" relation="public-inheritance">
+        <childnode refid="9138" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8953">
+      <node id="9136">
         <label>wxProtocol</label>
         <link refid="classwx_protocol"/>
-        <childnode refid="8954" relation="public-inheritance">
+        <childnode refid="9137" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8957">
+      <node id="9140">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/protocol.h" line="41" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/protocol.h" bodystart="40" bodyend="155"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/protocol.h" line="41" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/protocol.h" bodystart="40" bodyend="155"/>
     <listofallmembers>
       <member refid="classwx_protocol_1a251f4c7e9d13fc23a863540bbbedd81b" prot="public" virt="pure-virtual"><scope>wxProtocol</scope><name>Abort</name></member>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxProtocol</scope><name>AllocExclusive</name></member>

@@ -65,7 +65,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>text<sp/>=<sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref>(text.<ref refid="classwx_string_1adcfd12e6d0765b1d74bccc3d63d02e98" kindref="member" tooltip="Returns the multibyte (C string) representation of the string using conv&amp;#39;s wxMBConv::cWC2MB method an...">mb_str</ref>(convFrom),<sp/>convTo);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...failure<sp/>(or<sp/>we<sp/>may<sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>iso8859-1/7bit<sp/><ref refid="ftp_8h_1ac6a3bd5749f031b948edd5a5dc74df55af9c208c7d7a0f102f2683165540c882d" kindref="member">ASCII</ref>)...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...failure<sp/>(or<sp/>we<sp/>may<sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>iso8859-1/7bit<sp/>ASCII)...</highlight></codeline>
 <codeline><highlight class="normal">}</highlight></codeline>
 <codeline><highlight class="normal">...display<sp/>text...</highlight></codeline>
 </programlisting></para></sect1>

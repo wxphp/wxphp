@@ -3,6 +3,7 @@
   <compounddef id="interface_2wx_2datetime_8h" kind="file">
     <compoundname>datetime.h</compoundname>
     <innerclass refid="classwx_date_time" prot="public">wxDateTime</innerclass>
+    <innerclass refid="classwx_date_time_1_1_time_zone" prot="public">wxDateTime::TimeZone</innerclass>
     <innerclass refid="structwx_date_time_1_1_tm" prot="public">wxDateTime::Tm</innerclass>
     <innerclass refid="classwx_date_time_work_days" prot="public">wxDateTimeWorkDays</innerclass>
     <innerclass refid="classwx_date_span" prot="public">wxDateSpan</innerclass>
@@ -18,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1505" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" bodystart="1505" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1587" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" bodystart="1587" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -33,13 +34,13 @@
 <para><xrefsect id="todo_1_todo000021"><xreftitle>Todo</xreftitle><xrefdescription><para>Would it be better to rename this wxNullDateTime so it&apos;s consistent with the rest of the &quot;empty/invalid/null&quot; global objects? </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1500" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" bodystart="1500" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1582" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" bodystart="1582" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h"/>
   </compounddef>
 </doxygen>

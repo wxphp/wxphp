@@ -50,6 +50,7 @@
 #include "others.h"
 
 
+
 void php_wxToolTip_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -58,13 +59,13 @@ void php_wxToolTip_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxToolTip_php* object = (wxToolTip_php*)rsrc->ptr;
+	wxToolTip_php* object = static_cast<wxToolTip_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -122,7 +123,8 @@ PHP_METHOD(php_wxToolTip, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&tip0, &tip_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &tip0, &tip_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tip0, &tip_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -130,7 +132,6 @@ PHP_METHOD(php_wxToolTip, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -236,7 +237,8 @@ PHP_METHOD(php_wxToolTip, SetTip)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&tip0, &tip_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &tip0, &tip_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tip0, &tip_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -244,7 +246,6 @@ PHP_METHOD(php_wxToolTip, SetTip)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -324,7 +325,8 @@ PHP_METHOD(php_wxToolTip, SetReshow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&msecs0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &msecs0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &msecs0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -332,7 +334,6 @@ PHP_METHOD(php_wxToolTip, SetReshow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -413,7 +414,8 @@ PHP_METHOD(php_wxToolTip, SetDelay)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&msecs0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &msecs0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &msecs0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -421,7 +423,6 @@ PHP_METHOD(php_wxToolTip, SetDelay)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -502,7 +503,8 @@ PHP_METHOD(php_wxToolTip, SetAutoPop)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&msecs0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &msecs0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &msecs0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -510,7 +512,6 @@ PHP_METHOD(php_wxToolTip, SetAutoPop)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -595,7 +596,6 @@ PHP_METHOD(php_wxToolTip, GetWindow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -612,8 +612,8 @@ PHP_METHOD(php_wxToolTip, GetWindow)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -701,7 +701,6 @@ PHP_METHOD(php_wxToolTip, GetTip)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -787,7 +786,8 @@ PHP_METHOD(php_wxToolTip, Enable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&flag0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &flag0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flag0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -795,7 +795,6 @@ PHP_METHOD(php_wxToolTip, Enable)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)

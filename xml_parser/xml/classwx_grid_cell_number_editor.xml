@@ -26,7 +26,7 @@
 <para>Values equal to -1 for both <emphasis>min</emphasis> and <emphasis>max</emphasis> indicate that no range checking should be done. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="685"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="685"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_number_editor_1a82505b0510ae09f686ac7ede775bda86" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="691"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="691"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="699"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="699"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_number_editor_1ac3470cc905cec5f152508a979e73f5ea" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="704"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="704"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -82,42 +82,42 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__grid" kindref="compound">Grid Related Classes</ref></para><para><simplesect kind="see"><para><ref refid="classwx_grid_cell_editor" kindref="compound">wxGridCellEditor</ref>, <ref refid="classwx_grid_cell_auto_wrap_string_editor" kindref="compound">wxGridCellAutoWrapStringEditor</ref>, <ref refid="classwx_grid_cell_bool_editor" kindref="compound">wxGridCellBoolEditor</ref>, <ref refid="classwx_grid_cell_choice_editor" kindref="compound">wxGridCellChoiceEditor</ref>, <ref refid="classwx_grid_cell_enum_editor" kindref="compound">wxGridCellEnumEditor</ref>, <ref refid="classwx_grid_cell_float_editor" kindref="compound">wxGridCellFloatEditor</ref>, <ref refid="classwx_grid_cell_text_editor" kindref="compound">wxGridCellTextEditor</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6710">
+      <node id="6880">
         <label>wxGridCellNumberEditor</label>
         <link refid="classwx_grid_cell_number_editor"/>
-        <childnode refid="6711" relation="public-inheritance">
+        <childnode refid="6881" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6711">
+      <node id="6881">
         <label>wxGridCellTextEditor</label>
         <link refid="classwx_grid_cell_text_editor"/>
-        <childnode refid="6712" relation="public-inheritance">
+        <childnode refid="6882" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6712">
+      <node id="6882">
         <label>wxGridCellEditor</label>
         <link refid="classwx_grid_cell_editor"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6713">
+      <node id="6883">
         <label>wxGridCellNumberEditor</label>
         <link refid="classwx_grid_cell_number_editor"/>
-        <childnode refid="6714" relation="public-inheritance">
+        <childnode refid="6884" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6714">
+      <node id="6884">
         <label>wxGridCellTextEditor</label>
         <link refid="classwx_grid_cell_text_editor"/>
-        <childnode refid="6715" relation="public-inheritance">
+        <childnode refid="6885" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6715">
+      <node id="6885">
         <label>wxGridCellEditor</label>
         <link refid="classwx_grid_cell_editor"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="678" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" bodystart="677" bodyend="705"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="678" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" bodystart="677" bodyend="705"/>
     <listofallmembers>
       <member refid="classwx_grid_cell_editor_1a02016c9850d6a83aa86dfef9f3f3ccd6" prot="public" virt="pure-virtual"><scope>wxGridCellNumberEditor</scope><name>ApplyEdit</name></member>
       <member refid="classwx_grid_cell_editor_1aa3be55056f9ec3ceed8f0d31ed613cd9" prot="public" virt="pure-virtual"><scope>wxGridCellNumberEditor</scope><name>BeginEdit</name></member>

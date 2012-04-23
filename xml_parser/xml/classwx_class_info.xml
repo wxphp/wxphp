@@ -35,7 +35,7 @@
 <para>The supplied macros implicitly construct objects of this class, so there is no need to create such objects explicitly in an application. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="435"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="435"/>
       </memberdef>
       <memberdef kind="function" id="classwx_class_info_1a754a267b65cd7e2026e6a0beb22ff0a7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
@@ -49,7 +49,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="443"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="443"/>
       </memberdef>
       <memberdef kind="function" id="classwx_class_info_1a8764f4e89eb56345c12aab6bac8e1607" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="453"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="453"/>
       </memberdef>
       <memberdef kind="function" id="classwx_class_info_1a1ef4fc497c9fb983a23220d8bdbe5a3f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
@@ -75,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="458"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="458"/>
       </memberdef>
       <memberdef kind="function" id="classwx_class_info_1a4827f2dcd6ded37542370e6b1875c79e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
@@ -88,7 +88,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="463"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="463"/>
       </memberdef>
       <memberdef kind="function" id="classwx_class_info_1a98669f49aad58c83d991a545e36c46a7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -101,7 +101,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="468"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="468"/>
       </memberdef>
       <memberdef kind="function" id="classwx_class_info_1ab2737b6d3f1b8015e08934443eea1785" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -114,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="473"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="473"/>
       </memberdef>
       <memberdef kind="function" id="classwx_class_info_1a468c4f0e65c47d58fdb0a09cd6c6c1b5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -131,7 +131,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="478"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="478"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -150,7 +150,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="448"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="448"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -159,7 +159,7 @@
 <para>Instances of this class are not generally defined directly by an application, but indirectly through use of macros such as <ref refid="group__group__funcmacro__rtti_1ga9c252d076397bec5ac241272a7a60747" kindref="member">wxDECLARE_DYNAMIC_CLASS</ref> and <ref refid="group__group__funcmacro__rtti_1ga4cbf0c21eb5986eb489dc67450eab1d1" kindref="member">wxIMPLEMENT_DYNAMIC_CLASS</ref>.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__rtti" kindref="compound">Runtime Type Information (RTTI)</ref></para><para><simplesect kind="see"><para><ref refid="overview_rtti_1overview_rtti_classinfo" kindref="member">wxClassInfo</ref>, <ref refid="classwx_object" kindref="compound">wxObject</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="424" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" bodystart="423" bodyend="479"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="424" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" bodystart="423" bodyend="479"/>
     <listofallmembers>
       <member refid="classwx_class_info_1a754a267b65cd7e2026e6a0beb22ff0a7" prot="public" virt="non-virtual"><scope>wxClassInfo</scope><name>CreateObject</name></member>
       <member refid="classwx_class_info_1abca46fc5067f0dffa3e801a104b89818" prot="public" virt="non-virtual"><scope>wxClassInfo</scope><name>FindClass</name></member>

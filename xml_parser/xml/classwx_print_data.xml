@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="301"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="301"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_data_1a9aedb9333974e45376f3049954779510" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="306"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="306"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_data_1a8a101a3b25cda8ec865345a1309e04a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="311"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="311"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_data_1a8064d08864f1e30b495ea1aeb61fa6d8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="cmndata_8h_1ac5a8648f833a003ac36596a82e8361b9" kindref="member">wxPrintBin</ref></type>
@@ -59,7 +59,7 @@
 <para>By default, the system is left to select the bin (<computeroutput>wxPRINTBIN_DEFAULT</computeroutput> is returned).</para><para>See <ref refid="classwx_print_data_1af129c5539a9bfa1dbf0d93b6fd6caf3a" kindref="member">SetBin()</ref> for the full list of bin values. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="319"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="319"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_data_1ae19d5e60543b79d33547c498515aba5d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="324"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="324"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_data_1a1544533d9b4e7f9547d57d6bcd5f3a73" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="329"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="329"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_data_1a21abc9ba896e1df61eea5473d6734de1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a0f2596c210e8f39fb074cd2fb312ccf2" kindref="member">wxDuplexMode</ref></type>
@@ -98,7 +98,7 @@
 <para>One of wxDUPLEX_SIMPLEX, wxDUPLEX_HORIZONTAL, wxDUPLEX_VERTICAL. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="335"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="335"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_data_1a10a470412aa965ae7f4bfab93d6d1dc3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -111,7 +111,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="340"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="340"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_data_1aa625638b2b0db3df18712960a1e26f86" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a128bbdf96d08a0414f9ac6c762ee5b8f" kindref="member">wxPrintOrientation</ref></type>
@@ -124,7 +124,7 @@
 <para>This can be wxLANDSCAPE or wxPORTRAIT. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="345"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="345"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_data_1a87e7d571cc689be446b25419d6f448d6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a2f01b8ae721520dff55dee68a882629a" kindref="member">wxPaperSize</ref></type>
@@ -138,7 +138,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="352"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="352"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_data_1a355c9120fa86ca6c478b6af572e171db" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -151,10 +151,10 @@
 <para>If the printer name is the empty string, it indicates that the default printer should be used. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="358"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="358"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_data_1afe1d3737075a62a627fc49ed5403360d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>wxPrintQuality</type>
+        <type><ref refid="defs_8h_1aa032c3ba9e7b8f969fcf14136fde8b16" kindref="member">wxPrintQuality</ref></type>
         <definition>wxPrintQuality wxPrintData::GetQuality</definition>
         <argsstring>() const </argsstring>
         <name>GetQuality</name>
@@ -166,7 +166,7 @@
 </para><para>On input you should pass one of these identifiers, but on return you may get back a positive integer indicating the current resolution setting. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="374"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="374"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_data_1af9e5afaa5e4f45027641689f589f8871" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -179,7 +179,7 @@
 <para>This can return false on Windows if the current printer is not set, for example. On all other platforms, it returns true. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="381"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="381"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_data_1af129c5539a9bfa1dbf0d93b6fd6caf3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -196,7 +196,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="386"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="386"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_data_1ace51b342d6fd9e1678c0cbb11a953dbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -213,7 +213,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="391"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="391"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_data_1a829ec71e97680b579eec74bc8b0d207e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -230,7 +230,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="396"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="396"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_data_1a9ccfb142c2503c6b3530645f401bafc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -247,7 +247,7 @@
 <para>One of wxDUPLEX_SIMPLEX, wxDUPLEX_HORIZONTAL, wxDUPLEX_VERTICAL. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="402"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="402"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_data_1a2fed432d70b7292d50ae704ca20e5bd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -264,7 +264,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="407"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="407"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_data_1afa9d7f64655a71497199e0ef2070d377" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -281,7 +281,7 @@
 <para>This can be wxLANDSCAPE or wxPORTRAIT. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="412"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="412"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_data_1a463e3d74092b1067495bb4e687fd2c1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -298,7 +298,7 @@
 <para>This indicates the type of paper to be used. For a mapping between paper id, paper size and string name, see wxPrintPaperDatabase in <computeroutput>&quot;paper.h&quot;</computeroutput> (not yet documented). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="419"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="419"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_data_1a75fd42487b1bf58af1b1a1171f85d163" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -315,7 +315,7 @@
 <para>This can be the empty string to indicate that the default printer should be used. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="425"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="425"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_data_1a1c4cec6c3b058bc0cb697a8602fd2694" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -323,7 +323,7 @@
         <argsstring>(wxPrintQuality quality)</argsstring>
         <name>SetQuality</name>
         <param>
-          <type>wxPrintQuality</type>
+          <type><ref refid="defs_8h_1aa032c3ba9e7b8f969fcf14136fde8b16" kindref="member">wxPrintQuality</ref></type>
           <declname>quality</declname>
         </param>
         <briefdescription>
@@ -334,7 +334,7 @@
 </para><para>On input you should pass one of these identifiers, but on return you may get back a positive integer indicating the current resolution setting. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="441"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="441"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_data_1a1d60489dbeeff0943fba8e33cb241aa4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_print_data" kindref="compound">wxPrintData</ref> &amp;</type>
@@ -351,7 +351,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="446"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="446"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_data_1a85f6fe9c9926407486e7b24e5d2b4473" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -364,7 +364,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="449"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="449"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_data_1ae186dfe49ba6a9d276c7128114dd4df5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -381,7 +381,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="450"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="450"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_data_1a0fc94cfc1933e937ceae1185add03f1e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a3cf8d66263026e614130c9da8d19179d" kindref="member">wxPrintMode</ref></type>
@@ -394,7 +394,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="452"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="452"/>
       </memberdef>
       <memberdef kind="function" id="classwx_print_data_1aaa1ac4d884249efe1986fda0cc8f3d38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -411,7 +411,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="453"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="453"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -444,37 +444,37 @@ The following functions are specific to PostScript printing and have not yet bee
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__printing" kindref="compound">Printing Framework</ref>, <ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="overview_printing" kindref="compound">Printing Framework Overview</ref>, <ref refid="classwx_print_dialog" kindref="compound">wxPrintDialog</ref>, <ref refid="classwx_page_setup_dialog" kindref="compound">wxPageSetupDialog</ref>, <ref refid="classwx_print_dialog_data" kindref="compound">wxPrintDialogData</ref>, <ref refid="classwx_page_setup_dialog_data" kindref="compound">wxPageSetupDialogData</ref>, <ref refid="overview_cmndlg_1overview_cmndlg_print" kindref="member">wxPrintDialog Overview</ref>, <ref refid="classwx_printer_d_c" kindref="compound">wxPrinterDC</ref>, <ref refid="classwx_post_script_d_c" kindref="compound">wxPostScriptDC</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8780">
+      <node id="8973">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8779">
+      <node id="8972">
         <label>wxPrintData</label>
         <link refid="classwx_print_data"/>
-        <childnode refid="8780" relation="public-inheritance">
+        <childnode refid="8973" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8782">
+      <node id="8975">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8783" relation="usage">
+        <childnode refid="8976" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8781">
+      <node id="8974">
         <label>wxPrintData</label>
         <link refid="classwx_print_data"/>
-        <childnode refid="8782" relation="public-inheritance">
+        <childnode refid="8975" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8783">
+      <node id="8976">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" line="296" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmndata.h" bodystart="295" bodyend="454"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" line="296" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/cmndata.h" bodystart="295" bodyend="454"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxPrintData</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxPrintData</scope><name>CloneRefData</name></member>

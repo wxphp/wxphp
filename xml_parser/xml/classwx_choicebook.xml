@@ -16,12 +16,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicebk.h" line="61"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/choicebk.h" line="61"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_choicebook_1ae0e15a2cac176644fadca01cdff9d4bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_choicebook_1ab4054d2f57aebdc7d6991798c4a3376f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxChoicebook::wxChoicebook</definition>
-        <argsstring>(wxWindow *parent, wxWindowID id, const wxPoint &amp;pos=wxDefaultPosition, const wxSize &amp;size=wxDefaultSize, long style=0, const wxString &amp;name=wxEmptyStr)</argsstring>
+        <argsstring>(wxWindow *parent, wxWindowID id, const wxPoint &amp;pos=wxDefaultPosition, const wxSize &amp;size=wxDefaultSize, long style=0, const wxString &amp;name=wxEmptyString)</argsstring>
         <name>wxChoicebook</name>
         <param>
           <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -49,7 +49,7 @@
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
           <declname>name</declname>
-          <defval>wxEmptyStr</defval>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
         </param>
         <briefdescription>
 <para>Constructs a choicebook control. </para>        </briefdescription>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicebk.h" line="66"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/choicebk.h" line="66"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicebk.h" line="72"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/choicebk.h" line="72"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -95,109 +95,109 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__bookctrl" kindref="compound">Book Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/choicebook.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/choicebook.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/choicebook.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="overview_bookctrl" kindref="compound">wxBookCtrl Overview</ref>, <ref refid="classwx_notebook" kindref="compound">wxNotebook</ref>, <ref refid="page_samples_1page_samples_notebook" kindref="member">Notebook Sample</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4765">
+      <node id="4856">
         <label>wxBookCtrlBase</label>
         <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="4766" relation="public-inheritance">
+        <childnode refid="4857" relation="public-inheritance">
         </childnode>
-        <childnode refid="4771" relation="public-inheritance">
+        <childnode refid="4862" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4769">
+      <node id="4860">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4768">
+      <node id="4859">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4769" relation="public-inheritance">
+        <childnode refid="4860" relation="public-inheritance">
         </childnode>
-        <childnode refid="4770" relation="public-inheritance">
+        <childnode refid="4861" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4770">
+      <node id="4861">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4766">
+      <node id="4857">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4767" relation="public-inheritance">
+        <childnode refid="4858" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4767">
+      <node id="4858">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4768" relation="public-inheritance">
+        <childnode refid="4859" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4764">
+      <node id="4855">
         <label>wxChoicebook</label>
         <link refid="classwx_choicebook"/>
-        <childnode refid="4765" relation="public-inheritance">
+        <childnode refid="4856" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4771">
+      <node id="4862">
         <label>wxWithImages</label>
         <link refid="classwx_with_images"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4773">
+      <node id="4864">
         <label>wxBookCtrlBase</label>
         <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="4774" relation="public-inheritance">
+        <childnode refid="4865" relation="public-inheritance">
         </childnode>
-        <childnode refid="4780" relation="public-inheritance">
+        <childnode refid="4871" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4777">
+      <node id="4868">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4778" relation="usage">
+        <childnode refid="4869" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4776">
+      <node id="4867">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4777" relation="public-inheritance">
+        <childnode refid="4868" relation="public-inheritance">
         </childnode>
-        <childnode refid="4779" relation="public-inheritance">
+        <childnode refid="4870" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4779">
+      <node id="4870">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4774">
+      <node id="4865">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4775" relation="public-inheritance">
+        <childnode refid="4866" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4775">
+      <node id="4866">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4776" relation="public-inheritance">
+        <childnode refid="4867" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4772">
+      <node id="4863">
         <label>wxChoicebook</label>
         <link refid="classwx_choicebook"/>
-        <childnode refid="4773" relation="public-inheritance">
+        <childnode refid="4864" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4780">
+      <node id="4871">
         <label>wxWithImages</label>
         <link refid="classwx_with_images"/>
       </node>
-      <node id="4778">
+      <node id="4869">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicebk.h" line="55" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choicebk.h" bodystart="54" bodyend="73"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/choicebk.h" line="55" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/choicebk.h" bodystart="54" bodyend="73"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxChoicebook</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxChoicebook</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -379,6 +379,7 @@
       <member refid="classwx_book_ctrl_base_1a2dcfe645ba865a3f44ebaf660a9ab0ed" prot="public" virt="pure-virtual"><scope>wxChoicebook</scope><name>InsertPage</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxChoicebook</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxChoicebook</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxChoicebook</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxChoicebook</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxChoicebook</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxChoicebook</scope><name>IsExposed</name></member>
@@ -394,13 +395,13 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxChoicebook</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxChoicebook</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxChoicebook</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxChoicebook</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxChoicebook</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxChoicebook</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxChoicebook</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxChoicebook</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxChoicebook</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxChoicebook</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxChoicebook</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxChoicebook</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxChoicebook</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxChoicebook</scope><name>MoveAfterInTabOrder</name></member>
@@ -408,7 +409,7 @@
       <member refid="classwx_window_1a86904f6785df4af6036b33383490a805" prot="public" virt="non-virtual"><scope>wxChoicebook</scope><name>Navigate</name></member>
       <member refid="classwx_window_1aa58039c8fc65e19160becf510ee1d1d5" prot="public" virt="non-virtual"><scope>wxChoicebook</scope><name>NavigateIn</name></member>
       <member refid="classwx_window_1a8175da594e6045635a1d1cfe775cdddb" prot="public" virt="non-virtual"><scope>wxChoicebook</scope><name>NewControlId</name></member>
-      <member refid="classwx_book_ctrl_base_1aed8700a5492ca104d2792d9bafea2167a76a5551525c61310e58ed494b5d4d730" prot="public" virt="non-virtual"><scope>wxChoicebook</scope><name>NO_IMAGE</name></member>
+      <member refid="classwx_book_ctrl_base_1a2329dd4eea633a8764dbc29ac353c1a6a76a5551525c61310e58ed494b5d4d730" prot="public" virt="non-virtual"><scope>wxChoicebook</scope><name>NO_IMAGE</name></member>
       <member refid="classwx_window_1a6b5654c0c6c6245d592c279521f7099c" prot="public" virt="virtual"><scope>wxChoicebook</scope><name>OnInternalIdle</name></member>
       <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxChoicebook</scope><name>operator delete</name></member>
       <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxChoicebook</scope><name>operator new</name></member>
@@ -528,7 +529,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxChoicebook</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxChoicebook</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxChoicebook</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxChoicebook</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxChoicebook</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxChoicebook</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxChoicebook</scope><name>Unlink</name></member>
@@ -545,7 +545,7 @@
       <member refid="classwx_book_ctrl_base_1a8ef001ed2e647d32c05747ca7b940934" prot="public" virt="non-virtual"><scope>wxChoicebook</scope><name>wxBookCtrlBase</name></member>
       <member refid="classwx_book_ctrl_base_1ab085e6968b72d0eb7990a1b863afa2b0" prot="public" virt="non-virtual"><scope>wxChoicebook</scope><name>wxBookCtrlBase</name></member>
       <member refid="classwx_choicebook_1aa06ad50928a63e7067e9e496e4fbcf08" prot="public" virt="non-virtual"><scope>wxChoicebook</scope><name>wxChoicebook</name></member>
-      <member refid="classwx_choicebook_1ae0e15a2cac176644fadca01cdff9d4bf" prot="public" virt="non-virtual"><scope>wxChoicebook</scope><name>wxChoicebook</name></member>
+      <member refid="classwx_choicebook_1ab4054d2f57aebdc7d6991798c4a3376f" prot="public" virt="non-virtual"><scope>wxChoicebook</scope><name>wxChoicebook</name></member>
       <member refid="classwx_control_1adb8f3edf807efa9159de826bf92d6a44" prot="public" virt="non-virtual"><scope>wxChoicebook</scope><name>wxControl</name></member>
       <member refid="classwx_control_1a08428de2ba5cc988a86fe17071d49522" prot="public" virt="non-virtual"><scope>wxChoicebook</scope><name>wxControl</name></member>
       <member refid="classwx_evt_handler_1a3f0166c4154227d05575b01eb2c8d4be" prot="public" virt="non-virtual"><scope>wxChoicebook</scope><name>wxEvtHandler</name></member>

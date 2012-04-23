@@ -20,7 +20,7 @@
 <para>Note that the string is copied by the stream so if the original string is modified after using this constructor, changes to it are not reflected when reading from stream. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sstream.h" line="28"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sstream.h" line="28"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -29,42 +29,42 @@
 <para>It supports seeking.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10587">
+      <node id="10772">
         <label>wxInputStream</label>
         <link refid="classwx_input_stream"/>
-        <childnode refid="10588" relation="public-inheritance">
+        <childnode refid="10773" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10586">
+      <node id="10771">
         <label>wxStringInputStream</label>
         <link refid="classwx_string_input_stream"/>
-        <childnode refid="10587" relation="public-inheritance">
+        <childnode refid="10772" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10588">
+      <node id="10773">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10590">
+      <node id="10775">
         <label>wxInputStream</label>
         <link refid="classwx_input_stream"/>
-        <childnode refid="10591" relation="public-inheritance">
+        <childnode refid="10776" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10589">
+      <node id="10774">
         <label>wxStringInputStream</label>
         <link refid="classwx_string_input_stream"/>
-        <childnode refid="10590" relation="public-inheritance">
+        <childnode refid="10775" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10591">
+      <node id="10776">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sstream.h" line="19" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sstream.h" bodystart="18" bodyend="29"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sstream.h" line="19" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/sstream.h" bodystart="18" bodyend="29"/>
     <listofallmembers>
       <member refid="classwx_input_stream_1a72111c617db403344a2dd6b8c13330c3" prot="public" virt="virtual"><scope>wxStringInputStream</scope><name>CanRead</name></member>
       <member refid="classwx_input_stream_1a177bb52eb500be28c8d41f959b0fb6be" prot="public" virt="virtual"><scope>wxStringInputStream</scope><name>Eof</name></member>

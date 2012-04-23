@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="153"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="153"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_definition_1a6251f4f415203754898415e1ca8ca06a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_text_attr" kindref="compound">wxTextAttr</ref></type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="154"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="154"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -51,7 +51,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="127"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="127"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_definition_1a7e0bd7f060d6354104543f7cb6d8e137" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -64,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="132"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="132"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_definition_1a738696e84705cfa5408f1df73a4c0e6a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -77,7 +77,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="137"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="137"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_definition_1a1b43cb6485a25cd777ab0ae258f1e10b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -90,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="142"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="142"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_definition_1a2d7af2bd8de9d4e5f9b051dc4bcbe3be" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -103,7 +103,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="147"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="147"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_definition_1ace4827afa53ad92b3d8ec8ce799a7118" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_text_attr" kindref="compound">wxTextAttr</ref></type>
@@ -120,7 +120,7 @@
 <para>This function works recursively. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="161"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="161"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_definition_1a2d4525ac47865887a828b02252855254" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -137,7 +137,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="166"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="166"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_definition_1a6b4c5c3f44f10bd07e58ae2bfc611ec9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -154,7 +154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="171"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="171"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_definition_1a7085d485d0892a4f223a8e2c4a78e219" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -171,7 +171,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="176"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="176"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_definition_1afbd30b0796407ba1ea3c04e3e1367991" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -188,7 +188,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="181"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="181"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -197,55 +197,55 @@
 <para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9920">
+      <node id="10103">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="9922">
+      <node id="10105">
         <label>wxRichTextParagraphStyleDefinition</label>
         <link refid="classwx_rich_text_paragraph_style_definition"/>
-        <childnode refid="9919" relation="public-inheritance">
+        <childnode refid="10102" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9923">
+      <node id="10106">
         <label>wxRichTextListStyleDefinition</label>
         <link refid="classwx_rich_text_list_style_definition"/>
-        <childnode refid="9922" relation="public-inheritance">
+        <childnode refid="10105" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9919">
+      <node id="10102">
         <label>wxRichTextStyleDefinition</label>
         <link refid="classwx_rich_text_style_definition"/>
-        <childnode refid="9920" relation="public-inheritance">
+        <childnode refid="10103" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9921">
+      <node id="10104">
         <label>wxRichTextCharacterStyleDefinition</label>
         <link refid="classwx_rich_text_character_style_definition"/>
-        <childnode refid="9919" relation="public-inheritance">
+        <childnode refid="10102" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9925">
+      <node id="10108">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9926" relation="usage">
+        <childnode refid="10109" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9924">
+      <node id="10107">
         <label>wxRichTextStyleDefinition</label>
         <link refid="classwx_rich_text_style_definition"/>
-        <childnode refid="9925" relation="public-inheritance">
+        <childnode refid="10108" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9926">
+      <node id="10109">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="122" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" bodystart="121" bodyend="182"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="122" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" bodystart="121" bodyend="182"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxRichTextStyleDefinition</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxRichTextStyleDefinition</scope><name>CloneRefData</name></member>

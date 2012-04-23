@@ -25,7 +25,7 @@
 <para>Creates shared pointer from the raw pointer <emphasis>ptr</emphasis> and takes ownership of it. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sharedptr.h" line="30"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sharedptr.h" line="30"/>
       </memberdef>
       <memberdef kind="function" id="classwx_shared_ptr_3_01_t_01_4_1a78b7860f505470d2d954d33d76bf2372" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -42,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sharedptr.h" line="35"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sharedptr.h" line="35"/>
       </memberdef>
       <memberdef kind="function" id="classwx_shared_ptr_3_01_t_01_4_1a0b5939721f372f5f8f80113b81006a7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sharedptr.h" line="40"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sharedptr.h" line="40"/>
       </memberdef>
       <memberdef kind="function" id="classwx_shared_ptr_3_01_t_01_4_1a899d60ebcd4be6b9ce724a224a5ef4b7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>T *</type>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sharedptr.h" line="45"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sharedptr.h" line="45"/>
       </memberdef>
       <memberdef kind="function" id="classwx_shared_ptr_3_01_t_01_4_1a66f84bb60c78099c7f485fe9160cfb4f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -81,7 +81,7 @@
 <para>If this class contains a valid pointer it will return true, if it contains a NULL pointer it will return false. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sharedptr.h" line="54"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sharedptr.h" line="54"/>
       </memberdef>
       <memberdef kind="function" id="classwx_shared_ptr_3_01_t_01_4_1a606330d4c8a91f0ab4337ecf535a975a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>T</type>
@@ -94,7 +94,7 @@
 <para>If the internal pointer is NULL this method will cause an assert in debug mode. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sharedptr.h" line="61"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sharedptr.h" line="61"/>
       </memberdef>
       <memberdef kind="function" id="classwx_shared_ptr_3_01_t_01_4_1ab9b716c07f4263aa9a61c2ef348ca829" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>T *</type>
@@ -107,7 +107,7 @@
 <para>Returns pointer to its object.</para><para>If the internal pointer is NULL this method will cause an assert in debug mode. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sharedptr.h" line="68"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sharedptr.h" line="68"/>
       </memberdef>
       <memberdef kind="function" id="classwx_shared_ptr_3_01_t_01_4_1ae02306a82285661c58e809ac32492e46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxSharedPtr&lt; T &gt; &amp;</type>
@@ -124,7 +124,7 @@
 <para>Releases any previously held pointer and creates a reference to <emphasis>ptr</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sharedptr.h" line="75"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sharedptr.h" line="75"/>
       </memberdef>
       <memberdef kind="function" id="classwx_shared_ptr_3_01_t_01_4_1a2843bd42c7d37447d1d27f0507030ef7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxSharedPtr&lt; T &gt; &amp;</type>
@@ -141,7 +141,7 @@
 <para>Releases any previously held pointer and creates a reference to the same object as <emphasis>topcopy</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sharedptr.h" line="83"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sharedptr.h" line="83"/>
       </memberdef>
       <memberdef kind="function" id="classwx_shared_ptr_3_01_t_01_4_1a0487e5fffe75675432cdbc286c7c70c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -159,7 +159,7 @@
 <para>If the reference count of the previously owned pointer was 1 it will be deleted. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sharedptr.h" line="90"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sharedptr.h" line="90"/>
       </memberdef>
       <memberdef kind="function" id="classwx_shared_ptr_3_01_t_01_4_1acc5ef763bf3ecbb4baea49fa529a7d8f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -172,7 +172,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sharedptr.h" line="95"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sharedptr.h" line="95"/>
       </memberdef>
       <memberdef kind="function" id="classwx_shared_ptr_3_01_t_01_4_1a8781205f5790b6fcf56219b0de57df73" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -185,16 +185,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sharedptr.h" line="100"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sharedptr.h" line="100"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>A smart pointer with non-intrusive reference counting. </para>    </briefdescription>
     <detaileddescription>
-<para>It is modeled after <computeroutput>boost::shared_ptr&lt;&gt;</computeroutput> and can be used with STL containers and <ref refid="classwx_vector_3_01_t_01_4" kindref="compound">wxVector&lt;T&gt;</ref> unlike <computeroutput>std::auto_ptr&lt;&gt;</computeroutput> and <ref refid="classwx_scoped_ptr_3_01_t_01_4" kindref="compound">wxScopedPtr&lt;T&gt;</ref>.</para><para><heading level="2"></heading>
+<para>It is modelled after <computeroutput>boost::shared_ptr&lt;&gt;</computeroutput> and can be used with STL containers and <ref refid="classwx_vector_3_01_t_01_4" kindref="compound">wxVector&lt;T&gt;</ref> unlike <computeroutput>std::auto_ptr&lt;&gt;</computeroutput> and <ref refid="classwx_scoped_ptr_3_01_t_01_4" kindref="compound">wxScopedPtr&lt;T&gt;</ref>.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__smartpointers" kindref="compound">Smart Pointers</ref></para><para><simplesect kind="see"><para><ref refid="classwx_scoped_ptr_3_01_t_01_4" kindref="compound">wxScopedPtr&lt;T&gt;</ref>, <ref refid="classwx_weak_ref_3_01_t_01_4" kindref="compound">wxWeakRef&lt;T&gt;</ref>, <ref refid="classwx_object_data_ptr_3_01_t_01_4" kindref="compound">wxObjectDataPtr&lt;T&gt;</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sharedptr.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sharedptr.h" bodystart="21" bodyend="101"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sharedptr.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/sharedptr.h" bodystart="21" bodyend="101"/>
     <listofallmembers>
       <member refid="classwx_shared_ptr_3_01_t_01_4_1a899d60ebcd4be6b9ce724a224a5ef4b7" prot="public" virt="non-virtual"><scope>wxSharedPtr&lt; T &gt;</scope><name>get</name></member>
       <member refid="classwx_shared_ptr_3_01_t_01_4_1a66f84bb60c78099c7f485fe9160cfb4f" prot="public" virt="non-virtual"><scope>wxSharedPtr&lt; T &gt;</scope><name>operator unspecified_bool_type</name></member>

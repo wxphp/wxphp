@@ -18,7 +18,7 @@
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/dde.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="337"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="337"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga0327fbafa4fedceade1bd8d7faf015f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -32,13 +32,13 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/dde.h&gt; </v
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/dde.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="349"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="349"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h"/>
   </compounddef>
 </doxygen>

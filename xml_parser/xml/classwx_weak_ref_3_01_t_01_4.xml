@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/weakref.h" line="106" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/weakref.h" bodystart="106" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/weakref.h" line="106" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/weakref.h" bodystart="106" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -40,7 +40,7 @@
 <para>The weak reference is initialized to <emphasis>pobj</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/weakref.h" line="111"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/weakref.h" line="111"/>
       </memberdef>
       <memberdef kind="function" id="classwx_weak_ref_3_01_t_01_4_1ae751cee14dffbd70905482265f7cbab3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/weakref.h" line="116"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/weakref.h" line="116"/>
       </memberdef>
       <memberdef kind="function" id="classwx_weak_ref_3_01_t_01_4_1a58810f09705aecf916d451bb16415c05" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/weakref.h" line="121"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/weakref.h" line="121"/>
       </memberdef>
       <memberdef kind="function" id="classwx_weak_ref_3_01_t_01_4_1acb31fe6e5191ee43a2b467b28df3c126" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -83,7 +83,7 @@
 <para>Be default sets internal pointer to NULL. You need to call this method if you override it. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/weakref.h" line="128"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/weakref.h" line="128"/>
       </memberdef>
       <memberdef kind="function" id="classwx_weak_ref_3_01_t_01_4_1ab175c77e8fabc30fcc3489aa69aca139" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -96,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/weakref.h" line="133"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/weakref.h" line="133"/>
       </memberdef>
       <memberdef kind="function" id="classwx_weak_ref_3_01_t_01_4_1addf1a49d933b7a6acffb29e15587b935" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>T *</type>
@@ -109,7 +109,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/weakref.h" line="138"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/weakref.h" line="138"/>
       </memberdef>
       <memberdef kind="function" id="classwx_weak_ref_3_01_t_01_4_1a5523917fdaace96d8a9e15e43a242e0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>T *</type>
@@ -126,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/weakref.h" line="144"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/weakref.h" line="144"/>
       </memberdef>
       <memberdef kind="function" id="classwx_weak_ref_3_01_t_01_4_1a14850b8f235acbf65e322306c3198a41" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>T *</type>
@@ -139,7 +139,7 @@
 <para>Returns pointer to the tracked object or NULL. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/weakref.h" line="150"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/weakref.h" line="150"/>
       </memberdef>
       <memberdef kind="function" id="classwx_weak_ref_3_01_t_01_4_1a89453000905ac59eb2e683ff6254467f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>T &amp;</type>
@@ -152,7 +152,7 @@
 <para>If the internal pointer is NULL this method will cause an assert in debug mode. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/weakref.h" line="156"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/weakref.h" line="156"/>
       </memberdef>
       <memberdef kind="function" id="classwx_weak_ref_3_01_t_01_4_1ac11befd5621ba4f71ff45c681e281fb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>T *</type>
@@ -165,7 +165,7 @@
 <para>Returns a pointer to the tracked object. If the internal pointer is NULL this method will cause an assert in debug mode. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/weakref.h" line="162"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/weakref.h" line="162"/>
       </memberdef>
       <memberdef kind="function" id="classwx_weak_ref_3_01_t_01_4_1a63400d0275ad3735b4f94b6421d44326" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>T *</type>
@@ -182,7 +182,7 @@
 <para>A weak reference may be reset by passing <emphasis></emphasis> NULL as <emphasis>pobj</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/weakref.h" line="168"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/weakref.h" line="168"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -216,7 +216,7 @@
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/>None; this class implementation is entirely header-based.</para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__smartpointers" kindref="compound">Smart Pointers</ref></para><para><simplesect kind="see"><para><ref refid="classwx_shared_ptr_3_01_t_01_4" kindref="compound">wxSharedPtr&lt;T&gt;</ref>, <ref refid="classwx_scoped_ptr_3_01_t_01_4" kindref="compound">wxScopedPtr&lt;T&gt;</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/weakref.h" line="103" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/weakref.h" bodystart="102" bodyend="169"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/weakref.h" line="103" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/weakref.h" bodystart="102" bodyend="169"/>
     <listofallmembers>
       <member refid="classwx_weak_ref_3_01_t_01_4_1a4fecc24579d3b687f2901c3ffb376265" prot="public" virt="non-virtual"><scope>wxWeakRef&lt; T &gt;</scope><name>element_type</name></member>
       <member refid="classwx_weak_ref_3_01_t_01_4_1addf1a49d933b7a6acffb29e15587b935" prot="public" virt="non-virtual"><scope>wxWeakRef&lt; T &gt;</scope><name>get</name></member>

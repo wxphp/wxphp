@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ipc.h" line="339"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ipc.h" line="339"/>
       </memberdef>
       <memberdef kind="function" id="classwx_server_1af94377e136023548698a6898ed2ffb3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -32,7 +32,7 @@
 <para>Under Unix, the service name may be either an integer port identifier in which case an Internet domain socket will be used for the communications, or a valid file name (which shouldn&apos;t exist and will be deleted afterwards) in which case a Unix domain socket is created.</para><para>false is returned if the call failed (for example, the port number is already in use). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ipc.h" line="351"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ipc.h" line="351"/>
       </memberdef>
       <memberdef kind="function" id="classwx_server_1ae04dd9aa98b7a0a3cfce1333d80b0713" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_connection_base" kindref="compound">wxConnectionBase</ref> *</type>
@@ -49,7 +49,7 @@
 <para>The application should derive a member to intercept this message and return a connection object of either the standard <ref refid="classwx_connection" kindref="compound">wxConnection</ref> type, or (more likely) of a user-derived type.</para><para>If the topic is <bold>STDIO</bold>, the application may wish to refuse the connection. Under UNIX, when a server is created the <ref refid="classwx_server_1ae04dd9aa98b7a0a3cfce1333d80b0713" kindref="member">OnAcceptConnection()</ref> message is always sent for standard input and output, but in the context of DDE messages it doesn&apos;t make a lot of sense. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ipc.h" line="365"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ipc.h" line="365"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -58,7 +58,7 @@
 <para>The actual DDE-based implementation using <ref refid="classwx_d_d_e_server" kindref="compound">wxDDEServer</ref> is available on Windows only, but a platform-independent, socket-based version of this API is available using <ref refid="classwx_t_c_p_server" kindref="compound">wxTCPServer</ref>, which has the same API.</para><para>To create a server which can communicate with a suitable client, you need to derive a class from <ref refid="classwx_connection" kindref="compound">wxConnection</ref> and another from <ref refid="classwx_server" kindref="compound">wxServer</ref>. The custom <ref refid="classwx_connection" kindref="compound">wxConnection</ref> class will intercept communications in a &apos;conversation&apos; with a client, and the custom <ref refid="classwx_server" kindref="compound">wxServer</ref> is required so that a user-overridden <ref refid="classwx_server_1ae04dd9aa98b7a0a3cfce1333d80b0713" kindref="member">wxServer::OnAcceptConnection</ref> member can return a <ref refid="classwx_connection" kindref="compound">wxConnection</ref> of the required class, when a connection is made. Look at the IPC sample and the <ref refid="overview_ipc" kindref="compound">Interprocess Communication</ref> for an example of how to do this.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ipc" kindref="compound">Interprocess Communication</ref></para><para><simplesect kind="see"><para><ref refid="classwx_client" kindref="compound">wxClient</ref>, <ref refid="classwx_connection" kindref="compound">wxConnection</ref>, IPC, <ref refid="overview_ipc" kindref="compound">Interprocess Communication</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ipc.h" line="334" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ipc.h" bodystart="333" bodyend="366"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ipc.h" line="334" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/ipc.h" bodystart="333" bodyend="366"/>
     <listofallmembers>
       <member refid="classwx_server_1af94377e136023548698a6898ed2ffb3c" prot="public" virt="non-virtual"><scope>wxServer</scope><name>Create</name></member>
       <member refid="classwx_server_1ae04dd9aa98b7a0a3cfce1333d80b0713" prot="public" virt="virtual"><scope>wxServer</scope><name>OnAcceptConnection</name></member>

@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="139"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="139"/>
       </memberdef>
       <memberdef kind="function" id="classwx_busy_cursor_1ae02fa91dc7ce6ef2909d5b22ec7d9022" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="144"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="144"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -46,7 +46,7 @@
 </programlisting></para><para>It works by calling <ref refid="group__group__funcmacro__dialog_1ga1a9c984ef97d76e45b6dad72219e758b" kindref="member">wxBeginBusyCursor()</ref> in the constructor, and <ref refid="group__group__funcmacro__dialog_1gaf2331f353059e79d45700a04793a7dd3" kindref="member">wxEndBusyCursor()</ref> in the destructor.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref></para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__dialog_1ga1a9c984ef97d76e45b6dad72219e758b" kindref="member">wxBeginBusyCursor()</ref>, <ref refid="group__group__funcmacro__dialog_1gaf2331f353059e79d45700a04793a7dd3" kindref="member">wxEndBusyCursor()</ref>, <ref refid="classwx_window_disabler" kindref="compound">wxWindowDisabler</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="134" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" bodystart="133" bodyend="145"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="134" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" bodystart="133" bodyend="145"/>
     <listofallmembers>
       <member refid="classwx_busy_cursor_1aeaa61938f7322311eb43bfa1ef4ea205" prot="public" virt="non-virtual"><scope>wxBusyCursor</scope><name>wxBusyCursor</name></member>
       <member refid="classwx_busy_cursor_1ae02fa91dc7ce6ef2909d5b22ec7d9022" prot="public" virt="non-virtual"><scope>wxBusyCursor</scope><name>~wxBusyCursor</name></member>

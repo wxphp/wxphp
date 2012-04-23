@@ -33,7 +33,7 @@
 <para>If successful, return true and fill info structure with the parameters required to create the font, otherwise return false.</para><para>The first form is for wxWidgets&apos; internal use while the second one is better suitable for general use -- it returns wxFontEncoding which can consequently be passed to <ref refid="classwx_font" kindref="compound">wxFont</ref> constructor. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontmap.h" line="121"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontmap.h" line="121"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_mapper_1a9da8deb093a74bd4c061c6811c253f98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -64,7 +64,7 @@
 <para>If successful, return true and fill info structure with the parameters required to create the font, otherwise return false.</para><para>The first form is for wxWidgets&apos; internal use while the second one is better suitable for general use -- it returns wxFontEncoding which can consequently be passed to <ref refid="classwx_font" kindref="compound">wxFont</ref> constructor. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontmap.h" line="125"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontmap.h" line="125"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -80,7 +80,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontmap.h" line="70"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontmap.h" line="70"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_mapper_1aa5119648c6a2cde69bc3a1b4c70983c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontmap.h" line="75"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontmap.h" line="75"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_mapper_1a5c812a32c4477b0f507026d9939e4d29" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
@@ -115,7 +115,7 @@
 <para>Be careful when using this function with <emphasis>interactive</emphasis> set to true (default value) as the function then may show a dialog box to the user which may lead to unexpected reentrancies and may also take a significantly longer time than a simple function call. For these reasons, it is almost always a bad idea to call this function from the event handlers for repeatedly generated events such as <computeroutput>EVT_PAINT</computeroutput>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontmap.h" line="89"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontmap.h" line="89"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_mapper_1ab5c09ab2aab7641ca85f3c711b7c700b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -137,24 +137,7 @@
 <para>If no facename is given, find <emphasis>any</emphasis> font in this encoding. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontmap.h" line="171"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_font_mapper_1a1a16884bed5452249aa42b90e237eae9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void wxFontMapper::SetConfig</definition>
-        <argsstring>(wxConfigBase *config)</argsstring>
-        <name>SetConfig</name>
-        <param>
-          <type><ref refid="classwx_config_base" kindref="compound">wxConfigBase</ref> *</type>
-          <declname>config</declname>
-        </param>
-        <briefdescription>
-<para>Set the config object to use (may be NULL to use default). </para>        </briefdescription>
-        <detaileddescription>
-<para>By default, the global one (from <ref refid="classwx_config_base_1a61bfb04c1c133190b3e851b252ed1c60" kindref="member">wxConfigBase::Get()</ref> will be used) and the default root path for the config settings is the string returned by GetDefaultConfigPath(). </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontmap.h" line="188"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontmap.h" line="171"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_mapper_1a5999b3950e0a78e3e8890d96abe37a97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -171,7 +154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontmap.h" line="193"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontmap.h" line="185"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_mapper_1a2fc0db252f9a52356f1484c684c6f8b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -188,7 +171,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontmap.h" line="198"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontmap.h" line="190"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_mapper_1a7459de236727f25d40a57414f10850c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -205,7 +188,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontmap.h" line="203"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontmap.h" line="195"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -221,7 +204,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontmap.h" line="96"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontmap.h" line="96"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_mapper_1af52ac5ceb2482193c7f473f1011271ce" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> **</type>
@@ -238,7 +221,7 @@
 <para>The array is NULL-terminated. IF it isn&apos;t empty, the first name in it is the canonical encoding name, i.e. the same string as returned by <ref refid="classwx_font_mapper_1a92839194dfb366558dc80f8c28d89b68" kindref="member">GetEncodingName()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontmap.h" line="105"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontmap.h" line="105"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_mapper_1ac4a62f1b70e490871b81041f8615c42a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
@@ -255,7 +238,7 @@
 <para>Together with <ref refid="classwx_font_mapper_1a49c41e77de4bb68d8ceb2c22d182a819" kindref="member">GetSupportedEncodingsCount()</ref> this method may be used to get all supported encodings. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontmap.h" line="134"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontmap.h" line="134"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_mapper_1a97ddfc489a75d2bda6630ba045ccf0e5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -272,7 +255,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontmap.h" line="139"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontmap.h" line="139"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_mapper_1a9e2a0b5a7aa7be14e68798352d570751" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
@@ -289,7 +272,7 @@
 <para>This function is the inverse of <ref refid="classwx_font_mapper_1a92839194dfb366558dc80f8c28d89b68" kindref="member">GetEncodingName()</ref> and is intentionally less general than <ref refid="classwx_font_mapper_1a5c812a32c4477b0f507026d9939e4d29" kindref="member">CharsetToEncoding()</ref>, i.e. it doesn&apos;t try to make any guesses nor ever asks the user. It is meant just as a way of restoring objects previously serialized using <ref refid="classwx_font_mapper_1a92839194dfb366558dc80f8c28d89b68" kindref="member">GetEncodingName()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontmap.h" line="149"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontmap.h" line="149"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_mapper_1a92839194dfb366558dc80f8c28d89b68" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -307,7 +290,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontmap.h" line="157"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontmap.h" line="157"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_mapper_1a49c41e77de4bb68d8ceb2c22d182a819" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -320,7 +303,7 @@
 <para>Together with <ref refid="classwx_font_mapper_1ac4a62f1b70e490871b81041f8615c42a" kindref="member">GetEncoding()</ref> this method may be used to get all supported encodings. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontmap.h" line="164"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontmap.h" line="164"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_mapper_1a08ed527234d2cd470019f492a19d9cc3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font_mapper" kindref="compound">wxFontMapper</ref> *</type>
@@ -338,7 +321,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontmap.h" line="180"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontmap.h" line="180"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -357,14 +340,14 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>text<sp/>=<sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref>(text.mb_str(convFrom),<sp/>convTo);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...failure<sp/>(or<sp/>we<sp/>may<sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>iso8859-1/7bit<sp/><ref refid="ftp_8h_1ac6a3bd5749f031b948edd5a5dc74df55af9c208c7d7a0f102f2683165540c882d" kindref="member">ASCII</ref>)...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...failure<sp/>(or<sp/>we<sp/>may<sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>iso8859-1/7bit<sp/>ASCII)...</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>...display<sp/>text...</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref></para><para><simplesect kind="see"><para><ref refid="classwx_encoding_converter" kindref="compound">wxEncodingConverter</ref>, <ref refid="overview_nonenglish" kindref="compound">Writing Non-English Applications</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontmap.h" line="62" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontmap.h" bodystart="61" bodyend="204"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontmap.h" line="62" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/fontmap.h" bodystart="61" bodyend="196"/>
     <listofallmembers>
       <member refid="classwx_font_mapper_1a5c812a32c4477b0f507026d9939e4d29" prot="public" virt="virtual"><scope>wxFontMapper</scope><name>CharsetToEncoding</name></member>
       <member refid="classwx_font_mapper_1a2bd9e7f8c2c6808c4508ed05e9f1cfe5" prot="public" virt="non-virtual"><scope>wxFontMapper</scope><name>Get</name></member>
@@ -378,7 +361,6 @@
       <member refid="classwx_font_mapper_1a49c41e77de4bb68d8ceb2c22d182a819" prot="public" virt="non-virtual"><scope>wxFontMapper</scope><name>GetSupportedEncodingsCount</name></member>
       <member refid="classwx_font_mapper_1ab5c09ab2aab7641ca85f3c711b7c700b" prot="public" virt="virtual"><scope>wxFontMapper</scope><name>IsEncodingAvailable</name></member>
       <member refid="classwx_font_mapper_1a08ed527234d2cd470019f492a19d9cc3" prot="public" virt="non-virtual"><scope>wxFontMapper</scope><name>Set</name></member>
-      <member refid="classwx_font_mapper_1a1a16884bed5452249aa42b90e237eae9" prot="public" virt="non-virtual"><scope>wxFontMapper</scope><name>SetConfig</name></member>
       <member refid="classwx_font_mapper_1a5999b3950e0a78e3e8890d96abe37a97" prot="public" virt="non-virtual"><scope>wxFontMapper</scope><name>SetConfigPath</name></member>
       <member refid="classwx_font_mapper_1a2fc0db252f9a52356f1484c684c6f8b0" prot="public" virt="non-virtual"><scope>wxFontMapper</scope><name>SetDialogParent</name></member>
       <member refid="classwx_font_mapper_1a7459de236727f25d40a57414f10850c1" prot="public" virt="non-virtual"><scope>wxFontMapper</scope><name>SetDialogTitle</name></member>

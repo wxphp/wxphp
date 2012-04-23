@@ -29,7 +29,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="36"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="36"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -39,49 +39,49 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref></para><para><simplesect kind="see"><para><ref refid="overview_html_1overview_html_handlers" kindref="member">Tag Handlers</ref>, <ref refid="classwx_html_tag_handler" kindref="compound">wxHtmlTagHandler</ref>, <ref refid="classwx_html_win_tag_handler" kindref="compound">wxHtmlWinTagHandler</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7127">
+      <node id="7314">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7126">
+      <node id="7313">
         <label>wxModule</label>
         <link refid="classwx_module"/>
-        <childnode refid="7127" relation="public-inheritance">
+        <childnode refid="7314" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7125">
+      <node id="7312">
         <label>wxHtmlTagsModule</label>
         <link refid="classwx_html_tags_module"/>
-        <childnode refid="7126" relation="public-inheritance">
+        <childnode refid="7313" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7130">
+      <node id="7317">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7131" relation="usage">
+        <childnode refid="7318" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7129">
+      <node id="7316">
         <label>wxModule</label>
         <link refid="classwx_module"/>
-        <childnode refid="7130" relation="public-inheritance">
+        <childnode refid="7317" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7128">
+      <node id="7315">
         <label>wxHtmlTagsModule</label>
         <link refid="classwx_html_tags_module"/>
-        <childnode refid="7129" relation="public-inheritance">
+        <childnode refid="7316" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7131">
+      <node id="7318">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/winpars.h" bodystart="21" bodyend="37"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/html/winpars.h" bodystart="21" bodyend="37"/>
     <listofallmembers>
       <member refid="classwx_module_1a943494994b76ddaefebf95345c5a05ec" prot="protected" virt="non-virtual"><scope>wxHtmlTagsModule</scope><name>AddDependency</name></member>
       <member refid="classwx_module_1aadbdbde333a3c497eedd802ba4c76a0c" prot="protected" virt="non-virtual"><scope>wxHtmlTagsModule</scope><name>AddDependency</name></member>

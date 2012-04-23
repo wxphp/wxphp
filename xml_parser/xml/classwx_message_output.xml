@@ -18,7 +18,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgout.h" line="52"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgout.h" line="52"/>
       </memberdef>
       <memberdef kind="function" id="classwx_message_output_1ac8a0f8cc3ff1c0582d7e3e3f490e7e0b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_message_output" kindref="compound">wxMessageOutput</ref> *</type>
@@ -35,7 +35,7 @@
 <para>Using this function may be a simpler alternative to changing the message output object used for your program than overriding <ref refid="classwx_app_traits_1a53c3290baa711f24d9fcf4883b3363a4" kindref="member">wxAppTraits::CreateMessageOutput()</ref>.</para><para>Remember to delete the returned pointer or restore it later with another call to <ref refid="classwx_message_output_1ac8a0f8cc3ff1c0582d7e3e3f490e7e0b" kindref="member">Set()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgout.h" line="64"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgout.h" line="64"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -57,7 +57,7 @@
 <para>This function uses the same conventions as standard <computeroutput>printf()</computeroutput>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgout.h" line="71"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgout.h" line="71"/>
       </memberdef>
       <memberdef kind="function" id="classwx_message_output_1ae8b0b6734006e716bd80fd053a7b4e4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -75,7 +75,7 @@
 </programlisting> (notice that passing user-defined string to <ref refid="classwx_message_output_1a233e76ce6c1b569f16b42b49151ab979" kindref="member">Printf()</ref> directly is, of course, a security risk). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgout.h" line="89"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgout.h" line="89"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -88,36 +88,36 @@
 </programlisting></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7753">
+      <node id="7946">
         <label>wxMessageOutputStderr</label>
         <link refid="classwx_message_output_stderr"/>
-        <childnode refid="7751" relation="public-inheritance">
+        <childnode refid="7944" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7751">
+      <node id="7944">
         <label>wxMessageOutput</label>
         <link refid="classwx_message_output"/>
       </node>
-      <node id="7754">
+      <node id="7947">
         <label>wxMessageOutputBest</label>
         <link refid="classwx_message_output_best"/>
-        <childnode refid="7753" relation="public-inheritance">
+        <childnode refid="7946" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7755">
+      <node id="7948">
         <label>wxMessageOutputDebug</label>
         <link refid="classwx_message_output_debug"/>
-        <childnode refid="7753" relation="public-inheritance">
+        <childnode refid="7946" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7752">
+      <node id="7945">
         <label>wxMessageOutputMessageBox</label>
         <link refid="classwx_message_output_message_box"/>
-        <childnode refid="7751" relation="public-inheritance">
+        <childnode refid="7944" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgout.h" line="41" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgout.h" bodystart="40" bodyend="90"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgout.h" line="41" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/msgout.h" bodystart="40" bodyend="90"/>
     <listofallmembers>
       <member refid="classwx_message_output_1aff0387f83c5ee4db7cf26b909e1057e7" prot="public" virt="non-virtual"><scope>wxMessageOutput</scope><name>Get</name></member>
       <member refid="classwx_message_output_1ae8b0b6734006e716bd80fd053a7b4e4d" prot="public" virt="pure-virtual"><scope>wxMessageOutput</scope><name>Output</name></member>

@@ -16,7 +16,7 @@
 <para>This constructor is only used for two-step creation, if possible, prefer using the constructor below directly instead of using this one and calling <ref refid="classwx_banner_window_1abdf2347d2493376ed7366f964ce3ad4f" kindref="member">Create()</ref> later. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bannerwindow.h" line="62"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bannerwindow.h" line="62"/>
       </memberdef>
       <memberdef kind="function" id="classwx_banner_window_1a51cc9f87c7b994a76ddf886b435c31bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -38,7 +38,7 @@
 <para>The only really important arguments of the full constructor below are <emphasis>parent</emphasis> and <emphasis>dir</emphasis> so this class provides a convenient constructor taking only them.</para><para>The banner orientation changes how the text in it is displayed and also defines where is the bitmap truncated if it&apos;s too big to fit but doesn&apos;t do anything for the banner position, this is supposed to be taken care of in the usual way, e.g. using sizers. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bannerwindow.h" line="76"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bannerwindow.h" line="76"/>
       </memberdef>
       <memberdef kind="function" id="classwx_banner_window_1acbff11dfffdae9f0421d782f6adabb63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -84,7 +84,7 @@
 <para>Prefer to use the shorter constructor documented above. You should rarely, if ever, need to use non-default values for any other parameters: as the banner window doesn&apos;t generate any events, its identifier is not particularly useful; its position and size will be almost always managed by the containing sizer and it doesn&apos;t have any specific styles. So only the parent and the banner direction need to be specified. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bannerwindow.h" line="95"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bannerwindow.h" line="95"/>
       </memberdef>
       <memberdef kind="function" id="classwx_banner_window_1abdf2347d2493376ed7366f964ce3ad4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -130,7 +130,7 @@
 <para>It&apos;s an error to call <ref refid="classwx_banner_window_1abdf2347d2493376ed7366f964ce3ad4f" kindref="member">Create()</ref> for the objects created using non-default constructor. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bannerwindow.h" line="110"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bannerwindow.h" line="110"/>
       </memberdef>
       <memberdef kind="function" id="classwx_banner_window_1af42312d9da10d4d797a739eb7e23bb95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -155,7 +155,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bannerwindow.h" line="138"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bannerwindow.h" line="138"/>
       </memberdef>
       <memberdef kind="function" id="classwx_banner_window_1aa2dcae1c87dbf15486f34042cae575f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -176,7 +176,7 @@
 <para>This is mutually exclusive with <ref refid="classwx_banner_window_1af42312d9da10d4d797a739eb7e23bb95" kindref="member">SetBitmap()</ref>.</para><para>Title is rendered in bold and should be single line, message can have multiple lines but is not wrapped automatically, include explicit line breaks in the string if you want to have multiple lines. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bannerwindow.h" line="149"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bannerwindow.h" line="149"/>
       </memberdef>
       <memberdef kind="function" id="classwx_banner_window_1a48920916010216f51a748f4cf026520d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -197,7 +197,7 @@
 <para>The gradient colours are ignored if <ref refid="classwx_banner_window_1af42312d9da10d4d797a739eb7e23bb95" kindref="member">SetBitmap()</ref> is used. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bannerwindow.h" line="156"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bannerwindow.h" line="156"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -226,73 +226,73 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;generic/bannerwindow.png&apos; alt=&apos;Generic appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="since"><para>2.9.3 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4461">
+      <node id="4551">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4460">
+      <node id="4550">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4461" relation="public-inheritance">
+        <childnode refid="4551" relation="public-inheritance">
         </childnode>
-        <childnode refid="4462" relation="public-inheritance">
+        <childnode refid="4552" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4462">
+      <node id="4552">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4459">
+      <node id="4549">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4460" relation="public-inheritance">
+        <childnode refid="4550" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4458">
+      <node id="4548">
         <label>wxBannerWindow</label>
         <link refid="classwx_banner_window"/>
-        <childnode refid="4459" relation="public-inheritance">
+        <childnode refid="4549" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4466">
+      <node id="4556">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4467" relation="usage">
+        <childnode refid="4557" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4465">
+      <node id="4555">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4466" relation="public-inheritance">
+        <childnode refid="4556" relation="public-inheritance">
         </childnode>
-        <childnode refid="4468" relation="public-inheritance">
+        <childnode refid="4558" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4468">
+      <node id="4558">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4464">
+      <node id="4554">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4465" relation="public-inheritance">
+        <childnode refid="4555" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4463">
+      <node id="4553">
         <label>wxBannerWindow</label>
         <link refid="classwx_banner_window"/>
-        <childnode refid="4464" relation="public-inheritance">
+        <childnode refid="4554" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4467">
+      <node id="4557">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bannerwindow.h" line="53" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bannerwindow.h" bodystart="52" bodyend="157"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bannerwindow.h" line="53" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/bannerwindow.h" bodystart="52" bodyend="157"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxBannerWindow</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxBannerWindow</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -451,6 +451,7 @@
       <member refid="classwx_window_1aa90a260c0a835a133043460b7d0024a8" prot="public" virt="virtual"><scope>wxBannerWindow</scope><name>InitDialog</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxBannerWindow</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxBannerWindow</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxBannerWindow</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxBannerWindow</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxBannerWindow</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxBannerWindow</scope><name>IsExposed</name></member>
@@ -466,13 +467,13 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxBannerWindow</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxBannerWindow</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxBannerWindow</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxBannerWindow</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxBannerWindow</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxBannerWindow</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxBannerWindow</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxBannerWindow</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxBannerWindow</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxBannerWindow</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxBannerWindow</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxBannerWindow</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxBannerWindow</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxBannerWindow</scope><name>MoveAfterInTabOrder</name></member>
@@ -593,7 +594,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxBannerWindow</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxBannerWindow</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxBannerWindow</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxBannerWindow</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxBannerWindow</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxBannerWindow</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxBannerWindow</scope><name>Unlink</name></member>

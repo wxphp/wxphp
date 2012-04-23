@@ -3,6 +3,7 @@
   <compounddef id="classwx_choice" kind="class" prot="public">
     <compoundname>wxChoice</compoundname>
     <basecompoundref refid="classwx_control_with_items" prot="public" virt="non-virtual">wxControlWithItems</basecompoundref>
+    <derivedcompoundref refid="classwx_dir_filter_list_ctrl" prot="public" virt="non-virtual">wxDirFilterListCtrl</derivedcompoundref>
     <includes local="no">wx/choice.h</includes>
       <sectiondef kind="user-defined">
       <memberdef kind="function" id="classwx_choice_1a55dd1bd9ac7bbaee3eebdb94d11f9181" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -60,7 +61,7 @@
 <para>See <ref refid="classwx_choice_1abe4fa74cf09a21608e90cd55ca96fabd" kindref="member">wxChoice()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choice.h" line="145"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/choice.h" line="131"/>
       </memberdef>
       <memberdef kind="function" id="classwx_choice_1a91a72be7d1296d35589b152f7d86de3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -108,7 +109,7 @@
 <para>See <ref refid="classwx_choice_1abe4fa74cf09a21608e90cd55ca96fabd" kindref="member">wxChoice()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choice.h" line="152"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/choice.h" line="138"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -124,7 +125,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choice.h" line="41"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/choice.h" line="41"/>
       </memberdef>
       <memberdef kind="function" id="classwx_choice_1a4b8a1ceecde2d839156e4afe9fa8feca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -243,10 +244,10 @@
 </parameteritem>
 </parameterlist>
 <simplesect kind="see"><para><ref refid="classwx_choice_1a55dd1bd9ac7bbaee3eebdb94d11f9181" kindref="member">Create()</ref>, <ref refid="classwx_validator" kindref="compound">wxValidator</ref></para></simplesect>
-<bold>wxPython Note:</bold></para><para>The <ref refid="classwx_choice" kindref="compound">wxChoice</ref> constructor in wxPython reduces the <emphasis>n</emphasis> and <emphasis>choices</emphasis> arguments to a single argument, which is a list of strings.</para><para><bold>wxPerl Note:</bold> Not supported by wxPerl. </para>        </detaileddescription>
+<bold>wxPerl Note:</bold> Not supported by wxPerl. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choice.h" line="86"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/choice.h" line="79"/>
       </memberdef>
       <memberdef kind="function" id="classwx_choice_1a2bb4542d8803a4c91de478831f6ed560" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -349,10 +350,10 @@
 </parameteritem>
 </parameterlist>
 <simplesect kind="see"><para><ref refid="classwx_choice_1a55dd1bd9ac7bbaee3eebdb94d11f9181" kindref="member">Create()</ref>, <ref refid="classwx_validator" kindref="compound">wxValidator</ref></para></simplesect>
-<bold>wxPython Note:</bold></para><para>The <ref refid="classwx_choice" kindref="compound">wxChoice</ref> constructor in wxPython reduces the <emphasis>n</emphasis> and <emphasis>choices</emphasis> arguments to a single argument, which is a list of strings.</para><para><bold>wxPerl Note:</bold> Use an array reference for the <emphasis>choices</emphasis> parameter. </para>        </detaileddescription>
+<bold>wxPerl Note:</bold> Use an array reference for the <emphasis>choices</emphasis> parameter. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choice.h" line="128"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/choice.h" line="114"/>
       </memberdef>
       <memberdef kind="function" id="classwx_choice_1a5b182487bd1a95e94aff43b97433d7f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -365,7 +366,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choice.h" line="133"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/choice.h" line="119"/>
       </memberdef>
       <memberdef kind="function" id="classwx_choice_1a53754e98169381394954ceb89dc98350" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -379,7 +380,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choice.h" line="161"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/choice.h" line="147"/>
       </memberdef>
       <memberdef kind="function" id="classwx_choice_1abe793ea784ce361d07dda742e957ca89" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -393,7 +394,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choice.h" line="175"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/choice.h" line="161"/>
       </memberdef>
       <memberdef kind="function" id="classwx_choice_1a141ac5a6d0ee752b1e756a55ba9ee169" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -420,7 +421,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choice.h" line="186"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/choice.h" line="172"/>
       </memberdef>
       <memberdef kind="function" id="classwx_choice_1a1bdb7613ac14effa065c9700b0d27f06" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -433,7 +434,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choice.h" line="188"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/choice.h" line="174"/>
       </memberdef>
       <memberdef kind="function" id="classwx_choice_1ab85196b1b0f530cf3497014de51889b6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>unsigned int</type>
@@ -448,7 +449,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choice.h" line="190"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/choice.h" line="176"/>
       </memberdef>
       <memberdef kind="function" id="classwx_choice_1af13b41f102b0a819aead40919c5f4944" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -465,7 +466,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choice.h" line="191"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/choice.h" line="177"/>
       </memberdef>
       <memberdef kind="function" id="classwx_choice_1a10096ed787d493c701e9348f8e34440f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -492,7 +493,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choice.h" line="192"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/choice.h" line="178"/>
       </memberdef>
       <memberdef kind="function" id="classwx_choice_1a72e49836b9ed3ace5a512700d3680401" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -531,7 +532,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choice.h" line="194"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/choice.h" line="180"/>
       </memberdef>
       <memberdef kind="function" id="classwx_choice_1a3a89e3eef072e7914f8408154b4a1daa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -558,7 +559,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choice.h" line="195"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/choice.h" line="181"/>
       </memberdef>
       <memberdef kind="function" id="classwx_choice_1a0b5ca1f30a82f57849e8142d22e703eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -595,7 +596,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choice.h" line="196"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/choice.h" line="182"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -613,121 +614,127 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/choice.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/choice.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/choice.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_list_box" kindref="compound">wxListBox</ref>, <ref refid="classwx_combo_box" kindref="compound">wxComboBox</ref>, <ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4752">
+      <node id="4842">
         <label>wxItemContainer</label>
         <link refid="classwx_item_container"/>
-        <childnode refid="4753" relation="public-inheritance">
+        <childnode refid="4843" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4750">
+      <node id="4840">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4749">
+      <node id="4839">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4750" relation="public-inheritance">
+        <childnode refid="4840" relation="public-inheritance">
         </childnode>
-        <childnode refid="4751" relation="public-inheritance">
+        <childnode refid="4841" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4751">
+      <node id="4841">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4747">
+      <node id="4837">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4748" relation="public-inheritance">
+        <childnode refid="4838" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4748">
+      <node id="4838">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4749" relation="public-inheritance">
+        <childnode refid="4839" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4745">
+      <node id="4835">
         <label>wxChoice</label>
         <link refid="classwx_choice"/>
-        <childnode refid="4746" relation="public-inheritance">
+        <childnode refid="4836" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4746">
+      <node id="4836">
         <label>wxControlWithItems</label>
         <link refid="classwx_control_with_items"/>
-        <childnode refid="4747" relation="public-inheritance">
+        <childnode refid="4837" relation="public-inheritance">
         </childnode>
-        <childnode refid="4752" relation="public-inheritance">
+        <childnode refid="4842" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4753">
+      <node id="4844">
+        <label>wxDirFilterListCtrl</label>
+        <link refid="classwx_dir_filter_list_ctrl"/>
+        <childnode refid="4835" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4843">
         <label>wxItemContainerImmutable</label>
         <link refid="classwx_item_container_immutable"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4762">
+      <node id="4853">
         <label>wxItemContainer</label>
         <link refid="classwx_item_container"/>
-        <childnode refid="4763" relation="public-inheritance">
+        <childnode refid="4854" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4759">
+      <node id="4850">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4760" relation="usage">
+        <childnode refid="4851" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4758">
+      <node id="4849">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4759" relation="public-inheritance">
+        <childnode refid="4850" relation="public-inheritance">
         </childnode>
-        <childnode refid="4761" relation="public-inheritance">
+        <childnode refid="4852" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4761">
+      <node id="4852">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4756">
+      <node id="4847">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4757" relation="public-inheritance">
+        <childnode refid="4848" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4757">
+      <node id="4848">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4758" relation="public-inheritance">
+        <childnode refid="4849" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4754">
+      <node id="4845">
         <label>wxChoice</label>
         <link refid="classwx_choice"/>
-        <childnode refid="4755" relation="public-inheritance">
+        <childnode refid="4846" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4755">
+      <node id="4846">
         <label>wxControlWithItems</label>
         <link refid="classwx_control_with_items"/>
-        <childnode refid="4756" relation="public-inheritance">
+        <childnode refid="4847" relation="public-inheritance">
         </childnode>
-        <childnode refid="4762" relation="public-inheritance">
+        <childnode refid="4853" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4763">
+      <node id="4854">
         <label>wxItemContainerImmutable</label>
         <link refid="classwx_item_container_immutable"/>
       </node>
-      <node id="4760">
+      <node id="4851">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choice.h" line="34" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/choice.h" bodystart="33" bodyend="197"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/choice.h" line="34" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/choice.h" bodystart="33" bodyend="183"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxChoice</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxChoice</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -927,6 +934,7 @@
       <member refid="classwx_item_container_1ad2bc86a398c44f6ab6d3d6f64d946c70" prot="public" virt="non-virtual"><scope>wxChoice</scope><name>Insert</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxChoice</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxChoice</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxChoice</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxChoice</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_item_container_immutable_1a32c254e4cd1a6090377e0504e230bb88" prot="public" virt="non-virtual"><scope>wxChoice</scope><name>IsEmpty</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxChoice</scope><name>IsEnabled</name></member>
@@ -944,13 +952,13 @@
       <member refid="classwx_choice_1a1bdb7613ac14effa065c9700b0d27f06" prot="public" virt="virtual"><scope>wxChoice</scope><name>IsSorted</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxChoice</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxChoice</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxChoice</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxChoice</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxChoice</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxChoice</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxChoice</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxChoice</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxChoice</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxChoice</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxChoice</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxChoice</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxChoice</scope><name>MoveAfterInTabOrder</name></member>
@@ -1084,7 +1092,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxChoice</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxChoice</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxChoice</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxChoice</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxChoice</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxChoice</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxChoice</scope><name>Unlink</name></member>

@@ -15,7 +15,7 @@
 <para>Default constructing a <ref refid="classwx_tree_list_item" kindref="compound">wxTreeListItem</ref> creates an invalid item. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treelist.h" line="33"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treelist.h" line="33"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_list_item_1a61666cb8d9e60edbb723cda61a51283a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treelist.h" line="38"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treelist.h" line="38"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -38,7 +38,7 @@
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para><simplesect kind="since"><para>2.9.3 </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treelist.h" line="26" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treelist.h" bodystart="25" bodyend="39"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treelist.h" line="26" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treelist.h" bodystart="25" bodyend="39"/>
     <listofallmembers>
       <member refid="classwx_tree_list_item_1a61666cb8d9e60edbb723cda61a51283a" prot="public" virt="non-virtual"><scope>wxTreeListItem</scope><name>IsOk</name></member>
       <member refid="classwx_tree_list_item_1ae2de6943754cad1454ab8d797bc3ada0" prot="public" virt="non-virtual"><scope>wxTreeListItem</scope><name>wxTreeListItem</name></member>

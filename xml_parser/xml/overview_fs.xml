@@ -35,9 +35,9 @@
 <sect1 id="overview_fs_1overview_fs_wxhtmlfs">
 <title>File Systems Included in wxHTML</title>
 <para>The following virtual file system handlers are part of wxWidgets so far:</para><para><itemizedlist>
-<listitem><para><bold>wxArchiveFSHandler:</bold> A handler for archives such as zip and tar. Include file is wx/fs_arc.h. URLs examples: &quot;archive.zip#zip:filename&quot;, &quot;archive.tar.gz#gzip:#tar:filename&quot;. </para></listitem>
-<listitem><para><bold>wxFilterFSHandler:</bold> A handler for compression schemes such as gzip. Header is wx/fs_filter.h. URLs are in the form, e.g.: &quot;document.ps.gz#gzip:&quot;. </para></listitem>
-<listitem><para><bold>wxInternetFSHandler:</bold> A handler for accessing documents via HTTP or FTP protocols. Include file is wx/fs_inet.h. </para></listitem>
+<listitem><para><bold><ref refid="classwx_archive_f_s_handler" kindref="compound">wxArchiveFSHandler</ref>:</bold> A handler for archives such as zip and tar. Include file is <ref refid="fs__arc_8h" kindref="compound">wx/fs_arc.h</ref>. URLs examples: &quot;archive.zip#zip:filename&quot;, &quot;archive.tar.gz#gzip:#tar:filename&quot;. </para></listitem>
+<listitem><para><bold><ref refid="classwx_filter_f_s_handler" kindref="compound">wxFilterFSHandler</ref>:</bold> A handler for compression schemes such as gzip. Header is <ref refid="fs__filter_8h" kindref="compound">wx/fs_filter.h</ref>. URLs are in the form, e.g.: &quot;document.ps.gz#gzip:&quot;. </para></listitem>
+<listitem><para><bold><ref refid="classwx_internet_f_s_handler" kindref="compound">wxInternetFSHandler</ref>:</bold> A handler for accessing documents via HTTP or FTP protocols. Include file is <ref refid="fs__inet_8h" kindref="compound">wx/fs_inet.h</ref>. </para></listitem>
 <listitem><para><bold><ref refid="classwx_memory_f_s_handler" kindref="compound">wxMemoryFSHandler</ref>:</bold> This handler allows you to access data stored in memory (such as bitmaps) as if they were regular files. See <ref refid="classwx_memory_f_s_handler" kindref="compound">wxMemoryFSHandler</ref> for details. Include file is <ref refid="fs__mem_8h" kindref="compound">wx/fs_mem.h</ref>. URL is prefixed with memory:, e.g. &quot;memory:myfile.htm&quot;</para></listitem>
 </itemizedlist>
 In addition, <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref> itself can access local files.</para></sect1>

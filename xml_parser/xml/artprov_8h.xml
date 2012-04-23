@@ -4,9 +4,9 @@
     <compoundname>artprov.h</compoundname>
     <innerclass refid="classwx_art_provider" prot="public">wxArtProvider</innerclass>
       <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="artprov_8h_1ad9c24b799a686f312c2bb64f47b6ef95" prot="public" static="no">
-        <type>class <ref refid="classwx_string" kindref="compound">wxString</ref></type>
-        <definition>typedef class wxString wxArtClient</definition>
+      <memberdef kind="typedef" id="artprov_8h_1a61a888417b5c6c17f6ec35129b53d003" prot="public" static="no">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>typedef wxString wxArtClient</definition>
         <argsstring></argsstring>
         <name>wxArtClient</name>
         <briefdescription>
@@ -15,11 +15,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/artprov.h" line="12" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/artprov.h" bodystart="12" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="12" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="12" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="artprov_8h_1a372ff88c4a78144bc9fb36a413facdb4" prot="public" static="no">
-        <type>class <ref refid="classwx_string" kindref="compound">wxString</ref></type>
-        <definition>typedef class wxString wxArtID</definition>
+      <memberdef kind="typedef" id="artprov_8h_1af7d82bed13ba95dd8ba357f0cb4bdfbd" prot="public" static="no">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>typedef wxString wxArtID</definition>
         <argsstring></argsstring>
         <name>wxArtID</name>
         <briefdescription>
@@ -28,13 +28,821 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/artprov.h" line="17" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/artprov.h" bodystart="17" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="17" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="artprov_8h_1a60ddc53e53fc06d2bdf1a1dc5b4aa2d7" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtClient</ref></type>
+        <definition>wxArtClient wxART_TOOLBAR</definition>
+        <argsstring></argsstring>
+        <name>wxART_TOOLBAR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a71acc864981812e272f64633af6f63a6" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtClient</ref></type>
+        <definition>wxArtClient wxART_MENU</definition>
+        <argsstring></argsstring>
+        <name>wxART_MENU</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a4dc4a82ca5f56e4f02177ca0f6cccba8" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtClient</ref></type>
+        <definition>wxArtClient wxART_FRAME_ICON</definition>
+        <argsstring></argsstring>
+        <name>wxART_FRAME_ICON</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1aa79d216c858343397c8be2e32b8f7785" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtClient</ref></type>
+        <definition>wxArtClient wxART_CMN_DIALOG</definition>
+        <argsstring></argsstring>
+        <name>wxART_CMN_DIALOG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="24" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a11655b97976653e6ea624a493d5f881c" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtClient</ref></type>
+        <definition>wxArtClient wxART_HELP_BROWSER</definition>
+        <argsstring></argsstring>
+        <name>wxART_HELP_BROWSER</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a4d826ae7c2004743aebd150e0af9a5b8" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtClient</ref></type>
+        <definition>wxArtClient wxART_MESSAGE_BOX</definition>
+        <argsstring></argsstring>
+        <name>wxART_MESSAGE_BOX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="26" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a78a428f4f7008d243f95cac1b05f4bfb" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtClient</ref></type>
+        <definition>wxArtClient wxART_BUTTON</definition>
+        <argsstring></argsstring>
+        <name>wxART_BUTTON</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="27" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a26ca9d9d78b5f016f2b6e16abdd4108b" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtClient</ref></type>
+        <definition>wxArtClient wxART_LIST</definition>
+        <argsstring></argsstring>
+        <name>wxART_LIST</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="28" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1abe6f6066b36e0456cb2f8a0e6decb831" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtClient</ref></type>
+        <definition>wxArtClient wxART_OTHER</definition>
+        <argsstring></argsstring>
+        <name>wxART_OTHER</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="30" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1adcf9cc6b1e19e4486b47eb300949d978" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_ADD_BOOKMARK</definition>
+        <argsstring></argsstring>
+        <name>wxART_ADD_BOOKMARK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a999721069380620b515c20881a94bb01" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_DEL_BOOKMARK</definition>
+        <argsstring></argsstring>
+        <name>wxART_DEL_BOOKMARK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="34" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1aec45136a1f561299936c242b8b695d65" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_HELP_SIDE_PANEL</definition>
+        <argsstring></argsstring>
+        <name>wxART_HELP_SIDE_PANEL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="35" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a31b62379d52a528cc6c04ef524b0e851" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_HELP_SETTINGS</definition>
+        <argsstring></argsstring>
+        <name>wxART_HELP_SETTINGS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="36" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a43fab92991bed8a2394da33a294127f9" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_HELP_BOOK</definition>
+        <argsstring></argsstring>
+        <name>wxART_HELP_BOOK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="37" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1ab44613405f87913b6b0a49db5d652d33" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_HELP_FOLDER</definition>
+        <argsstring></argsstring>
+        <name>wxART_HELP_FOLDER</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="38" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a674475d677c8bec33569dce1a78e2057" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_HELP_PAGE</definition>
+        <argsstring></argsstring>
+        <name>wxART_HELP_PAGE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="39" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a3eb36770d772a059e61f4147feb5e391" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_GO_BACK</definition>
+        <argsstring></argsstring>
+        <name>wxART_GO_BACK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="40" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a21860141336a44a5fc0e2ddee6ef2a47" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_GO_FORWARD</definition>
+        <argsstring></argsstring>
+        <name>wxART_GO_FORWARD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="41" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a5ed2a49d1d43ac3e8129a01003a2e694" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_GO_UP</definition>
+        <argsstring></argsstring>
+        <name>wxART_GO_UP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="42" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a509102cf133133a05b01ea6d846c9331" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_GO_DOWN</definition>
+        <argsstring></argsstring>
+        <name>wxART_GO_DOWN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="43" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a748077b7c54c7551739f6bbf9632df2f" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_GO_TO_PARENT</definition>
+        <argsstring></argsstring>
+        <name>wxART_GO_TO_PARENT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="44" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a8b54d135b1c941441d0b94e866193613" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_GO_HOME</definition>
+        <argsstring></argsstring>
+        <name>wxART_GO_HOME</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="45" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a5b722c39be647147440209a671b5c44d" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_GOTO_FIRST</definition>
+        <argsstring></argsstring>
+        <name>wxART_GOTO_FIRST</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="46" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a1482565a5b569e78dca1748bea2a6625" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_GOTO_LAST</definition>
+        <argsstring></argsstring>
+        <name>wxART_GOTO_LAST</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="47" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a7479cf3b69c52f2cb322c50511fe5359" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_FILE_OPEN</definition>
+        <argsstring></argsstring>
+        <name>wxART_FILE_OPEN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="48" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a0e66b8bd6819b21b6109fe6397bb8fc1" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_FILE_SAVE</definition>
+        <argsstring></argsstring>
+        <name>wxART_FILE_SAVE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="49" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1af3f13dbeb7ffc38b68ebf83e85c5873c" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_FILE_SAVE_AS</definition>
+        <argsstring></argsstring>
+        <name>wxART_FILE_SAVE_AS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="50" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a17e2c7bee5a7aab84871d0dfe832420b" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_PRINT</definition>
+        <argsstring></argsstring>
+        <name>wxART_PRINT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="51" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1ac01939daaf92768419d49c9249defe73" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_HELP</definition>
+        <argsstring></argsstring>
+        <name>wxART_HELP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="52" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1aedc562155cf1713bd7cce7a01391c3a2" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_TIP</definition>
+        <argsstring></argsstring>
+        <name>wxART_TIP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="53" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1af970d26eec84cef1ac0ae3420316b1dc" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_REPORT_VIEW</definition>
+        <argsstring></argsstring>
+        <name>wxART_REPORT_VIEW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="54" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a774fdfad84af5c05641b5f1ae455a178" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_LIST_VIEW</definition>
+        <argsstring></argsstring>
+        <name>wxART_LIST_VIEW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="55" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a990a991d8b0c2e4d54daeda4ab477968" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_NEW_DIR</definition>
+        <argsstring></argsstring>
+        <name>wxART_NEW_DIR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="56" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a1801d404b53563ed8ba0ee316519d163" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_HARDDISK</definition>
+        <argsstring></argsstring>
+        <name>wxART_HARDDISK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="57" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a341bf03385dd8617e8f6d8c5580ef8e4" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_FLOPPY</definition>
+        <argsstring></argsstring>
+        <name>wxART_FLOPPY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="58" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1ab40a8decbca516744094d7d23b0e66ab" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_CDROM</definition>
+        <argsstring></argsstring>
+        <name>wxART_CDROM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="59" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a645f88a7727fb12b06029437bbe6ccad" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_REMOVABLE</definition>
+        <argsstring></argsstring>
+        <name>wxART_REMOVABLE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="60" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1ad0e8b7de479ce856f993bad7f39df696" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_FOLDER</definition>
+        <argsstring></argsstring>
+        <name>wxART_FOLDER</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="61" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a6f3c1bf03a46a52cd53dab4e7ab349c9" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_FOLDER_OPEN</definition>
+        <argsstring></argsstring>
+        <name>wxART_FOLDER_OPEN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="62" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a954d367077dc8017aa48228a1057acdd" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_GO_DIR_UP</definition>
+        <argsstring></argsstring>
+        <name>wxART_GO_DIR_UP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="63" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a46ed1c03721f97e804edaad37d08cb6a" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_EXECUTABLE_FILE</definition>
+        <argsstring></argsstring>
+        <name>wxART_EXECUTABLE_FILE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="64" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a42e530d7aeb712e51a85ccea2f0cea24" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_NORMAL_FILE</definition>
+        <argsstring></argsstring>
+        <name>wxART_NORMAL_FILE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="65" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a7ec870eafe676b6f323d8459203da108" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_TICK_MARK</definition>
+        <argsstring></argsstring>
+        <name>wxART_TICK_MARK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="66" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1ab911eca38a980923835d63eba3515696" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_CROSS_MARK</definition>
+        <argsstring></argsstring>
+        <name>wxART_CROSS_MARK</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="67" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a6007755736e803b7f237b9444aabefdd" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_ERROR</definition>
+        <argsstring></argsstring>
+        <name>wxART_ERROR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="68" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a7f179caf35f84ad76434050095a3a439" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_QUESTION</definition>
+        <argsstring></argsstring>
+        <name>wxART_QUESTION</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="69" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a96947921ebc5c5ff7d92f46c99584268" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_WARNING</definition>
+        <argsstring></argsstring>
+        <name>wxART_WARNING</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="70" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a43b4cd8a5a5f0cbd63c572fb43c11362" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_INFORMATION</definition>
+        <argsstring></argsstring>
+        <name>wxART_INFORMATION</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="71" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1ada180a0f0ae6f49edd4ed1d95a72cdee" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_MISSING_IMAGE</definition>
+        <argsstring></argsstring>
+        <name>wxART_MISSING_IMAGE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="72" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1ad5849ced161ad100dae134608b896583" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_COPY</definition>
+        <argsstring></argsstring>
+        <name>wxART_COPY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="74" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1ac5cca2f65e7c715142a70cc42a99c76e" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_CUT</definition>
+        <argsstring></argsstring>
+        <name>wxART_CUT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="75" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a59322f20272a2b2bca48ff6ea60b48d6" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_PASTE</definition>
+        <argsstring></argsstring>
+        <name>wxART_PASTE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="76" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a973466ad3491d822104666d2bb5690df" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_DELETE</definition>
+        <argsstring></argsstring>
+        <name>wxART_DELETE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="77" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a88a7f20612b51cf2f7241098b7c3f419" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_NEW</definition>
+        <argsstring></argsstring>
+        <name>wxART_NEW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="78" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1aaed314ddf35ce7399feb8af9c1837205" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_UNDO</definition>
+        <argsstring></argsstring>
+        <name>wxART_UNDO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="80" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a9953a44e60eaf95a32573cac9d4ccf75" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_REDO</definition>
+        <argsstring></argsstring>
+        <name>wxART_REDO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="81" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a3515601b819e80da5223bb99d3698c40" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_PLUS</definition>
+        <argsstring></argsstring>
+        <name>wxART_PLUS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="83" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a51d1b7007f26ba3fcaba736563f20e53" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_MINUS</definition>
+        <argsstring></argsstring>
+        <name>wxART_MINUS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="84" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a215cbc11ee7e33b89cd37c3d69f61c8e" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_CLOSE</definition>
+        <argsstring></argsstring>
+        <name>wxART_CLOSE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="86" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a09ead39d304009011a40008d8d3b5011" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_QUIT</definition>
+        <argsstring></argsstring>
+        <name>wxART_QUIT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="87" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1a116f2a1c46cc308cb44ae6319db4358d" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_FIND</definition>
+        <argsstring></argsstring>
+        <name>wxART_FIND</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="89" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="artprov_8h_1af86e1ee62b5ec179317d180d79454af5" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_string" kindref="compound">wxArtID</ref></type>
+        <definition>wxArtID wxART_FIND_AND_REPLACE</definition>
+        <argsstring></argsstring>
+        <name>wxART_FIND_AND_REPLACE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" line="90" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h" bodystart="90" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/artprov.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/artprov.h"/>
   </compounddef>
 </doxygen>

@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h" line="10" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h" bodystart="10" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/statusbr.h" line="10" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/statusbr.h" bodystart="10" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="statusbr_8h_1a73c5c766a087148c8855c424a4f60a26" prot="public" static="no">
         <name>wxSTB_SHOW_TIPS</name>
@@ -25,7 +25,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h" line="11" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h" bodystart="11" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/statusbr.h" line="11" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/statusbr.h" bodystart="11" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="statusbr_8h_1ae6df8eb429eefad13c17536aa23a63ab" prot="public" static="no">
         <name>wxSTB_ELLIPSIZE_START</name>
@@ -36,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h" bodystart="13" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/statusbr.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/statusbr.h" bodystart="13" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="statusbr_8h_1a63f27c46023f1045cac17a1f342cd12d" prot="public" static="no">
         <name>wxSTB_ELLIPSIZE_MIDDLE</name>
@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h" line="14" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h" bodystart="14" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/statusbr.h" line="14" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/statusbr.h" bodystart="14" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="statusbr_8h_1a3f97d1de5ef48a26233511761aa3d6d9" prot="public" static="no">
         <name>wxSTB_ELLIPSIZE_END</name>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h" bodystart="15" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/statusbr.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/statusbr.h" bodystart="15" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="statusbr_8h_1af67d5e82fd9da78a9292e5a51076a897" prot="public" static="no">
         <name>wxSTB_DEFAULT_STYLE</name>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h" line="17" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h" bodystart="17" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/statusbr.h" line="17" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/statusbr.h" bodystart="17" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="statusbr_8h_1a087408cc0ea0e5d01e58b6ae327d0de8" prot="public" static="no">
         <name>wxSB_NORMAL</name>
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h" bodystart="20" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/statusbr.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/statusbr.h" bodystart="20" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="statusbr_8h_1a233cfd6d0374642a4bb97e7d2161a422" prot="public" static="no">
         <name>wxSB_FLAT</name>
@@ -91,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h" bodystart="21" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/statusbr.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/statusbr.h" bodystart="21" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="statusbr_8h_1a58d30844ae31fba7d4e5a5556ae9dd92" prot="public" static="no">
         <name>wxSB_RAISED</name>
@@ -102,13 +102,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h" bodystart="22" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/statusbr.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/statusbr.h" bodystart="22" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/statusbr.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/statusbr.h"/>
   </compounddef>
 </doxygen>

@@ -12,7 +12,7 @@
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" line="43" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" bodystart="43" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" line="43" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__debug_1ga30ad68c25d4f7a731f60eb07419c2960" prot="public" static="no">
         <name>__WXDEBUG__</name>
@@ -22,7 +22,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; <
 <para>This symbol is defined if wxDEBUG_LEVEL is greater than 0 and undefined otherwise.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" line="55" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" bodystart="55" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" line="55" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" bodystart="55" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__debug_1ga204cc264ee560b67e6c6467ba8ffee5f" prot="public" static="no">
         <name>wxASSERT</name>
@@ -34,7 +34,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" line="82" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" bodystart="82" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" line="82" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" bodystart="82" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__debug_1ga9ff90708a7b76e926493ac0860f6854c" prot="public" static="no">
         <name>wxASSERT_LEVEL_2</name>
@@ -45,7 +45,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; <
 <para>This macro does nothing unless wxDEBUG_LEVEL is 2 or more and is meant to be used for the assertions with noticeable performance impact and which, hence, should be disabled during run-time.</para><para>If wxDEBUG_LEVEL is 2 or more, it becomes the same as <ref refid="group__group__funcmacro__debug_1ga204cc264ee560b67e6c6467ba8ffee5f" kindref="member">wxASSERT()</ref>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" line="95" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" bodystart="95" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" line="95" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" bodystart="95" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__debug_1gaf924de21e1d2b51a97886367b99851e7" prot="public" static="no">
         <name>wxASSERT_LEVEL_2_MSG</name>
@@ -58,7 +58,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" line="107" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" bodystart="107" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" line="107" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" bodystart="107" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__debug_1gabcdb0bf7c5499469b40a8fe8206e2cbf" prot="public" static="no">
         <name>wxASSERT_MIN_BITSIZE</name>
@@ -75,7 +75,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; <
 </programlisting></para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" line="129" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" bodystart="129" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" line="129" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" bodystart="129" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__debug_1ga0224638a009ef6a78e09c0d3bb61c379" prot="public" static="no">
         <name>wxASSERT_MSG</name>
@@ -88,7 +88,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" line="142" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" bodystart="142" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" line="142" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" bodystart="142" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__debug_1gacce4d688e56d4de1bbef692e7df2e3e3" prot="public" static="no">
         <name>wxCHECK</name>
@@ -100,7 +100,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; <
 <para>This check is done even in release mode.</para><para>This macro should be used to catch (both in debug and release builds) logical errors done by the programmer.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" line="153" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" bodystart="153" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" line="153" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" bodystart="153" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__debug_1ga4822a2ea9fdd0bc98caa3ff42587743e" prot="public" static="no">
         <name>wxCHECK_MSG</name>
@@ -113,7 +113,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; <
 <para>This check is done even in release mode.</para><para>This macro may be only used in non-void functions, see also <ref refid="group__group__funcmacro__debug_1ga0cf2ca7d7ff0107197e51e6b434fd0bd" kindref="member">wxCHECK_RET()</ref>.</para><para>This macro should be used to catch (both in debug and release builds) logical errors done by the programmer.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" line="166" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" bodystart="166" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" line="166" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" bodystart="166" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__debug_1ga0cf2ca7d7ff0107197e51e6b434fd0bd" prot="public" static="no">
         <name>wxCHECK_RET</name>
@@ -125,7 +125,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; <
 <para>This check is done even in release mode.</para><para>This macro should be used in void functions instead of <ref refid="group__group__funcmacro__debug_1ga4822a2ea9fdd0bc98caa3ff42587743e" kindref="member">wxCHECK_MSG()</ref>.</para><para>This macro should be used to catch (both in debug and release builds) logical errors done by the programmer.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" line="180" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" bodystart="180" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" line="180" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" bodystart="180" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__debug_1ga2a551ae1dcd439257d35a9b0b6ed483c" prot="public" static="no">
         <name>wxCHECK2</name>
@@ -137,7 +137,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; <
 <para>This is a generalisation of <ref refid="group__group__funcmacro__debug_1gacce4d688e56d4de1bbef692e7df2e3e3" kindref="member">wxCHECK()</ref> and may be used when something else than just returning from the function must be done when the <computeroutput>condition</computeroutput> is false. This check is done even in release mode.</para><para>This macro should be used to catch (both in debug and release builds) logical errors done by the programmer.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" line="194" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" bodystart="194" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" line="194" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" bodystart="194" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__debug_1gad9673fe2c9e69d6b41f0175b151060d0" prot="public" static="no">
         <name>wxCHECK2_MSG</name>
@@ -150,7 +150,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; <
 <para>This macro should be used to catch (both in debug and release builds) logical errors done by the programmer.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" line="205" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" bodystart="205" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" line="205" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" bodystart="205" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__debug_1gade23c9c38d065845dc040e31525befdc" prot="public" static="no">
         <name>wxCOMPILE_TIME_ASSERT</name>
@@ -163,7 +163,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" line="234" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" bodystart="234" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" line="234" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" bodystart="234" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__debug_1gaf12b2bda7fcd1b1df041f426d245b17f" prot="public" static="no">
         <name>wxCOMPILE_TIME_ASSERT2</name>
@@ -176,7 +176,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; <
 <para>This macro should be used to catch misconfigurations at compile-time.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" line="246" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" bodystart="246" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" line="246" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" bodystart="246" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__debug_1ga96e17e1bb37bec44a6608d0521abe22e" prot="public" static="no">
         <name>wxDISABLE_ASSERTS_IN_RELEASE_BUILD</name>
@@ -190,7 +190,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" line="277" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" bodystart="277" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" line="277" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" bodystart="277" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__debug_1gaa5b456751cd8c71e9a787fba16ecbd68" prot="public" static="no">
         <name>wxFAIL</name>
@@ -204,7 +204,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" line="297" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" bodystart="297" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" line="297" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" bodystart="297" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__debug_1ga4d129eca8fff062a65dec065edca085e" prot="public" static="no">
         <name>wxFAIL_MSG</name>
@@ -216,7 +216,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" line="314" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" bodystart="314" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" line="314" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" bodystart="314" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -232,7 +232,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; <
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" line="66" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" bodystart="62" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" line="66" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" bodystart="62" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -248,7 +248,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; <
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" line="21"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" line="21"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__debug_1ga36a77b1afdfcac5d30beeb7c727b797c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -262,7 +262,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" line="257"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" line="257"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__debug_1gaeb7e13193cb75f59c70a40bdc595a545" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -272,10 +272,10 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; <
         <briefdescription>
 <para>Returns true if the program is running under debugger, false otherwise. </para>        </briefdescription>
         <detaileddescription>
-<para>Please note that this function is currently only implemented for Win32 and Mac builds using CodeWarrior and always returns false elsewhere.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; </verbatim> </para>        </detaileddescription>
+<para>Please note that this function is currently only implemented for Win32 and always returns false elsewhere.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" line="324"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" line="324"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__debug_1ga7a8443c97e45d2943f03769aaa787376" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__group__funcmacro__debug_1ga5677dae639575c2d7e76edff69271fa9" kindref="member">wxAssertHandler_t</ref></type>
@@ -302,7 +302,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" line="360"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" line="360"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__debug_1ga56835907381132cfc64135d7fbf9d883" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -316,7 +316,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" line="374"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" line="374"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__debug_1ga982e43add2be6c375904de61dcb9f852" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -329,13 +329,13 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; <
 <para>Otherwise the program just terminates abnormally.</para><para>If <computeroutput>wxDEBUG_LEVEL</computeroutput> is 0 (which is not the default) this function does nothing.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/debug.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h" line="387"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h" line="387"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debug.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debug.h"/>
   </compounddef>
 </doxygen>

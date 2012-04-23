@@ -23,7 +23,7 @@
 <para>The clipping region is automatically unset when this object is destroyed. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1615"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1586"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_clipper_1a995a8e0147459e1ba92cbb965fd963a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -44,7 +44,7 @@
 <para>The clipping region is automatically unset when this object is destroyed. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1616"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1587"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_clipper_1a2096fc82c7ab658fcca0a65650ddeb80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -77,7 +77,7 @@
 <para>The clipping region is automatically unset when this object is destroyed. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1617"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1588"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -92,7 +92,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1623"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1594"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -113,7 +113,7 @@
 </programlisting></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_d_c_1a21ce8b27db0da5d68b8571d0ff39114b" kindref="member">wxDC::SetClippingRegion()</ref>, <ref refid="classwx_d_c_font_changer" kindref="compound">wxDCFontChanger</ref>, <ref refid="classwx_d_c_text_colour_changer" kindref="compound">wxDCTextColourChanger</ref>, <ref refid="classwx_d_c_pen_changer" kindref="compound">wxDCPenChanger</ref>, <ref refid="classwx_d_c_brush_changer" kindref="compound">wxDCBrushChanger</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1607" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" bodystart="1606" bodyend="1624"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1578" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" bodystart="1577" bodyend="1595"/>
     <listofallmembers>
       <member refid="classwx_d_c_clipper_1aa6548fa7be5cff3a74f6a6f539b00adf" prot="public" virt="non-virtual"><scope>wxDCClipper</scope><name>wxDCClipper</name></member>
       <member refid="classwx_d_c_clipper_1a995a8e0147459e1ba92cbb965fd963a4" prot="public" virt="non-virtual"><scope>wxDCClipper</scope><name>wxDCClipper</name></member>

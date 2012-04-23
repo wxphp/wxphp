@@ -21,7 +21,7 @@
 <para>If a filename is given, the Windows disk metafile is read in. Check whether this was performed successfully by using the <ref refid="classwx_metafile_1a22c932cc631943ef5f80a251639af298" kindref="member">IsOk()</ref> member. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/metafile.h" line="85"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/metafile.h" line="85"/>
       </memberdef>
       <memberdef kind="function" id="classwx_metafile_1ae163d1a240f59d8ce2d72450a1babb79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -34,7 +34,7 @@
 <para>See <ref refid="overview_refcount_1overview_refcount_destruct" kindref="member">Object Destruction</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/metafile.h" line="92"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/metafile.h" line="92"/>
       </memberdef>
       <memberdef kind="function" id="classwx_metafile_1a22c932cc631943ef5f80a251639af298" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -47,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/metafile.h" line="97"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/metafile.h" line="97"/>
       </memberdef>
       <memberdef kind="function" id="classwx_metafile_1a737c07e3ef22395d425fe7c3edbe4f2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -64,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/metafile.h" line="103"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/metafile.h" line="103"/>
       </memberdef>
       <memberdef kind="function" id="classwx_metafile_1a2e84ccbc1ec4edbf217684782e34035a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -98,7 +98,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/metafile.h" line="129"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/metafile.h" line="129"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -108,37 +108,37 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_metafile_d_c" kindref="compound">wxMetafileDC</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7782">
+      <node id="7975">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7781">
+      <node id="7974">
         <label>wxMetafile</label>
         <link refid="classwx_metafile"/>
-        <childnode refid="7782" relation="public-inheritance">
+        <childnode refid="7975" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7784">
+      <node id="7977">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7785" relation="usage">
+        <childnode refid="7978" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7783">
+      <node id="7976">
         <label>wxMetafile</label>
         <link refid="classwx_metafile"/>
-        <childnode refid="7784" relation="public-inheritance">
+        <childnode refid="7977" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7785">
+      <node id="7978">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/metafile.h" line="77" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/metafile.h" bodystart="76" bodyend="130"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/metafile.h" line="77" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/metafile.h" bodystart="76" bodyend="130"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxMetafile</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxMetafile</scope><name>CloneRefData</name></member>

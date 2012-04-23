@@ -3,6 +3,39 @@
   <compounddef id="classwx_stream_buffer" kind="class" prot="public">
     <compoundname>wxStreamBuffer</compoundname>
     <includes local="no">wx/stream.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classwx_stream_buffer_1a1b6333d99dc30ff865ff330b999e2dcc" prot="public" static="no">
+        <name>BufMode</name>
+        <enumvalue id="classwx_stream_buffer_1a1b6333d99dc30ff865ff330b999e2dcca93efc5286abe9db8c7763404aa835396" prot="public">
+          <name>read</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_stream_buffer_1a1b6333d99dc30ff865ff330b999e2dccafaa5f7ec649e934479215e28c410a6c4" prot="public">
+          <name>write</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_stream_buffer_1a1b6333d99dc30ff865ff330b999e2dcca3eec51f36a60801cc8aa8e5d2393a17f" prot="public">
+          <name>read_write</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>BufMode flags. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="155" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" bodystart="154" bodyend="159"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="classwx_stream_buffer_1a860dcea1040d3b58d62bf8a97df9f360" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -14,7 +47,7 @@
           <declname>stream</declname>
         </param>
         <param>
-          <type>BufMode</type>
+          <type><ref refid="classwx_stream_buffer_1a1b6333d99dc30ff865ff330b999e2dcc" kindref="member">BufMode</ref></type>
           <declname>mode</declname>
         </param>
         <briefdescription>
@@ -32,7 +65,7 @@
 <parametername>mode</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Can be: wxStreamBuffer::read, wxStreamBuffer::write, wxStreamBuffer::read_write.</para></parameterdescription>
+<para>Can be: <ref refid="classwx_stream_buffer_1a1b6333d99dc30ff865ff330b999e2dcca93efc5286abe9db8c7763404aa835396" kindref="member">wxStreamBuffer::read</ref>, <ref refid="classwx_stream_buffer_1a1b6333d99dc30ff865ff330b999e2dccafaa5f7ec649e934479215e28c410a6c4" kindref="member">wxStreamBuffer::write</ref>, <ref refid="classwx_stream_buffer_1a1b6333d99dc30ff865ff330b999e2dcca3eec51f36a60801cc8aa8e5d2393a17f" kindref="member">wxStreamBuffer::read_write</ref>.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
 One stream can have many stream buffers but only one is used internally to pass IO call (e.g. <ref refid="classwx_input_stream_1a72f24d0f50c7f07bb68dedf5e8690f4e" kindref="member">wxInputStream::Read()</ref> -&gt; <ref refid="classwx_stream_buffer_1a5c5772b548442c2a86c8f154c6b27dff" kindref="member">wxStreamBuffer::Read()</ref>), but you can call directly <ref refid="classwx_stream_buffer_1a5c5772b548442c2a86c8f154c6b27dff" kindref="member">wxStreamBuffer::Read</ref> without any problems. Note that all errors and messages linked to the stream are stored in the stream, not the stream buffers:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>streambuffer.Read(...);</highlight></codeline>
@@ -43,7 +76,7 @@ One stream can have many stream buffers but only one is used internally to pass 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="178"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="185"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_buffer_1a57afda8e5aec964e93453324afb4cd4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -80,7 +113,7 @@ One stream can have many stream buffers but only one is used internally to pass 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="193"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="200"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_buffer_1a129a654b76af84c888671441736ef352" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -117,7 +150,7 @@ One stream can have many stream buffers but only one is used internally to pass 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="208"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="215"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_buffer_1a68ea8280a0649f0cf522a572a1a60824" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -125,7 +158,7 @@ One stream can have many stream buffers but only one is used internally to pass 
         <argsstring>(BufMode mode)</argsstring>
         <name>wxStreamBuffer</name>
         <param>
-          <type>BufMode</type>
+          <type><ref refid="classwx_stream_buffer_1a1b6333d99dc30ff865ff330b999e2dcc" kindref="member">BufMode</ref></type>
           <declname>mode</declname>
         </param>
         <briefdescription>
@@ -136,7 +169,7 @@ One stream can have many stream buffers but only one is used internally to pass 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="225"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="232"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_buffer_1afd55499e0c75a9e067c57093ee654bad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -153,20 +186,20 @@ One stream can have many stream buffers but only one is used internally to pass 
 <para>This method initializes the stream buffer with the data of the specified stream buffer. The new stream buffer has the same attributes, size, position and they share the same buffer. This will cause problems if the stream to which the stream buffer belong is destroyed and the newly cloned stream buffer continues to be used, trying to call functions in the (destroyed) stream. It is advised to use this feature only in very local area of the program. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="238"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="245"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_stream_buffer_1a1dc3fff5c08288ebc77bd161e4ae9560" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_stream_buffer_1a4ffb98b4e9c5e091103e5171c6702537" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
-        <definition>wxStreamBuffer::wxStreamBuffer</definition>
+        <definition>wxStreamBuffer::~wxStreamBuffer</definition>
         <argsstring>()</argsstring>
-        <name>wxStreamBuffer</name>
+        <name>~wxStreamBuffer</name>
         <briefdescription>
 <para>Destructor. </para>        </briefdescription>
         <detaileddescription>
 <para>It finalizes all IO calls and frees all internal buffers if necessary. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="244"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="251"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_buffer_1a6501d9cb20e57b7d0f75144669b5246b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -179,7 +212,7 @@ One stream can have many stream buffers but only one is used internally to pass 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="249"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="256"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_buffer_1a2ac1132b1bf10d8f70321b87cce3fcd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -197,7 +230,7 @@ One stream can have many stream buffers but only one is used internally to pass 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="259"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="266"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_buffer_1a789259c4af93129601253be26b39abde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -210,7 +243,7 @@ One stream can have many stream buffers but only one is used internally to pass 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="264"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="271"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_buffer_1ac461ce80390382b799976c53ed93cbef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -227,7 +260,7 @@ One stream can have many stream buffers but only one is used internally to pass 
 <para>If <emphasis>flushable</emphasis> is disabled, no data are sent to the parent stream. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="270"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="277"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_buffer_1ae1aed89e66a588c10d15b99a8b20cb0f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -240,7 +273,7 @@ One stream can have many stream buffers but only one is used internally to pass 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="275"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="282"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_buffer_1ad2b5be1bbb26f025a70addc49f62d14b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -253,7 +286,7 @@ One stream can have many stream buffers but only one is used internally to pass 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="280"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="287"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_buffer_1aa165045209ddc667d350b552993c73b3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -266,7 +299,7 @@ One stream can have many stream buffers but only one is used internally to pass 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="285"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="292"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_buffer_1a28ca586b1b678549bd89850441e15a00" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -279,7 +312,7 @@ One stream can have many stream buffers but only one is used internally to pass 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="290"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="297"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_buffer_1a70c6fa06647b6ffe62f01823b3b3b762" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>char</type>
@@ -294,7 +327,7 @@ One stream can have many stream buffers but only one is used internally to pass 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="300"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="307"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_buffer_1a0d72df46cf154e22daaba85e7c56ca19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -307,7 +340,7 @@ One stream can have many stream buffers but only one is used internally to pass 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="305"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="312"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_buffer_1aad76dfa935d292ce84ca61d890166d7e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -320,7 +353,7 @@ One stream can have many stream buffers but only one is used internally to pass 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="310"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="317"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_buffer_1abd976eec61553ca3fc434dabff41b1aa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -333,7 +366,7 @@ One stream can have many stream buffers but only one is used internally to pass 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="315"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="322"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_buffer_1ae5f8ecfff22202601dfa3aefbe50e696" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -352,7 +385,7 @@ One stream can have many stream buffers but only one is used internally to pass 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="325"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="332"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_buffer_1a5c5772b548442c2a86c8f154c6b27dff" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>size_t</type>
@@ -374,7 +407,7 @@ One stream can have many stream buffers but only one is used internally to pass 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="337"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="344"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_buffer_1ab1818a8153ca96aa706fd2d355908e91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -392,7 +425,7 @@ One stream can have many stream buffers but only one is used internally to pass 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="346"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="353"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_buffer_1a4cf308d2a1b6d3f1c89fd3720feaf17e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -405,7 +438,7 @@ One stream can have many stream buffers but only one is used internally to pass 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="351"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="358"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_buffer_1aca1b47bbaf47adf0b6b458608a176c4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="group__group__funcmacro__file_1ga69d831b3febabc149c67b716c8e22de5" kindref="member">wxFileOffset</ref></type>
@@ -417,7 +450,7 @@ One stream can have many stream buffers but only one is used internally to pass 
           <declname>pos</declname>
         </param>
         <param>
-          <type><ref refid="ffile_8h_1ae3981f8632f0391e5c852bf62eb982b0" kindref="member">wxSeekMode</ref></type>
+          <type><ref refid="group__group__funcmacro__file_1gae3981f8632f0391e5c852bf62eb982b0" kindref="member">wxSeekMode</ref></type>
           <declname>mode</declname>
         </param>
         <briefdescription>
@@ -429,7 +462,7 @@ One stream can have many stream buffers but only one is used internally to pass 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="365"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="372"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_buffer_1a5981925c2323913c8bd252a2ad72bf7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -453,11 +486,11 @@ One stream can have many stream buffers but only one is used internally to pass 
 <para>Specifies which pointers to use for stream buffering. </para>        </briefdescription>
         <detaileddescription>
 <para>You need to pass a pointer on the start of the buffer end and another on the end. The object will use this buffer to cache stream data. It may be used also as a source/destination buffer when you create an empty stream buffer (See <ref refid="classwx_stream_buffer_1a860dcea1040d3b58d62bf8a97df9f360" kindref="member">wxStreamBuffer::wxStreamBuffer</ref>).</para><para><simplesect kind="remark"><para>When you use this function, you will have to destroy the IO buffers yourself after the stream buffer is destroyed or don&apos;t use it anymore. In the case you use it with an empty buffer, the stream buffer will not resize it when it is full.</para></simplesect>
-<simplesect kind="see"><para><ref refid="classwx_stream_buffer_1a1dc3fff5c08288ebc77bd161e4ae9560" kindref="member">wxStreamBuffer()</ref>, <ref refid="classwx_stream_buffer_1a2ac1132b1bf10d8f70321b87cce3fcd3" kindref="member">Fixed()</ref>, <ref refid="classwx_stream_buffer_1ac461ce80390382b799976c53ed93cbef" kindref="member">Flushable()</ref> </para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_stream_buffer_1a860dcea1040d3b58d62bf8a97df9f360" kindref="member">wxStreamBuffer()</ref>, <ref refid="classwx_stream_buffer_1a2ac1132b1bf10d8f70321b87cce3fcd3" kindref="member">Fixed()</ref>, <ref refid="classwx_stream_buffer_1ac461ce80390382b799976c53ed93cbef" kindref="member">Flushable()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="382"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="389"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_buffer_1ab62c5d757cd0f4b74748cc630f38bea4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -477,7 +510,7 @@ One stream can have many stream buffers but only one is used internally to pass 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="396"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="403"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_buffer_1afddd13353c9bfc54871673563052bde6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -495,7 +528,7 @@ One stream can have many stream buffers but only one is used internally to pass 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="405"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="412"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_buffer_1ad717309ac785d320757386df2db02160" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_stream_base" kindref="compound">wxStreamBase</ref> *</type>
@@ -505,10 +538,10 @@ One stream can have many stream buffers but only one is used internally to pass 
         <briefdescription>
 <para>Returns the parent stream of the stream buffer. </para>        </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000055"><xreftitle>Deprecated</xreftitle><xrefdescription><para>use GetStream() instead </para></xrefdescription></xrefsect></para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000054"><xreftitle>Deprecated</xreftitle><xrefdescription><para>use GetStream() instead </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="411"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="418"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_buffer_1ae95ffab896829ec7d2e8b821f42c0ab5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="group__group__funcmacro__file_1ga69d831b3febabc149c67b716c8e22de5" kindref="member">wxFileOffset</ref></type>
@@ -522,7 +555,7 @@ One stream can have many stream buffers but only one is used internally to pass 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="422"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="429"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_buffer_1a10875bdb145f030ee082ab26cab2c694" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -536,7 +569,7 @@ One stream can have many stream buffers but only one is used internally to pass 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="430"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="437"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_buffer_1a8ad171d3434d7beea9c0163896d8359f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>size_t</type>
@@ -557,7 +590,7 @@ One stream can have many stream buffers but only one is used internally to pass 
 <para>The data are cached in a buffer before being sent in one block to the stream. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="436"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="443"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stream_buffer_1a7d2d1ec4e66b7f9d19a109eb6fafa0c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -574,7 +607,7 @@ One stream can have many stream buffers but only one is used internally to pass 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="441"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="448"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -583,8 +616,9 @@ One stream can have many stream buffers but only one is used internally to pass 
 <para>Each stream always has one autoinitialized stream buffer, but you may attach more of them to the same stream.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_stream_base" kindref="compound">wxStreamBase</ref>, <ref refid="overview_stream" kindref="compound">Stream classes overview</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="151" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" bodystart="150" bodyend="442"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="151" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" bodystart="150" bodyend="449"/>
     <listofallmembers>
+      <member refid="classwx_stream_buffer_1a1b6333d99dc30ff865ff330b999e2dcc" prot="public" virt="non-virtual"><scope>wxStreamBuffer</scope><name>BufMode</name></member>
       <member refid="classwx_stream_buffer_1a6501d9cb20e57b7d0f75144669b5246b" prot="public" virt="non-virtual"><scope>wxStreamBuffer</scope><name>FillBuffer</name></member>
       <member refid="classwx_stream_buffer_1a2ac1132b1bf10d8f70321b87cce3fcd3" prot="public" virt="non-virtual"><scope>wxStreamBuffer</scope><name>Fixed</name></member>
       <member refid="classwx_stream_buffer_1ac461ce80390382b799976c53ed93cbef" prot="public" virt="non-virtual"><scope>wxStreamBuffer</scope><name>Flushable</name></member>
@@ -598,8 +632,10 @@ One stream can have many stream buffers but only one is used internally to pass 
       <member refid="classwx_stream_buffer_1aad76dfa935d292ce84ca61d890166d7e" prot="public" virt="non-virtual"><scope>wxStreamBuffer</scope><name>GetIntPosition</name></member>
       <member refid="classwx_stream_buffer_1abd976eec61553ca3fc434dabff41b1aa" prot="public" virt="non-virtual"><scope>wxStreamBuffer</scope><name>GetLastAccess</name></member>
       <member refid="classwx_stream_buffer_1ae5f8ecfff22202601dfa3aefbe50e696" prot="public" virt="virtual"><scope>wxStreamBuffer</scope><name>PutChar</name></member>
+      <member refid="classwx_stream_buffer_1a1b6333d99dc30ff865ff330b999e2dcca93efc5286abe9db8c7763404aa835396" prot="public" virt="non-virtual"><scope>wxStreamBuffer</scope><name>read</name></member>
       <member refid="classwx_stream_buffer_1a5c5772b548442c2a86c8f154c6b27dff" prot="public" virt="virtual"><scope>wxStreamBuffer</scope><name>Read</name></member>
       <member refid="classwx_stream_buffer_1ab1818a8153ca96aa706fd2d355908e91" prot="public" virt="non-virtual"><scope>wxStreamBuffer</scope><name>Read</name></member>
+      <member refid="classwx_stream_buffer_1a1b6333d99dc30ff865ff330b999e2dcca3eec51f36a60801cc8aa8e5d2393a17f" prot="public" virt="non-virtual"><scope>wxStreamBuffer</scope><name>read_write</name></member>
       <member refid="classwx_stream_buffer_1a4cf308d2a1b6d3f1c89fd3720feaf17e" prot="public" virt="non-virtual"><scope>wxStreamBuffer</scope><name>ResetBuffer</name></member>
       <member refid="classwx_stream_buffer_1aca1b47bbaf47adf0b6b458608a176c4f" prot="public" virt="virtual"><scope>wxStreamBuffer</scope><name>Seek</name></member>
       <member refid="classwx_stream_buffer_1a5981925c2323913c8bd252a2ad72bf7a" prot="public" virt="non-virtual"><scope>wxStreamBuffer</scope><name>SetBufferIO</name></member>
@@ -608,6 +644,7 @@ One stream can have many stream buffers but only one is used internally to pass 
       <member refid="classwx_stream_buffer_1ad717309ac785d320757386df2db02160" prot="public" virt="non-virtual"><scope>wxStreamBuffer</scope><name>Stream</name></member>
       <member refid="classwx_stream_buffer_1ae95ffab896829ec7d2e8b821f42c0ab5" prot="public" virt="virtual"><scope>wxStreamBuffer</scope><name>Tell</name></member>
       <member refid="classwx_stream_buffer_1a10875bdb145f030ee082ab26cab2c694" prot="public" virt="non-virtual"><scope>wxStreamBuffer</scope><name>Truncate</name></member>
+      <member refid="classwx_stream_buffer_1a1b6333d99dc30ff865ff330b999e2dccafaa5f7ec649e934479215e28c410a6c4" prot="public" virt="non-virtual"><scope>wxStreamBuffer</scope><name>write</name></member>
       <member refid="classwx_stream_buffer_1a8ad171d3434d7beea9c0163896d8359f" prot="public" virt="virtual"><scope>wxStreamBuffer</scope><name>Write</name></member>
       <member refid="classwx_stream_buffer_1a7d2d1ec4e66b7f9d19a109eb6fafa0c6" prot="public" virt="non-virtual"><scope>wxStreamBuffer</scope><name>Write</name></member>
       <member refid="classwx_stream_buffer_1a860dcea1040d3b58d62bf8a97df9f360" prot="public" virt="non-virtual"><scope>wxStreamBuffer</scope><name>wxStreamBuffer</name></member>
@@ -615,7 +652,7 @@ One stream can have many stream buffers but only one is used internally to pass 
       <member refid="classwx_stream_buffer_1a129a654b76af84c888671441736ef352" prot="public" virt="non-virtual"><scope>wxStreamBuffer</scope><name>wxStreamBuffer</name></member>
       <member refid="classwx_stream_buffer_1a68ea8280a0649f0cf522a572a1a60824" prot="public" virt="non-virtual"><scope>wxStreamBuffer</scope><name>wxStreamBuffer</name></member>
       <member refid="classwx_stream_buffer_1afd55499e0c75a9e067c57093ee654bad" prot="public" virt="non-virtual"><scope>wxStreamBuffer</scope><name>wxStreamBuffer</name></member>
-      <member refid="classwx_stream_buffer_1a1dc3fff5c08288ebc77bd161e4ae9560" prot="public" virt="non-virtual"><scope>wxStreamBuffer</scope><name>wxStreamBuffer</name></member>
+      <member refid="classwx_stream_buffer_1a4ffb98b4e9c5e091103e5171c6702537" prot="public" virt="non-virtual"><scope>wxStreamBuffer</scope><name>~wxStreamBuffer</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

@@ -22,7 +22,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wfstream.h" line="129"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wfstream.h" line="129"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_output_stream_1aa08a1b430be409055d87f1745409db3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -39,7 +39,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wfstream.h" line="134"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wfstream.h" line="134"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_output_stream_1a80f2b1a72c7032b3ab56c702872ac323" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -56,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wfstream.h" line="139"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wfstream.h" line="139"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_output_stream_1ac6bb88a9ee220f14f618724a1376b447" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wfstream.h" line="144"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wfstream.h" line="144"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_output_stream_1a626753e0830d6c9c5acc91f3cfe0127e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -84,7 +84,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wfstream.h" line="149"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wfstream.h" line="149"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -94,48 +94,48 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_buffered_output_stream" kindref="compound">wxBufferedOutputStream</ref>, <ref refid="classwx_file_input_stream" kindref="compound">wxFileInputStream</ref>, <ref refid="classwx_f_file_output_stream" kindref="compound">wxFFileOutputStream</ref>, <ref refid="classwx_f_file_input_stream" kindref="compound">wxFFileInputStream</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6219">
+      <node id="6338">
         <label>wxFileStream</label>
         <link refid="classwx_file_stream"/>
-        <childnode refid="6216" relation="public-inheritance">
+        <childnode refid="6335" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6216">
+      <node id="6335">
         <label>wxFileOutputStream</label>
         <link refid="classwx_file_output_stream"/>
-        <childnode refid="6217" relation="public-inheritance">
+        <childnode refid="6336" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6218">
+      <node id="6337">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="6217">
+      <node id="6336">
         <label>wxOutputStream</label>
         <link refid="classwx_output_stream"/>
-        <childnode refid="6218" relation="public-inheritance">
+        <childnode refid="6337" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6220">
+      <node id="6339">
         <label>wxFileOutputStream</label>
         <link refid="classwx_file_output_stream"/>
-        <childnode refid="6221" relation="public-inheritance">
+        <childnode refid="6340" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6222">
+      <node id="6341">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="6221">
+      <node id="6340">
         <label>wxOutputStream</label>
         <link refid="classwx_output_stream"/>
-        <childnode refid="6222" relation="public-inheritance">
+        <childnode refid="6341" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wfstream.h" line="121" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wfstream.h" bodystart="120" bodyend="150"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wfstream.h" line="121" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/wfstream.h" bodystart="120" bodyend="150"/>
     <listofallmembers>
       <member refid="classwx_output_stream_1a1c306ce99990d525921f8f6ae8432083" prot="public" virt="virtual"><scope>wxFileOutputStream</scope><name>Close</name></member>
       <member refid="classwx_stream_base_1aca7d52699887bc33bec4810bf6fe29ba" prot="public" virt="non-virtual"><scope>wxFileOutputStream</scope><name>GetLastError</name></member>

@@ -20,7 +20,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1774"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1745"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_font_changer_1a3c5c5fe626322d365cbd3f90928eeaa2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -56,7 +56,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1784"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1755"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_font_changer_1a31c6248bba6b47ae1cb34158c77e731b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -73,7 +73,7 @@
 <para>This method is meant to be called once only and only on the objects created with the constructor overload not taking <ref refid="classwx_colour" kindref="compound">wxColour</ref> argument and has the same effect as the other constructor, i.e. sets the font to the given <emphasis>font</emphasis> and ensures that the old value is restored when this object is destroyed. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1795"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1766"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_font_changer_1a837eeadb8b4ba4c97eafab6b8bfefd67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -86,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1800"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1771"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -96,7 +96,7 @@
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_d_c_1afab18239d707cd403235b36a987171a8" kindref="member">wxDC::SetFont()</ref>, <ref refid="classwx_d_c_text_colour_changer" kindref="compound">wxDCTextColourChanger</ref>, <ref refid="classwx_d_c_pen_changer" kindref="compound">wxDCPenChanger</ref>, <ref refid="classwx_d_c_brush_changer" kindref="compound">wxDCBrushChanger</ref>, <ref refid="classwx_d_c_clipper" kindref="compound">wxDCClipper</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1762" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" bodystart="1761" bodyend="1801"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1733" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" bodystart="1732" bodyend="1772"/>
     <listofallmembers>
       <member refid="classwx_d_c_font_changer_1a31c6248bba6b47ae1cb34158c77e731b" prot="public" virt="non-virtual"><scope>wxDCFontChanger</scope><name>Set</name></member>
       <member refid="classwx_d_c_font_changer_1aa4bd96e01e9099f10f9394ef9b69b069" prot="public" virt="non-virtual"><scope>wxDCFontChanger</scope><name>wxDCFontChanger</name></member>

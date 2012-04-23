@@ -40,7 +40,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="448"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="448"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a5a03fe160df4807b4de1c3bd0696d2ad" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -78,7 +78,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="450"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="450"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -108,7 +108,7 @@
 <para>In the first version, the size of this file is used. In the second one, the specified size <emphasis>bytes</emphasis> is used.</para><para>If the file size could not be retrieved or <emphasis>bytes</emphasis> is <ref refid="filename_8h_1a454ab49e582fff5adb3cec515d03b162" kindref="member">wxInvalidSize</ref> or zero, the <computeroutput>failmsg</computeroutput> string is returned.</para><para>Otherwise the returned string is a floating-point number with <computeroutput>precision</computeroutput> decimal digits followed by the abbreviation of the unit used. By default the traditional, although incorrect, convention of using SI units for multiples of 1024 is used, i.e. returned string will use suffixes of B, KB, MB, GB, TB for bytes, kilobytes, megabytes, gigabytes and terabytes respectively. With the IEC convention the names of the units are changed to B, KiB, MiB, GiB and TiB for bytes, kibibytes, mebibytes, gibibytes and tebibytes. Finally, with SI convention the same B, KB, MB, GB and TB suffixes are used but in their correct SI meaning, i.e. as multiples of 1000 and not 1024.</para><para>Support for the different size conventions is new in wxWidgets 2.9.1, in previous versions only the traditional convention was implemented. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="571"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="602"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a91caf872b17d6d775cdcd36161b5c470" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -140,7 +140,7 @@
 <para>In the first version, the size of this file is used. In the second one, the specified size <emphasis>bytes</emphasis> is used.</para><para>If the file size could not be retrieved or <emphasis>bytes</emphasis> is <ref refid="filename_8h_1a454ab49e582fff5adb3cec515d03b162" kindref="member">wxInvalidSize</ref> or zero, the <computeroutput>failmsg</computeroutput> string is returned.</para><para>Otherwise the returned string is a floating-point number with <computeroutput>precision</computeroutput> decimal digits followed by the abbreviation of the unit used. By default the traditional, although incorrect, convention of using SI units for multiples of 1024 is used, i.e. returned string will use suffixes of B, KB, MB, GB, TB for bytes, kilobytes, megabytes, gigabytes and terabytes respectively. With the IEC convention the names of the units are changed to B, KiB, MiB, GiB and TiB for bytes, kibibytes, mebibytes, gibibytes and tebibytes. Finally, with SI convention the same B, KB, MB, GB and TB suffixes are used but in their correct SI meaning, i.e. as multiples of 1000 and not 1024.</para><para>Support for the different size conventions is new in wxWidgets 2.9.1, in previous versions only the traditional convention was implemented. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="577"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="608"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -185,7 +185,7 @@
 <para>Any of the output parameters (<emphasis>volume</emphasis>, <emphasis>path</emphasis>, <emphasis>name</emphasis> or <emphasis>ext</emphasis>) may be NULL if you are not interested in the value of a particular component. Also, <emphasis>fullpath</emphasis> may be empty on entry. On return, <emphasis>path</emphasis> contains the file path (without the trailing separator), <emphasis>name</emphasis> contains the file name and <emphasis>ext</emphasis> contains the file extension without leading dot. All three of them may be empty if the corresponding component is. The old contents of the strings pointed to by these parameters will be overwritten in any case (if the pointers are not NULL).</para><para>Note that for a filename &quot;foo.&quot; the extension is present, as indicated by the trailing dot, but empty. If you need to cope with such cases, you should use <emphasis>hasExt</emphasis> instead of relying on testing whether <emphasis>ext</emphasis> is empty or not. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1188"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1225"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1ac822c21f143650264c9d433993909820" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -222,7 +222,7 @@
 <para>Any of the output parameters (<emphasis>volume</emphasis>, <emphasis>path</emphasis>, <emphasis>name</emphasis> or <emphasis>ext</emphasis>) may be NULL if you are not interested in the value of a particular component. Also, <emphasis>fullpath</emphasis> may be empty on entry. On return, <emphasis>path</emphasis> contains the file path (without the trailing separator), <emphasis>name</emphasis> contains the file name and <emphasis>ext</emphasis> contains the file extension without leading dot. All three of them may be empty if the corresponding component is. The old contents of the strings pointed to by these parameters will be overwritten in any case (if the pointers are not NULL).</para><para>Note that for a filename &quot;foo.&quot; the extension is present, as indicated by the trailing dot, but empty. If you need to cope with such cases, you should use <emphasis>hasExt</emphasis> instead of relying on testing whether <emphasis>ext</emphasis> is empty or not. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1194"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1231"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a1ee5834893e50987dc2e03b9cbfbaea6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -256,7 +256,7 @@
 <para>Any of the output parameters (<emphasis>volume</emphasis>, <emphasis>path</emphasis>, <emphasis>name</emphasis> or <emphasis>ext</emphasis>) may be NULL if you are not interested in the value of a particular component. Also, <emphasis>fullpath</emphasis> may be empty on entry. On return, <emphasis>path</emphasis> contains the file path (without the trailing separator), <emphasis>name</emphasis> contains the file name and <emphasis>ext</emphasis> contains the file extension without leading dot. All three of them may be empty if the corresponding component is. The old contents of the strings pointed to by these parameters will be overwritten in any case (if the pointers are not NULL).</para><para>Note that for a filename &quot;foo.&quot; the extension is present, as indicated by the trailing dot, but empty. If you need to cope with such cases, you should use <emphasis>hasExt</emphasis> instead of relying on testing whether <emphasis>ext</emphasis> is empty or not. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1199"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1236"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -271,7 +271,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="277"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="277"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1abc232361df39f16a802da8391692e2f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -288,7 +288,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="282"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="282"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1aac2508cfd52826e17fb048eeab27f87a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -310,7 +310,7 @@
 <para>If it terminates with a &apos;/&apos;, a directory path is constructed (the name will be empty), otherwise a file name and extension are extracted from it. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="292"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="292"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a9f48ff32f106456d46b00c8db1f46535" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -336,7 +336,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="298"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="298"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a7a885de7891214b03e64aac070b63e97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -366,7 +366,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="305"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="305"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1acc6848de75dd154c572db65cf72a90b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -400,7 +400,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="313"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="313"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1ae27fceb052e076466179cabd599bd878" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -417,7 +417,7 @@
 <para>This component should contain a single directory name level, i.e. not contain any path or volume separators nor should it be empty, otherwise the function does nothing (and generates an assert failure in debug build). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="321"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="321"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1ab75d82f4024c6f15cc4247c8835da557" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -434,7 +434,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="326"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="326"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1abaa2f7fb89227ba59f10c5908fb6072c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -456,7 +456,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="332"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="332"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a22b20107fe66d412c43663517d9f6cf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -494,7 +494,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="341"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="341"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a0c5ce686dc39e118800c08a278c92f21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -528,7 +528,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="349"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="349"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a1a13a96c6f8dc3baabb41afba0d4af10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -554,7 +554,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="355"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="355"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a9963f1d2f16ca1979df06fbb28a8da9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -584,7 +584,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="362"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="362"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a1cf7a6e3a6ac0f34260ea79f48663cc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -603,7 +603,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="370"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="370"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a7aabf113d3d420ba65f2a3a11ef1d087" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -625,7 +625,7 @@
 <para>The name and extension will be empty. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="377"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="377"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a021419b87e867a31ff4af5b6e84911cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -638,7 +638,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="382"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="382"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a6c56af101aea8c3d98c693811a44db69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -655,7 +655,7 @@
 <para>If a temporary file couldn&apos;t be created, the object is put into an invalid state (see <ref refid="classwx_file_name_1ac22a5a876c51d4d174740e43e0c8f475" kindref="member">IsOk()</ref>). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="391"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="391"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1acf47b12b1de8c47fc5cbc2ec7b5fe628" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -676,7 +676,7 @@
 <para>If the file couldn&apos;t be opened, the object is put into an invalid state (see <ref refid="classwx_file_name_1ac22a5a876c51d4d174740e43e0c8f475" kindref="member">IsOk()</ref>). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="400"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="400"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a0807cf78dcddc42d2467ee45cc108d08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -697,7 +697,7 @@
 <para>If the file couldn&apos;t be opened, the object is put into an invalid state (see <ref refid="classwx_file_name_1ac22a5a876c51d4d174740e43e0c8f475" kindref="member">IsOk()</ref>). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="409"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="409"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1aa4fbb922dd41ee6012f15c6d162fb0b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -710,7 +710,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="414"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="414"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a03a2f73191dbf2392b9f1c8e850b407a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -724,7 +724,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="422"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="422"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a3b539f8ff68649eb24381ae6b3bcae91" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -734,10 +734,25 @@
         <briefdescription>
 <para>Returns true if the directory with this name exists. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Notice that this function tests the directory part of this object, i.e. the string returned by <ref refid="classwx_file_name_1a1b313ab21ae9da4e1f9dbdf8a35d9de6" kindref="member">GetPath()</ref>, and not the full path returned by <ref refid="classwx_file_name_1a8fc8100ba99859a40558c068a841b586" kindref="member">GetFullPath()</ref>.</para><para><simplesect kind="see"><para><ref refid="classwx_file_name_1ad3f63bc2b328e373a6081dfd0ed0595d" kindref="member">FileExists()</ref>, <ref refid="classwx_file_name_1a26fccb0d01145e864f863ba69937c451" kindref="member">Exists()</ref> </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="456"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="462"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a26fccb0d01145e864f863ba69937c451" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxFileName::Exists</definition>
+        <argsstring>() const </argsstring>
+        <name>Exists</name>
+        <briefdescription>
+<para>Calls the static overload of this function with the full path of this object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="484"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1ad3f63bc2b328e373a6081dfd0ed0595d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -747,11 +762,11 @@
         <briefdescription>
 <para>Returns true if the file with this name exists. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="classwx_file_name_1a3b539f8ff68649eb24381ae6b3bcae91" kindref="member">DirExists()</ref> </para></simplesect>
+<para><simplesect kind="see"><para><ref refid="classwx_file_name_1a3b539f8ff68649eb24381ae6b3bcae91" kindref="member">DirExists()</ref>, <ref refid="classwx_file_name_1a26fccb0d01145e864f863ba69937c451" kindref="member">Exists()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="475"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="506"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1ae3196f7d5e004ce9690e1e050b35021d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -764,7 +779,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="506"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="537"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a8a1c3fbe46ecfb57ea6c4fcd53b20ed1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
@@ -777,7 +792,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="511"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="542"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a6703bfd4f587b35926d5c2949bc11918" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -790,7 +805,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="516"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="547"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1af1a43f651750f2b8a44adf08bb5db7a3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -803,7 +818,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="532"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="563"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a8fc8100ba99859a40558c068a841b586" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -821,7 +836,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="537"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="568"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1adfa5d06438fb9a7fcaa7d6efbc0b2cb3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -834,7 +849,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="583"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="614"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a6a1908a872b80060af5ef46cdda6c0c1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
@@ -847,7 +862,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="588"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="619"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1ac6475b655ac68c02a094723f653270e9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -861,7 +876,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="595"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="626"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a1b313ab21ae9da4e1f9dbdf8a35d9de6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -891,7 +906,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="620"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="651"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1aa9aeef951525bf6a1513c0b570b70bdb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -910,7 +925,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="657"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="688"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a145939346b79fd1d0da3637d7eb68f11" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -923,7 +938,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="662"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="693"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1ab4b3191fe205f39c5bc09d4aa047b0ce" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_u_long_long" kindref="compound">wxULongLong</ref></type>
@@ -936,7 +951,7 @@
 <para>the file is locked by another process) the returned value is <ref refid="filename_8h_1a454ab49e582fff5adb3cec515d03b162" kindref="member">wxInvalidSize</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="669"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="700"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a835d9778ce835b803893f8557cb2c3e4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -962,7 +977,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="702"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="733"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1af637b341e2119b1cac72a0f5ab52f768" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -975,7 +990,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="709"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="740"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a37e3b818118007fdabf08dca07fe4491" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -988,7 +1003,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="738"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="769"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1aa2096cc591692bc7aa971ae8e7924aba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1001,7 +1016,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="743"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="774"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a6f1384657bde27dd9393359041657fd4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1014,7 +1029,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="748"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="779"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a8661306053b75a514942ee58bf119790" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1035,7 +1050,7 @@
 <para>Please see <ref refid="classwx_file_name_1ae27fceb052e076466179cabd599bd878" kindref="member">AppendDir()</ref> for important notes. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="754"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="785"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a0c0818ef96f533fe0c3f087394bdbca6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1053,7 +1068,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="759"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="790"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a991fccb3fddb7e0281b5314970b14e20" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1066,7 +1081,7 @@
 <para>if it is a file).</para><para>Note that this method doesn&apos;t test whether the directory or file really exists, you should use <ref refid="classwx_file_name_1a3b539f8ff68649eb24381ae6b3bcae91" kindref="member">DirExists()</ref> or <ref refid="classwx_file_name_1ad3f63bc2b328e373a6081dfd0ed0595d" kindref="member">FileExists()</ref> for this. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="773"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="804"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1ad1fccfcfdc93381216fdfc0ebfc44ec0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1079,7 +1094,7 @@
 <para>Read permissions on a directory mean that you can list the directory contents but it doesn&apos;t imply that you have read permissions on the files contained. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="781"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="812"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a0ce0656507dbb99a8da44f0c64bd9bd5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1092,7 +1107,7 @@
 <para>Write permissions on a directory mean that you can create new files in the directory. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="797"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="828"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1abe00f9d78a0dcc0d099af846b8df52eb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1105,7 +1120,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="811"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="842"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a13effc5ad97b5232390bee8348237bf1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1118,7 +1133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="823"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="854"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a4d4be1373bcb6fc4abb79f37c0c0a181" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1131,7 +1146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="835"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="866"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1ac22a5a876c51d4d174740e43e0c8f475" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1144,7 +1159,7 @@
 <para>The assignment functions and <ref refid="classwx_file_name_1aa4fbb922dd41ee6012f15c6d162fb0b3" kindref="member">Clear()</ref> may reset the object to the uninitialized, invalid state (the former only do it on failure). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="848"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="879"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a0351b84987f8b58e1df6152347e937b4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1162,7 +1177,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="877"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="908"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a7affe5717d2ad6f9036aadbdd21edf53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1172,10 +1187,10 @@
         <briefdescription>
 <para>On Mac OS, looks up the appropriate type and creator from the registration and then sets it. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxosx" kindref="member">wxOSX</ref> port.  <onlyfor>wxosx</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="898"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="935"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1af947660cf109c3a39c4997f18a8670b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1201,7 +1216,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="911"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="948"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1ab7ac6ac2f4f0d7dca3fd9c9764ec818d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1241,7 +1256,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="931"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="968"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a852d4f699225e767242d54df53d6f3be" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1280,7 +1295,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="947"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="984"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a2db3fcc42863daa265619de0d5f390df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1331,7 +1346,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="993"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1030"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a577475123161b94cb8f8a597cefe64d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1348,7 +1363,7 @@
 <para>Please see <ref refid="classwx_file_name_1ae27fceb052e076466179cabd599bd878" kindref="member">AppendDir()</ref> for important notes. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="999"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1036"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1ad2b8491684c5bf97395ab9aa2f3d398b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1366,7 +1381,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1006"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1043"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1ab1336b56add13e0f2830197a3680da94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1379,7 +1394,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1011"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1048"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a945be5e2b6211800cc2f1c8f9072b071" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1411,7 +1426,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1040"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1077"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a1b19e2d1d986291ab6cee414028070df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1431,7 +1446,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1057"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1094"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1aa718276c012c7e64a1e2c28b47a1056b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1458,7 +1473,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1071"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1108"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a46da7e5ecc480fe0dd40f28790c979c4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1480,7 +1495,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1092"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1129"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1acf954a5fb0ec5c9433fd7b49bfd781a8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1493,7 +1508,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1097"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1134"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a2d5df1c71c011b0f8897dc51fe8d91ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1507,7 +1522,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1111"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1148"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a65c37fa5017b400d41009bbab56f2774" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1525,7 +1540,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1122"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1159"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a2490c8f2cc92fb88196adc33809a36c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1542,7 +1557,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1127"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1164"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a1bf12dfe55c3a2a56982a7a731fa1230" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1560,7 +1575,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1134"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1171"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a3a1269b6810aa55375da45d56f2ac3b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1583,7 +1598,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1148"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1185"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1af95c9e026b116d04d92f08146bc61bcd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1608,7 +1623,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1156"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1193"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a0c8e256bd978ab9d0cc3c640758b2e2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1625,7 +1640,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1161"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1198"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a4471ce6c004e35014da63d480349e7a9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1638,7 +1653,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1238"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1275"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a004720eaccbf477800b38907d06c1ab3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1655,7 +1670,7 @@
 <para>The string <emphasis>filenames</emphasis> is interpreted as a path in the native filename format. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1244"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1281"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a8709983fcc2d5ea4712995891f871c99" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1672,7 +1687,7 @@
 <para>The string <emphasis>filenames</emphasis> is interpreted as a path in the native filename format. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1250"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1287"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a77797c666b031aaae461bae50d1435eb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1689,7 +1704,7 @@
 <para>The string <emphasis>filenames</emphasis> is interpreted as a path in the native filename format. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1256"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1293"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a1c28136def93ad155fd1f9c038cc32fc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1706,7 +1721,7 @@
 <para>The string <emphasis>filenames</emphasis> is interpreted as a path in the native filename format. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1262"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1299"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1affa56269ea9bc0fde42324b845a1e228" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_file_name" kindref="compound">wxFileName</ref> &amp;</type>
@@ -1723,7 +1738,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1267"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1304"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1afe2f258994e45c802a5b73daaf34d071" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_file_name" kindref="compound">wxFileName</ref> &amp;</type>
@@ -1740,7 +1755,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1272"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1309"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -1756,10 +1771,11 @@
         <briefdescription>
 <para>Returns true if the directory with name <emphasis>dir</emphasis> exists. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classwx_file_name_1ad3f63bc2b328e373a6081dfd0ed0595d" kindref="member">FileExists()</ref>, <ref refid="classwx_file_name_1a26fccb0d01145e864f863ba69937c451" kindref="member">Exists()</ref> </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="461"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="469"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1afed95ad83636ed634bbe09564457bfe2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_file_name" kindref="compound">wxFileName</ref></type>
@@ -1781,7 +1797,27 @@
 <para>The <emphasis>dir</emphasis> parameter may have trailing path separator or not. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="468"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="476"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_file_name_1a69bf430af08dd04a28fea8b0501b7bce" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool wxFileName::Exists</definition>
+        <argsstring>(const wxString &amp;path)</argsstring>
+        <name>Exists</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+<para>Returns true if either a file or a directory or something else with this name exists in the file system. </para>        </briefdescription>
+        <detaileddescription>
+<para>This method is equivalent to <programlisting><codeline><highlight class="normal"><sp/><ref refid="classwx_file_name_1ad3f63bc2b328e373a6081dfd0ed0595d" kindref="member" tooltip="Returns true if the file with this name exists.">FileExists</ref>()<sp/>||<sp/><ref refid="classwx_file_name_1a3b539f8ff68649eb24381ae6b3bcae91" kindref="member" tooltip="Returns true if the directory with this name exists.">DirExists</ref>()<sp/></highlight></codeline>
+</programlisting> under most systems but under Unix it also returns true if the file identifies a special file system object such as a device, a socket or a FIFO.</para><para><simplesect kind="since"><para>2.9.4</para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_file_name_1ad3f63bc2b328e373a6081dfd0ed0595d" kindref="member">FileExists()</ref>, <ref refid="classwx_file_name_1a3b539f8ff68649eb24381ae6b3bcae91" kindref="member">DirExists()</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="499"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1ab8a8e5bfeaf12b6479ffc295a68137b9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1795,11 +1831,11 @@
         <briefdescription>
 <para>Returns true if the file with name <emphasis>file</emphasis> exists. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="classwx_file_name_1a3b539f8ff68649eb24381ae6b3bcae91" kindref="member">DirExists()</ref> </para></simplesect>
+<para><simplesect kind="see"><para><ref refid="classwx_file_name_1a3b539f8ff68649eb24381ae6b3bcae91" kindref="member">DirExists()</ref>, <ref refid="classwx_file_name_1a26fccb0d01145e864f863ba69937c451" kindref="member">Exists()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="482"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="513"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a693b785e7230fb161dbd040439874436" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_file_name" kindref="compound">wxFileName</ref></type>
@@ -1821,7 +1857,7 @@
 <para>This function exists mainly for symmetry with <ref refid="classwx_file_name_1afed95ad83636ed634bbe09564457bfe2" kindref="member">DirName()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="489"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="520"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1af697f1c0f7864fc35ac0e8198eacc84d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1841,7 +1877,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="501"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="532"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1acfe59c3758e4188fa76580a02c7c38af" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1859,7 +1895,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="522"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="553"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a889036f3a9913d5f1e4ba7c132a05f07" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
@@ -1877,7 +1913,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="527"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="558"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a8699fafd7b38069c2af0b4f0de89c180" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1890,7 +1926,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="542"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="573"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1ad6f9ae274e12729fc5689128ea94d16e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref></type>
@@ -1909,7 +1945,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="630"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="661"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a8db0c9210c80976e0dd2af83229d4be2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1928,7 +1964,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="639"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="670"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a22139e83bfeb325efcb253b605364167" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1946,7 +1982,7 @@
 <para>This is the same as <ref refid="classwx_file_name_1a8db0c9210c80976e0dd2af83229d4be2" kindref="member">GetPathSeparators()</ref> except for VMS path format where ] is used at the end of the path part. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="646"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="677"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a9cfa29562cc40389ce7f4d7c1a12f495" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_u_long_long" kindref="compound">wxULongLong</ref></type>
@@ -1963,7 +1999,7 @@
 <para>the file is locked by another process) the returned value is <ref refid="filename_8h_1a454ab49e582fff5adb3cec515d03b162" kindref="member">wxInvalidSize</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="676"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="707"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1ada549d0b26eb20fc03f42f2182b05fc9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1976,7 +2012,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="681"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="712"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a670e0da43feff098cdf637d21fc87c47" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1994,7 +2030,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="714"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="745"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a051821da028e3e0d08362ef02978a1a6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -2033,7 +2069,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="733"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="764"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1abe8d3ef3a404ed7050ad705d77d47eae" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2051,7 +2087,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="764"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="795"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a37759678b0b0e4f01076c4358a2e63b9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2068,7 +2104,7 @@
 <para>Read permissions on a directory mean that you can list the directory contents but it doesn&apos;t imply that you have read permissions on the files contained. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="789"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="820"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a1af163f5c99159a34be2f905eb1ec03b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2085,7 +2121,7 @@
 <para>Write permissions on a directory mean that you can create new files in the directory. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="805"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="836"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a65973db654e5b7b03eac0079b34f4694" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2102,7 +2138,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="817"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="848"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1aaf33a5de7f79587a58f9e20ae22d89b4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2119,7 +2155,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="829"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="860"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1ac430b77411e87a46f7a354bcf384cf65" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2136,7 +2172,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="841"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="872"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1abaf25b4b1c544d0d71511e93f82e264f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2158,7 +2194,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="854"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="885"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1ab039f42f5eea116a2f4759f3dd3877ff" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2182,7 +2218,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="872"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="903"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a2c3332f78de54e959fbca3591fb3f0f7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2204,10 +2240,10 @@
         <briefdescription>
 <para>On Mac OS, gets the common type and creator for the given extension. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxosx" kindref="member">wxOSX</ref> port.  <onlyfor>wxosx</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="884"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="917"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a502d197ca3d2d018125e7734fa93edcb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2229,10 +2265,10 @@
         <briefdescription>
 <para>On Mac OS, registers application defined extensions and their default type and creator. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxosx" kindref="member">wxOSX</ref> port.  <onlyfor>wxosx</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="892"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="927"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1ac2006b2fb30c0c0f11ef44560e1a62c7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2282,7 +2318,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="966"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1003"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1aa0aa5becff9a6d91ac5108bea7f12932" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2320,7 +2356,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1086"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1123"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a5c1d005ca788d42ca5d1c7bf8ff3d6b6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2337,7 +2373,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1102"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1139"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a66a0a31c3113875d46d2058135339fea" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2368,7 +2404,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1211"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1248"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_name_1a1cc6ef65bdf702fc220893d1e1db1141" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -2395,7 +2431,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="1233"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="1270"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -2479,7 +2515,7 @@ Other file system operations functions are:</para><para><itemizedlist>
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__file" kindref="compound">File Handling</ref> </para></sect1>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="272" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" bodystart="271" bodyend="1273"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="272" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" bodystart="271" bodyend="1310"/>
     <listofallmembers>
       <member refid="classwx_file_name_1ae27fceb052e076466179cabd599bd878" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>AppendDir</name></member>
       <member refid="classwx_file_name_1ab75d82f4024c6f15cc4247c8835da557" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>Assign</name></member>
@@ -2501,6 +2537,8 @@ Other file system operations functions are:</para><para><itemizedlist>
       <member refid="classwx_file_name_1a3b539f8ff68649eb24381ae6b3bcae91" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>DirExists</name></member>
       <member refid="classwx_file_name_1a706cd439af5469ff913bb022dff1ed71" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>DirExists</name></member>
       <member refid="classwx_file_name_1afed95ad83636ed634bbe09564457bfe2" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>DirName</name></member>
+      <member refid="classwx_file_name_1a26fccb0d01145e864f863ba69937c451" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>Exists</name></member>
+      <member refid="classwx_file_name_1a69bf430af08dd04a28fea8b0501b7bce" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>Exists</name></member>
       <member refid="classwx_file_name_1ad3f63bc2b328e373a6081dfd0ed0595d" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>FileExists</name></member>
       <member refid="classwx_file_name_1ab8a8e5bfeaf12b6479ffc295a68137b9" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>FileExists</name></member>
       <member refid="classwx_file_name_1a693b785e7230fb161dbd040439874436" prot="public" virt="non-virtual"><scope>wxFileName</scope><name>FileName</name></member>

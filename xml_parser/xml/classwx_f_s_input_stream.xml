@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="classwx_f_s_input_stream" kind="class" prot="public">
+    <compoundname>wxFSInputStream</compoundname>
+    <basecompoundref refid="classwx_wrapper_input_stream" prot="public" virt="non-virtual">wxWrapperInputStream</basecompoundref>
+    <includes local="no">wx/filesys.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_f_s_input_stream_1a3fd715c4ec1961e5ef4b6dda461af876" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxFSInputStream::wxFileInputStream</definition>
+        <argsstring>(const wxString &amp;filename, int flags=0)</argsstring>
+        <name>wxFileInputStream</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Create a stream associated with the data of the given virtual file system file. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the input file passed to <ref refid="classwx_file_system_1a01c6b989e86e34da21e94c802e516b16" kindref="member">wxFileSystem::OpenFile()</ref>. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>flags</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Combination of flags from wxFileSystemOpenFlags. <ref refid="filesys_8h_1abe38fc3ba01ed25545f0c841da8c2942a05297883347433d9f47427abbbee8211" kindref="member">wxFS_READ</ref> is implied, i.e. it is always added to the flags value.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Use <ref refid="classwx_stream_base_1a40b8d76951fdbc283a312ad8c12cfe9b" kindref="member">wxStreamBase::IsOk()</ref> to verify if the constructor succeeded. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="497"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_f_s_input_stream_1abfa73b8c605632017a3f29bb79832cc3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool wxFSInputStream::IsOk</definition>
+        <argsstring>() const </argsstring>
+        <name>IsOk</name>
+        <reimplements refid="classwx_stream_base_1a40b8d76951fdbc283a312ad8c12cfe9b">IsOk</reimplements>
+        <briefdescription>
+<para>Returns true if the stream is initialized and ready. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="502"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Input stream for virtual file stream files. </para>    </briefdescription>
+    <detaileddescription>
+<para>The stream reads data from <ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref> obtained from <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref>. It is especially useful to allow using virtual files with other wxWidgets functions and classes working with streams, e.g. for loading images or animations from virtual files and not only physical ones.</para><para><heading level="2"></heading>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_wrapper_input_stream" kindref="compound">wxWrapperInputStream</ref>, <ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref></para></simplesect>
+<simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="6599">
+        <label>wxInputStream</label>
+        <link refid="classwx_input_stream"/>
+        <childnode refid="6600" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6597">
+        <label>wxWrapperInputStream</label>
+        <link refid="classwx_wrapper_input_stream"/>
+        <childnode refid="6598" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6596">
+        <label>wxFSInputStream</label>
+        <link refid="classwx_f_s_input_stream"/>
+        <childnode refid="6597" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6600">
+        <label>wxStreamBase</label>
+        <link refid="classwx_stream_base"/>
+      </node>
+      <node id="6598">
+        <label>wxFilterInputStream</label>
+        <link refid="classwx_filter_input_stream"/>
+        <childnode refid="6599" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6604">
+        <label>wxInputStream</label>
+        <link refid="classwx_input_stream"/>
+        <childnode refid="6605" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6602">
+        <label>wxWrapperInputStream</label>
+        <link refid="classwx_wrapper_input_stream"/>
+        <childnode refid="6603" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6601">
+        <label>wxFSInputStream</label>
+        <link refid="classwx_f_s_input_stream"/>
+        <childnode refid="6602" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6605">
+        <label>wxStreamBase</label>
+        <link refid="classwx_stream_base"/>
+      </node>
+      <node id="6603">
+        <label>wxFilterInputStream</label>
+        <link refid="classwx_filter_input_stream"/>
+        <childnode refid="6604" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="483" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" bodystart="482" bodyend="503"/>
+    <listofallmembers>
+      <member refid="classwx_input_stream_1a72111c617db403344a2dd6b8c13330c3" prot="public" virt="virtual"><scope>wxFSInputStream</scope><name>CanRead</name></member>
+      <member refid="classwx_input_stream_1a177bb52eb500be28c8d41f959b0fb6be" prot="public" virt="virtual"><scope>wxFSInputStream</scope><name>Eof</name></member>
+      <member refid="classwx_input_stream_1a98462fa7198b5c9dca1c71acf6148e0b" prot="public" virt="non-virtual"><scope>wxFSInputStream</scope><name>GetC</name></member>
+      <member refid="classwx_stream_base_1aca7d52699887bc33bec4810bf6fe29ba" prot="public" virt="non-virtual"><scope>wxFSInputStream</scope><name>GetLastError</name></member>
+      <member refid="classwx_stream_base_1a0d2d992fd98835aabf2b9b656a1e6ccd" prot="public" virt="virtual"><scope>wxFSInputStream</scope><name>GetLength</name></member>
+      <member refid="classwx_stream_base_1a6ca6e81329a81252c50ccba1ee9249d8" prot="public" virt="virtual"><scope>wxFSInputStream</scope><name>GetSize</name></member>
+      <member refid="classwx_wrapper_input_stream_1af2b30e695a9309426c50d740f2574ef3" prot="protected" virt="non-virtual"><scope>wxFSInputStream</scope><name>InitParentStream</name></member>
+      <member refid="classwx_wrapper_input_stream_1a1befcdaf5494c9cd42ebff692a02e640" prot="protected" virt="non-virtual"><scope>wxFSInputStream</scope><name>InitParentStream</name></member>
+      <member refid="classwx_f_s_input_stream_1abfa73b8c605632017a3f29bb79832cc3" prot="public" virt="virtual"><scope>wxFSInputStream</scope><name>IsOk</name></member>
+      <member refid="classwx_stream_base_1a1b575329128f8ec7a369c9b2f7593d93" prot="public" virt="virtual"><scope>wxFSInputStream</scope><name>IsSeekable</name></member>
+      <member refid="classwx_input_stream_1a475a7fe822572eb15182fea22f5969d9" prot="public" virt="virtual"><scope>wxFSInputStream</scope><name>LastRead</name></member>
+      <member refid="classwx_input_stream_1a8ebacd18964a4b169a62ad9190cab4d5" prot="protected" virt="pure-virtual"><scope>wxFSInputStream</scope><name>OnSysRead</name></member>
+      <member refid="classwx_stream_base_1ae38e82c374f82d39993909f0a5d3017e" prot="protected" virt="virtual"><scope>wxFSInputStream</scope><name>OnSysSeek</name></member>
+      <member refid="classwx_stream_base_1a7bb3b0b470e960d1165a28e83d576c1b" prot="protected" virt="virtual"><scope>wxFSInputStream</scope><name>OnSysTell</name></member>
+      <member refid="classwx_stream_base_1aaee699fe59f603eaae1550ee55ac579f" prot="public" virt="non-virtual"><scope>wxFSInputStream</scope><name>operator!</name></member>
+      <member refid="classwx_input_stream_1a42dc4394276b726b9877faf2c71ae408" prot="public" virt="virtual"><scope>wxFSInputStream</scope><name>Peek</name></member>
+      <member refid="classwx_input_stream_1a72f24d0f50c7f07bb68dedf5e8690f4e" prot="public" virt="virtual"><scope>wxFSInputStream</scope><name>Read</name></member>
+      <member refid="classwx_input_stream_1a05cc7b25c9df86f00157a34ee9809bd5" prot="public" virt="non-virtual"><scope>wxFSInputStream</scope><name>Read</name></member>
+      <member refid="classwx_stream_base_1a52353ac42f72538b2022a84f416e5fe2" prot="public" virt="non-virtual"><scope>wxFSInputStream</scope><name>Reset</name></member>
+      <member refid="classwx_input_stream_1a989ed0f85fe7340cc0996bbcee03822d" prot="public" virt="virtual"><scope>wxFSInputStream</scope><name>SeekI</name></member>
+      <member refid="classwx_input_stream_1aece5e9ece88100f15fa91802b005ef4b" prot="public" virt="virtual"><scope>wxFSInputStream</scope><name>TellI</name></member>
+      <member refid="classwx_input_stream_1a503ff01720f51c4fb170aa78a296be9d" prot="public" virt="non-virtual"><scope>wxFSInputStream</scope><name>Ungetch</name></member>
+      <member refid="classwx_input_stream_1a7fe847c79f8d2e1b98bb129c23e549c7" prot="public" virt="non-virtual"><scope>wxFSInputStream</scope><name>Ungetch</name></member>
+      <member refid="classwx_f_s_input_stream_1a3fd715c4ec1961e5ef4b6dda461af876" prot="public" virt="non-virtual"><scope>wxFSInputStream</scope><name>wxFileInputStream</name></member>
+      <member refid="classwx_filter_input_stream_1a21dda00003313a92200677f2d9c78d99" prot="public" virt="non-virtual"><scope>wxFSInputStream</scope><name>wxFilterInputStream</name></member>
+      <member refid="classwx_filter_input_stream_1a64c3433e69bcec829fec8e0381a24847" prot="public" virt="non-virtual"><scope>wxFSInputStream</scope><name>wxFilterInputStream</name></member>
+      <member refid="classwx_input_stream_1aeb3e1146260cabcfbe631ff3493ee851" prot="public" virt="non-virtual"><scope>wxFSInputStream</scope><name>wxInputStream</name></member>
+      <member refid="classwx_stream_base_1a2bdb01f1ccd34d551d3cfc848054bf1e" prot="public" virt="non-virtual"><scope>wxFSInputStream</scope><name>wxStreamBase</name></member>
+      <member refid="classwx_wrapper_input_stream_1a3c6358c88884006e0e15ec0e1c189fca" prot="public" virt="non-virtual"><scope>wxFSInputStream</scope><name>wxWrapperInputStream</name></member>
+      <member refid="classwx_wrapper_input_stream_1a13f5184e23c6a5c7a67893a401bfefad" prot="public" virt="non-virtual"><scope>wxFSInputStream</scope><name>wxWrapperInputStream</name></member>
+      <member refid="classwx_wrapper_input_stream_1a6182cc3ea1788f2821e597aff1b8ea69" prot="protected" virt="non-virtual"><scope>wxFSInputStream</scope><name>wxWrapperInputStream</name></member>
+      <member refid="classwx_input_stream_1a30fea51e11bbf042f29bdf82bc052ab2" prot="public" virt="virtual"><scope>wxFSInputStream</scope><name>~wxInputStream</name></member>
+      <member refid="classwx_stream_base_1aebba32b4da79c60933fa997735a8bfe5" prot="public" virt="virtual"><scope>wxFSInputStream</scope><name>~wxStreamBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

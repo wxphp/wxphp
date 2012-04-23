@@ -26,7 +26,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2844"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="2844"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_icon_text_1aa32e3db38e83550e99367f88965be72c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2845"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="2845"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2851"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="2851"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_icon_text_1a24d920383c3d057ace008ac10842bc3e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2856"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="2856"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_icon_text_1a1d24b561ea0d4b524f2cae323d0063e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -88,7 +88,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2861"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="2861"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_icon_text_1a506b582c8fd74deff82806efa898813d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -105,7 +105,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2866"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="2866"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -114,37 +114,37 @@
 <para>This class can be converted to and from a <ref refid="classwx_variant" kindref="compound">wxVariant</ref>.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dvc" kindref="compound">wxDataViewCtrl Related Classes</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5329">
+      <node id="5424">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5328">
+      <node id="5423">
         <label>wxDataViewIconText</label>
         <link refid="classwx_data_view_icon_text"/>
-        <childnode refid="5329" relation="public-inheritance">
+        <childnode refid="5424" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5331">
+      <node id="5426">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5332" relation="usage">
+        <childnode refid="5427" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5330">
+      <node id="5425">
         <label>wxDataViewIconText</label>
         <link refid="classwx_data_view_icon_text"/>
-        <childnode refid="5331" relation="public-inheritance">
+        <childnode refid="5426" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5332">
+      <node id="5427">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="2837" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="2836" bodyend="2867"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="2837" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="2836" bodyend="2867"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxDataViewIconText</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxDataViewIconText</scope><name>CloneRefData</name></member>

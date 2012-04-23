@@ -14,13 +14,65 @@
 <para>See <ref refid="overview_bookctrl" kindref="compound">wxBookCtrl Overview</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="331" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" bodystart="331" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="347" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" bodystart="347" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="interface_2wx_2bookctrl_8h_1adf764cbdea00d65edcd07bb9953ad2b7" prot="public" static="no">
+        <name>@1</name>
+        <enumvalue id="interface_2wx_2bookctrl_8h_1adf764cbdea00d65edcd07bb9953ad2b7a3e48b6b7c03fba7f24c09551020ae030" prot="public">
+          <name>wxBK_HITTEST_NOWHERE</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+<para>No tab at the specified point. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2bookctrl_8h_1adf764cbdea00d65edcd07bb9953ad2b7a03e1d99ee2a49925940b72e0b6f9995a" prot="public">
+          <name>wxBK_HITTEST_ONICON</name>
+          <initializer> 2</initializer>
+          <briefdescription>
+<para>The point is over an icon. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2bookctrl_8h_1adf764cbdea00d65edcd07bb9953ad2b7a74e40362eb6c9706ff1d616a71d6bf6f" prot="public">
+          <name>wxBK_HITTEST_ONLABEL</name>
+          <initializer> 4</initializer>
+          <briefdescription>
+<para>The point is over a tab label. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2bookctrl_8h_1adf764cbdea00d65edcd07bb9953ad2b7a66b7d6ce07520e46b0a42d6ae873934c" prot="public">
+          <name>wxBK_HITTEST_ONITEM</name>
+          <initializer> wxBK_HITTEST_ONICON | wxBK_HITTEST_ONLABEL</initializer>
+          <briefdescription>
+<para>The point if over a tab item but not over its icon or label. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="interface_2wx_2bookctrl_8h_1adf764cbdea00d65edcd07bb9953ad2b7a41bfeb3416bce38bcdffbcc7421eb58f" prot="public">
+          <name>wxBK_HITTEST_ONPAGE</name>
+          <initializer> 8</initializer>
+          <briefdescription>
+<para>The point is over the page area. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Bit flags returned by wxBookCtrl::HitTest(). </para>        </briefdescription>
+        <detaileddescription>
+<para>Notice that wxOSX currently only returns wxBK_HITTEST_ONLABEL or wxBK_HITTEST_NOWHERE and never the other values, so you should only test for these two in the code that should be portable under OS X. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="17" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" bodystart="16" bodyend="32"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h"/>
   </compounddef>
 </doxygen>

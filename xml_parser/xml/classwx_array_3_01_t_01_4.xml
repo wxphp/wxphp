@@ -22,7 +22,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="239"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="239"/>
       </memberdef>
       <memberdef kind="function" id="classwx_array_3_01_t_01_4_1adff3fffdc4b2a51cb0ad4606114714ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -35,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="244"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="244"/>
       </memberdef>
       <memberdef kind="function" id="classwx_array_3_01_t_01_4_1a7fcfbd2fa53fe042ea385f4e254729da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -52,7 +52,7 @@
 <para>It is a function which is passed two arguments of type <computeroutput>T</computeroutput> where <computeroutput>T</computeroutput> is the array element type and which should return a negative, zero or positive value according to whether the first element passed to it is less than, equal to or greater than the second one. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="254"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="254"/>
       </memberdef>
       <memberdef kind="function" id="classwx_array_3_01_t_01_4_1ae6ce544f41797c2bca97507beca57b6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -69,7 +69,7 @@
 <para>doesn&apos;t copy the objects pointed to even if the source array contains the items of pointer type). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="260"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="260"/>
       </memberdef>
       <memberdef kind="function" id="classwx_array_3_01_t_01_4_1a27baa04ffabb62aab9357e6c92a4d430" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -86,7 +86,7 @@
 <para>doesn&apos;t copy the objects pointed to even if the source array contains the items of pointer type). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="266"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="266"/>
       </memberdef>
       <memberdef kind="function" id="classwx_array_3_01_t_01_4_1a7379d427e1cf74eba4cdc27f44c7c682" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -103,7 +103,7 @@
 <para>the array element are copied too). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="271"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="271"/>
       </memberdef>
       <memberdef kind="function" id="classwx_array_3_01_t_01_4_1a713b8bad4b168eeaba235aad4b4ac562" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxArray &amp;</type>
@@ -120,7 +120,7 @@
 <para>doesn&apos;t copy the objects pointed to even if the source array contains the items of pointer type). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="277"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="277"/>
       </memberdef>
       <memberdef kind="function" id="classwx_array_3_01_t_01_4_1a3480573120c8a425ca8aaee72462c469" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxSortedArray &amp;</type>
@@ -137,7 +137,7 @@
 <para>doesn&apos;t copy the objects pointed to even if the source array contains the items of pointer type). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="283"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="283"/>
       </memberdef>
       <memberdef kind="function" id="classwx_array_3_01_t_01_4_1afac88aa2fde976cb6e131369296843d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxObjArray &amp;</type>
@@ -154,7 +154,7 @@
 <para>the array element are copied too). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="288"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="288"/>
       </memberdef>
       <memberdef kind="function" id="classwx_array_3_01_t_01_4_1a61cc6bbeef22f43d9604d00d0ec8f383" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -167,7 +167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="294"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="294"/>
       </memberdef>
       <memberdef kind="function" id="classwx_array_3_01_t_01_4_1a5d923c5438b43960e0c26c33149b04f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -180,7 +180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="300"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="300"/>
       </memberdef>
       <memberdef kind="function" id="classwx_array_3_01_t_01_4_1aebb57204007527fe96011b2f16c9dacf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -193,7 +193,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="305"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="305"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -214,7 +214,7 @@
 <para>It is worth calling when the number of items which are going to be added to the array is known in advance because it will save unneeded memory reallocation. If the array already has enough memory for the given number of items, nothing happens. In any case, the existing contents of the array is not modified. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="336"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="336"/>
       </memberdef>
       <memberdef kind="function" id="classwx_array_3_01_t_01_4_1a6184a5915ad4878c39282be949f2e20b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -227,7 +227,7 @@
 <para>If the program knows that no new items will be added to the array it may call <ref refid="classwx_array_3_01_t_01_4_1a6184a5915ad4878c39282be949f2e20b" kindref="member">Shrink()</ref> to reduce its memory usage. However, if a new item is added to the array, some extra memory will be allocated again. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="344"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="344"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -244,7 +244,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="361"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="361"/>
       </memberdef>
       <memberdef kind="function" id="classwx_array_3_01_t_01_4_1a59050981bf25e5b6962fb9fba7ed6c47" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -257,7 +257,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="366"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="366"/>
       </memberdef>
       <memberdef kind="function" id="classwx_array_3_01_t_01_4_1ae496576cb097636aa2770573f70b67d4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>T &amp;</type>
@@ -274,7 +274,7 @@
 <para>If <emphasis>index</emphasis> is out of bounds, an assert failure is raised in the debug builds but nothing special is done in the release build.</para><para>The returned value is of type &quot;reference to the array element type&quot; for all of the array classes. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="376"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="376"/>
       </memberdef>
       <memberdef kind="function" id="classwx_array_3_01_t_01_4_1ab9b5e30133d9eb6af0c9675c2b99fc8c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>T &amp;</type>
@@ -287,7 +287,7 @@
 <para>is the same as calling &quot;Item(GetCount() - 1)&quot;. An assert failure is raised in the debug mode if the array is empty.</para><para>The returned value is of type &quot;reference to the array element type&quot; for all of the array classes. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="386"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="386"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -312,7 +312,7 @@
 <para>This version is used with wxArray.</para><para>You may also use <ref refid="dynarray_8h_1a7631438cf6263e77795c6905e0949b58" kindref="member">WX_APPEND_ARRAY()</ref> macro to append all elements of one array to another one but it is more efficient to use the <emphasis>copies</emphasis> parameter and modify the elements in place later if you plan to append a lot of items. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="407"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="407"/>
       </memberdef>
       <memberdef kind="function" id="classwx_array_3_01_t_01_4_1a899c54d4193671d14bd3fc8934e83ac0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -329,7 +329,7 @@
 <para>This version is used with wxSortedArray, returning the index where <emphasis>item</emphasis> is stored. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="416"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="416"/>
       </memberdef>
       <memberdef kind="function" id="classwx_array_3_01_t_01_4_1af6a00260542085cafc38d04ebd34c034" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -346,7 +346,7 @@
 <para>This version is used with wxObjArray. The array will take ownership of the <emphasis>item</emphasis>, deleting it when the item is deleted from the array. Note that you cannot append more than one pointer as reusing it would lead to deleting it twice (or more) resulting in a crash.</para><para>You may also use <ref refid="dynarray_8h_1a7631438cf6263e77795c6905e0949b58" kindref="member">WX_APPEND_ARRAY()</ref> macro to append all elements of one array to another one but it is more efficient to use the <emphasis>copies</emphasis> parameter and modify the elements in place later if you plan to append a lot of items. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="432"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="432"/>
       </memberdef>
       <memberdef kind="function" id="classwx_array_3_01_t_01_4_1a22a22c4f4cf3c9e9883dba5699abaf63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -368,7 +368,7 @@
 <para>This version is used with wxObjArray. The array will make a copy of the item and will not take ownership of the original item.</para><para>You may also use <ref refid="dynarray_8h_1a7631438cf6263e77795c6905e0949b58" kindref="member">WX_APPEND_ARRAY()</ref> macro to append all elements of one array to another one but it is more efficient to use the <emphasis>copies</emphasis> parameter and modify the elements in place later if you plan to append a lot of items. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="446"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="446"/>
       </memberdef>
       <memberdef kind="function" id="classwx_array_3_01_t_01_4_1a823040226372bac18bca3bd21b61621e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -389,7 +389,7 @@
 <para>Be aware that you will set out the order of the array if you give a wrong position.</para><para>This function is useful in conjunction with <ref refid="classwx_array_3_01_t_01_4_1a6f9fbb4563437d24283f105a81321416" kindref="member">IndexForInsert()</ref> for a common operation of &quot;insert only if not found&quot;. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="458"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="458"/>
       </memberdef>
       <memberdef kind="function" id="classwx_array_3_01_t_01_4_1ae3125ce69e5b1d6a7ec06b0d4bddad63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -415,7 +415,7 @@
 <para>wxSortedArray doesn&apos;t have this function because inserting in wrong place would break its sorted condition.</para><para>Please see <ref refid="classwx_array_3_01_t_01_4_1a0fd8856be5662cb7f07894cf9a318dda" kindref="member">Add()</ref> for an explanation of the differences between the overloaded versions of this function. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="471"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="471"/>
       </memberdef>
       <memberdef kind="function" id="classwx_array_3_01_t_01_4_1ac3eadfa94a64c21a079c8ad9e6e37693" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -436,7 +436,7 @@
 <para>wxSortedArray doesn&apos;t have this function because inserting in wrong place would break its sorted condition.</para><para>Please see <ref refid="classwx_array_3_01_t_01_4_1a0fd8856be5662cb7f07894cf9a318dda" kindref="member">Add()</ref> for an explanation of the differences between the overloaded versions of this function. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="484"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="484"/>
       </memberdef>
       <memberdef kind="function" id="classwx_array_3_01_t_01_4_1aa4f2ca3de52cdf37e2a7d0b88c27541b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -462,7 +462,7 @@
 <para>wxSortedArray doesn&apos;t have this function because inserting in wrong place would break its sorted condition.</para><para>Please see <ref refid="classwx_array_3_01_t_01_4_1a0fd8856be5662cb7f07894cf9a318dda" kindref="member">Add()</ref> for an explanation of the differences between the overloaded versions of this function. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="497"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="497"/>
       </memberdef>
       <memberdef kind="function" id="classwx_array_3_01_t_01_4_1adfddd024c1385af0f089ed37b96defe0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -485,7 +485,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="507"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="507"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -501,7 +501,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="521"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="521"/>
       </memberdef>
       <memberdef kind="function" id="classwx_array_3_01_t_01_4_1a4e49e0385927180ddc2332ff85724a3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>T *</type>
@@ -518,7 +518,7 @@
 <para>The function returns the pointer to the removed element. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="527"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="527"/>
       </memberdef>
       <memberdef kind="function" id="classwx_array_3_01_t_01_4_1adf1797565eeba15d33b1cb8becb1bfe9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -531,7 +531,7 @@
 <para>For wxObjArray classes, this destroys all of the array elements. For wxArray and wxSortedArray this does nothing except marking the array of being empty - this function does not free the allocated memory, use <ref refid="classwx_array_3_01_t_01_4_1a7c8302670949e819c4b442aba9e258e6" kindref="member">Clear()</ref> for this. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="535"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="535"/>
       </memberdef>
       <memberdef kind="function" id="classwx_array_3_01_t_01_4_1a917cf490b105c84bb06deb2a9d2f104f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -552,7 +552,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="562"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="562"/>
       </memberdef>
       <memberdef kind="function" id="classwx_array_3_01_t_01_4_1a7f5d1a313c7999bd2110157fdacaa026" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -577,7 +577,7 @@
 </programlisting></para><para>See also <ref refid="dynarray_8h_1a2057e24dceef760fadfc5ce19229cbc2" kindref="member">WX_CLEAR_ARRAY()</ref> macro which deletes all elements of a wxArray (supposed to contain pointers). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="580"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="580"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -603,7 +603,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="604"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="604"/>
       </memberdef>
       <memberdef kind="function" id="classwx_array_3_01_t_01_4_1abc08a79fe800638f315b35cb34272d7a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -620,7 +620,7 @@
 <para>Searches for the element in the array, using binary search.</para><para><computeroutput>wxNOT_FOUND</computeroutput> is returned if the element is not found, otherwise the index of the element is returned. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="614"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="614"/>
       </memberdef>
       <memberdef kind="function" id="classwx_array_3_01_t_01_4_1a6f9fbb4563437d24283f105a81321416" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -637,7 +637,7 @@
 <para>The index returned is just before the first existing item that is greater or equal (according to the compare function) to the given <emphasis>item</emphasis>.</para><para>You have to do extra work to know if the <emphasis>item</emphasis> already exists in array.</para><para>This function is useful in conjunction with <ref refid="classwx_array_3_01_t_01_4_1a823040226372bac18bca3bd21b61621e" kindref="member">AddAt()</ref> for a common operation of &quot;insert only if not found&quot;. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="628"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="628"/>
       </memberdef>
       <memberdef kind="function" id="classwx_array_3_01_t_01_4_1ae45b012bef8ed8980310b17edd37a9c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -655,7 +655,7 @@
 </programlisting></para><para>Where <emphasis>T</emphasis> is the type of the array elements. I.e. it is a function returning <emphasis>int</emphasis> which is passed two arguments of type <emphasis>T*</emphasis>.</para><para>Sorts the array using the specified compare function: this function should return a negative, zero or positive value according to whether the first element passed to it is less than, equal to or greater than the second one.</para><para>wxSortedArray doesn&apos;t have this function because it is always sorted. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="648"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="648"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -711,7 +711,7 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__containers" kindref="compound">Containers</ref></para><para><simplesect kind="see"><para><ref refid="overview_container" kindref="compound">Container Classes</ref>, <ref refid="classwx_list_3_01_t_01_4" kindref="compound">wxList&lt;T&gt;</ref>, <ref refid="classwx_vector_3_01_t_01_4" kindref="compound">wxVector&lt;T&gt;</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" line="219" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynarray.h" bodystart="218" bodyend="651"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" line="219" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dynarray.h" bodystart="218" bodyend="651"/>
     <listofallmembers>
       <member refid="classwx_array_3_01_t_01_4_1a0fd8856be5662cb7f07894cf9a318dda" prot="public" virt="non-virtual"><scope>wxArray&lt; T &gt;</scope><name>Add</name></member>
       <member refid="classwx_array_3_01_t_01_4_1a899c54d4193671d14bd3fc8934e83ac0" prot="public" virt="non-virtual"><scope>wxArray&lt; T &gt;</scope><name>Add</name></member>

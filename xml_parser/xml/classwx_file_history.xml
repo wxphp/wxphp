@@ -26,7 +26,7 @@
 <para>Pass the maximum number of files that should be stored and displayed.</para><para><emphasis>idBase</emphasis> defaults to wxID_FILE1 and represents the id given to the first history menu item. Since menu items can&apos;t share the same ID you should change <emphasis>idBase</emphasis> (to one of your own defined IDs) when using more than one <ref refid="classwx_file_history" kindref="compound">wxFileHistory</ref> in your application. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="36"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filehistory.h" line="36"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_history_1a9c5eda47b6fce4c195f7acb350789591" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -39,7 +39,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="41"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filehistory.h" line="41"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_history_1a835839c473dfa42feecc78bb4798c79d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -56,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="47"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filehistory.h" line="47"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_history_1a8c77c1d51e18be0b54639953745481a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="53"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filehistory.h" line="53"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_history_1a285f936b4c746f5214059a69357d049f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -86,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="57"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filehistory.h" line="57"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_history_1acec972bfcc45bb158446352c3ecb865f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="windowid_8h_1ae8091432cc2cb2485d45f2302fb51133" kindref="member">wxWindowID</ref></type>
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="62"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filehistory.h" line="62"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_history_1af96d6c2a618d92579b3acd7c934a4bb2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>size_t</type>
@@ -112,7 +112,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="67"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filehistory.h" line="67"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_history_1a99b1afe07ed22bf6f5587a7bf662f72d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -129,7 +129,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="72"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filehistory.h" line="72"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_history_1aba1b342c7005b38025c4d3f83d323570" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -142,7 +142,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="77"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filehistory.h" line="77"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_history_1ac419990f16e65b02389c3f66b0e7e74e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const wxList &amp;</type>
@@ -156,7 +156,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="84"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filehistory.h" line="84"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_history_1a2537201495686a3a6a26701e158ecfb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -174,7 +174,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="92"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filehistory.h" line="92"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_history_1ad9e2db9f45b538c19a240c55ccd60448" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -191,7 +191,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="97"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filehistory.h" line="97"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_history_1a5ed5eb530eb2fce7207ff8688535423c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -208,7 +208,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="102"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filehistory.h" line="102"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_history_1a0552296e381e7a3500e0813d2263930e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -226,7 +226,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="110"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filehistory.h" line="110"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_history_1ae778a6e4ade91d08b048082c3ec3566f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -243,7 +243,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="115"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filehistory.h" line="115"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_history_1ad73800aba67b30fc9d0dc94f17c4cc09" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -260,7 +260,7 @@
 <para>Also see <ref refid="classwx_file_history_1a8c77c1d51e18be0b54639953745481a6" kindref="member">AddFilesToMenu()</ref> for initializing the menu with filenames that are already in the history when this function is called, as this is not done automatically. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="123"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filehistory.h" line="123"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -270,37 +270,37 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__docview" kindref="compound">Document/View Framework</ref></para><para><simplesect kind="see"><para><ref refid="overview_docview" kindref="compound">Document/View Framework</ref>, <ref refid="classwx_doc_manager" kindref="compound">wxDocManager</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6203">
+      <node id="6322">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6202">
+      <node id="6321">
         <label>wxFileHistory</label>
         <link refid="classwx_file_history"/>
-        <childnode refid="6203" relation="public-inheritance">
+        <childnode refid="6322" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6205">
+      <node id="6324">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6206" relation="usage">
+        <childnode refid="6325" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6204">
+      <node id="6323">
         <label>wxFileHistory</label>
         <link refid="classwx_file_history"/>
-        <childnode refid="6205" relation="public-inheritance">
+        <childnode refid="6324" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6206">
+      <node id="6325">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filehistory.h" bodystart="24" bodyend="124"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filehistory.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/filehistory.h" bodystart="24" bodyend="124"/>
     <listofallmembers>
       <member refid="classwx_file_history_1a8c77c1d51e18be0b54639953745481a6" prot="public" virt="virtual"><scope>wxFileHistory</scope><name>AddFilesToMenu</name></member>
       <member refid="classwx_file_history_1a285f936b4c746f5214059a69357d049f" prot="public" virt="virtual"><scope>wxFileHistory</scope><name>AddFilesToMenu</name></member>

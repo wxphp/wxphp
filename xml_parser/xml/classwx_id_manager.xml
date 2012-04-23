@@ -29,7 +29,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/windowid.h" line="42"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/windowid.h" line="42"/>
       </memberdef>
       <memberdef kind="function" id="classwx_id_manager_1a48e2dcc02bb3998861a73de7959b377d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -67,7 +67,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/windowid.h" line="57"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/windowid.h" line="57"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -76,7 +76,7 @@
 <para>It is used by <ref refid="classwx_window_1a8175da594e6045635a1d1cfe775cdddb" kindref="member">wxWindow::NewControlId()</ref> and <ref refid="classwx_window_1ad9bc342d1e38d221e37f0f6396950c8c" kindref="member">wxWindow::UnreserveControlId()</ref>, and can also be used be used directly.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref></para><para><simplesect kind="see"><para><ref refid="classwx_window_1a8175da594e6045635a1d1cfe775cdddb" kindref="member">wxWindow::NewControlId()</ref>, <ref refid="classwx_window_1ad9bc342d1e38d221e37f0f6396950c8c" kindref="member">wxWindow::UnreserveControlId()</ref>, <ref refid="overview_windowids" kindref="compound">Window IDs</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/windowid.h" line="28" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/windowid.h" bodystart="27" bodyend="58"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/windowid.h" line="28" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/windowid.h" bodystart="27" bodyend="58"/>
     <listofallmembers>
       <member refid="classwx_id_manager_1a3038d645cbbb9ce1f89dcafe830275a6" prot="public" virt="non-virtual"><scope>wxIdManager</scope><name>ReserveId</name></member>
       <member refid="classwx_id_manager_1a48e2dcc02bb3998861a73de7959b377d" prot="public" virt="non-virtual"><scope>wxIdManager</scope><name>UnreserveId</name></member>

@@ -8,11 +8,9 @@
     <derivedcompoundref refid="classwx_file_dialog" prot="public" virt="non-virtual">wxFileDialog</derivedcompoundref>
     <derivedcompoundref refid="classwx_find_replace_dialog" prot="public" virt="non-virtual">wxFindReplaceDialog</derivedcompoundref>
     <derivedcompoundref refid="classwx_font_dialog" prot="public" virt="non-virtual">wxFontDialog</derivedcompoundref>
+    <derivedcompoundref refid="classwx_generic_progress_dialog" prot="public" virt="non-virtual">wxGenericProgressDialog</derivedcompoundref>
     <derivedcompoundref refid="classwx_message_dialog" prot="public" virt="non-virtual">wxMessageDialog</derivedcompoundref>
     <derivedcompoundref refid="classwx_multi_choice_dialog" prot="public" virt="non-virtual">wxMultiChoiceDialog</derivedcompoundref>
-    <derivedcompoundref refid="classwx_page_setup_dialog" prot="public" virt="non-virtual">wxPageSetupDialog</derivedcompoundref>
-    <derivedcompoundref refid="classwx_print_dialog" prot="public" virt="non-virtual">wxPrintDialog</derivedcompoundref>
-    <derivedcompoundref refid="classwx_progress_dialog" prot="public" virt="non-virtual">wxProgressDialog</derivedcompoundref>
     <derivedcompoundref refid="classwx_property_sheet_dialog" prot="public" virt="non-virtual">wxPropertySheetDialog</derivedcompoundref>
     <derivedcompoundref refid="classwx_rich_text_style_organiser_dialog" prot="public" virt="non-virtual">wxRichTextStyleOrganiserDialog</derivedcompoundref>
     <derivedcompoundref refid="classwx_single_choice_dialog" prot="public" virt="non-virtual">wxSingleChoiceDialog</derivedcompoundref>
@@ -32,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="153"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="153"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1a0bbd20a18b306aad59429b9d6783d39b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -128,7 +126,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="184"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="184"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1a9cf257635ad3273cde4a95a0d356657c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -141,7 +139,7 @@
 <para>Deletes any child windows before deleting the physical window.</para><para>See <ref refid="overview_windowdeletion" kindref="compound">Window Deletion</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="193"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="193"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1af3a75b9d24abe5c79d1bb5397c67b108" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -159,7 +157,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="201"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="201"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1a233dd280efa8ee93c61792e439904731" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -173,7 +171,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="210"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="210"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1a6af384c4a558965bfee61784f5e0b7fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -200,7 +198,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="218"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="218"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1a44e42338cb8bd2a1b312ab7a6f1722a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -248,7 +246,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="229"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="229"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1ae362b7c61430593ef8ac5034f1bd92c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer" kindref="compound">wxSizer</ref> *</type>
@@ -265,7 +263,7 @@
 <para><emphasis>flags</emphasis> is a bit list of the following flags: wxOK, wxCANCEL, wxYES, wxNO, wxAPPLY, wxCLOSE, wxHELP, wxNO_DEFAULT.</para><para>The sizer lays out the buttons in a manner appropriate to the platform.</para><para>This function uses <ref refid="classwx_dialog_1a8f2f565975f843035391ce62b0b9f8e8" kindref="member">CreateStdDialogButtonSizer()</ref> internally for most platforms but doesn&apos;t create the sizer at all for the platforms with hardware buttons (such as smartphones) for which it sets up the hardware buttons appropriately and returns NULL, so don&apos;t forget to test that the return value is valid before using it. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="244"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="244"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1a0c6fb55be0b07b934b30550e0225df8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer" kindref="compound">wxSizer</ref> *</type>
@@ -283,7 +281,7 @@
 This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1bd92c8" kindref="member">CreateButtonSizer()</ref> and <ref refid="classwx_dialog_1ab7a5666b612d6cfdfb2660fd9bd3393e" kindref="member">CreateSeparatedSizer()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="257"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="257"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1ab7a5666b612d6cfdfb2660fd9bd3393e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer" kindref="compound">wxSizer</ref> *</type>
@@ -310,7 +308,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="275"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="275"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1a8f2f565975f843035391ce62b0b9f8e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_std_dialog_button_sizer" kindref="compound">wxStdDialogButtonSizer</ref> *</type>
@@ -327,7 +325,24 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 <para><emphasis>flags</emphasis> is a bit list of the following flags: wxOK, wxCANCEL, wxYES, wxNO, wxAPPLY, wxCLOSE, wxHELP, wxNO_DEFAULT.</para><para>The sizer lays out the buttons in a manner appropriate to the platform. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="284"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="284"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_dialog_1a5bead5e932f17b7c2345dfc41b6cc79c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_sizer" kindref="compound">wxSizer</ref> *</type>
+        <definition>wxSizer* wxDialog::CreateTextSizer</definition>
+        <argsstring>(const wxString &amp;message)</argsstring>
+        <name>CreateTextSizer</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Splits text up at newlines and places the lines into <ref refid="classwx_static_text" kindref="compound">wxStaticText</ref> objects in a vertical <ref refid="classwx_box_sizer" kindref="compound">wxBoxSizer</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="290"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1a919613599a9e919913146e21d09b44c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -341,7 +356,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="292"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="298"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1a08a07820be45f6c6fcde5c9e2f786389" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -354,7 +369,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 <para>A command event for the identifier returned by <ref refid="classwx_dialog_1ae1dfa9d9b983615e6f350dbbfafbabe6" kindref="member">GetAffirmativeId()</ref> is sent by default. You can override this function. If the function returns false, wxWidgets will call <ref refid="classwx_window_1a3e44f4a494fc9ef4346c4fba70c8de0c" kindref="member">Close()</ref> for the dialog.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="303"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="309"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1a89b6085b05b63e98001311fafcfb21f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -380,7 +395,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="322"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="328"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1ae1dfa9d9b983615e6f350dbbfafbabe6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -394,7 +409,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="330"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="336"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1aee73457b69fb24e29a9039b6506eb92e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -407,7 +422,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 <para>This is particularly useful when the dialog implements pages, such as <ref refid="classwx_property_sheet_dialog" kindref="compound">wxPropertySheetDialog</ref>, and allows the <ref refid="overview_dialog" kindref="compound">layout adaptation code</ref> to know that only the pages need to be made scrollable. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="339"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="345"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1ae65d2ca1b31f331cb5b820509721d857" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -421,7 +436,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="346"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="352"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1a52d7d0ff9942ce8fee87a07c8d45e8f7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -435,7 +450,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="354"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="360"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1aef837b62721ec6d0043d2baa7da7d566" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -449,7 +464,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="364"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="370"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1a4e84aaae7dacd40639c6e76adab2bfbe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2dialog_8h_1a5121a982861076ced173471760f36baf" kindref="member">wxDialogLayoutAdaptationMode</ref></type>
@@ -463,7 +478,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="371"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="377"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1ad32f9a1b42bb0ab4cea9816dbd4af4ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dynarray_8h_1add87f199292e36ee87efd6d7f0d4ee66" kindref="member">wxArrayInt</ref> &amp;</type>
@@ -477,7 +492,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="386"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="392"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1a5f56f8d3ecc4336df4150aea989343df" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -492,7 +507,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="396"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="402"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1a80c76ed6b8f6eb92992f816e1a987f80" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_tool_bar" kindref="compound">wxToolBar</ref> *</type>
@@ -505,7 +520,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 <para>This function allows you to access the toolbar and add tools to it. Removing tools and adding arbitrary controls are not currently supported.</para><para>This function is not available on any other platform.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="408"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="414"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1afbc8650246551e62a37bf9667c05fc68" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -533,7 +548,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="423"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="429"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1a6a08c94474dc5691639c519bd81b8dee" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -548,7 +563,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="431"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="437"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1ab300c0c3bdf454efb22e85bfc30a8e41" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -566,7 +581,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="449"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="455"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1a2c135c1ae94d87a64ab6b6390fa8ce1e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -579,34 +594,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="454"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_dialog_1a31dde643f83e859e53759b8ae5f07378" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void wxDialog::OnSysColourChanged</definition>
-        <argsstring>(wxSysColourChangedEvent &amp;event)</argsstring>
-        <name>OnSysColourChanged</name>
-        <param>
-          <type><ref refid="classwx_sys_colour_changed_event" kindref="compound">wxSysColourChangedEvent</ref> &amp;</type>
-          <declname>event</declname>
-        </param>
-        <briefdescription>
-<para>The default handler for <computeroutput>wxEVT_SYS_COLOUR_CHANGED</computeroutput>. </para>        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>event</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The colour change event.</para></parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="remark"><para>Changes the dialog&apos;s colour to conform to the current settings (Windows only). Add an event table entry for your dialog class if you wish the behaviour to be different (such as keeping a user-defined background colour). If you do override this function, call <ref refid="classwx_event_1a98eb20b76106f9a933c2eb3ee119f66c" kindref="member">wxEvent::Skip()</ref> to propagate the notification to child windows and controls.</para></simplesect>
-<simplesect kind="see"><para><ref refid="classwx_sys_colour_changed_event" kindref="compound">wxSysColourChangedEvent</ref> </para></simplesect>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="471"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="460"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1a72ea7e269bedb2552bfeaccdbac07939" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -624,7 +612,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="487"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="476"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1a585869988e308f549128a6a065f387c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -641,7 +629,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 <para>When the button with this id is clicked, the dialog is closed. Also, when the user presses <computeroutput>ESC</computeroutput> key in the dialog or closes the dialog using the close button in the title bar, this is mapped to the click of the button with the specified id.</para><para>By default, the escape id is the special value wxID_ANY meaning that wxID_CANCEL button is used if it&apos;s present in the dialog and otherwise the button with <ref refid="classwx_dialog_1ae1dfa9d9b983615e6f350dbbfafbabe6" kindref="member">GetAffirmativeId()</ref> is used. Another special value for <emphasis>id</emphasis> is wxID_NONE meaning that <computeroutput>ESC</computeroutput> presses should be ignored. If any other value is given, it is interpreted as the id of the button to map the escape key to. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="503"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="492"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1a717435f3dd9d977feaa40fb359a6da84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -668,7 +656,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="513"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="502"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1a25159a919f632d6b2d15f19a1bfbe639" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -695,7 +683,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="523"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="512"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1ab8b02ae4d97e300b4d7bbce6cc6af221" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -713,7 +701,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="531"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="520"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1a9eaef1625f225bc25f8c92449d123a67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -731,7 +719,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="541"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="530"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1a9f949c545ca70571cec8cd2fcbfc0991" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -749,7 +737,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="549"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="538"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1a38e21fd7eb13d9d44cd9ea4f85a36517" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -774,7 +762,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="571"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="560"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1a0d04ed85ac5cd271a61514d446340673" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -800,7 +788,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="585"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="574"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1ae8e5fa98d473b812b8d1c2f163b65c67" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -827,7 +815,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="596"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="585"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1a6e078c3d0653f75ad3c34a37c0b54637" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -835,8 +823,6 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
         <argsstring>()</argsstring>
         <name>ShowModal</name>
         <reimplementedby refid="classwx_text_entry_dialog_1a47e2fdd56ac9034b2720bc74e89fbf82">ShowModal</reimplementedby>
-        <reimplementedby refid="classwx_page_setup_dialog_1a13e348ffb64ffc8aea34fe8ea268ef6a">ShowModal</reimplementedby>
-        <reimplementedby refid="classwx_print_dialog_1a770301243187c009fd3e6086a98c63c4">ShowModal</reimplementedby>
         <reimplementedby refid="classwx_message_dialog_1a28e6cea6fb3857df6cc9b103e06dbadf">ShowModal</reimplementedby>
         <reimplementedby refid="classwx_font_dialog_1a26f48c5b589f8bc45ec542599546f69a">ShowModal</reimplementedby>
         <reimplementedby refid="classwx_file_dialog_1a04943e4abb27a197a110898d40ddb4f0">ShowModal</reimplementedby>
@@ -852,7 +838,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="618"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="607"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1a5c61636f657c0ae9503c4dfa534e073e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -866,7 +852,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="635"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="624"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -886,7 +872,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="311"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="317"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1a6689e06106c3005c86bf73ac0718f6b6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_dialog_layout_adapter" kindref="compound">wxDialogLayoutAdapter</ref> *</type>
@@ -900,7 +886,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="378"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="384"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1ae74a22f52a5978f9a8a2b4853c60c376" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -914,7 +900,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="439"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="445"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_1a371e3d760ea9beb49b74c5ffee52a0ee" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_dialog_layout_adapter" kindref="compound">wxDialogLayoutAdapter</ref> *</type>
@@ -932,7 +918,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="558"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="547"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -968,7 +954,7 @@ This is a combination of <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1
 <listitem><para>wxMINIMIZE_BOX: Displays a minimize box on the dialog. </para></listitem>
 <listitem><para>wxTHICK_FRAME: Display a thick frame around the window. </para></listitem>
 <listitem><para>wxSTAY_ON_TOP: The dialog stays on top of all other windows. </para></listitem>
-<listitem><para>wxNO_3D: Under Windows, specifies that the child controls should not have 3D borders unless specified in the control. </para></listitem>
+<listitem><para>wxNO_3D: This style is obsolete and doesn&apos;t do anything any more, don&apos;t use it in any new code. </para></listitem>
 <listitem><para>wxDIALOG_NO_PARENT: By default, a dialog created with a NULL parent window will be given the <ref refid="classwx_app_1abc2b3305178f59f4024f492855c1bfdc" kindref="member">application&apos;s top level window</ref> as parent. Use this style to prevent this from happening and create an orphan dialog. This is not recommended for modal dialogs. </para></listitem>
 <listitem><para>wxDIALOG_EX_CONTEXTHELP: Under Windows, puts a query button on the caption. When pressed, Windows will go into a context-sensitive help mode and wxWidgets will send a <computeroutput>wxEVT_HELP</computeroutput> event if the user clicked on an application window. Note that this is an extended style and must be set by calling <ref refid="classwx_window_1ae9655f7c35ce7ac89cac2f6c0054b103" kindref="member">SetExtraStyle()</ref> before Create is called (two-step construction). </para></listitem>
 <listitem><para>wxDIALOG_EX_METAL: On Mac OS X, frames with this style will be shown with a metallic look. This is an extra style. </para></listitem>
@@ -983,205 +969,199 @@ Under Unix or Linux, MWM (the Motif Window Manager) or other window managers rec
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="5575">
+      <node id="5670">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="5576" relation="public-inheritance">
+        <childnode refid="5671" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5578">
+      <node id="5680">
+        <label>wxGenericProgressDialog</label>
+        <link refid="classwx_generic_progress_dialog"/>
+        <childnode refid="5668" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5673">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5584">
+      <node id="5679">
         <label>wxFontDialog</label>
         <link refid="classwx_font_dialog"/>
-        <childnode refid="5573" relation="public-inheritance">
+        <childnode refid="5668" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5582">
+      <node id="5677">
         <label>wxFileDialog</label>
         <link refid="classwx_file_dialog"/>
-        <childnode refid="5573" relation="public-inheritance">
+        <childnode refid="5668" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5577">
+      <node id="5672">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="5578" relation="public-inheritance">
+        <childnode refid="5673" relation="public-inheritance">
         </childnode>
-        <childnode refid="5579" relation="public-inheritance">
+        <childnode refid="5674" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5589">
+      <node id="5681">
         <label>wxProgressDialog</label>
         <link refid="classwx_progress_dialog"/>
-        <childnode refid="5573" relation="public-inheritance">
+        <childnode refid="5680" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5592">
+      <node id="5686">
         <label>wxRichTextStyleOrganiserDialog</label>
         <link refid="classwx_rich_text_style_organiser_dialog"/>
-        <childnode refid="5573" relation="public-inheritance">
+        <childnode refid="5668" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5586">
+      <node id="5683">
         <label>wxMultiChoiceDialog</label>
         <link refid="classwx_multi_choice_dialog"/>
-        <childnode refid="5573" relation="public-inheritance">
+        <childnode refid="5668" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5588">
-        <label>wxPrintDialog</label>
-        <link refid="classwx_print_dialog"/>
-        <childnode refid="5573" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5597">
+      <node id="5691">
         <label>wxWizard</label>
         <link refid="classwx_wizard"/>
-        <childnode refid="5573" relation="public-inheritance">
+        <childnode refid="5668" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5579">
+      <node id="5674">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="5576">
+      <node id="5671">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="5577" relation="public-inheritance">
+        <childnode refid="5672" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5573">
+      <node id="5668">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="5574" relation="public-inheritance">
+        <childnode refid="5669" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5585">
+      <node id="5682">
         <label>wxMessageDialog</label>
         <link refid="classwx_message_dialog"/>
-        <childnode refid="5573" relation="public-inheritance">
+        <childnode refid="5668" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5583">
+      <node id="5678">
         <label>wxFindReplaceDialog</label>
         <link refid="classwx_find_replace_dialog"/>
-        <childnode refid="5573" relation="public-inheritance">
+        <childnode refid="5668" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5593">
+      <node id="5687">
         <label>wxSingleChoiceDialog</label>
         <link refid="classwx_single_choice_dialog"/>
-        <childnode refid="5573" relation="public-inheritance">
+        <childnode refid="5668" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5581">
+      <node id="5676">
         <label>wxDirDialog</label>
         <link refid="classwx_dir_dialog"/>
-        <childnode refid="5573" relation="public-inheritance">
+        <childnode refid="5668" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5580">
+      <node id="5675">
         <label>wxColourDialog</label>
         <link refid="classwx_colour_dialog"/>
-        <childnode refid="5573" relation="public-inheritance">
+        <childnode refid="5668" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5574">
+      <node id="5669">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="5575" relation="public-inheritance">
+        <childnode refid="5670" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5591">
+      <node id="5685">
         <label>wxRichTextFormattingDialog</label>
         <link refid="classwx_rich_text_formatting_dialog"/>
-        <childnode refid="5590" relation="public-inheritance">
+        <childnode refid="5684" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5595">
+      <node id="5689">
         <label>wxTextEntryDialog</label>
         <link refid="classwx_text_entry_dialog"/>
-        <childnode refid="5573" relation="public-inheritance">
+        <childnode refid="5668" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5596">
+      <node id="5690">
         <label>wxPasswordEntryDialog</label>
         <link refid="classwx_password_entry_dialog"/>
-        <childnode refid="5595" relation="public-inheritance">
+        <childnode refid="5689" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5594">
+      <node id="5688">
         <label>wxSymbolPickerDialog</label>
         <link refid="classwx_symbol_picker_dialog"/>
-        <childnode refid="5573" relation="public-inheritance">
+        <childnode refid="5668" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5590">
+      <node id="5684">
         <label>wxPropertySheetDialog</label>
         <link refid="classwx_property_sheet_dialog"/>
-        <childnode refid="5573" relation="public-inheritance">
-        </childnode>
-      </node>
-      <node id="5587">
-        <label>wxPageSetupDialog</label>
-        <link refid="classwx_page_setup_dialog"/>
-        <childnode refid="5573" relation="public-inheritance">
+        <childnode refid="5668" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5600">
+      <node id="5694">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="5601" relation="public-inheritance">
+        <childnode refid="5695" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5603">
+      <node id="5697">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5604" relation="usage">
+        <childnode refid="5698" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5602">
+      <node id="5696">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="5603" relation="public-inheritance">
+        <childnode refid="5697" relation="public-inheritance">
         </childnode>
-        <childnode refid="5605" relation="public-inheritance">
+        <childnode refid="5699" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5605">
+      <node id="5699">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="5601">
+      <node id="5695">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="5602" relation="public-inheritance">
+        <childnode refid="5696" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5598">
+      <node id="5692">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="5599" relation="public-inheritance">
+        <childnode refid="5693" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5599">
+      <node id="5693">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="5600" relation="public-inheritance">
+        <childnode refid="5694" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5604">
+      <node id="5698">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="148" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" bodystart="147" bodyend="636"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="148" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" bodystart="147" bodyend="625"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxDialog</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxDialog</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -1225,6 +1205,7 @@ Under Unix or Linux, MWM (the Motif Window Manager) or other window managers rec
       <member refid="classwx_dialog_1a0c6fb55be0b07b934b30550e0225df8f" prot="public" virt="non-virtual"><scope>wxDialog</scope><name>CreateSeparatedButtonSizer</name></member>
       <member refid="classwx_dialog_1ab7a5666b612d6cfdfb2660fd9bd3393e" prot="public" virt="non-virtual"><scope>wxDialog</scope><name>CreateSeparatedSizer</name></member>
       <member refid="classwx_dialog_1a8f2f565975f843035391ce62b0b9f8e8" prot="public" virt="non-virtual"><scope>wxDialog</scope><name>CreateStdDialogButtonSizer</name></member>
+      <member refid="classwx_dialog_1a5bead5e932f17b7c2345dfc41b6cc79c" prot="public" virt="non-virtual"><scope>wxDialog</scope><name>CreateTextSizer</name></member>
       <member refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" prot="public" virt="non-virtual"><scope>wxDialog</scope><name>DeletePendingEvents</name></member>
       <member refid="classwx_window_1a6bf0c5be864544d9ce0560087667b7fc" prot="public" virt="virtual"><scope>wxDialog</scope><name>Destroy</name></member>
       <member refid="classwx_window_1aff47b32c8d42d515ea0bb6a6c2fea917" prot="public" virt="non-virtual"><scope>wxDialog</scope><name>DestroyChildren</name></member>
@@ -1373,6 +1354,7 @@ Under Unix or Linux, MWM (the Motif Window Manager) or other window managers rec
       <member refid="classwx_top_level_window_1afa58f411cf488eb9279683b1d20a74b6" prot="public" virt="virtual"><scope>wxDialog</scope><name>IsActive</name></member>
       <member refid="classwx_top_level_window_1ac0c7a7cb6e6dfdf7e59300ee5d476ce3" prot="public" virt="virtual"><scope>wxDialog</scope><name>IsAlwaysMaximized</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxDialog</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxDialog</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxDialog</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxDialog</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxDialog</scope><name>IsExposed</name></member>
@@ -1394,6 +1376,7 @@ Under Unix or Linux, MWM (the Motif Window Manager) or other window managers rec
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxDialog</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxDialog</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxDialog</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxDialog</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxDialog</scope><name>IsUnlinked</name></member>
       <member refid="classwx_top_level_window_1a305c48ddb8e45f89add1694053185a7d" prot="public" virt="non-virtual"><scope>wxDialog</scope><name>IsUsingNativeDecorations</name></member>
       <member refid="classwx_top_level_window_1adfe7e3f4a32f3ed178968f64431bbfe0" prot="public" virt="virtual"><scope>wxDialog</scope><name>Layout</name></member>
@@ -1401,7 +1384,6 @@ Under Unix or Linux, MWM (the Motif Window Manager) or other window managers rec
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxDialog</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxDialog</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxDialog</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxDialog</scope><name>MakeModal</name></member>
       <member refid="classwx_top_level_window_1addb1612e9f00ac82c2e19c2bac6ffc4f" prot="public" virt="virtual"><scope>wxDialog</scope><name>Maximize</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxDialog</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxDialog</scope><name>Move</name></member>
@@ -1412,7 +1394,6 @@ Under Unix or Linux, MWM (the Motif Window Manager) or other window managers rec
       <member refid="classwx_window_1aa58039c8fc65e19160becf510ee1d1d5" prot="public" virt="non-virtual"><scope>wxDialog</scope><name>NavigateIn</name></member>
       <member refid="classwx_window_1a8175da594e6045635a1d1cfe775cdddb" prot="public" virt="non-virtual"><scope>wxDialog</scope><name>NewControlId</name></member>
       <member refid="classwx_window_1a6b5654c0c6c6245d592c279521f7099c" prot="public" virt="virtual"><scope>wxDialog</scope><name>OnInternalIdle</name></member>
-      <member refid="classwx_dialog_1a31dde643f83e859e53759b8ae5f07378" prot="public" virt="non-virtual"><scope>wxDialog</scope><name>OnSysColourChanged</name></member>
       <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxDialog</scope><name>operator delete</name></member>
       <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxDialog</scope><name>operator new</name></member>
       <member refid="classwx_top_level_window_1a5890684b71321e27e8f3a223ad3c2445" prot="public" virt="virtual"><scope>wxDialog</scope><name>OSXIsModified</name></member>
@@ -1547,7 +1528,6 @@ Under Unix or Linux, MWM (the Motif Window Manager) or other window managers rec
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxDialog</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxDialog</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxDialog</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxDialog</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxDialog</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxDialog</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxDialog</scope><name>Unlink</name></member>

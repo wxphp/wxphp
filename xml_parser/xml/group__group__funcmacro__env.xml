@@ -16,7 +16,7 @@
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="248" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" bodystart="248" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="248" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" bodystart="248" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -35,7 +35,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>Note that under Win32 it may not return correct value for the variables set with <ref refid="group__group__funcmacro__env_1gaaf7e73120ba323e10ea2d3724f1927b8" kindref="member">wxSetEnv()</ref>, use <ref refid="group__group__funcmacro__env_1ga077a7602cf1adee6ceea300731f245dc" kindref="member">wxGetEnv()</ref> function instead.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="259"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="259"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__env_1ga077a7602cf1adee6ceea300731f245dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -56,7 +56,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para><emphasis>value</emphasis> may be NULL if you just want to know if the variable exists and are not interested in its value.</para><para>Returns true if the variable exists, false otherwise.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="271"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="271"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__env_1gaaf7e73120ba323e10ea2d3724f1927b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -94,7 +94,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="298"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="298"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__env_1ga4a72b083dad08150adcf9f950677284c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -111,7 +111,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para><ref refid="group__group__funcmacro__env_1ga077a7602cf1adee6ceea300731f245dc" kindref="member">wxGetEnv()</ref> will return NULL after the call to this function.</para><para>Returns true on success.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="309"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="309"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__env_1ga147974e23a77dadf95a67317774ada4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -138,7 +138,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="326"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="326"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

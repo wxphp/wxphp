@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="78"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="103"/>
       </memberdef>
       <memberdef kind="function" id="classwx_book_ctrl_base_1a990cc596ea313b3c057314398085d0b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -53,7 +53,7 @@
 <para><emphasis>image</emphasis> is an index into the image list which was set with <ref refid="classwx_with_images_1a8436e7fdc49a5a23fdca2effebd319ef" kindref="member">SetImageList()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="84"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="109"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -76,7 +76,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="101"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="126"/>
       </memberdef>
       <memberdef kind="function" id="classwx_book_ctrl_base_1aacc118888433ae50194cde356dbf2d50" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="106"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="131"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -119,7 +119,7 @@
 <para>Note that this method may return either the previously or newly selected page when called from the <computeroutput>EVT_BOOKCTRL_PAGE_CHANGED</computeroutput> handler depending on the platform and so <ref refid="classwx_book_ctrl_event_1af2721f1f6e9d6e5b83612f03ef36c4b5" kindref="member">wxBookCtrlEvent::GetSelection</ref> should be used instead in this case. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="126"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="151"/>
       </memberdef>
       <memberdef kind="function" id="classwx_book_ctrl_base_1a3a39c3e19db2929b38632d1126c41db1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -133,7 +133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="131"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="156"/>
       </memberdef>
       <memberdef kind="function" id="classwx_book_ctrl_base_1a522ca472343a07a262de92348e3f2d2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>int</type>
@@ -153,7 +153,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="142"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="167"/>
       </memberdef>
       <memberdef kind="function" id="classwx_book_ctrl_base_1a8b5b18fbf0281e99d227e574b5ffc1ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -172,7 +172,7 @@
 <para>The call to this function generates the page changing events. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="148"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="173"/>
       </memberdef>
       <memberdef kind="function" id="classwx_book_ctrl_base_1ab938512b16be50849c1c4888ffa6aa29" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>int</type>
@@ -191,7 +191,7 @@
 <para>This function behaves as <ref refid="classwx_book_ctrl_base_1a522ca472343a07a262de92348e3f2d2c" kindref="member">SetSelection()</ref> but does <emphasis>not</emphasis> generate the page changing events.</para><para>See <ref refid="overview_events_1overview_events_prog" kindref="member">User Generated Events vs Programmatically Generated Events</ref> for more information. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="158"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="183"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -260,7 +260,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="231"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="247"/>
       </memberdef>
       <memberdef kind="function" id="classwx_book_ctrl_base_1a91c1d122585b48ae1b5eab04104210da" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -274,7 +274,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="236"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="252"/>
       </memberdef>
       <memberdef kind="function" id="classwx_book_ctrl_base_1a7cbc19f60daf15af7019de20561b29f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -293,7 +293,7 @@
 <para>The call to this function generates the page changing events. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="242"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="258"/>
       </memberdef>
       <memberdef kind="function" id="classwx_book_ctrl_base_1a2dcfe645ba865a3f44ebaf660a9ab0ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -370,7 +370,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="268"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="284"/>
       </memberdef>
       <memberdef kind="function" id="classwx_book_ctrl_base_1a3297ad25597b3e993aa2b7a310c5159c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -388,7 +388,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="273"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="289"/>
       </memberdef>
       <memberdef kind="function" id="classwx_book_ctrl_base_1af3eb384bd80171225f4604da8bf5cc91" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>size_t</type>
@@ -402,7 +402,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="278"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="294"/>
       </memberdef>
       <memberdef kind="function" id="classwx_book_ctrl_base_1aa31a56c79370cc16cc663ad6133d0412" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -420,13 +420,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="283"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="299"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-type">
-      <memberdef kind="enum" id="classwx_book_ctrl_base_1aed8700a5492ca104d2792d9bafea2167" prot="public" static="no">
-        <name>@1</name>
-        <enumvalue id="classwx_book_ctrl_base_1aed8700a5492ca104d2792d9bafea2167a76a5551525c61310e58ed494b5d4d730" prot="public">
+      <memberdef kind="enum" id="classwx_book_ctrl_base_1a2329dd4eea633a8764dbc29ac353c1a6" prot="public" static="no">
+        <name>@2</name>
+        <enumvalue id="classwx_book_ctrl_base_1a2329dd4eea633a8764dbc29ac353c1a6a76a5551525c61310e58ed494b5d4d730" prot="public">
           <name>NO_IMAGE</name>
           <initializer> -1</initializer>
           <briefdescription>
@@ -440,7 +440,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="34" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" bodystart="33" bodyend="37"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="59" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" bodystart="58" bodyend="62"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -455,7 +455,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="42"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="67"/>
       </memberdef>
       <memberdef kind="function" id="classwx_book_ctrl_base_1ab085e6968b72d0eb7990a1b863afa2b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -496,7 +496,7 @@
 <para>See <ref refid="classwx_book_ctrl_base_1ad61f7fc3c1fbccbcb119e1dea3fdc4a6" kindref="member">Create()</ref> for two-step construction. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="53"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="78"/>
       </memberdef>
       <memberdef kind="function" id="classwx_book_ctrl_base_1ad61f7fc3c1fbccbcb119e1dea3fdc4a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -540,7 +540,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="63"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="88"/>
       </memberdef>
       <memberdef kind="function" id="classwx_book_ctrl_base_1a7ab6ba69644452e74bf914b3c30a9e58" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -558,7 +558,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="169"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="194"/>
       </memberdef>
       <memberdef kind="function" id="classwx_book_ctrl_base_1adc45bcabbe2b54e258147af6b4b4d9f8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -589,25 +589,14 @@
 <parametername>flags</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Return value for detailed information. One of the following values: <table rows="5" cols="2"><row>
-<entry thead="no"><para>wxBK_HITTEST_NOWHERE </para></entry><entry thead="no"><para>There was no tab under this point. </para></entry></row>
-<row>
-<entry thead="no"><para>wxBK_HITTEST_ONICON </para></entry><entry thead="no"><para>The point was over an icon (currently wxMSW only). </para></entry></row>
-<row>
-<entry thead="no"><para>wxBK_HITTEST_ONLABEL </para></entry><entry thead="no"><para>The point was over a label (currently wxMSW only). </para></entry></row>
-<row>
-<entry thead="no"><para>wxBK_HITTEST_ONITEM </para></entry><entry thead="no"><para>The point was over an item, but not on the label or icon. </para></entry></row>
-<row>
-<entry thead="no"><para>wxBK_HITTEST_ONPAGE </para></entry><entry thead="no"><para>The point was over a currently selected page, not over any tab. Note that this flag is present only if wxNOT_FOUND is returned. </para></entry></row>
-</table>
-</para></parameterdescription>
+<para>Return more details about the point, see returned value is a combination of <ref refid="interface_2wx_2bookctrl_8h_1adf764cbdea00d65edcd07bb9953ad2b7a3e48b6b7c03fba7f24c09551020ae030" kindref="member">wxBK_HITTEST_NOWHERE</ref>, <ref refid="interface_2wx_2bookctrl_8h_1adf764cbdea00d65edcd07bb9953ad2b7a03e1d99ee2a49925940b72e0b6f9995a" kindref="member">wxBK_HITTEST_ONICON</ref>, <ref refid="interface_2wx_2bookctrl_8h_1adf764cbdea00d65edcd07bb9953ad2b7a74e40362eb6c9706ff1d616a71d6bf6f" kindref="member">wxBK_HITTEST_ONLABEL</ref>, <ref refid="interface_2wx_2bookctrl_8h_1adf764cbdea00d65edcd07bb9953ad2b7a66b7d6ce07520e46b0a42d6ae873934c" kindref="member">wxBK_HITTEST_ONITEM</ref>, <ref refid="interface_2wx_2bookctrl_8h_1adf764cbdea00d65edcd07bb9953ad2b7a41bfeb3416bce38bcdffbcc7421eb58f" kindref="member">wxBK_HITTEST_ONPAGE</ref>.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
 <simplesect kind="return"><para>Returns the zero-based tab index or <computeroutput>wxNOT_FOUND</computeroutput> if there is no tab at the specified position. </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="196"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="212"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -624,133 +613,133 @@ This abstract class is the parent of all these book controls, and provides their
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__bookctrl" kindref="compound">Book Controls</ref></para><para><simplesect kind="see"><para><ref refid="overview_bookctrl" kindref="compound">wxBookCtrl Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4550">
+      <node id="4640">
         <label>wxAuiNotebook</label>
         <link refid="classwx_aui_notebook"/>
-        <childnode refid="4543" relation="public-inheritance">
+        <childnode refid="4633" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4543">
+      <node id="4633">
         <label>wxBookCtrlBase</label>
         <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="4544" relation="public-inheritance">
+        <childnode refid="4634" relation="public-inheritance">
         </childnode>
-        <childnode refid="4549" relation="public-inheritance">
+        <childnode refid="4639" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4547">
+      <node id="4637">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4546">
+      <node id="4636">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4547" relation="public-inheritance">
+        <childnode refid="4637" relation="public-inheritance">
         </childnode>
-        <childnode refid="4548" relation="public-inheritance">
+        <childnode refid="4638" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4555">
+      <node id="4645">
         <label>wxTreebook</label>
         <link refid="classwx_treebook"/>
-        <childnode refid="4543" relation="public-inheritance">
+        <childnode refid="4633" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4548">
+      <node id="4638">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4552">
+      <node id="4642">
         <label>wxListbook</label>
         <link refid="classwx_listbook"/>
-        <childnode refid="4543" relation="public-inheritance">
+        <childnode refid="4633" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4544">
+      <node id="4634">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4545" relation="public-inheritance">
+        <childnode refid="4635" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4545">
+      <node id="4635">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4546" relation="public-inheritance">
+        <childnode refid="4636" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4554">
+      <node id="4644">
         <label>wxToolbook</label>
         <link refid="classwx_toolbook"/>
-        <childnode refid="4543" relation="public-inheritance">
+        <childnode refid="4633" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4551">
+      <node id="4641">
         <label>wxChoicebook</label>
         <link refid="classwx_choicebook"/>
-        <childnode refid="4543" relation="public-inheritance">
+        <childnode refid="4633" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4553">
+      <node id="4643">
         <label>wxNotebook</label>
         <link refid="classwx_notebook"/>
-        <childnode refid="4543" relation="public-inheritance">
+        <childnode refid="4633" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4549">
+      <node id="4639">
         <label>wxWithImages</label>
         <link refid="classwx_with_images"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4556">
+      <node id="4646">
         <label>wxBookCtrlBase</label>
         <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="4557" relation="public-inheritance">
+        <childnode refid="4647" relation="public-inheritance">
         </childnode>
-        <childnode refid="4563" relation="public-inheritance">
+        <childnode refid="4653" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4560">
+      <node id="4650">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4561" relation="usage">
+        <childnode refid="4651" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4559">
+      <node id="4649">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4560" relation="public-inheritance">
+        <childnode refid="4650" relation="public-inheritance">
         </childnode>
-        <childnode refid="4562" relation="public-inheritance">
+        <childnode refid="4652" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4562">
+      <node id="4652">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4557">
+      <node id="4647">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4558" relation="public-inheritance">
+        <childnode refid="4648" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4558">
+      <node id="4648">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4559" relation="public-inheritance">
+        <childnode refid="4649" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4563">
+      <node id="4653">
         <label>wxWithImages</label>
         <link refid="classwx_with_images"/>
       </node>
-      <node id="4561">
+      <node id="4651">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="31" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" bodystart="30" bodyend="324"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="56" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" bodystart="55" bodyend="340"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxBookCtrlBase</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxBookCtrlBase</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -931,6 +920,7 @@ This abstract class is the parent of all these book controls, and provides their
       <member refid="classwx_book_ctrl_base_1a2dcfe645ba865a3f44ebaf660a9ab0ed" prot="public" virt="pure-virtual"><scope>wxBookCtrlBase</scope><name>InsertPage</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxBookCtrlBase</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxBookCtrlBase</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxBookCtrlBase</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxBookCtrlBase</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxBookCtrlBase</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxBookCtrlBase</scope><name>IsExposed</name></member>
@@ -946,13 +936,13 @@ This abstract class is the parent of all these book controls, and provides their
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxBookCtrlBase</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxBookCtrlBase</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxBookCtrlBase</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxBookCtrlBase</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxBookCtrlBase</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxBookCtrlBase</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxBookCtrlBase</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxBookCtrlBase</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxBookCtrlBase</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxBookCtrlBase</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxBookCtrlBase</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxBookCtrlBase</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxBookCtrlBase</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxBookCtrlBase</scope><name>MoveAfterInTabOrder</name></member>
@@ -960,7 +950,7 @@ This abstract class is the parent of all these book controls, and provides their
       <member refid="classwx_window_1a86904f6785df4af6036b33383490a805" prot="public" virt="non-virtual"><scope>wxBookCtrlBase</scope><name>Navigate</name></member>
       <member refid="classwx_window_1aa58039c8fc65e19160becf510ee1d1d5" prot="public" virt="non-virtual"><scope>wxBookCtrlBase</scope><name>NavigateIn</name></member>
       <member refid="classwx_window_1a8175da594e6045635a1d1cfe775cdddb" prot="public" virt="non-virtual"><scope>wxBookCtrlBase</scope><name>NewControlId</name></member>
-      <member refid="classwx_book_ctrl_base_1aed8700a5492ca104d2792d9bafea2167a76a5551525c61310e58ed494b5d4d730" prot="public" virt="non-virtual"><scope>wxBookCtrlBase</scope><name>NO_IMAGE</name></member>
+      <member refid="classwx_book_ctrl_base_1a2329dd4eea633a8764dbc29ac353c1a6a76a5551525c61310e58ed494b5d4d730" prot="public" virt="non-virtual"><scope>wxBookCtrlBase</scope><name>NO_IMAGE</name></member>
       <member refid="classwx_window_1a6b5654c0c6c6245d592c279521f7099c" prot="public" virt="virtual"><scope>wxBookCtrlBase</scope><name>OnInternalIdle</name></member>
       <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxBookCtrlBase</scope><name>operator delete</name></member>
       <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxBookCtrlBase</scope><name>operator new</name></member>
@@ -1080,7 +1070,6 @@ This abstract class is the parent of all these book controls, and provides their
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxBookCtrlBase</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxBookCtrlBase</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxBookCtrlBase</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxBookCtrlBase</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxBookCtrlBase</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxBookCtrlBase</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxBookCtrlBase</scope><name>Unlink</name></member>

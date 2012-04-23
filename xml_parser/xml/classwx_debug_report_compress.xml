@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="68"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="68"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_report_compress_1a865c9bdf4a444f6b72a48bb0ab113500" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -43,7 +43,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="89"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="89"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_report_compress_1a7fa629ad94d1976eb9648d0e9ed916f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -69,7 +69,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="106"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="106"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_report_compress_1a55c898a570b89ea491f6dc6b1d42e465" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="112"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="112"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -91,36 +91,36 @@
 <para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxqa" kindref="member">wxQA</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__debugging" kindref="compound">Debugging</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5553">
+      <node id="5648">
         <label>wxDebugReportUpload</label>
         <link refid="classwx_debug_report_upload"/>
-        <childnode refid="5551" relation="public-inheritance">
+        <childnode refid="5646" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5552">
+      <node id="5647">
         <label>wxDebugReport</label>
         <link refid="classwx_debug_report"/>
       </node>
-      <node id="5551">
+      <node id="5646">
         <label>wxDebugReportCompress</label>
         <link refid="classwx_debug_report_compress"/>
-        <childnode refid="5552" relation="public-inheritance">
+        <childnode refid="5647" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5555">
+      <node id="5650">
         <label>wxDebugReport</label>
         <link refid="classwx_debug_report"/>
       </node>
-      <node id="5554">
+      <node id="5649">
         <label>wxDebugReportCompress</label>
         <link refid="classwx_debug_report_compress"/>
-        <childnode refid="5555" relation="public-inheritance">
+        <childnode refid="5650" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="63" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" bodystart="62" bodyend="113"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="63" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" bodystart="62" bodyend="113"/>
     <listofallmembers>
       <member refid="classwx_debug_report_1aeec28b7b39294cdb29a5f4da252cc18b" prot="public" virt="non-virtual"><scope>wxDebugReportCompress</scope><name>AddAll</name></member>
       <member refid="classwx_debug_report_1a8f54f2a1a052a7e33d10a5deb0b1037f" prot="public" virt="virtual"><scope>wxDebugReportCompress</scope><name>AddContext</name></member>

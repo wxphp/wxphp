@@ -61,7 +61,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4220" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4219" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4226" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4225" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__events_1ga767b12d37f7370bc5f6b3d62340f3ef8" prot="public" static="no">
         <name>wxDECLARE_EVENT</name>
@@ -78,7 +78,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4241" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4240" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4247" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4246" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__events_1gad06be42e4272f402b789f3089783656a" prot="public" static="no">
         <name>wxDECLARE_EXPORTED_EVENT</name>
@@ -93,7 +93,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4253" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4252" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4259" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4258" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__events_1gaca944d76c68b31cf44fb62f25642ad00" prot="public" static="no">
         <name>wxEVENT_HANDLER_CAST</name>
@@ -107,7 +107,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4269" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4269" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4275" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4275" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__events_1gaee448cacb63b838872c78f553c07651e" prot="public" static="no">
         <name>wx__DECLARE_EVT1</name>
@@ -160,7 +160,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4304" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4303" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4310" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4309" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__events_1ga369f078d0729212e294fc49c0fe6cdbd" prot="public" static="no">
         <name>wx__DECLARE_EVT2</name>
@@ -175,7 +175,7 @@
 <para>Argument <emphasis>id1</emphasis> is the first identifier of the range, <emphasis>id2</emphasis> is the second identifier of the range. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4313" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4312" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4319" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4318" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__events_1ga2c552f7107a3dfcafbc287bc873c3cad" prot="public" static="no">
         <name>wx__DECLARE_EVT0</name>
@@ -188,7 +188,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4321" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4320" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4327" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4326" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__events_1gab6eca03fad44ec10b75d3cb82e9219e3" prot="public" static="no">
         <name>wxDECLARE_EVENT_TABLE</name>
@@ -200,7 +200,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4335" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4335" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4341" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4341" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__events_1ga736930efaab4d7e445e9e8e520c7b74d" prot="public" static="no">
         <name>wxBEGIN_EVENT_TABLE</name>
@@ -213,7 +213,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4345" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4345" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4351" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4351" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__events_1ga383fad2a46e1d6c220fbe03ecfbc9c17" prot="public" static="no">
         <name>wxEND_EVENT_TABLE</name>
@@ -225,7 +225,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4355" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4355" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4361" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4361" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="enum">
@@ -253,7 +253,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="14" bodyend="21"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="14" bodyend="21"/>
       </memberdef>
       <memberdef kind="enum" id="event_8h_1a685cc8dc6176be3ab0d40e3f72719e7d" prot="public" static="no">
         <name>wxEventCategory</name>
@@ -314,7 +314,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="29" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="28" bodyend="68"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="29" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="28" bodyend="68"/>
       </memberdef>
       <memberdef kind="enum" id="event_8h_1a20f17bd5262af79da603671677288b8d" prot="public" static="no">
         <name>wxKeyCategoryFlags</name>
@@ -367,18 +367,18 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1215" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="1214" bodyend="1233"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="1196" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="1195" bodyend="1214"/>
       </memberdef>
-      <memberdef kind="enum" id="event_8h_1adc29c2ff13d900c2f185ee95427fb06c" prot="public" static="no">
-        <name>@4</name>
-        <enumvalue id="event_8h_1adc29c2ff13d900c2f185ee95427fb06cac7f084f0db172184ab98ac6fe41c7874" prot="public">
+      <memberdef kind="enum" id="event_8h_1ab04a0655cd1e3bcac5e8f48c18df1a57" prot="public" static="no">
+        <name>@9</name>
+        <enumvalue id="event_8h_1ab04a0655cd1e3bcac5e8f48c18df1a57ac7f084f0db172184ab98ac6fe41c7874" prot="public">
           <name>wxJOYSTICK1</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="event_8h_1adc29c2ff13d900c2f185ee95427fb06caebf34d0f014b9588838f0df2d07179ba" prot="public">
+        <enumvalue id="event_8h_1ab04a0655cd1e3bcac5e8f48c18df1a57aebf34d0f014b9588838f0df2d07179ba" prot="public">
           <name>wxJOYSTICK2</name>
           <briefdescription>
           </briefdescription>
@@ -391,11 +391,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1564" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="1563" bodyend="1567"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="1545" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="1544" bodyend="1548"/>
       </memberdef>
-      <memberdef kind="enum" id="event_8h_1a61dadd085c1777f559549e05962b2c9e" prot="public" static="no">
-        <name>@5</name>
-        <enumvalue id="event_8h_1a61dadd085c1777f559549e05962b2c9ea5f1f011ee8968d6caf7687a0a2f401f9" prot="public">
+      <memberdef kind="enum" id="event_8h_1a385c44f6fb256e5716a2302a5b940388" prot="public" static="no">
+        <name>@10</name>
+        <enumvalue id="event_8h_1a385c44f6fb256e5716a2302a5b940388a5f1f011ee8968d6caf7687a0a2f401f9" prot="public">
           <name>wxJOY_BUTTON_ANY</name>
           <initializer> -1</initializer>
           <briefdescription>
@@ -403,7 +403,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="event_8h_1a61dadd085c1777f559549e05962b2c9ea94b9ae7707bcff09855d58411d870399" prot="public">
+        <enumvalue id="event_8h_1a385c44f6fb256e5716a2302a5b940388a94b9ae7707bcff09855d58411d870399" prot="public">
           <name>wxJOY_BUTTON1</name>
           <initializer> 1</initializer>
           <briefdescription>
@@ -411,7 +411,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="event_8h_1a61dadd085c1777f559549e05962b2c9eaeb5cebd234fff245a168b6e4f46cfcbf" prot="public">
+        <enumvalue id="event_8h_1a385c44f6fb256e5716a2302a5b940388aeb5cebd234fff245a168b6e4f46cfcbf" prot="public">
           <name>wxJOY_BUTTON2</name>
           <initializer> 2</initializer>
           <briefdescription>
@@ -419,7 +419,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="event_8h_1a61dadd085c1777f559549e05962b2c9ea8b8a821071905030b90d48184552da49" prot="public">
+        <enumvalue id="event_8h_1a385c44f6fb256e5716a2302a5b940388a8b8a821071905030b90d48184552da49" prot="public">
           <name>wxJOY_BUTTON3</name>
           <initializer> 4</initializer>
           <briefdescription>
@@ -427,7 +427,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="event_8h_1a61dadd085c1777f559549e05962b2c9ea7553f457436386b9706891f533ce51c1" prot="public">
+        <enumvalue id="event_8h_1a385c44f6fb256e5716a2302a5b940388a7553f457436386b9706891f533ce51c1" prot="public">
           <name>wxJOY_BUTTON4</name>
           <initializer> 8</initializer>
           <briefdescription>
@@ -441,7 +441,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1571" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="1570" bodyend="1577"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="1552" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="1551" bodyend="1558"/>
       </memberdef>
       <memberdef kind="enum" id="event_8h_1afd2fee4ca28a8255a68a0b06970aae9b" prot="public" static="no">
         <name>wxUpdateUIMode</name>
@@ -465,7 +465,32 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1950" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="1949" bodyend="1957"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="1931" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="1930" bodyend="1938"/>
+      </memberdef>
+      <memberdef kind="enum" id="event_8h_1a198c1db521935c03fbd89959c951215b" prot="public" static="no">
+        <name>wxMouseWheelAxis</name>
+        <enumvalue id="event_8h_1a198c1db521935c03fbd89959c951215baeede0c14a5b4f3abfb9be53ea356dc26" prot="public">
+          <name>wxMOUSE_WHEEL_VERTICAL</name>
+          <briefdescription>
+<para>Vertical scroll event. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="event_8h_1a198c1db521935c03fbd89959c951215ba27f1a1899f81c5e1cea20ddc08ef126f" prot="public">
+          <name>wxMOUSE_WHEEL_HORIZONTAL</name>
+          <briefdescription>
+<para>Horizontal scroll event. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Possible axis values for mouse wheel scroll events. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="2196" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="2195" bodyend="2199"/>
       </memberdef>
       <memberdef kind="enum" id="event_8h_1af8b16f71b9b38095fe9f7f6244665a80" prot="public" static="no">
         <name>wxIdleMode</name>
@@ -489,7 +514,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3451" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3450" bodyend="3457"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3446" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="3445" bodyend="3452"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -505,7 +530,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4185" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4185" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4191" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4191" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -520,7 +545,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4191" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4191" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4197" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4197" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga2d2da4a0bbb3b8e3a7d75654bd10b0b5" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -533,7 +558,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4193" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4193" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4199" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4199" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gad4219768fc12379d138fc7dbba84118a" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -546,7 +571,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4389" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4389" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4395" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4395" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gaa048f91c476dc448f2846d05a5a8bf59" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -559,7 +584,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4390" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4390" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4396" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4396" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga7725fd29757ad181877e6a1dd4381a65" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -572,7 +597,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4391" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4391" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4397" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4397" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga52b5836f0a0eb8b7e2c023af9f1bf9a1" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -585,7 +610,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4392" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4392" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4398" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4398" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga68b084a489d0fa719f9a78832048e6a4" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -598,7 +623,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4393" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4393" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4399" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4399" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga1400c0c6b63be0b9635bfc3f16e74ae2" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -611,7 +636,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4394" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4394" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4400" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4400" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga5705afbf2885acba094565982b5f6407" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -624,7 +649,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4395" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4395" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4401" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4401" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga4cedec3f49122698810b04d537d4a9dd" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -637,7 +662,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4396" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4396" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4402" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4402" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga20697e76a75c0a16d0b0325e9a42d06c" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -650,7 +675,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4397" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4397" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4403" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4403" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gaa6be89bff25192bad44d9c412ff23819" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -663,7 +688,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4398" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4398" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4404" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4404" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gae8788b80fcbd01211dbdea5567aea72f" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -676,7 +701,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4399" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4399" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4405" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4405" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga526a37ad39631d7f43d9bb5c36478495" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -689,7 +714,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4400" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4400" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4406" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4406" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga17bcb28ff96b79c53ccf3843e72ba5a5" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -702,7 +727,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4401" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4401" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4407" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4407" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gaa45272aa550ed2230658e3ba266adc1f" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -715,7 +740,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4402" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4402" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4408" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4408" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gaf559ba0a2bb2ed212f6e3045e19a3e1e" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -728,7 +753,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4403" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4403" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4409" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4409" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga35bafed45e064a7f52d9b905db5dd683" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -741,7 +766,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4404" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4404" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4410" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4410" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga64cca189be841809279f68c2d6253698" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -754,7 +779,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4405" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4405" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4411" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4411" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga15c7588be440f6e9498186fc2ee97071" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -767,7 +792,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4406" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4406" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4412" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4412" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gaaeb89fb4f0db5dec9ea914f39dd9b531" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -780,7 +805,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4407" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4407" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4413" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4413" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga10999d004415d560fe30f363cee9246f" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -793,7 +818,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4408" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4408" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4414" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4414" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga4df8cdfc22ea062a624bf28f0193a70d" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -806,7 +831,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4409" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4409" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4415" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4415" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gadcdbd260dfb5df127809a358aea183e2" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -819,7 +844,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4410" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4410" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4416" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4416" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga38c0a3d5642bffda5aea8b80def01265" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -832,7 +857,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4411" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4411" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4417" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4417" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga65464559cc790e98a45bcb0b3c82a615" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -845,7 +870,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4412" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4412" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4418" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4418" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga6fe155943290a9b9058019df13a67ab1" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -858,7 +883,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4413" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4413" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4419" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4419" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga0102a39d25aef78e0c09d0491802df51" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -871,7 +896,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4414" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4414" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4420" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4420" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga50eb868f69f96228a518651645a44798" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -884,7 +909,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4415" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4415" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4421" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4421" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga51a2a26e560dade6d24f3f464a24fd73" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -897,7 +922,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4416" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4416" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4422" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4422" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga50c0561f5b1e2c99f7f17ecb46f0b3bf" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -910,7 +935,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4417" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4417" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4423" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4423" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga3e3f53dd069925e1a380dd3466b687c0" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -923,7 +948,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4418" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4418" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4424" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4424" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gac281b82d10b2a360dec50a7630faedba" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -936,7 +961,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4419" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4419" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4425" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4425" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga086a581d47e4080a6d5fce51a8dbe4c1" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -949,7 +974,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4420" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4420" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4426" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4426" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gac256d5a0ce1c16f9166574d346cff1ea" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -962,7 +987,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4421" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4421" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4427" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4427" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga1e030f807fbbc7cb484a996ee7474f18" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -975,7 +1000,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4422" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4422" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4428" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4428" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga142748dac3ef6834cd07905cf4250287" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -988,7 +1013,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4423" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4423" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4429" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4429" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga40d495b7ecdf848c83b78ac82b875831" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1001,7 +1026,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4424" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4424" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4430" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4430" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gaa8e5b24c29c90120724fec044e65a4cf" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1014,7 +1039,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4425" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4425" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4431" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4431" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga64f59d4824a14660525940269789a504" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1027,7 +1052,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4426" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4426" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4432" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4432" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga0b05c98f7a9a02145a2897ef81beeb79" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1040,7 +1065,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4427" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4427" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4433" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4433" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga6a980cc1dbee3a9e9ebd143ab034d92a" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1053,7 +1078,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4428" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4428" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4434" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4434" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga8c84b8f7f567774848e6186f3152cf43" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1066,7 +1091,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4429" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4429" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4435" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4435" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gaca55396d484ecebe5d2c350ad5970277" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1079,7 +1104,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4430" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4430" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4436" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4436" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gaabd9bb68b0a3c847647e7cf9cea94661" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1092,7 +1117,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4431" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4431" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4437" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4437" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gab346a6871a876295b2ac0c68c4854f1d" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1105,7 +1130,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4432" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4432" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4438" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4438" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gabeaf4675d783be0ed3702588b9a72e5b" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1118,7 +1143,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4433" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4433" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4439" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4439" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga31b7b8506344e455922a3ff16eeb21be" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1131,7 +1156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4434" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4434" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4440" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4440" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga1b2368bdc96ea9da8e882c5ac59d2194" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1144,7 +1169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4435" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4435" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4441" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4441" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga5d644901ac199778191dae39c9d87ad6" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1157,7 +1182,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4436" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4436" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4442" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4442" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga436128df516d84d9f851031fbf3f4e1b" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1170,7 +1195,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4437" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4437" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4443" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4443" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga196c3cb4acb930435c85a1debcf6a725" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1183,7 +1208,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4438" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4438" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4444" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4444" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga77275ccff1a34eb358a7f81fffd6cd82" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1196,7 +1221,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4439" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4439" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4445" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4445" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gaea20763256909ff7b3b7e26775eca0b2" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1209,7 +1234,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4440" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4440" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4446" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4446" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gacc15771379e129a4059f6747c2d8e9b4" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1222,7 +1247,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4441" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4441" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4447" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4447" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gae4fd62ed70e9342a0c31ee964e37f421" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1235,7 +1260,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4442" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4442" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4448" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4448" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga405be6bc2a927832af949ad97a2d70a7" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1248,7 +1273,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4443" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4443" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4449" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4449" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga05b86ae42912553781cfd933395035e4" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1261,7 +1286,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4444" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4444" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4450" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4450" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga81d7671036c522e9f973daa460d37c86" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1274,7 +1299,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4445" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4445" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4451" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4451" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga75597c673c6cf786a7f5b25feae1844d" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1287,7 +1312,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4446" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4446" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4452" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4452" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gac7cf86e7878b5c77390373328e461f93" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1300,7 +1325,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4447" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4447" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4453" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4453" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gad24c0c20f15febc65971d064f4d6fa54" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1313,7 +1338,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4448" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4448" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4454" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4454" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gaedf425dd42f63b2453b0c594f0177fff" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1326,7 +1351,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4449" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4449" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4455" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4455" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga97f07efd73fe382a694a242d736f52b1" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1339,7 +1364,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4450" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4450" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4456" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4456" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga2deb86c6a680cd59c2cc555fc755e23d" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1352,7 +1377,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4451" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4451" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4457" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4457" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga8ee7c6a641fc037b9cf5fe6c1cd3c419" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1365,7 +1390,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4452" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4452" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4458" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4458" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga3283ebc3c80fbdce90114be4caa75278" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1378,7 +1403,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4453" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4453" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4459" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4459" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga54c21c8d52758c534e4063daa8ad2d69" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1391,7 +1416,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4454" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4454" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4460" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4460" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gaa704bc616fd8d73b16dcaa79e46013bd" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1404,7 +1429,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4455" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4455" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4461" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4461" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga03b625755bc271a5d5cfbe09a8d4f569" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1417,7 +1442,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4456" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4456" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4462" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4462" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gaf37d029552178f4b2994b19765bee234" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1430,7 +1455,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4457" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4457" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4463" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4463" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gade0275585d74784e5a7ca6baac6bc921" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1443,7 +1468,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4458" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4458" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4464" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4464" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga6f50fe24e66533200b95025fb9a812a2" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1456,7 +1481,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4459" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4459" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4465" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4465" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga97733a4f8b8d9223c1b362b1f00d51b9" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1469,7 +1494,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4460" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4460" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4466" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4466" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga9bc6a1afecf58a33d50066bb1379b645" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1482,7 +1507,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4461" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4461" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4467" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4467" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga854342a6f89abb23a7f0720e529d8f2c" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1495,7 +1520,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4462" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4462" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4468" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4468" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gad98d3ca1e118c5aaca40e24935448040" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1508,7 +1533,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4463" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4463" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4469" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4469" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gad759c03ad82e147709ce9be36e21146b" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1521,7 +1546,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4464" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4464" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4470" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4470" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga27688726d7457bc71213c05f9dd29faa" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1534,7 +1559,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4465" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4465" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4471" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4471" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga42f754d82b0c87a875b4acc004eb4185" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1547,7 +1572,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4466" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4466" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4472" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4472" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga420af6184c0cc43a24717843ceaaaab3" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1560,7 +1585,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4467" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4467" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4473" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4473" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gab3c29cb0bfda6dfa6c72a93a099f299e" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1573,7 +1598,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4468" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4468" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4474" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4474" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga263e6f7bd891203c33981ce7ab755bb7" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1586,7 +1611,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4469" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4469" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4475" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4475" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga8504d1733f17ae49c01e0d3f61433b9a" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1599,7 +1624,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4470" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4470" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4476" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4476" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga5fdd4de09a448bc5778deaa53f4d2f0c" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1612,7 +1637,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4471" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4471" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4477" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4477" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gaa112536b59c9d8217dd595b10afe99a0" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1625,7 +1650,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4472" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4472" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4478" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4478" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gad243a899d86bc3d750caca6f60732120" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1638,7 +1663,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4473" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4473" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4479" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4479" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga06fd6390cee153701e5e533478f3f977" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1651,7 +1676,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4474" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4474" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4480" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4480" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga00e838f1750231487ef10536e0bbef95" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1664,7 +1689,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4475" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4475" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4481" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4481" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gaaa6d83bd5f2579c1917a9c39bd3a3ac0" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1677,7 +1702,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4476" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4476" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4482" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4482" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gafe90199d4305e7a963d9950cca377b7b" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1690,7 +1715,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4477" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4477" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4483" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4483" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga17a22265aaa85d7f8ae65fe0756bd869" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1703,7 +1728,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4478" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4478" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4484" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4484" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga756c23872504db302554355ba60da3f9" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1716,7 +1741,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4479" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4479" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4485" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4485" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga06d49eaef0b84634c962b0349e55a3cb" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1729,7 +1754,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4480" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4480" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4486" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4486" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga0cdb07ea7f124389922db8838c14438b" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1742,7 +1767,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4481" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4481" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4487" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4487" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga3b26a116855fc1ea4a3d20d78614bf2f" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1755,7 +1780,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4482" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4482" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4488" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4488" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gad51461711d8a45cf2e8bbf3b807a0e33" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1768,7 +1793,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4483" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4483" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4489" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4489" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga4effdd29ea1bfb09f1720c67ec3e84f7" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1781,7 +1806,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4484" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4484" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4490" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4490" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga53adfd13ca9d8c5dadfbfa9a77838498" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1794,7 +1819,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4485" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4485" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4491" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4491" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gaa28fa0e1c41881b2c44003f3c84d0b39" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1807,7 +1832,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4486" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4486" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4492" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4492" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga38ac2ba7430629bf405ebe7deb0e5e82" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1820,7 +1845,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4487" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4487" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4493" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4493" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gacb83e5d9e85237e8ab95ea444f9f2ac6" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1833,7 +1858,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4488" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4488" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4494" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4494" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga4ee00b80b87c47cf6e730514d903d8f0" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1846,7 +1871,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4489" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4489" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4495" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4495" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga7afee7754797755107e322c819317bed" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1859,7 +1884,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4490" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4490" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4496" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4496" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga8bd6f5caef60dc86a6ea90e668e04b0b" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1872,7 +1897,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4491" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4491" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4497" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4497" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga86f01e5e0825ad7f4d647dc4fd7e57f2" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1885,7 +1910,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4492" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4492" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4498" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4498" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga8949908f357e73317d27390467537989" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1898,7 +1923,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4493" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4493" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4499" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4499" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gae36d762b380e59f41e33c08c4c672d41" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1911,7 +1936,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4494" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4494" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4500" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4500" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga6d2b30ebe97bc55b33edf0d2d3e0fbc4" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1924,7 +1949,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4495" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4495" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4501" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4501" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga8ffb0483f1377a675a59d9b6f5732b12" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1937,7 +1962,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4496" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4496" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4502" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4502" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga89331e7bed17ad7a91a82382245ff208" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1950,7 +1975,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4497" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4497" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4503" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4503" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga1a5a9c30e228d1a1244efc2830cc90c6" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1963,7 +1988,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4498" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4498" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4504" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4504" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga0b20eb3f82d79f642172f73d9697c432" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1976,7 +2001,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4499" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4499" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4505" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4505" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gad4f6ce79e652b882d1774dc01790561c" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -1989,7 +2014,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4500" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4500" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4506" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4506" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga09190359730ba0ac615ceaa0b2c22e06" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -2002,7 +2027,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4501" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4501" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4507" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4507" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga93f0d1df8acc3b8aa81d94c50f0baf61" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -2015,7 +2040,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4502" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4502" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4508" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4508" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gaa01e81877102588804da9792295ae48e" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -2028,7 +2053,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4503" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4503" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4509" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4509" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1gace9f552c8e93112def2e4c3f91288bd4" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -2041,7 +2066,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4504" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4504" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4510" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4510" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga5cb8b1c95e5ba7a0c6ad0887f3a6cdbc" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -2054,7 +2079,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4505" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4505" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4511" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4511" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga75ad6a4c777769e1f5e783e63e7b7036" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -2067,7 +2092,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4506" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4506" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4512" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4512" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga97aa55789599be3be897fdb8fa9e3fed" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -2080,7 +2105,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4507" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4507" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4513" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4513" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga5aa2f5872e2e85ff8d4d09f6f4b36793" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -2093,7 +2118,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4508" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4508" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4514" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4514" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="group__group__funcmacro__events_1ga827e9097f81696f3b87f52c1eb148a28" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -2106,7 +2131,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4509" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="4509" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4515" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="4515" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -2121,7 +2146,7 @@
 <para>Usually this function is only used by <ref refid="group__group__funcmacro__events_1ga09ec1d095bee3085c1cb31459b46bc00" kindref="member">wxDEFINE_EVENT()</ref> and not called directly. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4201"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4207"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__events_1ga0cf60a1ad3a5f1e659f7ae591570f58d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2142,7 +2167,7 @@
 <para>Otherwise, it dispatches <emphasis>event</emphasis> immediately using <ref refid="classwx_evt_handler_1a65968dd27f3aac7718f2dd6b2ddd5a08" kindref="member">wxEvtHandler::ProcessEvent()</ref>. See the respective documentation for details (and caveats). Because of limitation of <ref refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" kindref="member">wxEvtHandler::AddPendingEvent()</ref> this function is not thread-safe for event objects having <ref refid="classwx_string" kindref="compound">wxString</ref> fields, use <ref refid="group__group__funcmacro__events_1gae921d7bd0e52fedbf3f253d2c408bce1" kindref="member">wxQueueEvent()</ref> instead.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/event.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4369"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4375"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__events_1gae921d7bd0e52fedbf3f253d2c408bce1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2178,13 +2203,13 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4385"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4391"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h"/>
   </compounddef>
 </doxygen>

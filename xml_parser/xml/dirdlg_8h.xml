@@ -13,7 +13,51 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirdlg.h" line="9" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirdlg.h" bodystart="9" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirdlg.h" line="9" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dirdlg.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="dirdlg_8h_1acadf4ee710a343f80d0aa3bc97111404" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char wxDirDialogDefaultFolderStr[]</definition>
+        <argsstring>[]</argsstring>
+        <name>wxDirDialogDefaultFolderStr</name>
+        <initializer>&quot;/&quot;</initializer>
+        <briefdescription>
+<para>Initial folder for generic directory dialog. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirdlg.h" line="14" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dirdlg.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dirdlg_8h_1a6f17a504b82b31c8d81672581bf26a8d" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char wxDirSelectorPromptStr[]</definition>
+        <argsstring>[]</argsstring>
+        <name>wxDirSelectorPromptStr</name>
+        <initializer>&quot;Select a directory&quot;</initializer>
+        <briefdescription>
+<para>Default message for directory selector dialog. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirdlg.h" line="19" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dirdlg.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dirdlg_8h_1ab3ea030cc3321afccebdc45a0944cb9e" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char wxDirDialogNameStr[]</definition>
+        <argsstring>[]</argsstring>
+        <name>wxDirDialogNameStr</name>
+        <initializer>&quot;wxDirCtrl&quot;</initializer>
+        <briefdescription>
+<para>Default name for directory selector dialog. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirdlg.h" line="24" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dirdlg.h" bodystart="24" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -25,7 +69,7 @@
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
           <declname>message</declname>
-          <defval>wxDirSelectorPromptStr</defval>
+          <defval><ref refid="dirdlg_8h_1a6f17a504b82b31c8d81672581bf26a8d" kindref="member">wxDirSelectorPromptStr</ref></defval>
         </param>
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -58,13 +102,13 @@
 </programlisting></para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/dirdlg.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirdlg.h" line="142"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirdlg.h" line="157"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dirdlg.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dirdlg.h"/>
   </compounddef>
 </doxygen>

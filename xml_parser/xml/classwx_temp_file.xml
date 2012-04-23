@@ -20,7 +20,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/file.h" line="56"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/file.h" line="56"/>
       </memberdef>
       <memberdef kind="function" id="classwx_temp_file_1a64b32458252f16d9e2de51e3528ac5ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/file.h" line="61"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/file.h" line="61"/>
       </memberdef>
       <memberdef kind="function" id="classwx_temp_file_1a3483386ef70cd83a2919054a681f2892" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -46,7 +46,7 @@
 <para>Returns true if both actions succeeded.</para><para>If false is returned it may unfortunately mean two quite different things: either that the old file couldn&apos;t be deleted or that the new file couldn&apos;t be renamed to the old name. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/file.h" line="71"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/file.h" line="71"/>
       </memberdef>
       <memberdef kind="function" id="classwx_temp_file_1ae4154e93bcd87a48293e38666e2e10a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/file.h" line="77"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/file.h" line="77"/>
       </memberdef>
       <memberdef kind="function" id="classwx_temp_file_1a76e49e860b868a53a4dbcae2a2965e09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -72,7 +72,7 @@
 <para>This simply calls <ref refid="classwx_file_1a0b3ac667c1e6133c6c4ffce3c81b3c4c" kindref="member">wxFile::Flush()</ref> for the underlying file and may be necessary with file systems such as XFS and Ext4 under Linux. Calling this function may however have serious performance implications and also is not necessary with many other file systems so it is not done by default -- but you can call it before calling <ref refid="classwx_temp_file_1a3483386ef70cd83a2919054a681f2892" kindref="member">Commit()</ref> to absolutely ensure that the data was indeed written to the disk correctly. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/file.h" line="89"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/file.h" line="89"/>
       </memberdef>
       <memberdef kind="function" id="classwx_temp_file_1aa1ae23eeff613f655c746d2a9836a79c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/file.h" line="94"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/file.h" line="94"/>
       </memberdef>
       <memberdef kind="function" id="classwx_temp_file_1a9914d26a3ae35ca69c438cfb07d9a9a9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__group__funcmacro__file_1ga69d831b3febabc149c67b716c8e22de5" kindref="member">wxFileOffset</ref></type>
@@ -98,7 +98,7 @@
 <para>This method may return <ref refid="group__group__funcmacro__file_1gab184c7199d93541d22ae42e515cbbcb7" kindref="member">wxInvalidOffset</ref> if the length couldn&apos;t be determined or 0 even for non-empty files if the file is not seekable.</para><para>In general, the only way to determine if the file for which this function returns 0 is really empty or not is to try reading from it. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/file.h" line="105"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/file.h" line="105"/>
       </memberdef>
       <memberdef kind="function" id="classwx_temp_file_1a9c6a42adfae433ce7928fb77ac769291" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -115,7 +115,7 @@
 <para><emphasis>strName</emphasis> is the name of file to be replaced. The temporary file is always created in the directory where <emphasis>strName</emphasis> is. In particular, if <emphasis>strName</emphasis> doesn&apos;t include the path, it is created in the current directory and the program should have write access to it for the function to succeed. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/file.h" line="115"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/file.h" line="115"/>
       </memberdef>
       <memberdef kind="function" id="classwx_temp_file_1ab3d5fd185404cab6431500cd0019988f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__group__funcmacro__file_1ga69d831b3febabc149c67b716c8e22de5" kindref="member">wxFileOffset</ref></type>
@@ -127,7 +127,7 @@
           <declname>ofs</declname>
         </param>
         <param>
-          <type><ref refid="ffile_8h_1ae3981f8632f0391e5c852bf62eb982b0" kindref="member">wxSeekMode</ref></type>
+          <type><ref refid="group__group__funcmacro__file_1gae3981f8632f0391e5c852bf62eb982b0" kindref="member">wxSeekMode</ref></type>
           <declname>mode</declname>
           <defval>wxFromStart</defval>
         </param>
@@ -137,7 +137,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/file.h" line="121"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/file.h" line="121"/>
       </memberdef>
       <memberdef kind="function" id="classwx_temp_file_1a7b930c371b6546950903949f6000dc13" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__group__funcmacro__file_1ga69d831b3febabc149c67b716c8e22de5" kindref="member">wxFileOffset</ref></type>
@@ -150,7 +150,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/file.h" line="127"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/file.h" line="127"/>
       </memberdef>
       <memberdef kind="function" id="classwx_temp_file_1a40b4547f8c20673ea38e84b8a6a7eb02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -172,7 +172,7 @@
 <para>The second argument is only meaningful in Unicode build of wxWidgets when <emphasis>conv</emphasis> is used to convert <emphasis>str</emphasis> to multibyte representation. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/file.h" line="135"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/file.h" line="135"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -180,7 +180,7 @@
     <detaileddescription>
 <para>The name is explained by the fact that it may be also used as just a temporary file if you don&apos;t replace the old file contents.</para><para>Usually, when a program replaces the contents of some file it first opens it for writing, thus losing all of the old data and then starts recreating it. This approach is not very safe because during the regeneration of the file bad things may happen: the program may find that there is an internal error preventing it from completing file generation, the user may interrupt it (especially if file generation takes long time) and, finally, any other external interrupts (power supply failure or a disk error) will leave you without either the original file or the new one.</para><para><ref refid="classwx_temp_file" kindref="compound">wxTempFile</ref> addresses this problem by creating a temporary file which is meant to replace the original file - but only after it is fully written. So, if the user interrupts the program during the file generation, the old file won&apos;t be lost. Also, if the program discovers itself that it doesn&apos;t want to replace the old file there is no problem - in fact, <ref refid="classwx_temp_file" kindref="compound">wxTempFile</ref> will <bold>not</bold> replace the old file by default, you should explicitly call <ref refid="classwx_temp_file_1a3483386ef70cd83a2919054a681f2892" kindref="member">wxTempFile::Commit()</ref> to do it. Calling <ref refid="classwx_temp_file_1ae4154e93bcd87a48293e38666e2e10a8" kindref="member">wxTempFile::Discard()</ref> explicitly discards any modifications: it closes and deletes the temporary file and leaves the original file unchanged. If you call neither <ref refid="classwx_temp_file_1a3483386ef70cd83a2919054a681f2892" kindref="member">Commit()</ref> nor <ref refid="classwx_temp_file_1ae4154e93bcd87a48293e38666e2e10a8" kindref="member">Discard()</ref>, the destructor will call <ref refid="classwx_temp_file_1ae4154e93bcd87a48293e38666e2e10a8" kindref="member">Discard()</ref> automatically.</para><para>To summarize: if you want to replace another file, create an instance of <ref refid="classwx_temp_file" kindref="compound">wxTempFile</ref> passing the name of the file to be replaced to the constructor. (You may also use default constructor and pass the file name to <ref refid="classwx_temp_file_1a9c6a42adfae433ce7928fb77ac769291" kindref="member">wxTempFile::Open</ref>.) Then you can write to <ref refid="classwx_temp_file" kindref="compound">wxTempFile</ref> using wxFile-like functions and later call <ref refid="classwx_temp_file_1a3483386ef70cd83a2919054a681f2892" kindref="member">wxTempFile::Commit()</ref> to replace the old file (and close this one) or call <ref refid="classwx_temp_file_1ae4154e93bcd87a48293e38666e2e10a8" kindref="member">wxTempFile::Discard()</ref> to cancel the modifications.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__file" kindref="compound">File Handling</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/file.h" line="48" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/file.h" bodystart="47" bodyend="136"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/file.h" line="48" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/file.h" bodystart="47" bodyend="136"/>
     <listofallmembers>
       <member refid="classwx_temp_file_1a3483386ef70cd83a2919054a681f2892" prot="public" virt="non-virtual"><scope>wxTempFile</scope><name>Commit</name></member>
       <member refid="classwx_temp_file_1ae4154e93bcd87a48293e38666e2e10a8" prot="public" virt="non-virtual"><scope>wxTempFile</scope><name>Discard</name></member>

@@ -24,7 +24,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sound.h" line="100"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sound.h" line="105"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sound_1a00fbfa024e5a40764553315fc731bb9f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -49,7 +49,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sound.h" line="102"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sound.h" line="107"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -64,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sound.h" line="27"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sound.h" line="27"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sound_1a4600f58647b99e6c43a2875031b47f04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -101,7 +101,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sound.h" line="38"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sound.h" line="38"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sound_1a4be271de3f10b93320059d8775d04741" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -137,7 +137,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sound.h" line="48"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sound.h" line="48"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sound_1a89b804b39bc36bdf5c876aca0965845b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -150,7 +150,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sound.h" line="53"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sound.h" line="53"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sound_1aef8cb7594ef4df2e3a5f88c0091c1f63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -188,7 +188,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sound.h" line="65"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sound.h" line="65"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sound_1ac63033709ec767b57602342a3c86f166" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -201,7 +201,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sound.h" line="71"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sound.h" line="71"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -213,10 +213,10 @@
         <briefdescription>
 <para>Returns true if a sound is played at the moment. </para>        </briefdescription>
         <detaileddescription>
-<para>This method is currently not implemented under Windows. </para>        </detaileddescription>
+<para>This method is currently not available under Windows and may not be always implemented in Unix ports depending on the compilation options used (in this case it just always returns false).</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxgtk" kindref="member">wxGTK</ref>, <ref refid="page_port_1page_port_wxosx" kindref="member">wxOSX</ref> ports.  <onlyfor>wxgtk,wxosx</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sound.h" line="77"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sound.h" line="82"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sound_1a0999a172494bdd3e73b6e3420e9e4637" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -229,7 +229,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sound.h" line="108"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sound.h" line="113"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -238,37 +238,37 @@
 <para>Currently this class is implemented on Windows and Unix (and uses either Open Sound System or Simple DirectMedia Layer).</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__media" kindref="compound">Multimedia</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10333">
+      <node id="10516">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10332">
+      <node id="10515">
         <label>wxSound</label>
         <link refid="classwx_sound"/>
-        <childnode refid="10333" relation="public-inheritance">
+        <childnode refid="10516" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10335">
+      <node id="10518">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10336" relation="usage">
+        <childnode refid="10519" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10334">
+      <node id="10517">
         <label>wxSound</label>
         <link refid="classwx_sound"/>
-        <childnode refid="10335" relation="public-inheritance">
+        <childnode refid="10518" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10336">
+      <node id="10519">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sound.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sound.h" bodystart="21" bodyend="109"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sound.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/sound.h" bodystart="21" bodyend="114"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxSound</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxSound</scope><name>CloneRefData</name></member>

@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tooltip.h" line="28"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tooltip.h" line="28"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_tip_1afabc278831cf72bbb2a6474157c233c4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tooltip.h" line="40"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tooltip.h" line="40"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_tip_1ab2394cc433ac5394dea27ea4735f9a51" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tooltip.h" line="45"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tooltip.h" line="45"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_tip_1af398833cd15ef69ef8d82fc5b41edea0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -63,7 +63,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tooltip.h" line="87"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tooltip.h" line="87"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -83,7 +83,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tooltip.h" line="35"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tooltip.h" line="35"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_tip_1a6e947da99007aa96e2bd351c8ed08a21" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -101,7 +101,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tooltip.h" line="53"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tooltip.h" line="53"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_tip_1a5db5357f084afef9c4602baf0cb89105" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -119,7 +119,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tooltip.h" line="60"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tooltip.h" line="60"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_tip_1a244b83c88e7d4559ed7e74e8173c5b42" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -137,7 +137,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tooltip.h" line="75"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tooltip.h" line="75"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_tip_1a10e1eb761dca8e28583250265aa22ad3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -155,7 +155,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tooltip.h" line="82"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tooltip.h" line="82"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -164,37 +164,37 @@
 <para>The four static methods, <ref refid="classwx_tool_tip_1a527208d12631dfb3e6dea71011b887d6" kindref="member">wxToolTip::Enable()</ref>, <ref refid="classwx_tool_tip_1a5db5357f084afef9c4602baf0cb89105" kindref="member">wxToolTip::SetDelay()</ref> <ref refid="classwx_tool_tip_1a6e947da99007aa96e2bd351c8ed08a21" kindref="member">wxToolTip::SetAutoPop()</ref> and <ref refid="classwx_tool_tip_1a10e1eb761dca8e28583250265aa22ad3" kindref="member">wxToolTip::SetReshow()</ref> can be used to globally alter tooltips behaviour.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__help" kindref="compound">Help</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10951">
+      <node id="11141">
         <label>wxToolTip</label>
         <link refid="classwx_tool_tip"/>
-        <childnode refid="10952" relation="public-inheritance">
+        <childnode refid="11142" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10952">
+      <node id="11142">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10953">
+      <node id="11143">
         <label>wxToolTip</label>
         <link refid="classwx_tool_tip"/>
-        <childnode refid="10954" relation="public-inheritance">
+        <childnode refid="11144" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10954">
+      <node id="11144">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10955" relation="usage">
+        <childnode refid="11145" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10955">
+      <node id="11145">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tooltip.h" line="23" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tooltip.h" bodystart="22" bodyend="88"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tooltip.h" line="23" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/tooltip.h" bodystart="22" bodyend="88"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxToolTip</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxToolTip</scope><name>CloneRefData</name></member>

@@ -45,12 +45,12 @@
           </detaileddescription>
         </enumvalue>
         <briefdescription>
-<para>Zoom levels availiable in <ref refid="classwx_web_view" kindref="compound">wxWebView</ref>. </para>        </briefdescription>
+<para>Zoom levels available in <ref refid="classwx_web_view" kindref="compound">wxWebView</ref>. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" bodystart="12" bodyend="19"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" bodystart="12" bodyend="19"/>
       </memberdef>
       <memberdef kind="enum" id="webview_8h_1a4de3543743ab8fb2b462644182845b69" prot="public" static="no">
         <name>wxWebViewZoomType</name>
@@ -74,7 +74,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" bodystart="24" bodyend="35"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" bodystart="24" bodyend="35"/>
       </memberdef>
       <memberdef kind="enum" id="webview_8h_1a3cbf5a9a4918c1d0607ece28f5d99a7a" prot="public" static="no">
         <name>wxWebViewNavigationError</name>
@@ -140,7 +140,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="41" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" bodystart="40" bodyend="59"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="41" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" bodystart="40" bodyend="59"/>
       </memberdef>
       <memberdef kind="enum" id="webview_8h_1a9a49bca43f7eb6ec259c0fb18101979f" prot="public" static="no">
         <name>wxWebViewReloadFlags</name>
@@ -164,7 +164,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="65" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" bodystart="64" bodyend="70"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="65" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" bodystart="64" bodyend="70"/>
       </memberdef>
       <memberdef kind="enum" id="webview_8h_1a6d32d915850a6298c86cb9f56c15c251" prot="public" static="no">
         <name>wxWebViewBackend</name>
@@ -195,7 +195,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="77" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" bodystart="76" bodyend="87"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="76" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" bodystart="75" bodyend="86"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -210,7 +210,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="654" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" bodystart="654" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="653" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" bodystart="653" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="webview_8h_1a9f130a22975a39b19f8cc496c195800b" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -223,7 +223,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="655" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" bodystart="655" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="654" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" bodystart="654" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="webview_8h_1ac125cd24fb172ef50946c5813ef07f33" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -236,7 +236,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="656" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" bodystart="656" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="655" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" bodystart="655" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="webview_8h_1aff042d560f319c889f9480d44c8d8f1f" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -249,7 +249,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="657" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" bodystart="657" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="656" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" bodystart="656" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="webview_8h_1a1378f20c678aff031d62afb68e398535" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -262,7 +262,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="658" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" bodystart="658" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="657" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" bodystart="657" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="webview_8h_1adce6a4118e87a90afd6c4449bd5cf80c" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -275,13 +275,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" line="659" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h" bodystart="659" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" line="658" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h" bodystart="658" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/webview.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/webview.h"/>
   </compounddef>
 </doxygen>

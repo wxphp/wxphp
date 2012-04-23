@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bmpcbox.h" line="62"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bmpcbox.h" line="62"/>
       </memberdef>
       <memberdef kind="function" id="classwx_bitmap_combo_box_1ac5a35a4e3387659c73c7ecb43ad3e43c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -151,7 +151,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bmpcbox.h" line="98"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bmpcbox.h" line="98"/>
       </memberdef>
       <memberdef kind="function" id="classwx_bitmap_combo_box_1a13bdf9ae92e496b4af850ece9e466b33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -267,7 +267,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bmpcbox.h" line="131"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bmpcbox.h" line="131"/>
       </memberdef>
       <memberdef kind="function" id="classwx_bitmap_combo_box_1a2c1e99c46afd6832e62e6dea24876111" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -280,7 +280,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bmpcbox.h" line="136"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bmpcbox.h" line="136"/>
       </memberdef>
       <memberdef kind="function" id="classwx_bitmap_combo_box_1a79af57f3911325b5a61cb31ea183ff08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -302,7 +302,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bmpcbox.h" line="142"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bmpcbox.h" line="142"/>
       </memberdef>
       <memberdef kind="function" id="classwx_bitmap_combo_box_1a16742fef1682808010c547978c4a4ebb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -327,7 +327,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bmpcbox.h" line="149"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bmpcbox.h" line="149"/>
       </memberdef>
       <memberdef kind="function" id="classwx_bitmap_combo_box_1a27b43b346a164dbfcf689aaa3e2a5104" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -352,7 +352,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bmpcbox.h" line="156"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bmpcbox.h" line="156"/>
       </memberdef>
       <memberdef kind="function" id="classwx_bitmap_combo_box_1ab06cd157252c3f98d4ce22cb92c6d8ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -410,7 +410,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bmpcbox.h" line="168"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bmpcbox.h" line="168"/>
       </memberdef>
       <memberdef kind="function" id="classwx_bitmap_combo_box_1a4f269b59837fc3e312bb3e929caef6b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -463,7 +463,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bmpcbox.h" line="180"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bmpcbox.h" line="180"/>
       </memberdef>
       <memberdef kind="function" id="classwx_bitmap_combo_box_1ac3fdd72ad3ced4d8476d5f9df9ea87cd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -476,7 +476,7 @@
 <para>If the combo box is empty, then <ref refid="gdicmn_8h_1a33a012cdb075e9f78c93f63bec2dc27b" kindref="member">wxDefaultSize</ref> is returned. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bmpcbox.h" line="186"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bmpcbox.h" line="186"/>
       </memberdef>
       <memberdef kind="function" id="classwx_bitmap_combo_box_1a9bdaff70c80d51a859352b65da6d1378" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref></type>
@@ -493,7 +493,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bmpcbox.h" line="191"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bmpcbox.h" line="191"/>
       </memberdef>
       <memberdef kind="function" id="classwx_bitmap_combo_box_1ae5d7c2193eb93aef156b901a3f78be7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -518,7 +518,7 @@
 <para>Not valid for <computeroutput>wxCB_SORT</computeroutput> style, use <ref refid="classwx_bitmap_combo_box_1a79af57f3911325b5a61cb31ea183ff08" kindref="member">Append()</ref> instead. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bmpcbox.h" line="198"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bmpcbox.h" line="198"/>
       </memberdef>
       <memberdef kind="function" id="classwx_bitmap_combo_box_1a28fb428bb8a950f82d365ec7be303913" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -547,7 +547,7 @@
 <para>Not valid for <computeroutput>wxCB_SORT</computeroutput> style, use <ref refid="classwx_bitmap_combo_box_1a79af57f3911325b5a61cb31ea183ff08" kindref="member">Append()</ref> instead. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bmpcbox.h" line="207"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bmpcbox.h" line="207"/>
       </memberdef>
       <memberdef kind="function" id="classwx_bitmap_combo_box_1aaf177238a6a7ef6beb56cde669042736" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -576,7 +576,7 @@
 <para>Not valid for <computeroutput>wxCB_SORT</computeroutput> style, use <ref refid="classwx_bitmap_combo_box_1a79af57f3911325b5a61cb31ea183ff08" kindref="member">Append()</ref> instead. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bmpcbox.h" line="216"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bmpcbox.h" line="216"/>
       </memberdef>
       <memberdef kind="function" id="classwx_bitmap_combo_box_1a7a481ef22c95eaf0f3c45036badad428" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -597,7 +597,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bmpcbox.h" line="221"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bmpcbox.h" line="221"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -620,133 +620,133 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/bitmapcombobox.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/bitmapcombobox.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/bitmapcombobox.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_combo_box" kindref="compound">wxComboBox</ref>, <ref refid="classwx_choice" kindref="compound">wxChoice</ref>, <ref refid="classwx_owner_drawn_combo_box" kindref="compound">wxOwnerDrawnComboBox</ref>, <ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4501">
+      <node id="4591">
         <label>wxItemContainer</label>
         <link refid="classwx_item_container"/>
-        <childnode refid="4502" relation="public-inheritance">
+        <childnode refid="4592" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4499">
+      <node id="4589">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4494">
+      <node id="4584">
         <label>wxBitmapComboBox</label>
         <link refid="classwx_bitmap_combo_box"/>
-        <childnode refid="4495" relation="public-inheritance">
+        <childnode refid="4585" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4498">
+      <node id="4588">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4499" relation="public-inheritance">
+        <childnode refid="4589" relation="public-inheritance">
         </childnode>
-        <childnode refid="4500" relation="public-inheritance">
+        <childnode refid="4590" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4500">
+      <node id="4590">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4503">
+      <node id="4593">
         <label>wxTextEntry</label>
         <link refid="classwx_text_entry"/>
       </node>
-      <node id="4496">
+      <node id="4586">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4497" relation="public-inheritance">
+        <childnode refid="4587" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4497">
+      <node id="4587">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4498" relation="public-inheritance">
+        <childnode refid="4588" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4495">
+      <node id="4585">
         <label>wxComboBox</label>
         <link refid="classwx_combo_box"/>
-        <childnode refid="4496" relation="public-inheritance">
+        <childnode refid="4586" relation="public-inheritance">
         </childnode>
-        <childnode refid="4501" relation="public-inheritance">
+        <childnode refid="4591" relation="public-inheritance">
         </childnode>
-        <childnode refid="4503" relation="public-inheritance">
+        <childnode refid="4593" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4502">
+      <node id="4592">
         <label>wxItemContainerImmutable</label>
         <link refid="classwx_item_container_immutable"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4512">
+      <node id="4602">
         <label>wxItemContainer</label>
         <link refid="classwx_item_container"/>
-        <childnode refid="4513" relation="public-inheritance">
+        <childnode refid="4603" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4509">
+      <node id="4599">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4510" relation="usage">
+        <childnode refid="4600" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4504">
+      <node id="4594">
         <label>wxBitmapComboBox</label>
         <link refid="classwx_bitmap_combo_box"/>
-        <childnode refid="4505" relation="public-inheritance">
+        <childnode refid="4595" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4508">
+      <node id="4598">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4509" relation="public-inheritance">
+        <childnode refid="4599" relation="public-inheritance">
         </childnode>
-        <childnode refid="4511" relation="public-inheritance">
+        <childnode refid="4601" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4511">
+      <node id="4601">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4514">
+      <node id="4604">
         <label>wxTextEntry</label>
         <link refid="classwx_text_entry"/>
       </node>
-      <node id="4506">
+      <node id="4596">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4507" relation="public-inheritance">
+        <childnode refid="4597" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4507">
+      <node id="4597">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4508" relation="public-inheritance">
+        <childnode refid="4598" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4505">
+      <node id="4595">
         <label>wxComboBox</label>
         <link refid="classwx_combo_box"/>
-        <childnode refid="4506" relation="public-inheritance">
+        <childnode refid="4596" relation="public-inheritance">
         </childnode>
-        <childnode refid="4512" relation="public-inheritance">
+        <childnode refid="4602" relation="public-inheritance">
         </childnode>
-        <childnode refid="4514" relation="public-inheritance">
+        <childnode refid="4604" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4513">
+      <node id="4603">
         <label>wxItemContainerImmutable</label>
         <link refid="classwx_item_container_immutable"/>
       </node>
-      <node id="4510">
+      <node id="4600">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bmpcbox.h" line="57" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bmpcbox.h" bodystart="56" bodyend="222"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bmpcbox.h" line="57" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/bmpcbox.h" bodystart="56" bodyend="222"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxBitmapComboBox</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxBitmapComboBox</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -974,6 +974,7 @@
       <member refid="classwx_item_container_1ad2bc86a398c44f6ab6d3d6f64d946c70" prot="public" virt="non-virtual" ambiguityscope="wxComboBox::"><scope>wxBitmapComboBox</scope><name>Insert</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxBitmapComboBox</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxBitmapComboBox</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxBitmapComboBox</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxBitmapComboBox</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_text_entry_1a2bb43512241850ba7cef54dee029fb86" prot="public" virt="virtual"><scope>wxBitmapComboBox</scope><name>IsEditable</name></member>
       <member refid="classwx_combo_box_1a41789d188664ce4d05500b8452798c8f" prot="public" virt="virtual"><scope>wxBitmapComboBox</scope><name>IsEmpty</name></member>
@@ -993,13 +994,13 @@
       <member refid="classwx_combo_box_1a7ea3095ed99ef8b1b70e29e1a5f3eab1" prot="public" virt="non-virtual"><scope>wxBitmapComboBox</scope><name>IsTextEmpty</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxBitmapComboBox</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxBitmapComboBox</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxBitmapComboBox</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxBitmapComboBox</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxBitmapComboBox</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxBitmapComboBox</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxBitmapComboBox</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxBitmapComboBox</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxBitmapComboBox</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxBitmapComboBox</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxBitmapComboBox</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxBitmapComboBox</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxBitmapComboBox</scope><name>MoveAfterInTabOrder</name></member>
@@ -1126,7 +1127,7 @@
       <member refid="classwx_window_1ae813c640e1e2bc6014423247050846cf" prot="public" virt="virtual"><scope>wxBitmapComboBox</scope><name>SetSizeHints</name></member>
       <member refid="classwx_window_1abc95691b45e29a52c24aa9d33d46dec1" prot="public" virt="non-virtual"><scope>wxBitmapComboBox</scope><name>SetSizer</name></member>
       <member refid="classwx_window_1a29938af9828fd35da666536cdfb6b73c" prot="public" virt="non-virtual"><scope>wxBitmapComboBox</scope><name>SetSizerAndFit</name></member>
-      <member refid="classwx_combo_box_1a281df5e404fb6745657ca7faac96ff41" prot="public" virt="virtual"><scope>wxBitmapComboBox</scope><name>SetString</name></member>
+      <member refid="classwx_combo_box_1a4c8d4b39403b6c0ee14f30b0c1dd96b7" prot="public" virt="virtual"><scope>wxBitmapComboBox</scope><name>SetString</name></member>
       <member refid="classwx_item_container_immutable_1afa3800ff87f00a47211c3ce206e7bc39" prot="public" virt="non-virtual"><scope>wxBitmapComboBox</scope><name>SetStringSelection</name></member>
       <member refid="classwx_window_1a41dd19ed8809fd8ec662e2aa2a9579c3" prot="public" virt="virtual"><scope>wxBitmapComboBox</scope><name>SetThemeEnabled</name></member>
       <member refid="classwx_window_1a81a9fb74e3c6c7f4416e882f5e589b8c" prot="public" virt="non-virtual"><scope>wxBitmapComboBox</scope><name>SetToolTip</name></member>
@@ -1148,7 +1149,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxBitmapComboBox</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxBitmapComboBox</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxBitmapComboBox</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxBitmapComboBox</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxBitmapComboBox</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxBitmapComboBox</scope><name>Unbind</name></member>
       <member refid="classwx_text_entry_1ad3784d539a2554c6eec76c80aa6d97de" prot="public" virt="virtual"><scope>wxBitmapComboBox</scope><name>Undo</name></member>

@@ -17,7 +17,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/evtloop.h" line="75"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/evtloop.h" line="75"/>
       </memberdef>
       <memberdef kind="function" id="classwx_event_loop_base_1aeaba81e95ac7d13d1b8f6fca4e2c9906" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -30,7 +30,7 @@
 <para>Notice that even if this event loop hasn&apos;t terminated yet but has just spawned a nested (e.g. modal) event loop, this method would return false. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/evtloop.h" line="84"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/evtloop.h" line="84"/>
       </memberdef>
       <memberdef kind="function" id="classwx_event_loop_base_1afab302f6b6517d6fb361abb0f8da9b4e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/evtloop.h" line="90"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/evtloop.h" line="90"/>
       </memberdef>
       <memberdef kind="function" id="classwx_event_loop_base_1a8d5da74a520b7f190829ce26943613c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/evtloop.h" line="95"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/evtloop.h" line="95"/>
       </memberdef>
       <memberdef kind="function" id="classwx_event_loop_base_1a69f9cb42c4105a5041854d3f93ec2e64" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -74,7 +74,7 @@
 <para>If this method returns true, calling <ref refid="classwx_event_loop_base_1aa6f5e8cf5d07a6f9d2b99a4b64325b84" kindref="member">Dispatch()</ref> will not block. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/evtloop.h" line="102"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/evtloop.h" line="102"/>
       </memberdef>
       <memberdef kind="function" id="classwx_event_loop_base_1aa6f5e8cf5d07a6f9d2b99a4b64325b84" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -91,7 +91,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/evtloop.h" line="120"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/evtloop.h" line="120"/>
       </memberdef>
       <memberdef kind="function" id="classwx_event_loop_base_1ac150a90acfad227f2ce174139289d099" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>int</type>
@@ -117,7 +117,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/evtloop.h" line="138"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/evtloop.h" line="138"/>
       </memberdef>
       <memberdef kind="function" id="classwx_event_loop_base_1a96d41f8277d23fd9a4a5a0dfe3084120" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -130,7 +130,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/evtloop.h" line="144"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/evtloop.h" line="144"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -146,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/evtloop.h" line="157"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/evtloop.h" line="157"/>
       </memberdef>
       <memberdef kind="function" id="classwx_event_loop_base_1a5a6f47a392e5802e4d614b0dc398c6f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -159,7 +159,7 @@
 <para>It should return true if more idle events are needed, false if not. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/evtloop.h" line="165"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/evtloop.h" line="165"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -175,7 +175,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/evtloop.h" line="178"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/evtloop.h" line="178"/>
       </memberdef>
       <memberdef kind="function" id="classwx_event_loop_base_1a43b540654cc046ecea5e1e497acd4189" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -193,7 +193,7 @@
 <para>This can be useful, for example, when a time-consuming process writes to a text window. Without an occasional yield, the text window will not be updated properly, and on systems with cooperative multitasking, such as Windows 3.1 other processes will not respond.</para><para>Caution should be exercised, however, since yielding may allow the user to perform actions which are not compatible with the current task. Disabling menu items or whole menus during processing can avoid unwanted reentrance of code: see <ref refid="group__group__funcmacro__appinitterm_1ga25abb4004fac0bcc0b937d93657c8cba" kindref="member">wxSafeYield</ref> for a better function. You can avoid unwanted reentrancies also using <ref refid="classwx_event_loop_base_1a890b327bb21df1aa4989733fccf42fe5" kindref="member">IsYielding()</ref>.</para><para>Note that <ref refid="classwx_event_loop_base_1a43b540654cc046ecea5e1e497acd4189" kindref="member">Yield()</ref> will not flush the message logs. This is intentional as calling <ref refid="classwx_event_loop_base_1a43b540654cc046ecea5e1e497acd4189" kindref="member">Yield()</ref> is usually done to quickly update the screen and popping up a message box dialog may be undesirable. If you do wish to flush the log messages immediately (otherwise it will be done during the next idle loop iteration), call <ref refid="classwx_log_1ab0808092c4ec1d503e261d9d226d7e90" kindref="member">wxLog::FlushActive</ref>.</para><para>Calling <ref refid="classwx_event_loop_base_1a43b540654cc046ecea5e1e497acd4189" kindref="member">Yield()</ref> recursively is normally an error and an assert failure is raised in debug build if such situation is detected. However if the <emphasis>onlyIfNeeded</emphasis> parameter is true, the method will just silently return false instead. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/evtloop.h" line="205"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/evtloop.h" line="205"/>
       </memberdef>
       <memberdef kind="function" id="classwx_event_loop_base_1afb5ed08160c7e6b1364170af6115af55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -211,7 +211,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/evtloop.h" line="224"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/evtloop.h" line="224"/>
       </memberdef>
       <memberdef kind="function" id="classwx_event_loop_base_1adce29a2d6237e31795787c56984d91c3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -229,7 +229,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/evtloop.h" line="233"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/evtloop.h" line="233"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -244,7 +244,7 @@
 <para>May return NULL if there is no active event loop (e.g. during application startup or shutdown). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/evtloop.h" line="40"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/evtloop.h" line="40"/>
       </memberdef>
       <memberdef kind="function" id="classwx_event_loop_base_1a23646c8c2bdf2def39c856ac8ec250d8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -261,7 +261,7 @@
 <para>Called by <ref refid="classwx_event_loop_activator" kindref="compound">wxEventLoopActivator</ref>, use an instance of this class instead of calling this method directly to ensure that the previously active event loop is restored.</para><para>Results in a call to <ref refid="classwx_app_console_1aa116701a3bd7700fe6979117e53ae999" kindref="member">wxAppConsole::OnEventLoopEnter</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/evtloop.h" line="51"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/evtloop.h" line="51"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -276,7 +276,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/evtloop.h" line="56"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/evtloop.h" line="56"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -291,7 +291,7 @@
 <para>The default implementation calls <ref refid="classwx_app_console_1a8f94f02a752bb416e99161710637d8f3" kindref="member">wxAppConsole::OnEventLoopExit</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/evtloop.h" line="246"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/evtloop.h" line="246"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -300,7 +300,7 @@
 <para>An event loop is a class which queries the queue of native events sent to the wxWidgets application and dispatches them to the appropriate wxEvtHandlers.</para><para>An object of this class is created by <ref refid="classwx_app_traits_1a11205b08706b4d83bc83d0170511c909" kindref="member">wxAppTraits::CreateEventLoop()</ref> and used by <ref refid="classwx_app" kindref="compound">wxApp</ref> to run the main application event loop. Temporary event loops are usually created by <ref refid="classwx_dialog_1a6e078c3d0653f75ad3c34a37c0b54637" kindref="member">wxDialog::ShowModal()</ref>.</para><para>You can create your own event loop if you need, provided that you restore the main event loop once yours is destroyed (see <ref refid="classwx_event_loop_activator" kindref="compound">wxEventLoopActivator</ref>).</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__appmanagement" kindref="compound">Application and Process Management</ref></para><para><simplesect kind="see"><para><ref refid="classwx_app" kindref="compound">wxApp</ref>, <ref refid="classwx_event_loop_activator" kindref="compound">wxEventLoopActivator</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/evtloop.h" line="32" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/evtloop.h" bodystart="31" bodyend="247"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/evtloop.h" line="32" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/evtloop.h" bodystart="31" bodyend="247"/>
     <listofallmembers>
       <member refid="classwx_event_loop_base_1aa6f5e8cf5d07a6f9d2b99a4b64325b84" prot="public" virt="pure-virtual"><scope>wxEventLoopBase</scope><name>Dispatch</name></member>
       <member refid="classwx_event_loop_base_1ac150a90acfad227f2ce174139289d099" prot="public" virt="pure-virtual"><scope>wxEventLoopBase</scope><name>DispatchTimeout</name></member>

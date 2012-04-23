@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="164"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="281"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1aaf98aeeba06ad86fa471f9218ae91097" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -114,7 +114,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="193"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="310"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a8b9f3f6517e7e1ddfcd2f45c86741209" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -127,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="198"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="315"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a1b13420a586c57560e6a24035db219f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -155,7 +155,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="211"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="328"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a18017016afaf8f9b564df7eb692e5e5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -175,7 +175,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="221"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="338"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1abea2212faca2067fc5a8b8ce261906f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -197,7 +197,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="231"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="348"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a834e6ee38695323f882ad2ee5cc7a979" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -211,7 +211,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="239"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="356"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a5b13e700b9957677468d63558d73d5df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -258,7 +258,7 @@
 <para>See <ref refid="classwx_list_ctrl_1a6941e35348b00a288e833871fd0138e8" kindref="member">wxListCtrl()</ref> for further details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="249"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="366"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1aa9fe817f4a8fd36fca7e8cd5e9818291" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -272,7 +272,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="264"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="381"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a6d30022b48a69999ceafa8c6420bba5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -289,7 +289,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="269"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="386"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1aa4d9e2fd4e35137f970b65f0d60b6058" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -307,7 +307,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="278"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="395"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a95b0ed5ccc8bcf8640534db5977bdd7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> *</type>
@@ -329,7 +329,7 @@
 <para>This function generates a <computeroutput>EVT_LIST_BEGIN_LABEL_EDIT</computeroutput> event which can be vetoed so that no text control will appear for in-place editing.</para><para>If the user changed the label (i.e. s/he does not press ESC or leave the text control without changes, a <computeroutput>EVT_LIST_END_LABEL_EDIT</computeroutput> event will be sent which can be vetoed as well. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="291"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="408"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a037b5c94e79661110663d542f093d3a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -355,7 +355,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="314"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="431"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a59373c7c7b3b02522c40f97dd6493534" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -372,7 +372,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="319"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="436"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1ad8d64b6d1b4af0df31e61ae9521388d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -399,7 +399,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="330"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="447"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1ab027c0950e2d425b86461324765e8d43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -421,7 +421,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="342"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="459"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1ae46c0aa927816ae5b10afeea7a040e47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -447,7 +447,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="354"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="471"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a274b10b0abb9c75d19ee9806ead2caa8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -468,7 +468,7 @@
 <para>See <ref refid="classwx_list_ctrl_1a65a4d9f5fa5bc363e4a93317777d57b4" kindref="member">SetItem()</ref> for more information.</para><para><bold>wxPerl Note:</bold> In wxPerl this method takes only the <emphasis>col</emphasis> parameter and returns a <computeroutput>Wx::ListItem</computeroutput> (or <computeroutput>undef</computeroutput>). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="365"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="482"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1ab42694bad95025988d65949bbe334d6b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -481,7 +481,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="370"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="487"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1abaf0c8d0d5647619e7098fe73cfb2b18" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -495,11 +495,11 @@
         <briefdescription>
 <para>Gets the column index from its position in visual order. </para>        </briefdescription>
         <detaileddescription>
-<para>After calling <ref refid="classwx_list_ctrl_1af7087589e40618f25b35d7d5b7b24c1b" kindref="member">SetColumnsOrder()</ref>, the index returned by this function corresponds to the value of the element number <emphasis>pos</emphasis> in the array returned by <ref refid="classwx_list_ctrl_1a475c9e2234a60fb5751ddf7880c988f6" kindref="member">GetColumnsOrder()</ref>.</para><para>Please see <ref refid="classwx_list_ctrl_1af7087589e40618f25b35d7d5b7b24c1b" kindref="member">SetColumnsOrder()</ref> documentation for an example and additional remarks about the columns ordering.</para><para><simplesect kind="see"><para><ref refid="classwx_list_ctrl_1ac71dfc3321e8dad476a837e9c381d8f0" kindref="member">GetColumnOrder()</ref> </para></simplesect>
+<para>After calling <ref refid="classwx_list_ctrl_1a2a499df49ebcefb3451a44146f76457d" kindref="member">SetColumnsOrder()</ref>, the index returned by this function corresponds to the value of the element number <emphasis>pos</emphasis> in the array returned by <ref refid="classwx_list_ctrl_1a475c9e2234a60fb5751ddf7880c988f6" kindref="member">GetColumnsOrder()</ref>.</para><para>Please see <ref refid="classwx_list_ctrl_1a2a499df49ebcefb3451a44146f76457d" kindref="member">SetColumnsOrder()</ref> documentation for an example and additional remarks about the columns ordering.</para><para><simplesect kind="see"><para><ref refid="classwx_list_ctrl_1ac71dfc3321e8dad476a837e9c381d8f0" kindref="member">GetColumnOrder()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="384"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="501"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1ac71dfc3321e8dad476a837e9c381d8f0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -513,11 +513,11 @@
         <briefdescription>
 <para>Gets the column visual order position. </para>        </briefdescription>
         <detaileddescription>
-<para>This function returns the index of the column which appears at the given visual position, e.g. calling it with <emphasis>col</emphasis> equal to 0 returns the index of the first shown column.</para><para>Please see <ref refid="classwx_list_ctrl_1af7087589e40618f25b35d7d5b7b24c1b" kindref="member">SetColumnsOrder()</ref> documentation for an example and additional remarks about the columns ordering.</para><para><simplesect kind="see"><para><ref refid="classwx_list_ctrl_1a475c9e2234a60fb5751ddf7880c988f6" kindref="member">GetColumnsOrder()</ref>, <ref refid="classwx_list_ctrl_1abaf0c8d0d5647619e7098fe73cfb2b18" kindref="member">GetColumnIndexFromOrder()</ref> </para></simplesect>
+<para>This function returns the index of the column which appears at the given visual position, e.g. calling it with <emphasis>col</emphasis> equal to 0 returns the index of the first shown column.</para><para>Please see <ref refid="classwx_list_ctrl_1a2a499df49ebcefb3451a44146f76457d" kindref="member">SetColumnsOrder()</ref> documentation for an example and additional remarks about the columns ordering.</para><para><simplesect kind="see"><para><ref refid="classwx_list_ctrl_1a475c9e2234a60fb5751ddf7880c988f6" kindref="member">GetColumnsOrder()</ref>, <ref refid="classwx_list_ctrl_1abaf0c8d0d5647619e7098fe73cfb2b18" kindref="member">GetColumnIndexFromOrder()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="398"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="515"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a68358cfe94a7ed9ad3a7fa820dd24d7b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -534,7 +534,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="403"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="520"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a475c9e2234a60fb5751ddf7880c988f6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="dynarray_8h_1add87f199292e36ee87efd6d7f0d4ee66" kindref="member">wxArrayInt</ref></type>
@@ -544,11 +544,11 @@
         <briefdescription>
 <para>Returns the array containing the orders of all columns. </para>        </briefdescription>
         <detaileddescription>
-<para>On error, an empty array is returned.</para><para>Please see <ref refid="classwx_list_ctrl_1af7087589e40618f25b35d7d5b7b24c1b" kindref="member">SetColumnsOrder()</ref> documentation for an example and additional remarks about the columns ordering.</para><para><simplesect kind="see"><para><ref refid="classwx_list_ctrl_1ac71dfc3321e8dad476a837e9c381d8f0" kindref="member">GetColumnOrder()</ref>, <ref refid="classwx_list_ctrl_1abaf0c8d0d5647619e7098fe73cfb2b18" kindref="member">GetColumnIndexFromOrder()</ref> </para></simplesect>
+<para>On error, an empty array is returned.</para><para>Please see <ref refid="classwx_list_ctrl_1a2a499df49ebcefb3451a44146f76457d" kindref="member">SetColumnsOrder()</ref> documentation for an example and additional remarks about the columns ordering.</para><para><simplesect kind="see"><para><ref refid="classwx_list_ctrl_1ac71dfc3321e8dad476a837e9c381d8f0" kindref="member">GetColumnOrder()</ref>, <ref refid="classwx_list_ctrl_1abaf0c8d0d5647619e7098fe73cfb2b18" kindref="member">GetColumnIndexFromOrder()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="415"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="532"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a95b76c8a013a596cfff5ad3b9a72d735" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -561,7 +561,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="422"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="539"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1ad42426f06fd14dc293e281816eeb71f7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> *</type>
@@ -575,7 +575,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="431"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="548"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1aaf7fa8cac520e418487c645f8c81405a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_image_list" kindref="compound">wxImageList</ref> *</type>
@@ -594,7 +594,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="439"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="556"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a5a1cf111420f076d5fccd0be24f2efd3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -611,7 +611,7 @@
 <para>See <ref refid="classwx_list_ctrl_1a65a4d9f5fa5bc363e4a93317777d57b4" kindref="member">SetItem()</ref> for more information.</para><para>You must call <emphasis>info.SetId()</emphasis> to set the ID of item you&apos;re interested in before calling this method, and <emphasis>info.SetMask()</emphasis> with the flags indicating what fields you need to retrieve from <emphasis>info</emphasis>.</para><para><bold>wxPerl Note:</bold> In wxPerl this method takes as parameter the ID of the item and (optionally) the column, and returns a Wx::ListItem object. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="453"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="570"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1ac922b4a5705703c786f347cf1063e2d4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -629,7 +629,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="462"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="579"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1ac68cf16b035f4dca7d64931de82cdffa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -642,7 +642,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="467"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="584"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a137f05aa3d7b893b1393168df17511df" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a74cc3a4753ec135e9e2ee6b155c97216" kindref="member">wxUIntPtr</ref></type>
@@ -659,7 +659,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="472"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="589"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a93e53127014979d2551a02faea556ece" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
@@ -676,7 +676,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="477"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="594"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a3fd6cdba165ace784819fccb311f510b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -697,7 +697,7 @@
 <para><bold>wxPerl Note:</bold> In wxPerl this method takes only the <emphasis>item</emphasis> parameter and returns a <computeroutput>Wx::Point</computeroutput> (or <computeroutput>undef</computeroutput>). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="487"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="604"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a7e0657c17aededca22a58409712bc205" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -723,7 +723,7 @@
 <para><emphasis>code</emphasis> is one of wxLIST_RECT_BOUNDS, wxLIST_RECT_ICON, wxLIST_RECT_LABEL.</para><para><bold>wxPerl Note:</bold> In wxPerl this method takes only the <emphasis>item</emphasis> and <emphasis>code</emphasis> parameters and returns a <computeroutput>Wx::Rect</computeroutput> (or <computeroutput>undef</computeroutput>). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="501"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="618"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a090c477e2d52ff647d2ddb32fbae7f55" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -736,7 +736,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="508"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="625"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1ae3328b6aee8be7da8e73c31659e60704" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -757,7 +757,7 @@
 <para>For a list of state flags, see <ref refid="classwx_list_ctrl_1a65a4d9f5fa5bc363e4a93317777d57b4" kindref="member">SetItem()</ref>. The <emphasis>stateMask</emphasis> indicates which state flags are of interest. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="514"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="631"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1ab0a596e1ad4714b6d5ee7b3180c59680" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -794,7 +794,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="525"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="642"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a083bf286b4508e637e239661c381db3d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -811,7 +811,7 @@
 <para>If the item has no specific colour, returns an invalid colour (and not the default foreground control of the control itself as this wouldn&apos;t allow distinguishing between items having the same colour as the current control foreground and items with default colour which, hence, have always the same colour as the control). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="536"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="653"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1ad8372c4619ad5ea55ad16889caa32e78" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -839,8 +839,8 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/>;;<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>item<sp/>=<sp/>listctrl-&gt;GetNextItem(item,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxLIST_NEXT_ALL,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxLIST_STATE_SELECTED);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interface_2wx_2listctrl_8h_1a39fca1837c5ce7715cbf571669660c13ade6f41ef8b2af3e3486906ed7a391c1e" kindref="member">wxLIST_NEXT_ALL</ref>,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="interface_2wx_2listctrl_8h_1ae63567e152b485c92faec6487a310438" kindref="member">wxLIST_STATE_SELECTED</ref>);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>item<sp/>==<sp/>-1<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
@@ -855,7 +855,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="579"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="696"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a35a1f602550778c8bf6f3b475f025f73" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -868,7 +868,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="584"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="701"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1aad3ef363dc21c7ad869a1ecdc2ece00a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -899,7 +899,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="602"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="719"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1ac17700e61cb7b784cbe1da548dac4a2a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -912,7 +912,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="607"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="724"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1ae148ac03ad8043dfc842f6d9f9d8ffd7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -925,7 +925,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="612"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="729"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a6a28cfaa0c27745883cd16b2aedf75d8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rect" kindref="compound">wxRect</ref></type>
@@ -938,7 +938,7 @@
 <para>In other words, if the controls client size were equal to the size of this rectangle, no scrollbars would be needed and no free space would be left.</para><para>Note that this function only works in the icon and small icon views, not in list or report views (this is a limitation of the native Win32 control). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="622"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="739"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1ac346d7aa18722fb54580d4c4ed5cf113" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -966,7 +966,7 @@
 </para><para>If <emphasis>ptrSubItem</emphasis> is not NULL and the <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref> is in the report mode the subitem (or column) number will also be provided. This feature is only available in version 2.7.0 or higher and is currently only implemented under wxMSW and requires at least comctl32.dll of verion 4.70 on the host system or the value stored in <emphasis>ptrSubItem</emphasis> will be always -1. To compile this feature into wxWidgets library you need to have access to commctrl.h of version 4.70 that is provided by Microsoft.</para><para><bold>wxPerl Note:</bold> In wxPerl this method only takes the <emphasis>point</emphasis> parameter and returns a 2-element list (item, flags). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="656"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="773"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a2aba648d306f74922de4c8264b78a33b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -974,12 +974,12 @@
         <argsstring>() const </argsstring>
         <name>InReportView</name>
         <briefdescription>
-<para>Returns true if the control is currently using ::wxLC_REPORT style. </para>        </briefdescription>
+<para>Returns true if the control is currently using <ref refid="interface_2wx_2listctrl_8h_1ababe906ea6ac44adac57b655eda07d25" kindref="member">wxLC_REPORT</ref> style. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="661"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="778"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a75337fbb43f767eafc82d47966943141" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -1000,7 +1000,7 @@
 <para>For more details, see <ref refid="classwx_list_ctrl_1a65a4d9f5fa5bc363e4a93317777d57b4" kindref="member">SetItem()</ref>. Also see InsertColumn(long, const <ref refid="classwx_string" kindref="compound">wxString</ref>&amp;, int, int) overload for a usually more convenient alternative to this method and the description of how the item width is interpreted by this method. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="671"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="788"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1abd8d55b0f89e9a63372e3837c19c32d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -1028,7 +1028,7 @@
         <briefdescription>
 <para>For report view mode (only), inserts a column. </para>        </briefdescription>
         <detaileddescription>
-<para>Insert a new column in the list control in report view mode at the given position specifying its most common attributes.</para><para>Notice that to set the image for the column you need to use Insert(long, const wxListItem&amp;) overload and specify ::wxLIST_MASK_IMAGE in the item mask.</para><para><parameterlist kind="param"><parameteritem>
+<para>Insert a new column in the list control in report view mode at the given position specifying its most common attributes.</para><para>Notice that to set the image for the column you need to use Insert(long, const wxListItem&amp;) overload and specify <ref refid="interface_2wx_2listctrl_8h_1a45f7eff49d8fcd41b0fa657201aa9505" kindref="member">wxLIST_MASK_IMAGE</ref> in the item mask.</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>col</parametername>
 </parameternamelist>
@@ -1061,7 +1061,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="705"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="822"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1aa65a5ca4e7bd7c0e60a0522a9092a693" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -1086,7 +1086,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="713"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="830"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a66128e3a4806a7b545e83b6de0f49ed5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -1122,7 +1122,7 @@
 <bold>wxPerl Note:</bold> In wxPerl this method is implemented as InsertStringItem(index, label). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="727"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="844"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a5a01ced78c631b056d781cf6f2ae6626" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -1158,7 +1158,7 @@
 <bold>wxPerl Note:</bold> In wxPerl this method is implemented as InsertImageItem(index, imageIndex). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="741"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="858"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1ad06b98bdb32f5d3b15703db8e8f5f5c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -1205,7 +1205,7 @@
 <bold>wxPerl Note:</bold> In wxPerl this method is implemented as InsertImageStringItem(index, label, imageIndex). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="758"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="875"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a0a3e4b626a9fbb655191147eeb33bfdf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1218,7 +1218,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="763"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="880"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1ab8a88dac752a883ad4e02bb42a7d5015" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1236,7 +1236,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="774"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="891"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1aaa6b0180a9dcdf46be8ec4baffc61efc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1257,7 +1257,7 @@
 <para>The starting item must be less than or equal to the ending one.</para><para>Just as <ref refid="classwx_list_ctrl_1ab8a88dac752a883ad4e02bb42a7d5015" kindref="member">RefreshItem()</ref> this is only useful for virtual list controls. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="782"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="899"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a7e620aa7cc9953d5e98846b130034135" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1279,7 +1279,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="792"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="909"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a935412e9017c3fe511514cfc360a3117" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -1297,7 +1297,7 @@
 <para>Note that the <ref refid="classwx_window_1a3006d98a4145b7064c1f08e39487d257" kindref="member">wxWindow::GetBackgroundColour()</ref> function of <ref refid="classwx_window" kindref="compound">wxWindow</ref> base class can be used to retrieve the current background colour. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="800"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="917"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a61244b9721214359b0ad3992135920c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1318,7 +1318,7 @@
 <para>See <ref refid="classwx_list_ctrl_1a65a4d9f5fa5bc363e4a93317777d57b4" kindref="member">SetItem()</ref> for more information. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="806"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="923"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1ac5818d43ce3913f7f70a6a759485cd6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1339,12 +1339,12 @@
 <para><emphasis>width</emphasis> can be a width in pixels or <computeroutput>wxLIST_AUTOSIZE</computeroutput> (-1) or <computeroutput>wxLIST_AUTOSIZE_USEHEADER</computeroutput> (-2).</para><para><computeroutput>wxLIST_AUTOSIZE</computeroutput> will resize the column to the length of its longest item.</para><para><computeroutput>wxLIST_AUTOSIZE_USEHEADER</computeroutput> will resize the column to the length of the header (Win32) or 80 pixels (other platforms).</para><para>In small or normal icon view, <emphasis>col</emphasis> must be -1, and the column width is set for all columns. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="822"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="939"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_list_ctrl_1af7087589e40618f25b35d7d5b7b24c1b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_list_ctrl_1a2a499df49ebcefb3451a44146f76457d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxListCtrl::SetColumnsOrder</definition>
-        <argsstring>(const wxArrayInt &amp;orders) const </argsstring>
+        <argsstring>(const wxArrayInt &amp;orders)</argsstring>
         <name>SetColumnsOrder</name>
         <param>
           <type>const <ref refid="dynarray_8h_1add87f199292e36ee87efd6d7f0d4ee66" kindref="member">wxArrayInt</ref> &amp;</type>
@@ -1361,7 +1361,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>order[0]<sp/>=<sp/>2;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>order[1]<sp/>=<sp/>0;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>order[2]<sp/>=<sp/>1;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>list-&gt;<ref refid="classwx_list_ctrl_1af7087589e40618f25b35d7d5b7b24c1b" kindref="member" tooltip="Changes the order in which the columns are shown.">SetColumnsOrder</ref>(order);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>list-&gt;<ref refid="classwx_list_ctrl_1a2a499df49ebcefb3451a44146f76457d" kindref="member" tooltip="Changes the order in which the columns are shown.">SetColumnsOrder</ref>(order);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>now<sp/>list-&gt;GetColumnsOrder()<sp/>will<sp/>return<sp/>order<sp/>and</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>list-&gt;GetColumnIndexFromOrder(n)<sp/>will<sp/>return<sp/>order[n]<sp/>and</highlight><highlight class="normal"></highlight></codeline>
@@ -1371,7 +1371,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="871"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="988"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a9a6b0ebe6f4b0a8fbef31c4e17fe235f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1393,7 +1393,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="884"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1001"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a65a4d9f5fa5bc363e4a93317777d57b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1410,7 +1410,7 @@
 <para>Using the wxListItem&apos;s mask and state mask, you can change only selected attributes of a <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref> item. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="892"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1009"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1aa1ea1a3071677e667af1fcc909cefa03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -1440,7 +1440,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="897"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1014"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1adf07b82511dc77d64097c0ffefdc9a30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1461,7 +1461,7 @@
 <para>This function only works in report view mode. The colour can be retrieved using <ref refid="classwx_list_ctrl_1ac922b4a5705703c786f347cf1063e2d4" kindref="member">GetItemBackgroundColour()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="904"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1021"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a83d08f3aefb0a20b25fad05f19fad67d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1486,7 +1486,7 @@
 <para>In report view, you can specify the column. The image is an index into the image list associated with the list control. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="911"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1028"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a5ded9342e4969eeeb60d1305f75995fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1503,7 +1503,7 @@
 <para>It is used to indicate to the control the number of items it contains. After calling it, the main program should be ready to handle calls to various item callbacks (such as <ref refid="classwx_list_ctrl_1a92370967f97215e6068326645ee76624" kindref="member">wxListCtrl::OnGetItemText</ref>) for all items in the range from 0 to <emphasis>count</emphasis>.</para><para>Notice that the control is not necessarily redrawn after this call as it may be undesirable if an item which is not visible on the screen anyhow was added to or removed from a control displaying many items, if you do need to refresh the display you can just call <ref refid="classwx_window_1a29dc7251746154c821b17841b9877830" kindref="member">Refresh()</ref> manually. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="926"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1043"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a54825c8c66e7fb59cee6076d6554f8ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1524,7 +1524,7 @@
 <para>Notice that this function cannot be used to associate pointers with the control items, use <ref refid="classwx_list_ctrl_1a748edc3f8e43939632f2838756599863" kindref="member">SetItemPtrData()</ref> instead. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="934"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1051"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1acfc640f1aba5634ab25186e71ffc278f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1545,7 +1545,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="939"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1056"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1afe006faba05c34bbc70539f100e72c86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1571,33 +1571,7 @@
 <para>The images are indices into the image list associated with the list control. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="945"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_list_ctrl_1afe006faba05c34bbc70539f100e72c86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool wxListCtrl::SetItemImage</definition>
-        <argsstring>(long item, int image, int selImage=-1)</argsstring>
-        <name>SetItemImage</name>
-        <param>
-          <type>long</type>
-          <declname>item</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>image</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>selImage</declname>
-          <defval>-1</defval>
-        </param>
-        <briefdescription>
-<para>Sets the unselected and selected images associated with the item. </para>        </briefdescription>
-        <detaileddescription>
-<para>The images are indices into the image list associated with the list control.</para><para><xrefsect id="deprecated_1_deprecated000029"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This form is deprecated: <emphasis>selImage</emphasis> is not used; use the other <ref refid="classwx_list_ctrl_1afe006faba05c34bbc70539f100e72c86" kindref="member">SetItemImage()</ref> overload. </para></xrefdescription></xrefsect></para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="955"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1062"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a13525147c745a26eeb54fe55dfdbad46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1618,7 +1592,7 @@
 <para>Windows only. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="960"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1068"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a748edc3f8e43939632f2838756599863" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1640,7 +1614,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="971"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1079"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a172d78854092aec2b784b8519bf5be08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1662,10 +1636,12 @@
         <briefdescription>
 <para>Sets the item state. </para>        </briefdescription>
         <detaileddescription>
-<para>For a list of state flags, see <ref refid="classwx_list_ctrl_1a65a4d9f5fa5bc363e4a93317777d57b4" kindref="member">SetItem()</ref>. The <bold>stateMask</bold> indicates which state flags are valid. </para>        </detaileddescription>
+<para>The <emphasis>stateMask</emphasis> is a combination of <computeroutput>wxLIST_STATE_XXX</computeroutput> constants described in <ref refid="classwx_list_item" kindref="compound">wxListItem</ref> documentation. For each of the bits specified in <emphasis>stateMask</emphasis>, the corresponding state is set or cleared depending on whether <emphasis>state</emphasis> argument contains the same bit or not.</para><para>So to select an item you can use <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>list-&gt;<ref refid="classwx_list_ctrl_1a172d78854092aec2b784b8519bf5be08" kindref="member" tooltip="Sets the item state.">SetItemState</ref>(item,<sp/><ref refid="interface_2wx_2listctrl_8h_1ae63567e152b485c92faec6487a310438" kindref="member">wxLIST_STATE_SELECTED</ref>,<sp/><ref refid="interface_2wx_2listctrl_8h_1ae63567e152b485c92faec6487a310438" kindref="member">wxLIST_STATE_SELECTED</ref>);</highlight></codeline>
+</programlisting> while to deselect it you should use <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>list-&gt;<ref refid="classwx_list_ctrl_1a172d78854092aec2b784b8519bf5be08" kindref="member" tooltip="Sets the item state.">SetItemState</ref>(item,<sp/>0,<sp/><ref refid="interface_2wx_2listctrl_8h_1ae63567e152b485c92faec6487a310438" kindref="member">wxLIST_STATE_SELECTED</ref>);</highlight></codeline>
+</programlisting></para><para>Consider using <ref refid="classwx_list_view" kindref="compound">wxListView</ref> if possible to avoid dealing with this error-prone and confusing method. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="977"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1101"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1af4d70a5a6a15011590fa0b94254ecbd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1686,7 +1662,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="982"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1106"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a069801dda4c0df09ddb0c7cdefcdaf11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1707,7 +1683,7 @@
 <para>This function only works in report view. The colour can be retrieved using <ref refid="classwx_list_ctrl_1a083bf286b4508e637e239661c381db3d" kindref="member">GetItemTextColour()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="989"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1113"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a20daa8d70dc41ba23d00bcf6a652ab28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1729,7 +1705,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="994"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1118"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1af3e129f2ac6412c8bd602f286b95300f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1746,7 +1722,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="999"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1123"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1ae719fa247088c1f5e3b6bd7de2cfcc39" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1764,7 +1740,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1004"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1128"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a5a36fae3701f7df7021362b0330f9640" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1786,7 +1762,7 @@
 </programlisting></para><para>It is called each time when the two items must be compared and should return 0 if the items are equal, negative value if the first item is less than the second one and positive value if the first one is greater than the second one (the same convention as used by <computeroutput>qsort(3)</computeroutput>).</para><para>The parameter <emphasis>item1</emphasis> is the client data associated with the first item (NOT the index). The parameter <emphasis>item2</emphasis> is the client data associated with the second item (NOT the index). The parameter <emphasis>data</emphasis> is the value passed to <ref refid="classwx_list_ctrl_1a5a36fae3701f7df7021362b0330f9640" kindref="member">SortItems()</ref> itself.</para><para>Notice that the control may only be sorted on client data associated with the items, so you must use SetItemData if you want to be able to sort the items in the control.</para><para>Please see the <ref refid="page_samples_1page_samples_listctrl" kindref="member">List Control Sample</ref> for an example of using this function.</para><para><bold>wxPerl Note:</bold> In wxPerl the comparison function must take just two parameters; however, you may use a closure to achieve an effect similar to the SortItems third parameter. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1035"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1159"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -1806,7 +1782,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1052"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1176"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1ae0137632163b0714368f67585d46a5e6" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_list_item_attr" kindref="compound">wxListItemAttr</ref> *</type>
@@ -1829,7 +1805,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1069"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1193"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1ac2650c225e81512af8dcff22ab50a9dc" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -1851,7 +1827,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1082"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1206"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a05bd10ebe1ea2a45955dda48045d23a3" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -1869,7 +1845,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1098"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1222"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_ctrl_1a92370967f97215e6068326645ee76624" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1891,7 +1867,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1107"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1231"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1942,91 +1918,91 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/listctrl.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/listctrl.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/listctrl.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="overview_listctrl" kindref="compound">wxListCtrl Overview</ref>, <ref refid="classwx_list_view" kindref="compound">wxListView</ref>, <ref refid="classwx_list_box" kindref="compound">wxListBox</ref>, <ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref>, <ref refid="classwx_image_list" kindref="compound">wxImageList</ref>, <ref refid="classwx_list_event" kindref="compound">wxListEvent</ref>, <ref refid="classwx_list_item" kindref="compound">wxListItem</ref>, <ref refid="classwx_editable_list_box" kindref="compound">wxEditableListBox</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7444">
+      <node id="7642">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7443">
+      <node id="7641">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7444" relation="public-inheritance">
+        <childnode refid="7642" relation="public-inheritance">
         </childnode>
-        <childnode refid="7445" relation="public-inheritance">
+        <childnode refid="7643" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7445">
+      <node id="7643">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7441">
+      <node id="7639">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="7442" relation="public-inheritance">
+        <childnode refid="7640" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7446">
+      <node id="7644">
         <label>wxListView</label>
         <link refid="classwx_list_view"/>
-        <childnode refid="7440" relation="public-inheritance">
+        <childnode refid="7638" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7442">
+      <node id="7640">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7443" relation="public-inheritance">
+        <childnode refid="7641" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7440">
+      <node id="7638">
         <label>wxListCtrl</label>
         <link refid="classwx_list_ctrl"/>
-        <childnode refid="7441" relation="public-inheritance">
+        <childnode refid="7639" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7451">
+      <node id="7649">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7452" relation="usage">
+        <childnode refid="7650" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7450">
+      <node id="7648">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7451" relation="public-inheritance">
+        <childnode refid="7649" relation="public-inheritance">
         </childnode>
-        <childnode refid="7453" relation="public-inheritance">
+        <childnode refid="7651" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7453">
+      <node id="7651">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7448">
+      <node id="7646">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="7449" relation="public-inheritance">
+        <childnode refid="7647" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7449">
+      <node id="7647">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7450" relation="public-inheritance">
+        <childnode refid="7648" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7447">
+      <node id="7645">
         <label>wxListCtrl</label>
         <link refid="classwx_list_ctrl"/>
-        <childnode refid="7448" relation="public-inheritance">
+        <childnode refid="7646" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7452">
+      <node id="7650">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="159" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" bodystart="158" bodyend="1108"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="276" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="275" bodyend="1232"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxListCtrl</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxListCtrl</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -2237,6 +2213,7 @@
       <member refid="classwx_list_ctrl_1ad06b98bdb32f5d3b15703db8e8f5f5c3" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>InsertItem</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxListCtrl</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>IsExposed</name></member>
@@ -2252,6 +2229,7 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxListCtrl</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxListCtrl</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxListCtrl</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>IsUnlinked</name></member>
       <member refid="classwx_list_ctrl_1a0a3e4b626a9fbb655191147eeb33bfdf" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>IsVirtual</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxListCtrl</scope><name>Layout</name></member>
@@ -2259,7 +2237,6 @@
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxListCtrl</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxListCtrl</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxListCtrl</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>MoveAfterInTabOrder</name></member>
@@ -2327,7 +2304,7 @@
       <member refid="classwx_window_1ab2aadc857ee7f55f47ab9a8669e3beb7" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>SetClientSize</name></member>
       <member refid="classwx_window_1a582d4d1f60a3f777627773b2da0bb2ef" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>SetClientSize</name></member>
       <member refid="classwx_list_ctrl_1a61244b9721214359b0ad3992135920c4" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>SetColumn</name></member>
-      <member refid="classwx_list_ctrl_1af7087589e40618f25b35d7d5b7b24c1b" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>SetColumnsOrder</name></member>
+      <member refid="classwx_list_ctrl_1a2a499df49ebcefb3451a44146f76457d" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>SetColumnsOrder</name></member>
       <member refid="classwx_list_ctrl_1ac5818d43ce3913f7f70a6a759485cd6c" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>SetColumnWidth</name></member>
       <member refid="classwx_window_1afa75d111bbd9a68f837101a5fbed60a7" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>SetConstraints</name></member>
       <member refid="classwx_window_1a0ccf78fe06722b500adfb7f36b8ce443" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>SetContainingSizer</name></member>
@@ -2353,7 +2330,6 @@
       <member refid="classwx_list_ctrl_1a5ded9342e4969eeeb60d1305f75995fd" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>SetItemCount</name></member>
       <member refid="classwx_list_ctrl_1a54825c8c66e7fb59cee6076d6554f8ec" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>SetItemData</name></member>
       <member refid="classwx_list_ctrl_1acfc640f1aba5634ab25186e71ffc278f" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>SetItemFont</name></member>
-      <member refid="classwx_list_ctrl_1afe006faba05c34bbc70539f100e72c86" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>SetItemImage</name></member>
       <member refid="classwx_list_ctrl_1afe006faba05c34bbc70539f100e72c86" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>SetItemImage</name></member>
       <member refid="classwx_list_ctrl_1a13525147c745a26eeb54fe55dfdbad46" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>SetItemPosition</name></member>
       <member refid="classwx_list_ctrl_1a748edc3f8e43939632f2838756599863" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>SetItemPtrData</name></member>
@@ -2409,7 +2385,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxListCtrl</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxListCtrl</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxListCtrl</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxListCtrl</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxListCtrl</scope><name>Unlink</name></member>

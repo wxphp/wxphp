@@ -38,7 +38,7 @@
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/dynlib.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynlib.h" line="256" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynlib.h" bodystart="256" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynlib.h" line="256" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dynlib.h" bodystart="256" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="enum">
@@ -64,7 +64,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/dynlib.h&gt; 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynlib.h" line="65" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynlib.h" bodystart="64" bodyend="68"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynlib.h" line="65" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dynlib.h" bodystart="64" bodyend="68"/>
       </memberdef>
       <memberdef kind="enum" id="dynlib_8h_1a0e1300907aa8d5dedef66ee5fc192eaa" prot="public" static="no">
         <name>wxPluginCategory</name>
@@ -88,13 +88,13 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/dynlib.h&gt; 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynlib.h" line="75" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynlib.h" bodystart="74" bodyend="78"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynlib.h" line="75" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dynlib.h" bodystart="74" bodyend="78"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynlib.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynlib.h"/>
   </compounddef>
 </doxygen>

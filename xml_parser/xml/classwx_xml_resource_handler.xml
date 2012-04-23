@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="442"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="442"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1a96baada9ca7c54c3136268e93a84dd39" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="447"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="447"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1acf52bd86ca7dd4a055b8e89d693fd846" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
@@ -55,7 +55,7 @@
 <para>Should check for validity. <emphasis>parent</emphasis> is a higher-level object (usually window, dialog or panel) that is often necessary to create the resource.</para><para>If <bold>instance</bold> is non-NULL it should not create a new instance via &apos;new&apos; but should rather use this one, and call its Create method. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="459"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="459"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1aea4c926eb4842302568d4d063960e2fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="464"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="464"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1af0c078bc565c86b6ba33f860bfc053ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -88,7 +88,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="476"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="476"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1a1fa6e58387f7b76dcc0b6d6e6e075ca3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -105,7 +105,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="481"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="481"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -128,7 +128,7 @@
 <para><computeroutput>wxMB_DOCKABLE</computeroutput>) to the list of flags understood by this handler. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="490"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="490"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1af495ff91d59a9839e1646ca4c1887cb7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -141,7 +141,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="495"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="495"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1a5dea1c0876a5716b6cb3ca8d4bc9917a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -163,7 +163,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="500"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="500"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1a0bde85883fb19a919ce2fa490d741f0b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -185,7 +185,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="506"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="506"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1a0952d0c96d96642c518e8df0d37f7471" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
@@ -211,7 +211,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="512"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="512"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1abf28b5b86f4f9a6c7e167434dbec9db0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_animation" kindref="compound">wxAnimation</ref></type>
@@ -229,7 +229,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="517"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="517"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1a941fe235c4dc7b19a68e79440ab31f54" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref></type>
@@ -242,9 +242,9 @@
           <defval>&quot;bitmap&quot;</defval>
         </param>
         <param>
-          <type>const <ref refid="artprov_8h_1ad9c24b799a686f312c2bb64f47b6ef95" kindref="member">wxArtClient</ref> &amp;</type>
+          <type>const <ref refid="classwx_string" kindref="compound">wxArtClient</ref> &amp;</type>
           <declname>defaultArtClient</declname>
-          <defval>wxART_OTHER</defval>
+          <defval><ref refid="artprov_8h_1abe6f6066b36e0456cb2f8a0e6decb831" kindref="member">wxART_OTHER</ref></defval>
         </param>
         <param>
           <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -257,7 +257,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="524"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="524"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1abf6d75e522c9b1adbec78496f07fce2e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref></type>
@@ -269,9 +269,9 @@
           <declname>node</declname>
         </param>
         <param>
-          <type>const <ref refid="artprov_8h_1ad9c24b799a686f312c2bb64f47b6ef95" kindref="member">wxArtClient</ref> &amp;</type>
+          <type>const <ref refid="classwx_string" kindref="compound">wxArtClient</ref> &amp;</type>
           <declname>defaultArtClient</declname>
-          <defval>wxART_OTHER</defval>
+          <defval><ref refid="artprov_8h_1abe6f6066b36e0456cb2f8a0e6decb831" kindref="member">wxART_OTHER</ref></defval>
         </param>
         <param>
           <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -285,7 +285,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="532"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="532"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1a47f4102dcc458e8049219a021ed8e644" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -307,7 +307,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="537"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="537"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1a598b39cb1307c1920a38ac69234b0f3d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -329,7 +329,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="543"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="543"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1a1887a0495b62f24db47cf7145ddbcf05" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref> &amp;</type>
@@ -342,7 +342,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="548"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="548"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1a5620096a112d71fc9f288514cd14a9a8" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
@@ -369,7 +369,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="554"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="554"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1a5afbcaee0380ea29ac7467f8e31ce31c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1ac0f30319732dcceda470516918ff3556" kindref="member">wxDirection</ref></type>
@@ -392,7 +392,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="566"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="566"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1a506ec19c2257ceebfa2b09a96452a740" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
@@ -410,7 +410,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="571"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="571"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1a1b255b20978adeb1ea4ba2394153baf0" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -423,7 +423,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="576"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="576"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1ac21a94bce897ff2497e2bdaf943f88be" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_icon" kindref="compound">wxIcon</ref></type>
@@ -436,9 +436,9 @@
           <defval>&quot;icon&quot;</defval>
         </param>
         <param>
-          <type>const <ref refid="artprov_8h_1ad9c24b799a686f312c2bb64f47b6ef95" kindref="member">wxArtClient</ref> &amp;</type>
+          <type>const <ref refid="classwx_string" kindref="compound">wxArtClient</ref> &amp;</type>
           <declname>defaultArtClient</declname>
-          <defval>wxART_OTHER</defval>
+          <defval><ref refid="artprov_8h_1abe6f6066b36e0456cb2f8a0e6decb831" kindref="member">wxART_OTHER</ref></defval>
         </param>
         <param>
           <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -451,7 +451,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="583"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="583"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1a40eecb20b3789f2efe2ae739ac86fb10" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_icon" kindref="compound">wxIcon</ref></type>
@@ -463,9 +463,9 @@
           <declname>node</declname>
         </param>
         <param>
-          <type>const <ref refid="artprov_8h_1ad9c24b799a686f312c2bb64f47b6ef95" kindref="member">wxArtClient</ref> &amp;</type>
+          <type>const <ref refid="classwx_string" kindref="compound">wxArtClient</ref> &amp;</type>
           <declname>defaultArtClient</declname>
-          <defval>wxART_OTHER</defval>
+          <defval><ref refid="artprov_8h_1abe6f6066b36e0456cb2f8a0e6decb831" kindref="member">wxART_OTHER</ref></defval>
         </param>
         <param>
           <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -479,7 +479,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="592"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="592"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1af9d88525abbfa6e5a7f0836f004df0bb" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_icon_bundle" kindref="compound">wxIconBundle</ref></type>
@@ -491,9 +491,9 @@
           <declname>param</declname>
         </param>
         <param>
-          <type>const <ref refid="artprov_8h_1ad9c24b799a686f312c2bb64f47b6ef95" kindref="member">wxArtClient</ref> &amp;</type>
+          <type>const <ref refid="classwx_string" kindref="compound">wxArtClient</ref> &amp;</type>
           <declname>defaultArtClient</declname>
-          <defval>wxART_OTHER</defval>
+          <defval><ref refid="artprov_8h_1abe6f6066b36e0456cb2f8a0e6decb831" kindref="member">wxART_OTHER</ref></defval>
         </param>
         <briefdescription>
 <para>Returns an icon bundle. </para>        </briefdescription>
@@ -503,7 +503,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="605"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="605"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1ac66ac763f22925794a85c2a3d854e394" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_image_list" kindref="compound">wxImageList</ref> *</type>
@@ -523,7 +523,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="615"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="615"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1ab77ae1200dce25a066ec780d5fac927e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -545,7 +545,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="620"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="620"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1ab3164a50a6264fd72268d62c1b0b66ca" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -558,7 +558,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="625"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="625"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1a97a4c2bf8c55d5921348ce5d647f833f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -575,7 +575,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="630"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="630"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1afe53fac82e35de8faa39ff84e6cd8547" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_xml_node" kindref="compound">wxXmlNode</ref> *</type>
@@ -592,7 +592,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="635"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="635"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1ad235a53d08598812ed655befb2dcaae4" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -609,7 +609,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="640"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="640"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1a9cef3784d0cf114a85f3129ffb9ba622" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -627,7 +627,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="647"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="647"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1a592563abecf1ddadee0bcbae4278f007" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
@@ -645,7 +645,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="652"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="652"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1a19357b2f59f20a3c2eb1d944aa664c14" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -668,7 +668,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="657"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="657"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1a218d5e6e96d34b8dbf11227be49413f3" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -691,7 +691,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="663"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="663"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1ad97104f92eefebe62873aeb8e1b1e8f7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -715,7 +715,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="672"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="672"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1af26bb8a6f771c61f40cf97dd0a8f5944" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -732,7 +732,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="677"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="677"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1a4ceba613e1ec6261be315d148de6bc46" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -753,7 +753,7 @@
 <para>Returns true if the node has a property class equal to classname, e.g. object class=&quot;wxDialog&quot;. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="684"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="684"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1a20415a720e259e8cc138f38718b8831b" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -770,7 +770,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="689"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="689"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1a0b4c148209e4fcf1e6940895902ac5eb" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -792,7 +792,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="698"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="698"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1aeab6ca68ceb48baa386b4c345b7cd270" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -810,7 +810,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="706"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="706"/>
       </memberdef>
       <memberdef kind="function" id="classwx_xml_resource_handler_1a66d983d3b2a11d38f50b58e9399fc23d" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -832,7 +832,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="716"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="716"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -843,43 +843,43 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxxrc" kindref="member">wxXRC</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__xrc" kindref="compound">XML Based Resource System (XRC)</ref></para><para>See <ref refid="overview_xrc" kindref="compound">XML Based Resource System (XRC)</ref> for details.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxxrc" kindref="member">wxXRC</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__xrc" kindref="compound">XML Based Resource System (XRC)</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11742">
+      <node id="11940">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11743">
+      <node id="11941">
         <label>wxSizerXmlHandler</label>
         <link refid="classwx_sizer_xml_handler"/>
-        <childnode refid="11741" relation="public-inheritance">
+        <childnode refid="11939" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11741">
+      <node id="11939">
         <label>wxXmlResourceHandler</label>
         <link refid="classwx_xml_resource_handler"/>
-        <childnode refid="11742" relation="public-inheritance">
+        <childnode refid="11940" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11745">
+      <node id="11943">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11746" relation="usage">
+        <childnode refid="11944" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11744">
+      <node id="11942">
         <label>wxXmlResourceHandler</label>
         <link refid="classwx_xml_resource_handler"/>
-        <childnode refid="11745" relation="public-inheritance">
+        <childnode refid="11943" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11746">
+      <node id="11944">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="437" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" bodystart="436" bodyend="717"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="437" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" bodystart="436" bodyend="717"/>
     <listofallmembers>
       <member refid="classwx_xml_resource_handler_1a610176f73f543c1de32b65c4d370c34e" prot="protected" virt="non-virtual"><scope>wxXmlResourceHandler</scope><name>AddStyle</name></member>
       <member refid="classwx_xml_resource_handler_1af495ff91d59a9839e1646ca4c1887cb7" prot="protected" virt="non-virtual"><scope>wxXmlResourceHandler</scope><name>AddWindowStyles</name></member>

@@ -89,13 +89,13 @@
 <para>Note that when you specify more styles in <ref refid="classwx_text_validator" kindref="compound">wxTextValidator</ref> the validation checks are performed in the order in which the styles of this enumeration are defined. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valtext.h" line="17" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valtext.h" bodystart="16" bodyend="67"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valtext.h" line="17" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/valtext.h" bodystart="16" bodyend="67"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valtext.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valtext.h"/>
   </compounddef>
 </doxygen>

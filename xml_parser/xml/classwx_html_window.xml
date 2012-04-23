@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="62"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="62"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1ad3f82c7cb1ea50be9807604a8ac71905" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -58,7 +58,7 @@
 <para>The parameters are the same as <ref refid="classwx_scrolled_1a01d0ecb5daa59ebb7a0806f16b7ac267" kindref="member">wxScrolled::wxScrolled()</ref> constructor. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="72"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="72"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1a6c8cb22b488e8d59ece87fd169140718" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -84,7 +84,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="91"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="91"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1ac58ba50face285ddfd28a89f548f34c9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_html_container_cell" kindref="compound">wxHtmlContainerCell</ref> *</type>
@@ -98,7 +98,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="98"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="98"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1ac4f09301ceab86ff1ccae9209d8ba0d6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -111,7 +111,7 @@
 <para>If no page is opened or if the displayed page wasn&apos;t produced by call to <ref refid="classwx_html_window_1ab7086e665bb533a34dc11ab29465db09" kindref="member">LoadPage()</ref>, empty string is returned. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="105"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="105"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1a2e4e27fbc971881cfd2b66f69e67b30f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -124,7 +124,7 @@
 <para>If no page is opened or if the displayed page wasn&apos;t produced by call to <ref refid="classwx_html_window_1ab7086e665bb533a34dc11ab29465db09" kindref="member">LoadPage()</ref>, empty string is returned. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="112"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="112"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1a942a11d4cb16d3ab8de5b180dfc13f09" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -137,7 +137,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="118"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="118"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1a6613b1d52e5ba1e8a667270306e4f0aa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_frame" kindref="compound">wxFrame</ref> *</type>
@@ -150,7 +150,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="123"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="123"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1ac445bd13cce6579d1d74348b6771bc21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -163,7 +163,7 @@
 <para>Only pages displayed using <ref refid="classwx_html_window_1ab7086e665bb533a34dc11ab29465db09" kindref="member">LoadPage()</ref> are stored in history list. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="129"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="129"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1a43b2e1f13a8ef56144a351fcf1765d33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -176,7 +176,7 @@
 <para><ref refid="classwx_html_window_1ac445bd13cce6579d1d74348b6771bc21" kindref="member">HistoryBack()</ref> won&apos;t fail. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="135"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="135"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1a99097f5c7cfd6198c1309fe2713a5210" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -189,7 +189,7 @@
 <para><ref refid="classwx_html_window_1a385e056dba5b8f3d480f7053a9fb305f" kindref="member">HistoryForward()</ref> won&apos;t fail. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="141"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="141"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1a0cf30ee8ee03ff0fa6ee42fb349bb851" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -202,7 +202,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="146"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="146"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1a385e056dba5b8f3d480f7053a9fb305f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -215,7 +215,7 @@
 <para>Only pages displayed using <ref refid="classwx_html_window_1ab7086e665bb533a34dc11ab29465db09" kindref="member">LoadPage()</ref> are stored in history list. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="152"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="152"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1a1ffb71e2736cbe36740fd38bc3d100b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -234,7 +234,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="161"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="161"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1ab7086e665bb533a34dc11ab29465db09" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -261,7 +261,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="176"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="176"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1a519281dbfbddc163b5e73fd6a10cf90a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -278,7 +278,7 @@
 <para>Default behaviour is to emit a <ref refid="classwx_html_link_event" kindref="compound">wxHtmlLinkEvent</ref> and, if the event was not processed or skipped, call <ref refid="classwx_html_window_1ab7086e665bb533a34dc11ab29465db09" kindref="member">LoadPage()</ref> and do nothing else.</para><para>Overloading this method is deprecated; intercept the event instead.</para><para>Also see <ref refid="classwx_html_link_info" kindref="compound">wxHtmlLinkInfo</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="187"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="187"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1aaeca6abb2c4c5248d418ca19ee51206d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>wxHtmlOpeningStatus</type>
@@ -329,7 +329,7 @@ The return value is:<itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="219"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="219"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1ab8e6c857c4ca602387f38dbfa99ffb35" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -346,7 +346,7 @@ The return value is:<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="224"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="224"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1a22f8b0b78251259c01ce5e8f17294fd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -383,7 +383,7 @@ The return value is:<itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="238"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="238"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1a54459a2d5c5cc71f2849c5aa1fbd5e68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -397,7 +397,7 @@ The return value is:<itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="245"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="245"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1a15acd01f247257d427856713831db699" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -415,7 +415,7 @@ The return value is:<itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="255"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="255"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1ad3555a940e7916620e60b5f496982b52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -433,7 +433,7 @@ The return value is:<itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="264"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="264"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1a341d15c232a620c7c8ec4f72911c954b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -446,7 +446,7 @@ The return value is:<itemizedlist>
 <para>Returns an empty string if no text is currently selected. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="270"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="270"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1a3e2350cbf8bc74ba8451ab3f953046dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -472,7 +472,7 @@ The return value is:<itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="280"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="280"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1a31b77979403242da3ccd40bea9b29b87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -499,7 +499,7 @@ The return value is:<itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="289"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="289"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1a746ac926326153fdccf38a5d36b6288d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -528,7 +528,7 @@ The return value is:<itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="298"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="298"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1ac6d0335b1bb749b498598fc5a3b32703" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -555,7 +555,7 @@ The return value is:<itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="313"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="313"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1ab524aecb99227497a569981a2f11f67f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -576,7 +576,7 @@ The return value is:<itemizedlist>
 <para><emphasis>format</emphasis> is the format of the frame title, e.g. &quot;HtmlHelp : %s&quot;. It must contain exactly one s. This s is substituted with HTML page title. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="321"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="321"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1a81b658e84cbaf395eddd2d9c40b00c70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -601,7 +601,7 @@ The return value is:<itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="330"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="330"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1a009c5938a5aa1858c48aa61c71864ff6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -639,7 +639,7 @@ The return value is:<itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="344"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="344"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1aacc7ffe8844ca638008fff488b05314c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -652,7 +652,7 @@ The return value is:<itemizedlist>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="349"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="349"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1a46bb9859128a69e2d943a248c7bd41bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -689,7 +689,7 @@ The return value is:<itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="366"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="366"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -710,7 +710,7 @@ The return value is:<itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="81"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="81"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -771,7 +771,7 @@ The return value is:<itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="391"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="391"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_window_1a0d11dc952a4cb88bdf5a404adbdb3b93" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -818,7 +818,7 @@ The return value is:<itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="407"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="407"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -841,30 +841,30 @@ The return value is:<itemizedlist>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref></para><para><simplesect kind="see"><para><ref refid="classwx_html_link_event" kindref="compound">wxHtmlLinkEvent</ref>, <ref refid="classwx_html_cell_event" kindref="compound">wxHtmlCellEvent</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7139">
+      <node id="7326">
         <label>wxHtmlWindow</label>
         <link refid="classwx_html_window"/>
-        <childnode refid="7140" relation="public-inheritance">
+        <childnode refid="7327" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7140">
+      <node id="7327">
         <label>wxScrolledWindow</label>
         <link refid="classwx_scrolled"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7141">
+      <node id="7328">
         <label>wxHtmlWindow</label>
         <link refid="classwx_html_window"/>
-        <childnode refid="7142" relation="public-inheritance">
+        <childnode refid="7329" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7142">
+      <node id="7329">
         <label>wxScrolledWindow</label>
         <link refid="classwx_scrolled"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="57" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" bodystart="56" bodyend="408"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="57" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" bodystart="56" bodyend="408"/>
     <listofallmembers>
       <member refid="classwx_html_window_1a7d4293c4d2f03fd8d6252c62573b0529" prot="public" virt="non-virtual"><scope>wxHtmlWindow</scope><name>AddFilter</name></member>
       <member refid="classwx_scrolled_1a5b5e335677055e4107903f7d5dad042f" prot="public" virt="virtual"><scope>wxHtmlWindow</scope><name>AdjustScrollbars</name></member>

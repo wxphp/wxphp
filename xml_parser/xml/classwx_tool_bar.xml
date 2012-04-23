@@ -6,12 +6,12 @@
     <includes local="no">wx/toolbar.h</includes>
       <sectiondef kind="user-defined">
       <memberdef kind="function" id="classwx_tool_bar_1acd25fec352f66fb174f7f81a7d834b21" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>wxToolBarToolBase *</type>
+        <type><ref refid="classwx_tool_bar_tool_base" kindref="compound">wxToolBarToolBase</ref> *</type>
         <definition>virtual wxToolBarToolBase* wxToolBar::AddTool</definition>
         <argsstring>(wxToolBarToolBase *tool)</argsstring>
         <name>AddTool</name>
         <param>
-          <type>wxToolBarToolBase *</type>
+          <type><ref refid="classwx_tool_bar_tool_base" kindref="compound">wxToolBarToolBase</ref> *</type>
           <declname>tool</declname>
         </param>
         <briefdescription>
@@ -26,14 +26,14 @@
 </parameteritem>
 </parameterlist>
 <simplesect kind="remark"><para>After you have added tools to a toolbar, you must call <ref refid="classwx_tool_bar_1abb31ce337a2d3c1e30e8e3748905ecbf" kindref="member">Realize()</ref> in order to have the tools appear.</para></simplesect>
-<simplesect kind="see"><para><ref refid="classwx_tool_bar_1acff16fd0b48ae42e9d73597fe66a8cca" kindref="member">AddSeparator()</ref>, <ref refid="classwx_tool_bar_1a2e650357ee8872a7443b3c4276d5cbd4" kindref="member">AddCheckTool()</ref>, <ref refid="classwx_tool_bar_1abd8741bd04f531ccfa840e6c0ccc4c65" kindref="member">AddRadioTool()</ref>, <ref refid="classwx_tool_bar_1ae286b9b2736021d69b64022b3b7d3bb9" kindref="member">InsertTool()</ref>, <ref refid="classwx_tool_bar_1aea3c91f9b3d7505e4b511f678883c73d" kindref="member">DeleteTool()</ref>, <ref refid="classwx_tool_bar_1abb31ce337a2d3c1e30e8e3748905ecbf" kindref="member">Realize()</ref>, <ref refid="classwx_tool_bar_1a77e36541602e9c0f7daa4e9bf8b6e33e" kindref="member">SetDropdownMenu()</ref> </para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_tool_bar_1acff16fd0b48ae42e9d73597fe66a8cca" kindref="member">AddSeparator()</ref>, <ref refid="classwx_tool_bar_1a2e650357ee8872a7443b3c4276d5cbd4" kindref="member">AddCheckTool()</ref>, <ref refid="classwx_tool_bar_1abd8741bd04f531ccfa840e6c0ccc4c65" kindref="member">AddRadioTool()</ref>, <ref refid="classwx_tool_bar_1a584c791a0108fd848c9cd1e997316ad3" kindref="member">InsertTool()</ref>, <ref refid="classwx_tool_bar_1aea3c91f9b3d7505e4b511f678883c73d" kindref="member">DeleteTool()</ref>, <ref refid="classwx_tool_bar_1abb31ce337a2d3c1e30e8e3748905ecbf" kindref="member">Realize()</ref>, <ref refid="classwx_tool_bar_1a77e36541602e9c0f7daa4e9bf8b6e33e" kindref="member">SetDropdownMenu()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="265"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="402"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1adee3758ad1dfdb1b7921648729d1bf39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>wxToolBarToolBase *</type>
+        <type><ref refid="classwx_tool_bar_tool_base" kindref="compound">wxToolBarToolBase</ref> *</type>
         <definition>wxToolBarToolBase* wxToolBar::AddTool</definition>
         <argsstring>(int toolId, const wxString &amp;label, const wxBitmap &amp;bitmap, const wxString &amp;shortHelp=wxEmptyString, wxItemKind kind=wxITEM_NORMAL)</argsstring>
         <name>AddTool</name>
@@ -99,16 +99,16 @@
 </parameteritem>
 </parameterlist>
 <simplesect kind="remark"><para>After you have added tools to a toolbar, you must call <ref refid="classwx_tool_bar_1abb31ce337a2d3c1e30e8e3748905ecbf" kindref="member">Realize()</ref> in order to have the tools appear.</para></simplesect>
-<simplesect kind="see"><para><ref refid="classwx_tool_bar_1acff16fd0b48ae42e9d73597fe66a8cca" kindref="member">AddSeparator()</ref>, <ref refid="classwx_tool_bar_1a2e650357ee8872a7443b3c4276d5cbd4" kindref="member">AddCheckTool()</ref>, <ref refid="classwx_tool_bar_1abd8741bd04f531ccfa840e6c0ccc4c65" kindref="member">AddRadioTool()</ref>, <ref refid="classwx_tool_bar_1ae286b9b2736021d69b64022b3b7d3bb9" kindref="member">InsertTool()</ref>, <ref refid="classwx_tool_bar_1aea3c91f9b3d7505e4b511f678883c73d" kindref="member">DeleteTool()</ref>, <ref refid="classwx_tool_bar_1abb31ce337a2d3c1e30e8e3748905ecbf" kindref="member">Realize()</ref>, <ref refid="classwx_tool_bar_1a77e36541602e9c0f7daa4e9bf8b6e33e" kindref="member">SetDropdownMenu()</ref> </para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_tool_bar_1acff16fd0b48ae42e9d73597fe66a8cca" kindref="member">AddSeparator()</ref>, <ref refid="classwx_tool_bar_1a2e650357ee8872a7443b3c4276d5cbd4" kindref="member">AddCheckTool()</ref>, <ref refid="classwx_tool_bar_1abd8741bd04f531ccfa840e6c0ccc4c65" kindref="member">AddRadioTool()</ref>, <ref refid="classwx_tool_bar_1a584c791a0108fd848c9cd1e997316ad3" kindref="member">InsertTool()</ref>, <ref refid="classwx_tool_bar_1aea3c91f9b3d7505e4b511f678883c73d" kindref="member">DeleteTool()</ref>, <ref refid="classwx_tool_bar_1abb31ce337a2d3c1e30e8e3748905ecbf" kindref="member">Realize()</ref>, <ref refid="classwx_tool_bar_1a77e36541602e9c0f7daa4e9bf8b6e33e" kindref="member">SetDropdownMenu()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="299"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="436"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_tool_bar_1a24735383d7279bdd0c0cd4d95599f910" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>wxToolBarToolBase *</type>
+      <memberdef kind="function" id="classwx_tool_bar_1a487ba33ad14dd9fe6cb8c29a71d31d4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_tool_bar_tool_base" kindref="compound">wxToolBarToolBase</ref> *</type>
         <definition>wxToolBarToolBase* wxToolBar::AddTool</definition>
-        <argsstring>(int toolId, const wxString &amp;label, const wxBitmap &amp;bitmap, const wxBitmap &amp;bmpDisabled=wxNullBitmap, wxItemKind kind=wxITEM_NORMAL, const wxString &amp;shortHelpString=wxEmptyString, const wxString &amp;longHelpString=wxEmptyString, wxObject *clientData=NULL)</argsstring>
+        <argsstring>(int toolId, const wxString &amp;label, const wxBitmap &amp;bitmap, const wxBitmap &amp;bmpDisabled, wxItemKind kind=wxITEM_NORMAL, const wxString &amp;shortHelpString=wxEmptyString, const wxString &amp;longHelpString=wxEmptyString, wxObject *clientData=NULL)</argsstring>
         <name>AddTool</name>
         <param>
           <type>int</type>
@@ -125,7 +125,6 @@
         <param>
           <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
           <declname>bmpDisabled</declname>
-          <defval><ref refid="interface_2wx_2bitmap_8h_1a2947690e84b8fdb2e37b79a4af8f8a21" kindref="member">wxNullBitmap</ref></defval>
         </param>
         <param>
           <type><ref refid="defs_8h_1abd0c640814a55e4adda3bce698646d2d" kindref="member">wxItemKind</ref></type>
@@ -208,18 +207,18 @@
 </parameteritem>
 </parameterlist>
 <simplesect kind="remark"><para>After you have added tools to a toolbar, you must call <ref refid="classwx_tool_bar_1abb31ce337a2d3c1e30e8e3748905ecbf" kindref="member">Realize()</ref> in order to have the tools appear.</para></simplesect>
-<simplesect kind="see"><para><ref refid="classwx_tool_bar_1acff16fd0b48ae42e9d73597fe66a8cca" kindref="member">AddSeparator()</ref>, <ref refid="classwx_tool_bar_1a2e650357ee8872a7443b3c4276d5cbd4" kindref="member">AddCheckTool()</ref>, <ref refid="classwx_tool_bar_1abd8741bd04f531ccfa840e6c0ccc4c65" kindref="member">AddRadioTool()</ref>, <ref refid="classwx_tool_bar_1ae286b9b2736021d69b64022b3b7d3bb9" kindref="member">InsertTool()</ref>, <ref refid="classwx_tool_bar_1aea3c91f9b3d7505e4b511f678883c73d" kindref="member">DeleteTool()</ref>, <ref refid="classwx_tool_bar_1abb31ce337a2d3c1e30e8e3748905ecbf" kindref="member">Realize()</ref>, <ref refid="classwx_tool_bar_1a77e36541602e9c0f7daa4e9bf8b6e33e" kindref="member">SetDropdownMenu()</ref> </para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_tool_bar_1acff16fd0b48ae42e9d73597fe66a8cca" kindref="member">AddSeparator()</ref>, <ref refid="classwx_tool_bar_1a2e650357ee8872a7443b3c4276d5cbd4" kindref="member">AddCheckTool()</ref>, <ref refid="classwx_tool_bar_1abd8741bd04f531ccfa840e6c0ccc4c65" kindref="member">AddRadioTool()</ref>, <ref refid="classwx_tool_bar_1a584c791a0108fd848c9cd1e997316ad3" kindref="member">InsertTool()</ref>, <ref refid="classwx_tool_bar_1aea3c91f9b3d7505e4b511f678883c73d" kindref="member">DeleteTool()</ref>, <ref refid="classwx_tool_bar_1abb31ce337a2d3c1e30e8e3748905ecbf" kindref="member">Realize()</ref>, <ref refid="classwx_tool_bar_1a77e36541602e9c0f7daa4e9bf8b6e33e" kindref="member">SetDropdownMenu()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="344"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="481"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
-      <memberdef kind="function" id="classwx_tool_bar_1ae286b9b2736021d69b64022b3b7d3bb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>wxToolBarToolBase *</type>
+      <memberdef kind="function" id="classwx_tool_bar_1a584c791a0108fd848c9cd1e997316ad3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_tool_bar_tool_base" kindref="compound">wxToolBarToolBase</ref> *</type>
         <definition>wxToolBarToolBase* wxToolBar::InsertTool</definition>
-        <argsstring>(size_t pos, int toolId, const wxBitmap &amp;bitmap1, const wxBitmap &amp;bitmap2=wxNullBitmap, bool isToggle=false, wxObject *clientData=NULL, const wxString &amp;shortHelpString=wxEmptyString, const wxString &amp;longHelpString=wxEmptyString)</argsstring>
+        <argsstring>(size_t pos, int toolId, const wxString &amp;label, const wxBitmap &amp;bitmap, const wxBitmap &amp;bmpDisabled=wxNullBitmap, wxItemKind kind=wxITEM_NORMAL, const wxString &amp;shortHelp=wxEmptyString, const wxString &amp;longHelp=wxEmptyString, wxObject *clientData=NULL)</argsstring>
         <name>InsertTool</name>
         <param>
           <type>size_t</type>
@@ -230,33 +229,37 @@
           <declname>toolId</declname>
         </param>
         <param>
-          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
-          <declname>bitmap1</declname>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>label</declname>
         </param>
         <param>
           <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
-          <declname>bitmap2</declname>
+          <declname>bitmap</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>bmpDisabled</declname>
           <defval><ref refid="interface_2wx_2bitmap_8h_1a2947690e84b8fdb2e37b79a4af8f8a21" kindref="member">wxNullBitmap</ref></defval>
         </param>
         <param>
-          <type>bool</type>
-          <declname>isToggle</declname>
-          <defval>false</defval>
+          <type><ref refid="defs_8h_1abd0c640814a55e4adda3bce698646d2d" kindref="member">wxItemKind</ref></type>
+          <declname>kind</declname>
+          <defval>wxITEM_NORMAL</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>shortHelp</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>longHelp</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
         </param>
         <param>
           <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
           <declname>clientData</declname>
           <defval>NULL</defval>
-        </param>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>shortHelpString</declname>
-          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
-        </param>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>longHelpString</declname>
-          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
         </param>
         <briefdescription>
 <para>Inserts the tool with the specified attributes into the toolbar at the given position. </para>        </briefdescription>
@@ -266,10 +269,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="589"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="728"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a95ac49d3dd205b02425ca6da0686d612" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>wxToolBarToolBase *</type>
+        <type><ref refid="classwx_tool_bar_tool_base" kindref="compound">wxToolBarToolBase</ref> *</type>
         <definition>wxToolBarToolBase* wxToolBar::InsertTool</definition>
         <argsstring>(size_t pos, wxToolBarToolBase *tool)</argsstring>
         <name>InsertTool</name>
@@ -278,7 +281,7 @@
           <declname>pos</declname>
         </param>
         <param>
-          <type>wxToolBarToolBase *</type>
+          <type><ref refid="classwx_tool_bar_tool_base" kindref="compound">wxToolBarToolBase</ref> *</type>
           <declname>tool</declname>
         </param>
         <briefdescription>
@@ -289,7 +292,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="591"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="731"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -329,7 +332,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="701"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="845"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a7f793b01108f804ab076d05420b420da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -356,7 +359,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="715"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="859"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -371,7 +374,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="135"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="272"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a1c5d3a2853b41a2ef728dad18c321e1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -456,7 +459,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="164"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="301"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a612596bf858e2b2298e842d4c7cad7c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -469,10 +472,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="169"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="306"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a2e650357ee8872a7443b3c4276d5cbd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>wxToolBarToolBase *</type>
+        <type><ref refid="classwx_tool_bar_tool_base" kindref="compound">wxToolBarToolBase</ref> *</type>
         <definition>wxToolBarToolBase* wxToolBar::AddCheckTool</definition>
         <argsstring>(int toolId, const wxString &amp;label, const wxBitmap &amp;bitmap1, const wxBitmap &amp;bmpDisabled=wxNullBitmap, const wxString &amp;shortHelp=wxEmptyString, const wxString &amp;longHelp=wxEmptyString, wxObject *clientData=NULL)</argsstring>
         <name>AddCheckTool</name>
@@ -515,10 +518,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="182"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="319"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1aec263a8e47372eb78e91b8db8797731d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>wxToolBarToolBase *</type>
+        <type><ref refid="classwx_tool_bar_tool_base" kindref="compound">wxToolBarToolBase</ref> *</type>
         <definition>virtual wxToolBarToolBase* wxToolBar::AddControl</definition>
         <argsstring>(wxControl *control, const wxString &amp;label=wxEmptyString)</argsstring>
         <name>AddControl</name>
@@ -553,10 +556,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="201"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="338"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1abd8741bd04f531ccfa840e6c0ccc4c65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>wxToolBarToolBase *</type>
+        <type><ref refid="classwx_tool_bar_tool_base" kindref="compound">wxToolBarToolBase</ref> *</type>
         <definition>wxToolBarToolBase* wxToolBar::AddRadioTool</definition>
         <argsstring>(int toolId, const wxString &amp;label, const wxBitmap &amp;bitmap1, const wxBitmap &amp;bmpDisabled=wxNullBitmap, const wxString &amp;shortHelp=wxEmptyString, const wxString &amp;longHelp=wxEmptyString, wxObject *clientData=NULL)</argsstring>
         <name>AddRadioTool</name>
@@ -599,10 +602,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="222"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="359"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1acff16fd0b48ae42e9d73597fe66a8cca" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>wxToolBarToolBase *</type>
+        <type><ref refid="classwx_tool_bar_tool_base" kindref="compound">wxToolBarToolBase</ref> *</type>
         <definition>virtual wxToolBarToolBase* wxToolBar::AddSeparator</definition>
         <argsstring>()</argsstring>
         <name>AddSeparator</name>
@@ -613,10 +616,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="233"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="370"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1adb30df5ae52f2fabc974d0dd1376f5cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>wxToolBarToolBase *</type>
+        <type><ref refid="classwx_tool_bar_tool_base" kindref="compound">wxToolBarToolBase</ref> *</type>
         <definition>wxToolBarToolBase* wxToolBar::AddStretchableSpace</definition>
         <argsstring>()</argsstring>
         <name>AddStretchableSpace</name>
@@ -628,7 +631,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="250"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="387"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1ad431696ec829540e2f9889588f6589a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -641,7 +644,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="350"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="487"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1aea3c91f9b3d7505e4b511f678883c73d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -661,7 +664,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="364"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="501"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a441f430c309c1fa8e43803fe09c2fa25" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -678,7 +681,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="370"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="507"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1ad6b3481a2a6d71cad7b0923adf15c9d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -716,10 +719,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="386"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="523"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a1157728ed141356867ade93418dd87c1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>wxToolBarToolBase *</type>
+        <type><ref refid="classwx_tool_bar_tool_base" kindref="compound">wxToolBarToolBase</ref> *</type>
         <definition>wxToolBarToolBase* wxToolBar::FindById</definition>
         <argsstring>(int id) const </argsstring>
         <name>FindById</name>
@@ -733,7 +736,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="392"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="529"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a21e7604b705b699fcf1fe5eecb9976e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_control" kindref="compound">wxControl</ref> *</type>
@@ -750,10 +753,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="398"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="535"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1ae4968860591b08c4e00a9d20e3bb73af" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
-        <type>wxToolBarToolBase *</type>
+        <type><ref refid="classwx_tool_bar_tool_base" kindref="compound">wxToolBarToolBase</ref> *</type>
         <definition>virtual wxToolBarToolBase* wxToolBar::FindToolForPosition</definition>
         <argsstring>(wxCoord x, wxCoord y) const </argsstring>
         <name>FindToolForPosition</name>
@@ -788,7 +791,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="413"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="550"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a69a14d0bc57db1cc8da86c48a7f6610a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -802,7 +805,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="421"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="558"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a17fb94f787394647021e7f4327ea0c04" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -817,10 +820,10 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="439"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="576"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a2a40b1f6f6dc8483d721997afd4fcf05" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>const wxToolBarToolBase *</type>
+        <type>const <ref refid="classwx_tool_bar_tool_base" kindref="compound">wxToolBarToolBase</ref> *</type>
         <definition>const wxToolBarToolBase* wxToolBar::GetToolByPos</definition>
         <argsstring>(int pos) const </argsstring>
         <name>GetToolByPos</name>
@@ -836,7 +839,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="450"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="587"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a962ad5609303d6ed5151e396be47b501" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
@@ -862,7 +865,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="460"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="597"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a5e00931bc47567febe8c693b4ca4245d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -889,7 +892,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="472"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="609"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a708978cb19385f9ee3a6f688b8be47df" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -915,7 +918,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="482"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="619"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a9020f56133c3b793068618c1e8a798fc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -929,7 +932,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="489"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="626"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a50b893fd3fe02d123cf1f54f74f7e23f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -954,7 +957,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="498"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="635"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1aa275ee6955ea92ed633b3c952e620829" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -968,7 +971,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="505"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="642"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a8ae92fba03e57f40c626f41217cc2fb1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -994,7 +997,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="515"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="652"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1aef3f23ccc5faee6fc9de7233ac959612" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -1008,7 +1011,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="523"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="660"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1ab33c570054526074d0ad6a74868bb7ee" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -1035,7 +1038,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="535"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="672"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a4296cfe7a856e20f3da5805d2c21e91c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -1048,10 +1051,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="540"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="677"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a479503a1e3be0f387fd2da9365fc8eb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>wxToolBarToolBase *</type>
+        <type><ref refid="classwx_tool_bar_tool_base" kindref="compound">wxToolBarToolBase</ref> *</type>
         <definition>virtual wxToolBarToolBase* wxToolBar::InsertControl</definition>
         <argsstring>(size_t pos, wxControl *control, const wxString &amp;label=wxEmptyString)</argsstring>
         <name>InsertControl</name>
@@ -1071,14 +1074,14 @@
         <briefdescription>
 <para>Inserts the control into the toolbar at the given position. </para>        </briefdescription>
         <detaileddescription>
-<para>You must call <ref refid="classwx_tool_bar_1abb31ce337a2d3c1e30e8e3748905ecbf" kindref="member">Realize()</ref> for the change to take place.</para><para><simplesect kind="see"><para><ref refid="classwx_tool_bar_1aec263a8e47372eb78e91b8db8797731d" kindref="member">AddControl()</ref>, <ref refid="classwx_tool_bar_1ae286b9b2736021d69b64022b3b7d3bb9" kindref="member">InsertTool()</ref> </para></simplesect>
+<para>You must call <ref refid="classwx_tool_bar_1abb31ce337a2d3c1e30e8e3748905ecbf" kindref="member">Realize()</ref> for the change to take place.</para><para><simplesect kind="see"><para><ref refid="classwx_tool_bar_1aec263a8e47372eb78e91b8db8797731d" kindref="member">AddControl()</ref>, <ref refid="classwx_tool_bar_1a584c791a0108fd848c9cd1e997316ad3" kindref="member">InsertTool()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="549"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="686"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a57e48a59e3baa218dd294be4357cde7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>wxToolBarToolBase *</type>
+        <type><ref refid="classwx_tool_bar_tool_base" kindref="compound">wxToolBarToolBase</ref> *</type>
         <definition>virtual wxToolBarToolBase* wxToolBar::InsertSeparator</definition>
         <argsstring>(size_t pos)</argsstring>
         <name>InsertSeparator</name>
@@ -1089,14 +1092,14 @@
         <briefdescription>
 <para>Inserts the separator into the toolbar at the given position. </para>        </briefdescription>
         <detaileddescription>
-<para>You must call <ref refid="classwx_tool_bar_1abb31ce337a2d3c1e30e8e3748905ecbf" kindref="member">Realize()</ref> for the change to take place.</para><para><simplesect kind="see"><para><ref refid="classwx_tool_bar_1acff16fd0b48ae42e9d73597fe66a8cca" kindref="member">AddSeparator()</ref>, <ref refid="classwx_tool_bar_1ae286b9b2736021d69b64022b3b7d3bb9" kindref="member">InsertTool()</ref> </para></simplesect>
+<para>You must call <ref refid="classwx_tool_bar_1abb31ce337a2d3c1e30e8e3748905ecbf" kindref="member">Realize()</ref> for the change to take place.</para><para><simplesect kind="see"><para><ref refid="classwx_tool_bar_1acff16fd0b48ae42e9d73597fe66a8cca" kindref="member">AddSeparator()</ref>, <ref refid="classwx_tool_bar_1a584c791a0108fd848c9cd1e997316ad3" kindref="member">InsertTool()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="557"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="694"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1ae1c54313589268d8cd8ff692da4294af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>wxToolBarToolBase *</type>
+        <type><ref refid="classwx_tool_bar_tool_base" kindref="compound">wxToolBarToolBase</ref> *</type>
         <definition>wxToolBarToolBase* wxToolBar::InsertStretchableSpace</definition>
         <argsstring>(size_t pos)</argsstring>
         <name>InsertStretchableSpace</name>
@@ -1107,12 +1110,12 @@
         <briefdescription>
 <para>Inserts a stretchable space at the given position. </para>        </briefdescription>
         <detaileddescription>
-<para>See <ref refid="classwx_tool_bar_1adb30df5ae52f2fabc974d0dd1376f5cd" kindref="member">AddStretchableSpace()</ref> for details about stretchable spaces.</para><para><simplesect kind="see"><para><ref refid="classwx_tool_bar_1ae286b9b2736021d69b64022b3b7d3bb9" kindref="member">InsertTool()</ref>, <ref refid="classwx_tool_bar_1a57e48a59e3baa218dd294be4357cde7c" kindref="member">InsertSeparator()</ref></para></simplesect>
+<para>See <ref refid="classwx_tool_bar_1adb30df5ae52f2fabc974d0dd1376f5cd" kindref="member">AddStretchableSpace()</ref> for details about stretchable spaces.</para><para><simplesect kind="see"><para><ref refid="classwx_tool_bar_1a584c791a0108fd848c9cd1e997316ad3" kindref="member">InsertTool()</ref>, <ref refid="classwx_tool_bar_1a57e48a59e3baa218dd294be4357cde7c" kindref="member">InsertSeparator()</ref></para></simplesect>
 <simplesect kind="since"><para>2.9.1 </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="568"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="705"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1ab25e206f57a873d909cf5c45d2f91971" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -1150,7 +1153,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="612"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="752"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a11fb9b5c65661ea63d28198ce156cf4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1176,7 +1179,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="630"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="770"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1add255ea52fdf9d5bfde64a22bf94dab6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1198,7 +1201,7 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000057"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This is the old way of detecting tool right clicks; although it will still work, you should use the EVT_TOOL_RCLICKED() macro instead.</para></xrefdescription></xrefsect></para><para>Called when the user clicks on a tool with the right mouse button. The programmer should override this function to detect right tool clicks.</para><para><parameterlist kind="param"><parameteritem>
+<para><xrefsect id="deprecated_1_deprecated000056"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This is the old way of detecting tool right clicks; although it will still work, you should use the EVT_TOOL_RCLICKED() macro instead.</para></xrefdescription></xrefsect></para><para>Called when the user clicks on a tool with the right mouse button. The programmer should override this function to detect right tool clicks.</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>toolId</parametername>
 </parameternamelist>
@@ -1225,7 +1228,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="651"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="791"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1abb31ce337a2d3c1e30e8e3748905ecbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -1238,10 +1241,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="656"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="796"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a50f65799ae6294ee4ba08a1c75120089" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>wxToolBarToolBase *</type>
+        <type><ref refid="classwx_tool_bar_tool_base" kindref="compound">wxToolBarToolBase</ref> *</type>
         <definition>virtual wxToolBarToolBase* wxToolBar::RemoveTool</definition>
         <argsstring>(int id)</argsstring>
         <name>RemoveTool</name>
@@ -1257,7 +1260,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="668"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="808"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1ab360aaa5af1d07783071351cbe5c836b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1271,10 +1274,10 @@
         <briefdescription>
 <para>Sets the bitmap resource identifier for specifying tool bitmaps as indices into a custom bitmap. </para>        </briefdescription>
         <detaileddescription>
-<para>Windows CE only. </para>        </detaileddescription>
+<para>This is a Windows CE-specific method not available in the other ports.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw_wince" kindref="member">wxWinCE</ref> port.  <onlyfor>wxmsw_wince</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="674"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="818"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a77e36541602e9c0f7daa4e9bf8b6e33e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1295,7 +1298,7 @@
 <para>The tool itself will delete the menu when it&apos;s no longer needed. Only supported under GTK+ und MSW.</para><para>If you define a EVT_TOOL_DROPDOWN() handler in your program, you must call <ref refid="classwx_event_1a98eb20b76106f9a933c2eb3ee119f66c" kindref="member">wxEvent::Skip()</ref> from it or the menu won&apos;t be displayed. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="684"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="828"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a57398893cb553fad90ffa7cd18cb1882" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1322,7 +1325,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="730"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="874"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a4e3c80eeecb4723c9d4f090caab5151f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1351,7 +1354,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="738"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="882"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a051db073ec1aff7bb69cb58baa1a9ba9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1381,7 +1384,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="753"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="897"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1abaf8db63f2bc75e0de67280b7e83711d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1419,7 +1422,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="768"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="912"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a46b05975759ab8dc745908210ce17fcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1448,7 +1451,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="777"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="921"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a26ddfe7e52a93fbc4c169159863c629c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1475,7 +1478,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="791"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="935"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a163c9bfdd0f9f30707688bf498ab788c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1501,7 +1504,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="801"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="945"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a28ad34823b70faeae9a64c6152b8fcd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1539,7 +1542,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="817"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="961"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tool_bar_1a9a7a9fb115b35f267d4b10a293667542" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1576,13 +1579,84 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="830"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="974"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_tool_bar_1a1b4f0cacaff5e06c4894294c88b0b4f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_tool_bar_tool_base" kindref="compound">wxToolBarToolBase</ref> *</type>
+        <definition>virtual wxToolBarToolBase* wxToolBar::CreateTool</definition>
+        <argsstring>(int toolId, const wxString &amp;label, const wxBitmap &amp;bmpNormal, const wxBitmap &amp;bmpDisabled=wxNullBitmap, wxItemKind kind=wxITEM_NORMAL, wxObject *clientData=NULL, const wxString &amp;shortHelp=wxEmptyString, const wxString &amp;longHelp=wxEmptyString)</argsstring>
+        <name>CreateTool</name>
+        <param>
+          <type>int</type>
+          <declname>toolId</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>label</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>bmpNormal</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
+          <declname>bmpDisabled</declname>
+          <defval><ref refid="interface_2wx_2bitmap_8h_1a2947690e84b8fdb2e37b79a4af8f8a21" kindref="member">wxNullBitmap</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="defs_8h_1abd0c640814a55e4adda3bce698646d2d" kindref="member">wxItemKind</ref></type>
+          <declname>kind</declname>
+          <defval>wxITEM_NORMAL</defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
+          <declname>clientData</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>shortHelp</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>longHelp</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <briefdescription>
+<para>Factory function to create a new toolbar tool. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="987"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_tool_bar_1a2ad5be5698778b5d215dcabf8b907701" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classwx_tool_bar_tool_base" kindref="compound">wxToolBarToolBase</ref> *</type>
+        <definition>virtual wxToolBarToolBase* wxToolBar::CreateTool</definition>
+        <argsstring>(wxControl *control, const wxString &amp;label)</argsstring>
+        <name>CreateTool</name>
+        <param>
+          <type><ref refid="classwx_control" kindref="compound">wxControl</ref> *</type>
+          <declname>control</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>label</declname>
+        </param>
+        <briefdescription>
+<para>Factory function to create a new control toolbar tool. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="992"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>A toolbar is a bar of buttons and/or other controls usually placed below the menu bar in a <ref refid="classwx_frame" kindref="compound">wxFrame</ref>. </para>    </briefdescription>
     <detaileddescription>
-<para>You may create a toolbar that is managed by a frame calling <ref refid="classwx_frame_1a529698edc2fd2037ac8578dadafad0e2" kindref="member">wxFrame::CreateToolBar()</ref>. Under Pocket PC, you should always use this function for creating the toolbar to be managed by the frame, so that wxWidgets can use a combined menubar and toolbar. Where you manage your own toolbars, create <ref refid="classwx_tool_bar" kindref="compound">wxToolBar</ref> as usual.</para><para>There are several different types of tools you can add to a toolbar. These types are controlled by the <ref refid="defs_8h_1abd0c640814a55e4adda3bce698646d2d" kindref="member">wxItemKind</ref> enumeration.</para><para>Note that many methods in <ref refid="classwx_tool_bar" kindref="compound">wxToolBar</ref> such as <ref refid="classwx_tool_bar_1acd25fec352f66fb174f7f81a7d834b21" kindref="member">wxToolBar::AddTool</ref> return a <computeroutput>wxToolBarToolBase*</computeroutput> object. This should be regarded as an opaque handle representing the newly added toolbar item, providing access to its id and position within the toolbar. Changes to the item&apos;s state should be made through calls to <ref refid="classwx_tool_bar" kindref="compound">wxToolBar</ref> methods, for example <ref refid="classwx_tool_bar_1ad6b3481a2a6d71cad7b0923adf15c9d0" kindref="member">wxToolBar::EnableTool</ref>. Calls to <computeroutput>wxToolBarToolBase</computeroutput> methods (undocumented by purpose) will not change the visible state of the item within the tool bar.</para><para><bold>wxMSW note</bold>: Note that under wxMSW toolbar paints tools to reflect system-wide colours. If you use more than 16 colours in your tool bitmaps, you may wish to suppress this behaviour, otherwise system colours in your bitmaps will inadvertently be mapped to system colours. To do this, set the msw.remap system option before creating the toolbar: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_system_options_1aa04043bfa0ffee30aaf09f2e436f6208" kindref="member" tooltip="Sets an option.">wxSystemOptions::SetOption</ref>(</highlight><highlight class="stringliteral">&quot;msw.remap&quot;</highlight><highlight class="normal">,<sp/>0);</highlight></codeline>
+<para>You may create a toolbar that is managed by a frame calling <ref refid="classwx_frame_1a529698edc2fd2037ac8578dadafad0e2" kindref="member">wxFrame::CreateToolBar()</ref>. Under Pocket PC, you should always use this function for creating the toolbar to be managed by the frame, so that wxWidgets can use a combined menubar and toolbar. Where you manage your own toolbars, create <ref refid="classwx_tool_bar" kindref="compound">wxToolBar</ref> as usual.</para><para>There are several different types of tools you can add to a toolbar. These types are controlled by the <ref refid="defs_8h_1abd0c640814a55e4adda3bce698646d2d" kindref="member">wxItemKind</ref> enumeration.</para><para>Note that many methods in <ref refid="classwx_tool_bar" kindref="compound">wxToolBar</ref> such as <ref refid="classwx_tool_bar_1acd25fec352f66fb174f7f81a7d834b21" kindref="member">wxToolBar::AddTool</ref> return a <computeroutput>wxToolBarToolBase*</computeroutput> object. This should be regarded as an opaque handle representing the newly added toolbar item, providing access to its id and position within the toolbar. Changes to the item&apos;s state should be made through calls to <ref refid="classwx_tool_bar" kindref="compound">wxToolBar</ref> methods, for example <ref refid="classwx_tool_bar_1ad6b3481a2a6d71cad7b0923adf15c9d0" kindref="member">wxToolBar::EnableTool</ref>. Calls to <computeroutput><ref refid="classwx_tool_bar_tool_base" kindref="compound">wxToolBarToolBase</ref></computeroutput> methods (undocumented by purpose) will not change the visible state of the item within the tool bar.</para><para><bold>wxMSW note</bold>: Note that under wxMSW toolbar paints tools to reflect system-wide colours. If you use more than 16 colours in your tool bitmaps, you may wish to suppress this behaviour, otherwise system colours in your bitmaps will inadvertently be mapped to system colours. To do this, set the msw.remap system option before creating the toolbar: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_system_options_1aa04043bfa0ffee30aaf09f2e436f6208" kindref="member" tooltip="Sets an option.">wxSystemOptions::SetOption</ref>(</highlight><highlight class="stringliteral">&quot;msw.remap&quot;</highlight><highlight class="normal">,<sp/>0);</highlight></codeline>
 </programlisting> If you wish to use 32-bit images (which include an alpha channel for transparency) use: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_system_options_1aa04043bfa0ffee30aaf09f2e436f6208" kindref="member" tooltip="Sets an option.">wxSystemOptions::SetOption</ref>(</highlight><highlight class="stringliteral">&quot;msw.remap&quot;</highlight><highlight class="normal">,<sp/>2);</highlight></codeline>
 </programlisting> Then colour remapping is switched off, and a transparent background used. But only use this option under Windows XP with true colour: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="interface_2wx_2app_8h_1a01fd2cb0a8fbaade87800e71a50e855d" kindref="member" tooltip="The global pointer to the singleton wxApp object.">wxTheApp</ref>-&gt;GetComCtl32Version()<sp/>&gt;=<sp/>600<sp/>&amp;&amp;<ref refid="group__group__funcmacro__gdi_1gaa144903f36a28751aa9b80b3b5f804ba" kindref="member" tooltip="Returns the depth of the display (a value of 1 denotes a monochrome display)."> ::wxDisplayDepth</ref>()<sp/>&gt;=<sp/>32)</highlight></codeline>
 </programlisting></para><para><heading level="2">Styles</heading>
@@ -1616,85 +1690,85 @@ The toolbar class emits menu commands in the same way that a frame menubar does,
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="overview_toolbar" kindref="compound">Toolbar Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10925">
+      <node id="11110">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10924">
+      <node id="11109">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10925" relation="public-inheritance">
+        <childnode refid="11110" relation="public-inheritance">
         </childnode>
-        <childnode refid="10926" relation="public-inheritance">
+        <childnode refid="11111" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10921">
+      <node id="11106">
         <label>wxToolBar</label>
         <link refid="classwx_tool_bar"/>
-        <childnode refid="10922" relation="public-inheritance">
+        <childnode refid="11107" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10926">
+      <node id="11111">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10922">
+      <node id="11107">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="10923" relation="public-inheritance">
+        <childnode refid="11108" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10923">
+      <node id="11108">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10924" relation="public-inheritance">
+        <childnode refid="11109" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10931">
+      <node id="11116">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10932" relation="usage">
+        <childnode refid="11117" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10930">
+      <node id="11115">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10931" relation="public-inheritance">
+        <childnode refid="11116" relation="public-inheritance">
         </childnode>
-        <childnode refid="10933" relation="public-inheritance">
+        <childnode refid="11118" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10927">
+      <node id="11112">
         <label>wxToolBar</label>
         <link refid="classwx_tool_bar"/>
-        <childnode refid="10928" relation="public-inheritance">
+        <childnode refid="11113" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10933">
+      <node id="11118">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10928">
+      <node id="11113">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="10929" relation="public-inheritance">
+        <childnode refid="11114" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10929">
+      <node id="11114">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10930" relation="public-inheritance">
+        <childnode refid="11115" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10932">
+      <node id="11117">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" line="130" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toolbar.h" bodystart="129" bodyend="831"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" line="267" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/toolbar.h" bodystart="266" bodyend="998"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxToolBar</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxToolBar</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -1709,7 +1783,7 @@ The toolbar class emits menu commands in the same way that a frame menubar does,
       <member refid="classwx_tool_bar_1adb30df5ae52f2fabc974d0dd1376f5cd" prot="public" virt="non-virtual"><scope>wxToolBar</scope><name>AddStretchableSpace</name></member>
       <member refid="classwx_tool_bar_1acd25fec352f66fb174f7f81a7d834b21" prot="public" virt="virtual"><scope>wxToolBar</scope><name>AddTool</name></member>
       <member refid="classwx_tool_bar_1adee3758ad1dfdb1b7921648729d1bf39" prot="public" virt="non-virtual"><scope>wxToolBar</scope><name>AddTool</name></member>
-      <member refid="classwx_tool_bar_1a24735383d7279bdd0c0cd4d95599f910" prot="public" virt="non-virtual"><scope>wxToolBar</scope><name>AddTool</name></member>
+      <member refid="classwx_tool_bar_1a487ba33ad14dd9fe6cb8c29a71d31d4f" prot="public" virt="non-virtual"><scope>wxToolBar</scope><name>AddTool</name></member>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxToolBar</scope><name>AllocExclusive</name></member>
       <member refid="classwx_window_1aae29552806a328c6a55ef8f07647f5ba" prot="public" virt="virtual"><scope>wxToolBar</scope><name>AlwaysShowScrollbars</name></member>
       <member refid="classwx_evt_handler_1a84b1e446053bda8f76f13336839e8b64" prot="public" virt="non-virtual"><scope>wxToolBar</scope><name>Bind</name></member>
@@ -1740,6 +1814,8 @@ The toolbar class emits menu commands in the same way that a frame menubar does,
       <member refid="classwx_control_1abe23789c94c86907463a0e8434be822a" prot="public" virt="non-virtual"><scope>wxToolBar</scope><name>Create</name></member>
       <member refid="classwx_window_1a95b7ca8faa033f5ab35458887c07bf38" prot="public" virt="non-virtual" ambiguityscope="wxWindow::"><scope>wxToolBar</scope><name>Create</name></member>
       <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxToolBar</scope><name>CreateRefData</name></member>
+      <member refid="classwx_tool_bar_1a1b4f0cacaff5e06c4894294c88b0b4f0" prot="public" virt="virtual"><scope>wxToolBar</scope><name>CreateTool</name></member>
+      <member refid="classwx_tool_bar_1a2ad5be5698778b5d215dcabf8b907701" prot="public" virt="virtual"><scope>wxToolBar</scope><name>CreateTool</name></member>
       <member refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" prot="public" virt="non-virtual"><scope>wxToolBar</scope><name>DeletePendingEvents</name></member>
       <member refid="classwx_tool_bar_1aea3c91f9b3d7505e4b511f678883c73d" prot="public" virt="virtual"><scope>wxToolBar</scope><name>DeleteTool</name></member>
       <member refid="classwx_tool_bar_1a441f430c309c1fa8e43803fe09c2fa25" prot="public" virt="virtual"><scope>wxToolBar</scope><name>DeleteToolByPos</name></member>
@@ -1887,10 +1963,11 @@ The toolbar class emits menu commands in the same way that a frame menubar does,
       <member refid="classwx_tool_bar_1a479503a1e3be0f387fd2da9365fc8eb4" prot="public" virt="virtual"><scope>wxToolBar</scope><name>InsertControl</name></member>
       <member refid="classwx_tool_bar_1a57e48a59e3baa218dd294be4357cde7c" prot="public" virt="virtual"><scope>wxToolBar</scope><name>InsertSeparator</name></member>
       <member refid="classwx_tool_bar_1ae1c54313589268d8cd8ff692da4294af" prot="public" virt="non-virtual"><scope>wxToolBar</scope><name>InsertStretchableSpace</name></member>
-      <member refid="classwx_tool_bar_1ae286b9b2736021d69b64022b3b7d3bb9" prot="public" virt="non-virtual"><scope>wxToolBar</scope><name>InsertTool</name></member>
+      <member refid="classwx_tool_bar_1a584c791a0108fd848c9cd1e997316ad3" prot="public" virt="non-virtual"><scope>wxToolBar</scope><name>InsertTool</name></member>
       <member refid="classwx_tool_bar_1a95ac49d3dd205b02425ca6da0686d612" prot="public" virt="non-virtual"><scope>wxToolBar</scope><name>InsertTool</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxToolBar</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxToolBar</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxToolBar</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxToolBar</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxToolBar</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxToolBar</scope><name>IsExposed</name></member>
@@ -1906,13 +1983,13 @@ The toolbar class emits menu commands in the same way that a frame menubar does,
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxToolBar</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxToolBar</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxToolBar</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxToolBar</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxToolBar</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxToolBar</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxToolBar</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxToolBar</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxToolBar</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxToolBar</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxToolBar</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxToolBar</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxToolBar</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxToolBar</scope><name>MoveAfterInTabOrder</name></member>
@@ -2051,7 +2128,6 @@ The toolbar class emits menu commands in the same way that a frame menubar does,
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxToolBar</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxToolBar</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxToolBar</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxToolBar</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxToolBar</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxToolBar</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxToolBar</scope><name>Unlink</name></member>

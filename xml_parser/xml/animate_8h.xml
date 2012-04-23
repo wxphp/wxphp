@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" bodystart="12" bodyend="24"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h" bodystart="12" bodyend="24"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -56,13 +56,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" line="298" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" bodystart="298" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h" line="298" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h" bodystart="298" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h"/>
   </compounddef>
 </doxygen>

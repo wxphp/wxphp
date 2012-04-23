@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="522"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="536"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_link_info_1ab2c26b3dd13d88c71440cdcefe224071" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -38,7 +38,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="528"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="542"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_link_info_1adb3d44722b840030432e5648099580fd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_mouse_event" kindref="compound">wxMouseEvent</ref> *</type>
@@ -51,7 +51,7 @@
 <para>Valid only within <ref refid="classwx_html_window_1a519281dbfbddc163b5e73fd6a10cf90a" kindref="member">wxHtmlWindow::OnLinkClicked</ref>, NULL otherwise. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="534"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="548"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_link_info_1abc179e298f968a124578f53ea024662d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -64,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="539"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="553"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_link_info_1aab4290d621d21116e0cbb9f64fdc0c03" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_html_cell" kindref="compound">wxHtmlCell</ref> *</type>
@@ -77,7 +77,7 @@
 <para>Valid only within <ref refid="classwx_html_window_1a519281dbfbddc163b5e73fd6a10cf90a" kindref="member">wxHtmlWindow::OnLinkClicked</ref>, NULL otherwise. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="545"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="559"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_link_info_1a4709f7be33e669c45ef227f0f4602dcc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -90,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="551"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="565"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -100,37 +100,37 @@
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7073">
+      <node id="7260">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7072">
+      <node id="7259">
         <label>wxHtmlLinkInfo</label>
         <link refid="classwx_html_link_info"/>
-        <childnode refid="7073" relation="public-inheritance">
+        <childnode refid="7260" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7075">
+      <node id="7262">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7076" relation="usage">
+        <childnode refid="7263" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7074">
+      <node id="7261">
         <label>wxHtmlLinkInfo</label>
         <link refid="classwx_html_link_info"/>
-        <childnode refid="7075" relation="public-inheritance">
+        <childnode refid="7262" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7076">
+      <node id="7263">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="517" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" bodystart="516" bodyend="552"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="531" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" bodystart="530" bodyend="566"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxHtmlLinkInfo</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxHtmlLinkInfo</scope><name>CloneRefData</name></member>

@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="414"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="414"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sock_address_1ad5ce2fe60db7156a657ee365af8bc61e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="419"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="419"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sock_address_1a1a51e9dabf2728940da1e75a918b4360" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="424"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="424"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sock_address_1af7705f9c496b8d539c8f1a9cbd82f4ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -56,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="429"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="429"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sock_address_1aa9b8f3cc5f9af9d8e9cb9cf45448eccb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const sockaddr *</type>
@@ -70,7 +70,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="440"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="440"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sock_address_1a580dcc6c9faa1b79affa3a0428b62a2a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -84,7 +84,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="449"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="449"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -94,49 +94,49 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref>, <ref refid="classwx_i_paddress" kindref="compound">wxIPaddress</ref>, <ref refid="classwx_i_p_v4address" kindref="compound">wxIPV4address</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10275">
+      <node id="10458">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10277">
+      <node id="10460">
         <label>wxIPV4address</label>
         <link refid="classwx_i_p_v4address"/>
-        <childnode refid="10276" relation="public-inheritance">
+        <childnode refid="10459" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10276">
+      <node id="10459">
         <label>wxIPaddress</label>
         <link refid="classwx_i_paddress"/>
-        <childnode refid="10274" relation="public-inheritance">
+        <childnode refid="10457" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10274">
+      <node id="10457">
         <label>wxSockAddress</label>
         <link refid="classwx_sock_address"/>
-        <childnode refid="10275" relation="public-inheritance">
+        <childnode refid="10458" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10279">
+      <node id="10462">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10280" relation="usage">
+        <childnode refid="10463" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10278">
+      <node id="10461">
         <label>wxSockAddress</label>
         <link refid="classwx_sock_address"/>
-        <childnode refid="10279" relation="public-inheritance">
+        <childnode refid="10462" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10280">
+      <node id="10463">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="409" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" bodystart="408" bodyend="450"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="409" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" bodystart="408" bodyend="450"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxSockAddress</scope><name>AllocExclusive</name></member>
       <member refid="classwx_sock_address_1a1a51e9dabf2728940da1e75a918b4360" prot="public" virt="virtual"><scope>wxSockAddress</scope><name>Clear</name></member>

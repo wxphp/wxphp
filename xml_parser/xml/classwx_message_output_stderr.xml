@@ -31,7 +31,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgout.h" line="113"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgout.h" line="113"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -40,42 +40,42 @@
 <para>Implements <ref refid="classwx_message_output" kindref="compound">wxMessageOutput</ref> by using stderr or specified file.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7773">
+      <node id="7966">
         <label>wxMessageOutputStderr</label>
         <link refid="classwx_message_output_stderr"/>
-        <childnode refid="7774" relation="public-inheritance">
+        <childnode refid="7967" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7774">
+      <node id="7967">
         <label>wxMessageOutput</label>
         <link refid="classwx_message_output"/>
       </node>
-      <node id="7775">
+      <node id="7968">
         <label>wxMessageOutputBest</label>
         <link refid="classwx_message_output_best"/>
-        <childnode refid="7773" relation="public-inheritance">
+        <childnode refid="7966" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7776">
+      <node id="7969">
         <label>wxMessageOutputDebug</label>
         <link refid="classwx_message_output_debug"/>
-        <childnode refid="7773" relation="public-inheritance">
+        <childnode refid="7966" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7777">
+      <node id="7970">
         <label>wxMessageOutputStderr</label>
         <link refid="classwx_message_output_stderr"/>
-        <childnode refid="7778" relation="public-inheritance">
+        <childnode refid="7971" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7778">
+      <node id="7971">
         <label>wxMessageOutput</label>
         <link refid="classwx_message_output"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgout.h" line="101" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgout.h" bodystart="100" bodyend="114"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgout.h" line="101" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/msgout.h" bodystart="100" bodyend="114"/>
     <listofallmembers>
       <member refid="classwx_message_output_1aff0387f83c5ee4db7cf26b909e1057e7" prot="public" virt="non-virtual"><scope>wxMessageOutputStderr</scope><name>Get</name></member>
       <member refid="classwx_message_output_1ae8b0b6734006e716bd80fd053a7b4e4d" prot="public" virt="pure-virtual"><scope>wxMessageOutputStderr</scope><name>Output</name></member>

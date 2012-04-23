@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="119"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" line="119"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_t_p_1aad6d0c102912c0f508986d06e3406237" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -42,7 +42,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="128"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" line="128"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="140"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" line="140"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_t_p_1ae7e072cefb173542f20946cd50ef6213" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -73,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="145"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" line="145"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_t_p_1ab00f9f352c1e45422d2d5a158379f9a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -95,7 +95,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="153"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" line="153"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_t_p_1a469e4fc750cb81cc113465e73e0a3b77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -108,7 +108,7 @@
 <para>the full server reply for the last command. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="158"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" line="158"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_t_p_1a6a9d830ff6e3ec0075945425fe330f47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>char</type>
@@ -125,7 +125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="164"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" line="164"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_t_p_1a79f9b7d63245d75d7843b5f6587fc119" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -138,7 +138,7 @@
 <para>It will be used for the next transfer. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="169"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" line="169"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_t_p_1a93c03a6ffb9e4923067e2e10828b2bee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -151,7 +151,7 @@
 <para>It will be used for the next transfer. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="174"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" line="174"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_t_p_1af31656af37bf0e53129f1e6caa9443f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -168,7 +168,7 @@
 <para>This is the default as it works with practically all firewalls. If the server doesn&apos;t support passive mode, you may call this function with false as argument to use an active connection. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="183"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" line="183"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_t_p_1a9fda9b5eceee7c10cfdea9e5e062a084" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -186,7 +186,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="188"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" line="188"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_t_p_1acf95bd9da39666c74bb55db6ecc5cc0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -194,7 +194,7 @@
         <argsstring>(TransferMode mode)</argsstring>
         <name>SetTransferMode</name>
         <param>
-          <type><ref refid="ftp_8h_1ac6a3bd5749f031b948edd5a5dc74df55" kindref="member">TransferMode</ref></type>
+          <type><ref refid="classwx_f_t_p_1aaeeaee850fd01f6063ba62fab8e89d51" kindref="member">TransferMode</ref></type>
           <declname>mode</declname>
         </param>
         <briefdescription>
@@ -203,7 +203,7 @@
 <para>It will be used for the next transfer.</para><para>If this function is never called, binary transfer mode is used by default. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="196"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" line="196"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_t_p_1aa98a9516aacb33260942d5f65e4189ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -221,7 +221,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="201"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" line="201"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -241,7 +241,7 @@
 <para>Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="216"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" line="216"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_t_p_1ac9d150320640a50b8644fc56a9cbef91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -258,7 +258,7 @@
 <para>Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="222"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" line="222"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_t_p_1a007702c93714905da46998e89ee82e62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -271,7 +271,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="227"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" line="227"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_t_p_1a714e155b6758e84e1a2c764818354902" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -292,7 +292,7 @@
 <para>Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="232"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" line="232"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_t_p_1a95c6ec4a2be4082a3c4dc9408e4aa12d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -309,7 +309,7 @@
 <para>Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="238"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" line="238"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_t_p_1a61cc4d8b71dd5a013963c8611be22b87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -326,7 +326,7 @@
 <para>Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="243"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" line="243"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_t_p_1a45c5d8b47b1150b223859a37245922be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -343,7 +343,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="248"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" line="248"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_t_p_1acaa8a56639efe4f6313ec1b0bcc1d731" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -377,7 +377,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="279"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" line="279"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_t_p_1a54f6a620edf5d5ea6850c05dbb78f6cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -394,7 +394,7 @@
 <para>Notice that this size can be approximative size only and shouldn&apos;t be used for allocating the buffer in which the remote file is copied, for example. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="288"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" line="288"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_t_p_1afe3fdde3907de65f15750f22ebf66eab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -418,7 +418,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="303"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" line="303"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -440,7 +440,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="326"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" line="326"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_t_p_1a76277252a7bbc21efe6eaa6948dbda98" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_output_stream" kindref="compound">wxOutputStream</ref> *</type>
@@ -458,7 +458,40 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="338"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" line="338"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classwx_f_t_p_1aaeeaee850fd01f6063ba62fab8e89d51" prot="public" static="no">
+        <name>TransferMode</name>
+        <enumvalue id="classwx_f_t_p_1aaeeaee850fd01f6063ba62fab8e89d51af7c2b61793da91fd400ce93ceb177fb3" prot="public">
+          <name>NONE</name>
+          <briefdescription>
+<para>not set by user explicitly. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_f_t_p_1aaeeaee850fd01f6063ba62fab8e89d51ad095b3c8103d182e264a7c186c0f7f7b" prot="public">
+          <name>ASCII</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classwx_f_t_p_1aaeeaee850fd01f6063ba62fab8e89d51ad6f3155912cc38fab23554d19024f123" prot="public">
+          <name>BINARY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Transfer modes used by <ref refid="classwx_f_t_p" kindref="compound">wxFTP</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" line="97" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" bodystart="96" bodyend="101"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -473,7 +506,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="106"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" line="106"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_t_p_1aaa0a2be71fe00757acb4f3484f179a2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -486,7 +519,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="111"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" line="111"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -546,76 +579,78 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6461">
+      <node id="6611">
         <label>wxSocketBase</label>
         <link refid="classwx_socket_base"/>
-        <childnode refid="6462" relation="public-inheritance">
+        <childnode refid="6612" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6462">
+      <node id="6612">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6460">
+      <node id="6610">
         <label>wxSocketClient</label>
         <link refid="classwx_socket_client"/>
-        <childnode refid="6461" relation="public-inheritance">
+        <childnode refid="6611" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6458">
+      <node id="6608">
         <label>wxFTP</label>
         <link refid="classwx_f_t_p"/>
-        <childnode refid="6459" relation="public-inheritance">
+        <childnode refid="6609" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6459">
+      <node id="6609">
         <label>wxProtocol</label>
         <link refid="classwx_protocol"/>
-        <childnode refid="6460" relation="public-inheritance">
+        <childnode refid="6610" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6466">
+      <node id="6616">
         <label>wxSocketBase</label>
         <link refid="classwx_socket_base"/>
-        <childnode refid="6467" relation="public-inheritance">
+        <childnode refid="6617" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6467">
+      <node id="6617">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6468" relation="usage">
+        <childnode refid="6618" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6465">
+      <node id="6615">
         <label>wxSocketClient</label>
         <link refid="classwx_socket_client"/>
-        <childnode refid="6466" relation="public-inheritance">
+        <childnode refid="6616" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6463">
+      <node id="6613">
         <label>wxFTP</label>
         <link refid="classwx_f_t_p"/>
-        <childnode refid="6464" relation="public-inheritance">
+        <childnode refid="6614" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6464">
+      <node id="6614">
         <label>wxProtocol</label>
         <link refid="classwx_protocol"/>
-        <childnode refid="6465" relation="public-inheritance">
+        <childnode refid="6615" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6468">
+      <node id="6618">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" line="101" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/ftp.h" bodystart="100" bodyend="341"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" line="91" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/ftp.h" bodystart="90" bodyend="341"/>
     <listofallmembers>
       <member refid="classwx_f_t_p_1a9f1d0c38321f880302959c07c4749d4d" prot="public" virt="virtual"><scope>wxFTP</scope><name>Abort</name></member>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxFTP</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_f_t_p_1aaeeaee850fd01f6063ba62fab8e89d51ad095b3c8103d182e264a7c186c0f7f7b" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>ASCII</name></member>
+      <member refid="classwx_f_t_p_1aaeeaee850fd01f6063ba62fab8e89d51ad6f3155912cc38fab23554d19024f123" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>BINARY</name></member>
       <member refid="classwx_f_t_p_1a33cced47ce8c8809f10f98485e5b2042" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>ChDir</name></member>
       <member refid="classwx_f_t_p_1ab00f9f352c1e45422d2d5a158379f9a4" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>CheckCommand</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxFTP</scope><name>CloneRefData</name></member>
@@ -660,6 +695,7 @@
       <member refid="classwx_protocol_1a03c4ee18cd126eeec76fd79c016de2fb" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>LogResponse</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxFTP</scope><name>m_refData</name></member>
       <member refid="classwx_f_t_p_1ac9d150320640a50b8644fc56a9cbef91" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>MkDir</name></member>
+      <member refid="classwx_f_t_p_1aaeeaee850fd01f6063ba62fab8e89d51af7c2b61793da91fd400ce93ceb177fb3" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>NONE</name></member>
       <member refid="classwx_socket_base_1acfaca539bd0fe0e9c0b1018c77e6701c" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>Notify</name></member>
       <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>operator delete</name></member>
       <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>operator new</name></member>
@@ -692,6 +728,7 @@
       <member refid="classwx_f_t_p_1aa98a9516aacb33260942d5f65e4189ae" prot="public" virt="virtual"><scope>wxFTP</scope><name>SetUser</name></member>
       <member refid="classwx_socket_base_1acfa7398ce7fac6e8db20caeb3a09b10e" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>Shutdown</name></member>
       <member refid="classwx_socket_base_1a90d2aea95b10c68eee2656860d90e23e" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>ShutdownOutput</name></member>
+      <member refid="classwx_f_t_p_1aaeeaee850fd01f6063ba62fab8e89d51" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>TransferMode</name></member>
       <member refid="classwx_socket_base_1a8fd912526830f7b079ac28677424d40a" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>Unread</name></member>
       <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>UnRef</name></member>
       <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxFTP</scope><name>UnShare</name></member>

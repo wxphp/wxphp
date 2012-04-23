@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="302"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="302"/>
       </memberdef>
       <memberdef kind="function" id="classwx_renderer_native_1af5a80f13e6b7a20affd26b0becd9856b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -47,7 +47,7 @@
 <para><emphasis>flags</emphasis> may have the <computeroutput>wxCONTROL_CHECKED</computeroutput>, <computeroutput>wxCONTROL_CURRENT</computeroutput> or <computeroutput>wxCONTROL_UNDETERMINED</computeroutput> bit set, see <ref refid="renderer_8h_1wxCONTROL_FLAGS" kindref="member">wxCONTROL_FLAGS</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="311"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="311"/>
       </memberdef>
       <memberdef kind="function" id="classwx_renderer_native_1a9495db526d637f854a3436e1d17bb472" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -78,7 +78,7 @@
 <para>The usual appearance is a downwards pointing arrow.</para><para><emphasis>flags</emphasis> may have the <computeroutput>wxCONTROL_PRESSED</computeroutput> or <computeroutput>wxCONTROL_CURRENT</computeroutput> bit set, see <ref refid="renderer_8h_1wxCONTROL_FLAGS" kindref="member">wxCONTROL_FLAGS</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="321"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="321"/>
       </memberdef>
       <memberdef kind="function" id="classwx_renderer_native_1a0c16016c310cec4d3d2f53574741df05" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -109,7 +109,7 @@
 <para>Arrow will have transparent background.</para><para><emphasis>rect</emphasis> is not entirely filled by the arrow. Instead, you should use bounding rectangle of a drop down button which arrow matches the size you need.</para><para><emphasis>flags</emphasis> may have the <computeroutput>wxCONTROL_PRESSED</computeroutput> or <computeroutput>wxCONTROL_CURRENT</computeroutput> bit set, see <ref refid="renderer_8h_1wxCONTROL_FLAGS" kindref="member">wxCONTROL_FLAGS</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="334"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="334"/>
       </memberdef>
       <memberdef kind="function" id="classwx_renderer_native_1a365bc24e598ce64e3a8d2b9559a8c4c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -140,7 +140,7 @@
 <para><ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref>.</para><para>The only supported flags is <computeroutput>wxCONTROL_SELECTED</computeroutput> for items which are selected. see <ref refid="renderer_8h_1wxCONTROL_FLAGS" kindref="member">wxCONTROL_FLAGS</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="344"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="344"/>
       </memberdef>
       <memberdef kind="function" id="classwx_renderer_native_1a65c10b87b311b5278890026b26c525b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>int</type>
@@ -182,7 +182,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="358"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="358"/>
       </memberdef>
       <memberdef kind="function" id="classwx_renderer_native_1a7abc86c94cc688f59dc01a21f7b0db94" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>int</type>
@@ -224,7 +224,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="373"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="373"/>
       </memberdef>
       <memberdef kind="function" id="classwx_renderer_native_1a5d0ab3cbc0dbcf90a91a4e6ed400ff8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -255,7 +255,7 @@
 <para>in a <ref refid="classwx_list_ctrl" kindref="compound">wxListCtrl</ref>.</para><para>The supported <emphasis>flags</emphasis> are <computeroutput>wxCONTROL_SELECTED</computeroutput> for items which are selected (e.g. often a blue rectangle) and <computeroutput>wxCONTROL_CURRENT</computeroutput> for the item that has the focus (often a dotted line around the item&apos;s text). <computeroutput>wxCONTROL_FOCUSED</computeroutput> may be used to indicate if the control has the focus (otherwise the selection rectangle is e.g. often grey and not blue). This may be ignored by the renderer or deduced by the code directly from the <emphasis>win</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="388"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="388"/>
       </memberdef>
       <memberdef kind="function" id="classwx_renderer_native_1a866a6e77f5f302e7fbb50819268de331" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -286,7 +286,7 @@
 <para><emphasis>flags</emphasis> may have the <computeroutput>wxCONTROL_PRESSED</computeroutput>, <computeroutput>wxCONTROL_CURRENT</computeroutput> or <computeroutput>wxCONTROL_ISDEFAULT</computeroutput> bit set, see <ref refid="renderer_8h_1wxCONTROL_FLAGS" kindref="member">wxCONTROL_FLAGS</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="397"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="397"/>
       </memberdef>
       <memberdef kind="function" id="classwx_renderer_native_1a42ec07b63b3c38ab7309fe87932cfcb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -317,7 +317,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="404"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="404"/>
       </memberdef>
       <memberdef kind="function" id="classwx_renderer_native_1ac9eedbd75f63fb4b99a2a93ca08612c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -356,7 +356,7 @@
 <para>The <emphasis>orient</emphasis> parameter defines whether the sash should be vertical or horizontal and how the <emphasis>position</emphasis> should be interpreted. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="412"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="412"/>
       </memberdef>
       <memberdef kind="function" id="classwx_renderer_native_1a2b66a74d44ffc6a36a8bd1e15c83e77c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -387,7 +387,7 @@
 <para>To draw an expanded button the <emphasis>flags</emphasis> parameter must contain <computeroutput>wxCONTROL_EXPANDED</computeroutput> bit, see <ref refid="renderer_8h_1wxCONTROL_FLAGS" kindref="member">wxCONTROL_FLAGS</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="421"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="421"/>
       </memberdef>
       <memberdef kind="function" id="classwx_renderer_native_1a54bc38596a1ff8f37aa2a4f97d208a2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -417,7 +417,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="426"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="426"/>
       </memberdef>
       <memberdef kind="function" id="classwx_renderer_native_1ab9e724dd0441e511a75aee96fb7ddcd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -447,7 +447,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="431"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="431"/>
       </memberdef>
       <memberdef kind="function" id="classwx_renderer_native_1a35e49075d3a7e748953660101252a892" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -477,7 +477,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="436"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="436"/>
       </memberdef>
       <memberdef kind="function" id="classwx_renderer_native_1af62a5a4bd85f1d2f26ae72d5feb4469c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -507,7 +507,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="441"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="441"/>
       </memberdef>
       <memberdef kind="function" id="classwx_renderer_native_1a0bfb492af0725bd49a1402baa5f68e12" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -542,7 +542,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="465"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="465"/>
       </memberdef>
       <memberdef kind="function" id="classwx_renderer_native_1aae69eead8c4e298acf97a6bd4848a45c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -560,7 +560,7 @@
 <para>The <emphasis>win</emphasis> parameter is not used currently and can be NULL. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="491"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="491"/>
       </memberdef>
       <memberdef kind="function" id="classwx_renderer_native_1a7318ee160cf6810d5fbcfa3383a0562f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>int</type>
@@ -578,7 +578,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="497"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="497"/>
       </memberdef>
       <memberdef kind="function" id="classwx_renderer_native_1afede2d2f77c54cd443b1be09dbe2f9e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>int</type>
@@ -597,7 +597,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="505"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="505"/>
       </memberdef>
       <memberdef kind="function" id="classwx_renderer_native_1a4c5673f91bfd18792710ca133ca2e3f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="structwx_splitter_render_params" kindref="compound">wxSplitterRenderParams</ref></type>
@@ -615,7 +615,7 @@
 <para>The <emphasis>win</emphasis> parameter should be a <ref refid="classwx_splitter_window" kindref="compound">wxSplitterWindow</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="511"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="511"/>
       </memberdef>
       <memberdef kind="function" id="classwx_renderer_native_1af42af0da60489f1f54c8883f68bfdd42" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="structwx_renderer_version" kindref="compound">wxRendererVersion</ref></type>
@@ -630,7 +630,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="524"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="524"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -645,7 +645,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="470"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="470"/>
       </memberdef>
       <memberdef kind="function" id="classwx_renderer_native_1a53078a525d6a53dea7bcdb83cf43a840" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_renderer_native" kindref="compound">wxRendererNative</ref> &amp;</type>
@@ -658,7 +658,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="478"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="478"/>
       </memberdef>
       <memberdef kind="function" id="classwx_renderer_native_1afa11498932e1c8c56e2ef2e2ca33ddc6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_renderer_native" kindref="compound">wxRendererNative</ref> &amp;</type>
@@ -671,7 +671,7 @@
 <para>Under some platforms, this is the default renderer implementation, others have platform-specific default renderer which can be retrieved by calling <ref refid="classwx_renderer_native_1a53078a525d6a53dea7bcdb83cf43a840" kindref="member">GetDefault()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="485"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="485"/>
       </memberdef>
       <memberdef kind="function" id="classwx_renderer_native_1a0536cd4ed40c392859d2e8ae37a3eaca" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_renderer_native" kindref="compound">wxRendererNative</ref> *</type>
@@ -688,7 +688,7 @@
 <para>The <emphasis>name</emphasis> should be just the base name of the renderer and not the full name of the DLL file which is constructed differently (using <ref refid="classwx_dynamic_library_1a36a523c77c4bbc8dbe43bb35b070ed1d" kindref="member">wxDynamicLibrary::CanonicalizePluginName()</ref>) on different systems. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="535"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="535"/>
       </memberdef>
       <memberdef kind="function" id="classwx_renderer_native_1ace3f6d878be2e967f886397c26181c82" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_renderer_native" kindref="compound">wxRendererNative</ref> *</type>
@@ -705,7 +705,7 @@
 <para>Return the previous renderer used with <ref refid="classwx_renderer_native_1ace3f6d878be2e967f886397c26181c82" kindref="member">Set()</ref> or NULL if none. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="543"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="543"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -720,18 +720,18 @@
 Note that each drawing function restores the <ref refid="classwx_d_c" kindref="compound">wxDC</ref> attributes if it changes them, so it is safe to assume that the same pen, brush and colours that were active before the call to this function are still in effect after it.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9078">
+      <node id="9261">
         <label>wxDelegateRendererNative</label>
         <link refid="classwx_delegate_renderer_native"/>
-        <childnode refid="9077" relation="public-inheritance">
+        <childnode refid="9260" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9077">
+      <node id="9260">
         <label>wxRendererNative</label>
         <link refid="classwx_renderer_native"/>
       </node>
     </inheritancegraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" line="297" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/renderer.h" bodystart="296" bodyend="544"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" line="297" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/renderer.h" bodystart="296" bodyend="544"/>
     <listofallmembers>
       <member refid="classwx_renderer_native_1af5a80f13e6b7a20affd26b0becd9856b" prot="public" virt="pure-virtual"><scope>wxRendererNative</scope><name>DrawCheckBox</name></member>
       <member refid="classwx_renderer_native_1a54bc38596a1ff8f37aa2a4f97d208a2d" prot="public" virt="pure-virtual"><scope>wxRendererNative</scope><name>DrawChoice</name></member>

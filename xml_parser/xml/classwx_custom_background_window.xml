@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/custombgwin.h" line="53"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/custombgwin.h" line="53"/>
       </memberdef>
       <memberdef kind="function" id="classwx_custom_background_window_1ab9680949c59eeb400b34b298eb8bbd53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -37,7 +37,7 @@
 <para>If <emphasis>bmp</emphasis> is a valid bitmap, this bitmap will be tiled over the panel background and show through any of its transparent children. Passing an invalid bitmap reverts to the default background appearance.</para><para>Notice that you must not prevent the base class EVT_ERASE_BACKGROUND handler from running (i.e. not to handle this event yourself) for this to work. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/custombgwin.h" line="66"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/custombgwin.h" line="66"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -62,7 +62,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
 </programlisting></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="since"><para>2.9.3 </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/custombgwin.h" line="50" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/custombgwin.h" bodystart="49" bodyend="67"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/custombgwin.h" line="50" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/custombgwin.h" bodystart="49" bodyend="67"/>
     <listofallmembers>
       <member refid="classwx_custom_background_window_1ab9680949c59eeb400b34b298eb8bbd53" prot="public" virt="non-virtual"><scope>wxCustomBackgroundWindow</scope><name>SetBackgroundBitmap</name></member>
       <member refid="classwx_custom_background_window_1a1b029ca4e510fc40a891a4e353ddef0a" prot="public" virt="non-virtual"><scope>wxCustomBackgroundWindow</scope><name>wxCustomBackgroundWindow</name></member>

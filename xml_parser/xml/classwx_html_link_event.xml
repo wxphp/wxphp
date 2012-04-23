@@ -24,7 +24,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="431"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="431"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_link_event_1aa654ba5dde98da3ee76d2e21e5b68a72" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_html_link_info" kindref="compound">wxHtmlLinkInfo</ref> &amp;</type>
@@ -37,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="437"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="437"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -50,61 +50,61 @@
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7063">
+      <node id="7250">
         <label>wxHtmlLinkEvent</label>
         <link refid="classwx_html_link_event"/>
-        <childnode refid="7064" relation="public-inheritance">
+        <childnode refid="7251" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7066">
+      <node id="7253">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7064">
+      <node id="7251">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="7065" relation="public-inheritance">
+        <childnode refid="7252" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7065">
+      <node id="7252">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="7066" relation="public-inheritance">
+        <childnode refid="7253" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7067">
+      <node id="7254">
         <label>wxHtmlLinkEvent</label>
         <link refid="classwx_html_link_event"/>
-        <childnode refid="7068" relation="public-inheritance">
+        <childnode refid="7255" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7070">
+      <node id="7257">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7071" relation="usage">
+        <childnode refid="7258" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7068">
+      <node id="7255">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="7069" relation="public-inheritance">
+        <childnode refid="7256" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7069">
+      <node id="7256">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="7070" relation="public-inheritance">
+        <childnode refid="7257" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7071">
+      <node id="7258">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="426" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" bodystart="425" bodyend="438"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="426" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" bodystart="425" bodyend="438"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxHtmlLinkEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxHtmlLinkEvent</scope><name>Clone</name></member>

@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlfilt.h" line="26"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlfilt.h" line="26"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_filter_1ad9747f5a034fd11decec640ec9a488e0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -37,7 +37,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlfilt.h" line="38"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlfilt.h" line="38"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_filter_1a46e613725041e97a8934ce37da2e620f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -59,7 +59,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlfilt.h" line="51"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlfilt.h" line="51"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -69,37 +69,37 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref></para><para><simplesect kind="see"><para><ref refid="overview_html_1overview_html_filters" kindref="member">Input Filters</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7007">
+      <node id="7189">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7006">
+      <node id="7188">
         <label>wxHtmlFilter</label>
         <link refid="classwx_html_filter"/>
-        <childnode refid="7007" relation="public-inheritance">
+        <childnode refid="7189" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7009">
+      <node id="7191">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7010" relation="usage">
+        <childnode refid="7192" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7008">
+      <node id="7190">
         <label>wxHtmlFilter</label>
         <link refid="classwx_html_filter"/>
-        <childnode refid="7009" relation="public-inheritance">
+        <childnode refid="7191" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7010">
+      <node id="7192">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlfilt.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlfilt.h" bodystart="20" bodyend="52"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlfilt.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlfilt.h" bodystart="20" bodyend="52"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxHtmlFilter</scope><name>AllocExclusive</name></member>
       <member refid="classwx_html_filter_1ad9747f5a034fd11decec640ec9a488e0" prot="public" virt="pure-virtual"><scope>wxHtmlFilter</scope><name>CanRead</name></member>

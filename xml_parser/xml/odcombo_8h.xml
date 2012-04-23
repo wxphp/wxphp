@@ -28,13 +28,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/odcombo.h" line="11" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/odcombo.h" bodystart="10" bodyend="23"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/odcombo.h" line="11" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/odcombo.h" bodystart="10" bodyend="23"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/odcombo.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/odcombo.h"/>
   </compounddef>
 </doxygen>

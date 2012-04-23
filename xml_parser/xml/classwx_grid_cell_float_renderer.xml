@@ -53,7 +53,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="235"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="235"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_float_renderer_1a0546923deb3a5aadfe91c32c36717629" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -67,7 +67,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="244"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="244"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_float_renderer_1a2d55693158876a25e43e38eacbe32deb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="249"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="249"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_float_renderer_1a1af5d5244f1c906aa9ef7eb11fca5b64" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="254"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="254"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_float_renderer_1a1a842e454dd25b0d287686487a8c20ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -119,7 +119,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="264"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="264"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_float_renderer_1aa95d698f378dc182efd0e0760881bcc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -131,12 +131,12 @@
           <declname>params</declname>
         </param>
         <briefdescription>
-<para>The parameters string format is &quot;width[,precision[,format]]&quot; where <computeroutput>format</computeroutput> should be choosen beween f|e|g|E|G (f is used by default) </para>        </briefdescription>
+<para>The parameters string format is &quot;width[,precision[,format]]&quot; where <computeroutput>format</computeroutput> should be chosen between f|e|g|E|G (f is used by default) </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="270"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="270"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_float_renderer_1aa007a50469b1dd84af29d53551fc66ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -153,7 +153,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="275"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="275"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_float_renderer_1ab8cfe22849be2893627f169868062c2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -170,7 +170,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="280"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="280"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -180,42 +180,42 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__grid" kindref="compound">Grid Related Classes</ref></para><para><simplesect kind="see"><para><ref refid="classwx_grid_cell_renderer" kindref="compound">wxGridCellRenderer</ref>, <ref refid="classwx_grid_cell_auto_wrap_string_renderer" kindref="compound">wxGridCellAutoWrapStringRenderer</ref>, <ref refid="classwx_grid_cell_bool_renderer" kindref="compound">wxGridCellBoolRenderer</ref>, <ref refid="classwx_grid_cell_date_time_renderer" kindref="compound">wxGridCellDateTimeRenderer</ref>, <ref refid="classwx_grid_cell_enum_renderer" kindref="compound">wxGridCellEnumRenderer</ref>, <ref refid="classwx_grid_cell_number_renderer" kindref="compound">wxGridCellNumberRenderer</ref>, <ref refid="classwx_grid_cell_string_renderer" kindref="compound">wxGridCellStringRenderer</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6704">
+      <node id="6874">
         <label>wxGridCellFloatRenderer</label>
         <link refid="classwx_grid_cell_float_renderer"/>
-        <childnode refid="6705" relation="public-inheritance">
+        <childnode refid="6875" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6706">
+      <node id="6876">
         <label>wxGridCellRenderer</label>
         <link refid="classwx_grid_cell_renderer"/>
       </node>
-      <node id="6705">
+      <node id="6875">
         <label>wxGridCellStringRenderer</label>
         <link refid="classwx_grid_cell_string_renderer"/>
-        <childnode refid="6706" relation="public-inheritance">
+        <childnode refid="6876" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6707">
+      <node id="6877">
         <label>wxGridCellFloatRenderer</label>
         <link refid="classwx_grid_cell_float_renderer"/>
-        <childnode refid="6708" relation="public-inheritance">
+        <childnode refid="6878" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6709">
+      <node id="6879">
         <label>wxGridCellRenderer</label>
         <link refid="classwx_grid_cell_renderer"/>
       </node>
-      <node id="6708">
+      <node id="6878">
         <label>wxGridCellStringRenderer</label>
         <link refid="classwx_grid_cell_string_renderer"/>
-        <childnode refid="6709" relation="public-inheritance">
+        <childnode refid="6879" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="220" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" bodystart="219" bodyend="281"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="220" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" bodystart="219" bodyend="281"/>
     <listofallmembers>
       <member refid="classwx_grid_cell_renderer_1a55c1db8c06f8cb994beb90615d5264f7" prot="public" virt="pure-virtual"><scope>wxGridCellFloatRenderer</scope><name>Clone</name></member>
       <member refid="classwx_grid_cell_renderer_1a1848512422742bbbf9dec1b173bfc752" prot="public" virt="pure-virtual"><scope>wxGridCellFloatRenderer</scope><name>Draw</name></member>

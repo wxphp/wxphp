@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/laywin.h" line="312"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/laywin.h" line="312"/>
       </memberdef>
       <memberdef kind="function" id="classwx_query_layout_info_event_1ae0b1b2deb38e453bc942e09a555c6114" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="laywin_8h_1aa71c9fda256582eb60acb5f99ed9de95" kindref="member">wxLayoutAlignment</ref></type>
@@ -34,7 +34,7 @@
 <para>One of wxLAYOUT_TOP, wxLAYOUT_LEFT, wxLAYOUT_RIGHT, wxLAYOUT_BOTTOM. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/laywin.h" line="319"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/laywin.h" line="319"/>
       </memberdef>
       <memberdef kind="function" id="classwx_query_layout_info_event_1a405463e914c43914e2848c0f397e3276" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -47,7 +47,7 @@
 <para>Not currently used. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/laywin.h" line="324"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/laywin.h" line="324"/>
       </memberdef>
       <memberdef kind="function" id="classwx_query_layout_info_event_1a8eba548e689e1fbb10e1d3dac27c8bc5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="laywin_8h_1a2ce484ea253c6640705f6c33a9b7d16b" kindref="member">wxLayoutOrientation</ref></type>
@@ -60,7 +60,7 @@
 <para>May be one of wxLAYOUT_HORIZONTAL, wxLAYOUT_VERTICAL. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/laywin.h" line="330"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/laywin.h" line="330"/>
       </memberdef>
       <memberdef kind="function" id="classwx_query_layout_info_event_1a011162cc1def02675742eb62953af0a9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -73,7 +73,7 @@
 <para>This information is not yet used. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/laywin.h" line="336"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/laywin.h" line="336"/>
       </memberdef>
       <memberdef kind="function" id="classwx_query_layout_info_event_1ae867b7179c67f97f71623f31fc22cd3a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -86,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/laywin.h" line="342"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/laywin.h" line="342"/>
       </memberdef>
       <memberdef kind="function" id="classwx_query_layout_info_event_1af64b80ffa35bcb89a4a3ffa2a08df1e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -103,7 +103,7 @@
 <para>May be one of wxLAYOUT_TOP, wxLAYOUT_LEFT, wxLAYOUT_RIGHT, wxLAYOUT_BOTTOM. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/laywin.h" line="349"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/laywin.h" line="349"/>
       </memberdef>
       <memberdef kind="function" id="classwx_query_layout_info_event_1a5cefb50301df556df7841cd33be945c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -120,7 +120,7 @@
 <para>Not currently used. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/laywin.h" line="354"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/laywin.h" line="354"/>
       </memberdef>
       <memberdef kind="function" id="classwx_query_layout_info_event_1a91de3a17d98698f7423d73e13e55e0c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -137,7 +137,7 @@
 <para>May be one of wxLAYOUT_HORIZONTAL, wxLAYOUT_VERTICAL. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/laywin.h" line="360"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/laywin.h" line="360"/>
       </memberdef>
       <memberdef kind="function" id="classwx_query_layout_info_event_1ad844a6dfbe69cf48303823d2573810cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -154,7 +154,7 @@
 <para>This information is not yet used. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/laywin.h" line="366"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/laywin.h" line="366"/>
       </memberdef>
       <memberdef kind="function" id="classwx_query_layout_info_event_1a47ec467f4476fb22fccebb2ad7365bb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -171,7 +171,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/laywin.h" line="371"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/laywin.h" line="371"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -185,49 +185,49 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_calculate_layout_event" kindref="compound">wxCalculateLayoutEvent</ref>, <ref refid="classwx_sash_layout_window" kindref="compound">wxSashLayoutWindow</ref>, <ref refid="classwx_layout_algorithm" kindref="compound">wxLayoutAlgorithm</ref>. </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8967">
+      <node id="9150">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8965">
+      <node id="9148">
         <label>wxQueryLayoutInfoEvent</label>
         <link refid="classwx_query_layout_info_event"/>
-        <childnode refid="8966" relation="public-inheritance">
+        <childnode refid="9149" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8966">
+      <node id="9149">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="8967" relation="public-inheritance">
+        <childnode refid="9150" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8970">
+      <node id="9153">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8971" relation="usage">
+        <childnode refid="9154" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8968">
+      <node id="9151">
         <label>wxQueryLayoutInfoEvent</label>
         <link refid="classwx_query_layout_info_event"/>
-        <childnode refid="8969" relation="public-inheritance">
+        <childnode refid="9152" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8969">
+      <node id="9152">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="8970" relation="public-inheritance">
+        <childnode refid="9153" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8971">
+      <node id="9154">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/laywin.h" line="307" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/laywin.h" bodystart="306" bodyend="372"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/laywin.h" line="307" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/laywin.h" bodystart="306" bodyend="372"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxQueryLayoutInfoEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxQueryLayoutInfoEvent</scope><name>Clone</name></member>

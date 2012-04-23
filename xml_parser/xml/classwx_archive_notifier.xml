@@ -19,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="492"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="492"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -28,7 +28,7 @@
 <para>An instance of your notifier class can then be assigned to the <ref refid="classwx_archive_entry" kindref="compound">wxArchiveEntry</ref> object using <ref refid="classwx_archive_entry_1a14fe1a270dbb1d0e9a76e2c3c8dd32a8" kindref="member">wxArchiveEntry::SetNotifier</ref>. Your <ref refid="classwx_archive_notifier_1aabc8d85fc2f85b38a761e3b4ccf74f5a" kindref="member">OnEntryUpdated()</ref> method will then be invoked whenever the input stream updates the entry.</para><para>Setting a notifier is not usually necessary. It is used to handle certain cases when modifying an archive in a pipeline (i.e. between non-seekable streams). See <ref refid="overview_archive_1overview_archive_noseek" kindref="member">Archives on Non-Seekable Streams</ref>.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="overview_archive_1overview_archive_noseek" kindref="member">Archives on Non-Seekable Streams</ref>, <ref refid="classwx_archive_entry" kindref="compound">wxArchiveEntry</ref>, <ref refid="classwx_archive_input_stream" kindref="compound">wxArchiveInputStream</ref>, <ref refid="classwx_archive_output_stream" kindref="compound">wxArchiveOutputStream</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="487" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" bodystart="486" bodyend="493"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="487" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" bodystart="486" bodyend="493"/>
     <listofallmembers>
       <member refid="classwx_archive_notifier_1aabc8d85fc2f85b38a761e3b4ccf74f5a" prot="public" virt="pure-virtual"><scope>wxArchiveNotifier</scope><name>OnEntryUpdated</name></member>
     </listofallmembers>

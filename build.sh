@@ -21,7 +21,7 @@ cd source_maker/
 cd ..
 
 # Start the build process
-make
+make -j 5
 
 # Strip debugging symbols for smaller file
 strip modules/wxwidgets.so

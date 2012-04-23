@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stack.h" line="52"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stack.h" line="52"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stack_3_01_t_01_4_1a2515802c779c95d0b9178bc46c7c1582" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
         <type></type>
@@ -37,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stack.h" line="53"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stack.h" line="53"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -52,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stack.h" line="66"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stack.h" line="66"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stack_3_01_t_01_4_1a7f05c401d1a331de4ce3a50c65d01404" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_stack_3_01_t_01_4_1a9c1bedb7493896bc8e7bfa37c0b1673f" kindref="member">value_type</ref> &amp;</type>
@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stack.h" line="67"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stack.h" line="67"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-type">
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stack.h" line="38" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stack.h" bodystart="38" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stack.h" line="38" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/stack.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classwx_stack_3_01_t_01_4_1a3f77c27b43249f4cdb958536b7de9443" prot="public" static="no">
         <type><ref refid="classwx_vector_3_01_t_01_4_1a84a2f5af718ce03a212a65b8b5c1cb8a" kindref="member">container_type::size_type</ref></type>
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stack.h" line="41" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stack.h" bodystart="41" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stack.h" line="41" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/stack.h" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classwx_stack_3_01_t_01_4_1a9c1bedb7493896bc8e7bfa37c0b1673f" prot="public" static="no">
         <type><ref refid="classwx_vector_3_01_t_01_4_1a200a710822fc0779945b7d5bf943d9cc" kindref="member">container_type::value_type</ref></type>
@@ -106,7 +106,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stack.h" line="44" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stack.h" bodystart="44" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stack.h" line="44" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/stack.h" bodystart="44" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -121,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stack.h" line="57"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stack.h" line="57"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stack_3_01_t_01_4_1a3d5dea33634dc3b27e1d4cd23af43fe4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_stack_3_01_t_01_4_1a3f77c27b43249f4cdb958536b7de9443" kindref="member">size_type</ref></type>
@@ -134,7 +134,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stack.h" line="60"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stack.h" line="60"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stack_3_01_t_01_4_1a8ec5136cfa473d4bdab46b135cb62025" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -151,7 +151,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stack.h" line="71"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stack.h" line="71"/>
       </memberdef>
       <memberdef kind="function" id="classwx_stack_3_01_t_01_4_1a56290fc736949a13b99cfe4da2fc4050" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -164,7 +164,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stack.h" line="74"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stack.h" line="74"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -174,7 +174,7 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/>None; this class implementation is entirely header-based.</para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__containers" kindref="compound">Containers</ref></para><para><simplesect kind="see"><para><ref refid="overview_container" kindref="compound">Container Classes</ref>, <ref refid="classwx_vector_3_01_t_01_4" kindref="compound">wxVector&lt;T&gt;</ref></para></simplesect>
 <simplesect kind="since"><para>2.9.2 </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stack.h" line="35" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stack.h" bodystart="34" bodyend="75"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stack.h" line="35" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/stack.h" bodystart="34" bodyend="75"/>
     <listofallmembers>
       <member refid="classwx_stack_3_01_t_01_4_1a2a4f590c8d1c24164868080347d4822d" prot="public" virt="non-virtual"><scope>wxStack&lt; T &gt;</scope><name>container_type</name></member>
       <member refid="classwx_stack_3_01_t_01_4_1a0ce7258db75eb4950e8e3378ae510b47" prot="public" virt="non-virtual"><scope>wxStack&lt; T &gt;</scope><name>empty</name></member>

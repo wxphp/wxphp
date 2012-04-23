@@ -20,7 +20,7 @@
 <para>On a non-seekable stream reads to the end of the current entry first. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="36"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="36"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_input_stream_1a87615df48e5f57305aa360098f5dae26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_archive_entry" kindref="compound">wxArchiveEntry</ref> *</type>
@@ -35,7 +35,7 @@
 <para>Reading this <ref refid="classwx_archive_input_stream" kindref="compound">wxArchiveInputStream</ref> then returns the entry&apos;s data. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="43"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="43"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_input_stream_1abb0e2896bbb5b50b7cef95cfdd8fb8e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -52,7 +52,7 @@
 <para><emphasis>entry</emphasis> must be from the same archive file that this <ref refid="classwx_archive_input_stream" kindref="compound">wxArchiveInputStream</ref> is reading, and it must be reading it from a seekable stream. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="52"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="52"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -62,66 +62,66 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="overview_archive" kindref="compound">Archive Formats</ref>, <ref refid="classwx_archive_entry" kindref="compound">wxArchiveEntry</ref>, <ref refid="classwx_archive_output_stream" kindref="compound">wxArchiveOutputStream</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4322">
+      <node id="4412">
         <label>wxInputStream</label>
         <link refid="classwx_input_stream"/>
-        <childnode refid="4323" relation="public-inheritance">
+        <childnode refid="4413" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4320">
+      <node id="4410">
         <label>wxArchiveInputStream</label>
         <link refid="classwx_archive_input_stream"/>
-        <childnode refid="4321" relation="public-inheritance">
+        <childnode refid="4411" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4323">
+      <node id="4413">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="4321">
+      <node id="4411">
         <label>wxFilterInputStream</label>
         <link refid="classwx_filter_input_stream"/>
-        <childnode refid="4322" relation="public-inheritance">
+        <childnode refid="4412" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4324">
+      <node id="4414">
         <label>wxTarInputStream</label>
         <link refid="classwx_tar_input_stream"/>
-        <childnode refid="4320" relation="public-inheritance">
+        <childnode refid="4410" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4325">
+      <node id="4415">
         <label>wxZipInputStream</label>
         <link refid="classwx_zip_input_stream"/>
-        <childnode refid="4320" relation="public-inheritance">
+        <childnode refid="4410" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4328">
+      <node id="4418">
         <label>wxInputStream</label>
         <link refid="classwx_input_stream"/>
-        <childnode refid="4329" relation="public-inheritance">
+        <childnode refid="4419" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4326">
+      <node id="4416">
         <label>wxArchiveInputStream</label>
         <link refid="classwx_archive_input_stream"/>
-        <childnode refid="4327" relation="public-inheritance">
+        <childnode refid="4417" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4329">
+      <node id="4419">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="4327">
+      <node id="4417">
         <label>wxFilterInputStream</label>
         <link refid="classwx_filter_input_stream"/>
-        <childnode refid="4328" relation="public-inheritance">
+        <childnode refid="4418" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="30" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" bodystart="29" bodyend="53"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="30" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" bodystart="29" bodyend="53"/>
     <listofallmembers>
       <member refid="classwx_input_stream_1a72111c617db403344a2dd6b8c13330c3" prot="public" virt="virtual"><scope>wxArchiveInputStream</scope><name>CanRead</name></member>
       <member refid="classwx_archive_input_stream_1a091c14b91d891de1014a53251dc7835e" prot="public" virt="pure-virtual"><scope>wxArchiveInputStream</scope><name>CloseEntry</name></member>

@@ -16,7 +16,7 @@
 <para>In your own default constructor, initialise the members m_name, m_extension and m_type. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="169"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="169"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_handler_1ae3b15d01c280c91e49a633e857cfd214" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="174"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="174"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_handler_1a7c886c9f2192699183e480066e386133" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -46,7 +46,7 @@
 <para>This function doesn&apos;t modify the current stream position (because it restores the original position before returning; this however requires the stream to be seekable; see <ref refid="classwx_stream_base_1a1b575329128f8ec7a369c9b2f7593d93" kindref="member">wxStreamBase::IsSeekable</ref>). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="184"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="184"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_handler_1a91fadb9ace6a42e8cf3c66061e4bbfc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -63,7 +63,7 @@
 <para>This function doesn&apos;t modify the current stream position (because it restores the original position before returning; this however requires the stream to be seekable; see <ref refid="classwx_stream_base_1a1b575329128f8ec7a369c9b2f7593d93" kindref="member">wxStreamBase::IsSeekable</ref>). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="194"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="194"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_handler_1aa81486281a106d17c411bf452d919955" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -77,7 +77,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="201"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="201"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_handler_1aa224875cd5a1dbc0f108069f061cfdeb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_array_string" kindref="compound">wxArrayString</ref> &amp;</type>
@@ -91,7 +91,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="210"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="210"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_handler_1a06a38c24bf48bff1745f042c3b1cd16b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -117,7 +117,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="228"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="228"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_handler_1aa36b8554db08f2a13cfad10e04553e9f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -130,7 +130,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="233"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="233"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_handler_1a2ecb274fc69fe2ecb83b2f58cbe67357" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -143,7 +143,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="238"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="238"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_handler_1a4011d948aeee01261628668c23bdfaea" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="gdicmn_8h_1a90a1eb6d85b5044a99b706fd979f27f5" kindref="member">wxBitmapType</ref></type>
@@ -156,7 +156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="243"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="243"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_handler_1a39793e7d6c1e0138330b4c6727e26861" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -218,7 +218,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="267"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="267"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_handler_1a165394d021a199f207ae2910a3ba72e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -268,7 +268,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="285"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="285"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_handler_1abe9bfbb83e7f883f3d053264e3283f61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -294,7 +294,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="295"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="295"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_handler_1a65ba010611387392913569867ff60fc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -321,7 +321,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="307"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="307"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_handler_1a0bcdad1b9948249f511f461323c8a4c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -346,7 +346,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="315"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="315"/>
       </memberdef>
       <memberdef kind="function" id="classwx_image_handler_1aec863a8d58771b3c103551cf7a41eaf2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -371,7 +371,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="323"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="323"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -387,7 +387,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="337"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="337"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -400,37 +400,37 @@
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="7248">
+      <node id="7435">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7247">
+      <node id="7434">
         <label>wxImageHandler</label>
         <link refid="classwx_image_handler"/>
-        <childnode refid="7248" relation="public-inheritance">
+        <childnode refid="7435" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7250">
+      <node id="7437">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7251" relation="usage">
+        <childnode refid="7438" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7249">
+      <node id="7436">
         <label>wxImageHandler</label>
         <link refid="classwx_image_handler"/>
-        <childnode refid="7250" relation="public-inheritance">
+        <childnode refid="7437" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7251">
+      <node id="7438">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" line="161" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/image.h" bodystart="160" bodyend="338"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" line="161" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/image.h" bodystart="160" bodyend="338"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxImageHandler</scope><name>AllocExclusive</name></member>
       <member refid="classwx_image_handler_1a7c886c9f2192699183e480066e386133" prot="public" virt="non-virtual"><scope>wxImageHandler</scope><name>CanRead</name></member>

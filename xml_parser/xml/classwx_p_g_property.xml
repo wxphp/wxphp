@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="692" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="692" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="692" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" bodystart="692" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="697"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="697"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1adde08613b47eda8e324483ac754e8920" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -67,7 +67,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="723"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="723"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1ac18fca1cac5343b510220929a4f6a0bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -80,7 +80,7 @@
 <para>It is customary for derived properties to implement this. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="728"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="728"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1ae5c4f47d3ff609d19346b994a9a25acb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -96,7 +96,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="741"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="741"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1ad34da516faa44c994598ce0a6dda4063" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_variant" kindref="compound">wxVariant</ref></type>
@@ -109,7 +109,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="746"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="746"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a2e0c041aa3e19a5934a02c65b53f9f7d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -133,7 +133,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="756"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="756"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a974a9b01c1f88cf4db630b6895453db8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -183,7 +183,7 @@
 You might want to take into account that m_value is Null variant if property value is unspecified (which is usually only case if you explicitly enabled that sort behaviour). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="784"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="784"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a571ac2cc435cffa9a2d2377f3430f19d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -235,7 +235,7 @@ You might want to take into account that m_value is Null variant if property val
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="812"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="812"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a7bef52444b2c03a4f10eef54ef9e9739" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -273,7 +273,7 @@ You might want to take into account that m_value is Null variant if property val
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="829"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="829"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a0fbb7142a10cfcf02bb45000ab4527cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -307,11 +307,11 @@ You might want to take into account that m_value is Null variant if property val
 <para></para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<xrefsect id="todo_1_todo000046"><xreftitle>Todo</xreftitle><xrefdescription><para>docme</para></xrefdescription></xrefsect></para><para><simplesect kind="return"><para>true if value was changed. </para></simplesect>
+<xrefsect id="todo_1_todo000045"><xreftitle>Todo</xreftitle><xrefdescription><para>docme</para></xrefdescription></xrefsect></para><para><simplesect kind="return"><para>true if value was changed. </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="842"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="842"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a0b3351061910b91a954237735466ca88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -349,7 +349,7 @@ You might want to take into account that m_value is Null variant if property val
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="860"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="860"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a8c4008c4d7d148bd06f9db590301df76" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -378,7 +378,7 @@ You might want to take into account that m_value is Null variant if property val
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="875"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="875"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a16fbe26240bf47ab0a9a02d21781da73" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -414,7 +414,7 @@ You might want to take into account that m_value is Null variant if property val
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="897"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="897"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1ac3d79ee3ebbbff20c36627d92ea926e1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_variant" kindref="compound">wxVariant</ref></type>
@@ -486,7 +486,7 @@ You might want to take into account that m_value is Null variant if property val
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="953"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="953"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a2a890026b842c51658e8c358e137722d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>const <ref refid="classwx_p_g_editor" kindref="compound">wxPGEditor</ref> *</type>
@@ -499,7 +499,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="958"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="958"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1af1b9f11eab24b1c1331f3f4a663ff98e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_validator" kindref="compound">wxValidator</ref> *</type>
@@ -523,7 +523,7 @@ You might want to take into account that m_value is Null variant if property val
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="991"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="991"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1ad0b00df4a3916cb80adfa1227c70baf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -588,7 +588,7 @@ You might want to take into account that m_value is Null variant if property val
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1047"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1047"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a200356776151608f0ca63e8cc68fdc8b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>wxPGCellRenderer *</type>
@@ -605,7 +605,7 @@ You might want to take into account that m_value is Null variant if property val
 <para>Default implementation returns editor&apos;s renderer for all columns. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1054"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1054"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a5423122f2b186d07f5b73d9e119f0549" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -618,7 +618,7 @@ You might want to take into account that m_value is Null variant if property val
 <para>Only applies to properties which have choices.</para><para>Needs to reimplemented in derived class if property value does not map directly to a choice. Integer as index, bool, and string usually do. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1063"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1063"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a167afcb85ed4d527e34567e32a0cc714" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -631,7 +631,7 @@ You might want to take into account that m_value is Null variant if property val
 <para>Automatically called after value is set. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1068"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1068"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a7d355ae4bd55f00bc149e5416c39908c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -654,7 +654,7 @@ You might want to take into account that m_value is Null variant if property val
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1081"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1081"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a4417dd87a03fd41d6e4b831c5b2a4548" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_variant" kindref="compound">wxVariant</ref></type>
@@ -671,7 +671,7 @@ You might want to take into account that m_value is Null variant if property val
 <para>Override if custom handling of attributes is needed.</para><para>Default implementation simply return NULL variant. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1090"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1090"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a874654d10c66572f2a4c4c41c843f557" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>wxPGEditorDialogAdapter *</type>
@@ -684,7 +684,7 @@ You might want to take into account that m_value is Null variant if property val
 <para>Default implementation returns NULL (ie. no action is generated when button is pressed). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1099"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1099"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1acbffb1a7f8dee530918ff74c5cb70363" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -702,7 +702,7 @@ You might want to take into account that m_value is Null variant if property val
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1108"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1108"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1ab58afbdcd83f0626f44d152127038a89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -740,7 +740,7 @@ You might want to take into account that m_value is Null variant if property val
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1123"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1123"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1af9aa04abe8dc641dec6211568fb74fcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -755,11 +755,11 @@ You might want to take into account that m_value is Null variant if property val
         <briefdescription>
 <para>Adds a private child property. </para>        </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000046"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="classwx_p_g_property_1abec97e799f836560d4f65c7c5fc97f6f" kindref="member">AddPrivateChild()</ref> instead.</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="classwx_p_g_property_1abec97e799f836560d4f65c7c5fc97f6f" kindref="member">AddPrivateChild()</ref> </para></simplesect>
+<para><xrefsect id="deprecated_1_deprecated000045"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="classwx_p_g_property_1abec97e799f836560d4f65c7c5fc97f6f" kindref="member">AddPrivateChild()</ref> instead.</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="classwx_p_g_property_1abec97e799f836560d4f65c7c5fc97f6f" kindref="member">AddPrivateChild()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1132"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1132"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1abec97e799f836560d4f65c7c5fc97f6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -776,7 +776,7 @@ You might want to take into account that m_value is Null variant if property val
 <para>If you use this instead of <ref refid="classwx_property_grid_interface_1aed2f5e12acc0bc460c2295ac1564b735" kindref="member">wxPropertyGridInterface::Insert()</ref> or <ref refid="classwx_property_grid_interface_1a7ae5812ea47c050f981aec0b8ccbe83e" kindref="member">wxPropertyGridInterface::AppendIn()</ref>, then property&apos;s parental type will automatically be set up to wxPG_PROP_AGGREGATE. In other words, all properties of this property will become private. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1141"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1141"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a0202ce34acdf8114a55b1180ecffeeda" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -797,7 +797,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1147"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1147"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a77549498512cfa99b3b3e2c4317d5b70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -817,7 +817,7 @@ You might want to take into account that m_value is Null variant if property val
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1160"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1160"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a4f8871590e381ee0d63efc72ed76bba9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -843,7 +843,7 @@ You might want to take into account that m_value is Null variant if property val
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1169"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1169"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a1a4ff5d3a02a006dc27e33af02d093a2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -856,7 +856,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1175"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1175"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a8cebe6f162709ab46c878f9c4e7b53a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -879,7 +879,7 @@ You might want to take into account that m_value is Null variant if property val
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1187"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1187"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1aa8d29e4896c228f93d14fe2420c99f36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -892,7 +892,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1192"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1192"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a137f1b7ea16f1f18fcc3e50ec107da1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -909,20 +909,7 @@ You might want to take into account that m_value is Null variant if property val
 <para>If selected item is deleted, then the value is set to unspecified. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1199"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_p_g_property_1abcd8337b04de4934c15b81e4470c5919" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void wxPGProperty::Empty</definition>
-        <argsstring>()</argsstring>
-        <name>Empty</name>
-        <briefdescription>
-<para>Deletes all child properties. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1202"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1199"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1aa024322106dfb1300ed68919c27dd1e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -949,7 +936,7 @@ You might want to take into account that m_value is Null variant if property val
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1213"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1210"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a5f266fcee82f96b626914e1876078135" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -962,7 +949,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1218"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1215"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1aef37546c4f5bf61e20f67a28df9e7093" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_variant" kindref="compound">wxVariant</ref></type>
@@ -979,7 +966,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1223"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1220"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1aca7fc7738d8ed57e13e2cee6adc6d7d1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1000,7 +987,7 @@ You might want to take into account that m_value is Null variant if property val
 <para>Otherwise defVal is returned. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1227"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1224"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a5084cee03676645c40dc8c5dcb9ef802" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -1021,7 +1008,7 @@ You might want to take into account that m_value is Null variant if property val
 <para>Otherwise defVal is returned. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1231"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1228"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1afb2c6fd9dc99d6a56d45eda1cdc1db79" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -1042,7 +1029,7 @@ You might want to take into account that m_value is Null variant if property val
 <para>Otherwise defVal is returned. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1235"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1232"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1ac5e17dd4ace122b9ba8e007538ba7a02" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_variant" kindref="compound">wxVariant</ref></type>
@@ -1055,7 +1042,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1240"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1237"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a7e360285dcfa6fc18c6bc8a88e261baf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_p_g_editor" kindref="compound">wxPGEditor</ref> *</type>
@@ -1072,7 +1059,7 @@ You might want to take into account that m_value is Null variant if property val
 <para>NULL for no editor. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1245"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1242"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1adc211e2a17cfaab3a1c7d4b6fd8788b6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1085,7 +1072,7 @@ You might want to take into account that m_value is Null variant if property val
 <para>parent&apos;s name is not added in any case) </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1248"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1245"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1af2f256f0d3eda31b18548eaf3c5e992d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_p_g_cell" kindref="compound">wxPGCell</ref> &amp;</type>
@@ -1103,7 +1090,7 @@ You might want to take into account that m_value is Null variant if property val
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1257"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1254"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1aca895baa1adfa0536d1b623595ad198b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_cell" kindref="compound">wxPGCell</ref> &amp;</type>
@@ -1120,7 +1107,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1262"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1259"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a5c3624606ec872e85fcba2e9d411475c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_cell" kindref="compound">wxPGCell</ref> &amp;</type>
@@ -1137,7 +1124,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1267"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1264"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1aaa1e0364c2a3d0bd34d989634a828fcc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned int</type>
@@ -1150,7 +1137,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1272"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1269"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a6aedf98d88f968610f6adef45d391e80" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1187,7 +1174,7 @@ You might want to take into account that m_value is Null variant if property val
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1284"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1281"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a5659f9cc520b7093b64a10d5ceda04d3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_p_g_choices" kindref="compound">wxPGChoices</ref> &amp;</type>
@@ -1200,7 +1187,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1289"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1286"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1acb1585da22f65d15e7015b66ca3a455c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -1213,7 +1200,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1294"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1291"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1ac9b089203d786e268b73ec77f0a42504" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_client_data" kindref="compound">wxClientData</ref> *</type>
@@ -1226,7 +1213,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1298"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1295"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1aab8de8a18aa6817ac262d37a1c18e591" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_variant" kindref="compound">wxVariant</ref></type>
@@ -1239,7 +1226,7 @@ You might want to take into account that m_value is Null variant if property val
 <para>If property&apos;s value type is not a built-in one, and &quot;DefaultValue&quot; attribute is not defined, then this function usually returns Null variant. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1305"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1302"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1afc4727eecd9a28a4f7a5361dbc1e5e76" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1252,7 +1239,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1309"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1306"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a2f15b192dc294f8a66f2584d8bf0974f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_p_g_editor" kindref="compound">wxPGEditor</ref> *</type>
@@ -1265,7 +1252,7 @@ You might want to take into account that m_value is Null variant if property val
 <para>Returns more accurate value than <ref refid="classwx_p_g_property_1a2a890026b842c51658e8c358e137722d" kindref="member">DoGetEditorClass()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1316"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1313"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a20532654013f84d21774f939c4283546" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property_1a68b0ae8aab37c387f5fc4b7e9c53968e" kindref="member">FlagType</ref></type>
@@ -1278,7 +1265,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1321"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1318"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a921b49bc576e83b6cb900ade60f3787a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref> *</type>
@@ -1291,7 +1278,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1324"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1321"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1ab116666b230d5d98e8fcb7619eea162c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_property_grid" kindref="compound">wxPropertyGrid</ref> *</type>
@@ -1304,7 +1291,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1330"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1327"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a83843454085c699c2d886671c3460b5f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1318,7 +1305,7 @@ You might want to take into account that m_value is Null variant if property val
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1337"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1334"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1aef71581ec3dcd1e17457457def9f9d24" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned int</type>
@@ -1331,7 +1318,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1342"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1339"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a7610de7df326219f954133b2460f7bd9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1344,7 +1331,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1345"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1342"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1aef439150fcdfcc32bebedb278aea9806" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -1357,7 +1344,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1350"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1347"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a50aa7238a183862723e1505d5cffc341" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -1371,7 +1358,7 @@ You might want to take into account that m_value is Null variant if property val
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1359"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1356"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a78a3bf23304ec8a483c75fac5002986e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1384,7 +1371,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1363"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1360"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a38b7e68b49282ac71d6e4cea7643aea1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1397,7 +1384,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1366"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1363"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a88aa40a48c253824dcc296bcf1ff9f89" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -1410,7 +1397,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1369"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1366"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1ac19bf570e71050edb3b100a3bdb68734" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -1427,7 +1414,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1374"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1371"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a79cb24032f2aaee16a260ca560957a6f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_validator" kindref="compound">wxValidator</ref> *</type>
@@ -1440,7 +1427,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1377"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1374"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a76fdd0b4782957b18aca2e8b8e170a0d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_variant" kindref="compound">wxVariant</ref></type>
@@ -1453,7 +1440,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1382"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1379"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a2565aba121d1df376d7ba7c16fbc0553" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> *</type>
@@ -1466,7 +1453,7 @@ You might want to take into account that m_value is Null variant if property val
 <para>Only returns non-NULL bitmap if one was set with <ref refid="classwx_p_g_property_1a5c5be1292d329945b0a24e33db485207" kindref="member">SetValueImage()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1388"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1385"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a29f70a60e4844efbebc140270e1a4358" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1493,7 +1480,7 @@ You might want to take into account that m_value is Null variant if property val
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1406"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1403"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a0db56c7df1153eacebc53e428f22f322" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -1507,11 +1494,11 @@ You might want to take into account that m_value is Null variant if property val
         <briefdescription>
 <para>Synonymous to <ref refid="classwx_p_g_property_1a29f70a60e4844efbebc140270e1a4358" kindref="member">GetValueAsString()</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000047"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="classwx_p_g_property_1a29f70a60e4844efbebc140270e1a4358" kindref="member">GetValueAsString()</ref> instead.</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="classwx_p_g_property_1a29f70a60e4844efbebc140270e1a4358" kindref="member">GetValueAsString()</ref> </para></simplesect>
+<para><xrefsect id="deprecated_1_deprecated000046"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="classwx_p_g_property_1a29f70a60e4844efbebc140270e1a4358" kindref="member">GetValueAsString()</ref> instead.</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="classwx_p_g_property_1a29f70a60e4844efbebc140270e1a4358" kindref="member">GetValueAsString()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1414"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1411"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a729634b1a2f7574e4f98f48bcfe5b937" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1524,7 +1511,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1419"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1416"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1aa36f8e8d6f0e48c9bbb105905220605f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1537,7 +1524,7 @@ You might want to take into account that m_value is Null variant if property val
 <para>Note that the position of scrollbars is not taken into account. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1425"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1422"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a3cf53ef7dff19595ab4b62bb3af738bd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property_1a68b0ae8aab37c387f5fc4b7e9c53968e" kindref="member">FlagType</ref></type>
@@ -1555,7 +1542,7 @@ You might want to take into account that m_value is Null variant if property val
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1432"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1429"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a58d3125c3b7eebef540363d5720eafa3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1568,7 +1555,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1437"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1434"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1ad1bd50c81626773176c5d951d0e34c60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1605,7 +1592,7 @@ You might want to take into account that m_value is Null variant if property val
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1448"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1445"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a83f63b596fd2a2a677d8096485f0299e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1622,7 +1609,7 @@ You might want to take into account that m_value is Null variant if property val
 <para>wxNOT_FOUND if given property is not child of this. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1454"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1451"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a572697e79fd8785f3477cc7f8d72f5d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -1646,7 +1633,7 @@ You might want to take into account that m_value is Null variant if property val
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1467"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1464"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1ae9f9995783eeaf5320cb0c71482cbbc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1694,7 +1681,7 @@ You might want to take into account that m_value is Null variant if property val
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1482"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1479"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1aaf32ea058af511067b6f496dd55072eb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1707,7 +1694,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1487"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1484"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1afbcf920da6022bfdbc6050aea3ded3be" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1720,7 +1707,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1492"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1489"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1ad49b8eb1fcd8b275ce20b2f18be05755" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1733,7 +1720,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1497"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1494"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1aa9313d6d246d9cd3643a6bb34808c695" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1746,7 +1733,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1502"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1499"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1ab1ca1b66276badfc8e7c32b458181786" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1763,7 +1750,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1507"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1504"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1aa5a9ebcac6c954178f97a4c100bb3ac0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1777,7 +1764,7 @@ You might want to take into account that m_value is Null variant if property val
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1516"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1513"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a785c3679e91f5b878bcbaec31aa1bccc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1790,7 +1777,7 @@ You might want to take into account that m_value is Null variant if property val
 <para>This usually means that value is Null variant. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1522"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1519"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a8050a0de4f8625d544851fbcacb1961c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1803,7 +1790,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1527"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1524"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1af2f7f8a157295b8d56138f59573a8254" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -1820,7 +1807,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1532"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1529"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1af154d4b9d070c594a75164a5482d6888" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1833,7 +1820,7 @@ You might want to take into account that m_value is Null variant if property val
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1537"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1534"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a418c1539969b7a0a9378a3411a5680a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1870,7 +1857,7 @@ You might want to take into account that m_value is Null variant if property val
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1551"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1548"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a126a59cc86786f51cc72469bc2143b4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1896,7 +1883,7 @@ You might want to take into account that m_value is Null variant if property val
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1563"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1560"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a5a3851a607cf1f73f34caeaba24374be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1933,7 +1920,7 @@ You might want to take into account that m_value is Null variant if property val
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1577"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1574"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a2cd2e6f0b30a1ab789f9ea8b58226260" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1955,10 +1942,10 @@ You might want to take into account that m_value is Null variant if property val
 <para>For builtin editors, use wxPGEditor_X, where X is builtin editor&apos;s name (TextCtrl, Choice, etc. see <ref refid="classwx_p_g_editor" kindref="compound">wxPGEditor</ref> documentation for full list).</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-For custom editors, use pointer you received from <ref refid="classwx_property_grid_1a89ee01017530df27ff2c469bfbe0605e" kindref="member">wxPropertyGrid::RegisterEditorClass()</ref>. </para>        </detaileddescription>
+For custom editors, use pointer you received from <ref refid="classwx_property_grid_1adb8c3d0d29d1c051a8a9ece93d40f6b7" kindref="member">wxPropertyGrid::RegisterEditorClass()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1588"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1585"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a90294ea6cae6cf504d032b46787bb6e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1975,7 +1962,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1593"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1590"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a0ec5afcf091d8100142887f459d3dd52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1996,7 +1983,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1598"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1595"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a7275467270d2c7ac3f847f4d1b6a1194" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2014,7 +2001,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1606"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1603"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1aa27f45f58bbcd53802e6644db33aec83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2032,7 +2019,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1613"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1610"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1ab35b3529f2b6afbc1ec02d2bbb187709" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2049,7 +2036,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1617"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1614"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a4244276bf942fd52e1dd182535e7ba5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2066,7 +2053,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
 <para>Tries to retain value type, although currently if it is not string, then it is forced to integer. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1625"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1622"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a7722a2c503051fd6ef1477a9c0c081a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2084,7 +2071,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1633"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1630"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a02dd250ff0cfe074a8de9f8cd8643880" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2106,7 +2093,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1641"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1638"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a839af036b24fc35696f0ef3cb2b0670a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2123,7 +2110,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1647"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1644"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a5acdc1db23a6e219de6619bc54e1a2e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2141,7 +2128,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1655"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1652"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1aa74671893440ce2a0f2a0e47ba897ad5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2158,7 +2145,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1660"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1657"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a43f07192741d219d50e94b2d54e93847" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2175,7 +2162,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
 <para>Affects children recursively. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1665"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1662"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a79f28d83cf79c6bb87337183fb8c56f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2192,7 +2179,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1670"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1667"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1af7e9a4c245025e118373a3c876c7904d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2218,7 +2205,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1683"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1680"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a8d34f624ad2f38300741c3caa0929629" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2255,7 +2242,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1697"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1694"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a9eb7d1f243c6fb993b3563c241b2ef4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2272,7 +2259,7 @@ For custom editors, use pointer you received from <ref refid="classwx_property_g
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1700"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1697"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1aa8e771a01a93fe94f87a449f430afa79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2322,7 +2309,7 @@ If you need to change property value in event, based on user input, use <ref ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1723"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1720"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a5c5be1292d329945b0a24e33db485207" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2339,7 +2326,7 @@ If you need to change property value in event, based on user input, use <ref ref
 <para>This bitmap may be ignored by custom cell renderers. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1729"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1726"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1ade9385b0bc3c9ba4833b271157e87354" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2357,7 +2344,7 @@ If you need to change property value in event, based on user input, use <ref ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1738"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1735"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a4e55506bbc49f0b7d447df71a00f2df6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2370,7 +2357,7 @@ If you need to change property value in event, based on user input, use <ref ref
 <para>Null variant). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1743"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1740"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a46da7a139ba90c3852710f181280667d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2388,7 +2375,7 @@ If you need to change property value in event, based on user input, use <ref ref
 <para>cancel true returned by <ref refid="classwx_p_g_property_1a974a9b01c1f88cf4db630b6895453db8" kindref="member">StringToValue()</ref> or <ref refid="classwx_p_g_property_1a571ac2cc435cffa9a2d2377f3430f19d" kindref="member">IntToValue()</ref>). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1749"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1746"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a7b2f517388b0f0038354d5fd9f0bab43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_p_g_property" kindref="compound">wxPGProperty</ref> *</type>
@@ -2401,7 +2388,7 @@ If you need to change property value in event, based on user input, use <ref ref
 <para>Returns topmost property updated. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1755"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1752"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_property_1a9de64f67dc90b2aaad1f5e1a6d30e7e8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2414,7 +2401,22 @@ If you need to change property value in event, based on user input, use <ref ref
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="1760"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1757"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classwx_p_g_property_1abcd8337b04de4934c15b81e4470c5919" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxPGProperty::Empty</definition>
+        <argsstring>()</argsstring>
+        <name>Empty</name>
+        <briefdescription>
+<para>Deletes all child properties. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="1761"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -2511,7 +2513,7 @@ If you need to change property value in event, based on user input, use <ref ref
 <para>Allows editing of a list of strings in <ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> and in a separate dialog. Supports &quot;Delimiter&quot; attribute, which defaults to comma (&apos;,&apos;).</para></sect2>
 <sect2 id="classwx_p_g_property_1wxDateProperty">
 <title>wxDateProperty</title>
-<para><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> property. Default editor is DatePickerCtrl, although TextCtrl should work as well. wxPG_DATE_FORMAT attribute can be used to change string <ref refid="classwx_date_time_1a32377f43a31e29ad4fe70f299650c5f8" kindref="member">wxDateTime::Format</ref> uses (although default is recommended as it is locale-dependant), and wxPG_DATE_PICKER_STYLE allows changing window style given to DatePickerCtrl (default is wxDP_DEFAULT|wxDP_SHOWCENTURY). Using wxDP_ALLOWNONE will enable better unspecified value support.</para></sect2>
+<para><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> property. Default editor is DatePickerCtrl, although TextCtrl should work as well. wxPG_DATE_FORMAT attribute can be used to change string <ref refid="classwx_date_time_1a32377f43a31e29ad4fe70f299650c5f8" kindref="member">wxDateTime::Format</ref> uses (although default is recommended as it is locale-dependent), and wxPG_DATE_PICKER_STYLE allows changing window style given to DatePickerCtrl (default is wxDP_DEFAULT|wxDP_SHOWCENTURY). Using wxDP_ALLOWNONE will enable better unspecified value support.</para></sect2>
 <sect2 id="classwx_p_g_property_1wxEditEnumProperty">
 <title>wxEditEnumProperty</title>
 <para>Represents a string that can be freely edited or selected from list of choices - custom combobox control is used to edit the value.</para></sect2>
@@ -2620,37 +2622,37 @@ If you need to change property value in event, based on user input, use <ref ref
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxpropgrid" kindref="member">wxPropertyGrid</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__propgrid" kindref="compound">wxPropertyGrid</ref> </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="8664">
+      <node id="8857">
         <label>wxPGProperty</label>
         <link refid="classwx_p_g_property"/>
-        <childnode refid="8665" relation="public-inheritance">
+        <childnode refid="8858" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8665">
+      <node id="8858">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8666">
+      <node id="8859">
         <label>wxPGProperty</label>
         <link refid="classwx_p_g_property"/>
-        <childnode refid="8667" relation="public-inheritance">
+        <childnode refid="8860" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8667">
+      <node id="8860">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8668" relation="usage">
+        <childnode refid="8861" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8668">
+      <node id="8861">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" line="690" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/property.h" bodystart="689" bodyend="1761"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" line="690" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/property.h" bodystart="689" bodyend="1762"/>
     <listofallmembers>
       <member refid="classwx_p_g_property_1a0202ce34acdf8114a55b1180ecffeeda" prot="public" virt="non-virtual"><scope>wxPGProperty</scope><name>AdaptListToValue</name></member>
       <member refid="classwx_p_g_property_1ab58afbdcd83f0626f44d152127038a89" prot="public" virt="non-virtual"><scope>wxPGProperty</scope><name>AddChoice</name></member>
@@ -2670,7 +2672,7 @@ If you need to change property value in event, based on user input, use <ref ref
       <member refid="classwx_p_g_property_1af1b9f11eab24b1c1331f3f4a663ff98e" prot="public" virt="virtual"><scope>wxPGProperty</scope><name>DoGetValidator</name></member>
       <member refid="classwx_p_g_property_1ad34da516faa44c994598ce0a6dda4063" prot="public" virt="virtual"><scope>wxPGProperty</scope><name>DoGetValue</name></member>
       <member refid="classwx_p_g_property_1a7d355ae4bd55f00bc149e5416c39908c" prot="public" virt="virtual"><scope>wxPGProperty</scope><name>DoSetAttribute</name></member>
-      <member refid="classwx_p_g_property_1abcd8337b04de4934c15b81e4470c5919" prot="public" virt="non-virtual"><scope>wxPGProperty</scope><name>Empty</name></member>
+      <member refid="classwx_p_g_property_1abcd8337b04de4934c15b81e4470c5919" prot="protected" virt="non-virtual"><scope>wxPGProperty</scope><name>Empty</name></member>
       <member refid="classwx_p_g_property_1aa024322106dfb1300ed68919c27dd1e1" prot="public" virt="non-virtual"><scope>wxPGProperty</scope><name>Enable</name></member>
       <member refid="classwx_p_g_property_1a68b0ae8aab37c387f5fc4b7e9c53968e" prot="public" virt="non-virtual"><scope>wxPGProperty</scope><name>FlagType</name></member>
       <member refid="classwx_p_g_property_1a5f266fcee82f96b626914e1876078135" prot="public" virt="non-virtual"><scope>wxPGProperty</scope><name>GenerateComposedValue</name></member>

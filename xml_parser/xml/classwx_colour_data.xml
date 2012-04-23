@@ -4,6 +4,26 @@
     <compoundname>wxColourData</compoundname>
     <basecompoundref refid="classwx_object" prot="public" virt="non-virtual">wxObject</basecompoundref>
     <includes local="no">wx/colourdata.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classwx_colour_data_1a80f37650f0f4b550e72bf8fee2ed8dd0" prot="public" static="no">
+        <name>@5</name>
+        <enumvalue id="classwx_colour_data_1a80f37650f0f4b550e72bf8fee2ed8dd0a4b98189c46faa51f4b954639a87bf507" prot="public">
+          <name>NUM_CUSTOM</name>
+          <initializer> 16</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>number of custom colours we store </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colourdata.h" line="24" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/colourdata.h" bodystart="23" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="classwx_colour_data_1a970e44b3f6ee89a4f4621bd76eb3738c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -16,7 +36,7 @@
 <para>Initializes the custom colours to <computeroutput>wxNullColour</computeroutput>, the <emphasis>data</emphasis> colour setting to black, and the <emphasis>choose</emphasis> full setting to true. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colourdata.h" line="27"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colourdata.h" line="33"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_data_1a6aa87a1173d4a95ddbe0aa9cc412f64c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -29,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colourdata.h" line="32"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colourdata.h" line="38"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_data_1a98945552e72245b2d21b6b9a54fe6758" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -42,7 +62,7 @@
 <para>Has no meaning under other platforms.</para><para>The default value is true. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colourdata.h" line="42"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colourdata.h" line="48"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_data_1ac9eb69a80b6c0638284f6f55966f2ce4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
@@ -55,7 +75,7 @@
 <para>The default colour is black. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colourdata.h" line="49"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colourdata.h" line="55"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_data_1a0ddde66becc7d7d381580f89698c16b3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -80,7 +100,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colourdata.h" line="59"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colourdata.h" line="65"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_data_1a2e5e80d982cbcb17cac113a72efef2bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -97,7 +117,7 @@
 <para>Under other platforms, has no effect.</para><para>The default value is true. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colourdata.h" line="68"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colourdata.h" line="74"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_data_1a66d6dd56885c84a9f83e28a75fe2132e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -114,7 +134,7 @@
 <para>The default colour is black. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colourdata.h" line="75"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colourdata.h" line="81"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_data_1afff3c5561456c17bcf6329a81dcfc716" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -150,7 +170,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colourdata.h" line="86"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colourdata.h" line="92"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_data_1a3852e5257218136d8d04b866adadbd41" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -163,7 +183,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colourdata.h" line="92"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colourdata.h" line="98"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_data_1a6d0b9f7cfd1d628f212bc19ef963cab8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -180,7 +200,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colourdata.h" line="98"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colourdata.h" line="104"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_data_1ae9b5169a74f6afb889b187829cd517ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_colour_data" kindref="compound">wxColourData</ref> &amp;</type>
@@ -197,7 +217,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colourdata.h" line="103"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colourdata.h" line="109"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -207,37 +227,37 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref>, <ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_colour" kindref="compound">wxColour</ref>, <ref refid="classwx_colour_dialog" kindref="compound">wxColourDialog</ref>, <ref refid="overview_cmndlg_1overview_cmndlg_colour" kindref="member">wxColourDialog Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4857">
+      <node id="4949">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4856">
+      <node id="4948">
         <label>wxColourData</label>
         <link refid="classwx_colour_data"/>
-        <childnode refid="4857" relation="public-inheritance">
+        <childnode refid="4949" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4859">
+      <node id="4951">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4860" relation="usage">
+        <childnode refid="4952" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4858">
+      <node id="4950">
         <label>wxColourData</label>
         <link refid="classwx_colour_data"/>
-        <childnode refid="4859" relation="public-inheritance">
+        <childnode refid="4951" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4860">
+      <node id="4952">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colourdata.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colourdata.h" bodystart="19" bodyend="104"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colourdata.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/colourdata.h" bodystart="19" bodyend="110"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxColourData</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxColourData</scope><name>CloneRefData</name></member>
@@ -251,6 +271,7 @@
       <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxColourData</scope><name>IsKindOf</name></member>
       <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxColourData</scope><name>IsSameAs</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxColourData</scope><name>m_refData</name></member>
+      <member refid="classwx_colour_data_1a80f37650f0f4b550e72bf8fee2ed8dd0a4b98189c46faa51f4b954639a87bf507" prot="public" virt="non-virtual"><scope>wxColourData</scope><name>NUM_CUSTOM</name></member>
       <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxColourData</scope><name>operator delete</name></member>
       <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxColourData</scope><name>operator new</name></member>
       <member refid="classwx_colour_data_1ae9b5169a74f6afb889b187829cd517ad" prot="public" virt="non-virtual"><scope>wxColourData</scope><name>operator=</name></member>

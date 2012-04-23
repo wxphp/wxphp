@@ -21,7 +21,7 @@
 <para>This will attach scroll event handlers to the target window to catch and handle scroll events appropriately. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vscroll.h" line="37"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vscroll.h" line="37"/>
       </memberdef>
       <memberdef kind="function" id="classwx_var_scroll_helper_base_1a1d98424cb2af1db02e326c5c7065c12d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vscroll.h" line="43"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vscroll.h" line="43"/>
       </memberdef>
       <memberdef kind="function" id="classwx_var_scroll_helper_base_1aed909bbbec82269f2c53dad5e7da8ed7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -52,7 +52,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vscroll.h" line="54"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vscroll.h" line="54"/>
       </memberdef>
       <memberdef kind="function" id="classwx_var_scroll_helper_base_1a8b2142bd630ec007036d2d826fa25b4a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -70,7 +70,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vscroll.h" line="65"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vscroll.h" line="65"/>
       </memberdef>
       <memberdef kind="function" id="classwx_var_scroll_helper_base_1acdcec3046de7670eb2d448463a011b81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -88,7 +88,7 @@
 <para>When this is false, you are responsible for repainting any invalidated areas of the window yourself to account for the new scroll position. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vscroll.h" line="75"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vscroll.h" line="75"/>
       </memberdef>
       <memberdef kind="function" id="classwx_var_scroll_helper_base_1a5b9316fbade3450efdc359ac049a7839" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>int</type>
@@ -102,7 +102,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vscroll.h" line="84"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vscroll.h" line="84"/>
       </memberdef>
       <memberdef kind="function" id="classwx_var_scroll_helper_base_1addff4d4e4e099adac7abfe56fbb50682" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="defs_8h_1a1e6994f40bd9cb140e292afb165af971" kindref="member">wxOrientation</ref></type>
@@ -115,7 +115,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vscroll.h" line="90"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vscroll.h" line="90"/>
       </memberdef>
       <memberdef kind="function" id="classwx_var_scroll_helper_base_1a5d195a4216200894fc3e843c01ec4e54" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>int</type>
@@ -129,7 +129,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vscroll.h" line="100"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vscroll.h" line="100"/>
       </memberdef>
       <memberdef kind="function" id="classwx_var_scroll_helper_base_1afcd2d4890fcc4ea1128e67dc2faf4c2c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -143,7 +143,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vscroll.h" line="108"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vscroll.h" line="108"/>
       </memberdef>
       <memberdef kind="function" id="classwx_var_scroll_helper_base_1a3a95eda4e88e6444e33a37b8bb0fcd91" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -157,7 +157,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vscroll.h" line="114"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vscroll.h" line="114"/>
       </memberdef>
       <memberdef kind="function" id="classwx_var_scroll_helper_base_1aaa6b3959f6dbf90329c1c98a64735334" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -171,7 +171,7 @@
 <para>This includes the last unit even if it is only partially visible. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vscroll.h" line="121"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vscroll.h" line="121"/>
       </memberdef>
       <memberdef kind="function" id="classwx_var_scroll_helper_base_1aeb032c41e1436c630b9fadf3c198c91d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -188,7 +188,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vscroll.h" line="127"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vscroll.h" line="127"/>
       </memberdef>
       <memberdef kind="function" id="classwx_var_scroll_helper_base_1aeae3e1b16c52dc5227b439cb6ffacf59" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -201,7 +201,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vscroll.h" line="132"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vscroll.h" line="132"/>
       </memberdef>
       <memberdef kind="function" id="classwx_var_scroll_helper_base_1af79bfa4aac18be344d5dbcf7932cf1f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -219,7 +219,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vscroll.h" line="142"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vscroll.h" line="142"/>
       </memberdef>
       <memberdef kind="function" id="classwx_var_scroll_helper_base_1a0b05466ede3d27fa28daf2f62ae2ecb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -232,7 +232,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vscroll.h" line="147"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vscroll.h" line="147"/>
       </memberdef>
       <memberdef kind="function" id="classwx_var_scroll_helper_base_1ab17ffa8dd9790d7ffc789ea080816518" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -249,7 +249,7 @@
 <para>if it is below the last item). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vscroll.h" line="154"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vscroll.h" line="154"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -272,7 +272,7 @@
 <para><ref refid="classwx_var_scroll_helper_base_1a03bf97869b5668218ecc0a1dbe6a77af" kindref="member">OnGetUnitsSizeHint()</ref> is normally called just before <ref refid="classwx_var_scroll_helper_base_1a1f31e727d5db972c2227790eb9174034" kindref="member">OnGetUnitSize()</ref> but you shouldn&apos;t rely on the latter being called for all units in the interval specified here. It is also possible that <ref refid="classwx_var_scroll_helper_base_1a1f31e727d5db972c2227790eb9174034" kindref="member">OnGetUnitSize()</ref> will be called for units outside of this interval, so this is really just a hint, not a promise.</para><para>Finally, note that <emphasis>unitMin</emphasis> is inclusive, while <emphasis>unitMax</emphasis> is exclusive. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vscroll.h" line="174"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vscroll.h" line="174"/>
       </memberdef>
       <memberdef kind="function" id="classwx_var_scroll_helper_base_1a050ecc5ed309e58f2e47563546a09d2c" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
@@ -286,7 +286,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vscroll.h" line="189"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vscroll.h" line="189"/>
       </memberdef>
       <memberdef kind="function" id="classwx_var_scroll_helper_base_1a1f31e727d5db972c2227790eb9174034" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
@@ -303,7 +303,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vscroll.h" line="195"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vscroll.h" line="195"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -313,74 +313,74 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_h_scrolled_window" kindref="compound">wxHScrolledWindow</ref>, <ref refid="classwx_h_v_scrolled_window" kindref="compound">wxHVScrolledWindow</ref>, <ref refid="classwx_v_scrolled_window" kindref="compound">wxVScrolledWindow</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11325">
+      <node id="11514">
         <label>wxHScrolledWindow</label>
         <link refid="classwx_h_scrolled_window"/>
-        <childnode refid="11324" relation="public-inheritance">
+        <childnode refid="11513" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11323">
+      <node id="11512">
         <label>wxVarScrollHelperBase</label>
         <link refid="classwx_var_scroll_helper_base"/>
       </node>
-      <node id="11326">
+      <node id="11515">
         <label>wxVarHVScrollHelper</label>
         <link refid="classwx_var_h_v_scroll_helper"/>
-        <childnode refid="11324" relation="public-inheritance">
+        <childnode refid="11513" relation="public-inheritance">
         </childnode>
-        <childnode refid="11328" relation="public-inheritance">
+        <childnode refid="11517" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11330">
+      <node id="11519">
         <label>wxVListBox</label>
         <link refid="classwx_v_list_box"/>
-        <childnode refid="11329" relation="public-inheritance">
+        <childnode refid="11518" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11333">
+      <node id="11522">
         <label>wxSimpleHtmlListBox</label>
         <link refid="classwx_simple_html_list_box"/>
-        <childnode refid="11331" relation="public-inheritance">
+        <childnode refid="11520" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11329">
+      <node id="11518">
         <label>wxVScrolledWindow</label>
         <link refid="classwx_v_scrolled_window"/>
-        <childnode refid="11328" relation="public-inheritance">
+        <childnode refid="11517" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11332">
+      <node id="11521">
         <label>wxRichTextStyleListBox</label>
         <link refid="classwx_rich_text_style_list_box"/>
-        <childnode refid="11331" relation="public-inheritance">
+        <childnode refid="11520" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11331">
+      <node id="11520">
         <label>wxHtmlListBox</label>
         <link refid="classwx_html_list_box"/>
-        <childnode refid="11330" relation="public-inheritance">
+        <childnode refid="11519" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11327">
+      <node id="11516">
         <label>wxHVScrolledWindow</label>
         <link refid="classwx_h_v_scrolled_window"/>
-        <childnode refid="11326" relation="public-inheritance">
+        <childnode refid="11515" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11324">
+      <node id="11513">
         <label>wxVarHScrollHelper</label>
         <link refid="classwx_var_h_scroll_helper"/>
-        <childnode refid="11323" relation="public-inheritance">
+        <childnode refid="11512" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11328">
+      <node id="11517">
         <label>wxVarVScrollHelper</label>
         <link refid="classwx_var_v_scroll_helper"/>
-        <childnode refid="11323" relation="public-inheritance">
+        <childnode refid="11512" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vscroll.h" line="30" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vscroll.h" bodystart="29" bodyend="196"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vscroll.h" line="30" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/vscroll.h" bodystart="29" bodyend="196"/>
     <listofallmembers>
       <member refid="classwx_var_scroll_helper_base_1aed909bbbec82269f2c53dad5e7da8ed7" prot="public" virt="non-virtual"><scope>wxVarScrollHelperBase</scope><name>CalcScrolledPosition</name></member>
       <member refid="classwx_var_scroll_helper_base_1a8b2142bd630ec007036d2d826fa25b4a" prot="public" virt="non-virtual"><scope>wxVarScrollHelperBase</scope><name>CalcUnscrolledPosition</name></member>

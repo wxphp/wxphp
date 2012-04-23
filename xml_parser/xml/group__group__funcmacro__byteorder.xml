@@ -13,7 +13,7 @@
 <para>independently of the current platform.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1350" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1350" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" line="1365" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" bodystart="1365" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__byteorder_1gaf62355f7ea859dd5c91c24a6dcda1491" prot="public" static="no">
         <name>wxUINT32_SWAP_ALWAYS</name>
@@ -24,7 +24,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1351" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1351" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" line="1366" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" bodystart="1366" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__byteorder_1gab39197057c6b8c010dd52c433ce78be4" prot="public" static="no">
         <name>wxINT16_SWAP_ALWAYS</name>
@@ -35,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1352" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1352" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" line="1367" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" bodystart="1367" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__byteorder_1ga073af84d075d9d5c5f3d1e59b787d1f9" prot="public" static="no">
         <name>wxUINT16_SWAP_ALWAYS</name>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1353" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1353" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" line="1368" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" bodystart="1368" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__byteorder_1ga94c702b6b822a137769dd7018322699d" prot="public" static="no">
         <name>wxINT32_SWAP_ON_BE</name>
@@ -57,7 +57,7 @@
 <para>If the program has been compiled on a little-endian architecture, the value will be unchanged.</para><para>Use these macros to read data from and write data to a file that stores data in little-endian (for example Intel i386) format.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1371" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1371" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" line="1386" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" bodystart="1386" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__byteorder_1ga8171e345d7a0c9cfa10b373313eefde9" prot="public" static="no">
         <name>wxUINT32_SWAP_ON_BE</name>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1372" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1372" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" line="1387" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" bodystart="1387" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__byteorder_1gacce1065c78eac38833366478bb0b77b6" prot="public" static="no">
         <name>wxINT16_SWAP_ON_BE</name>
@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1373" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1373" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" line="1388" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" bodystart="1388" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__byteorder_1ga86a9bc83b8b6d632a009199d8ec4ec6c" prot="public" static="no">
         <name>wxUINT16_SWAP_ON_BE</name>
@@ -90,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1374" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1374" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" line="1389" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" bodystart="1389" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__byteorder_1gadb0e11cd0754cd1ab63debb5426ed1ce" prot="public" static="no">
         <name>wxINT32_SWAP_ON_LE</name>
@@ -101,7 +101,7 @@
 <para>If the program has been compiled on a big-endian architecture, the value will be unchanged.</para><para>Use these macros to read data from and write data to a file that stores data in big-endian format.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1392" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1392" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" line="1407" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" bodystart="1407" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__byteorder_1gaffb29e541cc7e6adec85a9ee5f6044b6" prot="public" static="no">
         <name>wxUINT32_SWAP_ON_LE</name>
@@ -112,7 +112,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1393" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1393" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" line="1408" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" bodystart="1408" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__byteorder_1ga3b04f074d4e7bf61f3d6ce002f7200d2" prot="public" static="no">
         <name>wxINT16_SWAP_ON_LE</name>
@@ -123,7 +123,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1394" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1394" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" line="1409" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" bodystart="1409" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__byteorder_1gaf02d68a36a349dd7311a73f76ab93316" prot="public" static="no">
         <name>wxUINT16_SWAP_ON_LE</name>
@@ -134,7 +134,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1395" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1395" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" line="1410" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" bodystart="1410" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__byteorder_1ga9d00fa152fe6e580048035a6f8d9379c" prot="public" static="no">
         <name>wxFORCE_LINK_THIS_MODULE</name>
@@ -145,7 +145,7 @@
 <para>In particular, you should use this macro in the source file which you want to force for inclusion. The <computeroutput>moduleName</computeroutput> needs to be a name not already in use in other <ref refid="group__group__funcmacro__byteorder_1ga9d00fa152fe6e580048035a6f8d9379c" kindref="member">wxFORCE_LINK_THIS_MODULE()</ref> macros, but is not required to be e.g. the same name of the source file (even if it&apos;s a good choice).</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/link.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/link.h" line="23" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/link.h" bodystart="23" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/link.h" line="23" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/link.h" bodystart="23" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__byteorder_1ga063c051259bc80da29444f51cfdbfaaa" prot="public" static="no">
         <name>wxFORCE_LINK_MODULE</name>
@@ -156,7 +156,7 @@
 <para>In particular, you should use this macro in a source file which you know for sure is linked in the output (e.g. the source file containing the <computeroutput>main()</computeroutput> of your app). The <computeroutput>moduleName</computeroutput> is the name of the module you want to forcefully link (i.e. the name you used in the relative <ref refid="group__group__funcmacro__byteorder_1ga9d00fa152fe6e580048035a6f8d9379c" kindref="member">wxFORCE_LINK_THIS_MODULE()</ref> macro.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/link.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/link.h" line="37" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/link.h" bodystart="37" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/link.h" line="37" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/link.h" bodystart="37" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="938"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="932"/>
       </memberdef>
       <memberdef kind="function" id="classwx_std_dialog_button_sizer_1ad86379fdfdeeb02f77019ea9e1250688" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -35,7 +35,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="953"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="947"/>
       </memberdef>
       <memberdef kind="function" id="classwx_std_dialog_button_sizer_1a6b84c3a59817dd4c1dbe22eec8951134" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -48,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="959"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="953"/>
       </memberdef>
       <memberdef kind="function" id="classwx_std_dialog_button_sizer_1a523a7a8ffe4d45d35a6a9a6859978e0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -65,7 +65,7 @@
 <para>This allows you to use identifiers other than the standard identifiers outlined above. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="967"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="961"/>
       </memberdef>
       <memberdef kind="function" id="classwx_std_dialog_button_sizer_1afc8000cf3148cd7feb96a1a906e7ceed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -82,7 +82,7 @@
 <para>This allows you to use identifiers other than the standard identifiers outlined above. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="975"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="969"/>
       </memberdef>
       <memberdef kind="function" id="classwx_std_dialog_button_sizer_1a2e3771a7f1b826a38f51f888210a5d85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -99,7 +99,7 @@
 <para>This allows you to use identifiers other than the standard identifiers outlined above. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="983"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="977"/>
       </memberdef>
       <memberdef kind="function" id="classwx_std_dialog_button_sizer_1a21a99d0261bbdc4ece1b4630d4a2ae3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -113,7 +113,7 @@
 <para>It is used internally only and must not be called by the user (call <ref refid="classwx_sizer_1a1ea8589882944f8ac78b6ff8abde1554" kindref="member">Layout()</ref> if you want to resize). Documented for information. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="985"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="979"/>
       </memberdef>
       <memberdef kind="function" id="classwx_std_dialog_button_sizer_1a30f031e45b3559f4a1bf52dbf0448ae1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -127,7 +127,7 @@
 <para>It is used internally only and must not be called by the user. Documented for information. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="986"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="980"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -137,61 +137,61 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__winlayout" kindref="compound">Window Layout</ref></para><para><simplesect kind="see"><para><ref refid="classwx_sizer" kindref="compound">wxSizer</ref>, <ref refid="overview_sizer" kindref="compound">Sizers Overview</ref>, <ref refid="classwx_dialog_1ae362b7c61430593ef8ac5034f1bd92c8" kindref="member">wxDialog::CreateButtonSizer</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10526">
+      <node id="10709">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10523">
+      <node id="10706">
         <label>wxStdDialogButtonSizer</label>
         <link refid="classwx_std_dialog_button_sizer"/>
-        <childnode refid="10524" relation="public-inheritance">
+        <childnode refid="10707" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10524">
+      <node id="10707">
         <label>wxBoxSizer</label>
         <link refid="classwx_box_sizer"/>
-        <childnode refid="10525" relation="public-inheritance">
+        <childnode refid="10708" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10525">
+      <node id="10708">
         <label>wxSizer</label>
         <link refid="classwx_sizer"/>
-        <childnode refid="10526" relation="public-inheritance">
+        <childnode refid="10709" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10530">
+      <node id="10713">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10531" relation="usage">
+        <childnode refid="10714" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10527">
+      <node id="10710">
         <label>wxStdDialogButtonSizer</label>
         <link refid="classwx_std_dialog_button_sizer"/>
-        <childnode refid="10528" relation="public-inheritance">
+        <childnode refid="10711" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10528">
+      <node id="10711">
         <label>wxBoxSizer</label>
         <link refid="classwx_box_sizer"/>
-        <childnode refid="10529" relation="public-inheritance">
+        <childnode refid="10712" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10529">
+      <node id="10712">
         <label>wxSizer</label>
         <link refid="classwx_sizer"/>
-        <childnode refid="10530" relation="public-inheritance">
+        <childnode refid="10713" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10531">
+      <node id="10714">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="933" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" bodystart="932" bodyend="987"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="927" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" bodystart="926" bodyend="981"/>
     <listofallmembers>
       <member refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" prot="public" virt="non-virtual"><scope>wxStdDialogButtonSizer</scope><name>Add</name></member>
       <member refid="classwx_sizer_1a81d21f287c416da96739a73faa54840d" prot="public" virt="non-virtual"><scope>wxStdDialogButtonSizer</scope><name>Add</name></member>

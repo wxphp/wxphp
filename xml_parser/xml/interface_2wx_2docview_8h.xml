@@ -28,7 +28,7 @@
 <para>Useful when converting an old application to use streams (within the document/view framework, for example).</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/docview.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1643"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1623"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__file_1gaa5f4996b72cfd90c82d42b9038566828" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -49,13 +49,13 @@
 <para>Useful when converting an old application to use streams (within the document/view framework, for example).</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/docview.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1653"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1633"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h"/>
   </compounddef>
 </doxygen>

@@ -22,7 +22,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="724"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="681"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_data_object_1a6b43294c05885cc8981b37f3c42815bd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -35,7 +35,7 @@
 <para>You may wish to override this method when offering data on-demand, but this is not required by wxWidgets&apos; internals. Use this method to get data in text form from the <ref refid="classwx_clipboard" kindref="compound">wxClipboard</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="732"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="689"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_data_object_1a15a488fff1040695932831cbf91dc5c8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>size_t</type>
@@ -48,13 +48,14 @@
 <para>By default, returns the size of the text data set in the constructor or using <ref refid="classwx_text_data_object_1ac6754f3ad536bd0fa99928604ec48e7a" kindref="member">SetText()</ref>. This can be overridden to provide text size data on-demand. It is recommended to return the text length plus 1 for a trailing zero, but this is not strictly required. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="740"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="697"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_text_data_object_1ab1a9ad66f48fed3e8eeea799d798eb95" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classwx_text_data_object_1aeb197612bcadc2f37aecdfc4acee9b55" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>size_t</type>
         <definition>virtual size_t wxTextDataObject::GetFormatCount</definition>
-        <argsstring>(Direction dir=Get)</argsstring>
+        <argsstring>(Direction dir=Get) const </argsstring>
         <name>GetFormatCount</name>
+        <reimplements refid="classwx_data_object_1a3f82815810bf4dcc34e1a5783c9b8a62">GetFormatCount</reimplements>
         <param>
           <type><ref refid="classwx_data_object_1a7623fd02a6bef5dba7c96ff0a1a692ef" kindref="member">Direction</ref></type>
           <declname>dir</declname>
@@ -66,7 +67,7 @@
 <para>Returns 1 under other platforms (e.g. wxMSW) or when building in ANSI mode (<computeroutput>wxUSE_UNICODE==0</computeroutput>). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="750"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="707"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_data_object_1a73b44708bbca270fb80dbf2ca267488e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_data_format" kindref="compound">wxDataFormat</ref> &amp;</type>
@@ -80,7 +81,7 @@
 <para>This is <computeroutput>wxDF_TEXT</computeroutput> or <computeroutput>wxDF_UNICODETEXT</computeroutput> depending on the platform and from the build mode (i.e. from <computeroutput>wxUSE_UNICODE</computeroutput>). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="758"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="715"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_data_object_1a6ef0b55724e5376e86552db82461c004" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -103,7 +104,7 @@
 <para>Under wxMac and wxGTK they are <computeroutput>wxDF_TEXT</computeroutput> and <computeroutput>wxDF_UNICODETEXT</computeroutput>, under other ports returns only one of the two, depending on the build mode. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="767"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="724"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_data_object_1ac6754f3ad536bd0fa99928604ec48e7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -120,58 +121,58 @@
 <para>This method is called when the data object receives the data and, by default, copies the text into the member variable. If you want to process the text on the fly you may wish to override this function. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="775"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="732"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para><ref refid="classwx_text_data_object" kindref="compound">wxTextDataObject</ref> is a specialization of <ref refid="classwx_data_object_simple" kindref="compound">wxDataObjectSimple</ref> for text data. </para>    </briefdescription>
     <detaileddescription>
-<para>It can be used without change to paste data into the <ref refid="classwx_clipboard" kindref="compound">wxClipboard</ref> or a <ref refid="classwx_drop_source" kindref="compound">wxDropSource</ref>. A user may wish to derive a new class from this class for providing text on-demand in order to minimize memory consumption when offering data in several formats, such as plain text and RTF because by default the text is stored in a string in this class, but it might as well be generated when requested. For this, <ref refid="classwx_text_data_object_1a15a488fff1040695932831cbf91dc5c8" kindref="member">GetTextLength()</ref> and <ref refid="classwx_text_data_object_1a6b43294c05885cc8981b37f3c42815bd" kindref="member">GetText()</ref> will have to be overridden.</para><para>Note that if you already have the text inside a string, you will not achieve any efficiency gain by overriding these functions because copying wxStrings is already a very efficient operation (data is not actually copied because wxStrings are reference counted).</para><para><bold>wxPython Note:</bold> If you wish to create a derived <ref refid="classwx_text_data_object" kindref="compound">wxTextDataObject</ref> class in wxPython you should derive the class from wxPyTextDataObject in order to get Python-aware capabilities for the various virtual methods.</para><para><heading level="2"></heading>
+<para>It can be used without change to paste data into the <ref refid="classwx_clipboard" kindref="compound">wxClipboard</ref> or a <ref refid="classwx_drop_source" kindref="compound">wxDropSource</ref>. A user may wish to derive a new class from this class for providing text on-demand in order to minimize memory consumption when offering data in several formats, such as plain text and RTF because by default the text is stored in a string in this class, but it might as well be generated when requested. For this, <ref refid="classwx_text_data_object_1a15a488fff1040695932831cbf91dc5c8" kindref="member">GetTextLength()</ref> and <ref refid="classwx_text_data_object_1a6b43294c05885cc8981b37f3c42815bd" kindref="member">GetText()</ref> will have to be overridden.</para><para>Note that if you already have the text inside a string, you will not achieve any efficiency gain by overriding these functions because copying wxStrings is already a very efficient operation (data is not actually copied because wxStrings are reference counted).</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="overview_dnd" kindref="compound">Drag and Drop Overview</ref>, <ref refid="classwx_data_object" kindref="compound">wxDataObject</ref>, <ref refid="classwx_data_object_simple" kindref="compound">wxDataObjectSimple</ref>, <ref refid="classwx_file_data_object" kindref="compound">wxFileDataObject</ref>, <ref refid="classwx_bitmap_data_object" kindref="compound">wxBitmapDataObject</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10794">
+      <node id="10979">
         <label>wxURLDataObject</label>
         <link refid="classwx_u_r_l_data_object"/>
-        <childnode refid="10791" relation="public-inheritance">
+        <childnode refid="10976" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10793">
+      <node id="10978">
         <label>wxDataObject</label>
         <link refid="classwx_data_object"/>
       </node>
-      <node id="10791">
+      <node id="10976">
         <label>wxTextDataObject</label>
         <link refid="classwx_text_data_object"/>
-        <childnode refid="10792" relation="public-inheritance">
+        <childnode refid="10977" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10792">
+      <node id="10977">
         <label>wxDataObjectSimple</label>
         <link refid="classwx_data_object_simple"/>
-        <childnode refid="10793" relation="public-inheritance">
+        <childnode refid="10978" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10797">
+      <node id="10982">
         <label>wxDataObject</label>
         <link refid="classwx_data_object"/>
       </node>
-      <node id="10795">
+      <node id="10980">
         <label>wxTextDataObject</label>
         <link refid="classwx_text_data_object"/>
-        <childnode refid="10796" relation="public-inheritance">
+        <childnode refid="10981" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10796">
+      <node id="10981">
         <label>wxDataObjectSimple</label>
         <link refid="classwx_data_object_simple"/>
-        <childnode refid="10797" relation="public-inheritance">
+        <childnode refid="10982" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" line="718" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataobj.h" bodystart="717" bodyend="776"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" line="675" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataobj.h" bodystart="674" bodyend="733"/>
     <listofallmembers>
       <member refid="classwx_data_object_1a7623fd02a6bef5dba7c96ff0a1a692efa1f94b69e55238c5470f85e252b5fd8df" prot="public" virt="non-virtual"><scope>wxTextDataObject</scope><name>Both</name></member>
       <member refid="classwx_data_object_1a7623fd02a6bef5dba7c96ff0a1a692ef" prot="public" virt="non-virtual"><scope>wxTextDataObject</scope><name>Direction</name></member>
@@ -182,8 +183,7 @@
       <member refid="classwx_data_object_simple_1aac4311ab34deb1028d471c6a435574ff" prot="public" virt="virtual"><scope>wxTextDataObject</scope><name>GetDataSize</name></member>
       <member refid="classwx_data_object_1a10674c65e59f08ba318f942e410b8627" prot="public" virt="pure-virtual" ambiguityscope="wxDataObject::"><scope>wxTextDataObject</scope><name>GetDataSize</name></member>
       <member refid="classwx_text_data_object_1a73b44708bbca270fb80dbf2ca267488e" prot="public" virt="non-virtual"><scope>wxTextDataObject</scope><name>GetFormat</name></member>
-      <member refid="classwx_text_data_object_1ab1a9ad66f48fed3e8eeea799d798eb95" prot="public" virt="virtual"><scope>wxTextDataObject</scope><name>GetFormatCount</name></member>
-      <member refid="classwx_data_object_1a3f82815810bf4dcc34e1a5783c9b8a62" prot="public" virt="pure-virtual" ambiguityscope="wxDataObjectSimple::"><scope>wxTextDataObject</scope><name>GetFormatCount</name></member>
+      <member refid="classwx_text_data_object_1aeb197612bcadc2f37aecdfc4acee9b55" prot="public" virt="virtual"><scope>wxTextDataObject</scope><name>GetFormatCount</name></member>
       <member refid="classwx_data_object_1a47570ed6123bbebec195a2b7f843103c" prot="public" virt="pure-virtual"><scope>wxTextDataObject</scope><name>GetPreferredFormat</name></member>
       <member refid="classwx_text_data_object_1a6b43294c05885cc8981b37f3c42815bd" prot="public" virt="virtual"><scope>wxTextDataObject</scope><name>GetText</name></member>
       <member refid="classwx_text_data_object_1a15a488fff1040695932831cbf91dc5c8" prot="public" virt="virtual"><scope>wxTextDataObject</scope><name>GetTextLength</name></member>

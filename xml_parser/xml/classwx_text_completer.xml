@@ -29,7 +29,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textcompleter.h" line="52"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textcompleter.h" line="52"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_completer_1afcfaf585fe34114a444411148c299619" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -43,7 +43,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textcompleter.h" line="67"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textcompleter.h" line="67"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -52,18 +52,18 @@
 <para>Custom completer objects used with <ref refid="classwx_text_entry_1ad911d59d6b381a20b0a6c34df2ac1d9f" kindref="member">wxTextEntry::AutoComplete()</ref> must derive from this class and implement its pure virtual method returning the completions. You would typically use a custom completer when the total number of completions is too big for performance to be acceptable if all of them need to be returned at once but if they can be generated hierarchically, i.e. only the first component initially, then the second one after the user finished entering the first one and so on.</para><para>When inheriting from this class you need to implement its two pure virtual methods. This allows to return the results incrementally and may or not be convenient depending on where do they come from. If you prefer to return all the completions at once, you should inherit from <ref refid="classwx_text_completer_simple" kindref="compound">wxTextCompleterSimple</ref> instead.</para><para><simplesect kind="since"><para>2.9.2 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10769">
+      <node id="10954">
         <label>wxTextCompleterSimple</label>
         <link refid="classwx_text_completer_simple"/>
-        <childnode refid="10768" relation="public-inheritance">
+        <childnode refid="10953" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10768">
+      <node id="10953">
         <label>wxTextCompleter</label>
         <link refid="classwx_text_completer"/>
       </node>
     </inheritancegraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textcompleter.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textcompleter.h" bodystart="32" bodyend="68"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textcompleter.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/textcompleter.h" bodystart="32" bodyend="68"/>
     <listofallmembers>
       <member refid="classwx_text_completer_1afcfaf585fe34114a444411148c299619" prot="public" virt="pure-virtual"><scope>wxTextCompleter</scope><name>GetNext</name></member>
       <member refid="classwx_text_completer_1a041c2f6544f3071f45a944f7ebc743f5" prot="public" virt="pure-virtual"><scope>wxTextCompleter</scope><name>Start</name></member>

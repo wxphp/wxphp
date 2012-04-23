@@ -18,6 +18,8 @@ if test "$PHP_WXWIDGETS" != "no"; then
 		if test -n "$PHP_WXWIDGETS"; then
 			if test -f "$PHP_WXWIDGETS/bin/wx-config"; then
 				WXCONFIG_PATH="$PHP_WXWIDGETS/bin/wx-config"
+			elif test -f "$PHP_WXWIDGETS/wx-config"; then
+				WXCONFIG_PATH="$PHP_WXWIDGETS/wx-config"
 			else
 				AC_MSG_ERROR([wx-config not found on the provided wxWidgets path])
 			fi
@@ -37,7 +39,7 @@ if test "$PHP_WXWIDGETS" != "no"; then
 	PHP_WXWIDGETS_LIBS=`$WXCONFIG_PATH --libs`
 	
 	dnl Append wxWidgets flags to the compiler flags and suppress warning flags
-	CXXFLAGS="$CXXFLAGS -w -fpermissive $PHP_WXWIDGETS_CFLAGS"
+	CXXFLAGS="$CXXFLAGS $PHP_WXWIDGETS_CFLAGS"
 
 	dnl Add header search paths to the PHP build system
 	PHP_EVAL_INCLINE($PHP_WXWIDGETS_CFLAGS)

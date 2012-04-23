@@ -41,7 +41,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="728" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" bodystart="727" bodyend="740"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="728" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" bodystart="727" bodyend="740"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="745"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="745"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_attr_1aec5dc1c4c8abceda074bcd9d4cb22534" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -94,7 +94,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="750"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="750"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_attr_1afaacb45ec1f3d2dadc281040d6c3d27a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_grid_cell_attr" kindref="compound">wxGridCellAttr</ref> *</type>
@@ -107,7 +107,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="755"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="755"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_attr_1ae6d84d5371a096ca06935d614215a073" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -120,7 +120,7 @@
 <para>Calling <ref refid="classwx_grid_cell_attr_1afd6f163592a87b4ed66e9142cccbcf43" kindref="member">IncRef()</ref> allows to lock it until the matching <ref refid="classwx_grid_cell_attr_1ae6d84d5371a096ca06935d614215a073" kindref="member">DecRef()</ref> is called. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="762"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="762"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_attr_1a7e75484460cddef9f61f27fb585d575f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -156,7 +156,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="781"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="781"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_attr_1a2cb3e26b3c6206904860b0ff327276ba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
@@ -169,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="786"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="786"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_attr_1a79286ff24bcb292f75849958a616fdc2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_grid_cell_editor" kindref="compound">wxGridCellEditor</ref> *</type>
@@ -194,7 +194,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="791"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="791"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_attr_1a3ae4beed21bb500a3255066ba42bfa8d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
@@ -207,7 +207,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="796"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="796"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_attr_1a84adcc498fe5ca6c34f771e2a54056f4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -232,7 +232,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="819"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="819"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_attr_1ad3809a482a4352aff5e6d0119ffda2b7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_grid_cell_renderer" kindref="compound">wxGridCellRenderer</ref> *</type>
@@ -257,7 +257,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="824"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="824"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_attr_1aa81e78d44e7bfbd3e72aec7c0d855393" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
@@ -270,7 +270,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="829"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="829"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_attr_1a4ac91ab1a5e731280f6ba6b2eb0cf49f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -283,7 +283,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="834"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="834"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_attr_1a2d7c282e3010625513b4178da7a152eb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -296,7 +296,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="839"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="839"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_attr_1a21b089217c94f70d5581a33936416ba9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -309,7 +309,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="844"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="844"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_attr_1a2ddbea7be26c17a69e6ff433f9062598" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -322,7 +322,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="849"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="849"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_attr_1aca31de3d88e5bb4247684ccca60ee413" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -335,7 +335,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="854"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="854"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_attr_1ab6d46e429b570e7ac157576dcd9661d4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -348,7 +348,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="859"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="859"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_attr_1afd6f163592a87b4ed66e9142cccbcf43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -361,7 +361,7 @@
 <para>Calling <ref refid="classwx_grid_cell_attr_1afd6f163592a87b4ed66e9142cccbcf43" kindref="member">IncRef()</ref> allows to lock it until the matching <ref refid="classwx_grid_cell_attr_1ae6d84d5371a096ca06935d614215a073" kindref="member">DecRef()</ref> is called. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="866"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="866"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_attr_1a01248c3dde35f00379b879926dfd74b0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -374,7 +374,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="871"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="871"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_attr_1a37df7e8345e3649db7e40277a0c23478" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -395,7 +395,7 @@
 <para><emphasis>hAlign</emphasis> can be one of <computeroutput>wxALIGN_LEFT</computeroutput>, <computeroutput>wxALIGN_CENTRE</computeroutput> or <computeroutput>wxALIGN_RIGHT</computeroutput> and <emphasis>vAlign</emphasis> can be one of <computeroutput>wxALIGN_TOP</computeroutput>, <computeroutput>wxALIGN_CENTRE</computeroutput> or <computeroutput>wxALIGN_BOTTOM</computeroutput>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="878"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="878"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_attr_1acb527e1463a4df7234bce6b8c3420ca3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -412,7 +412,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="883"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="883"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_attr_1afd5c2f4f037deed9dd25ab5570d8011b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -426,10 +426,10 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="todo_1_todo000031"><xreftitle>Todo</xreftitle><xrefdescription><para>Needs documentation.</para></xrefdescription></xrefsect></para>        </detaileddescription>
+<para><xrefsect id="todo_1_todo000030"><xreftitle>Todo</xreftitle><xrefdescription><para>Needs documentation.</para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="888"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="888"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_attr_1a12b19ca0f0ead1062f02831470112080" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -446,7 +446,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="893"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="893"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_attr_1aea145852c52bd1310362db6b6711cace" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -463,7 +463,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="898"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="898"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_attr_1af5c0bfc11a1d5e09557a00d3b54a163b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -481,7 +481,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="903"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="903"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_attr_1a97d3c498325f6024653b74dcc4609e0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -498,7 +498,7 @@
 <para>Takes ownership of the pointer. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="909"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="909"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_cell_attr_1a19b6fe93b5fd949c201fa38284eef603" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -515,7 +515,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="914"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="914"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -523,7 +523,7 @@
     <detaileddescription>
 <para>An object of this class may be returned by <ref refid="classwx_grid_table_base_1af031321a86e3835d23177ffe53eee643" kindref="member">wxGridTableBase::GetAttr()</ref>.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__grid" kindref="compound">Grid Related Classes</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="720" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" bodystart="719" bodyend="915"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="720" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" bodystart="719" bodyend="915"/>
     <listofallmembers>
       <member refid="classwx_grid_cell_attr_1acc28e22664b1e4d390448c556993c440a64c5695fae5610f4c16e2e34e09a85fd" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>Any</name></member>
       <member refid="classwx_grid_cell_attr_1acc28e22664b1e4d390448c556993c440aff982b237d3e09351a8f2bbab5d902ff" prot="public" virt="non-virtual"><scope>wxGridCellAttr</scope><name>Cell</name></member>

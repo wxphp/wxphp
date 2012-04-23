@@ -40,7 +40,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="837"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="864"/>
       </memberdef>
       <memberdef kind="function" id="classwx_graphics_gradient_stop_1a186381f9779cbb9ad06e3093e559ce0d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="840"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="867"/>
       </memberdef>
       <memberdef kind="function" id="classwx_graphics_gradient_stop_1ad50f38b4a022989dad00d4186c0b930e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -78,7 +78,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="847"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="874"/>
       </memberdef>
       <memberdef kind="function" id="classwx_graphics_gradient_stop_1a35c34af652ecfe45aaddd94b5232ce77" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -91,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="850"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="877"/>
       </memberdef>
       <memberdef kind="function" id="classwx_graphics_gradient_stop_1a5e56ab2a1b531a9e4fcc33d41b9399ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -116,7 +116,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="857"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="884"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -125,7 +125,7 @@
 <para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="826" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" bodystart="825" bodyend="858"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="853" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" bodystart="852" bodyend="885"/>
     <listofallmembers>
       <member refid="classwx_graphics_gradient_stop_1a186381f9779cbb9ad06e3093e559ce0d" prot="public" virt="non-virtual"><scope>wxGraphicsGradientStop</scope><name>GetColour</name></member>
       <member refid="classwx_graphics_gradient_stop_1a35c34af652ecfe45aaddd94b5232ce77" prot="public" virt="non-virtual"><scope>wxGraphicsGradientStop</scope><name>GetPosition</name></member>

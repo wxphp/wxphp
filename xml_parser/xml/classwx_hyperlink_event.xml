@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hyperlink.h" line="28"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hyperlink.h" line="34"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hyperlink_event_1a91d8f791567fac25673a7a879c5602b3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hyperlink.h" line="33"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hyperlink.h" line="39"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hyperlink_event_1a49a363a38d5fede85e6e3b17694694ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hyperlink.h" line="38"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hyperlink.h" line="44"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -71,61 +71,61 @@
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7204">
+      <node id="7391">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7202">
+      <node id="7389">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="7203" relation="public-inheritance">
+        <childnode refid="7390" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7201">
+      <node id="7388">
         <label>wxHyperlinkEvent</label>
         <link refid="classwx_hyperlink_event"/>
-        <childnode refid="7202" relation="public-inheritance">
+        <childnode refid="7389" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7203">
+      <node id="7390">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="7204" relation="public-inheritance">
+        <childnode refid="7391" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7208">
+      <node id="7395">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7209" relation="usage">
+        <childnode refid="7396" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7206">
+      <node id="7393">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="7207" relation="public-inheritance">
+        <childnode refid="7394" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7205">
+      <node id="7392">
         <label>wxHyperlinkEvent</label>
         <link refid="classwx_hyperlink_event"/>
-        <childnode refid="7206" relation="public-inheritance">
+        <childnode refid="7393" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7207">
+      <node id="7394">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="7208" relation="public-inheritance">
+        <childnode refid="7395" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7209">
+      <node id="7396">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hyperlink.h" line="23" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hyperlink.h" bodystart="22" bodyend="39"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hyperlink.h" line="29" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/hyperlink.h" bodystart="28" bodyend="45"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxHyperlinkEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxHyperlinkEvent</scope><name>Clone</name></member>

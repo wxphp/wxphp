@@ -15,7 +15,7 @@
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="992"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="987"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__gdi_1gaa144903f36a28751aa9b80b3b5f804ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -28,7 +28,7 @@
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="1000"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="995"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__gdi_1ga04d90db090918ad96448b5603d89617b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -46,7 +46,7 @@
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="1010"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="1005"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__gdi_1gab8a48ec2fc13c5112ff5fcd42e2881b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -75,7 +75,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/gdicmn.h&gt; 
 <para>On Windows this means the area not covered by the taskbar, etc. Other platforms are currently defaulting to the whole display until a way is found to provide this info for all window managers, etc.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="1024"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="1019"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__gdi_1gad087254ad6626958b5e4907e909bcd8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rect" kindref="compound">wxRect</ref></type>
@@ -88,7 +88,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/gdicmn.h&gt; 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="1025"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="1020"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__gdi_1ga84d60564b0cd90909000b53eba457cfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -102,7 +102,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/gdicmn.h&gt; 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="1040"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="1035"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__gdi_1ga2a4dcac2c18c10f546e699ddba2fbfc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -123,7 +123,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/gdicmn.h&gt; 
 <para>For the version taking <emphasis>width</emphasis> and <emphasis>header</emphasis> arguments, either of them can be NULL if the caller is not interested in the returned value.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="1053"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="1048"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__gdi_1gaefd6b970b2fa62bfc00f386da06ab286" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -136,7 +136,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/gdicmn.h&gt; 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="1054"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="1049"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__gdi_1ga964bb139750337d8e578450f88b6e97b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -158,7 +158,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/gdicmn.h&gt; 
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="1069"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="1064"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__gdi_1ga3ff3369f130a82b6b0fc2c021d9b800e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -171,7 +171,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/gdicmn.h&gt; 
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="1070"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="1065"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__gdi_1gab1948435f8ba3c1cac214e6599595c4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -212,7 +212,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/gdicmn.h&gt; 
 </programlisting></para><para>This simulates the wxMM_TEXT mapping mode, which wxWidgets assumes.</para><para>Placeable metafiles may be imported by many Windows applications, and can be used in RTF (Rich Text Format) files.</para><para><emphasis>scale</emphasis> allows the specification of scale for the metafile.</para><para>This function is only available under Windows.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/metafile.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/metafile.h" line="171"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/metafile.h" line="171"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="define">
@@ -226,7 +226,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/gdicmn.h&gt; 
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/dnd.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" line="400" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dnd.h" bodystart="400" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dnd.h" line="400" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dnd.h" bodystart="400" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__gdi_1ga309f860d17c1a8c4cc54c6e772a2fd09" prot="public" static="no">
         <name>wxBITMAP</name>
@@ -238,7 +238,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/dnd.h&gt; </v
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="974" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" bodystart="974" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="969" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" bodystart="969" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__gdi_1ga1f22eefa44998cbeb8f018978cf5d375" prot="public" static="no">
         <name>wxICON</name>
@@ -250,7 +250,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/gdicmn.h&gt; 
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/gdicmn.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="985" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" bodystart="985" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="980" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" bodystart="980" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

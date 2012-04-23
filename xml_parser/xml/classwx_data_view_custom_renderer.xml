@@ -37,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1773"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="1773"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_custom_renderer_1a66c5554b962ec195279a51b1b7d3cac4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -50,7 +50,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1778"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="1778"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_custom_renderer_1a76e85467c89adae6612236d803a552fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -122,7 +122,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1825"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="1825"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_custom_renderer_1a4fb670400e9c1a430a6d28231a3c6d4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -175,7 +175,7 @@ An example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1859"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="1859"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_custom_renderer_1ab785d5968da6d6c1da4fde83c974c049" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_data_view_item_attr" kindref="compound">wxDataViewItemAttr</ref> &amp;</type>
@@ -189,7 +189,7 @@ An example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1875"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="1875"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_custom_renderer_1a0c5e1d559b46c9456836c27dce0ffa4d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -202,7 +202,7 @@ An example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1880"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="1880"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_custom_renderer_1a903359019fcc481b7b6a359d7f3845f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -229,7 +229,7 @@ An example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1895"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="1895"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_custom_renderer_1a91856e7bfa815b392866b6728ca4e820" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -242,7 +242,7 @@ An example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1901"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="1901"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_custom_renderer_1a2240666e806e64228f235d5cfb33c0c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -275,7 +275,7 @@ An example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><
 <para>This method will only be called in <computeroutput>wxDATAVIEW_CELL_ACTIVATABLE</computeroutput> mode. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1911"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="1911"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_custom_renderer_1a0884c149dac5ff57137a5803eb6f72da" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -300,7 +300,7 @@ An example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><
 <para>Before this is called, <ref refid="classwx_data_view_renderer_1ac4494f39d056c1b0976481647b24117f" kindref="member">wxDataViewRenderer::SetValue</ref> was called so that this instance knows what to render. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1918"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="1918"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_custom_renderer_1a87f09758076f3fc8b859655212d330ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -333,7 +333,7 @@ An example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><
 <para>This will ensure that the correct colour, font and vertical alignment will be chosen so the text will look the same as text drawn by native renderers. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1927"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="1927"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_view_custom_renderer_1a36d6d5c64097bb48f67a712ddb7f97bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -366,7 +366,7 @@ An example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><
 <para>Not yet supported. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1936"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="1936"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -375,55 +375,55 @@ An example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><
 <para>You need to override at least <ref refid="classwx_data_view_renderer_1ac4494f39d056c1b0976481647b24117f" kindref="member">wxDataViewRenderer::SetValue</ref>, <ref refid="classwx_data_view_renderer_1ad7c52082d76074cae4ceaf94e55cf604" kindref="member">wxDataViewRenderer::GetValue</ref>, <ref refid="classwx_data_view_custom_renderer_1a0c5e1d559b46c9456836c27dce0ffa4d" kindref="member">wxDataViewCustomRenderer::GetSize</ref> and <ref refid="classwx_data_view_custom_renderer_1a0884c149dac5ff57137a5803eb6f72da" kindref="member">wxDataViewCustomRenderer::Render</ref>.</para><para>If you want your renderer to support in-place editing then you also need to override <ref refid="classwx_data_view_custom_renderer_1a91856e7bfa815b392866b6728ca4e820" kindref="member">wxDataViewCustomRenderer::HasEditorCtrl</ref>, <ref refid="classwx_data_view_custom_renderer_1a4fb670400e9c1a430a6d28231a3c6d4f" kindref="member">wxDataViewCustomRenderer::CreateEditorCtrl</ref> and <ref refid="classwx_data_view_custom_renderer_1a903359019fcc481b7b6a359d7f3845f2" kindref="member">wxDataViewCustomRenderer::GetValueFromEditorCtrl</ref>.</para><para>Note that a special event handler will be pushed onto that editor control which handles <emphasis>&lt;ENTER&gt;</emphasis> and focus out events in order to end the editing.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dvc" kindref="compound">wxDataViewCtrl Related Classes</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5303">
+      <node id="5398">
         <label>wxDataViewRenderer</label>
         <link refid="classwx_data_view_renderer"/>
-        <childnode refid="5304" relation="public-inheritance">
+        <childnode refid="5399" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5304">
+      <node id="5399">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5305">
+      <node id="5400">
         <label>wxDataViewSpinRenderer</label>
         <link refid="classwx_data_view_spin_renderer"/>
-        <childnode refid="5302" relation="public-inheritance">
+        <childnode refid="5397" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5302">
+      <node id="5397">
         <label>wxDataViewCustomRenderer</label>
         <link refid="classwx_data_view_custom_renderer"/>
-        <childnode refid="5303" relation="public-inheritance">
+        <childnode refid="5398" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5307">
+      <node id="5402">
         <label>wxDataViewRenderer</label>
         <link refid="classwx_data_view_renderer"/>
-        <childnode refid="5308" relation="public-inheritance">
+        <childnode refid="5403" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5308">
+      <node id="5403">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5309" relation="usage">
+        <childnode refid="5404" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5306">
+      <node id="5401">
         <label>wxDataViewCustomRenderer</label>
         <link refid="classwx_data_view_custom_renderer"/>
-        <childnode refid="5307" relation="public-inheritance">
+        <childnode refid="5402" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5309">
+      <node id="5404">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1766" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="1765" bodyend="1937"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="1766" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="1765" bodyend="1937"/>
     <listofallmembers>
       <member refid="classwx_data_view_custom_renderer_1a76e85467c89adae6612236d803a552fc" prot="public" virt="virtual"><scope>wxDataViewCustomRenderer</scope><name>ActivateCell</name></member>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxDataViewCustomRenderer</scope><name>AllocExclusive</name></member>

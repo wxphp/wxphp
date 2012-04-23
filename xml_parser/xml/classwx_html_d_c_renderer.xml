@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="25"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="25"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_d_c_renderer_1a5de0b68aafdc2776bf99da618c293763" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -31,7 +31,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="37"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="37"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_d_c_renderer_1aa0eb273089bb9adab8113ac59b9744d3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -45,7 +45,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="49"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="49"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_d_c_renderer_1af6921c6712a998118297c1b53eebf8fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -98,7 +98,7 @@
 <para></para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<xrefsect id="todo_1_todo000037"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
+<xrefsect id="todo_1_todo000036"><xreftitle>Todo</xreftitle><xrefdescription><para>docme </para></xrefdescription></xrefsect><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>from</parametername>
 </parameternamelist>
@@ -126,7 +126,7 @@ Returned value is y coordinate of first cell than didn&apos;t fit onto page. Use
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="80"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="80"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_d_c_renderer_1a43d1c3cd2e0d772b1ba1fc4e14f5f030" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -148,7 +148,7 @@ Returned value is y coordinate of first cell than didn&apos;t fit onto page. Use
 <para><emphasis>pixel_scale</emphasis> can be used when rendering to high-resolution DCs (e.g. printer) to adjust size of pixel metrics. (Many dimensions in HTML are given in pixels -- e.g. image sizes. 300x300 image would be only one inch wide on typical printer. With pixel_scale = 3.0 it would be 3 inches.) </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="91"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="91"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_d_c_renderer_1a70cfd1cd9f25f91afe40694466b70f7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -197,7 +197,7 @@ Default font sizes are defined by constants wxHTML_FONT_SIZE_1, wxHTML_FONT_SIZE
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="116"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="116"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_d_c_renderer_1a277ee219b82244b3eecef42f4e67f14c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -248,7 +248,7 @@ Default font sizes are defined by constants wxHTML_FONT_SIZE_1, wxHTML_FONT_SIZE
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="136"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="136"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_d_c_renderer_1a96e6e1583d11d6db81afd0c99adc4dff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -297,7 +297,7 @@ Default font sizes are defined by constants wxHTML_FONT_SIZE_1, wxHTML_FONT_SIZE
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="152"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="152"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_d_c_renderer_1afa7a08a1a57cad6e0ae78a219fb608d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -318,7 +318,7 @@ Default font sizes are defined by constants wxHTML_FONT_SIZE_1, wxHTML_FONT_SIZE
 <para>Note that you <bold>can&apos;t</bold> change width of the rectangle between calls to <ref refid="classwx_html_d_c_renderer_1af6921c6712a998118297c1b53eebf8fa" kindref="member">Render()</ref> ! (You can freely change height.) </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="159"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="159"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -327,37 +327,37 @@ Default font sizes are defined by constants wxHTML_FONT_SIZE_1, wxHTML_FONT_SIZE
 <para>You can use it in your own printing code, although use of <ref refid="classwx_html_easy_printing" kindref="compound">wxHtmlEasyPrinting</ref> or <ref refid="classwx_html_printout" kindref="compound">wxHtmlPrintout</ref> is strongly recommended.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6997">
+      <node id="7179">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6996">
+      <node id="7178">
         <label>wxHtmlDCRenderer</label>
         <link refid="classwx_html_d_c_renderer"/>
-        <childnode refid="6997" relation="public-inheritance">
+        <childnode refid="7179" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6999">
+      <node id="7181">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7000" relation="usage">
+        <childnode refid="7182" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6998">
+      <node id="7180">
         <label>wxHtmlDCRenderer</label>
         <link refid="classwx_html_d_c_renderer"/>
-        <childnode refid="6999" relation="public-inheritance">
+        <childnode refid="7181" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7000">
+      <node id="7182">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmprint.h" bodystart="19" bodyend="160"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmprint.h" bodystart="19" bodyend="160"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxHtmlDCRenderer</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxHtmlDCRenderer</scope><name>CloneRefData</name></member>

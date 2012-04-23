@@ -3,7 +3,7 @@ PHP_FUNCTION(php_<?=$function_name?>)
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking function <?=$function_name?>\n");
 	php_printf("===========================================\n");
-	#endif;
+	#endif
 	
 	//In case the function uses objects
 	zval **tmp;

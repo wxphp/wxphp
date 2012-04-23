@@ -1,0 +1,206 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
+  <compounddef id="classwx_grid_cell_coords" kind="class" prot="public">
+    <compoundname>wxGridCellCoords</compoundname>
+    <includes local="no">wx/grid.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_grid_cell_coords_1a893fbd641ec1f3da9e33da80c20aaf1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxGridCellCoords::wxGridCellCoords</definition>
+        <argsstring>()</argsstring>
+        <name>wxGridCellCoords</name>
+        <briefdescription>
+<para>Default constructor initializes the object to invalid state. </para>        </briefdescription>
+        <detaileddescription>
+<para>Initially the row and column are both invalid (-1) and so <ref refid="classwx_grid_cell_coords_1a72955f4a4fda295a16a2a8779e35889e" kindref="member">operator!()</ref> for an uninitialized <ref refid="classwx_grid_cell_coords" kindref="compound">wxGridCellCoords</ref> returns false. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="1208"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_coords_1ad1ee986fb15055b03840583bb8771c6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxGridCellCoords::wxGridCellCoords</definition>
+        <argsstring>(int row, int col)</argsstring>
+        <name>wxGridCellCoords</name>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Constructor taking a row and a column. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="1213"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_coords_1ace9a79974c326b87f326dcb61443767b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxGridCellCoords::GetRow</definition>
+        <argsstring>() const </argsstring>
+        <name>GetRow</name>
+        <briefdescription>
+<para>Return the row of the coordinate. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="1218"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_coords_1aca53f7cb534c4bcace3ca6a38d0daa55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGridCellCoords::SetRow</definition>
+        <argsstring>(int n)</argsstring>
+        <name>SetRow</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Set the row of the coordinate. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="1223"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_coords_1a0c32f8878ff7c4cbf0e58c57d6f37bb4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int wxGridCellCoords::GetCol</definition>
+        <argsstring>() const </argsstring>
+        <name>GetCol</name>
+        <briefdescription>
+<para>Return the column of the coordinate. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="1228"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_coords_1a4493db750cc177c86848a1aae9d955de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGridCellCoords::SetCol</definition>
+        <argsstring>(int n)</argsstring>
+        <name>SetCol</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Set the column of the coordinate. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="1233"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_coords_1aad4c0ff5617a7d97a2091c5215b2cfcf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void wxGridCellCoords::Set</definition>
+        <argsstring>(int row, int col)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>int</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Set the row and column of the coordinate. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="1238"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_coords_1a63320439f876339d02fa677a76e47a36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_grid_cell_coords" kindref="compound">wxGridCellCoords</ref> &amp;</type>
+        <definition>wxGridCellCoords&amp; wxGridCellCoords::operator=</definition>
+        <argsstring>(const wxGridCellCoords &amp;other)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classwx_grid_cell_coords" kindref="compound">wxGridCellCoords</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator for coordinate types. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="1243"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_coords_1a62cec9b96e8c2ccdd9f8b43ca826173a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGridCellCoords::operator==</definition>
+        <argsstring>(const wxGridCellCoords &amp;other) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_grid_cell_coords" kindref="compound">wxGridCellCoords</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Equality operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="1248"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_coords_1a2938ea4829f756e5598d1c2a2636e646" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGridCellCoords::operator!=</definition>
+        <argsstring>(const wxGridCellCoords &amp;other) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classwx_grid_cell_coords" kindref="compound">wxGridCellCoords</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Inequality operator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="1253"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_grid_cell_coords_1a72955f4a4fda295a16a2a8779e35889e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool wxGridCellCoords::operator!</definition>
+        <argsstring>() const </argsstring>
+        <name>operator!</name>
+        <briefdescription>
+<para>Checks whether the coordinates are invalid. </para>        </briefdescription>
+        <detaileddescription>
+<para>Returns false only if both row and column are -1. Notice that if either row or column (but not both) are -1, this method returns true even if the object is invalid. This is done because objects in such state should actually never exist, i.e. either both coordinates should be -1 or none of them should be -1. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="1264"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents coordinates of a grid cell. </para>    </briefdescription>
+    <detaileddescription>
+<para>An object of this class is simply a (row, column) pair. </para>    </detaileddescription>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="1200" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" bodystart="1199" bodyend="1265"/>
+    <listofallmembers>
+      <member refid="classwx_grid_cell_coords_1a0c32f8878ff7c4cbf0e58c57d6f37bb4" prot="public" virt="non-virtual"><scope>wxGridCellCoords</scope><name>GetCol</name></member>
+      <member refid="classwx_grid_cell_coords_1ace9a79974c326b87f326dcb61443767b" prot="public" virt="non-virtual"><scope>wxGridCellCoords</scope><name>GetRow</name></member>
+      <member refid="classwx_grid_cell_coords_1a72955f4a4fda295a16a2a8779e35889e" prot="public" virt="non-virtual"><scope>wxGridCellCoords</scope><name>operator!</name></member>
+      <member refid="classwx_grid_cell_coords_1a2938ea4829f756e5598d1c2a2636e646" prot="public" virt="non-virtual"><scope>wxGridCellCoords</scope><name>operator!=</name></member>
+      <member refid="classwx_grid_cell_coords_1a63320439f876339d02fa677a76e47a36" prot="public" virt="non-virtual"><scope>wxGridCellCoords</scope><name>operator=</name></member>
+      <member refid="classwx_grid_cell_coords_1a62cec9b96e8c2ccdd9f8b43ca826173a" prot="public" virt="non-virtual"><scope>wxGridCellCoords</scope><name>operator==</name></member>
+      <member refid="classwx_grid_cell_coords_1aad4c0ff5617a7d97a2091c5215b2cfcf" prot="public" virt="non-virtual"><scope>wxGridCellCoords</scope><name>Set</name></member>
+      <member refid="classwx_grid_cell_coords_1a4493db750cc177c86848a1aae9d955de" prot="public" virt="non-virtual"><scope>wxGridCellCoords</scope><name>SetCol</name></member>
+      <member refid="classwx_grid_cell_coords_1aca53f7cb534c4bcace3ca6a38d0daa55" prot="public" virt="non-virtual"><scope>wxGridCellCoords</scope><name>SetRow</name></member>
+      <member refid="classwx_grid_cell_coords_1a893fbd641ec1f3da9e33da80c20aaf1a" prot="public" virt="non-virtual"><scope>wxGridCellCoords</scope><name>wxGridCellCoords</name></member>
+      <member refid="classwx_grid_cell_coords_1ad1ee986fb15055b03840583bb8771c6a" prot="public" virt="non-virtual"><scope>wxGridCellCoords</scope><name>wxGridCellCoords</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

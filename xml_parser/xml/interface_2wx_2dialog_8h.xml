@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="19" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" bodystart="19" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="19" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" bodystart="19" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="enum">
@@ -51,13 +51,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" bodystart="12" bodyend="17"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" bodystart="12" bodyend="17"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h"/>
   </compounddef>
 </doxygen>

@@ -5,6 +5,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -21,6 +27,12 @@
 			"return_type":"bool",
 			"parameters_type":[
 				"bool"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"doIt"
@@ -39,6 +51,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -54,6 +72,14 @@
 			"parameters_type":[
 				"int",
 				"wxChar**"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"argc",
@@ -73,6 +99,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -86,6 +118,12 @@
 		{
 			"return_type":"void",
 			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
 				
 			],
 			"parameters_name":[
@@ -105,6 +143,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -120,6 +164,12 @@
 		{
 			"return_type":"bool",
 			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
 				
 			],
 			"parameters_name":[
@@ -140,6 +190,14 @@
 				"wxWindow*",
 				"bool"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"win",
 				"onlyIfNeeded"
@@ -158,6 +216,14 @@
 			"parameters_type":[
 				"int&",
 				"wxChar**"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"argc",
@@ -179,6 +245,18 @@
 				"char*",
 				"int"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"hInstance",
 				"hPrevInstance",
@@ -199,6 +277,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -216,6 +300,12 @@
 			"parameters_type":[
 				"wxBookCtrlBase*"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"book"
 			],
@@ -230,6 +320,12 @@
 			"return_type":"wxPersistentObject*",
 			"parameters_type":[
 				"T*"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"obj"
@@ -246,6 +342,12 @@
 			"parameters_type":[
 				"wxTopLevelWindow*"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"book"
 			],
@@ -260,6 +362,12 @@
 			"return_type":"wxPersistentObject*",
 			"parameters_type":[
 				"wxTreebook*"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"book"
@@ -278,6 +386,14 @@
 			"parameters_type":[
 				"const wxString&",
 				"ostream&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"filename",
@@ -299,6 +415,14 @@
 				"istream&",
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"stream",
 				"filename"
@@ -319,6 +443,14 @@
 				"const wxString&",
 				"wxFont*"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"string",
 				"font"
@@ -336,6 +468,14 @@
 			"parameters_type":[
 				"const wxString&",
 				"wxColour*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"string",
@@ -356,6 +496,12 @@
 			"parameters_type":[
 				"const wxFont&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"font"
 			],
@@ -370,6 +516,12 @@
 			"return_type":"wxString",
 			"parameters_type":[
 				"const wxColour&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"colour"
@@ -388,6 +540,14 @@
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"title",
@@ -408,6 +568,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -424,6 +590,12 @@
 			"return_type":"const wxChar*",
 			"parameters_type":[
 				"unsigned long"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"errCode"
@@ -443,6 +615,16 @@
 				"wxLogLevel",
 				"const char*",
 				"..."
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"level",
@@ -467,6 +649,16 @@
 				"const char*",
 				"va_list"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"level",
 				"formatString",
@@ -489,6 +681,14 @@
 				"const char*",
 				"..."
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"formatString",
 				null
@@ -508,6 +708,14 @@
 			"parameters_type":[
 				"const char*",
 				"va_list"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"formatString",
@@ -529,6 +737,14 @@
 				"const char*",
 				"..."
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"formatString",
 				null
@@ -548,6 +764,14 @@
 			"parameters_type":[
 				"const char*",
 				"va_list"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"formatString",
@@ -569,6 +793,14 @@
 				"const char*",
 				"..."
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"formatString",
 				null
@@ -588,6 +820,14 @@
 			"parameters_type":[
 				"const char*",
 				"va_list"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"formatString",
@@ -609,6 +849,14 @@
 				"const char*",
 				"..."
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"formatString",
 				null
@@ -628,6 +876,14 @@
 			"parameters_type":[
 				"const char*",
 				"va_list"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"formatString",
@@ -649,6 +905,14 @@
 				"const char*",
 				"..."
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"formatString",
 				null
@@ -668,6 +932,14 @@
 			"parameters_type":[
 				"const char*",
 				"va_list"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"formatString",
@@ -690,6 +962,16 @@
 				"const char*",
 				"..."
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"mask",
 				"formatString",
@@ -710,6 +992,16 @@
 				"wxTraceMask",
 				"const char*",
 				"..."
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"mask",
@@ -734,6 +1026,16 @@
 				"const char*",
 				"va_list"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"mask",
 				"formatString",
@@ -754,6 +1056,16 @@
 				"wxTraceMask",
 				"const char*",
 				"va_list"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"mask",
@@ -777,6 +1089,14 @@
 				"const char*",
 				"..."
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"formatString",
 				null
@@ -796,6 +1116,14 @@
 			"parameters_type":[
 				"const char*",
 				"va_list"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"formatString",
@@ -818,6 +1146,16 @@
 				"const char*",
 				"..."
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"frame",
 				"formatString",
@@ -837,6 +1175,14 @@
 			"parameters_type":[
 				"const char*",
 				"..."
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"formatString",
@@ -859,6 +1205,16 @@
 				"const char*",
 				"va_list"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"frame",
 				"formatString",
@@ -878,6 +1234,14 @@
 			"parameters_type":[
 				"const char*",
 				"va_list"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"formatString",
@@ -899,6 +1263,14 @@
 				"const char*",
 				"..."
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"formatString",
 				null
@@ -919,6 +1291,14 @@
 				"const char*",
 				"va_list"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"formatString",
 				"argPtr"
@@ -938,6 +1318,12 @@
 			"parameters_type":[
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"val"
 			],
@@ -953,6 +1339,12 @@
 		{
 			"return_type":"bool",
 			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
 				
 			],
 			"parameters_name":[
@@ -972,6 +1364,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -987,6 +1385,12 @@
 		{
 			"return_type":"void",
 			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
 				
 			],
 			"parameters_name":[
@@ -1007,6 +1411,14 @@
 				"const wxAboutDialogInfo&",
 				"wxWindow*"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"info",
 				"parent"
@@ -1025,6 +1437,14 @@
 			"parameters_type":[
 				"const wxAboutDialogInfo&",
 				"wxWindow*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"info",
@@ -1045,6 +1465,16 @@
 				"const wxString&",
 				"const wxChar",
 				"const wxChar"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"str",
@@ -1068,6 +1498,16 @@
 				"const wxChar",
 				"const wxChar"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"arr",
 				"sep",
@@ -1088,6 +1528,12 @@
 			"parameters_type":[
 				"wxAtomicInt&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"value"
 			],
@@ -1104,6 +1550,12 @@
 			"return_type":"wxInt32",
 			"parameters_type":[
 				"wxAtomicInt&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"value"
@@ -1124,6 +1576,18 @@
 				"size_t",
 				"const void*",
 				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"dst",
@@ -1147,6 +1611,14 @@
 				"const void*",
 				"size_t"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"src",
 				"srcLen"
@@ -1163,6 +1635,12 @@
 			"return_type":"wxString",
 			"parameters_type":[
 				"const wxMemoryBuffer&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"buf"
@@ -1181,6 +1659,12 @@
 			"parameters_type":[
 				"size_t"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"srcLen"
 			],
@@ -1197,6 +1681,12 @@
 			"return_type":"size_t",
 			"parameters_type":[
 				"size_t"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"len"
@@ -1219,6 +1709,22 @@
 				"size_t",
 				"wxBase64DecodeMode",
 				"size_t*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"dst",
@@ -1245,6 +1751,20 @@
 				"const wxString&",
 				"wxBase64DecodeMode",
 				"size_t*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"dst",
@@ -1270,6 +1790,18 @@
 				"wxBase64DecodeMode",
 				"size_t*"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"src",
 				"srcLen",
@@ -1289,6 +1821,16 @@
 				"const wxString&",
 				"wxBase64DecodeMode",
 				"size_t*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"src",
@@ -1317,6 +1859,30 @@
 				"int",
 				"int",
 				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"message",
@@ -1354,6 +1920,32 @@
 				"int",
 				"int"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				true,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"message",
 				"caption",
@@ -1386,6 +1978,20 @@
 				"int",
 				"wxWindow*"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"message",
 				"caption",
@@ -1412,6 +2018,22 @@
 				"const wxString*",
 				"int",
 				"wxWindow*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"message",
@@ -1445,7 +2067,32 @@
 				"int",
 				"bool",
 				"int",
+				"int",
 				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"message",
@@ -1456,7 +2103,8 @@
 				"y",
 				"centre",
 				"width",
-				"height"
+				"height",
+				"initialSelection"
 			],
 			"parameters_required":[
 				true,
@@ -1479,7 +2127,34 @@
 				"int",
 				"bool",
 				"int",
+				"int",
 				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				true,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"message",
@@ -1491,7 +2166,8 @@
 				"y",
 				"centre",
 				"width",
-				"height"
+				"height",
+				"initialSelection"
 			],
 			"parameters_required":[
 				true,
@@ -1511,6 +2187,20 @@
 				"const wxArrayString&",
 				"int",
 				"wxWindow*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"message",
@@ -1538,6 +2228,22 @@
 				"const wxString*",
 				"int",
 				"wxWindow*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"message",
@@ -1572,7 +2278,34 @@
 				"int",
 				"bool",
 				"int",
+				"int",
 				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				true,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"message",
@@ -1584,7 +2317,8 @@
 				"y",
 				"centre",
 				"width",
-				"height"
+				"height",
+				"initialSelection"
 			],
 			"parameters_required":[
 				true,
@@ -1609,7 +2343,36 @@
 				"int",
 				"bool",
 				"int",
+				"int",
 				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				true,
+				true,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"message",
@@ -1622,7 +2385,8 @@
 				"y",
 				"centre",
 				"width",
-				"height"
+				"height",
+				"initialSelection"
 			],
 			"parameters_required":[
 				true,
@@ -1644,6 +2408,22 @@
 				"void**",
 				"int",
 				"wxWindow*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"message",
@@ -1674,6 +2454,24 @@
 				"void**",
 				"int",
 				"wxWindow*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"message",
@@ -1712,6 +2510,30 @@
 				"int",
 				"int"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"selections",
 				"message",
@@ -1749,6 +2571,32 @@
 				"int",
 				"int"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				true,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"selections",
 				"message",
@@ -1783,6 +2631,18 @@
 				"const wxString&",
 				"wxColourData*"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"parent",
 				"colInit",
@@ -1804,6 +2664,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -1819,6 +2685,12 @@
 		{
 			"return_type":"void",
 			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
 				
 			],
 			"parameters_name":[
@@ -1838,6 +2710,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -1853,6 +2731,12 @@
 		{
 			"return_type":"void",
 			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
 				
 			],
 			"parameters_name":[
@@ -1872,6 +2756,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -1889,6 +2779,12 @@
 			"parameters_type":[
 				"wxAssertHandler_t"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"handler"
 			],
@@ -1904,6 +2800,12 @@
 		{
 			"return_type":"void",
 			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
 				
 			],
 			"parameters_name":[
@@ -1923,6 +2825,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -1939,6 +2847,12 @@
 			"return_type":"",
 			"parameters_type":[
 				"T*&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"ptr"
@@ -1957,6 +2871,12 @@
 			"parameters_type":[
 				"T*&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"array"
 			],
@@ -1974,6 +2894,14 @@
 			"parameters_type":[
 				"T&",
 				"T&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"first",
@@ -1994,6 +2922,14 @@
 			"parameters_type":[
 				"va_list",
 				"va_list"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"argptrDst",
@@ -2018,6 +2954,20 @@
 				"const wxPoint&",
 				"wxWindow*"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"message",
 				"default_path",
@@ -2039,6 +2989,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -2056,6 +3012,14 @@
 			"parameters_type":[
 				"wxEvtHandler*",
 				"const wxEvent&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"dest",
@@ -2076,6 +3040,14 @@
 			"parameters_type":[
 				"wxEvtHandler*",
 				"wxEvent*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"dest",
@@ -2104,6 +3076,28 @@
 				"int",
 				"int"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"message",
 				"default_path",
@@ -2123,6 +3117,133 @@
 			]
 		}
 	],
+	"wxFileSelectorEx":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"const wxString&",
+				"int*",
+				"const wxString&",
+				"int",
+				"wxWindow*",
+				"int",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"message",
+				"default_path",
+				"default_filename",
+				"indexDefaultExtension",
+				"wildcard",
+				"flags",
+				"parent",
+				"x",
+				"y"
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxLoadFileSelector":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"const wxString&",
+				"wxWindow*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"what",
+				"extension",
+				"default_name",
+				"parent"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxSaveFileSelector":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"const wxString&",
+				"wxWindow*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"what",
+				"extension",
+				"default_name",
+				"parent"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
 	"wxGetDiskSpace":[
 		{
 			"return_type":"bool",
@@ -2130,6 +3251,16 @@
 				"const wxString&",
 				"wxLongLong",
 				"wxLongLong"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"path",
@@ -2150,6 +3281,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -2168,6 +3305,16 @@
 				"const wxString&",
 				"wxArrayString&",
 				"wxArrayString&"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"wildCard",
@@ -2190,6 +3337,12 @@
 			"parameters_type":[
 				"wxChar*"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"s"
 			],
@@ -2207,6 +3360,12 @@
 			"parameters_type":[
 				"wxChar*"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"s"
 			],
@@ -2223,6 +3382,12 @@
 			"return_type":"bool",
 			"parameters_type":[
 				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"dirname"
@@ -2243,6 +3408,18 @@
 				"wxString*",
 				"wxString*",
 				"wxString*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"fullname",
@@ -2267,6 +3444,12 @@
 			"parameters_type":[
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"filename"
 			],
@@ -2285,6 +3468,16 @@
 				"const wxString&",
 				"const wxString&",
 				"bool"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"file1",
@@ -2308,6 +3501,16 @@
 				"const wxString&",
 				"bool"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"file1",
 				"file2",
@@ -2328,6 +3531,12 @@
 			"parameters_type":[
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"filename"
 			],
@@ -2346,6 +3555,16 @@
 				"const wxString&",
 				"const wxString&",
 				"bool"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"pattern",
@@ -2369,6 +3588,14 @@
 				"char*",
 				"int"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"buf",
 				"sz"
@@ -2387,6 +3614,12 @@
 			"parameters_type":[
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"path"
 			],
@@ -2403,6 +3636,12 @@
 			"return_type":"bool",
 			"parameters_type":[
 				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"pattern"
@@ -2421,6 +3660,12 @@
 			"parameters_type":[
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"filename"
 			],
@@ -2436,6 +3681,12 @@
 		{
 			"return_type":"wxString",
 			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
 				
 			],
 			"parameters_name":[
@@ -2455,6 +3706,12 @@
 			"parameters_type":[
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"dir"
 			],
@@ -2473,6 +3730,16 @@
 				"const wxString&",
 				"const wxString&",
 				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"file1",
@@ -2495,6 +3762,12 @@
 			"parameters_type":[
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"file"
 			],
@@ -2512,6 +3785,14 @@
 			"parameters_type":[
 				"const wxString&",
 				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"dir",
@@ -2532,6 +3813,14 @@
 				"const wxString&",
 				"int"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"dir",
 				"flags"
@@ -2548,6 +3837,12 @@
 		{
 			"return_type":"wxString",
 			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
 				
 			],
 			"parameters_name":[
@@ -2568,6 +3863,14 @@
 				"const wxString&",
 				"int"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"spec",
 				"flags"
@@ -2586,6 +3889,12 @@
 			"parameters_type":[
 				"int"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"fd"
 			],
@@ -2600,6 +3909,12 @@
 			"return_type":"wxFileKind",
 			"parameters_type":[
 				"FILE*"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"fp"
@@ -2618,6 +3933,12 @@
 			"parameters_type":[
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"path"
 			],
@@ -2632,6 +3953,12 @@
 			"return_type":"char*",
 			"parameters_type":[
 				"char*"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"path"
@@ -2651,6 +3978,14 @@
 				"const wxString&",
 				"char*"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"prefix",
 				"buf"
@@ -2667,6 +4002,14 @@
 			"parameters_type":[
 				"const wxString&",
 				"wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"prefix",
@@ -2689,6 +4032,16 @@
 				"const wxFont&",
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"parent",
 				"fontInit",
@@ -2709,6 +4062,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -2724,6 +4083,12 @@
 		{
 			"return_type":"int",
 			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
 				
 			],
 			"parameters_name":[
@@ -2742,6 +4107,12 @@
 			"return_type":"void",
 			"parameters_type":[
 				"const wxCursor&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"cursor"
@@ -2762,6 +4133,18 @@
 				"int*",
 				"int*",
 				"int*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"x",
@@ -2786,6 +4169,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -2801,6 +4190,12 @@
 		{
 			"return_type":"wxSize",
 			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
 				
 			],
 			"parameters_name":[
@@ -2821,6 +4216,14 @@
 				"int*",
 				"int*"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"width",
 				"height"
@@ -2838,6 +4241,12 @@
 		{
 			"return_type":"wxSize",
 			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
 				
 			],
 			"parameters_name":[
@@ -2858,6 +4267,14 @@
 				"int*",
 				"int*"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"width",
 				"height"
@@ -2877,6 +4294,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -2892,6 +4315,12 @@
 		{
 			"return_type":"void",
 			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
 				
 			],
 			"parameters_name":[
@@ -2911,6 +4340,14 @@
 			"parameters_type":[
 				"int&",
 				"wxChar**"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"argc",
@@ -2932,6 +4369,18 @@
 				"char*",
 				"int"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"hInstance",
 				"hPrevInstance",
@@ -2952,6 +4401,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -2968,6 +4423,12 @@
 			"return_type":"wxLongLong_t",
 			"parameters_type":[
 				"number"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				null
@@ -2986,6 +4447,12 @@
 			"parameters_type":[
 				"number"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				null
 			],
@@ -3002,6 +4469,12 @@
 			"return_type":"int",
 			"parameters_type":[
 				"double"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"x"
@@ -3020,6 +4493,12 @@
 			"parameters_type":[
 				"double"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"x"
 			],
@@ -3036,6 +4515,12 @@
 			"return_type":"wxFloat64",
 			"parameters_type":[
 				"const wxInt8*"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"bytes"
@@ -3054,6 +4539,14 @@
 			"parameters_type":[
 				"wxFloat64",
 				"wxInt8*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"num",
@@ -3074,6 +4567,12 @@
 			"parameters_type":[
 				"double"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"x"
 			],
@@ -3091,6 +4590,14 @@
 			"parameters_type":[
 				"double",
 				"double"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"x",
@@ -3111,6 +4618,12 @@
 			"parameters_type":[
 				"double"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"x"
 			],
@@ -3128,6 +4641,14 @@
 			"parameters_type":[
 				"const wxString&",
 				"..."
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"format",
@@ -3149,6 +4670,16 @@
 				"int",
 				"const wxString&",
 				"..."
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"level",
@@ -3175,6 +4706,22 @@
 				"int",
 				"int",
 				"float"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"filename",
@@ -3207,6 +4754,22 @@
 				"int",
 				"int"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"message",
 				"caption",
@@ -3236,6 +4799,26 @@
 				"wxWindow*",
 				"const wxPoint&"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"message",
 				"prompt",
@@ -3263,6 +4846,12 @@
 			"parameters_type":[
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"className"
 			],
@@ -3280,6 +4869,14 @@
 			"parameters_type":[
 				"T*",
 				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"obj",
@@ -3299,6 +4896,12 @@
 			"parameters_type":[
 				"wxPoint&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"pt"
 			],
@@ -3314,6 +4917,12 @@
 		{
 			"return_type":"wxWindow*",
 			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
 				
 			],
 			"parameters_name":[
@@ -3333,6 +4942,12 @@
 			"parameters_type":[
 				"wxWindow*"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"window"
 			],
@@ -3350,6 +4965,14 @@
 			"parameters_type":[
 				"int",
 				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"flags",
@@ -3371,6 +4994,14 @@
 				"const wxRichTextAttr&",
 				"const wxRichTextAttr&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"attr1",
 				"attr2"
@@ -3390,6 +5021,14 @@
 			"parameters_type":[
 				"const wxRichTextAttr&",
 				"const wxRichTextAttr&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"attr1",
@@ -3412,6 +5051,16 @@
 				"const wxRichTextAttr&",
 				"wxRichTextAttr*"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"destStyle",
 				"style",
@@ -3432,6 +5081,14 @@
 			"parameters_type":[
 				"wxRichTextAttr&",
 				"const wxRichTextAttr&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"destStyle",
@@ -3454,6 +5111,18 @@
 				"int",
 				"int&",
 				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"valueA",
@@ -3480,6 +5149,16 @@
 				"int",
 				"int"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"valueA",
 				"valueB",
@@ -3503,6 +5182,16 @@
 				"wxRichTextAttr&",
 				"wxRichTextAttr&"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"style",
 				"parStyle",
@@ -3525,6 +5214,14 @@
 				"const wxArrayInt&",
 				"const wxArrayInt&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"tabs1",
 				"tabs2"
@@ -3543,6 +5240,12 @@
 			"return_type":"WXDLLIMPEXP_RICHTEXT wxString",
 			"parameters_type":[
 				"long"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"n"
@@ -3563,6 +5266,18 @@
 				"const wxTextAttr&",
 				"wxTextAttr&",
 				"wxTextAttr&"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"currentStyle",
@@ -3587,6 +5302,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -3606,6 +5327,18 @@
 				"P1",
 				"...",
 				"PN"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"func",
@@ -3631,6 +5364,14 @@
 				"wxWindowID",
 				"long"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"id",
 				"flags"
@@ -3654,6 +5395,24 @@
 				"int",
 				"int",
 				"bool"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"message",
@@ -3684,6 +5443,24 @@
 				"int",
 				"bool"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"message",
 				"caption",
@@ -3707,6 +5484,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -3722,6 +5505,12 @@
 		{
 			"return_type":"long",
 			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
 				
 			],
 			"parameters_name":[
@@ -3741,6 +5530,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -3756,6 +5551,12 @@
 		{
 			"return_type":"long",
 			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
 				
 			],
 			"parameters_name":[
@@ -3775,6 +5576,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -3790,6 +5597,12 @@
 		{
 			"return_type":"wxLongLong",
 			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
 				
 			],
 			"parameters_name":[
@@ -3809,6 +5622,14 @@
 			"parameters_type":[
 				"const wxString&",
 				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"filename",
@@ -3830,6 +5651,16 @@
 				"wxWindow*",
 				"wxTipProvider*",
 				"bool"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"parent",
@@ -3853,6 +5684,16 @@
 				"const wxString&",
 				"wxStringTokenizerMode"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"str",
 				"delims",
@@ -3873,6 +5714,14 @@
 				"const wxString&",
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"string",
 				"domain"
@@ -3891,6 +5740,18 @@
 				"const wxString&",
 				"unsigned",
 				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"string",
@@ -3914,6 +5775,12 @@
 			"parameters_type":[
 				"const wxCursor*"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"cursor"
 			],
@@ -3929,6 +5796,12 @@
 		{
 			"return_type":"void",
 			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
 				
 			],
 			"parameters_name":[
@@ -3948,6 +5821,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -3963,6 +5842,12 @@
 		{
 			"return_type":"void",
 			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
 				
 			],
 			"parameters_name":[
@@ -3982,6 +5867,12 @@
 			"parameters_type":[
 				"wxWindow*"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"parent"
 			],
@@ -3997,6 +5888,12 @@
 		{
 			"return_type":"wxVersionInfo",
 			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
 				
 			],
 			"parameters_name":[
@@ -4016,6 +5913,12 @@
 			"parameters_type":[
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"var"
 			],
@@ -4030,6 +5933,12 @@
 			"return_type":"char*",
 			"parameters_type":[
 				"const char*"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"name"
@@ -4046,6 +5955,12 @@
 			"parameters_type":[
 				"const wchar_t*"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"name"
 			],
@@ -4060,6 +5975,12 @@
 			"return_type":"char*",
 			"parameters_type":[
 				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"name"
@@ -4076,6 +5997,12 @@
 			"parameters_type":[
 				"const wxCStrData&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"name"
 			],
@@ -4091,6 +6018,12 @@
 			"parameters_type":[
 				"const wxCharBuffer&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"name"
 			],
@@ -4105,6 +6038,12 @@
 			"return_type":"wchar_t*",
 			"parameters_type":[
 				"const wxWCharBuffer&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"name"
@@ -4123,6 +6062,14 @@
 			"parameters_type":[
 				"const wxString&",
 				"wxString*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"var",
@@ -4144,6 +6091,14 @@
 				"const wxString&",
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"var",
 				"value"
@@ -4163,6 +6118,12 @@
 			"parameters_type":[
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"var"
 			],
@@ -4180,6 +6141,12 @@
 			"parameters_type":[
 				"wxEnvVariableHashMap*"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"map"
 			],
@@ -4195,6 +6162,12 @@
 		{
 			"return_type":"wxBatteryState",
 			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
 				
 			],
 			"parameters_name":[
@@ -4214,6 +6187,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -4229,6 +6208,12 @@
 		{
 			"return_type":"wxString",
 			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
 				
 			],
 			"parameters_name":[
@@ -4248,6 +6233,12 @@
 			"parameters_type":[
 				"wxKeyCode"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"key"
 			],
@@ -4263,6 +6254,12 @@
 		{
 			"return_type":"wxPoint",
 			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
 				
 			],
 			"parameters_name":[
@@ -4282,6 +6279,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -4298,6 +6301,12 @@
 			"return_type":"void",
 			"parameters_type":[
 				"bool"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"enable"
@@ -4316,6 +6325,12 @@
 			"parameters_type":[
 				"const wxPoint&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"pt"
 			],
@@ -4333,6 +6348,14 @@
 			"parameters_type":[
 				"const wxString&",
 				"wxWindow*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"label",
@@ -4353,6 +6376,14 @@
 				"const wxString&",
 				"wxWindow*"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"name",
 				"parent"
@@ -4372,6 +6403,16 @@
 				"wxFrame*",
 				"const wxString&",
 				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"frame",
@@ -4394,6 +6435,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -4410,6 +6457,12 @@
 			"return_type":"void",
 			"parameters_type":[
 				"long"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"id"
@@ -4428,6 +6481,14 @@
 			"parameters_type":[
 				"const wxString&",
 				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"document",
@@ -4448,6 +6509,14 @@
 				"const wxString&",
 				"int"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"url",
 				"flags"
@@ -4467,6 +6536,14 @@
 				"const wxString&",
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"resourceName",
 				"resourceType"
@@ -4484,6 +6561,12 @@
 			"return_type":"void",
 			"parameters_type":[
 				"wxObject*"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"object"
@@ -4505,6 +6588,20 @@
 				"size_t",
 				"wxSortCallback",
 				"const void*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"pbase",
@@ -4531,6 +6628,12 @@
 			"parameters_type":[
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"displayName"
 			],
@@ -4548,6 +6651,14 @@
 			"parameters_type":[
 				"const wxString&",
 				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"str",
@@ -4567,6 +6678,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -4582,6 +6699,14 @@
 			"parameters_type":[
 				"char*",
 				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"buf",
@@ -4602,6 +6727,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -4617,6 +6748,12 @@
 		{
 			"return_type":"wxString",
 			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
 				
 			],
 			"parameters_name":[
@@ -4636,6 +6773,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -4651,6 +6794,14 @@
 			"parameters_type":[
 				"char*",
 				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"buf",
@@ -4671,6 +6822,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -4687,6 +6844,12 @@
 			"return_type":"wxString",
 			"parameters_type":[
 				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"user"
@@ -4705,6 +6868,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -4720,6 +6889,14 @@
 			"parameters_type":[
 				"char*",
 				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"buf",
@@ -4740,6 +6917,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -4755,6 +6938,14 @@
 			"parameters_type":[
 				"char*",
 				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"buf",
@@ -4775,6 +6966,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -4792,6 +6989,14 @@
 			"parameters_type":[
 				"int*",
 				"int*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"major",
@@ -4811,6 +7016,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -4828,6 +7039,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -4843,6 +7060,12 @@
 		{
 			"return_type":"wxLinuxDistributionInfo",
 			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
 				
 			],
 			"parameters_name":[
@@ -4865,6 +7088,18 @@
 				"wxProcess*",
 				"const wxExecuteEnv*"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"command",
 				"flags",
@@ -4885,6 +7120,18 @@
 				"int",
 				"wxProcess*",
 				"const wxExecuteEnv*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"argv",
@@ -4907,6 +7154,18 @@
 				"wxProcess*",
 				"const wxExecuteEnv*"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"argv",
 				"flags",
@@ -4927,6 +7186,18 @@
 				"wxArrayString&",
 				"int",
 				"const wxExecuteEnv*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"command",
@@ -4950,6 +7221,20 @@
 				"wxArrayString&",
 				"int",
 				"const wxExecuteEnv*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"command",
@@ -4974,6 +7259,12 @@
 			"parameters_type":[
 				
 			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
 			"parameters_name":[
 				
 			],
@@ -4993,6 +7284,18 @@
 				"wxSignal",
 				"wxKillError*",
 				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"pid",
@@ -5014,6 +7317,12 @@
 			"parameters_type":[
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"command"
 			],
@@ -5030,6 +7339,12 @@
 			"return_type":"bool",
 			"parameters_type":[
 				"int"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"flags"
@@ -5048,6 +7363,12 @@
 			"parameters_type":[
 				"unsigned long"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"microseconds"
 			],
@@ -5065,6 +7386,12 @@
 			"parameters_type":[
 				"unsigned long"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"milliseconds"
 			],
@@ -5080,6 +7407,12 @@
 		{
 			"return_type":"wxString",
 			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
 				
 			],
 			"parameters_name":[
@@ -5099,6 +7432,12 @@
 			"parameters_type":[
 				"int"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"secs"
 			],
@@ -5115,6 +7454,12 @@
 			"return_type":"void",
 			"parameters_type":[
 				"unsigned long"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"milliseconds"
@@ -5134,6 +7479,14 @@
 				"T*",
 				"int"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"value",
 				"style"
@@ -5151,6 +7504,16 @@
 				"int",
 				"T*",
 				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"precision",
@@ -5173,6 +7536,14 @@
 				"T*",
 				"int"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"value",
 				"style"
@@ -5191,6 +7562,12 @@
 			"parameters_type":[
 				"wxVector< T >&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"v"
 			],
@@ -5208,6 +7585,12 @@
 			"parameters_type":[
 				"const char*"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"s"
 			],
@@ -5222,6 +7605,12 @@
 			"return_type":"bool",
 			"parameters_type":[
 				"const wchar_t*"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"s"
@@ -5238,6 +7627,12 @@
 			"parameters_type":[
 				"const wxCharBuffer&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"s"
 			],
@@ -5252,6 +7647,12 @@
 			"return_type":"bool",
 			"parameters_type":[
 				"const wxWCharBuffer&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"s"
@@ -5268,6 +7669,12 @@
 			"parameters_type":[
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"s"
 			],
@@ -5282,6 +7689,12 @@
 			"return_type":"bool",
 			"parameters_type":[
 				"const wxCStrData&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"s"
@@ -5301,6 +7714,16 @@
 				"const wxChar*",
 				"wxChar",
 				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"s",
@@ -5322,6 +7745,16 @@
 				"const char*",
 				"char",
 				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"s",
@@ -5346,6 +7779,16 @@
 				"const wxChar*",
 				"size_t"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"sz1",
 				"sz2",
@@ -5366,6 +7809,16 @@
 				"const char*",
 				"const char*",
 				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"sz1",
@@ -5390,6 +7843,16 @@
 				"const wxChar*",
 				"size_t"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"szOut",
 				"szIn",
@@ -5410,6 +7873,16 @@
 				"char*",
 				"const char*",
 				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"szOut",
@@ -5434,6 +7907,16 @@
 				"const wxChar*",
 				"size_t"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"szOut",
 				"szIn",
@@ -5454,6 +7937,16 @@
 				"char*",
 				"const char*",
 				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"szOut",
@@ -5478,6 +7971,16 @@
 				"const wxChar",
 				"size_t"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"szOut",
 				"cIn",
@@ -5498,6 +8001,16 @@
 				"char*",
 				"const char",
 				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"szOut",
@@ -5521,6 +8034,14 @@
 				"int",
 				"const wxCharBuffer&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"category",
 				"locale"
@@ -5539,6 +8060,14 @@
 				"int",
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"category",
 				"locale"
@@ -5556,6 +8085,14 @@
 			"parameters_type":[
 				"int",
 				"const wxCStrData&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"category",
@@ -5576,6 +8113,12 @@
 			"parameters_type":[
 				"const wxCharBuffer&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"s"
 			],
@@ -5590,6 +8133,12 @@
 			"return_type":"size_t",
 			"parameters_type":[
 				"const wxWCharBuffer&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"s"
@@ -5606,6 +8155,12 @@
 			"parameters_type":[
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"s"
 			],
@@ -5620,6 +8175,12 @@
 			"return_type":"size_t",
 			"parameters_type":[
 				"const wxCStrData&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"s"
@@ -5639,6 +8200,14 @@
 				"const char*",
 				"size_t"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"str",
 				"maxlen"
@@ -5656,6 +8225,14 @@
 			"parameters_type":[
 				"const wchar_t*",
 				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"str",
@@ -5676,6 +8253,12 @@
 			"parameters_type":[
 				"const wxCharBuffer&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"s"
 			],
@@ -5690,6 +8273,12 @@
 			"return_type":"wchar_t*",
 			"parameters_type":[
 				"const wxWCharBuffer&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"s"
@@ -5706,6 +8295,12 @@
 			"parameters_type":[
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"s"
 			],
@@ -5720,6 +8315,12 @@
 			"return_type":"char*",
 			"parameters_type":[
 				"const wxCStrData&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"s"
@@ -5739,6 +8340,14 @@
 				"char*",
 				"const char*"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"dest",
 				"src"
@@ -5756,6 +8365,14 @@
 			"parameters_type":[
 				"wchar_t*",
 				"const wchar_t*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"dest",
@@ -5775,6 +8392,14 @@
 				"char*",
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"dest",
 				"src"
@@ -5792,6 +8417,14 @@
 			"parameters_type":[
 				"char*",
 				"const wxCStrData&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"dest",
@@ -5811,6 +8444,14 @@
 				"char*",
 				"const wxCharBuffer&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"dest",
 				"src"
@@ -5828,6 +8469,14 @@
 			"parameters_type":[
 				"wchar_t*",
 				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"dest",
@@ -5847,6 +8496,14 @@
 				"wchar_t*",
 				"const wxCStrData&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"dest",
 				"src"
@@ -5864,6 +8521,14 @@
 			"parameters_type":[
 				"wchar_t*",
 				"const wxWCharBuffer&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"dest",
@@ -5883,6 +8548,14 @@
 				"char*",
 				"const wchar_t*"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"dest",
 				"src"
@@ -5900,6 +8573,14 @@
 			"parameters_type":[
 				"wchar_t*",
 				"const char*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"dest",
@@ -5922,6 +8603,16 @@
 				"const char*",
 				"size_t"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"dest",
 				"src",
@@ -5942,6 +8633,16 @@
 				"wchar_t*",
 				"const wchar_t*",
 				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"dest",
@@ -5964,6 +8665,16 @@
 				"const wxString&",
 				"size_t"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"dest",
 				"src",
@@ -5984,6 +8695,16 @@
 				"char*",
 				"const wxCStrData&",
 				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"dest",
@@ -6006,6 +8727,16 @@
 				"const wxCharBuffer&",
 				"size_t"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"dest",
 				"src",
@@ -6026,6 +8757,16 @@
 				"wchar_t*",
 				"const wxString&",
 				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"dest",
@@ -6048,6 +8789,16 @@
 				"const wxCStrData&",
 				"size_t"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"dest",
 				"src",
@@ -6068,6 +8819,16 @@
 				"wchar_t*",
 				"const wxWCharBuffer&",
 				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"dest",
@@ -6090,6 +8851,16 @@
 				"const wchar_t*",
 				"size_t"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"dest",
 				"src",
@@ -6110,6 +8881,16 @@
 				"wchar_t*",
 				"const char*",
 				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"dest",
@@ -6134,6 +8915,16 @@
 				"const char*",
 				"size_t"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"dest",
 				"src",
@@ -6154,6 +8945,16 @@
 				"wchar_t*",
 				"const wchar_t*",
 				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"dest",
@@ -6177,6 +8978,14 @@
 				"char*",
 				"const char*"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"dest",
 				"src"
@@ -6194,6 +9003,14 @@
 			"parameters_type":[
 				"wchar_t*",
 				"const wchar_t*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"dest",
@@ -6213,6 +9030,14 @@
 				"char*",
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"dest",
 				"src"
@@ -6230,6 +9055,14 @@
 			"parameters_type":[
 				"char*",
 				"const wxCStrData&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"dest",
@@ -6249,6 +9082,14 @@
 				"char*",
 				"const wxCharBuffer&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"dest",
 				"src"
@@ -6266,6 +9107,14 @@
 			"parameters_type":[
 				"wchar_t*",
 				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"dest",
@@ -6285,6 +9134,14 @@
 				"wchar_t*",
 				"const wxCStrData&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"dest",
 				"src"
@@ -6302,6 +9159,14 @@
 			"parameters_type":[
 				"wchar_t*",
 				"const wxWCharBuffer&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"dest",
@@ -6321,6 +9186,14 @@
 				"char*",
 				"const wchar_t*"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"dest",
 				"src"
@@ -6338,6 +9211,14 @@
 			"parameters_type":[
 				"wchar_t*",
 				"const char*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"dest",
@@ -6360,6 +9241,16 @@
 				"const char*",
 				"size_t"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"dest",
 				"src",
@@ -6380,6 +9271,16 @@
 				"wchar_t*",
 				"const wchar_t*",
 				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"dest",
@@ -6402,6 +9303,16 @@
 				"const wxString&",
 				"size_t"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"dest",
 				"src",
@@ -6422,6 +9333,16 @@
 				"char*",
 				"const wxCStrData&",
 				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"dest",
@@ -6444,6 +9365,16 @@
 				"const wxCharBuffer&",
 				"size_t"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"dest",
 				"src",
@@ -6464,6 +9395,16 @@
 				"wchar_t*",
 				"const wxString&",
 				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"dest",
@@ -6486,6 +9427,16 @@
 				"const wxCStrData&",
 				"size_t"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"dest",
 				"src",
@@ -6506,6 +9457,16 @@
 				"wchar_t*",
 				"const wxWCharBuffer&",
 				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"dest",
@@ -6528,6 +9489,16 @@
 				"const wchar_t*",
 				"size_t"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"dest",
 				"src",
@@ -6548,6 +9519,16 @@
 				"wchar_t*",
 				"const char*",
 				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"dest",
@@ -6571,6 +9552,14 @@
 				"const wxString&",
 				"const T&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s1",
 				"s2"
@@ -6590,6 +9579,14 @@
 			"parameters_type":[
 				"const wxString&",
 				"const T&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"s1",
@@ -6611,6 +9608,14 @@
 				"const wxString&",
 				"const T&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s1",
 				"s2"
@@ -6630,6 +9635,14 @@
 			"parameters_type":[
 				"const wxString&",
 				"const T&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"s1",
@@ -6651,6 +9664,14 @@
 				"const wxString&",
 				"const T&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s1",
 				"s2"
@@ -6671,6 +9692,16 @@
 				"const wxString&",
 				"const T&",
 				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"s1",
@@ -6695,6 +9726,16 @@
 				"const T&",
 				"size_t"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"s1",
 				"s2",
@@ -6718,6 +9759,16 @@
 				"const char*",
 				"size_t"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"dest",
 				"src",
@@ -6738,6 +9789,16 @@
 				"wchar_t*",
 				"const wchar_t*",
 				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"dest",
@@ -6760,6 +9821,16 @@
 				"const wxCharTypeBuffer< T >&",
 				"size_t"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"dest",
 				"src",
@@ -6780,6 +9851,16 @@
 				"char*",
 				"const wxString&",
 				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"dest",
@@ -6802,6 +9883,16 @@
 				"const wxString&",
 				"size_t"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"dest",
 				"src",
@@ -6823,6 +9914,16 @@
 				"const wxCStrData&",
 				"size_t"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"dest",
 				"src",
@@ -6843,6 +9944,16 @@
 				"wchar_t*",
 				"const wxCStrData&",
 				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"dest",
@@ -6867,6 +9978,16 @@
 				"const char*",
 				"char**"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"str",
 				"delim",
@@ -6888,6 +10009,16 @@
 				"const wchar_t*",
 				"wchar_t**"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"str",
 				"delim",
@@ -6908,6 +10039,16 @@
 				"char*",
 				"const wxCStrData&",
 				"char**"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"str",
@@ -6930,6 +10071,16 @@
 				"const wxCStrData&",
 				"wchar_t**"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"str",
 				"delim",
@@ -6951,6 +10102,16 @@
 				"const wxString&",
 				"char**"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"str",
 				"delim",
@@ -6971,6 +10132,16 @@
 				"wchar_t*",
 				"const wxString&",
 				"wchar_t**"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"str",
@@ -6994,6 +10165,14 @@
 				"const char*",
 				"const char*"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"haystack",
 				"needle"
@@ -7011,6 +10190,14 @@
 			"parameters_type":[
 				"const wchar_t*",
 				"const wchar_t*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"haystack",
@@ -7030,6 +10217,14 @@
 				"const char*",
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"haystack",
 				"needle"
@@ -7047,6 +10242,14 @@
 			"parameters_type":[
 				"const wchar_t*",
 				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"haystack",
@@ -7066,6 +10269,14 @@
 				"const wxString&",
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"haystack",
 				"needle"
@@ -7083,6 +10294,14 @@
 			"parameters_type":[
 				"const wxCStrData&",
 				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"haystack",
@@ -7102,6 +10321,14 @@
 				"const wxCStrData&",
 				"const wxCStrData&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"haystack",
 				"needle"
@@ -7119,6 +10346,14 @@
 			"parameters_type":[
 				"const wxString&",
 				"const char*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"haystack",
@@ -7138,6 +10373,14 @@
 				"const wxCStrData&",
 				"const char*"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"haystack",
 				"needle"
@@ -7155,6 +10398,14 @@
 			"parameters_type":[
 				"const wxString&",
 				"const wchar_t*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"haystack",
@@ -7174,6 +10425,14 @@
 				"const wxCStrData&",
 				"const wchar_t*"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"haystack",
 				"needle"
@@ -7191,6 +10450,14 @@
 			"parameters_type":[
 				"char*",
 				"const char*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"haystack",
@@ -7210,6 +10477,14 @@
 				"wchar_t*",
 				"const wchar_t*"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"haystack",
 				"needle"
@@ -7228,6 +10503,14 @@
 				"char*",
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"haystack",
 				"needle"
@@ -7245,6 +10528,14 @@
 			"parameters_type":[
 				"wchar_t*",
 				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"haystack",
@@ -7266,6 +10557,14 @@
 				"const char*",
 				"char"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"c"
@@ -7284,6 +10583,14 @@
 				"const wchar_t*",
 				"wchar_t"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"c"
@@ -7301,6 +10608,14 @@
 			"parameters_type":[
 				"const char*",
 				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"s",
@@ -7320,6 +10635,14 @@
 				"const wchar_t*",
 				"const wxUniChar&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"c"
@@ -7338,6 +10661,14 @@
 				"const char*",
 				"const wxUniCharRef&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"c"
@@ -7355,6 +10686,14 @@
 			"parameters_type":[
 				"const wchar_t*",
 				"const wxUniCharRef&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"s",
@@ -7374,6 +10713,14 @@
 				"const wxCharTypeBuffer< T >&",
 				"T"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"c"
@@ -7392,6 +10739,14 @@
 				"const wxCharTypeBuffer< T >&",
 				"const wxUniChar&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"c"
@@ -7409,6 +10764,14 @@
 			"parameters_type":[
 				"const wxCharTypeBuffer< T >&",
 				"const wxUniCharRef&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"s",
@@ -7428,6 +10791,14 @@
 				"const wxString&",
 				"char"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"c"
@@ -7445,6 +10816,14 @@
 			"parameters_type":[
 				"const wxString&",
 				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"s",
@@ -7464,6 +10843,14 @@
 				"const wxString&",
 				"const wxUniChar&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"c"
@@ -7482,6 +10869,14 @@
 				"const wxString&",
 				"const wxUniCharRef&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"c"
@@ -7499,6 +10894,14 @@
 			"parameters_type":[
 				"const wxString&",
 				"wchar_t"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"s",
@@ -7518,6 +10921,14 @@
 				"const wxCStrData&",
 				"char"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"c"
@@ -7535,6 +10946,14 @@
 			"parameters_type":[
 				"const wxCStrData&",
 				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"s",
@@ -7554,6 +10973,14 @@
 				"const wxCStrData&",
 				"const wxUniChar&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"c"
@@ -7572,6 +10999,14 @@
 				"const wxCStrData&",
 				"const wxUniCharRef&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"c"
@@ -7589,6 +11024,14 @@
 			"parameters_type":[
 				"const wxCStrData&",
 				"wchar_t"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"s",
@@ -7608,6 +11051,14 @@
 				"char*",
 				"char"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"c"
@@ -7625,6 +11076,14 @@
 			"parameters_type":[
 				"wchar_t*",
 				"wchar_t"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"s",
@@ -7646,6 +11105,14 @@
 				"const char*",
 				"char"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"c"
@@ -7664,6 +11131,14 @@
 				"const wchar_t*",
 				"wchar_t"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"c"
@@ -7681,6 +11156,14 @@
 			"parameters_type":[
 				"const char*",
 				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"s",
@@ -7700,6 +11183,14 @@
 				"const wchar_t*",
 				"const wxUniChar&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"c"
@@ -7718,6 +11209,14 @@
 				"const char*",
 				"const wxUniCharRef&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"c"
@@ -7735,6 +11234,14 @@
 			"parameters_type":[
 				"const wchar_t*",
 				"const wxUniCharRef&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"s",
@@ -7754,6 +11261,14 @@
 				"const wxCharTypeBuffer< T >&",
 				"T"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"c"
@@ -7772,6 +11287,14 @@
 				"const wxCharTypeBuffer< T >&",
 				"const wxUniChar&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"c"
@@ -7789,6 +11312,14 @@
 			"parameters_type":[
 				"const wxCharTypeBuffer< T >&",
 				"const wxUniCharRef&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"s",
@@ -7808,6 +11339,14 @@
 				"const wxString&",
 				"char"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"c"
@@ -7825,6 +11364,14 @@
 			"parameters_type":[
 				"const wxString&",
 				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"s",
@@ -7844,6 +11391,14 @@
 				"const wxString&",
 				"const wxUniChar&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"c"
@@ -7862,6 +11417,14 @@
 				"const wxString&",
 				"const wxUniCharRef&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"c"
@@ -7879,6 +11442,14 @@
 			"parameters_type":[
 				"const wxString&",
 				"wchar_t"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"s",
@@ -7898,6 +11469,14 @@
 				"const wxCStrData&",
 				"char"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"c"
@@ -7915,6 +11494,14 @@
 			"parameters_type":[
 				"const wxCStrData&",
 				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"s",
@@ -7934,6 +11521,14 @@
 				"const wxCStrData&",
 				"const wxUniChar&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"c"
@@ -7952,6 +11547,14 @@
 				"const wxCStrData&",
 				"const wxUniCharRef&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"c"
@@ -7969,6 +11572,14 @@
 			"parameters_type":[
 				"const wxCStrData&",
 				"wchar_t"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"s",
@@ -7988,6 +11599,14 @@
 				"char*",
 				"char"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"c"
@@ -8005,6 +11624,14 @@
 			"parameters_type":[
 				"wchar_t*",
 				"wchar_t"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"s",
@@ -8026,6 +11653,14 @@
 				"const char*",
 				"const char*"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"accept"
@@ -8043,6 +11678,14 @@
 			"parameters_type":[
 				"const wchar_t*",
 				"const wchar_t*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"s",
@@ -8062,6 +11705,14 @@
 				"const char*",
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"accept"
@@ -8080,6 +11731,14 @@
 				"const char*",
 				"const wxCStrData&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"accept"
@@ -8097,6 +11756,14 @@
 			"parameters_type":[
 				"const wchar_t*",
 				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"s",
@@ -8116,6 +11783,14 @@
 				"const wchar_t*",
 				"const wxCStrData&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"accept"
@@ -8133,6 +11808,14 @@
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"s",
@@ -8152,6 +11835,14 @@
 				"const wxString&",
 				"const char*"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"accept"
@@ -8170,6 +11861,14 @@
 				"const wxString&",
 				"const wchar_t*"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"accept"
@@ -8187,6 +11886,14 @@
 			"parameters_type":[
 				"const wxString&",
 				"const wxCStrData&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"s",
@@ -8206,6 +11913,14 @@
 				"const wxCStrData&",
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"accept"
@@ -8223,6 +11938,14 @@
 			"parameters_type":[
 				"const wxCStrData&",
 				"const char*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"s",
@@ -8242,6 +11965,14 @@
 				"const wxCStrData&",
 				"const wchar_t*"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"accept"
@@ -8259,6 +11990,14 @@
 			"parameters_type":[
 				"const wxCStrData&",
 				"const wxCStrData&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"s",
@@ -8278,6 +12017,14 @@
 				"const S&",
 				"const wxCharTypeBuffer< T >&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"accept"
@@ -8295,6 +12042,14 @@
 			"parameters_type":[
 				"char*",
 				"const char*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"s",
@@ -8314,6 +12069,14 @@
 				"wchar_t*",
 				"const wchar_t*"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"accept"
@@ -8332,6 +12095,14 @@
 				"char*",
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"accept"
@@ -8349,6 +12120,14 @@
 			"parameters_type":[
 				"wchar_t*",
 				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"s",
@@ -8369,6 +12148,14 @@
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"path",
@@ -8391,6 +12178,16 @@
 				"const wxString&",
 				"FILE*"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"path",
 				"mode",
@@ -8412,6 +12209,12 @@
 			"parameters_type":[
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"path"
 			],
@@ -8429,6 +12232,14 @@
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"oldpath",
@@ -8451,6 +12262,16 @@
 				"int",
 				"FILE*"
 			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
 			"parameters_name":[
 				"s",
 				"size",
@@ -8472,6 +12293,12 @@
 			"parameters_type":[
 				"FILE*"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"stream"
 			],
@@ -8489,6 +12316,14 @@
 			"parameters_type":[
 				"int",
 				"FILE*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"c",
@@ -8509,6 +12344,12 @@
 			"parameters_type":[
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"str"
 			],
@@ -8526,6 +12367,12 @@
 			"parameters_type":[
 				"const wxString&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"str"
 			],
@@ -8542,6 +12389,12 @@
 			"return_type":"double",
 			"parameters_type":[
 				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"str"
@@ -8561,6 +12414,14 @@
 				"const char*",
 				"char**"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"nptr",
 				"endptr"
@@ -8578,6 +12439,14 @@
 			"parameters_type":[
 				"const wchar_t*",
 				"wchar_t**"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"nptr",
@@ -8597,6 +12466,14 @@
 				"const wxCharTypeBuffer< T >&",
 				"T**"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"nptr",
 				"endptr"
@@ -8614,6 +12491,14 @@
 			"parameters_type":[
 				"const wxString&",
 				"T"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"nptr",
@@ -8633,6 +12518,14 @@
 				"const wxCStrData&",
 				"T"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"nptr",
 				"endptr"
@@ -8651,6 +12544,12 @@
 			"return_type":"int",
 			"parameters_type":[
 				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"str"
@@ -8672,6 +12571,20 @@
 				"size_t",
 				"const wxString&",
 				"const struct tm*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"s",
@@ -8699,6 +12612,20 @@
 				"size_t",
 				"const wxString&",
 				"const struct tm*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"s",
@@ -8725,6 +12652,12 @@
 			"parameters_type":[
 				"const wxUniChar&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"c"
 			],
@@ -8741,6 +12674,12 @@
 			"return_type":"bool",
 			"parameters_type":[
 				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"c"
@@ -8759,6 +12698,12 @@
 			"parameters_type":[
 				"const wxUniChar&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"c"
 			],
@@ -8775,6 +12720,12 @@
 			"return_type":"bool",
 			"parameters_type":[
 				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"c"
@@ -8793,6 +12744,12 @@
 			"parameters_type":[
 				"const wxUniChar&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"c"
 			],
@@ -8809,6 +12766,12 @@
 			"return_type":"bool",
 			"parameters_type":[
 				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"c"
@@ -8827,6 +12790,12 @@
 			"parameters_type":[
 				"const wxUniChar&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"c"
 			],
@@ -8843,6 +12812,12 @@
 			"return_type":"bool",
 			"parameters_type":[
 				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"c"
@@ -8861,6 +12836,12 @@
 			"parameters_type":[
 				"const wxUniChar&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"c"
 			],
@@ -8877,6 +12858,12 @@
 			"return_type":"bool",
 			"parameters_type":[
 				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"c"
@@ -8895,6 +12882,12 @@
 			"parameters_type":[
 				"const wxUniChar&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"c"
 			],
@@ -8911,6 +12904,12 @@
 			"return_type":"wxUniChar",
 			"parameters_type":[
 				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"c"
@@ -8929,6 +12928,12 @@
 			"parameters_type":[
 				"const wxUniChar&"
 			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
 			"parameters_name":[
 				"c"
 			],
@@ -8945,6 +12950,12 @@
 			"return_type":"int",
 			"parameters_type":[
 				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
 			],
 			"parameters_name":[
 				"c"
@@ -8963,6 +12974,14 @@
 			"parameters_type":[
 				"wchar_t",
 				"const wxXLocale&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"c",
@@ -8984,6 +13003,14 @@
 				"wchar_t",
 				"const wxXLocale&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"c",
 				"loc"
@@ -9003,6 +13030,14 @@
 			"parameters_type":[
 				"wchar_t",
 				"const wxXLocale&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"c",
@@ -9024,6 +13059,14 @@
 				"wchar_t",
 				"const wxXLocale&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"c",
 				"loc"
@@ -9043,6 +13086,14 @@
 			"parameters_type":[
 				"wchar_t",
 				"const wxXLocale&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"c",
@@ -9064,6 +13115,14 @@
 				"wchar_t",
 				"const wxXLocale&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"c",
 				"loc"
@@ -9083,6 +13142,14 @@
 			"parameters_type":[
 				"wchar_t",
 				"const wxXLocale&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"c",
@@ -9104,6 +13171,14 @@
 				"wchar_t",
 				"const wxXLocale&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"c",
 				"loc"
@@ -9123,6 +13198,14 @@
 			"parameters_type":[
 				"wchar_t",
 				"const wxXLocale&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"c",
@@ -9144,6 +13227,14 @@
 				"wchar_t",
 				"const wxXLocale&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"c",
 				"loc"
@@ -9163,6 +13254,14 @@
 			"parameters_type":[
 				"wchar_t",
 				"const wxXLocale&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"c",
@@ -9184,6 +13283,14 @@
 				"wchar_t",
 				"const wxXLocale&"
 			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
 			"parameters_name":[
 				"c",
 				"loc"
@@ -9203,6 +13310,14 @@
 			"parameters_type":[
 				"wchar_t",
 				"const wxXLocale&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
 			],
 			"parameters_name":[
 				"c",
@@ -9224,6 +13339,16 @@
 				"const wchar_t*",
 				"wchar_t**",
 				"const wxXLocale&"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"c",
@@ -9248,6 +13373,18 @@
 				"wchar_t**",
 				"int",
 				"const wxXLocale&"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"c",
@@ -9274,6 +13411,18 @@
 				"wchar_t**",
 				"int",
 				"const wxXLocale&"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
 			],
 			"parameters_name":[
 				"c",

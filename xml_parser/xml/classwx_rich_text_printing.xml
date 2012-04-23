@@ -26,7 +26,7 @@
 <para>Optionally pass a title to be used in the preview frame and printing wait dialog, and also a parent window for these windows. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="276"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextprint.h" line="276"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_printing_1a4c549be7ef4eb88f9a8adae79c23a6ed" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -49,7 +49,7 @@
 <para>See <ref refid="classwx_rich_text_header_footer_data" kindref="compound">wxRichTextHeaderFooterData</ref> for details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="283"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextprint.h" line="283"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_printing_1a9df8f0e8a889b5e9f16450b29a349d9f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_rich_text_header_footer_data" kindref="compound">wxRichTextHeaderFooterData</ref> &amp;</type>
@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="288"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextprint.h" line="288"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_printing_1a22cef052a632aabee886e00cba0b898e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -85,7 +85,7 @@
 <para>See <ref refid="classwx_rich_text_header_footer_data" kindref="compound">wxRichTextHeaderFooterData</ref> for details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="295"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextprint.h" line="295"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_printing_1ab62454dc6f0437690c01d2746756cf76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_page_setup_dialog_data" kindref="compound">wxPageSetupDialogData</ref> *</type>
@@ -98,7 +98,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="300"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextprint.h" line="300"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_printing_1a1d9721f18b0e1057ac0508b1b9e0ed06" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -111,7 +111,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="306"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextprint.h" line="306"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_printing_1a919e320c931620c5a0c9ca8aaa1ce45a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_rect" kindref="compound">wxRect</ref> &amp;</type>
@@ -124,7 +124,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="311"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextprint.h" line="311"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_printing_1a4e257fa95f83c753f3ade8d3ab6f2663" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_print_data" kindref="compound">wxPrintData</ref> *</type>
@@ -137,7 +137,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="316"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextprint.h" line="316"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_printing_1a16a2d5aa820bc33ab994a341eccc9130" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -150,7 +150,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="321"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextprint.h" line="321"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_printing_1a3d6e068fa590da4d5ce2ab5a822d705d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -163,7 +163,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="326"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextprint.h" line="326"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_printing_1a1a15db2c8534795316e67794b9e7ac38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -180,7 +180,7 @@
 <para>The function takes its own copy of <emphasis>buffer</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="332"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextprint.h" line="332"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_printing_1a02435a216a38f53c55106e712aae8e5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -197,41 +197,51 @@
 <para><emphasis>richTextFile</emphasis> can be a text file or XML file, or other file depending on the available file handlers. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="340"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextprint.h" line="340"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_rich_text_printing_1a9a8ee25bef7e48f05fe5d6c40e4627d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_rich_text_printing_1a98575017a491bb3ae806f2e2568f85cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxRichTextPrinting::PrintBuffer</definition>
-        <argsstring>(const wxRichTextBuffer &amp;buffer)</argsstring>
+        <argsstring>(const wxRichTextBuffer &amp;buffer, bool showPrintDialog=true)</argsstring>
         <name>PrintBuffer</name>
         <param>
           <type>const <ref refid="classwx_rich_text_buffer" kindref="compound">wxRichTextBuffer</ref> &amp;</type>
           <declname>buffer</declname>
         </param>
+        <param>
+          <type>bool</type>
+          <declname>showPrintDialog</declname>
+          <defval>true</defval>
+        </param>
         <briefdescription>
 <para>Prints the given buffer. </para>        </briefdescription>
         <detaileddescription>
-<para>The function takes its own copy of <emphasis>buffer</emphasis>. </para>        </detaileddescription>
+<para>The function takes its own copy of <emphasis>buffer</emphasis>.  can be true to show the print dialog, or false to print quietly. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="345"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextprint.h" line="346"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_rich_text_printing_1a089947aca4031d2a651885f7b7bd8d16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_rich_text_printing_1a6eb4d23bf552054077f96e6ccccfede4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxRichTextPrinting::PrintFile</definition>
-        <argsstring>(const wxString &amp;richTextFile)</argsstring>
+        <argsstring>(const wxString &amp;richTextFile, bool showPrintDialog=true)</argsstring>
         <name>PrintFile</name>
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
           <declname>richTextFile</declname>
         </param>
+        <param>
+          <type>bool</type>
+          <declname>showPrintDialog</declname>
+          <defval>true</defval>
+        </param>
         <briefdescription>
 <para>Prints the given file. </para>        </briefdescription>
         <detaileddescription>
-<para><emphasis>richTextFile</emphasis> can be a text file or XML file, or other file depending on the available file handlers. </para>        </detaileddescription>
+<para><emphasis>richTextFile</emphasis> can be a text file or XML file, or other file depending on the available file handlers.  can be true to show the print dialog, or false to print quietly. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="351"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextprint.h" line="353"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_printing_1a46d46f072f4fdcd4577e03df5e7e6a29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -258,7 +268,7 @@
 <para>See <ref refid="classwx_rich_text_header_footer_data" kindref="compound">wxRichTextHeaderFooterData</ref> for details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="359"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextprint.h" line="361"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_printing_1a1f8ce2d3947efcff0c523eb354bd937b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -275,7 +285,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="364"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextprint.h" line="366"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_printing_1a575d5ec759919b055845f524948516a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -292,7 +302,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="369"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextprint.h" line="371"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_printing_1ab01a42e6649ebcc6aa91d80a486d2d70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -309,7 +319,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="374"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextprint.h" line="376"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_printing_1a48a246cd7553920bb932a144c6798d97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -336,7 +346,7 @@
 <para>See <ref refid="classwx_rich_text_header_footer_data" kindref="compound">wxRichTextHeaderFooterData</ref> for details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="382"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextprint.h" line="384"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_printing_1ab8784c4f9cfc398931eed9b24113c03c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -353,7 +363,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="387"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextprint.h" line="389"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_printing_1a3090bf47d749f7faab31d72ced7fe759" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -370,7 +380,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="393"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextprint.h" line="395"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_printing_1a04d2730e312fc798216d84b4a8ab261d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -387,7 +397,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="398"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextprint.h" line="400"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_printing_1a0372c0d5a80271d4a95d2a2741a1517e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -404,7 +414,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="403"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextprint.h" line="405"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_printing_1a217a0d752607e3f6b165a2bf7b7d008f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -421,7 +431,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="408"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextprint.h" line="410"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_printing_1afee2bc6c46cda70ce5300f7c08dfa4b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -438,7 +448,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="413"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextprint.h" line="415"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -447,37 +457,37 @@
 <para>It uses <ref refid="classwx_rich_text_printout" kindref="compound">wxRichTextPrintout</ref> for layout and rendering.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9832">
+      <node id="10015">
         <label>wxRichTextPrinting</label>
         <link refid="classwx_rich_text_printing"/>
-        <childnode refid="9833" relation="public-inheritance">
+        <childnode refid="10016" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9833">
+      <node id="10016">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9834">
+      <node id="10017">
         <label>wxRichTextPrinting</label>
         <link refid="classwx_rich_text_printing"/>
-        <childnode refid="9835" relation="public-inheritance">
+        <childnode refid="10018" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9835">
+      <node id="10018">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9836" relation="usage">
+        <childnode refid="10019" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9836">
+      <node id="10019">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" line="267" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextprint.h" bodystart="266" bodyend="414"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextprint.h" line="267" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextprint.h" bodystart="266" bodyend="416"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxRichTextPrinting</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxRichTextPrinting</scope><name>CloneRefData</name></member>
@@ -500,8 +510,8 @@
       <member refid="classwx_rich_text_printing_1a3d6e068fa590da4d5ce2ab5a822d705d" prot="public" virt="non-virtual"><scope>wxRichTextPrinting</scope><name>PageSetup</name></member>
       <member refid="classwx_rich_text_printing_1a1a15db2c8534795316e67794b9e7ac38" prot="public" virt="non-virtual"><scope>wxRichTextPrinting</scope><name>PreviewBuffer</name></member>
       <member refid="classwx_rich_text_printing_1a02435a216a38f53c55106e712aae8e5d" prot="public" virt="non-virtual"><scope>wxRichTextPrinting</scope><name>PreviewFile</name></member>
-      <member refid="classwx_rich_text_printing_1a9a8ee25bef7e48f05fe5d6c40e4627d4" prot="public" virt="non-virtual"><scope>wxRichTextPrinting</scope><name>PrintBuffer</name></member>
-      <member refid="classwx_rich_text_printing_1a089947aca4031d2a651885f7b7bd8d16" prot="public" virt="non-virtual"><scope>wxRichTextPrinting</scope><name>PrintFile</name></member>
+      <member refid="classwx_rich_text_printing_1a98575017a491bb3ae806f2e2568f85cc" prot="public" virt="non-virtual"><scope>wxRichTextPrinting</scope><name>PrintBuffer</name></member>
+      <member refid="classwx_rich_text_printing_1a6eb4d23bf552054077f96e6ccccfede4" prot="public" virt="non-virtual"><scope>wxRichTextPrinting</scope><name>PrintFile</name></member>
       <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxRichTextPrinting</scope><name>Ref</name></member>
       <member refid="classwx_rich_text_printing_1a46d46f072f4fdcd4577e03df5e7e6a29" prot="public" virt="non-virtual"><scope>wxRichTextPrinting</scope><name>SetFooterText</name></member>
       <member refid="classwx_rich_text_printing_1a1f8ce2d3947efcff0c523eb354bd937b" prot="public" virt="non-virtual"><scope>wxRichTextPrinting</scope><name>SetHeaderFooterData</name></member>

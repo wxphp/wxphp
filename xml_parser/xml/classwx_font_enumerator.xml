@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontenum.h" line="42"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontenum.h" line="42"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_enumerator_1aa8fe98a0c913864c99f33d5f79cb6879" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -43,7 +43,7 @@
 <para>Calling this function with default arguments will result in enumerating all fonts available on the system. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontenum.h" line="53"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontenum.h" line="53"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_enumerator_1ad9566d37c45e857c7e885f6d23a66848" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -60,7 +60,7 @@
 <para>Return true to continue enumeration or false to stop it. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontenum.h" line="79"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontenum.h" line="79"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_enumerator_1a5a100fb6f9cf812d0982ab83a0c07644" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -81,7 +81,7 @@
 <para>Return true to continue enumeration or false to stop it. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontenum.h" line="87"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontenum.h" line="87"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -101,7 +101,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontenum.h" line="59"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontenum.h" line="59"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_enumerator_1a5cf5587263a845e76ae16a39ce3e44b6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_array_string" kindref="compound">wxArrayString</ref></type>
@@ -124,7 +124,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontenum.h" line="66"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontenum.h" line="66"/>
       </memberdef>
       <memberdef kind="function" id="classwx_font_enumerator_1a8e11919b1a3bbbd662ba6087c7bc9943" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -141,7 +141,7 @@
 <para>it&apos;s the face name of an installed font and it can safely be used with <ref refid="classwx_font_1a97456a61332a1b6d44a76f0b57b01709" kindref="member">wxFont::SetFaceName</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontenum.h" line="72"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontenum.h" line="72"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -153,7 +153,7 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="overview_fontencoding" kindref="compound">Font Encodings</ref>, <ref refid="page_samples_1page_samples_font" kindref="member">Font Sample</ref>, <ref refid="classwx_font" kindref="compound">wxFont</ref>, <ref refid="classwx_font_mapper" kindref="compound">wxFontMapper</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontenum.h" line="36" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fontenum.h" bodystart="35" bodyend="88"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fontenum.h" line="36" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/fontenum.h" bodystart="35" bodyend="88"/>
     <listofallmembers>
       <member refid="classwx_font_enumerator_1a38dfb993bdb5ba19359679eb37f4296b" prot="public" virt="virtual"><scope>wxFontEnumerator</scope><name>EnumerateEncodings</name></member>
       <member refid="classwx_font_enumerator_1aa8fe98a0c913864c99f33d5f79cb6879" prot="public" virt="virtual"><scope>wxFontEnumerator</scope><name>EnumerateFacenames</name></member>

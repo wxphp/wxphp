@@ -20,7 +20,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="826"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="821"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_1ab0d46d98d425f35d51a8a284f0d65fb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -38,7 +38,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="827"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="822"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_1aea2001c0eb4ee58bfe8053dae90c35e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -60,7 +60,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="828"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="823"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_1ad67ffe193f1390c3b59ca90bee2297e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -78,7 +78,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="829"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="824"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -98,7 +98,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="856"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="851"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_1abdddee0dd164b74d899c05f1ee6ea5e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -116,7 +116,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="857"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="852"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_1a1cef28aa72da68daea6a8ffd0e417a41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -138,7 +138,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="858"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="853"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_1a5b93ee9afc913c3aaa061a4d436e91e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -156,7 +156,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="859"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="854"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -177,7 +177,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="932"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="927"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_1acef5beab40255d67241168617a6dd8d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -198,7 +198,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="934"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="929"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_1a4f5e8c5b985bc7c4a0b690b5d03aa185" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -219,7 +219,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="935"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="930"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_1ad9d50601f4afff8badda2979b1cffc08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -240,7 +240,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="937"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="932"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_1a2c8637c5b45909c4d353b45a0628a6c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -261,7 +261,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="938"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="933"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_1adcc7979939cfae0f82cead04c7b6eb34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
@@ -278,7 +278,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="939"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="934"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_1a1c46a9f17eb4451efadf0aa192f88f6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
@@ -295,7 +295,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="940"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="935"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_1ae0070f6158c8d7de53d9f7e6d301b670" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -316,7 +316,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="942"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="937"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_1adb9c5e8999a606eaf4e04549c631d15e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -337,7 +337,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="943"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="938"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_1aceb625572b23b7851cdf445537f5ea88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -358,7 +358,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="944"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="939"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_1a398b45f7f99eac7bb2f53c457012b58e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
@@ -375,7 +375,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="945"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="940"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_1a6ff396754f0e0944a6ed7223ec29b760" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
@@ -392,7 +392,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="946"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="941"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -407,7 +407,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="813"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="808"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_1aaa5ee9cd2943878582267508255c5bc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -428,7 +428,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="818"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="813"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_1ac1e1d3b84b295669b20323b72a9c14a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -446,7 +446,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="838"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="833"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_1af841d5b084fd441d35d9ea237dc8cac0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -459,7 +459,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="843"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="838"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_1a13433c2ef31e7e08cd42dd21afeaa60a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -472,7 +472,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="848"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="843"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_1a8377564f72496d664286bdad0fdce941" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -490,7 +490,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="868"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="863"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_1a17f2470fd03db979e9d28755e5f85df9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -503,7 +503,7 @@
 <para>This method is typically used before calling <ref refid="classwx_size_1aa0666752c5721566e4d80a82cf60c99a" kindref="member">SetDefaults()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="877"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="872"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_1a21eb89b963b3bc7c3ec001bf31d1305c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
@@ -525,7 +525,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="887"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="882"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_1ac5dbc35615c2d17ccb072efe334c75bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -546,7 +546,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="892"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="887"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_1aa0666752c5721566e4d80a82cf60c99a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -568,7 +568,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="908"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="903"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_1a4567577104dbf480c6331f97a71e73ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -585,7 +585,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="913"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="908"/>
       </memberdef>
       <memberdef kind="function" id="classwx_size_1a41d149df3805e7bca1d39eda9e035920" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -602,16 +602,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="918"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="913"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>A <ref refid="classwx_size" kindref="compound">wxSize</ref> is a useful data structure for graphics operations. </para>    </briefdescription>
     <detaileddescription>
-<para>It simply contains integer <emphasis>width</emphasis> and <emphasis>height</emphasis> members.</para><para>Note that the width and height stored inside a <ref refid="classwx_size" kindref="compound">wxSize</ref> object may be negative and that <ref refid="classwx_size" kindref="compound">wxSize</ref> functions do not perform any check against negative values (this is used to e.g. store the special -1 value in <ref refid="gdicmn_8h_1a33a012cdb075e9f78c93f63bec2dc27b" kindref="member">wxDefaultSize</ref> instance). See also <ref refid="classwx_size_1a17f2470fd03db979e9d28755e5f85df9" kindref="member">IsFullySpecified()</ref> and <ref refid="classwx_size_1aa0666752c5721566e4d80a82cf60c99a" kindref="member">SetDefaults()</ref> for utility functions regarding the special -1 value.</para><para><ref refid="classwx_size" kindref="compound">wxSize</ref> is used throughout wxWidgets as well as <ref refid="classwx_point" kindref="compound">wxPoint</ref> which, although almost equivalent to <ref refid="classwx_size" kindref="compound">wxSize</ref>, has a different meaning: <ref refid="classwx_point" kindref="compound">wxPoint</ref> represents a position while <ref refid="classwx_size" kindref="compound">wxSize</ref> represents the size.</para><para><bold>wxPython Note:</bold> wxPython defines aliases for the <emphasis>x</emphasis> and <emphasis>y</emphasis> members named <emphasis>width</emphasis> and <emphasis>height</emphasis> since it makes much more sense for sizes.</para><para><heading level="2"></heading>
+<para>It simply contains integer <emphasis>width</emphasis> and <emphasis>height</emphasis> members.</para><para>Note that the width and height stored inside a <ref refid="classwx_size" kindref="compound">wxSize</ref> object may be negative and that <ref refid="classwx_size" kindref="compound">wxSize</ref> functions do not perform any check against negative values (this is used to e.g. store the special -1 value in <ref refid="gdicmn_8h_1a33a012cdb075e9f78c93f63bec2dc27b" kindref="member">wxDefaultSize</ref> instance). See also <ref refid="classwx_size_1a17f2470fd03db979e9d28755e5f85df9" kindref="member">IsFullySpecified()</ref> and <ref refid="classwx_size_1aa0666752c5721566e4d80a82cf60c99a" kindref="member">SetDefaults()</ref> for utility functions regarding the special -1 value.</para><para><ref refid="classwx_size" kindref="compound">wxSize</ref> is used throughout wxWidgets as well as <ref refid="classwx_point" kindref="compound">wxPoint</ref> which, although almost equivalent to <ref refid="classwx_size" kindref="compound">wxSize</ref>, has a different meaning: <ref refid="classwx_point" kindref="compound">wxPoint</ref> represents a position while <ref refid="classwx_size" kindref="compound">wxSize</ref> represents the size.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para>Predefined objects/pointers: <ref refid="gdicmn_8h_1a33a012cdb075e9f78c93f63bec2dc27b" kindref="member">wxDefaultSize</ref></para><para><simplesect kind="see"><para><ref refid="classwx_point" kindref="compound">wxPoint</ref>, <ref refid="classwx_real_point" kindref="compound">wxRealPoint</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="808" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" bodystart="807" bodyend="948"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="803" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" bodystart="802" bodyend="943"/>
     <listofallmembers>
       <member refid="classwx_size_1a7f1e3a02453f5b97c53322031b07d36d" prot="public" virt="non-virtual"><scope>wxSize</scope><name>DecBy</name></member>
       <member refid="classwx_size_1ab0d46d98d425f35d51a8a284f0d65fb5" prot="public" virt="non-virtual"><scope>wxSize</scope><name>DecBy</name></member>

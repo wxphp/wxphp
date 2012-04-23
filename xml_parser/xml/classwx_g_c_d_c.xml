@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcgraph.h" line="26"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcgraph.h" line="26"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_c_d_c_1a8bfc3aa5028e38bc5e63b797fef63669" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -37,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcgraph.h" line="31"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcgraph.h" line="31"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_c_d_c_1a4e65ea4c23e1dc9adb22840282fa8894" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcgraph.h" line="36"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcgraph.h" line="36"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_c_d_c_1a44937b71c3e256a1e2c2187caab904f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcgraph.h" line="41"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcgraph.h" line="41"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_c_d_c_1a96469646f16d67d838fc49500b7af158" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -89,7 +89,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcgraph.h" line="52"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcgraph.h" line="52"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_c_d_c_1a655c7b2351ba8ee71cec659030a0fb59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -102,7 +102,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcgraph.h" line="54"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcgraph.h" line="54"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_c_d_c_1adb896ea5b3bceb3ac4048b8fc8ecc77d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -115,7 +115,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcgraph.h" line="55"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcgraph.h" line="55"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_c_d_c_1a6436a556ce56a037ef2fe40fa7a55195" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_graphics_context" kindref="compound">wxGraphicsContext</ref> *</type>
@@ -128,7 +128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcgraph.h" line="60"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcgraph.h" line="60"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_c_d_c_1a2b2b5d5ee3e8982b9bbf06cfe2a026f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -145,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcgraph.h" line="65"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcgraph.h" line="65"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -155,49 +155,49 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref></para><para><simplesect kind="see"><para><ref refid="classwx_d_c" kindref="compound">wxDC</ref>, <ref refid="classwx_graphics_context" kindref="compound">wxGraphicsContext</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6493">
+      <node id="6643">
         <label>wxGCDC</label>
         <link refid="classwx_g_c_d_c"/>
-        <childnode refid="6494" relation="public-inheritance">
+        <childnode refid="6644" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6495">
+      <node id="6645">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6494">
+      <node id="6644">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="6495" relation="public-inheritance">
+        <childnode refid="6645" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6496">
+      <node id="6646">
         <label>wxGCDC</label>
         <link refid="classwx_g_c_d_c"/>
-        <childnode refid="6497" relation="public-inheritance">
+        <childnode refid="6647" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6498">
+      <node id="6648">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6499" relation="usage">
+        <childnode refid="6649" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6497">
+      <node id="6647">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="6498" relation="public-inheritance">
+        <childnode refid="6648" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6499">
+      <node id="6649">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcgraph.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcgraph.h" bodystart="20" bodyend="67"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcgraph.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dcgraph.h" bodystart="20" bodyend="67"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxGCDC</scope><name>AllocExclusive</name></member>
       <member refid="classwx_d_c_1a12bed94a15136b9080683f4151042a34" prot="public" virt="non-virtual"><scope>wxGCDC</scope><name>Blit</name></member>

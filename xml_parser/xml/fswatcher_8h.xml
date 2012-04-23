@@ -81,13 +81,13 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fswatcher.h" line="194" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fswatcher.h" bodystart="193" bodyend="253"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fswatcher.h" line="194" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/fswatcher.h" bodystart="193" bodyend="253"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fswatcher.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fswatcher.h"/>
   </compounddef>
 </doxygen>

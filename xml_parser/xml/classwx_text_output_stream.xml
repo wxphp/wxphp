@@ -51,7 +51,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="242"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" line="242"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_output_stream_1aaceb51d3e3089494fe97531167a6f5d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -64,7 +64,7 @@
 <para>Also calls <ref refid="classwx_text_output_stream_1a67d9ed4f8cecc757be163a9ca9005442" kindref="member">Flush()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="249"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" line="249"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_output_stream_1a67d9ed4f8cecc757be163a9ca9005442" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -78,7 +78,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="260"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" line="260"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_output_stream_1ab1585b7951a614ba2b477adec0e99661" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_output_stream" kindref="compound">wxOutputStream</ref> &amp;</type>
@@ -92,7 +92,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="267"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" line="267"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_output_stream_1ae035d94387762083c8e20cd4a770a226" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="txtstrm_8h_1a4b64b170cc32ba60ccef13c2a64fec70" kindref="member">wxEOL</ref></type>
@@ -105,7 +105,7 @@
 <para>One of <ref refid="txtstrm_8h_1a4b64b170cc32ba60ccef13c2a64fec70a90c71ea90577fc20fb32033a9637474f" kindref="member">wxEOL_DOS</ref>, <ref refid="txtstrm_8h_1a4b64b170cc32ba60ccef13c2a64fec70a3710a5db890bb3be61c35987748a6c9a" kindref="member">wxEOL_MAC</ref> and <ref refid="txtstrm_8h_1a4b64b170cc32ba60ccef13c2a64fec70a8419d6a4ff26571c6e2a935482a1f4ec" kindref="member">wxEOL_UNIX</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="273"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" line="273"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_output_stream_1ac0cfb1efa2bfe3628ec7d2df598347fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_text_output_stream" kindref="compound">wxTextOutputStream</ref> &amp;</type>
@@ -122,7 +122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="278"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" line="278"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_output_stream_1a558ee7a0478a8c5c1b0adc8bfeb1d17e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -140,7 +140,7 @@
 <para>One of <ref refid="txtstrm_8h_1a4b64b170cc32ba60ccef13c2a64fec70ab0ad899b012b96a86d6b2a37033ad553" kindref="member">wxEOL_NATIVE</ref>, <ref refid="txtstrm_8h_1a4b64b170cc32ba60ccef13c2a64fec70a90c71ea90577fc20fb32033a9637474f" kindref="member">wxEOL_DOS</ref>, <ref refid="txtstrm_8h_1a4b64b170cc32ba60ccef13c2a64fec70a3710a5db890bb3be61c35987748a6c9a" kindref="member">wxEOL_MAC</ref> and <ref refid="txtstrm_8h_1a4b64b170cc32ba60ccef13c2a64fec70a8419d6a4ff26571c6e2a935482a1f4ec" kindref="member">wxEOL_UNIX</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="284"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" line="284"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_output_stream_1a58e528e46c6eff319a936af22ae0f133" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -157,7 +157,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="289"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" line="289"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_output_stream_1a9296389e098c81cb163da7e56f35fef0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -174,7 +174,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="294"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" line="294"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_output_stream_1a7923a55ebd59f03204a545b22afa3aac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -191,7 +191,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="299"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" line="299"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_output_stream_1ae19318be6f470c786a298027ce3130e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -208,7 +208,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="304"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" line="304"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_output_stream_1a6c7d5465556db40c357ddaa5f2bac996" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -225,7 +225,7 @@
 <para>Depending on the end-of-line mode the end of line (&apos;\n&apos;) characters in the string are converted to the correct line ending terminator. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="311"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" line="311"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -240,7 +240,7 @@
 </programlisting></para><para>The <ref refid="classwx_text_output_stream" kindref="compound">wxTextOutputStream</ref> writes text files (or streams) on DOS, Macintosh and Unix in their native formats (concerning the line ending).</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_text_input_stream" kindref="compound">wxTextInputStream</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" line="226" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/txtstrm.h" bodystart="225" bodyend="312"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" line="226" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/txtstrm.h" bodystart="225" bodyend="312"/>
     <listofallmembers>
       <member refid="classwx_text_output_stream_1a67d9ed4f8cecc757be163a9ca9005442" prot="public" virt="non-virtual"><scope>wxTextOutputStream</scope><name>Flush</name></member>
       <member refid="classwx_text_output_stream_1ae035d94387762083c8e20cd4a770a226" prot="public" virt="non-virtual"><scope>wxTextOutputStream</scope><name>GetMode</name></member>

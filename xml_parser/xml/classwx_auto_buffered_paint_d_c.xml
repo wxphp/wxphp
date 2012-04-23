@@ -20,7 +20,7 @@
 <para>Pass a pointer to the window on which you wish to paint. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcbuffer.h" line="153"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcbuffer.h" line="153"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -30,85 +30,85 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref></para><para><simplesect kind="see"><para><ref refid="classwx_d_c" kindref="compound">wxDC</ref>, <ref refid="classwx_buffered_paint_d_c" kindref="compound">wxBufferedPaintDC</ref>, <ref refid="classwx_paint_d_c" kindref="compound">wxPaintDC</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4445">
+      <node id="4535">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4443">
+      <node id="4533">
         <label>wxMemoryDC</label>
         <link refid="classwx_memory_d_c"/>
-        <childnode refid="4444" relation="public-inheritance">
+        <childnode refid="4534" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4441">
+      <node id="4531">
         <label>wxBufferedPaintDC</label>
         <link refid="classwx_buffered_paint_d_c"/>
-        <childnode refid="4442" relation="public-inheritance">
+        <childnode refid="4532" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4442">
+      <node id="4532">
         <label>wxBufferedDC</label>
         <link refid="classwx_buffered_d_c"/>
-        <childnode refid="4443" relation="public-inheritance">
+        <childnode refid="4533" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4444">
+      <node id="4534">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="4445" relation="public-inheritance">
+        <childnode refid="4535" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4440">
+      <node id="4530">
         <label>wxAutoBufferedPaintDC</label>
         <link refid="classwx_auto_buffered_paint_d_c"/>
-        <childnode refid="4441" relation="public-inheritance">
+        <childnode refid="4531" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4451">
+      <node id="4541">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4452" relation="usage">
+        <childnode refid="4542" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4449">
+      <node id="4539">
         <label>wxMemoryDC</label>
         <link refid="classwx_memory_d_c"/>
-        <childnode refid="4450" relation="public-inheritance">
+        <childnode refid="4540" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4447">
+      <node id="4537">
         <label>wxBufferedPaintDC</label>
         <link refid="classwx_buffered_paint_d_c"/>
-        <childnode refid="4448" relation="public-inheritance">
+        <childnode refid="4538" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4448">
+      <node id="4538">
         <label>wxBufferedDC</label>
         <link refid="classwx_buffered_d_c"/>
-        <childnode refid="4449" relation="public-inheritance">
+        <childnode refid="4539" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4450">
+      <node id="4540">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="4451" relation="public-inheritance">
+        <childnode refid="4541" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4446">
+      <node id="4536">
         <label>wxAutoBufferedPaintDC</label>
         <link refid="classwx_auto_buffered_paint_d_c"/>
-        <childnode refid="4447" relation="public-inheritance">
+        <childnode refid="4537" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4452">
+      <node id="4542">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcbuffer.h" line="148" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcbuffer.h" bodystart="147" bodyend="154"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcbuffer.h" line="148" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dcbuffer.h" bodystart="147" bodyend="154"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxAutoBufferedPaintDC</scope><name>AllocExclusive</name></member>
       <member refid="classwx_d_c_1a12bed94a15136b9080683f4151042a34" prot="public" virt="non-virtual"><scope>wxAutoBufferedPaintDC</scope><name>Blit</name></member>

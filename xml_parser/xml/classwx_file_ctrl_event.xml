@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filectrl.h" line="217"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filectrl.h" line="242"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_ctrl_event_1a6d343808cb9104141706f30dd9c7f117" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -41,7 +41,7 @@
 <para>In case of a <bold>EVT_FILECTRL_FOLDERCHANGED</bold>, this method returns the new directory. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filectrl.h" line="225"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filectrl.h" line="250"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_ctrl_event_1a6c15943f70a36359f4af1ca87177ee92" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filectrl.h" line="230"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filectrl.h" line="255"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_ctrl_event_1a7dfa7abbda6962dcf3492b2c35a7baab" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_array_string" kindref="compound">wxArrayString</ref></type>
@@ -67,7 +67,7 @@
 <para>In case of a <bold>EVT_FILECTRL_SELECTIONCHANGED</bold>, this method returns the files selected after the event. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filectrl.h" line="238"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filectrl.h" line="263"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_ctrl_event_1acaf0fc569cf20b46a68802e221fc27c3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -81,7 +81,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filectrl.h" line="248"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filectrl.h" line="273"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_ctrl_event_1aa318626624419fedcfdb66e99f162371" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -98,7 +98,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filectrl.h" line="253"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filectrl.h" line="278"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_ctrl_event_1a17fb78dfee5c02fc9c51bbd8dac02481" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -115,7 +115,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filectrl.h" line="259"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filectrl.h" line="284"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_ctrl_event_1a24e26be83fabc7368fc53134789da2db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -133,7 +133,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filectrl.h" line="266"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filectrl.h" line="291"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -149,61 +149,61 @@
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6160">
+      <node id="6279">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6158">
+      <node id="6277">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="6159" relation="public-inheritance">
+        <childnode refid="6278" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6159">
+      <node id="6278">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="6160" relation="public-inheritance">
+        <childnode refid="6279" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6157">
+      <node id="6276">
         <label>wxFileCtrlEvent</label>
         <link refid="classwx_file_ctrl_event"/>
-        <childnode refid="6158" relation="public-inheritance">
+        <childnode refid="6277" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6164">
+      <node id="6283">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6165" relation="usage">
+        <childnode refid="6284" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6162">
+      <node id="6281">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="6163" relation="public-inheritance">
+        <childnode refid="6282" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6163">
+      <node id="6282">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="6164" relation="public-inheritance">
+        <childnode refid="6283" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6161">
+      <node id="6280">
         <label>wxFileCtrlEvent</label>
         <link refid="classwx_file_ctrl_event"/>
-        <childnode refid="6162" relation="public-inheritance">
+        <childnode refid="6281" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6165">
+      <node id="6284">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filectrl.h" line="212" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filectrl.h" bodystart="211" bodyend="267"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filectrl.h" line="237" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/filectrl.h" bodystart="236" bodyend="292"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxFileCtrlEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxFileCtrlEvent</scope><name>Clone</name></member>

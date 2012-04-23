@@ -330,7 +330,7 @@ Other layout classes:</para><para><itemizedlist>
 <listitem><para><ref refid="classwx_drop_files_event" kindref="compound">wxDropFilesEvent</ref>: A drop files event </para></listitem>
 <listitem><para><ref refid="classwx_erase_event" kindref="compound">wxEraseEvent</ref>: An erase background event </para></listitem>
 <listitem><para><ref refid="classwx_event" kindref="compound">wxEvent</ref>: The event base class </para></listitem>
-<listitem><para>wxFindDialogEvent: Event sent by <ref refid="classwx_find_replace_dialog" kindref="compound">wxFindReplaceDialog</ref> </para></listitem>
+<listitem><para><ref refid="classwx_find_dialog_event" kindref="compound">wxFindDialogEvent</ref>: Event sent by <ref refid="classwx_find_replace_dialog" kindref="compound">wxFindReplaceDialog</ref> </para></listitem>
 <listitem><para><ref refid="classwx_focus_event" kindref="compound">wxFocusEvent</ref>: A window focus event </para></listitem>
 <listitem><para><ref refid="classwx_key_event" kindref="compound">wxKeyEvent</ref>: A keypress event </para></listitem>
 <listitem><para><ref refid="classwx_iconize_event" kindref="compound">wxIconizeEvent</ref>: An iconize/restore event </para></listitem>

@@ -15,7 +15,7 @@
 <para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="46" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" bodystart="46" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="46" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_language_info_1a16571209ec7c0fdb25c52f7e3b67ce97" prot="public" static="no" mutable="no">
         <type><ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref></type>
@@ -28,7 +28,7 @@
 <para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="46" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" bodystart="46" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="46" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" bodystart="46" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-attrib">
@@ -43,7 +43,7 @@
 <para>It should be greater than <computeroutput>wxLANGUAGE_USER_DEFINED</computeroutput> when defining your own language info structure. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="35" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" bodystart="35" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="35" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_language_info_1ae43aa210d3615683b957195c20c87bc1" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -56,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="38" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" bodystart="38" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="38" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_language_info_1aed8e74992463747db114504525ea6b33" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="50" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" bodystart="50" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="50" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" bodystart="50" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_language_info_1a1614ab04aa0bb1b268da27564e8c0fd6" prot="public" static="no" mutable="no">
         <type><ref refid="intl_8h_1a7e30efec05ef9b40b1750ac046400c81" kindref="member">wxLayoutDirection</ref></type>
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="53" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" bodystart="53" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="53" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" bodystart="53" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -97,7 +97,7 @@
 <para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="57"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="57"/>
       </memberdef>
       <memberdef kind="function" id="structwx_language_info_1ac75ff77cb6febf2a69d80bc21900fca3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -110,30 +110,30 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="61"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="61"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>Encapsulates a <ref refid="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86" kindref="member">wxLanguage</ref> indentifier together with OS-specific information related to that language. </para>    </briefdescription>
+<para>Encapsulates a <ref refid="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86" kindref="member">wxLanguage</ref> identifier together with OS-specific information related to that language. </para>    </briefdescription>
     <detaileddescription>
 <para><bold>wxPerl Note:</bold> In wxPerl <computeroutput>Wx::LanguageInfo</computeroutput> has only one method:<itemizedlist>
 <listitem><para>Wx::LanguageInfo-&gt;new(language, canonicalName, WinLang, WinSubLang, Description) </para></listitem></itemizedlist>
 </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="7385">
+      <node id="7583">
         <label>wxString</label>
         <link refid="classwx_string"/>
       </node>
-      <node id="7384">
+      <node id="7582">
         <label>wxLanguageInfo</label>
         <link refid="structwx_language_info"/>
-        <childnode refid="7385" relation="usage">
+        <childnode refid="7583" relation="usage">
           <edgelabel>Description</edgelabel>
           <edgelabel>CanonicalName</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="31" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" bodystart="30" bodyend="62"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="31" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" bodystart="30" bodyend="62"/>
     <listofallmembers>
       <member refid="structwx_language_info_1ae43aa210d3615683b957195c20c87bc1" prot="public" virt="non-virtual"><scope>wxLanguageInfo</scope><name>CanonicalName</name></member>
       <member refid="structwx_language_info_1aed8e74992463747db114504525ea6b33" prot="public" virt="non-virtual"><scope>wxLanguageInfo</scope><name>Description</name></member>

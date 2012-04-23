@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="20" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" bodystart="20" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="interface_2wx_2richtext_2richtextctrl_8h_1a96c33563cb5dcd69aeeab193ddf37c48" prot="public" static="no">
         <name>wxRE_MULTILINE</name>
@@ -26,7 +26,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="21" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" bodystart="21" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="interface_2wx_2richtext_2richtextctrl_8h_1a978c7728e58edf0cbe457ae0e4e095be" prot="public" static="no">
         <name>wxRE_CENTRE_CARET</name>
@@ -37,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="22" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="interface_2wx_2richtext_2richtextctrl_8h_1a7287988d7111028adc0963e37bf4137c" prot="public" static="no">
         <name>wxRE_CENTER_CARET</name>
@@ -48,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="23" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="23" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" line="23" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" bodystart="23" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="interface_2wx_2richtext_2richtextctrl_8h_1aff2f80950c4986c35a8ba329a20f0af5" prot="public" static="no">
         <name>wxRICHTEXT_SHIFT_DOWN</name>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="29" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="29" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" line="29" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" bodystart="29" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="interface_2wx_2richtext_2richtextctrl_8h_1ae0c293ce4d9debe9377dd346350bc91c" prot="public" static="no">
         <name>wxRICHTEXT_CTRL_DOWN</name>
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="30" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="30" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" line="30" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="interface_2wx_2richtext_2richtextctrl_8h_1ad16600e44def8b0369b7d698f9a92f81" prot="public" static="no">
         <name>wxRICHTEXT_ALT_DOWN</name>
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="31" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="31" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" line="31" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="interface_2wx_2richtext_2richtextctrl_8h_1a1ddd5481b84ae3be5b3c464ac3a0babc" prot="public" static="no">
         <name>wxRICHTEXT_EX_NO_GUIDELINES</name>
@@ -92,7 +92,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="38" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="38" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" line="38" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="interface_2wx_2richtext_2richtextctrl_8h_1a45f8f772d737858f62d3024a4fce07cd" prot="public" static="no">
         <name>wxRICHTEXT_DEFAULT_OVERALL_SIZE</name>
@@ -103,7 +103,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="45" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="45" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" line="45" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" bodystart="45" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="interface_2wx_2richtext_2richtextctrl_8h_1a70e49e026f363b3e349e4e6e7df7c277" prot="public" static="no">
         <name>wxRICHTEXT_DEFAULT_IMAGE_SIZE</name>
@@ -114,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="46" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="46" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" line="46" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" bodystart="46" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="interface_2wx_2richtext_2richtextctrl_8h_1ad907b072a2abaf8feeab2cb56d6e48b2" prot="public" static="no">
         <name>wxRICHTEXT_DEFAULT_SPACING</name>
@@ -125,7 +125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="47" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="47" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" line="47" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="interface_2wx_2richtext_2richtextctrl_8h_1a36973c69208e11be4f3af649267c34b7" prot="public" static="no">
         <name>wxRICHTEXT_DEFAULT_MARGIN</name>
@@ -136,7 +136,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="48" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="48" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" line="48" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="interface_2wx_2richtext_2richtextctrl_8h_1aeeae0cec3d95b1a6479dab91369fad6f" prot="public" static="no">
         <name>wxRICHTEXT_DEFAULT_UNFOCUSSED_BACKGROUND</name>
@@ -147,7 +147,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="49" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="49" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" line="49" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="interface_2wx_2richtext_2richtextctrl_8h_1a609cb17e31f478c40fe613aa9b0b2a53" prot="public" static="no">
         <name>wxRICHTEXT_DEFAULT_FOCUSSED_BACKGROUND</name>
@@ -158,7 +158,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="50" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="50" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" line="50" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" bodystart="50" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="interface_2wx_2richtext_2richtextctrl_8h_1a4b85a7c210c47ef9e12b0e85bc82e9d2" prot="public" static="no">
         <name>wxRICHTEXT_DEFAULT_UNSELECTED_BACKGROUND</name>
@@ -169,7 +169,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="51" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="51" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" line="51" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" bodystart="51" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="interface_2wx_2richtext_2richtextctrl_8h_1a7cd056faef85e714e35d77b3a5512161" prot="public" static="no">
         <name>wxRICHTEXT_DEFAULT_TYPE_COLOUR</name>
@@ -180,7 +180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="52" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="52" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" line="52" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" bodystart="52" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="interface_2wx_2richtext_2richtextctrl_8h_1affffe5205679b9c6b934e198d7ff15b4" prot="public" static="no">
         <name>wxRICHTEXT_DEFAULT_FOCUS_RECT_COLOUR</name>
@@ -191,7 +191,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="53" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="53" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" line="53" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" bodystart="53" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="interface_2wx_2richtext_2richtextctrl_8h_1aaf267438c4e9e7fe75ab5435d534fe22" prot="public" static="no">
         <name>wxRICHTEXT_DEFAULT_CARET_WIDTH</name>
@@ -202,7 +202,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="54" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="54" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" line="54" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" bodystart="54" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="interface_2wx_2richtext_2richtextctrl_8h_1a300f89a9ee123ba83596e760ccf245e4" prot="public" static="no">
         <name>wxRICHTEXT_DEFAULT_DELAYED_LAYOUT_THRESHOLD</name>
@@ -213,7 +213,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="56" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="56" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" line="56" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" bodystart="56" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="interface_2wx_2richtext_2richtextctrl_8h_1a937ce1fc6a2f281417393ca8a331b4f7" prot="public" static="no">
         <name>wxRICHTEXT_DEFAULT_LAYOUT_INTERVAL</name>
@@ -224,7 +224,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="58" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="58" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" line="58" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" bodystart="58" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="interface_2wx_2richtext_2richtextctrl_8h_1aae774a8945bdf2eeeb0e2e1b073ef1c6" prot="public" static="no">
         <name>wxID_RICHTEXT_PROPERTIES1</name>
@@ -235,7 +235,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="62" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="62" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" line="62" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" bodystart="62" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="interface_2wx_2richtext_2richtextctrl_8h_1aebafc8870a2e53b0e32a6b4244f60134" prot="public" static="no">
         <name>wxID_RICHTEXT_PROPERTIES2</name>
@@ -246,7 +246,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="63" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="63" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" line="63" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" bodystart="63" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="interface_2wx_2richtext_2richtextctrl_8h_1a8f96447079acfafc0399ac9ed9798ebc" prot="public" static="no">
         <name>wxID_RICHTEXT_PROPERTIES3</name>
@@ -257,7 +257,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="64" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="64" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" line="64" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" bodystart="64" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="enum">
@@ -283,13 +283,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" line="73" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h" bodystart="72" bodyend="76"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" line="73" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h" bodystart="72" bodyend="76"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextctrl.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextctrl.h"/>
   </compounddef>
 </doxygen>

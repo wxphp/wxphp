@@ -20,7 +20,7 @@
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
           <declname>caption</declname>
-          <defval>wxMessageBoxCaptionStr</defval>
+          <defval><ref refid="msgdlg_8h_1a5f93cd31111d1a0f2c65a4b4235035da" kindref="member">wxMessageBoxCaptionStr</ref></defval>
         </param>
         <param>
           <type>long</type>
@@ -38,7 +38,7 @@
 <para>Works just like the constructor for <ref refid="classwx_message_dialog" kindref="compound">wxMessageDialog</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richmsgdlg.h" line="71"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richmsgdlg.h" line="71"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_message_dialog_1aa382f6767ac0019cee3c6c914384dc77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -75,7 +75,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richmsgdlg.h" line="82"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richmsgdlg.h" line="82"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_message_dialog_1a28eb692d8aa85a99c1865b9ca8920057" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -89,7 +89,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richmsgdlg.h" line="92"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richmsgdlg.h" line="92"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_message_dialog_1a10fc469a0b5d22041d0352646348754d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -114,7 +114,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richmsgdlg.h" line="102"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richmsgdlg.h" line="102"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_message_dialog_1a2e5ad4dabc7a9486c4134b13130c1571" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -128,7 +128,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richmsgdlg.h" line="110"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richmsgdlg.h" line="110"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_message_dialog_1a72649d6bd600bbb7c09fb5b0d0d95291" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -142,7 +142,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richmsgdlg.h" line="122"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richmsgdlg.h" line="122"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_message_dialog_1a3d34a8f0e44933109fae02c81df5cf34" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -155,7 +155,7 @@
 <para><ref refid="classwx_rich_message_dialog_1a72649d6bd600bbb7c09fb5b0d0d95291" kindref="member">IsCheckBoxChecked()</ref> can be called afterwards to retrieve the value of the check box if one was used. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richmsgdlg.h" line="130"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richmsgdlg.h" line="130"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -177,7 +177,7 @@
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref></para><para><simplesect kind="see"><para><ref refid="overview_cmndlg_1overview_cmndlg_msg" kindref="member">wxMessageDialog Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richmsgdlg.h" line="61" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richmsgdlg.h" bodystart="60" bodyend="131"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richmsgdlg.h" line="61" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richmsgdlg.h" bodystart="60" bodyend="131"/>
     <listofallmembers>
       <member refid="classwx_rich_message_dialog_1a28eb692d8aa85a99c1865b9ca8920057" prot="public" virt="non-virtual"><scope>wxRichMessageDialog</scope><name>GetCheckBoxText</name></member>
       <member refid="classwx_rich_message_dialog_1a2e5ad4dabc7a9486c4134b13130c1571" prot="public" virt="non-virtual"><scope>wxRichMessageDialog</scope><name>GetDetailedText</name></member>

@@ -26,7 +26,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2206"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="2187"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -43,61 +43,61 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_clipboard" kindref="compound">wxClipboard</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4809">
+      <node id="4901">
         <label>wxClipboardTextEvent</label>
         <link refid="classwx_clipboard_text_event"/>
-        <childnode refid="4810" relation="public-inheritance">
+        <childnode refid="4902" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4812">
+      <node id="4904">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4810">
+      <node id="4902">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="4811" relation="public-inheritance">
+        <childnode refid="4903" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4811">
+      <node id="4903">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="4812" relation="public-inheritance">
+        <childnode refid="4904" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4813">
+      <node id="4905">
         <label>wxClipboardTextEvent</label>
         <link refid="classwx_clipboard_text_event"/>
-        <childnode refid="4814" relation="public-inheritance">
+        <childnode refid="4906" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4816">
+      <node id="4908">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4817" relation="usage">
+        <childnode refid="4909" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4814">
+      <node id="4906">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="4815" relation="public-inheritance">
+        <childnode refid="4907" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4815">
+      <node id="4907">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="4816" relation="public-inheritance">
+        <childnode refid="4908" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4817">
+      <node id="4909">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2201" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="2200" bodyend="2207"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="2182" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="2181" bodyend="2188"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxClipboardTextEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxClipboardTextEvent</scope><name>Clone</name></member>

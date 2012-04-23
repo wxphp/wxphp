@@ -19,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="61"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="61"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_rendering_info_1aa9a9ee213912d0823b33f5d8edbf837c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>wxHtmlSelection *</type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="62"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="62"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_rendering_info_1abb8aa12ea7d1baa40feb3ff3fe88abed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="64"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="64"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_rendering_info_1a87db7ff84e3f115c18b65314a0d472cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_html_rendering_style" kindref="compound">wxHtmlRenderingStyle</ref> &amp;</type>
@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="65"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="65"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_rendering_info_1a5d2ba6eacc8fe0933a3e57fe4a8a596f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxHtmlRenderingState &amp;</type>
@@ -75,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="67"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="67"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -90,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="55"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="55"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -99,7 +99,7 @@
 <para>Contains rendering state, selection information and rendering style object that can be used to customize the output.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref></para><para><simplesect kind="see"><para><ref refid="overview_html_1overview_html_cells" kindref="member">Cells and Containers</ref>, <ref refid="classwx_html_cell" kindref="compound">wxHtmlCell</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="50" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" bodystart="49" bodyend="69"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="50" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" bodystart="49" bodyend="69"/>
     <listofallmembers>
       <member refid="classwx_html_rendering_info_1aa9a9ee213912d0823b33f5d8edbf837c" prot="public" virt="non-virtual"><scope>wxHtmlRenderingInfo</scope><name>GetSelection</name></member>
       <member refid="classwx_html_rendering_info_1a5d2ba6eacc8fe0933a3e57fe4a8a596f" prot="public" virt="non-virtual"><scope>wxHtmlRenderingInfo</scope><name>GetState</name></member>

@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2dbase.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2dbase.h" bodystart="33" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/affinematrix2dbase.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/affinematrix2dbase.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_matrix2_d_1affc17d7fa780bf177ef9d0c1fef8e36b" prot="public" static="no" mutable="no">
         <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref></type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2dbase.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2dbase.h" bodystart="33" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/affinematrix2dbase.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/affinematrix2dbase.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_matrix2_d_1a3d913c8cfa47df185fda5fe9838e72f5" prot="public" static="no" mutable="no">
         <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref></type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2dbase.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2dbase.h" bodystart="33" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/affinematrix2dbase.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/affinematrix2dbase.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_matrix2_d_1a39c340de5e86bbfd1d22bd00da5b3ac0" prot="public" static="no" mutable="no">
         <type><ref refid="defs_8h_1a75a450a943d1f217d7cf24f2b9eeed2e" kindref="member">wxDouble</ref></type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2dbase.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2dbase.h" bodystart="33" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/affinematrix2dbase.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/affinematrix2dbase.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -89,7 +89,7 @@
 <para>Initializes the matrix elements to the identity. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2dbase.h" line="30"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/affinematrix2dbase.h" line="30"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -98,7 +98,7 @@
 <para>This simple structure is used with <ref refid="classwx_affine_matrix2_d" kindref="compound">wxAffineMatrix2D</ref>.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref></para><para><simplesect kind="since"><para>2.9.2 </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2dbase.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2dbase.h" bodystart="20" bodyend="34"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/affinematrix2dbase.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/affinematrix2dbase.h" bodystart="20" bodyend="34"/>
     <listofallmembers>
       <member refid="structwx_matrix2_d_1acf39d1bf23e33d280c09de247787a5be" prot="public" virt="non-virtual"><scope>wxMatrix2D</scope><name>m_11</name></member>
       <member refid="structwx_matrix2_d_1affc17d7fa780bf177ef9d0c1fef8e36b" prot="public" virt="non-virtual"><scope>wxMatrix2D</scope><name>m_12</name></member>

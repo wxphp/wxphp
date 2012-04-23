@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="24"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="24"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_b_position_1a6723ac451dac191b78e2a97aabf39e2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -36,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="28"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="28"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_b_position_1ab322e1b32ac347c85a11fb5bdaf8a573" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="33"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="33"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_b_position_1a2ec2d19fa77d136bc0f02765c44641c3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="38"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="38"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_b_position_1a584e7ce01a9ea442bb61be26f2c3e756" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="43"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="43"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_b_position_1a8ee420815d638827851492b588d990dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -96,24 +96,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="48"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="48"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_g_b_position_1ae5e7bd9f2cdbd345ccc76bee3b4e720d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_g_b_position_1ac07dff03da274758afabd9a91dd003a8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
-        <definition>bool wxGBPosition::operator!</definition>
+        <definition>bool wxGBPosition::operator!=</definition>
         <argsstring>(const wxGBPosition &amp;p) const </argsstring>
-        <name>operator!</name>
+        <name>operator!=</name>
         <param>
           <type>const <ref refid="classwx_g_b_position" kindref="compound">wxGBPosition</ref> &amp;</type>
           <declname>p</declname>
         </param>
         <briefdescription>
-<para>Checks if the position is valid. </para>        </briefdescription>
+<para>Compare inequality of two wxGBPositions. </para>        </briefdescription>
         <detaileddescription>
-<para>An invalid position is (-1,-1). </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="53"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="53"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_b_position_1a7c14d2092e52fb1d1e7b795e6e3a7358" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -130,7 +130,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="58"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="58"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -138,11 +138,11 @@
     <detaileddescription>
 <para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__winlayout" kindref="compound">Window Layout</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" line="19" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gbsizer.h" bodystart="18" bodyend="59"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" line="19" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/gbsizer.h" bodystart="18" bodyend="59"/>
     <listofallmembers>
       <member refid="classwx_g_b_position_1ab322e1b32ac347c85a11fb5bdaf8a573" prot="public" virt="non-virtual"><scope>wxGBPosition</scope><name>GetCol</name></member>
       <member refid="classwx_g_b_position_1a2ec2d19fa77d136bc0f02765c44641c3" prot="public" virt="non-virtual"><scope>wxGBPosition</scope><name>GetRow</name></member>
-      <member refid="classwx_g_b_position_1ae5e7bd9f2cdbd345ccc76bee3b4e720d" prot="public" virt="non-virtual"><scope>wxGBPosition</scope><name>operator!</name></member>
+      <member refid="classwx_g_b_position_1ac07dff03da274758afabd9a91dd003a8" prot="public" virt="non-virtual"><scope>wxGBPosition</scope><name>operator!=</name></member>
       <member refid="classwx_g_b_position_1a7c14d2092e52fb1d1e7b795e6e3a7358" prot="public" virt="non-virtual"><scope>wxGBPosition</scope><name>operator==</name></member>
       <member refid="classwx_g_b_position_1a584e7ce01a9ea442bb61be26f2c3e756" prot="public" virt="non-virtual"><scope>wxGBPosition</scope><name>SetCol</name></member>
       <member refid="classwx_g_b_position_1a8ee420815d638827851492b588d990dc" prot="public" virt="non-virtual"><scope>wxGBPosition</scope><name>SetRow</name></member>

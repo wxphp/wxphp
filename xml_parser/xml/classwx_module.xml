@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/module.h" line="84"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/module.h" line="84"/>
       </memberdef>
       <memberdef kind="function" id="classwx_module_1a34fc6905b31ae6eaf2052a9b74b2301f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/module.h" line="89"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/module.h" line="89"/>
       </memberdef>
       <memberdef kind="function" id="classwx_module_1ab7615e407981a1ab0dd2b5f0a6f760c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/module.h" line="94"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/module.h" line="94"/>
       </memberdef>
       <memberdef kind="function" id="classwx_module_1a297484b97a61428afecdaae4f8854d99" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -56,7 +56,7 @@
 <para>If the function returns false, wxWidgets will exit immediately. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/module.h" line="100"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/module.h" line="100"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -83,7 +83,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/module.h" line="113"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/module.h" line="113"/>
       </memberdef>
       <memberdef kind="function" id="classwx_module_1aadbdbde333a3c497eedd802ba4c76a0c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -108,7 +108,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/module.h" line="129"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/module.h" line="129"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -161,43 +161,43 @@
 </programlisting></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__appmanagement" kindref="compound">Application and Process Management</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7820">
+      <node id="8013">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7819">
+      <node id="8012">
         <label>wxModule</label>
         <link refid="classwx_module"/>
-        <childnode refid="7820" relation="public-inheritance">
+        <childnode refid="8013" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7821">
+      <node id="8014">
         <label>wxHtmlTagsModule</label>
         <link refid="classwx_html_tags_module"/>
-        <childnode refid="7819" relation="public-inheritance">
+        <childnode refid="8012" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7823">
+      <node id="8016">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7824" relation="usage">
+        <childnode refid="8017" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7822">
+      <node id="8015">
         <label>wxModule</label>
         <link refid="classwx_module"/>
-        <childnode refid="7823" relation="public-inheritance">
+        <childnode refid="8016" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7824">
+      <node id="8017">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/module.h" line="79" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/module.h" bodystart="78" bodyend="130"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/module.h" line="79" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/module.h" bodystart="78" bodyend="130"/>
     <listofallmembers>
       <member refid="classwx_module_1a943494994b76ddaefebf95345c5a05ec" prot="protected" virt="non-virtual"><scope>wxModule</scope><name>AddDependency</name></member>
       <member refid="classwx_module_1aadbdbde333a3c497eedd802ba4c76a0c" prot="protected" virt="non-virtual"><scope>wxModule</scope><name>AddDependency</name></member>

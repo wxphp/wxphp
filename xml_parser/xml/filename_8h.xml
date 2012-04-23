@@ -79,7 +79,7 @@
 <para>See <ref refid="classwx_file_name" kindref="compound">wxFileName</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="18" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" bodystart="17" bodyend="29"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="18" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" bodystart="17" bodyend="29"/>
       </memberdef>
       <memberdef kind="enum" id="filename_8h_1a75d2cf906e06263544e2ec219c91388e" prot="public" static="no">
         <name>wxSizeConvention</name>
@@ -112,7 +112,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="39" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" bodystart="38" bodyend="48"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="39" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" bodystart="38" bodyend="48"/>
       </memberdef>
       <memberdef kind="enum" id="filename_8h_1a18dd81e40b3fad4a089077e28e5dce22" prot="public" static="no">
         <name>wxPathNormalize</name>
@@ -186,11 +186,11 @@
 <para>See <ref refid="classwx_file_name_1a2db3fcc42863daa265619de0d5f390df" kindref="member">wxFileName::Normalize()</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="57" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" bodystart="56" bodyend="73"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="57" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" bodystart="56" bodyend="73"/>
       </memberdef>
-      <memberdef kind="enum" id="filename_8h_1ab04a0655cd1e3bcac5e8f48c18df1a57" prot="public" static="no">
-        <name>@9</name>
-        <enumvalue id="filename_8h_1ab04a0655cd1e3bcac5e8f48c18df1a57a9bfadc684497b4dd6091efec6a3897bd" prot="public">
+      <memberdef kind="enum" id="filename_8h_1aba01db17f4a2bfbc3db60dc172972a25" prot="public" static="no">
+        <name>@15</name>
+        <enumvalue id="filename_8h_1aba01db17f4a2bfbc3db60dc172972a25a9bfadc684497b4dd6091efec6a3897bd" prot="public">
           <name>wxPATH_RMDIR_FULL</name>
           <initializer> 1</initializer>
           <briefdescription>
@@ -198,7 +198,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="filename_8h_1ab04a0655cd1e3bcac5e8f48c18df1a57a3bc777142a75311521173019221b33ab" prot="public">
+        <enumvalue id="filename_8h_1aba01db17f4a2bfbc3db60dc172972a25a3bc777142a75311521173019221b33ab" prot="public">
           <name>wxPATH_RMDIR_RECURSIVE</name>
           <initializer> 2</initializer>
           <briefdescription>
@@ -212,7 +212,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="79" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" bodystart="78" bodyend="91"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="79" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" bodystart="78" bodyend="91"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -227,13 +227,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" line="96" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h" bodystart="96" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" line="96" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h" bodystart="96" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filename.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filename.h"/>
   </compounddef>
 </doxygen>

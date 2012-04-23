@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="79"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousestate.h" line="79"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_state_1aa7eb40470d873e107e4e974c680e7fac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -38,7 +38,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="80"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousestate.h" line="80"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="63"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousestate.h" line="63"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_state_1a55fe9f10344704c1e146d45ee556beec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="68"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousestate.h" line="68"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_state_1a877349a678a1f8dbc349975657146f18" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="73"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousestate.h" line="73"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_state_1a7c1a0c5dd4b603a8acf060e9b62e4c1a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -92,7 +92,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="86"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousestate.h" line="86"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_state_1ad6ddb394c20f1a826043dea8032e6845" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -105,7 +105,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="91"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousestate.h" line="91"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_state_1a0ead92ed0f5fd12a40d98366933a646f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -118,7 +118,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="96"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousestate.h" line="96"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_state_1a1fda1794b5f7c35c7b41bfc216516ea7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -131,7 +131,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="101"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousestate.h" line="101"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_state_1ae1ad1e41d58a0763e406a3cb7e65a251" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -144,7 +144,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="106"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousestate.h" line="106"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_state_1a095c9989c4fc607295683882f9d94efa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -161,7 +161,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="109"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousestate.h" line="109"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_state_1ad67621bb4a134ec32c0a5419474714e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -178,7 +178,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="110"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousestate.h" line="110"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_state_1a3af09115e9db255f820b54077da51cfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -195,7 +195,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="111"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousestate.h" line="111"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_state_1ab7f0e3c1b439df3069b9ed2438ab3fb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -212,7 +212,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="113"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousestate.h" line="113"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_state_1a642c369edc8cc256898684b9ffe47c2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -229,7 +229,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="114"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousestate.h" line="114"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_state_1a3dcc8691d8b73a015768ec5472346ce9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -246,7 +246,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="115"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousestate.h" line="115"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_state_1a9f87d1187687b2e8d96ea14a93fdc397" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -263,7 +263,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="116"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousestate.h" line="116"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_state_1ab0f55cf7fb235c4bb1bcd6dc4fd27cbd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -280,7 +280,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="117"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousestate.h" line="117"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mouse_state_1a59d981aa6726c5f7312b558159f25ced" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -297,7 +297,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="119"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousestate.h" line="119"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -307,36 +307,36 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/>None; this class implementation is entirely header-based.</para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__misc_1ga6fb42677c51d509690e7062b9dadaa25" kindref="member">wxGetMouseState()</ref>, <ref refid="classwx_mouse_event" kindref="compound">wxMouseEvent</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7860">
+      <node id="8053">
         <label>wxKeyboardState</label>
         <link refid="classwx_keyboard_state"/>
       </node>
-      <node id="7861">
+      <node id="8054">
         <label>wxMouseEvent</label>
         <link refid="classwx_mouse_event"/>
-        <childnode refid="7859" relation="public-inheritance">
+        <childnode refid="8052" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7859">
+      <node id="8052">
         <label>wxMouseState</label>
         <link refid="classwx_mouse_state"/>
-        <childnode refid="7860" relation="public-inheritance">
+        <childnode refid="8053" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7863">
+      <node id="8056">
         <label>wxKeyboardState</label>
         <link refid="classwx_keyboard_state"/>
       </node>
-      <node id="7862">
+      <node id="8055">
         <label>wxMouseState</label>
         <link refid="classwx_mouse_state"/>
-        <childnode refid="7863" relation="public-inheritance">
+        <childnode refid="8056" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" line="58" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mousestate.h" bodystart="57" bodyend="121"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mousestate.h" line="58" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/mousestate.h" bodystart="57" bodyend="121"/>
     <listofallmembers>
       <member refid="classwx_keyboard_state_1af71012a9fdbd32bbdc391c984ec5a588" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>AltDown</name></member>
       <member refid="classwx_mouse_state_1a1fda1794b5f7c35c7b41bfc216516ea7" prot="public" virt="non-virtual"><scope>wxMouseState</scope><name>Aux1IsDown</name></member>

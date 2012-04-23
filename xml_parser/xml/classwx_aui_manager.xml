@@ -24,7 +24,7 @@
 <para>There are several versions of this function. The first version allows the full spectrum of pane parameter possibilities. The second version is used for simpler user interfaces which do not require as much configuration. The last version allows a drop position to be specified, which will determine where the pane will be added. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="200"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="203"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_1a582080665a39c836b72b584ccef1a716" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -51,7 +51,7 @@
 <para>There are several versions of this function. The first version allows the full spectrum of pane parameter possibilities. The second version is used for simpler user interfaces which do not require as much configuration. The last version allows a drop position to be specified, which will determine where the pane will be added. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="202"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="205"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_1a0ed5e3568b1c4a26560022cd05f9fa42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -76,7 +76,7 @@
 <para>There are several versions of this function. The first version allows the full spectrum of pane parameter possibilities. The second version is used for simpler user interfaces which do not require as much configuration. The last version allows a drop position to be specified, which will determine where the pane will be added. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="205"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="208"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -95,7 +95,7 @@
 <para>The returned <ref refid="classwx_aui_pane_info" kindref="compound">wxAuiPaneInfo</ref> object may then be modified to change a pane&apos;s look, state or position. After one or more modifications to <ref refid="classwx_aui_pane_info" kindref="compound">wxAuiPaneInfo</ref>, <ref refid="classwx_aui_manager_1a0b58a6eaef93c8aff7e2872cf487ffb3" kindref="member">wxAuiManager::Update()</ref> should be called to commit the changes to the user interface. If the lookup failed (meaning the pane could not be found in the manager), a call to the returned wxAuiPaneInfo&apos;s IsOk() method will return false. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="264"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="267"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_1ae614cd23e5f4a872113f8487c4ea7360" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_aui_pane_info" kindref="compound">wxAuiPaneInfo</ref> &amp;</type>
@@ -112,7 +112,7 @@
 <para>The returned <ref refid="classwx_aui_pane_info" kindref="compound">wxAuiPaneInfo</ref> object may then be modified to change a pane&apos;s look, state or position. After one or more modifications to <ref refid="classwx_aui_pane_info" kindref="compound">wxAuiPaneInfo</ref>, <ref refid="classwx_aui_manager_1a0b58a6eaef93c8aff7e2872cf487ffb3" kindref="member">wxAuiManager::Update()</ref> should be called to commit the changes to the user interface. If the lookup failed (meaning the pane could not be found in the manager), a call to the returned wxAuiPaneInfo&apos;s IsOk() method will return false. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="265"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="268"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -152,7 +152,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="184"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="187"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_1a0f4b9fcdfcba64491c89a3e82ebc1568" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -165,7 +165,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="189"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="192"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_1ac3938302766f39a5bd3385e8cad5608b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -182,7 +182,7 @@
 <para>The window, if in a floated frame, is reparented to the frame managed by <ref refid="classwx_aui_manager" kindref="compound">wxAuiManager</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="213"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="216"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_1aa1ce2a93f9b0045846002e12477d57ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxAuiPaneInfoArray &amp;</type>
@@ -195,7 +195,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="218"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="221"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_1a9c0977acecc1b2231cfe59e43d2df559" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_aui_dock_art" kindref="compound">wxAuiDockArt</ref> *</type>
@@ -209,7 +209,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="224"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="227"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_1af642f94c83952b154e7b2bca1ac50d18" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -230,7 +230,7 @@
 <para>See <ref refid="classwx_aui_manager_1a2754fa329a4d62467d6ce28840730743" kindref="member">SetDockSizeConstraint()</ref> for more information. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="230"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="233"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_1abca74a6ce836ccc886819be4e9bb178b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned int</type>
@@ -243,7 +243,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="235"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="238"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_1afade767f55f82256e72c3116f9164b9f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -256,7 +256,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="240"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="243"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_1a4a43db0da1e28411906f90e1c7811ac0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -269,7 +269,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="271"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="274"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_1a646c81a70510bdd35d37e35a536dee74" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -295,7 +295,7 @@
 <para><ref refid="classwx_aui_manager_1a646c81a70510bdd35d37e35a536dee74" kindref="member">InsertPane()</ref> will push all panes, rows, or docks aside and insert the window into the position specified by <emphasis>insert_location</emphasis>.</para><para>Because <emphasis>insert_location</emphasis> can specify either a pane, dock row, or dock layer, the <emphasis>insert_level</emphasis> parameter is used to disambiguate this. The parameter <emphasis>insert_level</emphasis> can take a value of wxAUI_INSERT_PANE, wxAUI_INSERT_ROW or wxAUI_INSERT_DOCK. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="286"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="289"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_1aed9c83470fb2109af8b9d9e95b123884" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -316,7 +316,7 @@
 <para>It is used in combination with <ref refid="classwx_aui_manager_1a9383a8cdb9e5ac6ff6da200488af973e" kindref="member">SavePaneInfo()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="293"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="296"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_1ac098cf61cbb556c71b015dfd8d6bc66f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -338,7 +338,7 @@
 <para>If update is true, <ref refid="classwx_aui_manager_1a0b58a6eaef93c8aff7e2872cf487ffb3" kindref="member">wxAuiManager::Update()</ref> is automatically invoked, thus realizing the saved perspective on screen. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="300"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="303"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_1a9383a8cdb9e5ac6ff6da200488af973e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -355,7 +355,7 @@
 <para>It is used in combination with <ref refid="classwx_aui_manager_1aed9c83470fb2109af8b9d9e95b123884" kindref="member">LoadPaneInfo()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="307"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="310"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_1a0840921ed209ec05fb58447793816f97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -368,7 +368,7 @@
 <para>When a perspective is restored using <ref refid="classwx_aui_manager_1ac098cf61cbb556c71b015dfd8d6bc66f" kindref="member">LoadPerspective()</ref>, the entire user interface will return to the state it was when the perspective was saved. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="316"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="319"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_1ac9969d2f9dd5e4e0050d790ad0ac6bb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -386,7 +386,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="326"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="329"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_1a2754fa329a4d62467d6ce28840730743" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -407,7 +407,7 @@
 <para><ref refid="classwx_aui_manager" kindref="compound">wxAuiManager</ref> by default limits the size of any new dock to 1/3 of the window size. For horizontal docks, this would be 1/3 of the window height. For vertical docks, 1/3 of the width.</para><para>Calling this function will adjust this constraint value. The numbers must be between 0.0 and 1.0. For instance, calling SetDockSizeContraint with 0.5, 0.5 will cause new docks to be limited to half of the size of the entire managed window. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="340"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="343"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_1ad1a182b5e0f0f2cf42d5eb01ad11dab2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -424,7 +424,7 @@
 <para><emphasis>flags</emphasis> specifies options which allow the frame management behaviour to be modified. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="346"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="349"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_1aaf00fac868f939fd20899377df86b661" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -441,7 +441,7 @@
 <para>Frame management is not restricted to just frames. Child windows or custom controls are also allowed. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="353"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="356"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_1aaf67a8ec1f928039feab68c5b84347b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -458,7 +458,7 @@
 <para>It is rarely called, and is mostly used by controls implementing custom pane drag/drop behaviour. The specified rectangle should be in screen coordinates. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="361"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="364"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_1a9e997555b9411939b0c7498cd8449e04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -471,7 +471,7 @@
 <para><ref refid="classwx_aui_manager_1a9e997555b9411939b0c7498cd8449e04" kindref="member">UnInit()</ref> is usually called in the managed wxFrame&apos;s destructor. It is necessary to call this function before the managed frame or window is destroyed, otherwise the manager cannot remove its custom event handlers from a window. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="370"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="373"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_manager_1a0b58a6eaef93c8aff7e2872cf487ffb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -484,7 +484,7 @@
 <para><ref refid="classwx_aui_manager_1a0b58a6eaef93c8aff7e2872cf487ffb3" kindref="member">Update()</ref> must be invoked after <ref refid="classwx_aui_manager_1a8d3536810c429cd0760241581c50fa40" kindref="member">AddPane()</ref> or <ref refid="classwx_aui_manager_1a646c81a70510bdd35d37e35a536dee74" kindref="member">InsertPane()</ref> are called in order to &quot;realize&quot; or &quot;commit&quot; the changes. In addition, any number of changes may be made to <ref refid="classwx_aui_pane_info" kindref="compound">wxAuiPaneInfo</ref> structures (retrieved with <ref refid="classwx_aui_manager_1a31a5c978cd48e6ff82654a06adba825c" kindref="member">wxAuiManager::GetPane</ref>), but to realize the changes, <ref refid="classwx_aui_manager_1a0b58a6eaef93c8aff7e2872cf487ffb3" kindref="member">Update()</ref> must be called. This construction allows pane flicker to be avoided by updating the whole layout at one time. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="381"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="384"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -503,7 +503,7 @@
 <para>The <emphasis>window</emphasis> parameter should specify any child window or sub-child window of the frame or window managed by <ref refid="classwx_aui_manager" kindref="compound">wxAuiManager</ref>.</para><para>The <emphasis>window</emphasis> parameter need not be managed by the manager itself, nor does it even need to be a child or sub-child of a managed window. It must however be inside the window hierarchy underneath the managed window. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="251"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="254"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -526,7 +526,7 @@
 <para>It can be overridden by derived classes to provide custom docking calculations. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="390"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="393"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -565,6 +565,7 @@
 <listitem><para>EVT_AUI_PANE_CLOSE(func): Triggered when a docked or floating pane is closed. </para></listitem>
 <listitem><para>EVT_AUI_PANE_MAXIMIZE(func): Triggered when a pane is maximized. </para></listitem>
 <listitem><para>EVT_AUI_PANE_RESTORE(func): Triggered when a pane is restored. </para></listitem>
+<listitem><para>EVT_AUI_PANE_ACTIVATED(func): Triggered when a pane is made &apos;active&apos;. This event is new since wxWidgets 2.9.4. </para></listitem>
 <listitem><para>EVT_AUI_RENDER(func): This event can be caught to override the default renderer in order to custom draw your <ref refid="classwx_aui_manager" kindref="compound">wxAuiManager</ref> window (not recommended). </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
@@ -572,61 +573,61 @@
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="4363">
+      <node id="4453">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4362">
+      <node id="4452">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4363" relation="public-inheritance">
+        <childnode refid="4453" relation="public-inheritance">
         </childnode>
-        <childnode refid="4364" relation="public-inheritance">
+        <childnode refid="4454" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4364">
+      <node id="4454">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4361">
+      <node id="4451">
         <label>wxAuiManager</label>
         <link refid="classwx_aui_manager"/>
-        <childnode refid="4362" relation="public-inheritance">
+        <childnode refid="4452" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4367">
+      <node id="4457">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4368" relation="usage">
+        <childnode refid="4458" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4366">
+      <node id="4456">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4367" relation="public-inheritance">
+        <childnode refid="4457" relation="public-inheritance">
         </childnode>
-        <childnode refid="4369" relation="public-inheritance">
+        <childnode refid="4459" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4369">
+      <node id="4459">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4365">
+      <node id="4455">
         <label>wxAuiManager</label>
         <link refid="classwx_aui_manager"/>
-        <childnode refid="4366" relation="public-inheritance">
+        <childnode refid="4456" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4368">
+      <node id="4458">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" line="172" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/framemanager.h" bodystart="171" bodyend="391"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" line="175" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/framemanager.h" bodystart="174" bodyend="394"/>
     <listofallmembers>
       <member refid="classwx_evt_handler_1a7dc3c701781f4044372049de5004137e" prot="public" virt="non-virtual"><scope>wxAuiManager</scope><name>AddFilter</name></member>
       <member refid="classwx_aui_manager_1a8d3536810c429cd0760241581c50fa40" prot="public" virt="non-virtual"><scope>wxAuiManager</scope><name>AddPane</name></member>
@@ -695,7 +696,6 @@
       <member refid="classwx_aui_manager_1aaf67a8ec1f928039feab68c5b84347b5" prot="public" virt="virtual"><scope>wxAuiManager</scope><name>ShowHint</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxAuiManager</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxAuiManager</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxAuiManager</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxAuiManager</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxAuiManager</scope><name>Unbind</name></member>
       <member refid="classwx_aui_manager_1a9e997555b9411939b0c7498cd8449e04" prot="public" virt="non-virtual"><scope>wxAuiManager</scope><name>UnInit</name></member>

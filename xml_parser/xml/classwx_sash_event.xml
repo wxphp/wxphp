@@ -26,7 +26,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="233"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sashwin.h" line="233"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sash_event_1a489e1c38cc1636cce59221041eb0daa0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rect" kindref="compound">wxRect</ref></type>
@@ -39,7 +39,7 @@
 <para>It is up to the application to set the window size if required. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="239"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sashwin.h" line="239"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sash_event_1ae260428402f7c465134680f04f6167a0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="sashwin_8h_1a2085e8b6992690a1660956bebad50ee1" kindref="member">wxSashDragStatus</ref></type>
@@ -52,7 +52,7 @@
 <para>If the drag caused the notional bounding box of the window to flip over, for example, the drag will be out of rage. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="247"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sashwin.h" line="247"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sash_event_1aabffbdd2601ac609b3f37352ecffadee" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="sashwin_8h_1afb600316dcb731728456186c369bf455" kindref="member">wxSashEdgePosition</ref></type>
@@ -65,7 +65,7 @@
 <para>The return value is one of wxSASH_TOP, wxSASH_RIGHT, wxSASH_BOTTOM, wxSASH_LEFT. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="254"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sashwin.h" line="254"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -81,61 +81,61 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_sash_window" kindref="compound">wxSashWindow</ref>, <ref refid="overview_events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10043">
+      <node id="10226">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10041">
+      <node id="10224">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="10042" relation="public-inheritance">
+        <childnode refid="10225" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10040">
+      <node id="10223">
         <label>wxSashEvent</label>
         <link refid="classwx_sash_event"/>
-        <childnode refid="10041" relation="public-inheritance">
+        <childnode refid="10224" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10042">
+      <node id="10225">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10043" relation="public-inheritance">
+        <childnode refid="10226" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10047">
+      <node id="10230">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10048" relation="usage">
+        <childnode refid="10231" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10045">
+      <node id="10228">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="10046" relation="public-inheritance">
+        <childnode refid="10229" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10044">
+      <node id="10227">
         <label>wxSashEvent</label>
         <link refid="classwx_sash_event"/>
-        <childnode refid="10045" relation="public-inheritance">
+        <childnode refid="10228" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10046">
+      <node id="10229">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10047" relation="public-inheritance">
+        <childnode refid="10230" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10048">
+      <node id="10231">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" line="228" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sashwin.h" bodystart="227" bodyend="255"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sashwin.h" line="228" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/sashwin.h" bodystart="227" bodyend="255"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxSashEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxSashEvent</scope><name>Clone</name></member>

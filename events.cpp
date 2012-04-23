@@ -50,6 +50,7 @@
 #include "others.h"
 
 
+
 void php_wxEventFilter_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -58,13 +59,13 @@ void php_wxEventFilter_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxEventFilter_php* object = (wxEventFilter_php*)rsrc->ptr;
+	wxEventFilter_php* object = static_cast<wxEventFilter_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -118,7 +119,7 @@ int wxEventFilter_php::FilterEvent(wxEvent& event)
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxEvent_entry);
-	add_property_resource(arguments[0], _wxResource, zend_list_insert(&event, le_wxEvent));
+	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)&event, le_wxEvent));
 		
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
@@ -138,7 +139,7 @@ int wxEventFilter_php::FilterEvent(wxEvent& event)
 		php_printf("Returning userspace value.\n");
 		#endif
 		
-		return Z_LVAL_P(return_value);
+		return (int) Z_LVAL_P(return_value);
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -185,7 +186,6 @@ PHP_METHOD(php_wxEventFilter, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -231,6 +231,7 @@ PHP_METHOD(php_wxEventFilter, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxKeyboardState_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -239,13 +240,13 @@ void php_wxKeyboardState_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 	#endif
 	
 	
-	wxKeyboardState_php* object = (wxKeyboardState_php*)rsrc->ptr;
+	wxKeyboardState_php* object = static_cast<wxKeyboardState_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -340,7 +341,6 @@ PHP_METHOD(php_wxKeyboardState, AltDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -430,7 +430,6 @@ PHP_METHOD(php_wxKeyboardState, CmdDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -520,7 +519,6 @@ PHP_METHOD(php_wxKeyboardState, ControlDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -610,7 +608,6 @@ PHP_METHOD(php_wxKeyboardState, GetModifiers)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -700,7 +697,6 @@ PHP_METHOD(php_wxKeyboardState, HasModifiers)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -790,7 +786,6 @@ PHP_METHOD(php_wxKeyboardState, MetaDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -880,7 +875,6 @@ PHP_METHOD(php_wxKeyboardState, RawControlDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -966,7 +960,8 @@ PHP_METHOD(php_wxKeyboardState, SetAltDown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&down0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &down0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &down0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -974,7 +969,6 @@ PHP_METHOD(php_wxKeyboardState, SetAltDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1060,7 +1054,8 @@ PHP_METHOD(php_wxKeyboardState, SetControlDown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&down0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &down0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &down0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1068,7 +1063,6 @@ PHP_METHOD(php_wxKeyboardState, SetControlDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1154,7 +1148,8 @@ PHP_METHOD(php_wxKeyboardState, SetMetaDown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&down0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &down0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &down0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1162,7 +1157,6 @@ PHP_METHOD(php_wxKeyboardState, SetMetaDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1248,7 +1242,8 @@ PHP_METHOD(php_wxKeyboardState, SetRawControlDown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&down0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &down0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &down0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1256,7 +1251,6 @@ PHP_METHOD(php_wxKeyboardState, SetRawControlDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1342,7 +1336,8 @@ PHP_METHOD(php_wxKeyboardState, SetShiftDown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&down0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &down0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &down0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1350,7 +1345,6 @@ PHP_METHOD(php_wxKeyboardState, SetShiftDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1440,7 +1434,6 @@ PHP_METHOD(php_wxKeyboardState, ShiftDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1495,7 +1488,8 @@ PHP_METHOD(php_wxKeyboardState, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|bbbb' (&controlDown0, &shiftDown0, &altDown0, &metaDown0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|bbbb", &controlDown0, &shiftDown0, &altDown0, &metaDown0 ) == SUCCESS)
+		char parse_parameters_string[] = "|bbbb";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &controlDown0, &shiftDown0, &altDown0, &metaDown0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1503,7 +1497,6 @@ PHP_METHOD(php_wxKeyboardState, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1589,6 +1582,7 @@ PHP_METHOD(php_wxKeyboardState, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxAuiManagerEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1597,13 +1591,13 @@ void php_wxAuiManagerEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 	#endif
 	
 	
-	wxAuiManagerEvent_php* object = (wxAuiManagerEvent_php*)rsrc->ptr;
+	wxAuiManagerEvent_php* object = static_cast<wxAuiManagerEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -1660,7 +1654,8 @@ PHP_METHOD(php_wxAuiManagerEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&type0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|l", &type0 ) == SUCCESS)
+		char parse_parameters_string[] = "|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &type0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1668,7 +1663,6 @@ PHP_METHOD(php_wxAuiManagerEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1783,7 +1777,8 @@ PHP_METHOD(php_wxAuiManagerEvent, Veto)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&veto0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|b", &veto0 ) == SUCCESS)
+		char parse_parameters_string[] = "|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &veto0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1791,7 +1786,6 @@ PHP_METHOD(php_wxAuiManagerEvent, Veto)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1883,7 +1877,8 @@ PHP_METHOD(php_wxAuiManagerEvent, SetPane)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&pane0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &pane0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pane0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(pane0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(pane0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -1894,10 +1889,6 @@ PHP_METHOD(php_wxAuiManagerEvent, SetPane)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(pane0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(pane0);
 				}
 				else if(Z_TYPE_P(pane0) != IS_NULL)
 				{
@@ -1911,7 +1902,6 @@ PHP_METHOD(php_wxAuiManagerEvent, SetPane)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1993,7 +1983,8 @@ PHP_METHOD(php_wxAuiManagerEvent, SetManager)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&manager0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &manager0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &manager0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(manager0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(manager0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -2004,10 +1995,6 @@ PHP_METHOD(php_wxAuiManagerEvent, SetManager)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(manager0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(manager0);
 				}
 				else if(Z_TYPE_P(manager0) != IS_NULL)
 				{
@@ -2021,7 +2008,6 @@ PHP_METHOD(php_wxAuiManagerEvent, SetManager)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2103,7 +2089,8 @@ PHP_METHOD(php_wxAuiManagerEvent, SetDC)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&pdc0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &pdc0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pdc0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(pdc0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(pdc0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -2114,10 +2101,6 @@ PHP_METHOD(php_wxAuiManagerEvent, SetDC)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(pdc0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(pdc0);
 				}
 				else if(Z_TYPE_P(pdc0) != IS_NULL)
 				{
@@ -2131,7 +2114,6 @@ PHP_METHOD(php_wxAuiManagerEvent, SetDC)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2212,7 +2194,8 @@ PHP_METHOD(php_wxAuiManagerEvent, SetCanVeto)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&can_veto0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &can_veto0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &can_veto0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -2220,7 +2203,6 @@ PHP_METHOD(php_wxAuiManagerEvent, SetCanVeto)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2300,7 +2282,8 @@ PHP_METHOD(php_wxAuiManagerEvent, SetButton)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&button0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &button0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &button0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -2308,7 +2291,6 @@ PHP_METHOD(php_wxAuiManagerEvent, SetButton)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2392,7 +2374,6 @@ PHP_METHOD(php_wxAuiManagerEvent, GetVeto)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2476,7 +2457,6 @@ PHP_METHOD(php_wxAuiManagerEvent, GetPane)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2493,8 +2473,8 @@ PHP_METHOD(php_wxAuiManagerEvent, GetPane)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -2582,7 +2562,6 @@ PHP_METHOD(php_wxAuiManagerEvent, GetManager)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2599,8 +2578,8 @@ PHP_METHOD(php_wxAuiManagerEvent, GetManager)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -2688,7 +2667,6 @@ PHP_METHOD(php_wxAuiManagerEvent, GetDC)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2705,8 +2683,8 @@ PHP_METHOD(php_wxAuiManagerEvent, GetDC)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -2794,7 +2772,6 @@ PHP_METHOD(php_wxAuiManagerEvent, GetButton)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2878,7 +2855,6 @@ PHP_METHOD(php_wxAuiManagerEvent, CanVeto)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2899,6 +2875,7 @@ PHP_METHOD(php_wxAuiManagerEvent, CanVeto)
 
 		
 }
+
 void php_wxCalendarEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2907,13 +2884,13 @@ void php_wxCalendarEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 	#endif
 	
 	
-	wxCalendarEvent_php* object = (wxCalendarEvent_php*)rsrc->ptr;
+	wxCalendarEvent_php* object = static_cast<wxCalendarEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -3002,7 +2979,6 @@ PHP_METHOD(php_wxCalendarEvent, GetWeekDay)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3085,7 +3061,8 @@ PHP_METHOD(php_wxCalendarEvent, SetWeekDay)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&day0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &day0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &day0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -3093,7 +3070,6 @@ PHP_METHOD(php_wxCalendarEvent, SetWeekDay)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3117,6 +3093,7 @@ PHP_METHOD(php_wxCalendarEvent, SetWeekDay)
 
 		
 }
+
 void php_wxColourPickerEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3125,13 +3102,13 @@ void php_wxColourPickerEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRM
 	#endif
 	
 	
-	wxColourPickerEvent_php* object = (wxColourPickerEvent_php*)rsrc->ptr;
+	wxColourPickerEvent_php* object = static_cast<wxColourPickerEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -3220,7 +3197,6 @@ PHP_METHOD(php_wxColourPickerEvent, GetColour)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3306,7 +3282,8 @@ PHP_METHOD(php_wxColourPickerEvent, SetColour)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&pos0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &pos0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(pos0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(pos0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -3317,10 +3294,6 @@ PHP_METHOD(php_wxColourPickerEvent, SetColour)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(pos0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(pos0);
 				}
 				else if(Z_TYPE_P(pos0) != IS_NULL)
 				{
@@ -3334,7 +3307,6 @@ PHP_METHOD(php_wxColourPickerEvent, SetColour)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3391,21 +3363,18 @@ PHP_METHOD(php_wxColourPickerEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zlO' (&generator0, &id0, &colour0, php_wxColour_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "zlO", &generator0, &id0, &colour0, php_wxColour_entry ) == SUCCESS)
+		char parse_parameters_string[] = "zlO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &generator0, &id0, &colour0, php_wxColour_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(generator0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(generator0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 				{
 					id_to_find = Z_RESVAL_P(*tmp);
 					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxEvtHandler && rsrc_type != le_wxWindow && rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow && rsrc_type != le_wxValidator && rsrc_type != le_wxTextValidator && rsrc_type != le_wxGenericValidator && rsrc_type != le_wxMenu && rsrc_type != le_wxAuiManager && rsrc_type != le_wxMouseEventsManager && rsrc_type != le_wxTimer && rsrc_type != le_wxEventBlocker && rsrc_type != le_wxProcess && rsrc_type != le_wxFileSystemWatcher && rsrc_type != le_wxTaskBarIcon && rsrc_type != le_wxNotificationMessage && rsrc_type != le_wxBitmapHandler && rsrc_type != le_wxImage && rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxWrapSizer && rsrc_type != le_wxStdDialogButtonSizer && rsrc_type != le_wxGridSizer && rsrc_type != le_wxFlexGridSizer && rsrc_type != le_wxGridBagSizer && rsrc_type != le_wxSizerItem && rsrc_type != le_wxGBSizerItem && rsrc_type != le_wxImageList && rsrc_type != le_wxDC && rsrc_type != le_wxWindowDC && rsrc_type != le_wxClientDC && rsrc_type != le_wxPaintDC && rsrc_type != le_wxScreenDC && rsrc_type != le_wxPostScriptDC && rsrc_type != le_wxPrinterDC && rsrc_type != le_wxMemoryDC && rsrc_type != le_wxBufferedDC && rsrc_type != le_wxBufferedPaintDC && rsrc_type != le_wxAutoBufferedPaintDC && rsrc_type != le_wxMirrorDC && rsrc_type != le_wxColour && rsrc_type != le_wxMenuItem && rsrc_type != le_wxEvent && rsrc_type != le_wxMenuEvent && rsrc_type != le_wxKeyEvent && rsrc_type != le_wxCommandEvent && rsrc_type != le_wxNotifyEvent && rsrc_type != le_wxTreeEvent && rsrc_type != le_wxBookCtrlEvent && rsrc_type != le_wxAuiNotebookEvent && rsrc_type != le_wxAuiToolBarEvent && rsrc_type != le_wxListEvent && rsrc_type != le_wxSpinEvent && rsrc_type != le_wxSplitterEvent && rsrc_type != le_wxSpinDoubleEvent && rsrc_type != le_wxGridSizeEvent && rsrc_type != le_wxWizardEvent && rsrc_type != le_wxGridEvent && rsrc_type != le_wxGridRangeSelectEvent && rsrc_type != le_wxDataViewEvent && rsrc_type != le_wxHeaderCtrlEvent && rsrc_type != le_wxRibbonBarEvent && rsrc_type != le_wxStyledTextEvent && rsrc_type != le_wxChildFocusEvent && rsrc_type != le_wxHtmlCellEvent && rsrc_type != le_wxHtmlLinkEvent && rsrc_type != le_wxHyperlinkEvent && rsrc_type != le_wxColourPickerEvent && rsrc_type != le_wxFontPickerEvent && rsrc_type != le_wxScrollEvent && rsrc_type != le_wxWindowModalDialogEvent && rsrc_type != le_wxDateEvent && rsrc_type != le_wxCalendarEvent && rsrc_type != le_wxWindowCreateEvent && rsrc_type != le_wxWindowDestroyEvent && rsrc_type != le_wxUpdateUIEvent && rsrc_type != le_wxHelpEvent && rsrc_type != le_wxGridEditorCreatedEvent && rsrc_type != le_wxCollapsiblePaneEvent && rsrc_type != le_wxClipboardTextEvent && rsrc_type != le_wxFileCtrlEvent && rsrc_type != le_wxSashEvent && rsrc_type != le_wxFileDirPickerEvent && rsrc_type != le_wxContextMenuEvent && rsrc_type != le_wxRibbonButtonBarEvent && rsrc_type != le_wxRibbonGalleryEvent && rsrc_type != le_wxCloseEvent && rsrc_type != le_wxActivateEvent && rsrc_type != le_wxAuiManagerEvent && rsrc_type != le_wxSizeEvent && rsrc_type != le_wxMouseEvent && rsrc_type != le_wxMoveEvent && rsrc_type != le_wxMouseCaptureLostEvent && rsrc_type != le_wxMouseCaptureChangedEvent && rsrc_type != le_wxTimerEvent && rsrc_type != le_wxThreadEvent && rsrc_type != le_wxScrollWinEvent && rsrc_type != le_wxSysColourChangedEvent && rsrc_type != le_wxProcessEvent && rsrc_type != le_wxEraseEvent && rsrc_type != le_wxSetCursorEvent && rsrc_type != le_wxIconizeEvent && rsrc_type != le_wxIdleEvent && rsrc_type != le_wxShowEvent && rsrc_type != le_wxPaintEvent && rsrc_type != le_wxPaletteChangedEvent && rsrc_type != le_wxInitDialogEvent && rsrc_type != le_wxMaximizeEvent && rsrc_type != le_wxNavigationKeyEvent && rsrc_type != le_wxFocusEvent && rsrc_type != le_wxFileSystemWatcherEvent && rsrc_type != le_wxDisplayChangedEvent && rsrc_type != le_wxCalculateLayoutEvent && rsrc_type != le_wxDropFilesEvent && rsrc_type != le_wxQueryLayoutInfoEvent && rsrc_type != le_wxTaskBarIconEvent && rsrc_type != le_wxAcceleratorTable && rsrc_type != le_wxGDIObject && rsrc_type != le_wxBitmap && rsrc_type != le_wxPalette && rsrc_type != le_wxIcon && rsrc_type != le_wxFont && rsrc_type != le_wxAnimation && rsrc_type != le_wxIconBundle && rsrc_type != le_wxCursor && rsrc_type != le_wxRegion && rsrc_type != le_wxPen && rsrc_type != le_wxBrush && rsrc_type != le_wxArtProvider && rsrc_type != le_wxHtmlCell && rsrc_type != le_wxHtmlContainerCell && rsrc_type != le_wxHtmlColourCell && rsrc_type != le_wxHtmlWidgetCell && rsrc_type != le_wxHtmlEasyPrinting && rsrc_type != le_wxHtmlLinkInfo && rsrc_type != le_wxFindReplaceData && rsrc_type != le_wxSound && rsrc_type != le_wxFileSystem && rsrc_type != le_wxFileSystemHandler && rsrc_type != le_wxMask && rsrc_type != le_wxToolTip && rsrc_type != le_wxGraphicsRenderer && rsrc_type != le_wxLayoutConstraints && rsrc_type != le_wxFSFile && rsrc_type != le_wxColourData && rsrc_type != le_wxFontData && rsrc_type != le_wxToolBarToolBase && rsrc_type != le_wxGridTableBase && rsrc_type != le_wxDataViewRenderer && rsrc_type != le_wxDataViewBitmapRenderer && rsrc_type != le_wxDataViewChoiceRenderer && rsrc_type != le_wxDataViewCustomRenderer && rsrc_type != le_wxDataViewSpinRenderer && rsrc_type != le_wxDataViewDateRenderer && rsrc_type != le_wxDataViewIconTextRenderer && rsrc_type != le_wxDataViewProgressRenderer && rsrc_type != le_wxDataViewTextRenderer && rsrc_type != le_wxDataViewToggleRenderer && rsrc_type != le_wxDataViewIconText && rsrc_type != le_wxVariant && rsrc_type != le_wxClipboard && rsrc_type != le_wxConfigBase && rsrc_type != le_wxFileConfig && rsrc_type != le_wxXmlResource && rsrc_type != le_wxPageSetupDialogData && rsrc_type != le_wxPrintDialogData && rsrc_type != le_wxPrintData && rsrc_type != le_wxPrintPreview && rsrc_type != le_wxPrinter && rsrc_type != le_wxPrintout && rsrc_type != le_wxHtmlPrintout && rsrc_type != le_wxHtmlDCRenderer && rsrc_type != le_wxHtmlFilter && rsrc_type != le_wxHtmlHelpData && rsrc_type != le_wxHtmlTagHandler && rsrc_type != le_wxHtmlWinTagHandler && rsrc_type != le_wxModule && rsrc_type != le_wxHtmlTagsModule && rsrc_type != le_wxImageHandler && rsrc_type != le_wxXmlResourceHandler && rsrc_type != le_wxXmlDocument && rsrc_type != le_wxLayoutAlgorithm && rsrc_type != le_wxFileHistory))
+					if (!object_pointer0_0 || (rsrc_type != le_wxEvtHandler && rsrc_type != le_wxWindow && rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow && rsrc_type != le_wxValidator && rsrc_type != le_wxTextValidator && rsrc_type != le_wxGenericValidator && rsrc_type != le_wxMenu && rsrc_type != le_wxAuiManager && rsrc_type != le_wxMouseEventsManager && rsrc_type != le_wxTimer && rsrc_type != le_wxEventBlocker && rsrc_type != le_wxProcess && rsrc_type != le_wxFileSystemWatcher && rsrc_type != le_wxTaskBarIcon && rsrc_type != le_wxNotificationMessage && rsrc_type != le_wxBitmapHandler && rsrc_type != le_wxImage && rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxWrapSizer && rsrc_type != le_wxStdDialogButtonSizer && rsrc_type != le_wxGridSizer && rsrc_type != le_wxFlexGridSizer && rsrc_type != le_wxGridBagSizer && rsrc_type != le_wxSizerItem && rsrc_type != le_wxGBSizerItem && rsrc_type != le_wxImageList && rsrc_type != le_wxDC && rsrc_type != le_wxWindowDC && rsrc_type != le_wxClientDC && rsrc_type != le_wxPaintDC && rsrc_type != le_wxScreenDC && rsrc_type != le_wxPostScriptDC && rsrc_type != le_wxPrinterDC && rsrc_type != le_wxMemoryDC && rsrc_type != le_wxBufferedDC && rsrc_type != le_wxBufferedPaintDC && rsrc_type != le_wxAutoBufferedPaintDC && rsrc_type != le_wxMirrorDC && rsrc_type != le_wxColour && rsrc_type != le_wxMenuItem && rsrc_type != le_wxEvent && rsrc_type != le_wxMenuEvent && rsrc_type != le_wxKeyEvent && rsrc_type != le_wxCommandEvent && rsrc_type != le_wxNotifyEvent && rsrc_type != le_wxTreeEvent && rsrc_type != le_wxBookCtrlEvent && rsrc_type != le_wxAuiNotebookEvent && rsrc_type != le_wxAuiToolBarEvent && rsrc_type != le_wxListEvent && rsrc_type != le_wxSpinEvent && rsrc_type != le_wxSplitterEvent && rsrc_type != le_wxSpinDoubleEvent && rsrc_type != le_wxGridSizeEvent && rsrc_type != le_wxWizardEvent && rsrc_type != le_wxGridEvent && rsrc_type != le_wxGridRangeSelectEvent && rsrc_type != le_wxDataViewEvent && rsrc_type != le_wxHeaderCtrlEvent && rsrc_type != le_wxRibbonBarEvent && rsrc_type != le_wxStyledTextEvent && rsrc_type != le_wxChildFocusEvent && rsrc_type != le_wxHtmlCellEvent && rsrc_type != le_wxHtmlLinkEvent && rsrc_type != le_wxHyperlinkEvent && rsrc_type != le_wxColourPickerEvent && rsrc_type != le_wxFontPickerEvent && rsrc_type != le_wxScrollEvent && rsrc_type != le_wxWindowModalDialogEvent && rsrc_type != le_wxDateEvent && rsrc_type != le_wxCalendarEvent && rsrc_type != le_wxWindowCreateEvent && rsrc_type != le_wxWindowDestroyEvent && rsrc_type != le_wxUpdateUIEvent && rsrc_type != le_wxHelpEvent && rsrc_type != le_wxGridEditorCreatedEvent && rsrc_type != le_wxCollapsiblePaneEvent && rsrc_type != le_wxClipboardTextEvent && rsrc_type != le_wxFileCtrlEvent && rsrc_type != le_wxSashEvent && rsrc_type != le_wxFileDirPickerEvent && rsrc_type != le_wxContextMenuEvent && rsrc_type != le_wxRibbonButtonBarEvent && rsrc_type != le_wxRibbonGalleryEvent && rsrc_type != le_wxCloseEvent && rsrc_type != le_wxActivateEvent && rsrc_type != le_wxAuiManagerEvent && rsrc_type != le_wxSizeEvent && rsrc_type != le_wxMouseEvent && rsrc_type != le_wxMoveEvent && rsrc_type != le_wxTimerEvent && rsrc_type != le_wxThreadEvent && rsrc_type != le_wxScrollWinEvent && rsrc_type != le_wxSysColourChangedEvent && rsrc_type != le_wxProcessEvent && rsrc_type != le_wxEraseEvent && rsrc_type != le_wxSetCursorEvent && rsrc_type != le_wxIdleEvent && rsrc_type != le_wxPaintEvent && rsrc_type != le_wxPaletteChangedEvent && rsrc_type != le_wxInitDialogEvent && rsrc_type != le_wxMaximizeEvent && rsrc_type != le_wxNavigationKeyEvent && rsrc_type != le_wxFocusEvent && rsrc_type != le_wxFileSystemWatcherEvent && rsrc_type != le_wxDisplayChangedEvent && rsrc_type != le_wxCalculateLayoutEvent && rsrc_type != le_wxQueryLayoutInfoEvent && rsrc_type != le_wxTaskBarIconEvent && rsrc_type != le_wxAcceleratorTable && rsrc_type != le_wxGDIObject && rsrc_type != le_wxBitmap && rsrc_type != le_wxPalette && rsrc_type != le_wxIcon && rsrc_type != le_wxFont && rsrc_type != le_wxAnimation && rsrc_type != le_wxIconBundle && rsrc_type != le_wxCursor && rsrc_type != le_wxRegion && rsrc_type != le_wxPen && rsrc_type != le_wxBrush && rsrc_type != le_wxArtProvider && rsrc_type != le_wxHtmlCell && rsrc_type != le_wxHtmlContainerCell && rsrc_type != le_wxHtmlColourCell && rsrc_type != le_wxHtmlWidgetCell && rsrc_type != le_wxHtmlEasyPrinting && rsrc_type != le_wxHtmlLinkInfo && rsrc_type != le_wxFindReplaceData && rsrc_type != le_wxSound && rsrc_type != le_wxFileSystem && rsrc_type != le_wxFileSystemHandler && rsrc_type != le_wxMask && rsrc_type != le_wxToolTip && rsrc_type != le_wxGraphicsRenderer && rsrc_type != le_wxLayoutConstraints && rsrc_type != le_wxFSFile && rsrc_type != le_wxColourData && rsrc_type != le_wxFontData && rsrc_type != le_wxGridTableBase && rsrc_type != le_wxDataViewRenderer && rsrc_type != le_wxDataViewBitmapRenderer && rsrc_type != le_wxDataViewChoiceRenderer && rsrc_type != le_wxDataViewCustomRenderer && rsrc_type != le_wxDataViewSpinRenderer && rsrc_type != le_wxDataViewDateRenderer && rsrc_type != le_wxDataViewIconTextRenderer && rsrc_type != le_wxDataViewProgressRenderer && rsrc_type != le_wxDataViewTextRenderer && rsrc_type != le_wxDataViewToggleRenderer && rsrc_type != le_wxDataViewIconText && rsrc_type != le_wxVariant && rsrc_type != le_wxClipboard && rsrc_type != le_wxConfigBase && rsrc_type != le_wxFileConfig && rsrc_type != le_wxXmlResource && rsrc_type != le_wxPageSetupDialogData && rsrc_type != le_wxPrintDialogData && rsrc_type != le_wxPrintData && rsrc_type != le_wxPrintPreview && rsrc_type != le_wxPrinter && rsrc_type != le_wxPrintout && rsrc_type != le_wxHtmlPrintout && rsrc_type != le_wxHtmlDCRenderer && rsrc_type != le_wxHtmlFilter && rsrc_type != le_wxHtmlHelpData && rsrc_type != le_wxHtmlTagHandler && rsrc_type != le_wxHtmlWinTagHandler && rsrc_type != le_wxModule && rsrc_type != le_wxHtmlTagsModule && rsrc_type != le_wxImageHandler && rsrc_type != le_wxXmlResourceHandler && rsrc_type != le_wxXmlDocument && rsrc_type != le_wxLayoutAlgorithm && rsrc_type != le_wxFileHistory && rsrc_type != le_wxToolBarToolBase))
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(generator0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(generator0);
 				}
 				else if(Z_TYPE_P(generator0) != IS_NULL)
 				{
@@ -3423,10 +3392,6 @@ PHP_METHOD(php_wxColourPickerEvent, __construct)
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(colour0) == IS_LONG)
-				{
-					object_pointer0_2 = Z_LVAL_P(colour0);
-				}
 				else if(Z_TYPE_P(colour0) != IS_NULL)
 				{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
@@ -3439,7 +3404,6 @@ PHP_METHOD(php_wxColourPickerEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3487,6 +3451,7 @@ PHP_METHOD(php_wxColourPickerEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxCollapsiblePaneEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3495,13 +3460,13 @@ void php_wxCollapsiblePaneEvent_destruction_handler(zend_rsrc_list_entry *rsrc T
 	#endif
 	
 	
-	wxCollapsiblePaneEvent_php* object = (wxCollapsiblePaneEvent_php*)rsrc->ptr;
+	wxCollapsiblePaneEvent_php* object = static_cast<wxCollapsiblePaneEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -3590,7 +3555,6 @@ PHP_METHOD(php_wxCollapsiblePaneEvent, GetCollapsed)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3670,7 +3634,8 @@ PHP_METHOD(php_wxCollapsiblePaneEvent, SetCollapsed)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&collapsed0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &collapsed0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &collapsed0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -3678,7 +3643,6 @@ PHP_METHOD(php_wxCollapsiblePaneEvent, SetCollapsed)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3733,21 +3697,18 @@ PHP_METHOD(php_wxCollapsiblePaneEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zlb' (&generator0, &id0, &collapsed0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "zlb", &generator0, &id0, &collapsed0 ) == SUCCESS)
+		char parse_parameters_string[] = "zlb";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &generator0, &id0, &collapsed0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(generator0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(generator0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 				{
 					id_to_find = Z_RESVAL_P(*tmp);
 					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxEvtHandler && rsrc_type != le_wxWindow && rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow && rsrc_type != le_wxValidator && rsrc_type != le_wxTextValidator && rsrc_type != le_wxGenericValidator && rsrc_type != le_wxMenu && rsrc_type != le_wxAuiManager && rsrc_type != le_wxMouseEventsManager && rsrc_type != le_wxTimer && rsrc_type != le_wxEventBlocker && rsrc_type != le_wxProcess && rsrc_type != le_wxFileSystemWatcher && rsrc_type != le_wxTaskBarIcon && rsrc_type != le_wxNotificationMessage && rsrc_type != le_wxBitmapHandler && rsrc_type != le_wxImage && rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxWrapSizer && rsrc_type != le_wxStdDialogButtonSizer && rsrc_type != le_wxGridSizer && rsrc_type != le_wxFlexGridSizer && rsrc_type != le_wxGridBagSizer && rsrc_type != le_wxSizerItem && rsrc_type != le_wxGBSizerItem && rsrc_type != le_wxImageList && rsrc_type != le_wxDC && rsrc_type != le_wxWindowDC && rsrc_type != le_wxClientDC && rsrc_type != le_wxPaintDC && rsrc_type != le_wxScreenDC && rsrc_type != le_wxPostScriptDC && rsrc_type != le_wxPrinterDC && rsrc_type != le_wxMemoryDC && rsrc_type != le_wxBufferedDC && rsrc_type != le_wxBufferedPaintDC && rsrc_type != le_wxAutoBufferedPaintDC && rsrc_type != le_wxMirrorDC && rsrc_type != le_wxColour && rsrc_type != le_wxMenuItem && rsrc_type != le_wxEvent && rsrc_type != le_wxMenuEvent && rsrc_type != le_wxKeyEvent && rsrc_type != le_wxCommandEvent && rsrc_type != le_wxNotifyEvent && rsrc_type != le_wxTreeEvent && rsrc_type != le_wxBookCtrlEvent && rsrc_type != le_wxAuiNotebookEvent && rsrc_type != le_wxAuiToolBarEvent && rsrc_type != le_wxListEvent && rsrc_type != le_wxSpinEvent && rsrc_type != le_wxSplitterEvent && rsrc_type != le_wxSpinDoubleEvent && rsrc_type != le_wxGridSizeEvent && rsrc_type != le_wxWizardEvent && rsrc_type != le_wxGridEvent && rsrc_type != le_wxGridRangeSelectEvent && rsrc_type != le_wxDataViewEvent && rsrc_type != le_wxHeaderCtrlEvent && rsrc_type != le_wxRibbonBarEvent && rsrc_type != le_wxStyledTextEvent && rsrc_type != le_wxChildFocusEvent && rsrc_type != le_wxHtmlCellEvent && rsrc_type != le_wxHtmlLinkEvent && rsrc_type != le_wxHyperlinkEvent && rsrc_type != le_wxColourPickerEvent && rsrc_type != le_wxFontPickerEvent && rsrc_type != le_wxScrollEvent && rsrc_type != le_wxWindowModalDialogEvent && rsrc_type != le_wxDateEvent && rsrc_type != le_wxCalendarEvent && rsrc_type != le_wxWindowCreateEvent && rsrc_type != le_wxWindowDestroyEvent && rsrc_type != le_wxUpdateUIEvent && rsrc_type != le_wxHelpEvent && rsrc_type != le_wxGridEditorCreatedEvent && rsrc_type != le_wxCollapsiblePaneEvent && rsrc_type != le_wxClipboardTextEvent && rsrc_type != le_wxFileCtrlEvent && rsrc_type != le_wxSashEvent && rsrc_type != le_wxFileDirPickerEvent && rsrc_type != le_wxContextMenuEvent && rsrc_type != le_wxRibbonButtonBarEvent && rsrc_type != le_wxRibbonGalleryEvent && rsrc_type != le_wxCloseEvent && rsrc_type != le_wxActivateEvent && rsrc_type != le_wxAuiManagerEvent && rsrc_type != le_wxSizeEvent && rsrc_type != le_wxMouseEvent && rsrc_type != le_wxMoveEvent && rsrc_type != le_wxMouseCaptureLostEvent && rsrc_type != le_wxMouseCaptureChangedEvent && rsrc_type != le_wxTimerEvent && rsrc_type != le_wxThreadEvent && rsrc_type != le_wxScrollWinEvent && rsrc_type != le_wxSysColourChangedEvent && rsrc_type != le_wxProcessEvent && rsrc_type != le_wxEraseEvent && rsrc_type != le_wxSetCursorEvent && rsrc_type != le_wxIconizeEvent && rsrc_type != le_wxIdleEvent && rsrc_type != le_wxShowEvent && rsrc_type != le_wxPaintEvent && rsrc_type != le_wxPaletteChangedEvent && rsrc_type != le_wxInitDialogEvent && rsrc_type != le_wxMaximizeEvent && rsrc_type != le_wxNavigationKeyEvent && rsrc_type != le_wxFocusEvent && rsrc_type != le_wxFileSystemWatcherEvent && rsrc_type != le_wxDisplayChangedEvent && rsrc_type != le_wxCalculateLayoutEvent && rsrc_type != le_wxDropFilesEvent && rsrc_type != le_wxQueryLayoutInfoEvent && rsrc_type != le_wxTaskBarIconEvent && rsrc_type != le_wxAcceleratorTable && rsrc_type != le_wxGDIObject && rsrc_type != le_wxBitmap && rsrc_type != le_wxPalette && rsrc_type != le_wxIcon && rsrc_type != le_wxFont && rsrc_type != le_wxAnimation && rsrc_type != le_wxIconBundle && rsrc_type != le_wxCursor && rsrc_type != le_wxRegion && rsrc_type != le_wxPen && rsrc_type != le_wxBrush && rsrc_type != le_wxArtProvider && rsrc_type != le_wxHtmlCell && rsrc_type != le_wxHtmlContainerCell && rsrc_type != le_wxHtmlColourCell && rsrc_type != le_wxHtmlWidgetCell && rsrc_type != le_wxHtmlEasyPrinting && rsrc_type != le_wxHtmlLinkInfo && rsrc_type != le_wxFindReplaceData && rsrc_type != le_wxSound && rsrc_type != le_wxFileSystem && rsrc_type != le_wxFileSystemHandler && rsrc_type != le_wxMask && rsrc_type != le_wxToolTip && rsrc_type != le_wxGraphicsRenderer && rsrc_type != le_wxLayoutConstraints && rsrc_type != le_wxFSFile && rsrc_type != le_wxColourData && rsrc_type != le_wxFontData && rsrc_type != le_wxToolBarToolBase && rsrc_type != le_wxGridTableBase && rsrc_type != le_wxDataViewRenderer && rsrc_type != le_wxDataViewBitmapRenderer && rsrc_type != le_wxDataViewChoiceRenderer && rsrc_type != le_wxDataViewCustomRenderer && rsrc_type != le_wxDataViewSpinRenderer && rsrc_type != le_wxDataViewDateRenderer && rsrc_type != le_wxDataViewIconTextRenderer && rsrc_type != le_wxDataViewProgressRenderer && rsrc_type != le_wxDataViewTextRenderer && rsrc_type != le_wxDataViewToggleRenderer && rsrc_type != le_wxDataViewIconText && rsrc_type != le_wxVariant && rsrc_type != le_wxClipboard && rsrc_type != le_wxConfigBase && rsrc_type != le_wxFileConfig && rsrc_type != le_wxXmlResource && rsrc_type != le_wxPageSetupDialogData && rsrc_type != le_wxPrintDialogData && rsrc_type != le_wxPrintData && rsrc_type != le_wxPrintPreview && rsrc_type != le_wxPrinter && rsrc_type != le_wxPrintout && rsrc_type != le_wxHtmlPrintout && rsrc_type != le_wxHtmlDCRenderer && rsrc_type != le_wxHtmlFilter && rsrc_type != le_wxHtmlHelpData && rsrc_type != le_wxHtmlTagHandler && rsrc_type != le_wxHtmlWinTagHandler && rsrc_type != le_wxModule && rsrc_type != le_wxHtmlTagsModule && rsrc_type != le_wxImageHandler && rsrc_type != le_wxXmlResourceHandler && rsrc_type != le_wxXmlDocument && rsrc_type != le_wxLayoutAlgorithm && rsrc_type != le_wxFileHistory))
+					if (!object_pointer0_0 || (rsrc_type != le_wxEvtHandler && rsrc_type != le_wxWindow && rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow && rsrc_type != le_wxValidator && rsrc_type != le_wxTextValidator && rsrc_type != le_wxGenericValidator && rsrc_type != le_wxMenu && rsrc_type != le_wxAuiManager && rsrc_type != le_wxMouseEventsManager && rsrc_type != le_wxTimer && rsrc_type != le_wxEventBlocker && rsrc_type != le_wxProcess && rsrc_type != le_wxFileSystemWatcher && rsrc_type != le_wxTaskBarIcon && rsrc_type != le_wxNotificationMessage && rsrc_type != le_wxBitmapHandler && rsrc_type != le_wxImage && rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxWrapSizer && rsrc_type != le_wxStdDialogButtonSizer && rsrc_type != le_wxGridSizer && rsrc_type != le_wxFlexGridSizer && rsrc_type != le_wxGridBagSizer && rsrc_type != le_wxSizerItem && rsrc_type != le_wxGBSizerItem && rsrc_type != le_wxImageList && rsrc_type != le_wxDC && rsrc_type != le_wxWindowDC && rsrc_type != le_wxClientDC && rsrc_type != le_wxPaintDC && rsrc_type != le_wxScreenDC && rsrc_type != le_wxPostScriptDC && rsrc_type != le_wxPrinterDC && rsrc_type != le_wxMemoryDC && rsrc_type != le_wxBufferedDC && rsrc_type != le_wxBufferedPaintDC && rsrc_type != le_wxAutoBufferedPaintDC && rsrc_type != le_wxMirrorDC && rsrc_type != le_wxColour && rsrc_type != le_wxMenuItem && rsrc_type != le_wxEvent && rsrc_type != le_wxMenuEvent && rsrc_type != le_wxKeyEvent && rsrc_type != le_wxCommandEvent && rsrc_type != le_wxNotifyEvent && rsrc_type != le_wxTreeEvent && rsrc_type != le_wxBookCtrlEvent && rsrc_type != le_wxAuiNotebookEvent && rsrc_type != le_wxAuiToolBarEvent && rsrc_type != le_wxListEvent && rsrc_type != le_wxSpinEvent && rsrc_type != le_wxSplitterEvent && rsrc_type != le_wxSpinDoubleEvent && rsrc_type != le_wxGridSizeEvent && rsrc_type != le_wxWizardEvent && rsrc_type != le_wxGridEvent && rsrc_type != le_wxGridRangeSelectEvent && rsrc_type != le_wxDataViewEvent && rsrc_type != le_wxHeaderCtrlEvent && rsrc_type != le_wxRibbonBarEvent && rsrc_type != le_wxStyledTextEvent && rsrc_type != le_wxChildFocusEvent && rsrc_type != le_wxHtmlCellEvent && rsrc_type != le_wxHtmlLinkEvent && rsrc_type != le_wxHyperlinkEvent && rsrc_type != le_wxColourPickerEvent && rsrc_type != le_wxFontPickerEvent && rsrc_type != le_wxScrollEvent && rsrc_type != le_wxWindowModalDialogEvent && rsrc_type != le_wxDateEvent && rsrc_type != le_wxCalendarEvent && rsrc_type != le_wxWindowCreateEvent && rsrc_type != le_wxWindowDestroyEvent && rsrc_type != le_wxUpdateUIEvent && rsrc_type != le_wxHelpEvent && rsrc_type != le_wxGridEditorCreatedEvent && rsrc_type != le_wxCollapsiblePaneEvent && rsrc_type != le_wxClipboardTextEvent && rsrc_type != le_wxFileCtrlEvent && rsrc_type != le_wxSashEvent && rsrc_type != le_wxFileDirPickerEvent && rsrc_type != le_wxContextMenuEvent && rsrc_type != le_wxRibbonButtonBarEvent && rsrc_type != le_wxRibbonGalleryEvent && rsrc_type != le_wxCloseEvent && rsrc_type != le_wxActivateEvent && rsrc_type != le_wxAuiManagerEvent && rsrc_type != le_wxSizeEvent && rsrc_type != le_wxMouseEvent && rsrc_type != le_wxMoveEvent && rsrc_type != le_wxTimerEvent && rsrc_type != le_wxThreadEvent && rsrc_type != le_wxScrollWinEvent && rsrc_type != le_wxSysColourChangedEvent && rsrc_type != le_wxProcessEvent && rsrc_type != le_wxEraseEvent && rsrc_type != le_wxSetCursorEvent && rsrc_type != le_wxIdleEvent && rsrc_type != le_wxPaintEvent && rsrc_type != le_wxPaletteChangedEvent && rsrc_type != le_wxInitDialogEvent && rsrc_type != le_wxMaximizeEvent && rsrc_type != le_wxNavigationKeyEvent && rsrc_type != le_wxFocusEvent && rsrc_type != le_wxFileSystemWatcherEvent && rsrc_type != le_wxDisplayChangedEvent && rsrc_type != le_wxCalculateLayoutEvent && rsrc_type != le_wxQueryLayoutInfoEvent && rsrc_type != le_wxTaskBarIconEvent && rsrc_type != le_wxAcceleratorTable && rsrc_type != le_wxGDIObject && rsrc_type != le_wxBitmap && rsrc_type != le_wxPalette && rsrc_type != le_wxIcon && rsrc_type != le_wxFont && rsrc_type != le_wxAnimation && rsrc_type != le_wxIconBundle && rsrc_type != le_wxCursor && rsrc_type != le_wxRegion && rsrc_type != le_wxPen && rsrc_type != le_wxBrush && rsrc_type != le_wxArtProvider && rsrc_type != le_wxHtmlCell && rsrc_type != le_wxHtmlContainerCell && rsrc_type != le_wxHtmlColourCell && rsrc_type != le_wxHtmlWidgetCell && rsrc_type != le_wxHtmlEasyPrinting && rsrc_type != le_wxHtmlLinkInfo && rsrc_type != le_wxFindReplaceData && rsrc_type != le_wxSound && rsrc_type != le_wxFileSystem && rsrc_type != le_wxFileSystemHandler && rsrc_type != le_wxMask && rsrc_type != le_wxToolTip && rsrc_type != le_wxGraphicsRenderer && rsrc_type != le_wxLayoutConstraints && rsrc_type != le_wxFSFile && rsrc_type != le_wxColourData && rsrc_type != le_wxFontData && rsrc_type != le_wxGridTableBase && rsrc_type != le_wxDataViewRenderer && rsrc_type != le_wxDataViewBitmapRenderer && rsrc_type != le_wxDataViewChoiceRenderer && rsrc_type != le_wxDataViewCustomRenderer && rsrc_type != le_wxDataViewSpinRenderer && rsrc_type != le_wxDataViewDateRenderer && rsrc_type != le_wxDataViewIconTextRenderer && rsrc_type != le_wxDataViewProgressRenderer && rsrc_type != le_wxDataViewTextRenderer && rsrc_type != le_wxDataViewToggleRenderer && rsrc_type != le_wxDataViewIconText && rsrc_type != le_wxVariant && rsrc_type != le_wxClipboard && rsrc_type != le_wxConfigBase && rsrc_type != le_wxFileConfig && rsrc_type != le_wxXmlResource && rsrc_type != le_wxPageSetupDialogData && rsrc_type != le_wxPrintDialogData && rsrc_type != le_wxPrintData && rsrc_type != le_wxPrintPreview && rsrc_type != le_wxPrinter && rsrc_type != le_wxPrintout && rsrc_type != le_wxHtmlPrintout && rsrc_type != le_wxHtmlDCRenderer && rsrc_type != le_wxHtmlFilter && rsrc_type != le_wxHtmlHelpData && rsrc_type != le_wxHtmlTagHandler && rsrc_type != le_wxHtmlWinTagHandler && rsrc_type != le_wxModule && rsrc_type != le_wxHtmlTagsModule && rsrc_type != le_wxImageHandler && rsrc_type != le_wxXmlResourceHandler && rsrc_type != le_wxXmlDocument && rsrc_type != le_wxLayoutAlgorithm && rsrc_type != le_wxFileHistory && rsrc_type != le_wxToolBarToolBase))
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(generator0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(generator0);
 				}
 				else if(Z_TYPE_P(generator0) != IS_NULL)
 				{
@@ -3761,7 +3722,6 @@ PHP_METHOD(php_wxCollapsiblePaneEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3808,6 +3768,7 @@ PHP_METHOD(php_wxCollapsiblePaneEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxDataViewEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3816,13 +3777,13 @@ void php_wxDataViewEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 	#endif
 	
 	
-	wxDataViewEvent_php* object = (wxDataViewEvent_php*)rsrc->ptr;
+	wxDataViewEvent_php* object = static_cast<wxDataViewEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -3911,7 +3872,6 @@ PHP_METHOD(php_wxDataViewEvent, GetCacheFrom)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3995,7 +3955,6 @@ PHP_METHOD(php_wxDataViewEvent, GetCacheTo)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4079,7 +4038,6 @@ PHP_METHOD(php_wxDataViewEvent, GetColumn)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4163,7 +4121,6 @@ PHP_METHOD(php_wxDataViewEvent, GetDataBuffer)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4247,7 +4204,6 @@ PHP_METHOD(php_wxDataViewEvent, GetDataFormat)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4336,7 +4292,6 @@ PHP_METHOD(php_wxDataViewEvent, GetDataObject)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4353,8 +4308,8 @@ PHP_METHOD(php_wxDataViewEvent, GetDataObject)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4442,7 +4397,6 @@ PHP_METHOD(php_wxDataViewEvent, GetDataSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4526,7 +4480,6 @@ PHP_METHOD(php_wxDataViewEvent, GetDataViewColumn)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4543,8 +4496,8 @@ PHP_METHOD(php_wxDataViewEvent, GetDataViewColumn)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4632,7 +4585,6 @@ PHP_METHOD(php_wxDataViewEvent, GetModel)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4649,8 +4601,8 @@ PHP_METHOD(php_wxDataViewEvent, GetModel)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4738,7 +4690,6 @@ PHP_METHOD(php_wxDataViewEvent, GetPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4827,7 +4778,6 @@ PHP_METHOD(php_wxDataViewEvent, GetValue)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4841,8 +4791,8 @@ PHP_METHOD(php_wxDataViewEvent, GetValue)
 				value_to_return0 = (wxVariant_php*) &((wxDataViewEvent_php*)_this)->GetValue();
 
 				if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4857,7 +4807,6 @@ PHP_METHOD(php_wxDataViewEvent, GetValue)
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
 					references->AddReference(return_value);
 				}
-				references->AddReference(return_value);
 
 
 				return;
@@ -4931,7 +4880,6 @@ PHP_METHOD(php_wxDataViewEvent, IsEditCancelled)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5011,7 +4959,8 @@ PHP_METHOD(php_wxDataViewEvent, SetColumn)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -5019,7 +4968,6 @@ PHP_METHOD(php_wxDataViewEvent, SetColumn)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5101,17 +5049,18 @@ PHP_METHOD(php_wxDataViewEvent, SetDataBuffer)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&buf0, &buf_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &buf0, &buf_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &buf0, &buf_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
 
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &buf0_ref );
+			char parse_references_string[] = "z";
+			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &buf0_ref );
 		}
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5193,7 +5142,8 @@ PHP_METHOD(php_wxDataViewEvent, SetDataFormat)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&format0, php_wxDataFormat_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &format0, php_wxDataFormat_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &format0, php_wxDataFormat_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(format0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(format0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -5204,10 +5154,6 @@ PHP_METHOD(php_wxDataViewEvent, SetDataFormat)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(format0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(format0);
 				}
 				else if(Z_TYPE_P(format0) != IS_NULL)
 				{
@@ -5221,7 +5167,6 @@ PHP_METHOD(php_wxDataViewEvent, SetDataFormat)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5303,7 +5248,8 @@ PHP_METHOD(php_wxDataViewEvent, SetDataObject)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&obj0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &obj0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &obj0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(obj0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(obj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -5314,10 +5260,6 @@ PHP_METHOD(php_wxDataViewEvent, SetDataObject)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(obj0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(obj0);
 				}
 				else if(Z_TYPE_P(obj0) != IS_NULL)
 				{
@@ -5331,7 +5273,6 @@ PHP_METHOD(php_wxDataViewEvent, SetDataObject)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5412,7 +5353,8 @@ PHP_METHOD(php_wxDataViewEvent, SetDataSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&size0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &size0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -5420,7 +5362,6 @@ PHP_METHOD(php_wxDataViewEvent, SetDataSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5501,7 +5442,8 @@ PHP_METHOD(php_wxDataViewEvent, SetDataViewColumn)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(col0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(col0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -5512,10 +5454,6 @@ PHP_METHOD(php_wxDataViewEvent, SetDataViewColumn)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(col0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(col0);
 				}
 				else if(Z_TYPE_P(col0) != IS_NULL)
 				{
@@ -5529,7 +5467,6 @@ PHP_METHOD(php_wxDataViewEvent, SetDataViewColumn)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5611,7 +5548,8 @@ PHP_METHOD(php_wxDataViewEvent, SetModel)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&model0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &model0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &model0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(model0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(model0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -5622,10 +5560,6 @@ PHP_METHOD(php_wxDataViewEvent, SetModel)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(model0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(model0);
 				}
 				else if(Z_TYPE_P(model0) != IS_NULL)
 				{
@@ -5639,7 +5573,6 @@ PHP_METHOD(php_wxDataViewEvent, SetModel)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5721,7 +5654,8 @@ PHP_METHOD(php_wxDataViewEvent, SetValue)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&value0, php_wxVariant_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &value0, php_wxVariant_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &value0, php_wxVariant_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(value0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(value0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -5732,10 +5666,6 @@ PHP_METHOD(php_wxDataViewEvent, SetValue)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(value0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(value0);
 				}
 				else if(Z_TYPE_P(value0) != IS_NULL)
 				{
@@ -5749,7 +5679,6 @@ PHP_METHOD(php_wxDataViewEvent, SetValue)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5803,7 +5732,8 @@ PHP_METHOD(php_wxDataViewEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&commandType0, &winid0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|ll", &commandType0, &winid0 ) == SUCCESS)
+		char parse_parameters_string[] = "|ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &commandType0, &winid0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -5811,7 +5741,6 @@ PHP_METHOD(php_wxDataViewEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5877,6 +5806,7 @@ PHP_METHOD(php_wxDataViewEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxDateEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5885,13 +5815,13 @@ void php_wxDateEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxDateEvent_php* object = (wxDateEvent_php*)rsrc->ptr;
+	wxDateEvent_php* object = static_cast<wxDateEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -5982,7 +5912,6 @@ PHP_METHOD(php_wxDateEvent, GetDate)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6073,7 +6002,8 @@ PHP_METHOD(php_wxDateEvent, SetDate)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&date0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &date0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &date0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -6081,7 +6011,6 @@ PHP_METHOD(php_wxDateEvent, SetDate)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6109,6 +6038,7 @@ PHP_METHOD(php_wxDateEvent, SetDate)
 
 		
 }
+
 void php_wxEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6117,13 +6047,13 @@ void php_wxEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxEvent_php* object = (wxEvent_php*)rsrc->ptr;
+	wxEvent_php* object = static_cast<wxEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -6285,10 +6215,6 @@ PHP_METHOD(php_wxEvent, GetEventCategory)
 				references = &((wxMouseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxMoveEvent)
 				references = &((wxMoveEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureLostEvent)
-				references = &((wxMouseCaptureLostEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureChangedEvent)
-				references = &((wxMouseCaptureChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTimerEvent)
 				references = &((wxTimerEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxThreadEvent)
@@ -6303,12 +6229,8 @@ PHP_METHOD(php_wxEvent, GetEventCategory)
 				references = &((wxEraseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSetCursorEvent)
 				references = &((wxSetCursorEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxIconizeEvent)
-				references = &((wxIconizeEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxIdleEvent)
 				references = &((wxIdleEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxShowEvent)
-				references = &((wxShowEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaintEvent)
 				references = &((wxPaintEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaletteChangedEvent)
@@ -6327,8 +6249,6 @@ PHP_METHOD(php_wxEvent, GetEventCategory)
 				references = &((wxDisplayChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxCalculateLayoutEvent)
 				references = &((wxCalculateLayoutEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDropFilesEvent)
-				references = &((wxDropFilesEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxQueryLayoutInfoEvent)
 				references = &((wxQueryLayoutInfoEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTaskBarIconEvent)
@@ -6358,7 +6278,6 @@ PHP_METHOD(php_wxEvent, GetEventCategory)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6515,10 +6434,6 @@ PHP_METHOD(php_wxEvent, GetEventObject)
 				references = &((wxMouseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxMoveEvent)
 				references = &((wxMoveEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureLostEvent)
-				references = &((wxMouseCaptureLostEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureChangedEvent)
-				references = &((wxMouseCaptureChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTimerEvent)
 				references = &((wxTimerEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxThreadEvent)
@@ -6533,12 +6448,8 @@ PHP_METHOD(php_wxEvent, GetEventObject)
 				references = &((wxEraseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSetCursorEvent)
 				references = &((wxSetCursorEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxIconizeEvent)
-				references = &((wxIconizeEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxIdleEvent)
 				references = &((wxIdleEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxShowEvent)
-				references = &((wxShowEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaintEvent)
 				references = &((wxPaintEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaletteChangedEvent)
@@ -6557,8 +6468,6 @@ PHP_METHOD(php_wxEvent, GetEventObject)
 				references = &((wxDisplayChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxCalculateLayoutEvent)
 				references = &((wxCalculateLayoutEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDropFilesEvent)
-				references = &((wxDropFilesEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxQueryLayoutInfoEvent)
 				references = &((wxQueryLayoutInfoEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTaskBarIconEvent)
@@ -6588,7 +6497,6 @@ PHP_METHOD(php_wxEvent, GetEventObject)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6605,8 +6513,8 @@ PHP_METHOD(php_wxEvent, GetEventObject)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -6767,10 +6675,6 @@ PHP_METHOD(php_wxEvent, GetEventType)
 				references = &((wxMouseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxMoveEvent)
 				references = &((wxMoveEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureLostEvent)
-				references = &((wxMouseCaptureLostEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureChangedEvent)
-				references = &((wxMouseCaptureChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTimerEvent)
 				references = &((wxTimerEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxThreadEvent)
@@ -6785,12 +6689,8 @@ PHP_METHOD(php_wxEvent, GetEventType)
 				references = &((wxEraseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSetCursorEvent)
 				references = &((wxSetCursorEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxIconizeEvent)
-				references = &((wxIconizeEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxIdleEvent)
 				references = &((wxIdleEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxShowEvent)
-				references = &((wxShowEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaintEvent)
 				references = &((wxPaintEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaletteChangedEvent)
@@ -6809,8 +6709,6 @@ PHP_METHOD(php_wxEvent, GetEventType)
 				references = &((wxDisplayChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxCalculateLayoutEvent)
 				references = &((wxCalculateLayoutEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDropFilesEvent)
-				references = &((wxDropFilesEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxQueryLayoutInfoEvent)
 				references = &((wxQueryLayoutInfoEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTaskBarIconEvent)
@@ -6840,7 +6738,6 @@ PHP_METHOD(php_wxEvent, GetEventType)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -6997,10 +6894,6 @@ PHP_METHOD(php_wxEvent, GetId)
 				references = &((wxMouseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxMoveEvent)
 				references = &((wxMoveEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureLostEvent)
-				references = &((wxMouseCaptureLostEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureChangedEvent)
-				references = &((wxMouseCaptureChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTimerEvent)
 				references = &((wxTimerEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxThreadEvent)
@@ -7015,12 +6908,8 @@ PHP_METHOD(php_wxEvent, GetId)
 				references = &((wxEraseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSetCursorEvent)
 				references = &((wxSetCursorEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxIconizeEvent)
-				references = &((wxIconizeEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxIdleEvent)
 				references = &((wxIdleEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxShowEvent)
-				references = &((wxShowEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaintEvent)
 				references = &((wxPaintEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaletteChangedEvent)
@@ -7039,8 +6928,6 @@ PHP_METHOD(php_wxEvent, GetId)
 				references = &((wxDisplayChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxCalculateLayoutEvent)
 				references = &((wxCalculateLayoutEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDropFilesEvent)
-				references = &((wxDropFilesEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxQueryLayoutInfoEvent)
 				references = &((wxQueryLayoutInfoEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTaskBarIconEvent)
@@ -7070,7 +6957,6 @@ PHP_METHOD(php_wxEvent, GetId)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -7227,10 +7113,6 @@ PHP_METHOD(php_wxEvent, GetSkipped)
 				references = &((wxMouseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxMoveEvent)
 				references = &((wxMoveEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureLostEvent)
-				references = &((wxMouseCaptureLostEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureChangedEvent)
-				references = &((wxMouseCaptureChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTimerEvent)
 				references = &((wxTimerEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxThreadEvent)
@@ -7245,12 +7127,8 @@ PHP_METHOD(php_wxEvent, GetSkipped)
 				references = &((wxEraseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSetCursorEvent)
 				references = &((wxSetCursorEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxIconizeEvent)
-				references = &((wxIconizeEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxIdleEvent)
 				references = &((wxIdleEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxShowEvent)
-				references = &((wxShowEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaintEvent)
 				references = &((wxPaintEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaletteChangedEvent)
@@ -7269,8 +7147,6 @@ PHP_METHOD(php_wxEvent, GetSkipped)
 				references = &((wxDisplayChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxCalculateLayoutEvent)
 				references = &((wxCalculateLayoutEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDropFilesEvent)
-				references = &((wxDropFilesEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxQueryLayoutInfoEvent)
 				references = &((wxQueryLayoutInfoEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTaskBarIconEvent)
@@ -7300,7 +7176,6 @@ PHP_METHOD(php_wxEvent, GetSkipped)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -7457,10 +7332,6 @@ PHP_METHOD(php_wxEvent, GetTimestamp)
 				references = &((wxMouseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxMoveEvent)
 				references = &((wxMoveEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureLostEvent)
-				references = &((wxMouseCaptureLostEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureChangedEvent)
-				references = &((wxMouseCaptureChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTimerEvent)
 				references = &((wxTimerEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxThreadEvent)
@@ -7475,12 +7346,8 @@ PHP_METHOD(php_wxEvent, GetTimestamp)
 				references = &((wxEraseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSetCursorEvent)
 				references = &((wxSetCursorEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxIconizeEvent)
-				references = &((wxIconizeEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxIdleEvent)
 				references = &((wxIdleEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxShowEvent)
-				references = &((wxShowEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaintEvent)
 				references = &((wxPaintEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaletteChangedEvent)
@@ -7499,8 +7366,6 @@ PHP_METHOD(php_wxEvent, GetTimestamp)
 				references = &((wxDisplayChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxCalculateLayoutEvent)
 				references = &((wxCalculateLayoutEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDropFilesEvent)
-				references = &((wxDropFilesEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxQueryLayoutInfoEvent)
 				references = &((wxQueryLayoutInfoEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTaskBarIconEvent)
@@ -7530,7 +7395,6 @@ PHP_METHOD(php_wxEvent, GetTimestamp)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -7687,10 +7551,6 @@ PHP_METHOD(php_wxEvent, IsCommandEvent)
 				references = &((wxMouseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxMoveEvent)
 				references = &((wxMoveEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureLostEvent)
-				references = &((wxMouseCaptureLostEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureChangedEvent)
-				references = &((wxMouseCaptureChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTimerEvent)
 				references = &((wxTimerEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxThreadEvent)
@@ -7705,12 +7565,8 @@ PHP_METHOD(php_wxEvent, IsCommandEvent)
 				references = &((wxEraseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSetCursorEvent)
 				references = &((wxSetCursorEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxIconizeEvent)
-				references = &((wxIconizeEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxIdleEvent)
 				references = &((wxIdleEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxShowEvent)
-				references = &((wxShowEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaintEvent)
 				references = &((wxPaintEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaletteChangedEvent)
@@ -7729,8 +7585,6 @@ PHP_METHOD(php_wxEvent, IsCommandEvent)
 				references = &((wxDisplayChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxCalculateLayoutEvent)
 				references = &((wxCalculateLayoutEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDropFilesEvent)
-				references = &((wxDropFilesEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxQueryLayoutInfoEvent)
 				references = &((wxQueryLayoutInfoEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTaskBarIconEvent)
@@ -7760,7 +7614,6 @@ PHP_METHOD(php_wxEvent, IsCommandEvent)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -7917,10 +7770,6 @@ PHP_METHOD(php_wxEvent, ResumePropagation)
 				references = &((wxMouseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxMoveEvent)
 				references = &((wxMoveEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureLostEvent)
-				references = &((wxMouseCaptureLostEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureChangedEvent)
-				references = &((wxMouseCaptureChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTimerEvent)
 				references = &((wxTimerEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxThreadEvent)
@@ -7935,12 +7784,8 @@ PHP_METHOD(php_wxEvent, ResumePropagation)
 				references = &((wxEraseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSetCursorEvent)
 				references = &((wxSetCursorEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxIconizeEvent)
-				references = &((wxIconizeEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxIdleEvent)
 				references = &((wxIdleEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxShowEvent)
-				references = &((wxShowEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaintEvent)
 				references = &((wxPaintEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaletteChangedEvent)
@@ -7959,8 +7804,6 @@ PHP_METHOD(php_wxEvent, ResumePropagation)
 				references = &((wxDisplayChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxCalculateLayoutEvent)
 				references = &((wxCalculateLayoutEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDropFilesEvent)
-				references = &((wxDropFilesEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxQueryLayoutInfoEvent)
 				references = &((wxQueryLayoutInfoEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTaskBarIconEvent)
@@ -7986,7 +7829,8 @@ PHP_METHOD(php_wxEvent, ResumePropagation)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&propagationLevel0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &propagationLevel0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &propagationLevel0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -7994,7 +7838,6 @@ PHP_METHOD(php_wxEvent, ResumePropagation)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8151,10 +7994,6 @@ PHP_METHOD(php_wxEvent, SetEventObject)
 				references = &((wxMouseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxMoveEvent)
 				references = &((wxMoveEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureLostEvent)
-				references = &((wxMouseCaptureLostEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureChangedEvent)
-				references = &((wxMouseCaptureChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTimerEvent)
 				references = &((wxTimerEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxThreadEvent)
@@ -8169,12 +8008,8 @@ PHP_METHOD(php_wxEvent, SetEventObject)
 				references = &((wxEraseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSetCursorEvent)
 				references = &((wxSetCursorEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxIconizeEvent)
-				references = &((wxIconizeEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxIdleEvent)
 				references = &((wxIdleEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxShowEvent)
-				references = &((wxShowEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaintEvent)
 				references = &((wxPaintEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaletteChangedEvent)
@@ -8193,8 +8028,6 @@ PHP_METHOD(php_wxEvent, SetEventObject)
 				references = &((wxDisplayChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxCalculateLayoutEvent)
 				references = &((wxCalculateLayoutEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDropFilesEvent)
-				references = &((wxDropFilesEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxQueryLayoutInfoEvent)
 				references = &((wxQueryLayoutInfoEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTaskBarIconEvent)
@@ -8221,21 +8054,18 @@ PHP_METHOD(php_wxEvent, SetEventObject)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&object0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &object0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &object0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(object0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(object0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 				{
 					id_to_find = Z_RESVAL_P(*tmp);
 					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxEvtHandler && rsrc_type != le_wxWindow && rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow && rsrc_type != le_wxValidator && rsrc_type != le_wxTextValidator && rsrc_type != le_wxGenericValidator && rsrc_type != le_wxMenu && rsrc_type != le_wxAuiManager && rsrc_type != le_wxMouseEventsManager && rsrc_type != le_wxTimer && rsrc_type != le_wxEventBlocker && rsrc_type != le_wxProcess && rsrc_type != le_wxFileSystemWatcher && rsrc_type != le_wxTaskBarIcon && rsrc_type != le_wxNotificationMessage && rsrc_type != le_wxBitmapHandler && rsrc_type != le_wxImage && rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxWrapSizer && rsrc_type != le_wxStdDialogButtonSizer && rsrc_type != le_wxGridSizer && rsrc_type != le_wxFlexGridSizer && rsrc_type != le_wxGridBagSizer && rsrc_type != le_wxSizerItem && rsrc_type != le_wxGBSizerItem && rsrc_type != le_wxImageList && rsrc_type != le_wxDC && rsrc_type != le_wxWindowDC && rsrc_type != le_wxClientDC && rsrc_type != le_wxPaintDC && rsrc_type != le_wxScreenDC && rsrc_type != le_wxPostScriptDC && rsrc_type != le_wxPrinterDC && rsrc_type != le_wxMemoryDC && rsrc_type != le_wxBufferedDC && rsrc_type != le_wxBufferedPaintDC && rsrc_type != le_wxAutoBufferedPaintDC && rsrc_type != le_wxMirrorDC && rsrc_type != le_wxColour && rsrc_type != le_wxMenuItem && rsrc_type != le_wxEvent && rsrc_type != le_wxMenuEvent && rsrc_type != le_wxKeyEvent && rsrc_type != le_wxCommandEvent && rsrc_type != le_wxNotifyEvent && rsrc_type != le_wxTreeEvent && rsrc_type != le_wxBookCtrlEvent && rsrc_type != le_wxAuiNotebookEvent && rsrc_type != le_wxAuiToolBarEvent && rsrc_type != le_wxListEvent && rsrc_type != le_wxSpinEvent && rsrc_type != le_wxSplitterEvent && rsrc_type != le_wxSpinDoubleEvent && rsrc_type != le_wxGridSizeEvent && rsrc_type != le_wxWizardEvent && rsrc_type != le_wxGridEvent && rsrc_type != le_wxGridRangeSelectEvent && rsrc_type != le_wxDataViewEvent && rsrc_type != le_wxHeaderCtrlEvent && rsrc_type != le_wxRibbonBarEvent && rsrc_type != le_wxStyledTextEvent && rsrc_type != le_wxChildFocusEvent && rsrc_type != le_wxHtmlCellEvent && rsrc_type != le_wxHtmlLinkEvent && rsrc_type != le_wxHyperlinkEvent && rsrc_type != le_wxColourPickerEvent && rsrc_type != le_wxFontPickerEvent && rsrc_type != le_wxScrollEvent && rsrc_type != le_wxWindowModalDialogEvent && rsrc_type != le_wxDateEvent && rsrc_type != le_wxCalendarEvent && rsrc_type != le_wxWindowCreateEvent && rsrc_type != le_wxWindowDestroyEvent && rsrc_type != le_wxUpdateUIEvent && rsrc_type != le_wxHelpEvent && rsrc_type != le_wxGridEditorCreatedEvent && rsrc_type != le_wxCollapsiblePaneEvent && rsrc_type != le_wxClipboardTextEvent && rsrc_type != le_wxFileCtrlEvent && rsrc_type != le_wxSashEvent && rsrc_type != le_wxFileDirPickerEvent && rsrc_type != le_wxContextMenuEvent && rsrc_type != le_wxRibbonButtonBarEvent && rsrc_type != le_wxRibbonGalleryEvent && rsrc_type != le_wxCloseEvent && rsrc_type != le_wxActivateEvent && rsrc_type != le_wxAuiManagerEvent && rsrc_type != le_wxSizeEvent && rsrc_type != le_wxMouseEvent && rsrc_type != le_wxMoveEvent && rsrc_type != le_wxMouseCaptureLostEvent && rsrc_type != le_wxMouseCaptureChangedEvent && rsrc_type != le_wxTimerEvent && rsrc_type != le_wxThreadEvent && rsrc_type != le_wxScrollWinEvent && rsrc_type != le_wxSysColourChangedEvent && rsrc_type != le_wxProcessEvent && rsrc_type != le_wxEraseEvent && rsrc_type != le_wxSetCursorEvent && rsrc_type != le_wxIconizeEvent && rsrc_type != le_wxIdleEvent && rsrc_type != le_wxShowEvent && rsrc_type != le_wxPaintEvent && rsrc_type != le_wxPaletteChangedEvent && rsrc_type != le_wxInitDialogEvent && rsrc_type != le_wxMaximizeEvent && rsrc_type != le_wxNavigationKeyEvent && rsrc_type != le_wxFocusEvent && rsrc_type != le_wxFileSystemWatcherEvent && rsrc_type != le_wxDisplayChangedEvent && rsrc_type != le_wxCalculateLayoutEvent && rsrc_type != le_wxDropFilesEvent && rsrc_type != le_wxQueryLayoutInfoEvent && rsrc_type != le_wxTaskBarIconEvent && rsrc_type != le_wxAcceleratorTable && rsrc_type != le_wxGDIObject && rsrc_type != le_wxBitmap && rsrc_type != le_wxPalette && rsrc_type != le_wxIcon && rsrc_type != le_wxFont && rsrc_type != le_wxAnimation && rsrc_type != le_wxIconBundle && rsrc_type != le_wxCursor && rsrc_type != le_wxRegion && rsrc_type != le_wxPen && rsrc_type != le_wxBrush && rsrc_type != le_wxArtProvider && rsrc_type != le_wxHtmlCell && rsrc_type != le_wxHtmlContainerCell && rsrc_type != le_wxHtmlColourCell && rsrc_type != le_wxHtmlWidgetCell && rsrc_type != le_wxHtmlEasyPrinting && rsrc_type != le_wxHtmlLinkInfo && rsrc_type != le_wxFindReplaceData && rsrc_type != le_wxSound && rsrc_type != le_wxFileSystem && rsrc_type != le_wxFileSystemHandler && rsrc_type != le_wxMask && rsrc_type != le_wxToolTip && rsrc_type != le_wxGraphicsRenderer && rsrc_type != le_wxLayoutConstraints && rsrc_type != le_wxFSFile && rsrc_type != le_wxColourData && rsrc_type != le_wxFontData && rsrc_type != le_wxToolBarToolBase && rsrc_type != le_wxGridTableBase && rsrc_type != le_wxDataViewRenderer && rsrc_type != le_wxDataViewBitmapRenderer && rsrc_type != le_wxDataViewChoiceRenderer && rsrc_type != le_wxDataViewCustomRenderer && rsrc_type != le_wxDataViewSpinRenderer && rsrc_type != le_wxDataViewDateRenderer && rsrc_type != le_wxDataViewIconTextRenderer && rsrc_type != le_wxDataViewProgressRenderer && rsrc_type != le_wxDataViewTextRenderer && rsrc_type != le_wxDataViewToggleRenderer && rsrc_type != le_wxDataViewIconText && rsrc_type != le_wxVariant && rsrc_type != le_wxClipboard && rsrc_type != le_wxConfigBase && rsrc_type != le_wxFileConfig && rsrc_type != le_wxXmlResource && rsrc_type != le_wxPageSetupDialogData && rsrc_type != le_wxPrintDialogData && rsrc_type != le_wxPrintData && rsrc_type != le_wxPrintPreview && rsrc_type != le_wxPrinter && rsrc_type != le_wxPrintout && rsrc_type != le_wxHtmlPrintout && rsrc_type != le_wxHtmlDCRenderer && rsrc_type != le_wxHtmlFilter && rsrc_type != le_wxHtmlHelpData && rsrc_type != le_wxHtmlTagHandler && rsrc_type != le_wxHtmlWinTagHandler && rsrc_type != le_wxModule && rsrc_type != le_wxHtmlTagsModule && rsrc_type != le_wxImageHandler && rsrc_type != le_wxXmlResourceHandler && rsrc_type != le_wxXmlDocument && rsrc_type != le_wxLayoutAlgorithm && rsrc_type != le_wxFileHistory))
+					if (!object_pointer0_0 || (rsrc_type != le_wxEvtHandler && rsrc_type != le_wxWindow && rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow && rsrc_type != le_wxValidator && rsrc_type != le_wxTextValidator && rsrc_type != le_wxGenericValidator && rsrc_type != le_wxMenu && rsrc_type != le_wxAuiManager && rsrc_type != le_wxMouseEventsManager && rsrc_type != le_wxTimer && rsrc_type != le_wxEventBlocker && rsrc_type != le_wxProcess && rsrc_type != le_wxFileSystemWatcher && rsrc_type != le_wxTaskBarIcon && rsrc_type != le_wxNotificationMessage && rsrc_type != le_wxBitmapHandler && rsrc_type != le_wxImage && rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxWrapSizer && rsrc_type != le_wxStdDialogButtonSizer && rsrc_type != le_wxGridSizer && rsrc_type != le_wxFlexGridSizer && rsrc_type != le_wxGridBagSizer && rsrc_type != le_wxSizerItem && rsrc_type != le_wxGBSizerItem && rsrc_type != le_wxImageList && rsrc_type != le_wxDC && rsrc_type != le_wxWindowDC && rsrc_type != le_wxClientDC && rsrc_type != le_wxPaintDC && rsrc_type != le_wxScreenDC && rsrc_type != le_wxPostScriptDC && rsrc_type != le_wxPrinterDC && rsrc_type != le_wxMemoryDC && rsrc_type != le_wxBufferedDC && rsrc_type != le_wxBufferedPaintDC && rsrc_type != le_wxAutoBufferedPaintDC && rsrc_type != le_wxMirrorDC && rsrc_type != le_wxColour && rsrc_type != le_wxMenuItem && rsrc_type != le_wxEvent && rsrc_type != le_wxMenuEvent && rsrc_type != le_wxKeyEvent && rsrc_type != le_wxCommandEvent && rsrc_type != le_wxNotifyEvent && rsrc_type != le_wxTreeEvent && rsrc_type != le_wxBookCtrlEvent && rsrc_type != le_wxAuiNotebookEvent && rsrc_type != le_wxAuiToolBarEvent && rsrc_type != le_wxListEvent && rsrc_type != le_wxSpinEvent && rsrc_type != le_wxSplitterEvent && rsrc_type != le_wxSpinDoubleEvent && rsrc_type != le_wxGridSizeEvent && rsrc_type != le_wxWizardEvent && rsrc_type != le_wxGridEvent && rsrc_type != le_wxGridRangeSelectEvent && rsrc_type != le_wxDataViewEvent && rsrc_type != le_wxHeaderCtrlEvent && rsrc_type != le_wxRibbonBarEvent && rsrc_type != le_wxStyledTextEvent && rsrc_type != le_wxChildFocusEvent && rsrc_type != le_wxHtmlCellEvent && rsrc_type != le_wxHtmlLinkEvent && rsrc_type != le_wxHyperlinkEvent && rsrc_type != le_wxColourPickerEvent && rsrc_type != le_wxFontPickerEvent && rsrc_type != le_wxScrollEvent && rsrc_type != le_wxWindowModalDialogEvent && rsrc_type != le_wxDateEvent && rsrc_type != le_wxCalendarEvent && rsrc_type != le_wxWindowCreateEvent && rsrc_type != le_wxWindowDestroyEvent && rsrc_type != le_wxUpdateUIEvent && rsrc_type != le_wxHelpEvent && rsrc_type != le_wxGridEditorCreatedEvent && rsrc_type != le_wxCollapsiblePaneEvent && rsrc_type != le_wxClipboardTextEvent && rsrc_type != le_wxFileCtrlEvent && rsrc_type != le_wxSashEvent && rsrc_type != le_wxFileDirPickerEvent && rsrc_type != le_wxContextMenuEvent && rsrc_type != le_wxRibbonButtonBarEvent && rsrc_type != le_wxRibbonGalleryEvent && rsrc_type != le_wxCloseEvent && rsrc_type != le_wxActivateEvent && rsrc_type != le_wxAuiManagerEvent && rsrc_type != le_wxSizeEvent && rsrc_type != le_wxMouseEvent && rsrc_type != le_wxMoveEvent && rsrc_type != le_wxTimerEvent && rsrc_type != le_wxThreadEvent && rsrc_type != le_wxScrollWinEvent && rsrc_type != le_wxSysColourChangedEvent && rsrc_type != le_wxProcessEvent && rsrc_type != le_wxEraseEvent && rsrc_type != le_wxSetCursorEvent && rsrc_type != le_wxIdleEvent && rsrc_type != le_wxPaintEvent && rsrc_type != le_wxPaletteChangedEvent && rsrc_type != le_wxInitDialogEvent && rsrc_type != le_wxMaximizeEvent && rsrc_type != le_wxNavigationKeyEvent && rsrc_type != le_wxFocusEvent && rsrc_type != le_wxFileSystemWatcherEvent && rsrc_type != le_wxDisplayChangedEvent && rsrc_type != le_wxCalculateLayoutEvent && rsrc_type != le_wxQueryLayoutInfoEvent && rsrc_type != le_wxTaskBarIconEvent && rsrc_type != le_wxAcceleratorTable && rsrc_type != le_wxGDIObject && rsrc_type != le_wxBitmap && rsrc_type != le_wxPalette && rsrc_type != le_wxIcon && rsrc_type != le_wxFont && rsrc_type != le_wxAnimation && rsrc_type != le_wxIconBundle && rsrc_type != le_wxCursor && rsrc_type != le_wxRegion && rsrc_type != le_wxPen && rsrc_type != le_wxBrush && rsrc_type != le_wxArtProvider && rsrc_type != le_wxHtmlCell && rsrc_type != le_wxHtmlContainerCell && rsrc_type != le_wxHtmlColourCell && rsrc_type != le_wxHtmlWidgetCell && rsrc_type != le_wxHtmlEasyPrinting && rsrc_type != le_wxHtmlLinkInfo && rsrc_type != le_wxFindReplaceData && rsrc_type != le_wxSound && rsrc_type != le_wxFileSystem && rsrc_type != le_wxFileSystemHandler && rsrc_type != le_wxMask && rsrc_type != le_wxToolTip && rsrc_type != le_wxGraphicsRenderer && rsrc_type != le_wxLayoutConstraints && rsrc_type != le_wxFSFile && rsrc_type != le_wxColourData && rsrc_type != le_wxFontData && rsrc_type != le_wxGridTableBase && rsrc_type != le_wxDataViewRenderer && rsrc_type != le_wxDataViewBitmapRenderer && rsrc_type != le_wxDataViewChoiceRenderer && rsrc_type != le_wxDataViewCustomRenderer && rsrc_type != le_wxDataViewSpinRenderer && rsrc_type != le_wxDataViewDateRenderer && rsrc_type != le_wxDataViewIconTextRenderer && rsrc_type != le_wxDataViewProgressRenderer && rsrc_type != le_wxDataViewTextRenderer && rsrc_type != le_wxDataViewToggleRenderer && rsrc_type != le_wxDataViewIconText && rsrc_type != le_wxVariant && rsrc_type != le_wxClipboard && rsrc_type != le_wxConfigBase && rsrc_type != le_wxFileConfig && rsrc_type != le_wxXmlResource && rsrc_type != le_wxPageSetupDialogData && rsrc_type != le_wxPrintDialogData && rsrc_type != le_wxPrintData && rsrc_type != le_wxPrintPreview && rsrc_type != le_wxPrinter && rsrc_type != le_wxPrintout && rsrc_type != le_wxHtmlPrintout && rsrc_type != le_wxHtmlDCRenderer && rsrc_type != le_wxHtmlFilter && rsrc_type != le_wxHtmlHelpData && rsrc_type != le_wxHtmlTagHandler && rsrc_type != le_wxHtmlWinTagHandler && rsrc_type != le_wxModule && rsrc_type != le_wxHtmlTagsModule && rsrc_type != le_wxImageHandler && rsrc_type != le_wxXmlResourceHandler && rsrc_type != le_wxXmlDocument && rsrc_type != le_wxLayoutAlgorithm && rsrc_type != le_wxFileHistory && rsrc_type != le_wxToolBarToolBase))
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(object0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(object0);
 				}
 				else if(Z_TYPE_P(object0) != IS_NULL)
 				{
@@ -8249,7 +8079,6 @@ PHP_METHOD(php_wxEvent, SetEventObject)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8407,10 +8236,6 @@ PHP_METHOD(php_wxEvent, SetEventType)
 				references = &((wxMouseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxMoveEvent)
 				references = &((wxMoveEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureLostEvent)
-				references = &((wxMouseCaptureLostEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureChangedEvent)
-				references = &((wxMouseCaptureChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTimerEvent)
 				references = &((wxTimerEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxThreadEvent)
@@ -8425,12 +8250,8 @@ PHP_METHOD(php_wxEvent, SetEventType)
 				references = &((wxEraseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSetCursorEvent)
 				references = &((wxSetCursorEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxIconizeEvent)
-				references = &((wxIconizeEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxIdleEvent)
 				references = &((wxIdleEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxShowEvent)
-				references = &((wxShowEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaintEvent)
 				references = &((wxPaintEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaletteChangedEvent)
@@ -8449,8 +8270,6 @@ PHP_METHOD(php_wxEvent, SetEventType)
 				references = &((wxDisplayChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxCalculateLayoutEvent)
 				references = &((wxCalculateLayoutEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDropFilesEvent)
-				references = &((wxDropFilesEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxQueryLayoutInfoEvent)
 				references = &((wxQueryLayoutInfoEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTaskBarIconEvent)
@@ -8476,7 +8295,8 @@ PHP_METHOD(php_wxEvent, SetEventType)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&type0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &type0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &type0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -8484,7 +8304,6 @@ PHP_METHOD(php_wxEvent, SetEventType)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8641,10 +8460,6 @@ PHP_METHOD(php_wxEvent, SetId)
 				references = &((wxMouseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxMoveEvent)
 				references = &((wxMoveEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureLostEvent)
-				references = &((wxMouseCaptureLostEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureChangedEvent)
-				references = &((wxMouseCaptureChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTimerEvent)
 				references = &((wxTimerEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxThreadEvent)
@@ -8659,12 +8474,8 @@ PHP_METHOD(php_wxEvent, SetId)
 				references = &((wxEraseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSetCursorEvent)
 				references = &((wxSetCursorEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxIconizeEvent)
-				references = &((wxIconizeEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxIdleEvent)
 				references = &((wxIdleEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxShowEvent)
-				references = &((wxShowEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaintEvent)
 				references = &((wxPaintEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaletteChangedEvent)
@@ -8683,8 +8494,6 @@ PHP_METHOD(php_wxEvent, SetId)
 				references = &((wxDisplayChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxCalculateLayoutEvent)
 				references = &((wxCalculateLayoutEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDropFilesEvent)
-				references = &((wxDropFilesEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxQueryLayoutInfoEvent)
 				references = &((wxQueryLayoutInfoEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTaskBarIconEvent)
@@ -8710,7 +8519,8 @@ PHP_METHOD(php_wxEvent, SetId)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&id0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &id0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -8718,7 +8528,6 @@ PHP_METHOD(php_wxEvent, SetId)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -8875,10 +8684,6 @@ PHP_METHOD(php_wxEvent, SetTimestamp)
 				references = &((wxMouseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxMoveEvent)
 				references = &((wxMoveEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureLostEvent)
-				references = &((wxMouseCaptureLostEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureChangedEvent)
-				references = &((wxMouseCaptureChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTimerEvent)
 				references = &((wxTimerEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxThreadEvent)
@@ -8893,12 +8698,8 @@ PHP_METHOD(php_wxEvent, SetTimestamp)
 				references = &((wxEraseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSetCursorEvent)
 				references = &((wxSetCursorEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxIconizeEvent)
-				references = &((wxIconizeEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxIdleEvent)
 				references = &((wxIdleEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxShowEvent)
-				references = &((wxShowEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaintEvent)
 				references = &((wxPaintEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaletteChangedEvent)
@@ -8917,8 +8718,6 @@ PHP_METHOD(php_wxEvent, SetTimestamp)
 				references = &((wxDisplayChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxCalculateLayoutEvent)
 				references = &((wxCalculateLayoutEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDropFilesEvent)
-				references = &((wxDropFilesEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxQueryLayoutInfoEvent)
 				references = &((wxQueryLayoutInfoEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTaskBarIconEvent)
@@ -8944,7 +8743,8 @@ PHP_METHOD(php_wxEvent, SetTimestamp)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&timeStamp0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|l", &timeStamp0 ) == SUCCESS)
+		char parse_parameters_string[] = "|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &timeStamp0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -8952,7 +8752,6 @@ PHP_METHOD(php_wxEvent, SetTimestamp)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9120,10 +8919,6 @@ PHP_METHOD(php_wxEvent, ShouldPropagate)
 				references = &((wxMouseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxMoveEvent)
 				references = &((wxMoveEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureLostEvent)
-				references = &((wxMouseCaptureLostEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureChangedEvent)
-				references = &((wxMouseCaptureChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTimerEvent)
 				references = &((wxTimerEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxThreadEvent)
@@ -9138,12 +8933,8 @@ PHP_METHOD(php_wxEvent, ShouldPropagate)
 				references = &((wxEraseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSetCursorEvent)
 				references = &((wxSetCursorEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxIconizeEvent)
-				references = &((wxIconizeEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxIdleEvent)
 				references = &((wxIdleEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxShowEvent)
-				references = &((wxShowEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaintEvent)
 				references = &((wxPaintEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaletteChangedEvent)
@@ -9162,8 +8953,6 @@ PHP_METHOD(php_wxEvent, ShouldPropagate)
 				references = &((wxDisplayChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxCalculateLayoutEvent)
 				references = &((wxCalculateLayoutEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDropFilesEvent)
-				references = &((wxDropFilesEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxQueryLayoutInfoEvent)
 				references = &((wxQueryLayoutInfoEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTaskBarIconEvent)
@@ -9193,7 +8982,6 @@ PHP_METHOD(php_wxEvent, ShouldPropagate)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9350,10 +9138,6 @@ PHP_METHOD(php_wxEvent, Skip)
 				references = &((wxMouseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxMoveEvent)
 				references = &((wxMoveEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureLostEvent)
-				references = &((wxMouseCaptureLostEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureChangedEvent)
-				references = &((wxMouseCaptureChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTimerEvent)
 				references = &((wxTimerEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxThreadEvent)
@@ -9368,12 +9152,8 @@ PHP_METHOD(php_wxEvent, Skip)
 				references = &((wxEraseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSetCursorEvent)
 				references = &((wxSetCursorEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxIconizeEvent)
-				references = &((wxIconizeEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxIdleEvent)
 				references = &((wxIdleEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxShowEvent)
-				references = &((wxShowEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaintEvent)
 				references = &((wxPaintEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaletteChangedEvent)
@@ -9392,8 +9172,6 @@ PHP_METHOD(php_wxEvent, Skip)
 				references = &((wxDisplayChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxCalculateLayoutEvent)
 				references = &((wxCalculateLayoutEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDropFilesEvent)
-				references = &((wxDropFilesEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxQueryLayoutInfoEvent)
 				references = &((wxQueryLayoutInfoEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTaskBarIconEvent)
@@ -9419,7 +9197,8 @@ PHP_METHOD(php_wxEvent, Skip)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&skip0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|b", &skip0 ) == SUCCESS)
+		char parse_parameters_string[] = "|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &skip0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -9427,7 +9206,6 @@ PHP_METHOD(php_wxEvent, Skip)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9595,10 +9373,6 @@ PHP_METHOD(php_wxEvent, StopPropagation)
 				references = &((wxMouseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxMoveEvent)
 				references = &((wxMoveEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureLostEvent)
-				references = &((wxMouseCaptureLostEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMouseCaptureChangedEvent)
-				references = &((wxMouseCaptureChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTimerEvent)
 				references = &((wxTimerEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxThreadEvent)
@@ -9613,12 +9387,8 @@ PHP_METHOD(php_wxEvent, StopPropagation)
 				references = &((wxEraseEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSetCursorEvent)
 				references = &((wxSetCursorEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxIconizeEvent)
-				references = &((wxIconizeEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxIdleEvent)
 				references = &((wxIdleEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxShowEvent)
-				references = &((wxShowEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaintEvent)
 				references = &((wxPaintEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPaletteChangedEvent)
@@ -9637,8 +9407,6 @@ PHP_METHOD(php_wxEvent, StopPropagation)
 				references = &((wxDisplayChangedEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxCalculateLayoutEvent)
 				references = &((wxCalculateLayoutEvent_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDropFilesEvent)
-				references = &((wxDropFilesEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxQueryLayoutInfoEvent)
 				references = &((wxQueryLayoutInfoEvent_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxTaskBarIconEvent)
@@ -9668,7 +9436,6 @@ PHP_METHOD(php_wxEvent, StopPropagation)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9721,7 +9488,8 @@ PHP_METHOD(php_wxEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&id0, &eventType0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|ll", &id0, &eventType0 ) == SUCCESS)
+		char parse_parameters_string[] = "|ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &eventType0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -9729,7 +9497,6 @@ PHP_METHOD(php_wxEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -9834,7 +9601,9 @@ PHP_METHOD(php_wxEvent, __get)
 		zend_error(E_ERROR, "Could not process __get call as static\n");
 	}
 	
-	if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &name, &name_len ) == FAILURE)
+	char parse_parameters_string[] = "s";
+	
+	if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &name, &name_len ) == FAILURE)
 	{
 		RETVAL_NULL();
 	}
@@ -9862,7 +9631,8 @@ wxEvent* wxEvent_php::Clone()const
 	php_printf("===========================================\n");
 	#endif
 	
-	int arguments = NULL;
+	zval* arguments[1];
+	arguments[0] = NULL;
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
@@ -9900,10 +9670,6 @@ wxEvent* wxEvent_php::Clone()const
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
-		else if(Z_TYPE_P(return_value) == IS_LONG)
-		{
-			return_object = Z_LVAL_P(return_value);
-		}
 		return (wxEvent*) return_object;
 	}
 	
@@ -9916,6 +9682,7 @@ wxEvent* wxEvent_php::Clone()const
 	return wxEvent::Clone();
 
 }
+
 void php_wxEventBlocker_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9924,13 +9691,13 @@ void php_wxEventBlocker_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 	#endif
 	
 	
-	wxEventBlocker_php* object = (wxEventBlocker_php*)rsrc->ptr;
+	wxEventBlocker_php* object = static_cast<wxEventBlocker_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -10015,7 +9782,8 @@ PHP_METHOD(php_wxEventBlocker, Block)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&eventType0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &eventType0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &eventType0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -10023,7 +9791,6 @@ PHP_METHOD(php_wxEventBlocker, Block)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -10077,21 +9844,18 @@ PHP_METHOD(php_wxEventBlocker, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z|l' (&win0, &type0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z|l", &win0, &type0 ) == SUCCESS)
+		char parse_parameters_string[] = "z|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &win0, &type0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(win0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(win0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 				{
 					id_to_find = Z_RESVAL_P(*tmp);
 					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
+					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(win0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(win0);
 				}
 				else if(Z_TYPE_P(win0) != IS_NULL)
 				{
@@ -10105,7 +9869,6 @@ PHP_METHOD(php_wxEventBlocker, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -10163,6 +9926,7 @@ PHP_METHOD(php_wxEventBlocker, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxEvtHandler_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10171,13 +9935,13 @@ void php_wxEvtHandler_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxEvtHandler_php* object = (wxEvtHandler_php*)rsrc->ptr;
+	wxEvtHandler_php* object = static_cast<wxEvtHandler_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -10238,7 +10002,6 @@ PHP_METHOD(php_wxEvtHandler, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -10789,26 +10552,6 @@ void wxEvtHandler_php::onEvent(wxEvent& evnt)
 		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxMoveEvent));
 	}
 		
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(), wxT("wxMouseCaptureLostEvent")))
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Converting event type 'wxMouseCaptureLostEvent' to zval to call user function.\n\n");
-		#endif
-		
-		object_init_ex(arg[0], php_wxMouseCaptureLostEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxMouseCaptureLostEvent));
-	}
-		
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(), wxT("wxMouseCaptureChangedEvent")))
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Converting event type 'wxMouseCaptureChangedEvent' to zval to call user function.\n\n");
-		#endif
-		
-		object_init_ex(arg[0], php_wxMouseCaptureChangedEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxMouseCaptureChangedEvent));
-	}
-		
 	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(), wxT("wxTimerEvent")))
 	{
 		#ifdef USE_WXPHP_DEBUG
@@ -10879,16 +10622,6 @@ void wxEvtHandler_php::onEvent(wxEvent& evnt)
 		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxSetCursorEvent));
 	}
 		
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(), wxT("wxIconizeEvent")))
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Converting event type 'wxIconizeEvent' to zval to call user function.\n\n");
-		#endif
-		
-		object_init_ex(arg[0], php_wxIconizeEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxIconizeEvent));
-	}
-		
 	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(), wxT("wxIdleEvent")))
 	{
 		#ifdef USE_WXPHP_DEBUG
@@ -10897,16 +10630,6 @@ void wxEvtHandler_php::onEvent(wxEvent& evnt)
 		
 		object_init_ex(arg[0], php_wxIdleEvent_entry);
 		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxIdleEvent));
-	}
-		
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(), wxT("wxShowEvent")))
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Converting event type 'wxShowEvent' to zval to call user function.\n\n");
-		#endif
-		
-		object_init_ex(arg[0], php_wxShowEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxShowEvent));
 	}
 		
 	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(), wxT("wxPaintEvent")))
@@ -10997,16 +10720,6 @@ void wxEvtHandler_php::onEvent(wxEvent& evnt)
 		
 		object_init_ex(arg[0], php_wxCalculateLayoutEvent_entry);
 		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxCalculateLayoutEvent));
-	}
-		
-	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(), wxT("wxDropFilesEvent")))
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Converting event type 'wxDropFilesEvent' to zval to call user function.\n\n");
-		#endif
-		
-		object_init_ex(arg[0], php_wxDropFilesEvent_entry);
-		add_property_resource(arg[0], _wxResource, zend_list_insert(&evnt, le_wxDropFilesEvent));
 	}
 		
 	else if(!tcscmp(evnt.GetClassInfo()->GetClassName(), wxT("wxQueryLayoutInfoEvent")))
@@ -11115,6 +10828,11 @@ PHP_METHOD(php_wxEvtHandler, Connect)
 	zval** fc_name;
 	char* ct;
 	int args = ZEND_NUM_ARGS();
+	
+	//To supress some warnings due to passing a string directly
+	char parse_parameters_4[] = "lllz";
+	char parse_parameters_3[] = "llz";
+	char parse_parameters_2[] = "lz";
 
 	switch(args)
 	{
@@ -11122,7 +10840,7 @@ PHP_METHOD(php_wxEvtHandler, Connect)
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Parsing parameters with \"lllz\"\n");
 			#endif
-			if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, args TSRMLS_CC, "lllz", &id0, &id1, &flag , (void**)&fc) == FAILURE)
+			if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, args TSRMLS_CC, parse_parameters_4, &id0, &id1, &flag , (void**)&fc) == FAILURE)
 			{
 				zend_error(E_ERROR, "Incorrect type of parameters");
 				return;
@@ -11132,7 +10850,7 @@ PHP_METHOD(php_wxEvtHandler, Connect)
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Parsing parameters with \"llz\"\n");
 			#endif
-			if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, args TSRMLS_CC, "llz" , &id0, &flag , (void**)&fc) == FAILURE)
+			if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, args TSRMLS_CC, parse_parameters_3, &id0, &flag , (void**)&fc) == FAILURE)
 			{
 				zend_error(E_ERROR, "Incorrect type of parameters");
 				return;
@@ -11142,7 +10860,7 @@ PHP_METHOD(php_wxEvtHandler, Connect)
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Parsing parameters with \"lz\"\n");
 			#endif
-			if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, args TSRMLS_CC, "lz"  , &flag , (void**)&fc) == FAILURE)
+			if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, args TSRMLS_CC, parse_parameters_2, &flag , (void**)&fc) == FAILURE)
 			{
 				zend_error(E_ERROR, "Incorrect type of parameters");
 				return;
@@ -11167,21 +10885,21 @@ PHP_METHOD(php_wxEvtHandler, Connect)
 		case 4:
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Executing: _this->Connect(id0, id1, flag, wxEventHandler(wxEvtHandler_php::onEvent), ce);\n");
-			php_printf("Object id: %l Object last id: %l Event type: %d\n", id0, id1, flag);
+			php_printf("Object id: %d Object last id: %d Event type: %d\n", (int)id0, (int)id1, (int)flag);
 			#endif
 			_this->Connect(id0, id1, flag, wxEventHandler(wxEvtHandler_php::onEvent), ce);
 			break;
 		case 3:
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Executing: _this->Connect(id0, flag, wxEventHandler(wxEvtHandler_php::onEvent), ce);\n");
-			php_printf("Object id: %l Event type: %d\n", id0, flag);
+			php_printf("Object id: %d Event type: %d\n", (int)id0, (int)flag);
 			#endif
 			_this->Connect(id0, flag, wxEventHandler(wxEvtHandler_php::onEvent), ce);
 			break;
 		case 2:
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Executing: _this->Connect(flag, wxEventHandler(wxEvtHandler_php::onEvent), ce);\n");
-			php_printf("Event type: %d\n", flag);
+			php_printf("Event type: %d\n", (int)flag);
 			#endif
 			_this->Connect(flag, wxEventHandler(wxEvtHandler_php::onEvent), ce);
 			break;
@@ -11286,6 +11004,8 @@ PHP_METHOD(php_wxEvtHandler, AddFilter)
 				references = &((wxPrintDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				references = &((wxGenericProgressDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupWindow)
 				references = &((wxPopupWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupTransientWindow)
@@ -11432,10 +11152,6 @@ PHP_METHOD(php_wxEvtHandler, AddFilter)
 				references = &((wxSplitterWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPanel)
 				references = &((wxPanel_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPage)
-				references = &((wxWizardPage_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPageSimple)
-				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxScrolledWindow)
 				references = &((wxScrolledWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHtmlWindow)
@@ -11444,6 +11160,10 @@ PHP_METHOD(php_wxEvtHandler, AddFilter)
 				references = &((wxGrid_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPreviewCanvas)
 				references = &((wxPreviewCanvas_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPage)
+				references = &((wxWizardPage_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPageSimple)
+				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxEditableListBox)
 				references = &((wxEditableListBox_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHScrolledWindow)
@@ -11510,7 +11230,8 @@ PHP_METHOD(php_wxEvtHandler, AddFilter)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&filter0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &filter0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filter0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(filter0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(filter0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -11521,10 +11242,6 @@ PHP_METHOD(php_wxEvtHandler, AddFilter)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(filter0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(filter0);
 				}
 				else if(Z_TYPE_P(filter0) != IS_NULL)
 				{
@@ -11538,7 +11255,6 @@ PHP_METHOD(php_wxEvtHandler, AddFilter)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -11652,6 +11368,8 @@ PHP_METHOD(php_wxEvtHandler, AddPendingEvent)
 				references = &((wxPrintDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				references = &((wxGenericProgressDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupWindow)
 				references = &((wxPopupWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupTransientWindow)
@@ -11798,10 +11516,6 @@ PHP_METHOD(php_wxEvtHandler, AddPendingEvent)
 				references = &((wxSplitterWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPanel)
 				references = &((wxPanel_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPage)
-				references = &((wxWizardPage_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPageSimple)
-				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxScrolledWindow)
 				references = &((wxScrolledWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHtmlWindow)
@@ -11810,6 +11524,10 @@ PHP_METHOD(php_wxEvtHandler, AddPendingEvent)
 				references = &((wxGrid_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPreviewCanvas)
 				references = &((wxPreviewCanvas_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPage)
+				references = &((wxWizardPage_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPageSimple)
+				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxEditableListBox)
 				references = &((wxEditableListBox_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHScrolledWindow)
@@ -11876,7 +11594,8 @@ PHP_METHOD(php_wxEvtHandler, AddPendingEvent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&event0, php_wxEvent_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &event0, php_wxEvent_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &event0, php_wxEvent_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(event0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(event0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -11887,10 +11606,6 @@ PHP_METHOD(php_wxEvtHandler, AddPendingEvent)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(event0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(event0);
 				}
 				else if(Z_TYPE_P(event0) != IS_NULL)
 				{
@@ -11904,7 +11619,6 @@ PHP_METHOD(php_wxEvtHandler, AddPendingEvent)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -12018,6 +11732,8 @@ PHP_METHOD(php_wxEvtHandler, DeletePendingEvents)
 				references = &((wxPrintDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				references = &((wxGenericProgressDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupWindow)
 				references = &((wxPopupWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupTransientWindow)
@@ -12164,10 +11880,6 @@ PHP_METHOD(php_wxEvtHandler, DeletePendingEvents)
 				references = &((wxSplitterWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPanel)
 				references = &((wxPanel_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPage)
-				references = &((wxWizardPage_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPageSimple)
-				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxScrolledWindow)
 				references = &((wxScrolledWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHtmlWindow)
@@ -12176,6 +11888,10 @@ PHP_METHOD(php_wxEvtHandler, DeletePendingEvents)
 				references = &((wxGrid_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPreviewCanvas)
 				references = &((wxPreviewCanvas_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPage)
+				references = &((wxWizardPage_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPageSimple)
+				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxEditableListBox)
 				references = &((wxEditableListBox_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHScrolledWindow)
@@ -12245,7 +11961,6 @@ PHP_METHOD(php_wxEvtHandler, DeletePendingEvents)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -12358,6 +12073,8 @@ PHP_METHOD(php_wxEvtHandler, GetEvtHandlerEnabled)
 				references = &((wxPrintDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				references = &((wxGenericProgressDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupWindow)
 				references = &((wxPopupWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupTransientWindow)
@@ -12504,10 +12221,6 @@ PHP_METHOD(php_wxEvtHandler, GetEvtHandlerEnabled)
 				references = &((wxSplitterWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPanel)
 				references = &((wxPanel_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPage)
-				references = &((wxWizardPage_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPageSimple)
-				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxScrolledWindow)
 				references = &((wxScrolledWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHtmlWindow)
@@ -12516,6 +12229,10 @@ PHP_METHOD(php_wxEvtHandler, GetEvtHandlerEnabled)
 				references = &((wxGrid_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPreviewCanvas)
 				references = &((wxPreviewCanvas_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPage)
+				references = &((wxWizardPage_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPageSimple)
+				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxEditableListBox)
 				references = &((wxEditableListBox_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHScrolledWindow)
@@ -12585,7 +12302,6 @@ PHP_METHOD(php_wxEvtHandler, GetEvtHandlerEnabled)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -12698,6 +12414,8 @@ PHP_METHOD(php_wxEvtHandler, GetNextHandler)
 				references = &((wxPrintDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				references = &((wxGenericProgressDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupWindow)
 				references = &((wxPopupWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupTransientWindow)
@@ -12844,10 +12562,6 @@ PHP_METHOD(php_wxEvtHandler, GetNextHandler)
 				references = &((wxSplitterWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPanel)
 				references = &((wxPanel_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPage)
-				references = &((wxWizardPage_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPageSimple)
-				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxScrolledWindow)
 				references = &((wxScrolledWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHtmlWindow)
@@ -12856,6 +12570,10 @@ PHP_METHOD(php_wxEvtHandler, GetNextHandler)
 				references = &((wxGrid_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPreviewCanvas)
 				references = &((wxPreviewCanvas_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPage)
+				references = &((wxWizardPage_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPageSimple)
+				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxEditableListBox)
 				references = &((wxEditableListBox_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHScrolledWindow)
@@ -12925,7 +12643,6 @@ PHP_METHOD(php_wxEvtHandler, GetNextHandler)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -12942,8 +12659,8 @@ PHP_METHOD(php_wxEvtHandler, GetNextHandler)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13060,6 +12777,8 @@ PHP_METHOD(php_wxEvtHandler, GetPreviousHandler)
 				references = &((wxPrintDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				references = &((wxGenericProgressDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupWindow)
 				references = &((wxPopupWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupTransientWindow)
@@ -13206,10 +12925,6 @@ PHP_METHOD(php_wxEvtHandler, GetPreviousHandler)
 				references = &((wxSplitterWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPanel)
 				references = &((wxPanel_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPage)
-				references = &((wxWizardPage_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPageSimple)
-				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxScrolledWindow)
 				references = &((wxScrolledWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHtmlWindow)
@@ -13218,6 +12933,10 @@ PHP_METHOD(php_wxEvtHandler, GetPreviousHandler)
 				references = &((wxGrid_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPreviewCanvas)
 				references = &((wxPreviewCanvas_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPage)
+				references = &((wxWizardPage_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPageSimple)
+				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxEditableListBox)
 				references = &((wxEditableListBox_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHScrolledWindow)
@@ -13287,7 +13006,6 @@ PHP_METHOD(php_wxEvtHandler, GetPreviousHandler)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -13304,8 +13022,8 @@ PHP_METHOD(php_wxEvtHandler, GetPreviousHandler)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13422,6 +13140,8 @@ PHP_METHOD(php_wxEvtHandler, IsUnlinked)
 				references = &((wxPrintDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				references = &((wxGenericProgressDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupWindow)
 				references = &((wxPopupWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupTransientWindow)
@@ -13568,10 +13288,6 @@ PHP_METHOD(php_wxEvtHandler, IsUnlinked)
 				references = &((wxSplitterWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPanel)
 				references = &((wxPanel_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPage)
-				references = &((wxWizardPage_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPageSimple)
-				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxScrolledWindow)
 				references = &((wxScrolledWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHtmlWindow)
@@ -13580,6 +13296,10 @@ PHP_METHOD(php_wxEvtHandler, IsUnlinked)
 				references = &((wxGrid_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPreviewCanvas)
 				references = &((wxPreviewCanvas_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPage)
+				references = &((wxWizardPage_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPageSimple)
+				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxEditableListBox)
 				references = &((wxEditableListBox_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHScrolledWindow)
@@ -13649,7 +13369,6 @@ PHP_METHOD(php_wxEvtHandler, IsUnlinked)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -13762,6 +13481,8 @@ PHP_METHOD(php_wxEvtHandler, ProcessEvent)
 				references = &((wxPrintDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				references = &((wxGenericProgressDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupWindow)
 				references = &((wxPopupWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupTransientWindow)
@@ -13908,10 +13629,6 @@ PHP_METHOD(php_wxEvtHandler, ProcessEvent)
 				references = &((wxSplitterWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPanel)
 				references = &((wxPanel_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPage)
-				references = &((wxWizardPage_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPageSimple)
-				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxScrolledWindow)
 				references = &((wxScrolledWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHtmlWindow)
@@ -13920,6 +13637,10 @@ PHP_METHOD(php_wxEvtHandler, ProcessEvent)
 				references = &((wxGrid_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPreviewCanvas)
 				references = &((wxPreviewCanvas_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPage)
+				references = &((wxWizardPage_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPageSimple)
+				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxEditableListBox)
 				references = &((wxEditableListBox_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHScrolledWindow)
@@ -13986,7 +13707,8 @@ PHP_METHOD(php_wxEvtHandler, ProcessEvent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&event0, php_wxEvent_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &event0, php_wxEvent_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &event0, php_wxEvent_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(event0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(event0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -13997,10 +13719,6 @@ PHP_METHOD(php_wxEvtHandler, ProcessEvent)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(event0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(event0);
 				}
 				else if(Z_TYPE_P(event0) != IS_NULL)
 				{
@@ -14014,7 +13732,6 @@ PHP_METHOD(php_wxEvtHandler, ProcessEvent)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -14128,6 +13845,8 @@ PHP_METHOD(php_wxEvtHandler, ProcessEventLocally)
 				references = &((wxPrintDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				references = &((wxGenericProgressDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupWindow)
 				references = &((wxPopupWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupTransientWindow)
@@ -14274,10 +13993,6 @@ PHP_METHOD(php_wxEvtHandler, ProcessEventLocally)
 				references = &((wxSplitterWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPanel)
 				references = &((wxPanel_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPage)
-				references = &((wxWizardPage_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPageSimple)
-				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxScrolledWindow)
 				references = &((wxScrolledWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHtmlWindow)
@@ -14286,6 +14001,10 @@ PHP_METHOD(php_wxEvtHandler, ProcessEventLocally)
 				references = &((wxGrid_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPreviewCanvas)
 				references = &((wxPreviewCanvas_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPage)
+				references = &((wxWizardPage_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPageSimple)
+				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxEditableListBox)
 				references = &((wxEditableListBox_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHScrolledWindow)
@@ -14352,7 +14071,8 @@ PHP_METHOD(php_wxEvtHandler, ProcessEventLocally)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&event0, php_wxEvent_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &event0, php_wxEvent_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &event0, php_wxEvent_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(event0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(event0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -14363,10 +14083,6 @@ PHP_METHOD(php_wxEvtHandler, ProcessEventLocally)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(event0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(event0);
 				}
 				else if(Z_TYPE_P(event0) != IS_NULL)
 				{
@@ -14380,7 +14096,6 @@ PHP_METHOD(php_wxEvtHandler, ProcessEventLocally)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -14494,6 +14209,8 @@ PHP_METHOD(php_wxEvtHandler, ProcessPendingEvents)
 				references = &((wxPrintDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				references = &((wxGenericProgressDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupWindow)
 				references = &((wxPopupWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupTransientWindow)
@@ -14640,10 +14357,6 @@ PHP_METHOD(php_wxEvtHandler, ProcessPendingEvents)
 				references = &((wxSplitterWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPanel)
 				references = &((wxPanel_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPage)
-				references = &((wxWizardPage_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPageSimple)
-				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxScrolledWindow)
 				references = &((wxScrolledWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHtmlWindow)
@@ -14652,6 +14365,10 @@ PHP_METHOD(php_wxEvtHandler, ProcessPendingEvents)
 				references = &((wxGrid_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPreviewCanvas)
 				references = &((wxPreviewCanvas_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPage)
+				references = &((wxWizardPage_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPageSimple)
+				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxEditableListBox)
 				references = &((wxEditableListBox_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHScrolledWindow)
@@ -14721,7 +14438,6 @@ PHP_METHOD(php_wxEvtHandler, ProcessPendingEvents)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -14834,6 +14550,8 @@ PHP_METHOD(php_wxEvtHandler, QueueEvent)
 				references = &((wxPrintDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				references = &((wxGenericProgressDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupWindow)
 				references = &((wxPopupWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupTransientWindow)
@@ -14980,10 +14698,6 @@ PHP_METHOD(php_wxEvtHandler, QueueEvent)
 				references = &((wxSplitterWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPanel)
 				references = &((wxPanel_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPage)
-				references = &((wxWizardPage_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPageSimple)
-				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxScrolledWindow)
 				references = &((wxScrolledWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHtmlWindow)
@@ -14992,6 +14706,10 @@ PHP_METHOD(php_wxEvtHandler, QueueEvent)
 				references = &((wxGrid_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPreviewCanvas)
 				references = &((wxPreviewCanvas_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPage)
+				references = &((wxWizardPage_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPageSimple)
+				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxEditableListBox)
 				references = &((wxEditableListBox_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHScrolledWindow)
@@ -15058,21 +14776,18 @@ PHP_METHOD(php_wxEvtHandler, QueueEvent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&event0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &event0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &event0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(event0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(event0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 				{
 					id_to_find = Z_RESVAL_P(*tmp);
 					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxMenuEvent && rsrc_type != le_wxKeyEvent && rsrc_type != le_wxCommandEvent && rsrc_type != le_wxNotifyEvent && rsrc_type != le_wxTreeEvent && rsrc_type != le_wxBookCtrlEvent && rsrc_type != le_wxAuiNotebookEvent && rsrc_type != le_wxAuiToolBarEvent && rsrc_type != le_wxListEvent && rsrc_type != le_wxSpinEvent && rsrc_type != le_wxSplitterEvent && rsrc_type != le_wxSpinDoubleEvent && rsrc_type != le_wxGridSizeEvent && rsrc_type != le_wxWizardEvent && rsrc_type != le_wxGridEvent && rsrc_type != le_wxGridRangeSelectEvent && rsrc_type != le_wxDataViewEvent && rsrc_type != le_wxHeaderCtrlEvent && rsrc_type != le_wxRibbonBarEvent && rsrc_type != le_wxStyledTextEvent && rsrc_type != le_wxChildFocusEvent && rsrc_type != le_wxHtmlCellEvent && rsrc_type != le_wxHtmlLinkEvent && rsrc_type != le_wxHyperlinkEvent && rsrc_type != le_wxColourPickerEvent && rsrc_type != le_wxFontPickerEvent && rsrc_type != le_wxScrollEvent && rsrc_type != le_wxWindowModalDialogEvent && rsrc_type != le_wxDateEvent && rsrc_type != le_wxCalendarEvent && rsrc_type != le_wxWindowCreateEvent && rsrc_type != le_wxWindowDestroyEvent && rsrc_type != le_wxUpdateUIEvent && rsrc_type != le_wxHelpEvent && rsrc_type != le_wxGridEditorCreatedEvent && rsrc_type != le_wxCollapsiblePaneEvent && rsrc_type != le_wxClipboardTextEvent && rsrc_type != le_wxFileCtrlEvent && rsrc_type != le_wxSashEvent && rsrc_type != le_wxFileDirPickerEvent && rsrc_type != le_wxContextMenuEvent && rsrc_type != le_wxRibbonButtonBarEvent && rsrc_type != le_wxRibbonGalleryEvent && rsrc_type != le_wxCloseEvent && rsrc_type != le_wxActivateEvent && rsrc_type != le_wxAuiManagerEvent && rsrc_type != le_wxSizeEvent && rsrc_type != le_wxMouseEvent && rsrc_type != le_wxMoveEvent && rsrc_type != le_wxMouseCaptureLostEvent && rsrc_type != le_wxMouseCaptureChangedEvent && rsrc_type != le_wxTimerEvent && rsrc_type != le_wxThreadEvent && rsrc_type != le_wxScrollWinEvent && rsrc_type != le_wxSysColourChangedEvent && rsrc_type != le_wxProcessEvent && rsrc_type != le_wxEraseEvent && rsrc_type != le_wxSetCursorEvent && rsrc_type != le_wxIconizeEvent && rsrc_type != le_wxIdleEvent && rsrc_type != le_wxShowEvent && rsrc_type != le_wxPaintEvent && rsrc_type != le_wxPaletteChangedEvent && rsrc_type != le_wxInitDialogEvent && rsrc_type != le_wxMaximizeEvent && rsrc_type != le_wxNavigationKeyEvent && rsrc_type != le_wxFocusEvent && rsrc_type != le_wxFileSystemWatcherEvent && rsrc_type != le_wxDisplayChangedEvent && rsrc_type != le_wxCalculateLayoutEvent && rsrc_type != le_wxDropFilesEvent && rsrc_type != le_wxQueryLayoutInfoEvent && rsrc_type != le_wxTaskBarIconEvent))
+					if (!object_pointer0_0 || (rsrc_type != le_wxMenuEvent && rsrc_type != le_wxKeyEvent && rsrc_type != le_wxCommandEvent && rsrc_type != le_wxNotifyEvent && rsrc_type != le_wxTreeEvent && rsrc_type != le_wxBookCtrlEvent && rsrc_type != le_wxAuiNotebookEvent && rsrc_type != le_wxAuiToolBarEvent && rsrc_type != le_wxListEvent && rsrc_type != le_wxSpinEvent && rsrc_type != le_wxSplitterEvent && rsrc_type != le_wxSpinDoubleEvent && rsrc_type != le_wxGridSizeEvent && rsrc_type != le_wxWizardEvent && rsrc_type != le_wxGridEvent && rsrc_type != le_wxGridRangeSelectEvent && rsrc_type != le_wxDataViewEvent && rsrc_type != le_wxHeaderCtrlEvent && rsrc_type != le_wxRibbonBarEvent && rsrc_type != le_wxStyledTextEvent && rsrc_type != le_wxChildFocusEvent && rsrc_type != le_wxHtmlCellEvent && rsrc_type != le_wxHtmlLinkEvent && rsrc_type != le_wxHyperlinkEvent && rsrc_type != le_wxColourPickerEvent && rsrc_type != le_wxFontPickerEvent && rsrc_type != le_wxScrollEvent && rsrc_type != le_wxWindowModalDialogEvent && rsrc_type != le_wxDateEvent && rsrc_type != le_wxCalendarEvent && rsrc_type != le_wxWindowCreateEvent && rsrc_type != le_wxWindowDestroyEvent && rsrc_type != le_wxUpdateUIEvent && rsrc_type != le_wxHelpEvent && rsrc_type != le_wxGridEditorCreatedEvent && rsrc_type != le_wxCollapsiblePaneEvent && rsrc_type != le_wxClipboardTextEvent && rsrc_type != le_wxFileCtrlEvent && rsrc_type != le_wxSashEvent && rsrc_type != le_wxFileDirPickerEvent && rsrc_type != le_wxContextMenuEvent && rsrc_type != le_wxRibbonButtonBarEvent && rsrc_type != le_wxRibbonGalleryEvent && rsrc_type != le_wxCloseEvent && rsrc_type != le_wxActivateEvent && rsrc_type != le_wxAuiManagerEvent && rsrc_type != le_wxSizeEvent && rsrc_type != le_wxMouseEvent && rsrc_type != le_wxMoveEvent && rsrc_type != le_wxTimerEvent && rsrc_type != le_wxThreadEvent && rsrc_type != le_wxScrollWinEvent && rsrc_type != le_wxSysColourChangedEvent && rsrc_type != le_wxProcessEvent && rsrc_type != le_wxEraseEvent && rsrc_type != le_wxSetCursorEvent && rsrc_type != le_wxIdleEvent && rsrc_type != le_wxPaintEvent && rsrc_type != le_wxPaletteChangedEvent && rsrc_type != le_wxInitDialogEvent && rsrc_type != le_wxMaximizeEvent && rsrc_type != le_wxNavigationKeyEvent && rsrc_type != le_wxFocusEvent && rsrc_type != le_wxFileSystemWatcherEvent && rsrc_type != le_wxDisplayChangedEvent && rsrc_type != le_wxCalculateLayoutEvent && rsrc_type != le_wxQueryLayoutInfoEvent && rsrc_type != le_wxTaskBarIconEvent))
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(event0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(event0);
 				}
 				else if(Z_TYPE_P(event0) != IS_NULL)
 				{
@@ -15086,7 +14801,6 @@ PHP_METHOD(php_wxEvtHandler, QueueEvent)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -15200,6 +14914,8 @@ PHP_METHOD(php_wxEvtHandler, RemoveFilter)
 				references = &((wxPrintDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				references = &((wxGenericProgressDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupWindow)
 				references = &((wxPopupWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupTransientWindow)
@@ -15346,10 +15062,6 @@ PHP_METHOD(php_wxEvtHandler, RemoveFilter)
 				references = &((wxSplitterWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPanel)
 				references = &((wxPanel_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPage)
-				references = &((wxWizardPage_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPageSimple)
-				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxScrolledWindow)
 				references = &((wxScrolledWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHtmlWindow)
@@ -15358,6 +15070,10 @@ PHP_METHOD(php_wxEvtHandler, RemoveFilter)
 				references = &((wxGrid_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPreviewCanvas)
 				references = &((wxPreviewCanvas_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPage)
+				references = &((wxWizardPage_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPageSimple)
+				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxEditableListBox)
 				references = &((wxEditableListBox_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHScrolledWindow)
@@ -15424,7 +15140,8 @@ PHP_METHOD(php_wxEvtHandler, RemoveFilter)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&filter0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &filter0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filter0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(filter0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(filter0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -15435,10 +15152,6 @@ PHP_METHOD(php_wxEvtHandler, RemoveFilter)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(filter0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(filter0);
 				}
 				else if(Z_TYPE_P(filter0) != IS_NULL)
 				{
@@ -15452,7 +15165,6 @@ PHP_METHOD(php_wxEvtHandler, RemoveFilter)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -15566,6 +15278,8 @@ PHP_METHOD(php_wxEvtHandler, SafelyProcessEvent)
 				references = &((wxPrintDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				references = &((wxGenericProgressDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupWindow)
 				references = &((wxPopupWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupTransientWindow)
@@ -15712,10 +15426,6 @@ PHP_METHOD(php_wxEvtHandler, SafelyProcessEvent)
 				references = &((wxSplitterWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPanel)
 				references = &((wxPanel_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPage)
-				references = &((wxWizardPage_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPageSimple)
-				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxScrolledWindow)
 				references = &((wxScrolledWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHtmlWindow)
@@ -15724,6 +15434,10 @@ PHP_METHOD(php_wxEvtHandler, SafelyProcessEvent)
 				references = &((wxGrid_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPreviewCanvas)
 				references = &((wxPreviewCanvas_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPage)
+				references = &((wxWizardPage_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPageSimple)
+				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxEditableListBox)
 				references = &((wxEditableListBox_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHScrolledWindow)
@@ -15790,7 +15504,8 @@ PHP_METHOD(php_wxEvtHandler, SafelyProcessEvent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&event0, php_wxEvent_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &event0, php_wxEvent_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &event0, php_wxEvent_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(event0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(event0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -15801,10 +15516,6 @@ PHP_METHOD(php_wxEvtHandler, SafelyProcessEvent)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(event0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(event0);
 				}
 				else if(Z_TYPE_P(event0) != IS_NULL)
 				{
@@ -15818,7 +15529,6 @@ PHP_METHOD(php_wxEvtHandler, SafelyProcessEvent)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -15932,6 +15642,8 @@ PHP_METHOD(php_wxEvtHandler, SetEvtHandlerEnabled)
 				references = &((wxPrintDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				references = &((wxGenericProgressDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupWindow)
 				references = &((wxPopupWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupTransientWindow)
@@ -16078,10 +15790,6 @@ PHP_METHOD(php_wxEvtHandler, SetEvtHandlerEnabled)
 				references = &((wxSplitterWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPanel)
 				references = &((wxPanel_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPage)
-				references = &((wxWizardPage_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPageSimple)
-				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxScrolledWindow)
 				references = &((wxScrolledWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHtmlWindow)
@@ -16090,6 +15798,10 @@ PHP_METHOD(php_wxEvtHandler, SetEvtHandlerEnabled)
 				references = &((wxGrid_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPreviewCanvas)
 				references = &((wxPreviewCanvas_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPage)
+				references = &((wxWizardPage_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPageSimple)
+				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxEditableListBox)
 				references = &((wxEditableListBox_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHScrolledWindow)
@@ -16155,7 +15867,8 @@ PHP_METHOD(php_wxEvtHandler, SetEvtHandlerEnabled)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&enabled0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &enabled0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &enabled0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -16163,7 +15876,6 @@ PHP_METHOD(php_wxEvtHandler, SetEvtHandlerEnabled)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -16276,6 +15988,8 @@ PHP_METHOD(php_wxEvtHandler, SetNextHandler)
 				references = &((wxPrintDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				references = &((wxGenericProgressDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupWindow)
 				references = &((wxPopupWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupTransientWindow)
@@ -16422,10 +16136,6 @@ PHP_METHOD(php_wxEvtHandler, SetNextHandler)
 				references = &((wxSplitterWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPanel)
 				references = &((wxPanel_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPage)
-				references = &((wxWizardPage_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPageSimple)
-				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxScrolledWindow)
 				references = &((wxScrolledWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHtmlWindow)
@@ -16434,6 +16144,10 @@ PHP_METHOD(php_wxEvtHandler, SetNextHandler)
 				references = &((wxGrid_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPreviewCanvas)
 				references = &((wxPreviewCanvas_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPage)
+				references = &((wxWizardPage_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPageSimple)
+				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxEditableListBox)
 				references = &((wxEditableListBox_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHScrolledWindow)
@@ -16500,21 +16214,18 @@ PHP_METHOD(php_wxEvtHandler, SetNextHandler)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&handler0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &handler0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &handler0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(handler0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(handler0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 				{
 					id_to_find = Z_RESVAL_P(*tmp);
 					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow && rsrc_type != le_wxValidator && rsrc_type != le_wxTextValidator && rsrc_type != le_wxGenericValidator && rsrc_type != le_wxMenu && rsrc_type != le_wxAuiManager && rsrc_type != le_wxMouseEventsManager && rsrc_type != le_wxTimer && rsrc_type != le_wxEventBlocker && rsrc_type != le_wxProcess && rsrc_type != le_wxFileSystemWatcher && rsrc_type != le_wxTaskBarIcon && rsrc_type != le_wxNotificationMessage))
+					if (!object_pointer0_0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow && rsrc_type != le_wxValidator && rsrc_type != le_wxTextValidator && rsrc_type != le_wxGenericValidator && rsrc_type != le_wxMenu && rsrc_type != le_wxAuiManager && rsrc_type != le_wxMouseEventsManager && rsrc_type != le_wxTimer && rsrc_type != le_wxEventBlocker && rsrc_type != le_wxProcess && rsrc_type != le_wxFileSystemWatcher && rsrc_type != le_wxTaskBarIcon && rsrc_type != le_wxNotificationMessage))
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(handler0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(handler0);
 				}
 				else if(Z_TYPE_P(handler0) != IS_NULL)
 				{
@@ -16528,7 +16239,6 @@ PHP_METHOD(php_wxEvtHandler, SetNextHandler)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -16642,6 +16352,8 @@ PHP_METHOD(php_wxEvtHandler, SetPreviousHandler)
 				references = &((wxPrintDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				references = &((wxGenericProgressDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupWindow)
 				references = &((wxPopupWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupTransientWindow)
@@ -16788,10 +16500,6 @@ PHP_METHOD(php_wxEvtHandler, SetPreviousHandler)
 				references = &((wxSplitterWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPanel)
 				references = &((wxPanel_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPage)
-				references = &((wxWizardPage_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPageSimple)
-				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxScrolledWindow)
 				references = &((wxScrolledWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHtmlWindow)
@@ -16800,6 +16508,10 @@ PHP_METHOD(php_wxEvtHandler, SetPreviousHandler)
 				references = &((wxGrid_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPreviewCanvas)
 				references = &((wxPreviewCanvas_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPage)
+				references = &((wxWizardPage_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPageSimple)
+				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxEditableListBox)
 				references = &((wxEditableListBox_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHScrolledWindow)
@@ -16866,21 +16578,18 @@ PHP_METHOD(php_wxEvtHandler, SetPreviousHandler)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&handler0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &handler0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &handler0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(handler0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(handler0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 				{
 					id_to_find = Z_RESVAL_P(*tmp);
 					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow && rsrc_type != le_wxValidator && rsrc_type != le_wxTextValidator && rsrc_type != le_wxGenericValidator && rsrc_type != le_wxMenu && rsrc_type != le_wxAuiManager && rsrc_type != le_wxMouseEventsManager && rsrc_type != le_wxTimer && rsrc_type != le_wxEventBlocker && rsrc_type != le_wxProcess && rsrc_type != le_wxFileSystemWatcher && rsrc_type != le_wxTaskBarIcon && rsrc_type != le_wxNotificationMessage))
+					if (!object_pointer0_0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow && rsrc_type != le_wxValidator && rsrc_type != le_wxTextValidator && rsrc_type != le_wxGenericValidator && rsrc_type != le_wxMenu && rsrc_type != le_wxAuiManager && rsrc_type != le_wxMouseEventsManager && rsrc_type != le_wxTimer && rsrc_type != le_wxEventBlocker && rsrc_type != le_wxProcess && rsrc_type != le_wxFileSystemWatcher && rsrc_type != le_wxTaskBarIcon && rsrc_type != le_wxNotificationMessage))
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(handler0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(handler0);
 				}
 				else if(Z_TYPE_P(handler0) != IS_NULL)
 				{
@@ -16894,7 +16603,6 @@ PHP_METHOD(php_wxEvtHandler, SetPreviousHandler)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -16944,7 +16652,7 @@ bool wxEvtHandler_php::TryAfter(wxEvent& event)
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxEvent_entry);
-	add_property_resource(arguments[0], _wxResource, zend_list_insert(&event, le_wxEvent));
+	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)&event, le_wxEvent));
 		
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
@@ -17003,7 +16711,7 @@ bool wxEvtHandler_php::TryBefore(wxEvent& event)
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxEvent_entry);
-	add_property_resource(arguments[0], _wxResource, zend_list_insert(&event, le_wxEvent));
+	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)&event, le_wxEvent));
 		
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
@@ -17126,6 +16834,8 @@ PHP_METHOD(php_wxEvtHandler, Unlink)
 				references = &((wxPrintDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				references = &((wxGenericProgressDialog_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupWindow)
 				references = &((wxPopupWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPopupTransientWindow)
@@ -17272,10 +16982,6 @@ PHP_METHOD(php_wxEvtHandler, Unlink)
 				references = &((wxSplitterWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPanel)
 				references = &((wxPanel_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPage)
-				references = &((wxWizardPage_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizardPageSimple)
-				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxScrolledWindow)
 				references = &((wxScrolledWindow_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHtmlWindow)
@@ -17284,6 +16990,10 @@ PHP_METHOD(php_wxEvtHandler, Unlink)
 				references = &((wxGrid_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxPreviewCanvas)
 				references = &((wxPreviewCanvas_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPage)
+				references = &((wxWizardPage_php*)_this)->references;
+			else if(parent_rsrc_type == le_wxWizardPageSimple)
+				references = &((wxWizardPageSimple_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxEditableListBox)
 				references = &((wxEditableListBox_php*)_this)->references;
 			else if(parent_rsrc_type == le_wxHScrolledWindow)
@@ -17353,7 +17063,6 @@ PHP_METHOD(php_wxEvtHandler, Unlink)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -17374,6 +17083,7 @@ PHP_METHOD(php_wxEvtHandler, Unlink)
 
 		
 }
+
 void php_wxKeyEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17382,13 +17092,13 @@ void php_wxKeyEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxKeyEvent_php* object = (wxKeyEvent_php*)rsrc->ptr;
+	wxKeyEvent_php* object = static_cast<wxKeyEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -17477,7 +17187,6 @@ PHP_METHOD(php_wxKeyEvent, DoAllowNextEvent)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -17561,7 +17270,6 @@ PHP_METHOD(php_wxKeyEvent, GetKeyCode)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -17658,17 +17366,18 @@ PHP_METHOD(php_wxKeyEvent, GetPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'll' (x1, y1)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ll", x1, y1 ) == SUCCESS)
+		char parse_parameters_string[] = "ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, x1, y1 ) == SUCCESS)
 		{
 			overload1_called = true;
 			already_called = true;
 
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "zz", &x1_ref, &y1_ref );
+			char parse_references_string[] = "zz";
+			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &x1_ref, &y1_ref );
 		}
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -17692,7 +17401,6 @@ PHP_METHOD(php_wxKeyEvent, GetPosition)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -17788,7 +17496,6 @@ PHP_METHOD(php_wxKeyEvent, GetRawKeyCode)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -17872,7 +17579,6 @@ PHP_METHOD(php_wxKeyEvent, GetRawKeyFlags)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -17956,7 +17662,6 @@ PHP_METHOD(php_wxKeyEvent, GetX)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18040,7 +17745,6 @@ PHP_METHOD(php_wxKeyEvent, GetY)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18120,7 +17824,8 @@ PHP_METHOD(php_wxKeyEvent, IsKeyInCategory)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&category0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &category0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &category0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -18128,7 +17833,6 @@ PHP_METHOD(php_wxKeyEvent, IsKeyInCategory)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18212,7 +17916,6 @@ PHP_METHOD(php_wxKeyEvent, IsNextEventAllowed)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18264,7 +17967,8 @@ PHP_METHOD(php_wxKeyEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&keyEventType0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|l", &keyEventType0 ) == SUCCESS)
+		char parse_parameters_string[] = "|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &keyEventType0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -18272,7 +17976,6 @@ PHP_METHOD(php_wxKeyEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18328,6 +18031,7 @@ PHP_METHOD(php_wxKeyEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxScrollWinEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18336,13 +18040,13 @@ void php_wxScrollWinEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 	#endif
 	
 	
-	wxScrollWinEvent_php* object = (wxScrollWinEvent_php*)rsrc->ptr;
+	wxScrollWinEvent_php* object = static_cast<wxScrollWinEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -18401,7 +18105,8 @@ PHP_METHOD(php_wxScrollWinEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|lll' (&commandType0, &pos0, &orientation0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|lll", &commandType0, &pos0, &orientation0 ) == SUCCESS)
+		char parse_parameters_string[] = "|lll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &commandType0, &pos0, &orientation0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -18409,7 +18114,6 @@ PHP_METHOD(php_wxScrollWinEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18544,7 +18248,8 @@ PHP_METHOD(php_wxScrollWinEvent, SetPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -18552,7 +18257,6 @@ PHP_METHOD(php_wxScrollWinEvent, SetPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18632,7 +18336,8 @@ PHP_METHOD(php_wxScrollWinEvent, SetOrientation)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&orient0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &orient0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &orient0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -18640,7 +18345,6 @@ PHP_METHOD(php_wxScrollWinEvent, SetOrientation)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18724,7 +18428,6 @@ PHP_METHOD(php_wxScrollWinEvent, GetPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18808,7 +18511,6 @@ PHP_METHOD(php_wxScrollWinEvent, GetOrientation)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18829,6 +18531,7 @@ PHP_METHOD(php_wxScrollWinEvent, GetOrientation)
 
 		
 }
+
 void php_wxSysColourChangedEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18837,13 +18540,13 @@ void php_wxSysColourChangedEvent_destruction_handler(zend_rsrc_list_entry *rsrc 
 	#endif
 	
 	
-	wxSysColourChangedEvent_php* object = (wxSysColourChangedEvent_php*)rsrc->ptr;
+	wxSysColourChangedEvent_php* object = static_cast<wxSysColourChangedEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -18904,7 +18607,6 @@ PHP_METHOD(php_wxSysColourChangedEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -18950,6 +18652,7 @@ PHP_METHOD(php_wxSysColourChangedEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxWindowCreateEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18958,13 +18661,13 @@ void php_wxWindowCreateEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRM
 	#endif
 	
 	
-	wxWindowCreateEvent_php* object = (wxWindowCreateEvent_php*)rsrc->ptr;
+	wxWindowCreateEvent_php* object = static_cast<wxWindowCreateEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -19053,7 +18756,6 @@ PHP_METHOD(php_wxWindowCreateEvent, GetWindow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -19070,8 +18772,8 @@ PHP_METHOD(php_wxWindowCreateEvent, GetWindow)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -19128,21 +18830,18 @@ PHP_METHOD(php_wxWindowCreateEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|z' (&win0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|z", &win0 ) == SUCCESS)
+		char parse_parameters_string[] = "|z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &win0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(win0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(win0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 				{
 					id_to_find = Z_RESVAL_P(*tmp);
 					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
+					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(win0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(win0);
 				}
 				else if(Z_TYPE_P(win0) != IS_NULL)
 				{
@@ -19156,7 +18855,6 @@ PHP_METHOD(php_wxWindowCreateEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -19213,6 +18911,7 @@ PHP_METHOD(php_wxWindowCreateEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxPaintEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19221,13 +18920,13 @@ void php_wxPaintEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxPaintEvent_php* object = (wxPaintEvent_php*)rsrc->ptr;
+	wxPaintEvent_php* object = static_cast<wxPaintEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -19284,7 +18983,8 @@ PHP_METHOD(php_wxPaintEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&id0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|l", &id0 ) == SUCCESS)
+		char parse_parameters_string[] = "|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -19292,7 +18992,6 @@ PHP_METHOD(php_wxPaintEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -19348,6 +19047,7 @@ PHP_METHOD(php_wxPaintEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxMaximizeEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19356,13 +19056,13 @@ void php_wxMaximizeEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 	#endif
 	
 	
-	wxMaximizeEvent_php* object = (wxMaximizeEvent_php*)rsrc->ptr;
+	wxMaximizeEvent_php* object = static_cast<wxMaximizeEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -19419,7 +19119,8 @@ PHP_METHOD(php_wxMaximizeEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&id0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|l", &id0 ) == SUCCESS)
+		char parse_parameters_string[] = "|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -19427,7 +19128,6 @@ PHP_METHOD(php_wxMaximizeEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -19483,6 +19183,7 @@ PHP_METHOD(php_wxMaximizeEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxUpdateUIEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19491,13 +19192,13 @@ void php_wxUpdateUIEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 	#endif
 	
 	
-	wxUpdateUIEvent_php* object = (wxUpdateUIEvent_php*)rsrc->ptr;
+	wxUpdateUIEvent_php* object = static_cast<wxUpdateUIEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -19583,21 +19284,18 @@ PHP_METHOD(php_wxUpdateUIEvent, CanUpdate)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&window0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &window0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(window0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(window0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 				{
 					id_to_find = Z_RESVAL_P(*tmp);
 					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
+					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(window0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(window0);
 				}
 				else if(Z_TYPE_P(window0) != IS_NULL)
 				{
@@ -19611,7 +19309,6 @@ PHP_METHOD(php_wxUpdateUIEvent, CanUpdate)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -19692,7 +19389,8 @@ PHP_METHOD(php_wxUpdateUIEvent, Check)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&check0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &check0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &check0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -19700,7 +19398,6 @@ PHP_METHOD(php_wxUpdateUIEvent, Check)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -19780,7 +19477,8 @@ PHP_METHOD(php_wxUpdateUIEvent, Enable)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&enable0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &enable0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &enable0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -19788,7 +19486,6 @@ PHP_METHOD(php_wxUpdateUIEvent, Enable)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -19872,7 +19569,6 @@ PHP_METHOD(php_wxUpdateUIEvent, GetEnabled)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -19956,7 +19652,6 @@ PHP_METHOD(php_wxUpdateUIEvent, GetChecked)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20040,7 +19735,6 @@ PHP_METHOD(php_wxUpdateUIEvent, GetMode)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20125,7 +19819,6 @@ PHP_METHOD(php_wxUpdateUIEvent, GetSetChecked)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20209,7 +19902,6 @@ PHP_METHOD(php_wxUpdateUIEvent, GetSetEnabled)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20293,7 +19985,6 @@ PHP_METHOD(php_wxUpdateUIEvent, GetSetShown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20377,7 +20068,6 @@ PHP_METHOD(php_wxUpdateUIEvent, GetSetText)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20461,7 +20151,6 @@ PHP_METHOD(php_wxUpdateUIEvent, GetShown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20545,7 +20234,6 @@ PHP_METHOD(php_wxUpdateUIEvent, GetText)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20635,7 +20323,6 @@ PHP_METHOD(php_wxUpdateUIEvent, GetUpdateInterval)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20720,7 +20407,6 @@ PHP_METHOD(php_wxUpdateUIEvent, ResetUpdateTime)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20801,7 +20487,8 @@ PHP_METHOD(php_wxUpdateUIEvent, SetMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&mode0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &mode0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mode0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -20809,7 +20496,6 @@ PHP_METHOD(php_wxUpdateUIEvent, SetMode)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20891,7 +20577,8 @@ PHP_METHOD(php_wxUpdateUIEvent, SetText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&text0, &text_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &text0, &text_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &text0, &text_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -20899,7 +20586,6 @@ PHP_METHOD(php_wxUpdateUIEvent, SetText)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -20979,7 +20665,8 @@ PHP_METHOD(php_wxUpdateUIEvent, SetUpdateInterval)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&updateInterval0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &updateInterval0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &updateInterval0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -20987,7 +20674,6 @@ PHP_METHOD(php_wxUpdateUIEvent, SetUpdateInterval)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21068,7 +20754,8 @@ PHP_METHOD(php_wxUpdateUIEvent, Show)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&show0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &show0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &show0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -21076,7 +20763,6 @@ PHP_METHOD(php_wxUpdateUIEvent, Show)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21128,7 +20814,8 @@ PHP_METHOD(php_wxUpdateUIEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&commandId0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|l", &commandId0 ) == SUCCESS)
+		char parse_parameters_string[] = "|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &commandId0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -21136,7 +20823,6 @@ PHP_METHOD(php_wxUpdateUIEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21192,6 +20878,7 @@ PHP_METHOD(php_wxUpdateUIEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxClipboardTextEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21200,13 +20887,13 @@ void php_wxClipboardTextEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 	#endif
 	
 	
-	wxClipboardTextEvent_php* object = (wxClipboardTextEvent_php*)rsrc->ptr;
+	wxClipboardTextEvent_php* object = static_cast<wxClipboardTextEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -21264,7 +20951,8 @@ PHP_METHOD(php_wxClipboardTextEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&commandType0, &id0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|ll", &commandType0, &id0 ) == SUCCESS)
+		char parse_parameters_string[] = "|ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &commandType0, &id0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -21272,7 +20960,6 @@ PHP_METHOD(php_wxClipboardTextEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21338,6 +21025,7 @@ PHP_METHOD(php_wxClipboardTextEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxMouseEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21346,13 +21034,13 @@ void php_wxMouseEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxMouseEvent_php* object = (wxMouseEvent_php*)rsrc->ptr;
+	wxMouseEvent_php* object = static_cast<wxMouseEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -21441,7 +21129,6 @@ PHP_METHOD(php_wxMouseEvent, Aux1DClick)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21525,7 +21212,6 @@ PHP_METHOD(php_wxMouseEvent, Aux1Down)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21609,7 +21295,6 @@ PHP_METHOD(php_wxMouseEvent, Aux1Up)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21693,7 +21378,6 @@ PHP_METHOD(php_wxMouseEvent, Aux2DClick)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21777,7 +21461,6 @@ PHP_METHOD(php_wxMouseEvent, Aux2Down)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21861,7 +21544,6 @@ PHP_METHOD(php_wxMouseEvent, Aux2Up)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -21941,7 +21623,8 @@ PHP_METHOD(php_wxMouseEvent, Button)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&but0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &but0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &but0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -21949,7 +21632,6 @@ PHP_METHOD(php_wxMouseEvent, Button)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22029,7 +21711,8 @@ PHP_METHOD(php_wxMouseEvent, ButtonDClick)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&but0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|l", &but0 ) == SUCCESS)
+		char parse_parameters_string[] = "|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &but0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -22037,7 +21720,6 @@ PHP_METHOD(php_wxMouseEvent, ButtonDClick)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22128,7 +21810,8 @@ PHP_METHOD(php_wxMouseEvent, ButtonDown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&but0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|l", &but0 ) == SUCCESS)
+		char parse_parameters_string[] = "|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &but0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -22136,7 +21819,6 @@ PHP_METHOD(php_wxMouseEvent, ButtonDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22227,7 +21909,8 @@ PHP_METHOD(php_wxMouseEvent, ButtonUp)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&but0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|l", &but0 ) == SUCCESS)
+		char parse_parameters_string[] = "|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &but0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -22235,7 +21918,6 @@ PHP_METHOD(php_wxMouseEvent, ButtonUp)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22330,7 +22012,6 @@ PHP_METHOD(php_wxMouseEvent, Dragging)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22414,7 +22095,6 @@ PHP_METHOD(php_wxMouseEvent, Entering)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22498,7 +22178,6 @@ PHP_METHOD(php_wxMouseEvent, GetButton)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22582,7 +22261,6 @@ PHP_METHOD(php_wxMouseEvent, GetClickCount)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22666,7 +22344,6 @@ PHP_METHOD(php_wxMouseEvent, GetLinesPerAction)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22747,7 +22424,8 @@ PHP_METHOD(php_wxMouseEvent, GetLogicalPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&dc0, php_wxDC_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &dc0, php_wxDC_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dc0, php_wxDC_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(dc0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(dc0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -22758,10 +22436,6 @@ PHP_METHOD(php_wxMouseEvent, GetLogicalPosition)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(dc0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(dc0);
 				}
 				else if(Z_TYPE_P(dc0) != IS_NULL)
 				{
@@ -22775,7 +22449,6 @@ PHP_METHOD(php_wxMouseEvent, GetLogicalPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -22793,90 +22466,6 @@ PHP_METHOD(php_wxMouseEvent, GetLogicalPosition)
 				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxPoint));
 
 				references->AddReference(dc0);
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_METHOD(php_wxMouseEvent, GetWheelAxis)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxMouseEvent::GetWheelAxis\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	bool return_is_user_initialized = false;
-	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
-	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
-		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMouseEvent::GetWheelAxis\n");
-			
-			return;
-		}
-		else
-		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
-			
-			if(parent_rsrc_type == le_wxMouseEvent)
-				references = &((wxMouseEvent_php*)_this)->references;
-		}
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Processing the method call as static\n");
-		#endif
-	}
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxMouseEvent::GetWheelAxis())\n\n");
-				#endif
-				ZVAL_LONG(return_value, ((wxMouseEvent_php*)_this)->GetWheelAxis());
-
 
 				return;
 				break;
@@ -22949,7 +22538,6 @@ PHP_METHOD(php_wxMouseEvent, GetWheelDelta)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23033,7 +22621,6 @@ PHP_METHOD(php_wxMouseEvent, GetWheelRotation)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23117,7 +22704,6 @@ PHP_METHOD(php_wxMouseEvent, IsButton)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23201,7 +22787,6 @@ PHP_METHOD(php_wxMouseEvent, IsPageScroll)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23285,7 +22870,6 @@ PHP_METHOD(php_wxMouseEvent, Leaving)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23369,7 +22953,6 @@ PHP_METHOD(php_wxMouseEvent, LeftDClick)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23453,7 +23036,6 @@ PHP_METHOD(php_wxMouseEvent, LeftDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23537,7 +23119,6 @@ PHP_METHOD(php_wxMouseEvent, LeftUp)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23621,7 +23202,6 @@ PHP_METHOD(php_wxMouseEvent, MetaDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23705,7 +23285,6 @@ PHP_METHOD(php_wxMouseEvent, MiddleDClick)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23789,7 +23368,6 @@ PHP_METHOD(php_wxMouseEvent, MiddleDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23873,7 +23451,6 @@ PHP_METHOD(php_wxMouseEvent, MiddleUp)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -23957,7 +23534,6 @@ PHP_METHOD(php_wxMouseEvent, Moving)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -24041,7 +23617,6 @@ PHP_METHOD(php_wxMouseEvent, RightDClick)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -24125,7 +23700,6 @@ PHP_METHOD(php_wxMouseEvent, RightDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -24209,7 +23783,6 @@ PHP_METHOD(php_wxMouseEvent, RightUp)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -24261,7 +23834,8 @@ PHP_METHOD(php_wxMouseEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&mouseEventType0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|l", &mouseEventType0 ) == SUCCESS)
+		char parse_parameters_string[] = "|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mouseEventType0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -24269,7 +23843,6 @@ PHP_METHOD(php_wxMouseEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -24325,50 +23898,10 @@ PHP_METHOD(php_wxMouseEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-void php_wxDropFilesEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+PHP_METHOD(php_wxMouseEvent, GetWheelAxis)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxDropFilesEvent_destruction_handler on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	
-	wxDropFilesEvent_php* object = (wxDropFilesEvent_php*)rsrc->ptr;
-	
-	if(rsrc->ptr != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
-		#endif
-		
-		if(object->references.IsUserInitialized())
-		{	
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-			delete object;
-			
-			rsrc->ptr = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxDropFilesEvent done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
-}
-PHP_METHOD(php_wxDropFilesEvent, GetNumberOfFiles)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDropFilesEvent::GetNumberOfFiles\n");
+	php_printf("Invoking wxMouseEvent::GetWheelAxis\n");
 	php_printf("===========================================\n");
 	#endif
 	
@@ -24392,7 +23925,7 @@ PHP_METHOD(php_wxDropFilesEvent, GetNumberOfFiles)
 	{
 		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
 		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxDropFilesEvent::GetNumberOfFiles\n");
+			zend_error(E_ERROR, "Failed to get the parent object that called wxMouseEvent::GetWheelAxis\n");
 			
 			return;
 		}
@@ -24401,8 +23934,8 @@ PHP_METHOD(php_wxDropFilesEvent, GetNumberOfFiles)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDropFilesEvent)
-				references = &((wxDropFilesEvent_php*)_this)->references;
+			if(parent_rsrc_type == le_wxMouseEvent)
+				references = &((wxMouseEvent_php*)_this)->references;
 		}
 	}
 	else
@@ -24428,7 +23961,6 @@ PHP_METHOD(php_wxDropFilesEvent, GetNumberOfFiles)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -24436,9 +23968,9 @@ PHP_METHOD(php_wxDropFilesEvent, GetNumberOfFiles)
 			case 0:
 			{
 				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(wxDropFilesEvent::GetNumberOfFiles())\n\n");
+				php_printf("Executing RETURN_LONG(wxMouseEvent::GetWheelAxis())\n\n");
 				#endif
-				ZVAL_LONG(return_value, ((wxDropFilesEvent_php*)_this)->GetNumberOfFiles());
+				ZVAL_LONG(return_value, ((wxMouseEvent_php*)_this)->GetWheelAxis());
 
 
 				return;
@@ -24449,217 +23981,7 @@ PHP_METHOD(php_wxDropFilesEvent, GetNumberOfFiles)
 
 		
 }
-PHP_METHOD(php_wxDropFilesEvent, GetPosition)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDropFilesEvent::GetPosition\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	bool return_is_user_initialized = false;
-	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
-	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
-		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxDropFilesEvent::GetPosition\n");
-			
-			return;
-		}
-		else
-		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
-			
-			if(parent_rsrc_type == le_wxDropFilesEvent)
-				references = &((wxDropFilesEvent_php*)_this)->references;
-		}
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Processing the method call as static\n");
-		#endif
-	}
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
 
-		
-	
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDropFilesEvent::GetPosition() to return new object\n\n");
-				#endif
-				wxPoint value_to_return0;
-				value_to_return0 = ((wxDropFilesEvent_php*)_this)->GetPosition();
-				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
-				object_init_ex(return_value, php_wxPoint_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxPoint));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_METHOD(php_wxDropFilesEvent, __construct)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDropFilesEvent::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	
-	//Parameters for overload 0
-	long id0;
-	long noFiles0;
-	char* files0;
-	long files_len0;
-	zval* files0_ref;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 0  && arguments_received <= 3)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '|lls' (&id0, &noFiles0, &files0, &files_len0)\n");
-		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|lls", &id0, &noFiles0, &files0, &files_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|zzz", &dummy, &dummy, &files0_ref );
-		}
-	}
-
-		
-	
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct()\n");
-				#endif
-				_this = new wxDropFilesEvent_php();
-
-				((wxDropFilesEvent_php*) _this)->references.Initialize();
-				break;
-			}
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxEventType) id0)\n");
-				#endif
-				_this = new wxDropFilesEvent_php((wxEventType) id0);
-
-				((wxDropFilesEvent_php*) _this)->references.Initialize();
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxEventType) id0, (int) noFiles0)\n");
-				#endif
-				_this = new wxDropFilesEvent_php((wxEventType) id0, (int) noFiles0);
-
-				((wxDropFilesEvent_php*) _this)->references.Initialize();
-				break;
-			}
-			case 3:
-			{
-				wxString string_arg0_2 = wxString(files0, wxConvUTF8);
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxEventType) id0, (int) noFiles0, &string_arg0_2)\n");
-				#endif
-				_this = new wxDropFilesEvent_php((wxEventType) id0, (int) noFiles0, &string_arg0_2);
-
-				((wxDropFilesEvent_php*) _this)->references.Initialize();
-				break;
-			}
-		}
-	}
-
-		
-	if(already_called)
-	{
-		long id_to_find = zend_list_insert(_this, le_wxDropFilesEvent);
-		
-		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxDropFilesEvent_php*) _this)->evnArray);
-		
-		array_init(((wxDropFilesEvent_php*) _this)->evnArray);
-		
-		((wxDropFilesEvent_php*) _this)->phpObj = getThis();
-		
-		((wxDropFilesEvent_php*) _this)->InitProperties();
-		
-		#ifdef ZTS 
-		((wxDropFilesEvent_php*) _this)->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract type: failed to call a proper constructor");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
-}
 void php_wxCommandEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24668,13 +23990,13 @@ void php_wxCommandEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 	#endif
 	
 	
-	wxCommandEvent_php* object = (wxCommandEvent_php*)rsrc->ptr;
+	wxCommandEvent_php* object = static_cast<wxCommandEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -24732,7 +24054,8 @@ PHP_METHOD(php_wxCommandEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&commandEventType0, &id0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|ll", &commandEventType0, &id0 ) == SUCCESS)
+		char parse_parameters_string[] = "|ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &commandEventType0, &id0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -24740,7 +24063,6 @@ PHP_METHOD(php_wxCommandEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -24946,7 +24268,8 @@ PHP_METHOD(php_wxCommandEvent, SetString)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&string0, &string_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &string0, &string_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &string0, &string_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -24954,7 +24277,6 @@ PHP_METHOD(php_wxCommandEvent, SetString)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -25114,7 +24436,8 @@ PHP_METHOD(php_wxCommandEvent, SetInt)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&intCommand0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &intCommand0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &intCommand0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -25122,7 +24445,6 @@ PHP_METHOD(php_wxCommandEvent, SetInt)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -25282,7 +24604,8 @@ PHP_METHOD(php_wxCommandEvent, SetExtraLong)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&extraLong0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &extraLong0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &extraLong0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -25290,7 +24613,6 @@ PHP_METHOD(php_wxCommandEvent, SetExtraLong)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -25454,7 +24776,6 @@ PHP_METHOD(php_wxCommandEvent, IsSelection)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -25618,7 +24939,6 @@ PHP_METHOD(php_wxCommandEvent, IsChecked)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -25782,7 +25102,6 @@ PHP_METHOD(php_wxCommandEvent, GetString)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -25952,7 +25271,6 @@ PHP_METHOD(php_wxCommandEvent, GetSelection)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -26116,7 +25434,6 @@ PHP_METHOD(php_wxCommandEvent, GetInt)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -26280,7 +25597,6 @@ PHP_METHOD(php_wxCommandEvent, GetExtraLong)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -26301,6 +25617,7 @@ PHP_METHOD(php_wxCommandEvent, GetExtraLong)
 
 		
 }
+
 void php_wxActivateEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26309,13 +25626,13 @@ void php_wxActivateEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 	#endif
 	
 	
-	wxActivateEvent_php* object = (wxActivateEvent_php*)rsrc->ptr;
+	wxActivateEvent_php* object = static_cast<wxActivateEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -26404,7 +25721,6 @@ PHP_METHOD(php_wxActivateEvent, GetActive)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -26458,7 +25774,8 @@ PHP_METHOD(php_wxActivateEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|lbl' (&eventType0, &active0, &id0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|lbl", &eventType0, &active0, &id0 ) == SUCCESS)
+		char parse_parameters_string[] = "|lbl";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &eventType0, &active0, &id0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -26466,7 +25783,6 @@ PHP_METHOD(php_wxActivateEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -26542,6 +25858,7 @@ PHP_METHOD(php_wxActivateEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxContextMenuEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26550,13 +25867,13 @@ void php_wxContextMenuEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 	#endif
 	
 	
-	wxContextMenuEvent_php* object = (wxContextMenuEvent_php*)rsrc->ptr;
+	wxContextMenuEvent_php* object = static_cast<wxContextMenuEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -26645,7 +25962,6 @@ PHP_METHOD(php_wxContextMenuEvent, GetPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -26659,8 +25975,8 @@ PHP_METHOD(php_wxContextMenuEvent, GetPosition)
 				value_to_return0 = (wxPoint_php*) &((wxContextMenuEvent_php*)_this)->GetPosition();
 
 				if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -26675,7 +25991,6 @@ PHP_METHOD(php_wxContextMenuEvent, GetPosition)
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
 					references->AddReference(return_value);
 				}
-				references->AddReference(return_value);
 
 
 				return;
@@ -26746,7 +26061,8 @@ PHP_METHOD(php_wxContextMenuEvent, SetPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&point0, php_wxPoint_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &point0, php_wxPoint_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &point0, php_wxPoint_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(point0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(point0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -26757,10 +26073,6 @@ PHP_METHOD(php_wxContextMenuEvent, SetPosition)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(point0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(point0);
 				}
 				else if(Z_TYPE_P(point0) != IS_NULL)
 				{
@@ -26774,7 +26086,6 @@ PHP_METHOD(php_wxContextMenuEvent, SetPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -26830,7 +26141,8 @@ PHP_METHOD(php_wxContextMenuEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|llO' (&type0, &id0, &pos0, php_wxPoint_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|llO", &type0, &id0, &pos0, php_wxPoint_entry ) == SUCCESS)
+		char parse_parameters_string[] = "|llO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &type0, &id0, &pos0, php_wxPoint_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
 				if(Z_TYPE_P(pos0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(pos0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -26841,10 +26153,6 @@ PHP_METHOD(php_wxContextMenuEvent, __construct)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(pos0) == IS_LONG)
-				{
-					object_pointer0_2 = Z_LVAL_P(pos0);
 				}
 				else if(Z_TYPE_P(pos0) != IS_NULL)
 				{
@@ -26858,7 +26166,6 @@ PHP_METHOD(php_wxContextMenuEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -26935,6 +26242,7 @@ PHP_METHOD(php_wxContextMenuEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxEraseEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26943,13 +26251,13 @@ void php_wxEraseEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxEraseEvent_php* object = (wxEraseEvent_php*)rsrc->ptr;
+	wxEraseEvent_php* object = static_cast<wxEraseEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -27038,7 +26346,6 @@ PHP_METHOD(php_wxEraseEvent, GetDC)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -27055,8 +26362,8 @@ PHP_METHOD(php_wxEraseEvent, GetDC)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -27114,7 +26421,8 @@ PHP_METHOD(php_wxEraseEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|lz' (&id0, &dc0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|lz", &id0, &dc0 ) == SUCCESS)
+		char parse_parameters_string[] = "|lz";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &dc0 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(dc0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(dc0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -27125,10 +26433,6 @@ PHP_METHOD(php_wxEraseEvent, __construct)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(dc0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(dc0);
 				}
 				else if(Z_TYPE_P(dc0) != IS_NULL)
 				{
@@ -27142,7 +26446,6 @@ PHP_METHOD(php_wxEraseEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -27209,6 +26512,7 @@ PHP_METHOD(php_wxEraseEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxFocusEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27217,13 +26521,13 @@ void php_wxFocusEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxFocusEvent_php* object = (wxFocusEvent_php*)rsrc->ptr;
+	wxFocusEvent_php* object = static_cast<wxFocusEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -27312,7 +26616,6 @@ PHP_METHOD(php_wxFocusEvent, GetWindow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -27329,8 +26632,8 @@ PHP_METHOD(php_wxFocusEvent, GetWindow)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -27415,21 +26718,18 @@ PHP_METHOD(php_wxFocusEvent, SetWindow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&win0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &win0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &win0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(win0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(win0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 				{
 					id_to_find = Z_RESVAL_P(*tmp);
 					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
+					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(win0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(win0);
 				}
 				else if(Z_TYPE_P(win0) != IS_NULL)
 				{
@@ -27443,7 +26743,6 @@ PHP_METHOD(php_wxFocusEvent, SetWindow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -27497,7 +26796,8 @@ PHP_METHOD(php_wxFocusEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&eventType0, &id0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|ll", &eventType0, &id0 ) == SUCCESS)
+		char parse_parameters_string[] = "|ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &eventType0, &id0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -27505,7 +26805,6 @@ PHP_METHOD(php_wxFocusEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -27571,6 +26870,7 @@ PHP_METHOD(php_wxFocusEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxChildFocusEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27579,13 +26879,13 @@ void php_wxChildFocusEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 	#endif
 	
 	
-	wxChildFocusEvent_php* object = (wxChildFocusEvent_php*)rsrc->ptr;
+	wxChildFocusEvent_php* object = static_cast<wxChildFocusEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -27674,7 +26974,6 @@ PHP_METHOD(php_wxChildFocusEvent, GetWindow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -27691,8 +26990,8 @@ PHP_METHOD(php_wxChildFocusEvent, GetWindow)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -27749,21 +27048,18 @@ PHP_METHOD(php_wxChildFocusEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|z' (&win0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|z", &win0 ) == SUCCESS)
+		char parse_parameters_string[] = "|z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &win0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(win0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(win0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 				{
 					id_to_find = Z_RESVAL_P(*tmp);
 					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
+					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(win0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(win0);
 				}
 				else if(Z_TYPE_P(win0) != IS_NULL)
 				{
@@ -27777,7 +27073,6 @@ PHP_METHOD(php_wxChildFocusEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -27834,141 +27129,7 @@ PHP_METHOD(php_wxChildFocusEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-void php_wxMouseCaptureLostEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxMouseCaptureLostEvent_destruction_handler on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	
-	wxMouseCaptureLostEvent_php* object = (wxMouseCaptureLostEvent_php*)rsrc->ptr;
-	
-	if(rsrc->ptr != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
-		#endif
-		
-		if(object->references.IsUserInitialized())
-		{	
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-			delete object;
-			
-			rsrc->ptr = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxMouseCaptureLostEvent done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
-}
-PHP_METHOD(php_wxMouseCaptureLostEvent, __construct)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxMouseCaptureLostEvent::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	
-	//Parameters for overload 0
-	long windowId0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 0  && arguments_received <= 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '|l' (&windowId0)\n");
-		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|l", &windowId0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
 
-		
-	
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct()\n");
-				#endif
-				_this = new wxMouseCaptureLostEvent_php();
-
-				((wxMouseCaptureLostEvent_php*) _this)->references.Initialize();
-				break;
-			}
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindowID) windowId0)\n");
-				#endif
-				_this = new wxMouseCaptureLostEvent_php((wxWindowID) windowId0);
-
-				((wxMouseCaptureLostEvent_php*) _this)->references.Initialize();
-				break;
-			}
-		}
-	}
-
-		
-	if(already_called)
-	{
-		long id_to_find = zend_list_insert(_this, le_wxMouseCaptureLostEvent);
-		
-		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxMouseCaptureLostEvent_php*) _this)->evnArray);
-		
-		array_init(((wxMouseCaptureLostEvent_php*) _this)->evnArray);
-		
-		((wxMouseCaptureLostEvent_php*) _this)->phpObj = getThis();
-		
-		((wxMouseCaptureLostEvent_php*) _this)->InitProperties();
-		
-		#ifdef ZTS 
-		((wxMouseCaptureLostEvent_php*) _this)->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract type: failed to call a proper constructor");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
-}
 void php_wxNotifyEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27977,13 +27138,13 @@ void php_wxNotifyEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxNotifyEvent_php* object = (wxNotifyEvent_php*)rsrc->ptr;
+	wxNotifyEvent_php* object = static_cast<wxNotifyEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -28102,7 +27263,6 @@ PHP_METHOD(php_wxNotifyEvent, Allow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -28216,7 +27376,6 @@ PHP_METHOD(php_wxNotifyEvent, IsAllowed)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -28330,7 +27489,6 @@ PHP_METHOD(php_wxNotifyEvent, Veto)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -28383,7 +27541,8 @@ PHP_METHOD(php_wxNotifyEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&eventType0, &id0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|ll", &eventType0, &id0 ) == SUCCESS)
+		char parse_parameters_string[] = "|ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &eventType0, &id0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -28391,7 +27550,6 @@ PHP_METHOD(php_wxNotifyEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -28457,6 +27615,7 @@ PHP_METHOD(php_wxNotifyEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxThreadEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28465,13 +27624,13 @@ void php_wxThreadEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxThreadEvent_php* object = (wxThreadEvent_php*)rsrc->ptr;
+	wxThreadEvent_php* object = static_cast<wxThreadEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -28560,7 +27719,6 @@ PHP_METHOD(php_wxThreadEvent, Clone)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -28577,8 +27735,8 @@ PHP_METHOD(php_wxThreadEvent, Clone)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -28666,7 +27824,6 @@ PHP_METHOD(php_wxThreadEvent, GetExtraLong)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -28750,7 +27907,6 @@ PHP_METHOD(php_wxThreadEvent, GetEventCategory)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -28834,7 +27990,6 @@ PHP_METHOD(php_wxThreadEvent, GetInt)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -28918,7 +28073,6 @@ PHP_METHOD(php_wxThreadEvent, GetString)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -29004,7 +28158,8 @@ PHP_METHOD(php_wxThreadEvent, SetInt)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&intCommand0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &intCommand0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &intCommand0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -29012,7 +28167,6 @@ PHP_METHOD(php_wxThreadEvent, SetInt)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -29092,7 +28246,8 @@ PHP_METHOD(php_wxThreadEvent, SetExtraLong)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&extraLong0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &extraLong0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &extraLong0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -29100,7 +28255,6 @@ PHP_METHOD(php_wxThreadEvent, SetExtraLong)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -29181,7 +28335,8 @@ PHP_METHOD(php_wxThreadEvent, SetString)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&string0, &string_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &string0, &string_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &string0, &string_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -29189,7 +28344,6 @@ PHP_METHOD(php_wxThreadEvent, SetString)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -29242,7 +28396,8 @@ PHP_METHOD(php_wxThreadEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&eventType0, &id0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|ll", &eventType0, &id0 ) == SUCCESS)
+		char parse_parameters_string[] = "|ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &eventType0, &id0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -29250,7 +28405,6 @@ PHP_METHOD(php_wxThreadEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -29316,6 +28470,7 @@ PHP_METHOD(php_wxThreadEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxHelpEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29324,13 +28479,13 @@ void php_wxHelpEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxHelpEvent_php* object = (wxHelpEvent_php*)rsrc->ptr;
+	wxHelpEvent_php* object = static_cast<wxHelpEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -29419,7 +28574,6 @@ PHP_METHOD(php_wxHelpEvent, GetOrigin)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -29503,7 +28657,6 @@ PHP_METHOD(php_wxHelpEvent, GetPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -29517,8 +28670,8 @@ PHP_METHOD(php_wxHelpEvent, GetPosition)
 				value_to_return0 = (wxPoint_php*) &((wxHelpEvent_php*)_this)->GetPosition();
 
 				if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -29533,7 +28686,6 @@ PHP_METHOD(php_wxHelpEvent, GetPosition)
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
 					references->AddReference(return_value);
 				}
-				references->AddReference(return_value);
 
 
 				return;
@@ -29603,7 +28755,8 @@ PHP_METHOD(php_wxHelpEvent, SetOrigin)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&origin0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &origin0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &origin0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -29611,7 +28764,6 @@ PHP_METHOD(php_wxHelpEvent, SetOrigin)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -29692,7 +28844,8 @@ PHP_METHOD(php_wxHelpEvent, SetPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&pt0, php_wxPoint_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &pt0, php_wxPoint_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt0, php_wxPoint_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(pt0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(pt0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -29703,10 +28856,6 @@ PHP_METHOD(php_wxHelpEvent, SetPosition)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(pt0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(pt0);
 				}
 				else if(Z_TYPE_P(pt0) != IS_NULL)
 				{
@@ -29720,7 +28869,6 @@ PHP_METHOD(php_wxHelpEvent, SetPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -29777,7 +28925,8 @@ PHP_METHOD(php_wxHelpEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|llOl' (&type0, &winid0, &pt0, php_wxPoint_entry, &origin0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|llOl", &type0, &winid0, &pt0, php_wxPoint_entry, &origin0 ) == SUCCESS)
+		char parse_parameters_string[] = "|llOl";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &type0, &winid0, &pt0, php_wxPoint_entry, &origin0 ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
 				if(Z_TYPE_P(pt0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(pt0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -29788,10 +28937,6 @@ PHP_METHOD(php_wxHelpEvent, __construct)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(pt0) == IS_LONG)
-				{
-					object_pointer0_2 = Z_LVAL_P(pt0);
 				}
 				else if(Z_TYPE_P(pt0) != IS_NULL)
 				{
@@ -29805,7 +28950,6 @@ PHP_METHOD(php_wxHelpEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -29893,6 +29037,7 @@ PHP_METHOD(php_wxHelpEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxScrollEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29901,13 +29046,13 @@ void php_wxScrollEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxScrollEvent_php* object = (wxScrollEvent_php*)rsrc->ptr;
+	wxScrollEvent_php* object = static_cast<wxScrollEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -29967,7 +29112,8 @@ PHP_METHOD(php_wxScrollEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|llll' (&commandType0, &id0, &pos0, &orientation0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|llll", &commandType0, &id0, &pos0, &orientation0 ) == SUCCESS)
+		char parse_parameters_string[] = "|llll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &commandType0, &id0, &pos0, &orientation0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -29975,7 +29121,6 @@ PHP_METHOD(php_wxScrollEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30120,7 +29265,8 @@ PHP_METHOD(php_wxScrollEvent, SetPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -30128,7 +29274,6 @@ PHP_METHOD(php_wxScrollEvent, SetPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30208,7 +29353,8 @@ PHP_METHOD(php_wxScrollEvent, SetOrientation)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&orient0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &orient0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &orient0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -30216,7 +29362,6 @@ PHP_METHOD(php_wxScrollEvent, SetOrientation)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30300,7 +29445,6 @@ PHP_METHOD(php_wxScrollEvent, GetPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30384,7 +29528,6 @@ PHP_METHOD(php_wxScrollEvent, GetOrientation)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30405,6 +29548,7 @@ PHP_METHOD(php_wxScrollEvent, GetOrientation)
 
 		
 }
+
 void php_wxIdleEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30413,13 +29557,13 @@ void php_wxIdleEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxIdleEvent_php* object = (wxIdleEvent_php*)rsrc->ptr;
+	wxIdleEvent_php* object = static_cast<wxIdleEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -30508,7 +29652,6 @@ PHP_METHOD(php_wxIdleEvent, GetMode)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30593,7 +29736,6 @@ PHP_METHOD(php_wxIdleEvent, MoreRequested)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30673,7 +29815,8 @@ PHP_METHOD(php_wxIdleEvent, RequestMore)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&needMore0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|b", &needMore0 ) == SUCCESS)
+		char parse_parameters_string[] = "|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &needMore0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -30681,7 +29824,6 @@ PHP_METHOD(php_wxIdleEvent, RequestMore)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30772,7 +29914,8 @@ PHP_METHOD(php_wxIdleEvent, SetMode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&mode0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &mode0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &mode0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -30780,7 +29923,6 @@ PHP_METHOD(php_wxIdleEvent, SetMode)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30837,7 +29979,6 @@ PHP_METHOD(php_wxIdleEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -30883,6 +30024,7 @@ PHP_METHOD(php_wxIdleEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxInitDialogEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30891,13 +30033,13 @@ void php_wxInitDialogEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 	#endif
 	
 	
-	wxInitDialogEvent_php* object = (wxInitDialogEvent_php*)rsrc->ptr;
+	wxInitDialogEvent_php* object = static_cast<wxInitDialogEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -30954,7 +30096,8 @@ PHP_METHOD(php_wxInitDialogEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&id0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|l", &id0 ) == SUCCESS)
+		char parse_parameters_string[] = "|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -30962,7 +30105,6 @@ PHP_METHOD(php_wxInitDialogEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -31018,6 +30160,7 @@ PHP_METHOD(php_wxInitDialogEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxWindowDestroyEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31026,13 +30169,13 @@ void php_wxWindowDestroyEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 	#endif
 	
 	
-	wxWindowDestroyEvent_php* object = (wxWindowDestroyEvent_php*)rsrc->ptr;
+	wxWindowDestroyEvent_php* object = static_cast<wxWindowDestroyEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -31121,7 +30264,6 @@ PHP_METHOD(php_wxWindowDestroyEvent, GetWindow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -31138,8 +30280,8 @@ PHP_METHOD(php_wxWindowDestroyEvent, GetWindow)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -31196,21 +30338,18 @@ PHP_METHOD(php_wxWindowDestroyEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|z' (&win0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|z", &win0 ) == SUCCESS)
+		char parse_parameters_string[] = "|z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &win0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(win0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(win0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 				{
 					id_to_find = Z_RESVAL_P(*tmp);
 					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
+					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(win0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(win0);
 				}
 				else if(Z_TYPE_P(win0) != IS_NULL)
 				{
@@ -31224,7 +30363,6 @@ PHP_METHOD(php_wxWindowDestroyEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -31281,6 +30419,7 @@ PHP_METHOD(php_wxWindowDestroyEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxNavigationKeyEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31289,13 +30428,13 @@ void php_wxNavigationKeyEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 	#endif
 	
 	
-	wxNavigationKeyEvent_php* object = (wxNavigationKeyEvent_php*)rsrc->ptr;
+	wxNavigationKeyEvent_php* object = static_cast<wxNavigationKeyEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -31384,7 +30523,6 @@ PHP_METHOD(php_wxNavigationKeyEvent, GetCurrentFocus)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -31401,8 +30539,8 @@ PHP_METHOD(php_wxNavigationKeyEvent, GetCurrentFocus)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -31490,7 +30628,6 @@ PHP_METHOD(php_wxNavigationKeyEvent, GetDirection)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -31574,7 +30711,6 @@ PHP_METHOD(php_wxNavigationKeyEvent, IsFromTab)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -31658,7 +30794,6 @@ PHP_METHOD(php_wxNavigationKeyEvent, IsWindowChange)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -31739,21 +30874,18 @@ PHP_METHOD(php_wxNavigationKeyEvent, SetCurrentFocus)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&currentFocus0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &currentFocus0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &currentFocus0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(currentFocus0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(currentFocus0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 				{
 					id_to_find = Z_RESVAL_P(*tmp);
 					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
+					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(currentFocus0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(currentFocus0);
 				}
 				else if(Z_TYPE_P(currentFocus0) != IS_NULL)
 				{
@@ -31767,7 +30899,6 @@ PHP_METHOD(php_wxNavigationKeyEvent, SetCurrentFocus)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -31848,7 +30979,8 @@ PHP_METHOD(php_wxNavigationKeyEvent, SetDirection)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&direction0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &direction0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &direction0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -31856,7 +30988,6 @@ PHP_METHOD(php_wxNavigationKeyEvent, SetDirection)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -31936,7 +31067,8 @@ PHP_METHOD(php_wxNavigationKeyEvent, SetFlags)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&flags0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &flags0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flags0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -31944,7 +31076,6 @@ PHP_METHOD(php_wxNavigationKeyEvent, SetFlags)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -32024,7 +31155,8 @@ PHP_METHOD(php_wxNavigationKeyEvent, SetFromTab)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&fromTab0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &fromTab0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fromTab0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -32032,7 +31164,6 @@ PHP_METHOD(php_wxNavigationKeyEvent, SetFromTab)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -32112,7 +31243,8 @@ PHP_METHOD(php_wxNavigationKeyEvent, SetWindowChange)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&windowChange0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &windowChange0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &windowChange0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -32120,7 +31252,6 @@ PHP_METHOD(php_wxNavigationKeyEvent, SetWindowChange)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -32176,7 +31307,6 @@ PHP_METHOD(php_wxNavigationKeyEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -32222,280 +31352,7 @@ PHP_METHOD(php_wxNavigationKeyEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-void php_wxMouseCaptureChangedEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxMouseCaptureChangedEvent_destruction_handler on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	
-	wxMouseCaptureChangedEvent_php* object = (wxMouseCaptureChangedEvent_php*)rsrc->ptr;
-	
-	if(rsrc->ptr != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
-		#endif
-		
-		if(object->references.IsUserInitialized())
-		{	
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-			delete object;
-			
-			rsrc->ptr = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxMouseCaptureChangedEvent done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
-}
-PHP_METHOD(php_wxMouseCaptureChangedEvent, GetCapturedWindow)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxMouseCaptureChangedEvent::GetCapturedWindow\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	bool return_is_user_initialized = false;
-	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
-	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
-		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxMouseCaptureChangedEvent::GetCapturedWindow\n");
-			
-			return;
-		}
-		else
-		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
-			
-			if(parent_rsrc_type == le_wxMouseCaptureChangedEvent)
-				references = &((wxMouseCaptureChangedEvent_php*)_this)->references;
-		}
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Processing the method call as static\n");
-		#endif
-	}
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
 
-		
-	
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxMouseCaptureChangedEvent::GetCapturedWindow() to return object pointer\n\n");
-				#endif
-				wxWindow_php* value_to_return0;
-				value_to_return0 = (wxWindow_php*) ((wxMouseCaptureChangedEvent_php*)_this)->GetCapturedWindow();
-
-				if(value_to_return0 == NULL){
-					ZVAL_NULL(return_value);
-				}
-				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
-						return_is_user_initialized = true;
-					}
-					else{
-						zend_error(E_ERROR, "Could not retreive original zval.");
-					}
-				}
-				else{
-					object_init_ex(return_value,php_wxWindow_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return0, le_wxWindow));
-				}
-
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
-				}
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_METHOD(php_wxMouseCaptureChangedEvent, __construct)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxMouseCaptureChangedEvent::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	
-	//Parameters for overload 0
-	long windowId0;
-	zval* gainedCapture0 = 0;
-	void* object_pointer0_1 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 0  && arguments_received <= 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '|lz' (&windowId0, &gainedCapture0)\n");
-		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|lz", &windowId0, &gainedCapture0 ) == SUCCESS)
-		{
-			if(arguments_received >= 2){
-				if(Z_TYPE_P(gainedCapture0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(gainedCapture0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_1 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_1 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(gainedCapture0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(gainedCapture0);
-				}
-				else if(Z_TYPE_P(gainedCapture0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct()\n");
-				#endif
-				_this = new wxMouseCaptureChangedEvent_php();
-
-				((wxMouseCaptureChangedEvent_php*) _this)->references.Initialize();
-				break;
-			}
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindowID) windowId0)\n");
-				#endif
-				_this = new wxMouseCaptureChangedEvent_php((wxWindowID) windowId0);
-
-				((wxMouseCaptureChangedEvent_php*) _this)->references.Initialize();
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((wxWindowID) windowId0, (wxWindow*) object_pointer0_1)\n");
-				#endif
-				_this = new wxMouseCaptureChangedEvent_php((wxWindowID) windowId0, (wxWindow*) object_pointer0_1);
-
-				((wxMouseCaptureChangedEvent_php*) _this)->references.Initialize();
-				((wxMouseCaptureChangedEvent_php*) _this)->references.AddReference(gainedCapture0);
-				break;
-			}
-		}
-	}
-
-		
-	if(already_called)
-	{
-		long id_to_find = zend_list_insert(_this, le_wxMouseCaptureChangedEvent);
-		
-		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxMouseCaptureChangedEvent_php*) _this)->evnArray);
-		
-		array_init(((wxMouseCaptureChangedEvent_php*) _this)->evnArray);
-		
-		((wxMouseCaptureChangedEvent_php*) _this)->phpObj = getThis();
-		
-		((wxMouseCaptureChangedEvent_php*) _this)->InitProperties();
-		
-		#ifdef ZTS 
-		((wxMouseCaptureChangedEvent_php*) _this)->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract type: failed to call a proper constructor");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
-}
 void php_wxCloseEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -32504,13 +31361,13 @@ void php_wxCloseEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxCloseEvent_php* object = (wxCloseEvent_php*)rsrc->ptr;
+	wxCloseEvent_php* object = static_cast<wxCloseEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -32599,7 +31456,6 @@ PHP_METHOD(php_wxCloseEvent, CanVeto)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -32683,7 +31539,6 @@ PHP_METHOD(php_wxCloseEvent, GetLoggingOff)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -32763,7 +31618,8 @@ PHP_METHOD(php_wxCloseEvent, SetCanVeto)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&canVeto0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &canVeto0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &canVeto0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -32771,7 +31627,6 @@ PHP_METHOD(php_wxCloseEvent, SetCanVeto)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -32851,7 +31706,8 @@ PHP_METHOD(php_wxCloseEvent, SetLoggingOff)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&loggingOff0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &loggingOff0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &loggingOff0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -32859,7 +31715,6 @@ PHP_METHOD(php_wxCloseEvent, SetLoggingOff)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -32939,7 +31794,8 @@ PHP_METHOD(php_wxCloseEvent, Veto)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|b' (&veto0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|b", &veto0 ) == SUCCESS)
+		char parse_parameters_string[] = "|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &veto0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -32947,7 +31803,6 @@ PHP_METHOD(php_wxCloseEvent, Veto)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -33011,7 +31866,8 @@ PHP_METHOD(php_wxCloseEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&commandEventType0, &id0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|ll", &commandEventType0, &id0 ) == SUCCESS)
+		char parse_parameters_string[] = "|ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &commandEventType0, &id0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -33019,7 +31875,6 @@ PHP_METHOD(php_wxCloseEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -33085,6 +31940,7 @@ PHP_METHOD(php_wxCloseEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxMenuEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -33093,13 +31949,13 @@ void php_wxMenuEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxMenuEvent_php* object = (wxMenuEvent_php*)rsrc->ptr;
+	wxMenuEvent_php* object = static_cast<wxMenuEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -33188,7 +32044,6 @@ PHP_METHOD(php_wxMenuEvent, GetMenu)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -33205,8 +32060,8 @@ PHP_METHOD(php_wxMenuEvent, GetMenu)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -33294,7 +32149,6 @@ PHP_METHOD(php_wxMenuEvent, GetMenuId)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -33378,7 +32232,6 @@ PHP_METHOD(php_wxMenuEvent, IsPopup)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -33433,7 +32286,8 @@ PHP_METHOD(php_wxMenuEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|llz' (&type0, &id0, &menu0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|llz", &type0, &id0, &menu0 ) == SUCCESS)
+		char parse_parameters_string[] = "|llz";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &type0, &id0, &menu0 ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
 				if(Z_TYPE_P(menu0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(menu0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -33444,10 +32298,6 @@ PHP_METHOD(php_wxMenuEvent, __construct)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(menu0) == IS_LONG)
-				{
-					object_pointer0_2 = Z_LVAL_P(menu0);
 				}
 				else if(Z_TYPE_P(menu0) != IS_NULL)
 				{
@@ -33461,7 +32311,6 @@ PHP_METHOD(php_wxMenuEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -33538,722 +32387,7 @@ PHP_METHOD(php_wxMenuEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-void php_wxShowEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxShowEvent_destruction_handler on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	
-	wxShowEvent_php* object = (wxShowEvent_php*)rsrc->ptr;
-	
-	if(rsrc->ptr != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
-		#endif
-		
-		if(object->references.IsUserInitialized())
-		{	
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-			delete object;
-			
-			rsrc->ptr = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxShowEvent done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
-}
-PHP_METHOD(php_wxShowEvent, GetShow)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxShowEvent::GetShow\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	bool return_is_user_initialized = false;
-	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
-	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
-		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxShowEvent::GetShow\n");
-			
-			return;
-		}
-		else
-		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
-			
-			if(parent_rsrc_type == le_wxShowEvent)
-				references = &((wxShowEvent_php*)_this)->references;
-		}
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Processing the method call as static\n");
-		#endif
-	}
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
 
-		
-	
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxShowEvent::GetShow())\n\n");
-				#endif
-				ZVAL_BOOL(return_value, ((wxShowEvent_php*)_this)->GetShow());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_METHOD(php_wxShowEvent, IsShown)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxShowEvent::IsShown\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	bool return_is_user_initialized = false;
-	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
-	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
-		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxShowEvent::IsShown\n");
-			
-			return;
-		}
-		else
-		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
-			
-			if(parent_rsrc_type == le_wxShowEvent)
-				references = &((wxShowEvent_php*)_this)->references;
-		}
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Processing the method call as static\n");
-		#endif
-	}
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxShowEvent::IsShown())\n\n");
-				#endif
-				ZVAL_BOOL(return_value, ((wxShowEvent_php*)_this)->IsShown());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_METHOD(php_wxShowEvent, SetShow)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxShowEvent::SetShow\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	bool return_is_user_initialized = false;
-	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
-	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
-		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxShowEvent::SetShow\n");
-			
-			return;
-		}
-		else
-		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
-			
-			if(parent_rsrc_type == le_wxShowEvent)
-				references = &((wxShowEvent_php*)_this)->references;
-		}
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Processing the method call as static\n");
-		#endif
-	}
-	
-	//Parameters for overload 0
-	bool show0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'b' (&show0)\n");
-		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &show0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxShowEvent::SetShow(show0)\n\n");
-				#endif
-				((wxShowEvent_php*)_this)->SetShow(show0);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_METHOD(php_wxShowEvent, __construct)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxShowEvent::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	
-	//Parameters for overload 0
-	long winid0;
-	bool show0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 0  && arguments_received <= 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '|lb' (&winid0, &show0)\n");
-		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|lb", &winid0, &show0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct()\n");
-				#endif
-				_this = new wxShowEvent_php();
-
-				((wxShowEvent_php*) _this)->references.Initialize();
-				break;
-			}
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((int) winid0)\n");
-				#endif
-				_this = new wxShowEvent_php((int) winid0);
-
-				((wxShowEvent_php*) _this)->references.Initialize();
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((int) winid0, show0)\n");
-				#endif
-				_this = new wxShowEvent_php((int) winid0, show0);
-
-				((wxShowEvent_php*) _this)->references.Initialize();
-				break;
-			}
-		}
-	}
-
-		
-	if(already_called)
-	{
-		long id_to_find = zend_list_insert(_this, le_wxShowEvent);
-		
-		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxShowEvent_php*) _this)->evnArray);
-		
-		array_init(((wxShowEvent_php*) _this)->evnArray);
-		
-		((wxShowEvent_php*) _this)->phpObj = getThis();
-		
-		((wxShowEvent_php*) _this)->InitProperties();
-		
-		#ifdef ZTS 
-		((wxShowEvent_php*) _this)->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract type: failed to call a proper constructor");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
-}
-void php_wxIconizeEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxIconizeEvent_destruction_handler on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	
-	wxIconizeEvent_php* object = (wxIconizeEvent_php*)rsrc->ptr;
-	
-	if(rsrc->ptr != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
-		#endif
-		
-		if(object->references.IsUserInitialized())
-		{	
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-			delete object;
-			
-			rsrc->ptr = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxIconizeEvent done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
-}
-PHP_METHOD(php_wxIconizeEvent, Iconized)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxIconizeEvent::Iconized\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	bool return_is_user_initialized = false;
-	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
-	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
-		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxIconizeEvent::Iconized\n");
-			
-			return;
-		}
-		else
-		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
-			
-			if(parent_rsrc_type == le_wxIconizeEvent)
-				references = &((wxIconizeEvent_php*)_this)->references;
-		}
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Processing the method call as static\n");
-		#endif
-	}
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxIconizeEvent::Iconized())\n\n");
-				#endif
-				ZVAL_BOOL(return_value, ((wxIconizeEvent_php*)_this)->Iconized());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_METHOD(php_wxIconizeEvent, IsIconized)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxIconizeEvent::IsIconized\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	bool return_is_user_initialized = false;
-	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
-	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
-		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxIconizeEvent::IsIconized\n");
-			
-			return;
-		}
-		else
-		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
-			
-			if(parent_rsrc_type == le_wxIconizeEvent)
-				references = &((wxIconizeEvent_php*)_this)->references;
-		}
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Processing the method call as static\n");
-		#endif
-	}
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(wxIconizeEvent::IsIconized())\n\n");
-				#endif
-				ZVAL_BOOL(return_value, ((wxIconizeEvent_php*)_this)->IsIconized());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_METHOD(php_wxIconizeEvent, __construct)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxIconizeEvent::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	
-	//Parameters for overload 0
-	long id0;
-	bool iconized0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 0  && arguments_received <= 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '|lb' (&id0, &iconized0)\n");
-		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|lb", &id0, &iconized0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct()\n");
-				#endif
-				_this = new wxIconizeEvent_php();
-
-				((wxIconizeEvent_php*) _this)->references.Initialize();
-				break;
-			}
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((int) id0)\n");
-				#endif
-				_this = new wxIconizeEvent_php((int) id0);
-
-				((wxIconizeEvent_php*) _this)->references.Initialize();
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((int) id0, iconized0)\n");
-				#endif
-				_this = new wxIconizeEvent_php((int) id0, iconized0);
-
-				((wxIconizeEvent_php*) _this)->references.Initialize();
-				break;
-			}
-		}
-	}
-
-		
-	if(already_called)
-	{
-		long id_to_find = zend_list_insert(_this, le_wxIconizeEvent);
-		
-		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxIconizeEvent_php*) _this)->evnArray);
-		
-		array_init(((wxIconizeEvent_php*) _this)->evnArray);
-		
-		((wxIconizeEvent_php*) _this)->phpObj = getThis();
-		
-		((wxIconizeEvent_php*) _this)->InitProperties();
-		
-		#ifdef ZTS 
-		((wxIconizeEvent_php*) _this)->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract type: failed to call a proper constructor");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
-}
 void php_wxMoveEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -34262,13 +32396,13 @@ void php_wxMoveEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxMoveEvent_php* object = (wxMoveEvent_php*)rsrc->ptr;
+	wxMoveEvent_php* object = static_cast<wxMoveEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -34357,7 +32491,6 @@ PHP_METHOD(php_wxMoveEvent, GetPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -34446,7 +32579,6 @@ PHP_METHOD(php_wxMoveEvent, GetRect)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -34532,7 +32664,8 @@ PHP_METHOD(php_wxMoveEvent, SetPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&pos0, php_wxPoint_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &pos0, php_wxPoint_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, php_wxPoint_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(pos0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(pos0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -34543,10 +32676,6 @@ PHP_METHOD(php_wxMoveEvent, SetPosition)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(pos0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(pos0);
 				}
 				else if(Z_TYPE_P(pos0) != IS_NULL)
 				{
@@ -34560,7 +32689,6 @@ PHP_METHOD(php_wxMoveEvent, SetPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -34642,7 +32770,8 @@ PHP_METHOD(php_wxMoveEvent, SetRect)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&rect0, php_wxRect_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &rect0, php_wxRect_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rect0, php_wxRect_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(rect0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(rect0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -34653,10 +32782,6 @@ PHP_METHOD(php_wxMoveEvent, SetRect)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(rect0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(rect0);
 				}
 				else if(Z_TYPE_P(rect0) != IS_NULL)
 				{
@@ -34670,7 +32795,6 @@ PHP_METHOD(php_wxMoveEvent, SetRect)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -34725,7 +32849,8 @@ PHP_METHOD(php_wxMoveEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O|l' (&pt0, php_wxPoint_entry, &id0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O|l", &pt0, php_wxPoint_entry, &id0 ) == SUCCESS)
+		char parse_parameters_string[] = "O|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt0, php_wxPoint_entry, &id0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(pt0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(pt0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -34736,10 +32861,6 @@ PHP_METHOD(php_wxMoveEvent, __construct)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(pt0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(pt0);
 				}
 				else if(Z_TYPE_P(pt0) != IS_NULL)
 				{
@@ -34753,7 +32874,6 @@ PHP_METHOD(php_wxMoveEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -34811,6 +32931,7 @@ PHP_METHOD(php_wxMoveEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxSizeEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -34819,13 +32940,13 @@ void php_wxSizeEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxSizeEvent_php* object = (wxSizeEvent_php*)rsrc->ptr;
+	wxSizeEvent_php* object = static_cast<wxSizeEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -34914,7 +33035,6 @@ PHP_METHOD(php_wxSizeEvent, GetRect)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -35003,7 +33123,6 @@ PHP_METHOD(php_wxSizeEvent, GetSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -35089,7 +33208,8 @@ PHP_METHOD(php_wxSizeEvent, SetRect)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&rect0, php_wxRect_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &rect0, php_wxRect_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rect0, php_wxRect_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(rect0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(rect0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -35100,10 +33220,6 @@ PHP_METHOD(php_wxSizeEvent, SetRect)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(rect0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(rect0);
 				}
 				else if(Z_TYPE_P(rect0) != IS_NULL)
 				{
@@ -35117,7 +33233,6 @@ PHP_METHOD(php_wxSizeEvent, SetRect)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -35198,7 +33313,8 @@ PHP_METHOD(php_wxSizeEvent, SetSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&size0, php_wxSize_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &size0, php_wxSize_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size0, php_wxSize_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(size0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(size0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -35209,10 +33325,6 @@ PHP_METHOD(php_wxSizeEvent, SetSize)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(size0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(size0);
 				}
 				else if(Z_TYPE_P(size0) != IS_NULL)
 				{
@@ -35226,7 +33338,6 @@ PHP_METHOD(php_wxSizeEvent, SetSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -35280,7 +33391,8 @@ PHP_METHOD(php_wxSizeEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O|l' (&sz0, php_wxSize_entry, &id0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O|l", &sz0, php_wxSize_entry, &id0 ) == SUCCESS)
+		char parse_parameters_string[] = "O|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sz0, php_wxSize_entry, &id0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(sz0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(sz0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -35291,10 +33403,6 @@ PHP_METHOD(php_wxSizeEvent, __construct)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(sz0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(sz0);
 				}
 				else if(Z_TYPE_P(sz0) != IS_NULL)
 				{
@@ -35308,7 +33416,6 @@ PHP_METHOD(php_wxSizeEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -35366,6 +33473,7 @@ PHP_METHOD(php_wxSizeEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxSetCursorEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -35374,13 +33482,13 @@ void php_wxSetCursorEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 	#endif
 	
 	
-	wxSetCursorEvent_php* object = (wxSetCursorEvent_php*)rsrc->ptr;
+	wxSetCursorEvent_php* object = static_cast<wxSetCursorEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -35469,7 +33577,6 @@ PHP_METHOD(php_wxSetCursorEvent, GetCursor)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -35483,8 +33590,8 @@ PHP_METHOD(php_wxSetCursorEvent, GetCursor)
 				value_to_return0 = (wxCursor_php*) &((wxSetCursorEvent_php*)_this)->GetCursor();
 
 				if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -35499,7 +33606,6 @@ PHP_METHOD(php_wxSetCursorEvent, GetCursor)
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
 					references->AddReference(return_value);
 				}
-				references->AddReference(return_value);
 
 
 				return;
@@ -35573,7 +33679,6 @@ PHP_METHOD(php_wxSetCursorEvent, GetX)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -35657,7 +33762,6 @@ PHP_METHOD(php_wxSetCursorEvent, GetY)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -35741,7 +33845,6 @@ PHP_METHOD(php_wxSetCursorEvent, HasCursor)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -35822,7 +33925,8 @@ PHP_METHOD(php_wxSetCursorEvent, SetCursor)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&cursor0, php_wxCursor_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &cursor0, php_wxCursor_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &cursor0, php_wxCursor_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(cursor0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(cursor0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -35833,10 +33937,6 @@ PHP_METHOD(php_wxSetCursorEvent, SetCursor)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(cursor0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(cursor0);
 				}
 				else if(Z_TYPE_P(cursor0) != IS_NULL)
 				{
@@ -35850,7 +33950,6 @@ PHP_METHOD(php_wxSetCursorEvent, SetCursor)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -35904,7 +34003,8 @@ PHP_METHOD(php_wxSetCursorEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&x0, &y0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|ll", &x0, &y0 ) == SUCCESS)
+		char parse_parameters_string[] = "|ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -35912,7 +34012,6 @@ PHP_METHOD(php_wxSetCursorEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -35978,6 +34077,7 @@ PHP_METHOD(php_wxSetCursorEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxFileCtrlEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -35986,13 +34086,13 @@ void php_wxFileCtrlEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 	#endif
 	
 	
-	wxFileCtrlEvent_php* object = (wxFileCtrlEvent_php*)rsrc->ptr;
+	wxFileCtrlEvent_php* object = static_cast<wxFileCtrlEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -36081,7 +34181,6 @@ PHP_METHOD(php_wxFileCtrlEvent, GetDirectory)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -36171,7 +34270,6 @@ PHP_METHOD(php_wxFileCtrlEvent, GetFile)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -36261,7 +34359,6 @@ PHP_METHOD(php_wxFileCtrlEvent, GetFiles)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -36355,7 +34452,6 @@ PHP_METHOD(php_wxFileCtrlEvent, GetFilterIndex)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -36436,7 +34532,8 @@ PHP_METHOD(php_wxFileCtrlEvent, SetDirectory)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&directory0, &directory_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &directory0, &directory_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &directory0, &directory_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -36444,7 +34541,6 @@ PHP_METHOD(php_wxFileCtrlEvent, SetDirectory)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -36524,7 +34620,8 @@ PHP_METHOD(php_wxFileCtrlEvent, SetFiles)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'a' (&files0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "a", &files0 ) == SUCCESS)
+		char parse_parameters_string[] = "a";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &files0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -36532,11 +34629,11 @@ PHP_METHOD(php_wxFileCtrlEvent, SetFiles)
 	}
 
 		
-	wxArrayString strings_array0_0;
-	bool strings_continue0_0 = true;
-	
 	if(overload0_called)
 	{
+		wxArrayString strings_array0_0;
+		bool strings_continue0_0 = true;
+
 		switch(arguments_received)
 		{
 			case 1:
@@ -36629,7 +34726,8 @@ PHP_METHOD(php_wxFileCtrlEvent, SetFilterIndex)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&index0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &index0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -36637,7 +34735,6 @@ PHP_METHOD(php_wxFileCtrlEvent, SetFilterIndex)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -36692,21 +34789,18 @@ PHP_METHOD(php_wxFileCtrlEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lzl' (&type0, &evtObject0, &id0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lzl", &type0, &evtObject0, &id0 ) == SUCCESS)
+		char parse_parameters_string[] = "lzl";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &type0, &evtObject0, &id0 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(evtObject0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(evtObject0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 				{
 					id_to_find = Z_RESVAL_P(*tmp);
 					object_pointer0_1 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_1 || (rsrc_type != le_wxEvtHandler && rsrc_type != le_wxWindow && rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow && rsrc_type != le_wxValidator && rsrc_type != le_wxTextValidator && rsrc_type != le_wxGenericValidator && rsrc_type != le_wxMenu && rsrc_type != le_wxAuiManager && rsrc_type != le_wxMouseEventsManager && rsrc_type != le_wxTimer && rsrc_type != le_wxEventBlocker && rsrc_type != le_wxProcess && rsrc_type != le_wxFileSystemWatcher && rsrc_type != le_wxTaskBarIcon && rsrc_type != le_wxNotificationMessage && rsrc_type != le_wxBitmapHandler && rsrc_type != le_wxImage && rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxWrapSizer && rsrc_type != le_wxStdDialogButtonSizer && rsrc_type != le_wxGridSizer && rsrc_type != le_wxFlexGridSizer && rsrc_type != le_wxGridBagSizer && rsrc_type != le_wxSizerItem && rsrc_type != le_wxGBSizerItem && rsrc_type != le_wxImageList && rsrc_type != le_wxDC && rsrc_type != le_wxWindowDC && rsrc_type != le_wxClientDC && rsrc_type != le_wxPaintDC && rsrc_type != le_wxScreenDC && rsrc_type != le_wxPostScriptDC && rsrc_type != le_wxPrinterDC && rsrc_type != le_wxMemoryDC && rsrc_type != le_wxBufferedDC && rsrc_type != le_wxBufferedPaintDC && rsrc_type != le_wxAutoBufferedPaintDC && rsrc_type != le_wxMirrorDC && rsrc_type != le_wxColour && rsrc_type != le_wxMenuItem && rsrc_type != le_wxEvent && rsrc_type != le_wxMenuEvent && rsrc_type != le_wxKeyEvent && rsrc_type != le_wxCommandEvent && rsrc_type != le_wxNotifyEvent && rsrc_type != le_wxTreeEvent && rsrc_type != le_wxBookCtrlEvent && rsrc_type != le_wxAuiNotebookEvent && rsrc_type != le_wxAuiToolBarEvent && rsrc_type != le_wxListEvent && rsrc_type != le_wxSpinEvent && rsrc_type != le_wxSplitterEvent && rsrc_type != le_wxSpinDoubleEvent && rsrc_type != le_wxGridSizeEvent && rsrc_type != le_wxWizardEvent && rsrc_type != le_wxGridEvent && rsrc_type != le_wxGridRangeSelectEvent && rsrc_type != le_wxDataViewEvent && rsrc_type != le_wxHeaderCtrlEvent && rsrc_type != le_wxRibbonBarEvent && rsrc_type != le_wxStyledTextEvent && rsrc_type != le_wxChildFocusEvent && rsrc_type != le_wxHtmlCellEvent && rsrc_type != le_wxHtmlLinkEvent && rsrc_type != le_wxHyperlinkEvent && rsrc_type != le_wxColourPickerEvent && rsrc_type != le_wxFontPickerEvent && rsrc_type != le_wxScrollEvent && rsrc_type != le_wxWindowModalDialogEvent && rsrc_type != le_wxDateEvent && rsrc_type != le_wxCalendarEvent && rsrc_type != le_wxWindowCreateEvent && rsrc_type != le_wxWindowDestroyEvent && rsrc_type != le_wxUpdateUIEvent && rsrc_type != le_wxHelpEvent && rsrc_type != le_wxGridEditorCreatedEvent && rsrc_type != le_wxCollapsiblePaneEvent && rsrc_type != le_wxClipboardTextEvent && rsrc_type != le_wxFileCtrlEvent && rsrc_type != le_wxSashEvent && rsrc_type != le_wxFileDirPickerEvent && rsrc_type != le_wxContextMenuEvent && rsrc_type != le_wxRibbonButtonBarEvent && rsrc_type != le_wxRibbonGalleryEvent && rsrc_type != le_wxCloseEvent && rsrc_type != le_wxActivateEvent && rsrc_type != le_wxAuiManagerEvent && rsrc_type != le_wxSizeEvent && rsrc_type != le_wxMouseEvent && rsrc_type != le_wxMoveEvent && rsrc_type != le_wxMouseCaptureLostEvent && rsrc_type != le_wxMouseCaptureChangedEvent && rsrc_type != le_wxTimerEvent && rsrc_type != le_wxThreadEvent && rsrc_type != le_wxScrollWinEvent && rsrc_type != le_wxSysColourChangedEvent && rsrc_type != le_wxProcessEvent && rsrc_type != le_wxEraseEvent && rsrc_type != le_wxSetCursorEvent && rsrc_type != le_wxIconizeEvent && rsrc_type != le_wxIdleEvent && rsrc_type != le_wxShowEvent && rsrc_type != le_wxPaintEvent && rsrc_type != le_wxPaletteChangedEvent && rsrc_type != le_wxInitDialogEvent && rsrc_type != le_wxMaximizeEvent && rsrc_type != le_wxNavigationKeyEvent && rsrc_type != le_wxFocusEvent && rsrc_type != le_wxFileSystemWatcherEvent && rsrc_type != le_wxDisplayChangedEvent && rsrc_type != le_wxCalculateLayoutEvent && rsrc_type != le_wxDropFilesEvent && rsrc_type != le_wxQueryLayoutInfoEvent && rsrc_type != le_wxTaskBarIconEvent && rsrc_type != le_wxAcceleratorTable && rsrc_type != le_wxGDIObject && rsrc_type != le_wxBitmap && rsrc_type != le_wxPalette && rsrc_type != le_wxIcon && rsrc_type != le_wxFont && rsrc_type != le_wxAnimation && rsrc_type != le_wxIconBundle && rsrc_type != le_wxCursor && rsrc_type != le_wxRegion && rsrc_type != le_wxPen && rsrc_type != le_wxBrush && rsrc_type != le_wxArtProvider && rsrc_type != le_wxHtmlCell && rsrc_type != le_wxHtmlContainerCell && rsrc_type != le_wxHtmlColourCell && rsrc_type != le_wxHtmlWidgetCell && rsrc_type != le_wxHtmlEasyPrinting && rsrc_type != le_wxHtmlLinkInfo && rsrc_type != le_wxFindReplaceData && rsrc_type != le_wxSound && rsrc_type != le_wxFileSystem && rsrc_type != le_wxFileSystemHandler && rsrc_type != le_wxMask && rsrc_type != le_wxToolTip && rsrc_type != le_wxGraphicsRenderer && rsrc_type != le_wxLayoutConstraints && rsrc_type != le_wxFSFile && rsrc_type != le_wxColourData && rsrc_type != le_wxFontData && rsrc_type != le_wxToolBarToolBase && rsrc_type != le_wxGridTableBase && rsrc_type != le_wxDataViewRenderer && rsrc_type != le_wxDataViewBitmapRenderer && rsrc_type != le_wxDataViewChoiceRenderer && rsrc_type != le_wxDataViewCustomRenderer && rsrc_type != le_wxDataViewSpinRenderer && rsrc_type != le_wxDataViewDateRenderer && rsrc_type != le_wxDataViewIconTextRenderer && rsrc_type != le_wxDataViewProgressRenderer && rsrc_type != le_wxDataViewTextRenderer && rsrc_type != le_wxDataViewToggleRenderer && rsrc_type != le_wxDataViewIconText && rsrc_type != le_wxVariant && rsrc_type != le_wxClipboard && rsrc_type != le_wxConfigBase && rsrc_type != le_wxFileConfig && rsrc_type != le_wxXmlResource && rsrc_type != le_wxPageSetupDialogData && rsrc_type != le_wxPrintDialogData && rsrc_type != le_wxPrintData && rsrc_type != le_wxPrintPreview && rsrc_type != le_wxPrinter && rsrc_type != le_wxPrintout && rsrc_type != le_wxHtmlPrintout && rsrc_type != le_wxHtmlDCRenderer && rsrc_type != le_wxHtmlFilter && rsrc_type != le_wxHtmlHelpData && rsrc_type != le_wxHtmlTagHandler && rsrc_type != le_wxHtmlWinTagHandler && rsrc_type != le_wxModule && rsrc_type != le_wxHtmlTagsModule && rsrc_type != le_wxImageHandler && rsrc_type != le_wxXmlResourceHandler && rsrc_type != le_wxXmlDocument && rsrc_type != le_wxLayoutAlgorithm && rsrc_type != le_wxFileHistory))
+					if (!object_pointer0_1 || (rsrc_type != le_wxEvtHandler && rsrc_type != le_wxWindow && rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow && rsrc_type != le_wxValidator && rsrc_type != le_wxTextValidator && rsrc_type != le_wxGenericValidator && rsrc_type != le_wxMenu && rsrc_type != le_wxAuiManager && rsrc_type != le_wxMouseEventsManager && rsrc_type != le_wxTimer && rsrc_type != le_wxEventBlocker && rsrc_type != le_wxProcess && rsrc_type != le_wxFileSystemWatcher && rsrc_type != le_wxTaskBarIcon && rsrc_type != le_wxNotificationMessage && rsrc_type != le_wxBitmapHandler && rsrc_type != le_wxImage && rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxWrapSizer && rsrc_type != le_wxStdDialogButtonSizer && rsrc_type != le_wxGridSizer && rsrc_type != le_wxFlexGridSizer && rsrc_type != le_wxGridBagSizer && rsrc_type != le_wxSizerItem && rsrc_type != le_wxGBSizerItem && rsrc_type != le_wxImageList && rsrc_type != le_wxDC && rsrc_type != le_wxWindowDC && rsrc_type != le_wxClientDC && rsrc_type != le_wxPaintDC && rsrc_type != le_wxScreenDC && rsrc_type != le_wxPostScriptDC && rsrc_type != le_wxPrinterDC && rsrc_type != le_wxMemoryDC && rsrc_type != le_wxBufferedDC && rsrc_type != le_wxBufferedPaintDC && rsrc_type != le_wxAutoBufferedPaintDC && rsrc_type != le_wxMirrorDC && rsrc_type != le_wxColour && rsrc_type != le_wxMenuItem && rsrc_type != le_wxEvent && rsrc_type != le_wxMenuEvent && rsrc_type != le_wxKeyEvent && rsrc_type != le_wxCommandEvent && rsrc_type != le_wxNotifyEvent && rsrc_type != le_wxTreeEvent && rsrc_type != le_wxBookCtrlEvent && rsrc_type != le_wxAuiNotebookEvent && rsrc_type != le_wxAuiToolBarEvent && rsrc_type != le_wxListEvent && rsrc_type != le_wxSpinEvent && rsrc_type != le_wxSplitterEvent && rsrc_type != le_wxSpinDoubleEvent && rsrc_type != le_wxGridSizeEvent && rsrc_type != le_wxWizardEvent && rsrc_type != le_wxGridEvent && rsrc_type != le_wxGridRangeSelectEvent && rsrc_type != le_wxDataViewEvent && rsrc_type != le_wxHeaderCtrlEvent && rsrc_type != le_wxRibbonBarEvent && rsrc_type != le_wxStyledTextEvent && rsrc_type != le_wxChildFocusEvent && rsrc_type != le_wxHtmlCellEvent && rsrc_type != le_wxHtmlLinkEvent && rsrc_type != le_wxHyperlinkEvent && rsrc_type != le_wxColourPickerEvent && rsrc_type != le_wxFontPickerEvent && rsrc_type != le_wxScrollEvent && rsrc_type != le_wxWindowModalDialogEvent && rsrc_type != le_wxDateEvent && rsrc_type != le_wxCalendarEvent && rsrc_type != le_wxWindowCreateEvent && rsrc_type != le_wxWindowDestroyEvent && rsrc_type != le_wxUpdateUIEvent && rsrc_type != le_wxHelpEvent && rsrc_type != le_wxGridEditorCreatedEvent && rsrc_type != le_wxCollapsiblePaneEvent && rsrc_type != le_wxClipboardTextEvent && rsrc_type != le_wxFileCtrlEvent && rsrc_type != le_wxSashEvent && rsrc_type != le_wxFileDirPickerEvent && rsrc_type != le_wxContextMenuEvent && rsrc_type != le_wxRibbonButtonBarEvent && rsrc_type != le_wxRibbonGalleryEvent && rsrc_type != le_wxCloseEvent && rsrc_type != le_wxActivateEvent && rsrc_type != le_wxAuiManagerEvent && rsrc_type != le_wxSizeEvent && rsrc_type != le_wxMouseEvent && rsrc_type != le_wxMoveEvent && rsrc_type != le_wxTimerEvent && rsrc_type != le_wxThreadEvent && rsrc_type != le_wxScrollWinEvent && rsrc_type != le_wxSysColourChangedEvent && rsrc_type != le_wxProcessEvent && rsrc_type != le_wxEraseEvent && rsrc_type != le_wxSetCursorEvent && rsrc_type != le_wxIdleEvent && rsrc_type != le_wxPaintEvent && rsrc_type != le_wxPaletteChangedEvent && rsrc_type != le_wxInitDialogEvent && rsrc_type != le_wxMaximizeEvent && rsrc_type != le_wxNavigationKeyEvent && rsrc_type != le_wxFocusEvent && rsrc_type != le_wxFileSystemWatcherEvent && rsrc_type != le_wxDisplayChangedEvent && rsrc_type != le_wxCalculateLayoutEvent && rsrc_type != le_wxQueryLayoutInfoEvent && rsrc_type != le_wxTaskBarIconEvent && rsrc_type != le_wxAcceleratorTable && rsrc_type != le_wxGDIObject && rsrc_type != le_wxBitmap && rsrc_type != le_wxPalette && rsrc_type != le_wxIcon && rsrc_type != le_wxFont && rsrc_type != le_wxAnimation && rsrc_type != le_wxIconBundle && rsrc_type != le_wxCursor && rsrc_type != le_wxRegion && rsrc_type != le_wxPen && rsrc_type != le_wxBrush && rsrc_type != le_wxArtProvider && rsrc_type != le_wxHtmlCell && rsrc_type != le_wxHtmlContainerCell && rsrc_type != le_wxHtmlColourCell && rsrc_type != le_wxHtmlWidgetCell && rsrc_type != le_wxHtmlEasyPrinting && rsrc_type != le_wxHtmlLinkInfo && rsrc_type != le_wxFindReplaceData && rsrc_type != le_wxSound && rsrc_type != le_wxFileSystem && rsrc_type != le_wxFileSystemHandler && rsrc_type != le_wxMask && rsrc_type != le_wxToolTip && rsrc_type != le_wxGraphicsRenderer && rsrc_type != le_wxLayoutConstraints && rsrc_type != le_wxFSFile && rsrc_type != le_wxColourData && rsrc_type != le_wxFontData && rsrc_type != le_wxGridTableBase && rsrc_type != le_wxDataViewRenderer && rsrc_type != le_wxDataViewBitmapRenderer && rsrc_type != le_wxDataViewChoiceRenderer && rsrc_type != le_wxDataViewCustomRenderer && rsrc_type != le_wxDataViewSpinRenderer && rsrc_type != le_wxDataViewDateRenderer && rsrc_type != le_wxDataViewIconTextRenderer && rsrc_type != le_wxDataViewProgressRenderer && rsrc_type != le_wxDataViewTextRenderer && rsrc_type != le_wxDataViewToggleRenderer && rsrc_type != le_wxDataViewIconText && rsrc_type != le_wxVariant && rsrc_type != le_wxClipboard && rsrc_type != le_wxConfigBase && rsrc_type != le_wxFileConfig && rsrc_type != le_wxXmlResource && rsrc_type != le_wxPageSetupDialogData && rsrc_type != le_wxPrintDialogData && rsrc_type != le_wxPrintData && rsrc_type != le_wxPrintPreview && rsrc_type != le_wxPrinter && rsrc_type != le_wxPrintout && rsrc_type != le_wxHtmlPrintout && rsrc_type != le_wxHtmlDCRenderer && rsrc_type != le_wxHtmlFilter && rsrc_type != le_wxHtmlHelpData && rsrc_type != le_wxHtmlTagHandler && rsrc_type != le_wxHtmlWinTagHandler && rsrc_type != le_wxModule && rsrc_type != le_wxHtmlTagsModule && rsrc_type != le_wxImageHandler && rsrc_type != le_wxXmlResourceHandler && rsrc_type != le_wxXmlDocument && rsrc_type != le_wxLayoutAlgorithm && rsrc_type != le_wxFileHistory && rsrc_type != le_wxToolBarToolBase))
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(evtObject0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(evtObject0);
 				}
 				else if(Z_TYPE_P(evtObject0) != IS_NULL)
 				{
@@ -36720,7 +34814,6 @@ PHP_METHOD(php_wxFileCtrlEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -36767,6 +34860,7 @@ PHP_METHOD(php_wxFileCtrlEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxFileDirPickerEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -36775,13 +34869,13 @@ void php_wxFileDirPickerEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 	#endif
 	
 	
-	wxFileDirPickerEvent_php* object = (wxFileDirPickerEvent_php*)rsrc->ptr;
+	wxFileDirPickerEvent_php* object = static_cast<wxFileDirPickerEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -36870,7 +34964,6 @@ PHP_METHOD(php_wxFileDirPickerEvent, GetPath)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -36957,7 +35050,8 @@ PHP_METHOD(php_wxFileDirPickerEvent, SetPath)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&path0, &path_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &path0, &path_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &path0, &path_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -36965,7 +35059,6 @@ PHP_METHOD(php_wxFileDirPickerEvent, SetPath)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -37022,21 +35115,18 @@ PHP_METHOD(php_wxFileDirPickerEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lzls' (&type0, &generator0, &id0, &path0, &path_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lzls", &type0, &generator0, &id0, &path0, &path_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "lzls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &type0, &generator0, &id0, &path0, &path_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(generator0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(generator0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 				{
 					id_to_find = Z_RESVAL_P(*tmp);
 					object_pointer0_1 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_1 || (rsrc_type != le_wxEvtHandler && rsrc_type != le_wxWindow && rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow && rsrc_type != le_wxValidator && rsrc_type != le_wxTextValidator && rsrc_type != le_wxGenericValidator && rsrc_type != le_wxMenu && rsrc_type != le_wxAuiManager && rsrc_type != le_wxMouseEventsManager && rsrc_type != le_wxTimer && rsrc_type != le_wxEventBlocker && rsrc_type != le_wxProcess && rsrc_type != le_wxFileSystemWatcher && rsrc_type != le_wxTaskBarIcon && rsrc_type != le_wxNotificationMessage && rsrc_type != le_wxBitmapHandler && rsrc_type != le_wxImage && rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxWrapSizer && rsrc_type != le_wxStdDialogButtonSizer && rsrc_type != le_wxGridSizer && rsrc_type != le_wxFlexGridSizer && rsrc_type != le_wxGridBagSizer && rsrc_type != le_wxSizerItem && rsrc_type != le_wxGBSizerItem && rsrc_type != le_wxImageList && rsrc_type != le_wxDC && rsrc_type != le_wxWindowDC && rsrc_type != le_wxClientDC && rsrc_type != le_wxPaintDC && rsrc_type != le_wxScreenDC && rsrc_type != le_wxPostScriptDC && rsrc_type != le_wxPrinterDC && rsrc_type != le_wxMemoryDC && rsrc_type != le_wxBufferedDC && rsrc_type != le_wxBufferedPaintDC && rsrc_type != le_wxAutoBufferedPaintDC && rsrc_type != le_wxMirrorDC && rsrc_type != le_wxColour && rsrc_type != le_wxMenuItem && rsrc_type != le_wxEvent && rsrc_type != le_wxMenuEvent && rsrc_type != le_wxKeyEvent && rsrc_type != le_wxCommandEvent && rsrc_type != le_wxNotifyEvent && rsrc_type != le_wxTreeEvent && rsrc_type != le_wxBookCtrlEvent && rsrc_type != le_wxAuiNotebookEvent && rsrc_type != le_wxAuiToolBarEvent && rsrc_type != le_wxListEvent && rsrc_type != le_wxSpinEvent && rsrc_type != le_wxSplitterEvent && rsrc_type != le_wxSpinDoubleEvent && rsrc_type != le_wxGridSizeEvent && rsrc_type != le_wxWizardEvent && rsrc_type != le_wxGridEvent && rsrc_type != le_wxGridRangeSelectEvent && rsrc_type != le_wxDataViewEvent && rsrc_type != le_wxHeaderCtrlEvent && rsrc_type != le_wxRibbonBarEvent && rsrc_type != le_wxStyledTextEvent && rsrc_type != le_wxChildFocusEvent && rsrc_type != le_wxHtmlCellEvent && rsrc_type != le_wxHtmlLinkEvent && rsrc_type != le_wxHyperlinkEvent && rsrc_type != le_wxColourPickerEvent && rsrc_type != le_wxFontPickerEvent && rsrc_type != le_wxScrollEvent && rsrc_type != le_wxWindowModalDialogEvent && rsrc_type != le_wxDateEvent && rsrc_type != le_wxCalendarEvent && rsrc_type != le_wxWindowCreateEvent && rsrc_type != le_wxWindowDestroyEvent && rsrc_type != le_wxUpdateUIEvent && rsrc_type != le_wxHelpEvent && rsrc_type != le_wxGridEditorCreatedEvent && rsrc_type != le_wxCollapsiblePaneEvent && rsrc_type != le_wxClipboardTextEvent && rsrc_type != le_wxFileCtrlEvent && rsrc_type != le_wxSashEvent && rsrc_type != le_wxFileDirPickerEvent && rsrc_type != le_wxContextMenuEvent && rsrc_type != le_wxRibbonButtonBarEvent && rsrc_type != le_wxRibbonGalleryEvent && rsrc_type != le_wxCloseEvent && rsrc_type != le_wxActivateEvent && rsrc_type != le_wxAuiManagerEvent && rsrc_type != le_wxSizeEvent && rsrc_type != le_wxMouseEvent && rsrc_type != le_wxMoveEvent && rsrc_type != le_wxMouseCaptureLostEvent && rsrc_type != le_wxMouseCaptureChangedEvent && rsrc_type != le_wxTimerEvent && rsrc_type != le_wxThreadEvent && rsrc_type != le_wxScrollWinEvent && rsrc_type != le_wxSysColourChangedEvent && rsrc_type != le_wxProcessEvent && rsrc_type != le_wxEraseEvent && rsrc_type != le_wxSetCursorEvent && rsrc_type != le_wxIconizeEvent && rsrc_type != le_wxIdleEvent && rsrc_type != le_wxShowEvent && rsrc_type != le_wxPaintEvent && rsrc_type != le_wxPaletteChangedEvent && rsrc_type != le_wxInitDialogEvent && rsrc_type != le_wxMaximizeEvent && rsrc_type != le_wxNavigationKeyEvent && rsrc_type != le_wxFocusEvent && rsrc_type != le_wxFileSystemWatcherEvent && rsrc_type != le_wxDisplayChangedEvent && rsrc_type != le_wxCalculateLayoutEvent && rsrc_type != le_wxDropFilesEvent && rsrc_type != le_wxQueryLayoutInfoEvent && rsrc_type != le_wxTaskBarIconEvent && rsrc_type != le_wxAcceleratorTable && rsrc_type != le_wxGDIObject && rsrc_type != le_wxBitmap && rsrc_type != le_wxPalette && rsrc_type != le_wxIcon && rsrc_type != le_wxFont && rsrc_type != le_wxAnimation && rsrc_type != le_wxIconBundle && rsrc_type != le_wxCursor && rsrc_type != le_wxRegion && rsrc_type != le_wxPen && rsrc_type != le_wxBrush && rsrc_type != le_wxArtProvider && rsrc_type != le_wxHtmlCell && rsrc_type != le_wxHtmlContainerCell && rsrc_type != le_wxHtmlColourCell && rsrc_type != le_wxHtmlWidgetCell && rsrc_type != le_wxHtmlEasyPrinting && rsrc_type != le_wxHtmlLinkInfo && rsrc_type != le_wxFindReplaceData && rsrc_type != le_wxSound && rsrc_type != le_wxFileSystem && rsrc_type != le_wxFileSystemHandler && rsrc_type != le_wxMask && rsrc_type != le_wxToolTip && rsrc_type != le_wxGraphicsRenderer && rsrc_type != le_wxLayoutConstraints && rsrc_type != le_wxFSFile && rsrc_type != le_wxColourData && rsrc_type != le_wxFontData && rsrc_type != le_wxToolBarToolBase && rsrc_type != le_wxGridTableBase && rsrc_type != le_wxDataViewRenderer && rsrc_type != le_wxDataViewBitmapRenderer && rsrc_type != le_wxDataViewChoiceRenderer && rsrc_type != le_wxDataViewCustomRenderer && rsrc_type != le_wxDataViewSpinRenderer && rsrc_type != le_wxDataViewDateRenderer && rsrc_type != le_wxDataViewIconTextRenderer && rsrc_type != le_wxDataViewProgressRenderer && rsrc_type != le_wxDataViewTextRenderer && rsrc_type != le_wxDataViewToggleRenderer && rsrc_type != le_wxDataViewIconText && rsrc_type != le_wxVariant && rsrc_type != le_wxClipboard && rsrc_type != le_wxConfigBase && rsrc_type != le_wxFileConfig && rsrc_type != le_wxXmlResource && rsrc_type != le_wxPageSetupDialogData && rsrc_type != le_wxPrintDialogData && rsrc_type != le_wxPrintData && rsrc_type != le_wxPrintPreview && rsrc_type != le_wxPrinter && rsrc_type != le_wxPrintout && rsrc_type != le_wxHtmlPrintout && rsrc_type != le_wxHtmlDCRenderer && rsrc_type != le_wxHtmlFilter && rsrc_type != le_wxHtmlHelpData && rsrc_type != le_wxHtmlTagHandler && rsrc_type != le_wxHtmlWinTagHandler && rsrc_type != le_wxModule && rsrc_type != le_wxHtmlTagsModule && rsrc_type != le_wxImageHandler && rsrc_type != le_wxXmlResourceHandler && rsrc_type != le_wxXmlDocument && rsrc_type != le_wxLayoutAlgorithm && rsrc_type != le_wxFileHistory))
+					if (!object_pointer0_1 || (rsrc_type != le_wxEvtHandler && rsrc_type != le_wxWindow && rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow && rsrc_type != le_wxValidator && rsrc_type != le_wxTextValidator && rsrc_type != le_wxGenericValidator && rsrc_type != le_wxMenu && rsrc_type != le_wxAuiManager && rsrc_type != le_wxMouseEventsManager && rsrc_type != le_wxTimer && rsrc_type != le_wxEventBlocker && rsrc_type != le_wxProcess && rsrc_type != le_wxFileSystemWatcher && rsrc_type != le_wxTaskBarIcon && rsrc_type != le_wxNotificationMessage && rsrc_type != le_wxBitmapHandler && rsrc_type != le_wxImage && rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxWrapSizer && rsrc_type != le_wxStdDialogButtonSizer && rsrc_type != le_wxGridSizer && rsrc_type != le_wxFlexGridSizer && rsrc_type != le_wxGridBagSizer && rsrc_type != le_wxSizerItem && rsrc_type != le_wxGBSizerItem && rsrc_type != le_wxImageList && rsrc_type != le_wxDC && rsrc_type != le_wxWindowDC && rsrc_type != le_wxClientDC && rsrc_type != le_wxPaintDC && rsrc_type != le_wxScreenDC && rsrc_type != le_wxPostScriptDC && rsrc_type != le_wxPrinterDC && rsrc_type != le_wxMemoryDC && rsrc_type != le_wxBufferedDC && rsrc_type != le_wxBufferedPaintDC && rsrc_type != le_wxAutoBufferedPaintDC && rsrc_type != le_wxMirrorDC && rsrc_type != le_wxColour && rsrc_type != le_wxMenuItem && rsrc_type != le_wxEvent && rsrc_type != le_wxMenuEvent && rsrc_type != le_wxKeyEvent && rsrc_type != le_wxCommandEvent && rsrc_type != le_wxNotifyEvent && rsrc_type != le_wxTreeEvent && rsrc_type != le_wxBookCtrlEvent && rsrc_type != le_wxAuiNotebookEvent && rsrc_type != le_wxAuiToolBarEvent && rsrc_type != le_wxListEvent && rsrc_type != le_wxSpinEvent && rsrc_type != le_wxSplitterEvent && rsrc_type != le_wxSpinDoubleEvent && rsrc_type != le_wxGridSizeEvent && rsrc_type != le_wxWizardEvent && rsrc_type != le_wxGridEvent && rsrc_type != le_wxGridRangeSelectEvent && rsrc_type != le_wxDataViewEvent && rsrc_type != le_wxHeaderCtrlEvent && rsrc_type != le_wxRibbonBarEvent && rsrc_type != le_wxStyledTextEvent && rsrc_type != le_wxChildFocusEvent && rsrc_type != le_wxHtmlCellEvent && rsrc_type != le_wxHtmlLinkEvent && rsrc_type != le_wxHyperlinkEvent && rsrc_type != le_wxColourPickerEvent && rsrc_type != le_wxFontPickerEvent && rsrc_type != le_wxScrollEvent && rsrc_type != le_wxWindowModalDialogEvent && rsrc_type != le_wxDateEvent && rsrc_type != le_wxCalendarEvent && rsrc_type != le_wxWindowCreateEvent && rsrc_type != le_wxWindowDestroyEvent && rsrc_type != le_wxUpdateUIEvent && rsrc_type != le_wxHelpEvent && rsrc_type != le_wxGridEditorCreatedEvent && rsrc_type != le_wxCollapsiblePaneEvent && rsrc_type != le_wxClipboardTextEvent && rsrc_type != le_wxFileCtrlEvent && rsrc_type != le_wxSashEvent && rsrc_type != le_wxFileDirPickerEvent && rsrc_type != le_wxContextMenuEvent && rsrc_type != le_wxRibbonButtonBarEvent && rsrc_type != le_wxRibbonGalleryEvent && rsrc_type != le_wxCloseEvent && rsrc_type != le_wxActivateEvent && rsrc_type != le_wxAuiManagerEvent && rsrc_type != le_wxSizeEvent && rsrc_type != le_wxMouseEvent && rsrc_type != le_wxMoveEvent && rsrc_type != le_wxTimerEvent && rsrc_type != le_wxThreadEvent && rsrc_type != le_wxScrollWinEvent && rsrc_type != le_wxSysColourChangedEvent && rsrc_type != le_wxProcessEvent && rsrc_type != le_wxEraseEvent && rsrc_type != le_wxSetCursorEvent && rsrc_type != le_wxIdleEvent && rsrc_type != le_wxPaintEvent && rsrc_type != le_wxPaletteChangedEvent && rsrc_type != le_wxInitDialogEvent && rsrc_type != le_wxMaximizeEvent && rsrc_type != le_wxNavigationKeyEvent && rsrc_type != le_wxFocusEvent && rsrc_type != le_wxFileSystemWatcherEvent && rsrc_type != le_wxDisplayChangedEvent && rsrc_type != le_wxCalculateLayoutEvent && rsrc_type != le_wxQueryLayoutInfoEvent && rsrc_type != le_wxTaskBarIconEvent && rsrc_type != le_wxAcceleratorTable && rsrc_type != le_wxGDIObject && rsrc_type != le_wxBitmap && rsrc_type != le_wxPalette && rsrc_type != le_wxIcon && rsrc_type != le_wxFont && rsrc_type != le_wxAnimation && rsrc_type != le_wxIconBundle && rsrc_type != le_wxCursor && rsrc_type != le_wxRegion && rsrc_type != le_wxPen && rsrc_type != le_wxBrush && rsrc_type != le_wxArtProvider && rsrc_type != le_wxHtmlCell && rsrc_type != le_wxHtmlContainerCell && rsrc_type != le_wxHtmlColourCell && rsrc_type != le_wxHtmlWidgetCell && rsrc_type != le_wxHtmlEasyPrinting && rsrc_type != le_wxHtmlLinkInfo && rsrc_type != le_wxFindReplaceData && rsrc_type != le_wxSound && rsrc_type != le_wxFileSystem && rsrc_type != le_wxFileSystemHandler && rsrc_type != le_wxMask && rsrc_type != le_wxToolTip && rsrc_type != le_wxGraphicsRenderer && rsrc_type != le_wxLayoutConstraints && rsrc_type != le_wxFSFile && rsrc_type != le_wxColourData && rsrc_type != le_wxFontData && rsrc_type != le_wxGridTableBase && rsrc_type != le_wxDataViewRenderer && rsrc_type != le_wxDataViewBitmapRenderer && rsrc_type != le_wxDataViewChoiceRenderer && rsrc_type != le_wxDataViewCustomRenderer && rsrc_type != le_wxDataViewSpinRenderer && rsrc_type != le_wxDataViewDateRenderer && rsrc_type != le_wxDataViewIconTextRenderer && rsrc_type != le_wxDataViewProgressRenderer && rsrc_type != le_wxDataViewTextRenderer && rsrc_type != le_wxDataViewToggleRenderer && rsrc_type != le_wxDataViewIconText && rsrc_type != le_wxVariant && rsrc_type != le_wxClipboard && rsrc_type != le_wxConfigBase && rsrc_type != le_wxFileConfig && rsrc_type != le_wxXmlResource && rsrc_type != le_wxPageSetupDialogData && rsrc_type != le_wxPrintDialogData && rsrc_type != le_wxPrintData && rsrc_type != le_wxPrintPreview && rsrc_type != le_wxPrinter && rsrc_type != le_wxPrintout && rsrc_type != le_wxHtmlPrintout && rsrc_type != le_wxHtmlDCRenderer && rsrc_type != le_wxHtmlFilter && rsrc_type != le_wxHtmlHelpData && rsrc_type != le_wxHtmlTagHandler && rsrc_type != le_wxHtmlWinTagHandler && rsrc_type != le_wxModule && rsrc_type != le_wxHtmlTagsModule && rsrc_type != le_wxImageHandler && rsrc_type != le_wxXmlResourceHandler && rsrc_type != le_wxXmlDocument && rsrc_type != le_wxLayoutAlgorithm && rsrc_type != le_wxFileHistory && rsrc_type != le_wxToolBarToolBase))
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(generator0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(generator0);
 				}
 				else if(Z_TYPE_P(generator0) != IS_NULL)
 				{
@@ -37050,7 +35140,6 @@ PHP_METHOD(php_wxFileDirPickerEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -37097,6 +35186,7 @@ PHP_METHOD(php_wxFileDirPickerEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxFontPickerEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -37105,13 +35195,13 @@ void php_wxFontPickerEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 	#endif
 	
 	
-	wxFontPickerEvent_php* object = (wxFontPickerEvent_php*)rsrc->ptr;
+	wxFontPickerEvent_php* object = static_cast<wxFontPickerEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -37200,7 +35290,6 @@ PHP_METHOD(php_wxFontPickerEvent, GetFont)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -37286,7 +35375,8 @@ PHP_METHOD(php_wxFontPickerEvent, SetFont)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&f0, php_wxFont_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &f0, php_wxFont_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &f0, php_wxFont_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(f0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(f0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -37297,10 +35387,6 @@ PHP_METHOD(php_wxFontPickerEvent, SetFont)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(f0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(f0);
 				}
 				else if(Z_TYPE_P(f0) != IS_NULL)
 				{
@@ -37314,7 +35400,6 @@ PHP_METHOD(php_wxFontPickerEvent, SetFont)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -37371,21 +35456,18 @@ PHP_METHOD(php_wxFontPickerEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zlO' (&generator0, &id0, &font0, php_wxFont_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "zlO", &generator0, &id0, &font0, php_wxFont_entry ) == SUCCESS)
+		char parse_parameters_string[] = "zlO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &generator0, &id0, &font0, php_wxFont_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(generator0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(generator0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 				{
 					id_to_find = Z_RESVAL_P(*tmp);
 					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxEvtHandler && rsrc_type != le_wxWindow && rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow && rsrc_type != le_wxValidator && rsrc_type != le_wxTextValidator && rsrc_type != le_wxGenericValidator && rsrc_type != le_wxMenu && rsrc_type != le_wxAuiManager && rsrc_type != le_wxMouseEventsManager && rsrc_type != le_wxTimer && rsrc_type != le_wxEventBlocker && rsrc_type != le_wxProcess && rsrc_type != le_wxFileSystemWatcher && rsrc_type != le_wxTaskBarIcon && rsrc_type != le_wxNotificationMessage && rsrc_type != le_wxBitmapHandler && rsrc_type != le_wxImage && rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxWrapSizer && rsrc_type != le_wxStdDialogButtonSizer && rsrc_type != le_wxGridSizer && rsrc_type != le_wxFlexGridSizer && rsrc_type != le_wxGridBagSizer && rsrc_type != le_wxSizerItem && rsrc_type != le_wxGBSizerItem && rsrc_type != le_wxImageList && rsrc_type != le_wxDC && rsrc_type != le_wxWindowDC && rsrc_type != le_wxClientDC && rsrc_type != le_wxPaintDC && rsrc_type != le_wxScreenDC && rsrc_type != le_wxPostScriptDC && rsrc_type != le_wxPrinterDC && rsrc_type != le_wxMemoryDC && rsrc_type != le_wxBufferedDC && rsrc_type != le_wxBufferedPaintDC && rsrc_type != le_wxAutoBufferedPaintDC && rsrc_type != le_wxMirrorDC && rsrc_type != le_wxColour && rsrc_type != le_wxMenuItem && rsrc_type != le_wxEvent && rsrc_type != le_wxMenuEvent && rsrc_type != le_wxKeyEvent && rsrc_type != le_wxCommandEvent && rsrc_type != le_wxNotifyEvent && rsrc_type != le_wxTreeEvent && rsrc_type != le_wxBookCtrlEvent && rsrc_type != le_wxAuiNotebookEvent && rsrc_type != le_wxAuiToolBarEvent && rsrc_type != le_wxListEvent && rsrc_type != le_wxSpinEvent && rsrc_type != le_wxSplitterEvent && rsrc_type != le_wxSpinDoubleEvent && rsrc_type != le_wxGridSizeEvent && rsrc_type != le_wxWizardEvent && rsrc_type != le_wxGridEvent && rsrc_type != le_wxGridRangeSelectEvent && rsrc_type != le_wxDataViewEvent && rsrc_type != le_wxHeaderCtrlEvent && rsrc_type != le_wxRibbonBarEvent && rsrc_type != le_wxStyledTextEvent && rsrc_type != le_wxChildFocusEvent && rsrc_type != le_wxHtmlCellEvent && rsrc_type != le_wxHtmlLinkEvent && rsrc_type != le_wxHyperlinkEvent && rsrc_type != le_wxColourPickerEvent && rsrc_type != le_wxFontPickerEvent && rsrc_type != le_wxScrollEvent && rsrc_type != le_wxWindowModalDialogEvent && rsrc_type != le_wxDateEvent && rsrc_type != le_wxCalendarEvent && rsrc_type != le_wxWindowCreateEvent && rsrc_type != le_wxWindowDestroyEvent && rsrc_type != le_wxUpdateUIEvent && rsrc_type != le_wxHelpEvent && rsrc_type != le_wxGridEditorCreatedEvent && rsrc_type != le_wxCollapsiblePaneEvent && rsrc_type != le_wxClipboardTextEvent && rsrc_type != le_wxFileCtrlEvent && rsrc_type != le_wxSashEvent && rsrc_type != le_wxFileDirPickerEvent && rsrc_type != le_wxContextMenuEvent && rsrc_type != le_wxRibbonButtonBarEvent && rsrc_type != le_wxRibbonGalleryEvent && rsrc_type != le_wxCloseEvent && rsrc_type != le_wxActivateEvent && rsrc_type != le_wxAuiManagerEvent && rsrc_type != le_wxSizeEvent && rsrc_type != le_wxMouseEvent && rsrc_type != le_wxMoveEvent && rsrc_type != le_wxMouseCaptureLostEvent && rsrc_type != le_wxMouseCaptureChangedEvent && rsrc_type != le_wxTimerEvent && rsrc_type != le_wxThreadEvent && rsrc_type != le_wxScrollWinEvent && rsrc_type != le_wxSysColourChangedEvent && rsrc_type != le_wxProcessEvent && rsrc_type != le_wxEraseEvent && rsrc_type != le_wxSetCursorEvent && rsrc_type != le_wxIconizeEvent && rsrc_type != le_wxIdleEvent && rsrc_type != le_wxShowEvent && rsrc_type != le_wxPaintEvent && rsrc_type != le_wxPaletteChangedEvent && rsrc_type != le_wxInitDialogEvent && rsrc_type != le_wxMaximizeEvent && rsrc_type != le_wxNavigationKeyEvent && rsrc_type != le_wxFocusEvent && rsrc_type != le_wxFileSystemWatcherEvent && rsrc_type != le_wxDisplayChangedEvent && rsrc_type != le_wxCalculateLayoutEvent && rsrc_type != le_wxDropFilesEvent && rsrc_type != le_wxQueryLayoutInfoEvent && rsrc_type != le_wxTaskBarIconEvent && rsrc_type != le_wxAcceleratorTable && rsrc_type != le_wxGDIObject && rsrc_type != le_wxBitmap && rsrc_type != le_wxPalette && rsrc_type != le_wxIcon && rsrc_type != le_wxFont && rsrc_type != le_wxAnimation && rsrc_type != le_wxIconBundle && rsrc_type != le_wxCursor && rsrc_type != le_wxRegion && rsrc_type != le_wxPen && rsrc_type != le_wxBrush && rsrc_type != le_wxArtProvider && rsrc_type != le_wxHtmlCell && rsrc_type != le_wxHtmlContainerCell && rsrc_type != le_wxHtmlColourCell && rsrc_type != le_wxHtmlWidgetCell && rsrc_type != le_wxHtmlEasyPrinting && rsrc_type != le_wxHtmlLinkInfo && rsrc_type != le_wxFindReplaceData && rsrc_type != le_wxSound && rsrc_type != le_wxFileSystem && rsrc_type != le_wxFileSystemHandler && rsrc_type != le_wxMask && rsrc_type != le_wxToolTip && rsrc_type != le_wxGraphicsRenderer && rsrc_type != le_wxLayoutConstraints && rsrc_type != le_wxFSFile && rsrc_type != le_wxColourData && rsrc_type != le_wxFontData && rsrc_type != le_wxToolBarToolBase && rsrc_type != le_wxGridTableBase && rsrc_type != le_wxDataViewRenderer && rsrc_type != le_wxDataViewBitmapRenderer && rsrc_type != le_wxDataViewChoiceRenderer && rsrc_type != le_wxDataViewCustomRenderer && rsrc_type != le_wxDataViewSpinRenderer && rsrc_type != le_wxDataViewDateRenderer && rsrc_type != le_wxDataViewIconTextRenderer && rsrc_type != le_wxDataViewProgressRenderer && rsrc_type != le_wxDataViewTextRenderer && rsrc_type != le_wxDataViewToggleRenderer && rsrc_type != le_wxDataViewIconText && rsrc_type != le_wxVariant && rsrc_type != le_wxClipboard && rsrc_type != le_wxConfigBase && rsrc_type != le_wxFileConfig && rsrc_type != le_wxXmlResource && rsrc_type != le_wxPageSetupDialogData && rsrc_type != le_wxPrintDialogData && rsrc_type != le_wxPrintData && rsrc_type != le_wxPrintPreview && rsrc_type != le_wxPrinter && rsrc_type != le_wxPrintout && rsrc_type != le_wxHtmlPrintout && rsrc_type != le_wxHtmlDCRenderer && rsrc_type != le_wxHtmlFilter && rsrc_type != le_wxHtmlHelpData && rsrc_type != le_wxHtmlTagHandler && rsrc_type != le_wxHtmlWinTagHandler && rsrc_type != le_wxModule && rsrc_type != le_wxHtmlTagsModule && rsrc_type != le_wxImageHandler && rsrc_type != le_wxXmlResourceHandler && rsrc_type != le_wxXmlDocument && rsrc_type != le_wxLayoutAlgorithm && rsrc_type != le_wxFileHistory))
+					if (!object_pointer0_0 || (rsrc_type != le_wxEvtHandler && rsrc_type != le_wxWindow && rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow && rsrc_type != le_wxValidator && rsrc_type != le_wxTextValidator && rsrc_type != le_wxGenericValidator && rsrc_type != le_wxMenu && rsrc_type != le_wxAuiManager && rsrc_type != le_wxMouseEventsManager && rsrc_type != le_wxTimer && rsrc_type != le_wxEventBlocker && rsrc_type != le_wxProcess && rsrc_type != le_wxFileSystemWatcher && rsrc_type != le_wxTaskBarIcon && rsrc_type != le_wxNotificationMessage && rsrc_type != le_wxBitmapHandler && rsrc_type != le_wxImage && rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxWrapSizer && rsrc_type != le_wxStdDialogButtonSizer && rsrc_type != le_wxGridSizer && rsrc_type != le_wxFlexGridSizer && rsrc_type != le_wxGridBagSizer && rsrc_type != le_wxSizerItem && rsrc_type != le_wxGBSizerItem && rsrc_type != le_wxImageList && rsrc_type != le_wxDC && rsrc_type != le_wxWindowDC && rsrc_type != le_wxClientDC && rsrc_type != le_wxPaintDC && rsrc_type != le_wxScreenDC && rsrc_type != le_wxPostScriptDC && rsrc_type != le_wxPrinterDC && rsrc_type != le_wxMemoryDC && rsrc_type != le_wxBufferedDC && rsrc_type != le_wxBufferedPaintDC && rsrc_type != le_wxAutoBufferedPaintDC && rsrc_type != le_wxMirrorDC && rsrc_type != le_wxColour && rsrc_type != le_wxMenuItem && rsrc_type != le_wxEvent && rsrc_type != le_wxMenuEvent && rsrc_type != le_wxKeyEvent && rsrc_type != le_wxCommandEvent && rsrc_type != le_wxNotifyEvent && rsrc_type != le_wxTreeEvent && rsrc_type != le_wxBookCtrlEvent && rsrc_type != le_wxAuiNotebookEvent && rsrc_type != le_wxAuiToolBarEvent && rsrc_type != le_wxListEvent && rsrc_type != le_wxSpinEvent && rsrc_type != le_wxSplitterEvent && rsrc_type != le_wxSpinDoubleEvent && rsrc_type != le_wxGridSizeEvent && rsrc_type != le_wxWizardEvent && rsrc_type != le_wxGridEvent && rsrc_type != le_wxGridRangeSelectEvent && rsrc_type != le_wxDataViewEvent && rsrc_type != le_wxHeaderCtrlEvent && rsrc_type != le_wxRibbonBarEvent && rsrc_type != le_wxStyledTextEvent && rsrc_type != le_wxChildFocusEvent && rsrc_type != le_wxHtmlCellEvent && rsrc_type != le_wxHtmlLinkEvent && rsrc_type != le_wxHyperlinkEvent && rsrc_type != le_wxColourPickerEvent && rsrc_type != le_wxFontPickerEvent && rsrc_type != le_wxScrollEvent && rsrc_type != le_wxWindowModalDialogEvent && rsrc_type != le_wxDateEvent && rsrc_type != le_wxCalendarEvent && rsrc_type != le_wxWindowCreateEvent && rsrc_type != le_wxWindowDestroyEvent && rsrc_type != le_wxUpdateUIEvent && rsrc_type != le_wxHelpEvent && rsrc_type != le_wxGridEditorCreatedEvent && rsrc_type != le_wxCollapsiblePaneEvent && rsrc_type != le_wxClipboardTextEvent && rsrc_type != le_wxFileCtrlEvent && rsrc_type != le_wxSashEvent && rsrc_type != le_wxFileDirPickerEvent && rsrc_type != le_wxContextMenuEvent && rsrc_type != le_wxRibbonButtonBarEvent && rsrc_type != le_wxRibbonGalleryEvent && rsrc_type != le_wxCloseEvent && rsrc_type != le_wxActivateEvent && rsrc_type != le_wxAuiManagerEvent && rsrc_type != le_wxSizeEvent && rsrc_type != le_wxMouseEvent && rsrc_type != le_wxMoveEvent && rsrc_type != le_wxTimerEvent && rsrc_type != le_wxThreadEvent && rsrc_type != le_wxScrollWinEvent && rsrc_type != le_wxSysColourChangedEvent && rsrc_type != le_wxProcessEvent && rsrc_type != le_wxEraseEvent && rsrc_type != le_wxSetCursorEvent && rsrc_type != le_wxIdleEvent && rsrc_type != le_wxPaintEvent && rsrc_type != le_wxPaletteChangedEvent && rsrc_type != le_wxInitDialogEvent && rsrc_type != le_wxMaximizeEvent && rsrc_type != le_wxNavigationKeyEvent && rsrc_type != le_wxFocusEvent && rsrc_type != le_wxFileSystemWatcherEvent && rsrc_type != le_wxDisplayChangedEvent && rsrc_type != le_wxCalculateLayoutEvent && rsrc_type != le_wxQueryLayoutInfoEvent && rsrc_type != le_wxTaskBarIconEvent && rsrc_type != le_wxAcceleratorTable && rsrc_type != le_wxGDIObject && rsrc_type != le_wxBitmap && rsrc_type != le_wxPalette && rsrc_type != le_wxIcon && rsrc_type != le_wxFont && rsrc_type != le_wxAnimation && rsrc_type != le_wxIconBundle && rsrc_type != le_wxCursor && rsrc_type != le_wxRegion && rsrc_type != le_wxPen && rsrc_type != le_wxBrush && rsrc_type != le_wxArtProvider && rsrc_type != le_wxHtmlCell && rsrc_type != le_wxHtmlContainerCell && rsrc_type != le_wxHtmlColourCell && rsrc_type != le_wxHtmlWidgetCell && rsrc_type != le_wxHtmlEasyPrinting && rsrc_type != le_wxHtmlLinkInfo && rsrc_type != le_wxFindReplaceData && rsrc_type != le_wxSound && rsrc_type != le_wxFileSystem && rsrc_type != le_wxFileSystemHandler && rsrc_type != le_wxMask && rsrc_type != le_wxToolTip && rsrc_type != le_wxGraphicsRenderer && rsrc_type != le_wxLayoutConstraints && rsrc_type != le_wxFSFile && rsrc_type != le_wxColourData && rsrc_type != le_wxFontData && rsrc_type != le_wxGridTableBase && rsrc_type != le_wxDataViewRenderer && rsrc_type != le_wxDataViewBitmapRenderer && rsrc_type != le_wxDataViewChoiceRenderer && rsrc_type != le_wxDataViewCustomRenderer && rsrc_type != le_wxDataViewSpinRenderer && rsrc_type != le_wxDataViewDateRenderer && rsrc_type != le_wxDataViewIconTextRenderer && rsrc_type != le_wxDataViewProgressRenderer && rsrc_type != le_wxDataViewTextRenderer && rsrc_type != le_wxDataViewToggleRenderer && rsrc_type != le_wxDataViewIconText && rsrc_type != le_wxVariant && rsrc_type != le_wxClipboard && rsrc_type != le_wxConfigBase && rsrc_type != le_wxFileConfig && rsrc_type != le_wxXmlResource && rsrc_type != le_wxPageSetupDialogData && rsrc_type != le_wxPrintDialogData && rsrc_type != le_wxPrintData && rsrc_type != le_wxPrintPreview && rsrc_type != le_wxPrinter && rsrc_type != le_wxPrintout && rsrc_type != le_wxHtmlPrintout && rsrc_type != le_wxHtmlDCRenderer && rsrc_type != le_wxHtmlFilter && rsrc_type != le_wxHtmlHelpData && rsrc_type != le_wxHtmlTagHandler && rsrc_type != le_wxHtmlWinTagHandler && rsrc_type != le_wxModule && rsrc_type != le_wxHtmlTagsModule && rsrc_type != le_wxImageHandler && rsrc_type != le_wxXmlResourceHandler && rsrc_type != le_wxXmlDocument && rsrc_type != le_wxLayoutAlgorithm && rsrc_type != le_wxFileHistory && rsrc_type != le_wxToolBarToolBase))
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(generator0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(generator0);
 				}
 				else if(Z_TYPE_P(generator0) != IS_NULL)
 				{
@@ -37403,10 +35485,6 @@ PHP_METHOD(php_wxFontPickerEvent, __construct)
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(font0) == IS_LONG)
-				{
-					object_pointer0_2 = Z_LVAL_P(font0);
-				}
 				else if(Z_TYPE_P(font0) != IS_NULL)
 				{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
@@ -37419,7 +35497,6 @@ PHP_METHOD(php_wxFontPickerEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -37467,6 +35544,7 @@ PHP_METHOD(php_wxFontPickerEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxFileSystemWatcherEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -37475,13 +35553,13 @@ void php_wxFileSystemWatcherEvent_destruction_handler(zend_rsrc_list_entry *rsrc
 	#endif
 	
 	
-	wxFileSystemWatcherEvent_php* object = (wxFileSystemWatcherEvent_php*)rsrc->ptr;
+	wxFileSystemWatcherEvent_php* object = static_cast<wxFileSystemWatcherEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -37570,7 +35648,6 @@ PHP_METHOD(php_wxFileSystemWatcherEvent, GetChangeType)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -37657,7 +35734,6 @@ PHP_METHOD(php_wxFileSystemWatcherEvent, GetErrorDescription)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -37750,7 +35826,6 @@ PHP_METHOD(php_wxFileSystemWatcherEvent, GetNewPath)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -37767,8 +35842,8 @@ PHP_METHOD(php_wxFileSystemWatcherEvent, GetNewPath)
 
 				}
 				if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -37783,7 +35858,6 @@ PHP_METHOD(php_wxFileSystemWatcherEvent, GetNewPath)
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
 					references->AddReference(return_value);
 				}
-				references->AddReference(return_value);
 
 
 				return;
@@ -37857,7 +35931,6 @@ PHP_METHOD(php_wxFileSystemWatcherEvent, GetPath)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -37874,8 +35947,8 @@ PHP_METHOD(php_wxFileSystemWatcherEvent, GetPath)
 
 				}
 				if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -37890,7 +35963,6 @@ PHP_METHOD(php_wxFileSystemWatcherEvent, GetPath)
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
 					references->AddReference(return_value);
 				}
-				references->AddReference(return_value);
 
 
 				return;
@@ -37964,7 +36036,6 @@ PHP_METHOD(php_wxFileSystemWatcherEvent, IsError)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -38051,7 +36122,6 @@ PHP_METHOD(php_wxFileSystemWatcherEvent, ToString)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -38081,6 +36151,7 @@ PHP_METHOD(php_wxFileSystemWatcherEvent, ToString)
 
 		
 }
+
 void php_wxGridEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -38089,13 +36160,13 @@ void php_wxGridEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxGridEvent_php* object = (wxGridEvent_php*)rsrc->ptr;
+	wxGridEvent_php* object = static_cast<wxGridEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -38184,7 +36255,6 @@ PHP_METHOD(php_wxGridEvent, AltDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -38268,7 +36338,6 @@ PHP_METHOD(php_wxGridEvent, ControlDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -38352,7 +36421,6 @@ PHP_METHOD(php_wxGridEvent, GetCol)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -38436,7 +36504,6 @@ PHP_METHOD(php_wxGridEvent, GetPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -38525,7 +36592,6 @@ PHP_METHOD(php_wxGridEvent, GetRow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -38609,7 +36675,6 @@ PHP_METHOD(php_wxGridEvent, MetaDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -38693,7 +36758,6 @@ PHP_METHOD(php_wxGridEvent, Selecting)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -38777,7 +36841,6 @@ PHP_METHOD(php_wxGridEvent, ShiftDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -38853,21 +36916,18 @@ PHP_METHOD(php_wxGridEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llz|llllbO' (&id1, &type1, &obj1, &row1, &col1, &x1, &y1, &sel1, &kbd1, php_wxKeyboardState_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "llz|llllbO", &id1, &type1, &obj1, &row1, &col1, &x1, &y1, &sel1, &kbd1, php_wxKeyboardState_entry ) == SUCCESS)
+		char parse_parameters_string[] = "llz|llllbO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id1, &type1, &obj1, &row1, &col1, &x1, &y1, &sel1, &kbd1, php_wxKeyboardState_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
 				if(Z_TYPE_P(obj1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(obj1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 				{
 					id_to_find = Z_RESVAL_P(*tmp);
 					object_pointer1_2 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer1_2 || (rsrc_type != le_wxEvtHandler && rsrc_type != le_wxWindow && rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow && rsrc_type != le_wxValidator && rsrc_type != le_wxTextValidator && rsrc_type != le_wxGenericValidator && rsrc_type != le_wxMenu && rsrc_type != le_wxAuiManager && rsrc_type != le_wxMouseEventsManager && rsrc_type != le_wxTimer && rsrc_type != le_wxEventBlocker && rsrc_type != le_wxProcess && rsrc_type != le_wxFileSystemWatcher && rsrc_type != le_wxTaskBarIcon && rsrc_type != le_wxNotificationMessage && rsrc_type != le_wxBitmapHandler && rsrc_type != le_wxImage && rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxWrapSizer && rsrc_type != le_wxStdDialogButtonSizer && rsrc_type != le_wxGridSizer && rsrc_type != le_wxFlexGridSizer && rsrc_type != le_wxGridBagSizer && rsrc_type != le_wxSizerItem && rsrc_type != le_wxGBSizerItem && rsrc_type != le_wxImageList && rsrc_type != le_wxDC && rsrc_type != le_wxWindowDC && rsrc_type != le_wxClientDC && rsrc_type != le_wxPaintDC && rsrc_type != le_wxScreenDC && rsrc_type != le_wxPostScriptDC && rsrc_type != le_wxPrinterDC && rsrc_type != le_wxMemoryDC && rsrc_type != le_wxBufferedDC && rsrc_type != le_wxBufferedPaintDC && rsrc_type != le_wxAutoBufferedPaintDC && rsrc_type != le_wxMirrorDC && rsrc_type != le_wxColour && rsrc_type != le_wxMenuItem && rsrc_type != le_wxEvent && rsrc_type != le_wxMenuEvent && rsrc_type != le_wxKeyEvent && rsrc_type != le_wxCommandEvent && rsrc_type != le_wxNotifyEvent && rsrc_type != le_wxTreeEvent && rsrc_type != le_wxBookCtrlEvent && rsrc_type != le_wxAuiNotebookEvent && rsrc_type != le_wxAuiToolBarEvent && rsrc_type != le_wxListEvent && rsrc_type != le_wxSpinEvent && rsrc_type != le_wxSplitterEvent && rsrc_type != le_wxSpinDoubleEvent && rsrc_type != le_wxGridSizeEvent && rsrc_type != le_wxWizardEvent && rsrc_type != le_wxGridEvent && rsrc_type != le_wxGridRangeSelectEvent && rsrc_type != le_wxDataViewEvent && rsrc_type != le_wxHeaderCtrlEvent && rsrc_type != le_wxRibbonBarEvent && rsrc_type != le_wxStyledTextEvent && rsrc_type != le_wxChildFocusEvent && rsrc_type != le_wxHtmlCellEvent && rsrc_type != le_wxHtmlLinkEvent && rsrc_type != le_wxHyperlinkEvent && rsrc_type != le_wxColourPickerEvent && rsrc_type != le_wxFontPickerEvent && rsrc_type != le_wxScrollEvent && rsrc_type != le_wxWindowModalDialogEvent && rsrc_type != le_wxDateEvent && rsrc_type != le_wxCalendarEvent && rsrc_type != le_wxWindowCreateEvent && rsrc_type != le_wxWindowDestroyEvent && rsrc_type != le_wxUpdateUIEvent && rsrc_type != le_wxHelpEvent && rsrc_type != le_wxGridEditorCreatedEvent && rsrc_type != le_wxCollapsiblePaneEvent && rsrc_type != le_wxClipboardTextEvent && rsrc_type != le_wxFileCtrlEvent && rsrc_type != le_wxSashEvent && rsrc_type != le_wxFileDirPickerEvent && rsrc_type != le_wxContextMenuEvent && rsrc_type != le_wxRibbonButtonBarEvent && rsrc_type != le_wxRibbonGalleryEvent && rsrc_type != le_wxCloseEvent && rsrc_type != le_wxActivateEvent && rsrc_type != le_wxAuiManagerEvent && rsrc_type != le_wxSizeEvent && rsrc_type != le_wxMouseEvent && rsrc_type != le_wxMoveEvent && rsrc_type != le_wxMouseCaptureLostEvent && rsrc_type != le_wxMouseCaptureChangedEvent && rsrc_type != le_wxTimerEvent && rsrc_type != le_wxThreadEvent && rsrc_type != le_wxScrollWinEvent && rsrc_type != le_wxSysColourChangedEvent && rsrc_type != le_wxProcessEvent && rsrc_type != le_wxEraseEvent && rsrc_type != le_wxSetCursorEvent && rsrc_type != le_wxIconizeEvent && rsrc_type != le_wxIdleEvent && rsrc_type != le_wxShowEvent && rsrc_type != le_wxPaintEvent && rsrc_type != le_wxPaletteChangedEvent && rsrc_type != le_wxInitDialogEvent && rsrc_type != le_wxMaximizeEvent && rsrc_type != le_wxNavigationKeyEvent && rsrc_type != le_wxFocusEvent && rsrc_type != le_wxFileSystemWatcherEvent && rsrc_type != le_wxDisplayChangedEvent && rsrc_type != le_wxCalculateLayoutEvent && rsrc_type != le_wxDropFilesEvent && rsrc_type != le_wxQueryLayoutInfoEvent && rsrc_type != le_wxTaskBarIconEvent && rsrc_type != le_wxAcceleratorTable && rsrc_type != le_wxGDIObject && rsrc_type != le_wxBitmap && rsrc_type != le_wxPalette && rsrc_type != le_wxIcon && rsrc_type != le_wxFont && rsrc_type != le_wxAnimation && rsrc_type != le_wxIconBundle && rsrc_type != le_wxCursor && rsrc_type != le_wxRegion && rsrc_type != le_wxPen && rsrc_type != le_wxBrush && rsrc_type != le_wxArtProvider && rsrc_type != le_wxHtmlCell && rsrc_type != le_wxHtmlContainerCell && rsrc_type != le_wxHtmlColourCell && rsrc_type != le_wxHtmlWidgetCell && rsrc_type != le_wxHtmlEasyPrinting && rsrc_type != le_wxHtmlLinkInfo && rsrc_type != le_wxFindReplaceData && rsrc_type != le_wxSound && rsrc_type != le_wxFileSystem && rsrc_type != le_wxFileSystemHandler && rsrc_type != le_wxMask && rsrc_type != le_wxToolTip && rsrc_type != le_wxGraphicsRenderer && rsrc_type != le_wxLayoutConstraints && rsrc_type != le_wxFSFile && rsrc_type != le_wxColourData && rsrc_type != le_wxFontData && rsrc_type != le_wxToolBarToolBase && rsrc_type != le_wxGridTableBase && rsrc_type != le_wxDataViewRenderer && rsrc_type != le_wxDataViewBitmapRenderer && rsrc_type != le_wxDataViewChoiceRenderer && rsrc_type != le_wxDataViewCustomRenderer && rsrc_type != le_wxDataViewSpinRenderer && rsrc_type != le_wxDataViewDateRenderer && rsrc_type != le_wxDataViewIconTextRenderer && rsrc_type != le_wxDataViewProgressRenderer && rsrc_type != le_wxDataViewTextRenderer && rsrc_type != le_wxDataViewToggleRenderer && rsrc_type != le_wxDataViewIconText && rsrc_type != le_wxVariant && rsrc_type != le_wxClipboard && rsrc_type != le_wxConfigBase && rsrc_type != le_wxFileConfig && rsrc_type != le_wxXmlResource && rsrc_type != le_wxPageSetupDialogData && rsrc_type != le_wxPrintDialogData && rsrc_type != le_wxPrintData && rsrc_type != le_wxPrintPreview && rsrc_type != le_wxPrinter && rsrc_type != le_wxPrintout && rsrc_type != le_wxHtmlPrintout && rsrc_type != le_wxHtmlDCRenderer && rsrc_type != le_wxHtmlFilter && rsrc_type != le_wxHtmlHelpData && rsrc_type != le_wxHtmlTagHandler && rsrc_type != le_wxHtmlWinTagHandler && rsrc_type != le_wxModule && rsrc_type != le_wxHtmlTagsModule && rsrc_type != le_wxImageHandler && rsrc_type != le_wxXmlResourceHandler && rsrc_type != le_wxXmlDocument && rsrc_type != le_wxLayoutAlgorithm && rsrc_type != le_wxFileHistory))
+					if (!object_pointer1_2 || (rsrc_type != le_wxEvtHandler && rsrc_type != le_wxWindow && rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow && rsrc_type != le_wxValidator && rsrc_type != le_wxTextValidator && rsrc_type != le_wxGenericValidator && rsrc_type != le_wxMenu && rsrc_type != le_wxAuiManager && rsrc_type != le_wxMouseEventsManager && rsrc_type != le_wxTimer && rsrc_type != le_wxEventBlocker && rsrc_type != le_wxProcess && rsrc_type != le_wxFileSystemWatcher && rsrc_type != le_wxTaskBarIcon && rsrc_type != le_wxNotificationMessage && rsrc_type != le_wxBitmapHandler && rsrc_type != le_wxImage && rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxWrapSizer && rsrc_type != le_wxStdDialogButtonSizer && rsrc_type != le_wxGridSizer && rsrc_type != le_wxFlexGridSizer && rsrc_type != le_wxGridBagSizer && rsrc_type != le_wxSizerItem && rsrc_type != le_wxGBSizerItem && rsrc_type != le_wxImageList && rsrc_type != le_wxDC && rsrc_type != le_wxWindowDC && rsrc_type != le_wxClientDC && rsrc_type != le_wxPaintDC && rsrc_type != le_wxScreenDC && rsrc_type != le_wxPostScriptDC && rsrc_type != le_wxPrinterDC && rsrc_type != le_wxMemoryDC && rsrc_type != le_wxBufferedDC && rsrc_type != le_wxBufferedPaintDC && rsrc_type != le_wxAutoBufferedPaintDC && rsrc_type != le_wxMirrorDC && rsrc_type != le_wxColour && rsrc_type != le_wxMenuItem && rsrc_type != le_wxEvent && rsrc_type != le_wxMenuEvent && rsrc_type != le_wxKeyEvent && rsrc_type != le_wxCommandEvent && rsrc_type != le_wxNotifyEvent && rsrc_type != le_wxTreeEvent && rsrc_type != le_wxBookCtrlEvent && rsrc_type != le_wxAuiNotebookEvent && rsrc_type != le_wxAuiToolBarEvent && rsrc_type != le_wxListEvent && rsrc_type != le_wxSpinEvent && rsrc_type != le_wxSplitterEvent && rsrc_type != le_wxSpinDoubleEvent && rsrc_type != le_wxGridSizeEvent && rsrc_type != le_wxWizardEvent && rsrc_type != le_wxGridEvent && rsrc_type != le_wxGridRangeSelectEvent && rsrc_type != le_wxDataViewEvent && rsrc_type != le_wxHeaderCtrlEvent && rsrc_type != le_wxRibbonBarEvent && rsrc_type != le_wxStyledTextEvent && rsrc_type != le_wxChildFocusEvent && rsrc_type != le_wxHtmlCellEvent && rsrc_type != le_wxHtmlLinkEvent && rsrc_type != le_wxHyperlinkEvent && rsrc_type != le_wxColourPickerEvent && rsrc_type != le_wxFontPickerEvent && rsrc_type != le_wxScrollEvent && rsrc_type != le_wxWindowModalDialogEvent && rsrc_type != le_wxDateEvent && rsrc_type != le_wxCalendarEvent && rsrc_type != le_wxWindowCreateEvent && rsrc_type != le_wxWindowDestroyEvent && rsrc_type != le_wxUpdateUIEvent && rsrc_type != le_wxHelpEvent && rsrc_type != le_wxGridEditorCreatedEvent && rsrc_type != le_wxCollapsiblePaneEvent && rsrc_type != le_wxClipboardTextEvent && rsrc_type != le_wxFileCtrlEvent && rsrc_type != le_wxSashEvent && rsrc_type != le_wxFileDirPickerEvent && rsrc_type != le_wxContextMenuEvent && rsrc_type != le_wxRibbonButtonBarEvent && rsrc_type != le_wxRibbonGalleryEvent && rsrc_type != le_wxCloseEvent && rsrc_type != le_wxActivateEvent && rsrc_type != le_wxAuiManagerEvent && rsrc_type != le_wxSizeEvent && rsrc_type != le_wxMouseEvent && rsrc_type != le_wxMoveEvent && rsrc_type != le_wxTimerEvent && rsrc_type != le_wxThreadEvent && rsrc_type != le_wxScrollWinEvent && rsrc_type != le_wxSysColourChangedEvent && rsrc_type != le_wxProcessEvent && rsrc_type != le_wxEraseEvent && rsrc_type != le_wxSetCursorEvent && rsrc_type != le_wxIdleEvent && rsrc_type != le_wxPaintEvent && rsrc_type != le_wxPaletteChangedEvent && rsrc_type != le_wxInitDialogEvent && rsrc_type != le_wxMaximizeEvent && rsrc_type != le_wxNavigationKeyEvent && rsrc_type != le_wxFocusEvent && rsrc_type != le_wxFileSystemWatcherEvent && rsrc_type != le_wxDisplayChangedEvent && rsrc_type != le_wxCalculateLayoutEvent && rsrc_type != le_wxQueryLayoutInfoEvent && rsrc_type != le_wxTaskBarIconEvent && rsrc_type != le_wxAcceleratorTable && rsrc_type != le_wxGDIObject && rsrc_type != le_wxBitmap && rsrc_type != le_wxPalette && rsrc_type != le_wxIcon && rsrc_type != le_wxFont && rsrc_type != le_wxAnimation && rsrc_type != le_wxIconBundle && rsrc_type != le_wxCursor && rsrc_type != le_wxRegion && rsrc_type != le_wxPen && rsrc_type != le_wxBrush && rsrc_type != le_wxArtProvider && rsrc_type != le_wxHtmlCell && rsrc_type != le_wxHtmlContainerCell && rsrc_type != le_wxHtmlColourCell && rsrc_type != le_wxHtmlWidgetCell && rsrc_type != le_wxHtmlEasyPrinting && rsrc_type != le_wxHtmlLinkInfo && rsrc_type != le_wxFindReplaceData && rsrc_type != le_wxSound && rsrc_type != le_wxFileSystem && rsrc_type != le_wxFileSystemHandler && rsrc_type != le_wxMask && rsrc_type != le_wxToolTip && rsrc_type != le_wxGraphicsRenderer && rsrc_type != le_wxLayoutConstraints && rsrc_type != le_wxFSFile && rsrc_type != le_wxColourData && rsrc_type != le_wxFontData && rsrc_type != le_wxGridTableBase && rsrc_type != le_wxDataViewRenderer && rsrc_type != le_wxDataViewBitmapRenderer && rsrc_type != le_wxDataViewChoiceRenderer && rsrc_type != le_wxDataViewCustomRenderer && rsrc_type != le_wxDataViewSpinRenderer && rsrc_type != le_wxDataViewDateRenderer && rsrc_type != le_wxDataViewIconTextRenderer && rsrc_type != le_wxDataViewProgressRenderer && rsrc_type != le_wxDataViewTextRenderer && rsrc_type != le_wxDataViewToggleRenderer && rsrc_type != le_wxDataViewIconText && rsrc_type != le_wxVariant && rsrc_type != le_wxClipboard && rsrc_type != le_wxConfigBase && rsrc_type != le_wxFileConfig && rsrc_type != le_wxXmlResource && rsrc_type != le_wxPageSetupDialogData && rsrc_type != le_wxPrintDialogData && rsrc_type != le_wxPrintData && rsrc_type != le_wxPrintPreview && rsrc_type != le_wxPrinter && rsrc_type != le_wxPrintout && rsrc_type != le_wxHtmlPrintout && rsrc_type != le_wxHtmlDCRenderer && rsrc_type != le_wxHtmlFilter && rsrc_type != le_wxHtmlHelpData && rsrc_type != le_wxHtmlTagHandler && rsrc_type != le_wxHtmlWinTagHandler && rsrc_type != le_wxModule && rsrc_type != le_wxHtmlTagsModule && rsrc_type != le_wxImageHandler && rsrc_type != le_wxXmlResourceHandler && rsrc_type != le_wxXmlDocument && rsrc_type != le_wxLayoutAlgorithm && rsrc_type != le_wxFileHistory && rsrc_type != le_wxToolBarToolBase))
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(obj1) == IS_LONG)
-				{
-					object_pointer1_2 = Z_LVAL_P(obj1);
 				}
 				else if(Z_TYPE_P(obj1) != IS_NULL)
 				{
@@ -38885,10 +36945,6 @@ PHP_METHOD(php_wxGridEvent, __construct)
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(kbd1) == IS_LONG)
-				{
-					object_pointer1_8 = Z_LVAL_P(kbd1);
-				}
 				else if(Z_TYPE_P(kbd1) != IS_NULL)
 				{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
@@ -38901,7 +36957,6 @@ PHP_METHOD(php_wxGridEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -38919,7 +36974,6 @@ PHP_METHOD(php_wxGridEvent, __construct)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -39033,6 +37087,7 @@ PHP_METHOD(php_wxGridEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxGridSizeEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -39041,13 +37096,13 @@ void php_wxGridSizeEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 	#endif
 	
 	
-	wxGridSizeEvent_php* object = (wxGridSizeEvent_php*)rsrc->ptr;
+	wxGridSizeEvent_php* object = static_cast<wxGridSizeEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -39136,7 +37191,6 @@ PHP_METHOD(php_wxGridSizeEvent, AltDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -39220,7 +37274,6 @@ PHP_METHOD(php_wxGridSizeEvent, ControlDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -39304,7 +37357,6 @@ PHP_METHOD(php_wxGridSizeEvent, GetPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -39393,7 +37445,6 @@ PHP_METHOD(php_wxGridSizeEvent, GetRowOrCol)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -39477,7 +37528,6 @@ PHP_METHOD(php_wxGridSizeEvent, MetaDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -39561,7 +37611,6 @@ PHP_METHOD(php_wxGridSizeEvent, ShiftDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -39635,21 +37684,18 @@ PHP_METHOD(php_wxGridSizeEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llz|lllO' (&id1, &type1, &obj1, &rowOrCol1, &x1, &y1, &kbd1, php_wxKeyboardState_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "llz|lllO", &id1, &type1, &obj1, &rowOrCol1, &x1, &y1, &kbd1, php_wxKeyboardState_entry ) == SUCCESS)
+		char parse_parameters_string[] = "llz|lllO";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id1, &type1, &obj1, &rowOrCol1, &x1, &y1, &kbd1, php_wxKeyboardState_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
 				if(Z_TYPE_P(obj1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(obj1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 				{
 					id_to_find = Z_RESVAL_P(*tmp);
 					object_pointer1_2 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer1_2 || (rsrc_type != le_wxEvtHandler && rsrc_type != le_wxWindow && rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow && rsrc_type != le_wxValidator && rsrc_type != le_wxTextValidator && rsrc_type != le_wxGenericValidator && rsrc_type != le_wxMenu && rsrc_type != le_wxAuiManager && rsrc_type != le_wxMouseEventsManager && rsrc_type != le_wxTimer && rsrc_type != le_wxEventBlocker && rsrc_type != le_wxProcess && rsrc_type != le_wxFileSystemWatcher && rsrc_type != le_wxTaskBarIcon && rsrc_type != le_wxNotificationMessage && rsrc_type != le_wxBitmapHandler && rsrc_type != le_wxImage && rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxWrapSizer && rsrc_type != le_wxStdDialogButtonSizer && rsrc_type != le_wxGridSizer && rsrc_type != le_wxFlexGridSizer && rsrc_type != le_wxGridBagSizer && rsrc_type != le_wxSizerItem && rsrc_type != le_wxGBSizerItem && rsrc_type != le_wxImageList && rsrc_type != le_wxDC && rsrc_type != le_wxWindowDC && rsrc_type != le_wxClientDC && rsrc_type != le_wxPaintDC && rsrc_type != le_wxScreenDC && rsrc_type != le_wxPostScriptDC && rsrc_type != le_wxPrinterDC && rsrc_type != le_wxMemoryDC && rsrc_type != le_wxBufferedDC && rsrc_type != le_wxBufferedPaintDC && rsrc_type != le_wxAutoBufferedPaintDC && rsrc_type != le_wxMirrorDC && rsrc_type != le_wxColour && rsrc_type != le_wxMenuItem && rsrc_type != le_wxEvent && rsrc_type != le_wxMenuEvent && rsrc_type != le_wxKeyEvent && rsrc_type != le_wxCommandEvent && rsrc_type != le_wxNotifyEvent && rsrc_type != le_wxTreeEvent && rsrc_type != le_wxBookCtrlEvent && rsrc_type != le_wxAuiNotebookEvent && rsrc_type != le_wxAuiToolBarEvent && rsrc_type != le_wxListEvent && rsrc_type != le_wxSpinEvent && rsrc_type != le_wxSplitterEvent && rsrc_type != le_wxSpinDoubleEvent && rsrc_type != le_wxGridSizeEvent && rsrc_type != le_wxWizardEvent && rsrc_type != le_wxGridEvent && rsrc_type != le_wxGridRangeSelectEvent && rsrc_type != le_wxDataViewEvent && rsrc_type != le_wxHeaderCtrlEvent && rsrc_type != le_wxRibbonBarEvent && rsrc_type != le_wxStyledTextEvent && rsrc_type != le_wxChildFocusEvent && rsrc_type != le_wxHtmlCellEvent && rsrc_type != le_wxHtmlLinkEvent && rsrc_type != le_wxHyperlinkEvent && rsrc_type != le_wxColourPickerEvent && rsrc_type != le_wxFontPickerEvent && rsrc_type != le_wxScrollEvent && rsrc_type != le_wxWindowModalDialogEvent && rsrc_type != le_wxDateEvent && rsrc_type != le_wxCalendarEvent && rsrc_type != le_wxWindowCreateEvent && rsrc_type != le_wxWindowDestroyEvent && rsrc_type != le_wxUpdateUIEvent && rsrc_type != le_wxHelpEvent && rsrc_type != le_wxGridEditorCreatedEvent && rsrc_type != le_wxCollapsiblePaneEvent && rsrc_type != le_wxClipboardTextEvent && rsrc_type != le_wxFileCtrlEvent && rsrc_type != le_wxSashEvent && rsrc_type != le_wxFileDirPickerEvent && rsrc_type != le_wxContextMenuEvent && rsrc_type != le_wxRibbonButtonBarEvent && rsrc_type != le_wxRibbonGalleryEvent && rsrc_type != le_wxCloseEvent && rsrc_type != le_wxActivateEvent && rsrc_type != le_wxAuiManagerEvent && rsrc_type != le_wxSizeEvent && rsrc_type != le_wxMouseEvent && rsrc_type != le_wxMoveEvent && rsrc_type != le_wxMouseCaptureLostEvent && rsrc_type != le_wxMouseCaptureChangedEvent && rsrc_type != le_wxTimerEvent && rsrc_type != le_wxThreadEvent && rsrc_type != le_wxScrollWinEvent && rsrc_type != le_wxSysColourChangedEvent && rsrc_type != le_wxProcessEvent && rsrc_type != le_wxEraseEvent && rsrc_type != le_wxSetCursorEvent && rsrc_type != le_wxIconizeEvent && rsrc_type != le_wxIdleEvent && rsrc_type != le_wxShowEvent && rsrc_type != le_wxPaintEvent && rsrc_type != le_wxPaletteChangedEvent && rsrc_type != le_wxInitDialogEvent && rsrc_type != le_wxMaximizeEvent && rsrc_type != le_wxNavigationKeyEvent && rsrc_type != le_wxFocusEvent && rsrc_type != le_wxFileSystemWatcherEvent && rsrc_type != le_wxDisplayChangedEvent && rsrc_type != le_wxCalculateLayoutEvent && rsrc_type != le_wxDropFilesEvent && rsrc_type != le_wxQueryLayoutInfoEvent && rsrc_type != le_wxTaskBarIconEvent && rsrc_type != le_wxAcceleratorTable && rsrc_type != le_wxGDIObject && rsrc_type != le_wxBitmap && rsrc_type != le_wxPalette && rsrc_type != le_wxIcon && rsrc_type != le_wxFont && rsrc_type != le_wxAnimation && rsrc_type != le_wxIconBundle && rsrc_type != le_wxCursor && rsrc_type != le_wxRegion && rsrc_type != le_wxPen && rsrc_type != le_wxBrush && rsrc_type != le_wxArtProvider && rsrc_type != le_wxHtmlCell && rsrc_type != le_wxHtmlContainerCell && rsrc_type != le_wxHtmlColourCell && rsrc_type != le_wxHtmlWidgetCell && rsrc_type != le_wxHtmlEasyPrinting && rsrc_type != le_wxHtmlLinkInfo && rsrc_type != le_wxFindReplaceData && rsrc_type != le_wxSound && rsrc_type != le_wxFileSystem && rsrc_type != le_wxFileSystemHandler && rsrc_type != le_wxMask && rsrc_type != le_wxToolTip && rsrc_type != le_wxGraphicsRenderer && rsrc_type != le_wxLayoutConstraints && rsrc_type != le_wxFSFile && rsrc_type != le_wxColourData && rsrc_type != le_wxFontData && rsrc_type != le_wxToolBarToolBase && rsrc_type != le_wxGridTableBase && rsrc_type != le_wxDataViewRenderer && rsrc_type != le_wxDataViewBitmapRenderer && rsrc_type != le_wxDataViewChoiceRenderer && rsrc_type != le_wxDataViewCustomRenderer && rsrc_type != le_wxDataViewSpinRenderer && rsrc_type != le_wxDataViewDateRenderer && rsrc_type != le_wxDataViewIconTextRenderer && rsrc_type != le_wxDataViewProgressRenderer && rsrc_type != le_wxDataViewTextRenderer && rsrc_type != le_wxDataViewToggleRenderer && rsrc_type != le_wxDataViewIconText && rsrc_type != le_wxVariant && rsrc_type != le_wxClipboard && rsrc_type != le_wxConfigBase && rsrc_type != le_wxFileConfig && rsrc_type != le_wxXmlResource && rsrc_type != le_wxPageSetupDialogData && rsrc_type != le_wxPrintDialogData && rsrc_type != le_wxPrintData && rsrc_type != le_wxPrintPreview && rsrc_type != le_wxPrinter && rsrc_type != le_wxPrintout && rsrc_type != le_wxHtmlPrintout && rsrc_type != le_wxHtmlDCRenderer && rsrc_type != le_wxHtmlFilter && rsrc_type != le_wxHtmlHelpData && rsrc_type != le_wxHtmlTagHandler && rsrc_type != le_wxHtmlWinTagHandler && rsrc_type != le_wxModule && rsrc_type != le_wxHtmlTagsModule && rsrc_type != le_wxImageHandler && rsrc_type != le_wxXmlResourceHandler && rsrc_type != le_wxXmlDocument && rsrc_type != le_wxLayoutAlgorithm && rsrc_type != le_wxFileHistory))
+					if (!object_pointer1_2 || (rsrc_type != le_wxEvtHandler && rsrc_type != le_wxWindow && rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow && rsrc_type != le_wxValidator && rsrc_type != le_wxTextValidator && rsrc_type != le_wxGenericValidator && rsrc_type != le_wxMenu && rsrc_type != le_wxAuiManager && rsrc_type != le_wxMouseEventsManager && rsrc_type != le_wxTimer && rsrc_type != le_wxEventBlocker && rsrc_type != le_wxProcess && rsrc_type != le_wxFileSystemWatcher && rsrc_type != le_wxTaskBarIcon && rsrc_type != le_wxNotificationMessage && rsrc_type != le_wxBitmapHandler && rsrc_type != le_wxImage && rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxWrapSizer && rsrc_type != le_wxStdDialogButtonSizer && rsrc_type != le_wxGridSizer && rsrc_type != le_wxFlexGridSizer && rsrc_type != le_wxGridBagSizer && rsrc_type != le_wxSizerItem && rsrc_type != le_wxGBSizerItem && rsrc_type != le_wxImageList && rsrc_type != le_wxDC && rsrc_type != le_wxWindowDC && rsrc_type != le_wxClientDC && rsrc_type != le_wxPaintDC && rsrc_type != le_wxScreenDC && rsrc_type != le_wxPostScriptDC && rsrc_type != le_wxPrinterDC && rsrc_type != le_wxMemoryDC && rsrc_type != le_wxBufferedDC && rsrc_type != le_wxBufferedPaintDC && rsrc_type != le_wxAutoBufferedPaintDC && rsrc_type != le_wxMirrorDC && rsrc_type != le_wxColour && rsrc_type != le_wxMenuItem && rsrc_type != le_wxEvent && rsrc_type != le_wxMenuEvent && rsrc_type != le_wxKeyEvent && rsrc_type != le_wxCommandEvent && rsrc_type != le_wxNotifyEvent && rsrc_type != le_wxTreeEvent && rsrc_type != le_wxBookCtrlEvent && rsrc_type != le_wxAuiNotebookEvent && rsrc_type != le_wxAuiToolBarEvent && rsrc_type != le_wxListEvent && rsrc_type != le_wxSpinEvent && rsrc_type != le_wxSplitterEvent && rsrc_type != le_wxSpinDoubleEvent && rsrc_type != le_wxGridSizeEvent && rsrc_type != le_wxWizardEvent && rsrc_type != le_wxGridEvent && rsrc_type != le_wxGridRangeSelectEvent && rsrc_type != le_wxDataViewEvent && rsrc_type != le_wxHeaderCtrlEvent && rsrc_type != le_wxRibbonBarEvent && rsrc_type != le_wxStyledTextEvent && rsrc_type != le_wxChildFocusEvent && rsrc_type != le_wxHtmlCellEvent && rsrc_type != le_wxHtmlLinkEvent && rsrc_type != le_wxHyperlinkEvent && rsrc_type != le_wxColourPickerEvent && rsrc_type != le_wxFontPickerEvent && rsrc_type != le_wxScrollEvent && rsrc_type != le_wxWindowModalDialogEvent && rsrc_type != le_wxDateEvent && rsrc_type != le_wxCalendarEvent && rsrc_type != le_wxWindowCreateEvent && rsrc_type != le_wxWindowDestroyEvent && rsrc_type != le_wxUpdateUIEvent && rsrc_type != le_wxHelpEvent && rsrc_type != le_wxGridEditorCreatedEvent && rsrc_type != le_wxCollapsiblePaneEvent && rsrc_type != le_wxClipboardTextEvent && rsrc_type != le_wxFileCtrlEvent && rsrc_type != le_wxSashEvent && rsrc_type != le_wxFileDirPickerEvent && rsrc_type != le_wxContextMenuEvent && rsrc_type != le_wxRibbonButtonBarEvent && rsrc_type != le_wxRibbonGalleryEvent && rsrc_type != le_wxCloseEvent && rsrc_type != le_wxActivateEvent && rsrc_type != le_wxAuiManagerEvent && rsrc_type != le_wxSizeEvent && rsrc_type != le_wxMouseEvent && rsrc_type != le_wxMoveEvent && rsrc_type != le_wxTimerEvent && rsrc_type != le_wxThreadEvent && rsrc_type != le_wxScrollWinEvent && rsrc_type != le_wxSysColourChangedEvent && rsrc_type != le_wxProcessEvent && rsrc_type != le_wxEraseEvent && rsrc_type != le_wxSetCursorEvent && rsrc_type != le_wxIdleEvent && rsrc_type != le_wxPaintEvent && rsrc_type != le_wxPaletteChangedEvent && rsrc_type != le_wxInitDialogEvent && rsrc_type != le_wxMaximizeEvent && rsrc_type != le_wxNavigationKeyEvent && rsrc_type != le_wxFocusEvent && rsrc_type != le_wxFileSystemWatcherEvent && rsrc_type != le_wxDisplayChangedEvent && rsrc_type != le_wxCalculateLayoutEvent && rsrc_type != le_wxQueryLayoutInfoEvent && rsrc_type != le_wxTaskBarIconEvent && rsrc_type != le_wxAcceleratorTable && rsrc_type != le_wxGDIObject && rsrc_type != le_wxBitmap && rsrc_type != le_wxPalette && rsrc_type != le_wxIcon && rsrc_type != le_wxFont && rsrc_type != le_wxAnimation && rsrc_type != le_wxIconBundle && rsrc_type != le_wxCursor && rsrc_type != le_wxRegion && rsrc_type != le_wxPen && rsrc_type != le_wxBrush && rsrc_type != le_wxArtProvider && rsrc_type != le_wxHtmlCell && rsrc_type != le_wxHtmlContainerCell && rsrc_type != le_wxHtmlColourCell && rsrc_type != le_wxHtmlWidgetCell && rsrc_type != le_wxHtmlEasyPrinting && rsrc_type != le_wxHtmlLinkInfo && rsrc_type != le_wxFindReplaceData && rsrc_type != le_wxSound && rsrc_type != le_wxFileSystem && rsrc_type != le_wxFileSystemHandler && rsrc_type != le_wxMask && rsrc_type != le_wxToolTip && rsrc_type != le_wxGraphicsRenderer && rsrc_type != le_wxLayoutConstraints && rsrc_type != le_wxFSFile && rsrc_type != le_wxColourData && rsrc_type != le_wxFontData && rsrc_type != le_wxGridTableBase && rsrc_type != le_wxDataViewRenderer && rsrc_type != le_wxDataViewBitmapRenderer && rsrc_type != le_wxDataViewChoiceRenderer && rsrc_type != le_wxDataViewCustomRenderer && rsrc_type != le_wxDataViewSpinRenderer && rsrc_type != le_wxDataViewDateRenderer && rsrc_type != le_wxDataViewIconTextRenderer && rsrc_type != le_wxDataViewProgressRenderer && rsrc_type != le_wxDataViewTextRenderer && rsrc_type != le_wxDataViewToggleRenderer && rsrc_type != le_wxDataViewIconText && rsrc_type != le_wxVariant && rsrc_type != le_wxClipboard && rsrc_type != le_wxConfigBase && rsrc_type != le_wxFileConfig && rsrc_type != le_wxXmlResource && rsrc_type != le_wxPageSetupDialogData && rsrc_type != le_wxPrintDialogData && rsrc_type != le_wxPrintData && rsrc_type != le_wxPrintPreview && rsrc_type != le_wxPrinter && rsrc_type != le_wxPrintout && rsrc_type != le_wxHtmlPrintout && rsrc_type != le_wxHtmlDCRenderer && rsrc_type != le_wxHtmlFilter && rsrc_type != le_wxHtmlHelpData && rsrc_type != le_wxHtmlTagHandler && rsrc_type != le_wxHtmlWinTagHandler && rsrc_type != le_wxModule && rsrc_type != le_wxHtmlTagsModule && rsrc_type != le_wxImageHandler && rsrc_type != le_wxXmlResourceHandler && rsrc_type != le_wxXmlDocument && rsrc_type != le_wxLayoutAlgorithm && rsrc_type != le_wxFileHistory && rsrc_type != le_wxToolBarToolBase))
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(obj1) == IS_LONG)
-				{
-					object_pointer1_2 = Z_LVAL_P(obj1);
 				}
 				else if(Z_TYPE_P(obj1) != IS_NULL)
 				{
@@ -39667,10 +37713,6 @@ PHP_METHOD(php_wxGridSizeEvent, __construct)
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(kbd1) == IS_LONG)
-				{
-					object_pointer1_6 = Z_LVAL_P(kbd1);
-				}
 				else if(Z_TYPE_P(kbd1) != IS_NULL)
 				{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
@@ -39683,7 +37725,6 @@ PHP_METHOD(php_wxGridSizeEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -39701,7 +37742,6 @@ PHP_METHOD(php_wxGridSizeEvent, __construct)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -39793,6 +37833,7 @@ PHP_METHOD(php_wxGridSizeEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxGridRangeSelectEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -39801,13 +37842,13 @@ void php_wxGridRangeSelectEvent_destruction_handler(zend_rsrc_list_entry *rsrc T
 	#endif
 	
 	
-	wxGridRangeSelectEvent_php* object = (wxGridRangeSelectEvent_php*)rsrc->ptr;
+	wxGridRangeSelectEvent_php* object = static_cast<wxGridRangeSelectEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -39896,7 +37937,6 @@ PHP_METHOD(php_wxGridRangeSelectEvent, AltDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -39980,7 +38020,6 @@ PHP_METHOD(php_wxGridRangeSelectEvent, ControlDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -39991,95 +38030,6 @@ PHP_METHOD(php_wxGridRangeSelectEvent, ControlDown)
 				php_printf("Executing RETURN_BOOL(wxGridRangeSelectEvent::ControlDown())\n\n");
 				#endif
 				ZVAL_BOOL(return_value, ((wxGridRangeSelectEvent_php*)_this)->ControlDown());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_METHOD(php_wxGridRangeSelectEvent, GetBottomRightCoords)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxGridRangeSelectEvent::GetBottomRightCoords\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	bool return_is_user_initialized = false;
-	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
-	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
-		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxGridRangeSelectEvent::GetBottomRightCoords\n");
-			
-			return;
-		}
-		else
-		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
-			
-			if(parent_rsrc_type == le_wxGridRangeSelectEvent)
-				references = &((wxGridRangeSelectEvent_php*)_this)->references;
-		}
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Processing the method call as static\n");
-		#endif
-	}
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxGridRangeSelectEvent::GetBottomRightCoords() to return new object\n\n");
-				#endif
-				wxGridCellCoords value_to_return0;
-				value_to_return0 = ((wxGridRangeSelectEvent_php*)_this)->GetBottomRightCoords();
-				void* ptr = safe_emalloc(1, sizeof(wxGridCellCoords_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxGridCellCoords));
-				object_init_ex(return_value, php_wxGridCellCoords_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxGridCellCoords));
 
 
 				return;
@@ -40153,7 +38103,6 @@ PHP_METHOD(php_wxGridRangeSelectEvent, GetBottomRow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -40237,7 +38186,6 @@ PHP_METHOD(php_wxGridRangeSelectEvent, GetLeftCol)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -40321,7 +38269,6 @@ PHP_METHOD(php_wxGridRangeSelectEvent, GetRightCol)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -40332,95 +38279,6 @@ PHP_METHOD(php_wxGridRangeSelectEvent, GetRightCol)
 				php_printf("Executing RETURN_LONG(wxGridRangeSelectEvent::GetRightCol())\n\n");
 				#endif
 				ZVAL_LONG(return_value, ((wxGridRangeSelectEvent_php*)_this)->GetRightCol());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_METHOD(php_wxGridRangeSelectEvent, GetTopLeftCoords)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxGridRangeSelectEvent::GetTopLeftCoords\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	bool return_is_user_initialized = false;
-	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
-	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
-		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxGridRangeSelectEvent::GetTopLeftCoords\n");
-			
-			return;
-		}
-		else
-		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
-			
-			if(parent_rsrc_type == le_wxGridRangeSelectEvent)
-				references = &((wxGridRangeSelectEvent_php*)_this)->references;
-		}
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Processing the method call as static\n");
-		#endif
-	}
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxGridRangeSelectEvent::GetTopLeftCoords() to return new object\n\n");
-				#endif
-				wxGridCellCoords value_to_return0;
-				value_to_return0 = ((wxGridRangeSelectEvent_php*)_this)->GetTopLeftCoords();
-				void* ptr = safe_emalloc(1, sizeof(wxGridCellCoords_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxGridCellCoords));
-				object_init_ex(return_value, php_wxGridCellCoords_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxGridCellCoords));
 
 
 				return;
@@ -40494,7 +38352,6 @@ PHP_METHOD(php_wxGridRangeSelectEvent, GetTopRow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -40578,7 +38435,6 @@ PHP_METHOD(php_wxGridRangeSelectEvent, MetaDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -40662,7 +38518,6 @@ PHP_METHOD(php_wxGridRangeSelectEvent, Selecting)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -40746,7 +38601,6 @@ PHP_METHOD(php_wxGridRangeSelectEvent, ShiftDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -40788,19 +38642,6 @@ PHP_METHOD(php_wxGridRangeSelectEvent, __construct)
 	
 	//Parameters for overload 0
 	bool overload0_called = false;
-	//Parameters for overload 1
-	long id1;
-	long type1;
-	zval* obj1 = 0;
-	void* object_pointer1_2 = 0;
-	zval* topLeft1 = 0;
-	void* object_pointer1_3 = 0;
-	zval* bottomRight1 = 0;
-	void* object_pointer1_4 = 0;
-	bool sel1;
-	zval* kbd1 = 0;
-	void* object_pointer1_6 = 0;
-	bool overload1_called = false;
 		
 	//Overload 0
 	overload0:
@@ -40814,103 +38655,7 @@ PHP_METHOD(php_wxGridRangeSelectEvent, __construct)
 		already_called = true;
 	}
 
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received >= 5  && arguments_received <= 7)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'llzOO|bO' (&id1, &type1, &obj1, &topLeft1, php_wxGridCellCoords_entry, &bottomRight1, php_wxGridCellCoords_entry, &sel1, &kbd1, php_wxKeyboardState_entry)\n");
-		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "llzOO|bO", &id1, &type1, &obj1, &topLeft1, php_wxGridCellCoords_entry, &bottomRight1, php_wxGridCellCoords_entry, &sel1, &kbd1, php_wxKeyboardState_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 3){
-				if(Z_TYPE_P(obj1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(obj1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer1_2 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer1_2 || (rsrc_type != le_wxEvtHandler && rsrc_type != le_wxWindow && rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow && rsrc_type != le_wxValidator && rsrc_type != le_wxTextValidator && rsrc_type != le_wxGenericValidator && rsrc_type != le_wxMenu && rsrc_type != le_wxAuiManager && rsrc_type != le_wxMouseEventsManager && rsrc_type != le_wxTimer && rsrc_type != le_wxEventBlocker && rsrc_type != le_wxProcess && rsrc_type != le_wxFileSystemWatcher && rsrc_type != le_wxTaskBarIcon && rsrc_type != le_wxNotificationMessage && rsrc_type != le_wxBitmapHandler && rsrc_type != le_wxImage && rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxWrapSizer && rsrc_type != le_wxStdDialogButtonSizer && rsrc_type != le_wxGridSizer && rsrc_type != le_wxFlexGridSizer && rsrc_type != le_wxGridBagSizer && rsrc_type != le_wxSizerItem && rsrc_type != le_wxGBSizerItem && rsrc_type != le_wxImageList && rsrc_type != le_wxDC && rsrc_type != le_wxWindowDC && rsrc_type != le_wxClientDC && rsrc_type != le_wxPaintDC && rsrc_type != le_wxScreenDC && rsrc_type != le_wxPostScriptDC && rsrc_type != le_wxPrinterDC && rsrc_type != le_wxMemoryDC && rsrc_type != le_wxBufferedDC && rsrc_type != le_wxBufferedPaintDC && rsrc_type != le_wxAutoBufferedPaintDC && rsrc_type != le_wxMirrorDC && rsrc_type != le_wxColour && rsrc_type != le_wxMenuItem && rsrc_type != le_wxEvent && rsrc_type != le_wxMenuEvent && rsrc_type != le_wxKeyEvent && rsrc_type != le_wxCommandEvent && rsrc_type != le_wxNotifyEvent && rsrc_type != le_wxTreeEvent && rsrc_type != le_wxBookCtrlEvent && rsrc_type != le_wxAuiNotebookEvent && rsrc_type != le_wxAuiToolBarEvent && rsrc_type != le_wxListEvent && rsrc_type != le_wxSpinEvent && rsrc_type != le_wxSplitterEvent && rsrc_type != le_wxSpinDoubleEvent && rsrc_type != le_wxGridSizeEvent && rsrc_type != le_wxWizardEvent && rsrc_type != le_wxGridEvent && rsrc_type != le_wxGridRangeSelectEvent && rsrc_type != le_wxDataViewEvent && rsrc_type != le_wxHeaderCtrlEvent && rsrc_type != le_wxRibbonBarEvent && rsrc_type != le_wxStyledTextEvent && rsrc_type != le_wxChildFocusEvent && rsrc_type != le_wxHtmlCellEvent && rsrc_type != le_wxHtmlLinkEvent && rsrc_type != le_wxHyperlinkEvent && rsrc_type != le_wxColourPickerEvent && rsrc_type != le_wxFontPickerEvent && rsrc_type != le_wxScrollEvent && rsrc_type != le_wxWindowModalDialogEvent && rsrc_type != le_wxDateEvent && rsrc_type != le_wxCalendarEvent && rsrc_type != le_wxWindowCreateEvent && rsrc_type != le_wxWindowDestroyEvent && rsrc_type != le_wxUpdateUIEvent && rsrc_type != le_wxHelpEvent && rsrc_type != le_wxGridEditorCreatedEvent && rsrc_type != le_wxCollapsiblePaneEvent && rsrc_type != le_wxClipboardTextEvent && rsrc_type != le_wxFileCtrlEvent && rsrc_type != le_wxSashEvent && rsrc_type != le_wxFileDirPickerEvent && rsrc_type != le_wxContextMenuEvent && rsrc_type != le_wxRibbonButtonBarEvent && rsrc_type != le_wxRibbonGalleryEvent && rsrc_type != le_wxCloseEvent && rsrc_type != le_wxActivateEvent && rsrc_type != le_wxAuiManagerEvent && rsrc_type != le_wxSizeEvent && rsrc_type != le_wxMouseEvent && rsrc_type != le_wxMoveEvent && rsrc_type != le_wxMouseCaptureLostEvent && rsrc_type != le_wxMouseCaptureChangedEvent && rsrc_type != le_wxTimerEvent && rsrc_type != le_wxThreadEvent && rsrc_type != le_wxScrollWinEvent && rsrc_type != le_wxSysColourChangedEvent && rsrc_type != le_wxProcessEvent && rsrc_type != le_wxEraseEvent && rsrc_type != le_wxSetCursorEvent && rsrc_type != le_wxIconizeEvent && rsrc_type != le_wxIdleEvent && rsrc_type != le_wxShowEvent && rsrc_type != le_wxPaintEvent && rsrc_type != le_wxPaletteChangedEvent && rsrc_type != le_wxInitDialogEvent && rsrc_type != le_wxMaximizeEvent && rsrc_type != le_wxNavigationKeyEvent && rsrc_type != le_wxFocusEvent && rsrc_type != le_wxFileSystemWatcherEvent && rsrc_type != le_wxDisplayChangedEvent && rsrc_type != le_wxCalculateLayoutEvent && rsrc_type != le_wxDropFilesEvent && rsrc_type != le_wxQueryLayoutInfoEvent && rsrc_type != le_wxTaskBarIconEvent && rsrc_type != le_wxAcceleratorTable && rsrc_type != le_wxGDIObject && rsrc_type != le_wxBitmap && rsrc_type != le_wxPalette && rsrc_type != le_wxIcon && rsrc_type != le_wxFont && rsrc_type != le_wxAnimation && rsrc_type != le_wxIconBundle && rsrc_type != le_wxCursor && rsrc_type != le_wxRegion && rsrc_type != le_wxPen && rsrc_type != le_wxBrush && rsrc_type != le_wxArtProvider && rsrc_type != le_wxHtmlCell && rsrc_type != le_wxHtmlContainerCell && rsrc_type != le_wxHtmlColourCell && rsrc_type != le_wxHtmlWidgetCell && rsrc_type != le_wxHtmlEasyPrinting && rsrc_type != le_wxHtmlLinkInfo && rsrc_type != le_wxFindReplaceData && rsrc_type != le_wxSound && rsrc_type != le_wxFileSystem && rsrc_type != le_wxFileSystemHandler && rsrc_type != le_wxMask && rsrc_type != le_wxToolTip && rsrc_type != le_wxGraphicsRenderer && rsrc_type != le_wxLayoutConstraints && rsrc_type != le_wxFSFile && rsrc_type != le_wxColourData && rsrc_type != le_wxFontData && rsrc_type != le_wxToolBarToolBase && rsrc_type != le_wxGridTableBase && rsrc_type != le_wxDataViewRenderer && rsrc_type != le_wxDataViewBitmapRenderer && rsrc_type != le_wxDataViewChoiceRenderer && rsrc_type != le_wxDataViewCustomRenderer && rsrc_type != le_wxDataViewSpinRenderer && rsrc_type != le_wxDataViewDateRenderer && rsrc_type != le_wxDataViewIconTextRenderer && rsrc_type != le_wxDataViewProgressRenderer && rsrc_type != le_wxDataViewTextRenderer && rsrc_type != le_wxDataViewToggleRenderer && rsrc_type != le_wxDataViewIconText && rsrc_type != le_wxVariant && rsrc_type != le_wxClipboard && rsrc_type != le_wxConfigBase && rsrc_type != le_wxFileConfig && rsrc_type != le_wxXmlResource && rsrc_type != le_wxPageSetupDialogData && rsrc_type != le_wxPrintDialogData && rsrc_type != le_wxPrintData && rsrc_type != le_wxPrintPreview && rsrc_type != le_wxPrinter && rsrc_type != le_wxPrintout && rsrc_type != le_wxHtmlPrintout && rsrc_type != le_wxHtmlDCRenderer && rsrc_type != le_wxHtmlFilter && rsrc_type != le_wxHtmlHelpData && rsrc_type != le_wxHtmlTagHandler && rsrc_type != le_wxHtmlWinTagHandler && rsrc_type != le_wxModule && rsrc_type != le_wxHtmlTagsModule && rsrc_type != le_wxImageHandler && rsrc_type != le_wxXmlResourceHandler && rsrc_type != le_wxXmlDocument && rsrc_type != le_wxLayoutAlgorithm && rsrc_type != le_wxFileHistory))
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(obj1) == IS_LONG)
-				{
-					object_pointer1_2 = Z_LVAL_P(obj1);
-				}
-				else if(Z_TYPE_P(obj1) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			if(arguments_received >= 4){
-				if(Z_TYPE_P(topLeft1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(topLeft1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer1_3 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer1_3 )
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(topLeft1) == IS_LONG)
-				{
-					object_pointer1_3 = Z_LVAL_P(topLeft1);
-				}
-				else if(Z_TYPE_P(topLeft1) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			if(arguments_received >= 5){
-				if(Z_TYPE_P(bottomRight1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(bottomRight1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer1_4 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer1_4 )
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(bottomRight1) == IS_LONG)
-				{
-					object_pointer1_4 = Z_LVAL_P(bottomRight1);
-				}
-				else if(Z_TYPE_P(bottomRight1) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			if(arguments_received >= 7){
-				if(Z_TYPE_P(kbd1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(kbd1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer1_6 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer1_6 )
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(kbd1) == IS_LONG)
-				{
-					object_pointer1_6 = Z_LVAL_P(kbd1);
-				}
-				else if(Z_TYPE_P(kbd1) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload1_called = true;
-			already_called = true;
-		}
-	}
-
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -40923,54 +38668,6 @@ PHP_METHOD(php_wxGridRangeSelectEvent, __construct)
 				_this = new wxGridRangeSelectEvent_php();
 
 				((wxGridRangeSelectEvent_php*) _this)->references.Initialize();
-				break;
-			}
-		}
-	}
-
-	
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 5:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((int) id1, (wxEventType) type1, (wxObject*) object_pointer1_2, *(wxGridCellCoords*) object_pointer1_3, *(wxGridCellCoords*) object_pointer1_4)\n");
-				#endif
-				_this = new wxGridRangeSelectEvent_php((int) id1, (wxEventType) type1, (wxObject*) object_pointer1_2, *(wxGridCellCoords*) object_pointer1_3, *(wxGridCellCoords*) object_pointer1_4);
-
-				((wxGridRangeSelectEvent_php*) _this)->references.Initialize();
-				((wxGridRangeSelectEvent_php*) _this)->references.AddReference(obj1);
-				((wxGridRangeSelectEvent_php*) _this)->references.AddReference(topLeft1);
-				((wxGridRangeSelectEvent_php*) _this)->references.AddReference(bottomRight1);
-				break;
-			}
-			case 6:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((int) id1, (wxEventType) type1, (wxObject*) object_pointer1_2, *(wxGridCellCoords*) object_pointer1_3, *(wxGridCellCoords*) object_pointer1_4, sel1)\n");
-				#endif
-				_this = new wxGridRangeSelectEvent_php((int) id1, (wxEventType) type1, (wxObject*) object_pointer1_2, *(wxGridCellCoords*) object_pointer1_3, *(wxGridCellCoords*) object_pointer1_4, sel1);
-
-				((wxGridRangeSelectEvent_php*) _this)->references.Initialize();
-				((wxGridRangeSelectEvent_php*) _this)->references.AddReference(obj1);
-				((wxGridRangeSelectEvent_php*) _this)->references.AddReference(topLeft1);
-				((wxGridRangeSelectEvent_php*) _this)->references.AddReference(bottomRight1);
-				break;
-			}
-			case 7:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct((int) id1, (wxEventType) type1, (wxObject*) object_pointer1_2, *(wxGridCellCoords*) object_pointer1_3, *(wxGridCellCoords*) object_pointer1_4, sel1, *(wxKeyboardState*) object_pointer1_6)\n");
-				#endif
-				_this = new wxGridRangeSelectEvent_php((int) id1, (wxEventType) type1, (wxObject*) object_pointer1_2, *(wxGridCellCoords*) object_pointer1_3, *(wxGridCellCoords*) object_pointer1_4, sel1, *(wxKeyboardState*) object_pointer1_6);
-
-				((wxGridRangeSelectEvent_php*) _this)->references.Initialize();
-				((wxGridRangeSelectEvent_php*) _this)->references.AddReference(obj1);
-				((wxGridRangeSelectEvent_php*) _this)->references.AddReference(topLeft1);
-				((wxGridRangeSelectEvent_php*) _this)->references.AddReference(bottomRight1);
-				((wxGridRangeSelectEvent_php*) _this)->references.AddReference(kbd1);
 				break;
 			}
 		}
@@ -41004,6 +38701,7 @@ PHP_METHOD(php_wxGridRangeSelectEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxGridEditorCreatedEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -41012,13 +38710,13 @@ void php_wxGridEditorCreatedEvent_destruction_handler(zend_rsrc_list_entry *rsrc
 	#endif
 	
 	
-	wxGridEditorCreatedEvent_php* object = (wxGridEditorCreatedEvent_php*)rsrc->ptr;
+	wxGridEditorCreatedEvent_php* object = static_cast<wxGridEditorCreatedEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -41107,7 +38805,6 @@ PHP_METHOD(php_wxGridEditorCreatedEvent, GetCol)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -41191,7 +38888,6 @@ PHP_METHOD(php_wxGridEditorCreatedEvent, GetControl)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -41208,8 +38904,8 @@ PHP_METHOD(php_wxGridEditorCreatedEvent, GetControl)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -41297,7 +38993,6 @@ PHP_METHOD(php_wxGridEditorCreatedEvent, GetRow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -41377,7 +39072,8 @@ PHP_METHOD(php_wxGridEditorCreatedEvent, SetCol)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&col0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &col0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &col0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -41385,7 +39081,6 @@ PHP_METHOD(php_wxGridEditorCreatedEvent, SetCol)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -41466,7 +39161,8 @@ PHP_METHOD(php_wxGridEditorCreatedEvent, SetControl)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&ctrl0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &ctrl0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &ctrl0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(ctrl0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(ctrl0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -41477,10 +39173,6 @@ PHP_METHOD(php_wxGridEditorCreatedEvent, SetControl)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(ctrl0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(ctrl0);
 				}
 				else if(Z_TYPE_P(ctrl0) != IS_NULL)
 				{
@@ -41494,7 +39186,6 @@ PHP_METHOD(php_wxGridEditorCreatedEvent, SetControl)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -41575,7 +39266,8 @@ PHP_METHOD(php_wxGridEditorCreatedEvent, SetRow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&row0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &row0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &row0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -41583,7 +39275,6 @@ PHP_METHOD(php_wxGridEditorCreatedEvent, SetRow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -41656,21 +39347,18 @@ PHP_METHOD(php_wxGridEditorCreatedEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'llzllz' (&id1, &type1, &obj1, &row1, &col1, &ctrl1)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "llzllz", &id1, &type1, &obj1, &row1, &col1, &ctrl1 ) == SUCCESS)
+		char parse_parameters_string[] = "llzllz";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id1, &type1, &obj1, &row1, &col1, &ctrl1 ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
 				if(Z_TYPE_P(obj1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(obj1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 				{
 					id_to_find = Z_RESVAL_P(*tmp);
 					object_pointer1_2 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer1_2 || (rsrc_type != le_wxEvtHandler && rsrc_type != le_wxWindow && rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow && rsrc_type != le_wxValidator && rsrc_type != le_wxTextValidator && rsrc_type != le_wxGenericValidator && rsrc_type != le_wxMenu && rsrc_type != le_wxAuiManager && rsrc_type != le_wxMouseEventsManager && rsrc_type != le_wxTimer && rsrc_type != le_wxEventBlocker && rsrc_type != le_wxProcess && rsrc_type != le_wxFileSystemWatcher && rsrc_type != le_wxTaskBarIcon && rsrc_type != le_wxNotificationMessage && rsrc_type != le_wxBitmapHandler && rsrc_type != le_wxImage && rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxWrapSizer && rsrc_type != le_wxStdDialogButtonSizer && rsrc_type != le_wxGridSizer && rsrc_type != le_wxFlexGridSizer && rsrc_type != le_wxGridBagSizer && rsrc_type != le_wxSizerItem && rsrc_type != le_wxGBSizerItem && rsrc_type != le_wxImageList && rsrc_type != le_wxDC && rsrc_type != le_wxWindowDC && rsrc_type != le_wxClientDC && rsrc_type != le_wxPaintDC && rsrc_type != le_wxScreenDC && rsrc_type != le_wxPostScriptDC && rsrc_type != le_wxPrinterDC && rsrc_type != le_wxMemoryDC && rsrc_type != le_wxBufferedDC && rsrc_type != le_wxBufferedPaintDC && rsrc_type != le_wxAutoBufferedPaintDC && rsrc_type != le_wxMirrorDC && rsrc_type != le_wxColour && rsrc_type != le_wxMenuItem && rsrc_type != le_wxEvent && rsrc_type != le_wxMenuEvent && rsrc_type != le_wxKeyEvent && rsrc_type != le_wxCommandEvent && rsrc_type != le_wxNotifyEvent && rsrc_type != le_wxTreeEvent && rsrc_type != le_wxBookCtrlEvent && rsrc_type != le_wxAuiNotebookEvent && rsrc_type != le_wxAuiToolBarEvent && rsrc_type != le_wxListEvent && rsrc_type != le_wxSpinEvent && rsrc_type != le_wxSplitterEvent && rsrc_type != le_wxSpinDoubleEvent && rsrc_type != le_wxGridSizeEvent && rsrc_type != le_wxWizardEvent && rsrc_type != le_wxGridEvent && rsrc_type != le_wxGridRangeSelectEvent && rsrc_type != le_wxDataViewEvent && rsrc_type != le_wxHeaderCtrlEvent && rsrc_type != le_wxRibbonBarEvent && rsrc_type != le_wxStyledTextEvent && rsrc_type != le_wxChildFocusEvent && rsrc_type != le_wxHtmlCellEvent && rsrc_type != le_wxHtmlLinkEvent && rsrc_type != le_wxHyperlinkEvent && rsrc_type != le_wxColourPickerEvent && rsrc_type != le_wxFontPickerEvent && rsrc_type != le_wxScrollEvent && rsrc_type != le_wxWindowModalDialogEvent && rsrc_type != le_wxDateEvent && rsrc_type != le_wxCalendarEvent && rsrc_type != le_wxWindowCreateEvent && rsrc_type != le_wxWindowDestroyEvent && rsrc_type != le_wxUpdateUIEvent && rsrc_type != le_wxHelpEvent && rsrc_type != le_wxGridEditorCreatedEvent && rsrc_type != le_wxCollapsiblePaneEvent && rsrc_type != le_wxClipboardTextEvent && rsrc_type != le_wxFileCtrlEvent && rsrc_type != le_wxSashEvent && rsrc_type != le_wxFileDirPickerEvent && rsrc_type != le_wxContextMenuEvent && rsrc_type != le_wxRibbonButtonBarEvent && rsrc_type != le_wxRibbonGalleryEvent && rsrc_type != le_wxCloseEvent && rsrc_type != le_wxActivateEvent && rsrc_type != le_wxAuiManagerEvent && rsrc_type != le_wxSizeEvent && rsrc_type != le_wxMouseEvent && rsrc_type != le_wxMoveEvent && rsrc_type != le_wxMouseCaptureLostEvent && rsrc_type != le_wxMouseCaptureChangedEvent && rsrc_type != le_wxTimerEvent && rsrc_type != le_wxThreadEvent && rsrc_type != le_wxScrollWinEvent && rsrc_type != le_wxSysColourChangedEvent && rsrc_type != le_wxProcessEvent && rsrc_type != le_wxEraseEvent && rsrc_type != le_wxSetCursorEvent && rsrc_type != le_wxIconizeEvent && rsrc_type != le_wxIdleEvent && rsrc_type != le_wxShowEvent && rsrc_type != le_wxPaintEvent && rsrc_type != le_wxPaletteChangedEvent && rsrc_type != le_wxInitDialogEvent && rsrc_type != le_wxMaximizeEvent && rsrc_type != le_wxNavigationKeyEvent && rsrc_type != le_wxFocusEvent && rsrc_type != le_wxFileSystemWatcherEvent && rsrc_type != le_wxDisplayChangedEvent && rsrc_type != le_wxCalculateLayoutEvent && rsrc_type != le_wxDropFilesEvent && rsrc_type != le_wxQueryLayoutInfoEvent && rsrc_type != le_wxTaskBarIconEvent && rsrc_type != le_wxAcceleratorTable && rsrc_type != le_wxGDIObject && rsrc_type != le_wxBitmap && rsrc_type != le_wxPalette && rsrc_type != le_wxIcon && rsrc_type != le_wxFont && rsrc_type != le_wxAnimation && rsrc_type != le_wxIconBundle && rsrc_type != le_wxCursor && rsrc_type != le_wxRegion && rsrc_type != le_wxPen && rsrc_type != le_wxBrush && rsrc_type != le_wxArtProvider && rsrc_type != le_wxHtmlCell && rsrc_type != le_wxHtmlContainerCell && rsrc_type != le_wxHtmlColourCell && rsrc_type != le_wxHtmlWidgetCell && rsrc_type != le_wxHtmlEasyPrinting && rsrc_type != le_wxHtmlLinkInfo && rsrc_type != le_wxFindReplaceData && rsrc_type != le_wxSound && rsrc_type != le_wxFileSystem && rsrc_type != le_wxFileSystemHandler && rsrc_type != le_wxMask && rsrc_type != le_wxToolTip && rsrc_type != le_wxGraphicsRenderer && rsrc_type != le_wxLayoutConstraints && rsrc_type != le_wxFSFile && rsrc_type != le_wxColourData && rsrc_type != le_wxFontData && rsrc_type != le_wxToolBarToolBase && rsrc_type != le_wxGridTableBase && rsrc_type != le_wxDataViewRenderer && rsrc_type != le_wxDataViewBitmapRenderer && rsrc_type != le_wxDataViewChoiceRenderer && rsrc_type != le_wxDataViewCustomRenderer && rsrc_type != le_wxDataViewSpinRenderer && rsrc_type != le_wxDataViewDateRenderer && rsrc_type != le_wxDataViewIconTextRenderer && rsrc_type != le_wxDataViewProgressRenderer && rsrc_type != le_wxDataViewTextRenderer && rsrc_type != le_wxDataViewToggleRenderer && rsrc_type != le_wxDataViewIconText && rsrc_type != le_wxVariant && rsrc_type != le_wxClipboard && rsrc_type != le_wxConfigBase && rsrc_type != le_wxFileConfig && rsrc_type != le_wxXmlResource && rsrc_type != le_wxPageSetupDialogData && rsrc_type != le_wxPrintDialogData && rsrc_type != le_wxPrintData && rsrc_type != le_wxPrintPreview && rsrc_type != le_wxPrinter && rsrc_type != le_wxPrintout && rsrc_type != le_wxHtmlPrintout && rsrc_type != le_wxHtmlDCRenderer && rsrc_type != le_wxHtmlFilter && rsrc_type != le_wxHtmlHelpData && rsrc_type != le_wxHtmlTagHandler && rsrc_type != le_wxHtmlWinTagHandler && rsrc_type != le_wxModule && rsrc_type != le_wxHtmlTagsModule && rsrc_type != le_wxImageHandler && rsrc_type != le_wxXmlResourceHandler && rsrc_type != le_wxXmlDocument && rsrc_type != le_wxLayoutAlgorithm && rsrc_type != le_wxFileHistory))
+					if (!object_pointer1_2 || (rsrc_type != le_wxEvtHandler && rsrc_type != le_wxWindow && rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow && rsrc_type != le_wxValidator && rsrc_type != le_wxTextValidator && rsrc_type != le_wxGenericValidator && rsrc_type != le_wxMenu && rsrc_type != le_wxAuiManager && rsrc_type != le_wxMouseEventsManager && rsrc_type != le_wxTimer && rsrc_type != le_wxEventBlocker && rsrc_type != le_wxProcess && rsrc_type != le_wxFileSystemWatcher && rsrc_type != le_wxTaskBarIcon && rsrc_type != le_wxNotificationMessage && rsrc_type != le_wxBitmapHandler && rsrc_type != le_wxImage && rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxWrapSizer && rsrc_type != le_wxStdDialogButtonSizer && rsrc_type != le_wxGridSizer && rsrc_type != le_wxFlexGridSizer && rsrc_type != le_wxGridBagSizer && rsrc_type != le_wxSizerItem && rsrc_type != le_wxGBSizerItem && rsrc_type != le_wxImageList && rsrc_type != le_wxDC && rsrc_type != le_wxWindowDC && rsrc_type != le_wxClientDC && rsrc_type != le_wxPaintDC && rsrc_type != le_wxScreenDC && rsrc_type != le_wxPostScriptDC && rsrc_type != le_wxPrinterDC && rsrc_type != le_wxMemoryDC && rsrc_type != le_wxBufferedDC && rsrc_type != le_wxBufferedPaintDC && rsrc_type != le_wxAutoBufferedPaintDC && rsrc_type != le_wxMirrorDC && rsrc_type != le_wxColour && rsrc_type != le_wxMenuItem && rsrc_type != le_wxEvent && rsrc_type != le_wxMenuEvent && rsrc_type != le_wxKeyEvent && rsrc_type != le_wxCommandEvent && rsrc_type != le_wxNotifyEvent && rsrc_type != le_wxTreeEvent && rsrc_type != le_wxBookCtrlEvent && rsrc_type != le_wxAuiNotebookEvent && rsrc_type != le_wxAuiToolBarEvent && rsrc_type != le_wxListEvent && rsrc_type != le_wxSpinEvent && rsrc_type != le_wxSplitterEvent && rsrc_type != le_wxSpinDoubleEvent && rsrc_type != le_wxGridSizeEvent && rsrc_type != le_wxWizardEvent && rsrc_type != le_wxGridEvent && rsrc_type != le_wxGridRangeSelectEvent && rsrc_type != le_wxDataViewEvent && rsrc_type != le_wxHeaderCtrlEvent && rsrc_type != le_wxRibbonBarEvent && rsrc_type != le_wxStyledTextEvent && rsrc_type != le_wxChildFocusEvent && rsrc_type != le_wxHtmlCellEvent && rsrc_type != le_wxHtmlLinkEvent && rsrc_type != le_wxHyperlinkEvent && rsrc_type != le_wxColourPickerEvent && rsrc_type != le_wxFontPickerEvent && rsrc_type != le_wxScrollEvent && rsrc_type != le_wxWindowModalDialogEvent && rsrc_type != le_wxDateEvent && rsrc_type != le_wxCalendarEvent && rsrc_type != le_wxWindowCreateEvent && rsrc_type != le_wxWindowDestroyEvent && rsrc_type != le_wxUpdateUIEvent && rsrc_type != le_wxHelpEvent && rsrc_type != le_wxGridEditorCreatedEvent && rsrc_type != le_wxCollapsiblePaneEvent && rsrc_type != le_wxClipboardTextEvent && rsrc_type != le_wxFileCtrlEvent && rsrc_type != le_wxSashEvent && rsrc_type != le_wxFileDirPickerEvent && rsrc_type != le_wxContextMenuEvent && rsrc_type != le_wxRibbonButtonBarEvent && rsrc_type != le_wxRibbonGalleryEvent && rsrc_type != le_wxCloseEvent && rsrc_type != le_wxActivateEvent && rsrc_type != le_wxAuiManagerEvent && rsrc_type != le_wxSizeEvent && rsrc_type != le_wxMouseEvent && rsrc_type != le_wxMoveEvent && rsrc_type != le_wxTimerEvent && rsrc_type != le_wxThreadEvent && rsrc_type != le_wxScrollWinEvent && rsrc_type != le_wxSysColourChangedEvent && rsrc_type != le_wxProcessEvent && rsrc_type != le_wxEraseEvent && rsrc_type != le_wxSetCursorEvent && rsrc_type != le_wxIdleEvent && rsrc_type != le_wxPaintEvent && rsrc_type != le_wxPaletteChangedEvent && rsrc_type != le_wxInitDialogEvent && rsrc_type != le_wxMaximizeEvent && rsrc_type != le_wxNavigationKeyEvent && rsrc_type != le_wxFocusEvent && rsrc_type != le_wxFileSystemWatcherEvent && rsrc_type != le_wxDisplayChangedEvent && rsrc_type != le_wxCalculateLayoutEvent && rsrc_type != le_wxQueryLayoutInfoEvent && rsrc_type != le_wxTaskBarIconEvent && rsrc_type != le_wxAcceleratorTable && rsrc_type != le_wxGDIObject && rsrc_type != le_wxBitmap && rsrc_type != le_wxPalette && rsrc_type != le_wxIcon && rsrc_type != le_wxFont && rsrc_type != le_wxAnimation && rsrc_type != le_wxIconBundle && rsrc_type != le_wxCursor && rsrc_type != le_wxRegion && rsrc_type != le_wxPen && rsrc_type != le_wxBrush && rsrc_type != le_wxArtProvider && rsrc_type != le_wxHtmlCell && rsrc_type != le_wxHtmlContainerCell && rsrc_type != le_wxHtmlColourCell && rsrc_type != le_wxHtmlWidgetCell && rsrc_type != le_wxHtmlEasyPrinting && rsrc_type != le_wxHtmlLinkInfo && rsrc_type != le_wxFindReplaceData && rsrc_type != le_wxSound && rsrc_type != le_wxFileSystem && rsrc_type != le_wxFileSystemHandler && rsrc_type != le_wxMask && rsrc_type != le_wxToolTip && rsrc_type != le_wxGraphicsRenderer && rsrc_type != le_wxLayoutConstraints && rsrc_type != le_wxFSFile && rsrc_type != le_wxColourData && rsrc_type != le_wxFontData && rsrc_type != le_wxGridTableBase && rsrc_type != le_wxDataViewRenderer && rsrc_type != le_wxDataViewBitmapRenderer && rsrc_type != le_wxDataViewChoiceRenderer && rsrc_type != le_wxDataViewCustomRenderer && rsrc_type != le_wxDataViewSpinRenderer && rsrc_type != le_wxDataViewDateRenderer && rsrc_type != le_wxDataViewIconTextRenderer && rsrc_type != le_wxDataViewProgressRenderer && rsrc_type != le_wxDataViewTextRenderer && rsrc_type != le_wxDataViewToggleRenderer && rsrc_type != le_wxDataViewIconText && rsrc_type != le_wxVariant && rsrc_type != le_wxClipboard && rsrc_type != le_wxConfigBase && rsrc_type != le_wxFileConfig && rsrc_type != le_wxXmlResource && rsrc_type != le_wxPageSetupDialogData && rsrc_type != le_wxPrintDialogData && rsrc_type != le_wxPrintData && rsrc_type != le_wxPrintPreview && rsrc_type != le_wxPrinter && rsrc_type != le_wxPrintout && rsrc_type != le_wxHtmlPrintout && rsrc_type != le_wxHtmlDCRenderer && rsrc_type != le_wxHtmlFilter && rsrc_type != le_wxHtmlHelpData && rsrc_type != le_wxHtmlTagHandler && rsrc_type != le_wxHtmlWinTagHandler && rsrc_type != le_wxModule && rsrc_type != le_wxHtmlTagsModule && rsrc_type != le_wxImageHandler && rsrc_type != le_wxXmlResourceHandler && rsrc_type != le_wxXmlDocument && rsrc_type != le_wxLayoutAlgorithm && rsrc_type != le_wxFileHistory && rsrc_type != le_wxToolBarToolBase))
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(obj1) == IS_LONG)
-				{
-					object_pointer1_2 = Z_LVAL_P(obj1);
 				}
 				else if(Z_TYPE_P(obj1) != IS_NULL)
 				{
@@ -41688,10 +39376,6 @@ PHP_METHOD(php_wxGridEditorCreatedEvent, __construct)
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(ctrl1) == IS_LONG)
-				{
-					object_pointer1_5 = Z_LVAL_P(ctrl1);
-				}
 				else if(Z_TYPE_P(ctrl1) != IS_NULL)
 				{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
@@ -41704,7 +39388,6 @@ PHP_METHOD(php_wxGridEditorCreatedEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -41722,7 +39405,6 @@ PHP_METHOD(php_wxGridEditorCreatedEvent, __construct)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -41770,6 +39452,7 @@ PHP_METHOD(php_wxGridEditorCreatedEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxHeaderCtrlEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -41778,13 +39461,13 @@ void php_wxHeaderCtrlEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 	#endif
 	
 	
-	wxHeaderCtrlEvent_php* object = (wxHeaderCtrlEvent_php*)rsrc->ptr;
+	wxHeaderCtrlEvent_php* object = static_cast<wxHeaderCtrlEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -41873,7 +39556,6 @@ PHP_METHOD(php_wxHeaderCtrlEvent, GetColumn)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -41960,7 +39642,6 @@ PHP_METHOD(php_wxHeaderCtrlEvent, GetNewOrder)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -42047,7 +39728,6 @@ PHP_METHOD(php_wxHeaderCtrlEvent, GetWidth)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -42071,6 +39751,7 @@ PHP_METHOD(php_wxHeaderCtrlEvent, GetWidth)
 
 		
 }
+
 void php_wxHyperlinkEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -42079,13 +39760,13 @@ void php_wxHyperlinkEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 	#endif
 	
 	
-	wxHyperlinkEvent_php* object = (wxHyperlinkEvent_php*)rsrc->ptr;
+	wxHyperlinkEvent_php* object = static_cast<wxHyperlinkEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -42174,7 +39855,6 @@ PHP_METHOD(php_wxHyperlinkEvent, GetURL)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -42261,7 +39941,8 @@ PHP_METHOD(php_wxHyperlinkEvent, SetURL)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&url0, &url_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &url0, &url_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &url0, &url_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -42269,7 +39950,6 @@ PHP_METHOD(php_wxHyperlinkEvent, SetURL)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -42325,21 +40005,18 @@ PHP_METHOD(php_wxHyperlinkEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zls' (&generator0, &id0, &url0, &url_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "zls", &generator0, &id0, &url0, &url_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "zls";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &generator0, &id0, &url0, &url_len0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(generator0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(generator0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 				{
 					id_to_find = Z_RESVAL_P(*tmp);
 					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxEvtHandler && rsrc_type != le_wxWindow && rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow && rsrc_type != le_wxValidator && rsrc_type != le_wxTextValidator && rsrc_type != le_wxGenericValidator && rsrc_type != le_wxMenu && rsrc_type != le_wxAuiManager && rsrc_type != le_wxMouseEventsManager && rsrc_type != le_wxTimer && rsrc_type != le_wxEventBlocker && rsrc_type != le_wxProcess && rsrc_type != le_wxFileSystemWatcher && rsrc_type != le_wxTaskBarIcon && rsrc_type != le_wxNotificationMessage && rsrc_type != le_wxBitmapHandler && rsrc_type != le_wxImage && rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxWrapSizer && rsrc_type != le_wxStdDialogButtonSizer && rsrc_type != le_wxGridSizer && rsrc_type != le_wxFlexGridSizer && rsrc_type != le_wxGridBagSizer && rsrc_type != le_wxSizerItem && rsrc_type != le_wxGBSizerItem && rsrc_type != le_wxImageList && rsrc_type != le_wxDC && rsrc_type != le_wxWindowDC && rsrc_type != le_wxClientDC && rsrc_type != le_wxPaintDC && rsrc_type != le_wxScreenDC && rsrc_type != le_wxPostScriptDC && rsrc_type != le_wxPrinterDC && rsrc_type != le_wxMemoryDC && rsrc_type != le_wxBufferedDC && rsrc_type != le_wxBufferedPaintDC && rsrc_type != le_wxAutoBufferedPaintDC && rsrc_type != le_wxMirrorDC && rsrc_type != le_wxColour && rsrc_type != le_wxMenuItem && rsrc_type != le_wxEvent && rsrc_type != le_wxMenuEvent && rsrc_type != le_wxKeyEvent && rsrc_type != le_wxCommandEvent && rsrc_type != le_wxNotifyEvent && rsrc_type != le_wxTreeEvent && rsrc_type != le_wxBookCtrlEvent && rsrc_type != le_wxAuiNotebookEvent && rsrc_type != le_wxAuiToolBarEvent && rsrc_type != le_wxListEvent && rsrc_type != le_wxSpinEvent && rsrc_type != le_wxSplitterEvent && rsrc_type != le_wxSpinDoubleEvent && rsrc_type != le_wxGridSizeEvent && rsrc_type != le_wxWizardEvent && rsrc_type != le_wxGridEvent && rsrc_type != le_wxGridRangeSelectEvent && rsrc_type != le_wxDataViewEvent && rsrc_type != le_wxHeaderCtrlEvent && rsrc_type != le_wxRibbonBarEvent && rsrc_type != le_wxStyledTextEvent && rsrc_type != le_wxChildFocusEvent && rsrc_type != le_wxHtmlCellEvent && rsrc_type != le_wxHtmlLinkEvent && rsrc_type != le_wxHyperlinkEvent && rsrc_type != le_wxColourPickerEvent && rsrc_type != le_wxFontPickerEvent && rsrc_type != le_wxScrollEvent && rsrc_type != le_wxWindowModalDialogEvent && rsrc_type != le_wxDateEvent && rsrc_type != le_wxCalendarEvent && rsrc_type != le_wxWindowCreateEvent && rsrc_type != le_wxWindowDestroyEvent && rsrc_type != le_wxUpdateUIEvent && rsrc_type != le_wxHelpEvent && rsrc_type != le_wxGridEditorCreatedEvent && rsrc_type != le_wxCollapsiblePaneEvent && rsrc_type != le_wxClipboardTextEvent && rsrc_type != le_wxFileCtrlEvent && rsrc_type != le_wxSashEvent && rsrc_type != le_wxFileDirPickerEvent && rsrc_type != le_wxContextMenuEvent && rsrc_type != le_wxRibbonButtonBarEvent && rsrc_type != le_wxRibbonGalleryEvent && rsrc_type != le_wxCloseEvent && rsrc_type != le_wxActivateEvent && rsrc_type != le_wxAuiManagerEvent && rsrc_type != le_wxSizeEvent && rsrc_type != le_wxMouseEvent && rsrc_type != le_wxMoveEvent && rsrc_type != le_wxMouseCaptureLostEvent && rsrc_type != le_wxMouseCaptureChangedEvent && rsrc_type != le_wxTimerEvent && rsrc_type != le_wxThreadEvent && rsrc_type != le_wxScrollWinEvent && rsrc_type != le_wxSysColourChangedEvent && rsrc_type != le_wxProcessEvent && rsrc_type != le_wxEraseEvent && rsrc_type != le_wxSetCursorEvent && rsrc_type != le_wxIconizeEvent && rsrc_type != le_wxIdleEvent && rsrc_type != le_wxShowEvent && rsrc_type != le_wxPaintEvent && rsrc_type != le_wxPaletteChangedEvent && rsrc_type != le_wxInitDialogEvent && rsrc_type != le_wxMaximizeEvent && rsrc_type != le_wxNavigationKeyEvent && rsrc_type != le_wxFocusEvent && rsrc_type != le_wxFileSystemWatcherEvent && rsrc_type != le_wxDisplayChangedEvent && rsrc_type != le_wxCalculateLayoutEvent && rsrc_type != le_wxDropFilesEvent && rsrc_type != le_wxQueryLayoutInfoEvent && rsrc_type != le_wxTaskBarIconEvent && rsrc_type != le_wxAcceleratorTable && rsrc_type != le_wxGDIObject && rsrc_type != le_wxBitmap && rsrc_type != le_wxPalette && rsrc_type != le_wxIcon && rsrc_type != le_wxFont && rsrc_type != le_wxAnimation && rsrc_type != le_wxIconBundle && rsrc_type != le_wxCursor && rsrc_type != le_wxRegion && rsrc_type != le_wxPen && rsrc_type != le_wxBrush && rsrc_type != le_wxArtProvider && rsrc_type != le_wxHtmlCell && rsrc_type != le_wxHtmlContainerCell && rsrc_type != le_wxHtmlColourCell && rsrc_type != le_wxHtmlWidgetCell && rsrc_type != le_wxHtmlEasyPrinting && rsrc_type != le_wxHtmlLinkInfo && rsrc_type != le_wxFindReplaceData && rsrc_type != le_wxSound && rsrc_type != le_wxFileSystem && rsrc_type != le_wxFileSystemHandler && rsrc_type != le_wxMask && rsrc_type != le_wxToolTip && rsrc_type != le_wxGraphicsRenderer && rsrc_type != le_wxLayoutConstraints && rsrc_type != le_wxFSFile && rsrc_type != le_wxColourData && rsrc_type != le_wxFontData && rsrc_type != le_wxToolBarToolBase && rsrc_type != le_wxGridTableBase && rsrc_type != le_wxDataViewRenderer && rsrc_type != le_wxDataViewBitmapRenderer && rsrc_type != le_wxDataViewChoiceRenderer && rsrc_type != le_wxDataViewCustomRenderer && rsrc_type != le_wxDataViewSpinRenderer && rsrc_type != le_wxDataViewDateRenderer && rsrc_type != le_wxDataViewIconTextRenderer && rsrc_type != le_wxDataViewProgressRenderer && rsrc_type != le_wxDataViewTextRenderer && rsrc_type != le_wxDataViewToggleRenderer && rsrc_type != le_wxDataViewIconText && rsrc_type != le_wxVariant && rsrc_type != le_wxClipboard && rsrc_type != le_wxConfigBase && rsrc_type != le_wxFileConfig && rsrc_type != le_wxXmlResource && rsrc_type != le_wxPageSetupDialogData && rsrc_type != le_wxPrintDialogData && rsrc_type != le_wxPrintData && rsrc_type != le_wxPrintPreview && rsrc_type != le_wxPrinter && rsrc_type != le_wxPrintout && rsrc_type != le_wxHtmlPrintout && rsrc_type != le_wxHtmlDCRenderer && rsrc_type != le_wxHtmlFilter && rsrc_type != le_wxHtmlHelpData && rsrc_type != le_wxHtmlTagHandler && rsrc_type != le_wxHtmlWinTagHandler && rsrc_type != le_wxModule && rsrc_type != le_wxHtmlTagsModule && rsrc_type != le_wxImageHandler && rsrc_type != le_wxXmlResourceHandler && rsrc_type != le_wxXmlDocument && rsrc_type != le_wxLayoutAlgorithm && rsrc_type != le_wxFileHistory))
+					if (!object_pointer0_0 || (rsrc_type != le_wxEvtHandler && rsrc_type != le_wxWindow && rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow && rsrc_type != le_wxValidator && rsrc_type != le_wxTextValidator && rsrc_type != le_wxGenericValidator && rsrc_type != le_wxMenu && rsrc_type != le_wxAuiManager && rsrc_type != le_wxMouseEventsManager && rsrc_type != le_wxTimer && rsrc_type != le_wxEventBlocker && rsrc_type != le_wxProcess && rsrc_type != le_wxFileSystemWatcher && rsrc_type != le_wxTaskBarIcon && rsrc_type != le_wxNotificationMessage && rsrc_type != le_wxBitmapHandler && rsrc_type != le_wxImage && rsrc_type != le_wxSizer && rsrc_type != le_wxBoxSizer && rsrc_type != le_wxStaticBoxSizer && rsrc_type != le_wxWrapSizer && rsrc_type != le_wxStdDialogButtonSizer && rsrc_type != le_wxGridSizer && rsrc_type != le_wxFlexGridSizer && rsrc_type != le_wxGridBagSizer && rsrc_type != le_wxSizerItem && rsrc_type != le_wxGBSizerItem && rsrc_type != le_wxImageList && rsrc_type != le_wxDC && rsrc_type != le_wxWindowDC && rsrc_type != le_wxClientDC && rsrc_type != le_wxPaintDC && rsrc_type != le_wxScreenDC && rsrc_type != le_wxPostScriptDC && rsrc_type != le_wxPrinterDC && rsrc_type != le_wxMemoryDC && rsrc_type != le_wxBufferedDC && rsrc_type != le_wxBufferedPaintDC && rsrc_type != le_wxAutoBufferedPaintDC && rsrc_type != le_wxMirrorDC && rsrc_type != le_wxColour && rsrc_type != le_wxMenuItem && rsrc_type != le_wxEvent && rsrc_type != le_wxMenuEvent && rsrc_type != le_wxKeyEvent && rsrc_type != le_wxCommandEvent && rsrc_type != le_wxNotifyEvent && rsrc_type != le_wxTreeEvent && rsrc_type != le_wxBookCtrlEvent && rsrc_type != le_wxAuiNotebookEvent && rsrc_type != le_wxAuiToolBarEvent && rsrc_type != le_wxListEvent && rsrc_type != le_wxSpinEvent && rsrc_type != le_wxSplitterEvent && rsrc_type != le_wxSpinDoubleEvent && rsrc_type != le_wxGridSizeEvent && rsrc_type != le_wxWizardEvent && rsrc_type != le_wxGridEvent && rsrc_type != le_wxGridRangeSelectEvent && rsrc_type != le_wxDataViewEvent && rsrc_type != le_wxHeaderCtrlEvent && rsrc_type != le_wxRibbonBarEvent && rsrc_type != le_wxStyledTextEvent && rsrc_type != le_wxChildFocusEvent && rsrc_type != le_wxHtmlCellEvent && rsrc_type != le_wxHtmlLinkEvent && rsrc_type != le_wxHyperlinkEvent && rsrc_type != le_wxColourPickerEvent && rsrc_type != le_wxFontPickerEvent && rsrc_type != le_wxScrollEvent && rsrc_type != le_wxWindowModalDialogEvent && rsrc_type != le_wxDateEvent && rsrc_type != le_wxCalendarEvent && rsrc_type != le_wxWindowCreateEvent && rsrc_type != le_wxWindowDestroyEvent && rsrc_type != le_wxUpdateUIEvent && rsrc_type != le_wxHelpEvent && rsrc_type != le_wxGridEditorCreatedEvent && rsrc_type != le_wxCollapsiblePaneEvent && rsrc_type != le_wxClipboardTextEvent && rsrc_type != le_wxFileCtrlEvent && rsrc_type != le_wxSashEvent && rsrc_type != le_wxFileDirPickerEvent && rsrc_type != le_wxContextMenuEvent && rsrc_type != le_wxRibbonButtonBarEvent && rsrc_type != le_wxRibbonGalleryEvent && rsrc_type != le_wxCloseEvent && rsrc_type != le_wxActivateEvent && rsrc_type != le_wxAuiManagerEvent && rsrc_type != le_wxSizeEvent && rsrc_type != le_wxMouseEvent && rsrc_type != le_wxMoveEvent && rsrc_type != le_wxTimerEvent && rsrc_type != le_wxThreadEvent && rsrc_type != le_wxScrollWinEvent && rsrc_type != le_wxSysColourChangedEvent && rsrc_type != le_wxProcessEvent && rsrc_type != le_wxEraseEvent && rsrc_type != le_wxSetCursorEvent && rsrc_type != le_wxIdleEvent && rsrc_type != le_wxPaintEvent && rsrc_type != le_wxPaletteChangedEvent && rsrc_type != le_wxInitDialogEvent && rsrc_type != le_wxMaximizeEvent && rsrc_type != le_wxNavigationKeyEvent && rsrc_type != le_wxFocusEvent && rsrc_type != le_wxFileSystemWatcherEvent && rsrc_type != le_wxDisplayChangedEvent && rsrc_type != le_wxCalculateLayoutEvent && rsrc_type != le_wxQueryLayoutInfoEvent && rsrc_type != le_wxTaskBarIconEvent && rsrc_type != le_wxAcceleratorTable && rsrc_type != le_wxGDIObject && rsrc_type != le_wxBitmap && rsrc_type != le_wxPalette && rsrc_type != le_wxIcon && rsrc_type != le_wxFont && rsrc_type != le_wxAnimation && rsrc_type != le_wxIconBundle && rsrc_type != le_wxCursor && rsrc_type != le_wxRegion && rsrc_type != le_wxPen && rsrc_type != le_wxBrush && rsrc_type != le_wxArtProvider && rsrc_type != le_wxHtmlCell && rsrc_type != le_wxHtmlContainerCell && rsrc_type != le_wxHtmlColourCell && rsrc_type != le_wxHtmlWidgetCell && rsrc_type != le_wxHtmlEasyPrinting && rsrc_type != le_wxHtmlLinkInfo && rsrc_type != le_wxFindReplaceData && rsrc_type != le_wxSound && rsrc_type != le_wxFileSystem && rsrc_type != le_wxFileSystemHandler && rsrc_type != le_wxMask && rsrc_type != le_wxToolTip && rsrc_type != le_wxGraphicsRenderer && rsrc_type != le_wxLayoutConstraints && rsrc_type != le_wxFSFile && rsrc_type != le_wxColourData && rsrc_type != le_wxFontData && rsrc_type != le_wxGridTableBase && rsrc_type != le_wxDataViewRenderer && rsrc_type != le_wxDataViewBitmapRenderer && rsrc_type != le_wxDataViewChoiceRenderer && rsrc_type != le_wxDataViewCustomRenderer && rsrc_type != le_wxDataViewSpinRenderer && rsrc_type != le_wxDataViewDateRenderer && rsrc_type != le_wxDataViewIconTextRenderer && rsrc_type != le_wxDataViewProgressRenderer && rsrc_type != le_wxDataViewTextRenderer && rsrc_type != le_wxDataViewToggleRenderer && rsrc_type != le_wxDataViewIconText && rsrc_type != le_wxVariant && rsrc_type != le_wxClipboard && rsrc_type != le_wxConfigBase && rsrc_type != le_wxFileConfig && rsrc_type != le_wxXmlResource && rsrc_type != le_wxPageSetupDialogData && rsrc_type != le_wxPrintDialogData && rsrc_type != le_wxPrintData && rsrc_type != le_wxPrintPreview && rsrc_type != le_wxPrinter && rsrc_type != le_wxPrintout && rsrc_type != le_wxHtmlPrintout && rsrc_type != le_wxHtmlDCRenderer && rsrc_type != le_wxHtmlFilter && rsrc_type != le_wxHtmlHelpData && rsrc_type != le_wxHtmlTagHandler && rsrc_type != le_wxHtmlWinTagHandler && rsrc_type != le_wxModule && rsrc_type != le_wxHtmlTagsModule && rsrc_type != le_wxImageHandler && rsrc_type != le_wxXmlResourceHandler && rsrc_type != le_wxXmlDocument && rsrc_type != le_wxLayoutAlgorithm && rsrc_type != le_wxFileHistory && rsrc_type != le_wxToolBarToolBase))
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(generator0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(generator0);
 				}
 				else if(Z_TYPE_P(generator0) != IS_NULL)
 				{
@@ -42353,7 +40030,6 @@ PHP_METHOD(php_wxHyperlinkEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -42400,6 +40076,7 @@ PHP_METHOD(php_wxHyperlinkEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxQueryLayoutInfoEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -42408,13 +40085,13 @@ void php_wxQueryLayoutInfoEvent_destruction_handler(zend_rsrc_list_entry *rsrc T
 	#endif
 	
 	
-	wxQueryLayoutInfoEvent_php* object = (wxQueryLayoutInfoEvent_php*)rsrc->ptr;
+	wxQueryLayoutInfoEvent_php* object = static_cast<wxQueryLayoutInfoEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -42503,7 +40180,6 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, GetAlignment)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -42587,7 +40263,6 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, GetFlags)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -42671,7 +40346,6 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, GetOrientation)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -42755,7 +40429,6 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, GetRequestedLength)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -42839,7 +40512,6 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, GetSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -42924,7 +40596,8 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, SetAlignment)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&alignment0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &alignment0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &alignment0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -42932,7 +40605,6 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, SetAlignment)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -43012,7 +40684,8 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, SetFlags)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&flags0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &flags0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flags0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -43020,7 +40693,6 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, SetFlags)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -43100,7 +40772,8 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, SetOrientation)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&orientation0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &orientation0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &orientation0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -43108,7 +40781,6 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, SetOrientation)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -43188,7 +40860,8 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, SetRequestedLength)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&length0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &length0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &length0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -43196,7 +40869,6 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, SetRequestedLength)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -43277,7 +40949,8 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, SetSize)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&size0, php_wxSize_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &size0, php_wxSize_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size0, php_wxSize_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(size0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(size0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -43288,10 +40961,6 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, SetSize)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(size0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(size0);
 				}
 				else if(Z_TYPE_P(size0) != IS_NULL)
 				{
@@ -43305,7 +40974,6 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, SetSize)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -43358,7 +41026,8 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&id0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|l", &id0 ) == SUCCESS)
+		char parse_parameters_string[] = "|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -43366,7 +41035,6 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -43422,6 +41090,7 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxCalculateLayoutEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -43430,13 +41099,13 @@ void php_wxCalculateLayoutEvent_destruction_handler(zend_rsrc_list_entry *rsrc T
 	#endif
 	
 	
-	wxCalculateLayoutEvent_php* object = (wxCalculateLayoutEvent_php*)rsrc->ptr;
+	wxCalculateLayoutEvent_php* object = static_cast<wxCalculateLayoutEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -43525,7 +41194,6 @@ PHP_METHOD(php_wxCalculateLayoutEvent, GetFlags)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -43609,7 +41277,6 @@ PHP_METHOD(php_wxCalculateLayoutEvent, GetRect)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -43694,7 +41361,8 @@ PHP_METHOD(php_wxCalculateLayoutEvent, SetFlags)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&flags0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &flags0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flags0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -43702,7 +41370,6 @@ PHP_METHOD(php_wxCalculateLayoutEvent, SetFlags)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -43783,7 +41450,8 @@ PHP_METHOD(php_wxCalculateLayoutEvent, SetRect)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&rect0, php_wxRect_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &rect0, php_wxRect_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &rect0, php_wxRect_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(rect0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(rect0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -43794,10 +41462,6 @@ PHP_METHOD(php_wxCalculateLayoutEvent, SetRect)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(rect0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(rect0);
 				}
 				else if(Z_TYPE_P(rect0) != IS_NULL)
 				{
@@ -43811,7 +41475,6 @@ PHP_METHOD(php_wxCalculateLayoutEvent, SetRect)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -43864,7 +41527,8 @@ PHP_METHOD(php_wxCalculateLayoutEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|l' (&id0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|l", &id0 ) == SUCCESS)
+		char parse_parameters_string[] = "|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -43872,7 +41536,6 @@ PHP_METHOD(php_wxCalculateLayoutEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -43928,6 +41591,7 @@ PHP_METHOD(php_wxCalculateLayoutEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxListEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -43936,13 +41600,13 @@ void php_wxListEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxListEvent_php* object = (wxListEvent_php*)rsrc->ptr;
+	wxListEvent_php* object = static_cast<wxListEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -44031,7 +41695,6 @@ PHP_METHOD(php_wxListEvent, GetCacheFrom)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -44115,7 +41778,6 @@ PHP_METHOD(php_wxListEvent, GetCacheTo)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -44199,7 +41861,6 @@ PHP_METHOD(php_wxListEvent, GetColumn)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -44283,7 +41944,6 @@ PHP_METHOD(php_wxListEvent, GetData)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -44367,7 +42027,6 @@ PHP_METHOD(php_wxListEvent, GetImage)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -44451,7 +42110,6 @@ PHP_METHOD(php_wxListEvent, GetIndex)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -44535,7 +42193,6 @@ PHP_METHOD(php_wxListEvent, GetItem)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -44549,8 +42206,8 @@ PHP_METHOD(php_wxListEvent, GetItem)
 				value_to_return0 = (wxListItem_php*) &((wxListEvent_php*)_this)->GetItem();
 
 				if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -44565,7 +42222,6 @@ PHP_METHOD(php_wxListEvent, GetItem)
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
 					references->AddReference(return_value);
 				}
-				references->AddReference(return_value);
 
 
 				return;
@@ -44639,7 +42295,6 @@ PHP_METHOD(php_wxListEvent, GetKeyCode)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -44723,7 +42378,6 @@ PHP_METHOD(php_wxListEvent, GetLabel)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -44813,7 +42467,6 @@ PHP_METHOD(php_wxListEvent, GetMask)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -44897,7 +42550,6 @@ PHP_METHOD(php_wxListEvent, GetPoint)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -44986,7 +42638,6 @@ PHP_METHOD(php_wxListEvent, GetText)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -45076,7 +42727,6 @@ PHP_METHOD(php_wxListEvent, IsEditCancelled)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -45129,7 +42779,8 @@ PHP_METHOD(php_wxListEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&commandType0, &id0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|ll", &commandType0, &id0 ) == SUCCESS)
+		char parse_parameters_string[] = "|ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &commandType0, &id0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -45137,7 +42788,6 @@ PHP_METHOD(php_wxListEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -45203,6 +42853,7 @@ PHP_METHOD(php_wxListEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxMouseEventsManager_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -45211,13 +42862,13 @@ void php_wxMouseEventsManager_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 	#endif
 	
 	
-	wxMouseEventsManager_php* object = (wxMouseEventsManager_php*)rsrc->ptr;
+	wxMouseEventsManager_php* object = static_cast<wxMouseEventsManager_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -45303,21 +42954,18 @@ PHP_METHOD(php_wxMouseEventsManager, Create)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&win0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &win0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &win0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(win0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(win0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 				{
 					id_to_find = Z_RESVAL_P(*tmp);
 					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
+					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(win0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(win0);
 				}
 				else if(Z_TYPE_P(win0) != IS_NULL)
 				{
@@ -45331,7 +42979,6 @@ PHP_METHOD(php_wxMouseEventsManager, Create)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -45557,7 +43204,7 @@ bool wxMouseEventsManager_php::MouseDragBegin(int item, const wxPoint& pos)
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], item);
 	object_init_ex(arguments[1], php_wxPoint_entry);
-	add_property_resource(arguments[1], _wxResource, zend_list_insert(&pos, le_wxPoint));
+	add_property_resource(arguments[1], _wxResource, zend_list_insert((void*)&pos, le_wxPoint));
 		
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
@@ -45677,7 +43324,7 @@ void wxMouseEventsManager_php::MouseDragEnd(int item, const wxPoint& pos)
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], item);
 	object_init_ex(arguments[1], php_wxPoint_entry);
-	add_property_resource(arguments[1], _wxResource, zend_list_insert(&pos, le_wxPoint));
+	add_property_resource(arguments[1], _wxResource, zend_list_insert((void*)&pos, le_wxPoint));
 		
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
@@ -45738,7 +43385,7 @@ void wxMouseEventsManager_php::MouseDragging(int item, const wxPoint& pos)
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], item);
 	object_init_ex(arguments[1], php_wxPoint_entry);
-	add_property_resource(arguments[1], _wxResource, zend_list_insert(&pos, le_wxPoint));
+	add_property_resource(arguments[1], _wxResource, zend_list_insert((void*)&pos, le_wxPoint));
 		
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
@@ -45798,7 +43445,7 @@ int wxMouseEventsManager_php::MouseHitTest(const wxPoint& pos)
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxPoint_entry);
-	add_property_resource(arguments[0], _wxResource, zend_list_insert(&pos, le_wxPoint));
+	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)&pos, le_wxPoint));
 		
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
@@ -45818,7 +43465,7 @@ int wxMouseEventsManager_php::MouseHitTest(const wxPoint& pos)
 		php_printf("Returning userspace value.\n");
 		#endif
 		
-		return Z_LVAL_P(return_value);
+		return (int) Z_LVAL_P(return_value);
 	}
 	
 	#ifdef USE_WXPHP_DEBUG
@@ -45876,21 +43523,18 @@ PHP_METHOD(php_wxMouseEventsManager, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&win1)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &win1 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &win1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(win1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(win1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
 				{
 					id_to_find = Z_RESVAL_P(*tmp);
 					object_pointer1_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer1_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
+					if (!object_pointer1_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(win1) == IS_LONG)
-				{
-					object_pointer1_0 = Z_LVAL_P(win1);
 				}
 				else if(Z_TYPE_P(win1) != IS_NULL)
 				{
@@ -45904,7 +43548,6 @@ PHP_METHOD(php_wxMouseEventsManager, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -45922,7 +43565,6 @@ PHP_METHOD(php_wxMouseEventsManager, __construct)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -45969,6 +43611,7 @@ PHP_METHOD(php_wxMouseEventsManager, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxMouseState_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -45977,13 +43620,13 @@ void php_wxMouseState_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxMouseState_php* object = (wxMouseState_php*)rsrc->ptr;
+	wxMouseState_php* object = static_cast<wxMouseState_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -46074,7 +43717,6 @@ PHP_METHOD(php_wxMouseState, Aux1IsDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -46160,7 +43802,6 @@ PHP_METHOD(php_wxMouseState, Aux2IsDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -46246,7 +43887,6 @@ PHP_METHOD(php_wxMouseState, GetPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -46337,7 +43977,6 @@ PHP_METHOD(php_wxMouseState, GetX)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -46423,7 +44062,6 @@ PHP_METHOD(php_wxMouseState, GetY)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -46509,7 +44147,6 @@ PHP_METHOD(php_wxMouseState, LeftIsDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -46595,7 +44232,6 @@ PHP_METHOD(php_wxMouseState, MiddleIsDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -46681,7 +44317,6 @@ PHP_METHOD(php_wxMouseState, RightIsDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -46763,7 +44398,8 @@ PHP_METHOD(php_wxMouseState, SetAux1Down)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&down0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &down0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &down0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -46771,7 +44407,6 @@ PHP_METHOD(php_wxMouseState, SetAux1Down)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -46853,7 +44488,8 @@ PHP_METHOD(php_wxMouseState, SetAux2Down)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&down0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &down0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &down0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -46861,7 +44497,6 @@ PHP_METHOD(php_wxMouseState, SetAux2Down)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -46943,7 +44578,8 @@ PHP_METHOD(php_wxMouseState, SetLeftDown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&down0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &down0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &down0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -46951,7 +44587,6 @@ PHP_METHOD(php_wxMouseState, SetLeftDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -47033,7 +44668,8 @@ PHP_METHOD(php_wxMouseState, SetMiddleDown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&down0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &down0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &down0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -47041,7 +44677,6 @@ PHP_METHOD(php_wxMouseState, SetMiddleDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -47124,7 +44759,8 @@ PHP_METHOD(php_wxMouseState, SetPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&pos0, php_wxPoint_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &pos0, php_wxPoint_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0, php_wxPoint_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(pos0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(pos0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -47135,10 +44771,6 @@ PHP_METHOD(php_wxMouseState, SetPosition)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(pos0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(pos0);
 				}
 				else if(Z_TYPE_P(pos0) != IS_NULL)
 				{
@@ -47152,7 +44784,6 @@ PHP_METHOD(php_wxMouseState, SetPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -47234,7 +44865,8 @@ PHP_METHOD(php_wxMouseState, SetRightDown)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&down0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &down0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &down0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -47242,7 +44874,6 @@ PHP_METHOD(php_wxMouseState, SetRightDown)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -47325,7 +44956,8 @@ PHP_METHOD(php_wxMouseState, SetState)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&state0, php_wxMouseState_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &state0, php_wxMouseState_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &state0, php_wxMouseState_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(state0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(state0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -47336,10 +44968,6 @@ PHP_METHOD(php_wxMouseState, SetState)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(state0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(state0);
 				}
 				else if(Z_TYPE_P(state0) != IS_NULL)
 				{
@@ -47353,7 +44981,6 @@ PHP_METHOD(php_wxMouseState, SetState)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -47436,7 +45063,8 @@ PHP_METHOD(php_wxMouseState, SetX)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&x0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &x0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -47444,7 +45072,6 @@ PHP_METHOD(php_wxMouseState, SetX)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -47526,7 +45153,8 @@ PHP_METHOD(php_wxMouseState, SetY)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&y0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &y0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &y0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -47534,7 +45162,6 @@ PHP_METHOD(php_wxMouseState, SetY)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -47590,7 +45217,6 @@ PHP_METHOD(php_wxMouseState, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -47636,6 +45262,7 @@ PHP_METHOD(php_wxMouseState, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxProcessEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -47644,13 +45271,13 @@ void php_wxProcessEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 	#endif
 	
 	
-	wxProcessEvent_php* object = (wxProcessEvent_php*)rsrc->ptr;
+	wxProcessEvent_php* object = static_cast<wxProcessEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -47739,7 +45366,6 @@ PHP_METHOD(php_wxProcessEvent, GetExitCode)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -47823,7 +45449,6 @@ PHP_METHOD(php_wxProcessEvent, GetPid)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -47877,7 +45502,8 @@ PHP_METHOD(php_wxProcessEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|lll' (&id0, &pid0, &exitcode0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|lll", &id0, &pid0, &exitcode0 ) == SUCCESS)
+		char parse_parameters_string[] = "|lll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &pid0, &exitcode0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -47885,7 +45511,6 @@ PHP_METHOD(php_wxProcessEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -47961,6 +45586,7 @@ PHP_METHOD(php_wxProcessEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxRibbonBarEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -47969,13 +45595,13 @@ void php_wxRibbonBarEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 	#endif
 	
 	
-	wxRibbonBarEvent_php* object = (wxRibbonBarEvent_php*)rsrc->ptr;
+	wxRibbonBarEvent_php* object = static_cast<wxRibbonBarEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -48064,7 +45690,6 @@ PHP_METHOD(php_wxRibbonBarEvent, GetPage)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -48081,8 +45706,8 @@ PHP_METHOD(php_wxRibbonBarEvent, GetPage)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -48167,7 +45792,8 @@ PHP_METHOD(php_wxRibbonBarEvent, SetPage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&page0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &page0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &page0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(page0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(page0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -48178,10 +45804,6 @@ PHP_METHOD(php_wxRibbonBarEvent, SetPage)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(page0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(page0);
 				}
 				else if(Z_TYPE_P(page0) != IS_NULL)
 				{
@@ -48195,7 +45817,6 @@ PHP_METHOD(php_wxRibbonBarEvent, SetPage)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -48251,7 +45872,8 @@ PHP_METHOD(php_wxRibbonBarEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|llz' (&command_type0, &win_id0, &page0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|llz", &command_type0, &win_id0, &page0 ) == SUCCESS)
+		char parse_parameters_string[] = "|llz";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &command_type0, &win_id0, &page0 ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
 				if(Z_TYPE_P(page0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(page0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -48262,10 +45884,6 @@ PHP_METHOD(php_wxRibbonBarEvent, __construct)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(page0) == IS_LONG)
-				{
-					object_pointer0_2 = Z_LVAL_P(page0);
 				}
 				else if(Z_TYPE_P(page0) != IS_NULL)
 				{
@@ -48279,7 +45897,6 @@ PHP_METHOD(php_wxRibbonBarEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -48356,6 +45973,7 @@ PHP_METHOD(php_wxRibbonBarEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxRibbonButtonBarEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -48364,13 +45982,13 @@ void php_wxRibbonButtonBarEvent_destruction_handler(zend_rsrc_list_entry *rsrc T
 	#endif
 	
 	
-	wxRibbonButtonBarEvent_php* object = (wxRibbonButtonBarEvent_php*)rsrc->ptr;
+	wxRibbonButtonBarEvent_php* object = static_cast<wxRibbonButtonBarEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -48459,7 +46077,6 @@ PHP_METHOD(php_wxRibbonButtonBarEvent, GetBar)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -48476,8 +46093,8 @@ PHP_METHOD(php_wxRibbonButtonBarEvent, GetBar)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -48562,7 +46179,8 @@ PHP_METHOD(php_wxRibbonButtonBarEvent, PopupMenu)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&menu0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &menu0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &menu0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(menu0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(menu0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -48573,10 +46191,6 @@ PHP_METHOD(php_wxRibbonButtonBarEvent, PopupMenu)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(menu0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(menu0);
 				}
 				else if(Z_TYPE_P(menu0) != IS_NULL)
 				{
@@ -48590,7 +46204,6 @@ PHP_METHOD(php_wxRibbonButtonBarEvent, PopupMenu)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -48672,7 +46285,8 @@ PHP_METHOD(php_wxRibbonButtonBarEvent, SetBar)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&bar0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &bar0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &bar0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(bar0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(bar0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -48683,10 +46297,6 @@ PHP_METHOD(php_wxRibbonButtonBarEvent, SetBar)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(bar0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(bar0);
 				}
 				else if(Z_TYPE_P(bar0) != IS_NULL)
 				{
@@ -48700,7 +46310,6 @@ PHP_METHOD(php_wxRibbonButtonBarEvent, SetBar)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -48756,7 +46365,8 @@ PHP_METHOD(php_wxRibbonButtonBarEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|llz' (&command_type0, &win_id0, &bar0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|llz", &command_type0, &win_id0, &bar0 ) == SUCCESS)
+		char parse_parameters_string[] = "|llz";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &command_type0, &win_id0, &bar0 ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
 				if(Z_TYPE_P(bar0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(bar0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -48767,10 +46377,6 @@ PHP_METHOD(php_wxRibbonButtonBarEvent, __construct)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(bar0) == IS_LONG)
-				{
-					object_pointer0_2 = Z_LVAL_P(bar0);
 				}
 				else if(Z_TYPE_P(bar0) != IS_NULL)
 				{
@@ -48784,7 +46390,6 @@ PHP_METHOD(php_wxRibbonButtonBarEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -48861,6 +46466,7 @@ PHP_METHOD(php_wxRibbonButtonBarEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxRibbonGalleryEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -48869,13 +46475,13 @@ void php_wxRibbonGalleryEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 	#endif
 	
 	
-	wxRibbonGalleryEvent_php* object = (wxRibbonGalleryEvent_php*)rsrc->ptr;
+	wxRibbonGalleryEvent_php* object = static_cast<wxRibbonGalleryEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -48964,7 +46570,6 @@ PHP_METHOD(php_wxRibbonGalleryEvent, GetGallery)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -48981,8 +46586,8 @@ PHP_METHOD(php_wxRibbonGalleryEvent, GetGallery)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -49070,7 +46675,6 @@ PHP_METHOD(php_wxRibbonGalleryEvent, GetGalleryItem)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -49087,8 +46691,8 @@ PHP_METHOD(php_wxRibbonGalleryEvent, GetGalleryItem)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -49173,7 +46777,8 @@ PHP_METHOD(php_wxRibbonGalleryEvent, SetGallery)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&gallery0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &gallery0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &gallery0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(gallery0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(gallery0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -49184,10 +46789,6 @@ PHP_METHOD(php_wxRibbonGalleryEvent, SetGallery)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(gallery0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(gallery0);
 				}
 				else if(Z_TYPE_P(gallery0) != IS_NULL)
 				{
@@ -49201,7 +46802,6 @@ PHP_METHOD(php_wxRibbonGalleryEvent, SetGallery)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -49283,7 +46883,8 @@ PHP_METHOD(php_wxRibbonGalleryEvent, SetGalleryItem)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&item0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &item0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &item0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(item0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(item0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -49294,10 +46895,6 @@ PHP_METHOD(php_wxRibbonGalleryEvent, SetGalleryItem)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(item0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(item0);
 				}
 				else if(Z_TYPE_P(item0) != IS_NULL)
 				{
@@ -49311,7 +46908,6 @@ PHP_METHOD(php_wxRibbonGalleryEvent, SetGalleryItem)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -49369,7 +46965,8 @@ PHP_METHOD(php_wxRibbonGalleryEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|llzz' (&command_type0, &win_id0, &gallery0, &item0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|llzz", &command_type0, &win_id0, &gallery0, &item0 ) == SUCCESS)
+		char parse_parameters_string[] = "|llzz";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &command_type0, &win_id0, &gallery0, &item0 ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
 				if(Z_TYPE_P(gallery0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(gallery0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -49380,10 +46977,6 @@ PHP_METHOD(php_wxRibbonGalleryEvent, __construct)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(gallery0) == IS_LONG)
-				{
-					object_pointer0_2 = Z_LVAL_P(gallery0);
 				}
 				else if(Z_TYPE_P(gallery0) != IS_NULL)
 				{
@@ -49401,10 +46994,6 @@ PHP_METHOD(php_wxRibbonGalleryEvent, __construct)
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(item0) == IS_LONG)
-				{
-					object_pointer0_3 = Z_LVAL_P(item0);
-				}
 				else if(Z_TYPE_P(item0) != IS_NULL)
 				{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
@@ -49417,7 +47006,6 @@ PHP_METHOD(php_wxRibbonGalleryEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -49506,6 +47094,7 @@ PHP_METHOD(php_wxRibbonGalleryEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxSashEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -49514,13 +47103,13 @@ void php_wxSashEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxSashEvent_php* object = (wxSashEvent_php*)rsrc->ptr;
+	wxSashEvent_php* object = static_cast<wxSashEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -49609,7 +47198,6 @@ PHP_METHOD(php_wxSashEvent, GetDragRect)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -49698,7 +47286,6 @@ PHP_METHOD(php_wxSashEvent, GetDragStatus)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -49782,7 +47369,6 @@ PHP_METHOD(php_wxSashEvent, GetEdge)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -49835,7 +47421,8 @@ PHP_METHOD(php_wxSashEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&id0, &edge0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|ll", &id0, &edge0 ) == SUCCESS)
+		char parse_parameters_string[] = "|ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &edge0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -49843,7 +47430,6 @@ PHP_METHOD(php_wxSashEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -49909,6 +47495,7 @@ PHP_METHOD(php_wxSashEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxSpinEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -49917,13 +47504,13 @@ void php_wxSpinEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxSpinEvent_php* object = (wxSpinEvent_php*)rsrc->ptr;
+	wxSpinEvent_php* object = static_cast<wxSpinEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -50012,7 +47599,6 @@ PHP_METHOD(php_wxSpinEvent, GetPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -50092,7 +47678,8 @@ PHP_METHOD(php_wxSpinEvent, SetPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -50100,7 +47687,6 @@ PHP_METHOD(php_wxSpinEvent, SetPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -50153,7 +47739,8 @@ PHP_METHOD(php_wxSpinEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&commandType0, &id0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|ll", &commandType0, &id0 ) == SUCCESS)
+		char parse_parameters_string[] = "|ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &commandType0, &id0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -50161,7 +47748,6 @@ PHP_METHOD(php_wxSpinEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -50227,6 +47813,7 @@ PHP_METHOD(php_wxSpinEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxSpinDoubleEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -50235,13 +47822,13 @@ void php_wxSpinDoubleEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 	#endif
 	
 	
-	wxSpinDoubleEvent_php* object = (wxSpinDoubleEvent_php*)rsrc->ptr;
+	wxSpinDoubleEvent_php* object = static_cast<wxSpinDoubleEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -50304,7 +47891,8 @@ PHP_METHOD(php_wxSpinDoubleEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&event0, php_wxSpinDoubleEvent_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &event0, php_wxSpinDoubleEvent_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &event0, php_wxSpinDoubleEvent_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(event0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(event0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -50315,10 +47903,6 @@ PHP_METHOD(php_wxSpinDoubleEvent, __construct)
 					{
 						goto overload1;
 					}
-				}
-				else if(Z_TYPE_P(event0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(event0);
 				}
 				else if(Z_TYPE_P(event0) != IS_NULL)
 				{
@@ -50339,7 +47923,8 @@ PHP_METHOD(php_wxSpinDoubleEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|lld' (&commandType1, &winid1, &value1)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|lld", &commandType1, &winid1, &value1 ) == SUCCESS)
+		char parse_parameters_string[] = "|lld";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &commandType1, &winid1, &value1 ) == SUCCESS)
 		{
 			overload1_called = true;
 			already_called = true;
@@ -50347,7 +47932,6 @@ PHP_METHOD(php_wxSpinDoubleEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -50366,7 +47950,6 @@ PHP_METHOD(php_wxSpinDoubleEvent, __construct)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -50501,7 +48084,8 @@ PHP_METHOD(php_wxSpinDoubleEvent, SetValue)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'd' (&value0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "d", &value0 ) == SUCCESS)
+		char parse_parameters_string[] = "d";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &value0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -50509,7 +48093,6 @@ PHP_METHOD(php_wxSpinDoubleEvent, SetValue)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -50593,7 +48176,6 @@ PHP_METHOD(php_wxSpinDoubleEvent, GetValue)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -50614,6 +48196,7 @@ PHP_METHOD(php_wxSpinDoubleEvent, GetValue)
 
 		
 }
+
 void php_wxSplitterEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -50622,13 +48205,13 @@ void php_wxSplitterEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 	#endif
 	
 	
-	wxSplitterEvent_php* object = (wxSplitterEvent_php*)rsrc->ptr;
+	wxSplitterEvent_php* object = static_cast<wxSplitterEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -50717,7 +48300,6 @@ PHP_METHOD(php_wxSplitterEvent, GetSashPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -50801,7 +48383,6 @@ PHP_METHOD(php_wxSplitterEvent, GetWindowBeingRemoved)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -50818,8 +48399,8 @@ PHP_METHOD(php_wxSplitterEvent, GetWindowBeingRemoved)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -50907,7 +48488,6 @@ PHP_METHOD(php_wxSplitterEvent, GetX)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -50991,7 +48571,6 @@ PHP_METHOD(php_wxSplitterEvent, GetY)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -51071,7 +48650,8 @@ PHP_METHOD(php_wxSplitterEvent, SetSashPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -51079,7 +48659,6 @@ PHP_METHOD(php_wxSplitterEvent, SetSashPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -51133,7 +48712,8 @@ PHP_METHOD(php_wxSplitterEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|lz' (&eventType0, &splitter0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|lz", &eventType0, &splitter0 ) == SUCCESS)
+		char parse_parameters_string[] = "|lz";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &eventType0, &splitter0 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(splitter0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(splitter0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -51144,10 +48724,6 @@ PHP_METHOD(php_wxSplitterEvent, __construct)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(splitter0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(splitter0);
 				}
 				else if(Z_TYPE_P(splitter0) != IS_NULL)
 				{
@@ -51161,7 +48737,6 @@ PHP_METHOD(php_wxSplitterEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -51228,6 +48803,7 @@ PHP_METHOD(php_wxSplitterEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxStyledTextEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -51236,13 +48812,13 @@ void php_wxStyledTextEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 	#endif
 	
 	
-	wxStyledTextEvent_php* object = (wxStyledTextEvent_php*)rsrc->ptr;
+	wxStyledTextEvent_php* object = static_cast<wxStyledTextEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -51304,7 +48880,8 @@ PHP_METHOD(php_wxStyledTextEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|ll' (&commandType0, &id0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|ll", &commandType0, &id0 ) == SUCCESS)
+		char parse_parameters_string[] = "|ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &commandType0, &id0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -51319,7 +48896,8 @@ PHP_METHOD(php_wxStyledTextEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&event1, php_wxStyledTextEvent_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &event1, php_wxStyledTextEvent_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &event1, php_wxStyledTextEvent_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(event1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(event1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -51330,10 +48908,6 @@ PHP_METHOD(php_wxStyledTextEvent, __construct)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(event1) == IS_LONG)
-				{
-					object_pointer1_0 = Z_LVAL_P(event1);
 				}
 				else if(Z_TYPE_P(event1) != IS_NULL)
 				{
@@ -51347,7 +48921,6 @@ PHP_METHOD(php_wxStyledTextEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -51385,7 +48958,6 @@ PHP_METHOD(php_wxStyledTextEvent, __construct)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -51491,7 +49063,8 @@ PHP_METHOD(php_wxStyledTextEvent, SetY)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&val0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &val0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &val0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -51499,7 +49072,6 @@ PHP_METHOD(php_wxStyledTextEvent, SetY)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -51579,7 +49151,8 @@ PHP_METHOD(php_wxStyledTextEvent, SetX)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&val0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &val0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &val0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -51587,7 +49160,6 @@ PHP_METHOD(php_wxStyledTextEvent, SetX)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -51667,7 +49239,8 @@ PHP_METHOD(php_wxStyledTextEvent, SetWParam)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&val0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &val0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &val0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -51675,7 +49248,6 @@ PHP_METHOD(php_wxStyledTextEvent, SetWParam)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -51756,7 +49328,8 @@ PHP_METHOD(php_wxStyledTextEvent, SetText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&t0, &t_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &t0, &t_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &t0, &t_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -51764,7 +49337,6 @@ PHP_METHOD(php_wxStyledTextEvent, SetText)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -51844,7 +49416,8 @@ PHP_METHOD(php_wxStyledTextEvent, SetPosition)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&pos0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &pos0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pos0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -51852,7 +49425,6 @@ PHP_METHOD(php_wxStyledTextEvent, SetPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -51932,7 +49504,8 @@ PHP_METHOD(php_wxStyledTextEvent, SetModifiers)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&m0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &m0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &m0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -51940,7 +49513,6 @@ PHP_METHOD(php_wxStyledTextEvent, SetModifiers)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -52020,7 +49592,8 @@ PHP_METHOD(php_wxStyledTextEvent, SetModificationType)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&t0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &t0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &t0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -52028,7 +49601,6 @@ PHP_METHOD(php_wxStyledTextEvent, SetModificationType)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -52108,7 +49680,8 @@ PHP_METHOD(php_wxStyledTextEvent, SetMessage)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&val0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &val0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &val0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -52116,7 +49689,6 @@ PHP_METHOD(php_wxStyledTextEvent, SetMessage)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -52196,7 +49768,8 @@ PHP_METHOD(php_wxStyledTextEvent, SetMargin)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&val0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &val0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &val0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -52204,7 +49777,6 @@ PHP_METHOD(php_wxStyledTextEvent, SetMargin)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -52284,7 +49856,8 @@ PHP_METHOD(php_wxStyledTextEvent, SetListType)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&val0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &val0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &val0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -52292,7 +49865,6 @@ PHP_METHOD(php_wxStyledTextEvent, SetListType)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -52372,7 +49944,8 @@ PHP_METHOD(php_wxStyledTextEvent, SetLinesAdded)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&num0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &num0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &num0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -52380,7 +49953,6 @@ PHP_METHOD(php_wxStyledTextEvent, SetLinesAdded)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -52460,7 +50032,8 @@ PHP_METHOD(php_wxStyledTextEvent, SetLine)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&val0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &val0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &val0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -52468,7 +50041,6 @@ PHP_METHOD(php_wxStyledTextEvent, SetLine)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -52552,7 +50124,6 @@ PHP_METHOD(php_wxStyledTextEvent, GetAlt)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -52636,7 +50207,6 @@ PHP_METHOD(php_wxStyledTextEvent, GetControl)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -52720,7 +50290,6 @@ PHP_METHOD(php_wxStyledTextEvent, GetDragAllowMove)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -52804,7 +50373,6 @@ PHP_METHOD(php_wxStyledTextEvent, GetDragText)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -52894,7 +50462,6 @@ PHP_METHOD(php_wxStyledTextEvent, GetFoldLevelNow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -52978,7 +50545,6 @@ PHP_METHOD(php_wxStyledTextEvent, GetFoldLevelPrev)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -53062,7 +50628,6 @@ PHP_METHOD(php_wxStyledTextEvent, GetKey)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -53146,7 +50711,6 @@ PHP_METHOD(php_wxStyledTextEvent, GetLParam)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -53230,7 +50794,6 @@ PHP_METHOD(php_wxStyledTextEvent, GetLength)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -53314,7 +50877,6 @@ PHP_METHOD(php_wxStyledTextEvent, GetLine)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -53398,7 +50960,6 @@ PHP_METHOD(php_wxStyledTextEvent, GetLinesAdded)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -53482,7 +51043,6 @@ PHP_METHOD(php_wxStyledTextEvent, GetListType)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -53566,7 +51126,6 @@ PHP_METHOD(php_wxStyledTextEvent, GetMargin)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -53650,7 +51209,6 @@ PHP_METHOD(php_wxStyledTextEvent, GetMessage)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -53734,7 +51292,6 @@ PHP_METHOD(php_wxStyledTextEvent, GetModificationType)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -53818,7 +51375,6 @@ PHP_METHOD(php_wxStyledTextEvent, GetModifiers)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -53902,7 +51458,6 @@ PHP_METHOD(php_wxStyledTextEvent, GetPosition)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -53986,7 +51541,6 @@ PHP_METHOD(php_wxStyledTextEvent, GetShift)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -54070,7 +51624,6 @@ PHP_METHOD(php_wxStyledTextEvent, GetText)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -54160,7 +51713,6 @@ PHP_METHOD(php_wxStyledTextEvent, GetWParam)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -54244,7 +51796,6 @@ PHP_METHOD(php_wxStyledTextEvent, GetX)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -54328,7 +51879,6 @@ PHP_METHOD(php_wxStyledTextEvent, GetY)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -54408,7 +51958,8 @@ PHP_METHOD(php_wxStyledTextEvent, SetDragAllowMove)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&val0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &val0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &val0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -54416,7 +51967,6 @@ PHP_METHOD(php_wxStyledTextEvent, SetDragAllowMove)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -54496,7 +52046,8 @@ PHP_METHOD(php_wxStyledTextEvent, SetDragResult)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&val0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &val0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &val0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -54504,7 +52055,6 @@ PHP_METHOD(php_wxStyledTextEvent, SetDragResult)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -54585,7 +52135,8 @@ PHP_METHOD(php_wxStyledTextEvent, SetDragText)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&val0, &val_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &val0, &val_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &val0, &val_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -54593,7 +52144,6 @@ PHP_METHOD(php_wxStyledTextEvent, SetDragText)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -54673,7 +52223,8 @@ PHP_METHOD(php_wxStyledTextEvent, SetFoldLevelNow)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&val0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &val0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &val0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -54681,7 +52232,6 @@ PHP_METHOD(php_wxStyledTextEvent, SetFoldLevelNow)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -54761,7 +52311,8 @@ PHP_METHOD(php_wxStyledTextEvent, SetFoldLevelPrev)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&val0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &val0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &val0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -54769,7 +52320,6 @@ PHP_METHOD(php_wxStyledTextEvent, SetFoldLevelPrev)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -54849,7 +52399,8 @@ PHP_METHOD(php_wxStyledTextEvent, SetKey)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&k0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &k0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &k0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -54857,7 +52408,6 @@ PHP_METHOD(php_wxStyledTextEvent, SetKey)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -54937,7 +52487,8 @@ PHP_METHOD(php_wxStyledTextEvent, SetLParam)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&val0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &val0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &val0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -54945,7 +52496,6 @@ PHP_METHOD(php_wxStyledTextEvent, SetLParam)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -55025,7 +52575,8 @@ PHP_METHOD(php_wxStyledTextEvent, SetLength)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &len0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -55033,7 +52584,6 @@ PHP_METHOD(php_wxStyledTextEvent, SetLength)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -55117,7 +52667,6 @@ PHP_METHOD(php_wxStyledTextEvent, GetDragResult)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -55138,6 +52687,7 @@ PHP_METHOD(php_wxStyledTextEvent, GetDragResult)
 
 		
 }
+
 void php_wxTaskBarIconEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -55146,13 +52696,13 @@ void php_wxTaskBarIconEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 	#endif
 	
 	
-	wxTaskBarIconEvent_php* object = (wxTaskBarIconEvent_php*)rsrc->ptr;
+	wxTaskBarIconEvent_php* object = static_cast<wxTaskBarIconEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -55211,7 +52761,8 @@ PHP_METHOD(php_wxTaskBarIconEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lz' (&evtType0, &tbIcon0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lz", &evtType0, &tbIcon0 ) == SUCCESS)
+		char parse_parameters_string[] = "lz";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &evtType0, &tbIcon0 ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(tbIcon0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(tbIcon0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -55222,10 +52773,6 @@ PHP_METHOD(php_wxTaskBarIconEvent, __construct)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(tbIcon0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(tbIcon0);
 				}
 				else if(Z_TYPE_P(tbIcon0) != IS_NULL)
 				{
@@ -55239,7 +52786,6 @@ PHP_METHOD(php_wxTaskBarIconEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -55286,6 +52832,7 @@ PHP_METHOD(php_wxTaskBarIconEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxTimerEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -55294,13 +52841,13 @@ void php_wxTimerEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxTimerEvent_php* object = (wxTimerEvent_php*)rsrc->ptr;
+	wxTimerEvent_php* object = static_cast<wxTimerEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -55389,7 +52936,6 @@ PHP_METHOD(php_wxTimerEvent, GetInterval)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -55456,7 +53002,8 @@ PHP_METHOD(php_wxTimerEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&timer1, php_wxTimer_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &timer1, php_wxTimer_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &timer1, php_wxTimer_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(timer1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(timer1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -55467,10 +53014,6 @@ PHP_METHOD(php_wxTimerEvent, __construct)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(timer1) == IS_LONG)
-				{
-					object_pointer1_0 = Z_LVAL_P(timer1);
 				}
 				else if(Z_TYPE_P(timer1) != IS_NULL)
 				{
@@ -55484,7 +53027,6 @@ PHP_METHOD(php_wxTimerEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -55502,7 +53044,6 @@ PHP_METHOD(php_wxTimerEvent, __construct)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -55549,6 +53090,7 @@ PHP_METHOD(php_wxTimerEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxTreeEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -55557,13 +53099,13 @@ void php_wxTreeEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxTreeEvent_php* object = (wxTreeEvent_php*)rsrc->ptr;
+	wxTreeEvent_php* object = static_cast<wxTreeEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -55652,7 +53194,6 @@ PHP_METHOD(php_wxTreeEvent, GetItem)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -55741,7 +53282,6 @@ PHP_METHOD(php_wxTreeEvent, GetKeyCode)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -55825,7 +53365,6 @@ PHP_METHOD(php_wxTreeEvent, GetKeyEvent)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -55839,8 +53378,8 @@ PHP_METHOD(php_wxTreeEvent, GetKeyEvent)
 				value_to_return0 = (wxKeyEvent_php*) &((wxTreeEvent_php*)_this)->GetKeyEvent();
 
 				if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -55855,7 +53394,6 @@ PHP_METHOD(php_wxTreeEvent, GetKeyEvent)
 				if(value_to_return0 != _this && return_is_user_initialized){ //Prevent adding references to it self
 					references->AddReference(return_value);
 				}
-				references->AddReference(return_value);
 
 
 				return;
@@ -55929,7 +53467,6 @@ PHP_METHOD(php_wxTreeEvent, GetLabel)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -56019,7 +53556,6 @@ PHP_METHOD(php_wxTreeEvent, GetOldItem)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -56108,7 +53644,6 @@ PHP_METHOD(php_wxTreeEvent, GetPoint)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -56197,7 +53732,6 @@ PHP_METHOD(php_wxTreeEvent, IsEditCancelled)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -56278,7 +53812,8 @@ PHP_METHOD(php_wxTreeEvent, SetToolTip)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&tooltip0, &tooltip_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &tooltip0, &tooltip_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &tooltip0, &tooltip_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -56286,7 +53821,6 @@ PHP_METHOD(php_wxTreeEvent, SetToolTip)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -56342,7 +53876,8 @@ PHP_METHOD(php_wxTreeEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'lz|O' (&commandType0, &tree0, &item0, php_wxTreeItemId_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "lz|O", &commandType0, &tree0, &item0, php_wxTreeItemId_entry ) == SUCCESS)
+		char parse_parameters_string[] = "lz|O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &commandType0, &tree0, &item0, php_wxTreeItemId_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 2){
 				if(Z_TYPE_P(tree0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(tree0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -56353,10 +53888,6 @@ PHP_METHOD(php_wxTreeEvent, __construct)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(tree0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(tree0);
 				}
 				else if(Z_TYPE_P(tree0) != IS_NULL)
 				{
@@ -56374,10 +53905,6 @@ PHP_METHOD(php_wxTreeEvent, __construct)
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(item0) == IS_LONG)
-				{
-					object_pointer0_2 = Z_LVAL_P(item0);
-				}
 				else if(Z_TYPE_P(item0) != IS_NULL)
 				{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
@@ -56390,7 +53917,6 @@ PHP_METHOD(php_wxTreeEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -56449,6 +53975,7 @@ PHP_METHOD(php_wxTreeEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxWizardEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -56457,13 +53984,13 @@ void php_wxWizardEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxWizardEvent_php* object = (wxWizardEvent_php*)rsrc->ptr;
+	wxWizardEvent_php* object = static_cast<wxWizardEvent_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -56552,7 +54079,6 @@ PHP_METHOD(php_wxWizardEvent, GetDirection)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -56608,7 +54134,8 @@ PHP_METHOD(php_wxWizardEvent, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|llbz' (&type0, &id0, &direction0, &page0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|llbz", &type0, &id0, &direction0, &page0 ) == SUCCESS)
+		char parse_parameters_string[] = "|llbz";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &type0, &id0, &direction0, &page0 ) == SUCCESS)
 		{
 			if(arguments_received >= 4){
 				if(Z_TYPE_P(page0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(page0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -56619,10 +54146,6 @@ PHP_METHOD(php_wxWizardEvent, __construct)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(page0) == IS_LONG)
-				{
-					object_pointer0_3 = Z_LVAL_P(page0);
 				}
 				else if(Z_TYPE_P(page0) != IS_NULL)
 				{
@@ -56636,7 +54159,6 @@ PHP_METHOD(php_wxWizardEvent, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -56786,7 +54308,6 @@ PHP_METHOD(php_wxWizardEvent, GetPage)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -56803,8 +54324,8 @@ PHP_METHOD(php_wxWizardEvent, GetPage)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{

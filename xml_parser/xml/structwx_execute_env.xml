@@ -15,7 +15,7 @@
 <para>If this field is empty, the current working directory of this process is used. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="878" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" bodystart="878" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="881" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" bodystart="881" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_execute_env_1a50bc7125cb5c22439e33fb88f09682e7" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__env_1ga37c7bb54114fa4fdb99e19440ded6e00" kindref="member">wxEnvVariableHashMap</ref></type>
@@ -28,7 +28,7 @@
 <para>If the map is empty, the environment variables of the current process are also used for the child one, otherwise only the variables defined in this map are used. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="887" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" bodystart="887" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="890" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" bodystart="890" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -37,19 +37,19 @@
 <para><simplesect kind="since"><para>2.9.2</para></simplesect>
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="6102">
+      <node id="6218">
         <label>wxString</label>
         <link refid="classwx_string"/>
       </node>
-      <node id="6101">
+      <node id="6217">
         <label>wxExecuteEnv</label>
         <link refid="structwx_execute_env"/>
-        <childnode refid="6102" relation="usage">
+        <childnode refid="6218" relation="usage">
           <edgelabel>cwd</edgelabel>
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="871" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" bodystart="870" bodyend="888"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="874" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" bodystart="873" bodyend="891"/>
     <listofallmembers>
       <member refid="structwx_execute_env_1a0705b3bfe79a7c25ddd6309a439ff66c" prot="public" virt="non-virtual"><scope>wxExecuteEnv</scope><name>cwd</name></member>
       <member refid="structwx_execute_env_1a50bc7125cb5c22439e33fb88f09682e7" prot="public" virt="non-virtual"><scope>wxExecuteEnv</scope><name>env</name></member>

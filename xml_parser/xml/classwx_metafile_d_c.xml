@@ -21,7 +21,7 @@
 <para>If no filename is passed, the metafile is created in memory. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/metafile.h" line="42"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/metafile.h" line="42"/>
       </memberdef>
       <memberdef kind="function" id="classwx_metafile_d_c_1a086b13449d9ae50ef0d7fb368550f4b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/metafile.h" line="47"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/metafile.h" line="47"/>
       </memberdef>
       <memberdef kind="function" id="classwx_metafile_d_c_1a33b05bb7da88ada1bd4f3d4b05b1baf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_metafile" kindref="compound">wxMetafile</ref> *</type>
@@ -47,7 +47,7 @@
 <para>A metafile is returned, and ownership of it passes to the calling application (so it should be destroyed explicitly). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/metafile.h" line="54"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/metafile.h" line="54"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -57,49 +57,49 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref></para><para><simplesect kind="see"><para><ref refid="classwx_metafile" kindref="compound">wxMetafile</ref>, <ref refid="classwx_d_c" kindref="compound">wxDC</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7788">
+      <node id="7981">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7786">
+      <node id="7979">
         <label>wxMetafileDC</label>
         <link refid="classwx_metafile_d_c"/>
-        <childnode refid="7787" relation="public-inheritance">
+        <childnode refid="7980" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7787">
+      <node id="7980">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="7788" relation="public-inheritance">
+        <childnode refid="7981" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7791">
+      <node id="7984">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7792" relation="usage">
+        <childnode refid="7985" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7789">
+      <node id="7982">
         <label>wxMetafileDC</label>
         <link refid="classwx_metafile_d_c"/>
-        <childnode refid="7790" relation="public-inheritance">
+        <childnode refid="7983" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7790">
+      <node id="7983">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="7791" relation="public-inheritance">
+        <childnode refid="7984" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7792">
+      <node id="7985">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/metafile.h" line="36" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/metafile.h" bodystart="35" bodyend="55"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/metafile.h" line="36" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/metafile.h" bodystart="35" bodyend="55"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxMetafileDC</scope><name>AllocExclusive</name></member>
       <member refid="classwx_d_c_1a12bed94a15136b9080683f4151042a34" prot="public" virt="non-virtual"><scope>wxMetafileDC</scope><name>Blit</name></member>

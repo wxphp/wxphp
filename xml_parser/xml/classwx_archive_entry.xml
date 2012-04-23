@@ -19,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="192"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="192"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_entry_1acb1e2dd308429c6afba02ec6d24c43f3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="197"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="197"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_entry_1a2de48b81c6513c2884b35d606d9b1ffa" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="202"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="202"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_entry_1a7f7c8fc858136626dcdf1865e646cef9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -67,7 +67,7 @@
 <para>The name can include directory components, i.e. it can be a full path.</para><para>If this is a directory entry, (i.e. if <ref refid="classwx_archive_entry_1a548d3b6f4aeba699dc0d1ec1c21b7ce2" kindref="member">IsDir()</ref> is true) then the returned string is the name with a trailing path separator. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="211"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="211"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_entry_1afd7cfa9a05e971ee0355bafbeff8c93d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -90,7 +90,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="220"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="220"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_entry_1a05d8c0618a80cb1ada5c37a58042ec32" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="group__group__funcmacro__file_1ga69d831b3febabc149c67b716c8e22de5" kindref="member">wxFileOffset</ref></type>
@@ -104,7 +104,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="225"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="225"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_entry_1ac5f34334ab1895a923354bd4da755364" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -122,7 +122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="230"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="230"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_entry_1a3e93b7e12487636f903956935d92c7b2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="filename_8h_1a0f0d9c04938ef2820d1ff7ed6b97bf00" kindref="member">wxPathFormat</ref></type>
@@ -135,7 +135,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="236"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="236"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_entry_1a53486cf23696bd7b910a652c27af0a38" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -151,7 +151,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="248"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="248"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_entry_1ab36942e9cbadced7476b4bceb21b7e08" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="group__group__funcmacro__file_1ga69d831b3febabc149c67b716c8e22de5" kindref="member">wxFileOffset</ref></type>
@@ -164,7 +164,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="253"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="253"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_entry_1a548d3b6f4aeba699dc0d1ec1c21b7ce2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -178,7 +178,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="267"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="267"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_entry_1ab01182fe22c8eeefa05740e68d12ced0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -196,7 +196,7 @@
 <para>See <ref refid="classwx_archive_entry_1a548d3b6f4aeba699dc0d1ec1c21b7ce2" kindref="member">IsDir()</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="272"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="272"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_entry_1abe30c2532550d23136cf6e1390007073" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -209,7 +209,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="277"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="277"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_entry_1a0ed675785f6d0ddaf36664951f4430b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -227,7 +227,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="282"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="282"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_entry_1a14fe1a270dbb1d0e9a76e2c3c8dd32a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -244,7 +244,7 @@
 <para>Whenever the <ref refid="classwx_archive_input_stream" kindref="compound">wxArchiveInputStream</ref> updates this entry, it will then invoke the associated notifier&apos;s <ref refid="classwx_archive_notifier_1aabc8d85fc2f85b38a761e3b4ccf74f5a" kindref="member">wxArchiveNotifier::OnEntryUpdated</ref> method.</para><para>Setting a notifier is not usually necessary. It is used to handle certain cases when modifying an archive in a pipeline (i.e. between non-seekable streams). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="294"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="294"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_entry_1aaa3a489d4a7038170318e7384a27941b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -258,7 +258,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="299"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="299"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -275,49 +275,49 @@
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="4313">
+      <node id="4396">
         <label>wxArchiveEntry</label>
         <link refid="classwx_archive_entry"/>
-        <childnode refid="4314" relation="public-inheritance">
+        <childnode refid="4397" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4314">
+      <node id="4397">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4316">
+      <node id="4399">
         <label>wxZipEntry</label>
         <link refid="classwx_zip_entry"/>
-        <childnode refid="4313" relation="public-inheritance">
+        <childnode refid="4396" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4315">
+      <node id="4398">
         <label>wxTarEntry</label>
         <link refid="classwx_tar_entry"/>
-        <childnode refid="4313" relation="public-inheritance">
+        <childnode refid="4396" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4317">
+      <node id="4400">
         <label>wxArchiveEntry</label>
         <link refid="classwx_archive_entry"/>
-        <childnode refid="4318" relation="public-inheritance">
+        <childnode refid="4401" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4318">
+      <node id="4401">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4319" relation="usage">
+        <childnode refid="4402" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4319">
+      <node id="4402">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="187" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" bodystart="186" bodyend="300"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="187" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" bodystart="186" bodyend="300"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxArchiveEntry</scope><name>AllocExclusive</name></member>
       <member refid="classwx_archive_entry_1a18cf9ea4a92bd5a9e845ee1d2ee04553" prot="public" virt="non-virtual"><scope>wxArchiveEntry</scope><name>Clone</name></member>

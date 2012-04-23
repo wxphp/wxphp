@@ -29,7 +29,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1357"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1502"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_view_1a5468e6e52d0cca76b1584dbb2a552adc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1362"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1507"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_view_1a5104e465fc4c31782179c2a7f8a18a4d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -60,7 +60,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1371"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1516"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_view_1aa7337c34a27bf53c1700e74b7463a9f4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -74,7 +74,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1378"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1523"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_view_1a4aafbf2bbd35dea3b3be284285c9a727" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -92,7 +92,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1386"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1531"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_view_1a98e03eaba3a9461acb6ea1b2f4bb1b7c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -110,7 +110,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1394"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1539"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_view_1a02966936da5643b2d80a857676482b2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -148,7 +148,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1406"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1551"/>
       </memberdef>
       <memberdef kind="function" id="classwx_list_view_1ab4f169a074fbe2d6bf9c2880c84f3dee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -184,7 +184,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1418"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1563"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -194,97 +194,97 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/listview.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/listview.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/listview.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_list_view_1ab4f169a074fbe2d6bf9c2880c84f3dee" kindref="member">wxListView::SetColumnImage</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7477">
+      <node id="7675">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7476">
+      <node id="7674">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7477" relation="public-inheritance">
+        <childnode refid="7675" relation="public-inheritance">
         </childnode>
-        <childnode refid="7478" relation="public-inheritance">
+        <childnode refid="7676" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7478">
+      <node id="7676">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7474">
+      <node id="7672">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="7475" relation="public-inheritance">
+        <childnode refid="7673" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7472">
+      <node id="7670">
         <label>wxListView</label>
         <link refid="classwx_list_view"/>
-        <childnode refid="7473" relation="public-inheritance">
+        <childnode refid="7671" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7475">
+      <node id="7673">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7476" relation="public-inheritance">
+        <childnode refid="7674" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7473">
+      <node id="7671">
         <label>wxListCtrl</label>
         <link refid="classwx_list_ctrl"/>
-        <childnode refid="7474" relation="public-inheritance">
+        <childnode refid="7672" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7484">
+      <node id="7682">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7485" relation="usage">
+        <childnode refid="7683" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7483">
+      <node id="7681">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7484" relation="public-inheritance">
+        <childnode refid="7682" relation="public-inheritance">
         </childnode>
-        <childnode refid="7486" relation="public-inheritance">
+        <childnode refid="7684" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7486">
+      <node id="7684">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7481">
+      <node id="7679">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="7482" relation="public-inheritance">
+        <childnode refid="7680" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7479">
+      <node id="7677">
         <label>wxListView</label>
         <link refid="classwx_list_view"/>
-        <childnode refid="7480" relation="public-inheritance">
+        <childnode refid="7678" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7482">
+      <node id="7680">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7483" relation="public-inheritance">
+        <childnode refid="7681" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7480">
+      <node id="7678">
         <label>wxListCtrl</label>
         <link refid="classwx_list_ctrl"/>
-        <childnode refid="7481" relation="public-inheritance">
+        <childnode refid="7679" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7485">
+      <node id="7683">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" line="1347" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listctrl.h" bodystart="1346" bodyend="1419"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" line="1492" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listctrl.h" bodystart="1491" bodyend="1564"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxListView</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxListView</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -500,6 +500,7 @@
       <member refid="classwx_list_ctrl_1ad06b98bdb32f5d3b15703db8e8f5f5c3" prot="public" virt="non-virtual"><scope>wxListView</scope><name>InsertItem</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxListView</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxListView</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxListView</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxListView</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxListView</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxListView</scope><name>IsExposed</name></member>
@@ -516,6 +517,7 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxListView</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxListView</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxListView</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxListView</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxListView</scope><name>IsUnlinked</name></member>
       <member refid="classwx_list_ctrl_1a0a3e4b626a9fbb655191147eeb33bfdf" prot="public" virt="non-virtual"><scope>wxListView</scope><name>IsVirtual</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxListView</scope><name>Layout</name></member>
@@ -523,7 +525,6 @@
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxListView</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxListView</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxListView</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxListView</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxListView</scope><name>MoveAfterInTabOrder</name></member>
@@ -593,7 +594,7 @@
       <member refid="classwx_window_1a582d4d1f60a3f777627773b2da0bb2ef" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetClientSize</name></member>
       <member refid="classwx_list_ctrl_1a61244b9721214359b0ad3992135920c4" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetColumn</name></member>
       <member refid="classwx_list_view_1ab4f169a074fbe2d6bf9c2880c84f3dee" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetColumnImage</name></member>
-      <member refid="classwx_list_ctrl_1af7087589e40618f25b35d7d5b7b24c1b" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetColumnsOrder</name></member>
+      <member refid="classwx_list_ctrl_1a2a499df49ebcefb3451a44146f76457d" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetColumnsOrder</name></member>
       <member refid="classwx_list_ctrl_1ac5818d43ce3913f7f70a6a759485cd6c" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetColumnWidth</name></member>
       <member refid="classwx_window_1afa75d111bbd9a68f837101a5fbed60a7" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetConstraints</name></member>
       <member refid="classwx_window_1a0ccf78fe06722b500adfb7f36b8ce443" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetContainingSizer</name></member>
@@ -619,7 +620,6 @@
       <member refid="classwx_list_ctrl_1a5ded9342e4969eeeb60d1305f75995fd" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetItemCount</name></member>
       <member refid="classwx_list_ctrl_1a54825c8c66e7fb59cee6076d6554f8ec" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetItemData</name></member>
       <member refid="classwx_list_ctrl_1acfc640f1aba5634ab25186e71ffc278f" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetItemFont</name></member>
-      <member refid="classwx_list_ctrl_1afe006faba05c34bbc70539f100e72c86" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetItemImage</name></member>
       <member refid="classwx_list_ctrl_1afe006faba05c34bbc70539f100e72c86" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetItemImage</name></member>
       <member refid="classwx_list_ctrl_1a13525147c745a26eeb54fe55dfdbad46" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetItemPosition</name></member>
       <member refid="classwx_list_ctrl_1a748edc3f8e43939632f2838756599863" prot="public" virt="non-virtual"><scope>wxListView</scope><name>SetItemPtrData</name></member>
@@ -675,7 +675,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxListView</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxListView</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxListView</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxListView</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxListView</scope><name>Unlink</name></member>

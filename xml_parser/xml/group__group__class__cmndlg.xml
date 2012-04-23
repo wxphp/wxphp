@@ -18,7 +18,7 @@
     <innerclass refid="classwx_font_data" prot="public">wxFontData</innerclass>
     <innerclass refid="classwx_font_dialog" prot="public">wxFontDialog</innerclass>
     <innerclass refid="classwx_message_dialog" prot="public">wxMessageDialog</innerclass>
-    <innerclass refid="classwx_progress_dialog" prot="public">wxProgressDialog</innerclass>
+    <innerclass refid="classwx_generic_progress_dialog" prot="public">wxGenericProgressDialog</innerclass>
     <innerclass refid="classwx_rearrange_dialog" prot="public">wxRearrangeDialog</innerclass>
     <innerclass refid="classwx_rich_message_dialog" prot="public">wxRichMessageDialog</innerclass>
     <innerclass refid="classwx_symbol_picker_dialog" prot="public">wxSymbolPickerDialog</innerclass>

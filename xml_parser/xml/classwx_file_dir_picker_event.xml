@@ -5,6 +5,19 @@
     <basecompoundref refid="classwx_command_event" prot="public" virt="non-virtual">wxCommandEvent</basecompoundref>
     <includes local="no">wx/filepicker.h</includes>
       <sectiondef kind="public-func">
+      <memberdef kind="function" id="classwx_file_dir_picker_event_1a311f6e70d669ca9ef6f4425c7778f215" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>wxFileDirPickerEvent::wxFileDirPickerEvent</definition>
+        <argsstring>()</argsstring>
+        <name>wxFileDirPickerEvent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filepicker.h" line="337"/>
+      </memberdef>
       <memberdef kind="function" id="classwx_file_dir_picker_event_1aa867fcb8f5f99de19e70b2b460d56181" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxFileDirPickerEvent::wxFileDirPickerEvent</definition>
@@ -32,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filepicker.h" line="319"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filepicker.h" line="344"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_dir_picker_event_1ab36bf0910e294b0db79ed476f75f67ad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -45,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filepicker.h" line="324"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filepicker.h" line="349"/>
       </memberdef>
       <memberdef kind="function" id="classwx_file_dir_picker_event_1a4bdc140322bb16344da7ecf51aa216ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -62,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filepicker.h" line="329"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filepicker.h" line="354"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -77,61 +90,61 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_file_picker_ctrl" kindref="compound">wxFilePickerCtrl</ref>, <ref refid="classwx_dir_picker_ctrl" kindref="compound">wxDirPickerCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6192">
+      <node id="6311">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6190">
+      <node id="6309">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="6191" relation="public-inheritance">
+        <childnode refid="6310" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6189">
+      <node id="6308">
         <label>wxFileDirPickerEvent</label>
         <link refid="classwx_file_dir_picker_event"/>
-        <childnode refid="6190" relation="public-inheritance">
+        <childnode refid="6309" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6191">
+      <node id="6310">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="6192" relation="public-inheritance">
+        <childnode refid="6311" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6196">
+      <node id="6315">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6197" relation="usage">
+        <childnode refid="6316" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6194">
+      <node id="6313">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="6195" relation="public-inheritance">
+        <childnode refid="6314" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6193">
+      <node id="6312">
         <label>wxFileDirPickerEvent</label>
         <link refid="classwx_file_dir_picker_event"/>
-        <childnode refid="6194" relation="public-inheritance">
+        <childnode refid="6313" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6195">
+      <node id="6314">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="6196" relation="public-inheritance">
+        <childnode refid="6315" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6197">
+      <node id="6316">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filepicker.h" line="312" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filepicker.h" bodystart="311" bodyend="330"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filepicker.h" line="335" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/filepicker.h" bodystart="334" bodyend="355"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxFileDirPickerEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxFileDirPickerEvent</scope><name>Clone</name></member>
@@ -181,6 +194,7 @@
       <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxFileDirPickerEvent</scope><name>UnShare</name></member>
       <member refid="classwx_command_event_1aad941347872cd71fedcfc765fae7b2f7" prot="public" virt="non-virtual"><scope>wxFileDirPickerEvent</scope><name>wxCommandEvent</name></member>
       <member refid="classwx_event_1aaf2a5cf056d006859cea36689ba13d36" prot="public" virt="non-virtual"><scope>wxFileDirPickerEvent</scope><name>wxEvent</name></member>
+      <member refid="classwx_file_dir_picker_event_1a311f6e70d669ca9ef6f4425c7778f215" prot="public" virt="non-virtual"><scope>wxFileDirPickerEvent</scope><name>wxFileDirPickerEvent</name></member>
       <member refid="classwx_file_dir_picker_event_1aa867fcb8f5f99de19e70b2b460d56181" prot="public" virt="non-virtual"><scope>wxFileDirPickerEvent</scope><name>wxFileDirPickerEvent</name></member>
       <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxFileDirPickerEvent</scope><name>wxObject</name></member>
       <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxFileDirPickerEvent</scope><name>wxObject</name></member>

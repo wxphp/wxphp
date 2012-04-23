@@ -19,13 +19,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist/bookctrl.h" line="47"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist/bookctrl.h" line="47"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist/bookctrl.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist/bookctrl.h"/>
   </compounddef>
 </doxygen>

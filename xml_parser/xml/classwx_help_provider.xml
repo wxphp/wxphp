@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cshelp.h" line="31"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cshelp.h" line="31"/>
       </memberdef>
       <memberdef kind="function" id="classwx_help_provider_1ae4b53b23804a04ce2c4eb93c17e4e8c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -38,7 +38,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cshelp.h" line="40"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cshelp.h" line="40"/>
       </memberdef>
       <memberdef kind="function" id="classwx_help_provider_1afcfbc0885cd60700d2b7f8fe66ebcc17" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -60,7 +60,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cshelp.h" line="54"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cshelp.h" line="54"/>
       </memberdef>
       <memberdef kind="function" id="classwx_help_provider_1a8a3ced6995edd8bfc856070d9c1ece8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -77,7 +77,7 @@
 <para>May be used to set the same help string for all Cancel buttons in the application, for example. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cshelp.h" line="69"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cshelp.h" line="69"/>
       </memberdef>
       <memberdef kind="function" id="classwx_help_provider_1af41c1502690ee6d62c421014903e6adf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -94,7 +94,7 @@
 <para>This is called by the <ref refid="classwx_window" kindref="compound">wxWindow</ref> destructor. Without this, the table of help strings will fill up and when window pointers are reused, the wrong help string will be found. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cshelp.h" line="77"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cshelp.h" line="77"/>
       </memberdef>
       <memberdef kind="function" id="classwx_help_provider_1a7a5559d236d746371d12851fe6dce591" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -111,7 +111,7 @@
 <para>Override this function if the help doesn&apos;t depend on the exact position inside the window, otherwise you need to override <ref refid="classwx_help_provider_1a5e67cbd17663ad9b7d0c8f407762a0bd" kindref="member">ShowHelpAtPoint()</ref>. Returns true if help was shown, or false if no help was available for this window. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cshelp.h" line="94"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cshelp.h" line="94"/>
       </memberdef>
       <memberdef kind="function" id="classwx_help_provider_1a5e67cbd17663ad9b7d0c8f407762a0bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -160,7 +160,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cshelp.h" line="115"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cshelp.h" line="115"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -175,7 +175,7 @@
 <para>Unlike some other classes, the help provider is not created on demand. This must be explicitly done by the application using <ref refid="classwx_help_provider_1ae706d7d7bcc79ae894c021706670311c" kindref="member">Set()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cshelp.h" line="62"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cshelp.h" line="62"/>
       </memberdef>
       <memberdef kind="function" id="classwx_help_provider_1ae706d7d7bcc79ae894c021706670311c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_help_provider" kindref="compound">wxHelpProvider</ref> *</type>
@@ -193,7 +193,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cshelp.h" line="84"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cshelp.h" line="84"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -203,24 +203,24 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__help" kindref="compound">Help</ref></para><para><simplesect kind="see"><para><ref refid="classwx_context_help" kindref="compound">wxContextHelp</ref>, <ref refid="classwx_context_help_button" kindref="compound">wxContextHelpButton</ref>, <ref refid="classwx_simple_help_provider" kindref="compound">wxSimpleHelpProvider</ref>, <ref refid="classwx_help_controller_help_provider" kindref="compound">wxHelpControllerHelpProvider</ref>, <ref refid="classwx_window_1a4c1a2cbc7363237b3a7c70af4e702c72" kindref="member">wxWindow::SetHelpText()</ref>, <ref refid="classwx_window_1afa448f4e01bedc4a5e3d4324929e5d5d" kindref="member">wxWindow::GetHelpTextAtPoint()</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6944">
+      <node id="7126">
         <label>wxHelpProvider</label>
         <link refid="classwx_help_provider"/>
       </node>
-      <node id="6945">
+      <node id="7127">
         <label>wxSimpleHelpProvider</label>
         <link refid="classwx_simple_help_provider"/>
-        <childnode refid="6944" relation="public-inheritance">
+        <childnode refid="7126" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6946">
+      <node id="7128">
         <label>wxHelpControllerHelpProvider</label>
         <link refid="classwx_help_controller_help_provider"/>
-        <childnode refid="6945" relation="public-inheritance">
+        <childnode refid="7127" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cshelp.h" line="26" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cshelp.h" bodystart="25" bodyend="116"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cshelp.h" line="26" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/cshelp.h" bodystart="25" bodyend="116"/>
     <listofallmembers>
       <member refid="classwx_help_provider_1ae4b53b23804a04ce2c4eb93c17e4e8c6" prot="public" virt="virtual"><scope>wxHelpProvider</scope><name>AddHelp</name></member>
       <member refid="classwx_help_provider_1afcfbc0885cd60700d2b7f8fe66ebcc17" prot="public" virt="virtual"><scope>wxHelpProvider</scope><name>AddHelp</name></member>

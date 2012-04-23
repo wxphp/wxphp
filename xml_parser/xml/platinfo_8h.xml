@@ -174,7 +174,7 @@
 <para>The values of the constants are chosen so that they can be combined as flags; this allows to check for operating system families like e.g. <computeroutput>wxOS_MAC</computeroutput> and <computeroutput>wxOS_UNIX</computeroutput>.</para><para>Note that you can obtain more detailed informations about the current OS version in use by checking the major and minor version numbers returned by <ref refid="group__group__funcmacro__networkuseros_1ga2ca585c288b956d80511478dc7b01533" kindref="member">wxGetOsVersion()</ref> or by <ref refid="classwx_platform_info_1ab95e9c7889ae224744cce280d84fe01a" kindref="member">wxPlatformInfo::GetOSMajorVersion()</ref>, <ref refid="classwx_platform_info_1aa9bc289303d4e13ad9f186d738e1d528" kindref="member">wxPlatformInfo::GetOSMinorVersion()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="23" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" bodystart="22" bodyend="62"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="23" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" bodystart="22" bodyend="62"/>
       </memberdef>
       <memberdef kind="enum" id="platinfo_8h_1a4acbc14b366d6ce2875f809be384757b" prot="public" static="no">
         <name>wxPortId</name>
@@ -272,7 +272,7 @@
 <para>Some of them can be used with more than a single (native) toolkit; e.g. wxWinCE port sources can be used with smartphones, pocket PCs and handheld devices SDKs. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="72" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" bodystart="71" bodyend="86"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="72" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" bodystart="71" bodyend="86"/>
       </memberdef>
       <memberdef kind="enum" id="platinfo_8h_1ab2b4836af7d22393b06c1d4f110bdb4c" prot="public" static="no">
         <name>wxArchitecture</name>
@@ -311,7 +311,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="95" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" bodystart="94" bodyend="102"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="95" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" bodystart="94" bodyend="102"/>
       </memberdef>
       <memberdef kind="enum" id="platinfo_8h_1a604702957b3c219643e1c989766f7047" prot="public" static="no">
         <name>wxEndianness</name>
@@ -357,13 +357,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="109" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" bodystart="108" bodyend="117"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="109" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" bodystart="108" bodyend="117"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h"/>
   </compounddef>
 </doxygen>

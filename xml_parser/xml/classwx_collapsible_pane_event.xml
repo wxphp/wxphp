@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/collpane.h" line="33"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/collpane.h" line="33"/>
       </memberdef>
       <memberdef kind="function" id="classwx_collapsible_pane_event_1a6cb95f26c0fdb0251723a08e6c6ada49" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/collpane.h" line="38"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/collpane.h" line="38"/>
       </memberdef>
       <memberdef kind="function" id="classwx_collapsible_pane_event_1ad4d117a8ce01c0e3d966abd93444a9b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/collpane.h" line="44"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/collpane.h" line="44"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -72,61 +72,61 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_collapsible_pane" kindref="compound">wxCollapsiblePane</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4845">
+      <node id="4937">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4843">
+      <node id="4935">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="4844" relation="public-inheritance">
+        <childnode refid="4936" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4842">
+      <node id="4934">
         <label>wxCollapsiblePaneEvent</label>
         <link refid="classwx_collapsible_pane_event"/>
-        <childnode refid="4843" relation="public-inheritance">
+        <childnode refid="4935" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4844">
+      <node id="4936">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="4845" relation="public-inheritance">
+        <childnode refid="4937" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4849">
+      <node id="4941">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4850" relation="usage">
+        <childnode refid="4942" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4847">
+      <node id="4939">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="4848" relation="public-inheritance">
+        <childnode refid="4940" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4846">
+      <node id="4938">
         <label>wxCollapsiblePaneEvent</label>
         <link refid="classwx_collapsible_pane_event"/>
-        <childnode refid="4847" relation="public-inheritance">
+        <childnode refid="4939" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4848">
+      <node id="4940">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="4849" relation="public-inheritance">
+        <childnode refid="4941" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4850">
+      <node id="4942">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/collpane.h" line="28" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/collpane.h" bodystart="27" bodyend="45"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/collpane.h" line="28" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/collpane.h" bodystart="27" bodyend="45"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxCollapsiblePaneEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxCollapsiblePaneEvent</scope><name>Clone</name></member>

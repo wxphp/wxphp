@@ -47,13 +47,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textfile.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textfile.h" bodystart="14" bodyend="21"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textfile.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/textfile.h" bodystart="14" bodyend="21"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textfile.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textfile.h"/>
   </compounddef>
 </doxygen>

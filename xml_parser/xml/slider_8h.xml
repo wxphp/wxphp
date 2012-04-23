@@ -13,7 +13,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="10" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" bodystart="10" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="10" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" bodystart="10" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="slider_8h_1a832d0bb39804bf205bb2390e6cc5c38c" prot="public" static="no">
         <name>wxSL_VERTICAL</name>
@@ -24,7 +24,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="11" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" bodystart="11" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="11" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" bodystart="11" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="slider_8h_1ad4b61faaa17deb5c77fc33c674e4e6e2" prot="public" static="no">
         <name>wxSL_TICKS</name>
@@ -35,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" bodystart="13" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" bodystart="13" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="slider_8h_1aba3270db38ca36dce8fbb562339bc1de" prot="public" static="no">
         <name>wxSL_AUTOTICKS</name>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="14" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" bodystart="14" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="14" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" bodystart="14" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="slider_8h_1a54cd30f0b76f2d6ca3f20587bb60c0ad" prot="public" static="no">
         <name>wxSL_LEFT</name>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" bodystart="15" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" bodystart="15" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="slider_8h_1a4427976dd7a0d76d8a49594878c17017" prot="public" static="no">
         <name>wxSL_TOP</name>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="16" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" bodystart="16" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="16" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" bodystart="16" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="slider_8h_1a02bd1079b5f91b03a11655b67c4bee4a" prot="public" static="no">
         <name>wxSL_RIGHT</name>
@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="17" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" bodystart="17" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="17" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" bodystart="17" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="slider_8h_1a9e770753f83f3fe3413a62ad11c2911d" prot="public" static="no">
         <name>wxSL_BOTTOM</name>
@@ -90,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="18" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" bodystart="18" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="18" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" bodystart="18" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="slider_8h_1ac319f593915ba8e18faba5f2357e2f24" prot="public" static="no">
         <name>wxSL_BOTH</name>
@@ -101,7 +101,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="19" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" bodystart="19" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="19" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" bodystart="19" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="slider_8h_1a459e238f8010f389bde29b489bb2bdc2" prot="public" static="no">
         <name>wxSL_SELRANGE</name>
@@ -112,7 +112,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" bodystart="20" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" bodystart="20" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="slider_8h_1af2c60a50029cb8dcaa2f63dfb98fbe6e" prot="public" static="no">
         <name>wxSL_INVERSE</name>
@@ -123,7 +123,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" bodystart="21" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" bodystart="21" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="slider_8h_1a0dc7c4b1ed7ce890f00e025aad4dc9e6" prot="public" static="no">
         <name>wxSL_MIN_MAX_LABELS</name>
@@ -134,7 +134,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" bodystart="22" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="slider_8h_1a03d0d4cebfd73fbf66f947964953ccfd" prot="public" static="no">
         <name>wxSL_VALUE_LABEL</name>
@@ -145,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="23" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" bodystart="23" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="23" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" bodystart="23" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="slider_8h_1ab11c6aa70bee53b6af0f4d8b4d9a6f7d" prot="public" static="no">
         <name>wxSL_LABELS</name>
@@ -156,13 +156,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="24" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" bodystart="24" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="24" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" bodystart="24" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h"/>
   </compounddef>
 </doxygen>

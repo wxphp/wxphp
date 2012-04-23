@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="220"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="220"/>
       </memberdef>
       <memberdef kind="function" id="classwx_locale_1a6e32eaba74aff33f10803bf881c1ca33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -37,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="225"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="225"/>
       </memberdef>
       <memberdef kind="function" id="classwx_locale_1a08a66e0450161b86285c367486433f49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -69,7 +69,7 @@
 <para>The call of this function has several global side effects which you should understand: first of all, the application locale is changed - note that this will affect many of standard C library functions such as printf() or strftime(). Second, this <ref refid="classwx_locale" kindref="compound">wxLocale</ref> object becomes the new current global locale for the application and so all subsequent calls to <ref refid="group__group__funcmacro__string_1ga223e9aea5b1a2252c7e632613c7b9a74" kindref="member">wxGetTranslation()</ref> will try to translate the messages using the message catalogs for this locale. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="240"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="240"/>
       </memberdef>
       <memberdef kind="function" id="classwx_locale_1ad4a6e67f200f59311471fcfba6ed9dd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="247"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="247"/>
       </memberdef>
       <memberdef kind="function" id="classwx_locale_1a1e9eb6387646a94c65d1493b5be7641c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="252"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="252"/>
       </memberdef>
       <memberdef kind="function" id="classwx_locale_1aa42e2d9e0537afcf009d334732e112b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -120,7 +120,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="257"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="257"/>
       </memberdef>
       <memberdef kind="function" id="classwx_locale_1ae6ce1aee1d8b54274b5889ad27bf7893" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -145,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="263"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="263"/>
       </memberdef>
       <memberdef kind="function" id="classwx_locale_1a89f8b4899148e754d1300bda2fe6600f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -158,7 +158,7 @@
 <para>Canonical form is the one that is used on UNIX systems: it is a two- or five-letter string in xx or xx_YY format, where xx is ISO 639 code of language and YY is ISO 3166 code of the country. Examples are &quot;en&quot;, &quot;en_GB&quot;, &quot;en_US&quot; or &quot;fr_FR&quot;. This form is internally used when looking up message catalogs. Compare <ref refid="classwx_locale_1a01a3752dfba43d28ea5d14cda63846da" kindref="member">GetSysName()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="298"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="298"/>
       </memberdef>
       <memberdef kind="function" id="classwx_locale_1abdefae235ce4de0314f016956331398a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -180,7 +180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="304"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="304"/>
       </memberdef>
       <memberdef kind="function" id="classwx_locale_1a6516d2529c936e441d7d23c42dc3e1b4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -193,7 +193,7 @@
 <para>Note that you can call this function only if you used the form of <ref refid="classwx_locale_1a37c254f20d4862b6efea2fedf63a231a" kindref="member">Init()</ref> that takes <ref refid="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86" kindref="member">wxLanguage</ref> argument. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="312"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="312"/>
       </memberdef>
       <memberdef kind="function" id="classwx_locale_1a2ae3d7a2e2df6e5de02e2b89ff7c7246" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -206,7 +206,7 @@
 <para>This is a full, human-readable name, e.g. &quot;English&quot; or &quot;French&quot;. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="349"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="349"/>
       </memberdef>
       <memberdef kind="function" id="classwx_locale_1abe917e8aaabd5a0bf05e43625a9ff94a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -219,7 +219,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="355"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="355"/>
       </memberdef>
       <memberdef kind="function" id="classwx_locale_1ab7bfa739af4e02181c822039a855ff22" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -241,7 +241,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="361"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="361"/>
       </memberdef>
       <memberdef kind="function" id="classwx_locale_1a73800e8acd6fac2869e1c913b5d80f90" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -271,7 +271,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="368"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="368"/>
       </memberdef>
       <memberdef kind="function" id="classwx_locale_1a01a3752dfba43d28ea5d14cda63846da" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -284,7 +284,7 @@
 <para>Compare <ref refid="classwx_locale_1a89f8b4899148e754d1300bda2fe6600f" kindref="member">GetCanonicalName()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="374"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="374"/>
       </memberdef>
       <memberdef kind="function" id="classwx_locale_1a37c254f20d4862b6efea2fedf63a231a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -325,7 +325,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="443"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="443"/>
       </memberdef>
       <memberdef kind="function" id="classwx_locale_1a294bb96e0162dd844a64f9f6ce260030" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -386,7 +386,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="463"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="463"/>
       </memberdef>
       <memberdef kind="function" id="classwx_locale_1a34cfcc10fafd0e7c8c3186fb8660e81f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -403,7 +403,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="483"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="483"/>
       </memberdef>
       <memberdef kind="function" id="classwx_locale_1ad31448ac1181c1ee4be56951051f1707" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -416,7 +416,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="488"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="488"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -435,7 +435,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="268"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="268"/>
       </memberdef>
       <memberdef kind="function" id="classwx_locale_1ad65c3a047d9a3dd9dad997337b69f546" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -452,7 +452,7 @@
 <para>This database is used in conjunction with the first form of <ref refid="classwx_locale_1a37c254f20d4862b6efea2fedf63a231a" kindref="member">Init()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="274"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="274"/>
       </memberdef>
       <memberdef kind="function" id="classwx_locale_1ad199b975b09ba5c8c2f90da955f0748a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="structwx_language_info" kindref="compound">wxLanguageInfo</ref> *</type>
@@ -470,7 +470,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="288"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="288"/>
       </memberdef>
       <memberdef kind="function" id="classwx_locale_1a3584472a1458ce535027576c77e9565b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="structwx_language_info" kindref="compound">wxLanguageInfo</ref> *</type>
@@ -487,7 +487,7 @@
 <para>Note that even if the returned pointer is valid, the caller should <emphasis>not</emphasis> delete it.</para><para>See <ref refid="classwx_locale_1ad65c3a047d9a3dd9dad997337b69f546" kindref="member">AddLanguage()</ref> for the <ref refid="structwx_language_info" kindref="compound">wxLanguageInfo</ref> description. As with <ref refid="classwx_locale_1a37c254f20d4862b6efea2fedf63a231a" kindref="member">Init()</ref>, <computeroutput>wxLANGUAGE_DEFAULT</computeroutput> has the special meaning if passed as an argument to this function and in this case the result of <ref refid="classwx_locale_1ae8f67045995e55b8d853405a66365fd5" kindref="member">GetSystemLanguage()</ref> is used. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="324"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="324"/>
       </memberdef>
       <memberdef kind="function" id="classwx_locale_1a9d9f7478358bf7676da611dfbfc5da82" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -504,7 +504,7 @@
 <para>See <ref refid="classwx_locale_1a3584472a1458ce535027576c77e9565b" kindref="member">GetLanguageInfo()</ref> for a remark about special meaning of <computeroutput>wxLANGUAGE_DEFAULT</computeroutput>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="332"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="332"/>
       </memberdef>
       <memberdef kind="function" id="classwx_locale_1a881139e58ad0f3ed1d54868e2e2161fe" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -522,7 +522,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="342"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="342"/>
       </memberdef>
       <memberdef kind="function" id="classwx_locale_1aa807dd0db36c3bd6556c2a37014239d6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding</ref></type>
@@ -535,7 +535,7 @@
 <para>Returns <ref refid="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" kindref="member">wxFontEncoding()</ref> value or <computeroutput>wxFONTENCODING_SYSTEM</computeroutput> if it couldn&apos;t be determined. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="381"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="381"/>
       </memberdef>
       <memberdef kind="function" id="classwx_locale_1a301032f2ecdf0be5321fab2281c71206" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -548,7 +548,7 @@
 <para>This string isn&apos;t particularly useful for the application as its form is platform-dependent and so you should probably use <ref refid="classwx_locale_1aa807dd0db36c3bd6556c2a37014239d6" kindref="member">GetSystemEncoding()</ref> instead.</para><para>Returns a user-readable string value or an empty string if it couldn&apos;t be determined. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="391"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="391"/>
       </memberdef>
       <memberdef kind="function" id="classwx_locale_1ae8f67045995e55b8d853405a66365fd5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -561,7 +561,7 @@
 <para>Returns the <ref refid="language_8h_1a7d1c74ce43b2fb7acf7a6fa438c0ee86" kindref="member">wxLanguage</ref> value or <computeroutput>wxLANGUAGE_UNKNOWN</computeroutput> if the language-guessing algorithm failed. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="399"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="399"/>
       </memberdef>
       <memberdef kind="function" id="classwx_locale_1acd6eccc8900847c0a29e7a4598c7d83f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -599,7 +599,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="416"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="416"/>
       </memberdef>
       <memberdef kind="function" id="classwx_locale_1a8e36e46b5b82f71b44ec0363a4c61288" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -617,7 +617,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="478"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="478"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -646,7 +646,7 @@
 </programlisting></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref></para><para><simplesect kind="see"><para><ref refid="overview_i18n" kindref="compound">Internationalization</ref>, <ref refid="page_samples_1page_samples_internat" kindref="member">Internationalization Sample</ref>, <ref refid="classwx_x_locale" kindref="compound">wxXLocale</ref>, <ref refid="classwx_translations" kindref="compound">wxTranslations</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" line="214" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/intl.h" bodystart="213" bodyend="489"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" line="214" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/intl.h" bodystart="213" bodyend="489"/>
     <listofallmembers>
       <member refid="classwx_locale_1a1e9eb6387646a94c65d1493b5be7641c" prot="public" virt="non-virtual"><scope>wxLocale</scope><name>AddCatalog</name></member>
       <member refid="classwx_locale_1aa42e2d9e0537afcf009d334732e112b2" prot="public" virt="non-virtual"><scope>wxLocale</scope><name>AddCatalog</name></member>

@@ -12,48 +12,48 @@
 <simplesect kind="since"><para>2.9.1 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6814">
+      <node id="6984">
         <label>wxGridHeaderLabelsRenderer</label>
         <link refid="classwx_grid_header_labels_renderer"/>
-        <childnode refid="6815" relation="public-inheritance">
+        <childnode refid="6985" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6815">
+      <node id="6985">
         <label>wxGridCornerHeaderRenderer</label>
         <link refid="classwx_grid_corner_header_renderer"/>
       </node>
-      <node id="6813">
+      <node id="6983">
         <label>wxGridRowHeaderRenderer</label>
         <link refid="classwx_grid_row_header_renderer"/>
-        <childnode refid="6814" relation="public-inheritance">
+        <childnode refid="6984" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6816">
+      <node id="6986">
         <label>wxGridRowHeaderRendererDefault</label>
         <link refid="classwx_grid_row_header_renderer_default"/>
-        <childnode refid="6813" relation="public-inheritance">
+        <childnode refid="6983" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6818">
+      <node id="6988">
         <label>wxGridHeaderLabelsRenderer</label>
         <link refid="classwx_grid_header_labels_renderer"/>
-        <childnode refid="6819" relation="public-inheritance">
+        <childnode refid="6989" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6819">
+      <node id="6989">
         <label>wxGridCornerHeaderRenderer</label>
         <link refid="classwx_grid_corner_header_renderer"/>
       </node>
-      <node id="6817">
+      <node id="6987">
         <label>wxGridRowHeaderRenderer</label>
         <link refid="classwx_grid_row_header_renderer"/>
-        <childnode refid="6818" relation="public-inheritance">
+        <childnode refid="6988" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="992" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" bodystart="991" bodyend="993"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="992" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" bodystart="991" bodyend="993"/>
     <listofallmembers>
       <member refid="classwx_grid_corner_header_renderer_1ae645864cfd4fe4be47522b2151ee2e45" prot="public" virt="pure-virtual"><scope>wxGridRowHeaderRenderer</scope><name>DrawBorder</name></member>
       <member refid="classwx_grid_header_labels_renderer_1adc92b8e48a5e88b1c91c5d50e37846ea" prot="public" virt="virtual"><scope>wxGridRowHeaderRenderer</scope><name>DrawLabel</name></member>

@@ -15,7 +15,7 @@
 <para>was properly initialized, and false otherwise. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconloc.h" line="36"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/iconloc.h" line="36"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_location_1add6a6738682209e6d861faaedd0fbd1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconloc.h" line="38"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/iconloc.h" line="38"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_location_1a84c8757c1ee09732bccb78a0c0a69c9a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconloc.h" line="39"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/iconloc.h" line="39"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -54,7 +54,7 @@
 <para>not embedded into the application resources) icon. For most platforms it simply contains the file name but under some others (notably Windows) the same file may contain multiple icons and so this class also stores the index of the icon inside the file.</para><para>In any case, its details should be of no interest to the application code and most of them are not even documented here (on purpose) as it is only meant to be used as an opaque class: the application may get the object of this class from somewhere and the only reasonable thing to do with it later is to create a <ref refid="classwx_icon" kindref="compound">wxIcon</ref> from it.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_icon" kindref="compound">wxIcon</ref>, <ref refid="classwx_file_type_1a5e5a5491cffb54791285663fd337d351" kindref="member">wxFileType::GetIcon</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconloc.h" line="30" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/iconloc.h" bodystart="29" bodyend="41"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/iconloc.h" line="30" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/iconloc.h" bodystart="29" bodyend="41"/>
     <listofallmembers>
       <member refid="classwx_icon_location_1a84c8757c1ee09732bccb78a0c0a69c9a" prot="public" virt="non-virtual"><scope>wxIconLocation</scope><name>GetFileName</name></member>
       <member refid="classwx_icon_location_1ab989d175f879d06ef9824364a9f698a9" prot="public" virt="non-virtual"><scope>wxIconLocation</scope><name>IsOk</name></member>

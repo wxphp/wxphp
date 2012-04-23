@@ -15,7 +15,7 @@
 <para>Please remember that hash maps do not guarantee ordering. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashmap.h" line="183"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashmap.h" line="183"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_map_1a0cdcad775e48da6951c86dedf58a40be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>iterator</type>
@@ -28,7 +28,7 @@
 <para>Please remember that hash maps do not guarantee ordering. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashmap.h" line="184"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashmap.h" line="184"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -43,7 +43,7 @@
 <para>Please remember that hash maps do not guarantee ordering. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashmap.h" line="208"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashmap.h" line="208"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_map_1abc2e7c494575814d0c7b344be7980cbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>iterator</type>
@@ -56,7 +56,7 @@
 <para>Please remember that hash maps do not guarantee ordering. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashmap.h" line="209"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashmap.h" line="209"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -75,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashmap.h" line="217"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashmap.h" line="217"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_map_1a305f2481fef3a5b8e2aaade661f96475" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -92,7 +92,7 @@
 <para>After the deletion the iterator is no longer valid and must not be used. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashmap.h" line="223"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashmap.h" line="223"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_map_1af66c0680fdde6dbc1760934429957860" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -109,7 +109,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashmap.h" line="224"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashmap.h" line="224"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -129,7 +129,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashmap.h" line="237"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashmap.h" line="237"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_map_1aaeb4bb24b69ffa9d693b91eeba1c6391" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const_iterator</type>
@@ -147,7 +147,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashmap.h" line="238"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashmap.h" line="238"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -167,7 +167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashmap.h" line="171"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashmap.h" line="171"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_map_1ae890044e2344b1838517a6f82b6a6ab7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -184,7 +184,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashmap.h" line="176"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashmap.h" line="176"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_map_1a58c9783bb91068a645a3c91a19c124fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -197,7 +197,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashmap.h" line="190"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashmap.h" line="190"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_map_1a852c3250b25caaa8bd76327c3c9fe2a1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_type</type>
@@ -214,7 +214,7 @@
 <para>This function returns only 0 or 1. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashmap.h" line="196"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashmap.h" line="196"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_map_1a07153a28283f93a46faf0ccb340114dd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -227,7 +227,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashmap.h" line="201"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashmap.h" line="201"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_map_1ad88d3a3507b253cf53091e052b2746a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>Insert_Result</type>
@@ -245,7 +245,7 @@
 </programlisting> The iterator points to the inserted element, the boolean value is true if <emphasis>v</emphasis> was actually inserted. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashmap.h" line="248"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashmap.h" line="248"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_map_1ab93ea3e530789910f94a727243ae6863" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>mapped_type</type>
@@ -262,7 +262,7 @@
 <para>The only difference is that if the given key is not present in the hash map, an element with the default <computeroutput>value_type()</computeroutput> is inserted in the table. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashmap.h" line="255"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashmap.h" line="255"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_map_1a83b1ef9d30a009732055bd2ad26c27b1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_type</type>
@@ -275,13 +275,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashmap.h" line="260"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashmap.h" line="260"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>This is a simple, type-safe, and reasonably efficient hash map class, whose interface is a subset of the interface of STL containers. </para>    </briefdescription>
     <detaileddescription>
-<para>In particular, the interface is modeled after std::map, and the various, non-standard, std::hash_map (<ulink url="http://www.cppreference.com/wiki/stl/map/start">http://www.cppreference.com/wiki/stl/map/start</ulink>).</para><para>Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyClass<sp/>{<sp/>...<sp/>};</highlight></codeline>
+<para>In particular, the interface is modelled after std::map, and the various, non-standard, std::hash_map (<ulink url="http://www.cppreference.com/wiki/stl/map/start">http://www.cppreference.com/wiki/stl/map/start</ulink>).</para><para>Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyClass<sp/>{<sp/>...<sp/>};</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>declare<sp/>a<sp/>hash<sp/>map<sp/>with<sp/>string<sp/>keys<sp/>and<sp/>int<sp/>values</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WX_DECLARE_STRING_HASH_MAP(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>MyHash5<sp/>);</highlight></codeline>
@@ -325,8 +325,8 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CLASSNAME);<sp/></highlight><highlight class="comment">//<sp/>name<sp/>of<sp/>the<sp/>class</highlight></codeline>
 </programlisting> The HASH_T and KEY_EQ_T are the types used for the hashing function and key comparison. wxWidgets provides three predefined hashing functions: <computeroutput>wxIntegerHash</computeroutput> for integer types ( int, long, short, and their unsigned counterparts ), <computeroutput>wxStringHash</computeroutput> for strings ( <ref refid="classwx_string" kindref="compound">wxString</ref>, wxChar*, char* ), and <computeroutput>wxPointerHash</computeroutput> for any kind of pointer. Similarly three equality predicates: <computeroutput>wxIntegerEqual</computeroutput>, <computeroutput>wxStringEqual</computeroutput>, <computeroutput>wxPointerEqual</computeroutput> are provided. Using this you could declare a hash map mapping int values to <ref refid="classwx_string" kindref="compound">wxString</ref> like this:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/>WX_DECLARE_HASH_MAP(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref>,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxIntegerHash,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxIntegerEqual,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::wxIntegerHash,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::wxIntegerEqual,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MyHash<sp/>);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>using<sp/>an<sp/>user-defined<sp/>class<sp/>for<sp/>keys</highlight><highlight class="normal"></highlight></codeline>
@@ -361,8 +361,8 @@
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>WX_DECLARE_HASH_MAP(<sp/>MyKey,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>type<sp/>of<sp/>the<sp/>keys</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SOME_TYPE,<sp/><sp/></highlight><highlight class="comment">//<sp/>any<sp/>type<sp/>you<sp/>like</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MyKeyHash,<sp/><sp/></highlight><highlight class="comment">//<sp/>hasher</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MyKeyEqual,<sp/></highlight><highlight class="comment">//<sp/>key<sp/>equality<sp/>predicate</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::MyKeyHash,<sp/><sp/></highlight><highlight class="comment">//<sp/>hasher</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::MyKeyEqual,<sp/></highlight><highlight class="comment">//<sp/>key<sp/>equality<sp/>predicate</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CLASSNAME);<sp/></highlight><highlight class="comment">//<sp/>name<sp/>of<sp/>the<sp/>class</highlight></codeline>
 </programlisting></para></sect1>
 <sect1 id="classwx_hash_map_1hashmap_types">
@@ -380,7 +380,7 @@
 </para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__containers" kindref="compound">Containers</ref> </para></sect1>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashmap.h" line="165" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashmap.h" bodystart="164" bodyend="261"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashmap.h" line="165" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/hashmap.h" bodystart="164" bodyend="261"/>
     <listofallmembers>
       <member refid="classwx_hash_map_1a42be2fd47c9cf178df18ebe2d74a36b1" prot="public" virt="non-virtual"><scope>wxHashMap</scope><name>begin</name></member>
       <member refid="classwx_hash_map_1a0cdcad775e48da6951c86dedf58a40be" prot="public" virt="non-virtual"><scope>wxHashMap</scope><name>begin</name></member>

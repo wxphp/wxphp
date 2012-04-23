@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="160" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" bodystart="160" bodyend="163"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="160" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" bodystart="160" bodyend="163"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -42,7 +42,7 @@
 <para>Use <ref refid="classwx_debug_report_1aec2381b47edf01ec3f2462fd84534989" kindref="member">IsOk()</ref> to check for errors. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="169"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="169"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_report_1a455abd17b0b3b38c9292b0cc5796f4df" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -55,7 +55,7 @@
 <para>Call <ref refid="classwx_debug_report_1ac9b95dc82b763b20f56a9ecaf0643c6e" kindref="member">Reset()</ref> to prevent this from happening. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="176"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="176"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_report_1aeec28b7b39294cdb29a5f4da252cc18b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -73,7 +73,7 @@
 <para>Currently this includes a text (XML) file describing the process context and, under Win32, a minidump file. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="183"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="183"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_report_1a8f54f2a1a052a7e33d10a5deb0b1037f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -90,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="189"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="189"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_report_1a239a2a49a7e951fcffc40c05f3cd0ab2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -103,7 +103,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="194"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="194"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_report_1aea719d012f378d470c75183339b3c542" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -116,7 +116,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="199"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="199"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_report_1a256d702690530ab982dc97cfa945094a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -133,7 +133,7 @@
 <para>Minidumps are only available under recent Win32 versions (<computeroutput>dbghlp32.dll</computeroutput> can be installed under older systems to make minidumps available). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="208"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="208"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_report_1ac897b26d2c0f55baf69a7aaf291b80bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -146,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="213"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="213"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_report_1a0df685608f1b418b01c10a6b35cf6c85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -159,7 +159,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="218"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="218"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_report_1aea190079cf5b14a9d9b8604b5b3e2d32" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -181,7 +181,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="231"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="231"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_report_1a6573bf401d5a7d2ba4d5bc17f6dba480" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -207,7 +207,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="242"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="242"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_report_1a9d468d2561b6a111c2d421e9965c1157" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -221,7 +221,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="251"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="251"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_report_1aceb8640f55701369f40e35ba12b3250b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -246,7 +246,7 @@
 <para>If <emphasis>n</emphasis> is greater than or equal to the number of files, then false is returned. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="258"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="258"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_report_1ada0b3ef4849927977df02980d656709f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -259,7 +259,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="263"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="263"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_report_1aa4540fed6e2fe7c32a3245dbf8bf626f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -272,7 +272,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="269"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="269"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_report_1aec2381b47edf01ec3f2462fd84534989" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -285,7 +285,7 @@
 <para>If this method returns false the report can&apos;t be used. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="275"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="275"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_report_1a3ec35bb65b88aac386a399b27ef940a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -298,7 +298,7 @@
 <para>This is usually not enough -- instead you should override this method to do something more useful to you. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="282"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="282"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_report_1a0e2ce4e318a701ce9a7f74df15bc7c35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -315,7 +315,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="289"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="289"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_report_1ac9b95dc82b763b20f56a9ecaf0643c6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -328,7 +328,7 @@
 <para>The object can&apos;t be used any more after this as it becomes uninitialized and invalid. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="295"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="295"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -347,7 +347,7 @@
 <para>By default, it does nothing. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="303"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="303"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_report_1ab3c7d9e2329a70fd86ad91237d6efdee" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -364,7 +364,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="309"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="309"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_report_1a07639b262106766a4a860a358b5ed814" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -381,7 +381,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="315"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="315"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_report_1a11a2815019fcaa50dffe53c21f5b121f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -398,7 +398,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="321"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="321"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -415,24 +415,24 @@
 </programlisting></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxqa" kindref="member">wxQA</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__debugging" kindref="compound">Debugging</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5549">
+      <node id="5644">
         <label>wxDebugReportUpload</label>
         <link refid="classwx_debug_report_upload"/>
-        <childnode refid="5548" relation="public-inheritance">
+        <childnode refid="5643" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5547">
+      <node id="5642">
         <label>wxDebugReport</label>
         <link refid="classwx_debug_report"/>
       </node>
-      <node id="5548">
+      <node id="5643">
         <label>wxDebugReportCompress</label>
         <link refid="classwx_debug_report_compress"/>
-        <childnode refid="5547" relation="public-inheritance">
+        <childnode refid="5642" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="154" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" bodystart="153" bodyend="322"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="154" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" bodystart="153" bodyend="322"/>
     <listofallmembers>
       <member refid="classwx_debug_report_1aeec28b7b39294cdb29a5f4da252cc18b" prot="public" virt="non-virtual"><scope>wxDebugReport</scope><name>AddAll</name></member>
       <member refid="classwx_debug_report_1a8f54f2a1a052a7e33d10a5deb0b1037f" prot="public" virt="virtual"><scope>wxDebugReport</scope><name>AddContext</name></member>

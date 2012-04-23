@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" line="68"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h" line="68"/>
       </memberdef>
       <memberdef kind="function" id="classwx_animation_ctrl_1a29e4df79f64e431a83c9e17f2acaa9ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -146,7 +146,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" line="100"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h" line="100"/>
       </memberdef>
       <memberdef kind="function" id="classwx_animation_ctrl_1a6c1d4b84e0657bd839963c4fd822bdfd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_animation" kindref="compound">wxAnimation</ref></type>
@@ -159,7 +159,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" line="105"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h" line="105"/>
       </memberdef>
       <memberdef kind="function" id="classwx_animation_ctrl_1a69007ed7ba414d68d9086cf2547e05e2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref></type>
@@ -172,7 +172,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" line="111"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h" line="111"/>
       </memberdef>
       <memberdef kind="function" id="classwx_animation_ctrl_1aa3dbfe9a61400cacb7a3ce541ab694bc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -185,7 +185,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" line="116"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h" line="116"/>
       </memberdef>
       <memberdef kind="function" id="classwx_animation_ctrl_1a0e42c2563550dc396556285b0b3b6fc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -207,7 +207,7 @@
 <para>See <ref refid="classwx_animation_1ad35fc6e902814df5f9f4668df3d503e3" kindref="member">wxAnimation::LoadFile</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" line="123"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h" line="123"/>
       </memberdef>
       <memberdef kind="function" id="classwx_animation_ctrl_1a07e0235f82ab826889bfb77f23344074" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -229,7 +229,7 @@
 <para>See <ref refid="classwx_animation_1aa6434b9dcc63295b0e393a21a59eb634" kindref="member">wxAnimation::Load()</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" line="130"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h" line="130"/>
       </memberdef>
       <memberdef kind="function" id="classwx_animation_ctrl_1ace0ae1bf6e30458cc5da6b4696c9b2fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -242,7 +242,7 @@
 <para>The animation is always played in loop mode (unless the last frame of the animation has an infinite delay time) and always start from the first frame even if you <ref refid="classwx_animation_ctrl_1aa7849c5941a6d8b6143c6c5dec6118a8" kindref="member">stopped</ref> it while some other frame was displayed. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" line="139"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h" line="139"/>
       </memberdef>
       <memberdef kind="function" id="classwx_animation_ctrl_1a19f6444bb0fb00d7a3bee9745010770a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -259,7 +259,7 @@
 <para>If the previous animation is being played, it&apos;s <ref refid="classwx_animation_ctrl_1aa7849c5941a6d8b6143c6c5dec6118a8" kindref="member">Stop()</ref> stopped. Until <ref refid="classwx_animation_ctrl_1ace0ae1bf6e30458cc5da6b4696c9b2fa" kindref="member">Play()</ref> isn&apos;t called, a static image, the first frame of the given animation or the background colour will be shown (see <ref refid="classwx_animation_ctrl_1a78b7609f0b79aaf816cc4959676aeee9" kindref="member">SetInactiveBitmap()</ref> for more info). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" line="149"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h" line="149"/>
       </memberdef>
       <memberdef kind="function" id="classwx_animation_ctrl_1a78b7609f0b79aaf816cc4959676aeee9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -276,7 +276,7 @@
 <para>If you set as inactive bitmap <ref refid="interface_2wx_2bitmap_8h_1a2947690e84b8fdb2e37b79a4af8f8a21" kindref="member">wxNullBitmap</ref> (which is the default), then the first frame of the animation is instead shown when the control is inactive; in this case, if there&apos;s no valid animation associated with the control (see <ref refid="classwx_animation_ctrl_1a19f6444bb0fb00d7a3bee9745010770a" kindref="member">SetAnimation()</ref>), then the background colour of the window is shown.</para><para>If the control is not playing the animation, the given bitmap will be immediately shown, otherwise it will be shown as soon as <ref refid="classwx_animation_ctrl_1aa7849c5941a6d8b6143c6c5dec6118a8" kindref="member">Stop()</ref> is called.</para><para>Note that the inactive bitmap, if smaller than the control&apos;s size, will be centered in the control; if bigger, it will be stretched to fit it. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" line="165"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h" line="165"/>
       </memberdef>
       <memberdef kind="function" id="classwx_animation_ctrl_1aa7849c5941a6d8b6143c6c5dec6118a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -289,7 +289,7 @@
 <para>The control will show the first frame of the animation, a custom static image or the window&apos;s background colour as specified by the last <ref refid="classwx_animation_ctrl_1a78b7609f0b79aaf816cc4959676aeee9" kindref="member">SetInactiveBitmap()</ref> call. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" line="172"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h" line="172"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -304,85 +304,85 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para>Implementations:<nonbreakablespace/><nonbreakablespace/>native under <ref refid="page_port_1page_port_wxgtk" kindref="member">wxGTK</ref>, <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> ports; a generic implementation is used elsewhere.</para><para><htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/animationctrl.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/animationctrl.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/animationctrl.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_animation" kindref="compound">wxAnimation</ref>, <ref refid="page_samples_1page_samples_animate" kindref="member">Animation Sample</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4241">
+      <node id="4324">
         <label>wxAnimationCtrl</label>
         <link refid="classwx_animation_ctrl"/>
-        <childnode refid="4242" relation="public-inheritance">
+        <childnode refid="4325" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4245">
+      <node id="4328">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4244">
+      <node id="4327">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4245" relation="public-inheritance">
+        <childnode refid="4328" relation="public-inheritance">
         </childnode>
-        <childnode refid="4246" relation="public-inheritance">
+        <childnode refid="4329" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4246">
+      <node id="4329">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4242">
+      <node id="4325">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4243" relation="public-inheritance">
+        <childnode refid="4326" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4243">
+      <node id="4326">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4244" relation="public-inheritance">
+        <childnode refid="4327" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4247">
+      <node id="4330">
         <label>wxAnimationCtrl</label>
         <link refid="classwx_animation_ctrl"/>
-        <childnode refid="4248" relation="public-inheritance">
+        <childnode refid="4331" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4251">
+      <node id="4334">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4252" relation="usage">
+        <childnode refid="4335" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4250">
+      <node id="4333">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4251" relation="public-inheritance">
+        <childnode refid="4334" relation="public-inheritance">
         </childnode>
-        <childnode refid="4253" relation="public-inheritance">
+        <childnode refid="4336" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4253">
+      <node id="4336">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4248">
+      <node id="4331">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="4249" relation="public-inheritance">
+        <childnode refid="4332" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4249">
+      <node id="4332">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4250" relation="public-inheritance">
+        <childnode refid="4333" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4252">
+      <node id="4335">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" line="57" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" bodystart="56" bodyend="173"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h" line="57" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h" bodystart="56" bodyend="173"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxAnimationCtrl</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxAnimationCtrl</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -549,6 +549,7 @@
       <member refid="classwx_window_1aa90a260c0a835a133043460b7d0024a8" prot="public" virt="virtual"><scope>wxAnimationCtrl</scope><name>InitDialog</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxAnimationCtrl</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxAnimationCtrl</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxAnimationCtrl</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxAnimationCtrl</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxAnimationCtrl</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxAnimationCtrl</scope><name>IsExposed</name></member>
@@ -565,6 +566,7 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxAnimationCtrl</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxAnimationCtrl</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxAnimationCtrl</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxAnimationCtrl</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxAnimationCtrl</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxAnimationCtrl</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxAnimationCtrl</scope><name>LineDown</name></member>
@@ -573,7 +575,6 @@
       <member refid="classwx_animation_ctrl_1a0e42c2563550dc396556285b0b3b6fc3" prot="public" virt="virtual"><scope>wxAnimationCtrl</scope><name>LoadFile</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxAnimationCtrl</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxAnimationCtrl</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxAnimationCtrl</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxAnimationCtrl</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxAnimationCtrl</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxAnimationCtrl</scope><name>MoveAfterInTabOrder</name></member>
@@ -698,7 +699,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxAnimationCtrl</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxAnimationCtrl</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxAnimationCtrl</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxAnimationCtrl</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxAnimationCtrl</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxAnimationCtrl</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxAnimationCtrl</scope><name>Unlink</name></member>

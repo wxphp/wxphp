@@ -17,7 +17,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1328"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1308"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1a6cbaff0fd4638df69040fe033021fe21" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const wxList &amp;</type>
@@ -31,7 +31,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1329"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1309"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -51,7 +51,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1362"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1342"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1a62c14f60acd409981dbb65933a0f039d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> &amp;</type>
@@ -69,7 +69,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1363"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1343"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -89,7 +89,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1494"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1474"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1a143d37102e6a2d63302bfa280fedcaee" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_output_stream" kindref="compound">wxOutputStream</ref> &amp;</type>
@@ -107,7 +107,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1495"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1475"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-attrib">
@@ -122,7 +122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1588" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" bodystart="1588" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1568" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" bodystart="1568" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classwx_document_1acd3c92903b80816f5693761f7c2bc2b9" prot="protected" static="no" mutable="no">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -135,7 +135,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1593" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" bodystart="1593" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1573" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" bodystart="1573" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classwx_document_1ad3b6d18eae3a6f81a52d00c43e30e956" prot="protected" static="no" mutable="no">
         <type>bool</type>
@@ -148,7 +148,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1598" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" bodystart="1598" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1578" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" bodystart="1578" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classwx_document_1ade5e6e43ec8387afbfa4d36cedb2c600" prot="protected" static="no" mutable="no">
         <type><ref refid="classwx_doc_template" kindref="compound">wxDocTemplate</ref> *</type>
@@ -161,7 +161,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1603" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" bodystart="1603" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1583" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" bodystart="1583" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classwx_document_1aff647250dfd823511a90122f5eced4a2" prot="protected" static="no" mutable="no">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -174,7 +174,7 @@
 <para>The document title is used for an associated frame (if any), and is usually constructed by the framework from the filename. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1609" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" bodystart="1609" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1589" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" bodystart="1589" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classwx_document_1add7be32780e5bc95f833faec0098f81c" prot="protected" static="no" mutable="no">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -187,7 +187,7 @@
 <para>If several document templates are created that use the same document type, this variable is used in <ref refid="classwx_doc_manager_1ac310efd148042ce530164b05f3181e15" kindref="member">wxDocManager::CreateView()</ref> to collate a list of alternative view types that can be used on this kind of document. Do not change the value of this variable. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1619" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" bodystart="1619" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1599" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" bodystart="1599" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classwx_document_1ab1d69674c05ee358cac25fa311fc46a6" prot="protected" static="no" mutable="no">
         <type>wxList</type>
@@ -200,7 +200,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1624" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" bodystart="1624" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1604" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" bodystart="1604" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -228,7 +228,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1199"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1179"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1a894332ee2d4da8deeaa0c01f4ba556a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -241,7 +241,7 @@
 <para>Removes itself from the document manager. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1204"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1184"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1acae0bbe368cd261c245350464329c6cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -258,7 +258,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1210"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1190"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1abe9a83ed109fe984cc82ed35188b299c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -273,7 +273,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1226"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1206"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1a8bbe46b9a14d500d0bfbe1ab5dd802f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -286,7 +286,7 @@
 <para>This does not normally delete the document object, use <ref refid="classwx_document_1a0f5c5e822ac78f5e5ef0b14a3d02c477" kindref="member">DeleteAllViews()</ref> to do this implicitly. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1233"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1213"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1a0f5c5e822ac78f5e5ef0b14a3d02c477" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -299,7 +299,7 @@
 <para>Deleting the final view will implicitly delete the document itself, because the <ref refid="classwx_view" kindref="compound">wxView</ref> destructor calls <ref refid="classwx_document_1aeea95878b9079cff8adcf5c539bf0972" kindref="member">RemoveView()</ref>. This in turns calls <ref refid="classwx_document_1a99cb689421dc26bf95c222e0b12305f1" kindref="member">OnChangedViewList()</ref>, whose default implemention is to save and delete the document if no views exist. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1242"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1222"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1afcd7641415f12bc132eb9f668c6a7f81" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -312,7 +312,7 @@
 <para>This method may be overridden to perform any additional cleanup which might be needed when the document is closed.</para><para>The return value of this method is currently ignored.</para><para>The default version does nothing and simply returns true. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1254"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1234"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1ac4400f63eeb994aa0b6289cd3fbb2bac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_command_processor" kindref="compound">wxCommandProcessor</ref> *</type>
@@ -326,7 +326,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1262"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1242"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1aacd84b66750f17245581ed4d4d672d07" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_doc_manager" kindref="compound">wxDocManager</ref> *</type>
@@ -339,7 +339,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1267"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1247"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1a4cfebd6f2cea0f62c917465a114ec1bd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -352,7 +352,7 @@
 <para>See the comment for <ref refid="classwx_document_1add7be32780e5bc95f833faec0098f81c" kindref="member">m_documentTypeName</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1273"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1253"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1ac8caf0e2e904fa2e9f5448e573c0d786" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -366,7 +366,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1280"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1260"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1ad5b00467fdd501bc154d8ce367a82271" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_doc_template" kindref="compound">wxDocTemplate</ref> *</type>
@@ -379,7 +379,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1285"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1265"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1a5531aac0dd425d1b2c0382ed19ccc3fb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -392,7 +392,7 @@
 <para>By default, uses the frame associated with the first view. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1292"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1272"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1a38d00dec4e9ade115d07131e2732550e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -405,7 +405,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1298"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1278"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1af4c6d71359b7ecce5d74c0de8c9fcc83" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_view" kindref="compound">wxView</ref> *</type>
@@ -419,7 +419,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1306"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1286"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1ac0b23ca840df717ead6f3836c3062d9a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -432,7 +432,7 @@
 <para>The document title is used for an associated frame (if any), and is usually constructed by the framework from the filename. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1313"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1293"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1a3fd3919d3a97c15a7cf015512e622a5b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -445,7 +445,7 @@
 <para>The default implementation uses the document title, if any, of the name part of the document filename if it was set or, otherwise, the string <bold>unnamed</bold>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1320"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1300"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1a1d9c84635a64494ea403455506b6d834" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -459,7 +459,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1342"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1322"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1a008d84f77dc52fbd45eba3a614594758" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -473,7 +473,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1351"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1331"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1a5a4fedba3df42a4b133bf16ba3a8ef1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -491,7 +491,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1373"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1353"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1a99cb689421dc26bf95c222e0b12305f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -504,7 +504,7 @@
 <para>The default implementation saves and deletes the document if no views exist (the last one has just been removed). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1380"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1360"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1a12730179398ba640d78bd9f4ad65dc95" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -517,7 +517,7 @@
 <para>The default implementation calls <ref refid="classwx_document_1afcd7641415f12bc132eb9f668c6a7f81" kindref="member">DeleteContents()</ref> (which may be overridden to perform additional cleanup) and sets the modified flag to false. You can override it to supply additional behaviour when the document is closed with <ref refid="classwx_document_1a8bbe46b9a14d500d0bfbe1ab5dd802f8" kindref="member">Close()</ref>.</para><para>Notice that previous wxWidgets versions used to call this function also from <ref refid="classwx_document_1a054028374af6d24cbcf80c258c7e3ae5" kindref="member">OnNewDocument()</ref>, rather counter-intuitively. This is no longer the case since wxWidgets 2.9.0. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1394"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1374"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1a77a48cbe35d3db6b64f84e11a804ef11" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -554,7 +554,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1415"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1395"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1a179c3d09f2e9d421e12728da96f3ce93" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_command_processor" kindref="compound">wxCommandProcessor</ref> *</type>
@@ -568,7 +568,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1424"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1404"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1a054028374af6d24cbcf80c258c7e3ae5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -581,7 +581,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1431"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1411"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1a12e524636420d866e3069a186dcc2435" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -598,7 +598,7 @@
 <para>If <ref refid="classwx_document_1a3718314462707c34cec51f243c67d315" kindref="member">LoadObject()</ref> returns true, the document is set to unmodified; otherwise, an error message box is displayed. The document&apos;s views are notified that the filename has changed, to give windows an opportunity to update their titles. All of the document&apos;s views are then updated. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1441"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1421"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1aee86aa837e2ddae59a1336c654e9f94b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -615,7 +615,7 @@
 <para>If <ref refid="classwx_document_1a25891a0f441fc2edd17f863de96e32b0" kindref="member">SaveObject()</ref> returns true, the document is set to unmodified; otherwise, an error message box is displayed. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1449"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1429"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1a67879e3f2e94bb35e558af46bd847cf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -628,7 +628,7 @@
 <para>If the user replies Yes, the <ref refid="classwx_document_1a0f23eb3c793828ec010ff4897155117f" kindref="member">Save()</ref> function is called. If No, the document is marked as unmodified and the function succeeds. If Cancel, the function fails. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1457"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1437"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1aeea95878b9079cff8adcf5c539bf0972" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -645,7 +645,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1463"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1443"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1a0f23eb3c793828ec010ff4897155117f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -658,7 +658,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1469"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1449"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1a9ef28247525dbf71d8d90b3217785b2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -671,7 +671,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1475"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1455"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1a89c48d558b117a8f7d034d328bdb2de8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -684,7 +684,7 @@
 <para>Prompts the user first, and then calls <ref refid="classwx_document_1acbb47142b140686cd3a573407710928e" kindref="member">DoOpenDocument()</ref> to reload the current file. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1483"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1463"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1ad4a77b27cd15cfc016c2a4a4439ed1a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -702,7 +702,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1505"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1485"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1a0e2a67717d21d9f24b2732be1e8082f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -719,7 +719,7 @@
 <para>See the comment for <ref refid="classwx_document_1add7be32780e5bc95f833faec0098f81c" kindref="member">m_documentTypeName</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1511"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1491"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1a1376b01a94c9e5aed70bf1f04a259ce8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -736,7 +736,7 @@
 <para>Should only be called by the framework. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1517"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1497"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1ae0c9a297f2f7a0786e78ee4a25563468" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -755,7 +755,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1532"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1512"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1aadd4ceefef4a25d637a1c2a965c889f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -777,7 +777,7 @@
 <para>Usually called by the framework.</para><para>Calls <ref refid="classwx_document_1a9413e5eebea2995e330028a608668c68" kindref="member">OnChangeFilename()</ref> which in turn calls <ref refid="classwx_view_1a4a104c7919b4f3ab8bfaaf9a3a577529" kindref="member">wxView::OnChangeFilename()</ref> for all views if <emphasis>notifyViews</emphasis> is true. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1540"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1520"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1a9413e5eebea2995e330028a608668c68" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -795,7 +795,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1548"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1528"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1abceab99f5677bc4ae3f12ce3756635a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -812,7 +812,7 @@
 <para>The document title is used for an associated frame (if any), and is usually constructed by the framework from the filename. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1555"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1535"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1a5c4e930bbc9606120f05b0b3b2cf2192" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -835,7 +835,7 @@
 <para>If <emphasis>sender</emphasis> is non-NULL, does not update this view. <emphasis>hint</emphasis> represents optional information to allow a view to optimize its update. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1562"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1542"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -854,7 +854,7 @@
 <para>Base class version creates a file-based stream and calls <ref refid="classwx_document_1a25891a0f441fc2edd17f863de96e32b0" kindref="member">SaveObject()</ref>. Override this if you need to do something else or prefer not to use <ref refid="classwx_document_1a25891a0f441fc2edd17f863de96e32b0" kindref="member">SaveObject()</ref> at all. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1573"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1553"/>
       </memberdef>
       <memberdef kind="function" id="classwx_document_1acbb47142b140686cd3a573407710928e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -871,7 +871,7 @@
 <para>Base class version creates a file-based stream and calls <ref refid="classwx_document_1a3718314462707c34cec51f243c67d315" kindref="member">LoadObject()</ref>. Override this if you need to do something else or prefer not to use <ref refid="classwx_document_1a3718314462707c34cec51f243c67d315" kindref="member">LoadObject()</ref> at all. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1583"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1563"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -881,53 +881,53 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__docview" kindref="compound">Document/View Framework</ref></para><para><simplesect kind="see"><para><ref refid="overview_docview" kindref="compound">Document/View Framework</ref>, <ref refid="classwx_view" kindref="compound">wxView</ref>, <ref refid="classwx_doc_template" kindref="compound">wxDocTemplate</ref>, <ref refid="classwx_doc_manager" kindref="compound">wxDocManager</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5769">
+      <node id="5884">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5768">
+      <node id="5883">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="5769" relation="public-inheritance">
+        <childnode refid="5884" relation="public-inheritance">
         </childnode>
-        <childnode refid="5770" relation="public-inheritance">
+        <childnode refid="5885" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5770">
+      <node id="5885">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="5767">
+      <node id="5882">
         <label>wxDocument</label>
         <link refid="classwx_document"/>
-        <childnode refid="5768" relation="public-inheritance">
+        <childnode refid="5883" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5777">
+      <node id="5892">
         <label>wxString</label>
         <link refid="classwx_string"/>
       </node>
-      <node id="5778">
+      <node id="5893">
         <label>wxClassInfo</label>
         <link refid="classwx_class_info"/>
       </node>
-      <node id="5779">
+      <node id="5894">
         <label>wxCommandProcessor</label>
         <link refid="classwx_command_processor"/>
-        <childnode refid="5773" relation="public-inheritance">
+        <childnode refid="5888" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5776">
+      <node id="5891">
         <label>wxDocTemplate</label>
         <link refid="classwx_doc_template"/>
-        <childnode refid="5773" relation="public-inheritance">
+        <childnode refid="5888" relation="public-inheritance">
         </childnode>
-        <childnode refid="5776" relation="usage">
+        <childnode refid="5891" relation="usage">
           <edgelabel>m_documentManager</edgelabel>
         </childnode>
-        <childnode refid="5777" relation="usage">
+        <childnode refid="5892" relation="usage">
           <edgelabel>m_defaultExt</edgelabel>
           <edgelabel>m_directory</edgelabel>
           <edgelabel>m_viewTypeName</edgelabel>
@@ -935,53 +935,53 @@
           <edgelabel>m_description</edgelabel>
           <edgelabel>m_fileFilter</edgelabel>
         </childnode>
-        <childnode refid="5778" relation="usage">
+        <childnode refid="5893" relation="usage">
           <edgelabel>m_docClassInfo</edgelabel>
           <edgelabel>m_viewClassInfo</edgelabel>
         </childnode>
       </node>
-      <node id="5773">
+      <node id="5888">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5774" relation="usage">
+        <childnode refid="5889" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5772">
+      <node id="5887">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="5773" relation="public-inheritance">
+        <childnode refid="5888" relation="public-inheritance">
         </childnode>
-        <childnode refid="5775" relation="public-inheritance">
+        <childnode refid="5890" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5775">
+      <node id="5890">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="5771">
+      <node id="5886">
         <label>wxDocument</label>
         <link refid="classwx_document"/>
-        <childnode refid="5772" relation="public-inheritance">
+        <childnode refid="5887" relation="public-inheritance">
         </childnode>
-        <childnode refid="5776" relation="usage">
+        <childnode refid="5891" relation="usage">
           <edgelabel>m_documentTemplate</edgelabel>
         </childnode>
-        <childnode refid="5779" relation="usage">
+        <childnode refid="5894" relation="usage">
           <edgelabel>m_commandProcessor</edgelabel>
         </childnode>
-        <childnode refid="5777" relation="usage">
+        <childnode refid="5892" relation="usage">
           <edgelabel>m_documentTypeName</edgelabel>
           <edgelabel>m_documentTitle</edgelabel>
           <edgelabel>m_documentFile</edgelabel>
         </childnode>
       </node>
-      <node id="5774">
+      <node id="5889">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" line="1187" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/docview.h" bodystart="1186" bodyend="1625"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" line="1167" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/docview.h" bodystart="1166" bodyend="1605"/>
     <listofallmembers>
       <member refid="classwx_evt_handler_1a7dc3c701781f4044372049de5004137e" prot="public" virt="non-virtual"><scope>wxDocument</scope><name>AddFilter</name></member>
       <member refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" prot="public" virt="virtual"><scope>wxDocument</scope><name>AddPendingEvent</name></member>
@@ -1078,7 +1078,6 @@
       <member refid="classwx_document_1abceab99f5677bc4ae3f12ce3756635a4" prot="public" virt="non-virtual"><scope>wxDocument</scope><name>SetTitle</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxDocument</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxDocument</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxDocument</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxDocument</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxDocument</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxDocument</scope><name>Unlink</name></member>

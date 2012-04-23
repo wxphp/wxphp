@@ -20,17 +20,17 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="284"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/buffer.h" line="284"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_memory_buffer_1ae5e0f530609b4417c0d45a4392c6f9ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_memory_buffer_1a60b99492a70a991287ef587eabda324f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxMemoryBuffer::wxMemoryBuffer</definition>
-        <argsstring>(size_t size=DefBufSize)</argsstring>
+        <argsstring>(size_t size=1024)</argsstring>
         <name>wxMemoryBuffer</name>
         <param>
           <type>size_t</type>
           <declname>size</declname>
-          <defval>DefBufSize</defval>
+          <defval>1024</defval>
         </param>
         <briefdescription>
 <para>Create a new buffer. </para>        </briefdescription>
@@ -40,13 +40,13 @@
 <parametername>size</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>size of the new buffer. </para></parameterdescription>
+<para>size of the new buffer, 1KiB by default. </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="292"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/buffer.h" line="292"/>
       </memberdef>
       <memberdef kind="function" id="classwx_memory_buffer_1a98673da88270eff09bb09b1f9d001177" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -71,7 +71,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="300"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/buffer.h" line="300"/>
       </memberdef>
       <memberdef kind="function" id="classwx_memory_buffer_1aa6030db293bc18c8bf041df2f371b5b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -107,7 +107,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="310"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/buffer.h" line="310"/>
       </memberdef>
       <memberdef kind="function" id="classwx_memory_buffer_1a25a1be146612e646bfdffa1b4f9901e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -122,7 +122,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="321"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/buffer.h" line="321"/>
       </memberdef>
       <memberdef kind="function" id="classwx_memory_buffer_1a562fe87a27b5e372ba0b27ec9178e645" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -147,7 +147,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="333"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/buffer.h" line="333"/>
       </memberdef>
       <memberdef kind="function" id="classwx_memory_buffer_1a13cafdf81384ab5a4852b02fc96b13c3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -160,7 +160,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="338"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/buffer.h" line="338"/>
       </memberdef>
       <memberdef kind="function" id="classwx_memory_buffer_1ae543cfcc8f2934190d99bd04f6d31d84" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -173,7 +173,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="343"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/buffer.h" line="343"/>
       </memberdef>
       <memberdef kind="function" id="classwx_memory_buffer_1ac6cdcfddbd4d8707ac719b5ad9286bf8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -186,7 +186,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="348"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/buffer.h" line="348"/>
       </memberdef>
       <memberdef kind="function" id="classwx_memory_buffer_1acd11911e10cbe857fffd5e7480e76f6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -203,7 +203,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="355"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/buffer.h" line="355"/>
       </memberdef>
       <memberdef kind="function" id="classwx_memory_buffer_1a574a79602d064e51c291971f9b4b8086" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -218,7 +218,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="364"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/buffer.h" line="364"/>
       </memberdef>
       <memberdef kind="function" id="classwx_memory_buffer_1acb3dc059abd84ca5f33ed6af1cc18010" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -235,7 +235,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="369"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/buffer.h" line="369"/>
       </memberdef>
       <memberdef kind="function" id="classwx_memory_buffer_1a933c6ee0caa2362358a1e63eecedee9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -260,7 +260,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="379"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/buffer.h" line="379"/>
       </memberdef>
       <memberdef kind="function" id="classwx_memory_buffer_1a215c28520788d72b9a536c5a22d53aaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -285,7 +285,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="389"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/buffer.h" line="389"/>
       </memberdef>
       <memberdef kind="function" id="classwx_memory_buffer_1abc64d7315750cd8c6a37b3ae5f978aaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -310,7 +310,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="399"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/buffer.h" line="399"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -318,7 +318,7 @@
     <detaileddescription>
 <para><ref refid="classwx_memory_buffer" kindref="compound">wxMemoryBuffer</ref> guarantees deletion of the memory block when the object is destroyed.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" line="275" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/buffer.h" bodystart="274" bodyend="400"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/buffer.h" line="275" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/buffer.h" bodystart="274" bodyend="400"/>
     <listofallmembers>
       <member refid="classwx_memory_buffer_1a98673da88270eff09bb09b1f9d001177" prot="public" virt="non-virtual"><scope>wxMemoryBuffer</scope><name>AppendByte</name></member>
       <member refid="classwx_memory_buffer_1aa6030db293bc18c8bf041df2f371b5b7" prot="public" virt="non-virtual"><scope>wxMemoryBuffer</scope><name>AppendData</name></member>
@@ -334,7 +334,7 @@
       <member refid="classwx_memory_buffer_1a215c28520788d72b9a536c5a22d53aaa" prot="public" virt="non-virtual"><scope>wxMemoryBuffer</scope><name>UngetAppendBuf</name></member>
       <member refid="classwx_memory_buffer_1abc64d7315750cd8c6a37b3ae5f978aaa" prot="public" virt="non-virtual"><scope>wxMemoryBuffer</scope><name>UngetWriteBuf</name></member>
       <member refid="classwx_memory_buffer_1a8272b5a9de53293c1edbf0a62ab81e2f" prot="public" virt="non-virtual"><scope>wxMemoryBuffer</scope><name>wxMemoryBuffer</name></member>
-      <member refid="classwx_memory_buffer_1ae5e0f530609b4417c0d45a4392c6f9ce" prot="public" virt="non-virtual"><scope>wxMemoryBuffer</scope><name>wxMemoryBuffer</name></member>
+      <member refid="classwx_memory_buffer_1a60b99492a70a991287ef587eabda324f" prot="public" virt="non-virtual"><scope>wxMemoryBuffer</scope><name>wxMemoryBuffer</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

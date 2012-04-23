@@ -20,7 +20,7 @@
         <briefdescription>
 <para>This function shows a message to the user in a safe way and should be safe to call even before the application has been initialized or if it is currently in some other strange state (for example, about to crash). </para>        </briefdescription>
         <detaileddescription>
-<para>Under Windows this function shows a message box using a native dialog instead of <ref refid="group__group__funcmacro__dialog_1gaf8a6b7e1e34eae82d3d75e3721298b26" kindref="member">wxMessageBox()</ref> (which might be unsafe to call), elsewhere it simply prints the message to the standard output using the title as prefix.</para><para><parameterlist kind="param"><parameteritem>
+<para>Under Windows this function shows a message box using a native dialog instead of <ref refid="group__group__funcmacro__dialog_1ga193c64ed4802e379799cdb42de252647" kindref="member">wxMessageBox()</ref> (which might be unsafe to call), elsewhere it simply prints the message to the standard output using the title as prefix.</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>title</parametername>
 </parameternamelist>
@@ -39,7 +39,7 @@
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1212"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="1212"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1gaec3640fa3b46c970ff0c86fe354e59ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned long</type>
@@ -53,7 +53,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1222"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="1222"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1ga281928cbfd83d3558148fa75795bd48a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
@@ -72,7 +72,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1233"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="1233"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1gac47036f8bd8f711bf4646418c71828a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -96,7 +96,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
 <para>E.g. using <computeroutput>wxLOG_Message</computeroutput> as first argument, this function behaves like <ref refid="group__group__funcmacro__log_1ga249358701f3c2d410088ddf7a61d8564" kindref="member">wxLogMessage()</ref>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1245"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="1245"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1gaf7fb6625d3aad758275121ed2d20808c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -121,7 +121,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1246"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="1246"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1ga249358701f3c2d410088ddf7a61d8564" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -141,7 +141,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
 <para>They also appear in a message box by default (but it can be changed).</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1257"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="1257"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1gaf24c602f58052639c81ac6f9a8a50206" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -162,7 +162,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1258"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="1258"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1gaf57b7e28ab76bacf10b3be044e8bd634" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -182,7 +182,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
 <para>Normally, it is suppressed, but might be activated if the user wishes to know more details about the program progress (another, but possibly confusing name for the same function could be <computeroutput>wxLogInfo</computeroutput>).</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1270"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="1270"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1ga6fdd51c170ae7c81341aa4e3ee1841ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -203,7 +203,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1271"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="1271"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1ga0c2b19580ef6721508e6d69534b10e90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -223,7 +223,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1282"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="1282"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1ga580ff3e0c308e8f05d2c71fdb5adeb09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -244,7 +244,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1283"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="1283"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1ga4ae39c06cbeaa5461cd1b5c293a31403" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -264,7 +264,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
 <para>Using <emphasis>abort()</emphasis> standard function also terminates the program with this exit code.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1295"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="1295"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1gaa5e94fb56d124f4a0cb1110818e0eac9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -285,7 +285,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1296"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="1296"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1ga0dd3c633f990f794e76065c9a7af4c87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -305,7 +305,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
 <para>the messages that must be shown to the user. The default processing is to pop up a message box to inform the user about it.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1308"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="1308"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1gab29663f34ac598748687e51b77155827" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -326,7 +326,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1309"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="1309"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1ga947e317db477914c12b13c4534867ec9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -361,7 +361,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
 </para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1345"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="1345"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1ga61890f9e44dff168137195c6f2aefe72" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -386,7 +386,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1346"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="1346"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1gae28a46b220921cd87a6f75f0842294c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -407,7 +407,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
         <briefdescription>
 <para>Like <ref refid="group__group__funcmacro__log_1ga9c530ae20eb423744f90874d2c97d02b" kindref="member">wxLogDebug()</ref>, trace functions only do something in debug builds and expand to nothing in the release one. </para>        </briefdescription>
         <detaileddescription>
-<para>The reason for making it a separate function is that usually there are a lot of trace messages, so it might make sense to separate them from other debug messages.</para><para><xrefsect id="deprecated_1_deprecated000030"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This version of <ref refid="group__group__funcmacro__log_1ga947e317db477914c12b13c4534867ec9" kindref="member">wxLogTrace()</ref> only logs the message if all the bits corresponding to the <emphasis>mask</emphasis> are set in the <ref refid="classwx_log" kindref="compound">wxLog</ref> trace mask which can be set by calling wxLog::SetTraceMask(). This version is less flexible than wxLogTrace(const char*,const char*,...) because it doesn&apos;t allow defining the user trace masks easily. This is why it is deprecated in favour of using string trace masks.</para></xrefdescription></xrefsect></para><para>The following bitmasks are defined for wxTraceMask:</para><para><table rows="5" cols="2"><row>
+<para>The reason for making it a separate function is that usually there are a lot of trace messages, so it might make sense to separate them from other debug messages.</para><para><xrefsect id="deprecated_1_deprecated000029"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This version of <ref refid="group__group__funcmacro__log_1ga947e317db477914c12b13c4534867ec9" kindref="member">wxLogTrace()</ref> only logs the message if all the bits corresponding to the <emphasis>mask</emphasis> are set in the <ref refid="classwx_log" kindref="compound">wxLog</ref> trace mask which can be set by calling wxLog::SetTraceMask(). This version is less flexible than wxLogTrace(const char*,const char*,...) because it doesn&apos;t allow defining the user trace masks easily. This is why it is deprecated in favour of using string trace masks.</para></xrefdescription></xrefsect></para><para>The following bitmasks are defined for wxTraceMask:</para><para><table rows="5" cols="2"><row>
 <entry thead="no"><para> wxTraceMemAlloc </para></entry><entry thead="no"><para>Trace memory allocation (new/delete)  </para></entry></row>
 <row>
 <entry thead="no"><para> wxTraceMessages </para></entry><entry thead="no"><para>Trace window messages/X callbacks  </para></entry></row>
@@ -421,7 +421,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
 </para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1377"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="1377"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1ga4e9ae81531ebbdba35a989afe5f16bd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -446,7 +446,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1378"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="1378"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1ga9c530ae20eb423744f90874d2c97d02b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -466,7 +466,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
 <para>They only do something in debug mode (when the preprocessor symbol <computeroutput>__WXDEBUG__</computeroutput> is defined) and expand to nothing in release mode (otherwise).</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1390"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="1390"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1ga3cc30f9f86cfadf7433ad8608c80ab13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -487,7 +487,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1391"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="1391"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1gac241ed1e5d13c7a552f58307c7f16691" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -511,7 +511,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
 <para>when using the second version of the functions).</para><para>If the target frame doesn&apos;t have a statusbar, the message will be lost.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1405"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="1405"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1gaee20d65aac7d45f58b5a02c8dfbca441" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -536,7 +536,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1406"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="1406"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1gadbec1e3fe9fea084a5ec8e6db40771c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -556,7 +556,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1407"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="1407"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1ga8bd4574562557296dc6f090543933571" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -577,7 +577,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1408"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="1408"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1ga28f01715af5aaf37caffdc5bc00fde3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -598,7 +598,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1425"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="1425"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1ga538567f50381dd09a5c91938dff7f3c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -619,7 +619,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="1426"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="1426"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1gac125720c9e98ed47efb181cbc0c05b9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -636,10 +636,10 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000033"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use one of the <ref refid="group__group__funcmacro__log_1ga947e317db477914c12b13c4534867ec9" kindref="member">wxLogTrace()</ref> functions or one of the <ref refid="group__group__funcmacro__log_1ga61890f9e44dff168137195c6f2aefe72" kindref="member">wxVLogTrace()</ref> functions instead.</para></xrefdescription></xrefsect></para><para>Takes printf-style variable argument syntax. Output is directed to the current output stream (see <ref refid="classwx_debug_context" kindref="compound">wxDebugContext</ref>).</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/memory.h&gt; </verbatim> </para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000032"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use one of the <ref refid="group__group__funcmacro__log_1ga947e317db477914c12b13c4534867ec9" kindref="member">wxLogTrace()</ref> functions or one of the <ref refid="group__group__funcmacro__log_1ga61890f9e44dff168137195c6f2aefe72" kindref="member">wxVLogTrace()</ref> functions instead.</para></xrefdescription></xrefsect></para><para>Takes printf-style variable argument syntax. Output is directed to the current output stream (see <ref refid="classwx_debug_context" kindref="compound">wxDebugContext</ref>).</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/memory.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/memory.h" line="207"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/memory.h" line="207"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__log_1gacd709b9186e93bd04c01bd635c7a2cb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -660,10 +660,10 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000034"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use one of the <ref refid="group__group__funcmacro__log_1ga947e317db477914c12b13c4534867ec9" kindref="member">wxLogTrace()</ref> functions or one of the <ref refid="group__group__funcmacro__log_1ga61890f9e44dff168137195c6f2aefe72" kindref="member">wxVLogTrace()</ref> functions instead.</para></xrefdescription></xrefsect></para><para>Takes <emphasis>printf()</emphasis> style variable argument syntax. Output is directed to the current output stream (see <ref refid="classwx_debug_context" kindref="compound">wxDebugContext</ref>). The first argument should be the level at which this information is appropriate. It will only be output if the level returned by <ref refid="classwx_debug_context_1aa2175db985d125950314331d790428c2" kindref="member">wxDebugContext::GetLevel()</ref> is equal to or greater than this value.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/memory.h&gt; </verbatim> </para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000033"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use one of the <ref refid="group__group__funcmacro__log_1ga947e317db477914c12b13c4534867ec9" kindref="member">wxLogTrace()</ref> functions or one of the <ref refid="group__group__funcmacro__log_1ga61890f9e44dff168137195c6f2aefe72" kindref="member">wxVLogTrace()</ref> functions instead.</para></xrefdescription></xrefsect></para><para>Takes <emphasis>printf()</emphasis> style variable argument syntax. Output is directed to the current output stream (see <ref refid="classwx_debug_context" kindref="compound">wxDebugContext</ref>). The first argument should be the level at which this information is appropriate. It will only be output if the level returned by <ref refid="classwx_debug_context_1aa2175db985d125950314331d790428c2" kindref="member">wxDebugContext::GetLevel()</ref> is equal to or greater than this value.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/memory.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/memory.h" line="221"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/memory.h" line="221"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="define">
@@ -674,10 +674,10 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000031"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use one of the <ref refid="group__group__funcmacro__log_1ga947e317db477914c12b13c4534867ec9" kindref="member">wxLogTrace()</ref> functions or one of the <ref refid="group__group__funcmacro__log_1ga61890f9e44dff168137195c6f2aefe72" kindref="member">wxVLogTrace()</ref> functions instead.</para></xrefdescription></xrefsect></para><para>Calls <ref refid="group__group__funcmacro__log_1gac125720c9e98ed47efb181cbc0c05b9e" kindref="member">wxTrace()</ref> with printf-style variable argument syntax. Output is directed to the current output stream (see <ref refid="classwx_debug_context" kindref="compound">wxDebugContext</ref>).</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/memory.h&gt; </verbatim> </para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000030"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use one of the <ref refid="group__group__funcmacro__log_1ga947e317db477914c12b13c4534867ec9" kindref="member">wxLogTrace()</ref> functions or one of the <ref refid="group__group__funcmacro__log_1ga61890f9e44dff168137195c6f2aefe72" kindref="member">wxVLogTrace()</ref> functions instead.</para></xrefdescription></xrefsect></para><para>Calls <ref refid="group__group__funcmacro__log_1gac125720c9e98ed47efb181cbc0c05b9e" kindref="member">wxTrace()</ref> with printf-style variable argument syntax. Output is directed to the current output stream (see <ref refid="classwx_debug_context" kindref="compound">wxDebugContext</ref>).</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/memory.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/memory.h" line="182" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/memory.h" bodystart="182" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/memory.h" line="182" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/memory.h" bodystart="182" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__log_1gaaa8834ddec3fb37c0e07d16a2a29c38e" prot="public" static="no">
         <name>WXTRACELEVEL</name>
@@ -687,10 +687,10 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/log.h&gt; </v
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000032"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use one of the <ref refid="group__group__funcmacro__log_1ga947e317db477914c12b13c4534867ec9" kindref="member">wxLogTrace()</ref> functions or one of the <ref refid="group__group__funcmacro__log_1ga61890f9e44dff168137195c6f2aefe72" kindref="member">wxVLogTrace()</ref> functions instead.</para></xrefdescription></xrefsect></para><para>Calls wxTraceLevel with printf-style variable argument syntax. Output is directed to the current output stream (see <ref refid="classwx_debug_context" kindref="compound">wxDebugContext</ref>). The first argument should be the level at which this information is appropriate. It will only be output if the level returned by <ref refid="classwx_debug_context_1aa2175db985d125950314331d790428c2" kindref="member">wxDebugContext::GetLevel</ref> is equal to or greater than this value.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/memory.h&gt; </verbatim> </para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000031"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use one of the <ref refid="group__group__funcmacro__log_1ga947e317db477914c12b13c4534867ec9" kindref="member">wxLogTrace()</ref> functions or one of the <ref refid="group__group__funcmacro__log_1ga61890f9e44dff168137195c6f2aefe72" kindref="member">wxVLogTrace()</ref> functions instead.</para></xrefdescription></xrefsect></para><para>Calls wxTraceLevel with printf-style variable argument syntax. Output is directed to the current output stream (see <ref refid="classwx_debug_context" kindref="compound">wxDebugContext</ref>). The first argument should be the level at which this information is appropriate. It will only be output if the level returned by <ref refid="classwx_debug_context_1aa2175db985d125950314331d790428c2" kindref="member">wxDebugContext::GetLevel</ref> is equal to or greater than this value.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/memory.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/memory.h" line="196" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/memory.h" bodystart="196" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/memory.h" line="196" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/memory.h" bodystart="196" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

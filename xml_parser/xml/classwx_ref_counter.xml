@@ -16,7 +16,7 @@
 <para>It&apos;s declared <computeroutput>protected</computeroutput> so that <ref refid="classwx_ref_counter" kindref="compound">wxRefCounter</ref> instances will never be destroyed directly but only as result of a <ref refid="classwx_ref_counter_1a803eb5be907b1a342082ceb59c01d8c5" kindref="member">DecRef()</ref> call. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="172"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="172"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -31,7 +31,7 @@
 <para>Initialises the internal reference count to 1. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="178"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="178"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ref_counter_1a803eb5be907b1a342082ceb59c01d8c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -44,7 +44,7 @@
 <para>Please note that after calling this function, the caller should absolutely avoid to use the pointer to this instance since it may not be valid anymore. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="189"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="189"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ref_counter_1a89049a62c4e8f7823e2ef6216685f109" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -57,7 +57,7 @@
 <para>When this goes to zero during a <ref refid="classwx_ref_counter_1a803eb5be907b1a342082ceb59c01d8c5" kindref="member">DecRef()</ref> call, the object will auto-free itself. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="196"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="196"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ref_counter_1a9fec1fb6f778d9df7a8c046ad6a2d887" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="201"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="201"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -80,48 +80,48 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__rtti" kindref="compound">Runtime Type Information (RTTI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_object" kindref="compound">wxObject</ref>, <ref refid="classwx_object_ref_data" kindref="compound">wxObjectRefData</ref>, <ref refid="classwx_object_data_ptr_3_01_t_01_4" kindref="compound">wxObjectDataPtr&lt;T&gt;</ref>, <ref refid="overview_refcount" kindref="compound">Reference Counting</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9050">
+      <node id="9233">
         <label>wxDataViewListStore</label>
         <link refid="classwx_data_view_list_store"/>
-        <childnode refid="9049" relation="public-inheritance">
+        <childnode refid="9232" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9046">
+      <node id="9229">
         <label>wxRefCounter</label>
         <link refid="classwx_ref_counter"/>
       </node>
-      <node id="9049">
+      <node id="9232">
         <label>wxDataViewIndexListModel</label>
         <link refid="classwx_data_view_index_list_model"/>
-        <childnode refid="9048" relation="public-inheritance">
+        <childnode refid="9231" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9047">
+      <node id="9230">
         <label>wxDataViewModel</label>
         <link refid="classwx_data_view_model"/>
-        <childnode refid="9046" relation="public-inheritance">
+        <childnode refid="9229" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9052">
+      <node id="9235">
         <label>wxDataViewTreeStore</label>
         <link refid="classwx_data_view_tree_store"/>
-        <childnode refid="9047" relation="public-inheritance">
+        <childnode refid="9230" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9051">
+      <node id="9234">
         <label>wxDataViewVirtualListModel</label>
         <link refid="classwx_data_view_virtual_list_model"/>
-        <childnode refid="9048" relation="public-inheritance">
+        <childnode refid="9231" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9048">
+      <node id="9231">
         <label>wxDataViewListModel</label>
         <link refid="classwx_data_view_list_model"/>
-        <childnode refid="9047" relation="public-inheritance">
+        <childnode refid="9230" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" line="164" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/object.h" bodystart="163" bodyend="202"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" line="164" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/object.h" bodystart="163" bodyend="202"/>
     <listofallmembers>
       <member refid="classwx_ref_counter_1a803eb5be907b1a342082ceb59c01d8c5" prot="public" virt="non-virtual"><scope>wxRefCounter</scope><name>DecRef</name></member>
       <member refid="classwx_ref_counter_1a89049a62c4e8f7823e2ef6216685f109" prot="public" virt="non-virtual"><scope>wxRefCounter</scope><name>GetRefCount</name></member>

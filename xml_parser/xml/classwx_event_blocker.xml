@@ -25,7 +25,7 @@
 <para>If <emphasis>type</emphasis> is <computeroutput>wxEVT_ANY</computeroutput>, then all events for that window are blocked. You can call <ref refid="classwx_event_blocker_1aaf4da8ee6a529e4959702fb89d9f7311" kindref="member">Block()</ref> after creation to add other event types to the list of events to block.</para><para>Note that the <emphasis>win</emphasis> window <bold>must</bold> remain alive until the <ref refid="classwx_event_blocker" kindref="compound">wxEventBlocker</ref> object destruction. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="305"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="305"/>
       </memberdef>
       <memberdef kind="function" id="classwx_event_blocker_1a84f0c911e0c18b69b51cf6048f52e886" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -38,7 +38,7 @@
 <para>The blocker will remove itself from the chain of event handlers for the window provided in the constructor, thus restoring normal processing of events. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="311"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="311"/>
       </memberdef>
       <memberdef kind="function" id="classwx_event_blocker_1aaf4da8ee6a529e4959702fb89d9f7311" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="316"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="316"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -80,61 +80,61 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="overview_events_1overview_events_processing" kindref="member">How Events are Processed</ref>, <ref refid="classwx_evt_handler" kindref="compound">wxEvtHandler</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5916">
+      <node id="6032">
         <label>wxEventBlocker</label>
         <link refid="classwx_event_blocker"/>
-        <childnode refid="5917" relation="public-inheritance">
+        <childnode refid="6033" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5918">
+      <node id="6034">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5917">
+      <node id="6033">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="5918" relation="public-inheritance">
+        <childnode refid="6034" relation="public-inheritance">
         </childnode>
-        <childnode refid="5919" relation="public-inheritance">
+        <childnode refid="6035" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5919">
+      <node id="6035">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5920">
+      <node id="6036">
         <label>wxEventBlocker</label>
         <link refid="classwx_event_blocker"/>
-        <childnode refid="5921" relation="public-inheritance">
+        <childnode refid="6037" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5922">
+      <node id="6038">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5923" relation="usage">
+        <childnode refid="6039" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5921">
+      <node id="6037">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="5922" relation="public-inheritance">
+        <childnode refid="6038" relation="public-inheritance">
         </childnode>
-        <childnode refid="5924" relation="public-inheritance">
+        <childnode refid="6040" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5924">
+      <node id="6040">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="5923">
+      <node id="6039">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="293" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="292" bodyend="317"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="293" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="292" bodyend="317"/>
     <listofallmembers>
       <member refid="classwx_evt_handler_1a7dc3c701781f4044372049de5004137e" prot="public" virt="non-virtual"><scope>wxEventBlocker</scope><name>AddFilter</name></member>
       <member refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" prot="public" virt="virtual"><scope>wxEventBlocker</scope><name>AddPendingEvent</name></member>
@@ -180,7 +180,6 @@
       <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxEventBlocker</scope><name>SetRefData</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxEventBlocker</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxEventBlocker</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxEventBlocker</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxEventBlocker</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxEventBlocker</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxEventBlocker</scope><name>Unlink</name></member>

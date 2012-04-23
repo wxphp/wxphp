@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/srchctrl.h" line="68"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/srchctrl.h" line="68"/>
       </memberdef>
       <memberdef kind="function" id="classwx_search_ctrl_1a6663657075e790177b0af7b274396fcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -125,7 +125,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/srchctrl.h" line="98"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/srchctrl.h" line="98"/>
       </memberdef>
       <memberdef kind="function" id="classwx_search_ctrl_1ab33ff43ccbce785b684211e66ea04668" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -138,7 +138,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/srchctrl.h" line="103"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/srchctrl.h" line="103"/>
       </memberdef>
       <memberdef kind="function" id="classwx_search_ctrl_1a6a438d8cb2a837e62f4e60cf264c72ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -190,7 +190,7 @@
 <para>This method should be called if the default constructor was used for the control creation. Its parameters have the same meaning as for the non-default constructor. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/srchctrl.h" line="112"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/srchctrl.h" line="112"/>
       </memberdef>
       <memberdef kind="function" id="classwx_search_ctrl_1ac002d07fbe74aaafa2453e37597bdafe" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_menu" kindref="compound">wxMenu</ref> *</type>
@@ -203,7 +203,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/srchctrl.h" line="118"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/srchctrl.h" line="118"/>
       </memberdef>
       <memberdef kind="function" id="classwx_search_ctrl_1a8337d433935228cc41be5b52f3f0ba56" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -216,7 +216,7 @@
 <para>If there is a menu attached, the search button will be visible regardless of the search button visibility value.</para><para>This always returns false in Mac OS X v10.3 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/srchctrl.h" line="127"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/srchctrl.h" line="127"/>
       </memberdef>
       <memberdef kind="function" id="classwx_search_ctrl_1a48359aee898fab25ad71aaf96e147215" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -229,7 +229,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/srchctrl.h" line="132"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/srchctrl.h" line="132"/>
       </memberdef>
       <memberdef kind="function" id="classwx_search_ctrl_1a9f18c479114987e08b5eb6e12a0e4a07" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -254,7 +254,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/srchctrl.h" line="141"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/srchctrl.h" line="141"/>
       </memberdef>
       <memberdef kind="function" id="classwx_search_ctrl_1a0fcdffea50164baa9b34794dc1bb0e01" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -271,7 +271,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/srchctrl.h" line="146"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/srchctrl.h" line="146"/>
       </memberdef>
       <memberdef kind="function" id="classwx_search_ctrl_1a750a459667f79927b860e4cbb556826b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -288,7 +288,7 @@
 <para>If there is a menu attached, the search button will be visible regardless of the search button visibility value.</para><para>This has no effect in Mac OS X v10.3 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/srchctrl.h" line="155"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/srchctrl.h" line="155"/>
       </memberdef>
       <memberdef kind="function" id="classwx_search_ctrl_1a0604addbb924aff847756c6aecfd9423" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -305,7 +305,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/srchctrl.h" line="161"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/srchctrl.h" line="161"/>
       </memberdef>
       <memberdef kind="function" id="classwx_search_ctrl_1afe93c0e1a66c49fd6c9ffcb702bde8ad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -318,7 +318,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/srchctrl.h" line="166"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/srchctrl.h" line="166"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -344,109 +344,109 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/searchctrl.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/searchctrl.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/searchctrl.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_text_ctrl_1a4216ca88aa1610edc00c69e26eb92fbd" kindref="member">wxTextCtrl::Create</ref>, <ref refid="classwx_validator" kindref="compound">wxValidator</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10136">
+      <node id="10319">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10131">
+      <node id="10314">
         <label>wxSearchCtrl</label>
         <link refid="classwx_search_ctrl"/>
-        <childnode refid="10132" relation="public-inheritance">
+        <childnode refid="10315" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10132">
+      <node id="10315">
         <label>wxTextCtrl</label>
         <link refid="classwx_text_ctrl"/>
-        <childnode refid="10133" relation="public-inheritance">
+        <childnode refid="10316" relation="public-inheritance">
         </childnode>
-        <childnode refid="10138" relation="public-inheritance">
+        <childnode refid="10321" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10135">
+      <node id="10318">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10136" relation="public-inheritance">
+        <childnode refid="10319" relation="public-inheritance">
         </childnode>
-        <childnode refid="10137" relation="public-inheritance">
+        <childnode refid="10320" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10137">
+      <node id="10320">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10138">
+      <node id="10321">
         <label>wxTextEntry</label>
         <link refid="classwx_text_entry"/>
       </node>
-      <node id="10133">
+      <node id="10316">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="10134" relation="public-inheritance">
+        <childnode refid="10317" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10134">
+      <node id="10317">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10135" relation="public-inheritance">
+        <childnode refid="10318" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10144">
+      <node id="10327">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10145" relation="usage">
+        <childnode refid="10328" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10139">
+      <node id="10322">
         <label>wxSearchCtrl</label>
         <link refid="classwx_search_ctrl"/>
-        <childnode refid="10140" relation="public-inheritance">
+        <childnode refid="10323" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10140">
+      <node id="10323">
         <label>wxTextCtrl</label>
         <link refid="classwx_text_ctrl"/>
-        <childnode refid="10141" relation="public-inheritance">
+        <childnode refid="10324" relation="public-inheritance">
         </childnode>
-        <childnode refid="10147" relation="public-inheritance">
+        <childnode refid="10330" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10143">
+      <node id="10326">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10144" relation="public-inheritance">
+        <childnode refid="10327" relation="public-inheritance">
         </childnode>
-        <childnode refid="10146" relation="public-inheritance">
+        <childnode refid="10329" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10146">
+      <node id="10329">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10147">
+      <node id="10330">
         <label>wxTextEntry</label>
         <link refid="classwx_text_entry"/>
       </node>
-      <node id="10141">
+      <node id="10324">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="10142" relation="public-inheritance">
+        <childnode refid="10325" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10142">
+      <node id="10325">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10143" relation="public-inheritance">
+        <childnode refid="10326" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10145">
+      <node id="10328">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/srchctrl.h" line="63" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/srchctrl.h" bodystart="62" bodyend="167"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/srchctrl.h" line="63" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/srchctrl.h" bodystart="62" bodyend="167"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxSearchCtrl</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxSearchCtrl</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -645,6 +645,7 @@
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxSearchCtrl</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxSearchCtrl</scope><name>IsBeingDeleted</name></member>
       <member refid="classwx_search_ctrl_1a48359aee898fab25ad71aaf96e147215" prot="public" virt="virtual"><scope>wxSearchCtrl</scope><name>IsCancelButtonVisible</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxSearchCtrl</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxSearchCtrl</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_text_entry_1a2bb43512241850ba7cef54dee029fb86" prot="public" virt="virtual"><scope>wxSearchCtrl</scope><name>IsEditable</name></member>
       <member refid="classwx_text_entry_1a84d0559b6e7720cc230ba35e74e1e158" prot="public" virt="virtual"><scope>wxSearchCtrl</scope><name>IsEmpty</name></member>
@@ -666,6 +667,7 @@
       <member refid="classwx_text_ctrl_1a8a6d38a71d6b6c6979c969462f58d59f" prot="public" virt="non-virtual"><scope>wxSearchCtrl</scope><name>IsSingleLine</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxSearchCtrl</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxSearchCtrl</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxSearchCtrl</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxSearchCtrl</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxSearchCtrl</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxSearchCtrl</scope><name>LineDown</name></member>
@@ -673,7 +675,6 @@
       <member refid="classwx_text_ctrl_1a40e67be01fca0933542d471aadae04fd" prot="public" virt="non-virtual"><scope>wxSearchCtrl</scope><name>LoadFile</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxSearchCtrl</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxSearchCtrl</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxSearchCtrl</scope><name>MakeModal</name></member>
       <member refid="classwx_text_ctrl_1ab89671b5cd9e2da9a978f14e0f9931cf" prot="public" virt="virtual"><scope>wxSearchCtrl</scope><name>MarkDirty</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxSearchCtrl</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxSearchCtrl</scope><name>Move</name></member>
@@ -828,7 +829,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxSearchCtrl</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxSearchCtrl</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxSearchCtrl</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxSearchCtrl</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxSearchCtrl</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxSearchCtrl</scope><name>Unbind</name></member>
       <member refid="classwx_text_entry_1ad3784d539a2554c6eec76c80aa6d97de" prot="public" virt="virtual"><scope>wxSearchCtrl</scope><name>Undo</name></member>

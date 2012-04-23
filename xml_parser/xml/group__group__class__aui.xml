@@ -112,7 +112,7 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxaui" kindref="member">wxAui</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__aui" kindref="compound">Window Docking (wxAUI)</ref> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" bodystart="14" bodyend="36"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" bodystart="14" bodyend="36"/>
       </memberdef>
       <memberdef kind="enum" id="group__group__class__aui_1ga69dac305bd485aa477362ee8749a6bf5" prot="public" static="no">
         <name>wxAuiToolBarArtSetting</name>
@@ -147,7 +147,7 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxaui" kindref="member">wxAui</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__aui" kindref="compound">Window Docking (wxAUI)</ref> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="43" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" bodystart="42" bodyend="47"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" line="43" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" bodystart="42" bodyend="47"/>
       </memberdef>
       <memberdef kind="enum" id="group__group__class__aui_1gaacef34e9982d39c56ea988a2e7ba611b" prot="public" static="no">
         <name>wxAuiToolBarToolTextOrientation</name>
@@ -190,7 +190,7 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxaui" kindref="member">wxAui</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__aui" kindref="compound">Window Docking (wxAUI)</ref> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="54" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" bodystart="53" bodyend="59"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" line="54" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" bodystart="53" bodyend="59"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

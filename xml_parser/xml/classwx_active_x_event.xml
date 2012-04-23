@@ -20,7 +20,7 @@
 <para>This is the numeric value from the .idl file specified by the id(). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/activex.h" line="46"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/ole/activex.h" line="46"/>
       </memberdef>
       <memberdef kind="function" id="classwx_active_x_event_1a1ae5d3cd751c448e7884c83af3e28d67" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/activex.h" line="51"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/ole/activex.h" line="51"/>
       </memberdef>
       <memberdef kind="function" id="classwx_active_x_event_1ac79b05bfe9aea3937db9b2f1d8c3a496" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -50,7 +50,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/activex.h" line="56"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/ole/activex.h" line="56"/>
       </memberdef>
       <memberdef kind="function" id="classwx_active_x_event_1ac820291b0d1f4b556f7219c9d14ff283" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/activex.h" line="61"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/ole/activex.h" line="61"/>
       </memberdef>
       <memberdef kind="function" id="classwx_active_x_event_1a228781b71eedc945f2669ac4c2e7342c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_variant" kindref="compound">wxVariant</ref></type>
@@ -84,7 +84,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/activex.h" line="66"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/ole/activex.h" line="66"/>
       </memberdef>
       <memberdef kind="function" id="classwx_active_x_event_1af7d71e2433aef27681e6eec254ddf1dc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>wxActiveXEventNativeMSW *</type>
@@ -98,7 +98,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/activex.h" line="76"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/ole/activex.h" line="76"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -111,61 +111,61 @@
 ActiveX event parameters can get extremely complex and may be beyond the abilities of <ref refid="classwx_variant" kindref="compound">wxVariant</ref>. If &apos;operator[]&apos; fails, prints an error messages or crashes the application, event handlers should use <ref refid="classwx_active_x_event_1af7d71e2433aef27681e6eec254ddf1dc" kindref="member">GetNativeParameters()</ref> instead to obtain the original event information. Calls to operator[] and GetNativeParmeters() can be mixed. It is valid to handle some parameters of an event with operator[] and others directly through <ref refid="classwx_active_x_event_1af7d71e2433aef27681e6eec254ddf1dc" kindref="member">GetNativeParameters()</ref>. It is <bold>not</bold> valid however to manipulate the same parameter using both approaches at the same time.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4226">
+      <node id="4304">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4224">
+      <node id="4302">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="4225" relation="public-inheritance">
+        <childnode refid="4303" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4223">
+      <node id="4301">
         <label>wxActiveXEvent</label>
         <link refid="classwx_active_x_event"/>
-        <childnode refid="4224" relation="public-inheritance">
+        <childnode refid="4302" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4225">
+      <node id="4303">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="4226" relation="public-inheritance">
+        <childnode refid="4304" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4230">
+      <node id="4308">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4231" relation="usage">
+        <childnode refid="4309" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4228">
+      <node id="4306">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="4229" relation="public-inheritance">
+        <childnode refid="4307" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4227">
+      <node id="4305">
         <label>wxActiveXEvent</label>
         <link refid="classwx_active_x_event"/>
-        <childnode refid="4228" relation="public-inheritance">
+        <childnode refid="4306" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4229">
+      <node id="4307">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="4230" relation="public-inheritance">
+        <childnode refid="4308" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4231">
+      <node id="4309">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/activex.h" line="40" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/activex.h" bodystart="39" bodyend="77"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/ole/activex.h" line="40" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/ole/activex.h" bodystart="39" bodyend="77"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxActiveXEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxActiveXEvent</scope><name>Clone</name></member>

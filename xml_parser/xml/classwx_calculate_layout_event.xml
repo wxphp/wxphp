@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/laywin.h" line="399"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/laywin.h" line="399"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calculate_layout_event_1add92c23892f56f5d9980a075d7a38143" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -34,7 +34,7 @@
 <para>Not currently used. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/laywin.h" line="404"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/laywin.h" line="404"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calculate_layout_event_1a7efc8c5ae474d7119424191061330c4e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rect" kindref="compound">wxRect</ref></type>
@@ -47,7 +47,7 @@
 <para>When the event handler returns, this should contain the remaining parent client rectangle, after the event handler has subtracted the area that its window occupies. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/laywin.h" line="414"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/laywin.h" line="414"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calculate_layout_event_1a004b0f2a708dd3ff682d50492e7863a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -64,7 +64,7 @@
 <para>Not currently used. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/laywin.h" line="419"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/laywin.h" line="419"/>
       </memberdef>
       <memberdef kind="function" id="classwx_calculate_layout_event_1a471737747c444846393309de6e24eabc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/laywin.h" line="425"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/laywin.h" line="425"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -95,49 +95,49 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_query_layout_info_event" kindref="compound">wxQueryLayoutInfoEvent</ref>, <ref refid="classwx_sash_layout_window" kindref="compound">wxSashLayoutWindow</ref>, <ref refid="classwx_layout_algorithm" kindref="compound">wxLayoutAlgorithm</ref>. </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4658">
+      <node id="4748">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4656">
+      <node id="4746">
         <label>wxCalculateLayoutEvent</label>
         <link refid="classwx_calculate_layout_event"/>
-        <childnode refid="4657" relation="public-inheritance">
+        <childnode refid="4747" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4657">
+      <node id="4747">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="4658" relation="public-inheritance">
+        <childnode refid="4748" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4661">
+      <node id="4751">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4662" relation="usage">
+        <childnode refid="4752" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4659">
+      <node id="4749">
         <label>wxCalculateLayoutEvent</label>
         <link refid="classwx_calculate_layout_event"/>
-        <childnode refid="4660" relation="public-inheritance">
+        <childnode refid="4750" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4660">
+      <node id="4750">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="4661" relation="public-inheritance">
+        <childnode refid="4751" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4662">
+      <node id="4752">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/laywin.h" line="394" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/laywin.h" bodystart="393" bodyend="426"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/laywin.h" line="394" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/laywin.h" bodystart="393" bodyend="426"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxCalculateLayoutEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxCalculateLayoutEvent</scope><name>Clone</name></member>

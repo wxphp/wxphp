@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/bar.h" line="29"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/bar.h" line="29"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_bar_event_1a2fbdbda6d81719e13a911035f58c9027" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_ribbon_page" kindref="compound">wxRibbonPage</ref> *</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/bar.h" line="34"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/bar.h" line="34"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_bar_event_1abb0eb4fe0f83e8a1eebf83968ca4ed6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/bar.h" line="39"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/bar.h" line="39"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -71,73 +71,73 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxribbon" kindref="member">wxRibbon</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref>, <ref refid="group__group__class__ribbon" kindref="compound">Ribbon User Interface</ref></para><para><simplesect kind="see"><para><ref refid="classwx_ribbon_bar" kindref="compound">wxRibbonBar</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9103">
+      <node id="9286">
         <label>wxRibbonBarEvent</label>
         <link refid="classwx_ribbon_bar_event"/>
-        <childnode refid="9104" relation="public-inheritance">
+        <childnode refid="9287" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9107">
+      <node id="9290">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="9105">
+      <node id="9288">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="9106" relation="public-inheritance">
+        <childnode refid="9289" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9104">
+      <node id="9287">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="9105" relation="public-inheritance">
+        <childnode refid="9288" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9106">
+      <node id="9289">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="9107" relation="public-inheritance">
+        <childnode refid="9290" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9108">
+      <node id="9291">
         <label>wxRibbonBarEvent</label>
         <link refid="classwx_ribbon_bar_event"/>
-        <childnode refid="9109" relation="public-inheritance">
+        <childnode refid="9292" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9112">
+      <node id="9295">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9113" relation="usage">
+        <childnode refid="9296" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9110">
+      <node id="9293">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="9111" relation="public-inheritance">
+        <childnode refid="9294" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9109">
+      <node id="9292">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="9110" relation="public-inheritance">
+        <childnode refid="9293" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9111">
+      <node id="9294">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="9112" relation="public-inheritance">
+        <childnode refid="9295" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9113">
+      <node id="9296">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/bar.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/bar.h" bodystart="21" bodyend="40"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/bar.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/bar.h" bodystart="21" bodyend="40"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxRibbonBarEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_notify_event_1a7b23515f827b2ce1da1e6990d9aafe80" prot="public" virt="non-virtual"><scope>wxRibbonBarEvent</scope><name>Allow</name></member>

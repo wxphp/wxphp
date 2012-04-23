@@ -50,13 +50,13 @@
 <para>The dialogs title is set to <computeroutput>caption</computeroutput>, it contains a (possibly) multiline <computeroutput>message</computeroutput> above the single line <computeroutput>prompt</computeroutput> and the zone for entering the number.</para><para>The number entered must be in the range <computeroutput>min</computeroutput> to <computeroutput>max</computeroutput> (both of which should be positive) and <computeroutput>value</computeroutput> is the initial value of it. If the user enters an invalid value, it is forced to fall into the specified range. If the user cancels the dialog, the function returns -1.</para><para>Dialog is centered on its <computeroutput>parent</computeroutput> unless an explicit position is given in <computeroutput>pos</computeroutput>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/numdlg.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/numdlg.h" line="34"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/numdlg.h" line="34"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/numdlg.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/numdlg.h"/>
   </compounddef>
 </doxygen>

@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="184"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/accel.h" line="198"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accelerator_table_1a7c7fd90b4c8197da20334c9c34665121" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -53,7 +53,7 @@
 <bold>wxPerl Note:</bold> The wxPerl constructor accepts a list of either Wx::AcceleratorEntry objects or references to 3-element arrays [flags, keyCode, cmd] , like the parameters of Wx::AcceleratorEntry::new. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="201"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/accel.h" line="215"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accelerator_table_1ad40d0d1e5af3b79b6746042f2f14a045" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -78,7 +78,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="211"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/accel.h" line="225"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accelerator_table_1a139eacdb95c97899ba040607b616cece" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -91,7 +91,7 @@
 <para>See <ref refid="overview_refcount_1overview_refcount_destruct" kindref="member">Object Destruction</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="217"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/accel.h" line="231"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accelerator_table_1aa1b41a9778357f38c6eb9093a002b79f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -104,7 +104,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="222"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/accel.h" line="236"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -123,37 +123,37 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para>Predefined objects/pointers: <ref refid="accel_8h_1ad73e85397cbc1a674e32e3ab77d3ee34" kindref="member">wxNullAcceleratorTable</ref></para><para><simplesect kind="see"><para><ref refid="classwx_accelerator_entry" kindref="compound">wxAcceleratorEntry</ref>, <ref refid="classwx_window_1a0af5e9aa4dee6a4e92c0700f92605642" kindref="member">wxWindow::SetAcceleratorTable</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4194">
+      <node id="4272">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4193">
+      <node id="4271">
         <label>wxAcceleratorTable</label>
         <link refid="classwx_accelerator_table"/>
-        <childnode refid="4194" relation="public-inheritance">
+        <childnode refid="4272" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4196">
+      <node id="4274">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4197" relation="usage">
+        <childnode refid="4275" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4195">
+      <node id="4273">
         <label>wxAcceleratorTable</label>
         <link refid="classwx_accelerator_table"/>
-        <childnode refid="4196" relation="public-inheritance">
+        <childnode refid="4274" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4197">
+      <node id="4275">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="179" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" bodystart="178" bodyend="223"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/accel.h" line="193" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/accel.h" bodystart="192" bodyend="237"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxAcceleratorTable</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxAcceleratorTable</scope><name>CloneRefData</name></member>

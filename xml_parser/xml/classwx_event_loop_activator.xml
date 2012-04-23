@@ -19,7 +19,7 @@
 <para>This saves the current return value of <ref refid="classwx_event_loop_base_1a2027e53527c15342c2e23c8217e82ca3" kindref="member">wxEventLoopBase::GetActive()</ref> and then calls <ref refid="classwx_event_loop_base_1a23646c8c2bdf2def39c856ac8ec250d8" kindref="member">wxEventLoopBase::SetActive()</ref> with the given <emphasis>loop</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/evtloop.h" line="282"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/evtloop.h" line="282"/>
       </memberdef>
       <memberdef kind="function" id="classwx_event_loop_activator_1ab82e79297d4af502a409c7fa7d5ebccc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/evtloop.h" line="287"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/evtloop.h" line="287"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -50,7 +50,7 @@
 </programlisting></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__appmanagement" kindref="compound">Application and Process Management</ref></para><para><simplesect kind="see"><para><ref refid="classwx_event_loop_base" kindref="compound">wxEventLoopBase</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/evtloop.h" line="274" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/evtloop.h" bodystart="273" bodyend="288"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/evtloop.h" line="274" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/evtloop.h" bodystart="273" bodyend="288"/>
     <listofallmembers>
       <member refid="classwx_event_loop_activator_1a822800a6803d17d59baaa098e447af6c" prot="public" virt="non-virtual"><scope>wxEventLoopActivator</scope><name>wxEventLoopActivator</name></member>
       <member refid="classwx_event_loop_activator_1ab82e79297d4af502a409c7fa7d5ebccc" prot="public" virt="non-virtual"><scope>wxEventLoopActivator</scope><name>~wxEventLoopActivator</name></member>

@@ -21,7 +21,7 @@
 Call <ref refid="classwx_temp_file_output_stream_1a7d5c6d29cfd95b7c3fa0a726c6687839" kindref="member">Commit()</ref> or <ref refid="classwx_output_stream_1a1c306ce99990d525921f8f6ae8432083" kindref="member">wxOutputStream::Close()</ref> to replace the old file and close this one. Calling <ref refid="classwx_temp_file_output_stream_1ae6ac7d9d3609c317b9ac398279d0f114" kindref="member">Discard()</ref> (or allowing the destructor to do it) will discard the changes. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wfstream.h" line="34"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wfstream.h" line="34"/>
       </memberdef>
       <memberdef kind="function" id="classwx_temp_file_output_stream_1a7d5c6d29cfd95b7c3fa0a726c6687839" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -34,7 +34,7 @@ Call <ref refid="classwx_temp_file_output_stream_1a7d5c6d29cfd95b7c3fa0a726c6687
 <para>Returns true if both actions succeeded.</para><para>If false is returned it may unfortunately mean two quite different things: either that either the old file couldn&apos;t be deleted or that the new file couldn&apos;t be renamed to the old name. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wfstream.h" line="44"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wfstream.h" line="44"/>
       </memberdef>
       <memberdef kind="function" id="classwx_temp_file_output_stream_1ae6ac7d9d3609c317b9ac398279d0f114" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -47,7 +47,7 @@ Call <ref refid="classwx_temp_file_output_stream_1a7d5c6d29cfd95b7c3fa0a726c6687
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wfstream.h" line="50"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wfstream.h" line="50"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -57,42 +57,42 @@ Call <ref refid="classwx_temp_file_output_stream_1a7d5c6d29cfd95b7c3fa0a726c6687
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_temp_file" kindref="compound">wxTempFile</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10733">
+      <node id="10918">
         <label>wxTempFileOutputStream</label>
         <link refid="classwx_temp_file_output_stream"/>
-        <childnode refid="10734" relation="public-inheritance">
+        <childnode refid="10919" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10735">
+      <node id="10920">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="10734">
+      <node id="10919">
         <label>wxOutputStream</label>
         <link refid="classwx_output_stream"/>
-        <childnode refid="10735" relation="public-inheritance">
+        <childnode refid="10920" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10736">
+      <node id="10921">
         <label>wxTempFileOutputStream</label>
         <link refid="classwx_temp_file_output_stream"/>
-        <childnode refid="10737" relation="public-inheritance">
+        <childnode refid="10922" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10738">
+      <node id="10923">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="10737">
+      <node id="10922">
         <label>wxOutputStream</label>
         <link refid="classwx_output_stream"/>
-        <childnode refid="10738" relation="public-inheritance">
+        <childnode refid="10923" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wfstream.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wfstream.h" bodystart="21" bodyend="51"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wfstream.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/wfstream.h" bodystart="21" bodyend="51"/>
     <listofallmembers>
       <member refid="classwx_output_stream_1a1c306ce99990d525921f8f6ae8432083" prot="public" virt="virtual"><scope>wxTempFileOutputStream</scope><name>Close</name></member>
       <member refid="classwx_temp_file_output_stream_1a7d5c6d29cfd95b7c3fa0a726c6687839" prot="public" virt="virtual"><scope>wxTempFileOutputStream</scope><name>Commit</name></member>

@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="663"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="652"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_layout_adapter_1a08173985cfdfca4a8b5bdc5f10b64bc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -32,7 +32,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="668"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="657"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dialog_layout_adapter_1adb59c3238b594b88faa4aab892b9bdd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>bool</type>
@@ -49,7 +49,7 @@
 <para>Normally this function will be called just before the dialog is shown. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="675"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="664"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -58,7 +58,7 @@
 <para>Principally, this is to cater for small displays by making part of the dialog scroll, but the application developer may find other uses for layout adaption.</para><para>By default, there is one instance of wxStandardDialogLayoutAdapter which can perform adaptation for most custom dialogs and dialogs with book controls such as <ref refid="classwx_property_sheet_dialog" kindref="compound">wxPropertySheetDialog</ref>.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__winlayout" kindref="compound">Window Layout</ref></para><para><simplesect kind="see"><para><ref refid="overview_dialog_1overview_dialog_autoscrolling" kindref="member">Automatic scrolling dialogs</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" line="658" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dialog.h" bodystart="657" bodyend="676"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" line="647" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dialog.h" bodystart="646" bodyend="665"/>
     <listofallmembers>
       <member refid="classwx_dialog_layout_adapter_1a08173985cfdfca4a8b5bdc5f10b64bc0" prot="public" virt="pure-virtual"><scope>wxDialogLayoutAdapter</scope><name>CanDoLayoutAdaptation</name></member>
       <member refid="classwx_dialog_layout_adapter_1adb59c3238b594b88faa4aab892b9bdd8" prot="public" virt="pure-virtual"><scope>wxDialogLayoutAdapter</scope><name>DoLayoutAdaptation</name></member>

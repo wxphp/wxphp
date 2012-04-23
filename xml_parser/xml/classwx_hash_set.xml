@@ -15,7 +15,7 @@
 <para>Please remember that hash sets do not guarantee ordering. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashset.h" line="160"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashset.h" line="160"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_set_1a215be550553feb0f0dc2da770c3a5ff7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>iterator</type>
@@ -28,7 +28,7 @@
 <para>Please remember that hash sets do not guarantee ordering. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashset.h" line="161"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashset.h" line="161"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -43,7 +43,7 @@
 <para>Please remember that hash sets do not guarantee ordering. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashset.h" line="185"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashset.h" line="185"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_set_1a64e72e9f58a5f33fd24aa2e3ca3b3b00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>iterator</type>
@@ -56,7 +56,7 @@
 <para>Please remember that hash sets do not guarantee ordering. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashset.h" line="186"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashset.h" line="186"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -75,7 +75,7 @@
 <para>After the deletion the iterator is no longer valid and must not be used. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashset.h" line="200"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashset.h" line="200"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_set_1a2f289bb421d517896f400176ba539fe8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -92,7 +92,7 @@
 <para>After the deletion the iterator is no longer valid and must not be used. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashset.h" line="201"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashset.h" line="201"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -112,7 +112,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashset.h" line="213"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashset.h" line="213"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_set_1adb4b274b7d8c9fbca9e4453f0971fe12" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const_iterator</type>
@@ -130,7 +130,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashset.h" line="214"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashset.h" line="214"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -150,7 +150,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashset.h" line="148"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashset.h" line="148"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_set_1aa9819f9680e3450479cf7be1d832fd9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -167,7 +167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashset.h" line="153"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashset.h" line="153"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_set_1a81dee12cfec562dcd8ebf14b77bbecf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -180,7 +180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashset.h" line="167"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashset.h" line="167"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_set_1ae102adc16fa54b4aba2eefbb355c228a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_type</type>
@@ -197,7 +197,7 @@
 <para>This function returns only 0 or 1. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashset.h" line="173"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashset.h" line="173"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_set_1a7fe7d3968606d33a1dca3a75b47ec827" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -210,7 +210,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashset.h" line="178"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashset.h" line="178"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_set_1a1c54e60d26122a8eae9c3dfe12446e2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_type</type>
@@ -227,7 +227,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashset.h" line="193"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashset.h" line="193"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_set_1ad8c4392cba0a4b1f903b9cfe788180da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>Insert_Result</type>
@@ -245,7 +245,7 @@
 </programlisting> The iterator points to the inserted element, the boolean value is true if <emphasis>v</emphasis> was actually inserted. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashset.h" line="224"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashset.h" line="224"/>
       </memberdef>
       <memberdef kind="function" id="classwx_hash_set_1a31c570890219139fafc7b8b62c29db8a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_type</type>
@@ -258,7 +258,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashset.h" line="229"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashset.h" line="229"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -267,11 +267,11 @@
 <para>The interface is similar to std::tr1::hash_set or std::set classes but notice that, unlike std::set, the contents of a hash set is not sorted.</para><para>Example: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MyClass<sp/>{<sp/>...<sp/>};</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>same,<sp/>with<sp/>MyClass*<sp/>keys<sp/>(only<sp/>uses<sp/>pointer<sp/>equality!)</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WX_DECLARE_HASH_SET(<sp/>MyClass*,<sp/>wxPointerHash,<sp/>wxPointerEqual,<sp/>MySet1<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WX_DECLARE_HASH_SET(<sp/>MyClass*,<sp/>::wxPointerHash,<sp/>::wxPointerEqual,<sp/>MySet1<sp/>);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>same,<sp/>with<sp/>int<sp/>keys</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WX_DECLARE_HASH_SET(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>wxIntegerHash,<sp/>wxIntegerEqual,<sp/>MySet2<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WX_DECLARE_HASH_SET(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>::wxIntegerHash,<sp/>::wxIntegerEqual,<sp/>MySet2<sp/>);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>declare<sp/>a<sp/>hash<sp/>set<sp/>with<sp/>string<sp/>keys</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WX_DECLARE_HASH_SET(<sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref>,<sp/>wxStringHash,<sp/>wxStringEqual,<sp/>MySet3<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WX_DECLARE_HASH_SET(<sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref>,<sp/>::wxStringHash,<sp/>::wxStringEqual,<sp/>MySet3<sp/>);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MySet1<sp/>h1;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MySet2<sp/>h1;</highlight></codeline>
@@ -303,8 +303,8 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>KEY_EQ_T,<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>key<sp/>equality<sp/>predicate</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CLASSNAME);<sp/></highlight><highlight class="comment">//<sp/>name<sp/>of<sp/>the<sp/>class</highlight></codeline>
 </programlisting> The HASH_T and KEY_EQ_T are the types used for the hashing function and key comparison. wxWidgets provides three predefined hashing functions: wxIntegerHash for integer types ( int, long, short, and their unsigned counterparts ), wxStringHash for strings ( <ref refid="classwx_string" kindref="compound">wxString</ref>, wxChar*, char* ), and wxPointerHash for any kind of pointer. Similarly three equality predicates: wxIntegerEqual, wxStringEqual, wxPointerEqual are provided. Using this you could declare a hash set using int values like this:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WX_DECLARE_HASH_SET(<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxIntegerHash,</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxIntegerEqual,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::wxIntegerHash,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::wxIntegerEqual,</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MySet<sp/>);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>using<sp/>an<sp/>user-defined<sp/>class<sp/>for<sp/>keys</highlight><highlight class="normal"></highlight></codeline>
@@ -338,8 +338,8 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WX_DECLARE_HASH_SET(<sp/>MyKey,<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>type<sp/>of<sp/>the<sp/>keys</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MyKeyHash,<sp/><sp/></highlight><highlight class="comment">//<sp/>hasher</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MyKeyEqual,<sp/></highlight><highlight class="comment">//<sp/>key<sp/>equality<sp/>predicate</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::MyKeyHash,<sp/><sp/></highlight><highlight class="comment">//<sp/>hasher</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>::MyKeyEqual,<sp/></highlight><highlight class="comment">//<sp/>key<sp/>equality<sp/>predicate</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CLASSNAME);<sp/></highlight><highlight class="comment">//<sp/>name<sp/>of<sp/>the<sp/>class</highlight></codeline>
 </programlisting></para></sect1>
 <sect1 id="classwx_hash_set_1hashset_types">
@@ -352,7 +352,7 @@
 <para>An iterator is similar to a pointer, and so you can use the usual pointer operations: ++it ( and it++ ) to move to the next element, *it to access the element pointed to, *it to access the value of the element pointed to. Hash sets provide forward only iterators, this means that you can&apos;t use --it, it + 3, it1 - it2.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__containers" kindref="compound">Containers</ref> </para></sect1>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashset.h" line="142" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/hashset.h" bodystart="141" bodyend="230"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/hashset.h" line="142" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/hashset.h" bodystart="141" bodyend="230"/>
     <listofallmembers>
       <member refid="classwx_hash_set_1af71a133692e70c51624551d353094263" prot="public" virt="non-virtual"><scope>wxHashSet</scope><name>begin</name></member>
       <member refid="classwx_hash_set_1a215be550553feb0f0dc2da770c3a5ff7" prot="public" virt="non-virtual"><scope>wxHashSet</scope><name>begin</name></member>

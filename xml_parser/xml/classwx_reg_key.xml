@@ -26,7 +26,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="100" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" bodystart="99" bodyend="103"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="100" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" bodystart="99" bodyend="103"/>
       </memberdef>
       <memberdef kind="enum" id="classwx_reg_key_1a1dcc4de4d1cc4370399e8813cb6abd5b" prot="public" static="no">
         <name>StdKey</name>
@@ -92,7 +92,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="109" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" bodystart="108" bodyend="118"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="109" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" bodystart="108" bodyend="118"/>
       </memberdef>
       <memberdef kind="enum" id="classwx_reg_key_1a50c331bab4eb972c283eeaf59fc448ae" prot="public" static="no">
         <name>ValueType</name>
@@ -186,7 +186,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="124" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" bodystart="123" bodyend="138"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="124" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" bodystart="123" bodyend="138"/>
       </memberdef>
       <memberdef kind="enum" id="classwx_reg_key_1a89e5048d817178768bd50e7b53663b25" prot="public" static="no">
         <name>WOW64ViewMode</name>
@@ -218,7 +218,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="147" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" bodystart="146" bodyend="165"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="147" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" bodystart="146" bodyend="165"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -238,7 +238,7 @@
 <para>The <emphasis>viewMode</emphasis> parameter is new since wxWidgets 2.9.2. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="75"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="75"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1a19174e100d25186fbe7ef1c6cabd5f97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -260,7 +260,7 @@
 <para>The <emphasis>viewMode</emphasis> parameter is new since wxWidgets 2.9.2. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="82"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="82"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1aa55e66f45518852805625ff7e8536e93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -286,7 +286,7 @@
 <para>The <emphasis>viewMode</emphasis> parameter is new since wxWidgets 2.9.2. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="89"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="89"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1ae0d1d90d6d998bd62fafb6a8d5931647" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -307,7 +307,7 @@
 <para>The registry view is inherited from the parent. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="94"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="94"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1a312d2f0b1a2c7f5c0255ad3c31bb024d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -320,7 +320,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="170"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="170"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1adf91359cd740646a987c28de6fed1f4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -337,7 +337,7 @@
 <para>Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="176"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="176"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1a6214549194a56e78c64894d72b369044" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -354,7 +354,7 @@
 <para>Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="181"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="181"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1a3d49c254202ddd95c09b62a1085e785b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -380,7 +380,7 @@
 <para>By default it will remain the same. Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="188"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="188"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1afb4737a6c170dcb8531ec62d858f5e66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -398,7 +398,7 @@
 <para>Will fail if the key already exists and <emphasis>bOkIfExists</emphasis> is false. Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="193"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="193"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1aa6a7cac55a2265c0c30ed2cd64d378ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -415,7 +415,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="198"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="198"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1a50441e0f6e031b2745d25de9a0aac520" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -428,7 +428,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="203"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="203"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1ab6f2ecf7e1a8a65e93eb16379ff88e29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -445,7 +445,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="209"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="209"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1a0906e47c998da3bb435bdaef650d2872" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -458,7 +458,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="214"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="214"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1aadbb20792adf347cef9dd5ca331bad63" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -475,7 +475,7 @@
 <para>(The file will not be overwritten; it&apos;s an error if it already exists.) Note that we export the key in REGEDIT4 format, not RegSaveKey() binary format nor the newer REGEDIT5. Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="222"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="222"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1a2b77e7f711e4d76e1898073e3b9c8df1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -492,7 +492,7 @@
 <para>Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="227"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="227"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1a2fd4a5275642fa4ab5b6abf2a4d913b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -513,7 +513,7 @@
 <para>Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="232"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="232"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1a630083f901d76e90762eafb466503f37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -534,7 +534,7 @@
 <para>Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="237"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="237"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1ac1ac5f10a317eb671e86e71211999492" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -592,7 +592,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="252"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="252"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1afd4495f50319e49b64e8883d70eb38af" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -610,7 +610,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="257"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="257"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1a3a30ff77a2a47e38d637660bfc3a4435" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classwx_reg_key_1a89e5048d817178768bd50e7b53663b25" kindref="member">WOW64ViewMode</ref></type>
@@ -625,7 +625,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="266" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" bodystart="266" bodyend="266"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="266" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" bodystart="266" bodyend="266"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1a09c4e4adcfaa4fb351655ffe9fea84eb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -646,7 +646,7 @@
 <para>Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="271"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="271"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1a2472b182be142a4380faa42c9b13fdbb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -667,7 +667,7 @@
 <para>Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="276"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="276"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1a806826a8afab140dfcb0b8ca9a46b869" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_reg_key_1a50c331bab4eb972c283eeaf59fc448ae" kindref="member">ValueType</ref></type>
@@ -684,7 +684,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="281"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="281"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1ae9ee885dd29cb661023eb2e2f1bdc071" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -701,20 +701,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="286"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="286"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_reg_key_1abb47141de665cd334a2b4cc3ad491101" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_reg_key_1a113d48a6b154a10005e8fc66aee68e5d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
-        <definition>bool wxRegKey::HasSubKeys</definition>
+        <definition>bool wxRegKey::HasSubkeys</definition>
         <argsstring>() const </argsstring>
-        <name>HasSubKeys</name>
+        <name>HasSubkeys</name>
         <briefdescription>
 <para>Returns true if any subkeys exist. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="291"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="291"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1a40a961cfd8d4f6e89e8f287a9e415546" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -731,7 +731,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="296"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="296"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1ac64f86ae0be0d3a171adbb39c0bed4c3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -744,7 +744,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="301"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="301"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1a27ce237e89b919c716de3bef7b33d511" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -757,7 +757,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="306"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="306"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1aa7e2acc6bb64794dd3b8404999575be5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -774,7 +774,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="311"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="311"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1ae444b007cb2bc68e993ec1461596e01c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -787,7 +787,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="316"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="316"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1a40c5e3c3e24c12063824200882fff4e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -805,7 +805,7 @@
 <para>This method also allows the key to be opened in read-only mode by passing <ref refid="classwx_reg_key_1a10e685bc8b2e08cde20cb56f9623182da883aac4bfd536335487f496e3541408a" kindref="member">wxRegKey::Read</ref> instead of default <ref refid="classwx_reg_key_1a10e685bc8b2e08cde20cb56f9623182da7edf59adb9ff7ead05ecd96192487a21" kindref="member">wxRegKey::Write</ref> parameter. Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="323"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="323"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1a805f399e3a9ea5e6b835cbbb767cd009" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_reg_key" kindref="compound">wxRegKey</ref> &amp;</type>
@@ -822,7 +822,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="328"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="328"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1a498487f0546354587875fbd7cfb47ec4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -835,7 +835,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="333"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="333"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1a789d3546decb64839fdee5e5df6aff8b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -856,7 +856,7 @@
 <para>Returns true if successful. An empty <emphasis>szValue</emphasis> queries the default/unnamed key value. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="339"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="339"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1ac99a8d456b47f96675d860547ae164b4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -881,7 +881,7 @@
 <para>Returns true if successful. An empty <emphasis>szValue</emphasis> queries the default/unnamed key value. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="345"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="345"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1a1e3e238d81f3ed0e58ddae42d0603a63" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -902,7 +902,7 @@
 <para>Returns true if successful. An empty <emphasis>szValue</emphasis> queries the default/unnamed key value. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="351"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="351"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1acd7c953cb0c78cee2330a7c5ecb9d5fc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -923,7 +923,7 @@
 <para>Returns true if successful. An empty <emphasis>szValue</emphasis> queries the default/unnamed key value. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="357"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="357"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1a38e51ebf1385c9033ebd3a7bea6d6986" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -940,7 +940,7 @@
 <para>Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="362"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="362"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1a1c90a9935936ef22bb07da98ad6f63d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -961,7 +961,7 @@
 <para>Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="368"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="368"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1a3da9da0a4d05099e401c8a6dbe00d2f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -978,7 +978,7 @@
 <para>For <ref refid="classwx_reg_config" kindref="compound">wxRegConfig</ref> usage only. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="373"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="373"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1ae23e53cadf2f45b28edf682fb80c084a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -995,7 +995,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="378"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="378"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1a72d31e5f221d4f095d665a4f5c8d7365" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1012,7 +1012,7 @@
 <para>The name is absolute. It should start with HKEY_xxx. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="384"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="384"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1a7353a628be350a23662286d9499e4ba7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1033,7 +1033,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="388"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="388"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1a8271d8e1e600c7e228e5beef22363aff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1054,7 +1054,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="392"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="392"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1ad0372a04a86fc1a6a8c511e26ce0f8be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1075,7 +1075,7 @@
 <para>If the value doesn&apos;t exist, it is created. Returns true if successful. An empty <emphasis>szValue</emphasis> sets the default/unnamed key value. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="399"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="399"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1a12bfa3628e634e739f1b97906a2db665" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1096,7 +1096,7 @@
 <para>If the value doesn&apos;t exist, it is created. Returns true if successful. An empty <emphasis>szValue</emphasis> sets the default/unnamed key value. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="405"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="405"/>
       </memberdef>
       <memberdef kind="function" id="classwx_reg_key_1a2f7b85a0eb027682d69fcbd860eac54b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1117,7 +1117,7 @@
 <para>If the value doesn&apos;t exist, it is created. Returns true if successful. An empty <emphasis>szValue</emphasis> sets the default/unnamed key value. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="411"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="411"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1147,7 +1147,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Read<sp/>the<sp/>value<sp/>back.</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>value;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>key.QueryValue(</highlight><highlight class="stringliteral">&quot;MyValue&quot;</highlight><highlight class="normal">,<sp/>&amp;value);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__dialog_1gaf8a6b7e1e34eae82d3d75e3721298b26" kindref="member" tooltip="Show a general purpose message dialog.">wxMessageBox</ref>(<ref refid="classwx_string_1addd9ccfa3ae2b7ab2d66bcbf034d0be0" kindref="member" tooltip="This static function returns the string containing the result of calling Printf() with the passed par...">wxString::Format</ref>(</highlight><highlight class="stringliteral">&quot;%d&quot;</highlight><highlight class="normal">,<sp/>value),<sp/></highlight><highlight class="stringliteral">&quot;Registry<sp/>Value&quot;</highlight><highlight class="normal">,<sp/><ref refid="defs_8h_1a9c40266b61a27f0124a69a699753889a" kindref="member">wxOK</ref>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__dialog_1ga193c64ed4802e379799cdb42de252647" kindref="member" tooltip="Show a general purpose message dialog.">wxMessageBox</ref>(<ref refid="classwx_string_1addd9ccfa3ae2b7ab2d66bcbf034d0be0" kindref="member" tooltip="This static function returns the string containing the result of calling Printf() with the passed par...">wxString::Format</ref>(</highlight><highlight class="stringliteral">&quot;%d&quot;</highlight><highlight class="normal">,<sp/>value),<sp/></highlight><highlight class="stringliteral">&quot;Registry<sp/>Value&quot;</highlight><highlight class="normal">,<sp/><ref refid="defs_8h_1a9c40266b61a27f0124a69a699753889a" kindref="member">wxOK</ref>);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>number<sp/>of<sp/>subkeys<sp/>and<sp/>enumerate<sp/>them.</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>subkeys;</highlight></codeline>
@@ -1157,12 +1157,12 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>key.GetFirstKey(key_name,<sp/>1);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>subkeys;<sp/>i++)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__dialog_1gaf8a6b7e1e34eae82d3d75e3721298b26" kindref="member" tooltip="Show a general purpose message dialog.">wxMessageBox</ref>(key_name,<sp/></highlight><highlight class="stringliteral">&quot;Subkey<sp/>Name&quot;</highlight><highlight class="normal">,<sp/><ref refid="defs_8h_1a9c40266b61a27f0124a69a699753889a" kindref="member">wxOK</ref>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="group__group__funcmacro__dialog_1ga193c64ed4802e379799cdb42de252647" kindref="member" tooltip="Show a general purpose message dialog.">wxMessageBox</ref>(key_name,<sp/></highlight><highlight class="stringliteral">&quot;Subkey<sp/>Name&quot;</highlight><highlight class="normal">,<sp/><ref refid="defs_8h_1a9c40266b61a27f0124a69a699753889a" kindref="member">wxOK</ref>);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>key.GetNextKey(key_name,<sp/>1);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" line="68" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/registry.h" bodystart="67" bodyend="412"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" line="68" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/registry.h" bodystart="67" bodyend="412"/>
     <listofallmembers>
       <member refid="classwx_reg_key_1a10e685bc8b2e08cde20cb56f9623182d" prot="public" virt="non-virtual"><scope>wxRegKey</scope><name>AccessMode</name></member>
       <member refid="classwx_reg_key_1a312d2f0b1a2c7f5c0255ad3c31bb024d" prot="public" virt="non-virtual"><scope>wxRegKey</scope><name>Close</name></member>
@@ -1185,7 +1185,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
       <member refid="classwx_reg_key_1a806826a8afab140dfcb0b8ca9a46b869" prot="public" virt="non-virtual"><scope>wxRegKey</scope><name>GetValueType</name></member>
       <member refid="classwx_reg_key_1a3a30ff77a2a47e38d637660bfc3a4435" prot="public" virt="non-virtual"><scope>wxRegKey</scope><name>GetView</name></member>
       <member refid="classwx_reg_key_1ae9ee885dd29cb661023eb2e2f1bdc071" prot="public" virt="non-virtual"><scope>wxRegKey</scope><name>HasSubKey</name></member>
-      <member refid="classwx_reg_key_1abb47141de665cd334a2b4cc3ad491101" prot="public" virt="non-virtual"><scope>wxRegKey</scope><name>HasSubKeys</name></member>
+      <member refid="classwx_reg_key_1a113d48a6b154a10005e8fc66aee68e5d" prot="public" virt="non-virtual"><scope>wxRegKey</scope><name>HasSubkeys</name></member>
       <member refid="classwx_reg_key_1a40a961cfd8d4f6e89e8f287a9e415546" prot="public" virt="non-virtual"><scope>wxRegKey</scope><name>HasValue</name></member>
       <member refid="classwx_reg_key_1ac64f86ae0be0d3a171adbb39c0bed4c3" prot="public" virt="non-virtual"><scope>wxRegKey</scope><name>HasValues</name></member>
       <member refid="classwx_reg_key_1a1dcc4de4d1cc4370399e8813cb6abd5ba1742b9de7b1e5c3265f27256f99ca525" prot="public" virt="non-virtual"><scope>wxRegKey</scope><name>HKCC</name></member>

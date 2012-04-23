@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="199"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="199"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1ab0dc7fb1c079f1fc8ca7df8987e261fc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
@@ -47,7 +47,7 @@
 <para>Use this for converting a width, for example. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="206"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="206"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1aac47fb25f72317712e74a7e2903ba704" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
@@ -64,7 +64,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="212"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="212"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a57fa7329b7890bb56cc7e05fc83e033c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
@@ -81,7 +81,7 @@
 <para>Use this for converting a height, for example. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="219"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="219"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a3f551058c92d68efa61548d266f6a750" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
@@ -98,7 +98,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="225"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="225"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1adccbd84729882831bcbd0cb2c3e550a6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
@@ -115,7 +115,7 @@
 <para>Use this for converting a width, for example. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="232"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="232"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a9b5bd5a823388f8b941406315c5eeafb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
@@ -132,7 +132,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="238"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="238"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1aea082fd9d45adb6783542493439b73dc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
@@ -149,7 +149,7 @@
 <para>Use this for converting a height, for example. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="245"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="245"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -166,7 +166,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="259"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="259"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a348f8cd1ba0ffcf62b8145628b0a5492" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -203,7 +203,7 @@
 <para>The current pen is used for the outline and the current brush for filling the shape.</para><para>The arc is drawn in a counter-clockwise direction from the start point to the end point. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="271"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="271"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1abe49b852e96ff500ef6333bfc044890f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -228,7 +228,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="276"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="276"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1af982eb2d3b10c5617ef3559d51a1defc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -259,7 +259,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="291"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="291"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a9449053951eceeb7984125cd4a694fd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -285,7 +285,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="297"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="297"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a8ad34eda4c0b75ca905d466c6328fe91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -314,7 +314,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="302"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="302"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a14fe0d838374721e98d6254cdd1484a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -331,7 +331,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="307"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="307"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a62fd1c810d532e53a25e3b2e6fd621f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -357,7 +357,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="314"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="314"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a560192c6dcb33c5bde404f3647234657" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -378,7 +378,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="319"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="319"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a340697f08f5fd08d9db383ffcef642c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -408,7 +408,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="328"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="328"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a8a7a8478797c599e91125168669a5f36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -429,7 +429,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="333"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="333"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a637167c299d7e58832cf9c71f6f64fd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -446,7 +446,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="338"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="338"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a821e0b82707ca0379273cca67913da06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -483,7 +483,7 @@
 <para>The current pen is used for drawing the arc and the current brush is used for drawing the pie.</para><para><emphasis>x</emphasis> and <emphasis>y</emphasis> specify the x and y coordinates of the upper-left corner of the rectangle that contains the ellipse.</para><para><emphasis>width</emphasis> and <emphasis>height</emphasis> specify the width and height of the rectangle that contains the ellipse.</para><para><emphasis>start</emphasis> and <emphasis>end</emphasis> specify the start and end of the arc relative to the three-o&apos;clock position from the center of the rectangle. Angles are specified in degrees (360 is a complete circle). Positive values mean counter-clockwise motion. If <emphasis>start</emphasis> is equal to <emphasis>end</emphasis>, a complete ellipse will be drawn. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="357"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="357"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a5f18a7aee18b69c8721aec67ea0a3532" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -512,7 +512,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="363"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="363"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a890d011a03308a28039d4940dd04264e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -537,7 +537,7 @@
 <para>This can be the simplest way of drawing bitmaps on a window. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="370"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="370"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a5719d8c36a03d1679828c5d89d33dd67" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -558,7 +558,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="375"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="375"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1ae28d7aa2e17a850f4ca15c042a870152" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -598,7 +598,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="386"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="386"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a9e4ddef5a10fdcee96ff9ef2fded9ee3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -629,7 +629,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="393"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="393"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a12f2c236d4d320acec0bc6fe20e8399d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -658,7 +658,7 @@
 <para>The current pen is used for drawing the line. Note that the point (<emphasis>x2</emphasis>, <emphasis>y2</emphasis>) is not part of the line and is not drawn by this function (this is consistent with the behaviour of many other toolkits). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="401"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="401"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a34f84b8b73cf782e6d9ab0f629598b6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -679,7 +679,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="406"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="406"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a6480acc286278f7d87358586e51fa205" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -708,10 +708,10 @@
         <briefdescription>
 <para>Draws lines using an array of points of size <emphasis>n</emphasis> adding the optional offset coordinate. </para>        </briefdescription>
         <detaileddescription>
-<para>The current pen is used for drawing the lines.</para><para><bold>wxPython Note:</bold> The wxPython version of this method accepts a Python list of <ref refid="classwx_point" kindref="compound">wxPoint</ref> objects.</para><para><bold>wxPerl Note:</bold> Not supported by wxPerl. </para>        </detaileddescription>
+<para>The current pen is used for drawing the lines.</para><para><bold>wxPerl Note:</bold> Not supported by wxPerl. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="422"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="417"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a23cbb356e46890c99fcb5304d077f888" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -735,10 +735,10 @@
         <briefdescription>
 <para>This method uses a list of wxPoints, adding the optional offset coordinate. </para>        </briefdescription>
         <detaileddescription>
-<para>The programmer is responsible for deleting the list of points.</para><para><bold>wxPython Note:</bold> The wxPython version of this method accepts a Python list of <ref refid="classwx_point" kindref="compound">wxPoint</ref> objects.</para><para><bold>wxPerl Note:</bold> The wxPerl version of this method accepts as its first parameter a reference to an array of <ref refid="classwx_point" kindref="compound">wxPoint</ref> objects. </para>        </detaileddescription>
+<para>The programmer is responsible for deleting the list of points.</para><para><bold>wxPerl Note:</bold> The wxPerl version of this method accepts as its first parameter a reference to an array of <ref refid="classwx_point" kindref="compound">wxPoint</ref> objects. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="440"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="430"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a8380aab866e8f3947e0898cf08969d9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -759,7 +759,7 @@
 <para>Note that the other properties of the pen are not used, such as width. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="446"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="436"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a9b75ad987adc0c01d13c34db101b3539" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -776,7 +776,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="451"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="441"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1af3ded6183d3ba706d0377e5c25fcaf83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -813,7 +813,7 @@
 <para>The first and last points are automatically closed.</para><para>The last argument specifies the fill rule: <bold>wxODDEVEN_RULE</bold> (the default) or <bold>wxWINDING_RULE</bold>.</para><para>The current pen is used for drawing the outline, and the current brush for filling the shape. Using a transparent brush suppresses filling.</para><para><bold>wxPerl Note:</bold> Not supported by wxPerl. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="470"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="460"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a6e5808ba5b740f0d4df5da02b05ce5ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -842,10 +842,10 @@
         <briefdescription>
 <para>This method draws a filled polygon using a list of wxPoints, adding the optional offset coordinate. </para>        </briefdescription>
         <detaileddescription>
-<para>The first and last points are automatically closed.</para><para>The last argument specifies the fill rule: <bold>wxODDEVEN_RULE</bold> (the default) or <bold>wxWINDING_RULE</bold>.</para><para>The current pen is used for drawing the outline, and the current brush for filling the shape. Using a transparent brush suppresses filling.</para><para>The programmer is responsible for deleting the list of points.</para><para><bold>wxPython Note:</bold> The wxPython version of this method accepts a Python list of <ref refid="classwx_point" kindref="compound">wxPoint</ref> objects.</para><para><bold>wxPerl Note:</bold> The wxPerl version of this method accepts as its first parameter a reference to an array of <ref refid="classwx_point" kindref="compound">wxPoint</ref> objects. </para>        </detaileddescription>
+<para>The first and last points are automatically closed.</para><para>The last argument specifies the fill rule: <bold>wxODDEVEN_RULE</bold> (the default) or <bold>wxWINDING_RULE</bold>.</para><para>The current pen is used for drawing the outline, and the current brush for filling the shape. Using a transparent brush suppresses filling.</para><para>The programmer is responsible for deleting the list of points.</para><para><bold>wxPerl Note:</bold> The wxPerl version of this method accepts as its first parameter a reference to an array of <ref refid="classwx_point" kindref="compound">wxPoint</ref> objects. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="497"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="482"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a3beb1e45475b7f62babd123944818703" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -884,10 +884,10 @@
         <briefdescription>
 <para>Draws two or more filled polygons using an array of <emphasis>points</emphasis>, adding the optional offset coordinates. </para>        </briefdescription>
         <detaileddescription>
-<para>Notice that for the platforms providing a native implementation of this function (Windows and PostScript-based <ref refid="classwx_d_c" kindref="compound">wxDC</ref> currently), this is more efficient than using <ref refid="classwx_d_c_1af3ded6183d3ba706d0377e5c25fcaf83" kindref="member">DrawPolygon()</ref> in a loop.</para><para><emphasis>n</emphasis> specifies the number of polygons to draw, the array <emphasis>count</emphasis> of size <emphasis>n</emphasis> specifies the number of points in each of the polygons in the <emphasis>points</emphasis> array.</para><para>The last argument specifies the fill rule: <bold>wxODDEVEN_RULE</bold> (the default) or <bold>wxWINDING_RULE</bold>.</para><para>The current pen is used for drawing the outline, and the current brush for filling the shape. Using a transparent brush suppresses filling.</para><para>The polygons maybe disjoint or overlapping. Each polygon specified in a call to <ref refid="classwx_d_c_1a3beb1e45475b7f62babd123944818703" kindref="member">DrawPolyPolygon()</ref> must be closed. Unlike polygons created by the <ref refid="classwx_d_c_1af3ded6183d3ba706d0377e5c25fcaf83" kindref="member">DrawPolygon()</ref> member function, the polygons created by this method are not closed automatically.</para><para><bold>wxPython Note:</bold> Not implemented yet. </para>        </detaileddescription>
+<para>Notice that for the platforms providing a native implementation of this function (Windows and PostScript-based <ref refid="classwx_d_c" kindref="compound">wxDC</ref> currently), this is more efficient than using <ref refid="classwx_d_c_1af3ded6183d3ba706d0377e5c25fcaf83" kindref="member">DrawPolygon()</ref> in a loop.</para><para><emphasis>n</emphasis> specifies the number of polygons to draw, the array <emphasis>count</emphasis> of size <emphasis>n</emphasis> specifies the number of points in each of the polygons in the <emphasis>points</emphasis> array.</para><para>The last argument specifies the fill rule: <bold>wxODDEVEN_RULE</bold> (the default) or <bold>wxWINDING_RULE</bold>.</para><para>The current pen is used for drawing the outline, and the current brush for filling the shape. Using a transparent brush suppresses filling.</para><para>The polygons maybe disjoint or overlapping. Each polygon specified in a call to <ref refid="classwx_d_c_1a3beb1e45475b7f62babd123944818703" kindref="member">DrawPolyPolygon()</ref> must be closed. Unlike polygons created by the <ref refid="classwx_d_c_1af3ded6183d3ba706d0377e5c25fcaf83" kindref="member">DrawPolygon()</ref> member function, the polygons created by this method are not closed automatically. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="528"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="509"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a918b9ae3447a2fc13f4c38c628a45c01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -916,7 +916,7 @@
 <para>The current pen is used for the outline and the current brush for filling the shape. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="535"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="516"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a5499c7359d84871343e4875902c06a69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -937,7 +937,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="540"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="521"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1ae0a8c6fe2eb45f6f03339b049db6b2b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -954,7 +954,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="545"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="526"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1aae5aff11939d5c55ab5c50987e4f2521" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -985,7 +985,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="559"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="540"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a791bc8502da484f1d3163e360cf91e8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1010,7 +1010,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="565"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="546"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a94db29e2a40a16dc19ac852d05cd65b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1043,7 +1043,7 @@
 <para>The corners are quarter-circles using the given radius. The current pen is used for the outline and the current brush for filling the shape.</para><para>If <emphasis>radius</emphasis> is positive, the value is assumed to be the radius of the rounded corner. If <emphasis>radius</emphasis> is negative, the absolute value is assumed to be the <emphasis>proportion</emphasis> of the smallest dimension of the rectangle. This means that the corner can be a sensible size relative to the size of the rectangle, and also avoids the strange effects X produces when the corners are too big for the rectangle. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="581"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="562"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a9e4b8ab031042016d434606eb7744c9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1068,7 +1068,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="587"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="568"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a926fb2251b9185e58f15c41f680aaf2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1089,7 +1089,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="592"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="573"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a45ae54ccc969bac583b14988dd2ea01e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1108,10 +1108,10 @@
         <briefdescription>
 <para>Draws a spline between all given points using the current pen. </para>        </briefdescription>
         <detaileddescription>
-<para><bold>wxPython Note:</bold> The wxPython version of this method accepts a Python list of <ref refid="classwx_point" kindref="compound">wxPoint</ref> objects.</para><para><bold>wxPerl Note:</bold> Not supported by wxPerl. </para>        </detaileddescription>
+<para><bold>wxPerl Note:</bold> Not supported by wxPerl. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="606"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="582"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1aacfb4bab651f9eb572e42cd2870c40c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1128,7 +1128,7 @@
 <para><bold>wxPerl Note:</bold> The wxPerl version of this method accepts as its first parameter a reference to an array of <ref refid="classwx_point" kindref="compound">wxPoint</ref> objects. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="618"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="594"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a60c358ff3cfbf2b6f6d1918b527de98a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1165,7 +1165,7 @@
 <para><bold>wxPerl Note:</bold> Not supported by wxPerl. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="629"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="605"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a11d35ce34fccb57b0efc7dc91168660b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1191,7 +1191,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="647"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="623"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a17f5674c449449b730c63f773534d721" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1212,7 +1212,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="652"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="628"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a323802ed579056fce98220f5d1778076" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1238,7 +1238,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="666"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="642"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a2f0cd1850aefeda55b25cf56d55ac495" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1268,7 +1268,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="682"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="658"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a9cfbde2fcde06ffacf323f3a9dd1b020" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1298,7 +1298,7 @@
 <para>The <emphasis>nDirection</emphasis> specifies the direction of the colour change, default is to use <emphasis>initialColour</emphasis> on the left part of the rectangle and <emphasis>destColour</emphasis> on the right one. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="694"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="670"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1af510e22ffc274d3d3b29659941f2b5a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1329,11 +1329,11 @@
 <para><itemizedlist>
 <listitem><para>wxFLOOD_SURFACE: The flooding occurs until a colour other than the given colour is encountered.</para></listitem><listitem><para>wxFLOOD_BORDER: The area to be flooded is bounded by the given colour.</para></listitem></itemizedlist>
 </para><para><simplesect kind="return"><para>false if the operation failed.</para></simplesect>
-<simplesect kind="note"><para>The present implementation for non-Windows platforms may fail to find colour borders if the pixels do not match the colour exactly. However the function will still return true. </para></simplesect>
+<simplesect kind="note"><para>The present implementation for non-Windows platforms may fail to find colour borders if the pixels do not match the colour exactly. However the function will still return true.</para><simplesectsep/><para>This method shouldn&apos;t be used with <ref refid="classwx_paint_d_c" kindref="compound">wxPaintDC</ref> under non-Windows platforms as it uses <ref refid="classwx_d_c_1a3f82f6b54ba2e6f348de7f779487b234" kindref="member">GetPixel()</ref> internally and this may give wrong results, notably in wxGTK. If you need to flood fill <ref refid="classwx_paint_d_c" kindref="compound">wxPaintDC</ref>, create a temporary <ref refid="classwx_memory_d_c" kindref="compound">wxMemoryDC</ref>, flood fill it and then blit it to, or draw as a bitmap on, <ref refid="classwx_paint_d_c" kindref="compound">wxPaintDC</ref>. See the example of doing this in the drawing sample and <ref refid="classwx_buffered_paint_d_c" kindref="compound">wxBufferedPaintDC</ref> class. </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="712"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="695"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1aa3ad38fdcd0e731af94bd9c3189e72e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1359,7 +1359,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="718"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="701"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1af8bab4cd7ffc3050974236a32afa1e1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1381,7 +1381,7 @@
 <para>This is a vertical and horizontal line the height and width of the window, centred on the given point. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="725"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="708"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1ad5ad1b17105668a9cba6f4f6cc902a02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1398,7 +1398,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="730"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="713"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -1416,7 +1416,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="745"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="728"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1ad5e374115511157ceed3d4c983a4dd7f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1443,10 +1443,10 @@
         <briefdescription>
 <para>Gets the rectangle surrounding the current clipping region. </para>        </briefdescription>
         <detaileddescription>
-<para><bold>wxPython Note:</bold> No arguments are required and the four values defining the rectangle are returned as a tuple. </para>        </detaileddescription>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="755"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="733"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a21ce8b27db0da5d68b8571d0ff39114b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1477,7 +1477,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="776"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="754"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a800f7ca2a4a7588ff68d808eb06191e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1499,7 +1499,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="781"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="759"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a9a397f713db57f7999b5851a5b25dd84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1517,7 +1517,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="786"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="764"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a382a46c105ebad94e848e74e9cc0b4b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1534,7 +1534,7 @@
 <para>Unlike <ref refid="classwx_d_c_1a21ce8b27db0da5d68b8571d0ff39114b" kindref="member">SetClippingRegion()</ref>, this function works with physical coordinates and not with the logical ones. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="794"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="772"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -1550,7 +1550,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="807"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="785"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a2d854a964cbabc521ac6a84b0b1ffe20" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
@@ -1563,7 +1563,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="812"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="790"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a017ad82379a6e52d6b2ba1d212b65950" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structwx_font_metrics" kindref="compound">wxFontMetrics</ref></type>
@@ -1577,7 +1577,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="827"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="805"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a1983be5fdf9e88127d15fff119a0ef03" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1614,7 +1614,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="853"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="831"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1af04e14231873e8659c4e88036f1bb8ce" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -1634,7 +1634,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="869"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="847"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1aa0dd5cdd1ce56ff3d1c23d233711653d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1652,11 +1652,11 @@
         <briefdescription>
 <para>Fills the <emphasis>widths</emphasis> array with the widths from the beginning of <emphasis>text</emphasis> to the corresponding character of <emphasis>text</emphasis>. </para>        </briefdescription>
         <detaileddescription>
-<para>The generic version simply builds a running total of the widths of each character using <ref refid="classwx_d_c_1ae55cbf1bc7b7e836cb192eb48d31efab" kindref="member">GetTextExtent()</ref>, however if the various platforms have a native API function that is faster or more accurate than the generic implementation then it should be used instead.</para><para><bold>wxPython Note:</bold> This method only takes the <emphasis>text</emphasis> parameter and returns a Python list of integers.</para><para><bold>wxPerl Note:</bold> In wxPerl this method only takes the <emphasis>text</emphasis> parameter and returns the widths as a list of integers.</para><para><simplesect kind="see"><para><ref refid="classwx_d_c_1a1983be5fdf9e88127d15fff119a0ef03" kindref="member">GetMultiLineTextExtent()</ref>, <ref refid="classwx_d_c_1ae55cbf1bc7b7e836cb192eb48d31efab" kindref="member">GetTextExtent()</ref> </para></simplesect>
+<para>The generic version simply builds a running total of the widths of each character using <ref refid="classwx_d_c_1ae55cbf1bc7b7e836cb192eb48d31efab" kindref="member">GetTextExtent()</ref>, however if the various platforms have a native API function that is faster or more accurate than the generic implementation then it should be used instead.</para><para><bold>wxPerl Note:</bold> In wxPerl this method only takes the <emphasis>text</emphasis> parameter and returns the widths as a list of integers.</para><para><simplesect kind="see"><para><ref refid="classwx_d_c_1a1983be5fdf9e88127d15fff119a0ef03" kindref="member">GetMultiLineTextExtent()</ref>, <ref refid="classwx_d_c_1ae55cbf1bc7b7e836cb192eb48d31efab" kindref="member">GetTextExtent()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="892"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="865"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1ae55cbf1bc7b7e836cb192eb48d31efab" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1694,13 +1694,11 @@
 <para>Gets the dimensions of the string using the currently selected font. </para>        </briefdescription>
         <detaileddescription>
 <para><emphasis>string</emphasis> is the text string to measure, <emphasis>descent</emphasis> is the dimension from the baseline of the font to the bottom of the descender, and <emphasis>externalLeading</emphasis> is any extra vertical space added to the font by the font designer (usually is zero).</para><para>The text extent is returned in <emphasis>w</emphasis> and <emphasis>h</emphasis> pointers or as a <ref refid="classwx_size" kindref="compound">wxSize</ref> object depending on which version of this function is used.</para><para>If the optional parameter <emphasis>font</emphasis> is specified and valid, then it is used for the text extent calculation. Otherwise the currently selected font is.</para><para><simplesect kind="note"><para>This function only works with single-line strings.</para></simplesect>
-<bold>wxPython Note:</bold> The following methods are implemented in wxPython:<itemizedlist>
-<listitem><para>GetTextExtent(string) - Returns a 2-tuple, (width, height).</para></listitem><listitem><para>GetFullTextExtent(string, font=NULL) - Returns a 4-tuple, (width, height, descent, externalLeading).</para></listitem></itemizedlist>
-</para><para><bold>wxPerl Note:</bold> In wxPerl this method is implemented as GetTextExtent(string, font = undef) returning a 4-element list (width, height, descent, externalLeading)</para><para><simplesect kind="see"><para><ref refid="classwx_font" kindref="compound">wxFont</ref>, <ref refid="classwx_d_c_1afab18239d707cd403235b36a987171a8" kindref="member">SetFont()</ref>, <ref refid="classwx_d_c_1aa0dd5cdd1ce56ff3d1c23d233711653d" kindref="member">GetPartialTextExtents()</ref>, <ref refid="classwx_d_c_1a1983be5fdf9e88127d15fff119a0ef03" kindref="member">GetMultiLineTextExtent()</ref> </para></simplesect>
+<bold>wxPerl Note:</bold> In wxPerl this method is implemented as GetTextExtent(string, font = undef) returning a 4-element list (width, height, descent, externalLeading)</para><para><simplesect kind="see"><para><ref refid="classwx_font" kindref="compound">wxFont</ref>, <ref refid="classwx_d_c_1afab18239d707cd403235b36a987171a8" kindref="member">SetFont()</ref>, <ref refid="classwx_d_c_1aa0dd5cdd1ce56ff3d1c23d233711653d" kindref="member">GetPartialTextExtents()</ref>, <ref refid="classwx_d_c_1a1983be5fdf9e88127d15fff119a0ef03" kindref="member">GetMultiLineTextExtent()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="929"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="895"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1ac195999acf9dd440bf92272eb4206c35" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -1717,7 +1715,7 @@
 <para><bold>wxPerl Note:</bold> Not supported by wxPerl. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="939"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="905"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -1734,7 +1732,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="954"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="920"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a06000dac38b658a388a9ad1d9d029a2a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_font" kindref="compound">wxFont</ref> &amp;</type>
@@ -1747,7 +1745,7 @@
 <para>Notice that even although each device context object has some default font after creation, this method would return a <ref refid="interface_2wx_2font_8h_1aa81b6e7b8f74356bfe604485a4be1066" kindref="member">wxNullFont</ref> initially and only after calling <ref refid="classwx_d_c_1afab18239d707cd403235b36a987171a8" kindref="member">SetFont()</ref> a valid font is returned. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="963"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="929"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a781d5a5c56d1c3caeca4e3e18847fb47" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="intl_8h_1a7e30efec05ef9b40b1750ac046400c81" kindref="member">wxLayoutDirection</ref></type>
@@ -1761,7 +1759,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="973"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="939"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a1f3d318c90a2e7a89fb116feeacd4bcf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
@@ -1775,7 +1773,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="980"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="946"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a0f044e87752d3c5e49a7f028fb3c44de" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
@@ -1789,7 +1787,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="987"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="953"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a86c405ae265e6fdb4e393c4c9ada73c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1806,7 +1804,7 @@
 <para>This setting determines whether text will be drawn with a background colour or not. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="995"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="961"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1afab18239d707cd403235b36a987171a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1824,7 +1822,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1006"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="972"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a3ed22bd0a0b835d4d085261bb022766b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1841,7 +1839,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1011"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="977"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1aeac811df9a1688ce875117f3049849d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1859,7 +1857,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1019"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="985"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a16196571f402cabf506619e8bf9f1586" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1885,7 +1883,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1030"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="996"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -1910,7 +1908,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1046"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1012"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a8829696c6ebabed7053f8a9479fabeef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
@@ -1923,7 +1921,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1051"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1017"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a90b1bc13bd01e442754e91935a8d0ef3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
@@ -1936,7 +1934,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1056"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1022"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a603de4a911be9500e5eb5ffda87750bc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
@@ -1949,7 +1947,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1061"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1027"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1aecfe126a0ebb9818f1b3abf43675e744" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
@@ -1962,7 +1960,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1066"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1032"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a35ed8c0c64315ec85588142d44f83af8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1976,7 +1974,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1074"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1040"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -1997,7 +1995,7 @@
 <para><emphasis>message</emphasis> is a message to show while printing. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1088"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1054"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a94c855ceb9f2fd5dcd1cf61396c13576" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2010,7 +2008,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1093"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1059"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a95a506a0153d24dc352577161d45081c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2024,7 +2022,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1098"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1064"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a3867f84557ecaf68bfeacffea74e8902" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2038,7 +2036,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1103"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1069"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -2097,9 +2095,9 @@
           <defval><ref refid="defs_8h_1ae297119c813ec5d3328ce3f43f9ac6c1" kindref="member">wxDefaultCoord</ref></defval>
         </param>
         <briefdescription>
-<para>Copy from a source DC to this DC, specifying the destination coordinates, size of area to copy, source DC, source coordinates, logical function, whether to use a bitmap mask, and mask source position. </para>        </briefdescription>
+<para>Copy from a source DC to this DC. </para>        </briefdescription>
         <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
+<para>With this method you can specify the destination coordinates and the size of area to copy which will be the same for both the source and target DCs. If you need to apply scaling while copying, use <ref refid="classwx_d_c_1a82801167a35e747218c49aa2161ae4bf" kindref="member">StretchBlit()</ref>.</para><para>Notice that source DC coordinates <emphasis>xsrc</emphasis> and <emphasis>ysrc</emphasis> are interpreted using the current source DC coordinate system, i.e. the scale, origin position and axis directions are taken into account when transforming them to physical (pixel) coordinates.</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>xdest</parametername>
 </parameternamelist>
@@ -2197,7 +2195,7 @@ This sequence of operations ensures that the source&apos;s transparent area need
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1178"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1151"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a82801167a35e747218c49aa2161ae4bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2261,9 +2259,9 @@ This sequence of operations ensures that the source&apos;s transparent area need
           <defval><ref refid="defs_8h_1ae297119c813ec5d3328ce3f43f9ac6c1" kindref="member">wxDefaultCoord</ref></defval>
         </param>
         <briefdescription>
-<para>Copy from a source DC to this DC, specifying the destination coordinates, destination size, source DC, source coordinates, size of source area to copy, logical function, whether to use a bitmap mask, and mask source position. </para>        </briefdescription>
+<para>Copy from a source DC to this DC possibly changing the scale. </para>        </briefdescription>
         <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
+<para>Unlike <ref refid="classwx_d_c_1a12bed94a15136b9080683f4151042a34" kindref="member">Blit()</ref>, this method allows to specify different source and destination region sizes, meaning that it can stretch or shrink it while copying. The same can be achieved by changing the scale of the source or target DC but calling this method is simpler and can also be more efficient if the platform provides a native implementation of it.</para><para>The meaning of its other parameters is the same as with <ref refid="classwx_d_c_1a12bed94a15136b9080683f4151042a34" kindref="member">Blit()</ref>, in particular all source coordinates are interpreted using the source DC coordinate system, i.e. are affected by its scale, origin translation and axis direction.</para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>xdest</parametername>
 </parameternamelist>
@@ -2370,12 +2368,12 @@ This sequence of operations ensures that the source&apos;s transparent area need
 <para>Source y position on the mask. If both xsrcMask and ysrcMask are wxDefaultCoord, <emphasis>xsrc</emphasis> and <emphasis>ysrc</emphasis> will be assumed for the mask source position. Currently only implemented on Windows.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f4151042a34" kindref="member">Blit()</ref> in <ref refid="classwx_post_script_d_c" kindref="compound">wxPostScriptDC</ref>, under X.</para><para><ref refid="classwx_d_c_1a82801167a35e747218c49aa2161ae4bf" kindref="member">StretchBlit()</ref> is only implemented under wxMAC and wxMSW.</para><para>See <ref refid="classwx_memory_d_c" kindref="compound">wxMemoryDC</ref> for typical usage.</para><para><simplesect kind="since"><para>2.9.0</para></simplesect>
+There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f4151042a34" kindref="member">Blit()</ref> in <ref refid="classwx_post_script_d_c" kindref="compound">wxPostScriptDC</ref>, under X.</para><para>See <ref refid="classwx_memory_d_c" kindref="compound">wxMemoryDC</ref> for typical usage.</para><para><simplesect kind="since"><para>2.9.0</para></simplesect>
 <simplesect kind="see"><para><ref refid="classwx_d_c_1a12bed94a15136b9080683f4151042a34" kindref="member">Blit()</ref>, <ref refid="classwx_memory_d_c" kindref="compound">wxMemoryDC</ref>, <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref>, <ref refid="classwx_mask" kindref="compound">wxMask</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1259"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1238"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -2392,7 +2390,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1273"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1252"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1aca9a1077274d59d88b31261de91665f0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_brush" kindref="compound">wxBrush</ref> &amp;</type>
@@ -2406,7 +2404,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1280"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1259"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a575cce713b210ca802d9d7ba0d39d3a7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_pen" kindref="compound">wxPen</ref> &amp;</type>
@@ -2420,7 +2418,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1287"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1266"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1ad0139f6542f619244b80d4db7f685f86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2437,7 +2435,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1292"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1271"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a13978b2624116987a59ff729c4f81a96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2455,7 +2453,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1304"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1283"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a0d229733fbc83c7e4c483c0714d090b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2473,7 +2471,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1316"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1295"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -2491,7 +2489,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1534"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1505"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a6e3243fcb5d194ef5637f4bda11a49c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2509,7 +2507,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1546"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1517"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1ae763dfe2be3673044770adb67f7a212f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_affine_matrix2_d" kindref="compound">wxAffineMatrix2D</ref></type>
@@ -2523,7 +2521,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1555"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1526"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a41a9a4f616da21afdcad0fe1585ca066" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2537,7 +2535,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1562"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1533"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -2566,7 +2564,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1333"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1312"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a04e455c37a61a0929fc8328c0fdbc5f4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -2580,7 +2578,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1340"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1319"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a8c6448e0f9b102f764964c74b46be1a9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
@@ -2594,7 +2592,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1347"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1326"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1aaa63fac56c04221856bcae7e669a64af" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2dc_8h_1a07398221a1f9dfecf424c90c5c777d54" kindref="member">wxRasterOperationMode</ref></type>
@@ -2608,7 +2606,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1354"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1333"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a05edb97114a25ac879146b87a7c1d8f5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2dc_8h_1a5a641b839b9ac2ff94514d0596f6e20a" kindref="member">wxMappingMode</ref></type>
@@ -2622,7 +2620,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1361"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1340"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a3f82f6b54ba2e6f348de7f779487b234" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2645,11 +2643,11 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
         <briefdescription>
 <para>Gets in <emphasis>colour</emphasis> the colour at the specified location. </para>        </briefdescription>
         <detaileddescription>
-<para>Not available for <ref refid="classwx_post_script_d_c" kindref="compound">wxPostScriptDC</ref> or <ref refid="classwx_metafile_d_c" kindref="compound">wxMetafileDC</ref>.</para><para><simplesect kind="note"><para>Setting a pixel can be done using <ref refid="classwx_d_c_1a8380aab866e8f3947e0898cf08969d9f" kindref="member">DrawPoint()</ref>.</para></simplesect>
-<bold>wxPython Note:</bold> The <ref refid="classwx_colour" kindref="compound">wxColour</ref> value is returned and is not required as a parameter. </para>        </detaileddescription>
+<para>Not available for <ref refid="classwx_post_script_d_c" kindref="compound">wxPostScriptDC</ref> or <ref refid="classwx_metafile_d_c" kindref="compound">wxMetafileDC</ref>.</para><para><simplesect kind="note"><para>Setting a pixel can be done using <ref refid="classwx_d_c_1a8380aab866e8f3947e0898cf08969d9f" kindref="member">DrawPoint()</ref>.</para><simplesectsep/><para>This method shouldn&apos;t be used with <ref refid="classwx_paint_d_c" kindref="compound">wxPaintDC</ref> as accessing the DC while drawing can result in unexpected results, notably in wxGTK. </para></simplesect>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1373"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1351"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1ad21c33ad6a0a0f3d620bc39633fa8268" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -2662,7 +2660,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1378"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1356"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1ab4c22c7c7490a4aabc13dfd9e7a285a3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2685,14 +2683,12 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>scaleX<sp/>=<sp/>(double)(maxX<sp/>/<sp/>w);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>scaleY<sp/>=<sp/>(double)(maxY<sp/>/<sp/>h);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dc.SetUserScale(min(scaleX,<sp/>scaleY),min(scaleX,<sp/>scaleY));</highlight></codeline>
-</programlisting></para><para><bold>wxPython Note:</bold> In place of a single overloaded method name, wxPython implements the following methods:<itemizedlist>
-<listitem><para><ref refid="classwx_d_c_1ab4c22c7c7490a4aabc13dfd9e7a285a3" kindref="member">GetSize()</ref> - Returns a <ref refid="classwx_size" kindref="compound">wxSize</ref>.</para></listitem><listitem><para>GetSizeWH() - Returns a 2-tuple (width, height).</para></listitem></itemizedlist>
-</para><para><bold>wxPerl Note:</bold> In wxPerl there are two methods instead of a single overloaded method:<itemizedlist>
+</programlisting></para><para><bold>wxPerl Note:</bold> In wxPerl there are two methods instead of a single overloaded method:<itemizedlist>
 <listitem><para><ref refid="classwx_d_c_1ab4c22c7c7490a4aabc13dfd9e7a285a3" kindref="member">GetSize()</ref>: returns a Wx::Size object.</para></listitem><listitem><para>GetSizeWH(): returns a 2-element list (width, height). </para></listitem></itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1410"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1381"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a29c2c2fb580e287e31789c681445dc76" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -2705,7 +2701,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1415"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1386"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a079324d560b2c88a150962101ff3a055" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2726,7 +2722,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1420"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1391"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a4365cedbd78180624a1b9abf1dad730d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -2739,7 +2735,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1425"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1396"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a8be86f17ac3fcf8925372825a9210120" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2761,7 +2757,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1437"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1408"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1aac2d04cf636651fbbc943d4236586e3a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -2774,7 +2770,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1442"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1413"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a1ada4defde484280fb24c4c47d24e0e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2810,7 +2806,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1456"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1427"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a0a1c7d7d07d1faf3f7b89698bde769f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2831,7 +2827,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
 <para>This function may be useful in Windows printing operations for placing a graphic on a page. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1463"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1434"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1aae8adce8cf260bf703b8e76784bd577d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2849,7 +2845,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
 <para>It determines how a <emphasis>source</emphasis> pixel (from a pen or brush colour, or source device context if using <ref refid="classwx_d_c_1a12bed94a15136b9080683f4151042a34" kindref="member">Blit()</ref>) combines with a <emphasis>destination</emphasis> pixel in the current device context. Text drawing is not affected by this function.</para><para>See <ref refid="interface_2wx_2dc_8h_1a07398221a1f9dfecf424c90c5c777d54" kindref="member">wxRasterOperationMode</ref> enumeration values for more info.</para><para>The default is <computeroutput>wxCOPY</computeroutput>, which simply draws with the current colour. The others combine the current colour and the background using a logical operation. <computeroutput>wxINVERT</computeroutput> is commonly used for drawing rubber bands or moving outlines, since drawing twice reverts to the original colour. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1479"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1450"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1aa07ef94e2f3af5b64345c3f94333e86e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2866,7 +2862,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
 <para>Note that in X, text drawing isn&apos;t handled consistently with the mapping mode; a font is always specified in point size. However, setting the user scale (see <ref refid="classwx_d_c_1a190e43cf66ef402aa67f759d20f22eb0" kindref="member">SetUserScale()</ref>) scales the text appropriately. In Windows, scalable TrueType fonts are always used; in X, results depend on availability of fonts, but usually a reasonable match is found.</para><para>The coordinate origin is always at the top left of the screen/printer.</para><para>Drawing to a Windows printer device context uses the current mapping mode, but mapping mode is currently ignored for PostScript output. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1496"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1467"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1afc58b0f4653159e713377d38c84a120f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2885,7 +2881,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1506"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1477"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a190e43cf66ef402aa67f759d20f22eb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2906,7 +2902,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1512"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1483"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1aae1c728cdd2f43601f876b7d67067a39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2927,7 +2923,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1567"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1538"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1ab857836d90a4b12f2cc26488fda0e328" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2948,7 +2944,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1568"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1539"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a4ce7dda4ff2f3ece524b8d538b346b6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2969,7 +2965,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1569"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1540"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1ae045e468451ef72c70b6b94d418ab2e6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -2990,7 +2986,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1570"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1541"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_1a2e0817f3073c1661d52351afff46c379" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
@@ -3003,7 +2999,7 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1571"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1542"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -3022,121 +3018,121 @@ There is partial support for <ref refid="classwx_d_c_1a12bed94a15136b9080683f415
 <xrefsect id="todo_1_todo000024"><xreftitle>Todo</xreftitle><xrefdescription><para>Precise definition of default/initial state. </para><para>Pixelwise definition of operations (e.g. last point of a line not drawn). </para></xrefdescription></xrefsect></para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="5513">
+      <node id="5608">
         <label>wxScreenDC</label>
         <link refid="classwx_screen_d_c"/>
-        <childnode refid="5502" relation="public-inheritance">
+        <childnode refid="5597" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5504">
+      <node id="5599">
         <label>wxGCDC</label>
         <link refid="classwx_g_c_d_c"/>
-        <childnode refid="5502" relation="public-inheritance">
+        <childnode refid="5597" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5503">
+      <node id="5598">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5505">
+      <node id="5600">
         <label>wxMemoryDC</label>
         <link refid="classwx_memory_d_c"/>
-        <childnode refid="5502" relation="public-inheritance">
+        <childnode refid="5597" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5515">
+      <node id="5610">
         <label>wxWindowDC</label>
         <link refid="classwx_window_d_c"/>
-        <childnode refid="5502" relation="public-inheritance">
+        <childnode refid="5597" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5507">
+      <node id="5602">
         <label>wxBufferedPaintDC</label>
         <link refid="classwx_buffered_paint_d_c"/>
-        <childnode refid="5506" relation="public-inheritance">
+        <childnode refid="5601" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5506">
+      <node id="5601">
         <label>wxBufferedDC</label>
         <link refid="classwx_buffered_d_c"/>
-        <childnode refid="5505" relation="public-inheritance">
+        <childnode refid="5600" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5516">
+      <node id="5611">
         <label>wxClientDC</label>
         <link refid="classwx_client_d_c"/>
-        <childnode refid="5515" relation="public-inheritance">
+        <childnode refid="5610" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5512">
+      <node id="5607">
         <label>wxPrinterDC</label>
         <link refid="classwx_printer_d_c"/>
-        <childnode refid="5502" relation="public-inheritance">
+        <childnode refid="5597" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5509">
+      <node id="5604">
         <label>wxMetafileDC</label>
         <link refid="classwx_metafile_d_c"/>
-        <childnode refid="5502" relation="public-inheritance">
+        <childnode refid="5597" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5502">
+      <node id="5597">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="5503" relation="public-inheritance">
+        <childnode refid="5598" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5510">
+      <node id="5605">
         <label>wxMirrorDC</label>
         <link refid="classwx_mirror_d_c"/>
-        <childnode refid="5502" relation="public-inheritance">
+        <childnode refid="5597" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5514">
+      <node id="5609">
         <label>wxSVGFileDC</label>
         <link refid="classwx_s_v_g_file_d_c"/>
-        <childnode refid="5502" relation="public-inheritance">
+        <childnode refid="5597" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5511">
+      <node id="5606">
         <label>wxPostScriptDC</label>
         <link refid="classwx_post_script_d_c"/>
-        <childnode refid="5502" relation="public-inheritance">
+        <childnode refid="5597" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5508">
+      <node id="5603">
         <label>wxAutoBufferedPaintDC</label>
         <link refid="classwx_auto_buffered_paint_d_c"/>
-        <childnode refid="5507" relation="public-inheritance">
+        <childnode refid="5602" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5517">
+      <node id="5612">
         <label>wxPaintDC</label>
         <link refid="classwx_paint_d_c"/>
-        <childnode refid="5515" relation="public-inheritance">
+        <childnode refid="5611" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5519">
+      <node id="5614">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5520" relation="usage">
+        <childnode refid="5615" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5518">
+      <node id="5613">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="5519" relation="public-inheritance">
+        <childnode refid="5614" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5520">
+      <node id="5615">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="188" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" bodystart="187" bodyend="1573"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="188" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" bodystart="187" bodyend="1544"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxDC</scope><name>AllocExclusive</name></member>
       <member refid="classwx_d_c_1a12bed94a15136b9080683f4151042a34" prot="public" virt="non-virtual"><scope>wxDC</scope><name>Blit</name></member>

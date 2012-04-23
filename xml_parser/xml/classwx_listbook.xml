@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listbook.h" line="59"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listbook.h" line="59"/>
       </memberdef>
       <memberdef kind="function" id="classwx_listbook_1a2e5a198617615b4fa83eafa5b577afb3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listbook.h" line="68"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listbook.h" line="68"/>
       </memberdef>
       <memberdef kind="function" id="classwx_listbook_1a7662907e13a8fd324b5e7d5d01c48bd2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_list_view" kindref="compound">wxListView</ref> *</type>
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listbook.h" line="73"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listbook.h" line="73"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -93,109 +93,109 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__bookctrl" kindref="compound">Book Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/listbook.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/listbook.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/listbook.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="interface_2wx_2bookctrl_8h_1ab367c06ea9df73f0d3bf3c464afdb7d6" kindref="member">wxBookCtrl</ref>, <ref refid="classwx_notebook" kindref="compound">wxNotebook</ref>, <ref refid="page_samples_1page_samples_notebook" kindref="member">Notebook Sample</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7403">
+      <node id="7601">
         <label>wxBookCtrlBase</label>
         <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="7404" relation="public-inheritance">
+        <childnode refid="7602" relation="public-inheritance">
         </childnode>
-        <childnode refid="7409" relation="public-inheritance">
+        <childnode refid="7607" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7407">
+      <node id="7605">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7406">
+      <node id="7604">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7407" relation="public-inheritance">
+        <childnode refid="7605" relation="public-inheritance">
         </childnode>
-        <childnode refid="7408" relation="public-inheritance">
+        <childnode refid="7606" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7408">
+      <node id="7606">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7402">
+      <node id="7600">
         <label>wxListbook</label>
         <link refid="classwx_listbook"/>
-        <childnode refid="7403" relation="public-inheritance">
+        <childnode refid="7601" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7404">
+      <node id="7602">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="7405" relation="public-inheritance">
+        <childnode refid="7603" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7405">
+      <node id="7603">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7406" relation="public-inheritance">
+        <childnode refid="7604" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7409">
+      <node id="7607">
         <label>wxWithImages</label>
         <link refid="classwx_with_images"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7411">
+      <node id="7609">
         <label>wxBookCtrlBase</label>
         <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="7412" relation="public-inheritance">
+        <childnode refid="7610" relation="public-inheritance">
         </childnode>
-        <childnode refid="7418" relation="public-inheritance">
+        <childnode refid="7616" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7415">
+      <node id="7613">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7416" relation="usage">
+        <childnode refid="7614" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7414">
+      <node id="7612">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7415" relation="public-inheritance">
+        <childnode refid="7613" relation="public-inheritance">
         </childnode>
-        <childnode refid="7417" relation="public-inheritance">
+        <childnode refid="7615" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7417">
+      <node id="7615">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7410">
+      <node id="7608">
         <label>wxListbook</label>
         <link refid="classwx_listbook"/>
-        <childnode refid="7411" relation="public-inheritance">
+        <childnode refid="7609" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7412">
+      <node id="7610">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="7413" relation="public-inheritance">
+        <childnode refid="7611" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7413">
+      <node id="7611">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7414" relation="public-inheritance">
+        <childnode refid="7612" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7418">
+      <node id="7616">
         <label>wxWithImages</label>
         <link refid="classwx_with_images"/>
       </node>
-      <node id="7416">
+      <node id="7614">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listbook.h" line="54" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/listbook.h" bodystart="53" bodyend="74"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/listbook.h" line="54" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/listbook.h" bodystart="53" bodyend="74"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxListbook</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxListbook</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -377,6 +377,7 @@
       <member refid="classwx_book_ctrl_base_1a2dcfe645ba865a3f44ebaf660a9ab0ed" prot="public" virt="pure-virtual"><scope>wxListbook</scope><name>InsertPage</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxListbook</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxListbook</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxListbook</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxListbook</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxListbook</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxListbook</scope><name>IsExposed</name></member>
@@ -392,13 +393,13 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxListbook</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxListbook</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxListbook</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxListbook</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxListbook</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxListbook</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxListbook</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxListbook</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxListbook</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxListbook</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxListbook</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxListbook</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxListbook</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxListbook</scope><name>MoveAfterInTabOrder</name></member>
@@ -406,7 +407,7 @@
       <member refid="classwx_window_1a86904f6785df4af6036b33383490a805" prot="public" virt="non-virtual"><scope>wxListbook</scope><name>Navigate</name></member>
       <member refid="classwx_window_1aa58039c8fc65e19160becf510ee1d1d5" prot="public" virt="non-virtual"><scope>wxListbook</scope><name>NavigateIn</name></member>
       <member refid="classwx_window_1a8175da594e6045635a1d1cfe775cdddb" prot="public" virt="non-virtual"><scope>wxListbook</scope><name>NewControlId</name></member>
-      <member refid="classwx_book_ctrl_base_1aed8700a5492ca104d2792d9bafea2167a76a5551525c61310e58ed494b5d4d730" prot="public" virt="non-virtual"><scope>wxListbook</scope><name>NO_IMAGE</name></member>
+      <member refid="classwx_book_ctrl_base_1a2329dd4eea633a8764dbc29ac353c1a6a76a5551525c61310e58ed494b5d4d730" prot="public" virt="non-virtual"><scope>wxListbook</scope><name>NO_IMAGE</name></member>
       <member refid="classwx_window_1a6b5654c0c6c6245d592c279521f7099c" prot="public" virt="virtual"><scope>wxListbook</scope><name>OnInternalIdle</name></member>
       <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxListbook</scope><name>operator delete</name></member>
       <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxListbook</scope><name>operator new</name></member>
@@ -526,7 +527,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxListbook</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxListbook</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxListbook</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxListbook</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxListbook</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxListbook</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxListbook</scope><name>Unlink</name></member>

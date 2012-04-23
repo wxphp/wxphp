@@ -40,7 +40,7 @@
 <para>The circle is defined by the coordinates of its centre (<emphasis>x</emphasis>, <emphasis>y</emphasis>) or <emphasis>c</emphasis> and its radius <emphasis>r</emphasis>. The arc goes from the starting angle <emphasis>startAngle</emphasis> to <emphasis>endAngle</emphasis> either clockwise or counter-clockwise depending on the value of <emphasis>clockwise</emphasis> argument.</para><para>The angles are measured in radians but, contrary to the usual mathematical convention, are always <emphasis>clockwise</emphasis> from the horizontal axis. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="39"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="39"/>
       </memberdef>
       <memberdef kind="function" id="classwx_graphics_path_1a335b31fbf77fcbec0fde6d057022d784" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -73,7 +73,7 @@
 <para>The circle is defined by the coordinates of its centre (<emphasis>x</emphasis>, <emphasis>y</emphasis>) or <emphasis>c</emphasis> and its radius <emphasis>r</emphasis>. The arc goes from the starting angle <emphasis>startAngle</emphasis> to <emphasis>endAngle</emphasis> either clockwise or counter-clockwise depending on the value of <emphasis>clockwise</emphasis> argument.</para><para>The angles are measured in radians but, contrary to the usual mathematical convention, are always <emphasis>clockwise</emphasis> from the horizontal axis. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="41"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="41"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -108,7 +108,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="50"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="50"/>
       </memberdef>
       <memberdef kind="function" id="classwx_graphics_path_1a1dedee16234c079524b51db8e0395f68" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -133,7 +133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="56"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="56"/>
       </memberdef>
       <memberdef kind="function" id="classwx_graphics_path_1a206bb3c137a11e2cd98ab454478448a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -170,7 +170,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="64"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="64"/>
       </memberdef>
       <memberdef kind="function" id="classwx_graphics_path_1a513c48b6ef2cee88b57b09d19af641ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -195,7 +195,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="71"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="71"/>
       </memberdef>
       <memberdef kind="function" id="classwx_graphics_path_1a30dd31df80ae28c98aa04df9ed35baff" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -224,7 +224,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="76"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="76"/>
       </memberdef>
       <memberdef kind="function" id="classwx_graphics_path_1abd69d09ad6fe10af99a675ac79d2717a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -245,7 +245,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="81"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="81"/>
       </memberdef>
       <memberdef kind="function" id="classwx_graphics_path_1a3df39365090cffcd4b86ec2987833a29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -262,7 +262,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="85"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="85"/>
       </memberdef>
       <memberdef kind="function" id="classwx_graphics_path_1ab1d0507f094a4f65df8d1a8e0a40dba9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -279,7 +279,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="90"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="90"/>
       </memberdef>
       <memberdef kind="function" id="classwx_graphics_path_1a8d9b5140dc3bc067f37b57eda2847399" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -308,7 +308,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="97"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="97"/>
       </memberdef>
       <memberdef kind="function" id="classwx_graphics_path_1ac257fef3393f29b2705438fdc08b28a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -337,7 +337,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="102"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="102"/>
       </memberdef>
       <memberdef kind="function" id="classwx_graphics_path_1a8926037ec4e4a774222d1dadaf4dae3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -370,7 +370,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="108"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="108"/>
       </memberdef>
       <memberdef kind="function" id="classwx_graphics_path_1a93ee08b5acd2a2aa82dceb4bbd9cc819" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -383,7 +383,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="113"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="113"/>
       </memberdef>
       <memberdef kind="function" id="classwx_graphics_path_1a2e34c2d55e4fa64c29cc3e05e642fced" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -406,7 +406,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="119"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="119"/>
       </memberdef>
       <memberdef kind="function" id="classwx_graphics_path_1ab85c9b543d1d8817f15c0f95988f8af3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -433,7 +433,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="124"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="124"/>
       </memberdef>
       <memberdef kind="function" id="classwx_graphics_path_1a6760c4a23b52c3111365ce5303c69c02" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rect2_d_double" kindref="compound">wxRect2DDouble</ref></type>
@@ -446,7 +446,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="130"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="130"/>
       </memberdef>
       <memberdef kind="function" id="classwx_graphics_path_1aabf0b2ddd61634f49faa182a0682e49a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -475,7 +475,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="136"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="136"/>
       </memberdef>
       <memberdef kind="function" id="classwx_graphics_path_1af16bb3000d0d6f2f9598418ab690ed68" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -496,7 +496,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="141"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="141"/>
       </memberdef>
       <memberdef kind="function" id="classwx_graphics_path_1a5185d14cf9ab56f919f607102ac42b34" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point2_d_double" kindref="compound">wxPoint2DDouble</ref></type>
@@ -509,7 +509,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="145"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="145"/>
       </memberdef>
       <memberdef kind="function" id="classwx_graphics_path_1ab94ff4cd718776256247555247ce7d84" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void *</type>
@@ -522,7 +522,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="151"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="151"/>
       </memberdef>
       <memberdef kind="function" id="classwx_graphics_path_1a62c899479b6bd2105507317a1246978e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -543,7 +543,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="156"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="156"/>
       </memberdef>
       <memberdef kind="function" id="classwx_graphics_path_1a42a800a76412ad4ae2eb276ba4016f37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -560,7 +560,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="160"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="160"/>
       </memberdef>
       <memberdef kind="function" id="classwx_graphics_path_1a6a6a766853d1e57678c2d54e2eea490d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -577,7 +577,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="165"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="165"/>
       </memberdef>
       <memberdef kind="function" id="classwx_graphics_path_1aae764607b7e8c37c9b6e71603ce6a776" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -594,7 +594,7 @@
 <para>on cairo the native path returned by <ref refid="classwx_graphics_path_1ab94ff4cd718776256247555247ce7d84" kindref="member">GetNativePath()</ref> is newly allocated each time). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="172"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="172"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -603,49 +603,49 @@
 <para>The contents are specific an private to the respective renderer. Instances are reference counted and can therefore be assigned as usual. The only way to get a valid instance is by using <ref refid="classwx_graphics_context_1a55c95ed392ed17f6fbd6e83b2a442a80" kindref="member">wxGraphicsContext::CreatePath()</ref> or <ref refid="classwx_graphics_renderer_1acdaf5505ed3833c4cb76112d001b8717" kindref="member">wxGraphicsRenderer::CreatePath()</ref>.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6608">
+      <node id="6776">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6607">
+      <node id="6775">
         <label>wxGraphicsObject</label>
         <link refid="classwx_graphics_object"/>
-        <childnode refid="6608" relation="public-inheritance">
+        <childnode refid="6776" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6606">
+      <node id="6774">
         <label>wxGraphicsPath</label>
         <link refid="classwx_graphics_path"/>
-        <childnode refid="6607" relation="public-inheritance">
+        <childnode refid="6775" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6611">
+      <node id="6779">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6612" relation="usage">
+        <childnode refid="6780" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6610">
+      <node id="6778">
         <label>wxGraphicsObject</label>
         <link refid="classwx_graphics_object"/>
-        <childnode refid="6611" relation="public-inheritance">
+        <childnode refid="6779" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6609">
+      <node id="6777">
         <label>wxGraphicsPath</label>
         <link refid="classwx_graphics_path"/>
-        <childnode refid="6610" relation="public-inheritance">
+        <childnode refid="6778" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6612">
+      <node id="6780">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" bodystart="21" bodyend="173"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" bodystart="21" bodyend="173"/>
     <listofallmembers>
       <member refid="classwx_graphics_path_1a42dfa8d02729f00b4171f2bf83e16dbe" prot="public" virt="virtual"><scope>wxGraphicsPath</scope><name>AddArc</name></member>
       <member refid="classwx_graphics_path_1a335b31fbf77fcbec0fde6d057022d784" prot="public" virt="non-virtual"><scope>wxGraphicsPath</scope><name>AddArc</name></member>

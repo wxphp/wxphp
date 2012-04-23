@@ -18,7 +18,7 @@
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/math.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/math.h" line="18"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/math.h" line="18"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__math_1ga1fd493b41d9af8d07a5a0229fd11c339" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -35,7 +35,7 @@
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/math.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/math.h" line="25"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/math.h" line="25"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__math_1ga6b8f7cc815ead70a710191a388345176" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a99e112176d161558aa025fa6d9d217e0" kindref="member">wxFloat64</ref></type>
@@ -53,7 +53,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/math.h" line="34"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/math.h" line="34"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__math_1ga974d117c30d950cb77e7b6b11199be09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -75,7 +75,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/math.h" line="44"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/math.h" line="44"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__math_1ga01553ff75f3c6a64b1a678044f9cd4b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -92,7 +92,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/math.h" line="49"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/math.h" line="49"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__math_1ga309df1421691e2e683bf03096c0aa64b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -113,7 +113,7 @@
 <para>This is only reliable if both values have been assigned the same value. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/math.h" line="56"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/math.h" line="56"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__math_1ga78a1d85cc0ca2d55938a7a67101c7072" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -130,13 +130,13 @@
 <para>This is only reliable if it has been assigned 0. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/math.h" line="62"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/math.h" line="62"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/math.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/math.h"/>
   </compounddef>
 </doxygen>

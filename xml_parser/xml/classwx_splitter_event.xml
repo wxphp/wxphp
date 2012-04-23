@@ -26,7 +26,7 @@
 <para>Used internally by wxWidgets only. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="464"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="503"/>
       </memberdef>
       <memberdef kind="function" id="classwx_splitter_event_1ace6fab3fdb0b145db2c80168cba85986" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -39,7 +39,7 @@
 <para>May only be called while processing <computeroutput>wxEVT_COMMAND_SPLITTER_SASH_POS_CHANGING</computeroutput> and <computeroutput>wxEVT_COMMAND_SPLITTER_SASH_POS_CHANGED</computeroutput> events. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="473"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="512"/>
       </memberdef>
       <memberdef kind="function" id="classwx_splitter_event_1a13b6e3ed0e70332417c20cf7abf71692" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -52,7 +52,7 @@
 <para>May only be called while processing <computeroutput>wxEVT_COMMAND_SPLITTER_UNSPLIT</computeroutput> events. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="482"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="521"/>
       </memberdef>
       <memberdef kind="function" id="classwx_splitter_event_1aeb0e985fbd6f042bcef355d802c67766" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -65,7 +65,7 @@
 <para>May only be called while processing <computeroutput>wxEVT_COMMAND_SPLITTER_DOUBLECLICKED</computeroutput> events. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="490"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="529"/>
       </memberdef>
       <memberdef kind="function" id="classwx_splitter_event_1a531ea08fcfcffe062c969de6721876a6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -78,7 +78,7 @@
 <para>May only be called while processing <computeroutput>wxEVT_COMMAND_SPLITTER_DOUBLECLICKED</computeroutput> events. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="498"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="537"/>
       </memberdef>
       <memberdef kind="function" id="classwx_splitter_event_1a477c99aaf92b0d7ab36d6e71c42f323a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -103,7 +103,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="515"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="554"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -120,73 +120,73 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_splitter_window" kindref="compound">wxSplitterWindow</ref>, <ref refid="overview_events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10419">
+      <node id="10602">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10417">
+      <node id="10600">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="10418" relation="public-inheritance">
+        <childnode refid="10601" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10415">
+      <node id="10598">
         <label>wxSplitterEvent</label>
         <link refid="classwx_splitter_event"/>
-        <childnode refid="10416" relation="public-inheritance">
+        <childnode refid="10599" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10416">
+      <node id="10599">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="10417" relation="public-inheritance">
+        <childnode refid="10600" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10418">
+      <node id="10601">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10419" relation="public-inheritance">
+        <childnode refid="10602" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10424">
+      <node id="10607">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10425" relation="usage">
+        <childnode refid="10608" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10422">
+      <node id="10605">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="10423" relation="public-inheritance">
+        <childnode refid="10606" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10420">
+      <node id="10603">
         <label>wxSplitterEvent</label>
         <link refid="classwx_splitter_event"/>
-        <childnode refid="10421" relation="public-inheritance">
+        <childnode refid="10604" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10421">
+      <node id="10604">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="10422" relation="public-inheritance">
+        <childnode refid="10605" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10423">
+      <node id="10606">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10424" relation="public-inheritance">
+        <childnode refid="10607" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10425">
+      <node id="10608">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" line="458" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/splitter.h" bodystart="457" bodyend="516"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" line="497" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/splitter.h" bodystart="496" bodyend="555"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxSplitterEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_notify_event_1a7b23515f827b2ce1da1e6990d9aafe80" prot="public" virt="non-virtual"><scope>wxSplitterEvent</scope><name>Allow</name></member>

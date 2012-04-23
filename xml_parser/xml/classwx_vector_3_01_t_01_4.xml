@@ -24,7 +24,7 @@
 <para>If <emphasis>n</emphasis> is less than the current <ref refid="classwx_vector_3_01_t_01_4_1af24b9e8fb0e0a2d2aa97b390287c1329" kindref="member">size()</ref>, the elements at the end of the vector are erased. If it is greater, then the vector is completed with either the copies of the given object <emphasis>v</emphasis> or <computeroutput><ref refid="classwx_vector_3_01_t_01_4_1a200a710822fc0779945b7d5bf943d9cc" kindref="member">value_type()</ref></computeroutput> objects until it becomes of size <emphasis>n</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="205"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="205"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1ac4fb0422e58df05b76e0ddadd2f5b886" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -45,7 +45,7 @@
 <para>If <emphasis>n</emphasis> is less than the current <ref refid="classwx_vector_3_01_t_01_4_1af24b9e8fb0e0a2d2aa97b390287c1329" kindref="member">size()</ref>, the elements at the end of the vector are erased. If it is greater, then the vector is completed with either the copies of the given object <emphasis>v</emphasis> or <computeroutput><ref refid="classwx_vector_3_01_t_01_4_1a200a710822fc0779945b7d5bf943d9cc" kindref="member">value_type()</ref></computeroutput> objects until it becomes of size <emphasis>n</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="206"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="206"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-type">
@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="29" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" bodystart="29" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="29" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" bodystart="29" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classwx_vector_3_01_t_01_4_1a37a805d9c23b6fd1adb465c66bd35f0a" prot="public" static="no">
         <type>size_t</type>
@@ -73,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="30" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" bodystart="30" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="30" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classwx_vector_3_01_t_01_4_1a200a710822fc0779945b7d5bf943d9cc" prot="public" static="no">
         <type>T</type>
@@ -86,7 +86,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="31" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" bodystart="31" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="31" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classwx_vector_3_01_t_01_4_1ad6d7a3ad4a85b5c6696ddef93c1a99a9" prot="public" static="no">
         <type><ref refid="classwx_vector_3_01_t_01_4_1a200a710822fc0779945b7d5bf943d9cc" kindref="member">value_type</ref> *</type>
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="32" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" bodystart="32" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="32" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classwx_vector_3_01_t_01_4_1ab5863ae8b75987f416b5bddc471703ed" prot="public" static="no">
         <type><ref refid="classwx_vector_3_01_t_01_4_1a200a710822fc0779945b7d5bf943d9cc" kindref="member">value_type</ref> *</type>
@@ -112,7 +112,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" bodystart="33" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classwx_vector_3_01_t_01_4_1a82f52b139a4601c6e2fa40541d586161" prot="public" static="no">
         <type>const <ref refid="classwx_vector_3_01_t_01_4_1a200a710822fc0779945b7d5bf943d9cc" kindref="member">value_type</ref> *</type>
@@ -125,7 +125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="34" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" bodystart="34" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="34" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="classwx_vector_3_01_t_01_4_1a1f821be1999ac7794de8a8ab948cdc21" prot="public" static="no">
         <type><ref refid="classwx_vector_3_01_t_01_4_1a200a710822fc0779945b7d5bf943d9cc" kindref="member">value_type</ref> &amp;</type>
@@ -138,7 +138,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="35" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" bodystart="35" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="35" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -153,7 +153,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="40"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="40"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1a82ee76027215aba38c1aad81fee32c5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -170,7 +170,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="46"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="46"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1a39e1538b613ab0f01820d26a84dc51c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -191,7 +191,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="52"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="52"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1ae9336ab1785c3ab56ac1e127c5ffd4de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -208,7 +208,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="57"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="57"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1a84d557b24714a696457bac771136ce3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -221,7 +221,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="62"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="62"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1a182cc2e0f0be4dd0f176fccf8e714fd3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_vector_3_01_t_01_4_1a200a710822fc0779945b7d5bf943d9cc" kindref="member">value_type</ref> &amp;</type>
@@ -238,7 +238,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="67"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="67"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1adb8cfe7d394cf4cc801830369ac2dc75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_vector_3_01_t_01_4_1a200a710822fc0779945b7d5bf943d9cc" kindref="member">value_type</ref> &amp;</type>
@@ -255,7 +255,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="72"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="72"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1a1677aa57f3bcdcbff301bee9eb144f73" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_vector_3_01_t_01_4_1a200a710822fc0779945b7d5bf943d9cc" kindref="member">value_type</ref> &amp;</type>
@@ -268,7 +268,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="77"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="77"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1a838f840d0c8b2e13041e2a299b4fa90b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_vector_3_01_t_01_4_1a200a710822fc0779945b7d5bf943d9cc" kindref="member">value_type</ref> &amp;</type>
@@ -281,7 +281,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="82"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="82"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1a1d5a597828efedbf47723913b0ab23f0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_vector_3_01_t_01_4_1a82f52b139a4601c6e2fa40541d586161" kindref="member">const_iterator</ref></type>
@@ -294,7 +294,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="87"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="87"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1a7f22b9bd87c197c1faa0cc2dca7734b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_vector_3_01_t_01_4_1ab5863ae8b75987f416b5bddc471703ed" kindref="member">iterator</ref></type>
@@ -307,7 +307,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="92"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="92"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1a78a8ee0844d5c70f94c88c4f1850dbcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>reverse_iterator</type>
@@ -320,7 +320,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="97"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="97"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1a3b05b4697465aae97ba7680087954527" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>reverse_iterator</type>
@@ -333,7 +333,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="102"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="102"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1aade55244d500e3da4bc4df8348858c46" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_vector_3_01_t_01_4_1a84a2f5af718ce03a212a65b8b5c1cb8a" kindref="member">size_type</ref></type>
@@ -347,7 +347,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="110"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="110"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1ae21785a57b42f87b231b6fd671023962" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -360,7 +360,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="115"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="115"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1a61bd9fb52a7e663649ea777c55ae322a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -373,7 +373,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="120"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="120"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1a6d79b750588ab99317d0dd4d4fd4e958" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_vector_3_01_t_01_4_1a82f52b139a4601c6e2fa40541d586161" kindref="member">const_iterator</ref></type>
@@ -386,7 +386,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="125"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="125"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1aa24253d529b71c87994d3b66c00772ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_vector_3_01_t_01_4_1ab5863ae8b75987f416b5bddc471703ed" kindref="member">iterator</ref></type>
@@ -399,7 +399,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="130"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="130"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1aae28862c925b2c8441cd4f44450a9198" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_vector_3_01_t_01_4_1ab5863ae8b75987f416b5bddc471703ed" kindref="member">iterator</ref></type>
@@ -417,7 +417,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="137"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="137"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1a0d8227912dd736d3e131f04166b7bb9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_vector_3_01_t_01_4_1ab5863ae8b75987f416b5bddc471703ed" kindref="member">iterator</ref></type>
@@ -439,7 +439,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="145"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="145"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1ad0430199e8a3170a3ab0233a0cbb7f3c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_vector_3_01_t_01_4_1a200a710822fc0779945b7d5bf943d9cc" kindref="member">value_type</ref> &amp;</type>
@@ -452,7 +452,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="150"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="150"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1a9230869b3b2096eb49482df71341173b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_vector_3_01_t_01_4_1a200a710822fc0779945b7d5bf943d9cc" kindref="member">value_type</ref> &amp;</type>
@@ -465,7 +465,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="155"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="155"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1a5a0bcd7b375194b35c6056529b343a18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_vector_3_01_t_01_4_1ab5863ae8b75987f416b5bddc471703ed" kindref="member">iterator</ref></type>
@@ -488,7 +488,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="162"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="162"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1a9a74ef44b520827dd1fa38054c8f0874" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxVector &amp;</type>
@@ -505,7 +505,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="167"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="167"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1a18bc8725840b1eb6fcbd25fe3baa0958" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_vector_3_01_t_01_4_1a200a710822fc0779945b7d5bf943d9cc" kindref="member">value_type</ref> &amp;</type>
@@ -522,7 +522,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="172"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="172"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1a7aadbaee2b1d918e5274998fb0a3de1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_vector_3_01_t_01_4_1a200a710822fc0779945b7d5bf943d9cc" kindref="member">value_type</ref> &amp;</type>
@@ -539,7 +539,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="177"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="177"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1ad99c85acaf59452ea211d1ea4905d8e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -552,7 +552,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="182"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="182"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1ae8681598f2600c22bee07d74992edf85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -569,7 +569,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="187"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="187"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1aa9acd20ae5b71ea5ea06b8150f37b117" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -587,7 +587,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="194"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="194"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1af24b9e8fb0e0a2d2aa97b390287c1329" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_vector_3_01_t_01_4_1a84a2f5af718ce03a212a65b8b5c1cb8a" kindref="member">size_type</ref></type>
@@ -600,7 +600,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="212"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="212"/>
       </memberdef>
       <memberdef kind="function" id="classwx_vector_3_01_t_01_4_1a637549cb7d4ff507a6a867430e0c033a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -618,7 +618,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="223"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="223"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -627,7 +627,7 @@
 <para>If wxWidgets is compiled in STL mode, wxVector will just be a typedef to <computeroutput>std::vector</computeroutput>. Just like for <computeroutput>std::vector</computeroutput>, objects stored in <ref refid="classwx_vector_3_01_t_01_4" kindref="compound">wxVector&lt;T&gt;</ref> need to be <emphasis>assignable</emphasis> but don&apos;t have to be <emphasis>&quot;default constructible&quot;</emphasis>.</para><para>Please refer to the STL documentation for further information.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/>None; this class implementation is entirely header-based.</para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__containers" kindref="compound">Containers</ref></para><para><simplesect kind="see"><para><ref refid="overview_container" kindref="compound">Container Classes</ref>, <ref refid="classwx_list_3_01_t_01_4" kindref="compound">wxList&lt;T&gt;</ref>, <ref refid="classwx_array_3_01_t_01_4" kindref="compound">wxArray&lt;T&gt;</ref>, <ref refid="vector_8h_1a41dfc361588f2e2e8aa2bfcaa863e7ef" kindref="member">wxVectorSort&lt;T&gt;</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="27" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" bodystart="26" bodyend="224"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="27" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" bodystart="26" bodyend="224"/>
     <listofallmembers>
       <member refid="classwx_vector_3_01_t_01_4_1a182cc2e0f0be4dd0f176fccf8e714fd3" prot="public" virt="non-virtual"><scope>wxVector&lt; T &gt;</scope><name>at</name></member>
       <member refid="classwx_vector_3_01_t_01_4_1adb8cfe7d394cf4cc801830369ac2dc75" prot="public" virt="non-virtual"><scope>wxVector&lt; T &gt;</scope><name>at</name></member>

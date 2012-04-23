@@ -36,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3429"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3424"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scroll_event_1aa2bdc184bf44032ef5ee717543b4755b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3435"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3430"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scroll_event_1a8f4496be5a272028a6ac754e713117d5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3440"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3435"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scroll_event_1acbe59c387a80ef7b98f9c0f2308e7ab5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3443"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3438"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scroll_event_1a89ec1c45caac5f2548ad7875124e5a6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -96,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3444"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3439"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -133,61 +133,61 @@
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="10118">
+      <node id="10301">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10115">
+      <node id="10298">
         <label>wxScrollEvent</label>
         <link refid="classwx_scroll_event"/>
-        <childnode refid="10116" relation="public-inheritance">
+        <childnode refid="10299" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10116">
+      <node id="10299">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="10117" relation="public-inheritance">
+        <childnode refid="10300" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10117">
+      <node id="10300">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10118" relation="public-inheritance">
+        <childnode refid="10301" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10122">
+      <node id="10305">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10123" relation="usage">
+        <childnode refid="10306" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10119">
+      <node id="10302">
         <label>wxScrollEvent</label>
         <link refid="classwx_scroll_event"/>
-        <childnode refid="10120" relation="public-inheritance">
+        <childnode refid="10303" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10120">
+      <node id="10303">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="10121" relation="public-inheritance">
+        <childnode refid="10304" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10121">
+      <node id="10304">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10122" relation="public-inheritance">
+        <childnode refid="10305" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10123">
+      <node id="10306">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3423" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3422" bodyend="3445"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3418" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="3417" bodyend="3440"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxScrollEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxScrollEvent</scope><name>Clone</name></member>

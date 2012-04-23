@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="256" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" bodystart="256" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="393" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" bodystart="393" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_date_time_1_1_tm_1a2e68da4c4e5df695afcedc7445768c41" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_date_time_1a27df9e32a320a1ca266288d1a436de98" kindref="member">wxDateTime_t</ref></type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="257" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" bodystart="256" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="394" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" bodystart="393" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_date_time_1_1_tm_1a49217f26b68fb659c9ff775b443de3f0" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_date_time_1a27df9e32a320a1ca266288d1a436de98" kindref="member">wxDateTime_t</ref></type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="258" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" bodystart="256" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="395" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" bodystart="393" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_date_time_1_1_tm_1a50111e0cd83293e8d12c82503d2f2453" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_date_time_1a27df9e32a320a1ca266288d1a436de98" kindref="member">wxDateTime_t</ref></type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="259" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" bodystart="256" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="396" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" bodystart="393" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_date_time_1_1_tm_1a647747002c2f8c62e08142dc720b54e4" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_date_time_1a27df9e32a320a1ca266288d1a436de98" kindref="member">wxDateTime_t</ref></type>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="260" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" bodystart="256" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="397" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" bodystart="393" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_date_time_1_1_tm_1a93384bdb2d520893108abb97785c51b3" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_date_time_1a27df9e32a320a1ca266288d1a436de98" kindref="member">wxDateTime_t</ref></type>
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="261" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" bodystart="256" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="398" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" bodystart="393" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_date_time_1_1_tm_1a80de535542be20cb937690898929f962" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_date_time_1a156e17eb15e3c16a7da36cd810ff9117" kindref="member">Month</ref></type>
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="262" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" bodystart="262" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="399" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" bodystart="399" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structwx_date_time_1_1_tm_1a5a0020805e09b9264e8019eef74f3418" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -106,7 +106,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="263" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" bodystart="263" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="400" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" bodystart="400" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -121,7 +121,7 @@
 <para>Return false if the components don&apos;t correspond to a correct date. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="270"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="407"/>
       </memberdef>
       <memberdef kind="function" id="structwx_date_time_1_1_tm_1acb7857f17b6c923aa81f610f52eb31b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time_1a9ce844e5c79b28711f52ae2d9a571457" kindref="member">WeekDay</ref></type>
@@ -134,14 +134,14 @@
 <para>Unlike the other fields, the week day is not always available and so must be accessed using this method as it is computed on demand when it is called. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="279"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="416"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Contains broken down date-time representation. </para>    </briefdescription>
     <detaileddescription>
 <para>This struct is analogous to standard C <computeroutput>struct tm</computeroutput> and uses the same, not always immediately obvious, conventions for its members: notably its mon and mday fields count from 0 while yday counts from 1. </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="255" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" bodystart="254" bodyend="280"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="392" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" bodystart="391" bodyend="417"/>
     <listofallmembers>
       <member refid="structwx_date_time_1_1_tm_1acb7857f17b6c923aa81f610f52eb31b8" prot="public" virt="non-virtual"><scope>wxDateTime::Tm</scope><name>GetWeekDay</name></member>
       <member refid="structwx_date_time_1_1_tm_1a50111e0cd83293e8d12c82503d2f2453" prot="public" virt="non-virtual"><scope>wxDateTime::Tm</scope><name>hour</name></member>

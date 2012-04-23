@@ -110,6 +110,11 @@ PHP_METHOD(php_<?=$class_name?>, Connect)
 	zval** fc_name;
 	char* ct;
 	int args = ZEND_NUM_ARGS();
+	
+	//To supress some warnings due to passing a string directly
+	char parse_parameters_4[] = "lllz";
+	char parse_parameters_3[] = "llz";
+	char parse_parameters_2[] = "lz";
 
 	switch(args)
 	{
@@ -117,7 +122,7 @@ PHP_METHOD(php_<?=$class_name?>, Connect)
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Parsing parameters with \"lllz\"\n");
 			#endif
-			if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, args TSRMLS_CC, "lllz", &id0, &id1, &flag , (void**)&fc) == FAILURE)
+			if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, args TSRMLS_CC, parse_parameters_4, &id0, &id1, &flag , (void**)&fc) == FAILURE)
 			{
 				zend_error(E_ERROR, "Incorrect type of parameters");
 				return;
@@ -127,7 +132,7 @@ PHP_METHOD(php_<?=$class_name?>, Connect)
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Parsing parameters with \"llz\"\n");
 			#endif
-			if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, args TSRMLS_CC, "llz" , &id0, &flag , (void**)&fc) == FAILURE)
+			if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, args TSRMLS_CC, parse_parameters_3, &id0, &flag , (void**)&fc) == FAILURE)
 			{
 				zend_error(E_ERROR, "Incorrect type of parameters");
 				return;
@@ -137,7 +142,7 @@ PHP_METHOD(php_<?=$class_name?>, Connect)
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Parsing parameters with \"lz\"\n");
 			#endif
-			if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, args TSRMLS_CC, "lz"  , &flag , (void**)&fc) == FAILURE)
+			if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, args TSRMLS_CC, parse_parameters_2, &flag , (void**)&fc) == FAILURE)
 			{
 				zend_error(E_ERROR, "Incorrect type of parameters");
 				return;
@@ -162,21 +167,21 @@ PHP_METHOD(php_<?=$class_name?>, Connect)
 		case 4:
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Executing: _this->Connect(id0, id1, flag, wxEventHandler(<?=$class_name?>_php::onEvent), ce);\n");
-			php_printf("Object id: %l Object last id: %l Event type: %d\n", id0, id1, flag);
+			php_printf("Object id: %d Object last id: %d Event type: %d\n", (int)id0, (int)id1, (int)flag);
 			#endif
 			_this->Connect(id0, id1, flag, wxEventHandler(<?=$class_name?>_php::onEvent), ce);
 			break;
 		case 3:
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Executing: _this->Connect(id0, flag, wxEventHandler(<?=$class_name?>_php::onEvent), ce);\n");
-			php_printf("Object id: %l Event type: %d\n", id0, flag);
+			php_printf("Object id: %d Event type: %d\n", (int)id0, (int)flag);
 			#endif
 			_this->Connect(id0, flag, wxEventHandler(<?=$class_name?>_php::onEvent), ce);
 			break;
 		case 2:
 			#ifdef USE_WXPHP_DEBUG
 			php_printf("Executing: _this->Connect(flag, wxEventHandler(<?=$class_name?>_php::onEvent), ce);\n");
-			php_printf("Event type: %d\n", flag);
+			php_printf("Event type: %d\n", (int)flag);
 			#endif
 			_this->Connect(flag, wxEventHandler(<?=$class_name?>_php::onEvent), ce);
 			break;

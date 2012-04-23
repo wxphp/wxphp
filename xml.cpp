@@ -50,6 +50,7 @@
 #include "others.h"
 
 
+
 void php_wxXmlNode_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -58,13 +59,13 @@ void php_wxXmlNode_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxXmlNode_php* object = (wxXmlNode_php*)rsrc->ptr;
+	wxXmlNode_php* object = static_cast<wxXmlNode_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -156,7 +157,8 @@ PHP_METHOD(php_wxXmlNode, AddAttribute)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss' (&name0, &name_len0, &value0, &value_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ss", &name0, &name_len0, &value0, &value_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ss";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &name0, &name_len0, &value0, &value_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -171,7 +173,8 @@ PHP_METHOD(php_wxXmlNode, AddAttribute)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&attr1)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &attr1 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &attr1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(attr1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(attr1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -182,10 +185,6 @@ PHP_METHOD(php_wxXmlNode, AddAttribute)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(attr1) == IS_LONG)
-				{
-					object_pointer1_0 = Z_LVAL_P(attr1);
 				}
 				else if(Z_TYPE_P(attr1) != IS_NULL)
 				{
@@ -199,7 +198,6 @@ PHP_METHOD(php_wxXmlNode, AddAttribute)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -218,7 +216,6 @@ PHP_METHOD(php_wxXmlNode, AddAttribute)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -300,7 +297,8 @@ PHP_METHOD(php_wxXmlNode, AddChild)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&child0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &child0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &child0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(child0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(child0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -311,10 +309,6 @@ PHP_METHOD(php_wxXmlNode, AddChild)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(child0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(child0);
 				}
 				else if(Z_TYPE_P(child0) != IS_NULL)
 				{
@@ -328,7 +322,6 @@ PHP_METHOD(php_wxXmlNode, AddChild)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -410,7 +403,8 @@ PHP_METHOD(php_wxXmlNode, DeleteAttribute)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&name0, &name_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &name0, &name_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &name0, &name_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -418,7 +412,6 @@ PHP_METHOD(php_wxXmlNode, DeleteAttribute)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -508,12 +501,14 @@ PHP_METHOD(php_wxXmlNode, GetAttribute)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss' (&attrName0, &attrName_len0, &value0, &value_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ss", &attrName0, &attrName_len0, &value0, &value_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "ss";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &attrName0, &attrName_len0, &value0, &value_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
 
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "zz", &dummy, &value0_ref );
+			char parse_references_string[] = "zz";
+			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &dummy, &value0_ref );
 		}
 	}
 
@@ -525,7 +520,8 @@ PHP_METHOD(php_wxXmlNode, GetAttribute)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|s' (&attrName1, &attrName_len1, &defaultVal1, &defaultVal_len1)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s|s", &attrName1, &attrName_len1, &defaultVal1, &defaultVal_len1 ) == SUCCESS)
+		char parse_parameters_string[] = "s|s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &attrName1, &attrName_len1, &defaultVal1, &defaultVal_len1 ) == SUCCESS)
 		{
 			overload1_called = true;
 			already_called = true;
@@ -533,7 +529,6 @@ PHP_METHOD(php_wxXmlNode, GetAttribute)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -559,7 +554,6 @@ PHP_METHOD(php_wxXmlNode, GetAttribute)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -666,7 +660,6 @@ PHP_METHOD(php_wxXmlNode, GetAttributes)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -683,8 +676,8 @@ PHP_METHOD(php_wxXmlNode, GetAttributes)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -772,7 +765,6 @@ PHP_METHOD(php_wxXmlNode, GetChildren)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -789,8 +781,8 @@ PHP_METHOD(php_wxXmlNode, GetChildren)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -878,7 +870,6 @@ PHP_METHOD(php_wxXmlNode, GetContent)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -965,7 +956,8 @@ PHP_METHOD(php_wxXmlNode, GetDepth)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with '|z' (&grandparent0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "|z", &grandparent0 ) == SUCCESS)
+		char parse_parameters_string[] = "|z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &grandparent0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(grandparent0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(grandparent0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -976,10 +968,6 @@ PHP_METHOD(php_wxXmlNode, GetDepth)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(grandparent0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(grandparent0);
 				}
 				else if(Z_TYPE_P(grandparent0) != IS_NULL)
 				{
@@ -993,7 +981,6 @@ PHP_METHOD(php_wxXmlNode, GetDepth)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1089,7 +1076,6 @@ PHP_METHOD(php_wxXmlNode, GetLineNumber)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1173,7 +1159,6 @@ PHP_METHOD(php_wxXmlNode, GetName)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1263,7 +1248,6 @@ PHP_METHOD(php_wxXmlNode, GetNext)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1280,8 +1264,8 @@ PHP_METHOD(php_wxXmlNode, GetNext)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -1369,7 +1353,6 @@ PHP_METHOD(php_wxXmlNode, GetNoConversion)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1453,7 +1436,6 @@ PHP_METHOD(php_wxXmlNode, GetNodeContent)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1543,7 +1525,6 @@ PHP_METHOD(php_wxXmlNode, GetParent)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1560,8 +1541,8 @@ PHP_METHOD(php_wxXmlNode, GetParent)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -1649,7 +1630,6 @@ PHP_METHOD(php_wxXmlNode, GetType)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1730,7 +1710,8 @@ PHP_METHOD(php_wxXmlNode, HasAttribute)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&attrName0, &attrName_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &attrName0, &attrName_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &attrName0, &attrName_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1738,7 +1719,6 @@ PHP_METHOD(php_wxXmlNode, HasAttribute)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1821,7 +1801,8 @@ PHP_METHOD(php_wxXmlNode, InsertChild)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zz' (&child0, &followingNode0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "zz", &child0, &followingNode0 ) == SUCCESS)
+		char parse_parameters_string[] = "zz";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &child0, &followingNode0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(child0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(child0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -1832,10 +1813,6 @@ PHP_METHOD(php_wxXmlNode, InsertChild)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(child0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(child0);
 				}
 				else if(Z_TYPE_P(child0) != IS_NULL)
 				{
@@ -1853,10 +1830,6 @@ PHP_METHOD(php_wxXmlNode, InsertChild)
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(followingNode0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(followingNode0);
-				}
 				else if(Z_TYPE_P(followingNode0) != IS_NULL)
 				{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
@@ -1869,7 +1842,6 @@ PHP_METHOD(php_wxXmlNode, InsertChild)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1954,7 +1926,8 @@ PHP_METHOD(php_wxXmlNode, InsertChildAfter)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zz' (&child0, &precedingNode0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "zz", &child0, &precedingNode0 ) == SUCCESS)
+		char parse_parameters_string[] = "zz";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &child0, &precedingNode0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(child0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(child0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -1965,10 +1938,6 @@ PHP_METHOD(php_wxXmlNode, InsertChildAfter)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(child0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(child0);
 				}
 				else if(Z_TYPE_P(child0) != IS_NULL)
 				{
@@ -1986,10 +1955,6 @@ PHP_METHOD(php_wxXmlNode, InsertChildAfter)
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
 				}
-				else if(Z_TYPE_P(precedingNode0) == IS_LONG)
-				{
-					object_pointer0_1 = Z_LVAL_P(precedingNode0);
-				}
 				else if(Z_TYPE_P(precedingNode0) != IS_NULL)
 				{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
@@ -2002,7 +1967,6 @@ PHP_METHOD(php_wxXmlNode, InsertChildAfter)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2088,7 +2052,6 @@ PHP_METHOD(php_wxXmlNode, IsWhitespaceOnly)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2169,7 +2132,8 @@ PHP_METHOD(php_wxXmlNode, RemoveChild)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&child0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &child0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &child0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(child0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(child0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -2180,10 +2144,6 @@ PHP_METHOD(php_wxXmlNode, RemoveChild)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(child0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(child0);
 				}
 				else if(Z_TYPE_P(child0) != IS_NULL)
 				{
@@ -2197,7 +2157,6 @@ PHP_METHOD(php_wxXmlNode, RemoveChild)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2279,7 +2238,8 @@ PHP_METHOD(php_wxXmlNode, SetAttributes)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&attr0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &attr0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &attr0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(attr0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(attr0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -2290,10 +2250,6 @@ PHP_METHOD(php_wxXmlNode, SetAttributes)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(attr0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(attr0);
 				}
 				else if(Z_TYPE_P(attr0) != IS_NULL)
 				{
@@ -2307,7 +2263,6 @@ PHP_METHOD(php_wxXmlNode, SetAttributes)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2389,7 +2344,8 @@ PHP_METHOD(php_wxXmlNode, SetChildren)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&child0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &child0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &child0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(child0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(child0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -2400,10 +2356,6 @@ PHP_METHOD(php_wxXmlNode, SetChildren)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(child0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(child0);
 				}
 				else if(Z_TYPE_P(child0) != IS_NULL)
 				{
@@ -2417,7 +2369,6 @@ PHP_METHOD(php_wxXmlNode, SetChildren)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2499,7 +2450,8 @@ PHP_METHOD(php_wxXmlNode, SetContent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&con0, &con_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &con0, &con_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &con0, &con_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -2507,7 +2459,6 @@ PHP_METHOD(php_wxXmlNode, SetContent)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2588,7 +2539,8 @@ PHP_METHOD(php_wxXmlNode, SetName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&name0, &name_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &name0, &name_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &name0, &name_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -2596,7 +2548,6 @@ PHP_METHOD(php_wxXmlNode, SetName)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2677,7 +2628,8 @@ PHP_METHOD(php_wxXmlNode, SetNext)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&next0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &next0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &next0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(next0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(next0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -2688,10 +2640,6 @@ PHP_METHOD(php_wxXmlNode, SetNext)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(next0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(next0);
 				}
 				else if(Z_TYPE_P(next0) != IS_NULL)
 				{
@@ -2705,7 +2653,6 @@ PHP_METHOD(php_wxXmlNode, SetNext)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2786,7 +2733,8 @@ PHP_METHOD(php_wxXmlNode, SetNoConversion)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'b' (&noconversion0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "b", &noconversion0 ) == SUCCESS)
+		char parse_parameters_string[] = "b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &noconversion0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -2794,7 +2742,6 @@ PHP_METHOD(php_wxXmlNode, SetNoConversion)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2875,7 +2822,8 @@ PHP_METHOD(php_wxXmlNode, SetParent)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&parent0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &parent0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(parent0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -2886,10 +2834,6 @@ PHP_METHOD(php_wxXmlNode, SetParent)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(parent0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(parent0);
 				}
 				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
@@ -2903,7 +2847,6 @@ PHP_METHOD(php_wxXmlNode, SetParent)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -2984,7 +2927,8 @@ PHP_METHOD(php_wxXmlNode, SetType)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'l' (&type0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "l", &type0 ) == SUCCESS)
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &type0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -2992,7 +2936,6 @@ PHP_METHOD(php_wxXmlNode, SetType)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3067,7 +3010,8 @@ PHP_METHOD(php_wxXmlNode, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'zls|szzl' (&parent0, &type0, &name0, &name_len0, &content0, &content_len0, &attrs0, &next0, &lineNo0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "zls|szzl", &parent0, &type0, &name0, &name_len0, &content0, &content_len0, &attrs0, &next0, &lineNo0 ) == SUCCESS)
+		char parse_parameters_string[] = "zls|szzl";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &type0, &name0, &name_len0, &content0, &content_len0, &attrs0, &next0, &lineNo0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(parent0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -3078,10 +3022,6 @@ PHP_METHOD(php_wxXmlNode, __construct)
 					{
 						goto overload1;
 					}
-				}
-				else if(Z_TYPE_P(parent0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(parent0);
 				}
 				else if(Z_TYPE_P(parent0) != IS_NULL)
 				{
@@ -3099,10 +3039,6 @@ PHP_METHOD(php_wxXmlNode, __construct)
 						goto overload1;
 					}
 				}
-				else if(Z_TYPE_P(attrs0) == IS_LONG)
-				{
-					object_pointer0_4 = Z_LVAL_P(attrs0);
-				}
 				else if(Z_TYPE_P(attrs0) != IS_NULL)
 				{
 						goto overload1;
@@ -3118,10 +3054,6 @@ PHP_METHOD(php_wxXmlNode, __construct)
 					{
 						goto overload1;
 					}
-				}
-				else if(Z_TYPE_P(next0) == IS_LONG)
-				{
-					object_pointer0_5 = Z_LVAL_P(next0);
 				}
 				else if(Z_TYPE_P(next0) != IS_NULL)
 				{
@@ -3142,7 +3074,8 @@ PHP_METHOD(php_wxXmlNode, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ls|sl' (&type1, &name1, &name_len1, &content1, &content_len1, &lineNo1)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ls|sl", &type1, &name1, &name_len1, &content1, &content_len1, &lineNo1 ) == SUCCESS)
+		char parse_parameters_string[] = "ls|sl";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &type1, &name1, &name_len1, &content1, &content_len1, &lineNo1 ) == SUCCESS)
 		{
 			overload1_called = true;
 			already_called = true;
@@ -3157,7 +3090,8 @@ PHP_METHOD(php_wxXmlNode, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&node2, php_wxXmlNode_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &node2, php_wxXmlNode_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &node2, php_wxXmlNode_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(node2) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(node2), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -3168,10 +3102,6 @@ PHP_METHOD(php_wxXmlNode, __construct)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(node2) == IS_LONG)
-				{
-					object_pointer2_0 = Z_LVAL_P(node2);
 				}
 				else if(Z_TYPE_P(node2) != IS_NULL)
 				{
@@ -3185,7 +3115,6 @@ PHP_METHOD(php_wxXmlNode, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3253,7 +3182,6 @@ PHP_METHOD(php_wxXmlNode, __construct)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -3291,7 +3219,6 @@ PHP_METHOD(php_wxXmlNode, __construct)
 		}
 	}
 
-	
 	if(overload2_called)
 	{
 		switch(arguments_received)
@@ -3338,6 +3265,7 @@ PHP_METHOD(php_wxXmlNode, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxXmlAttribute_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3346,13 +3274,13 @@ void php_wxXmlAttribute_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 	#endif
 	
 	
-	wxXmlAttribute_php* object = (wxXmlAttribute_php*)rsrc->ptr;
+	wxXmlAttribute_php* object = static_cast<wxXmlAttribute_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -3441,7 +3369,6 @@ PHP_METHOD(php_wxXmlAttribute, GetName)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3531,7 +3458,6 @@ PHP_METHOD(php_wxXmlAttribute, GetNext)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3548,8 +3474,8 @@ PHP_METHOD(php_wxXmlAttribute, GetNext)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3637,7 +3563,6 @@ PHP_METHOD(php_wxXmlAttribute, GetValue)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3724,7 +3649,8 @@ PHP_METHOD(php_wxXmlAttribute, SetName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&name0, &name_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &name0, &name_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &name0, &name_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -3732,7 +3658,6 @@ PHP_METHOD(php_wxXmlAttribute, SetName)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3813,7 +3738,8 @@ PHP_METHOD(php_wxXmlAttribute, SetNext)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&next0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &next0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &next0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(next0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(next0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -3824,10 +3750,6 @@ PHP_METHOD(php_wxXmlAttribute, SetNext)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(next0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(next0);
 				}
 				else if(Z_TYPE_P(next0) != IS_NULL)
 				{
@@ -3841,7 +3763,6 @@ PHP_METHOD(php_wxXmlAttribute, SetNext)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -3923,7 +3844,8 @@ PHP_METHOD(php_wxXmlAttribute, SetValue)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&value0, &value_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &value0, &value_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &value0, &value_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -3931,7 +3853,6 @@ PHP_METHOD(php_wxXmlAttribute, SetValue)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4002,7 +3923,8 @@ PHP_METHOD(php_wxXmlAttribute, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'ss|z' (&name1, &name_len1, &value1, &value_len1, &next1)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "ss|z", &name1, &name_len1, &value1, &value_len1, &next1 ) == SUCCESS)
+		char parse_parameters_string[] = "ss|z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &name1, &name_len1, &value1, &value_len1, &next1 ) == SUCCESS)
 		{
 			if(arguments_received >= 3){
 				if(Z_TYPE_P(next1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(next1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -4013,10 +3935,6 @@ PHP_METHOD(php_wxXmlAttribute, __construct)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(next1) == IS_LONG)
-				{
-					object_pointer1_2 = Z_LVAL_P(next1);
 				}
 				else if(Z_TYPE_P(next1) != IS_NULL)
 				{
@@ -4030,7 +3948,6 @@ PHP_METHOD(php_wxXmlAttribute, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4048,7 +3965,6 @@ PHP_METHOD(php_wxXmlAttribute, __construct)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -4105,6 +4021,7 @@ PHP_METHOD(php_wxXmlAttribute, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+
 void php_wxXmlDocument_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4113,13 +4030,13 @@ void php_wxXmlDocument_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxXmlDocument_php* object = (wxXmlDocument_php*)rsrc->ptr;
+	wxXmlDocument_php* object = static_cast<wxXmlDocument_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -4205,7 +4122,8 @@ PHP_METHOD(php_wxXmlDocument, AppendToProlog)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&node0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &node0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &node0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(node0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(node0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -4216,10 +4134,6 @@ PHP_METHOD(php_wxXmlDocument, AppendToProlog)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(node0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(node0);
 				}
 				else if(Z_TYPE_P(node0) != IS_NULL)
 				{
@@ -4233,7 +4147,6 @@ PHP_METHOD(php_wxXmlDocument, AppendToProlog)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4318,7 +4231,6 @@ PHP_METHOD(php_wxXmlDocument, DetachDocumentNode)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4335,8 +4247,8 @@ PHP_METHOD(php_wxXmlDocument, DetachDocumentNode)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4424,7 +4336,6 @@ PHP_METHOD(php_wxXmlDocument, DetachRoot)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4441,8 +4352,8 @@ PHP_METHOD(php_wxXmlDocument, DetachRoot)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4530,7 +4441,6 @@ PHP_METHOD(php_wxXmlDocument, GetDocumentNode)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4547,8 +4457,8 @@ PHP_METHOD(php_wxXmlDocument, GetDocumentNode)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4636,7 +4546,6 @@ PHP_METHOD(php_wxXmlDocument, GetFileEncoding)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4726,7 +4635,6 @@ PHP_METHOD(php_wxXmlDocument, GetLibraryVersionInfo)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4820,7 +4728,6 @@ PHP_METHOD(php_wxXmlDocument, GetRoot)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -4837,8 +4744,8 @@ PHP_METHOD(php_wxXmlDocument, GetRoot)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return0->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return0->phpObj != NULL){
+						return_value = value_to_return0->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4926,7 +4833,6 @@ PHP_METHOD(php_wxXmlDocument, GetVersion)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5016,7 +4922,6 @@ PHP_METHOD(php_wxXmlDocument, IsOk)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5107,7 +5012,8 @@ PHP_METHOD(php_wxXmlDocument, Load)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|sl' (&filename0, &filename_len0, &encoding0, &encoding_len0, &flags0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s|sl", &filename0, &filename_len0, &encoding0, &encoding_len0, &flags0 ) == SUCCESS)
+		char parse_parameters_string[] = "s|sl";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filename0, &filename_len0, &encoding0, &encoding_len0, &flags0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -5122,7 +5028,8 @@ PHP_METHOD(php_wxXmlDocument, Load)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O|sl' (&stream1, php_wxInputStream_entry, &encoding1, &encoding_len1, &flags1)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O|sl", &stream1, php_wxInputStream_entry, &encoding1, &encoding_len1, &flags1 ) == SUCCESS)
+		char parse_parameters_string[] = "O|sl";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream1, php_wxInputStream_entry, &encoding1, &encoding_len1, &flags1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(stream1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(stream1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -5133,10 +5040,6 @@ PHP_METHOD(php_wxXmlDocument, Load)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(stream1) == IS_LONG)
-				{
-					object_pointer1_0 = Z_LVAL_P(stream1);
 				}
 				else if(Z_TYPE_P(stream1) != IS_NULL)
 				{
@@ -5150,7 +5053,6 @@ PHP_METHOD(php_wxXmlDocument, Load)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5191,7 +5093,6 @@ PHP_METHOD(php_wxXmlDocument, Load)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -5303,7 +5204,8 @@ PHP_METHOD(php_wxXmlDocument, Save)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|l' (&filename0, &filename_len0, &indentstep0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s|l", &filename0, &filename_len0, &indentstep0 ) == SUCCESS)
+		char parse_parameters_string[] = "s|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filename0, &filename_len0, &indentstep0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -5318,7 +5220,8 @@ PHP_METHOD(php_wxXmlDocument, Save)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O|l' (&stream1, php_wxOutputStream_entry, &indentstep1)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O|l", &stream1, php_wxOutputStream_entry, &indentstep1 ) == SUCCESS)
+		char parse_parameters_string[] = "O|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream1, php_wxOutputStream_entry, &indentstep1 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(stream1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(stream1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -5329,10 +5232,6 @@ PHP_METHOD(php_wxXmlDocument, Save)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(stream1) == IS_LONG)
-				{
-					object_pointer1_0 = Z_LVAL_P(stream1);
 				}
 				else if(Z_TYPE_P(stream1) != IS_NULL)
 				{
@@ -5346,7 +5245,6 @@ PHP_METHOD(php_wxXmlDocument, Save)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5376,7 +5274,6 @@ PHP_METHOD(php_wxXmlDocument, Save)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -5470,7 +5367,8 @@ PHP_METHOD(php_wxXmlDocument, SetDocumentNode)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&node0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &node0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &node0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(node0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(node0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -5481,10 +5379,6 @@ PHP_METHOD(php_wxXmlDocument, SetDocumentNode)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(node0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(node0);
 				}
 				else if(Z_TYPE_P(node0) != IS_NULL)
 				{
@@ -5498,7 +5392,6 @@ PHP_METHOD(php_wxXmlDocument, SetDocumentNode)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5580,7 +5473,8 @@ PHP_METHOD(php_wxXmlDocument, SetFileEncoding)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&encoding0, &encoding_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &encoding0, &encoding_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &encoding0, &encoding_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -5588,7 +5482,6 @@ PHP_METHOD(php_wxXmlDocument, SetFileEncoding)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5669,7 +5562,8 @@ PHP_METHOD(php_wxXmlDocument, SetRoot)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&node0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &node0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &node0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(node0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(node0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -5680,10 +5574,6 @@ PHP_METHOD(php_wxXmlDocument, SetRoot)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(node0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(node0);
 				}
 				else if(Z_TYPE_P(node0) != IS_NULL)
 				{
@@ -5697,7 +5587,6 @@ PHP_METHOD(php_wxXmlDocument, SetRoot)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5779,7 +5668,8 @@ PHP_METHOD(php_wxXmlDocument, SetVersion)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&version0, &version_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &version0, &version_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &version0, &version_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -5787,7 +5677,6 @@ PHP_METHOD(php_wxXmlDocument, SetVersion)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5866,7 +5755,8 @@ PHP_METHOD(php_wxXmlDocument, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&doc1, php_wxXmlDocument_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &doc1, php_wxXmlDocument_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &doc1, php_wxXmlDocument_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(doc1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(doc1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -5877,10 +5767,6 @@ PHP_METHOD(php_wxXmlDocument, __construct)
 					{
 						goto overload2;
 					}
-				}
-				else if(Z_TYPE_P(doc1) == IS_LONG)
-				{
-					object_pointer1_0 = Z_LVAL_P(doc1);
 				}
 				else if(Z_TYPE_P(doc1) != IS_NULL)
 				{
@@ -5901,7 +5787,8 @@ PHP_METHOD(php_wxXmlDocument, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|s' (&filename2, &filename_len2, &encoding2, &encoding_len2)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s|s", &filename2, &filename_len2, &encoding2, &encoding_len2 ) == SUCCESS)
+		char parse_parameters_string[] = "s|s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filename2, &filename_len2, &encoding2, &encoding_len2 ) == SUCCESS)
 		{
 			overload2_called = true;
 			already_called = true;
@@ -5916,7 +5803,8 @@ PHP_METHOD(php_wxXmlDocument, __construct)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O|s' (&stream3, php_wxInputStream_entry, &encoding3, &encoding_len3)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O|s", &stream3, php_wxInputStream_entry, &encoding3, &encoding_len3 ) == SUCCESS)
+		char parse_parameters_string[] = "O|s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &stream3, php_wxInputStream_entry, &encoding3, &encoding_len3 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(stream3) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(stream3), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -5927,10 +5815,6 @@ PHP_METHOD(php_wxXmlDocument, __construct)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(stream3) == IS_LONG)
-				{
-					object_pointer3_0 = Z_LVAL_P(stream3);
 				}
 				else if(Z_TYPE_P(stream3) != IS_NULL)
 				{
@@ -5944,7 +5828,6 @@ PHP_METHOD(php_wxXmlDocument, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -5962,7 +5845,6 @@ PHP_METHOD(php_wxXmlDocument, __construct)
 		}
 	}
 
-	
 	if(overload1_called)
 	{
 		switch(arguments_received)
@@ -5981,7 +5863,6 @@ PHP_METHOD(php_wxXmlDocument, __construct)
 		}
 	}
 
-	
 	if(overload2_called)
 	{
 		switch(arguments_received)
@@ -6009,7 +5890,6 @@ PHP_METHOD(php_wxXmlDocument, __construct)
 		}
 	}
 
-	
 	if(overload3_called)
 	{
 		switch(arguments_received)

@@ -23,7 +23,7 @@
 <para><ref refid="classwx_u_string" kindref="compound">wxUString</ref> additionally provides overloads for <ref refid="classwx_string" kindref="compound">wxString</ref>, C string, UTF-16 strings, 32-bit strings, char buffers, single characters etc. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="248"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="248"/>
       </memberdef>
       <memberdef kind="function" id="ustring_8h_1a333bf64b6e1f9eb6d6beeaef78e226ff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -44,7 +44,7 @@
 <para><ref refid="classwx_u_string" kindref="compound">wxUString</ref> additionally provides overloads for <ref refid="classwx_string" kindref="compound">wxString</ref>, C string, UTF-16 strings, 32-bit strings, char buffers, single characters etc. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="255"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="255"/>
       </memberdef>
       <memberdef kind="function" id="ustring_8h_1a47f84a04f4b08fb2027ac6b2cfffb50a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -65,7 +65,7 @@
 <para><ref refid="classwx_u_string" kindref="compound">wxUString</ref> additionally provides overloads for <ref refid="classwx_string" kindref="compound">wxString</ref>, C string, UTF-16 strings, 32-bit strings, char buffers, single characters etc. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="261"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="261"/>
       </memberdef>
       <memberdef kind="function" id="ustring_8h_1ada82e58e765867bb87f55f6360fd1efd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -86,7 +86,7 @@
 <para><ref refid="classwx_u_string" kindref="compound">wxUString</ref> additionally provides overloads for <ref refid="classwx_string" kindref="compound">wxString</ref>, C string, UTF-16 strings, 32-bit strings, char buffers, single characters etc. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="267"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="267"/>
       </memberdef>
       <memberdef kind="function" id="ustring_8h_1a60ad5d54a9306f31fe6d6bb2eeb23c3a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -107,7 +107,7 @@
 <para><ref refid="classwx_u_string" kindref="compound">wxUString</ref> additionally provides overloads for <ref refid="classwx_string" kindref="compound">wxString</ref>, C string, UTF-16 strings, 32-bit strings, char buffers, single characters etc. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="273"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="273"/>
       </memberdef>
       <memberdef kind="function" id="ustring_8h_1a8f2eee8ed36bf49efc0862d3fe3bdeb4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -128,7 +128,7 @@
 <para><ref refid="classwx_u_string" kindref="compound">wxUString</ref> additionally provides overloads for <ref refid="classwx_string" kindref="compound">wxString</ref>, C string, UTF-16 strings, 32-bit strings, char buffers, single characters etc. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="279"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="279"/>
       </memberdef>
       <memberdef kind="function" id="ustring_8h_1a60380a62d3887028c7d8e58545adcf77" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -149,13 +149,13 @@
 <para><ref refid="classwx_u_string" kindref="compound">wxUString</ref> additionally provides overloads for <ref refid="classwx_string" kindref="compound">wxString</ref>, C string, UTF-16 strings, 32-bit strings, char buffers, single characters etc. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h" line="285"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h" line="285"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ustring.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ustring.h"/>
   </compounddef>
 </doxygen>

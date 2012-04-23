@@ -15,7 +15,7 @@
 <para><ref refid="classwx_rearrange_ctrl_1ab6b616278ce3cc9a095fbbd3e02620d9" kindref="member">Create()</ref> must be called later to effectively create the control. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" line="191"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rearrangectrl.h" line="191"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rearrange_ctrl_1a20803f2a9c123596b055fafd90ecff6a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -67,7 +67,7 @@
 <para>Please see <ref refid="classwx_rearrange_ctrl_1ab6b616278ce3cc9a095fbbd3e02620d9" kindref="member">Create()</ref> for the parameters description. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" line="206"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rearrangectrl.h" line="206"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rearrange_ctrl_1ab6b616278ce3cc9a095fbbd3e02620d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -119,7 +119,7 @@
 <para>The parameters of this method are the same as for <ref refid="classwx_rearrange_list_1a48b402d920f8afaa5e84aa2638d514a1" kindref="member">wxRearrangeList::Create()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" line="223"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rearrangectrl.h" line="223"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rearrange_ctrl_1a96a66c0c2bf1135d12a9e7902b050356" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rearrange_list" kindref="compound">wxRearrangeList</ref> *</type>
@@ -132,7 +132,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" line="228"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rearrangectrl.h" line="228"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -141,7 +141,7 @@
 <para>This control is in fact a panel containing the <ref refid="classwx_rearrange_list" kindref="compound">wxRearrangeList</ref> control and the &quot;Up&quot; and &quot;Down&quot; buttons to move the currently selected item up or down. It is used as the main part of a <ref refid="classwx_rearrange_dialog" kindref="compound">wxRearrangeDialog</ref>.</para><para><simplesect kind="since"><para>2.9.0</para></simplesect>
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" line="184" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/rearrangectrl.h" bodystart="183" bodyend="229"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/rearrangectrl.h" line="184" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/rearrangectrl.h" bodystart="183" bodyend="229"/>
     <listofallmembers>
       <member refid="classwx_rearrange_ctrl_1ab6b616278ce3cc9a095fbbd3e02620d9" prot="public" virt="non-virtual"><scope>wxRearrangeCtrl</scope><name>Create</name></member>
       <member refid="classwx_rearrange_ctrl_1a96a66c0c2bf1135d12a9e7902b050356" prot="public" virt="non-virtual"><scope>wxRearrangeCtrl</scope><name>GetList</name></member>

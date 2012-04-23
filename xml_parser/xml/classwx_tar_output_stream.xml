@@ -30,7 +30,7 @@
 <para>If it is passed by reference then it does not.</para><para>In a Unicode build the third parameter <emphasis>conv</emphasis> is used to translate the headers fields into an 8-bit encoding. It has no effect on the stream&apos;s data.</para><para>When the <emphasis>format</emphasis> is <emphasis>wxTAR_PAX</emphasis>, pax extended headers are generated when any header field will not fit the standard tar header block or if it uses any non-ascii characters.</para><para>Extended headers are stored as extra &apos;files&apos; within the tar, and will be extracted as such by any other tar program that does not understand them. The <emphasis>conv</emphasis> parameter only affect the standard tar headers, the extended headers are always UTF-8 encoded.</para><para>When the <emphasis>format</emphasis> is <emphasis>wxTAR_USTAR</emphasis>, no extended headers are generated, and instead a warning message is logged if any header field overflows. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="159"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="159"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tar_output_stream_1a11c21c143472287e7646b946c2812107" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -57,7 +57,7 @@
 <para>If it is passed by reference then it does not.</para><para>In a Unicode build the third parameter <emphasis>conv</emphasis> is used to translate the headers fields into an 8-bit encoding. It has no effect on the stream&apos;s data.</para><para>When the <emphasis>format</emphasis> is <emphasis>wxTAR_PAX</emphasis>, pax extended headers are generated when any header field will not fit the standard tar header block or if it uses any non-ascii characters.</para><para>Extended headers are stored as extra &apos;files&apos; within the tar, and will be extracted as such by any other tar program that does not understand them. The <emphasis>conv</emphasis> parameter only affect the standard tar headers, the extended headers are always UTF-8 encoded.</para><para>When the <emphasis>format</emphasis> is <emphasis>wxTAR_USTAR</emphasis>, no extended headers are generated, and instead a warning message is logged if any header field overflows. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="162"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="162"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -72,7 +72,7 @@
 <para>The blocking factor defaults to 10 for <emphasis>wxTAR_PAX</emphasis> and 20 for <emphasis>wxTAR_USTAR</emphasis> (see <ref refid="classwx_tar_output_stream_1a0711e1faef971ae13350e76de56b9a20" kindref="member">wxTarOutputStream()</ref>), as specified in the POSIX standards. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="213"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="213"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tar_output_stream_1a691265d08b0d293ff00abbb0a42aec63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -89,7 +89,7 @@
 <para>The blocking factor defaults to 10 for <emphasis>wxTAR_PAX</emphasis> and 20 for <emphasis>wxTAR_USTAR</emphasis> (see <ref refid="classwx_tar_output_stream_1a0711e1faef971ae13350e76de56b9a20" kindref="member">wxTarOutputStream()</ref>), as specified in the POSIX standards. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="214"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="214"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -104,7 +104,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="169"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="169"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tar_output_stream_1a28f6073ef5557fb488b1a7142d0ba882" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -118,7 +118,7 @@
 <para>Called by the destructor if not called explicitly. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="175"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="175"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tar_output_stream_1a4d4e378698566f70790534d259688349" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -132,7 +132,7 @@
 <para>It is called implicitly whenever another new entry is created with <ref refid="classwx_tar_output_stream_1ae7cfa31b3fe7f9937d813982cdda749f" kindref="member">CopyEntry()</ref> or <ref refid="classwx_tar_output_stream_1ae4c7956c1ab3b4c4b41df71ad093c3ec" kindref="member">PutNextEntry()</ref>, or when the tar is closed. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="183"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="183"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tar_output_stream_1ad7dfbd66d7915d81bdc96e3d449b1f2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -149,7 +149,7 @@
 <para>For the tar format this function does nothing. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="189"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="189"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tar_output_stream_1ae7cfa31b3fe7f9937d813982cdda749f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -170,7 +170,7 @@
 <para><emphasis>entry</emphasis> is then opened in <emphasis>inputStream</emphasis> and its contents copied to this stream.</para><para>For some other archive formats <ref refid="classwx_tar_output_stream_1ae7cfa31b3fe7f9937d813982cdda749f" kindref="member">CopyEntry()</ref> is much more efficient than transferring the data using Read() and <ref refid="classwx_output_stream_1a22154f02408431ffe8b1590407c3b011" kindref="member">Write()</ref> since it will copy them without decompressing and recompressing them. For tar however it makes no difference.</para><para>For tars on seekable streams, <emphasis>entry</emphasis> must be from the same tar file as <emphasis>inputStream</emphasis>. For non-seekable streams, <emphasis>entry</emphasis> must also be the last thing read from <emphasis>inputStream</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="204"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="204"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tar_output_stream_1a98ea36fbcd08c6c7ae82eaafdd5eb789" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -193,7 +193,7 @@
 <para><ref refid="classwx_tar_output_stream_1ae4c7956c1ab3b4c4b41df71ad093c3ec" kindref="member">PutNextEntry()</ref> can also be used to create directory entries, by supplying a name with a trailing path separator. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="224"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="224"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tar_output_stream_1ae4c7956c1ab3b4c4b41df71ad093c3ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -210,7 +210,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="229"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="229"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tar_output_stream_1a088d0f85e66a41388866edfa9512d7ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -238,7 +238,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="235"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="235"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -248,66 +248,66 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="overview_archive" kindref="compound">Archive Formats</ref>, <ref refid="classwx_tar_entry" kindref="compound">wxTarEntry</ref>, <ref refid="classwx_tar_input_stream" kindref="compound">wxTarInputStream</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10694">
+      <node id="10879">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="10690">
+      <node id="10875">
         <label>wxTarOutputStream</label>
         <link refid="classwx_tar_output_stream"/>
-        <childnode refid="10691" relation="public-inheritance">
+        <childnode refid="10876" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10692">
+      <node id="10877">
         <label>wxFilterOutputStream</label>
         <link refid="classwx_filter_output_stream"/>
-        <childnode refid="10693" relation="public-inheritance">
+        <childnode refid="10878" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10693">
+      <node id="10878">
         <label>wxOutputStream</label>
         <link refid="classwx_output_stream"/>
-        <childnode refid="10694" relation="public-inheritance">
+        <childnode refid="10879" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10691">
+      <node id="10876">
         <label>wxArchiveOutputStream</label>
         <link refid="classwx_archive_output_stream"/>
-        <childnode refid="10692" relation="public-inheritance">
+        <childnode refid="10877" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10699">
+      <node id="10884">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="10695">
+      <node id="10880">
         <label>wxTarOutputStream</label>
         <link refid="classwx_tar_output_stream"/>
-        <childnode refid="10696" relation="public-inheritance">
+        <childnode refid="10881" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10697">
+      <node id="10882">
         <label>wxFilterOutputStream</label>
         <link refid="classwx_filter_output_stream"/>
-        <childnode refid="10698" relation="public-inheritance">
+        <childnode refid="10883" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10698">
+      <node id="10883">
         <label>wxOutputStream</label>
         <link refid="classwx_output_stream"/>
-        <childnode refid="10699" relation="public-inheritance">
+        <childnode refid="10884" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10696">
+      <node id="10881">
         <label>wxArchiveOutputStream</label>
         <link refid="classwx_archive_output_stream"/>
-        <childnode refid="10697" relation="public-inheritance">
+        <childnode refid="10882" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" line="135" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/tarstrm.h" bodystart="134" bodyend="236"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" line="135" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/tarstrm.h" bodystart="134" bodyend="236"/>
     <listofallmembers>
       <member refid="classwx_tar_output_stream_1a28f6073ef5557fb488b1a7142d0ba882" prot="public" virt="virtual"><scope>wxTarOutputStream</scope><name>Close</name></member>
       <member refid="classwx_tar_output_stream_1a4d4e378698566f70790534d259688349" prot="public" virt="virtual"><scope>wxTarOutputStream</scope><name>CloseEntry</name></member>

@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="1098"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1058"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_event_1adbdc734a9a590540c02727d3478bbf91" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref></type>
@@ -42,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="1103"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1063"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_event_1a93c22ad9b0bea65d5320684acb2ed1a4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -55,7 +55,7 @@
 <para>Use <ref refid="classwx_tree_event_1acbb3f2ed69f43cc5b0b3beaf1ea9fb2d" kindref="member">GetKeyEvent()</ref> to get the values of the modifier keys for this event (i.e. Shift or Ctrl). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="1109"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1069"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_event_1acbb3f2ed69f43cc5b0b3beaf1ea9fb2d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_key_event" kindref="compound">wxKeyEvent</ref> &amp;</type>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="1114"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1074"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_event_1a3bb2b200afb8f389bd201bc09d945763" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="1119"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1079"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_event_1a7e424d49ada8ad89408426181013d4e8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref></type>
@@ -94,7 +94,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="1125"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1085"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_event_1a51b2ab537f535916ff181ac009acf27f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
@@ -107,7 +107,7 @@
 <para>In both cases the position is in client coordinates - i.e. relative to the <ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref> window (so that you can pass it directly to e.g. <ref refid="classwx_window_1a8f715d238cf74a845488b0e2645e98df" kindref="member">wxWindow::PopupMenu()</ref>). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="1135"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1095"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_event_1a12ada07a54f4520cf0983702c693b172" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -120,7 +120,7 @@
 <para>This should be called from within an <computeroutput>EVT_TREE_END_LABEL_EDIT</computeroutput> handler. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="1141"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1101"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_event_1aa7e87d07fb9292ee3d72b857485bf342" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -137,7 +137,7 @@
 <para>Windows only. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="1147"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1107"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -171,73 +171,73 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11205">
+      <node id="11394">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11203">
+      <node id="11392">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="11204" relation="public-inheritance">
+        <childnode refid="11393" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11202">
+      <node id="11391">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="11203" relation="public-inheritance">
+        <childnode refid="11392" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11201">
+      <node id="11390">
         <label>wxTreeEvent</label>
         <link refid="classwx_tree_event"/>
-        <childnode refid="11202" relation="public-inheritance">
+        <childnode refid="11391" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11204">
+      <node id="11393">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="11205" relation="public-inheritance">
+        <childnode refid="11394" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11210">
+      <node id="11399">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11211" relation="usage">
+        <childnode refid="11400" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11208">
+      <node id="11397">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="11209" relation="public-inheritance">
+        <childnode refid="11398" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11207">
+      <node id="11396">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="11208" relation="public-inheritance">
+        <childnode refid="11397" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11206">
+      <node id="11395">
         <label>wxTreeEvent</label>
         <link refid="classwx_tree_event"/>
-        <childnode refid="11207" relation="public-inheritance">
+        <childnode refid="11396" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11209">
+      <node id="11398">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="11210" relation="public-inheritance">
+        <childnode refid="11399" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11211">
+      <node id="11400">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" line="1092" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treectrl.h" bodystart="1091" bodyend="1148"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" line="1052" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treectrl.h" bodystart="1051" bodyend="1108"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxTreeEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_notify_event_1a7b23515f827b2ce1da1e6990d9aafe80" prot="public" virt="non-virtual"><scope>wxTreeEvent</scope><name>Allow</name></member>

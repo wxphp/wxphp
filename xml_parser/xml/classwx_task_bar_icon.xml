@@ -5,18 +5,23 @@
     <basecompoundref refid="classwx_evt_handler" prot="public" virt="non-virtual">wxEvtHandler</basecompoundref>
     <includes local="no">wx/taskbar.h</includes>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="classwx_task_bar_icon_1a0e6e619a0126fba305ab46499a4e895e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_task_bar_icon_1a8cd4bb6d88cfdc336aa11aa578529d53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxTaskBarIcon::wxTaskBarIcon</definition>
-        <argsstring>()</argsstring>
+        <argsstring>(wxTaskBarIconType iconType=wxTBI_DEFAULT_TYPE)</argsstring>
         <name>wxTaskBarIcon</name>
+        <param>
+          <type><ref refid="taskbar_8h_1a51fd8660b8ae3cd5773bc21a02883db2" kindref="member">wxTaskBarIconType</ref></type>
+          <declname>iconType</declname>
+          <defval>wxTBI_DEFAULT_TYPE</defval>
+        </param>
         <briefdescription>
 <para>Default constructor. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para>The iconType is only applicable on wxOSX_Cocoa. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="84"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" line="97"/>
       </memberdef>
       <memberdef kind="function" id="classwx_task_bar_icon_1af484f4a2fec3d8d927c5e8b802d293d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -29,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="89"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" line="102"/>
       </memberdef>
       <memberdef kind="function" id="classwx_task_bar_icon_1a6f70b76af5364d616d67fb0610724780" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -42,7 +47,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="97"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" line="110"/>
       </memberdef>
       <memberdef kind="function" id="classwx_task_bar_icon_1a5191762c5744a4d94839b43398300cd1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -55,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="102"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" line="115"/>
       </memberdef>
       <memberdef kind="function" id="classwx_task_bar_icon_1a163d781d08e0dc1ab45551c4e08b32f4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -68,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="107"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" line="120"/>
       </memberdef>
       <memberdef kind="function" id="classwx_task_bar_icon_1a5f67b426e34077c690c49f4e6dcc6919" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -86,7 +91,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="118"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" line="131"/>
       </memberdef>
       <memberdef kind="function" id="classwx_task_bar_icon_1ae2144fbd2527eff10fe4b7ec8e96ecdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -99,7 +104,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="123"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" line="136"/>
       </memberdef>
       <memberdef kind="function" id="classwx_task_bar_icon_1a95251b440ebda58172c4398c68e525e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -121,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="129"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" line="142"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -138,7 +143,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="152"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" line="165"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -153,7 +158,7 @@
 <para>Override this function in order to provide popup menu associated with the icon. If <ref refid="classwx_task_bar_icon_1a739c81dc5cadf9e550d38001cee419f6" kindref="member">CreatePopupMenu()</ref> returns NULL (this happens by default), no menu is shown, otherwise the menu is displayed and then deleted by the library as soon as the user dismisses it.</para><para>The events can be handled by a class derived from <ref refid="classwx_task_bar_icon" kindref="compound">wxTaskBarIcon</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="167"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" line="180"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -176,61 +181,61 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref> </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="10702">
+      <node id="10887">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10701">
+      <node id="10886">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10702" relation="public-inheritance">
+        <childnode refid="10887" relation="public-inheritance">
         </childnode>
-        <childnode refid="10703" relation="public-inheritance">
+        <childnode refid="10888" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10703">
+      <node id="10888">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10700">
+      <node id="10885">
         <label>wxTaskBarIcon</label>
         <link refid="classwx_task_bar_icon"/>
-        <childnode refid="10701" relation="public-inheritance">
+        <childnode refid="10886" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10706">
+      <node id="10891">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10707" relation="usage">
+        <childnode refid="10892" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10705">
+      <node id="10890">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10706" relation="public-inheritance">
+        <childnode refid="10891" relation="public-inheritance">
         </childnode>
-        <childnode refid="10708" relation="public-inheritance">
+        <childnode refid="10893" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10708">
+      <node id="10893">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10704">
+      <node id="10889">
         <label>wxTaskBarIcon</label>
         <link refid="classwx_task_bar_icon"/>
-        <childnode refid="10705" relation="public-inheritance">
+        <childnode refid="10890" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10707">
+      <node id="10892">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" line="79" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/taskbar.h" bodystart="78" bodyend="168"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" line="92" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/taskbar.h" bodystart="91" bodyend="181"/>
     <listofallmembers>
       <member refid="classwx_evt_handler_1a7dc3c701781f4044372049de5004137e" prot="public" virt="non-virtual"><scope>wxTaskBarIcon</scope><name>AddFilter</name></member>
       <member refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" prot="public" virt="virtual"><scope>wxTaskBarIcon</scope><name>AddPendingEvent</name></member>
@@ -283,7 +288,6 @@
       <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxTaskBarIcon</scope><name>SetRefData</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxTaskBarIcon</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxTaskBarIcon</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxTaskBarIcon</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxTaskBarIcon</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxTaskBarIcon</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxTaskBarIcon</scope><name>Unlink</name></member>
@@ -292,7 +296,7 @@
       <member refid="classwx_evt_handler_1a3f0166c4154227d05575b01eb2c8d4be" prot="public" virt="non-virtual"><scope>wxTaskBarIcon</scope><name>wxEvtHandler</name></member>
       <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxTaskBarIcon</scope><name>wxObject</name></member>
       <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxTaskBarIcon</scope><name>wxObject</name></member>
-      <member refid="classwx_task_bar_icon_1a0e6e619a0126fba305ab46499a4e895e" prot="public" virt="non-virtual"><scope>wxTaskBarIcon</scope><name>wxTaskBarIcon</name></member>
+      <member refid="classwx_task_bar_icon_1a8cd4bb6d88cfdc336aa11aa578529d53" prot="public" virt="non-virtual"><scope>wxTaskBarIcon</scope><name>wxTaskBarIcon</name></member>
       <member refid="classwx_evt_handler_1a372d2239d91521eddc8fd2715fcab584" prot="public" virt="virtual"><scope>wxTaskBarIcon</scope><name>~wxEvtHandler</name></member>
       <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxTaskBarIcon</scope><name>~wxObject</name></member>
       <member refid="classwx_task_bar_icon_1af484f4a2fec3d8d927c5e8b802d293d7" prot="public" virt="virtual"><scope>wxTaskBarIcon</scope><name>~wxTaskBarIcon</name></member>

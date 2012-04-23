@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="59"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="59"/>
       </memberdef>
       <memberdef kind="function" id="classwx_t_c_p_server_1ac0dbb7a47a92e18400785d03f97bd575" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -33,7 +33,7 @@
 <para>Under Unix, the string must contain an integer id which is used as an Internet port number. false is returned if the call failed (for example, the port number is already in use). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="68"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="68"/>
       </memberdef>
       <memberdef kind="function" id="classwx_t_c_p_server_1a7042468880f14ee549cbf75c91c889cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_connection_base" kindref="compound">wxConnectionBase</ref> *</type>
@@ -50,7 +50,7 @@
 <para>The application should derive a member to intercept this message and return a connection object of either the standard <ref refid="classwx_t_c_p_connection" kindref="compound">wxTCPConnection</ref> type, or of a user-derived type. If the topic is &quot;STDIO&quot;, the application may wish to refuse the connection. Under Unix, when a server is created the OnAcceptConnection message is always sent for standard input and output. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="81"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="81"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -60,37 +60,37 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_t_c_p_client" kindref="compound">wxTCPClient</ref>, <ref refid="classwx_t_c_p_connection" kindref="compound">wxTCPConnection</ref>, <ref refid="overview_ipc" kindref="compound">Interprocess Communication</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10727">
+      <node id="10912">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10726">
+      <node id="10911">
         <label>wxTCPServer</label>
         <link refid="classwx_t_c_p_server"/>
-        <childnode refid="10727" relation="public-inheritance">
+        <childnode refid="10912" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10729">
+      <node id="10914">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10730" relation="usage">
+        <childnode refid="10915" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10728">
+      <node id="10913">
         <label>wxTCPServer</label>
         <link refid="classwx_t_c_p_server"/>
-        <childnode refid="10729" relation="public-inheritance">
+        <childnode refid="10914" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10730">
+      <node id="10915">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" line="54" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sckipc.h" bodystart="53" bodyend="82"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" line="54" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/sckipc.h" bodystart="53" bodyend="82"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxTCPServer</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxTCPServer</scope><name>CloneRefData</name></member>

@@ -19,7 +19,7 @@
 <para>Whenever possible wxWidgets provides an efficient, CPU-specific, implementation of this function. If such implementation is available, the symbol wxHAS_ATOMIC_OPS is defined. Otherwise this function still exists but is implemented in a generic way using a critical section which can be prohibitively expensive for use in performance-sensitive code.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/atomic.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/atomic.h" line="28"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/atomic.h" line="28"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__atomic_1ga396a0a6c5b705d46862564f5b16897b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a5c084575ef1ffaa7586dda7e4b22d78a" kindref="member">wxInt32</ref></type>
@@ -37,7 +37,7 @@
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/atomic.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/atomic.h" line="40"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/atomic.h" line="40"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

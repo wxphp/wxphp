@@ -5,6 +5,7 @@
     <innerclass refid="classwx_file_system" prot="public">wxFileSystem</innerclass>
     <innerclass refid="classwx_f_s_file" prot="public">wxFSFile</innerclass>
     <innerclass refid="classwx_file_system_handler" prot="public">wxFileSystemHandler</innerclass>
+    <innerclass refid="classwx_f_s_input_stream" prot="public">wxFSInputStream</innerclass>
       <sectiondef kind="enum">
       <memberdef kind="enum" id="filesys_8h_1abe38fc3ba01ed25545f0c841da8c2942" prot="public" static="no">
         <name>wxFileSystemOpenFlags</name>
@@ -30,13 +31,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="14" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" bodystart="13" bodyend="17"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="14" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" bodystart="13" bodyend="17"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h"/>
   </compounddef>
 </doxygen>

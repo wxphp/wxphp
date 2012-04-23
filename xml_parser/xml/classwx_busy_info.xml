@@ -25,7 +25,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/busyinfo.h" line="66"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/busyinfo.h" line="66"/>
       </memberdef>
       <memberdef kind="function" id="classwx_busy_info_1af6d67f322ed46bc4eb1148d41f5c129b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -38,7 +38,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/busyinfo.h" line="71"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/busyinfo.h" line="71"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -62,7 +62,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para>but take care to not cause undesirable reentrancies when doing it (see <ref refid="classwx_app_console_1a302adeb701f247bf8cac1570efc25020" kindref="member">wxApp::Yield</ref> for more details). The simplest way to do it is to use <ref refid="classwx_window_disabler" kindref="compound">wxWindowDisabler</ref> class as illustrated in the above example.</para><para>Note that a <ref refid="classwx_busy_info" kindref="compound">wxBusyInfo</ref> is always built with the <computeroutput>wxSTAY_ON_TOP</computeroutput> window style (see <ref refid="classwx_frame" kindref="compound">wxFrame</ref> window styles for more info).</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/busyinfo.h" line="58" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/busyinfo.h" bodystart="57" bodyend="72"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/busyinfo.h" line="58" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/busyinfo.h" bodystart="57" bodyend="72"/>
     <listofallmembers>
       <member refid="classwx_busy_info_1aa53bff52ae401bab878169e7d04b86d3" prot="public" virt="non-virtual"><scope>wxBusyInfo</scope><name>wxBusyInfo</name></member>
       <member refid="classwx_busy_info_1af6d67f322ed46bc4eb1148d41f5c129b" prot="public" virt="virtual"><scope>wxBusyInfo</scope><name>~wxBusyInfo</name></member>

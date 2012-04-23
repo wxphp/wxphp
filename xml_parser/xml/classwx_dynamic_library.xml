@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynlib.h" line="115"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynlib.h" line="115"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dynamic_library_1a0bf6388400c27308a5e9cc8ccbc69301" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -37,7 +37,7 @@
 <para>Calls <ref refid="classwx_dynamic_library_1a8fc30053e38d44cfe0b2252a16598c44" kindref="member">Load()</ref> with the given <emphasis>name</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynlib.h" line="119"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynlib.h" line="119"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dynamic_library_1abf953699d784076924386a519453e363" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxDllType</type>
@@ -50,7 +50,7 @@
 <para>the object will not unload the library any longer in its destructor but it is now the callers responsibility to do this using <ref refid="classwx_dynamic_library_1a3c1c0310e1dd448e3575ed981fe0cef4" kindref="member">Unload()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynlib.h" line="145"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynlib.h" line="145"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dynamic_library_1a8326e2a1f6ff322f965137ec66c900ee" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -73,7 +73,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynlib.h" line="159"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynlib.h" line="159"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dynamic_library_1a53f257b8362d7657ed672a4c2a03641b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -90,7 +90,7 @@
 <para>Such functions have either <computeroutput>&apos;A&apos;</computeroutput> (in ANSI build) or <computeroutput>&apos;W&apos;</computeroutput> (in Unicode, or wide character build) suffix if they take string parameters. Using this function, you can use just the base name of the function and the correct suffix is appended automatically depending on the current build. Otherwise, this method is identical to <ref refid="classwx_dynamic_library_1a8326e2a1f6ff322f965137ec66c900ee" kindref="member">GetSymbol()</ref>.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynlib.h" line="172"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynlib.h" line="172"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dynamic_library_1aca690ba1f8c142973f5395542f460f3f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -108,7 +108,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynlib.h" line="181"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynlib.h" line="181"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dynamic_library_1a6caa0a1e89e5b7059ac704ec434eb863" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -121,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynlib.h" line="186"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynlib.h" line="186"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dynamic_library_1a8fc30053e38d44cfe0b2252a16598c44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -143,7 +143,7 @@
 <para>The <emphasis>flags</emphasis> argument can be a combination of the styles outlined in the class description.</para><para>Returns true if the library was successfully loaded, false otherwise. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynlib.h" line="205"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynlib.h" line="205"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dynamic_library_1a3c1c0310e1dd448e3575ed981fe0cef4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -156,7 +156,7 @@
 <para><ref refid="classwx_dynamic_library" kindref="compound">wxDynamicLibrary</ref> object automatically calls this method from its destructor if it had been successfully loaded. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynlib.h" line="212"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynlib.h" line="212"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -181,7 +181,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynlib.h" line="129"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynlib.h" line="129"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dynamic_library_1a36a523c77c4bbc8dbe43bb35b070ed1d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -203,7 +203,7 @@
 <para>The only difference is that compiler and version information are added to the name to ensure that the plugin which is going to be loaded will be compatible with the main program. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynlib.h" line="138"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynlib.h" line="138"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dynamic_library_1a74aa762219bc25e2a52c8d024ae84183" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxDllType</type>
@@ -216,7 +216,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynlib.h" line="151"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynlib.h" line="151"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dynamic_library_1a89df5540b1dc3aa3886122d8fc8e1e84" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxDynamicLibraryDetailsArray</type>
@@ -229,7 +229,7 @@
 <para>The array elements are objects of the type: <ref refid="classwx_dynamic_library_details" kindref="compound">wxDynamicLibraryDetails</ref>. The array will be empty if an error occurred.</para><para>This method is currently implemented only under Win32 and Linux and is useful mostly for diagnostics purposes. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynlib.h" line="197"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynlib.h" line="197"/>
       </memberdef>
       <memberdef kind="function" id="classwx_dynamic_library_1a27a115695cc04dd1e0a59c2d5ed82989" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -246,7 +246,7 @@
 <para><ref refid="classwx_dynamic_library" kindref="compound">wxDynamicLibrary</ref> object automatically calls this method from its destructor if it had been successfully loaded.</para><para>This version of <ref refid="classwx_dynamic_library_1a3c1c0310e1dd448e3575ed981fe0cef4" kindref="member">Unload()</ref> is only used if you need to keep the library in memory during a longer period of time than the scope of the <ref refid="classwx_dynamic_library" kindref="compound">wxDynamicLibrary</ref> object. In this case you may call <ref refid="classwx_dynamic_library_1abf953699d784076924386a519453e363" kindref="member">Detach()</ref> and store the handle somewhere and call this static method later to unload it. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynlib.h" line="223"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynlib.h" line="223"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -263,7 +263,7 @@
 </itemizedlist>
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__appmanagement" kindref="compound">Application and Process Management</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynlib.h" line="110" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynlib.h" bodystart="109" bodyend="224"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynlib.h" line="110" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dynlib.h" bodystart="109" bodyend="224"/>
     <listofallmembers>
       <member refid="classwx_dynamic_library_1a2d61b9a60e0c804c06e2fc6a5d53fb3c" prot="public" virt="non-virtual"><scope>wxDynamicLibrary</scope><name>CanonicalizeName</name></member>
       <member refid="classwx_dynamic_library_1a36a523c77c4bbc8dbe43bb35b070ed1d" prot="public" virt="non-virtual"><scope>wxDynamicLibrary</scope><name>CanonicalizePluginName</name></member>

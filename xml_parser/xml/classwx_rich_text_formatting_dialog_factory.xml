@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="30"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="30"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_formatting_dialog_factory_1a9a12c839e9181ee3f6ec6236a18d57b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="35"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="35"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_formatting_dialog_factory_1ac445891f66c6f2b035356ebf23f5eea4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="40"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="40"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_formatting_dialog_factory_1aaa8fa34f4bb993e79fd7379e77b15419" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_panel" kindref="compound">wxPanel</ref> *</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="46"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="46"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_formatting_dialog_factory_1a6c4427c8ebac973dcf1baf58d492f373" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -92,7 +92,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="52"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="52"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_formatting_dialog_factory_1a71c609e45705b8b89cdd33021c467c36" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -109,7 +109,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="57"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="57"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_formatting_dialog_factory_1a9b8e180d3b9b7427ebb307fab4abc310" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -122,7 +122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="62"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="62"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_formatting_dialog_factory_1aea9992a3611747d7d0be153599f8f995" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -139,7 +139,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="67"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="67"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_formatting_dialog_factory_1a3dde25dde04565683c34f5a507bbe989" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -156,7 +156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="73"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="73"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_formatting_dialog_factory_1ae281cd3fa0f02a8b6e177cd17906fc06" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -177,7 +177,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="79"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="79"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -186,37 +186,37 @@
 <para>A default instance of this class is provided automatically. If you wish to change the behaviour of the formatting dialog (for example add or replace a page), you may derive from this class, override one or more functions, and call the static function <ref refid="classwx_rich_text_formatting_dialog_1a23c0022142539fcb77757ffb7c1f0d9a" kindref="member">wxRichTextFormattingDialog::SetFormattingDialogFactory</ref>.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9624">
+      <node id="9807">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="9623">
+      <node id="9806">
         <label>wxRichTextFormattingDialogFactory</label>
         <link refid="classwx_rich_text_formatting_dialog_factory"/>
-        <childnode refid="9624" relation="public-inheritance">
+        <childnode refid="9807" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9626">
+      <node id="9809">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9627" relation="usage">
+        <childnode refid="9810" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9625">
+      <node id="9808">
         <label>wxRichTextFormattingDialogFactory</label>
         <link refid="classwx_rich_text_formatting_dialog_factory"/>
-        <childnode refid="9626" relation="public-inheritance">
+        <childnode refid="9809" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9627">
+      <node id="9810">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" bodystart="24" bodyend="80"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="25" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" bodystart="24" bodyend="80"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxRichTextFormattingDialogFactory</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxRichTextFormattingDialogFactory</scope><name>CloneRefData</name></member>

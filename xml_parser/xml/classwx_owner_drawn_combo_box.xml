@@ -56,7 +56,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/odcombo.h" line="160"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/odcombo.h" line="160"/>
       </memberdef>
       <memberdef kind="function" id="classwx_owner_drawn_combo_box_1a6e4bc8f072b03f00ccd5dc834f9ab149" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -114,7 +114,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/odcombo.h" line="170"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/odcombo.h" line="170"/>
       </memberdef>
       <memberdef kind="function" id="classwx_owner_drawn_combo_box_1a8117083f01a57671d333d6df72d23abf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -167,7 +167,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/odcombo.h" line="179"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/odcombo.h" line="179"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -182,12 +182,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/odcombo.h" line="69"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/odcombo.h" line="69"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_owner_drawn_combo_box_1a18c40514bb22df84b2a653735d57db45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_owner_drawn_combo_box_1ab321b7648155a873e60a7c2e055c7246" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxOwnerDrawnComboBox::wxOwnerDrawnComboBox</definition>
-        <argsstring>(wxWindow *parent, wxWindowID id, const wxString &amp;value=wxEmptyString, const wxPoint &amp;pos=wxDefaultPosition, const wxSize &amp;size=wxDefaultSize, int n=0, const wxString[] choices=NULL, long style=0, const wxValidator &amp;validator=wxDefaultValidator, const wxString &amp;name=&quot;comboBox&quot;)</argsstring>
+        <argsstring>(wxWindow *parent, wxWindowID id, const wxString &amp;value=wxEmptyString, const wxPoint &amp;pos=wxDefaultPosition, const wxSize &amp;size=wxDefaultSize, int n=0, const wxString choices[]=NULL, long style=0, const wxValidator &amp;validator=wxDefaultValidator, const wxString &amp;name=&quot;comboBox&quot;)</argsstring>
         <name>wxOwnerDrawnComboBox</name>
         <param>
           <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -218,8 +218,9 @@
           <defval>0</defval>
         </param>
         <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref>[]</type>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref></type>
           <declname>choices</declname>
+          <array>[]</array>
           <defval>NULL</defval>
         </param>
         <param>
@@ -315,7 +316,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/odcombo.h" line="106"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/odcombo.h" line="106"/>
       </memberdef>
       <memberdef kind="function" id="classwx_owner_drawn_combo_box_1a2eda25541f678c9dfa9bc4c97bcafc29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -432,7 +433,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/odcombo.h" line="139"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/odcombo.h" line="139"/>
       </memberdef>
       <memberdef kind="function" id="classwx_owner_drawn_combo_box_1a6b083faef14b3094ca26cf8225f99220" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -445,7 +446,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/odcombo.h" line="144"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/odcombo.h" line="144"/>
       </memberdef>
       <memberdef kind="function" id="classwx_owner_drawn_combo_box_1aada8ca321c213d2e4a28c01aa1c56c35" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -458,7 +459,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/odcombo.h" line="185"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/odcombo.h" line="185"/>
       </memberdef>
       <memberdef kind="function" id="classwx_owner_drawn_combo_box_1a6bff15424b9ea43df6c4b9efe7bc1a78" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -471,7 +472,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/odcombo.h" line="190"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/odcombo.h" line="190"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -503,7 +504,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/odcombo.h" line="204"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/odcombo.h" line="204"/>
       </memberdef>
       <memberdef kind="function" id="classwx_owner_drawn_combo_box_1a356f571c472250d19f1f7010592e0823" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -561,7 +562,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/odcombo.h" line="224"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/odcombo.h" line="224"/>
       </memberdef>
       <memberdef kind="function" id="classwx_owner_drawn_combo_box_1a3cb4a0cf2d80cab952f74d49beb0007b" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
@@ -578,7 +579,7 @@
 <para>The default implementation returns text height, as if this control was a normal combobox. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/odcombo.h" line="233"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/odcombo.h" line="233"/>
       </memberdef>
       <memberdef kind="function" id="classwx_owner_drawn_combo_box_1a337ac52e60f5d474e69097703f4788aa" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
@@ -595,7 +596,7 @@
 <para>If -1 is returned, then the item text width is used.</para><para>The default implementation returns -1. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/odcombo.h" line="242"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/odcombo.h" line="242"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -616,109 +617,109 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref> <htmlonly> &lt;br&gt;&lt;div&gt;&lt;span class=&apos;appearance&apos;&gt;Appearance:&lt;/span&gt;&lt;br&gt;&lt;table class=&apos;appearance&apos;&gt;&lt;tr&gt;&lt;td&gt;&lt;img src=&apos;wxmsw/ownerdrawncombobox.png&apos; alt=&apos;wxMSW appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxgtk/ownerdrawncombobox.png&apos; alt=&apos;wxGTK appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;td&gt;&lt;img src=&apos;wxmac/ownerdrawncombobox.png&apos; alt=&apos;wxMac appearance&apos; class=&apos;appearance&apos;/&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;wxMSW appearance&lt;/td&gt;&lt;td&gt;wxGTK appearance&lt;/td&gt;&lt;td&gt;wxMac appearance&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt; </htmlonly></para><para><simplesect kind="see"><para><ref refid="classwx_combo_ctrl" kindref="compound">wxComboCtrl</ref>, <ref refid="classwx_combo_box" kindref="compound">wxComboBox</ref>, <ref refid="classwx_v_list_box" kindref="compound">wxVListBox</ref>, <ref refid="classwx_command_event" kindref="compound">wxCommandEvent</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8487">
+      <node id="8690">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8486">
+      <node id="8689">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8487" relation="public-inheritance">
+        <childnode refid="8690" relation="public-inheritance">
         </childnode>
-        <childnode refid="8488" relation="public-inheritance">
+        <childnode refid="8691" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8488">
+      <node id="8691">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8489">
+      <node id="8692">
         <label>wxTextEntry</label>
         <link refid="classwx_text_entry"/>
       </node>
-      <node id="8484">
+      <node id="8687">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="8485" relation="public-inheritance">
+        <childnode refid="8688" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8485">
+      <node id="8688">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="8486" relation="public-inheritance">
+        <childnode refid="8689" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8483">
+      <node id="8686">
         <label>wxComboCtrl</label>
         <link refid="classwx_combo_ctrl"/>
-        <childnode refid="8484" relation="public-inheritance">
+        <childnode refid="8687" relation="public-inheritance">
         </childnode>
-        <childnode refid="8489" relation="public-inheritance">
+        <childnode refid="8692" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8482">
+      <node id="8685">
         <label>wxOwnerDrawnComboBox</label>
         <link refid="classwx_owner_drawn_combo_box"/>
-        <childnode refid="8483" relation="public-inheritance">
+        <childnode refid="8686" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8495">
+      <node id="8698">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8496" relation="usage">
+        <childnode refid="8699" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8494">
+      <node id="8697">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8495" relation="public-inheritance">
+        <childnode refid="8698" relation="public-inheritance">
         </childnode>
-        <childnode refid="8497" relation="public-inheritance">
+        <childnode refid="8700" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8497">
+      <node id="8700">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8498">
+      <node id="8701">
         <label>wxTextEntry</label>
         <link refid="classwx_text_entry"/>
       </node>
-      <node id="8492">
+      <node id="8695">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="8493" relation="public-inheritance">
+        <childnode refid="8696" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8493">
+      <node id="8696">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="8494" relation="public-inheritance">
+        <childnode refid="8697" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8491">
+      <node id="8694">
         <label>wxComboCtrl</label>
         <link refid="classwx_combo_ctrl"/>
-        <childnode refid="8492" relation="public-inheritance">
+        <childnode refid="8695" relation="public-inheritance">
         </childnode>
-        <childnode refid="8498" relation="public-inheritance">
+        <childnode refid="8701" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8490">
+      <node id="8693">
         <label>wxOwnerDrawnComboBox</label>
         <link refid="classwx_owner_drawn_combo_box"/>
-        <childnode refid="8491" relation="public-inheritance">
+        <childnode refid="8694" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8496">
+      <node id="8699">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/odcombo.h" line="64" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/odcombo.h" bodystart="63" bodyend="243"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/odcombo.h" line="64" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/odcombo.h" bodystart="63" bodyend="243"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxOwnerDrawnComboBox</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxOwnerDrawnComboBox</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -927,6 +928,7 @@
       <member refid="classwx_window_1aa90a260c0a835a133043460b7d0024a8" prot="public" virt="virtual"><scope>wxOwnerDrawnComboBox</scope><name>InitDialog</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxOwnerDrawnComboBox</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxOwnerDrawnComboBox</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxOwnerDrawnComboBox</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxOwnerDrawnComboBox</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_text_entry_1a2bb43512241850ba7cef54dee029fb86" prot="public" virt="virtual"><scope>wxOwnerDrawnComboBox</scope><name>IsEditable</name></member>
       <member refid="classwx_text_entry_1a84d0559b6e7720cc230ba35e74e1e158" prot="public" virt="virtual"><scope>wxOwnerDrawnComboBox</scope><name>IsEmpty</name></member>
@@ -946,13 +948,13 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxOwnerDrawnComboBox</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxOwnerDrawnComboBox</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxOwnerDrawnComboBox</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxOwnerDrawnComboBox</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxOwnerDrawnComboBox</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxOwnerDrawnComboBox</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxOwnerDrawnComboBox</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxOwnerDrawnComboBox</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxOwnerDrawnComboBox</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxOwnerDrawnComboBox</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxOwnerDrawnComboBox</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxOwnerDrawnComboBox</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxOwnerDrawnComboBox</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxOwnerDrawnComboBox</scope><name>MoveAfterInTabOrder</name></member>
@@ -1039,7 +1041,7 @@
       <member refid="classwx_window_1a9ab11e7da57a1d08918aa75fc33f6ad3" prot="public" virt="virtual"><scope>wxOwnerDrawnComboBox</scope><name>SetFont</name></member>
       <member refid="classwx_window_1a69f1e1c7ddd370d72e68c70f13ac8de9" prot="public" virt="virtual"><scope>wxOwnerDrawnComboBox</scope><name>SetForegroundColour</name></member>
       <member refid="classwx_window_1a4c1a2cbc7363237b3a7c70af4e702c72" prot="public" virt="non-virtual"><scope>wxOwnerDrawnComboBox</scope><name>SetHelpText</name></member>
-      <member refid="classwx_combo_ctrl_1afd6de67563df02c3e57d48a0a55842fa" prot="public" virt="virtual"><scope>wxOwnerDrawnComboBox</scope><name>SetHint</name></member>
+      <member refid="classwx_combo_ctrl_1a68221bdd4af63abfd9840e5de13f4ba6" prot="public" virt="virtual"><scope>wxOwnerDrawnComboBox</scope><name>SetHint</name></member>
       <member refid="classwx_window_1a7f27d0faed14effa013381bdc40e1bcd" prot="public" virt="non-virtual"><scope>wxOwnerDrawnComboBox</scope><name>SetId</name></member>
       <member refid="classwx_window_1ae6dfe0b0d4a8c666b21ce8df8d96727b" prot="protected" virt="virtual"><scope>wxOwnerDrawnComboBox</scope><name>SetInitialBestSize</name></member>
       <member refid="classwx_window_1a1b309ca50ba87e34f968c83b79af1397" prot="public" virt="non-virtual"><scope>wxOwnerDrawnComboBox</scope><name>SetInitialSize</name></member>
@@ -1090,7 +1092,6 @@
       <member refid="classwx_window_1ac8cf4398cec50ac36634760f45a0656f" prot="public" virt="virtual"><scope>wxOwnerDrawnComboBox</scope><name>SetTransparent</name></member>
       <member refid="classwx_window_1a00066c70049a7be3ce6b648d206e6432" prot="public" virt="virtual"><scope>wxOwnerDrawnComboBox</scope><name>SetValidator</name></member>
       <member refid="classwx_combo_ctrl_1a4202edbc9fc83623c658a83fe4c6d7be" prot="public" virt="virtual"><scope>wxOwnerDrawnComboBox</scope><name>SetValue</name></member>
-      <member refid="classwx_combo_ctrl_1af70ad872f5f8ca4c5598739556a73554" prot="public" virt="non-virtual"><scope>wxOwnerDrawnComboBox</scope><name>SetValueWithEvent</name></member>
       <member refid="classwx_window_1a37f293b7904bc6668b86cccb0aea5669" prot="public" virt="non-virtual"><scope>wxOwnerDrawnComboBox</scope><name>SetVirtualSize</name></member>
       <member refid="classwx_window_1a8e95201edebe43b9623bd3bdc555af4d" prot="public" virt="non-virtual"><scope>wxOwnerDrawnComboBox</scope><name>SetVirtualSize</name></member>
       <member refid="classwx_window_1a306af30adec68689f74ed537b4f9d5fd" prot="public" virt="non-virtual"><scope>wxOwnerDrawnComboBox</scope><name>SetWindowStyle</name></member>
@@ -1106,7 +1107,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxOwnerDrawnComboBox</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxOwnerDrawnComboBox</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxOwnerDrawnComboBox</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxOwnerDrawnComboBox</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxOwnerDrawnComboBox</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxOwnerDrawnComboBox</scope><name>Unbind</name></member>
       <member refid="classwx_combo_ctrl_1a9da1ff37488b9c33ed02ba2064ad6d85" prot="public" virt="virtual"><scope>wxOwnerDrawnComboBox</scope><name>Undo</name></member>
@@ -1131,7 +1131,7 @@
       <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxOwnerDrawnComboBox</scope><name>wxObject</name></member>
       <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxOwnerDrawnComboBox</scope><name>wxObject</name></member>
       <member refid="classwx_owner_drawn_combo_box_1af949423a0a5e212ee125ad82ecb5941e" prot="public" virt="non-virtual"><scope>wxOwnerDrawnComboBox</scope><name>wxOwnerDrawnComboBox</name></member>
-      <member refid="classwx_owner_drawn_combo_box_1a18c40514bb22df84b2a653735d57db45" prot="public" virt="non-virtual"><scope>wxOwnerDrawnComboBox</scope><name>wxOwnerDrawnComboBox</name></member>
+      <member refid="classwx_owner_drawn_combo_box_1ab321b7648155a873e60a7c2e055c7246" prot="public" virt="non-virtual"><scope>wxOwnerDrawnComboBox</scope><name>wxOwnerDrawnComboBox</name></member>
       <member refid="classwx_owner_drawn_combo_box_1a2eda25541f678c9dfa9bc4c97bcafc29" prot="public" virt="non-virtual"><scope>wxOwnerDrawnComboBox</scope><name>wxOwnerDrawnComboBox</name></member>
       <member refid="classwx_window_1a695200a4915b934926dcf32afa44544c" prot="public" virt="non-virtual"><scope>wxOwnerDrawnComboBox</scope><name>wxWindow</name></member>
       <member refid="classwx_window_1a7799009b10d1765d1bbb6db4994f922e" prot="public" virt="non-virtual"><scope>wxOwnerDrawnComboBox</scope><name>wxWindow</name></member>

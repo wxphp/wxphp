@@ -30,7 +30,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fs_mem.h" line="86"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fs_mem.h" line="86"/>
       </memberdef>
       <memberdef kind="function" id="classwx_memory_f_s_handler_1adf1fa7dd553e0ae001d458e8114c98b5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -57,7 +57,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fs_mem.h" line="87"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fs_mem.h" line="87"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -86,7 +86,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fs_mem.h" line="103"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fs_mem.h" line="103"/>
       </memberdef>
       <memberdef kind="function" id="classwx_memory_f_s_handler_1a1e1d1e096824bb42d787d1c1f42c015a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -117,7 +117,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fs_mem.h" line="107"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fs_mem.h" line="107"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -132,7 +132,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fs_mem.h" line="72"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fs_mem.h" line="72"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -151,7 +151,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fs_mem.h" line="113"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fs_mem.h" line="113"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -170,7 +170,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&lt;html&gt;&lt;body&gt;About:<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&lt;img<sp/>src=\&quot;memory:logo.pcx\&quot;&gt;&lt;/body&gt;&lt;/html&gt;&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_dialog" kindref="compound" tooltip="A dialog box is a window with a title bar and sometimes a system menu, which can be moved around the ...">wxDialog</ref><sp/>dlg(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>-1,<sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref>(<ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="This macro expands into a call to wxGetTranslation(), so it marks the message for the extraction by x...">_</ref>(</highlight><highlight class="stringliteral">&quot;About&quot;</highlight><highlight class="normal">)));</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_dialog" kindref="compound" tooltip="A dialog box is a window with a title bar and sometimes a system menu, which can be moved around the ...">wxDialog</ref><sp/>dlg(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>-1,<sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref>(<ref refid="group__group__funcmacro__string_1ga8a02b8875a521df57263a9e6f090f2d0" kindref="member" tooltip="Macro to be used around all literal strings that should be translated.">_</ref>(</highlight><highlight class="stringliteral">&quot;About&quot;</highlight><highlight class="normal">)));</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_box_sizer" kindref="compound" tooltip="The basic idea behind a box sizer is that windows will most often be laid out in rather simple basic ...">wxBoxSizer</ref><sp/>*topsizer;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_html_window" kindref="compound" tooltip="wxHtmlWindow is probably the only class you will directly use unless you want to do something special...">wxHtmlWindow</ref><sp/>*html;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>topsizer<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_box_sizer" kindref="compound" tooltip="The basic idea behind a box sizer is that windows will most often be laid out in rather simple basic ...">wxBoxSizer</ref>(<ref refid="defs_8h_1a1e6994f40bd9cb140e292afb165af971a2134d1cb8cf605532880c118190695b5" kindref="member">wxVERTICAL</ref>);</highlight></codeline>
@@ -197,49 +197,49 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__vfs" kindref="compound">Virtual File System</ref></para><para><simplesect kind="see"><para><ref refid="classwx_memory_f_s_handler_1a1a4c2fa90f2d747eeaf532decd14eda7" kindref="member">wxMemoryFSHandler::AddFileWithMimeType</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7685">
+      <node id="7878">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7683">
+      <node id="7876">
         <label>wxMemoryFSHandler</label>
         <link refid="classwx_memory_f_s_handler"/>
-        <childnode refid="7684" relation="public-inheritance">
+        <childnode refid="7877" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7684">
+      <node id="7877">
         <label>wxFileSystemHandler</label>
         <link refid="classwx_file_system_handler"/>
-        <childnode refid="7685" relation="public-inheritance">
+        <childnode refid="7878" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7688">
+      <node id="7881">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7689" relation="usage">
+        <childnode refid="7882" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7686">
+      <node id="7879">
         <label>wxMemoryFSHandler</label>
         <link refid="classwx_memory_f_s_handler"/>
-        <childnode refid="7687" relation="public-inheritance">
+        <childnode refid="7880" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7687">
+      <node id="7880">
         <label>wxFileSystemHandler</label>
         <link refid="classwx_file_system_handler"/>
-        <childnode refid="7688" relation="public-inheritance">
+        <childnode refid="7881" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7689">
+      <node id="7882">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fs_mem.h" line="67" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/fs_mem.h" bodystart="66" bodyend="114"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fs_mem.h" line="67" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/fs_mem.h" bodystart="66" bodyend="114"/>
     <listofallmembers>
       <member refid="classwx_memory_f_s_handler_1a3f492723f5ae6353c6f2ef8ce8af676b" prot="public" virt="non-virtual"><scope>wxMemoryFSHandler</scope><name>AddFile</name></member>
       <member refid="classwx_memory_f_s_handler_1adf1fa7dd553e0ae001d458e8114c98b5" prot="public" virt="non-virtual"><scope>wxMemoryFSHandler</scope><name>AddFile</name></member>

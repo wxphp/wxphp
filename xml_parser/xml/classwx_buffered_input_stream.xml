@@ -40,7 +40,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="752"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="759"/>
       </memberdef>
       <memberdef kind="function" id="classwx_buffered_input_stream_1a9907314666e7bf812ec6fecd13f09a6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -77,7 +77,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="768"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="775"/>
       </memberdef>
       <memberdef kind="function" id="classwx_buffered_input_stream_1a6a025e389262fdacc5bfab50e8bd0b22" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -90,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="773"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="780"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -100,54 +100,54 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_stream_buffer" kindref="compound">wxStreamBuffer</ref>, <ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref>, <ref refid="classwx_buffered_output_stream" kindref="compound">wxBufferedOutputStream</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4608">
+      <node id="4698">
         <label>wxInputStream</label>
         <link refid="classwx_input_stream"/>
-        <childnode refid="4609" relation="public-inheritance">
+        <childnode refid="4699" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4609">
+      <node id="4699">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="4607">
+      <node id="4697">
         <label>wxFilterInputStream</label>
         <link refid="classwx_filter_input_stream"/>
-        <childnode refid="4608" relation="public-inheritance">
+        <childnode refid="4698" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4606">
+      <node id="4696">
         <label>wxBufferedInputStream</label>
         <link refid="classwx_buffered_input_stream"/>
-        <childnode refid="4607" relation="public-inheritance">
+        <childnode refid="4697" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4612">
+      <node id="4702">
         <label>wxInputStream</label>
         <link refid="classwx_input_stream"/>
-        <childnode refid="4613" relation="public-inheritance">
+        <childnode refid="4703" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4613">
+      <node id="4703">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="4611">
+      <node id="4701">
         <label>wxFilterInputStream</label>
         <link refid="classwx_filter_input_stream"/>
-        <childnode refid="4612" relation="public-inheritance">
+        <childnode refid="4702" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4610">
+      <node id="4700">
         <label>wxBufferedInputStream</label>
         <link refid="classwx_buffered_input_stream"/>
-        <childnode refid="4611" relation="public-inheritance">
+        <childnode refid="4701" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="739" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" bodystart="738" bodyend="774"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="746" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" bodystart="745" bodyend="781"/>
     <listofallmembers>
       <member refid="classwx_input_stream_1a72111c617db403344a2dd6b8c13330c3" prot="public" virt="virtual"><scope>wxBufferedInputStream</scope><name>CanRead</name></member>
       <member refid="classwx_input_stream_1a177bb52eb500be28c8d41f959b0fb6be" prot="public" virt="virtual"><scope>wxBufferedInputStream</scope><name>Eof</name></member>

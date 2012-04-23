@@ -28,7 +28,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist/toplevel.h" line="28"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist/toplevel.h" line="28"/>
       </memberdef>
       <memberdef kind="function" id="classwx_persistent_t_l_w_1a0f727e11a56129a481fb06e899df0442" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -42,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist/toplevel.h" line="33"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist/toplevel.h" line="33"/>
       </memberdef>
       <memberdef kind="function" id="classwx_persistent_t_l_w_1ab32aa061f7548f6ccc4ed4820f73d2e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -56,7 +56,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist/toplevel.h" line="38"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist/toplevel.h" line="38"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -64,42 +64,42 @@
     <detaileddescription>
 <para>This adapter saves and restores the geometry (i.e. position and size) and the state (iconized, maximized or normal) of top level windows. It can be used with both <ref refid="classwx_frame" kindref="compound">wxFrame</ref> and <ref refid="classwx_dialog" kindref="compound">wxDialog</ref>.</para><para>Note that it does <emphasis>not</emphasis> save nor restore the window visibility. </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8623">
+      <node id="8816">
         <label>wxPersistentTLW</label>
         <link refid="classwx_persistent_t_l_w"/>
-        <childnode refid="8624" relation="public-inheritance">
+        <childnode refid="8817" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8624">
+      <node id="8817">
         <label>wxPersistentWindow&lt; wxTopLevelWindow &gt;</label>
         <link refid="classwx_persistent_window"/>
-        <childnode refid="8625" relation="public-inheritance">
+        <childnode refid="8818" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8625">
+      <node id="8818">
         <label>wxPersistentObject</label>
         <link refid="classwx_persistent_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8626">
+      <node id="8819">
         <label>wxPersistentTLW</label>
         <link refid="classwx_persistent_t_l_w"/>
-        <childnode refid="8627" relation="public-inheritance">
+        <childnode refid="8820" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8627">
+      <node id="8820">
         <label>wxPersistentWindow&lt; wxTopLevelWindow &gt;</label>
         <link refid="classwx_persistent_window"/>
-        <childnode refid="8628" relation="public-inheritance">
+        <childnode refid="8821" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8628">
+      <node id="8821">
         <label>wxPersistentObject</label>
         <link refid="classwx_persistent_object"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist/toplevel.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist/toplevel.h" bodystart="19" bodyend="39"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist/toplevel.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/persist/toplevel.h" bodystart="19" bodyend="39"/>
     <listofallmembers>
       <member refid="classwx_persistent_window_1a10aa6724f3431349ac44fc1d583f6981" prot="public" virt="non-virtual"><scope>wxPersistentTLW</scope><name>Get</name></member>
       <member refid="classwx_persistent_object_1a53d730bbfe3fdf57c9c553987f1096f8" prot="public" virt="pure-virtual"><scope>wxPersistentTLW</scope><name>GetKind</name></member>

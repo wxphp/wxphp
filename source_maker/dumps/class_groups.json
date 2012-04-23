@@ -91,7 +91,7 @@
 		"wxFontData",
 		"wxFontDialog",
 		"wxMessageDialog",
-		"wxProgressDialog",
+		"wxGenericProgressDialog",
 		"wxRearrangeDialog",
 		"wxRichMessageDialog",
 		"wxSymbolPickerDialog",
@@ -318,6 +318,7 @@
 		"wxMoveEvent",
 		"wxSizeEvent",
 		"wxSetCursorEvent",
+		"wxFindDialogEvent",
 		"wxFileCtrlEvent",
 		"wxFileDirPickerEvent",
 		"wxFontPickerEvent",
@@ -482,6 +483,7 @@
 		"wxContextHelpButton",
 		"wxSimpleHelpProvider",
 		"wxExtHelpController",
+		"wxHelpControllerBase",
 		"wxHelpController",
 		"wxHtmlHelpController",
 		"wxHtmlModalHelp",
@@ -543,6 +545,7 @@
 		"wxAccessible",
 		"wxAffineMatrix2D",
 		"wxMatrix2D",
+		"wxAffineMatrix2DBase",
 		"wxArtProvider",
 		"wxCaret",
 		"wxJoystick",
@@ -726,6 +729,7 @@
 		"wxTrackable"
 	],
 	"group_class_streams":[
+		"wxFSInputStream",
 		"wxArchiveInputStream",
 		"wxArchiveOutputStream",
 		"wxArchiveEntry",
@@ -754,6 +758,7 @@
 		"wxFilterOutputStream",
 		"wxFilterInputStream",
 		"wxBufferedOutputStream",
+		"wxWrapperInputStream",
 		"wxTarInputStream",
 		"wxTarClassFactory",
 		"wxTarOutputStream",
@@ -782,8 +787,7 @@
 		"wxMBConvUTF8",
 		"wxMBConvUTF16",
 		"wxMBConvUTF32",
-		"wxCSConv",
-		"wxMBConvFile"
+		"wxCSConv"
 	],
 	"group_class_threading":[
 		"wxMessageQueue< T >",

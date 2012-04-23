@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="73"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" line="73"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tool_bar_event_1a72c4ae573acac59f249a60f702ac22d8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="75"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" line="75"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tool_bar_event_1a0d330e406c4075a064d74b51160b91ca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rect" kindref="compound">wxRect</ref></type>
@@ -42,7 +42,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="77"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" line="77"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_tool_bar_event_1a15aa082597103f6efcfa0fde697c0766" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="79"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" line="79"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -64,73 +64,73 @@
 <para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxaui" kindref="member">wxAui</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__aui" kindref="compound">Window Docking (wxAUI)</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4431">
+      <node id="4521">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4429">
+      <node id="4519">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="4430" relation="public-inheritance">
+        <childnode refid="4520" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4428">
+      <node id="4518">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="4429" relation="public-inheritance">
+        <childnode refid="4519" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4427">
+      <node id="4517">
         <label>wxAuiToolBarEvent</label>
         <link refid="classwx_aui_tool_bar_event"/>
-        <childnode refid="4428" relation="public-inheritance">
+        <childnode refid="4518" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4430">
+      <node id="4520">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="4431" relation="public-inheritance">
+        <childnode refid="4521" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4436">
+      <node id="4526">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4437" relation="usage">
+        <childnode refid="4527" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4434">
+      <node id="4524">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="4435" relation="public-inheritance">
+        <childnode refid="4525" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4433">
+      <node id="4523">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="4434" relation="public-inheritance">
+        <childnode refid="4524" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4432">
+      <node id="4522">
         <label>wxAuiToolBarEvent</label>
         <link refid="classwx_aui_tool_bar_event"/>
-        <childnode refid="4433" relation="public-inheritance">
+        <childnode refid="4523" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4435">
+      <node id="4525">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="4436" relation="public-inheritance">
+        <childnode refid="4526" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4437">
+      <node id="4527">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" line="71" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/toolbar.h" bodystart="70" bodyend="80"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" line="71" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/toolbar.h" bodystart="70" bodyend="80"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxAuiToolBarEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_notify_event_1a7b23515f827b2ce1da1e6990d9aafe80" prot="public" virt="non-virtual"><scope>wxAuiToolBarEvent</scope><name>Allow</name></member>

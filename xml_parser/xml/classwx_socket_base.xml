@@ -20,7 +20,7 @@
 <para>Don&apos;t use it directly; instead, use <ref refid="classwx_socket_client" kindref="compound">wxSocketClient</ref> to construct a socket client, or <ref refid="classwx_socket_server" kindref="compound">wxSocketServer</ref> to construct a socket server. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="674"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="674"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1a636e72242dd5550e84456c277ca31222" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -33,7 +33,7 @@
 <para>Do not destroy a socket using the delete operator directly; use <ref refid="classwx_socket_base_1ab0b0926cfdfdd00b8b5c5f7f57cea861" kindref="member">Destroy()</ref> instead. Also, do not create socket objects in the stack. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="682"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="682"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1ab0b0926cfdfdd00b8b5c5f7f57cea861" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -47,7 +47,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="697"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="697"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1a4c4c4cc8e1fcd824ef621b0f3d17b29f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -61,7 +61,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="719"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="719"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1acfa7398ce7fac6e8db20caeb3a09b10e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -74,7 +74,7 @@
 <para>This function undoes the call to <ref refid="classwx_socket_base_1a4c4c4cc8e1fcd824ef621b0f3d17b29f" kindref="member">Initialize()</ref> and must be called after every successful call to <ref refid="classwx_socket_base_1a4c4c4cc8e1fcd824ef621b0f3d17b29f" kindref="member">Initialize()</ref>.</para><para>This function should only be called from the main thread, just as <ref refid="classwx_socket_base_1a4c4c4cc8e1fcd824ef621b0f3d17b29f" kindref="member">Initialize()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="730"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="730"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -90,7 +90,7 @@
 <para>Use this function to check for an error condition after one of the following calls: <ref refid="classwx_socket_base_1a5cfc8b791cff6723dd499509d99d02be" kindref="member">Discard()</ref>, <ref refid="classwx_socket_base_1a944eb846a3849dd34f7825cfdce3bcd1" kindref="member">Peek()</ref>, <ref refid="classwx_socket_base_1aa75b3c2dd051a012cfbd0596d95f80c2" kindref="member">Read()</ref>, <ref refid="classwx_socket_base_1a7c16b20282272c68acfe04107d430bf6" kindref="member">ReadMsg()</ref>, <ref refid="classwx_socket_base_1a8fd912526830f7b079ac28677424d40a" kindref="member">Unread()</ref>, <ref refid="classwx_socket_base_1a7676f1821d2e17db95de2438346355cd" kindref="member">Write()</ref>, <ref refid="classwx_socket_base_1a91abca66c1d5bf4237aa87b0e796464b" kindref="member">WriteMsg()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="746"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="746"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1a1751b32af0172a30f544068100ba90d2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -108,7 +108,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="753"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="753"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1aae825b5309067c212640189d6ad7e993" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -126,7 +126,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="760"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="760"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1adb940bb2853901b4ea0b2840964f8e5b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -139,7 +139,7 @@
 <para>The timeout can be set using <ref refid="classwx_socket_base_1ac24247e3f866154825c14de46a911e50" kindref="member">SetTimeout()</ref> and is 10 minutes by default. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="767"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="767"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1a2d171f3eac0dbc9211f0032188d381ac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -152,7 +152,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="772"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="772"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1a6703a3dd7c15fcb2eff7c7baf0b886f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -165,7 +165,7 @@
 <para>This might mean that queued data is available for reading or, for streamed sockets, that the connection has been closed, so that a read operation will complete immediately without blocking (unless the <bold>wxSOCKET_WAITALL</bold> flag is set, in which case the operation might still block). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="782"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="782"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1ac5118b15195664969b7d914a045936f6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -178,7 +178,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="787"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="787"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1a86799181fb499a72a42651704a3bbda3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -192,7 +192,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="799"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="799"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1a5b0cfbb970153b563c7134c1e8ba8319" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref></type>
@@ -205,7 +205,7 @@
 <para>Use this function to get the number of bytes actually transferred after using one of the following IO calls: <ref refid="classwx_socket_base_1a5cfc8b791cff6723dd499509d99d02be" kindref="member">Discard()</ref>, <ref refid="classwx_socket_base_1a944eb846a3849dd34f7825cfdce3bcd1" kindref="member">Peek()</ref>, <ref refid="classwx_socket_base_1aa75b3c2dd051a012cfbd0596d95f80c2" kindref="member">Read()</ref>, <ref refid="classwx_socket_base_1a7c16b20282272c68acfe04107d430bf6" kindref="member">ReadMsg()</ref>, <ref refid="classwx_socket_base_1a8fd912526830f7b079ac28677424d40a" kindref="member">Unread()</ref>, <ref refid="classwx_socket_base_1a7676f1821d2e17db95de2438346355cd" kindref="member">Write()</ref>, <ref refid="classwx_socket_base_1a91abca66c1d5bf4237aa87b0e796464b" kindref="member">WriteMsg()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="808"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="808"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1a4b3fa4395c33fd4f99956a5585e49b2e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="socket_8h_1aec4f3fb4ed18dd9b1fe503750ec4e0f6" kindref="member">wxSocketError</ref></type>
@@ -219,7 +219,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="820"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="820"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1a386797430bfc9f568be388e7abf6c782" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -233,7 +233,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="829"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="829"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1af227621ab1ee04542063fe91ea281e49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -247,7 +247,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="840"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="840"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -266,7 +266,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="867"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="867"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1a90d2aea95b10c68eee2656860d90e23e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -279,7 +279,7 @@
 <para>This function simply calls the standard shutdown() function on the underlying socket, indicating that nothing will be written to this socket any more. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="876"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="876"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1a5cfc8b791cff6723dd499509d99d02be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref> &amp;</type>
@@ -292,7 +292,7 @@
 <para>This function always returns immediately and its operation is not affected by IO flags.</para><para>Use <ref refid="classwx_socket_base_1a5b0cfbb970153b563c7134c1e8ba8319" kindref="member">LastCount()</ref> to verify the number of bytes actually discarded.</para><para>If you use <ref refid="classwx_socket_base_1a1a70bf5e24ccf3a6171ba07c06f8dac9" kindref="member">Error()</ref>, it will always return false. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="888"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="888"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1a1eecc8010fa40587623778cf9902e661" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>wxSocketFlags</type>
@@ -305,7 +305,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="893"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="893"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1a89897c3ea99e6e3d8d5daf8e26596bc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -319,7 +319,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="908"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="908"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1a944eb846a3849dd34f7825cfdce3bcd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref> &amp;</type>
@@ -358,7 +358,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="934"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="934"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1aa75b3c2dd051a012cfbd0596d95f80c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref> &amp;</type>
@@ -397,7 +397,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="956"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="956"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1a7c16b20282272c68acfe04107d430bf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref> &amp;</type>
@@ -436,7 +436,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="984"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="984"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1aa11d1db40c87c8e06e3f9849a08abafc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -462,7 +462,7 @@
 For more information on socket events see <ref refid="socket_8h_1wxSocketFlags" kindref="member">wxSocketFlags</ref> . </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1023"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="1023"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1a18b26d4201f86daf64c881433c68a1b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -479,7 +479,7 @@ For more information on socket events see <ref refid="socket_8h_1wxSocketFlags" 
 <para>This function must always be called for the server sockets but may also be called for client sockets, if it is, <bold>bind()</bold> is called before <bold>connect()</bold>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1032"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="1032"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1ac24247e3f866154825c14de46a911e50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -496,7 +496,7 @@ For more information on socket events see <ref refid="socket_8h_1wxSocketFlags" 
 <para>This timeout applies to all IO calls, and also to the <ref refid="classwx_socket_base_1ae46d0dea0ec25af581ba3119cca4bd7e" kindref="member">Wait()</ref> family of functions if you don&apos;t specify a wait interval. Initially, the default timeout is 10 minutes. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1041"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="1041"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1a8fd912526830f7b079ac28677424d40a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref> &amp;</type>
@@ -534,7 +534,7 @@ For more information on socket events see <ref refid="socket_8h_1wxSocketFlags" 
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1063"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="1063"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1ae46d0dea0ec25af581ba3119cca4bd7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -581,7 +581,7 @@ Note that it is recommended to use the individual <bold>WaitForXXX()</bold> func
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1093"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="1093"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1a80e8a0feaed33843aa7972c02909106c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -621,7 +621,7 @@ Note that it is recommended to use the individual <bold>WaitForXXX()</bold> func
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1113"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="1113"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1aab8fdd558f149d70ed265dad0f12e9f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -661,7 +661,7 @@ Note that it is recommended to use the individual <bold>WaitForXXX()</bold> func
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1137"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="1137"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1abda804254aa40c9f8ae363dbc5ebc1f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -701,7 +701,7 @@ Note that it is recommended to use the individual <bold>WaitForXXX()</bold> func
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1161"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="1161"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1a7676f1821d2e17db95de2438346355cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref> &amp;</type>
@@ -740,7 +740,7 @@ The exact behaviour of <ref refid="classwx_socket_base_1a7676f1821d2e17db95de243
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1184"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="1184"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1a91abca66c1d5bf4237aa87b0e796464b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref> &amp;</type>
@@ -779,7 +779,7 @@ The exact behaviour of <ref refid="classwx_socket_base_1a7676f1821d2e17db95de243
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1216"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="1216"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -795,7 +795,7 @@ The exact behaviour of <ref refid="classwx_socket_base_1a7676f1821d2e17db95de243
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1230"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="1230"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1acfaca539bd0fe0e9c0b1018c77e6701c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -812,7 +812,7 @@ The exact behaviour of <ref refid="classwx_socket_base_1a7676f1821d2e17db95de243
 <para>If <emphasis>notify</emphasis> is true, the events configured with <ref refid="classwx_socket_base_1a4a3883a253c29e0f0027d279c647dbe0" kindref="member">SetNotify()</ref> will be sent to the application. If <emphasis>notify</emphasis> is false; no events will be sent. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1239"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="1239"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1a5695e6dc7db8e4119caf3c81dcbc7306" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -829,7 +829,7 @@ The exact behaviour of <ref refid="classwx_socket_base_1a7676f1821d2e17db95de243
 <para>All socket events will contain a pointer to this data, which can be retrieved with the <ref refid="classwx_socket_event_1ad25a41eaa76521bef7c9d9a3d2bb0936" kindref="member">wxSocketEvent::GetClientData()</ref> function. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1246"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="1246"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1a09819e56d36638fb6b45bf3dd7ea8742" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -867,7 +867,7 @@ The exact behaviour of <ref refid="classwx_socket_base_1a7676f1821d2e17db95de243
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1261"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="1261"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_base_1a4a3883a253c29e0f0027d279c647dbe0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -892,7 +892,7 @@ For example:</para><para><programlisting><codeline><highlight class="normal"><sp
 </programlisting></para><para>In this example, the user will be notified about incoming socket data and whenever the connection is closed.</para><para>For more information on socket events see <ref refid="socket_8h_1wxSocketEventFlags" kindref="member">wxSocketEventFlags</ref> . </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1287"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="1287"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -907,73 +907,73 @@ For example:</para><para><programlisting><codeline><highlight class="normal"><sp
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_socket_event" kindref="compound">wxSocketEvent</ref>, <ref refid="classwx_socket_client" kindref="compound">wxSocketClient</ref>, <ref refid="classwx_socket_server" kindref="compound">wxSocketServer</ref>, <ref refid="page_samples_1page_samples_sockets" kindref="member">Sockets Sample</ref>, <ref refid="socket_8h_1wxSocketFlags" kindref="member">wxSocketFlags</ref>, <ref refid="socket_8h_1a2ec8996eecae7da1c5fa77c88a45a353" kindref="member">wxSocketEventFlags</ref>, <ref refid="socket_8h_1aec4f3fb4ed18dd9b1fe503750ec4e0f6" kindref="member">wxSocketError</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10281">
+      <node id="10464">
         <label>wxSocketBase</label>
         <link refid="classwx_socket_base"/>
-        <childnode refid="10282" relation="public-inheritance">
+        <childnode refid="10465" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10282">
+      <node id="10465">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10283">
+      <node id="10466">
         <label>wxDatagramSocket</label>
         <link refid="classwx_datagram_socket"/>
-        <childnode refid="10281" relation="public-inheritance">
+        <childnode refid="10464" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10284">
+      <node id="10467">
         <label>wxSocketClient</label>
         <link refid="classwx_socket_client"/>
-        <childnode refid="10281" relation="public-inheritance">
+        <childnode refid="10464" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10288">
+      <node id="10471">
         <label>wxSocketServer</label>
         <link refid="classwx_socket_server"/>
-        <childnode refid="10281" relation="public-inheritance">
+        <childnode refid="10464" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10286">
+      <node id="10469">
         <label>wxFTP</label>
         <link refid="classwx_f_t_p"/>
-        <childnode refid="10285" relation="public-inheritance">
+        <childnode refid="10468" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10287">
+      <node id="10470">
         <label>wxHTTP</label>
         <link refid="classwx_h_t_t_p"/>
-        <childnode refid="10285" relation="public-inheritance">
+        <childnode refid="10468" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10285">
+      <node id="10468">
         <label>wxProtocol</label>
         <link refid="classwx_protocol"/>
-        <childnode refid="10284" relation="public-inheritance">
+        <childnode refid="10467" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10289">
+      <node id="10472">
         <label>wxSocketBase</label>
         <link refid="classwx_socket_base"/>
-        <childnode refid="10290" relation="public-inheritance">
+        <childnode refid="10473" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10290">
+      <node id="10473">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10291" relation="usage">
+        <childnode refid="10474" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10291">
+      <node id="10474">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="660" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" bodystart="659" bodyend="1290"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="660" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" bodystart="659" bodyend="1290"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxSocketBase</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxSocketBase</scope><name>CloneRefData</name></member>

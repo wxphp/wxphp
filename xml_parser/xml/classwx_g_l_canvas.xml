@@ -99,7 +99,7 @@
 <parametername>attribList</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Array of integers. With this parameter you can set the device context attributes associated to this window. This array is zero-terminated: it should be set up using <ref refid="glcanvas_8h_1wxGL_FLAGS" kindref="member">wxGL_FLAGS</ref> constants. If a constant should be followed by a value, put it in the next array position. For example, WX_GL_DEPTH_SIZE should be followed by the value that indicates the number of bits for the depth buffer, e.g.: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attribList[n++]<sp/>=<sp/><ref refid="glcanvas_8h_1a385c44f6fb256e5716a2302a5b940388a82592856bf43fc99e64da03a6433de09" kindref="member" tooltip="Specifies number of bits for Z-buffer (typically 0, 16 or 32).">WX_GL_DEPTH_SIZE</ref>;</highlight></codeline>
+<para>Array of integers. With this parameter you can set the device context attributes associated to this window. This array is zero-terminated: it should be set up using <ref refid="glcanvas_8h_1wxGL_FLAGS" kindref="member">wxGL_FLAGS</ref> constants. If a constant should be followed by a value, put it in the next array position. For example, WX_GL_DEPTH_SIZE should be followed by the value that indicates the number of bits for the depth buffer, e.g.: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attribList[n++]<sp/>=<sp/><ref refid="glcanvas_8h_1aaf105ae5beaca1dee30ae54530691fcea82592856bf43fc99e64da03a6433de09" kindref="member" tooltip="Specifies number of bits for Z-buffer (typically 0, 16 or 32).">WX_GL_DEPTH_SIZE</ref>;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attribList[n++]<sp/>=<sp/>32;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>attribList[n]<sp/>=<sp/>0;<sp/></highlight><highlight class="comment">//<sp/>terminate<sp/>the<sp/>list</highlight></codeline>
 </programlisting> If the attribute list is not specified at all, i.e. if this parameter is NULL, the default attributes including WX_GL_RGBA and WX_GL_DOUBLEBUFFER are used. But notice that if you do specify some attributes you also need to explicitly include these two default attributes in the list if you need them. </para></parameterdescription>
@@ -115,7 +115,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/glcanvas.h" line="239"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/glcanvas.h" line="239"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_l_canvas_1a2b877738b9604684ae218cd16a62f6ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -132,7 +132,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/glcanvas.h" line="265"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/glcanvas.h" line="265"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_l_canvas_1a9f9ab3909606484e717904064d4e7b4f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -151,7 +151,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/glcanvas.h" line="281"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/glcanvas.h" line="281"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_l_canvas_1a7286a7382972dfa4b323c292cb3a8a18" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -165,7 +165,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/glcanvas.h" line="290"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/glcanvas.h" line="290"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -193,7 +193,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/glcanvas.h" line="249"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/glcanvas.h" line="249"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_l_canvas_1af12e5dd650e96af9ff4a96525406bc73" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -210,7 +210,7 @@
 <para>Notice that while this function is implemented for all of GLX, WGL and AGL the extensions names are usually not the same for different platforms and so the code using it still usually uses conditional compilation. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/glcanvas.h" line="259"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/glcanvas.h" line="259"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -221,73 +221,73 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxgl" kindref="member">wxGL</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gl" kindref="compound">OpenGL</ref></para><para><simplesect kind="see"><para><ref refid="classwx_g_l_context" kindref="compound">wxGLContext</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6542">
+      <node id="6710">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6541">
+      <node id="6709">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="6542" relation="public-inheritance">
+        <childnode refid="6710" relation="public-inheritance">
         </childnode>
-        <childnode refid="6543" relation="public-inheritance">
+        <childnode refid="6711" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6543">
+      <node id="6711">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="6540">
+      <node id="6708">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="6541" relation="public-inheritance">
+        <childnode refid="6709" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6539">
+      <node id="6707">
         <label>wxGLCanvas</label>
         <link refid="classwx_g_l_canvas"/>
-        <childnode refid="6540" relation="public-inheritance">
+        <childnode refid="6708" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6547">
+      <node id="6715">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6548" relation="usage">
+        <childnode refid="6716" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6546">
+      <node id="6714">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="6547" relation="public-inheritance">
+        <childnode refid="6715" relation="public-inheritance">
         </childnode>
-        <childnode refid="6549" relation="public-inheritance">
+        <childnode refid="6717" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6549">
+      <node id="6717">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="6545">
+      <node id="6713">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="6546" relation="public-inheritance">
+        <childnode refid="6714" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6544">
+      <node id="6712">
         <label>wxGLCanvas</label>
         <link refid="classwx_g_l_canvas"/>
-        <childnode refid="6545" relation="public-inheritance">
+        <childnode refid="6713" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6548">
+      <node id="6716">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/glcanvas.h" line="186" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/glcanvas.h" bodystart="185" bodyend="291"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/glcanvas.h" line="186" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/glcanvas.h" bodystart="185" bodyend="291"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxGLCanvas</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxGLCanvas</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -445,6 +445,7 @@
       <member refid="classwx_window_1aa90a260c0a835a133043460b7d0024a8" prot="public" virt="virtual"><scope>wxGLCanvas</scope><name>InitDialog</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxGLCanvas</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxGLCanvas</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxGLCanvas</scope><name>IsDescendant</name></member>
       <member refid="classwx_g_l_canvas_1aea68f828d3673d1c4d4f1a8e27abbc90" prot="public" virt="non-virtual"><scope>wxGLCanvas</scope><name>IsDisplaySupported</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxGLCanvas</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxGLCanvas</scope><name>IsEnabled</name></member>
@@ -462,13 +463,13 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxGLCanvas</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxGLCanvas</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxGLCanvas</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxGLCanvas</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxGLCanvas</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxGLCanvas</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxGLCanvas</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxGLCanvas</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxGLCanvas</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxGLCanvas</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxGLCanvas</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxGLCanvas</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxGLCanvas</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxGLCanvas</scope><name>MoveAfterInTabOrder</name></member>
@@ -589,7 +590,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxGLCanvas</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxGLCanvas</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxGLCanvas</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxGLCanvas</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxGLCanvas</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxGLCanvas</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxGLCanvas</scope><name>Unlink</name></member>

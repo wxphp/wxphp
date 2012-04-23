@@ -13,14 +13,12 @@
         <briefdescription>
 <para>Default constructor. </para>        </briefdescription>
         <detaileddescription>
-<para><bold>wxPython Note:</bold> The following methods are added in wxPython for accessing the object:<itemizedlist>
-<listitem><para>GetData(): Returns a reference to the Python Object.</para></listitem><listitem><para>SetData(obj): Associates a new Python Object with the <ref refid="classwx_tree_item_data" kindref="compound">wxTreeItemData</ref>.</para></listitem></itemizedlist>
-</para><para><bold>wxPerl Note:</bold> In wxPerl the constructor accepts a scalar as an optional parameter and stores it as client data; use<itemizedlist>
+<para><bold>wxPerl Note:</bold> In wxPerl the constructor accepts a scalar as an optional parameter and stores it as client data; use<itemizedlist>
 <listitem><para>GetData() to retrieve the value.</para></listitem><listitem><para>SetData(data) to set it. </para></listitem></itemizedlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treebase.h" line="88"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="77"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_item_data_1aa3d0fb19b863733d7f5c2a9331a18236" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -33,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treebase.h" line="93"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="82"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_item_data_1a78d6d1c5374d0580dd3244ef42ae8b3c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref> &amp;</type>
@@ -46,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treebase.h" line="98"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="87"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_item_data_1a527fa24ac4c80f1df25f51e24990ec44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -63,7 +61,7 @@
 <para>Notice that this function is automatically called by <ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref> methods associating an object of this class with a tree control item such as <ref refid="classwx_tree_ctrl_1a0a798a2a06f21bcb5bef2c4b4b7cc3a5" kindref="member">wxTreeCtrl::AppendItem()</ref>, <ref refid="classwx_tree_ctrl_1a06e1e6b25a7121922412eea510bd3109" kindref="member">wxTreeCtrl::InsertItem()</ref> and <ref refid="classwx_tree_ctrl_1adb74a81b41ab25bd38884311bb4b3b46" kindref="member">wxTreeCtrl::SetItemData()</ref> so there is usually no need to call it yourself. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treebase.h" line="109"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="98"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -73,30 +71,30 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__containers" kindref="compound">Containers</ref></para><para><simplesect kind="see"><para><ref refid="classwx_tree_ctrl" kindref="compound">wxTreeCtrl</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11213">
+      <node id="11402">
         <label>wxClientData</label>
         <link refid="classwx_client_data"/>
       </node>
-      <node id="11212">
+      <node id="11401">
         <label>wxTreeItemData</label>
         <link refid="classwx_tree_item_data"/>
-        <childnode refid="11213" relation="public-inheritance">
+        <childnode refid="11402" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11215">
+      <node id="11404">
         <label>wxClientData</label>
         <link refid="classwx_client_data"/>
       </node>
-      <node id="11214">
+      <node id="11403">
         <label>wxTreeItemData</label>
         <link refid="classwx_tree_item_data"/>
-        <childnode refid="11215" relation="public-inheritance">
+        <childnode refid="11404" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treebase.h" line="70" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treebase.h" bodystart="69" bodyend="110"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="65" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="64" bodyend="99"/>
     <listofallmembers>
       <member refid="classwx_tree_item_data_1a78d6d1c5374d0580dd3244ef42ae8b3c" prot="public" virt="non-virtual"><scope>wxTreeItemData</scope><name>GetId</name></member>
       <member refid="classwx_tree_item_data_1a527fa24ac4c80f1df25f51e24990ec44" prot="public" virt="non-virtual"><scope>wxTreeItemData</scope><name>SetId</name></member>

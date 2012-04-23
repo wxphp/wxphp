@@ -36,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="467"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="467"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_cell_event_1a422286f8782736ee829d63b2cda5d0f7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_html_cell" kindref="compound">wxHtmlCell</ref> *</type>
@@ -49,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="472"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="472"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_cell_event_1a949dce268a65125be9d5899645d7e145" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -62,7 +62,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="478"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="478"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_cell_event_1a95ac4ce6efa5997d07a7fef726e51330" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
@@ -75,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="483"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="483"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_cell_event_1a8b6a0595bb044e3da3f5ff5f3a85087b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -92,7 +92,7 @@
 <para>With this function the event handler can return info to the <ref refid="classwx_html_window" kindref="compound">wxHtmlWindow</ref> which sent the event. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="492"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="492"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -106,61 +106,61 @@
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6976">
+      <node id="7158">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6973">
+      <node id="7155">
         <label>wxHtmlCellEvent</label>
         <link refid="classwx_html_cell_event"/>
-        <childnode refid="6974" relation="public-inheritance">
+        <childnode refid="7156" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6974">
+      <node id="7156">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="6975" relation="public-inheritance">
+        <childnode refid="7157" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6975">
+      <node id="7157">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="6976" relation="public-inheritance">
+        <childnode refid="7158" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6980">
+      <node id="7162">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6981" relation="usage">
+        <childnode refid="7163" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6977">
+      <node id="7159">
         <label>wxHtmlCellEvent</label>
         <link refid="classwx_html_cell_event"/>
-        <childnode refid="6978" relation="public-inheritance">
+        <childnode refid="7160" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6978">
+      <node id="7160">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="6979" relation="public-inheritance">
+        <childnode refid="7161" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6979">
+      <node id="7161">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="6980" relation="public-inheritance">
+        <childnode refid="7162" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6981">
+      <node id="7163">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" line="459" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlwin.h" bodystart="458" bodyend="493"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" line="459" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlwin.h" bodystart="458" bodyend="493"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxHtmlCellEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxHtmlCellEvent</scope><name>Clone</name></member>

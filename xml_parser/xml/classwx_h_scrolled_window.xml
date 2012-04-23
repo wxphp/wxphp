@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vscroll.h" line="766"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vscroll.h" line="766"/>
       </memberdef>
       <memberdef kind="function" id="classwx_h_scrolled_window_1a98cb43583496d8b09a1609dbb4a7db76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -103,7 +103,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vscroll.h" line="791"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vscroll.h" line="791"/>
       </memberdef>
       <memberdef kind="function" id="classwx_h_scrolled_window_1a5982d08464fabd3b47543d298b710224" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -146,7 +146,7 @@
 <para>Just as with the constructor, the <computeroutput>wxHSCROLL</computeroutput> style is always used, there is no need to specify it explicitly. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vscroll.h" line="803"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vscroll.h" line="803"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -156,109 +156,109 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__miscwnd" kindref="compound">Miscellaneous Windows</ref></para><para><simplesect kind="see"><para><ref refid="classwx_h_v_scrolled_window" kindref="compound">wxHVScrolledWindow</ref>, <ref refid="classwx_v_scrolled_window" kindref="compound">wxVScrolledWindow</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6955">
+      <node id="7137">
         <label>wxVarScrollHelperBase</label>
         <link refid="classwx_var_scroll_helper_base"/>
       </node>
-      <node id="6948">
+      <node id="7130">
         <label>wxHScrolledWindow</label>
         <link refid="classwx_h_scrolled_window"/>
-        <childnode refid="6949" relation="public-inheritance">
+        <childnode refid="7131" relation="public-inheritance">
         </childnode>
-        <childnode refid="6954" relation="public-inheritance">
+        <childnode refid="7136" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6952">
+      <node id="7134">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6951">
+      <node id="7133">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="6952" relation="public-inheritance">
+        <childnode refid="7134" relation="public-inheritance">
         </childnode>
-        <childnode refid="6953" relation="public-inheritance">
+        <childnode refid="7135" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6949">
+      <node id="7131">
         <label>wxPanel</label>
         <link refid="classwx_panel"/>
-        <childnode refid="6950" relation="public-inheritance">
+        <childnode refid="7132" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6953">
+      <node id="7135">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="6950">
+      <node id="7132">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="6951" relation="public-inheritance">
+        <childnode refid="7133" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6954">
+      <node id="7136">
         <label>wxVarHScrollHelper</label>
         <link refid="classwx_var_h_scroll_helper"/>
-        <childnode refid="6955" relation="public-inheritance">
+        <childnode refid="7137" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6964">
+      <node id="7146">
         <label>wxVarScrollHelperBase</label>
         <link refid="classwx_var_scroll_helper_base"/>
       </node>
-      <node id="6956">
+      <node id="7138">
         <label>wxHScrolledWindow</label>
         <link refid="classwx_h_scrolled_window"/>
-        <childnode refid="6957" relation="public-inheritance">
+        <childnode refid="7139" relation="public-inheritance">
         </childnode>
-        <childnode refid="6963" relation="public-inheritance">
+        <childnode refid="7145" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6960">
+      <node id="7142">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6961" relation="usage">
+        <childnode refid="7143" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6959">
+      <node id="7141">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="6960" relation="public-inheritance">
+        <childnode refid="7142" relation="public-inheritance">
         </childnode>
-        <childnode refid="6962" relation="public-inheritance">
+        <childnode refid="7144" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6957">
+      <node id="7139">
         <label>wxPanel</label>
         <link refid="classwx_panel"/>
-        <childnode refid="6958" relation="public-inheritance">
+        <childnode refid="7140" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6962">
+      <node id="7144">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="6958">
+      <node id="7140">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="6959" relation="public-inheritance">
+        <childnode refid="7141" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6963">
+      <node id="7145">
         <label>wxVarHScrollHelper</label>
         <link refid="classwx_var_h_scroll_helper"/>
-        <childnode refid="6964" relation="public-inheritance">
+        <childnode refid="7146" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6961">
+      <node id="7143">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vscroll.h" line="761" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vscroll.h" bodystart="760" bodyend="804"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vscroll.h" line="761" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/vscroll.h" bodystart="760" bodyend="804"/>
     <listofallmembers>
       <member refid="classwx_panel_1ad43482bf961c0a8185624085facd0853" prot="public" virt="virtual"><scope>wxHScrolledWindow</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxHScrolledWindow</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -431,6 +431,7 @@
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxHScrolledWindow</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxHScrolledWindow</scope><name>IsBeingDeleted</name></member>
       <member refid="classwx_var_h_scroll_helper_1ac13395af926452b12b120cac2ba9de45" prot="public" virt="non-virtual"><scope>wxHScrolledWindow</scope><name>IsColumnVisible</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxHScrolledWindow</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxHScrolledWindow</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxHScrolledWindow</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxHScrolledWindow</scope><name>IsExposed</name></member>
@@ -446,6 +447,7 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxHScrolledWindow</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxHScrolledWindow</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxHScrolledWindow</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxHScrolledWindow</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxHScrolledWindow</scope><name>IsUnlinked</name></member>
       <member refid="classwx_var_scroll_helper_base_1aeb032c41e1436c630b9fadf3c198c91d" prot="public" virt="non-virtual"><scope>wxHScrolledWindow</scope><name>IsVisible</name></member>
       <member refid="classwx_panel_1a6ded9b75baf21e2c9f5496f746b68bf0" prot="public" virt="virtual"><scope>wxHScrolledWindow</scope><name>Layout</name></member>
@@ -453,7 +455,6 @@
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxHScrolledWindow</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxHScrolledWindow</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxHScrolledWindow</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxHScrolledWindow</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxHScrolledWindow</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxHScrolledWindow</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxHScrolledWindow</scope><name>MoveAfterInTabOrder</name></member>
@@ -585,7 +586,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxHScrolledWindow</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxHScrolledWindow</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxHScrolledWindow</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxHScrolledWindow</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxHScrolledWindow</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxHScrolledWindow</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxHScrolledWindow</scope><name>Unlink</name></member>

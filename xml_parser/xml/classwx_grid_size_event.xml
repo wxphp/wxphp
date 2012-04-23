@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="4380"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="4452"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_size_event_1ad935b56f49e477e327a2a2129ac7508d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="4386"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="4458"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_size_event_1a92f026bb127fe46e8c389029b110c533" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -74,7 +74,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="4391"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="4463"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_size_event_1a03e9c7dfbd71bb398cdf47dbbe2ce5ad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -87,7 +87,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="4396"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="4468"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_size_event_1ac75c50bd92ded22b27237216005de838" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="4401"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="4473"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_size_event_1a4b981029d1f2b5f3f29a5bd0593a4fbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -113,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="4406"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="4478"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_size_event_1a2d5feec68f9197cb89d011b0b5e5703e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -126,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="4411"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="4483"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_size_event_1ad0409a36885f7f0cf218139b7696b9b6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -139,7 +139,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="4416"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="4488"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -155,73 +155,73 @@
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__grid" kindref="compound">Grid Related Classes</ref>, <ref refid="group__group__class__events" kindref="compound">Events</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6832">
+      <node id="7002">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6830">
+      <node id="7000">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="6831" relation="public-inheritance">
+        <childnode refid="7001" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6828">
+      <node id="6998">
         <label>wxGridSizeEvent</label>
         <link refid="classwx_grid_size_event"/>
-        <childnode refid="6829" relation="public-inheritance">
+        <childnode refid="6999" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6829">
+      <node id="6999">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="6830" relation="public-inheritance">
+        <childnode refid="7000" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6831">
+      <node id="7001">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="6832" relation="public-inheritance">
+        <childnode refid="7002" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6837">
+      <node id="7007">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6838" relation="usage">
+        <childnode refid="7008" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6835">
+      <node id="7005">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="6836" relation="public-inheritance">
+        <childnode refid="7006" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6833">
+      <node id="7003">
         <label>wxGridSizeEvent</label>
         <link refid="classwx_grid_size_event"/>
-        <childnode refid="6834" relation="public-inheritance">
+        <childnode refid="7004" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6834">
+      <node id="7004">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="6835" relation="public-inheritance">
+        <childnode refid="7005" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6836">
+      <node id="7006">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="6837" relation="public-inheritance">
+        <childnode refid="7007" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6838">
+      <node id="7008">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="4375" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" bodystart="4374" bodyend="4417"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="4447" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" bodystart="4446" bodyend="4489"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxGridSizeEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_notify_event_1a7b23515f827b2ce1da1e6990d9aafe80" prot="public" virt="non-virtual"><scope>wxGridSizeEvent</scope><name>Allow</name></member>

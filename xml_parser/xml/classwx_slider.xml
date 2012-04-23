@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="150"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="150"/>
       </memberdef>
       <memberdef kind="function" id="classwx_slider_1a891b43da8ecd9709fdac3ccadc23903f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -146,7 +146,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="186"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="186"/>
       </memberdef>
       <memberdef kind="function" id="classwx_slider_1a9c68e292942c8a54926bab215895583e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -159,7 +159,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="191"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="191"/>
       </memberdef>
       <memberdef kind="function" id="classwx_slider_1a6c13ab073bb392ca2e396611e5359899" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -172,7 +172,7 @@
 <para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="198"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="198"/>
       </memberdef>
       <memberdef kind="function" id="classwx_slider_1a05d72f8b25bd084ede2cda557cf4d234" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -185,7 +185,7 @@
 <para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="205"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="205"/>
       </memberdef>
       <memberdef kind="function" id="classwx_slider_1a1034920c0cef6726d526461b475ac0e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -243,7 +243,7 @@
 <para>See <ref refid="classwx_slider_1a2173af74dec187f971f43ff76ce5fda4" kindref="member">wxSlider()</ref> for further details. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="215"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="215"/>
       </memberdef>
       <memberdef kind="function" id="classwx_slider_1acbacae279cb7b95fb74594b2e8bec170" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -257,7 +257,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="222"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="222"/>
       </memberdef>
       <memberdef kind="function" id="classwx_slider_1ae7561240ec6e042c9676ab84e53e3d2b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -271,7 +271,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="229"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="229"/>
       </memberdef>
       <memberdef kind="function" id="classwx_slider_1aa12929fd8cfe2af6433bc86ee5903549" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -285,7 +285,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="236"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="236"/>
       </memberdef>
       <memberdef kind="function" id="classwx_slider_1a91a27b89a2400a07deebf1e73124482b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -299,7 +299,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="243"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="243"/>
       </memberdef>
       <memberdef kind="function" id="classwx_slider_1a1837de02b10ab0ab83cf49e1eae9a955" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -313,7 +313,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="252"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="252"/>
       </memberdef>
       <memberdef kind="function" id="classwx_slider_1aa09045fb2d314864c95945b968b8aa19" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -327,7 +327,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="261"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="261"/>
       </memberdef>
       <memberdef kind="function" id="classwx_slider_1abb186599789c0605833a3e1c13ef7721" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -341,7 +341,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="270"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="270"/>
       </memberdef>
       <memberdef kind="function" id="classwx_slider_1a061c2ee97937ef2f0814b104b6f4a27d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -355,7 +355,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="279"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="279"/>
       </memberdef>
       <memberdef kind="function" id="classwx_slider_1a10265cd77f9c1275bcc69963f38f5861" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -369,7 +369,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="286"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="286"/>
       </memberdef>
       <memberdef kind="function" id="classwx_slider_1a4a595e045a2f7edb10b92ac9613159a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -395,7 +395,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="297"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="297"/>
       </memberdef>
       <memberdef kind="function" id="classwx_slider_1ac8511076503048ba8566446c58b5900d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -421,7 +421,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="307"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="307"/>
       </memberdef>
       <memberdef kind="function" id="classwx_slider_1ac2eecc23851213793d4045e0470eb3de" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -443,7 +443,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="314"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="314"/>
       </memberdef>
       <memberdef kind="function" id="classwx_slider_1a3477bd700151d3c04e42ae53311a18f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -480,7 +480,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="328"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="328"/>
       </memberdef>
       <memberdef kind="function" id="classwx_slider_1a2b093450d2e09568f12b92b4a2ec8b74" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -506,7 +506,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="340"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="340"/>
       </memberdef>
       <memberdef kind="function" id="classwx_slider_1a247d55821e4a3cd1769b7c90e9d37438" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -532,7 +532,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="352"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="352"/>
       </memberdef>
       <memberdef kind="function" id="classwx_slider_1a6fbaed71e8be9fbb7fa03a26b3a6df94" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -558,7 +558,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="365"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="365"/>
       </memberdef>
       <memberdef kind="function" id="classwx_slider_1a8c9839893e1569bef990dd84567ea541" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -583,7 +583,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="373"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="373"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -635,85 +635,85 @@ Notice that <computeroutput>wxSL_LEFT</computeroutput>, <computeroutput>wxSL_TOP
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="10265">
+      <node id="10448">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10264">
+      <node id="10447">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10265" relation="public-inheritance">
+        <childnode refid="10448" relation="public-inheritance">
         </childnode>
-        <childnode refid="10266" relation="public-inheritance">
+        <childnode refid="10449" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10266">
+      <node id="10449">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10262">
+      <node id="10445">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="10263" relation="public-inheritance">
+        <childnode refid="10446" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10263">
+      <node id="10446">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10264" relation="public-inheritance">
+        <childnode refid="10447" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10261">
+      <node id="10444">
         <label>wxSlider</label>
         <link refid="classwx_slider"/>
-        <childnode refid="10262" relation="public-inheritance">
+        <childnode refid="10445" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10271">
+      <node id="10454">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10272" relation="usage">
+        <childnode refid="10455" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10270">
+      <node id="10453">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="10271" relation="public-inheritance">
+        <childnode refid="10454" relation="public-inheritance">
         </childnode>
-        <childnode refid="10273" relation="public-inheritance">
+        <childnode refid="10456" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10273">
+      <node id="10456">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="10268">
+      <node id="10451">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="10269" relation="public-inheritance">
+        <childnode refid="10452" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10269">
+      <node id="10452">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="10270" relation="public-inheritance">
+        <childnode refid="10453" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10267">
+      <node id="10450">
         <label>wxSlider</label>
         <link refid="classwx_slider"/>
-        <childnode refid="10268" relation="public-inheritance">
+        <childnode refid="10451" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10272">
+      <node id="10455">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" line="145" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/slider.h" bodystart="144" bodyend="374"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" line="145" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/slider.h" bodystart="144" bodyend="374"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxSlider</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxSlider</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -889,6 +889,7 @@ Notice that <computeroutput>wxSL_LEFT</computeroutput>, <computeroutput>wxSL_TOP
       <member refid="classwx_window_1aa90a260c0a835a133043460b7d0024a8" prot="public" virt="virtual"><scope>wxSlider</scope><name>InitDialog</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxSlider</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxSlider</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxSlider</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxSlider</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxSlider</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxSlider</scope><name>IsExposed</name></member>
@@ -904,13 +905,13 @@ Notice that <computeroutput>wxSL_LEFT</computeroutput>, <computeroutput>wxSL_TOP
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxSlider</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxSlider</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxSlider</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxSlider</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxSlider</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxSlider</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxSlider</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxSlider</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxSlider</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxSlider</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxSlider</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxSlider</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxSlider</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxSlider</scope><name>MoveAfterInTabOrder</name></member>
@@ -1039,7 +1040,6 @@ Notice that <computeroutput>wxSL_LEFT</computeroutput>, <computeroutput>wxSL_TOP
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxSlider</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxSlider</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxSlider</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxSlider</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxSlider</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxSlider</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxSlider</scope><name>Unlink</name></member>

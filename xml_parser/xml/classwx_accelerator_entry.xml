@@ -64,7 +64,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="61"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/accel.h" line="61"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accelerator_entry_1a8853051e5706c505d15ff70e1e44c7df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="66"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/accel.h" line="66"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accelerator_entry_1ae1d386394ee03b85d4826237071e3fb6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -94,7 +94,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="71"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/accel.h" line="71"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accelerator_entry_1abb84cd94b583e18eeb02597f4907e4ba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -107,7 +107,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="76"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/accel.h" line="76"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accelerator_entry_1af2da2c566731201caaabee443dc4bee1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -120,7 +120,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="81"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/accel.h" line="81"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accelerator_entry_1a48d31d2dbf55bdd3cae39135b3ec83a3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_menu_item" kindref="compound">wxMenuItem</ref> *</type>
@@ -133,7 +133,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="86"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/accel.h" line="86"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accelerator_entry_1abaac10bba35d3e3c32f05761e0d19d1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -192,7 +192,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="101"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/accel.h" line="101"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accelerator_entry_1aa8087cc425e16773f76911ea67a39631" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -205,7 +205,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="106"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/accel.h" line="106"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accelerator_entry_1a0d164fa98bba518e6b6f9cca65332d36" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -218,7 +218,21 @@
 <para>The returned string is of the form <computeroutput>[Alt+][Ctrl+][Shift+]Key</computeroutput> where the modifier keys are present only if the corresponding flag is set. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="115"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/accel.h" line="115"/>
+      </memberdef>
+      <memberdef kind="function" id="classwx_accelerator_entry_1ae1da1f2622d05fc436b552de71b14d96" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxAcceleratorEntry::ToRawString</definition>
+        <argsstring>() const </argsstring>
+        <name>ToRawString</name>
+        <briefdescription>
+<para>Returns a textual representation of this accelerator which is appropriate for saving in configuration files. </para>        </briefdescription>
+        <detaileddescription>
+<para>Unlike the string returned by <ref refid="classwx_accelerator_entry_1a0d164fa98bba518e6b6f9cca65332d36" kindref="member">ToString()</ref>, this one is never translated so, while it&apos;s not suitable for showing to the user, it can be used to uniquely identify the accelerator independently of the user language.</para><para>The returned string can still be parsed by <ref refid="classwx_accelerator_entry_1a201b717e9069367c60bd8765eda60371" kindref="member">FromString()</ref>.</para><para><simplesect kind="since"><para>2.9.4 </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/accel.h" line="129"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accelerator_entry_1a201b717e9069367c60bd8765eda60371" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -244,7 +258,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="133"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/accel.h" line="147"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accelerator_entry_1a3e3f35ba5bb44a9f0b7c073e4294eb62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_accelerator_entry" kindref="compound">wxAcceleratorEntry</ref> &amp;</type>
@@ -261,7 +275,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="136"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/accel.h" line="150"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accelerator_entry_1a129c9a53e8c540b0ce7b2ce22401e027" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -278,7 +292,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="137"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/accel.h" line="151"/>
       </memberdef>
       <memberdef kind="function" id="classwx_accelerator_entry_1a2f6079d45fd5916dacebdc91bf00d243" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -295,7 +309,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="138"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/accel.h" line="152"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -304,7 +318,7 @@
 <para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_accelerator_table" kindref="compound">wxAcceleratorTable</ref>, <ref refid="classwx_window_1a0af5e9aa4dee6a4e92c0700f92605642" kindref="member">wxWindow::SetAcceleratorTable</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="45" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" bodystart="44" bodyend="139"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/accel.h" line="45" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/accel.h" bodystart="44" bodyend="153"/>
     <listofallmembers>
       <member refid="classwx_accelerator_entry_1a201b717e9069367c60bd8765eda60371" prot="public" virt="non-virtual"><scope>wxAcceleratorEntry</scope><name>FromString</name></member>
       <member refid="classwx_accelerator_entry_1ae1d386394ee03b85d4826237071e3fb6" prot="public" virt="non-virtual"><scope>wxAcceleratorEntry</scope><name>GetCommand</name></member>
@@ -316,6 +330,7 @@
       <member refid="classwx_accelerator_entry_1a3e3f35ba5bb44a9f0b7c073e4294eb62" prot="public" virt="non-virtual"><scope>wxAcceleratorEntry</scope><name>operator=</name></member>
       <member refid="classwx_accelerator_entry_1a129c9a53e8c540b0ce7b2ce22401e027" prot="public" virt="non-virtual"><scope>wxAcceleratorEntry</scope><name>operator==</name></member>
       <member refid="classwx_accelerator_entry_1abaac10bba35d3e3c32f05761e0d19d1a" prot="public" virt="non-virtual"><scope>wxAcceleratorEntry</scope><name>Set</name></member>
+      <member refid="classwx_accelerator_entry_1ae1da1f2622d05fc436b552de71b14d96" prot="public" virt="non-virtual"><scope>wxAcceleratorEntry</scope><name>ToRawString</name></member>
       <member refid="classwx_accelerator_entry_1a0d164fa98bba518e6b6f9cca65332d36" prot="public" virt="non-virtual"><scope>wxAcceleratorEntry</scope><name>ToString</name></member>
       <member refid="classwx_accelerator_entry_1a9387fbbaed1cbfb8673308ec2b10da3e" prot="public" virt="non-virtual"><scope>wxAcceleratorEntry</scope><name>wxAcceleratorEntry</name></member>
       <member refid="classwx_accelerator_entry_1a8853051e5706c505d15ff70e1e44c7df" prot="public" virt="non-virtual"><scope>wxAcceleratorEntry</scope><name>wxAcceleratorEntry</name></member>

@@ -29,7 +29,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3015"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3010"/>
       </memberdef>
       <memberdef kind="function" id="classwx_child_focus_event_1adb8de37b01fad179806fa49aeeaa3af2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -42,7 +42,7 @@
 <para>To get the actually focused control use <ref refid="classwx_window_1a777258379a3eef1b0530f12db6b77cab" kindref="member">wxWindow::FindFocus</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3023"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3018"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -56,61 +56,61 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="overview_events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4739">
+      <node id="4829">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4737">
+      <node id="4827">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="4738" relation="public-inheritance">
+        <childnode refid="4828" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4736">
+      <node id="4826">
         <label>wxChildFocusEvent</label>
         <link refid="classwx_child_focus_event"/>
-        <childnode refid="4737" relation="public-inheritance">
+        <childnode refid="4827" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4738">
+      <node id="4828">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="4739" relation="public-inheritance">
+        <childnode refid="4829" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4743">
+      <node id="4833">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4744" relation="usage">
+        <childnode refid="4834" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4741">
+      <node id="4831">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="4742" relation="public-inheritance">
+        <childnode refid="4832" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4740">
+      <node id="4830">
         <label>wxChildFocusEvent</label>
         <link refid="classwx_child_focus_event"/>
-        <childnode refid="4741" relation="public-inheritance">
+        <childnode refid="4831" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4742">
+      <node id="4832">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="4743" relation="public-inheritance">
+        <childnode refid="4833" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4744">
+      <node id="4834">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3006" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3005" bodyend="3024"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3001" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="3000" bodyend="3019"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxChildFocusEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxChildFocusEvent</scope><name>Clone</name></member>

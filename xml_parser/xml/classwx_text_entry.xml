@@ -25,7 +25,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="474"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="474"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1ad8dc1eb9633c73d26c968b337525c6c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -50,7 +50,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="475"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="475"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -79,7 +79,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="50"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="50"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1ad911d59d6b381a20b0a6c34df2ac1d9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -99,7 +99,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="68"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="68"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1ae8ca40185ba6bbaacb4715039d73342b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -127,7 +127,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="102"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="102"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1ad40d7e35d8bb9c9ab8e4ffa1b801a5d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -143,7 +143,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="120"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="120"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1ab02338d68d51f103551454298578851c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -159,7 +159,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="141"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="141"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1a5cc88c6714d37e089404d9d60fe512b7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -172,7 +172,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="146"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="146"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1a9cdfb37ccaeda4c11ca1062fea0d476d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -185,7 +185,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="151"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="151"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1a0c000d10a56732e6f0835a2c9339c0fc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -198,7 +198,7 @@
 <para>On some platforms (Motif, GTK) this is an approximation and returns true if the control is editable, false otherwise. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="160"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="160"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1ac6024b11e35d0dab403c22c18a937ad4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -211,7 +211,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="166"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="166"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1a58757a503d496a06d0c744949b2e0a33" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -224,7 +224,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="172"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="172"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1a8c52ab71f51c8f80556c2c8e763cbca1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -250,7 +250,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="194"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="194"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1a98b8e3fab8a5ac9944c2cefbb09ab3a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -263,7 +263,7 @@
 <para>Note that this function will generate a <computeroutput>wxEVT_COMMAND_TEXT_UPDATED</computeroutput> event, i.e. its effect is identical to calling <computeroutput>SetValue</computeroutput>(&quot;&quot;). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="202"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="202"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1a94675646b91a2d5a18e3ca7395cafe77" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -277,7 +277,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="207"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="207"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1a396c9bc8cbf6adb7e69dcf035d31efbe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>long</type>
@@ -297,7 +297,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="230"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="230"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1a0d31704b5bc0b8cfe2502a66409d05c9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="textentry_8h_1aa28063825bda6771b3b9434698747e52" kindref="member">wxTextPos</ref></type>
@@ -311,7 +311,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="236"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="236"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1a60d7bdf8e8a3ace5cdae716f527d57c7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -332,7 +332,7 @@
 <para>The positions must have been returned by another <ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> method. Please note that the positions in a multiline <ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref> do <bold>not</bold> correspond to the indices in the string returned by <ref refid="classwx_text_entry_1af234557ffcbfefb3ea45358c4f2a5283" kindref="member">GetValue()</ref> because of the different new line representations (<computeroutput>CR</computeroutput> or <computeroutput>CR</computeroutput> LF) and so this method should be used to obtain the correct results instead of extracting parts of the entire value. It may also be more efficient, especially if the control contains a lot of data. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="250"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="250"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1a9ca06a599c45ea3ad7690cc3aca288e3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -369,7 +369,7 @@
 <bold>wxPerl Note:</bold> In wxPerl this method takes no parameters and returns a 2-element list (from, to). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="271"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="271"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1a8e9a9f73eb6d2a59e52fba31b472182a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -383,7 +383,7 @@
 <para>If there is no selection, the returned string is empty. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="278"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="278"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1af234557ffcbfefb3ea45358c4f2a5283" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -397,7 +397,7 @@
 <para>Notice that for a multiline text control, the lines will be separated by (Unix-style) <computeroutput>\n</computeroutput> characters, even under Windows where they are separated by a <computeroutput>\r\n</computeroutput> sequence in the native control. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="287"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="287"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1a2bb43512241850ba7cef54dee029fb86" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -410,7 +410,7 @@
 <para>In other words, this functions returns true if the control hasn&apos;t been put in read-only mode by a previous call to <ref refid="classwx_text_entry_1a7d95c0f42b5e1dc0559ae1ec56cb8b86" kindref="member">SetEditable()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="296"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="296"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1a84d0559b6e7720cc230ba35e74e1e158" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -425,7 +425,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="306"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="306"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1a5889d0d240e603e32c11bd580b65b3d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -439,7 +439,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="311"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="311"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1a3aa0d89ddb8a922c941818dafe4852a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -452,7 +452,7 @@
 <para>Does nothing if there is no redo facility. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="319"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="319"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1ab38f2786becabdacf27c7e31a2922bcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -489,7 +489,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="333"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="333"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1a1fb3ac76d270b2c64cff595497815f8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -537,7 +537,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="349"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="349"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1a7d95c0f42b5e1dc0559ae1ec56cb8b86" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -563,7 +563,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="361"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="361"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1a6e5460ec6e893ecb3e3ce90300373de8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -589,7 +589,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="369"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="369"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1a954a065a2f20da350ae830faff1fff95" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -603,7 +603,7 @@
 <para>This is equivalent to calling <ref refid="classwx_text_entry_1a6e5460ec6e893ecb3e3ce90300373de8" kindref="member">wxTextCtrl::SetInsertionPoint()</ref> with <ref refid="classwx_text_entry_1a0d31704b5bc0b8cfe2502a66409d05c9" kindref="member">wxTextCtrl::GetLastPosition()</ref> argument. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="377"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="377"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1a5b9dea0d1adeb9cc14309600de6aff50" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -620,7 +620,7 @@
 <para>In other words, it allows to limit the text value length to <emphasis>len</emphasis> not counting the terminating <computeroutput>NUL</computeroutput> character.</para><para>If <emphasis>len</emphasis> is 0, the previously set max length limit, if any, is discarded and the user may enter as much text as the underlying native text control widget supports (typically at least 32Kb). If the user tries to enter more characters into the text control when it already is filled up to the maximal length, a <computeroutput>wxEVT_COMMAND_TEXT_MAXLEN</computeroutput> event is sent to notify the program about it (giving it the possibility to show an explanatory message, for example) and the extra input is discarded.</para><para>Note that in wxGTK this function may only be used with single line text controls. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="396"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="396"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1af7e298bc2a34bd646328f53efab766aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -659,7 +659,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="414"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="414"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1a2f7cb6fe4a1c2d1cd79edec6391ea91e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -673,14 +673,14 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="421"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="421"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1a4e9dfe958dbd1918c54b45be83f1bed4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
         <definition>virtual bool wxTextEntry::SetHint</definition>
         <argsstring>(const wxString &amp;hint)</argsstring>
         <name>SetHint</name>
-        <reimplementedby refid="classwx_combo_ctrl_1afd6de67563df02c3e57d48a0a55842fa">SetHint</reimplementedby>
+        <reimplementedby refid="classwx_combo_ctrl_1a68221bdd4af63abfd9840e5de13f4ba6">SetHint</reimplementedby>
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
           <declname>hint</declname>
@@ -693,7 +693,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="452"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="452"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1a9b5deb6db1bd97c746bc0d2637d7f466" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -708,7 +708,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="461"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="461"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1ae95ebc42453130e7ae0def8f5434d937" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
@@ -725,7 +725,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="490"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="490"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1a90f876b2dd83ba5c97ba0c193b386e9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -752,7 +752,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="509"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="509"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1ad3784d539a2554c6eec76c80aa6d97de" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -766,7 +766,7 @@
 <para>Does nothing if there is no undo facility. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="517"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="517"/>
       </memberdef>
       <memberdef kind="function" id="classwx_text_entry_1aa1b9419f95878c44234ff812b528c17b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -792,7 +792,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="535"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="535"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -803,54 +803,54 @@
 <simplesect kind="since"><para>2.9.0 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10809">
+      <node id="10994">
         <label>wxSearchCtrl</label>
         <link refid="classwx_search_ctrl"/>
-        <childnode refid="10808" relation="public-inheritance">
+        <childnode refid="10993" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10804">
+      <node id="10989">
         <label>wxBitmapComboBox</label>
         <link refid="classwx_bitmap_combo_box"/>
-        <childnode refid="10803" relation="public-inheritance">
+        <childnode refid="10988" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10808">
+      <node id="10993">
         <label>wxTextCtrl</label>
         <link refid="classwx_text_ctrl"/>
-        <childnode refid="10802" relation="public-inheritance">
+        <childnode refid="10987" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10802">
+      <node id="10987">
         <label>wxTextEntry</label>
         <link refid="classwx_text_entry"/>
       </node>
-      <node id="10805">
+      <node id="10990">
         <label>wxComboCtrl</label>
         <link refid="classwx_combo_ctrl"/>
-        <childnode refid="10802" relation="public-inheritance">
+        <childnode refid="10987" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10803">
+      <node id="10988">
         <label>wxComboBox</label>
         <link refid="classwx_combo_box"/>
-        <childnode refid="10802" relation="public-inheritance">
+        <childnode refid="10987" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10806">
+      <node id="10991">
         <label>wxOwnerDrawnComboBox</label>
         <link refid="classwx_owner_drawn_combo_box"/>
-        <childnode refid="10805" relation="public-inheritance">
+        <childnode refid="10990" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10807">
+      <node id="10992">
         <label>wxRichTextStyleComboCtrl</label>
         <link refid="classwx_rich_text_style_combo_ctrl"/>
-        <childnode refid="10805" relation="public-inheritance">
+        <childnode refid="10990" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="35" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" bodystart="34" bodyend="536"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="35" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" bodystart="34" bodyend="536"/>
     <listofallmembers>
       <member refid="classwx_text_entry_1af80b5a51906ca9c65fa6cdaa9640768b" prot="public" virt="virtual"><scope>wxTextEntry</scope><name>AppendText</name></member>
       <member refid="classwx_text_entry_1ad911d59d6b381a20b0a6c34df2ac1d9f" prot="public" virt="non-virtual"><scope>wxTextEntry</scope><name>AutoComplete</name></member>

@@ -21,7 +21,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="327"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="327"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pen_1a4bd6be69b648a46b22b87a73b8f6212a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -47,7 +47,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="328"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="328"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -62,7 +62,7 @@
 <para>The pen will be uninitialised, and <ref refid="classwx_pen_1ad36b523a05e5dc6f26cedcbe4e09e513" kindref="member">IsOk()</ref> will return false. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="156"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="156"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pen_1a3bcca8b2a34a208689b739b6df00a24e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -115,7 +115,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="177"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="177"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pen_1ae2a92286436cd980de9f9360eb9d4def" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -152,7 +152,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="193"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="193"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pen_1a5ba7b9a179fa2887bf77099bbe2dddce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -177,7 +177,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="201"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="201"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pen_1ae4879c3e2bbe8b302f603a1f3d031024" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -192,7 +192,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="213"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="213"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pen_1ac501e84664f2ca047a36ee816a2f58ed" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="pen_8h_1a7d4a9e379451a8d249239543ad78af3a" kindref="member">wxPenCap</ref></type>
@@ -206,7 +206,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="223"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="223"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pen_1afeddf87958683f10e2fd685fff932e25" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -220,7 +220,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="230"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="230"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pen_1a89897140519f81047fdbae7653e25c98" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -239,7 +239,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="241"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="241"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pen_1afa2c9d8badbc1701d56f3f37490ead80" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="pen_8h_1a2f214bacb569721da370aab5dbc2a9f4" kindref="member">wxPenJoin</ref></type>
@@ -253,7 +253,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="251"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="251"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pen_1a50195e3d48e7f1469b949bc52e94f284" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> *</type>
@@ -267,7 +267,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="258"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="258"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pen_1ac2614614fc84337541adff4fd3659af4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="pen_8h_1aebe64277219894a55d6b963607ad5f54" kindref="member">wxPenStyle</ref></type>
@@ -281,7 +281,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="265"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="265"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pen_1a2e2c46609fe1d92d22394a74ae19f2a2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -295,7 +295,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="272"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="272"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pen_1ad36b523a05e5dc6f26cedcbe4e09e513" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -308,7 +308,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 <para>Notice that an uninitialized pen object can&apos;t be queried for any pen properties and all calls to the accessor methods on it will result in an assert failure. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="281"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="281"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pen_1aaa41bac2e7f09a3f59829813c3160da6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -323,7 +323,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="296"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="296"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pen_1a3fc43564c149d688c9b651da53a2bb4a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -338,7 +338,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="311"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="311"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pen_1ac577f818922f65043ae8642369ce3841" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -356,7 +356,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="319"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="319"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pen_1a6f4471824d023b98e5d884b00535b573" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -378,7 +378,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="341"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="341"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pen_1a6458cc3b4d30ac5a62cd75a445fc0b28" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -396,7 +396,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="351"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="351"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pen_1acb75ec80dcd9534181f8c17520aca2b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -414,7 +414,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="358"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="358"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pen_1a741bccee5c10c6a24d22132f5c1ff2f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -432,7 +432,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="365"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="365"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pen_1ad390a7361cd737fcb176db622f5ad039" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -450,7 +450,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="372"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="372"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pen_1a98819e4cb9abba22d993ba5ae1a93613" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -467,7 +467,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 <para>See <ref refid="overview_refcount_1overview_refcount_equality" kindref="member">reference-counted object comparison</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="380"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="380"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pen_1a54b6973663045f1b2a239fc8e752a737" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_pen" kindref="compound">wxPen</ref> &amp;</type>
@@ -484,7 +484,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="385"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="385"/>
       </memberdef>
       <memberdef kind="function" id="classwx_pen_1a96ad6c566711fc2a3f94f60b949bf39d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -501,7 +501,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 <para>See <ref refid="overview_refcount_1overview_refcount_equality" kindref="member">reference-counted object comparison</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="393"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="393"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -527,49 +527,49 @@ Do not initialize objects on the stack before the program commences, since other
 <simplesect kind="see"><para><ref refid="classwx_pen_list" kindref="compound">wxPenList</ref>, <ref refid="classwx_d_c" kindref="compound">wxDC</ref>, <ref refid="classwx_d_c_1a0d229733fbc83c7e4c483c0714d090b2" kindref="member">wxDC::SetPen()</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8599">
+      <node id="8792">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8597">
+      <node id="8790">
         <label>wxPen</label>
         <link refid="classwx_pen"/>
-        <childnode refid="8598" relation="public-inheritance">
+        <childnode refid="8791" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8598">
+      <node id="8791">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="8599" relation="public-inheritance">
+        <childnode refid="8792" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8602">
+      <node id="8795">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8603" relation="usage">
+        <childnode refid="8796" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8600">
+      <node id="8793">
         <label>wxPen</label>
         <link refid="classwx_pen"/>
-        <childnode refid="8601" relation="public-inheritance">
+        <childnode refid="8794" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8601">
+      <node id="8794">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="8602" relation="public-inheritance">
+        <childnode refid="8795" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8603">
+      <node id="8796">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="151" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="150" bodyend="394"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="151" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" bodystart="150" bodyend="394"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxPen</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxPen</scope><name>CloneRefData</name></member>

@@ -19,13 +19,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="43" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" bodystart="37" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="43" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" bodystart="37" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="enum">
-      <memberdef kind="enum" id="toplevel_8h_1aaf8fd5f0e57d456151c951e0f3715fc4" prot="public" static="no">
-        <name>@23</name>
-        <enumvalue id="toplevel_8h_1aaf8fd5f0e57d456151c951e0f3715fc4a8108db1470990d8ff6bf08c195f11c4f" prot="public">
+      <memberdef kind="enum" id="toplevel_8h_1a458e651af6690959efa2afb96be7d609" prot="public" static="no">
+        <name>@36</name>
+        <enumvalue id="toplevel_8h_1a458e651af6690959efa2afb96be7d609a8108db1470990d8ff6bf08c195f11c4f" prot="public">
           <name>wxUSER_ATTENTION_INFO</name>
           <initializer> 1</initializer>
           <briefdescription>
@@ -33,7 +33,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="toplevel_8h_1aaf8fd5f0e57d456151c951e0f3715fc4ab5eb31d93125653334ffbe901c1a2135" prot="public">
+        <enumvalue id="toplevel_8h_1a458e651af6690959efa2afb96be7d609ab5eb31d93125653334ffbe901c1a2135" prot="public">
           <name>wxUSER_ATTENTION_ERROR</name>
           <initializer> 2</initializer>
           <briefdescription>
@@ -47,11 +47,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" bodystart="12" bodyend="16"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" bodystart="12" bodyend="16"/>
       </memberdef>
-      <memberdef kind="enum" id="toplevel_8h_1a94798fdadfbf49a7c658ace669a1d310" prot="public" static="no">
-        <name>@24</name>
-        <enumvalue id="toplevel_8h_1a94798fdadfbf49a7c658ace669a1d310a4625145320cb6292879930fddaec9846" prot="public">
+      <memberdef kind="enum" id="toplevel_8h_1a1f9aebf1de3ebbf4283a4dcf73308562" prot="public" static="no">
+        <name>@37</name>
+        <enumvalue id="toplevel_8h_1a1f9aebf1de3ebbf4283a4dcf73308562a4625145320cb6292879930fddaec9846" prot="public">
           <name>wxFULLSCREEN_NOMENUBAR</name>
           <initializer> 0x0001</initializer>
           <briefdescription>
@@ -59,7 +59,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="toplevel_8h_1a94798fdadfbf49a7c658ace669a1d310a201b1534be9376afa9f9bbd8d0f747e0" prot="public">
+        <enumvalue id="toplevel_8h_1a1f9aebf1de3ebbf4283a4dcf73308562a201b1534be9376afa9f9bbd8d0f747e0" prot="public">
           <name>wxFULLSCREEN_NOTOOLBAR</name>
           <initializer> 0x0002</initializer>
           <briefdescription>
@@ -67,7 +67,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="toplevel_8h_1a94798fdadfbf49a7c658ace669a1d310ae24e5651560ad32e4defd3fae63c8249" prot="public">
+        <enumvalue id="toplevel_8h_1a1f9aebf1de3ebbf4283a4dcf73308562ae24e5651560ad32e4defd3fae63c8249" prot="public">
           <name>wxFULLSCREEN_NOSTATUSBAR</name>
           <initializer> 0x0004</initializer>
           <briefdescription>
@@ -75,7 +75,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="toplevel_8h_1a94798fdadfbf49a7c658ace669a1d310aaa20e9333ae71a20f1f82d93b1384f2e" prot="public">
+        <enumvalue id="toplevel_8h_1a1f9aebf1de3ebbf4283a4dcf73308562aaa20e9333ae71a20f1f82d93b1384f2e" prot="public">
           <name>wxFULLSCREEN_NOBORDER</name>
           <initializer> 0x0008</initializer>
           <briefdescription>
@@ -83,7 +83,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="toplevel_8h_1a94798fdadfbf49a7c658ace669a1d310af4ce9818046a65150e66be67072e85e6" prot="public">
+        <enumvalue id="toplevel_8h_1a1f9aebf1de3ebbf4283a4dcf73308562af4ce9818046a65150e66be67072e85e6" prot="public">
           <name>wxFULLSCREEN_NOCAPTION</name>
           <initializer> 0x0010</initializer>
           <briefdescription>
@@ -91,7 +91,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="toplevel_8h_1a94798fdadfbf49a7c658ace669a1d310a72ce60840ea903bc619581af981dab15" prot="public">
+        <enumvalue id="toplevel_8h_1a1f9aebf1de3ebbf4283a4dcf73308562a72ce60840ea903bc619581af981dab15" prot="public">
           <name>wxFULLSCREEN_ALL</name>
           <initializer> wxFULLSCREEN_NOMENUBAR | wxFULLSCREEN_NOTOOLBAR |
                           wxFULLSCREEN_NOSTATUSBAR | wxFULLSCREEN_NOBORDER |
@@ -107,13 +107,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h" bodystart="21" bodyend="35"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h" bodystart="21" bodyend="35"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/toplevel.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/toplevel.h"/>
   </compounddef>
 </doxygen>

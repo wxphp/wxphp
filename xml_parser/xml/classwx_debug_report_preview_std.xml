@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="342"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="342"/>
       </memberdef>
       <memberdef kind="function" id="classwx_debug_report_preview_std_1a5b6ea5f83145afd8904fe2af5d19074b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -35,7 +35,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="349"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="349"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -44,30 +44,30 @@
 <para>It displays a dialog allowing the user to examine the contents of a debug report, remove files from and add notes to it.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxqa" kindref="member">wxQA</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__debugging" kindref="compound">Debugging</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5560">
+      <node id="5655">
         <label>wxDebugReportPreview</label>
         <link refid="classwx_debug_report_preview"/>
       </node>
-      <node id="5559">
+      <node id="5654">
         <label>wxDebugReportPreviewStd</label>
         <link refid="classwx_debug_report_preview_std"/>
-        <childnode refid="5560" relation="public-inheritance">
+        <childnode refid="5655" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5562">
+      <node id="5657">
         <label>wxDebugReportPreview</label>
         <link refid="classwx_debug_report_preview"/>
       </node>
-      <node id="5561">
+      <node id="5656">
         <label>wxDebugReportPreviewStd</label>
         <link refid="classwx_debug_report_preview_std"/>
-        <childnode refid="5562" relation="public-inheritance">
+        <childnode refid="5657" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" line="337" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/debugrpt.h" bodystart="336" bodyend="350"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" line="337" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/debugrpt.h" bodystart="336" bodyend="350"/>
     <listofallmembers>
       <member refid="classwx_debug_report_preview_std_1a5b6ea5f83145afd8904fe2af5d19074b" prot="public" virt="virtual"><scope>wxDebugReportPreviewStd</scope><name>Show</name></member>
       <member refid="classwx_debug_report_preview_1a25c6bed0bf6ad6acf5d06817f520fb57" prot="public" virt="non-virtual"><scope>wxDebugReportPreviewStd</scope><name>wxDebugReportPreview</name></member>

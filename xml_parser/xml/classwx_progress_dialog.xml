@@ -2,13 +2,13 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_progress_dialog" kind="class" prot="public">
     <compoundname>wxProgressDialog</compoundname>
-    <basecompoundref refid="classwx_dialog" prot="public" virt="non-virtual">wxDialog</basecompoundref>
+    <basecompoundref refid="classwx_generic_progress_dialog" prot="public" virt="non-virtual">wxGenericProgressDialog</basecompoundref>
     <includes local="no">wx/progdlg.h</includes>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="classwx_progress_dialog_1a5af211090705e7c15d85cb0561974ebc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_progress_dialog_1a8c1cd91b630fd1165ac59d82a4408cf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxProgressDialog::wxProgressDialog</definition>
-        <argsstring>(const wxString &amp;title, const wxString &amp;message, int maximum=100, wxWindow *parent=NULL, int style=wxPD_AUTO_HIDE|wxPD_APP_MODAL)</argsstring>
+        <argsstring>(const wxString &amp;title, const wxString &amp;message, int maximum=100, wxWindow *parent=NULL, int style=wxPD_APP_MODAL|wxPD_AUTO_HIDE)</argsstring>
         <name>wxProgressDialog</name>
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -31,360 +31,137 @@
         <param>
           <type>int</type>
           <declname>style</declname>
-          <defval>wxPD_AUTO_HIDE|wxPD_APP_MODAL</defval>
+          <defval>wxPD_APP_MODAL|wxPD_AUTO_HIDE</defval>
         </param>
         <briefdescription>
-<para>Constructor. </para>        </briefdescription>
-        <detaileddescription>
-<para>Creates the dialog, displays it and disables user input for other windows, or, if <computeroutput>wxPD_APP_MODAL</computeroutput> flag is not given, for its parent window only.</para><para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>title</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Dialog title to show in titlebar. </para></parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>message</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Message displayed above the progress bar. </para></parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>maximum</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Maximum value for the progress bar. In the generic implementation the progress bar is constructed only if this value is greater than zero. </para></parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>parent</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Parent window. </para></parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>style</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The dialog style. See <ref refid="classwx_progress_dialog" kindref="compound">wxProgressDialog</ref>. </para></parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/progdlg.h" line="90"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_progress_dialog_1a8c7482390f950c4b27f2b321d6466d83" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type></type>
-        <definition>virtual wxProgressDialog::~wxProgressDialog</definition>
-        <argsstring>()</argsstring>
-        <name>~wxProgressDialog</name>
-        <briefdescription>
-<para>Destructor. </para>        </briefdescription>
-        <detaileddescription>
-<para>Deletes the dialog and enables all top level windows. </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/progdlg.h" line="95"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_progress_dialog_1a36e4fd6c214e1b5a9a179833403e01e0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>int</type>
-        <definition>int wxProgressDialog::GetValue</definition>
-        <argsstring>() const </argsstring>
-        <name>GetValue</name>
-        <briefdescription>
-<para>Returns the last value passed to the <ref refid="classwx_window_1abaf28f1a075fd1b10f761a8febe597ec" kindref="member">Update()</ref> function or <computeroutput>wxNOT_FOUND</computeroutput> if the dialog has no progress bar. </para>        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="since"><para>2.9.0 </para></simplesect>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/progdlg.h" line="103"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_progress_dialog_1a8e5b43a63f6eb039ab7b4017cba1befb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>int</type>
-        <definition>int wxProgressDialog::GetRange</definition>
-        <argsstring>() const </argsstring>
-        <name>GetRange</name>
-        <briefdescription>
-<para>Returns the maximum value of the progress meter, as passed to the constructor or <computeroutput>wxNOT_FOUND</computeroutput> if the dialog has no progress bar. </para>        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="since"><para>2.9.0 </para></simplesect>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/progdlg.h" line="111"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_progress_dialog_1a5662c408b760047614834c5f256eee01" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
-        <definition>wxString wxProgressDialog::GetMessage</definition>
-        <argsstring>() const </argsstring>
-        <name>GetMessage</name>
-        <briefdescription>
-<para>Returns the last message passed to the <ref refid="classwx_window_1abaf28f1a075fd1b10f761a8febe597ec" kindref="member">Update()</ref> function; if you always passed wxEmptyString to <ref refid="classwx_window_1abaf28f1a075fd1b10f761a8febe597ec" kindref="member">Update()</ref> then the message set through the constructor is returned. </para>        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="since"><para>2.9.0 </para></simplesect>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/progdlg.h" line="120"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_progress_dialog_1a31bca38cd1e7bff44d458cb9580c006a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>bool</type>
-        <definition>virtual bool wxProgressDialog::Pulse</definition>
-        <argsstring>(const wxString &amp;newmsg=wxEmptyString, bool *skip=NULL)</argsstring>
-        <name>Pulse</name>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>newmsg</declname>
-          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
-        </param>
-        <param>
-          <type>bool *</type>
-          <declname>skip</declname>
-          <defval>NULL</defval>
-        </param>
-        <briefdescription>
-<para>Like <ref refid="classwx_window_1abaf28f1a075fd1b10f761a8febe597ec" kindref="member">Update()</ref> but makes the gauge control run in indeterminate mode. </para>        </briefdescription>
-        <detaileddescription>
-<para>In indeterminate mode the remaining and the estimated time labels (if present) are set to &quot;Unknown&quot; or to <emphasis>newmsg</emphasis> (if it&apos;s non-empty). Each call to this function moves the progress bar a bit to indicate that some progress was done.</para><para><simplesect kind="see"><para><ref refid="classwx_gauge_1a45c379e7a36861aa4cf4a381f8dc1e31" kindref="member">wxGauge::Pulse()</ref>, <ref refid="classwx_window_1abaf28f1a075fd1b10f761a8febe597ec" kindref="member">Update()</ref> </para></simplesect>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/progdlg.h" line="132"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_progress_dialog_1a38301659916dbe776afd6d06cc574db9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void wxProgressDialog::Resume</definition>
-        <argsstring>()</argsstring>
-        <name>Resume</name>
-        <briefdescription>
-<para>Can be used to continue with the dialog, after the user had clicked the &quot;Abort&quot; button. </para>        </briefdescription>
+        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/progdlg.h" line="137"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_progress_dialog_1a3f93ca94ae34633bcc83c3694e191781" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void wxProgressDialog::SetRange</definition>
-        <argsstring>(int maximum)</argsstring>
-        <name>SetRange</name>
-        <param>
-          <type>int</type>
-          <declname>maximum</declname>
-        </param>
-        <briefdescription>
-<para>Changes the maximum value of the progress meter given in the constructor. </para>        </briefdescription>
-        <detaileddescription>
-<para>This function can only be called (with a positive value) if the value passed in the constructor was positive.</para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/progdlg.h" line="146"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_progress_dialog_1ac1d2b9b4f50d6a5716abdea4f10b81e9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool wxProgressDialog::WasCancelled</definition>
-        <argsstring>() const </argsstring>
-        <name>WasCancelled</name>
-        <briefdescription>
-<para>Returns true if the &quot;Cancel&quot; button was pressed. </para>        </briefdescription>
-        <detaileddescription>
-<para>Normally a Cancel button press is indicated by <ref refid="classwx_window_1abaf28f1a075fd1b10f761a8febe597ec" kindref="member">Update()</ref> returning false but sometimes it may be more convenient to check if the dialog was cancelled from elsewhere in the code and this function allows to do it.</para><para>It always returns false if the Cancel button is not shown at all.</para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/progdlg.h" line="161"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_progress_dialog_1ad672e2b13ffd1c989efe9ef0def30fbf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool wxProgressDialog::WasSkipped</definition>
-        <argsstring>() const </argsstring>
-        <name>WasSkipped</name>
-        <briefdescription>
-<para>Returns true if the &quot;Skip&quot; button was pressed. </para>        </briefdescription>
-        <detaileddescription>
-<para>This is similar to <ref refid="classwx_progress_dialog_1ac1d2b9b4f50d6a5716abdea4f10b81e9" kindref="member">WasCancelled()</ref> but returns true if the &quot;Skip&quot; button was pressed, not the &quot;Cancel&quot; one.</para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/progdlg.h" line="171"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_progress_dialog_1a9a32e6c22c2b59fd5efec0e843332384" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>bool</type>
-        <definition>virtual bool wxProgressDialog::Update</definition>
-        <argsstring>(int value, const wxString &amp;newmsg=wxEmptyString, bool *skip=NULL)</argsstring>
-        <name>Update</name>
-        <param>
-          <type>int</type>
-          <declname>value</declname>
-        </param>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>newmsg</declname>
-          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
-        </param>
-        <param>
-          <type>bool *</type>
-          <declname>skip</declname>
-          <defval>NULL</defval>
-        </param>
-        <briefdescription>
-<para>Updates the dialog, setting the progress bar to the new value and updating the message if new one is specified. </para>        </briefdescription>
-        <detaileddescription>
-<para>Returns true unless the &quot;Cancel&quot; button has been pressed.</para><para>If false is returned, the application can either immediately destroy the dialog or ask the user for the confirmation and if the abort is not confirmed the dialog may be resumed with <ref refid="classwx_progress_dialog_1a38301659916dbe776afd6d06cc574db9" kindref="member">Resume()</ref> function.</para><para>If <emphasis>value</emphasis> is the maximum value for the dialog, the behaviour of the function depends on whether <computeroutput>wxPD_AUTO_HIDE</computeroutput> was used when the dialog was created. If it was, the dialog is hidden and the function returns immediately. If it was not, the dialog becomes a modal dialog and waits for the user to dismiss it, meaning that this function does not return until this happens.</para><para>Notice that you may want to call <ref refid="classwx_window_1a2bf38a6cbd1f82fb46f274396f482994" kindref="member">Fit()</ref> to change the dialog size to conform to the length of the new message if desired. The dialog does not do this automatically.</para><para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>value</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The new value of the progress meter. It should be less than or equal to the maximum value given to the constructor. </para></parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>newmsg</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The new messages for the progress dialog text, if it is empty (which is the default) the message is not changed. </para></parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>skip</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>If &quot;Skip&quot; button was pressed since last <ref refid="classwx_window_1abaf28f1a075fd1b10f761a8febe597ec" kindref="member">Update()</ref> call, this is set to true. </para></parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/progdlg.h" line="206"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" line="229"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>This class represents a dialog that shows a short message and a progress bar. </para>    </briefdescription>
+<para>If supported by the platform this class will provide the platform&apos;s native progress dialog, else it will simply be the <emphasis><ref refid="classwx_generic_progress_dialog" kindref="compound">wxGenericProgressDialog</ref></emphasis>. </para>    </briefdescription>
     <detaileddescription>
-<para>Optionally, it can display ABORT and SKIP buttons, and the elapsed, remaining and estimated time for the end of the progress.</para><para>Note that you must be aware that <ref refid="classwx_progress_dialog" kindref="compound">wxProgressDialog</ref> internally calls <ref refid="classwx_event_loop_base_1afb5ed08160c7e6b1364170af6115af55" kindref="member">wxEventLoopBase::YieldFor</ref> with <computeroutput>wxEVT_CATEGORY_UI</computeroutput> and <computeroutput>wxEVT_CATEGORY_USER_INPUT</computeroutput> and this may cause unwanted re-entrancies or the out-of-order processing of pending events (to help preventing the last problem if you&apos;re using <ref refid="classwx_progress_dialog" kindref="compound">wxProgressDialog</ref> in a multi-threaded application you should be sure to use <ref refid="classwx_thread_event" kindref="compound">wxThreadEvent</ref> for your inter-threads communications).</para><para><heading level="2">Styles</heading>
-</para><para>This class supports the following styles: <itemizedlist>
-<listitem><para>wxPD_APP_MODAL: Make the progress dialog modal. If this flag is not given, it is only &quot;locally&quot; modal - that is the input to the parent window is disabled, but not to the other ones. </para></listitem>
-<listitem><para>wxPD_AUTO_HIDE: Causes the progress dialog to disappear from screen as soon as the maximum value of the progress meter has been reached. If this style is not present, the dialog will become a modal dialog (see <ref refid="classwx_dialog_1a6e078c3d0653f75ad3c34a37c0b54637" kindref="member">wxDialog::ShowModal</ref>) once the maximum value has been reached and wait for the user to dismiss it. </para></listitem>
-<listitem><para>wxPD_SMOOTH: Causes smooth progress of the gauge control (uses a <ref refid="classwx_gauge" kindref="compound">wxGauge</ref> with the <computeroutput>wxGA_SMOOTH</computeroutput> style). </para></listitem>
-<listitem><para>wxPD_CAN_ABORT: This flag tells the dialog that it should have a &quot;Cancel&quot; button which the user may press. If this happens, the next call to <ref refid="classwx_window_1abaf28f1a075fd1b10f761a8febe597ec" kindref="member">Update()</ref> will return false. </para></listitem>
-<listitem><para>wxPD_CAN_SKIP: This flag tells the dialog that it should have a &quot;Skip&quot; button which the user may press. If this happens, the next call to <ref refid="classwx_window_1abaf28f1a075fd1b10f761a8febe597ec" kindref="member">Update()</ref> will return true in its skip parameter. </para></listitem>
-<listitem><para>wxPD_ELAPSED_TIME: This flag tells the dialog that it should show elapsed time (since creating the dialog). </para></listitem>
-<listitem><para>wxPD_ESTIMATED_TIME: This flag tells the dialog that it should show estimated time. </para></listitem>
-<listitem><para>wxPD_REMAINING_TIME: This flag tells the dialog that it should show remaining time. </para></listitem>
-</itemizedlist>
-<heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref> </para>    </detaileddescription>
+    </detaileddescription>
     <inheritancegraph>
-      <node id="8849">
+      <node id="9031">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="8850" relation="public-inheritance">
+        <childnode refid="9032" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8852">
+      <node id="9028">
+        <label>wxGenericProgressDialog</label>
+        <link refid="classwx_generic_progress_dialog"/>
+        <childnode refid="9029" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9034">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8851">
+      <node id="9033">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8852" relation="public-inheritance">
+        <childnode refid="9034" relation="public-inheritance">
         </childnode>
-        <childnode refid="8853" relation="public-inheritance">
+        <childnode refid="9035" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8846">
+      <node id="9027">
         <label>wxProgressDialog</label>
         <link refid="classwx_progress_dialog"/>
-        <childnode refid="8847" relation="public-inheritance">
+        <childnode refid="9028" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8853">
+      <node id="9035">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8850">
+      <node id="9032">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="8851" relation="public-inheritance">
+        <childnode refid="9033" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8847">
+      <node id="9029">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="8848" relation="public-inheritance">
+        <childnode refid="9030" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8848">
+      <node id="9030">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="8849" relation="public-inheritance">
+        <childnode refid="9031" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8857">
+      <node id="9040">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="8858" relation="public-inheritance">
+        <childnode refid="9041" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8860">
+      <node id="9037">
+        <label>wxGenericProgressDialog</label>
+        <link refid="classwx_generic_progress_dialog"/>
+        <childnode refid="9038" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9043">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8861" relation="usage">
+        <childnode refid="9044" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8859">
+      <node id="9042">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8860" relation="public-inheritance">
+        <childnode refid="9043" relation="public-inheritance">
         </childnode>
-        <childnode refid="8862" relation="public-inheritance">
+        <childnode refid="9045" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8854">
+      <node id="9036">
         <label>wxProgressDialog</label>
         <link refid="classwx_progress_dialog"/>
-        <childnode refid="8855" relation="public-inheritance">
+        <childnode refid="9037" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8862">
+      <node id="9045">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8858">
+      <node id="9041">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="8859" relation="public-inheritance">
+        <childnode refid="9042" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8855">
+      <node id="9038">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="8856" relation="public-inheritance">
+        <childnode refid="9039" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8856">
+      <node id="9039">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="8857" relation="public-inheritance">
+        <childnode refid="9040" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8861">
+      <node id="9044">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/progdlg.h" line="67" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/progdlg.h" bodystart="66" bodyend="207"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" line="224" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/progdlg.h" bodystart="223" bodyend="230"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -428,6 +205,7 @@
       <member refid="classwx_dialog_1a0c6fb55be0b07b934b30550e0225df8f" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>CreateSeparatedButtonSizer</name></member>
       <member refid="classwx_dialog_1ab7a5666b612d6cfdfb2660fd9bd3393e" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>CreateSeparatedSizer</name></member>
       <member refid="classwx_dialog_1a8f2f565975f843035391ce62b0b9f8e8" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>CreateStdDialogButtonSizer</name></member>
+      <member refid="classwx_dialog_1a5bead5e932f17b7c2345dfc41b6cc79c" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>CreateTextSizer</name></member>
       <member refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>DeletePendingEvents</name></member>
       <member refid="classwx_window_1a6bf0c5be864544d9ce0560087667b7fc" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>Destroy</name></member>
       <member refid="classwx_window_1aff47b32c8d42d515ea0bb6a6c2fea917" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>DestroyChildren</name></member>
@@ -511,7 +289,7 @@
       <member refid="classwx_window_1a5cc2082eb5ddb27f97be191bd093709e" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>GetMaxHeight</name></member>
       <member refid="classwx_window_1a0a1672e81caf81a95eb5b48383d22065" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>GetMaxSize</name></member>
       <member refid="classwx_window_1a2e953a64c41131b87bdd7c513ced3687" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>GetMaxWidth</name></member>
-      <member refid="classwx_progress_dialog_1a5662c408b760047614834c5f256eee01" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>GetMessage</name></member>
+      <member refid="classwx_generic_progress_dialog_1a1b74e60297cbbbf459f1d0df1987d62e" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>GetMessage</name></member>
       <member refid="classwx_window_1a8e88d1d38c2bf98a72d86b42cf3e35c0" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>GetMinClientSize</name></member>
       <member refid="classwx_window_1ae4dd9a046ff774ea3ef114caeb452681" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>GetMinHeight</name></member>
       <member refid="classwx_window_1a853c9a8443f996a368569a8fae551f5a" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>GetMinSize</name></member>
@@ -526,7 +304,7 @@
       <member refid="classwx_window_1ad9a883e20827fa717e92fc2f8bd99d6b" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>GetPosition</name></member>
       <member refid="classwx_evt_handler_1aad1ba7fa9ccbf12ee2d80f5f12350adb" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>GetPreviousHandler</name></member>
       <member refid="classwx_window_1aa4cb912eb28be31279fa1b95747c6d02" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>GetPrevSibling</name></member>
-      <member refid="classwx_progress_dialog_1a8e5b43a63f6eb039ab7b4017cba1befb" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>GetRange</name></member>
+      <member refid="classwx_generic_progress_dialog_1a4081c26570ddd49e304d6db45467d4b8" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>GetRange</name></member>
       <member refid="classwx_window_1ac8809904bb379c32c33c79fbe38745eb" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>GetRect</name></member>
       <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>GetRefData</name></member>
       <member refid="classwx_dialog_1a5f56f8d3ecc4336df4150aea989343df" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>GetReturnCode</name></member>
@@ -550,7 +328,7 @@
       <member refid="classwx_window_1a7e32d9a9ffd058c931db20416bc55baa" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>GetUpdateClientRect</name></member>
       <member refid="classwx_window_1aa982adbcebfa7bc73fbae7465132115b" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>GetUpdateRegion</name></member>
       <member refid="classwx_window_1a6a332586346cb9ece4a8fe058a7b88c4" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>GetValidator</name></member>
-      <member refid="classwx_progress_dialog_1a36e4fd6c214e1b5a9a179833403e01e0" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>GetValue</name></member>
+      <member refid="classwx_generic_progress_dialog_1a00dfb93cd982bacdfd20261aff0b4e62" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>GetValue</name></member>
       <member refid="classwx_window_1a614d32c464296b7d6caabcafc18deb97" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>GetVirtualSize</name></member>
       <member refid="classwx_window_1a2628c6f1f4aecb790f0c86622ebf4d56" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>GetVirtualSize</name></member>
       <member refid="classwx_window_1afd861e553190e22a76d3d40ee5e8d628" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>GetWindowBorderSize</name></member>
@@ -579,6 +357,7 @@
       <member refid="classwx_top_level_window_1afa58f411cf488eb9279683b1d20a74b6" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>IsActive</name></member>
       <member refid="classwx_top_level_window_1ac0c7a7cb6e6dfdf7e59300ee5d476ce3" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>IsAlwaysMaximized</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>IsExposed</name></member>
@@ -600,6 +379,7 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>IsUnlinked</name></member>
       <member refid="classwx_top_level_window_1a305c48ddb8e45f89add1694053185a7d" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>IsUsingNativeDecorations</name></member>
       <member refid="classwx_top_level_window_1adfe7e3f4a32f3ed178968f64431bbfe0" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>Layout</name></member>
@@ -607,7 +387,6 @@
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxProgressDialog</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>MakeModal</name></member>
       <member refid="classwx_top_level_window_1addb1612e9f00ac82c2e19c2bac6ffc4f" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>Maximize</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>Move</name></member>
@@ -618,7 +397,6 @@
       <member refid="classwx_window_1aa58039c8fc65e19160becf510ee1d1d5" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>NavigateIn</name></member>
       <member refid="classwx_window_1a8175da594e6045635a1d1cfe775cdddb" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>NewControlId</name></member>
       <member refid="classwx_window_1a6b5654c0c6c6245d592c279521f7099c" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>OnInternalIdle</name></member>
-      <member refid="classwx_dialog_1a31dde643f83e859e53759b8ae5f07378" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>OnSysColourChanged</name></member>
       <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>operator delete</name></member>
       <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>operator new</name></member>
       <member refid="classwx_top_level_window_1a5890684b71321e27e8f3a223ad3c2445" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>OSXIsModified</name></member>
@@ -636,7 +414,7 @@
       <member refid="classwx_window_1a9350b3a9c2e380707eaea92cedad12a5" prot="protected" virt="non-virtual"><scope>wxProgressDialog</scope><name>ProcessThreadEvent</name></member>
       <member refid="classwx_window_1a0a76891d726ad5f9a729e27e4eab2b57" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>ProcessWindowEvent</name></member>
       <member refid="classwx_window_1a0a11aa4a50491d051f947e2618e52178" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>ProcessWindowEventLocally</name></member>
-      <member refid="classwx_progress_dialog_1a31bca38cd1e7bff44d458cb9580c006a" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>Pulse</name></member>
+      <member refid="classwx_generic_progress_dialog_1ab5ecf227eebaa1aadb5f5c553e4a4ee5" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>Pulse</name></member>
       <member refid="classwx_window_1a398c11ab9af7956067a964f560d1978c" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>PushEventHandler</name></member>
       <member refid="classwx_window_1a69e450f21b0d7013269ec1a4771f043b" prot="protected" virt="virtual"><scope>wxProgressDialog</scope><name>QueueEvent</name></member>
       <member refid="classwx_window_1a54808c933f22a891c5db646f6209fa4d" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>Raise</name></member>
@@ -650,7 +428,7 @@
       <member refid="classwx_evt_handler_1a67a57b759c447b121bf70a7c9804c8f2" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>RemoveFilter</name></member>
       <member refid="classwx_window_1a7977b749284e65aecfed2ce146799cb9" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>Reparent</name></member>
       <member refid="classwx_top_level_window_1a749d23ea08f6273fb93fe2c003b650b3" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>RequestUserAttention</name></member>
-      <member refid="classwx_progress_dialog_1a38301659916dbe776afd6d06cc574db9" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>Resume</name></member>
+      <member refid="classwx_generic_progress_dialog_1a076a10d2d6cb1e2561b6f1820663cd70" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>Resume</name></member>
       <member refid="classwx_window_1a0f9814efc50316b4c57b7ec2bf78b716" prot="protected" virt="non-virtual"><scope>wxProgressDialog</scope><name>SafelyProcessEvent</name></member>
       <member refid="classwx_window_1a65531bbc52f9508b0e31a9c08c97bd31" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>ScreenToClient</name></member>
       <member refid="classwx_window_1a59d02b70a9107433836a977c4c0cd7a9" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>ScreenToClient</name></member>
@@ -714,7 +492,7 @@
       <member refid="classwx_window_1aee57358435d6bd33f598c81354b47425" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>SetPalette</name></member>
       <member refid="classwx_window_1a81f23590239934fa10fded0566a65d8c" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>SetPosition</name></member>
       <member refid="classwx_window_1a07f5f7ed3f78e0ef7b3dee3f4da81001" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>SetPreviousHandler</name></member>
-      <member refid="classwx_progress_dialog_1a3f93ca94ae34633bcc83c3694e191781" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>SetRange</name></member>
+      <member refid="classwx_generic_progress_dialog_1af5f24bd05ef8b31dd1991bbc7533cb17" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>SetRange</name></member>
       <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>SetRefData</name></member>
       <member refid="classwx_top_level_window_1a82afa6f09dd5faef6330807ef59374e8" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>SetRepresentedFilename</name></member>
       <member refid="classwx_dialog_1a0d04ed85ac5cd271a61514d446340673" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>SetReturnCode</name></member>
@@ -756,7 +534,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxProgressDialog</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxProgressDialog</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxProgressDialog</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>Unlink</name></member>
@@ -765,30 +542,31 @@
       <member refid="classwx_window_1ad9bc342d1e38d221e37f0f6396950c8c" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>UnreserveControlId</name></member>
       <member refid="classwx_window_1ae75712451673658b0a533480bf5eeaa4" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>UnsetToolTip</name></member>
       <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>UnShare</name></member>
-      <member refid="classwx_progress_dialog_1a9a32e6c22c2b59fd5efec0e843332384" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>Update</name></member>
+      <member refid="classwx_generic_progress_dialog_1a1d542cea96c531d85c32d6612bd55a02" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>Update</name></member>
       <member refid="classwx_window_1abaf28f1a075fd1b10f761a8febe597ec" prot="public" virt="virtual" ambiguityscope="wxDialog::"><scope>wxProgressDialog</scope><name>Update</name></member>
       <member refid="classwx_window_1adf0a4987728bd0bf69f922641b3efbfc" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>UpdateWindowUI</name></member>
       <member refid="classwx_top_level_window_1a4d13f215c9b4fbad26fced00eff20d90" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>UseNativeDecorations</name></member>
       <member refid="classwx_top_level_window_1afd809e099fdd7cef3d9892167a477531" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>UseNativeDecorationsByDefault</name></member>
       <member refid="classwx_window_1ac87f253253a0c5eb498871c83afa40fd" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>Validate</name></member>
       <member refid="classwx_window_1ac500152d1eca3a2ee98a68e7ea7372b5" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>WarpPointer</name></member>
-      <member refid="classwx_progress_dialog_1ac1d2b9b4f50d6a5716abdea4f10b81e9" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>WasCancelled</name></member>
-      <member refid="classwx_progress_dialog_1ad672e2b13ffd1c989efe9ef0def30fbf" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>WasSkipped</name></member>
+      <member refid="classwx_generic_progress_dialog_1abd27b3af19db770d90db015a50f38f2c" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>WasCancelled</name></member>
+      <member refid="classwx_generic_progress_dialog_1a7b86291b5380e622cf32b697825ce03d" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>WasSkipped</name></member>
       <member refid="classwx_window_1aa456f800c9dde3b2361cad0abf54bc27" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>WindowToClientSize</name></member>
       <member refid="classwx_dialog_1a11f9715b3975218071a4de9b29a4ed03" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>wxDialog</name></member>
       <member refid="classwx_dialog_1a0bbd20a18b306aad59429b9d6783d39b" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>wxDialog</name></member>
       <member refid="classwx_evt_handler_1a3f0166c4154227d05575b01eb2c8d4be" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>wxEvtHandler</name></member>
+      <member refid="classwx_generic_progress_dialog_1ac015aa72408dcddef95f4f575bb628bc" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>wxGenericProgressDialog</name></member>
       <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>wxObject</name></member>
       <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>wxObject</name></member>
-      <member refid="classwx_progress_dialog_1a5af211090705e7c15d85cb0561974ebc" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>wxProgressDialog</name></member>
+      <member refid="classwx_progress_dialog_1a8c1cd91b630fd1165ac59d82a4408cf9" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>wxProgressDialog</name></member>
       <member refid="classwx_top_level_window_1abb919ad585057de6fce94bb7d5497256" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>wxTopLevelWindow</name></member>
       <member refid="classwx_top_level_window_1abddbaa0d42b46847b679464b485654be" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>wxTopLevelWindow</name></member>
       <member refid="classwx_window_1a695200a4915b934926dcf32afa44544c" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>wxWindow</name></member>
       <member refid="classwx_window_1a7799009b10d1765d1bbb6db4994f922e" prot="public" virt="non-virtual"><scope>wxProgressDialog</scope><name>wxWindow</name></member>
       <member refid="classwx_dialog_1a9cf257635ad3273cde4a95a0d356657c" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>~wxDialog</name></member>
       <member refid="classwx_evt_handler_1a372d2239d91521eddc8fd2715fcab584" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>~wxEvtHandler</name></member>
+      <member refid="classwx_generic_progress_dialog_1ab8c52516eca99ecb72f703086a471877" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>~wxGenericProgressDialog</name></member>
       <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>~wxObject</name></member>
-      <member refid="classwx_progress_dialog_1a8c7482390f950c4b27f2b321d6466d83" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>~wxProgressDialog</name></member>
       <member refid="classwx_top_level_window_1a643df4d651b5394b8a674067aef4dd04" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>~wxTopLevelWindow</name></member>
       <member refid="classwx_window_1a0c2a46181a89c349327f0b276f5ef8d7" prot="public" virt="virtual"><scope>wxProgressDialog</scope><name>~wxWindow</name></member>
     </listofallmembers>

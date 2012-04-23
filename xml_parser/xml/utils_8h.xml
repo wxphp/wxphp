@@ -127,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" bodystart="12" bodyend="30"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" bodystart="12" bodyend="30"/>
       </memberdef>
       <memberdef kind="enum" id="utils_8h_1af9655b6ab587e0a65ad6f63eb32d814f" prot="public" static="no">
         <name>wxKillError</name>
@@ -172,7 +172,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="36" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" bodystart="35" bodyend="42"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="36" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" bodystart="35" bodyend="42"/>
       </memberdef>
       <memberdef kind="enum" id="utils_8h_1a03a0fc5862f90668a6d4cf968445b272" prot="public" static="no">
         <name>wxKillFlags</name>
@@ -198,7 +198,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="45" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" bodystart="44" bodyend="48"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="45" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" bodystart="44" bodyend="48"/>
       </memberdef>
       <memberdef kind="enum" id="utils_8h_1abacc7b19c541b5353890c078f734d291" prot="public" static="no">
         <name>wxShutdownFlags</name>
@@ -240,11 +240,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="51" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" bodystart="50" bodyend="56"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="51" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" bodystart="50" bodyend="56"/>
       </memberdef>
-      <memberdef kind="enum" id="group__group__funcmacro__misc_1gae4d5251432e1a9e6803c0240cc492e18" prot="public" static="no">
-        <name>@25</name>
-        <enumvalue id="group__group__funcmacro__misc_1ggae4d5251432e1a9e6803c0240cc492e18a14018aae4b122e62a6d1337084cd51c0" prot="public">
+      <memberdef kind="enum" id="group__group__funcmacro__misc_1ga77867ab4129f63159b37bca3b652a798" prot="public" static="no">
+        <name>@38</name>
+        <enumvalue id="group__group__funcmacro__misc_1gga77867ab4129f63159b37bca3b652a798a14018aae4b122e62a6d1337084cd51c0" prot="public">
           <name>wxStrip_Mnemonics</name>
           <initializer> 1</initializer>
           <briefdescription>
@@ -252,7 +252,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="group__group__funcmacro__misc_1ggae4d5251432e1a9e6803c0240cc492e18af190d8b16d9fa9cc9c57786be7531d2a" prot="public">
+        <enumvalue id="group__group__funcmacro__misc_1gga77867ab4129f63159b37bca3b652a798af190d8b16d9fa9cc9c57786be7531d2a" prot="public">
           <name>wxStrip_Accel</name>
           <initializer> 2</initializer>
           <briefdescription>
@@ -260,7 +260,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="group__group__funcmacro__misc_1ggae4d5251432e1a9e6803c0240cc492e18a498e6b6ab4541edee4df73d12913692e" prot="public">
+        <enumvalue id="group__group__funcmacro__misc_1gga77867ab4129f63159b37bca3b652a798a498e6b6ab4541edee4df73d12913692e" prot="public">
           <name>wxStrip_All</name>
           <initializer> wxStrip_Mnemonics | wxStrip_Accel</initializer>
           <briefdescription>
@@ -274,11 +274,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="586" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" bodystart="585" bodyend="595"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="589" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" bodystart="588" bodyend="598"/>
       </memberdef>
-      <memberdef kind="enum" id="group__group__funcmacro__procctrl_1ga7ff5f2dff38e7639981794c43dc9167b" prot="public" static="no">
-        <name>@26</name>
-        <enumvalue id="group__group__funcmacro__procctrl_1gga7ff5f2dff38e7639981794c43dc9167ba457bddfa2a7ce4927358680893910cc8" prot="public">
+      <memberdef kind="enum" id="group__group__funcmacro__procctrl_1ga16685eea158879e41b101ca3634de462" prot="public" static="no">
+        <name>@39</name>
+        <enumvalue id="group__group__funcmacro__procctrl_1gga16685eea158879e41b101ca3634de462a457bddfa2a7ce4927358680893910cc8" prot="public">
           <name>wxEXEC_ASYNC</name>
           <initializer> 0</initializer>
           <briefdescription>
@@ -286,7 +286,7 @@
           <detaileddescription>
 <para>Notice that, due to its value, this is the default. </para>          </detaileddescription>
         </enumvalue>
-        <enumvalue id="group__group__funcmacro__procctrl_1gga7ff5f2dff38e7639981794c43dc9167ba412f75e022e82e7d8415109a6712be36" prot="public">
+        <enumvalue id="group__group__funcmacro__procctrl_1gga16685eea158879e41b101ca3634de462a412f75e022e82e7d8415109a6712be36" prot="public">
           <name>wxEXEC_SYNC</name>
           <initializer> 1</initializer>
           <briefdescription>
@@ -294,7 +294,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="group__group__funcmacro__procctrl_1gga7ff5f2dff38e7639981794c43dc9167ba433c517e46d1dd61a5dda1ffeb750552" prot="public">
+        <enumvalue id="group__group__funcmacro__procctrl_1gga16685eea158879e41b101ca3634de462a433c517e46d1dd61a5dda1ffeb750552" prot="public">
           <name>wxEXEC_SHOW_CONSOLE</name>
           <initializer> 2</initializer>
           <briefdescription>
@@ -302,7 +302,7 @@
           <detaileddescription>
 <para>The child console is hidden by default if the child IO is redirected, this flag allows to change this and show it nevertheless.</para><para>This flag is ignored under the other platforms. </para>          </detaileddescription>
         </enumvalue>
-        <enumvalue id="group__group__funcmacro__procctrl_1gga7ff5f2dff38e7639981794c43dc9167bafd7547e6ac65800275cdffc7be65fd74" prot="public">
+        <enumvalue id="group__group__funcmacro__procctrl_1gga16685eea158879e41b101ca3634de462afd7547e6ac65800275cdffc7be65fd74" prot="public">
           <name>wxEXEC_MAKE_GROUP_LEADER</name>
           <initializer> 4</initializer>
           <briefdescription>
@@ -310,23 +310,23 @@
           <detaileddescription>
 <para>Under Unix, if the process is the group leader then passing wxKILL_CHILDREN to <ref refid="group__group__funcmacro__procctrl_1gae3a7de5a29e70c77463dd1bc38fb98cf" kindref="member">wxKill()</ref> kills all children as well as pid.</para><para>Under MSW, applies only to console applications and is only supported under NT family (i.e. not under Windows 9x). It corresponds to the native <computeroutput>CREATE_NEW_PROCESS_GROUP</computeroutput> and, in particular, ensures that Ctrl-Break signals will be sent to all children of this process as well to the process itself. Support for this flag under MSW was added in version 2.9.4 of wxWidgets. </para>          </detaileddescription>
         </enumvalue>
-        <enumvalue id="group__group__funcmacro__procctrl_1gga7ff5f2dff38e7639981794c43dc9167ba8d51ac2386c10f6f5eb7c7a0704addb1" prot="public">
+        <enumvalue id="group__group__funcmacro__procctrl_1gga16685eea158879e41b101ca3634de462a8d51ac2386c10f6f5eb7c7a0704addb1" prot="public">
           <name>wxEXEC_NODISABLE</name>
           <initializer> 8</initializer>
           <briefdescription>
 <para>Don&apos;t disable the program UI while running the child synchronously. </para>          </briefdescription>
           <detaileddescription>
-<para>By default synchronous execution disables all program windows to avoid that the user interacts with the program while the child process is running, you can use this flag to prevent this from happening.</para><para>This flag can only be used with <ref refid="group__group__funcmacro__procctrl_1gga7ff5f2dff38e7639981794c43dc9167ba412f75e022e82e7d8415109a6712be36" kindref="member">wxEXEC_SYNC</ref>. </para>          </detaileddescription>
+<para>By default synchronous execution disables all program windows to avoid that the user interacts with the program while the child process is running, you can use this flag to prevent this from happening.</para><para>This flag can only be used with <ref refid="group__group__funcmacro__procctrl_1gga16685eea158879e41b101ca3634de462a412f75e022e82e7d8415109a6712be36" kindref="member">wxEXEC_SYNC</ref>. </para>          </detaileddescription>
         </enumvalue>
-        <enumvalue id="group__group__funcmacro__procctrl_1gga7ff5f2dff38e7639981794c43dc9167ba00bae6530ff099a5ead1c80f81d5a5c9" prot="public">
+        <enumvalue id="group__group__funcmacro__procctrl_1gga16685eea158879e41b101ca3634de462a00bae6530ff099a5ead1c80f81d5a5c9" prot="public">
           <name>wxEXEC_NOEVENTS</name>
           <initializer> 16</initializer>
           <briefdescription>
 <para>Don&apos;t dispatch events while the child process is executed. </para>          </briefdescription>
           <detaileddescription>
-<para>By default, the event loop is run while waiting for synchronous execution to complete and this flag can be used to simply block the main process until the child process finishes</para><para>This flag can only be used with <ref refid="group__group__funcmacro__procctrl_1gga7ff5f2dff38e7639981794c43dc9167ba412f75e022e82e7d8415109a6712be36" kindref="member">wxEXEC_SYNC</ref>. </para>          </detaileddescription>
+<para>By default, the event loop is run while waiting for synchronous execution to complete and this flag can be used to simply block the main process until the child process finishes</para><para>This flag can only be used with <ref refid="group__group__funcmacro__procctrl_1gga16685eea158879e41b101ca3634de462a412f75e022e82e7d8415109a6712be36" kindref="member">wxEXEC_SYNC</ref>. </para>          </detaileddescription>
         </enumvalue>
-        <enumvalue id="group__group__funcmacro__procctrl_1gga7ff5f2dff38e7639981794c43dc9167ba6eb92c81a5e49ef172b9d74528be55a0" prot="public">
+        <enumvalue id="group__group__funcmacro__procctrl_1gga16685eea158879e41b101ca3634de462a6eb92c81a5e49ef172b9d74528be55a0" prot="public">
           <name>wxEXEC_HIDE_CONSOLE</name>
           <initializer> 32</initializer>
           <briefdescription>
@@ -334,7 +334,7 @@
           <detaileddescription>
 <para>Under MSW, hide the console of the child process if it has one, even if its IO is not redirected.</para><para>This flag is ignored under the other platforms. </para>          </detaileddescription>
         </enumvalue>
-        <enumvalue id="group__group__funcmacro__procctrl_1gga7ff5f2dff38e7639981794c43dc9167ba81dbb296e5efdd73668a1570e7af5716" prot="public">
+        <enumvalue id="group__group__funcmacro__procctrl_1gga16685eea158879e41b101ca3634de462a81dbb296e5efdd73668a1570e7af5716" prot="public">
           <name>wxEXEC_BLOCK</name>
           <initializer> wxEXEC_SYNC | wxEXEC_NOEVENTS</initializer>
           <briefdescription>
@@ -348,7 +348,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="894" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" bodystart="893" bodyend="968"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="897" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" bodystart="896" bodyend="971"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -364,7 +364,7 @@
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="248" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" bodystart="248" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="248" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" bodystart="248" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="group__group__funcmacro__misc_1ga35fec5f8f6480a13c339ce6d0710962a" prot="public" static="no">
         <type>int(*</type>
@@ -377,7 +377,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="554" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" bodystart="554" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="557" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" bodystart="557" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -398,7 +398,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="167"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="167"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__dialog_1gaf2331f353059e79d45700a04793a7dd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -412,7 +412,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="177"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="177"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__dialog_1gac66e5849170bf4b1f816e0a8c5912e9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -426,7 +426,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="187"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="187"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__dialog_1ga3267f33060d2ae403862427acb758bab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -440,7 +440,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="196"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="196"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__dialog_1ga10cbf79d51b2467289d1f6c11a7d0beb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -459,7 +459,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="211"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="211"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__version_1ga362595d425b3ff956744bcea8e72b374" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_version_info" kindref="compound">wxVersionInfo</ref></type>
@@ -475,7 +475,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="229"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="229"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__env_1ga2e874b3553a5a4f6a939aa83ab8dedfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__group__funcmacro__string_1gad42f64d8c82f1ce4ae58773a89b2d6a7" kindref="member">wxChar</ref> *</type>
@@ -492,7 +492,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>Note that under Win32 it may not return correct value for the variables set with <ref refid="group__group__funcmacro__env_1gaaf7e73120ba323e10ea2d3724f1927b8" kindref="member">wxSetEnv()</ref>, use <ref refid="group__group__funcmacro__env_1ga077a7602cf1adee6ceea300731f245dc" kindref="member">wxGetEnv()</ref> function instead.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="259"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="259"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__env_1ga077a7602cf1adee6ceea300731f245dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -513,7 +513,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para><emphasis>value</emphasis> may be NULL if you just want to know if the variable exists and are not interested in its value.</para><para>Returns true if the variable exists, false otherwise.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="271"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="271"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__env_1gaaf7e73120ba323e10ea2d3724f1927b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -551,7 +551,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="298"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="298"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__env_1ga4a72b083dad08150adcf9f950677284c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -568,7 +568,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para><ref refid="group__group__funcmacro__env_1ga077a7602cf1adee6ceea300731f245dc" kindref="member">wxGetEnv()</ref> will return NULL after the call to this function.</para><para>Returns true on success.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="309"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="309"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__env_1ga147974e23a77dadf95a67317774ada4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -595,7 +595,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="326"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="326"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1gaceace1c71d01adb27b30a068015836e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="power_8h_1a1222ff013d6af054701028e127405bbd" kindref="member">wxBatteryState</ref></type>
@@ -608,7 +608,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para><computeroutput>wxBATTERY_UNKNOWN_STATE</computeroutput> is also the default on platforms where this feature is not implemented (currently everywhere but MS Windows).</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="343"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="343"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1gac7a20e813e3d3259f98e9a54440cf633" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="power_8h_1ae3f5c432e430cf701d4cef6abf893632" kindref="member">wxPowerType</ref></type>
@@ -621,7 +621,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para><computeroutput>wxPOWER_UNKNOWN</computeroutput> is also the default on platforms where this feature is not implemented (currently everywhere but MS Windows).</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="353"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="353"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1gabb98f8c6c7df627b3c4a5246b452a5b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -635,7 +635,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="362"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="362"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga82a18ac43492bfb375604c41b71ce84f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -652,7 +652,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>For togglable keys (Caps Lock, Num Lock and Scroll Lock), returns true if the key is toggled such that its LED indicator is lit. There is currently no way to test whether togglable keys are up or down.</para><para>Even though there are virtual key codes defined for mouse buttons, they cannot be used with this function currently.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="376"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="376"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga00fef3cd1a110189e737ad7bf948a3d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
@@ -665,7 +665,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="383"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="383"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga6fb42677c51d509690e7062b9dadaa25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_mouse_state" kindref="compound">wxMouseState</ref></type>
@@ -678,7 +678,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>Returns a <ref refid="classwx_mouse_state" kindref="compound">wxMouseState</ref> instance that contains the current position of the mouse pointer in screen coordinates, as well as boolean values indicating the up/down status of the mouse buttons and the modifier keys.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="393"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="393"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga26ae851bd6d2d8df09afedad1e8e5d6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -696,7 +696,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>It is used by <ref refid="group__group__funcmacro__appinitterm_1ga25abb4004fac0bcc0b937d93657c8cba" kindref="member">wxSafeYield()</ref>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="401"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="401"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga13f5ea19998bb9fd38ce07d61a6a2e1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -710,10 +710,10 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
         <briefdescription>
 <para>Find the deepest window at the given mouse position in screen coordinates, returning the window if found, or NULL if not. </para>        </briefdescription>
         <detaileddescription>
-<para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+<para>This function takes child windows at the given position into account even if they are disabled. The hidden children are however skipped by it.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="409"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="412"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga0736ab488cec8607a031567059dfe6f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -732,10 +732,10 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000059"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Replaced by <ref refid="classwx_window_1ab8eb148fffae109e0fac86e88d569670" kindref="member">wxWindow::FindWindowByLabel()</ref>.</para></xrefdescription></xrefsect></para><para>Find a window by its label. Depending on the type of window, the label may be a window title or panel item label. If <emphasis>parent</emphasis> is NULL, the search will start from all top-level frames and dialog boxes; if non-NULL, the search will be limited to the given window hierarchy. The search is recursive in both cases.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000058"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Replaced by <ref refid="classwx_window_1ab8eb148fffae109e0fac86e88d569670" kindref="member">wxWindow::FindWindowByLabel()</ref>.</para></xrefdescription></xrefsect></para><para>Find a window by its label. Depending on the type of window, the label may be a window title or panel item label. If <emphasis>parent</emphasis> is NULL, the search will start from all top-level frames and dialog boxes; if non-NULL, the search will be limited to the given window hierarchy. The search is recursive in both cases.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="423"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="426"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga3b60179234c123ea62e2a1a598397150" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -754,10 +754,10 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000060"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Replaced by <ref refid="classwx_window_1adbe4eea02f615313c12a2c00557a44c3" kindref="member">wxWindow::FindWindowByName()</ref>.</para></xrefdescription></xrefsect></para><para>Find a window by its name (as given in a window constructor or <emphasis>Create</emphasis> function call). If <emphasis>parent</emphasis> is NULL, the search will start from all top-level frames and dialog boxes; if non-NULL, the search will be limited to the given window hierarchy. The search is recursive in both cases.</para><para>If no such named window is found, <ref refid="group__group__funcmacro__misc_1ga0736ab488cec8607a031567059dfe6f2" kindref="member">wxFindWindowByLabel()</ref> is called.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000059"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Replaced by <ref refid="classwx_window_1adbe4eea02f615313c12a2c00557a44c3" kindref="member">wxWindow::FindWindowByName()</ref>.</para></xrefdescription></xrefsect></para><para>Find a window by its name (as given in a window constructor or <emphasis>Create</emphasis> function call). If <emphasis>parent</emphasis> is NULL, the search will start from all top-level frames and dialog boxes; if non-NULL, the search will be limited to the given window hierarchy. The search is recursive in both cases.</para><para>If no such named window is found, <ref refid="group__group__funcmacro__misc_1ga0736ab488cec8607a031567059dfe6f2" kindref="member">wxFindWindowByLabel()</ref> is called.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="437"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="440"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga5c3705ca3d228c51155fcf22404b739c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -782,7 +782,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="445"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="448"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1gaef162e1ba5d17a839b2f7912424bc822" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -792,10 +792,10 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000061"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Ids generated by it can conflict with the Ids defined by the user code, use <computeroutput>wxID_ANY</computeroutput> to assign ids which are guaranteed to not conflict with the user-defined ids for the controls and menu items you create instead of using this function.</para></xrefdescription></xrefsect></para><para>Generates an integer identifier unique to this run of the program.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000060"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Ids generated by it can conflict with the Ids defined by the user code, use <computeroutput>wxID_ANY</computeroutput> to assign ids which are guaranteed to not conflict with the user-defined ids for the controls and menu items you create instead of using this function.</para></xrefdescription></xrefsect></para><para>Generates an integer identifier unique to this run of the program.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="457"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="460"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga61bb9dcbb5f0a32904c8e290a63f8022" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -812,7 +812,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="465"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="468"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga04038d4c78e4c111d018b8f82b2d66c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -835,7 +835,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="479"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="482"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga3ff36fe489da2a779248b56f283615ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -861,7 +861,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="513"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="516"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1gaff02a820db63eab038d64508aeeacc19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -884,7 +884,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 </programlisting></para><para>Where <computeroutput>file.ext</computeroutput> is a file that the resource compiler can find.</para><para>This function is available under Windows only.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="533"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="536"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1gaf617bfe542c74d75f97adeab88fab2e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -898,10 +898,10 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000062"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Replaced by <ref refid="classwx_window_1a3e44f4a494fc9ef4346c4fba70c8de0c" kindref="member">wxWindow::Close()</ref>.</para></xrefdescription></xrefsect>See the <ref refid="overview_windowdeletion" kindref="compound">window deletion overview</ref>.</para><para>Tells the system to delete the specified object when all other events have been processed. In some environments, it is necessary to use this instead of deleting a frame directly with the delete operator, because some GUIs will still send events to a deleted window.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000061"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Replaced by <ref refid="classwx_window_1a3e44f4a494fc9ef4346c4fba70c8de0c" kindref="member">wxWindow::Close()</ref>.</para></xrefdescription></xrefsect>See the <ref refid="overview_windowdeletion" kindref="compound">window deletion overview</ref>.</para><para>Tells the system to delete the specified object when all other events have been processed. In some environments, it is necessary to use this instead of deleting a frame directly with the delete operator, because some GUIs will still send events to a deleted window.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="546"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="549"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1gaaa680fc5a0eb13ed1f9ad56721e1171c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -934,7 +934,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>This function sorts <emphasis>total_elems</emphasis> objects of size <emphasis>size</emphasis> located at <emphasis>pbase</emphasis>. It uses <emphasis>cmp</emphasis> function for comparing them and passes <emphasis>user_data</emphasis> pointer to the comparison function each time it&apos;s called.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="566"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="569"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga6a5c19411145daf20a1cc6d875dbfe45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -952,7 +952,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="579"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="582"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga1513748c5eb0df0de6103c5105a18d55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -974,7 +974,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>By default, the functions strips both the mnemonics character (<computeroutput>&apos;&amp;&apos;</computeroutput>) which is used to indicate a keyboard shortkey, and the accelerators, which are used only in the menu items and are separated from the main text by the <computeroutput>\t</computeroutput> (TAB) character. By using <emphasis>flags</emphasis> of <computeroutput>wxStrip_Mnemonics</computeroutput> or <computeroutput>wxStrip_Accel</computeroutput> to strip only the former or the latter part, respectively.</para><para>Notice that in most cases <ref refid="classwx_menu_item_1af8f7bb0c7ca8808047c3c97b564069ed" kindref="member">wxMenuItem::GetLabelFromText()</ref> or <ref refid="classwx_control_1ad95895ecdd123dff35866db1d2430a76" kindref="member">wxControl::GetLabelText()</ref> can be used instead.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="611"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="614"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga58315189fa6c3c70c8c3e040fd592d97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -988,7 +988,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="628"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="631"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga9df97118e6514b933b0aa755ff62964d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1006,7 +1006,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000063"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__group__funcmacro__networkuseros_1ga58315189fa6c3c70c8c3e040fd592d97" kindref="member">wxGetEmailAddress()</ref> instead.</para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
+<para><xrefsect id="deprecated_1_deprecated000062"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__group__funcmacro__networkuseros_1ga58315189fa6c3c70c8c3e040fd592d97" kindref="member">wxGetEmailAddress()</ref> instead.</para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>buf</parametername>
 </parameternamelist>
@@ -1025,7 +1025,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="640"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="643"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga295ff6a2681c806195447a920f681499" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxMemorySize</type>
@@ -1038,7 +1038,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="648"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="651"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1gae426408d7b659be4db51cc8296af5e7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1052,7 +1052,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="657"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="660"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga25dd53a4a5aab23305b8e4e9c5ff730b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1067,7 +1067,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="674"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="677"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga6f8c550ed86ea82ac363e925db7026f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1085,7 +1085,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000064"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__group__funcmacro__networkuseros_1ga25dd53a4a5aab23305b8e4e9c5ff730b" kindref="member">wxGetHostName()</ref> instead.</para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
+<para><xrefsect id="deprecated_1_deprecated000063"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__group__funcmacro__networkuseros_1ga25dd53a4a5aab23305b8e4e9c5ff730b" kindref="member">wxGetHostName()</ref> instead.</para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>buf</parametername>
 </parameternamelist>
@@ -1104,7 +1104,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="686"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="689"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga8e3277f772d143953b4e7eca3312dea0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1118,7 +1118,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="696"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="699"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga18db911e93361ebd5bbfb0d5136ddf5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1136,7 +1136,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>If the <emphasis>user</emphasis> is empty (default value), this function behaves like <ref refid="group__group__funcmacro__networkuseros_1gae426408d7b659be4db51cc8296af5e7a" kindref="member">wxGetHomeDir()</ref> (i.e. returns the current user home directory).</para><para>If the home directory couldn&apos;t be determined, an empty string is returned.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="707"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="710"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1gab1ebfcd4741550d6f7aa6f8a8952f4f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1151,7 +1151,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="722"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="725"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1gac27162ecb34dab557506f6a612df6211" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1169,7 +1169,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000065"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__group__funcmacro__networkuseros_1gab1ebfcd4741550d6f7aa6f8a8952f4f3" kindref="member">wxGetUserId()</ref> instead.</para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
+<para><xrefsect id="deprecated_1_deprecated000064"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__group__funcmacro__networkuseros_1gab1ebfcd4741550d6f7aa6f8a8952f4f3" kindref="member">wxGetUserId()</ref> instead.</para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>buf</parametername>
 </parameternamelist>
@@ -1188,7 +1188,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="734"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="737"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga37cb8272601e8c81e2ee53ee50e64a8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1203,7 +1203,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="749"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="752"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1gaae7f8332d69c28360110242de6f3d3e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1221,7 +1221,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000066"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__group__funcmacro__networkuseros_1ga37cb8272601e8c81e2ee53ee50e64a8e" kindref="member">wxGetUserName()</ref> instead.</para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
+<para><xrefsect id="deprecated_1_deprecated000065"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Use <ref refid="group__group__funcmacro__networkuseros_1ga37cb8272601e8c81e2ee53ee50e64a8e" kindref="member">wxGetUserName()</ref> instead.</para></xrefdescription></xrefsect></para><para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>buf</parametername>
 </parameternamelist>
@@ -1240,7 +1240,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="761"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="764"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga2404d9ca32701ddb2a34af00e81446b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1254,7 +1254,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="772"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="775"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga2ca585c288b956d80511478dc7b01533" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fd" kindref="member">wxOperatingSystemId</ref></type>
@@ -1297,7 +1297,7 @@ See the <ulink url="http://msdn.microsoft.com/en-us/library/ms724832(VS.85).aspx
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="808"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="811"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga56083f0f3875e40b13aa6094e283584e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1311,7 +1311,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="824"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="827"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1gaccf71bf91abcb6469e6b812acf40bd38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1325,7 +1325,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="834"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="837"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__networkuseros_1ga06f6fb212c396bd20865ee4e2f69aa1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structwx_linux_distribution_info" kindref="compound">wxLinuxDistributionInfo</ref></type>
@@ -1338,7 +1338,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>This function uses the <computeroutput>lsb_release</computeroutput> utility which is part of the <computeroutput>Linux Standard Base Core</computeroutput> specification (see <ulink url="http://refspecs.linux-foundation.org/lsb.shtml">http://refspecs.linux-foundation.org/lsb.shtml</ulink>) since the very first LSB release 1.0 (released in 2001). The <computeroutput>lsb_release</computeroutput> utility is very common on modern Linux distributions but in case it&apos;s not available, then this function will return a <ref refid="structwx_linux_distribution_info" kindref="compound">wxLinuxDistributionInfo</ref> structure containing empty strings.</para><para>This function is Linux-specific and is only available when the <computeroutput>__LINUX__</computeroutput> symbol is defined. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="851"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="854"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__procctrl_1gaa276e9e676e26bafeec3141b73399b33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -1367,7 +1367,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
         <briefdescription>
 <para>Executes another program in Unix or Windows. </para>        </briefdescription>
         <detaileddescription>
-<para>In the overloaded versions of this function, if <emphasis>flags</emphasis> parameter contains <computeroutput>wxEXEC_ASYNC</computeroutput> flag (the default), flow of control immediately returns. If it contains <computeroutput>wxEXEC_SYNC</computeroutput>, the current application waits until the other program has terminated.</para><para>In the case of synchronous execution, the return value is the exit code of the process (which terminates by the moment the function returns) and will be -1 if the process couldn&apos;t be started and typically 0 if the process terminated successfully. Also, while waiting for the process to terminate, <ref refid="group__group__funcmacro__procctrl_1gaa276e9e676e26bafeec3141b73399b33" kindref="member">wxExecute()</ref> will call <ref refid="group__group__funcmacro__appinitterm_1gac386c89a04e364afc07edce6d848c27a" kindref="member">wxYield()</ref>. Because of this, by default this function disables all application windows to avoid unexpected reentrancies which could result from the users interaction with the program while the child process is running. If you are sure that it is safe to not disable the program windows, you may pass <computeroutput>wxEXEC_NODISABLE</computeroutput> flag to prevent this automatic disabling from happening.</para><para>For asynchronous execution, however, the return value is the process id and zero value indicates that the command could not be executed. As an added complication, the return value of -1 in this case indicates that we didn&apos;t launch a new process, but connected to the running one (this can only happen when using DDE under Windows for command execution). In particular, in this case only, the calling code will not get the notification about process termination.</para><para>If <emphasis>callback</emphasis> isn&apos;t NULL and if execution is asynchronous, <ref refid="classwx_process_1aa378b7e705c9191431cad51a81581836" kindref="member">wxProcess::OnTerminate()</ref> will be called when the process finishes. Specifying this parameter also allows you to redirect the standard input and/or output of the process being launched by calling <ref refid="classwx_process_1a9d1fc94d98e373c26dbb128516c2c348" kindref="member">wxProcess::Redirect()</ref>.</para><para>Under Windows, when launching a console process its console is shown by default but hidden if its IO is redirected. Both of these default behaviours may be overridden: if <ref refid="group__group__funcmacro__procctrl_1gga7ff5f2dff38e7639981794c43dc9167ba6eb92c81a5e49ef172b9d74528be55a0" kindref="member">wxEXEC_HIDE_CONSOLE</ref> is specified, the console will never be shown. If <ref refid="group__group__funcmacro__procctrl_1gga7ff5f2dff38e7639981794c43dc9167ba433c517e46d1dd61a5dda1ffeb750552" kindref="member">wxEXEC_SHOW_CONSOLE</ref> is used, the console will be shown even if the child process IO is redirected. Neither of these flags affect non-console Windows applications or does anything under the other systems.</para><para>Under Unix the flag <computeroutput>wxEXEC_MAKE_GROUP_LEADER</computeroutput> may be used to ensure that the new process is a group leader (this will create a new session if needed). Calling <ref refid="group__group__funcmacro__procctrl_1gae3a7de5a29e70c77463dd1bc38fb98cf" kindref="member">wxKill()</ref> passing wxKILL_CHILDREN will kill this process as well as all of its children (except those which have started their own session). Under MSW, this flag can be used with console processes only and corresponds to the native <computeroutput>CREATE_NEW_PROCESS_GROUP</computeroutput> flag.</para><para>The <computeroutput>wxEXEC_NOEVENTS</computeroutput> flag prevents processing of any events from taking place while the child process is running. It should be only used for very short-lived processes as otherwise the application windows risk becoming unresponsive from the users point of view. As this flag only makes sense with <computeroutput>wxEXEC_SYNC</computeroutput>, <computeroutput>wxEXEC_BLOCK</computeroutput> equal to the sum of both of these flags is provided as a convenience.</para><para><simplesect kind="note"><para>Currently <ref refid="group__group__funcmacro__procctrl_1gaa276e9e676e26bafeec3141b73399b33" kindref="member">wxExecute()</ref> can only be used from the main thread, calling this function from another thread will result in an assert failure in debug build and won&apos;t work.</para></simplesect>
+<para>In the overloaded versions of this function, if <emphasis>flags</emphasis> parameter contains <computeroutput>wxEXEC_ASYNC</computeroutput> flag (the default), flow of control immediately returns. If it contains <computeroutput>wxEXEC_SYNC</computeroutput>, the current application waits until the other program has terminated.</para><para>In the case of synchronous execution, the return value is the exit code of the process (which terminates by the moment the function returns) and will be -1 if the process couldn&apos;t be started and typically 0 if the process terminated successfully. Also, while waiting for the process to terminate, <ref refid="group__group__funcmacro__procctrl_1gaa276e9e676e26bafeec3141b73399b33" kindref="member">wxExecute()</ref> will call <ref refid="group__group__funcmacro__appinitterm_1gac386c89a04e364afc07edce6d848c27a" kindref="member">wxYield()</ref>. Because of this, by default this function disables all application windows to avoid unexpected reentrancies which could result from the users interaction with the program while the child process is running. If you are sure that it is safe to not disable the program windows, you may pass <computeroutput>wxEXEC_NODISABLE</computeroutput> flag to prevent this automatic disabling from happening.</para><para>For asynchronous execution, however, the return value is the process id and zero value indicates that the command could not be executed. As an added complication, the return value of -1 in this case indicates that we didn&apos;t launch a new process, but connected to the running one (this can only happen when using DDE under Windows for command execution). In particular, in this case only, the calling code will not get the notification about process termination.</para><para>If <emphasis>callback</emphasis> isn&apos;t NULL and if execution is asynchronous, <ref refid="classwx_process_1aa378b7e705c9191431cad51a81581836" kindref="member">wxProcess::OnTerminate()</ref> will be called when the process finishes. Specifying this parameter also allows you to redirect the standard input and/or output of the process being launched by calling <ref refid="classwx_process_1a9d1fc94d98e373c26dbb128516c2c348" kindref="member">wxProcess::Redirect()</ref>.</para><para>Under Windows, when launching a console process its console is shown by default but hidden if its IO is redirected. Both of these default behaviours may be overridden: if <ref refid="group__group__funcmacro__procctrl_1gga16685eea158879e41b101ca3634de462a6eb92c81a5e49ef172b9d74528be55a0" kindref="member">wxEXEC_HIDE_CONSOLE</ref> is specified, the console will never be shown. If <ref refid="group__group__funcmacro__procctrl_1gga16685eea158879e41b101ca3634de462a433c517e46d1dd61a5dda1ffeb750552" kindref="member">wxEXEC_SHOW_CONSOLE</ref> is used, the console will be shown even if the child process IO is redirected. Neither of these flags affect non-console Windows applications or does anything under the other systems.</para><para>Under Unix the flag <computeroutput>wxEXEC_MAKE_GROUP_LEADER</computeroutput> may be used to ensure that the new process is a group leader (this will create a new session if needed). Calling <ref refid="group__group__funcmacro__procctrl_1gae3a7de5a29e70c77463dd1bc38fb98cf" kindref="member">wxKill()</ref> passing wxKILL_CHILDREN will kill this process as well as all of its children (except those which have started their own session). Under MSW, this flag can be used with console processes only and corresponds to the native <computeroutput>CREATE_NEW_PROCESS_GROUP</computeroutput> flag.</para><para>The <computeroutput>wxEXEC_NOEVENTS</computeroutput> flag prevents processing of any events from taking place while the child process is running. It should be only used for very short-lived processes as otherwise the application windows risk becoming unresponsive from the users point of view. As this flag only makes sense with <computeroutput>wxEXEC_SYNC</computeroutput>, <computeroutput>wxEXEC_BLOCK</computeroutput> equal to the sum of both of these flags is provided as a convenience.</para><para><simplesect kind="note"><para>Currently <ref refid="group__group__funcmacro__procctrl_1gaa276e9e676e26bafeec3141b73399b33" kindref="member">wxExecute()</ref> can only be used from the main thread, calling this function from another thread will result in an assert failure in debug build and won&apos;t work.</para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>command</parametername>
@@ -1401,7 +1401,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim></para><para><bold>wxPerl Note:</bold> In wxPerl this function is called <computeroutput>Wx::ExecuteCommand</computeroutput>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1054"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="1057"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__procctrl_1ga8116ca17aec4eea74b848f1544805960" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -1463,7 +1463,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim></para><para><bold>wxPerl Note:</bold> In wxPerl this function is called <computeroutput>Wx::ExecuteArgs</computeroutput>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1090"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="1093"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__procctrl_1gabba679a024d6a4a084fc8d16220c4d7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -1495,7 +1495,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1093"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="1096"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__procctrl_1ga8f0c6749817ce450eae22290194c812e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -1542,7 +1542,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <parametername>flags</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Combination of flags to which <ref refid="group__group__funcmacro__procctrl_1gga7ff5f2dff38e7639981794c43dc9167ba412f75e022e82e7d8415109a6712be36" kindref="member">wxEXEC_SYNC</ref> is always implicitly added. </para></parameterdescription>
+<para>Combination of flags to which <ref refid="group__group__funcmacro__procctrl_1gga16685eea158879e41b101ca3634de462a412f75e022e82e7d8415109a6712be36" kindref="member">wxEXEC_SYNC</ref> is always implicitly added. </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
@@ -1556,7 +1556,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim></para><para><bold>wxPerl Note:</bold> This function is called <computeroutput>Wx::ExecuteStdout:</computeroutput> it only takes the <emphasis>command</emphasis> argument, and returns a 2-element list (<computeroutput>status</computeroutput>, <computeroutput>output</computeroutput>), where <computeroutput>output</computeroutput> in an array reference. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1131"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="1134"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__procctrl_1ga481a6f4eb3783d38e022aaca1b6ed757" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -1614,7 +1614,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <parametername>flags</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Combination of flags to which <ref refid="group__group__funcmacro__procctrl_1gga7ff5f2dff38e7639981794c43dc9167ba412f75e022e82e7d8415109a6712be36" kindref="member">wxEXEC_SYNC</ref> is always implicitly added. </para></parameterdescription>
+<para>Combination of flags to which <ref refid="group__group__funcmacro__procctrl_1gga16685eea158879e41b101ca3634de462a412f75e022e82e7d8415109a6712be36" kindref="member">wxEXEC_SYNC</ref> is always implicitly added. </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
@@ -1628,7 +1628,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim></para><para><bold>wxPerl Note:</bold> This function is called <computeroutput>Wx::ExecuteStdoutStderr:</computeroutput> it only takes the <emphasis>command</emphasis> argument, and returns a 3-element list (<computeroutput>status</computeroutput>, <computeroutput>output</computeroutput>, <computeroutput>errors</computeroutput>), where <computeroutput>output</computeroutput> and <computeroutput>errors</computeroutput> are array references. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1168"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="1171"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__procctrl_1gab50b6a7e83f7a59d4c1d08d52505f8c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned long</type>
@@ -1641,7 +1641,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>If an error occurs, 0 is returned.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1176"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="1179"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__procctrl_1gae3a7de5a29e70c77463dd1bc38fb98cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -1701,7 +1701,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1235"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="1238"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__procctrl_1gad7f2f357f592f8c786ab05f516578023" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1720,7 +1720,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1245"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="1248"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__procctrl_1ga3177c2a68564921806525f8fefa7e5c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1748,7 +1748,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1266"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="1269"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__time_1ga21baed39430c5dae8517c4bd87fcf357" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1765,7 +1765,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>The microsecond resolution may not, in fact, be available on all platforms (currently only Unix platforms with nanosleep(2) may provide it) in which case this is the same as calling <ref refid="group__group__funcmacro__time_1ga66778879349f76fd833902d3767006fa" kindref="member">wxMilliSleep()</ref> with the argument of <emphasis>microseconds/1000</emphasis>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1283"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="1286"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__time_1ga66778879349f76fd833902d3767006fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1782,7 +1782,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>Notice that usage of this function is encouraged instead of calling usleep(3) directly because the standard <emphasis>usleep()</emphasis> function is not MT safe.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1292"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="1295"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__time_1ga6c406d666359a8c34ef4a35277e5ea83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1795,7 +1795,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1299"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="1302"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__time_1ga35215dff464a300f45dec961b3c23539" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1812,7 +1812,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1306"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="1309"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__time_1gac19b07b94bdf832cca9666b06f7d2882" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1826,16 +1826,16 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000067"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated because its name is misleading: notice that the argument is in milliseconds, not microseconds.</para></xrefdescription></xrefsect>Please use either <ref refid="group__group__funcmacro__time_1ga66778879349f76fd833902d3767006fa" kindref="member">wxMilliSleep()</ref> or <ref refid="group__group__funcmacro__time_1ga21baed39430c5dae8517c4bd87fcf357" kindref="member">wxMicroSleep()</ref> depending on the resolution you need.</para><para>Sleeps for the specified number of milliseconds.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000066"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated because its name is misleading: notice that the argument is in milliseconds, not microseconds.</para></xrefdescription></xrefsect>Please use either <ref refid="group__group__funcmacro__time_1ga66778879349f76fd833902d3767006fa" kindref="member">wxMilliSleep()</ref> or <ref refid="group__group__funcmacro__time_1ga21baed39430c5dae8517c4bd87fcf357" kindref="member">wxMicroSleep()</ref> depending on the resolution you need.</para><para>Sleeps for the specified number of milliseconds.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1318"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="1321"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h"/>
   </compounddef>
 </doxygen>

@@ -33,7 +33,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" line="213"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopedptr.h" line="213"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scoped_ptr_3_01_t_01_4_1a8bf0c197623ad28953376673bc7e2064" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" line="218"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopedptr.h" line="218"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scoped_ptr_3_01_t_01_4_1ae977a918f432b7bb1484c592f739f4b2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>T *</type>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" line="223"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopedptr.h" line="223"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scoped_ptr_3_01_t_01_4_1a1b25e09d821215642e9f94d8c89c2ccc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -72,7 +72,7 @@
 <para>If this class contains a valid pointer it will return true, if it contains a NULL pointer it will return false. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" line="232"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopedptr.h" line="232"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scoped_ptr_3_01_t_01_4_1a3fdb19f5a019d7a6647ef2e8c88fa9ee" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>T &amp;</type>
@@ -85,7 +85,7 @@
 <para>If the internal pointer is NULL this method will cause an assert in debug mode. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" line="239"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopedptr.h" line="239"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scoped_ptr_3_01_t_01_4_1afcb2b91b39a9cf7e48ef3fd8e90f5029" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>T *</type>
@@ -98,7 +98,7 @@
 <para>Returns pointer to object.</para><para>If the internal pointer is NULL this method will cause an assert in debug mode. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" line="246"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopedptr.h" line="246"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scoped_ptr_3_01_t_01_4_1abfdc1ffb4b244e8e7fd22b2c6762f292" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>T *</type>
@@ -112,7 +112,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" line="255"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopedptr.h" line="255"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scoped_ptr_3_01_t_01_4_1aa4db906b4966f8ad42d263f5b7001306" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -130,7 +130,7 @@
 <para>The previous pointer will be deleted. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" line="261"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopedptr.h" line="261"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scoped_ptr_3_01_t_01_4_1af05ebf95340ac2cafeabb284efca7e83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -147,7 +147,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" line="266"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopedptr.h" line="266"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -156,7 +156,7 @@
 <para>It is the template version of the old-style <ref refid="classwx_scoped_ptr" kindref="compound">scoped pointer macros</ref>.</para><para>Notice that objects of this class intentionally cannot be copied.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__smartpointers" kindref="compound">Smart Pointers</ref></para><para><simplesect kind="see"><para><ref refid="classwx_shared_ptr_3_01_t_01_4" kindref="compound">wxSharedPtr&lt;T&gt;</ref>, <ref refid="classwx_weak_ref_3_01_t_01_4" kindref="compound">wxWeakRef&lt;T&gt;</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" line="205" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopedptr.h" bodystart="204" bodyend="267"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopedptr.h" line="205" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/scopedptr.h" bodystart="204" bodyend="267"/>
     <listofallmembers>
       <member refid="classwx_scoped_ptr_3_01_t_01_4_1ae977a918f432b7bb1484c592f739f4b2" prot="public" virt="non-virtual"><scope>wxScopedPtr&lt; T &gt;</scope><name>get</name></member>
       <member refid="classwx_scoped_ptr_3_01_t_01_4_1a1b25e09d821215642e9f94d8c89c2ccc" prot="public" virt="non-virtual"><scope>wxScopedPtr&lt; T &gt;</scope><name>operator unspecified_bool_type</name></member>

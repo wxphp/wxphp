@@ -6,6 +6,7 @@
     <innerclass refid="classwx_accessible" prot="public">wxAccessible</innerclass>
     <innerclass refid="classwx_affine_matrix2_d" prot="public">wxAffineMatrix2D</innerclass>
     <innerclass refid="structwx_matrix2_d" prot="public">wxMatrix2D</innerclass>
+    <innerclass refid="classwx_affine_matrix2_d_base" prot="public">wxAffineMatrix2DBase</innerclass>
     <innerclass refid="classwx_art_provider" prot="public">wxArtProvider</innerclass>
     <innerclass refid="classwx_caret" prot="public">wxCaret</innerclass>
     <innerclass refid="classwx_joystick" prot="public">wxJoystick</innerclass>

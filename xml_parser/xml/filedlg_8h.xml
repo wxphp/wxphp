@@ -13,13 +13,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" bodystart="20" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filedlg.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/filedlg.h" bodystart="20" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="enum">
-      <memberdef kind="enum" id="filedlg_8h_1abed82baf7f470b522273a3e37c24c600" prot="public" static="no">
-        <name>@8</name>
-        <enumvalue id="filedlg_8h_1abed82baf7f470b522273a3e37c24c600a66a0a1b2dc1cea202030df12462a1026" prot="public">
+      <memberdef kind="enum" id="filedlg_8h_1a16af7b253440dadd46a80a4b9fddba4d" prot="public" static="no">
+        <name>@14</name>
+        <enumvalue id="filedlg_8h_1a16af7b253440dadd46a80a4b9fddba4da66a0a1b2dc1cea202030df12462a1026" prot="public">
           <name>wxFD_OPEN</name>
           <initializer> 0x0001</initializer>
           <briefdescription>
@@ -27,7 +27,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="filedlg_8h_1abed82baf7f470b522273a3e37c24c600aac29a39c558c3709c8bffaf012c90aec" prot="public">
+        <enumvalue id="filedlg_8h_1a16af7b253440dadd46a80a4b9fddba4daac29a39c558c3709c8bffaf012c90aec" prot="public">
           <name>wxFD_SAVE</name>
           <initializer> 0x0002</initializer>
           <briefdescription>
@@ -35,7 +35,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="filedlg_8h_1abed82baf7f470b522273a3e37c24c600a5f106d797bb886352a221437ffa39715" prot="public">
+        <enumvalue id="filedlg_8h_1a16af7b253440dadd46a80a4b9fddba4da5f106d797bb886352a221437ffa39715" prot="public">
           <name>wxFD_OVERWRITE_PROMPT</name>
           <initializer> 0x0004</initializer>
           <briefdescription>
@@ -43,7 +43,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="filedlg_8h_1abed82baf7f470b522273a3e37c24c600a0fa7600d35ad244e3e4f7d872eaf1fba" prot="public">
+        <enumvalue id="filedlg_8h_1a16af7b253440dadd46a80a4b9fddba4da0fa7600d35ad244e3e4f7d872eaf1fba" prot="public">
           <name>wxFD_FILE_MUST_EXIST</name>
           <initializer> 0x0010</initializer>
           <briefdescription>
@@ -51,7 +51,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="filedlg_8h_1abed82baf7f470b522273a3e37c24c600a541b5067216e5a4b0ee2e25fbcae9201" prot="public">
+        <enumvalue id="filedlg_8h_1a16af7b253440dadd46a80a4b9fddba4da541b5067216e5a4b0ee2e25fbcae9201" prot="public">
           <name>wxFD_MULTIPLE</name>
           <initializer> 0x0020</initializer>
           <briefdescription>
@@ -59,7 +59,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="filedlg_8h_1abed82baf7f470b522273a3e37c24c600a1b2ca63637281a6712701e4c58610a49" prot="public">
+        <enumvalue id="filedlg_8h_1a16af7b253440dadd46a80a4b9fddba4da1b2ca63637281a6712701e4c58610a49" prot="public">
           <name>wxFD_CHANGE_DIR</name>
           <initializer> 0x0080</initializer>
           <briefdescription>
@@ -67,7 +67,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="filedlg_8h_1abed82baf7f470b522273a3e37c24c600ae7aae0e35cdb8a1a3161de1a1f8f8e1a" prot="public">
+        <enumvalue id="filedlg_8h_1a16af7b253440dadd46a80a4b9fddba4dae7aae0e35cdb8a1a3161de1a1f8f8e1a" prot="public">
           <name>wxFD_PREVIEW</name>
           <initializer> 0x0100</initializer>
           <briefdescription>
@@ -81,14 +81,29 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="10" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" bodystart="9" bodyend="18"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filedlg.h" line="10" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/filedlg.h" bodystart="9" bodyend="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="filedlg_8h_1a3a48d9b7ad35e6c332acb146f78c1b5d" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char wxFileSelectorDefaultWildcardStr[]</definition>
+        <argsstring>[]</argsstring>
+        <name>wxFileSelectorDefaultWildcardStr</name>
+        <briefdescription>
+<para>Default wildcard string used in <ref refid="classwx_file_dialog" kindref="compound">wxFileDialog</ref> corresponding to all files. </para>        </briefdescription>
+        <detaileddescription>
+<para>It is defined as &quot;*.*&quot; under MSW and OS/2 and &quot;*&quot; everywhere else. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filedlg.h" line="27" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/filedlg.h" bodystart="27" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="group__group__funcmacro__dialog_1ga34b2514dafd2823f697c3fe68caecc1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1gac92fd90e0f898095ef0c9f86b01928bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
         <definition>wxString wxFileSelector</definition>
-        <argsstring>(const wxString &amp;message, const wxString &amp;default_path=wxEmptyString, const wxString &amp;default_filename=wxEmptyString, const wxString &amp;default_extension=wxEmptyString, const wxString &amp;wildcard=&quot;.&quot;, int flags=0, wxWindow *parent=NULL, int x=-1, int y=-1)</argsstring>
+        <argsstring>(const wxString &amp;message, const wxString &amp;default_path=wxEmptyString, const wxString &amp;default_filename=wxEmptyString, const wxString &amp;default_extension=wxEmptyString, const wxString &amp;wildcard=wxFileSelectorDefaultWildcardStr, int flags=0, wxWindow *parent=NULL, int x=wxDefaultCoord, int y=wxDefaultCoord)</argsstring>
         <name>wxFileSelector</name>
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -112,7 +127,7 @@
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
           <declname>wildcard</declname>
-          <defval>&quot;.&quot;</defval>
+          <defval><ref refid="filedlg_8h_1a3a48d9b7ad35e6c332acb146f78c1b5d" kindref="member">wxFileSelectorDefaultWildcardStr</ref></defval>
         </param>
         <param>
           <type>int</type>
@@ -127,19 +142,19 @@
         <param>
           <type>int</type>
           <declname>x</declname>
-          <defval>-1</defval>
+          <defval><ref refid="defs_8h_1ae297119c813ec5d3328ce3f43f9ac6c1" kindref="member">wxDefaultCoord</ref></defval>
         </param>
         <param>
           <type>int</type>
           <declname>y</declname>
-          <defval>-1</defval>
+          <defval><ref refid="defs_8h_1ae297119c813ec5d3328ce3f43f9ac6c1" kindref="member">wxDefaultCoord</ref></defval>
         </param>
         <briefdescription>
 <para>Pops up a file selector box. </para>        </briefdescription>
         <detaileddescription>
 <para>In Windows, this is the common file selector dialog. In X, this is a file selector box with the same functionality. The path and filename are distinct elements of a full file pathname. If path is empty, the current directory will be used. If filename is empty, no default filename will be supplied. The wildcard determines what files are displayed in the file selector, and file extension supplies a type extension for the required filename. Flags may be a combination of wxFD_OPEN, wxFD_SAVE, wxFD_OVERWRITE_PROMPT or wxFD_FILE_MUST_EXIST.</para><para><simplesect kind="note"><para>wxFD_MULTIPLE can only be used with <ref refid="classwx_file_dialog" kindref="compound">wxFileDialog</ref> and not here since this function only returns a single file name.</para></simplesect>
 Both the Unix and Windows versions implement a wildcard filter. Typing a filename containing wildcards (*, ?) in the filename text item, and clicking on Ok, will result in only those files matching the pattern being displayed.</para><para>The wildcard may be a specification for multiple types of file with a description for each, such as:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;BMP<sp/>files<sp/>(*.bmp)|*.bmp|GIF<sp/>files<sp/>(*.gif)|*.gif&quot;</highlight></codeline>
-</programlisting></para><para>The application must check for an empty return value (the user pressed Cancel). For example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>filename<sp/>=<sp/><ref refid="group__group__funcmacro__dialog_1ga34b2514dafd2823f697c3fe68caecc1c" kindref="member" tooltip="Pops up a file selector box.">wxFileSelector</ref>(</highlight><highlight class="stringliteral">&quot;Choose<sp/>a<sp/>file<sp/>to<sp/>open&quot;</highlight><highlight class="normal">);</highlight></codeline>
+</programlisting></para><para>The application must check for an empty return value (the user pressed Cancel). For example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classwx_string" kindref="compound" tooltip="The wxString class has been completely rewritten for wxWidgets 3.0 and this change was actually the m...">wxString</ref><sp/>filename<sp/>=<sp/><ref refid="group__group__funcmacro__dialog_1gac92fd90e0f898095ef0c9f86b01928bf" kindref="member" tooltip="Pops up a file selector box.">wxFileSelector</ref>(</highlight><highlight class="stringliteral">&quot;Choose<sp/>a<sp/>file<sp/>to<sp/>open&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!filename.<ref refid="classwx_string_1ac6ae24a8ccc6e4e671f972948fca437c" kindref="member">empty</ref>()<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>work<sp/>with<sp/>the<sp/>file</highlight><highlight class="normal"></highlight></codeline>
@@ -149,13 +164,133 @@ Both the Unix and Windows versions implement a wildcard filter. Typing a filenam
 </programlisting></para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/filedlg.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h" line="367"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filedlg.h" line="374"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1ga7d1d5dfa232d5d8fc325ab01d0a1fd86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxFileSelectorEx</definition>
+        <argsstring>(const wxString &amp;message=wxFileSelectorPromptStr, const wxString &amp;default_path=wxEmptyString, const wxString &amp;default_filename=wxEmptyString, int *indexDefaultExtension=NULL, const wxString &amp;wildcard=wxFileSelectorDefaultWildcardStr, int flags=0, wxWindow *parent=NULL, int x=wxDefaultCoord, int y=wxDefaultCoord)</argsstring>
+        <name>wxFileSelectorEx</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>message</declname>
+          <defval>wxFileSelectorPromptStr</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>default_path</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>default_filename</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>indexDefaultExtension</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>wildcard</declname>
+          <defval><ref refid="filedlg_8h_1a3a48d9b7ad35e6c332acb146f78c1b5d" kindref="member">wxFileSelectorDefaultWildcardStr</ref></defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>flags</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+          <defval><ref refid="defs_8h_1ae297119c813ec5d3328ce3f43f9ac6c1" kindref="member">wxDefaultCoord</ref></defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+          <defval><ref refid="defs_8h_1ae297119c813ec5d3328ce3f43f9ac6c1" kindref="member">wxDefaultCoord</ref></defval>
+        </param>
+        <briefdescription>
+<para>An extended version of wxFileSelector. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filedlg.h" line="387"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1ga8d71c14962d9d93d2c251c43759f4783" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxLoadFileSelector</definition>
+        <argsstring>(const wxString &amp;what, const wxString &amp;extension, const wxString &amp;default_name=wxEmptyString, wxWindow *parent=NULL)</argsstring>
+        <name>wxLoadFileSelector</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>what</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>extension</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>default_name</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Ask for filename to load. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filedlg.h" line="395"/>
+      </memberdef>
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1gaef939cd02a41730546513302b3adebdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
+        <definition>wxString wxSaveFileSelector</definition>
+        <argsstring>(const wxString &amp;what, const wxString &amp;extension, const wxString &amp;default_name=wxEmptyString, wxWindow *parent=NULL)</argsstring>
+        <name>wxSaveFileSelector</name>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>what</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>extension</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
+          <declname>default_name</declname>
+          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
+          <declname>parent</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Ask for filename to save. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filedlg.h" line="403"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filedlg.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filedlg.h"/>
   </compounddef>
 </doxygen>

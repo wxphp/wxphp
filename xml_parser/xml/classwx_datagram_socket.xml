@@ -40,7 +40,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1314"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="1314"/>
       </memberdef>
       <memberdef kind="function" id="classwx_datagram_socket_1ad079d6d4d46c18ae7ff1939a2176c20a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -53,7 +53,7 @@
 <para>Please see <ref refid="classwx_socket_base_1ab0b0926cfdfdd00b8b5c5f7f57cea861" kindref="member">wxSocketBase::Destroy()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1319"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="1319"/>
       </memberdef>
       <memberdef kind="function" id="classwx_datagram_socket_1a12eb147a3f3119e09bbecbda2393a35a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_datagram_socket" kindref="compound">wxDatagramSocket</ref> &amp;</type>
@@ -102,58 +102,58 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1339"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="1339"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><xrefsect id="todo_1_todo000059"><xreftitle>Todo</xreftitle><xrefdescription><para>docme</para></xrefdescription></xrefsect></para><para><heading level="2"></heading>
+<para><xrefsect id="todo_1_todo000058"><xreftitle>Todo</xreftitle><xrefdescription><para>docme</para></xrefdescription></xrefsect></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5235">
+      <node id="5330">
         <label>wxSocketBase</label>
         <link refid="classwx_socket_base"/>
-        <childnode refid="5236" relation="public-inheritance">
+        <childnode refid="5331" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5236">
+      <node id="5331">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5234">
+      <node id="5329">
         <label>wxDatagramSocket</label>
         <link refid="classwx_datagram_socket"/>
-        <childnode refid="5235" relation="public-inheritance">
+        <childnode refid="5330" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5238">
+      <node id="5333">
         <label>wxSocketBase</label>
         <link refid="classwx_socket_base"/>
-        <childnode refid="5239" relation="public-inheritance">
+        <childnode refid="5334" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5239">
+      <node id="5334">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5240" relation="usage">
+        <childnode refid="5335" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5237">
+      <node id="5332">
         <label>wxDatagramSocket</label>
         <link refid="classwx_datagram_socket"/>
-        <childnode refid="5238" relation="public-inheritance">
+        <childnode refid="5333" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5240">
+      <node id="5335">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="1303" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" bodystart="1302" bodyend="1340"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="1303" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" bodystart="1302" bodyend="1340"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxDatagramSocket</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxDatagramSocket</scope><name>CloneRefData</name></member>

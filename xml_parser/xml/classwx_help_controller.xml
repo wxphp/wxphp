@@ -2,49 +2,8 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
   <compounddef id="classwx_help_controller" kind="class" prot="public">
     <compoundname>wxHelpController</compoundname>
-    <derivedcompoundref refid="classwx_ext_help_controller" prot="public" virt="non-virtual">wxExtHelpController</derivedcompoundref>
+    <basecompoundref refid="classwx_help_controller_base" prot="public" virt="non-virtual">wxHelpControllerBase</basecompoundref>
     <includes local="no">wx/help.h</includes>
-      <sectiondef kind="user-defined">
-      <memberdef kind="function" id="classwx_help_controller_1a1ad55c6eb7caec669399287b372bc226" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>bool</type>
-        <definition>virtual bool wxHelpController::Initialize</definition>
-        <argsstring>(const wxString &amp;file)</argsstring>
-        <name>Initialize</name>
-        <reimplementedby refid="classwx_ext_help_controller_1a940d69bf177f02f75ff9230e9a3fbcac">Initialize</reimplementedby>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>file</declname>
-        </param>
-        <briefdescription>
-<para>Initializes the help instance with a help filename, and optionally a server socket number if using wxHelp (now obsolete). </para>        </briefdescription>
-        <detaileddescription>
-<para>Does not invoke the help viewer. This must be called directly after the help instance object is created and before any attempts to communicate with the viewer.</para><para>You may omit the file extension and a suitable one will be chosen. For <ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref>, the extensions zip, htb and hhp will be appended while searching for a suitable file. For WinHelp, the hlp extension is appended. </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/help.h" line="178"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_help_controller_1ac79d6a0e6b6034ee21c3a0492328b278" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>bool</type>
-        <definition>virtual bool wxHelpController::Initialize</definition>
-        <argsstring>(const wxString &amp;file, int server)</argsstring>
-        <name>Initialize</name>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>file</declname>
-        </param>
-        <param>
-          <type>int</type>
-          <declname>server</declname>
-        </param>
-        <briefdescription>
-<para>Initializes the help instance with a help filename, and optionally a server socket number if using wxHelp (now obsolete). </para>        </briefdescription>
-        <detaileddescription>
-<para>Does not invoke the help viewer. This must be called directly after the help instance object is created and before any attempts to communicate with the viewer.</para><para>You may omit the file extension and a suitable one will be chosen. For <ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref>, the extensions zip, htb and hhp will be appended while searching for a suitable file. For WinHelp, the hlp extension is appended. </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/help.h" line="179"/>
-      </memberdef>
-      </sectiondef>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="classwx_help_controller_1a33ea318ec42fbe28b84abfec61094209" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -59,403 +18,105 @@
         <briefdescription>
 <para>Constructs a help instance object, but does not invoke the help viewer. </para>        </briefdescription>
         <detaileddescription>
-<para>If you provide a window, it will be used by some help controller classes, such as wxCHMHelpController, wxWinHelpController and <ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref>, as the parent for the help window instead of the value of <ref refid="classwx_app_1abc2b3305178f59f4024f492855c1bfdc" kindref="member">wxApp::GetTopWindow</ref>.</para><para>You can also change the parent window later with <ref refid="classwx_help_controller_1a8aa3495521c3d70df27b055ebe2ec647" kindref="member">SetParentWindow()</ref>. </para>        </detaileddescription>
+<para>If you provide a window, it will be used by some help controller classes, such as wxCHMHelpController, wxWinHelpController and <ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref>, as the parent for the help window instead of the value of <ref refid="classwx_app_1abc2b3305178f59f4024f492855c1bfdc" kindref="member">wxApp::GetTopWindow</ref>.</para><para>You can also change the parent window later with <ref refid="classwx_help_controller_base_1a8cb9ceb25ef38343812758131d4c464f" kindref="member">SetParentWindow()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/help.h" line="78"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_help_controller_1a85c0b798b823375ac1b7303d3b60be14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>wxHelpController::~wxHelpController</definition>
-        <argsstring>()</argsstring>
-        <name>~wxHelpController</name>
-        <briefdescription>
-<para>Destroys the help instance, closing down the viewer if it is running. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/help.h" line="83"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_help_controller_1af9ef4a430d76d79698bcc74a32c63d07" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>bool</type>
-        <definition>virtual bool wxHelpController::DisplayBlock</definition>
-        <argsstring>(long blockNo)</argsstring>
-        <name>DisplayBlock</name>
-        <reimplementedby refid="classwx_ext_help_controller_1a6903a755c83c96e9635813ecff921bba">DisplayBlock</reimplementedby>
-        <param>
-          <type>long</type>
-          <declname>blockNo</declname>
-        </param>
-        <briefdescription>
-<para>If the help viewer is not running, runs it and displays the file at the given block number. </para>        </briefdescription>
-        <detaileddescription>
-<para><itemizedlist>
-<listitem><para><emphasis>WinHelp:</emphasis> Refers to the context number.</para></listitem><listitem><para><emphasis>MS</emphasis> HTML Help: Refers to the context number.</para></listitem><listitem><para><emphasis>External</emphasis> HTML help: the same as for <ref refid="classwx_help_controller_1a3b33afa37503d64b6d2d14cd5e618fbb" kindref="member">DisplaySection()</ref>.</para></listitem><listitem><para><emphasis><ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref>:</emphasis> <emphasis>sectionNo</emphasis> is an identifier as specified in the <computeroutput></computeroutput>.hhc file. See <ref refid="overview_html_1overview_html_helpformats" kindref="member">Help Files Format</ref>.</para></listitem></itemizedlist>
-</para><para><xrefsect id="deprecated_1_deprecated000021"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is for backward compatibility only, and applications should use <ref refid="classwx_help_controller_1a3b33afa37503d64b6d2d14cd5e618fbb" kindref="member">DisplaySection()</ref> instead. </para></xrefdescription></xrefsect></para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/help.h" line="99"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_help_controller_1a3e559eb797c41f6db66244dc26f86e52" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>bool</type>
-        <definition>virtual bool wxHelpController::DisplayContents</definition>
-        <argsstring>()</argsstring>
-        <name>DisplayContents</name>
-        <reimplementedby refid="classwx_ext_help_controller_1a5acb23d732d25319ac88e90b4d2607c1">DisplayContents</reimplementedby>
-        <briefdescription>
-<para>If the help viewer is not running, runs it and displays the contents. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/help.h" line="104"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_help_controller_1a38cb16dff72acaad3dbf18618d14c5bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>bool</type>
-        <definition>virtual bool wxHelpController::DisplayContextPopup</definition>
-        <argsstring>(int contextId)</argsstring>
-        <name>DisplayContextPopup</name>
-        <param>
-          <type>int</type>
-          <declname>contextId</declname>
-        </param>
-        <briefdescription>
-<para>Displays the section as a popup window using a context id. </para>        </briefdescription>
-        <detaileddescription>
-<para>Returns false if unsuccessful or not implemented. </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/help.h" line="110"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_help_controller_1a3b33afa37503d64b6d2d14cd5e618fbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>bool</type>
-        <definition>virtual bool wxHelpController::DisplaySection</definition>
-        <argsstring>(const wxString &amp;section)</argsstring>
-        <name>DisplaySection</name>
-        <reimplementedby refid="classwx_ext_help_controller_1a2dab567c64ff153c63a2c5b6e00feee6">DisplaySection</reimplementedby>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>section</declname>
-        </param>
-        <briefdescription>
-<para>If the help viewer is not running, runs it and displays the given section. </para>        </briefdescription>
-        <detaileddescription>
-<para>The interpretation of section differs between help viewers. For most viewers, this call is equivalent to KeywordSearch. For MS HTML Help, wxHTML help and external HTML help, if section has a .htm or .html extension, that HTML file will be displayed; otherwise a keyword search is done. </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/help.h" line="121"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_help_controller_1a153bc6e425054ca7d515d4900e229abc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>bool</type>
-        <definition>virtual bool wxHelpController::DisplaySection</definition>
-        <argsstring>(int sectionNo)</argsstring>
-        <name>DisplaySection</name>
-        <reimplementedby refid="classwx_ext_help_controller_1addfd43e1bb21602f9e8c86526411484f">DisplaySection</reimplementedby>
-        <param>
-          <type>int</type>
-          <declname>sectionNo</declname>
-        </param>
-        <briefdescription>
-<para>If the help viewer is not running, runs it and displays the given section. </para>        </briefdescription>
-        <detaileddescription>
-<para><itemizedlist>
-<listitem><para><emphasis>WinHelp</emphasis>, MS HTML Help <emphasis>sectionNo</emphasis> is a context id.</para></listitem><listitem><para><emphasis>External</emphasis> HTML help: <ref refid="classwx_ext_help_controller" kindref="compound">wxExtHelpController</ref> implements <emphasis>sectionNo</emphasis> as an id in a map file, which is of the form:</para></listitem><listitem><para><emphasis><ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref>:</emphasis> <emphasis>sectionNo</emphasis> is an identifier as specified in the <computeroutput></computeroutput>.hhc file. See <ref refid="overview_html_1overview_html_helpformats" kindref="member">Help Files Format</ref>. See also the help sample for notes on how to specify section numbers for various help file formats. </para></listitem></itemizedlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/help.h" line="134"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_help_controller_1aec7708bb6d06272e53dcdc636c48d7ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>bool</type>
-        <definition>virtual bool wxHelpController::DisplayTextPopup</definition>
-        <argsstring>(const wxString &amp;text, const wxPoint &amp;pos)</argsstring>
-        <name>DisplayTextPopup</name>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>text</declname>
-        </param>
-        <param>
-          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
-          <declname>pos</declname>
-        </param>
-        <briefdescription>
-<para>Displays the text in a popup window, if possible. </para>        </briefdescription>
-        <detaileddescription>
-<para>Returns false if unsuccessful or not implemented. </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/help.h" line="142"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_help_controller_1ac3ec3f26e4023519dd5de5fdbc9bb8e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type><ref refid="classwx_frame" kindref="compound">wxFrame</ref> *</type>
-        <definition>virtual wxFrame* wxHelpController::GetFrameParameters</definition>
-        <argsstring>(const wxSize *size=NULL, const wxPoint *pos=NULL, bool *newFrameEachTime=NULL)</argsstring>
-        <name>GetFrameParameters</name>
-        <param>
-          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> *</type>
-          <declname>size</declname>
-          <defval>NULL</defval>
-        </param>
-        <param>
-          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> *</type>
-          <declname>pos</declname>
-          <defval>NULL</defval>
-        </param>
-        <param>
-          <type>bool *</type>
-          <declname>newFrameEachTime</declname>
-          <defval>NULL</defval>
-        </param>
-        <briefdescription>
-<para>For <ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref>, returns the latest frame size and position settings and whether a new frame is drawn with each invocation. </para>        </briefdescription>
-        <detaileddescription>
-<para>For all other help controllers, this function does nothing and just returns NULL.</para><para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>size</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The most recent frame size. </para></parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>pos</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The most recent frame position. </para></parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>newFrameEachTime</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>true if a new frame is drawn with each invocation. </para></parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/help.h" line="158"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_help_controller_1a4bffe31afd0f884add36fe56de767d40" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
-        <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
-        <definition>virtual wxWindow* wxHelpController::GetParentWindow</definition>
-        <argsstring>() const </argsstring>
-        <name>GetParentWindow</name>
-        <briefdescription>
-<para>Returns the window to be used as the parent for the help window. </para>        </briefdescription>
-        <detaileddescription>
-<para>This window is used by wxCHMHelpController, wxWinHelpController and <ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref>. </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/help.h" line="165"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_help_controller_1a9a0100555c85cd7e81fdeb3f1bc7a792" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>bool</type>
-        <definition>virtual bool wxHelpController::KeywordSearch</definition>
-        <argsstring>(const wxString &amp;keyWord, wxHelpSearchMode mode=wxHELP_SEARCH_ALL)</argsstring>
-        <name>KeywordSearch</name>
-        <reimplementedby refid="classwx_ext_help_controller_1a0eb62626aed22760d6a4b3cf527dd8f8">KeywordSearch</reimplementedby>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>keyWord</declname>
-        </param>
-        <param>
-          <type>wxHelpSearchMode</type>
-          <declname>mode</declname>
-          <defval>wxHELP_SEARCH_ALL</defval>
-        </param>
-        <briefdescription>
-<para>If the help viewer is not running, runs it, and searches for sections matching the given keyword. </para>        </briefdescription>
-        <detaileddescription>
-<para>If one match is found, the file is displayed at this section. The optional parameter allows the search the index (wxHELP_SEARCH_INDEX) but this currently only supported by the <ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref>.</para><para><itemizedlist>
-<listitem><para><emphasis>WinHelp</emphasis>, MS HTML Help: If more than one match is found, the first topic is displayed.</para></listitem><listitem><para><emphasis>External</emphasis> HTML help, simple wxHTML help: If more than one match is found, a choice of topics is displayed.</para></listitem><listitem><para><emphasis><ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref>:</emphasis> see <ref refid="classwx_html_help_controller_1ae22ee2f714ad59162e1f7d583899e58b" kindref="member">wxHtmlHelpController::KeywordSearch</ref>. </para></listitem></itemizedlist>
-</para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/help.h" line="195"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_help_controller_1a632fbbad190ebf6ef45ff1ca448beb30" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>bool</type>
-        <definition>virtual bool wxHelpController::LoadFile</definition>
-        <argsstring>(const wxString &amp;file=wxEmptyString)</argsstring>
-        <name>LoadFile</name>
-        <reimplementedby refid="classwx_ext_help_controller_1a0b6d17f9000f53f81a2a08189f4ebb55">LoadFile</reimplementedby>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>file</declname>
-          <defval><ref refid="interface_2wx_2string_8h_1a9a321d587166a30017b608dd2d234033" kindref="member">wxEmptyString</ref></defval>
-        </param>
-        <briefdescription>
-<para>If the help viewer is not running, runs it and loads the given file. </para>        </briefdescription>
-        <detaileddescription>
-<para>If the filename is not supplied or is empty, the file specified in <ref refid="classwx_help_controller_1a1ad55c6eb7caec669399287b372bc226" kindref="member">Initialize()</ref> is used.</para><para>If the viewer is already displaying the specified file, it will not be reloaded. This member function may be used before each display call in case the user has opened another file.</para><para><ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref> ignores this call. </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/help.h" line="208"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_help_controller_1a6a8653ac15db5261ea74e32549c6bb34" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>bool</type>
-        <definition>virtual bool wxHelpController::OnQuit</definition>
-        <argsstring>()</argsstring>
-        <name>OnQuit</name>
-        <reimplementedby refid="classwx_ext_help_controller_1ad672bb152334dcbf23765102b21948d5">OnQuit</reimplementedby>
-        <briefdescription>
-<para>Overridable member called when this application&apos;s viewer is quit by the user. </para>        </briefdescription>
-        <detaileddescription>
-<para>This does not work for all help controllers. </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/help.h" line="214"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_help_controller_1a1f814fd7342dec37725430511d1950b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>bool</type>
-        <definition>virtual bool wxHelpController::Quit</definition>
-        <argsstring>()</argsstring>
-        <name>Quit</name>
-        <reimplementedby refid="classwx_ext_help_controller_1a6724c6cfd323707c8b80a272ab87c067">Quit</reimplementedby>
-        <briefdescription>
-<para>If the viewer is running, quits it by disconnecting. </para>        </briefdescription>
-        <detaileddescription>
-<para>For Windows Help, the viewer will only close if no other application is using it. </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/help.h" line="220"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_help_controller_1af55cac5005cb4bf9936b303852dee8e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>void</type>
-        <definition>virtual void wxHelpController::SetFrameParameters</definition>
-        <argsstring>(const wxString &amp;title, const wxSize &amp;size, const wxPoint &amp;pos=wxDefaultPosition, bool newFrameEachTime=false)</argsstring>
-        <name>SetFrameParameters</name>
-        <reimplementedby refid="classwx_ext_help_controller_1ac7caae5434171c2126821b75dabe8bc0">SetFrameParameters</reimplementedby>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>title</declname>
-        </param>
-        <param>
-          <type>const <ref refid="classwx_size" kindref="compound">wxSize</ref> &amp;</type>
-          <declname>size</declname>
-        </param>
-        <param>
-          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
-          <declname>pos</declname>
-          <defval><ref refid="gdicmn_8h_1af5a90c753eaf3d3e3e5068a19ec3c1d0" kindref="member">wxDefaultPosition</ref></defval>
-        </param>
-        <param>
-          <type>bool</type>
-          <declname>newFrameEachTime</declname>
-          <defval>false</defval>
-        </param>
-        <briefdescription>
-<para>For <ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref>, the title is set (with s indicating the page title) and also the size and position of the frame if the frame is already open. </para>        </briefdescription>
-        <detaileddescription>
-<para><emphasis>newFrameEachTime</emphasis> is ignored.</para><para>For all other help controllers this function has no effect. </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/help.h" line="232"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_help_controller_1a8aa3495521c3d70df27b055ebe2ec647" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>void</type>
-        <definition>virtual void wxHelpController::SetParentWindow</definition>
-        <argsstring>(wxWindow *parentWindow)</argsstring>
-        <name>SetParentWindow</name>
-        <param>
-          <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
-          <declname>parentWindow</declname>
-        </param>
-        <briefdescription>
-<para>Sets the window to be used as the parent for the help window. </para>        </briefdescription>
-        <detaileddescription>
-<para>This is used by wxCHMHelpController, wxWinHelpController and <ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref>. </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/help.h" line="238"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_help_controller_1a0c0bfc45eca97004ddf62f41cf789031" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>void</type>
-        <definition>virtual void wxHelpController::SetViewer</definition>
-        <argsstring>(const wxString &amp;viewer, long flags)</argsstring>
-        <name>SetViewer</name>
-        <reimplementedby refid="classwx_ext_help_controller_1a09067f77907e4b8986fce95c5f7bf76f">SetViewer</reimplementedby>
-        <param>
-          <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
-          <declname>viewer</declname>
-        </param>
-        <param>
-          <type>long</type>
-          <declname>flags</declname>
-        </param>
-        <briefdescription>
-<para>Sets detailed viewer information. </para>        </briefdescription>
-        <detaileddescription>
-<para>So far this is only relevant to <ref refid="classwx_ext_help_controller" kindref="compound">wxExtHelpController</ref>. Some examples of usage:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_help.SetViewer(</highlight><highlight class="stringliteral">&quot;kdehelp&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_help.SetViewer(</highlight><highlight class="stringliteral">&quot;gnome-help-browser&quot;</highlight><highlight class="normal">);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_help.SetViewer(</highlight><highlight class="stringliteral">&quot;netscape&quot;</highlight><highlight class="normal">,<sp/>wxHELP_NETSCAPE);</highlight></codeline>
-</programlisting></para><para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>viewer</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>This defaults to &quot;netscape&quot; for <ref refid="classwx_ext_help_controller" kindref="compound">wxExtHelpController</ref>. </para></parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>flags</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>This defaults to wxHELP_NETSCAPE for <ref refid="classwx_ext_help_controller" kindref="compound">wxExtHelpController</ref>, indicating that the viewer is a variant of Netscape Navigator.</para></parameterdescription>
-</parameteritem>
-</parameterlist>
-<xrefsect id="todo_1_todo000032"><xreftitle>Todo</xreftitle><xrefdescription><para>modernize this function with <ref refid="group__group__funcmacro__misc_1ga3ff36fe489da2a779248b56f283615ca" kindref="member">wxLaunchDefaultBrowser</ref> </para></xrefdescription></xrefsect></para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/help.h" line="259"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/help.h" line="313"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>This is a family of classes by which applications may invoke a help viewer to provide on-line help. </para>    </briefdescription>
+<para>This is an alias for one of a family of help controller classes which is most appropriate for the current platform. </para>    </briefdescription>
     <detaileddescription>
-<para>A help controller allows an application to display help, at the contents or at a particular topic, and shut the help program down on termination. This avoids proliferation of many instances of the help viewer whenever the user requests a different topic via the application&apos;s menus or buttons.</para><para>Typically, an application will create a help controller instance when it starts, and immediately call <ref refid="classwx_help_controller_1a1ad55c6eb7caec669399287b372bc226" kindref="member">wxHelpController::Initialize</ref> to associate a filename with it. The help viewer will only get run, however, just before the first call to display something.</para><para>Most help controller classes actually derive from wxHelpControllerBase and have names of the form wxXXXHelpController or wxHelpControllerXXX. An appropriate class is aliased to the name <ref refid="classwx_help_controller" kindref="compound">wxHelpController</ref> for each platform, as follows:<itemizedlist>
+<para>A help controller allows an application to display help, at the contents or at a particular topic, and shut the help program down on termination. This avoids proliferation of many instances of the help viewer whenever the user requests a different topic via the application&apos;s menus or buttons.</para><para>Typically, an application will create a help controller instance when it starts, and immediately call <ref refid="classwx_help_controller_base_1ac7a8fa6e2f659cdca5863f8a3e35e1f0" kindref="member">wxHelpController::Initialize</ref> to associate a filename with it. The help viewer will only get run, however, just before the first call to display something.</para><para>Most help controller classes actually derive from <ref refid="classwx_help_controller_base" kindref="compound">wxHelpControllerBase</ref> and have names of the form wxXXXHelpController or wxHelpControllerXXX. An appropriate class is aliased to the name <ref refid="classwx_help_controller" kindref="compound">wxHelpController</ref> for each platform, as follows:<itemizedlist>
 <listitem><para>On desktop Windows, wxCHMHelpController is used (MS HTML Help).</para></listitem><listitem><para>On Windows CE, wxWinceHelpController is used.</para></listitem><listitem><para>On all other platforms, <ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref> is used if wxHTML is compiled into wxWidgets; otherwise <ref refid="classwx_ext_help_controller" kindref="compound">wxExtHelpController</ref> is used (for invoking an external browser).</para></listitem></itemizedlist>
 </para><para>The remaining help controller classes need to be named explicitly by an application that wishes to make use of them.</para><para>The following help controller classes are defined:<itemizedlist>
-<listitem><para>wxWinHelpController, for controlling Windows Help.</para></listitem><listitem><para>wxCHMHelpController, for controlling MS HTML Help. To use this, you need to set wxUSE_MS_HTML_HELP to 1 in setup.h and have the htmlhelp.h header from Microsoft&apos;s HTML Help kit. (You don&apos;t need the VC++-specific htmlhelp.lib because wxWidgets loads necessary DLL at runtime and so it works with all compilers.)</para></listitem><listitem><para>wxBestHelpController, for controlling MS HTML Help or, if Microsoft&apos;s runtime is not available, <ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref>. You need to provide <bold>both</bold> CHM and HTB versions of the help file. For wxMSW only.</para></listitem><listitem><para><ref refid="classwx_ext_help_controller" kindref="compound">wxExtHelpController</ref>, for controlling external browsers under Unix. The default browser is Netscape Navigator. The &apos;help&apos; sample shows its use.</para></listitem><listitem><para>wxWinceHelpController, for controlling a simple <computeroutput></computeroutput>.htm help controller for Windows CE applications.</para></listitem><listitem><para><ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref>, a sophisticated help controller using wxHTML, in a similar style to the Microsoft HTML Help viewer and using some of the same files. Although it has an API compatible with other help controllers, it has more advanced features, so it is recommended that you use the specific API for this class instead. Note that if you use .zip or .htb formats for your books, you must add this line to your application initialization: <programlisting><codeline><highlight class="normal"><sp/><ref refid="classwx_file_system_1a442d841b2baa5a0eb83c3a985b1e3119" kindref="member" tooltip="This static function adds new handler into the list of handlers (see wxFileSystemHandler) which provi...">wxFileSystem::AddHandler</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>wxArchiveFSHandler);<sp/></highlight></codeline>
+<listitem><para>wxWinHelpController, for controlling Windows Help.</para></listitem><listitem><para>wxCHMHelpController, for controlling MS HTML Help. To use this, you need to set wxUSE_MS_HTML_HELP to 1 in setup.h and have the htmlhelp.h header from Microsoft&apos;s HTML Help kit. (You don&apos;t need the VC++-specific htmlhelp.lib because wxWidgets loads necessary DLL at runtime and so it works with all compilers.)</para></listitem><listitem><para>wxBestHelpController, for controlling MS HTML Help or, if Microsoft&apos;s runtime is not available, <ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref>. You need to provide <bold>both</bold> CHM and HTB versions of the help file. For wxMSW only.</para></listitem><listitem><para><ref refid="classwx_ext_help_controller" kindref="compound">wxExtHelpController</ref>, for controlling external browsers under Unix. The default browser is Netscape Navigator. The &apos;help&apos; sample shows its use.</para></listitem><listitem><para>wxWinceHelpController, for controlling a simple <computeroutput></computeroutput>.htm help controller for Windows CE applications.</para></listitem><listitem><para><ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref>, a sophisticated help controller using wxHTML, in a similar style to the Microsoft HTML Help viewer and using some of the same files. Although it has an API compatible with other help controllers, it has more advanced features, so it is recommended that you use the specific API for this class instead. Note that if you use .zip or .htb formats for your books, you must add this line to your application initialization: <programlisting><codeline><highlight class="normal"><sp/><ref refid="classwx_file_system_1a442d841b2baa5a0eb83c3a985b1e3119" kindref="member" tooltip="This static function adds new handler into the list of handlers (see wxFileSystemHandler) which provi...">wxFileSystem::AddHandler</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_archive_f_s_handler" kindref="compound" tooltip="A file system handler for accessing files inside of archives.">wxArchiveFSHandler</ref>);<sp/></highlight></codeline>
 </programlisting> or nothing will be shown in your help window.</para></listitem></itemizedlist>
 </para><para><heading level="2"></heading>
-</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__help" kindref="compound">Help</ref></para><para><simplesect kind="see"><para><ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref>, <ref refid="overview_html" kindref="compound">wxHTML Overview</ref> </para></simplesect>
+</para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__help" kindref="compound">Help</ref></para><para><simplesect kind="see"><para><ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref>, <ref refid="overview_html" kindref="compound">wxHTML Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6926">
+      <node id="7096">
         <label>wxHelpController</label>
         <link refid="classwx_help_controller"/>
-      </node>
-      <node id="6927">
-        <label>wxExtHelpController</label>
-        <link refid="classwx_ext_help_controller"/>
-        <childnode refid="6926" relation="public-inheritance">
+        <childnode refid="7097" relation="public-inheritance">
         </childnode>
       </node>
+      <node id="7097">
+        <label>wxHelpControllerBase</label>
+        <link refid="classwx_help_controller_base"/>
+        <childnode refid="7098" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7098">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+      </node>
     </inheritancegraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/help.h" line="67" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/help.h" bodystart="66" bodyend="260"/>
+    <collaborationgraph>
+      <node id="7099">
+        <label>wxHelpController</label>
+        <link refid="classwx_help_controller"/>
+        <childnode refid="7100" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7100">
+        <label>wxHelpControllerBase</label>
+        <link refid="classwx_help_controller_base"/>
+        <childnode refid="7101" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7101">
+        <label>wxObject</label>
+        <link refid="classwx_object"/>
+        <childnode refid="7102" relation="usage">
+          <edgelabel>m_refData</edgelabel>
+        </childnode>
+      </node>
+      <node id="7102">
+        <label>wxObjectRefData</label>
+        <link refid="classwx_object_ref_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/help.h" line="302" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/help.h" bodystart="301" bodyend="314"/>
     <listofallmembers>
-      <member refid="classwx_help_controller_1af9ef4a430d76d79698bcc74a32c63d07" prot="public" virt="virtual"><scope>wxHelpController</scope><name>DisplayBlock</name></member>
-      <member refid="classwx_help_controller_1a3e559eb797c41f6db66244dc26f86e52" prot="public" virt="virtual"><scope>wxHelpController</scope><name>DisplayContents</name></member>
-      <member refid="classwx_help_controller_1a38cb16dff72acaad3dbf18618d14c5bb" prot="public" virt="virtual"><scope>wxHelpController</scope><name>DisplayContextPopup</name></member>
-      <member refid="classwx_help_controller_1a3b33afa37503d64b6d2d14cd5e618fbb" prot="public" virt="virtual"><scope>wxHelpController</scope><name>DisplaySection</name></member>
-      <member refid="classwx_help_controller_1a153bc6e425054ca7d515d4900e229abc" prot="public" virt="virtual"><scope>wxHelpController</scope><name>DisplaySection</name></member>
-      <member refid="classwx_help_controller_1aec7708bb6d06272e53dcdc636c48d7ee" prot="public" virt="virtual"><scope>wxHelpController</scope><name>DisplayTextPopup</name></member>
-      <member refid="classwx_help_controller_1ac3ec3f26e4023519dd5de5fdbc9bb8e3" prot="public" virt="virtual"><scope>wxHelpController</scope><name>GetFrameParameters</name></member>
-      <member refid="classwx_help_controller_1a4bffe31afd0f884add36fe56de767d40" prot="public" virt="virtual"><scope>wxHelpController</scope><name>GetParentWindow</name></member>
-      <member refid="classwx_help_controller_1a1ad55c6eb7caec669399287b372bc226" prot="public" virt="virtual"><scope>wxHelpController</scope><name>Initialize</name></member>
-      <member refid="classwx_help_controller_1ac79d6a0e6b6034ee21c3a0492328b278" prot="public" virt="virtual"><scope>wxHelpController</scope><name>Initialize</name></member>
-      <member refid="classwx_help_controller_1a9a0100555c85cd7e81fdeb3f1bc7a792" prot="public" virt="virtual"><scope>wxHelpController</scope><name>KeywordSearch</name></member>
-      <member refid="classwx_help_controller_1a632fbbad190ebf6ef45ff1ca448beb30" prot="public" virt="virtual"><scope>wxHelpController</scope><name>LoadFile</name></member>
-      <member refid="classwx_help_controller_1a6a8653ac15db5261ea74e32549c6bb34" prot="public" virt="virtual"><scope>wxHelpController</scope><name>OnQuit</name></member>
-      <member refid="classwx_help_controller_1a1f814fd7342dec37725430511d1950b2" prot="public" virt="virtual"><scope>wxHelpController</scope><name>Quit</name></member>
-      <member refid="classwx_help_controller_1af55cac5005cb4bf9936b303852dee8e8" prot="public" virt="virtual"><scope>wxHelpController</scope><name>SetFrameParameters</name></member>
-      <member refid="classwx_help_controller_1a8aa3495521c3d70df27b055ebe2ec647" prot="public" virt="virtual"><scope>wxHelpController</scope><name>SetParentWindow</name></member>
-      <member refid="classwx_help_controller_1a0c0bfc45eca97004ddf62f41cf789031" prot="public" virt="virtual"><scope>wxHelpController</scope><name>SetViewer</name></member>
+      <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxHelpController</scope><name>AllocExclusive</name></member>
+      <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxHelpController</scope><name>CloneRefData</name></member>
+      <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxHelpController</scope><name>CreateRefData</name></member>
+      <member refid="classwx_help_controller_base_1acef270454911598d88e31016124f487c" prot="public" virt="pure-virtual"><scope>wxHelpController</scope><name>DisplayBlock</name></member>
+      <member refid="classwx_help_controller_base_1a369c8bd9974b06105778226399563cbb" prot="public" virt="pure-virtual"><scope>wxHelpController</scope><name>DisplayContents</name></member>
+      <member refid="classwx_help_controller_base_1a8ec7169cdc87678e2bbee7f1c6a8cdca" prot="public" virt="virtual"><scope>wxHelpController</scope><name>DisplayContextPopup</name></member>
+      <member refid="classwx_help_controller_base_1a57ad6b821d19d61de836a445fb9a1365" prot="public" virt="virtual"><scope>wxHelpController</scope><name>DisplaySection</name></member>
+      <member refid="classwx_help_controller_base_1a84351b9fd7d02de52bd0a292995f06e4" prot="public" virt="pure-virtual"><scope>wxHelpController</scope><name>DisplaySection</name></member>
+      <member refid="classwx_help_controller_base_1a416082870baafe1719ee4af2a9c50a26" prot="public" virt="virtual"><scope>wxHelpController</scope><name>DisplayTextPopup</name></member>
+      <member refid="classwx_object_1ab3a0c6f723cbaddb47be4e8dd98cc8e2" prot="public" virt="virtual"><scope>wxHelpController</scope><name>GetClassInfo</name></member>
+      <member refid="classwx_help_controller_base_1a756498b71be6d604e358551ad2d2289e" prot="public" virt="virtual"><scope>wxHelpController</scope><name>GetFrameParameters</name></member>
+      <member refid="classwx_help_controller_base_1ae5d5da2c6d5c0eb23b31070d3abc158f" prot="public" virt="virtual"><scope>wxHelpController</scope><name>GetParentWindow</name></member>
+      <member refid="classwx_object_1aabdb4fc957226544a8408167844e4f42" prot="public" virt="non-virtual"><scope>wxHelpController</scope><name>GetRefData</name></member>
+      <member refid="classwx_help_controller_base_1ac7a8fa6e2f659cdca5863f8a3e35e1f0" prot="public" virt="virtual"><scope>wxHelpController</scope><name>Initialize</name></member>
+      <member refid="classwx_help_controller_base_1ae637c7add0d5f48544c72d8982691568" prot="public" virt="virtual"><scope>wxHelpController</scope><name>Initialize</name></member>
+      <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxHelpController</scope><name>IsKindOf</name></member>
+      <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxHelpController</scope><name>IsSameAs</name></member>
+      <member refid="classwx_help_controller_base_1a725195abad79988412d6f9708cee9641" prot="public" virt="pure-virtual"><scope>wxHelpController</scope><name>KeywordSearch</name></member>
+      <member refid="classwx_help_controller_base_1a9c43cb16bb10f3dd70b75e73996189b6" prot="public" virt="pure-virtual"><scope>wxHelpController</scope><name>LoadFile</name></member>
+      <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxHelpController</scope><name>m_refData</name></member>
+      <member refid="classwx_help_controller_base_1afe4eee3105ed7529420cde766a156a13" prot="public" virt="virtual"><scope>wxHelpController</scope><name>OnQuit</name></member>
+      <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxHelpController</scope><name>operator delete</name></member>
+      <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxHelpController</scope><name>operator new</name></member>
+      <member refid="classwx_help_controller_base_1a66380fa26b81c64bb3ead8b22ae620cb" prot="public" virt="pure-virtual"><scope>wxHelpController</scope><name>Quit</name></member>
+      <member refid="classwx_object_1a2f6f1aa51fe9fc2b1415ca4211a90e9e" prot="public" virt="non-virtual"><scope>wxHelpController</scope><name>Ref</name></member>
+      <member refid="classwx_help_controller_base_1a13d06756b391b08c76f9689f9ece10f3" prot="public" virt="virtual"><scope>wxHelpController</scope><name>SetFrameParameters</name></member>
+      <member refid="classwx_help_controller_base_1a8cb9ceb25ef38343812758131d4c464f" prot="public" virt="virtual"><scope>wxHelpController</scope><name>SetParentWindow</name></member>
+      <member refid="classwx_object_1afab780710f2adc1bb33310e27590140b" prot="public" virt="non-virtual"><scope>wxHelpController</scope><name>SetRefData</name></member>
+      <member refid="classwx_help_controller_base_1ac8c3e391bdf373ece23ac69dcc59d874" prot="public" virt="virtual"><scope>wxHelpController</scope><name>SetViewer</name></member>
+      <member refid="classwx_object_1af51efc6b1ae632fc7f0cd7ebbce9fa36" prot="public" virt="non-virtual"><scope>wxHelpController</scope><name>UnRef</name></member>
+      <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxHelpController</scope><name>UnShare</name></member>
       <member refid="classwx_help_controller_1a33ea318ec42fbe28b84abfec61094209" prot="public" virt="non-virtual"><scope>wxHelpController</scope><name>wxHelpController</name></member>
-      <member refid="classwx_help_controller_1a85c0b798b823375ac1b7303d3b60be14" prot="public" virt="non-virtual"><scope>wxHelpController</scope><name>~wxHelpController</name></member>
+      <member refid="classwx_help_controller_base_1a2373627b7ca45b75810926154bf65843" prot="public" virt="non-virtual"><scope>wxHelpController</scope><name>wxHelpControllerBase</name></member>
+      <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxHelpController</scope><name>wxObject</name></member>
+      <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxHelpController</scope><name>wxObject</name></member>
+      <member refid="classwx_help_controller_base_1a14a0b4e5433e6b03e11804a15fa432a2" prot="public" virt="non-virtual"><scope>wxHelpController</scope><name>~wxHelpControllerBase</name></member>
+      <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxHelpController</scope><name>~wxObject</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

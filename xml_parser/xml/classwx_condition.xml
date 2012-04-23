@@ -19,7 +19,7 @@
 <para>The <emphasis>mutex</emphasis> must be locked by the caller before calling <ref refid="classwx_condition_1ad42af860d727aad40cf366eaab9da48d" kindref="member">Wait()</ref> function. Use <ref refid="classwx_condition_1ae1ccee596e1b527821f2d084d2f4b5e4" kindref="member">IsOk()</ref> to check if the object was successfully initialized. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="116"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="116"/>
       </memberdef>
       <memberdef kind="function" id="classwx_condition_1a78c0da35a4bc0a611039b105ff839ea1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -32,7 +32,7 @@
 <para>The destructor is not virtual so this class should not be used polymorphically. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="123"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="123"/>
       </memberdef>
       <memberdef kind="function" id="classwx_condition_1af8ed8df7255aba60dcecba0bbe102fd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2thread_8h_1af963862ae0e1bd5cafe4039dccbbd81e" kindref="member">wxCondError</ref></type>
@@ -46,7 +46,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="133"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="133"/>
       </memberdef>
       <memberdef kind="function" id="classwx_condition_1ae1ccee596e1b527821f2d084d2f4b5e4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="139"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="139"/>
       </memberdef>
       <memberdef kind="function" id="classwx_condition_1a9fa920a093abdadb19f40db82fbaedd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2thread_8h_1af963862ae0e1bd5cafe4039dccbbd81e" kindref="member">wxCondError</ref></type>
@@ -73,7 +73,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="154"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="154"/>
       </memberdef>
       <memberdef kind="function" id="classwx_condition_1ad42af860d727aad40cf366eaab9da48d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2thread_8h_1af963862ae0e1bd5cafe4039dccbbd81e" kindref="member">wxCondError</ref></type>
@@ -88,7 +88,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="173"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="173"/>
       </memberdef>
       <memberdef kind="function" id="classwx_condition_1a368e40158c732759fad60d46d292bd2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2thread_8h_1af963862ae0e1bd5cafe4039dccbbd81e" kindref="member">wxCondError</ref></type>
@@ -114,7 +114,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="188"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="188"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -176,7 +176,7 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__threading" kindref="compound">Threading</ref></para><para><simplesect kind="see"><para><ref refid="classwx_thread" kindref="compound">wxThread</ref>, <ref refid="classwx_mutex" kindref="compound">wxMutex</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="109" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="108" bodyend="189"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="109" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" bodystart="108" bodyend="189"/>
     <listofallmembers>
       <member refid="classwx_condition_1af8ed8df7255aba60dcecba0bbe102fd4" prot="public" virt="non-virtual"><scope>wxCondition</scope><name>Broadcast</name></member>
       <member refid="classwx_condition_1ae1ccee596e1b527821f2d084d2f4b5e4" prot="public" virt="non-virtual"><scope>wxCondition</scope><name>IsOk</name></member>

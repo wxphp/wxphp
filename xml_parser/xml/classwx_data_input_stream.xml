@@ -39,7 +39,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="193"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datstrm.h" line="193"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_input_stream_1af4f67a3f04e782dc22326df5b15df3cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -52,7 +52,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="198"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datstrm.h" line="198"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_input_stream_1ad88bdb3fd5085080ea7c917181aa64cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -69,7 +69,7 @@
 <para>Sparc) or written by Java-Streams (which always use big-endian order). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="205"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datstrm.h" line="205"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_input_stream_1adc121737c4951234bcd61d88272d1d58" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_m_b_conv" kindref="compound">wxMBConv</ref> *</type>
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="212"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datstrm.h" line="212"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_input_stream_1a94bcedd17bee00052ecb907a29e26c33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1aad88e290b822df511ad8025ee2e45263" kindref="member">wxUint8</ref></type>
@@ -95,7 +95,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="217"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datstrm.h" line="217"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_input_stream_1aaa0562585fe23bb86d1fdc59336184b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -116,7 +116,7 @@
 <para>The amount of bytes to read is specified by the <emphasis>size</emphasis> variable. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="222"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datstrm.h" line="222"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_input_stream_1acc017dd5ce709595fcb04252e88433fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a8e9363c460a79dd550df544fab96e16d" kindref="member">wxUint16</ref></type>
@@ -129,7 +129,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="227"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datstrm.h" line="227"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_input_stream_1a95db79be24f8abe37cec5897f2bb5d0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -150,7 +150,7 @@
 <para>The amount of 16 bit unsigned integers to read is specified by the <emphasis>size</emphasis> variable. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="233"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datstrm.h" line="233"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_input_stream_1a2e29749280c5e1e7a24e821bc244c926" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1afdb12e5345c3fae4b537e813df9f02a3" kindref="member">wxUint32</ref></type>
@@ -163,7 +163,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="238"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datstrm.h" line="238"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_input_stream_1a13bf663e7e76a5ac11bcbf01c8453505" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -184,7 +184,7 @@
 <para>The amount of 32 bit unsigned integers to read is specified by the <emphasis>size</emphasis> variable. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="244"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datstrm.h" line="244"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_input_stream_1a7d744b0594c5810ae0bf2c4bb92fbd04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="defs_8h_1a356b5511a759210b8138b6433ed8b1fc" kindref="member">wxUint64</ref></type>
@@ -197,7 +197,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="249"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datstrm.h" line="249"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_input_stream_1af9d0786df6af44b5d62cf1f8b4406307" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -218,7 +218,7 @@
 <para>The amount of 64 bit unsigned integers to read is specified by the <emphasis>size</emphasis> variable. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="255"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datstrm.h" line="255"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_input_stream_1a1669d060400851b49b5dc627388efcb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -231,7 +231,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="260"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datstrm.h" line="260"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_input_stream_1aa33da9cf032bcca914d3bc254d11a3ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -252,7 +252,7 @@
 <para>The amount of doubles to read is specified by the <emphasis>size</emphasis> variable. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="265"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datstrm.h" line="265"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_input_stream_1a65d59e47586519047d59e2f2ea4aa4b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -266,7 +266,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="280"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datstrm.h" line="280"/>
       </memberdef>
       <memberdef kind="function" id="classwx_data_input_stream_1a8c9559bac6f6ac6d93b42d70c45452c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -283,7 +283,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="285"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datstrm.h" line="285"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -301,7 +301,7 @@
 </programlisting></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_data_output_stream" kindref="compound">wxDataOutputStream</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" line="176" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datstrm.h" bodystart="175" bodyend="286"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datstrm.h" line="176" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/datstrm.h" bodystart="175" bodyend="286"/>
     <listofallmembers>
       <member refid="classwx_data_input_stream_1ad88bdb3fd5085080ea7c917181aa64cf" prot="public" virt="non-virtual"><scope>wxDataInputStream</scope><name>BigEndianOrdered</name></member>
       <member refid="classwx_data_input_stream_1adc121737c4951234bcd61d88272d1d58" prot="public" virt="non-virtual"><scope>wxDataInputStream</scope><name>GetConv</name></member>

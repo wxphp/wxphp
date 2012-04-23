@@ -85,7 +85,7 @@ if(file_exists("dumps/classes.json"))
 	$defIni = unserialize_json(file_get_contents("dumps/classes.json"));
 	
 	//Blacklist classes
-	unset($defIni['wxArrayString']);
+	unset($defIni['wxArrayString']); //Dont implement this class since it is interpreted as php native array()
 }
 
 //Load class properties parsed by the xml_parser
@@ -211,6 +211,13 @@ remove_methods_implementing_unknown_types($defIni);
 //Removes functions implementing unknown parameter types or return types
 remove_functions_implementing_unknown_types($defFunctions);
 
+//Remove classes and methods not implemented on all 3 target platforms (windows, linux, mac)
+remove_classes_and_methods_not_crossplatform($defIni);
+
+//Remove methods implementing unhandled argument declaration like 
+//wxRichTextCtrl::PrepareContent(wxRichTextParagraphLayoutBox &WXUNUSED(container))
+remove_methods_implementing_unhandled_arguments($defIni);
+
 
 //Merges method overloads from parents to child classes
 //classes_method_merger($defIni); //This is provoking compilation errors on some classes
@@ -324,9 +331,14 @@ foreach($defClassGroups as $file_name => $class_list)
 	
 	//Generate header file that holds class declarations
 	echo "Generating $file_name.h ...\n";
+	
 	$classes_header_code = classes_author_header();
 	
+	$classes_header_code .= "#ifndef wxphp_{$file_name}_guard\n";
+	$classes_header_code .= "#define wxphp_{$file_name}_guard\n\n";
+	
 	$classes_header_code .= "#include \"references.h\"\n\n";
+	
 	$classes_header_code .= "ZEND_BEGIN_ARG_INFO_EX(wxphp_{$file_name}_get_args, 0, 0, 1)\n";
 	$classes_header_code .= tabs(1) . "ZEND_ARG_INFO(0, name)\n";
     $classes_header_code .= "ZEND_END_ARG_INFO()\n\n";
@@ -343,6 +355,8 @@ foreach($defClassGroups as $file_name => $class_list)
 		$classes_header_code .= ob_get_contents();
 		ob_end_clean();
 	}
+	
+	$classes_header_code .= "#endif //wxphp_{$file_name}_guard\n\n";
 
 	file_put_contents($file_name.".h", $classes_header_code);
 
@@ -365,6 +379,8 @@ $entries .= "\n";
 
 foreach($defIni as $class_name => $class_methods)
 {
+	$entries .= "char PHP_{$class_name}_NAME[] = \"$class_name\";\n";
+	$entries .= "char le_{$class_name}_name[] = \"native $class_name\";\n";
 	$entries .= "zend_class_entry *php_{$class_name}_entry;\n";
 	$entries .= "int le_{$class_name};\n\n";
 }
@@ -373,8 +389,8 @@ foreach($defIni as $class_name => $class_methods)
 $classes = "";
 foreach($defIni as $class_name => $class_methods)
 {
-	$classes .= "\tINIT_CLASS_ENTRY(cf, PHP_{$class_name}_NAME , php_{$class_name}_functions);\n";
-	$classes .= "\tphp_{$class_name}_entry = zend_register_internal_class(&cf TSRMLS_CC);\n";
+	$classes .= "\tINIT_CLASS_ENTRY(ce, PHP_{$class_name}_NAME , php_{$class_name}_functions);\n";
+	$classes .= "\tphp_{$class_name}_entry = zend_register_internal_class(&ce TSRMLS_CC);\n";
 	$classes .= "\tle_{$class_name} = zend_register_list_destructors_ex(php_{$class_name}_destruction_handler, NULL, le_{$class_name}_name, module_number);\n";
 	$classes .= "\n";
 }
@@ -415,7 +431,25 @@ foreach($defGlobals as $variable_name => $variable_type)
 	//Manually define wxEmptyString
 	if($variable_name == "wxEmptyString")
 	{
-		$classes .= "\tREGISTER_STRING_CONSTANT(\"$variable_name\", \"\", CONST_CS | CONST_PERSISTENT);\n";
+		$classes .= "\tchar _wx_empty_string[] = \"\";\n";
+		$classes .= "\tREGISTER_STRING_CONSTANT(\"$variable_name\", _wx_empty_string, CONST_CS | CONST_PERSISTENT);\n";
+		continue;
+	}
+	
+	//Manually define wxTransparentColour since it causes a "taking address of temporary" error because it is a macro
+	//defined as #define wxTransparentColour wxColour(0, 0, 0, wxALPHA_TRANSPARENT) on wx/colour.h
+	if($variable_name == "wxTransparentColour")
+	{
+		$classes .= "\twxColour* _wx_transparent_color = new wxColour(0, 0, 0, wxALPHA_TRANSPARENT);\n";
+		$classes .= "\twxPHP_REGISTER_RESOURCE_CONSTANT(\"wxTransparentColour\", (void*) _wx_transparent_color, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);\n";
+		continue;
+	}
+	
+	//Since wxART_ global variables are defined as wxString but what they are really is a char[]
+	if("".strpos($variable_name,"wxART_")."" != "")
+	{
+		$classes .= "\tchar _wxchar_{$variable_name}[] = $variable_name;\n";
+		$classes .= "\tREGISTER_STRING_CONSTANT(\"$variable_name\", _wxchar_$variable_name, CONST_CS | CONST_PERSISTENT);\n";
 		continue;
 	}
 	
@@ -428,7 +462,7 @@ foreach($defGlobals as $variable_name => $variable_type)
 		
 		
 	$type_modifier = "";
-	$standard_type = parameter_type($variable_type, "Global Variables", null, $type_modifier, true);
+	$standard_type = parameter_type($variable_type, false, "Global Variables", null, $type_modifier, true);
 	$plain_type = str_replace(array("const ", "&", "*"), "", $variable_type);
 	
 	switch($standard_type)
@@ -498,7 +532,7 @@ foreach($defGlobals as $variable_name => $variable_type)
 				case "const_reference":
 				case "none":
 				case "const_none":
-					$classes .= "\tREGISTER_LONG_CONSTANT(\"$variable_name\", $variable_name, CONST_CS | CONST_PERSISTENT);\n";
+					$classes .= "\tREGISTER_LONG_CONSTANT(\"$variable_name\", reinterpret_cast<long int>($variable_name), CONST_CS | CONST_PERSISTENT);\n";
 					break;
 			}
 			break;
@@ -525,14 +559,14 @@ foreach($defGlobals as $variable_name => $variable_type)
 			{
 				case "pointer":
 				case "const_pointer":
-					$classes .= "\tREGISTER_STRINGL_CONSTANT(\"$variable_name\", (const char*) $variable_name->char_str(), $variable_name->Len(), CONST_CS | CONST_PERSISTENT);\n";
+					$classes .= "\tREGISTER_STRINGL_CONSTANT(\"$variable_name\", reinterpret_cast<const char*>($variable_name->char_str()), $variable_name->Len(), CONST_CS | CONST_PERSISTENT);\n";
 					break;
 					
 				case "reference":
 				case "const_reference":
 				case "none":
 				case "const_none":
-					$classes .= "\tREGISTER_STRINGL_CONSTANT(\"$variable_name\", (const char*) $variable_name.char_str(), $variable_name.Len(), CONST_CS | CONST_PERSISTENT);\n";
+					$classes .= "\tREGISTER_STRINGL_CONSTANT(\"$variable_name\", reinterpret_cast<const char*>($variable_name.char_str()), $variable_name.Len(), CONST_CS | CONST_PERSISTENT);\n";
 					break;
 			}
 			break;
@@ -542,14 +576,14 @@ foreach($defGlobals as $variable_name => $variable_type)
 			{
 				case "pointer":
 				case "const_pointer":
-					$classes .= "\twxPHP_REGISTER_RESOURCE_CONSTANT(\"$variable_name\", {$variable_name}, php_{$plain_type}_entry, le_{$plain_type}, CONST_CS | CONST_PERSISTENT);\n";
+					$classes .= "\twxPHP_REGISTER_RESOURCE_CONSTANT(\"$variable_name\", (void*) {$variable_name}, php_{$plain_type}_entry, le_{$plain_type}, CONST_CS | CONST_PERSISTENT);\n";
 					break;
 					
 				case "reference":
 				case "const_reference":
 				case "none":
 				case "const_none":
-					$classes .= "\twxPHP_REGISTER_RESOURCE_CONSTANT(\"$variable_name\", &{$variable_name}, php_{$plain_type}_entry, le_{$plain_type}, CONST_CS | CONST_PERSISTENT);\n";
+					$classes .= "\twxPHP_REGISTER_RESOURCE_CONSTANT(\"$variable_name\", (void*) &{$variable_name}, php_{$plain_type}_entry, le_{$plain_type}, CONST_CS | CONST_PERSISTENT);\n";
 					break;
 			}
 			break;

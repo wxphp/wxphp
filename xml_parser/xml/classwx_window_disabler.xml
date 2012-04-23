@@ -21,7 +21,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="85"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="85"/>
       </memberdef>
       <memberdef kind="function" id="classwx_window_disabler_1ad2ece1cf29a6957b3d8945d5ed0c1b58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -38,7 +38,7 @@
 <para>Notice that under MSW if <emphasis>winToSkip</emphasis> appears in the taskbar, the user will be able to close the entire application (even though its main window is disabled) by right clicking on the taskbar icon and selecting the appropriate &quot;Close&quot; command from the context menu. To prevent this from happening you may want to use wxFRAME_TOOL_WINDOW, if applicable, or wxFRAME_NO_TASKBAR style when creating the window that will remain enabled. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="99"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="99"/>
       </memberdef>
       <memberdef kind="function" id="classwx_window_disabler_1ac75fd30271c477db8606d5dbe2ada483" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -51,7 +51,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="104"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="104"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -60,7 +60,7 @@
 <para>This is useful when you want to indicate to the user that the application is currently busy and cannot respond to user input.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref></para><para><simplesect kind="see"><para><ref refid="classwx_busy_cursor" kindref="compound">wxBusyCursor</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="75" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" bodystart="74" bodyend="105"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="75" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" bodystart="74" bodyend="105"/>
     <listofallmembers>
       <member refid="classwx_window_disabler_1a1f7e8380ee6f7c3b709a54d68770e08b" prot="public" virt="non-virtual"><scope>wxWindowDisabler</scope><name>wxWindowDisabler</name></member>
       <member refid="classwx_window_disabler_1ad2ece1cf29a6957b3d8945d5ed0c1b58" prot="public" virt="non-virtual"><scope>wxWindowDisabler</scope><name>wxWindowDisabler</name></member>

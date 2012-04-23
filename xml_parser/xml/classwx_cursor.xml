@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="89"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cursor.h" line="89"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cursor_1a938d1ffc4e5c0b79bfd3888b927da964" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -101,7 +101,7 @@
 Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxgtk" kindref="member">wxGTK</ref>, <ref refid="page_port_1page_port_wxmotif" kindref="member">wxMotif</ref> ports.  <onlyfor>wxgtk,wxmotif</onlyfor> </para><para><bold>wxPerl Note:</bold> In wxPerl use Wx::Cursor-&gt;newData(bits, width, height, hotSpotX = -1, hotSpotY = -1, maskBits = 0). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="121"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cursor.h" line="121"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cursor_1a36b3072bef5fb4d67a4de310573b2a5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -164,7 +164,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="157"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cursor.h" line="157"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cursor_1a94c14f9a314356cdfcd98260b729ae5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -189,7 +189,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="165"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cursor.h" line="165"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cursor_1adaf6e394c7306a3999bdc314d7b307a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -208,7 +208,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="191"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cursor.h" line="191"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cursor_1a20f3123d9d012427ae1f614e10b9cfb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -233,7 +233,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="199"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cursor.h" line="199"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cursor_1a67d75f93d7faf5deb2dd45f11ca34677" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -246,7 +246,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 <para>See <ref refid="overview_refcount_1overview_refcount_destruct" kindref="member">reference-counted object destruction</ref> for more info.</para><para>A cursor can be reused for more than one window, and does not get destroyed when the window is destroyed. wxWidgets destroys all cursors on application exit, although it is best to clean them up explicitly. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="210"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cursor.h" line="210"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cursor_1ac4968a6f7084bfad4cc4525de1c07e7b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -259,7 +259,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="215"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cursor.h" line="215"/>
       </memberdef>
       <memberdef kind="function" id="classwx_cursor_1af69083ddcd4a854684b260ff62afb7f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_cursor" kindref="compound">wxCursor</ref> &amp;</type>
@@ -276,7 +276,7 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="220"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cursor.h" line="220"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -328,49 +328,49 @@ Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="5219">
+      <node id="5314">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5218">
+      <node id="5313">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="5219" relation="public-inheritance">
+        <childnode refid="5314" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5217">
+      <node id="5312">
         <label>wxCursor</label>
         <link refid="classwx_cursor"/>
-        <childnode refid="5218" relation="public-inheritance">
+        <childnode refid="5313" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5222">
+      <node id="5317">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5223" relation="usage">
+        <childnode refid="5318" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5221">
+      <node id="5316">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="5222" relation="public-inheritance">
+        <childnode refid="5317" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5220">
+      <node id="5315">
         <label>wxCursor</label>
         <link refid="classwx_cursor"/>
-        <childnode refid="5221" relation="public-inheritance">
+        <childnode refid="5316" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5223">
+      <node id="5318">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" line="84" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cursor.h" bodystart="83" bodyend="221"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cursor.h" line="84" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/cursor.h" bodystart="83" bodyend="221"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxCursor</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxCursor</scope><name>CloneRefData</name></member>

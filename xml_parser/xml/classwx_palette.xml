@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/palette.h" line="40"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/palette.h" line="40"/>
       </memberdef>
       <memberdef kind="function" id="classwx_palette_1ab6e5c7d9f2fbc763120378e111dda828" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -41,7 +41,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/palette.h" line="48"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/palette.h" line="48"/>
       </memberdef>
       <memberdef kind="function" id="classwx_palette_1ac98e35c82e6e2e70bad9190a51067123" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -100,7 +100,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/palette.h" line="72"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/palette.h" line="72"/>
       </memberdef>
       <memberdef kind="function" id="classwx_palette_1a2b6a3346630aa048198e8344fc7d3995" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -114,7 +114,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/palette.h" line="79"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/palette.h" line="79"/>
       </memberdef>
       <memberdef kind="function" id="classwx_palette_1aeb040e229b732bc46dac0dc204f005f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -174,7 +174,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/palette.h" line="100"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/palette.h" line="100"/>
       </memberdef>
       <memberdef kind="function" id="classwx_palette_1a9644b5ac257ebddd01cbbf455240dac3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -187,7 +187,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/palette.h" line="105"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/palette.h" line="105"/>
       </memberdef>
       <memberdef kind="function" id="classwx_palette_1a364b8e84d0ae246aff69b835830978bb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -236,7 +236,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/palette.h" line="122"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/palette.h" line="122"/>
       </memberdef>
       <memberdef kind="function" id="classwx_palette_1ad87f2e5170a1187bfdd3250acd237715" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -296,7 +296,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/palette.h" line="146"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/palette.h" line="146"/>
       </memberdef>
       <memberdef kind="function" id="classwx_palette_1a4806c1217ddde8d9ba789ba012a31cad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -309,7 +309,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/palette.h" line="151"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/palette.h" line="151"/>
       </memberdef>
       <memberdef kind="function" id="classwx_palette_1a69ff271555dbb2ad5ed0950840137c62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_palette" kindref="compound">wxPalette</ref> &amp;</type>
@@ -326,7 +326,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/palette.h" line="156"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/palette.h" line="156"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -336,49 +336,49 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para>Predefined objects/pointers: <ref refid="palette_8h_1a2ecbe58191b89a50dd5dd0643e29f708" kindref="member">wxNullPalette</ref></para><para><simplesect kind="see"><para><ref refid="classwx_d_c_1afc58b0f4653159e713377d38c84a120f" kindref="member">wxDC::SetPalette()</ref>, <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8537">
+      <node id="8730">
         <label>wxPalette</label>
         <link refid="classwx_palette"/>
-        <childnode refid="8538" relation="public-inheritance">
+        <childnode refid="8731" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8539">
+      <node id="8732">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8538">
+      <node id="8731">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="8539" relation="public-inheritance">
+        <childnode refid="8732" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8540">
+      <node id="8733">
         <label>wxPalette</label>
         <link refid="classwx_palette"/>
-        <childnode refid="8541" relation="public-inheritance">
+        <childnode refid="8734" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8542">
+      <node id="8735">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8543" relation="usage">
+        <childnode refid="8736" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8541">
+      <node id="8734">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="8542" relation="public-inheritance">
+        <childnode refid="8735" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8543">
+      <node id="8736">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/palette.h" line="34" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/palette.h" bodystart="33" bodyend="157"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/palette.h" line="34" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/palette.h" bodystart="33" bodyend="157"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxPalette</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxPalette</scope><name>CloneRefData</name></member>

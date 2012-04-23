@@ -28,13 +28,13 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h" line="241"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h" line="241"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vector.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vector.h"/>
   </compounddef>
 </doxygen>

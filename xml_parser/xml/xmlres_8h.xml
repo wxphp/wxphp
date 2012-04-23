@@ -37,13 +37,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h" bodystart="12" bodyend="23"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" line="13" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h" bodystart="12" bodyend="23"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xrc/xmlres.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xrc/xmlres.h"/>
   </compounddef>
 </doxygen>

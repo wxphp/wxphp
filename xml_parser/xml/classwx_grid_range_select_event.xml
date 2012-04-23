@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="4442"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="4514"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_range_select_event_1ade89f4e1cd33b6f45668a72126fee786" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -36,11 +36,11 @@
           <declname>obj</declname>
         </param>
         <param>
-          <type>const wxGridCellCoords &amp;</type>
+          <type>const <ref refid="classwx_grid_cell_coords" kindref="compound">wxGridCellCoords</ref> &amp;</type>
           <declname>topLeft</declname>
         </param>
         <param>
-          <type>const wxGridCellCoords &amp;</type>
+          <type>const <ref refid="classwx_grid_cell_coords" kindref="compound">wxGridCellCoords</ref> &amp;</type>
           <declname>bottomRight</declname>
         </param>
         <param>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="4450"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="4522"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_range_select_event_1a9fb849199696d6e108240f8f4f2ca622" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="4455"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="4527"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_range_select_event_1a988730098b667929b5a4e8b2bcf157eb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -85,10 +85,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="4460"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="4532"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_range_select_event_1a41ae5f64b163bcf46195a4c4770f5209" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>wxGridCellCoords</type>
+        <type><ref refid="classwx_grid_cell_coords" kindref="compound">wxGridCellCoords</ref></type>
         <definition>wxGridCellCoords wxGridRangeSelectEvent::GetBottomRightCoords</definition>
         <argsstring>()</argsstring>
         <name>GetBottomRightCoords</name>
@@ -98,7 +98,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="4465"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="4537"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_range_select_event_1a65b5f48002e698fb486ced1a209827a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -111,7 +111,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="4470"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="4542"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_range_select_event_1aefb2f225fa8a9c789c4a2c44a6bb38d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -124,7 +124,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="4475"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="4547"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_range_select_event_1acd3f06cd999281af14e2a3fa32b0a035" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -137,10 +137,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="4480"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="4552"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_range_select_event_1a3cb4d558567dbc5c8a5fcc5ff597c9b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>wxGridCellCoords</type>
+        <type><ref refid="classwx_grid_cell_coords" kindref="compound">wxGridCellCoords</ref></type>
         <definition>wxGridCellCoords wxGridRangeSelectEvent::GetTopLeftCoords</definition>
         <argsstring>()</argsstring>
         <name>GetTopLeftCoords</name>
@@ -150,7 +150,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="4485"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="4557"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_range_select_event_1aaac10976d6fe4911ee3f498dc1896ef0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -163,7 +163,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="4490"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="4562"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_range_select_event_1a8d872a1cee5110b0e4c900f656fcce4f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -176,7 +176,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="4495"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="4567"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_range_select_event_1a140a8cedba61f89948d5788d2511b372" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -189,7 +189,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="4500"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="4572"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_range_select_event_1aeb2d01a3a74fd0ff19dfb5d63bfc4c15" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -202,7 +202,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="4505"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="4577"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -216,73 +216,73 @@
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__grid" kindref="compound">Grid Related Classes</ref>, <ref refid="group__group__class__events" kindref="compound">Events</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6806">
+      <node id="6976">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6804">
+      <node id="6974">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="6805" relation="public-inheritance">
+        <childnode refid="6975" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6803">
+      <node id="6973">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="6804" relation="public-inheritance">
+        <childnode refid="6974" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6802">
+      <node id="6972">
         <label>wxGridRangeSelectEvent</label>
         <link refid="classwx_grid_range_select_event"/>
-        <childnode refid="6803" relation="public-inheritance">
+        <childnode refid="6973" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6805">
+      <node id="6975">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="6806" relation="public-inheritance">
+        <childnode refid="6976" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6811">
+      <node id="6981">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6812" relation="usage">
+        <childnode refid="6982" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6809">
+      <node id="6979">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="6810" relation="public-inheritance">
+        <childnode refid="6980" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6808">
+      <node id="6978">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="6809" relation="public-inheritance">
+        <childnode refid="6979" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6807">
+      <node id="6977">
         <label>wxGridRangeSelectEvent</label>
         <link refid="classwx_grid_range_select_event"/>
-        <childnode refid="6808" relation="public-inheritance">
+        <childnode refid="6978" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6810">
+      <node id="6980">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="6811" relation="public-inheritance">
+        <childnode refid="6981" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6812">
+      <node id="6982">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="4437" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" bodystart="4436" bodyend="4506"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="4509" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" bodystart="4508" bodyend="4578"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxGridRangeSelectEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_notify_event_1a7b23515f827b2ce1da1e6990d9aafe80" prot="public" virt="non-virtual"><scope>wxGridRangeSelectEvent</scope><name>Allow</name></member>

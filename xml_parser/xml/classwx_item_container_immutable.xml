@@ -22,7 +22,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="43"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="43"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_immutable_1a32c254e4cd1a6090377e0504e230bb88" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -37,7 +37,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="50"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="50"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_immutable_1a30e9fe62bd51415d9af2a9c6f19ec8f7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -67,7 +67,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="61"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="61"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_immutable_1a1468727e7ce4194b3c4edd05cc1336ec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_array_string" kindref="compound">wxArrayString</ref></type>
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="66"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="66"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_immutable_1a1daf356c330bac2d7a93c5b3de8fbabf" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -89,7 +89,7 @@
         <name>SetString</name>
         <reimplementedby refid="classwx_radio_box_1a95951516ebbf6d4ef78a110c0905777c">SetString</reimplementedby>
         <reimplementedby refid="classwx_list_box_1aa7167deecacd31c66134500d96681405">SetString</reimplementedby>
-        <reimplementedby refid="classwx_combo_box_1a281df5e404fb6745657ca7faac96ff41">SetString</reimplementedby>
+        <reimplementedby refid="classwx_combo_box_1a4c8d4b39403b6c0ee14f30b0c1dd96b7">SetString</reimplementedby>
         <reimplementedby refid="classwx_choice_1a0b5ca1f30a82f57849e8142d22e703eb">SetString</reimplementedby>
         <param>
           <type>unsigned int</type>
@@ -120,7 +120,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="76"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="76"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_immutable_1af4a1bcdae92a7fe0367dc25a73e669bb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -162,7 +162,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="89"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="89"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -195,7 +195,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="109"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="109"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_immutable_1a18a7cb1a652772d5cb8adc52be1efea0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type>int</type>
@@ -215,7 +215,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="123"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="123"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_immutable_1afa3800ff87f00a47211c3ce206e7bc39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -242,7 +242,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="140"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="140"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_immutable_1ad4e81fb20f75c3cd6b277ed639087e28" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -257,7 +257,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="148"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="148"/>
       </memberdef>
       <memberdef kind="function" id="classwx_item_container_immutable_1abcc0d37a2a7f29d5c54cfa5252571d61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -274,7 +274,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="154"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="154"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -289,7 +289,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="34"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="34"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -299,72 +299,78 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para><simplesect kind="see"><para><ref refid="classwx_control_with_items" kindref="compound">wxControlWithItems</ref>, <ref refid="classwx_item_container" kindref="compound">wxItemContainer</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7346">
+      <node id="7543">
         <label>wxItemContainer</label>
         <link refid="classwx_item_container"/>
-        <childnode refid="7345" relation="public-inheritance">
+        <childnode refid="7542" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7351">
+      <node id="7549">
         <label>wxListBox</label>
         <link refid="classwx_list_box"/>
-        <childnode refid="7349" relation="public-inheritance">
+        <childnode refid="7546" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7354">
+      <node id="7552">
         <label>wxSimpleHtmlListBox</label>
         <link refid="classwx_simple_html_list_box"/>
-        <childnode refid="7346" relation="public-inheritance">
+        <childnode refid="7543" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7348">
+      <node id="7545">
         <label>wxBitmapComboBox</label>
         <link refid="classwx_bitmap_combo_box"/>
-        <childnode refid="7347" relation="public-inheritance">
+        <childnode refid="7544" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7355">
+      <node id="7553">
         <label>wxRadioBox</label>
         <link refid="classwx_radio_box"/>
-        <childnode refid="7345" relation="private-inheritance">
+        <childnode refid="7542" relation="private-inheritance">
         </childnode>
       </node>
-      <node id="7352">
+      <node id="7550">
         <label>wxCheckListBox</label>
         <link refid="classwx_check_list_box"/>
-        <childnode refid="7351" relation="public-inheritance">
+        <childnode refid="7549" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7353">
+      <node id="7551">
         <label>wxRearrangeList</label>
         <link refid="classwx_rearrange_list"/>
-        <childnode refid="7352" relation="public-inheritance">
+        <childnode refid="7550" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7350">
+      <node id="7547">
         <label>wxChoice</label>
         <link refid="classwx_choice"/>
-        <childnode refid="7349" relation="public-inheritance">
+        <childnode refid="7546" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7347">
+      <node id="7544">
         <label>wxComboBox</label>
         <link refid="classwx_combo_box"/>
-        <childnode refid="7346" relation="public-inheritance">
+        <childnode refid="7543" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7349">
+      <node id="7546">
         <label>wxControlWithItems</label>
         <link refid="classwx_control_with_items"/>
-        <childnode refid="7346" relation="public-inheritance">
+        <childnode refid="7543" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7345">
+      <node id="7548">
+        <label>wxDirFilterListCtrl</label>
+        <link refid="classwx_dir_filter_list_ctrl"/>
+        <childnode refid="7547" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7542">
         <label>wxItemContainerImmutable</label>
         <link refid="classwx_item_container_immutable"/>
       </node>
     </inheritancegraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" line="31" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ctrlsub.h" bodystart="30" bodyend="157"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" line="31" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/ctrlsub.h" bodystart="30" bodyend="157"/>
     <listofallmembers>
       <member refid="classwx_item_container_immutable_1af4a1bcdae92a7fe0367dc25a73e669bb" prot="public" virt="virtual"><scope>wxItemContainerImmutable</scope><name>FindString</name></member>
       <member refid="classwx_item_container_immutable_1a173bdb9c72977d524f524fcd02521f61" prot="public" virt="pure-virtual"><scope>wxItemContainerImmutable</scope><name>GetCount</name></member>

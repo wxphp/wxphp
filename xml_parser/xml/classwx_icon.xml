@@ -16,7 +16,7 @@
 <para>Constructs an icon object with no data; an assignment or another member function such as <ref refid="classwx_icon_1a753ecdd4f8d908f51fa0bbd848a613ee" kindref="member">LoadFile()</ref> must be called subsequently. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/icon.h" line="62"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/icon.h" line="62"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_1a0379f12c09a41e1e18a25f845d1cdafc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/icon.h" line="67"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/icon.h" line="67"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_1a135a7d23bec91957885c5d29b97cccff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -81,7 +81,7 @@
 <bold>wxPerl Note:</bold> In wxPerl use Wx::Icon-&gt;newBits(bits, width, height, depth = -1);</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref>, <ref refid="page_port_1page_port_wxosx" kindref="member">wxOSX</ref> ports.  <onlyfor>wxmsw,wxosx</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/icon.h" line="103"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/icon.h" line="103"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_1a8923d0c1f69ca83671e57bb439228fe2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -111,7 +111,7 @@
 </programlisting></para><para><bold>wxPerl Note:</bold> In wxPerl use Wx::Icon-&gt;newFromXPM(data). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/icon.h" line="137"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/icon.h" line="137"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_1a9f39036a2f5881d9e0c093b724ae0543" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -173,7 +173,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/icon.h" line="163"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/icon.h" line="163"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_1a42ebe9eef5b1bc44393af62430ca75b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -190,7 +190,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/icon.h" line="168"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/icon.h" line="168"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_1a4bc4f12033206cfcfdbd9ae4d4ef4e73" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -204,7 +204,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/icon.h" line="180"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/icon.h" line="180"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_1a05f63d3b7f069bcbe91ad36f06b92526" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_icon" kindref="compound">wxIcon</ref></type>
@@ -219,11 +219,11 @@
         <briefdescription>
 <para>Returns disabled (dimmed) version of the icon. </para>        </briefdescription>
         <detaileddescription>
-<para>MSW only. <simplesect kind="since"><para>2.9.0 </para></simplesect>
+<para>This method is available in <ref refid="classwx_icon" kindref="compound">wxIcon</ref> only under wxMSW, other ports only have it in <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref>. You can always use <ref refid="classwx_image_1a5f5b9ac6ab0caa7b567a2fb3120f77db" kindref="member">wxImage::ConvertToDisabled()</ref> and create the icon from <ref refid="classwx_image" kindref="compound">wxImage</ref> manually however.</para><para>Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><simplesect kind="since"><para>2.9.0 </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/icon.h" line="186"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/icon.h" line="193"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_1aea0254e1fcd09977999799b5744a016c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -241,7 +241,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/icon.h" line="194"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/icon.h" line="201"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_1a17248278c939f0154cd47e36a32e8da4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -254,7 +254,7 @@
 <para>A value of 1 indicates a monochrome icon. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/icon.h" line="200"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/icon.h" line="207"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_1ab164ff879a344827b505777d44de9e1f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -268,7 +268,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/icon.h" line="207"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/icon.h" line="214"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_1a20c3fc32aa9b7c6adebc6074ba159e6d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -282,7 +282,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/icon.h" line="214"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/icon.h" line="221"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_1a722382b00d2ec3f22ab58b77f00d5ad2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -295,7 +295,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/icon.h" line="219"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/icon.h" line="226"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_1a753ecdd4f8d908f51fa0bbd848a613ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -357,7 +357,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/icon.h" line="245"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/icon.h" line="252"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_1ae2099848c41aa2031fe70649c9279816" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -382,7 +382,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/icon.h" line="253"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/icon.h" line="260"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_1a5c5d857cd6fda4ecc05ba4820d4aa2fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -407,7 +407,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/icon.h" line="261"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/icon.h" line="268"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_1add437e80330ad01742421d2b1d66e2d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -432,7 +432,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/icon.h" line="269"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/icon.h" line="276"/>
       </memberdef>
       <memberdef kind="function" id="classwx_icon_1a562aba599e3ba5a42b604d64e1d480b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_icon" kindref="compound">wxIcon</ref> &amp;</type>
@@ -457,7 +457,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/icon.h" line="277"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/icon.h" line="284"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -468,49 +468,49 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para>Predefined objects/pointers: <ref refid="icon_8h_1a953854798a8dfd400777318358dad5b6" kindref="member">wxNullIcon</ref></para><para><simplesect kind="see"><para><ref refid="overview_bitmap" kindref="compound">Bitmaps and Icons</ref>, <ref refid="overview_bitmap_1overview_bitmap_supportedformats" kindref="member">Supported Bitmap File Formats</ref>, <ref refid="classwx_d_c_1a890d011a03308a28039d4940dd04264e" kindref="member">wxDC::DrawIcon</ref>, <ref refid="classwx_cursor" kindref="compound">wxCursor</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7210">
+      <node id="7397">
         <label>wxIcon</label>
         <link refid="classwx_icon"/>
-        <childnode refid="7211" relation="public-inheritance">
+        <childnode refid="7398" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7212">
+      <node id="7399">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7211">
+      <node id="7398">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="7212" relation="public-inheritance">
+        <childnode refid="7399" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7213">
+      <node id="7400">
         <label>wxIcon</label>
         <link refid="classwx_icon"/>
-        <childnode refid="7214" relation="public-inheritance">
+        <childnode refid="7401" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7215">
+      <node id="7402">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7216" relation="usage">
+        <childnode refid="7403" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7214">
+      <node id="7401">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="7215" relation="public-inheritance">
+        <childnode refid="7402" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7216">
+      <node id="7403">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/icon.h" line="54" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/icon.h" bodystart="53" bodyend="278"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/icon.h" line="54" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/icon.h" bodystart="53" bodyend="285"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxIcon</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxIcon</scope><name>CloneRefData</name></member>

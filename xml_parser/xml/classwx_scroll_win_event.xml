@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1739"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="1720"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scroll_win_event_1afe0b5f7ff633e930d190bd8ec9a1a22a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -44,7 +44,7 @@
 <para><xrefsect id="todo_1_todo000026"><xreftitle>Todo</xreftitle><xrefdescription><para>wxHORIZONTAL and wxVERTICAL should go in their own enum </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1747"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="1728"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scroll_win_event_1af6652b2f8110049e9c7208237a641960" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -57,7 +57,7 @@
 <para>Note that this field can&apos;t be used for the other events, you need to query the window itself for the current position in that case. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1755"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="1736"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scroll_win_event_1af78dd191ab94c6bc08b2905129eac9d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -74,7 +74,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1757"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="1738"/>
       </memberdef>
       <memberdef kind="function" id="classwx_scroll_win_event_1ac4a9a862ce25c4e050a166a7f0e27709" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -91,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1758"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="1739"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -113,49 +113,49 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_scroll_event" kindref="compound">wxScrollEvent</ref>, <ref refid="overview_events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10126">
+      <node id="10309">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10124">
+      <node id="10307">
         <label>wxScrollWinEvent</label>
         <link refid="classwx_scroll_win_event"/>
-        <childnode refid="10125" relation="public-inheritance">
+        <childnode refid="10308" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10125">
+      <node id="10308">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10126" relation="public-inheritance">
+        <childnode refid="10309" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10129">
+      <node id="10312">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10130" relation="usage">
+        <childnode refid="10313" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10127">
+      <node id="10310">
         <label>wxScrollWinEvent</label>
         <link refid="classwx_scroll_win_event"/>
-        <childnode refid="10128" relation="public-inheritance">
+        <childnode refid="10311" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10128">
+      <node id="10311">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10129" relation="public-inheritance">
+        <childnode refid="10312" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10130">
+      <node id="10313">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="1733" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="1732" bodyend="1759"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="1714" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="1713" bodyend="1740"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxScrollWinEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxScrollWinEvent</scope><name>Clone</name></member>

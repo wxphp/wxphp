@@ -4,11 +4,54 @@
     <compoundname>textdlg.h</compoundname>
     <innerclass refid="classwx_password_entry_dialog" prot="public">wxPasswordEntryDialog</innerclass>
     <innerclass refid="classwx_text_entry_dialog" prot="public">wxTextEntryDialog</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="textdlg_8h_1ad832f9927cefed055342288211a6ba5b" prot="public" static="no">
+        <name>wxTextEntryDialogStyle</name>
+        <initializer>(wxOK | wxCANCEL | wxCENTRE | wxWS_EX_VALIDATE_RECURSIVELY)</initializer>
+        <briefdescription>
+<para>Default text dialog style. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textdlg.h" line="12" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/textdlg.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="textdlg_8h_1a8faefe197032156063a3ea71fdf4eb8a" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char wxGetTextFromUserPromptStr[]</definition>
+        <argsstring>[]</argsstring>
+        <name>wxGetTextFromUserPromptStr</name>
+        <initializer>&quot;Input Text&quot;</initializer>
+        <briefdescription>
+<para>Default text dialog caption. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textdlg.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/textdlg.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="textdlg_8h_1a95d09b2377556bb3c7e60ef408c50d34" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char wxGetPasswordFromUserPromptStr[]</definition>
+        <argsstring>[]</argsstring>
+        <name>wxGetPasswordFromUserPromptStr</name>
+        <initializer>&quot;Enter Password&quot;</initializer>
+        <briefdescription>
+<para>Default password dialog caption. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textdlg.h" line="18" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/textdlg.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="group__group__funcmacro__dialog_1ga7ffaac89c7b1be611d61599ec0bc2a8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1ga5a6a376f69f87e48e618f6f79e2c4a1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
         <definition>wxString wxGetTextFromUser</definition>
-        <argsstring>(const wxString &amp;message, const wxString &amp;caption=&quot;Input text&quot;, const wxString &amp;default_value=wxEmptyString, wxWindow *parent=NULL, int x=wxDefaultCoord, int y=wxDefaultCoord, bool centre=true)</argsstring>
+        <argsstring>(const wxString &amp;message, const wxString &amp;caption=wxGetTextFromUserPromptStr, const wxString &amp;default_value=wxEmptyString, wxWindow *parent=NULL, int x=wxDefaultCoord, int y=wxDefaultCoord, bool centre=true)</argsstring>
         <name>wxGetTextFromUser</name>
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -17,7 +60,7 @@
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
           <declname>caption</declname>
-          <defval>&quot;Input text&quot;</defval>
+          <defval><ref refid="textdlg_8h_1a8faefe197032156063a3ea71fdf4eb8a" kindref="member">wxGetTextFromUserPromptStr</ref></defval>
         </param>
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -50,12 +93,12 @@
 <para>The user may type in text and press OK to return this text, or press Cancel to return the empty string.</para><para>If <computeroutput>centre</computeroutput> is true, the message text (which may include new line characters) is centred; if false, the message is left-justified.</para><para>This function is a wrapper around <ref refid="classwx_text_entry_dialog" kindref="compound">wxTextEntryDialog</ref> and while it is usually more convenient to use, using the dialog directly is more flexible, e.g. it allows you to specify the <computeroutput>wxTE_MULTILINE</computeroutput> to allow the user enter multiple lines of text while this function is limited to single line entry only.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/textdlg.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textdlg.h" line="147"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textdlg.h" line="159"/>
       </memberdef>
-      <memberdef kind="function" id="group__group__funcmacro__dialog_1ga568ded2f0ec3af010b25a05514b7bb77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group__group__funcmacro__dialog_1ga717976ecb9537ac00d0c3e79e054e7c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
         <definition>wxString wxGetPasswordFromUser</definition>
-        <argsstring>(const wxString &amp;message, const wxString &amp;caption=&quot;Input text&quot;, const wxString &amp;default_value=wxEmptyString, wxWindow *parent=NULL, int x=wxDefaultCoord, int y=wxDefaultCoord, bool centre=true)</argsstring>
+        <argsstring>(const wxString &amp;message, const wxString &amp;caption=wxGetPasswordFromUserPromptStr, const wxString &amp;default_value=wxEmptyString, wxWindow *parent=NULL, int x=wxDefaultCoord, int y=wxDefaultCoord, bool centre=true)</argsstring>
         <name>wxGetPasswordFromUser</name>
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -64,7 +107,7 @@
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
           <declname>caption</declname>
-          <defval>&quot;Input text&quot;</defval>
+          <defval><ref refid="textdlg_8h_1a95d09b2377556bb3c7e60ef408c50d34" kindref="member">wxGetPasswordFromUserPromptStr</ref></defval>
         </param>
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -92,18 +135,18 @@
           <defval>true</defval>
         </param>
         <briefdescription>
-<para>Similar to <ref refid="group__group__funcmacro__dialog_1ga7ffaac89c7b1be611d61599ec0bc2a8d" kindref="member">wxGetTextFromUser()</ref> but the text entered in the dialog is not shown on screen but replaced with stars. </para>        </briefdescription>
+<para>Similar to <ref refid="group__group__funcmacro__dialog_1ga5a6a376f69f87e48e618f6f79e2c4a1b" kindref="member">wxGetTextFromUser()</ref> but the text entered in the dialog is not shown on screen but replaced with stars. </para>        </briefdescription>
         <detaileddescription>
 <para>This is intended to be used for entering passwords as the function name implies.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/textdlg.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textdlg.h" line="162"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textdlg.h" line="174"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textdlg.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textdlg.h"/>
   </compounddef>
 </doxygen>

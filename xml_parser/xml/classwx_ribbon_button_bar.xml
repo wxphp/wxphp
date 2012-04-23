@@ -16,7 +16,7 @@
 <para>With this constructor, <ref refid="classwx_ribbon_button_bar_1aa971964bdc06247b469fc71fcd7b3dd3" kindref="member">Create()</ref> should be called in order to create the button bar. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/buttonbar.h" line="128"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/buttonbar.h" line="128"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_button_bar_1a7cc16335b2ca640188f0cca469867349" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -89,7 +89,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/buttonbar.h" line="148"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/buttonbar.h" line="148"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_button_bar_1adabae0c366cf39da652c58a578e1f65e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -102,7 +102,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/buttonbar.h" line="153"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/buttonbar.h" line="153"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_button_bar_1aa971964bdc06247b469fc71fcd7b3dd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -139,12 +139,12 @@
 <para>Should only be called when the default constructor is used, and arguments have the same meaning as in the full constructor. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/buttonbar.h" line="164"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/buttonbar.h" line="164"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_ribbon_button_bar_1aed65783239df02f3ad2e697d89d4d8fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classwx_ribbon_button_bar_1ae1a70ebc43f9d46d4a65f22c3af1cfec" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>wxRibbonButtonBarButtonBase *</type>
         <definition>virtual wxRibbonButtonBarButtonBase* wxRibbonButtonBar::AddButton</definition>
-        <argsstring>(int button_id, const wxString &amp;label, const wxBitmap &amp;bitmap, const wxString &amp;help_string, wxRibbonButtonBarButtonKind kind=wxRIBBON_BUTTONBAR_BUTTON_NORMAL)</argsstring>
+        <argsstring>(int button_id, const wxString &amp;label, const wxBitmap &amp;bitmap, const wxString &amp;help_string, wxRibbonButtonKind kind=wxRIBBON_BUTTON_NORMAL)</argsstring>
         <name>AddButton</name>
         <param>
           <type>int</type>
@@ -163,9 +163,9 @@
           <declname>help_string</declname>
         </param>
         <param>
-          <type>wxRibbonButtonBarButtonKind</type>
+          <type><ref refid="art_8h_1a49672bfa76086982645f3797b0162e19" kindref="member">wxRibbonButtonKind</ref></type>
           <declname>kind</declname>
-          <defval>wxRIBBON_BUTTONBAR_BUTTON_NORMAL</defval>
+          <defval>wxRIBBON_BUTTON_NORMAL</defval>
         </param>
         <briefdescription>
 <para>Add a button to the button bar (simple version). </para>        </briefdescription>
@@ -173,7 +173,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/buttonbar.h" line="174"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/buttonbar.h" line="174"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_button_bar_1aae03838a1e454134a75a748a52bdefd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>wxRibbonButtonBarButtonBase *</type>
@@ -200,11 +200,11 @@
         <briefdescription>
 <para>Add a dropdown button to the button bar (simple version). </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="classwx_ribbon_button_bar_1aed65783239df02f3ad2e697d89d4d8fc" kindref="member">AddButton()</ref> </para></simplesect>
+<para><simplesect kind="see"><para><ref refid="classwx_ribbon_button_bar_1ae1a70ebc43f9d46d4a65f22c3af1cfec" kindref="member">AddButton()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/buttonbar.h" line="185"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/buttonbar.h" line="185"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_button_bar_1aca67a024f3b1aa733b5f5064a2a2d753" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>wxRibbonButtonBarButtonBase *</type>
@@ -231,11 +231,11 @@
         <briefdescription>
 <para>Add a hybrid button to the button bar (simple version). </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="classwx_ribbon_button_bar_1aed65783239df02f3ad2e697d89d4d8fc" kindref="member">AddButton()</ref> </para></simplesect>
+<para><simplesect kind="see"><para><ref refid="classwx_ribbon_button_bar_1ae1a70ebc43f9d46d4a65f22c3af1cfec" kindref="member">AddButton()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/buttonbar.h" line="196"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/buttonbar.h" line="196"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_button_bar_1af241cdcdecb11e0d74fa2a9c4811816c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>wxRibbonButtonBarButtonBase *</type>
@@ -262,16 +262,16 @@
         <briefdescription>
 <para>Add a toggle button to the button bar (simple version). </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="classwx_ribbon_button_bar_1aed65783239df02f3ad2e697d89d4d8fc" kindref="member">AddButton()</ref> </para></simplesect>
+<para><simplesect kind="see"><para><ref refid="classwx_ribbon_button_bar_1ae1a70ebc43f9d46d4a65f22c3af1cfec" kindref="member">AddButton()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/buttonbar.h" line="207"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/buttonbar.h" line="207"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_ribbon_button_bar_1a9843a42c2c3dd320fb8784e6854af207" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classwx_ribbon_button_bar_1af70938cb034cb033d8e7b91f5a64499c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>wxRibbonButtonBarButtonBase *</type>
         <definition>virtual wxRibbonButtonBarButtonBase* wxRibbonButtonBar::AddButton</definition>
-        <argsstring>(int button_id, const wxString &amp;label, const wxBitmap &amp;bitmap, const wxBitmap &amp;bitmap_small=wxNullBitmap, const wxBitmap &amp;bitmap_disabled=wxNullBitmap, const wxBitmap &amp;bitmap_small_disabled=wxNullBitmap, wxRibbonButtonBarButtonKind kind=wxRIBBON_BUTTONBAR_BUTTON_NORMAL, const wxString &amp;help_string=wxEmptyString, wxObject *client_data=NULL)</argsstring>
+        <argsstring>(int button_id, const wxString &amp;label, const wxBitmap &amp;bitmap, const wxBitmap &amp;bitmap_small=wxNullBitmap, const wxBitmap &amp;bitmap_disabled=wxNullBitmap, const wxBitmap &amp;bitmap_small_disabled=wxNullBitmap, wxRibbonButtonKind kind=wxRIBBON_BUTTON_NORMAL, const wxString &amp;help_string=wxEmptyString, wxObject *client_data=NULL)</argsstring>
         <name>AddButton</name>
         <param>
           <type>int</type>
@@ -301,9 +301,9 @@
           <defval><ref refid="interface_2wx_2bitmap_8h_1a2947690e84b8fdb2e37b79a4af8f8a21" kindref="member">wxNullBitmap</ref></defval>
         </param>
         <param>
-          <type>wxRibbonButtonBarButtonKind</type>
+          <type><ref refid="art_8h_1a49672bfa76086982645f3797b0162e19" kindref="member">wxRibbonButtonKind</ref></type>
           <declname>kind</declname>
-          <defval>wxRIBBON_BUTTONBAR_BUTTON_NORMAL</defval>
+          <defval>wxRIBBON_BUTTON_NORMAL</defval>
         </param>
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -387,12 +387,12 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/buttonbar.h" line="253"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/buttonbar.h" line="253"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_ribbon_button_bar_1a0337da8d02efffac495e9f2e89d9611b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classwx_ribbon_button_bar_1a868fbf0a858d145189d2ec30dc651329" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>wxRibbonButtonBarButtonBase *</type>
         <definition>virtual wxRibbonButtonBarButtonBase* wxRibbonButtonBar::InsertButton</definition>
-        <argsstring>(size_t pos, int button_id, const wxString &amp;label, const wxBitmap &amp;bitmap, const wxString &amp;help_string, wxRibbonButtonBarButtonKind kind=wxRIBBON_BUTTONBAR_BUTTON_NORMAL)</argsstring>
+        <argsstring>(size_t pos, int button_id, const wxString &amp;label, const wxBitmap &amp;bitmap, const wxString &amp;help_string, wxRibbonButtonKind kind=wxRIBBON_BUTTON_NORMAL)</argsstring>
         <name>InsertButton</name>
         <param>
           <type>size_t</type>
@@ -415,19 +415,19 @@
           <declname>help_string</declname>
         </param>
         <param>
-          <type>wxRibbonButtonBarButtonKind</type>
+          <type><ref refid="art_8h_1a49672bfa76086982645f3797b0162e19" kindref="member">wxRibbonButtonKind</ref></type>
           <declname>kind</declname>
-          <defval>wxRIBBON_BUTTONBAR_BUTTON_NORMAL</defval>
+          <defval>wxRIBBON_BUTTON_NORMAL</defval>
         </param>
         <briefdescription>
 <para>Inserts a button to the button bar (simple version) at the given position. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="classwx_ribbon_button_bar_1aed65783239df02f3ad2e697d89d4d8fc" kindref="member">AddButton()</ref></para></simplesect>
+<para><simplesect kind="see"><para><ref refid="classwx_ribbon_button_bar_1ae1a70ebc43f9d46d4a65f22c3af1cfec" kindref="member">AddButton()</ref></para></simplesect>
 <simplesect kind="since"><para>2.9.4 </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/buttonbar.h" line="268"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/buttonbar.h" line="268"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_button_bar_1a4919dcf984649382cd1981b4cbd56ff5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>wxRibbonButtonBarButtonBase *</type>
@@ -458,12 +458,12 @@
         <briefdescription>
 <para>Inserts a dropdown button to the button bar (simple version) at the given position. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="classwx_ribbon_button_bar_1a0337da8d02efffac495e9f2e89d9611b" kindref="member">InsertButton()</ref> </para><simplesectsep/><para><ref refid="classwx_ribbon_button_bar_1aae03838a1e454134a75a748a52bdefd9" kindref="member">AddDropdownButton()</ref> </para><simplesectsep/><para><ref refid="classwx_ribbon_button_bar_1aed65783239df02f3ad2e697d89d4d8fc" kindref="member">AddButton()</ref></para></simplesect>
+<para><simplesect kind="see"><para><ref refid="classwx_ribbon_button_bar_1a868fbf0a858d145189d2ec30dc651329" kindref="member">InsertButton()</ref> </para><simplesectsep/><para><ref refid="classwx_ribbon_button_bar_1aae03838a1e454134a75a748a52bdefd9" kindref="member">AddDropdownButton()</ref> </para><simplesectsep/><para><ref refid="classwx_ribbon_button_bar_1ae1a70ebc43f9d46d4a65f22c3af1cfec" kindref="member">AddButton()</ref></para></simplesect>
 <simplesect kind="since"><para>2.9.4 </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/buttonbar.h" line="285"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/buttonbar.h" line="285"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_button_bar_1abf4688a90077ed9228d66f768c71edef" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>wxRibbonButtonBarButtonBase *</type>
@@ -494,12 +494,12 @@
         <briefdescription>
 <para>Inserts a hybrid button to the button bar (simple version) at the given position. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="classwx_ribbon_button_bar_1a0337da8d02efffac495e9f2e89d9611b" kindref="member">InsertButton()</ref> </para><simplesectsep/><para><ref refid="classwx_ribbon_button_bar_1aca67a024f3b1aa733b5f5064a2a2d753" kindref="member">AddHybridButton()</ref> </para><simplesectsep/><para><ref refid="classwx_ribbon_button_bar_1aed65783239df02f3ad2e697d89d4d8fc" kindref="member">AddButton()</ref></para></simplesect>
+<para><simplesect kind="see"><para><ref refid="classwx_ribbon_button_bar_1a868fbf0a858d145189d2ec30dc651329" kindref="member">InsertButton()</ref> </para><simplesectsep/><para><ref refid="classwx_ribbon_button_bar_1aca67a024f3b1aa733b5f5064a2a2d753" kindref="member">AddHybridButton()</ref> </para><simplesectsep/><para><ref refid="classwx_ribbon_button_bar_1ae1a70ebc43f9d46d4a65f22c3af1cfec" kindref="member">AddButton()</ref></para></simplesect>
 <simplesect kind="since"><para>2.9.4 </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/buttonbar.h" line="302"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/buttonbar.h" line="302"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_button_bar_1a40a1eace5f7a6e2f48b99e168be8d640" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>wxRibbonButtonBarButtonBase *</type>
@@ -530,17 +530,17 @@
         <briefdescription>
 <para>Inserts a toggle button to the button bar (simple version) at the given position. </para>        </briefdescription>
         <detaileddescription>
-<para><simplesect kind="see"><para><ref refid="classwx_ribbon_button_bar_1a0337da8d02efffac495e9f2e89d9611b" kindref="member">InsertButton()</ref> </para><simplesectsep/><para><ref refid="classwx_ribbon_button_bar_1af241cdcdecb11e0d74fa2a9c4811816c" kindref="member">AddToggleButton()</ref> </para><simplesectsep/><para><ref refid="classwx_ribbon_button_bar_1aed65783239df02f3ad2e697d89d4d8fc" kindref="member">AddButton()</ref></para></simplesect>
+<para><simplesect kind="see"><para><ref refid="classwx_ribbon_button_bar_1a868fbf0a858d145189d2ec30dc651329" kindref="member">InsertButton()</ref> </para><simplesectsep/><para><ref refid="classwx_ribbon_button_bar_1af241cdcdecb11e0d74fa2a9c4811816c" kindref="member">AddToggleButton()</ref> </para><simplesectsep/><para><ref refid="classwx_ribbon_button_bar_1ae1a70ebc43f9d46d4a65f22c3af1cfec" kindref="member">AddButton()</ref></para></simplesect>
 <simplesect kind="since"><para>2.9.4 </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/buttonbar.h" line="319"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/buttonbar.h" line="319"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_ribbon_button_bar_1aba437d0c8748360e49cb7db513c14c66" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classwx_ribbon_button_bar_1a2a27a9f2e2ad933a7f28abb5fdd0e319" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>wxRibbonButtonBarButtonBase *</type>
         <definition>virtual wxRibbonButtonBarButtonBase* wxRibbonButtonBar::InsertButton</definition>
-        <argsstring>(size_t pos, int button_id, const wxString &amp;label, const wxBitmap &amp;bitmap, const wxBitmap &amp;bitmap_small=wxNullBitmap, const wxBitmap &amp;bitmap_disabled=wxNullBitmap, const wxBitmap &amp;bitmap_small_disabled=wxNullBitmap, wxRibbonButtonBarButtonKind kind=wxRIBBON_BUTTONBAR_BUTTON_NORMAL, const wxString &amp;help_string=wxEmptyString, wxObject *client_data=NULL)</argsstring>
+        <argsstring>(size_t pos, int button_id, const wxString &amp;label, const wxBitmap &amp;bitmap, const wxBitmap &amp;bitmap_small=wxNullBitmap, const wxBitmap &amp;bitmap_disabled=wxNullBitmap, const wxBitmap &amp;bitmap_small_disabled=wxNullBitmap, wxRibbonButtonKind kind=wxRIBBON_BUTTON_NORMAL, const wxString &amp;help_string=wxEmptyString, wxObject *client_data=NULL)</argsstring>
         <name>InsertButton</name>
         <param>
           <type>size_t</type>
@@ -574,9 +574,9 @@
           <defval><ref refid="interface_2wx_2bitmap_8h_1a2947690e84b8fdb2e37b79a4af8f8a21" kindref="member">wxNullBitmap</ref></defval>
         </param>
         <param>
-          <type>wxRibbonButtonBarButtonKind</type>
+          <type><ref refid="art_8h_1a49672bfa76086982645f3797b0162e19" kindref="member">wxRibbonButtonKind</ref></type>
           <declname>kind</declname>
-          <defval>wxRIBBON_BUTTONBAR_BUTTON_NORMAL</defval>
+          <defval>wxRIBBON_BUTTON_NORMAL</defval>
         </param>
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -663,12 +663,12 @@
 </parameteritem>
 </parameterlist>
 <simplesect kind="return"><para>An opaque pointer which can be used only with other button bar methods.</para></simplesect>
-<simplesect kind="see"><para><ref refid="classwx_ribbon_button_bar_1a4919dcf984649382cd1981b4cbd56ff5" kindref="member">InsertDropdownButton()</ref> </para><simplesectsep/><para><ref refid="classwx_ribbon_button_bar_1abf4688a90077ed9228d66f768c71edef" kindref="member">InsertHybridButton()</ref> </para><simplesectsep/><para><ref refid="classwx_ribbon_button_bar_1a40a1eace5f7a6e2f48b99e168be8d640" kindref="member">InsertToggleButton()</ref> </para><simplesectsep/><para><ref refid="classwx_ribbon_button_bar_1aed65783239df02f3ad2e697d89d4d8fc" kindref="member">AddButton()</ref></para></simplesect>
+<simplesect kind="see"><para><ref refid="classwx_ribbon_button_bar_1a4919dcf984649382cd1981b4cbd56ff5" kindref="member">InsertDropdownButton()</ref> </para><simplesectsep/><para><ref refid="classwx_ribbon_button_bar_1abf4688a90077ed9228d66f768c71edef" kindref="member">InsertHybridButton()</ref> </para><simplesectsep/><para><ref refid="classwx_ribbon_button_bar_1a40a1eace5f7a6e2f48b99e168be8d640" kindref="member">InsertToggleButton()</ref> </para><simplesectsep/><para><ref refid="classwx_ribbon_button_bar_1ae1a70ebc43f9d46d4a65f22c3af1cfec" kindref="member">AddButton()</ref></para></simplesect>
 <simplesect kind="since"><para>2.9.4 </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/buttonbar.h" line="371"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/buttonbar.h" line="371"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_button_bar_1a51a25a1204ed4e191fc8741c2fbdcb75" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>size_t</type>
@@ -682,7 +682,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/buttonbar.h" line="378"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/buttonbar.h" line="378"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_button_bar_1a34af192e81147da8fe8657b856688c5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -696,7 +696,7 @@
 <para>Must be called after buttons are added to the button bar, as otherwise the newly added buttons will not be displayed. In normal situations, it will be called automatically when <ref refid="classwx_ribbon_bar_1ac70abc120cc43044d197f19795e9cf44" kindref="member">wxRibbonBar::Realize()</ref> is called. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/buttonbar.h" line="387"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/buttonbar.h" line="387"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_button_bar_1aafdddb31e6776ca0a9010da0d0e8fbdb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -710,7 +710,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/buttonbar.h" line="394"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/buttonbar.h" line="394"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_button_bar_1a43751fabdf058db92facb5e2c30f3045" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -728,7 +728,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/buttonbar.h" line="401"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/buttonbar.h" line="401"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_button_bar_1a518282911f1562395f614384b539c8bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -765,7 +765,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/buttonbar.h" line="411"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/buttonbar.h" line="411"/>
       </memberdef>
       <memberdef kind="function" id="classwx_ribbon_button_bar_1a8d69e9a70bf38693cc349bbf76f0735a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -801,7 +801,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/buttonbar.h" line="422"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/buttonbar.h" line="422"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -822,103 +822,103 @@
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxribbon" kindref="member">wxRibbon</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ribbon" kindref="compound">Ribbon User Interface</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9115">
+      <node id="9298">
         <label>wxRibbonControl</label>
         <link refid="classwx_ribbon_control"/>
-        <childnode refid="9116" relation="public-inheritance">
+        <childnode refid="9299" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9119">
+      <node id="9302">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="9118">
+      <node id="9301">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="9119" relation="public-inheritance">
+        <childnode refid="9302" relation="public-inheritance">
         </childnode>
-        <childnode refid="9120" relation="public-inheritance">
+        <childnode refid="9303" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9114">
+      <node id="9297">
         <label>wxRibbonButtonBar</label>
         <link refid="classwx_ribbon_button_bar"/>
-        <childnode refid="9115" relation="public-inheritance">
+        <childnode refid="9298" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9120">
+      <node id="9303">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="9116">
+      <node id="9299">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="9117" relation="public-inheritance">
+        <childnode refid="9300" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9117">
+      <node id="9300">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="9118" relation="public-inheritance">
+        <childnode refid="9301" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9122">
+      <node id="9305">
         <label>wxRibbonControl</label>
         <link refid="classwx_ribbon_control"/>
-        <childnode refid="9123" relation="public-inheritance">
+        <childnode refid="9306" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9126">
+      <node id="9309">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9127" relation="usage">
+        <childnode refid="9310" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9125">
+      <node id="9308">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="9126" relation="public-inheritance">
+        <childnode refid="9309" relation="public-inheritance">
         </childnode>
-        <childnode refid="9128" relation="public-inheritance">
+        <childnode refid="9311" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9121">
+      <node id="9304">
         <label>wxRibbonButtonBar</label>
         <link refid="classwx_ribbon_button_bar"/>
-        <childnode refid="9122" relation="public-inheritance">
+        <childnode refid="9305" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9128">
+      <node id="9311">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="9123">
+      <node id="9306">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="9124" relation="public-inheritance">
+        <childnode refid="9307" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9124">
+      <node id="9307">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="9125" relation="public-inheritance">
+        <childnode refid="9308" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9127">
+      <node id="9310">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/buttonbar.h" line="121" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/buttonbar.h" bodystart="120" bodyend="423"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/buttonbar.h" line="121" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/buttonbar.h" bodystart="120" bodyend="423"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxRibbonButtonBar</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxRibbonButtonBar</scope><name>AcceptsFocusFromKeyboard</name></member>
       <member refid="classwx_window_1ac7ed96693517630f4d2e99265b76d1a9" prot="public" virt="virtual"><scope>wxRibbonButtonBar</scope><name>AcceptsFocusRecursively</name></member>
-      <member refid="classwx_ribbon_button_bar_1aed65783239df02f3ad2e697d89d4d8fc" prot="public" virt="virtual"><scope>wxRibbonButtonBar</scope><name>AddButton</name></member>
-      <member refid="classwx_ribbon_button_bar_1a9843a42c2c3dd320fb8784e6854af207" prot="public" virt="virtual"><scope>wxRibbonButtonBar</scope><name>AddButton</name></member>
+      <member refid="classwx_ribbon_button_bar_1ae1a70ebc43f9d46d4a65f22c3af1cfec" prot="public" virt="virtual"><scope>wxRibbonButtonBar</scope><name>AddButton</name></member>
+      <member refid="classwx_ribbon_button_bar_1af70938cb034cb033d8e7b91f5a64499c" prot="public" virt="virtual"><scope>wxRibbonButtonBar</scope><name>AddButton</name></member>
       <member refid="classwx_window_1abf60159278059a5bb397eb8647227bb3" prot="public" virt="virtual"><scope>wxRibbonButtonBar</scope><name>AddChild</name></member>
       <member refid="classwx_ribbon_button_bar_1aae03838a1e454134a75a748a52bdefd9" prot="public" virt="virtual"><scope>wxRibbonButtonBar</scope><name>AddDropdownButton</name></member>
       <member refid="classwx_evt_handler_1a7dc3c701781f4044372049de5004137e" prot="public" virt="non-virtual"><scope>wxRibbonButtonBar</scope><name>AddFilter</name></member>
@@ -990,6 +990,7 @@
       <member refid="classwx_window_1a3006d98a4145b7064c1f08e39487d257" prot="public" virt="non-virtual"><scope>wxRibbonButtonBar</scope><name>GetBackgroundColour</name></member>
       <member refid="classwx_window_1a59047d52b88f2422bbcf01bbecdc4b7b" prot="public" virt="virtual"><scope>wxRibbonButtonBar</scope><name>GetBackgroundStyle</name></member>
       <member refid="classwx_window_1a7e64b9380374e5681f146e9e319e35e3" prot="public" virt="non-virtual"><scope>wxRibbonButtonBar</scope><name>GetBestSize</name></member>
+      <member refid="classwx_ribbon_control_1a555837437ef7e19ebfb9cf7a019e9b8d" prot="public" virt="virtual"><scope>wxRibbonButtonBar</scope><name>GetBestSizeForParentSize</name></member>
       <member refid="classwx_window_1a0180343fa395e0c8e6de4022684ca5d6" prot="public" virt="virtual"><scope>wxRibbonButtonBar</scope><name>GetBestVirtualSize</name></member>
       <member refid="classwx_window_1ad95a95e683e57ac6365745b737571582" prot="public" virt="non-virtual"><scope>wxRibbonButtonBar</scope><name>GetBorder</name></member>
       <member refid="classwx_window_1aa53c8d1b5af17a8fbbe8845210e2032b" prot="public" virt="non-virtual"><scope>wxRibbonButtonBar</scope><name>GetBorder</name></member>
@@ -1091,13 +1092,14 @@
       <member refid="classwx_window_1a9fd5b6520c1b30eb8e82bb5d56bc24c0" prot="public" virt="virtual"><scope>wxRibbonButtonBar</scope><name>InformFirstDirection</name></member>
       <member refid="classwx_window_1a6b1bf9e099704e7a493b8c4666b1f7f7" prot="public" virt="virtual"><scope>wxRibbonButtonBar</scope><name>InheritAttributes</name></member>
       <member refid="classwx_window_1aa90a260c0a835a133043460b7d0024a8" prot="public" virt="virtual"><scope>wxRibbonButtonBar</scope><name>InitDialog</name></member>
-      <member refid="classwx_ribbon_button_bar_1a0337da8d02efffac495e9f2e89d9611b" prot="public" virt="virtual"><scope>wxRibbonButtonBar</scope><name>InsertButton</name></member>
-      <member refid="classwx_ribbon_button_bar_1aba437d0c8748360e49cb7db513c14c66" prot="public" virt="virtual"><scope>wxRibbonButtonBar</scope><name>InsertButton</name></member>
+      <member refid="classwx_ribbon_button_bar_1a868fbf0a858d145189d2ec30dc651329" prot="public" virt="virtual"><scope>wxRibbonButtonBar</scope><name>InsertButton</name></member>
+      <member refid="classwx_ribbon_button_bar_1a2a27a9f2e2ad933a7f28abb5fdd0e319" prot="public" virt="virtual"><scope>wxRibbonButtonBar</scope><name>InsertButton</name></member>
       <member refid="classwx_ribbon_button_bar_1a4919dcf984649382cd1981b4cbd56ff5" prot="public" virt="virtual"><scope>wxRibbonButtonBar</scope><name>InsertDropdownButton</name></member>
       <member refid="classwx_ribbon_button_bar_1abf4688a90077ed9228d66f768c71edef" prot="public" virt="virtual"><scope>wxRibbonButtonBar</scope><name>InsertHybridButton</name></member>
       <member refid="classwx_ribbon_button_bar_1a40a1eace5f7a6e2f48b99e168be8d640" prot="public" virt="virtual"><scope>wxRibbonButtonBar</scope><name>InsertToggleButton</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxRibbonButtonBar</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxRibbonButtonBar</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxRibbonButtonBar</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxRibbonButtonBar</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxRibbonButtonBar</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxRibbonButtonBar</scope><name>IsExposed</name></member>
@@ -1114,13 +1116,13 @@
       <member refid="classwx_ribbon_control_1a501bee400eee7b57128c1ad77edf0b1d" prot="public" virt="virtual"><scope>wxRibbonButtonBar</scope><name>IsSizingContinuous</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxRibbonButtonBar</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxRibbonButtonBar</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxRibbonButtonBar</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxRibbonButtonBar</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxRibbonButtonBar</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxRibbonButtonBar</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxRibbonButtonBar</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxRibbonButtonBar</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxRibbonButtonBar</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxRibbonButtonBar</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxRibbonButtonBar</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxRibbonButtonBar</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxRibbonButtonBar</scope><name>MoveAfterInTabOrder</name></member>
@@ -1245,7 +1247,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxRibbonButtonBar</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxRibbonButtonBar</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxRibbonButtonBar</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxRibbonButtonBar</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxRibbonButtonBar</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxRibbonButtonBar</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxRibbonButtonBar</scope><name>Unlink</name></member>

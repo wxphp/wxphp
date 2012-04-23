@@ -76,13 +76,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propdlg.h" line="14" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propdlg.h" bodystart="13" bodyend="56"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propdlg.h" line="14" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propdlg.h" bodystart="13" bodyend="56"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propdlg.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propdlg.h"/>
   </compounddef>
 </doxygen>

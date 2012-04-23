@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="178"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="178"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_formatting_dialog_1a96af7280ad99c2a740f697d35b0ec292" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_text_attr" kindref="compound">wxTextAttr</ref> &amp;</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="179"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="179"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="129"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="129"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_formatting_dialog_1a806c865750509e5fcf29a8c39161fc0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -140,7 +140,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="151"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="151"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_formatting_dialog_1aaaa8f8d715f643485b74a1cd11e77a24" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -153,7 +153,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="156"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="156"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_formatting_dialog_1a3303d022495222ba7c4ab5d89db6314e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -179,7 +179,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="163"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="163"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_formatting_dialog_1a8e92d665872c61dac18ba0d49b9446bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -225,7 +225,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="172"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="172"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_formatting_dialog_1a04b37fc1652f2849125858196aacd776" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_image_list" kindref="compound">wxImageList</ref> *</type>
@@ -238,7 +238,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="206"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="206"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_formatting_dialog_1a0b2a33e8f16a9a1d136747853df5039e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -259,7 +259,7 @@
 <para>Attributes that do not have common values in the given range will be omitted from the style&apos;s flags. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="213"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="213"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_formatting_dialog_1a95a6c773ebb8e80c27e8b485e907e128" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_rich_text_style_definition" kindref="compound">wxRichTextStyleDefinition</ref> *</type>
@@ -272,7 +272,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="218"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="218"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_formatting_dialog_1a71564bb97a8ca302a0ffdf0da3df3326" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_rich_text_style_sheet" kindref="compound">wxRichTextStyleSheet</ref> *</type>
@@ -285,7 +285,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="223"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="223"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_formatting_dialog_1ad9a426c5bf6f04f68444a85fdcc6b651" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -302,7 +302,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="228"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="228"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_formatting_dialog_1ab1282c2d062d3d5eebc96fb19a2b291e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -319,7 +319,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="241"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="241"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_formatting_dialog_1a4f6df3d16fc3a7090d2f52c5a6aa4667" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -341,7 +341,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="246"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="246"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_formatting_dialog_1a77d096131f0a35f917bf0fc8aa116e60" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -367,7 +367,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="254"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="254"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_formatting_dialog_1aec22254f1678ccf7506cff9b10ba98c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -380,7 +380,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="259"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="259"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -399,7 +399,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="185"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="185"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_formatting_dialog_1a028f4a0cd054e3ccc9d9d8cac3f9f730" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_text_attr" kindref="compound">wxTextAttr</ref> *</type>
@@ -416,7 +416,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="190"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="190"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_formatting_dialog_1a6626d7834ebd8f0daa4b6229ffbe6d32" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rich_text_style_definition" kindref="compound">wxRichTextStyleDefinition</ref> *</type>
@@ -433,7 +433,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="195"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="195"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_formatting_dialog_1a269ad61b739c2ebee0b3a011aba6880a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rich_text_formatting_dialog_factory" kindref="compound">wxRichTextFormattingDialogFactory</ref> *</type>
@@ -446,7 +446,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="200"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="200"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_formatting_dialog_1a23c0022142539fcb77757ffb7c1f0d9a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -463,7 +463,7 @@
 <para>It deletes the existing factory object. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="236"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="236"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -488,121 +488,121 @@
 </programlisting></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9608">
+      <node id="9791">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="9609" relation="public-inheritance">
+        <childnode refid="9792" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9611">
+      <node id="9794">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="9610">
+      <node id="9793">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="9611" relation="public-inheritance">
+        <childnode refid="9794" relation="public-inheritance">
         </childnode>
-        <childnode refid="9612" relation="public-inheritance">
+        <childnode refid="9795" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9612">
+      <node id="9795">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="9609">
+      <node id="9792">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="9610" relation="public-inheritance">
+        <childnode refid="9793" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9606">
+      <node id="9789">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="9607" relation="public-inheritance">
+        <childnode refid="9790" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9607">
+      <node id="9790">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="9608" relation="public-inheritance">
+        <childnode refid="9791" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9604">
+      <node id="9787">
         <label>wxRichTextFormattingDialog</label>
         <link refid="classwx_rich_text_formatting_dialog"/>
-        <childnode refid="9605" relation="public-inheritance">
+        <childnode refid="9788" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9605">
+      <node id="9788">
         <label>wxPropertySheetDialog</label>
         <link refid="classwx_property_sheet_dialog"/>
-        <childnode refid="9606" relation="public-inheritance">
+        <childnode refid="9789" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9617">
+      <node id="9800">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="9618" relation="public-inheritance">
+        <childnode refid="9801" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9620">
+      <node id="9803">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9621" relation="usage">
+        <childnode refid="9804" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9619">
+      <node id="9802">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="9620" relation="public-inheritance">
+        <childnode refid="9803" relation="public-inheritance">
         </childnode>
-        <childnode refid="9622" relation="public-inheritance">
+        <childnode refid="9805" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9622">
+      <node id="9805">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="9618">
+      <node id="9801">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="9619" relation="public-inheritance">
+        <childnode refid="9802" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9615">
+      <node id="9798">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="9616" relation="public-inheritance">
+        <childnode refid="9799" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9616">
+      <node id="9799">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="9617" relation="public-inheritance">
+        <childnode refid="9800" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9613">
+      <node id="9796">
         <label>wxRichTextFormattingDialog</label>
         <link refid="classwx_rich_text_formatting_dialog"/>
-        <childnode refid="9614" relation="public-inheritance">
+        <childnode refid="9797" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9614">
+      <node id="9797">
         <label>wxPropertySheetDialog</label>
         <link refid="classwx_property_sheet_dialog"/>
-        <childnode refid="9615" relation="public-inheritance">
+        <childnode refid="9798" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9621">
+      <node id="9804">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" line="124" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextformatdlg.h" bodystart="123" bodyend="260"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" line="124" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextformatdlg.h" bodystart="123" bodyend="260"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxRichTextFormattingDialog</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxRichTextFormattingDialog</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -651,6 +651,7 @@
       <member refid="classwx_dialog_1a0c6fb55be0b07b934b30550e0225df8f" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>CreateSeparatedButtonSizer</name></member>
       <member refid="classwx_dialog_1ab7a5666b612d6cfdfb2660fd9bd3393e" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>CreateSeparatedSizer</name></member>
       <member refid="classwx_dialog_1a8f2f565975f843035391ce62b0b9f8e8" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>CreateStdDialogButtonSizer</name></member>
+      <member refid="classwx_dialog_1a5bead5e932f17b7c2345dfc41b6cc79c" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>CreateTextSizer</name></member>
       <member refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>DeletePendingEvents</name></member>
       <member refid="classwx_window_1a6bf0c5be864544d9ce0560087667b7fc" prot="public" virt="virtual"><scope>wxRichTextFormattingDialog</scope><name>Destroy</name></member>
       <member refid="classwx_window_1aff47b32c8d42d515ea0bb6a6c2fea917" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>DestroyChildren</name></member>
@@ -812,6 +813,7 @@
       <member refid="classwx_top_level_window_1afa58f411cf488eb9279683b1d20a74b6" prot="public" virt="virtual"><scope>wxRichTextFormattingDialog</scope><name>IsActive</name></member>
       <member refid="classwx_top_level_window_1ac0c7a7cb6e6dfdf7e59300ee5d476ce3" prot="public" virt="virtual"><scope>wxRichTextFormattingDialog</scope><name>IsAlwaysMaximized</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxRichTextFormattingDialog</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>IsExposed</name></member>
@@ -833,6 +835,7 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxRichTextFormattingDialog</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxRichTextFormattingDialog</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxRichTextFormattingDialog</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>IsUnlinked</name></member>
       <member refid="classwx_top_level_window_1a305c48ddb8e45f89add1694053185a7d" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>IsUsingNativeDecorations</name></member>
       <member refid="classwx_top_level_window_1adfe7e3f4a32f3ed178968f64431bbfe0" prot="public" virt="virtual"><scope>wxRichTextFormattingDialog</scope><name>Layout</name></member>
@@ -841,7 +844,6 @@
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxRichTextFormattingDialog</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxRichTextFormattingDialog</scope><name>MakeModal</name></member>
       <member refid="classwx_top_level_window_1addb1612e9f00ac82c2e19c2bac6ffc4f" prot="public" virt="virtual"><scope>wxRichTextFormattingDialog</scope><name>Maximize</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>Move</name></member>
@@ -852,7 +854,6 @@
       <member refid="classwx_window_1aa58039c8fc65e19160becf510ee1d1d5" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>NavigateIn</name></member>
       <member refid="classwx_window_1a8175da594e6045635a1d1cfe775cdddb" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>NewControlId</name></member>
       <member refid="classwx_window_1a6b5654c0c6c6245d592c279521f7099c" prot="public" virt="virtual"><scope>wxRichTextFormattingDialog</scope><name>OnInternalIdle</name></member>
-      <member refid="classwx_dialog_1a31dde643f83e859e53759b8ae5f07378" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>OnSysColourChanged</name></member>
       <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>operator delete</name></member>
       <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>operator new</name></member>
       <member refid="classwx_top_level_window_1a5890684b71321e27e8f3a223ad3c2445" prot="public" virt="virtual"><scope>wxRichTextFormattingDialog</scope><name>OSXIsModified</name></member>
@@ -930,7 +931,6 @@
       <member refid="classwx_rich_text_formatting_dialog_1ab1282c2d062d3d5eebc96fb19a2b291e" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>SetImageList</name></member>
       <member refid="classwx_window_1ae6dfe0b0d4a8c666b21ce8df8d96727b" prot="protected" virt="virtual"><scope>wxRichTextFormattingDialog</scope><name>SetInitialBestSize</name></member>
       <member refid="classwx_window_1a1b309ca50ba87e34f968c83b79af1397" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>SetInitialSize</name></member>
-      <member refid="classwx_property_sheet_dialog_1a2f200c9958b36f24009299a014ac5c8d" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>SetInnerSizer</name></member>
       <member refid="classwx_window_1aa00ffea9f53587f29ae343adde033b8e" prot="public" virt="virtual"><scope>wxRichTextFormattingDialog</scope><name>SetLabel</name></member>
       <member refid="classwx_dialog_1ab8b02ae4d97e300b4d7bbce6cc6af221" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>SetLayoutAdaptationDone</name></member>
       <member refid="classwx_dialog_1a9eaef1625f225bc25f8c92449d123a67" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>SetLayoutAdaptationLevel</name></member>
@@ -995,7 +995,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxRichTextFormattingDialog</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxRichTextFormattingDialog</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxRichTextFormattingDialog</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxRichTextFormattingDialog</scope><name>Unlink</name></member>

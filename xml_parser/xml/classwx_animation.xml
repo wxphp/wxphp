@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" line="204"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h" line="204"/>
       </memberdef>
       <memberdef kind="function" id="classwx_animation_1a7b9ef90b074e1d4a01ed0134a10cd446" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -57,7 +57,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" line="215"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h" line="215"/>
       </memberdef>
       <memberdef kind="function" id="classwx_animation_1ad34e514efb1c01d1b543b18d46dfd66d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -70,7 +70,7 @@
 <para>See <ref refid="overview_refcount_1overview_refcount_destruct" kindref="member">Object Destruction</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" line="221"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h" line="221"/>
       </memberdef>
       <memberdef kind="function" id="classwx_animation_1acafd9977191c651ad51de24b71d42a83" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -87,7 +87,7 @@
 <para>If <computeroutput>-1</computeroutput> is returned the frame is to be displayed forever. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" line="227"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h" line="227"/>
       </memberdef>
       <memberdef kind="function" id="classwx_animation_1af43633e8ed2e14e4fd7261b7703c242a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_image" kindref="compound">wxImage</ref></type>
@@ -104,7 +104,7 @@
 <para>This method is not implemented in the native wxGTK implementation of this class and always returns an invalid image there. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" line="235"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h" line="235"/>
       </memberdef>
       <memberdef kind="function" id="classwx_animation_1a3bc6fa758021b210d0baf7e93797458f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>unsigned int</type>
@@ -117,7 +117,7 @@
 <para>This method is not implemented in the native wxGTK implementation of this class and always returns 0 there. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" line="243"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h" line="243"/>
       </memberdef>
       <memberdef kind="function" id="classwx_animation_1ab8197aea215708e93fc5e597b979ef74" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -130,7 +130,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" line="248"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h" line="248"/>
       </memberdef>
       <memberdef kind="function" id="classwx_animation_1a0fae632ac096cd42c86c7c8ca1792511" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -143,7 +143,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" line="253"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h" line="253"/>
       </memberdef>
       <memberdef kind="function" id="classwx_animation_1aa6434b9dcc63295b0e393a21a59eb634" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -181,7 +181,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" line="268"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h" line="268"/>
       </memberdef>
       <memberdef kind="function" id="classwx_animation_1ad35fc6e902814df5f9f4668df3d503e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -219,7 +219,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" line="282"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h" line="282"/>
       </memberdef>
       <memberdef kind="function" id="classwx_animation_1a876231c4e5b692508e04f8c4249aceb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_animation" kindref="compound">wxAnimation</ref> &amp;</type>
@@ -236,7 +236,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" line="287"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h" line="287"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -246,49 +246,49 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para>Predefined objects/pointers: <ref refid="animate_8h_1a511afb5aaf468a90108facf18c255ae4" kindref="member">wxNullAnimation</ref></para><para><simplesect kind="see"><para><ref refid="classwx_animation_ctrl" kindref="compound">wxAnimationCtrl</ref>, <ref refid="page_samples_1page_samples_animate" kindref="member">Animation Sample</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4234">
+      <node id="4317">
         <label>wxAnimation</label>
         <link refid="classwx_animation"/>
-        <childnode refid="4235" relation="public-inheritance">
+        <childnode refid="4318" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4236">
+      <node id="4319">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4235">
+      <node id="4318">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="4236" relation="public-inheritance">
+        <childnode refid="4319" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4237">
+      <node id="4320">
         <label>wxAnimation</label>
         <link refid="classwx_animation"/>
-        <childnode refid="4238" relation="public-inheritance">
+        <childnode refid="4321" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4239">
+      <node id="4322">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4240" relation="usage">
+        <childnode refid="4323" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4238">
+      <node id="4321">
         <label>wxGDIObject</label>
         <link refid="classwx_g_d_i_object"/>
-        <childnode refid="4239" relation="public-inheritance">
+        <childnode refid="4322" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4240">
+      <node id="4323">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" line="199" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/animate.h" bodystart="198" bodyend="288"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h" line="199" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/animate.h" bodystart="198" bodyend="288"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxAnimation</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxAnimation</scope><name>CloneRefData</name></member>

@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" line="60"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mimetype.h" line="60"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mime_types_manager_1a31b5b4a56a01380a4375fb75e012a5f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" line="65"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mimetype.h" line="65"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mime_types_manager_1a5a34d689e57c8c0d9f8032e1302f9e0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -45,7 +45,7 @@
 <para>Please see the typetest sample for an example of using it. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" line="72"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mimetype.h" line="72"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mime_types_manager_1a20a5bd44120549886911a6bb34a06feb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_file_type" kindref="compound">wxFileType</ref> *</type>
@@ -62,7 +62,7 @@
 <para>The <emphasis>extension</emphasis> parameter may have, or not, the leading dot, if it has it, it is stripped automatically. It must not however be empty. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" line="81"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mimetype.h" line="81"/>
       </memberdef>
       <memberdef kind="function" id="classwx_mime_types_manager_1a5c4bc90bfd1b4355d489bb7eb0ed4a6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_file_type" kindref="compound">wxFileType</ref> *</type>
@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" line="87"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mimetype.h" line="87"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -102,7 +102,7 @@
 <para>Note that the &apos;*&apos; wildcard is not allowed in <emphasis>mimeType</emphasis> itself.</para><para>The comparison don by this function is case insensitive so it is not necessary to convert the strings to the same case before calling it. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" line="99"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mimetype.h" line="99"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -121,7 +121,7 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref></para><para><simplesect kind="see"><para><ref refid="classwx_file_type" kindref="compound">wxFileType</ref> </para></simplesect>
 </para></sect1>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" line="55" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" bodystart="54" bodyend="100"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mimetype.h" line="55" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/mimetype.h" bodystart="54" bodyend="100"/>
     <listofallmembers>
       <member refid="classwx_mime_types_manager_1a5a34d689e57c8c0d9f8032e1302f9e0f" prot="public" virt="non-virtual"><scope>wxMimeTypesManager</scope><name>AddFallbacks</name></member>
       <member refid="classwx_mime_types_manager_1a20a5bd44120549886911a6bb34a06feb" prot="public" virt="non-virtual"><scope>wxMimeTypesManager</scope><name>GetFileTypeFromExtension</name></member>

@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="12" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" bodystart="11" bodyend="30"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/accel.h" line="12" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/accel.h" bodystart="11" bodyend="30"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -70,13 +70,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" line="233" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h" bodystart="233" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/accel.h" line="247" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/accel.h" bodystart="247" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/accel.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/accel.h"/>
   </compounddef>
 </doxygen>

@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/collpane.h" line="9" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/collpane.h" bodystart="9" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/collpane.h" line="9" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/collpane.h" bodystart="9" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="collpane_8h_1a08532c3a20049c554f78b9d891726550" prot="public" static="no">
         <name>wxCP_NO_TLW_RESIZE</name>
@@ -25,7 +25,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/collpane.h" line="10" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/collpane.h" bodystart="10" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/collpane.h" line="10" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/collpane.h" bodystart="10" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -40,13 +40,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/collpane.h" line="47" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/collpane.h" bodystart="47" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/collpane.h" line="47" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/collpane.h" bodystart="47" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/collpane.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/collpane.h"/>
   </compounddef>
 </doxygen>

@@ -41,13 +41,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/gallery.h" line="10" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/gallery.h" bodystart="9" bodyend="15"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/gallery.h" line="10" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/gallery.h" bodystart="9" bodyend="15"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/ribbon/gallery.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/ribbon/gallery.h"/>
   </compounddef>
 </doxygen>

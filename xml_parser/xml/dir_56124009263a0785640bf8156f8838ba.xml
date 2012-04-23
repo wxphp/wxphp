@@ -124,6 +124,9 @@
     <innerfile refid="fontpicker_8h">fontpicker.h</innerfile>
     <innerfile refid="fontutil_8h">fontutil.h</innerfile>
     <innerfile refid="frame_8h">frame.h</innerfile>
+    <innerfile refid="fs__arc_8h">fs_arc.h</innerfile>
+    <innerfile refid="fs__filter_8h">fs_filter.h</innerfile>
+    <innerfile refid="fs__inet_8h">fs_inet.h</innerfile>
     <innerfile refid="fs__mem_8h">fs_mem.h</innerfile>
     <innerfile refid="fswatcher_8h">fswatcher.h</innerfile>
     <innerfile refid="gauge_8h">gauge.h</innerfile>

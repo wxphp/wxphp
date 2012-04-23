@@ -41,7 +41,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/glcanvas.h" line="61"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/glcanvas.h" line="61"/>
       </memberdef>
       <memberdef kind="function" id="classwx_g_l_context_1a64f2df7d615cbd76093590194867f6ce" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -59,7 +59,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/glcanvas.h" line="73"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/glcanvas.h" line="73"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -69,37 +69,37 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxgl" kindref="member">wxGL</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gl" kindref="compound">OpenGL</ref></para><para><simplesect kind="see"><para><ref refid="classwx_g_l_canvas" kindref="compound">wxGLCanvas</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6551">
+      <node id="6719">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6550">
+      <node id="6718">
         <label>wxGLContext</label>
         <link refid="classwx_g_l_context"/>
-        <childnode refid="6551" relation="public-inheritance">
+        <childnode refid="6719" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6553">
+      <node id="6721">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6554" relation="usage">
+        <childnode refid="6722" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6552">
+      <node id="6720">
         <label>wxGLContext</label>
         <link refid="classwx_g_l_context"/>
-        <childnode refid="6553" relation="public-inheritance">
+        <childnode refid="6721" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6554">
+      <node id="6722">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/glcanvas.h" line="45" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/glcanvas.h" bodystart="44" bodyend="74"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/glcanvas.h" line="45" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/glcanvas.h" bodystart="44" bodyend="74"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxGLContext</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxGLContext</scope><name>CloneRefData</name></member>

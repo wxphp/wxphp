@@ -84,7 +84,7 @@
 <para>wxFontFamily thus allows to group the font face names of fonts with similar properties. Most wxWidgets ports use lists of fonts for each font family inspired by the data taken from <ulink url="http://www.codestyle.org/css/font-family.">http://www.codestyle.org/css/font-family.</ulink> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="19" bodyend="43"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/font.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/font.h" bodystart="19" bodyend="43"/>
       </memberdef>
       <memberdef kind="enum" id="interface_2wx_2font_8h_1ab8f87d0b928ad1f8cba7d1c01f5f7a55" prot="public" static="no">
         <name>wxFontStyle</name>
@@ -125,7 +125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="49" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="48" bodyend="61"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/font.h" line="49" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/font.h" bodystart="48" bodyend="61"/>
       </memberdef>
       <memberdef kind="enum" id="interface_2wx_2font_8h_1a7cc37d08c7e84370f4fcc175b557a022" prot="public" static="no">
         <name>wxFontWeight</name>
@@ -166,7 +166,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="67" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="66" bodyend="72"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/font.h" line="67" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/font.h" bodystart="66" bodyend="72"/>
       </memberdef>
       <memberdef kind="enum" id="interface_2wx_2font_8h_1a8ef63b60a0a464f610b56c892dba9f45" prot="public" static="no">
         <name>wxFontSymbolicSize</name>
@@ -228,7 +228,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="85" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="84" bodyend="93"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/font.h" line="85" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/font.h" bodystart="84" bodyend="93"/>
       </memberdef>
       <memberdef kind="enum" id="interface_2wx_2font_8h_1a332098a83a5d888d2e1169b4bd9565da" prot="public" static="no">
         <name>wxFontFlag</name>
@@ -325,7 +325,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="99" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="98" bodyend="130"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/font.h" line="99" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/font.h" bodystart="98" bodyend="130"/>
       </memberdef>
       <memberdef kind="enum" id="interface_2wx_2font_8h_1a09016a7497d1ec6defdf13fd6439acca" prot="public" static="no">
         <name>wxFontEncoding</name>
@@ -1035,7 +1035,7 @@
 <para>See <ref refid="classwx_font_1af8dd83a8ab30564d53e643d5bfe0bd57" kindref="member">wxFont::SetEncoding()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="140" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="139" bodyend="266"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/font.h" line="140" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/font.h" bodystart="139" bodyend="266"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -1050,11 +1050,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="1012" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="1012" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/font.h" line="1012" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/font.h" bodystart="1012" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="interface_2wx_2font_8h_1a3d7653ceb6b4f01e64fcfce0aec79a5a" prot="public" static="no" mutable="no">
-        <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
-        <definition>wxFont wxNORMAL_FONT</definition>
+      <memberdef kind="variable" id="interface_2wx_2font_8h_1a06bb8d57cf11260649c497b1e6b854b1" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref> *</type>
+        <definition>wxFont* wxNORMAL_FONT</definition>
         <argsstring></argsstring>
         <name>wxNORMAL_FONT</name>
         <briefdescription>
@@ -1064,46 +1064,46 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="1019" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="1019" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/font.h" line="1019" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/font.h" bodystart="1019" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="interface_2wx_2font_8h_1a717f06a50bfc94b1b0e5a5cf18f85e9f" prot="public" static="no" mutable="no">
-        <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
-        <definition>wxFont wxSMALL_FONT</definition>
+      <memberdef kind="variable" id="interface_2wx_2font_8h_1adaf1038c22f0f8be92176610ce6b9563" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref> *</type>
+        <definition>wxFont* wxSMALL_FONT</definition>
         <argsstring></argsstring>
         <name>wxSMALL_FONT</name>
         <briefdescription>
-<para>A font using the <computeroutput>wxFONTFAMILY_SWISS</computeroutput> family and 2 points smaller than <ref refid="interface_2wx_2font_8h_1a3d7653ceb6b4f01e64fcfce0aec79a5a" kindref="member">wxNORMAL_FONT</ref>. </para>        </briefdescription>
+<para>A font using the <computeroutput>wxFONTFAMILY_SWISS</computeroutput> family and 2 points smaller than <ref refid="interface_2wx_2font_8h_1a06bb8d57cf11260649c497b1e6b854b1" kindref="member">wxNORMAL_FONT</ref>. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="1025" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="1025" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/font.h" line="1025" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/font.h" bodystart="1025" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="interface_2wx_2font_8h_1a0105413f0c4164745a0102ed3ee8177a" prot="public" static="no" mutable="no">
-        <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
-        <definition>wxFont wxITALIC_FONT</definition>
+      <memberdef kind="variable" id="interface_2wx_2font_8h_1a3bd1dd2cbad0852d3f1ad66eb76acc2b" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref> *</type>
+        <definition>wxFont* wxITALIC_FONT</definition>
         <argsstring></argsstring>
         <name>wxITALIC_FONT</name>
         <briefdescription>
-<para>A font using the <computeroutput>wxFONTFAMILY_ROMAN</computeroutput> family and <computeroutput>wxFONTSTYLE_ITALIC</computeroutput> style and of the same size of <ref refid="interface_2wx_2font_8h_1a3d7653ceb6b4f01e64fcfce0aec79a5a" kindref="member">wxNORMAL_FONT</ref>. </para>        </briefdescription>
+<para>A font using the <computeroutput>wxFONTFAMILY_ROMAN</computeroutput> family and <computeroutput>wxFONTSTYLE_ITALIC</computeroutput> style and of the same size of <ref refid="interface_2wx_2font_8h_1a06bb8d57cf11260649c497b1e6b854b1" kindref="member">wxNORMAL_FONT</ref>. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="1031" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="1031" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/font.h" line="1031" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/font.h" bodystart="1031" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="interface_2wx_2font_8h_1a45e210182a5159f343998b151ef0c813" prot="public" static="no" mutable="no">
-        <type><ref refid="classwx_font" kindref="compound">wxFont</ref></type>
-        <definition>wxFont wxSWISS_FONT</definition>
+      <memberdef kind="variable" id="interface_2wx_2font_8h_1a54997f2e4b4f4a03f92db6d41da30bb5" prot="public" static="no" mutable="no">
+        <type><ref refid="classwx_font" kindref="compound">wxFont</ref> *</type>
+        <definition>wxFont* wxSWISS_FONT</definition>
         <argsstring></argsstring>
         <name>wxSWISS_FONT</name>
         <briefdescription>
-<para>A font identic to <ref refid="interface_2wx_2font_8h_1a3d7653ceb6b4f01e64fcfce0aec79a5a" kindref="member">wxNORMAL_FONT</ref> except for the family used which is <computeroutput>wxFONTFAMILY_SWISS</computeroutput>. </para>        </briefdescription>
+<para>A font identic to <ref refid="interface_2wx_2font_8h_1a06bb8d57cf11260649c497b1e6b854b1" kindref="member">wxNORMAL_FONT</ref> except for the family used which is <computeroutput>wxFONTFAMILY_SWISS</computeroutput>. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="1037" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="1037" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/font.h" line="1037" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/font.h" bodystart="1037" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="interface_2wx_2font_8h_1a7f6d6164fe33b3a8234b26229bd8c516" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_font_list" kindref="compound">wxFontList</ref> *</type>
@@ -1116,7 +1116,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="1082" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" bodystart="1082" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/font.h" line="1082" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/font.h" bodystart="1082" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -1140,7 +1140,7 @@
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/font.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="1100"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/font.h" line="1100"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga73a6a41930ee5544077c6dd4df77ea06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1158,13 +1158,13 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/font.h&gt; </
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/font.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="1109"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/font.h" line="1109"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/font.h"/>
   </compounddef>
 </doxygen>

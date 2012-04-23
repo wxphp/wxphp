@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.4">
-  <compounddef id="dir_3abfa87c137ec772edc9208946b16333" kind="dir">
-    <compoundname>interface/wx/stc/</compoundname>
-    <innerfile refid="stc_8h">stc.h</innerfile>
+  <compounddef id="fs__filter_8h" kind="file">
+    <compoundname>fs_filter.h</compoundname>
+    <innerclass refid="classwx_filter_f_s_handler" prot="public">wxFilterFSHandler</innerclass>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/fs_filter.h"/>
   </compounddef>
 </doxygen>

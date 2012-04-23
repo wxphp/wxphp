@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" line="66"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" line="66"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_i_1abb3212b6bd4393b24db58411f5f66207" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -42,7 +42,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" line="74"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" line="74"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_i_1a69a1f2a24d618d89b61232f64a441566" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -67,7 +67,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" line="82"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" line="82"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_i_1a02116f8883e77754a793dbfea0454896" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -80,7 +80,7 @@
 <para>If the URI is not a reference or is not resolved, the URI that is returned is the same one passed to the constructor or <ref refid="classwx_u_r_i_1a1b65a25fea50ceb7dd07083c5d6b540d" kindref="member">Create()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" line="91"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" line="91"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_i_1a3352a1dd8649194230a72efcd2d0ebf9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -94,7 +94,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" line="101"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" line="101"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_i_1a1b65a25fea50ceb7dd07083c5d6b540d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -119,7 +119,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" line="111"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" line="111"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_i_1ac00aa809db96d73784544d3111ff2117" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -132,7 +132,7 @@
 <para>The fragment of a URI is the last value of the URI, and is the value after a &quot;#&quot; character after the path of the URI.</para><para><computeroutput>&quot;http://mysite.com/mypath#&lt;fragment&gt;&quot;</computeroutput> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" line="121"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" line="121"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_i_1ac6650f18e23bb37868faa225cd3412d6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="uri_8h_1a6e3c85777e4e09916a0b94fa1afe19e2" kindref="member">wxURIHostType</ref></type>
@@ -145,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" line="126"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" line="126"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_i_1aa743a9ffa9cb1b8f50c27d733dd840cf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -158,7 +158,7 @@
 <para>Note that this is explicitly depreciated by RFC 1396 and should generally be avoided if possible.</para><para><computeroutput>&quot;http://&lt;user&gt;:&lt;password&gt;@mysite.com/mypath&quot;</computeroutput> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" line="135"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" line="135"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_i_1a344bbf9b939a05a1a5017454ee4cb471" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -171,7 +171,7 @@
 <para>The path component of a URI comes directly after the scheme component if followed by zero or one slashes (&apos;/&apos;), or after the server/port component.</para><para>Absolute paths include the leading &apos;/&apos; character.</para><para><computeroutput>&quot;http://mysite.com&lt;path&gt;&quot;</computeroutput> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" line="148"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" line="148"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_i_1a2730f3b8bdba4dd20d1c0494316f27c6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -185,7 +185,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" line="161"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" line="161"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_i_1aee997a36b2669dd55a62f1848c3751fd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -198,7 +198,7 @@
 <para>The query component is what is commonly passed to a cgi application, and must come after the path component, and after a &apos;?&apos; character.</para><para><computeroutput>&quot;http://mysite.com/mypath?&lt;query&gt;&quot;</computeroutput> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" line="171"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" line="171"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_i_1ae02a0c635fde3fa9db00c1fbec6d0c18" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -211,7 +211,7 @@
 <para>The first part of the URI.</para><para><computeroutput>&quot;&lt;scheme&gt;://mysite.com&quot;</computeroutput> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" line="180"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" line="180"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_i_1a33159a144c40f715544c42d6014383b9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -224,7 +224,7 @@
 <para>The server of the URI can be a server name or a type of IP address. See <ref refid="classwx_u_r_i_1ac6650f18e23bb37868faa225cd3412d6" kindref="member">GetHostType()</ref> for the possible values for the host type of the server component.</para><para><computeroutput>&quot;http://&lt;server&gt;/mypath&quot;</computeroutput> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" line="191"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" line="191"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_i_1a8aee0a44dffce7579eb82e0181d4fc1d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -237,7 +237,7 @@
 <para>Note that this is explicitly depreciated by RFC 1396 and should generally be avoided if possible.</para><para><computeroutput>&quot;http://&lt;user&gt;:&lt;password&gt;@mysite.com/mypath&quot;</computeroutput> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" line="200"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" line="200"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_i_1a8621cd0990de99bfeba5bd96691c4e4a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -250,7 +250,7 @@
 <para>The component of a URI before the server component that is postfixed by a &apos;@&apos; character.</para><para><computeroutput>&quot;http://&lt;userinfo&gt;@mysite.com/mypath&quot;</computeroutput> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" line="210"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" line="210"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_i_1af2896c78d0a603c677b8d313f957b0ea" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -263,7 +263,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" line="215"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" line="215"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_i_1acd98d123d25312743bd2b35bfe5dc77b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -276,7 +276,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" line="220"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" line="220"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_i_1a691c3f0f3bc51d8dc2a570700b8256eb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -289,7 +289,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" line="225"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" line="225"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_i_1a25ecd142749d1ca2be7939b1cf606593" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -302,7 +302,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" line="230"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" line="230"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_i_1aa424836846d5438b0cd75fe1631aaf9c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -315,7 +315,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" line="235"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" line="235"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_i_1a741d16955b870aaddf0d5d6d26d78ae9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -328,20 +328,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" line="240"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" line="240"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_u_r_i_1afb92420e39800d72e1adfb4048edd32d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_u_r_i_1af2b283ab9e5ab7b3ddaab50cf6fcd9de" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
-        <definition>bool wxURI::HasUser</definition>
+        <definition>bool wxURI::HasUserInfo</definition>
         <argsstring>() const </argsstring>
-        <name>HasUser</name>
+        <name>HasUserInfo</name>
         <briefdescription>
 <para>Returns true if the User component of the URI exists. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" line="245"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" line="245"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_i_1aaa5d7930c1e01d7261126c4fbf4b139d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -354,7 +354,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" line="251"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" line="251"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_i_1aba4590d36eb2c9f1ead9e92f4ef31c70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -391,7 +391,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" line="273"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" line="273"/>
       </memberdef>
       <memberdef kind="function" id="classwx_u_r_i_1a4012ea3965b7fe6a9c0d7cc93dac094f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -416,7 +416,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" line="293"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" line="293"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -443,7 +443,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" line="284"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" line="284"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -454,48 +454,48 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_u_r_i" kindref="compound" tooltip="wxURI is used to extract information from a URI (Uniform Resource Identifier).">wxURI</ref><sp/>myuri(</highlight><highlight class="stringliteral">&quot;http://mysite.com&quot;</highlight><highlight class="normal">);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>myuri.HasScheme()<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>protocol<sp/>=<sp/>myuri.GetScheme();</highlight></codeline>
-</programlisting></para><para><simplesect kind="note"><para>On URIs with a &quot;file&quot; scheme <ref refid="classwx_u_r_i" kindref="compound">wxURI</ref> does not parse the userinfo, server, or port portion. This is to keep compatability with <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref>, the old <ref refid="classwx_u_r_l" kindref="compound">wxURL</ref>, and older url specifications.</para></simplesect>
+</programlisting></para><para><simplesect kind="note"><para>On URIs with a &quot;file&quot; scheme <ref refid="classwx_u_r_i" kindref="compound">wxURI</ref> does not parse the userinfo, server, or port portion. This is to keep compatibility with <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref>, the old <ref refid="classwx_u_r_l" kindref="compound">wxURL</ref>, and older url specifications.</para></simplesect>
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_u_r_l" kindref="compound">wxURL</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11262">
+      <node id="11451">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11261">
+      <node id="11450">
         <label>wxURI</label>
         <link refid="classwx_u_r_i"/>
-        <childnode refid="11262" relation="public-inheritance">
+        <childnode refid="11451" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11263">
+      <node id="11452">
         <label>wxURL</label>
         <link refid="classwx_u_r_l"/>
-        <childnode refid="11261" relation="public-inheritance">
+        <childnode refid="11450" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11265">
+      <node id="11454">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11266" relation="usage">
+        <childnode refid="11455" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11264">
+      <node id="11453">
         <label>wxURI</label>
         <link refid="classwx_u_r_i"/>
-        <childnode refid="11265" relation="public-inheritance">
+        <childnode refid="11454" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11266">
+      <node id="11455">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" line="61" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/uri.h" bodystart="60" bodyend="294"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" line="61" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/uri.h" bodystart="60" bodyend="294"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxURI</scope><name>AllocExclusive</name></member>
       <member refid="classwx_u_r_i_1a3352a1dd8649194230a72efcd2d0ebf9" prot="public" virt="non-virtual"><scope>wxURI</scope><name>BuildUnescapedURI</name></member>
@@ -521,7 +521,7 @@
       <member refid="classwx_u_r_i_1a25ecd142749d1ca2be7939b1cf606593" prot="public" virt="non-virtual"><scope>wxURI</scope><name>HasQuery</name></member>
       <member refid="classwx_u_r_i_1aa424836846d5438b0cd75fe1631aaf9c" prot="public" virt="non-virtual"><scope>wxURI</scope><name>HasScheme</name></member>
       <member refid="classwx_u_r_i_1a741d16955b870aaddf0d5d6d26d78ae9" prot="public" virt="non-virtual"><scope>wxURI</scope><name>HasServer</name></member>
-      <member refid="classwx_u_r_i_1afb92420e39800d72e1adfb4048edd32d" prot="public" virt="non-virtual"><scope>wxURI</scope><name>HasUser</name></member>
+      <member refid="classwx_u_r_i_1af2b283ab9e5ab7b3ddaab50cf6fcd9de" prot="public" virt="non-virtual"><scope>wxURI</scope><name>HasUserInfo</name></member>
       <member refid="classwx_object_1af40d580385cf4f8112fae7713404b01e" prot="public" virt="non-virtual"><scope>wxURI</scope><name>IsKindOf</name></member>
       <member refid="classwx_u_r_i_1aaa5d7930c1e01d7261126c4fbf4b139d" prot="public" virt="non-virtual"><scope>wxURI</scope><name>IsReference</name></member>
       <member refid="classwx_object_1a80a1a3fda7b14396a9ddd3d7a46a88bd" prot="public" virt="non-virtual"><scope>wxURI</scope><name>IsSameAs</name></member>

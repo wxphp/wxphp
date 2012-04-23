@@ -40,7 +40,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="198"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="198"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_server_1ab622729632cca56cbc14c8e6e7a7bb50" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="203"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="203"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_server_1a7ed69a9282e9437a74213779e62bbff7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref> *</type>
@@ -74,7 +74,7 @@ If <emphasis>wait</emphasis> is false, it will try to accept a pending connectio
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="229"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="229"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_server_1abe8446b81f5bedbc33e4f74fd5b36982" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -113,7 +113,7 @@ If <emphasis>wait</emphasis> is false, it will try to accept a pending connectio
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="246"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="246"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_server_1a3e0998c069bf8b3ef447167faf00ebae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -153,58 +153,58 @@ If <emphasis>wait</emphasis> is false, it will try to accept a pending connectio
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="265"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="265"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><xrefsect id="todo_1_todo000057"><xreftitle>Todo</xreftitle><xrefdescription><para>describe me.</para></xrefdescription></xrefsect></para><para><heading level="2"></heading>
+<para><xrefsect id="todo_1_todo000056"><xreftitle>Todo</xreftitle><xrefdescription><para>describe me.</para></xrefdescription></xrefsect></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10322">
+      <node id="10505">
         <label>wxSocketBase</label>
         <link refid="classwx_socket_base"/>
-        <childnode refid="10323" relation="public-inheritance">
+        <childnode refid="10506" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10323">
+      <node id="10506">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10321">
+      <node id="10504">
         <label>wxSocketServer</label>
         <link refid="classwx_socket_server"/>
-        <childnode refid="10322" relation="public-inheritance">
+        <childnode refid="10505" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10325">
+      <node id="10508">
         <label>wxSocketBase</label>
         <link refid="classwx_socket_base"/>
-        <childnode refid="10326" relation="public-inheritance">
+        <childnode refid="10509" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10326">
+      <node id="10509">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10327" relation="usage">
+        <childnode refid="10510" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10324">
+      <node id="10507">
         <label>wxSocketServer</label>
         <link refid="classwx_socket_server"/>
-        <childnode refid="10325" relation="public-inheritance">
+        <childnode refid="10508" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10327">
+      <node id="10510">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="184" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" bodystart="183" bodyend="266"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="184" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" bodystart="183" bodyend="266"/>
     <listofallmembers>
       <member refid="classwx_socket_server_1a7ed69a9282e9437a74213779e62bbff7" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>Accept</name></member>
       <member refid="classwx_socket_server_1abe8446b81f5bedbc33e4f74fd5b36982" prot="public" virt="non-virtual"><scope>wxSocketServer</scope><name>AcceptWith</name></member>

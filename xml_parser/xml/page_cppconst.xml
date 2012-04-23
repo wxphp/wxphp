@@ -17,13 +17,7 @@
 <hruler/>
 </para><sect1 id="page_cppconst_1page_cppconst_guisystem">
 <title>GUI system</title>
-<para><table rows="30" cols="2"><row>
-<entry thead="no"><para>__WINDOWS__ </para></entry><entry thead="no"><para>any Windows, you may also use __WXMSW__ </para></entry></row>
-<row>
-<entry thead="no"><para>__WIN16__ </para></entry><entry thead="no"><para>Win16 API (not supported since wxWidgets 2.6) </para></entry></row>
-<row>
-<entry thead="no"><para>__WIN32__ </para></entry><entry thead="no"><para>Win32 API </para></entry></row>
-<row>
+<para><table rows="27" cols="2"><row>
 <entry thead="no"><para>__WXBASE__ </para></entry><entry thead="no"><para>Only wxBase, no GUI features (same as <computeroutput>wxUSE_GUI</computeroutput> == 0) </para></entry></row>
 <row>
 <entry thead="no"><para>__WXCOCOA__ </para></entry><entry thead="no"><para>OS X using wxCocoa Port </para></entry></row>
@@ -50,7 +44,7 @@
 <row>
 <entry thead="no"><para>__WXMOTIF20__ </para></entry><entry thead="no"><para>Motif 2.0 or higher </para></entry></row>
 <row>
-<entry thead="no"><para>__WXMSW__ </para></entry><entry thead="no"><para>Any Windows </para></entry></row>
+<entry thead="no"><para>__WXMSW__ </para></entry><entry thead="no"><para>GUI using <ulink url="http://en.wikipedia.org/wiki/Windows_User">Windows Controls</ulink> </para></entry></row>
 <row>
 <entry thead="no"><para>__WXOSX__ </para></entry><entry thead="no"><para>any OS X </para></entry></row>
 <row>
@@ -87,7 +81,7 @@
 The convention is to use the <computeroutput>__WX</computeroutput> prefix for these symbols, although this has not always been followed.</para></sect1>
 <sect1 id="page_cppconst_1page_cppconst_os">
 <title>Operating systems</title>
-<para><table rows="26" cols="2"><row>
+<para><table rows="29" cols="2"><row>
 <entry thead="no"><para>__APPLE__ </para></entry><entry thead="no"><para>any Mac OS version </para></entry></row>
 <row>
 <entry thead="no"><para>__AIX__ </para></entry><entry thead="no"><para>AIX </para></entry></row>
@@ -96,7 +90,7 @@ The convention is to use the <computeroutput>__WX</computeroutput> prefix for th
 <row>
 <entry thead="no"><para>__CYGWIN__ </para></entry><entry thead="no"><para>Cygwin: Unix on Win32 </para></entry></row>
 <row>
-<entry thead="no"><para>__DARWIN__ </para></entry><entry thead="no"><para>Mac OS X using the BSD Unix C library (as opposed to using the Metrowerks MSL C/C++ library) </para></entry></row>
+<entry thead="no"><para>__DARWIN__ </para></entry><entry thead="no"><para>Mac OS X (with BSD C library) </para></entry></row>
 <row>
 <entry thead="no"><para>__DATA_GENERAL__ </para></entry><entry thead="no"><para>DG-UX </para></entry></row>
 <row>
@@ -134,7 +128,13 @@ The convention is to use the <computeroutput>__WX</computeroutput> prefix for th
 <row>
 <entry thead="no"><para>__VMS__ </para></entry><entry thead="no"><para>VMS </para></entry></row>
 <row>
-<entry thead="no"><para>__WINDOWS__ </para></entry><entry thead="no"><para>any Windows </para></entry></row>
+<entry thead="no"><para>__WINDOWS__ </para></entry><entry thead="no"><para>Any Windows platform, using any port (see also <computeroutput>__WXMSW__</computeroutput>) </para></entry></row>
+<row>
+<entry thead="no"><para>__WIN16__ </para></entry><entry thead="no"><para>Win16 API (not supported since wxWidgets 2.6) </para></entry></row>
+<row>
+<entry thead="no"><para>__WIN32__ </para></entry><entry thead="no"><para>Win32 API </para></entry></row>
+<row>
+<entry thead="no"><para>__WIN64__ </para></entry><entry thead="no"><para>Win64 (mostly same as Win32 but data type sizes are different) </para></entry></row>
 <row>
 <entry thead="no"><para>__WINE__ </para></entry><entry thead="no"><para>Wine </para></entry></row>
 <row>
@@ -173,7 +173,7 @@ The convention is to use the <computeroutput>__WX</computeroutput> prefix for th
 </para></sect1>
 <sect1 id="page_cppconst_1page_cppconst_compiler">
 <title>Compilers</title>
-<para><table rows="14" cols="2"><row>
+<para><table rows="13" cols="2"><row>
 <entry thead="no"><para>__BORLANDC__ </para></entry><entry thead="no"><para>Borland C++. The value of the macro corresponds to the compiler version: 500 is 5.0. </para></entry></row>
 <row>
 <entry thead="no"><para>__DJGPP__ </para></entry><entry thead="no"><para>DJGPP </para></entry></row>
@@ -188,15 +188,13 @@ The convention is to use the <computeroutput>__WX</computeroutput> prefix for th
 <row>
 <entry thead="no"><para>__MINGW32__ </para></entry><entry thead="no"><para>MinGW </para></entry></row>
 <row>
-<entry thead="no"><para>__MWERKS__ </para></entry><entry thead="no"><para>CodeWarrior MetroWerks compiler </para></entry></row>
-<row>
 <entry thead="no"><para>__SUNCC__ </para></entry><entry thead="no"><para>Sun CC, see also wxCHECK_SUNCC_VERSION </para></entry></row>
 <row>
 <entry thead="no"><para>__SYMANTECC__ </para></entry><entry thead="no"><para>Symantec C++ </para></entry></row>
 <row>
 <entry thead="no"><para>__VISAGECPP__ </para></entry><entry thead="no"><para>IBM Visual Age (OS/2) </para></entry></row>
 <row>
-<entry thead="no"><para>__VISUALC__ </para></entry><entry thead="no"><para>Microsoft Visual C++, see also <ref refid="group__group__funcmacro__version_1ga5a01a6b9009ee0ef3b90d520b1a0f5c1" kindref="member">wxCHECK_VISUALC_VERSION</ref>. The value of this macro corresponds to the compiler version: <computeroutput>1020</computeroutput> for <computeroutput>4.2</computeroutput> (the first supported version), <computeroutput>1100</computeroutput> for <computeroutput>5.0</computeroutput>, <computeroutput>1200</computeroutput> for <computeroutput>6.0</computeroutput> and so on. For convenience, the symbols __VISUALCn__ are also defined for each major compiler version from 5 to 10, i.e. you can use tests such #ifdef __VISUALC7__ to test for compiler version being precisely 7. </para></entry></row>
+<entry thead="no"><para>__VISUALC__ </para></entry><entry thead="no"><para>Microsoft Visual C++, see also <ref refid="group__group__funcmacro__version_1ga5a01a6b9009ee0ef3b90d520b1a0f5c1" kindref="member">wxCHECK_VISUALC_VERSION</ref>. The value of this macro corresponds to the compiler version: <computeroutput>1020</computeroutput> for <computeroutput>4.2</computeroutput> (the first supported version), <computeroutput>1100</computeroutput> for <computeroutput>5.0</computeroutput>, <computeroutput>1200</computeroutput> for <computeroutput>6.0</computeroutput> and so on. For convenience, the symbols __VISUALCn__ are also defined for each major compiler version from 5 to 11, i.e. you can use tests such #ifdef __VISUALC7__ to test for compiler version being precisely 7. </para></entry></row>
 <row>
 <entry thead="no"><para>__XLC__ </para></entry><entry thead="no"><para>AIX compiler </para></entry></row>
 <row>
@@ -205,7 +203,7 @@ The convention is to use the <computeroutput>__WX</computeroutput> prefix for th
 </para></sect1>
 <sect1 id="page_cppconst_1page_cppconst_featuretests">
 <title>Feature tests</title>
-<para>Some library features may not be always available even if they were selected by the user. To make it possible to check if this is the case, the library predefines the symbols in the form <computeroutput>wxHAS_FEATURE</computeroutput>. Unlike <computeroutput>wxUSE_FEATURE</computeroutput> symbols which are defined by the library user (directly in <computeroutput>setup.h</computeroutput> or by running configure script) and which must be always defined as either 0 or 1, the <computeroutput>wxHAS</computeroutput> symbols are only defined if the corresponding feature is available and not defined at all otherwise.</para><para>Currently the following symbols exist:</para><para><table rows="14" cols="2"><row>
+<para>Some library features may not be always available even if they were selected by the user. To make it possible to check if this is the case, the library predefines the symbols in the form <computeroutput>wxHAS_FEATURE</computeroutput>. Unlike <computeroutput>wxUSE_FEATURE</computeroutput> symbols which are defined by the library user (directly in <computeroutput>setup.h</computeroutput> or by running configure script) and which must be always defined as either 0 or 1, the <computeroutput>wxHAS</computeroutput> symbols are only defined if the corresponding feature is available and not defined at all otherwise.</para><para>Currently the following symbols exist:</para><para><table rows="15" cols="2"><row>
 <entry thead="no"><para>wxHAS_3STATE_CHECKBOX </para></entry><entry thead="no"><para>Defined if <ref refid="classwx_check_box" kindref="compound">wxCheckBox</ref> supports wxCHK_3STATE flag, i.e. is capable of showing three states and not only the usual two. Currently defined for almost all ports. </para></entry></row>
 <row>
 <entry thead="no"><para>wxHAS_ATOMIC_OPS </para></entry><entry thead="no"><para>Defined if <ref refid="group__group__funcmacro__atomic_1ga35470b5fc125b443e73b7967100752d4" kindref="member">wxAtomicInc()</ref> and <ref refid="group__group__funcmacro__atomic_1ga396a0a6c5b705d46862564f5b16897b2" kindref="member">wxAtomicDec()</ref> functions have an efficient (CPU-specific) implementation. Notice that the functions themselves are always available but can be prohibitively slow to use when implemented in a generic way, using a critical section. </para></entry></row>
@@ -221,6 +219,8 @@ The convention is to use the <computeroutput>__WX</computeroutput> prefix for th
 <entry thead="no"><para>wxHAS_LONG_LONG_T_DIFFERENT_FROM_LONG </para></entry><entry thead="no"><para>Defined if compiler supports a 64 bit integer type (available as <computeroutput>wxLongLong_t</computeroutput>) and this type is different from long. Notice that, provided wxUSE_LONGLONG is not turned off, some 64 bit type is always available to wxWidgets programs and this symbol only indicates a presence of such primitive type. It is useful to decide whether some function should be overloaded for both <computeroutput>long</computeroutput> and <computeroutput>long long</computeroutput> types. </para></entry></row>
 <row>
 <entry thead="no"><para>wxHAS_MULTIPLE_FILEDLG_FILTERS </para></entry><entry thead="no"><para>Defined if <ref refid="classwx_file_dialog" kindref="compound">wxFileDialog</ref> supports multiple (&apos;|&apos;-separated) filters. </para></entry></row>
+<row>
+<entry thead="no"><para>wxHAS_IMAGES_IN_RESOURCES </para></entry><entry thead="no"><para>Defined if <ulink url="http://en.wikipedia.org/wiki/Resource_(Windows)">Windows resource files</ulink> or OS/2 resource files are available on the current platform. </para></entry></row>
 <row>
 <entry thead="no"><para>wxHAS_POWER_EVENTS </para></entry><entry thead="no"><para>Defined if <ref refid="classwx_power_event" kindref="compound">wxPowerEvent</ref> are ever generated on the current platform. </para></entry></row>
 <row>

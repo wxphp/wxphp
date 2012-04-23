@@ -20,7 +20,7 @@
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1679" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="1679" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1679" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" bodystart="1679" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__thread_1gaa9f05a4361ea095939f90512ee52a831" prot="public" static="no">
         <name>wxCRIT_SECT_DECLARE_MEMBER</name>
@@ -31,7 +31,7 @@
 <para>As it doesn&apos;t include the <computeroutput>static</computeroutput> keyword (unlike <ref refid="group__group__funcmacro__thread_1ga79ee915c6353e705958843a57a5148e2" kindref="member">wxCRIT_SECT_DECLARE()</ref>), it can be used to declare a class or struct member which explains its name.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1689" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="1689" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1689" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" bodystart="1689" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__thread_1gae589848294c2cf63ad6895c4344755fe" prot="public" static="no">
         <name>wxCRIT_SECT_LOCKER</name>
@@ -43,7 +43,7 @@
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1698" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="1698" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1698" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" bodystart="1698" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__thread_1ga3b0ab821a03aeecc1a7ddfcecb581355" prot="public" static="no">
         <name>wxCRITICAL_SECTION</name>
@@ -62,7 +62,7 @@
 </programlisting></para><para>Note that this example assumes that the function is called the first time from the main thread so that the critical section object is initialized correctly by the time other threads start calling it, if this is not the case this approach can <bold>not</bold> be used and the critical section must be made a global instead.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1725" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="1725" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1725" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" bodystart="1725" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__thread_1gab5a243025a42da8c351a2df8519f4208" prot="public" static="no">
         <name>wxLEAVE_CRIT_SECT</name>
@@ -73,7 +73,7 @@
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1734" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="1734" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1734" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" bodystart="1734" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__thread_1ga53ce988bc3201b82b77d4779610be608" prot="public" static="no">
         <name>wxENTER_CRIT_SECT</name>
@@ -84,7 +84,7 @@
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1743" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="1743" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1743" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" bodystart="1743" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="enum">
@@ -125,7 +125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="12" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="11" bodyend="17"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="12" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" bodystart="11" bodyend="17"/>
       </memberdef>
       <memberdef kind="enum" id="interface_2wx_2thread_8h_1ad32912ed5726dfd2d4c24bdafbedac2e" prot="public" static="no">
         <name>wxCriticalSectionType</name>
@@ -149,7 +149,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="526" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="525" bodyend="532"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="526" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" bodystart="525" bodyend="532"/>
       </memberdef>
       <memberdef kind="enum" id="interface_2wx_2thread_8h_1a180bd0d42ba227657c3ad00194371a87" prot="public" static="no">
         <name>wxThreadWait</name>
@@ -182,7 +182,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="608" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="607" bodyend="640"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="608" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" bodystart="607" bodyend="640"/>
       </memberdef>
       <memberdef kind="enum" id="interface_2wx_2thread_8h_1a0dc9a167e8d084946512da99b37b5fd0" prot="public" static="no">
         <name>wxThreadKind</name>
@@ -206,7 +206,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="646" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="645" bodyend="652"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="646" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" bodystart="645" bodyend="652"/>
       </memberdef>
       <memberdef kind="enum" id="interface_2wx_2thread_8h_1a9e4ba0577f752fee0ba2133035f75ac2" prot="public" static="no">
         <name>wxThreadError</name>
@@ -259,11 +259,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="658" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="657" bodyend="676"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="658" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" bodystart="657" bodyend="676"/>
       </memberdef>
-      <memberdef kind="enum" id="interface_2wx_2thread_8h_1a39fca1837c5ce7715cbf571669660c13" prot="public" static="no">
-        <name>@22</name>
-        <enumvalue id="interface_2wx_2thread_8h_1a39fca1837c5ce7715cbf571669660c13aea44fc3114b0a70adba408c33f0fbdb8" prot="public">
+      <memberdef kind="enum" id="interface_2wx_2thread_8h_1a96a58e29e8dbf2b5bdeb775cba46556e" prot="public" static="no">
+        <name>@34</name>
+        <enumvalue id="interface_2wx_2thread_8h_1a96a58e29e8dbf2b5bdeb775cba46556eaea44fc3114b0a70adba408c33f0fbdb8" prot="public">
           <name>WXTHREAD_MIN_PRIORITY</name>
           <initializer> 0u</initializer>
           <briefdescription>
@@ -271,7 +271,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="interface_2wx_2thread_8h_1a39fca1837c5ce7715cbf571669660c13a28fc72e65a5bec39136189f51654b835" prot="public">
+        <enumvalue id="interface_2wx_2thread_8h_1a96a58e29e8dbf2b5bdeb775cba46556ea28fc72e65a5bec39136189f51654b835" prot="public">
           <name>WXTHREAD_DEFAULT_PRIORITY</name>
           <initializer> 50u</initializer>
           <briefdescription>
@@ -279,7 +279,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="interface_2wx_2thread_8h_1a39fca1837c5ce7715cbf571669660c13ad28b90e80e00f10dc6ec1bc335bd567d" prot="public">
+        <enumvalue id="interface_2wx_2thread_8h_1a96a58e29e8dbf2b5bdeb775cba46556ead28b90e80e00f10dc6ec1bc335bd567d" prot="public">
           <name>WXTHREAD_MAX_PRIORITY</name>
           <initializer> 100u</initializer>
           <briefdescription>
@@ -293,7 +293,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="682" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="681" bodyend="686"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="682" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" bodystart="681" bodyend="686"/>
       </memberdef>
       <memberdef kind="enum" id="interface_2wx_2thread_8h_1a47100c8fbaa57b192696bec84197398e" prot="public" static="no">
         <name>wxSemaError</name>
@@ -346,7 +346,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1374" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="1373" bodyend="1381"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1374" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" bodystart="1373" bodyend="1381"/>
       </memberdef>
       <memberdef kind="enum" id="interface_2wx_2thread_8h_1a20ab09ca102b0bef60c0f8eb9aad3ff3" prot="public" static="no">
         <name>wxMutexType</name>
@@ -370,7 +370,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1512" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="1511" bodyend="1518"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1512" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" bodystart="1511" bodyend="1518"/>
       </memberdef>
       <memberdef kind="enum" id="interface_2wx_2thread_8h_1ac8c1ee75d2a2da3be8eabc629f71c1a7" prot="public" static="no">
         <name>wxMutexError</name>
@@ -430,7 +430,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1525" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="1524" bodyend="1546"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1525" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" bodystart="1524" bodyend="1546"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -445,7 +445,7 @@
 <para>Always returns true if <computeroutput>wxUSE_THREADS</computeroutput> is 0.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1751"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1751"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__thread_1ga6671c1599fd4ccf6a7c7bb90b2304709" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -471,7 +471,7 @@
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1787"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1787"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__thread_1gaddfdb2956953480a379d998ea7ced5b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -485,13 +485,13 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; 
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/thread.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="1797"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="1797"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h"/>
   </compounddef>
 </doxygen>

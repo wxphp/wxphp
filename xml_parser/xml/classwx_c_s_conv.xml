@@ -28,7 +28,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="454"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/strconv.h" line="454"/>
       </memberdef>
       <memberdef kind="function" id="classwx_c_s_conv_1a9bef78f02754fca9414fbe43cfff0c95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -53,7 +53,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="465"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/strconv.h" line="465"/>
       </memberdef>
       <memberdef kind="function" id="classwx_c_s_conv_1a644589a9f626556ab0c715b0cbef1dc4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -67,7 +67,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="479"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/strconv.h" line="479"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -77,30 +77,30 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__conv" kindref="compound">Text Conversion</ref></para><para><simplesect kind="see"><para><ref refid="classwx_m_b_conv" kindref="compound">wxMBConv</ref>, <ref refid="classwx_encoding_converter" kindref="compound">wxEncodingConverter</ref>, <ref refid="overview_mbconv" kindref="compound">wxMBConv Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5213">
+      <node id="5308">
         <label>wxCSConv</label>
         <link refid="classwx_c_s_conv"/>
-        <childnode refid="5214" relation="public-inheritance">
+        <childnode refid="5309" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5214">
+      <node id="5309">
         <label>wxMBConv</label>
         <link refid="classwx_m_b_conv"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5215">
+      <node id="5310">
         <label>wxCSConv</label>
         <link refid="classwx_c_s_conv"/>
-        <childnode refid="5216" relation="public-inheritance">
+        <childnode refid="5311" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5216">
+      <node id="5311">
         <label>wxMBConv</label>
         <link refid="classwx_m_b_conv"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="443" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" bodystart="442" bodyend="480"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/strconv.h" line="443" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/strconv.h" bodystart="442" bodyend="480"/>
     <listofallmembers>
       <member refid="classwx_m_b_conv_1ae6fd1020a2c7c82191c4822682e80d05" prot="public" virt="pure-virtual"><scope>wxCSConv</scope><name>Clone</name></member>
       <member refid="classwx_m_b_conv_1a0e572efeda6c5c73ddff1292609fa211" prot="public" virt="non-virtual"><scope>wxCSConv</scope><name>cMB2WC</name></member>

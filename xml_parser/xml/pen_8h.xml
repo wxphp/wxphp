@@ -69,14 +69,14 @@
           <briefdescription>
           </briefdescription>
           <detaileddescription>
-<para><xrefsect id="todo_1_todo000042"><xreftitle>Todo</xreftitle><xrefdescription><para>WHAT&apos;s this? </para></xrefdescription></xrefsect></para>          </detaileddescription>
+<para><xrefsect id="todo_1_todo000041"><xreftitle>Todo</xreftitle><xrefdescription><para>WHAT&apos;s this? </para></xrefdescription></xrefsect></para>          </detaileddescription>
         </enumvalue>
         <enumvalue id="pen_8h_1aebe64277219894a55d6b963607ad5f54a4fb547c2970454366e99444d4cee10bf" prot="public">
           <name>wxPENSTYLE_STIPPLE_MASK</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
-<para><xrefsect id="todo_1_todo000043"><xreftitle>Todo</xreftitle><xrefdescription><para>WHAT&apos;s this? </para></xrefdescription></xrefsect></para>          </detaileddescription>
+<para><xrefsect id="todo_1_todo000042"><xreftitle>Todo</xreftitle><xrefdescription><para>WHAT&apos;s this? </para></xrefdescription></xrefsect></para>          </detaileddescription>
         </enumvalue>
         <enumvalue id="pen_8h_1aebe64277219894a55d6b963607ad5f54a3a3987132ab682f325c1050dd4bee493" prot="public">
           <name>wxPENSTYLE_STIPPLE</name>
@@ -149,7 +149,7 @@
 <para>Note that hatched pen styles are not supported by X11-based ports, including wxGTK. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="16" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="15" bodyend="69"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="16" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" bodystart="15" bodyend="69"/>
       </memberdef>
       <memberdef kind="enum" id="pen_8h_1a2f214bacb569721da370aab5dbc2a9f4" prot="public" static="no">
         <name>wxPenJoin</name>
@@ -186,10 +186,10 @@
         <briefdescription>
 <para>The possible join values of a <ref refid="classwx_pen" kindref="compound">wxPen</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para><xrefsect id="todo_1_todo000040"><xreftitle>Todo</xreftitle><xrefdescription><para>use wxPENJOIN_ prefix </para></xrefdescription></xrefsect></para>        </detaileddescription>
+<para><xrefsect id="todo_1_todo000039"><xreftitle>Todo</xreftitle><xrefdescription><para>use wxPENJOIN_ prefix </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="77" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="76" bodyend="83"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="77" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" bodystart="76" bodyend="83"/>
       </memberdef>
       <memberdef kind="enum" id="pen_8h_1a7d4a9e379451a8d249239543ad78af3a" prot="public" static="no">
         <name>wxPenCap</name>
@@ -226,10 +226,10 @@
         <briefdescription>
 <para>The possible cap values of a <ref refid="classwx_pen" kindref="compound">wxPen</ref>. </para>        </briefdescription>
         <detaileddescription>
-<para><xrefsect id="todo_1_todo000041"><xreftitle>Todo</xreftitle><xrefdescription><para>use wxPENCAP_ prefix </para></xrefdescription></xrefsect></para>        </detaileddescription>
+<para><xrefsect id="todo_1_todo000040"><xreftitle>Todo</xreftitle><xrefdescription><para>use wxPENCAP_ prefix </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="92" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="91" bodyend="98"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="92" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" bodystart="91" bodyend="98"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -244,7 +244,7 @@
 <para><ref refid="classwx_pen_1ad36b523a05e5dc6f26cedcbe4e09e513" kindref="member">wxPen::IsOk()</ref> always returns false for this object. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="400" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="400" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="400" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" bodystart="400" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="pen_8h_1a62930a76d6d75371553b90661f8d9d30" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_pen" kindref="compound">wxPen</ref> *</type>
@@ -257,7 +257,7 @@
 <para>Except for the color it has all standard attributes (1-pixel width, <computeroutput>wxPENSTYLE_SOLID</computeroutput> and <computeroutput>wxCAP_ROUND</computeroutput> styles, etc...). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="407" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="407" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="407" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" bodystart="407" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="pen_8h_1a40815520d399c003f4b17dd1d8a24142" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_pen" kindref="compound">wxPen</ref> *</type>
@@ -270,7 +270,7 @@
 <para>Except for the color it has all standard attributes (1-pixel width, <computeroutput>wxPENSTYLE_SOLID</computeroutput> and <computeroutput>wxCAP_ROUND</computeroutput> styles, etc...). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="414" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="414" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="414" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" bodystart="414" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="pen_8h_1a4b1692630dc023b9900f2d507da34735" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_pen" kindref="compound">wxPen</ref> *</type>
@@ -283,7 +283,7 @@
 <para>Except for the color it has all standard attributes (1-pixel width, <computeroutput>wxPENSTYLE_SOLID</computeroutput> and <computeroutput>wxCAP_ROUND</computeroutput> styles, etc...). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="421" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="421" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="421" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" bodystart="421" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="pen_8h_1a3cbf557f3d9825283a92dcb40bc2e20a" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_pen" kindref="compound">wxPen</ref> *</type>
@@ -296,7 +296,7 @@
 <para>Except for the color it has all standard attributes (1-pixel width, <computeroutput>wxPENSTYLE_SOLID</computeroutput> and <computeroutput>wxCAP_ROUND</computeroutput> styles, etc...). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="428" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="428" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="428" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" bodystart="428" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="pen_8h_1a787768c16bb3ca4bba95f850e1a737d6" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_pen" kindref="compound">wxPen</ref> *</type>
@@ -309,7 +309,7 @@
 <para>Except for the color it has all standard attributes (1-pixel width, <computeroutput>wxPENSTYLE_SOLID</computeroutput> and <computeroutput>wxCAP_ROUND</computeroutput> styles, etc...). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="435" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="435" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="435" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" bodystart="435" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="pen_8h_1a845a77278b675303c61858c18c2bb91b" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_pen" kindref="compound">wxPen</ref> *</type>
@@ -322,7 +322,7 @@
 <para>Except for the color it has all standard attributes (1-pixel width, <computeroutput>wxPENSTYLE_SOLID</computeroutput> and <computeroutput>wxCAP_ROUND</computeroutput> styles, etc...). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="442" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="442" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="442" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" bodystart="442" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="pen_8h_1a2673a1627fe81e99a5b69ddacaecee2b" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_pen" kindref="compound">wxPen</ref> *</type>
@@ -335,7 +335,7 @@
 <para>Except for the color it has all standard attributes (1-pixel width, <computeroutput>wxPENSTYLE_SOLID</computeroutput> and <computeroutput>wxCAP_ROUND</computeroutput> styles, etc...). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="449" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="449" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="449" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" bodystart="449" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="pen_8h_1afa8342d5885d1b1adf1fabd18a97ac58" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_pen" kindref="compound">wxPen</ref> *</type>
@@ -348,7 +348,7 @@
 <para>Except for the color it has all standard attributes (1-pixel width, <computeroutput>wxPENSTYLE_SOLID</computeroutput> and <computeroutput>wxCAP_ROUND</computeroutput> styles, etc...). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="456" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="456" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="456" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" bodystart="456" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="pen_8h_1ae1d7305927b56df235753d543ec02b2d" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_pen" kindref="compound">wxPen</ref> *</type>
@@ -361,7 +361,7 @@
 <para>Except for the color and for the <computeroutput>wxPENSTYLE_SHORT_DASH</computeroutput> it has all standard attributes (1-pixel width, <computeroutput>wxCAP_ROUND</computeroutput> style, etc...). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="463" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="463" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="463" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" bodystart="463" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="pen_8h_1a63955d74842289709ca0d7adc2c63e51" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_pen" kindref="compound">wxPen</ref> *</type>
@@ -374,7 +374,7 @@
 <para>Except for the color it has all standard attributes (1-pixel width, <computeroutput>wxPENSTYLE_SOLID</computeroutput> and <computeroutput>wxCAP_ROUND</computeroutput> styles, etc...). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="470" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="470" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="470" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" bodystart="470" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="pen_8h_1a0af84a9a68b2cb4d4d3f0a600da0b264" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_pen" kindref="compound">wxPen</ref> *</type>
@@ -387,7 +387,7 @@
 <para>Except for the color it has all standard attributes (1-pixel width, <computeroutput>wxPENSTYLE_SOLID</computeroutput> and <computeroutput>wxCAP_ROUND</computeroutput> styles, etc...). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="477" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="477" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="477" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" bodystart="477" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="pen_8h_1a7ae1733b4203165aba05a5b53476e9c3" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_pen" kindref="compound">wxPen</ref> *</type>
@@ -400,7 +400,7 @@
 <para>Except for the color it has all standard attributes (1-pixel width, <computeroutput>wxPENSTYLE_SOLID</computeroutput> and <computeroutput>wxCAP_ROUND</computeroutput> styles, etc...). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="484" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="484" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="484" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" bodystart="484" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="pen_8h_1a9eb4c70a69dd5c289c6c53b0da13f48b" prot="public" static="no" mutable="no">
         <type><ref refid="classwx_pen_list" kindref="compound">wxPenList</ref> *</type>
@@ -413,13 +413,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" line="554" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h" bodystart="554" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" line="554" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h" bodystart="554" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/pen.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/pen.h"/>
   </compounddef>
 </doxygen>

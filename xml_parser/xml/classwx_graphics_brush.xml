@@ -10,49 +10,49 @@
 <para>The contents are specific and private to the respective renderer. Instances are ref counted and can therefore be assigned as usual. The only way to get a valid instance is via <ref refid="classwx_graphics_context_1a1228d38d7710ed025f5f63e860e7c45c" kindref="member">wxGraphicsContext::CreateBrush()</ref> or <ref refid="classwx_graphics_renderer_1af4925b45520135fd41788fc37e244029" kindref="member">wxGraphicsRenderer::CreateBrush()</ref>.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6564">
+      <node id="6732">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6562">
+      <node id="6730">
         <label>wxGraphicsBrush</label>
         <link refid="classwx_graphics_brush"/>
-        <childnode refid="6563" relation="public-inheritance">
+        <childnode refid="6731" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6563">
+      <node id="6731">
         <label>wxGraphicsObject</label>
         <link refid="classwx_graphics_object"/>
-        <childnode refid="6564" relation="public-inheritance">
+        <childnode refid="6732" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6567">
+      <node id="6735">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6568" relation="usage">
+        <childnode refid="6736" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6565">
+      <node id="6733">
         <label>wxGraphicsBrush</label>
         <link refid="classwx_graphics_brush"/>
-        <childnode refid="6566" relation="public-inheritance">
+        <childnode refid="6734" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6566">
+      <node id="6734">
         <label>wxGraphicsObject</label>
         <link refid="classwx_graphics_object"/>
-        <childnode refid="6567" relation="public-inheritance">
+        <childnode refid="6735" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6568">
+      <node id="6736">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="1162" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" bodystart="1161" bodyend="1165"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="1189" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" bodystart="1188" bodyend="1192"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxGraphicsBrush</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxGraphicsBrush</scope><name>CloneRefData</name></member>

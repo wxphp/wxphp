@@ -39,7 +39,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="379"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/translation.h" line="379"/>
       </memberdef>
       <memberdef kind="function" id="classwx_msg_catalog_1a03764e0e9ec33b652b279cac83f19dab" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_msg_catalog" kindref="compound">wxMsgCatalog</ref> *</type>
@@ -76,7 +76,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="391"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/translation.h" line="391"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -84,7 +84,7 @@
     <detaileddescription>
 <para>This class should only be used directly by <ref refid="classwx_translations_loader" kindref="compound">wxTranslationsLoader</ref> implementations.</para><para><simplesect kind="since"><para>2.9.1 </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="367" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" bodystart="366" bodyend="392"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/translation.h" line="367" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/translation.h" bodystart="366" bodyend="392"/>
     <listofallmembers>
       <member refid="classwx_msg_catalog_1a03764e0e9ec33b652b279cac83f19dab" prot="public" virt="non-virtual"><scope>wxMsgCatalog</scope><name>CreateFromData</name></member>
       <member refid="classwx_msg_catalog_1a6f8d93d1d2557183c9a994e0381f901b" prot="public" virt="non-virtual"><scope>wxMsgCatalog</scope><name>CreateFromFile</name></member>

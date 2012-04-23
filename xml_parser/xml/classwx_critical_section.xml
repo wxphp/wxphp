@@ -20,7 +20,7 @@
 <para>By default critical sections are recursive under Unix and Windows. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="565"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="565"/>
       </memberdef>
       <memberdef kind="function" id="classwx_critical_section_1a6701aa3a4d56438728d0a2511c264d30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="570"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="570"/>
       </memberdef>
       <memberdef kind="function" id="classwx_critical_section_1afa80c7cb306d72884ebcc4e60ea61d39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -46,7 +46,7 @@
 <para>There is no error return for this function.</para><para>After entering the critical section protecting a data variable, the thread running inside the critical section may safely use/modify it.</para><para>Note that entering the same critical section twice or more from the same thread doesn&apos;t result in a deadlock; in this case in fact this function will immediately return. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="585"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="585"/>
       </memberdef>
       <memberdef kind="function" id="classwx_critical_section_1abb732e66f2b0e6f38d30f29a25d8851a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -60,7 +60,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="593"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="593"/>
       </memberdef>
       <memberdef kind="function" id="classwx_critical_section_1a9710ab7240b29a653fd9233c12aadba6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -73,7 +73,7 @@
 <para>There is no error return for this function. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="599"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="599"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -83,7 +83,7 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__threading" kindref="compound">Threading</ref></para><para><simplesect kind="note"><para>Critical sections can be used before the wxWidgets library is fully initialized. In particular, it&apos;s safe to create global <ref refid="classwx_critical_section" kindref="compound">wxCriticalSection</ref> instances.</para></simplesect>
 <simplesect kind="see"><para><ref refid="classwx_thread" kindref="compound">wxThread</ref>, <ref refid="classwx_condition" kindref="compound">wxCondition</ref>, <ref refid="classwx_critical_section_locker" kindref="compound">wxCriticalSectionLocker</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" line="559" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/thread.h" bodystart="558" bodyend="600"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" line="559" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/thread.h" bodystart="558" bodyend="600"/>
     <listofallmembers>
       <member refid="classwx_critical_section_1afa80c7cb306d72884ebcc4e60ea61d39" prot="public" virt="non-virtual"><scope>wxCriticalSection</scope><name>Enter</name></member>
       <member refid="classwx_critical_section_1a9710ab7240b29a653fd9233c12aadba6" prot="public" virt="non-virtual"><scope>wxCriticalSection</scope><name>Leave</name></member>

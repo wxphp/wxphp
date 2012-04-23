@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="106" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" bodystart="106" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xlocale.h" line="99" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/xlocale.h" bodystart="99" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -38,7 +38,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="117"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xlocale.h" line="110"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__locale_1gacd0bc4d967d50ae7f823b000894a1276" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="118"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xlocale.h" line="111"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__locale_1gade37ad0e12b8a1fcd7e040c824393412" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="119"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xlocale.h" line="112"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__locale_1ga4ea4f6bbf84949a09e11bb9d3830d144" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -101,7 +101,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="120"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xlocale.h" line="113"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__locale_1gac02d54370229bf21bf5fccc16f252f54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -122,7 +122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="121"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xlocale.h" line="114"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__locale_1ga9791edc396a64410f20ec4c33e10ccf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -143,7 +143,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="122"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xlocale.h" line="115"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__locale_1gacdc3622fcffc18c65eda29ae0f0b4517" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -164,7 +164,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="123"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xlocale.h" line="116"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__locale_1ga32dc4144f5642f5b2bb004f00c608f43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -185,7 +185,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="124"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xlocale.h" line="117"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__locale_1gab7241bf7c23c871dd9466f95618f5fe4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -206,7 +206,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="125"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xlocale.h" line="118"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__locale_1ga7abb9f4c50b26c5d1aec18e8c3f58875" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -227,7 +227,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="126"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xlocale.h" line="119"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__locale_1ga7c29a0907dc7e76a3278187a77fca42c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -248,7 +248,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="127"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xlocale.h" line="120"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__locale_1gaf31baafb5092f60427786800d9ab5cfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wchar_t</type>
@@ -269,7 +269,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="128"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xlocale.h" line="121"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__locale_1ga43fc799c8b0dcae5202958638b67a0e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wchar_t</type>
@@ -290,7 +290,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="129"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xlocale.h" line="122"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__locale_1gaf18ccdc1bf0a25c255f310453f84296e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -315,7 +315,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="131"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xlocale.h" line="124"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__locale_1gaa642380bc18eb602dcf49a13c085f1bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -344,7 +344,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="132"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xlocale.h" line="125"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__locale_1gac9a430bd7e7519c64d217fe4f9170605" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned long</type>
@@ -373,13 +373,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h" line="133"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xlocale.h" line="126"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/xlocale.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/xlocale.h"/>
   </compounddef>
 </doxygen>

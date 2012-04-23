@@ -52,7 +52,7 @@ Since wxWidgets was started, several other free or almost-free GUI frameworks ha
 <title>wxWidgets requirements</title>
 <para>To make use of wxWidgets, you currently need one of the following setups.</para><para>(a) MS-Windows:</para><para><itemizedlist>
 <listitem><para>A 32-bit or 64-bit PC running MS Windows. </para></listitem>
-<listitem><para>A Windows compiler: MS Visual C++ (embedded Visual C++ for wxWinCE port), Borland C++, Watcom C++, Cygwin, MinGW, Metrowerks CodeWarrior, Digital Mars C++. See <computeroutput>install.txt</computeroutput> for details about compiler version supported.</para></listitem>
+<listitem><para>A Windows compiler: MS Visual C++ (embedded Visual C++ for wxWinCE port), Borland C++, Watcom C++, Cygwin, MinGW, Digital Mars C++. See <computeroutput>install.txt</computeroutput> for details about compiler version supported.</para></listitem>
 </itemizedlist>
 (b) Unix:</para><para><itemizedlist>
 <listitem><para>Almost any C++ compiler, including GNU C++ and many Unix vendors compilers such as Sun CC, HP-UX aCC or SGI mipsPro. </para></listitem>

@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/spinctrl.h" line="331" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/spinctrl.h" bodystart="331" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/spinctrl.h" line="331" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/spinctrl.h" bodystart="331" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="spinctrl_8h_1a65967cb3b61729dd165ea29fdcc20990" prot="public" static="no" mutable="no">
         <type><ref refid="group__group__funcmacro__events_1ga6a7fd172612c0d6d9029bfa3aa91aca0" kindref="member">wxEventType</ref></type>
@@ -30,13 +30,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/spinctrl.h" line="332" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/spinctrl.h" bodystart="332" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/spinctrl.h" line="332" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/spinctrl.h" bodystart="332" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/spinctrl.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/spinctrl.h"/>
   </compounddef>
 </doxygen>

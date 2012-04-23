@@ -23,7 +23,7 @@
 <para>If the parent stream is passed as a pointer then the new filter stream takes ownership of it. If it is passed by reference then it does not. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="958"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="965"/>
       </memberdef>
       <memberdef kind="function" id="classwx_filter_output_stream_1a0358028d12b8dde1ef969efd1703908e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -40,7 +40,7 @@
 <para>If the parent stream is passed as a pointer then the new filter stream takes ownership of it. If it is passed by reference then it does not. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="959"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="966"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -51,72 +51,72 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_filter_class_factory" kindref="compound">wxFilterClassFactory</ref>, <ref refid="classwx_filter_input_stream" kindref="compound">wxFilterInputStream</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6308">
+      <node id="6439">
         <label>wxZlibOutputStream</label>
         <link refid="classwx_zlib_output_stream"/>
-        <childnode refid="6301" relation="public-inheritance">
+        <childnode refid="6432" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6307">
+      <node id="6438">
         <label>wxBufferedOutputStream</label>
         <link refid="classwx_buffered_output_stream"/>
-        <childnode refid="6301" relation="public-inheritance">
+        <childnode refid="6432" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6306">
+      <node id="6437">
         <label>wxZipOutputStream</label>
         <link refid="classwx_zip_output_stream"/>
-        <childnode refid="6304" relation="public-inheritance">
+        <childnode refid="6435" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6303">
+      <node id="6434">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="6305">
+      <node id="6436">
         <label>wxTarOutputStream</label>
         <link refid="classwx_tar_output_stream"/>
-        <childnode refid="6304" relation="public-inheritance">
+        <childnode refid="6435" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6301">
+      <node id="6432">
         <label>wxFilterOutputStream</label>
         <link refid="classwx_filter_output_stream"/>
-        <childnode refid="6302" relation="public-inheritance">
+        <childnode refid="6433" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6302">
+      <node id="6433">
         <label>wxOutputStream</label>
         <link refid="classwx_output_stream"/>
-        <childnode refid="6303" relation="public-inheritance">
+        <childnode refid="6434" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6304">
+      <node id="6435">
         <label>wxArchiveOutputStream</label>
         <link refid="classwx_archive_output_stream"/>
-        <childnode refid="6301" relation="public-inheritance">
+        <childnode refid="6432" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6311">
+      <node id="6442">
         <label>wxStreamBase</label>
         <link refid="classwx_stream_base"/>
       </node>
-      <node id="6309">
+      <node id="6440">
         <label>wxFilterOutputStream</label>
         <link refid="classwx_filter_output_stream"/>
-        <childnode refid="6310" relation="public-inheritance">
+        <childnode refid="6441" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6310">
+      <node id="6441">
         <label>wxOutputStream</label>
         <link refid="classwx_output_stream"/>
-        <childnode refid="6311" relation="public-inheritance">
+        <childnode refid="6442" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" line="949" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stream.h" bodystart="948" bodyend="961"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" line="956" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/stream.h" bodystart="955" bodyend="968"/>
     <listofallmembers>
       <member refid="classwx_output_stream_1a1c306ce99990d525921f8f6ae8432083" prot="public" virt="virtual"><scope>wxFilterOutputStream</scope><name>Close</name></member>
       <member refid="classwx_stream_base_1aca7d52699887bc33bec4810bf6fe29ba" prot="public" virt="non-virtual"><scope>wxFilterOutputStream</scope><name>GetLastError</name></member>

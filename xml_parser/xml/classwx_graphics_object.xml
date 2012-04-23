@@ -23,7 +23,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="195"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="195"/>
       </memberdef>
       <memberdef kind="function" id="classwx_graphics_object_1ada13da4f78271792792050132965777d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -37,7 +37,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="200"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="200"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -47,79 +47,79 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_graphics_brush" kindref="compound">wxGraphicsBrush</ref>, <ref refid="classwx_graphics_pen" kindref="compound">wxGraphicsPen</ref>, <ref refid="classwx_graphics_matrix" kindref="compound">wxGraphicsMatrix</ref>, <ref refid="classwx_graphics_path" kindref="compound">wxGraphicsPath</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6595">
+      <node id="6763">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6602">
+      <node id="6770">
         <label>wxGraphicsPen</label>
         <link refid="classwx_graphics_pen"/>
-        <childnode refid="6594" relation="public-inheritance">
+        <childnode refid="6762" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6597">
+      <node id="6765">
         <label>wxGraphicsBrush</label>
         <link refid="classwx_graphics_brush"/>
-        <childnode refid="6594" relation="public-inheritance">
+        <childnode refid="6762" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6599">
+      <node id="6767">
         <label>wxGraphicsFont</label>
         <link refid="classwx_graphics_font"/>
-        <childnode refid="6594" relation="public-inheritance">
+        <childnode refid="6762" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6596">
+      <node id="6764">
         <label>wxGraphicsBitmap</label>
         <link refid="classwx_graphics_bitmap"/>
-        <childnode refid="6594" relation="public-inheritance">
+        <childnode refid="6762" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6598">
+      <node id="6766">
         <label>wxGraphicsContext</label>
         <link refid="classwx_graphics_context"/>
-        <childnode refid="6594" relation="public-inheritance">
+        <childnode refid="6762" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6594">
+      <node id="6762">
         <label>wxGraphicsObject</label>
         <link refid="classwx_graphics_object"/>
-        <childnode refid="6595" relation="public-inheritance">
+        <childnode refid="6763" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6600">
+      <node id="6768">
         <label>wxGraphicsMatrix</label>
         <link refid="classwx_graphics_matrix"/>
-        <childnode refid="6594" relation="public-inheritance">
+        <childnode refid="6762" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6601">
+      <node id="6769">
         <label>wxGraphicsPath</label>
         <link refid="classwx_graphics_path"/>
-        <childnode refid="6594" relation="public-inheritance">
+        <childnode refid="6762" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6604">
+      <node id="6772">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6605" relation="usage">
+        <childnode refid="6773" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6603">
+      <node id="6771">
         <label>wxGraphicsObject</label>
         <link refid="classwx_graphics_object"/>
-        <childnode refid="6604" relation="public-inheritance">
+        <childnode refid="6772" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6605">
+      <node id="6773">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" line="189" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/graphics.h" bodystart="188" bodyend="201"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" line="189" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/graphics.h" bodystart="188" bodyend="201"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxGraphicsObject</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxGraphicsObject</scope><name>CloneRefData</name></member>

@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="618"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="618"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_iterator_1a0b62fbe749f09e81f3e722fe181249fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_archive_iterator" kindref="compound">wxArchiveIterator</ref></type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="619"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="619"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="600"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="600"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_iterator_1a183ba26604c7efab6f62e5f0d1a01980" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -63,7 +63,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="606"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="606"/>
       </memberdef>
       <memberdef kind="function" id="classwx_archive_iterator_1a1c21be4714c9fdfcf5dff748789d66ad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const T</type>
@@ -76,7 +76,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="612"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="612"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -114,7 +114,7 @@
 </programlisting></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__archive" kindref="compound">Archive support</ref>, <ref refid="group__group__class__streams" kindref="compound">Streams</ref></para><para><simplesect kind="see"><para><ref refid="classwx_archive_entry" kindref="compound">wxArchiveEntry</ref>, <ref refid="classwx_archive_input_stream" kindref="compound">wxArchiveInputStream</ref>, <ref refid="classwx_archive_output_stream" kindref="compound">wxArchiveOutputStream</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" line="595" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/archive.h" bodystart="594" bodyend="621"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" line="595" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/archive.h" bodystart="594" bodyend="621"/>
     <listofallmembers>
       <member refid="classwx_archive_iterator_1a1c21be4714c9fdfcf5dff748789d66ad" prot="public" virt="non-virtual"><scope>wxArchiveIterator</scope><name>operator*</name></member>
       <member refid="classwx_archive_iterator_1a1ea0a4c8d77e860b229e04d4ca44ca47" prot="public" virt="non-virtual"><scope>wxArchiveIterator</scope><name>operator++</name></member>

@@ -50,6 +50,7 @@
 #include "others.h"
 
 
+
 void php_wxFileSystem_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -58,13 +59,13 @@ void php_wxFileSystem_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 	
-	wxFileSystem_php* object = (wxFileSystem_php*)rsrc->ptr;
+	wxFileSystem_php* object = static_cast<wxFileSystem_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -125,7 +126,6 @@ PHP_METHOD(php_wxFileSystem, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -231,7 +231,8 @@ PHP_METHOD(php_wxFileSystem, URLToFileName)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&url0, &url_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &url0, &url_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &url0, &url_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -239,7 +240,6 @@ PHP_METHOD(php_wxFileSystem, URLToFileName)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -331,7 +331,8 @@ PHP_METHOD(php_wxFileSystem, OpenFile)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|l' (&location0, &location_len0, &flags0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s|l", &location0, &location_len0, &flags0 ) == SUCCESS)
+		char parse_parameters_string[] = "s|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &location0, &location_len0, &flags0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -339,7 +340,6 @@ PHP_METHOD(php_wxFileSystem, OpenFile)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -356,8 +356,8 @@ PHP_METHOD(php_wxFileSystem, OpenFile)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return1->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return1->phpObj != NULL){
+						return_value = value_to_return1->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -389,8 +389,8 @@ PHP_METHOD(php_wxFileSystem, OpenFile)
 					ZVAL_NULL(return_value);
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
-					if(zend_hash_find(Z_OBJPROP_P(value_to_return2->phpObj), _wxResource, sizeof(_wxResource),  (void **)&tmp) == SUCCESS){
-						return_value = *tmp;
+					if(value_to_return2->phpObj != NULL){
+						return_value = value_to_return2->phpObj;
 						return_is_user_initialized = true;
 					}
 					else{
@@ -475,7 +475,8 @@ PHP_METHOD(php_wxFileSystem, HasHandlerForPath)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&location0, &location_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &location0, &location_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &location0, &location_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -483,7 +484,6 @@ PHP_METHOD(php_wxFileSystem, HasHandlerForPath)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -568,7 +568,6 @@ PHP_METHOD(php_wxFileSystem, GetPath)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -658,7 +657,6 @@ PHP_METHOD(php_wxFileSystem, FindNext)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -746,7 +744,8 @@ PHP_METHOD(php_wxFileSystem, FindFirst)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|l' (&wildcard0, &wildcard_len0, &flags0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s|l", &wildcard0, &wildcard_len0, &flags0 ) == SUCCESS)
+		char parse_parameters_string[] = "s|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &wildcard0, &wildcard_len0, &flags0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -754,7 +753,6 @@ PHP_METHOD(php_wxFileSystem, FindFirst)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -863,17 +861,18 @@ PHP_METHOD(php_wxFileSystem, FindFileInPath)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'sss' (&pStr0, &pStr_len0, &path0, &path_len0, &file0, &file_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "sss", &pStr0, &pStr_len0, &path0, &path_len0, &file0, &file_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "sss";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pStr0, &pStr_len0, &path0, &path_len0, &file0, &file_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
 
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "zzz", &pStr0_ref, &dummy, &dummy );
+			char parse_references_string[] = "zzz";
+			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &pStr0_ref, &dummy, &dummy );
 		}
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -961,7 +960,8 @@ PHP_METHOD(php_wxFileSystem, FileNameToURL)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'O' (&filename0, php_wxFileName_entry)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "O", &filename0, php_wxFileName_entry ) == SUCCESS)
+		char parse_parameters_string[] = "O";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filename0, php_wxFileName_entry ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(filename0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(filename0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -972,10 +972,6 @@ PHP_METHOD(php_wxFileSystem, FileNameToURL)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(filename0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(filename0);
 				}
 				else if(Z_TYPE_P(filename0) != IS_NULL)
 				{
@@ -989,7 +985,6 @@ PHP_METHOD(php_wxFileSystem, FileNameToURL)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1078,7 +1073,8 @@ PHP_METHOD(php_wxFileSystem, ChangePathTo)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|b' (&location0, &location_len0, &is_dir0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s|b", &location0, &location_len0, &is_dir0 ) == SUCCESS)
+		char parse_parameters_string[] = "s|b";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &location0, &location_len0, &is_dir0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1086,7 +1082,6 @@ PHP_METHOD(php_wxFileSystem, ChangePathTo)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1178,7 +1173,8 @@ PHP_METHOD(php_wxFileSystem, AddHandler)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 'z' (&handler0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "z", &handler0 ) == SUCCESS)
+		char parse_parameters_string[] = "z";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &handler0 ) == SUCCESS)
 		{
 			if(arguments_received >= 1){
 				if(Z_TYPE_P(handler0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(handler0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
@@ -1189,10 +1185,6 @@ PHP_METHOD(php_wxFileSystem, AddHandler)
 					{
 						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
 					}
-				}
-				else if(Z_TYPE_P(handler0) == IS_LONG)
-				{
-					object_pointer0_0 = Z_LVAL_P(handler0);
 				}
 				else if(Z_TYPE_P(handler0) != IS_NULL)
 				{
@@ -1206,7 +1198,6 @@ PHP_METHOD(php_wxFileSystem, AddHandler)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1228,6 +1219,7 @@ PHP_METHOD(php_wxFileSystem, AddHandler)
 
 		
 }
+
 void php_wxFileSystemHandler_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1236,13 +1228,13 @@ void php_wxFileSystemHandler_destruction_handler(zend_rsrc_list_entry *rsrc TSRM
 	#endif
 	
 	
-	wxFileSystemHandler_php* object = (wxFileSystemHandler_php*)rsrc->ptr;
+	wxFileSystemHandler_php* object = static_cast<wxFileSystemHandler_php*>(rsrc->ptr);
 	
 	if(rsrc->ptr != NULL)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", rsrc->ptr);
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
 		#endif
 		
 		if(object->references.IsUserInitialized())
@@ -1391,7 +1383,8 @@ PHP_METHOD(php_wxFileSystemHandler, FindFirst)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's|l' (&wildcard0, &wildcard_len0, &flags0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s|l", &wildcard0, &wildcard_len0, &flags0 ) == SUCCESS)
+		char parse_parameters_string[] = "s|l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &wildcard0, &wildcard_len0, &flags0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1399,7 +1392,6 @@ PHP_METHOD(php_wxFileSystemHandler, FindFirst)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1506,7 +1498,6 @@ PHP_METHOD(php_wxFileSystemHandler, FindNext)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1593,7 +1584,8 @@ PHP_METHOD(php_wxFileSystemHandler, GetMimeTypeFromExt)
 		php_printf("Parameters received %d\n", arguments_received);
 		php_printf("Parsing parameters with 's' (&location0, &location_len0)\n");
 		#endif
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, "s", &location0, &location_len0 ) == SUCCESS)
+		char parse_parameters_string[] = "s";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &location0, &location_len0 ) == SUCCESS)
 		{
 			overload0_called = true;
 			already_called = true;
@@ -1601,7 +1593,6 @@ PHP_METHOD(php_wxFileSystemHandler, GetMimeTypeFromExt)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)
@@ -1657,7 +1648,7 @@ wxFSFile* wxFileSystemHandler_php::OpenFile(wxFileSystem& fs, const wxString& lo
 	
 	//Parameters for conversion
 	object_init_ex(arguments[0], php_wxFileSystem_entry);
-	add_property_resource(arguments[0], _wxResource, zend_list_insert(&fs, le_wxFileSystem));
+	add_property_resource(arguments[0], _wxResource, zend_list_insert((void*)&fs, le_wxFileSystem));
 	temp_string = (char*)malloc(sizeof(wxChar)*(location.size()+1));
 	strcpy(temp_string, (const char *) location.char_str());
 	ZVAL_STRING(arguments[1], temp_string, 1);
@@ -1685,10 +1676,6 @@ wxFSFile* wxFileSystemHandler_php::OpenFile(wxFileSystem& fs, const wxString& lo
 		{
 			id_to_find = Z_RESVAL_P(*tmp);
 			return_object = zend_list_find(id_to_find, &rsrc_type);
-		}
-		else if(Z_TYPE_P(return_value) == IS_LONG)
-		{
-			return_object = Z_LVAL_P(return_value);
 		}
 		return (wxFSFile*) return_object;
 	}
@@ -1737,7 +1724,6 @@ PHP_METHOD(php_wxFileSystemHandler, __construct)
 	}
 
 		
-	
 	if(overload0_called)
 	{
 		switch(arguments_received)

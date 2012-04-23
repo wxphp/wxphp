@@ -33,11 +33,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" bodystart="21" bodyend="26"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/base64.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/base64.h" bodystart="21" bodyend="26"/>
       </memberdef>
-      <memberdef kind="enum" id="group__group__funcmacro__misc_1gae4d5251432e1a9e6803c0240cc492e18" prot="public" static="no">
-        <name>@25</name>
-        <enumvalue id="group__group__funcmacro__misc_1ggae4d5251432e1a9e6803c0240cc492e18a14018aae4b122e62a6d1337084cd51c0" prot="public">
+      <memberdef kind="enum" id="group__group__funcmacro__misc_1ga77867ab4129f63159b37bca3b652a798" prot="public" static="no">
+        <name>@38</name>
+        <enumvalue id="group__group__funcmacro__misc_1gga77867ab4129f63159b37bca3b652a798a14018aae4b122e62a6d1337084cd51c0" prot="public">
           <name>wxStrip_Mnemonics</name>
           <initializer> 1</initializer>
           <briefdescription>
@@ -45,7 +45,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="group__group__funcmacro__misc_1ggae4d5251432e1a9e6803c0240cc492e18af190d8b16d9fa9cc9c57786be7531d2a" prot="public">
+        <enumvalue id="group__group__funcmacro__misc_1gga77867ab4129f63159b37bca3b652a798af190d8b16d9fa9cc9c57786be7531d2a" prot="public">
           <name>wxStrip_Accel</name>
           <initializer> 2</initializer>
           <briefdescription>
@@ -53,7 +53,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="group__group__funcmacro__misc_1ggae4d5251432e1a9e6803c0240cc492e18a498e6b6ab4541edee4df73d12913692e" prot="public">
+        <enumvalue id="group__group__funcmacro__misc_1gga77867ab4129f63159b37bca3b652a798a498e6b6ab4541edee4df73d12913692e" prot="public">
           <name>wxStrip_All</name>
           <initializer> wxStrip_Mnemonics | wxStrip_Accel</initializer>
           <briefdescription>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="586" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" bodystart="585" bodyend="595"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="589" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" bodystart="588" bodyend="598"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -82,7 +82,7 @@
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="554" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" bodystart="554" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="557" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" bodystart="557" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -143,7 +143,7 @@
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="53"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/base64.h" line="53"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1gaafaeb4b7aef5c4f9795341938cb469ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -179,7 +179,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; 
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="72"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/base64.h" line="72"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga12895467dca7cafd2d3c776e580d4861" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -196,7 +196,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; 
 <para>There is no error return.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="82"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/base64.h" line="82"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga2b4f508809484666dfc7f81cf9073523" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -213,7 +213,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; 
 <para>This can be useful for allocating a buffer to be passed to <ref refid="group__group__funcmacro__misc_1ga97da529725f807059069449cdc0eb6e3" kindref="member">wxBase64Decode()</ref>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="92"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/base64.h" line="92"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga84d7266622d43ce4793a8f0bce865117" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -230,7 +230,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; 
 <para>This can be useful for allocating the buffer passed to <ref refid="group__group__funcmacro__misc_1gae76ac8ba0136d28435a233108cc40bee" kindref="member">wxBase64Encode()</ref>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="101"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/base64.h" line="101"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga97da529725f807059069449cdc0eb6e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -313,7 +313,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; 
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="145"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/base64.h" line="145"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga093152150d5e353cbd9d5499b5d83c9a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -349,7 +349,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; 
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="162"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/base64.h" line="162"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga254a00deb9b405de6f11736937b032b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_memory_buffer" kindref="compound">wxMemoryBuffer</ref></type>
@@ -381,7 +381,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; 
 <para>See the <ref refid="group__group__funcmacro__misc_1ga97da529725f807059069449cdc0eb6e3" kindref="member">wxBase64Decode(void*,size_t,const char*,size_t,wxBase64DecodeMode,size_t*)</ref> overload for more information about the parameters of this function. The difference of this overload is that it allocates a buffer of necessary size on its own and returns it, freeing you from the need to do it manually. Because of this, it is simpler to use and is recommended for normal use.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="178"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/base64.h" line="178"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga57c3f3ee5b6ba0e9e2fcf5008634a32b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_memory_buffer" kindref="compound">wxMemoryBuffer</ref></type>
@@ -408,7 +408,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; 
 <para>See the <ref refid="group__group__funcmacro__misc_1ga97da529725f807059069449cdc0eb6e3" kindref="member">wxBase64Decode(void*,size_t,const char*,size_t,wxBase64DecodeMode,size_t*)</ref> overload for more information about the parameters of this function.</para><para>This overload takes as input a <ref refid="classwx_string" kindref="compound">wxString</ref> and returns the internally-allocated memory as a <ref refid="classwx_memory_buffer" kindref="compound">wxMemoryBuffer</ref>, containing the Base64-decoded data.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/base64.h" line="193"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/base64.h" line="193"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga598ae7504c6436af325490b41f4b5e90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -430,7 +430,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/base64.h&gt; 
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/colour.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="308"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="308"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga0adf8026ea8ed126420a2e7ef9edc678" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -448,7 +448,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/colour.h&gt; 
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/colour.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colour.h" line="317"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colour.h" line="317"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1gab8eb5d04fa3c1c12ea4b134b91481772" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -462,7 +462,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/colour.h&gt; 
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/dde.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="337"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="337"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga0327fbafa4fedceade1bd8d7faf015f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -476,7 +476,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/dde.h&gt; </v
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/dde.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="349"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="349"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1gac97f2b9872d977f30368231c75dd1059" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -502,7 +502,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/dde.h&gt; </v
 </programlisting></para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1498"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" line="1513"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga2a54307a1463c69c594b55e9d8d9987e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -529,7 +529,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/dde.h&gt; </v
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1518"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" line="1533"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1gab9080ca47d718deecb196aa10fa3b8d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -559,7 +559,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/defs.h&gt; </
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1671"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" line="1686"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga14782857e2432e5836ceb510bc72211c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -580,7 +580,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/defs.h&gt; </
 <para>It must be used to preserve the value of a <computeroutput>va_list</computeroutput> object if you need to use it after passing it to another function because it can be modified by the latter.</para><para>As with <computeroutput>va_start</computeroutput>, each call to <computeroutput>wxVaCopy</computeroutput> must have a matching <computeroutput>va_end</computeroutput>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1684"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" line="1699"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1gaa7f39827f935fb7ba342a35dc1fb45dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -602,7 +602,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/defs.h&gt; </
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/font.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="1100"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/font.h" line="1100"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga73a6a41930ee5544077c6dd4df77ea06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -620,7 +620,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/font.h&gt; </
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/font.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/font.h" line="1109"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/font.h" line="1109"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga8d211f75f18b9dfa770f93a1518e78da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxLongLong_t</type>
@@ -640,7 +640,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/font.h&gt; </
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/longlong.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="242"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="242"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga61a8fc8ea56fd6333d804e789af35ad4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxLongLong_t</type>
@@ -660,7 +660,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/longlong.h&gt
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/longlong.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="258"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="258"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga24290da88c13d315efe19c0ed480477f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -702,7 +702,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/longlong.h&gt
 <para>This function is overloaded to take several parameters up to some implementation-defined (but relatively low) limit.</para><para>The <emphasis>func</emphasis> should be a functor taking parameters of the types P1, ..., PN, i.e. the expression <computeroutput>func</computeroutput>(p1, ..., pN) should be valid. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" line="54"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" line="54"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1gafe92f9f590110183182e5b65433ad2a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -739,7 +739,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/longlong.h&gt
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/stockitem.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stockitem.h" line="81"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stockitem.h" line="81"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1gaceace1c71d01adb27b30a068015836e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="power_8h_1a1222ff013d6af054701028e127405bbd" kindref="member">wxBatteryState</ref></type>
@@ -752,7 +752,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/stockitem.h&g
 <para><computeroutput>wxBATTERY_UNKNOWN_STATE</computeroutput> is also the default on platforms where this feature is not implemented (currently everywhere but MS Windows).</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="343"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="343"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1gac7a20e813e3d3259f98e9a54440cf633" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="power_8h_1ae3f5c432e430cf701d4cef6abf893632" kindref="member">wxPowerType</ref></type>
@@ -765,7 +765,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/stockitem.h&g
 <para><computeroutput>wxPOWER_UNKNOWN</computeroutput> is also the default on platforms where this feature is not implemented (currently everywhere but MS Windows).</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="353"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="353"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1gabb98f8c6c7df627b3c4a5246b452a5b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -779,7 +779,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/stockitem.h&g
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="362"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="362"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga82a18ac43492bfb375604c41b71ce84f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -796,7 +796,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>For togglable keys (Caps Lock, Num Lock and Scroll Lock), returns true if the key is toggled such that its LED indicator is lit. There is currently no way to test whether togglable keys are up or down.</para><para>Even though there are virtual key codes defined for mouse buttons, they cannot be used with this function currently.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="376"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="376"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga00fef3cd1a110189e737ad7bf948a3d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
@@ -809,7 +809,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="383"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="383"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga6fb42677c51d509690e7062b9dadaa25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_mouse_state" kindref="compound">wxMouseState</ref></type>
@@ -822,7 +822,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>Returns a <ref refid="classwx_mouse_state" kindref="compound">wxMouseState</ref> instance that contains the current position of the mouse pointer in screen coordinates, as well as boolean values indicating the up/down status of the mouse buttons and the modifier keys.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="393"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="393"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga26ae851bd6d2d8df09afedad1e8e5d6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -840,7 +840,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>It is used by <ref refid="group__group__funcmacro__appinitterm_1ga25abb4004fac0bcc0b937d93657c8cba" kindref="member">wxSafeYield()</ref>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="401"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="401"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga13f5ea19998bb9fd38ce07d61a6a2e1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -854,10 +854,10 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
         <briefdescription>
 <para>Find the deepest window at the given mouse position in screen coordinates, returning the window if found, or NULL if not. </para>        </briefdescription>
         <detaileddescription>
-<para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+<para>This function takes child windows at the given position into account even if they are disabled. The hidden children are however skipped by it.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="409"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="412"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga0736ab488cec8607a031567059dfe6f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -876,10 +876,10 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000059"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Replaced by <ref refid="classwx_window_1ab8eb148fffae109e0fac86e88d569670" kindref="member">wxWindow::FindWindowByLabel()</ref>.</para></xrefdescription></xrefsect></para><para>Find a window by its label. Depending on the type of window, the label may be a window title or panel item label. If <emphasis>parent</emphasis> is NULL, the search will start from all top-level frames and dialog boxes; if non-NULL, the search will be limited to the given window hierarchy. The search is recursive in both cases.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000058"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Replaced by <ref refid="classwx_window_1ab8eb148fffae109e0fac86e88d569670" kindref="member">wxWindow::FindWindowByLabel()</ref>.</para></xrefdescription></xrefsect></para><para>Find a window by its label. Depending on the type of window, the label may be a window title or panel item label. If <emphasis>parent</emphasis> is NULL, the search will start from all top-level frames and dialog boxes; if non-NULL, the search will be limited to the given window hierarchy. The search is recursive in both cases.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="423"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="426"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga3b60179234c123ea62e2a1a598397150" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -898,10 +898,10 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000060"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Replaced by <ref refid="classwx_window_1adbe4eea02f615313c12a2c00557a44c3" kindref="member">wxWindow::FindWindowByName()</ref>.</para></xrefdescription></xrefsect></para><para>Find a window by its name (as given in a window constructor or <emphasis>Create</emphasis> function call). If <emphasis>parent</emphasis> is NULL, the search will start from all top-level frames and dialog boxes; if non-NULL, the search will be limited to the given window hierarchy. The search is recursive in both cases.</para><para>If no such named window is found, <ref refid="group__group__funcmacro__misc_1ga0736ab488cec8607a031567059dfe6f2" kindref="member">wxFindWindowByLabel()</ref> is called.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000059"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Replaced by <ref refid="classwx_window_1adbe4eea02f615313c12a2c00557a44c3" kindref="member">wxWindow::FindWindowByName()</ref>.</para></xrefdescription></xrefsect></para><para>Find a window by its name (as given in a window constructor or <emphasis>Create</emphasis> function call). If <emphasis>parent</emphasis> is NULL, the search will start from all top-level frames and dialog boxes; if non-NULL, the search will be limited to the given window hierarchy. The search is recursive in both cases.</para><para>If no such named window is found, <ref refid="group__group__funcmacro__misc_1ga0736ab488cec8607a031567059dfe6f2" kindref="member">wxFindWindowByLabel()</ref> is called.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="437"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="440"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga5c3705ca3d228c51155fcf22404b739c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -926,7 +926,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="445"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="448"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1gaef162e1ba5d17a839b2f7912424bc822" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -936,10 +936,10 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000061"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Ids generated by it can conflict with the Ids defined by the user code, use <computeroutput>wxID_ANY</computeroutput> to assign ids which are guaranteed to not conflict with the user-defined ids for the controls and menu items you create instead of using this function.</para></xrefdescription></xrefsect></para><para>Generates an integer identifier unique to this run of the program.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000060"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Ids generated by it can conflict with the Ids defined by the user code, use <computeroutput>wxID_ANY</computeroutput> to assign ids which are guaranteed to not conflict with the user-defined ids for the controls and menu items you create instead of using this function.</para></xrefdescription></xrefsect></para><para>Generates an integer identifier unique to this run of the program.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="457"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="460"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga61bb9dcbb5f0a32904c8e290a63f8022" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -956,7 +956,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="465"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="468"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga04038d4c78e4c111d018b8f82b2d66c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -979,7 +979,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="479"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="482"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga3ff36fe489da2a779248b56f283615ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1005,7 +1005,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="513"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="516"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1gaff02a820db63eab038d64508aeeacc19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1028,7 +1028,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 </programlisting></para><para>Where <computeroutput>file.ext</computeroutput> is a file that the resource compiler can find.</para><para>This function is available under Windows only.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="533"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="536"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1gaf617bfe542c74d75f97adeab88fab2e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1042,10 +1042,10 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000062"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Replaced by <ref refid="classwx_window_1a3e44f4a494fc9ef4346c4fba70c8de0c" kindref="member">wxWindow::Close()</ref>.</para></xrefdescription></xrefsect>See the <ref refid="overview_windowdeletion" kindref="compound">window deletion overview</ref>.</para><para>Tells the system to delete the specified object when all other events have been processed. In some environments, it is necessary to use this instead of deleting a frame directly with the delete operator, because some GUIs will still send events to a deleted window.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
+<para><xrefsect id="deprecated_1_deprecated000061"><xreftitle>Deprecated</xreftitle><xrefdescription><para>Replaced by <ref refid="classwx_window_1a3e44f4a494fc9ef4346c4fba70c8de0c" kindref="member">wxWindow::Close()</ref>.</para></xrefdescription></xrefsect>See the <ref refid="overview_windowdeletion" kindref="compound">window deletion overview</ref>.</para><para>Tells the system to delete the specified object when all other events have been processed. In some environments, it is necessary to use this instead of deleting a frame directly with the delete operator, because some GUIs will still send events to a deleted window.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="546"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="549"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1gaaa680fc5a0eb13ed1f9ad56721e1171c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1078,7 +1078,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>This function sorts <emphasis>total_elems</emphasis> objects of size <emphasis>size</emphasis> located at <emphasis>pbase</emphasis>. It uses <emphasis>cmp</emphasis> function for comparing them and passes <emphasis>user_data</emphasis> pointer to the comparison function each time it&apos;s called.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="566"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="569"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga6a5c19411145daf20a1cc6d875dbfe45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1096,7 +1096,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="579"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="582"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga1513748c5eb0df0de6103c5105a18d55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1118,7 +1118,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>By default, the functions strips both the mnemonics character (<computeroutput>&apos;&amp;&apos;</computeroutput>) which is used to indicate a keyboard shortkey, and the accelerators, which are used only in the menu items and are separated from the main text by the <computeroutput>\t</computeroutput> (TAB) character. By using <emphasis>flags</emphasis> of <computeroutput>wxStrip_Mnemonics</computeroutput> or <computeroutput>wxStrip_Accel</computeroutput> to strip only the former or the latter part, respectively.</para><para>Notice that in most cases <ref refid="classwx_menu_item_1af8f7bb0c7ca8808047c3c97b564069ed" kindref="member">wxMenuItem::GetLabelFromText()</ref> or <ref refid="classwx_control_1ad95895ecdd123dff35866db1d2430a76" kindref="member">wxControl::GetLabelText()</ref> can be used instead.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="611"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="614"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga1e2c40f2735a91a6bb283ff3d3e406f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -1135,7 +1135,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/window.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/window.h" line="3472"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/window.h" line="3524"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga01b527f25e52ae16d2c9ee06458b10f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -1148,7 +1148,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/window.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/window.h" line="3480"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/window.h" line="3532"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__misc_1ga3a5f33038df32c170c234a0161cfd702" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -1165,7 +1165,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/window.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/window.h" line="3488"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/window.h" line="3540"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="define">
@@ -1179,7 +1179,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>Unlike when using the preprocessor operator, the arguments undergo macro expansion before being concatenated.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/cpp.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cpp.h" line="19" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cpp.h" bodystart="19" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cpp.h" line="19" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/cpp.h" bodystart="19" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1ga55a96ec0e75df9052a6d442732532425" prot="public" static="no">
         <name>wxCONCAT3</name>
@@ -1192,7 +1192,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cpp.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cpp.h" bodystart="20" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cpp.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/cpp.h" bodystart="20" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1gab617aaa91b86883c3fb4300bb6cc1ba6" prot="public" static="no">
         <name>wxCONCAT4</name>
@@ -1206,7 +1206,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cpp.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cpp.h" bodystart="21" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cpp.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/cpp.h" bodystart="21" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1gab462091b4d23f715085e187a2b458b52" prot="public" static="no">
         <name>wxCONCAT5</name>
@@ -1221,7 +1221,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cpp.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cpp.h" bodystart="22" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cpp.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/cpp.h" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1gadb6119d6bfa157ecd48f7c68dc147296" prot="public" static="no">
         <name>wxSTRINGIZE</name>
@@ -1233,7 +1233,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/cpp.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cpp.h" line="40" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cpp.h" bodystart="40" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cpp.h" line="40" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/cpp.h" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1ga8c83f0b99d9d4ba57f3b54a385765f8a" prot="public" static="no">
         <name>wxSTRINGIZE_T</name>
@@ -1244,7 +1244,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/cpp.h&gt; </v
 <para>This is the Unicode-friendly equivalent of <ref refid="group__group__funcmacro__misc_1gadb6119d6bfa157ecd48f7c68dc147296" kindref="member">wxSTRINGIZE()</ref>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/cpp.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cpp.h" line="49" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cpp.h" bodystart="49" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cpp.h" line="49" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/cpp.h" bodystart="49" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1ga86654cef89e57eebec1025ab73b4bcf3" prot="public" static="no">
         <name>__WXFUNCTION__</name>
@@ -1254,7 +1254,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/cpp.h&gt; </v
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/cpp.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cpp.h" line="58" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cpp.h" bodystart="58" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cpp.h" line="58" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/cpp.h" bodystart="58" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1ga235fb9f070237c2d1e6e275b12a313ee" prot="public" static="no">
         <name>wxDECLARE_NO_ASSIGN_CLASS</name>
@@ -1266,7 +1266,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/cpp.h&gt; </v
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1415" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1415" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" line="1430" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" bodystart="1430" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1ga9ed5b52d604f9eb46c775986ea7ed48c" prot="public" static="no">
         <name>wxDECLARE_NO_COPY_CLASS</name>
@@ -1288,7 +1288,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/cpp.h&gt; </v
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1450" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1450" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" line="1465" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" bodystart="1465" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1gaa12aaa924b3e1eb622d1b5fa920ab650" prot="public" static="no">
         <name>wxDECLARE_NO_COPY_TEMPLATE_CLASS</name>
@@ -1316,7 +1316,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/cpp.h&gt; </v
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1464" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1464" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" line="1479" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" bodystart="1479" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1gab5479598285a610e4565c18d927ca299" prot="public" static="no">
         <name>wxDECLARE_NO_COPY_TEMPLATE_CLASS_2</name>
@@ -1352,7 +1352,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/cpp.h&gt; </v
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1480" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1480" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" line="1495" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" bodystart="1495" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1gae7670c39825278bd22677b42f1589daa" prot="public" static="no">
         <name>wxDEPRECATED</name>
@@ -1368,7 +1368,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/cpp.h&gt; </v
 </programlisting></para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1538" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1538" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" line="1553" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" bodystart="1553" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1ga539e5db26516d824523d77ed599fa063" prot="public" static="no">
         <name>wxDEPRECATED_BUT_USED_INTERNALLY</name>
@@ -1379,7 +1379,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/cpp.h&gt; </v
 <para>It is used with the virtual functions which are called by the library itself -- even if such function is deprecated the library still has to call it to ensure that the existing code overriding it continues to work, but the use of this macro ensures that a deprecation warning will be generated if this function is used from the user code or, in case of Visual C++, even when it is simply overridden.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1554" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1554" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" line="1569" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" bodystart="1569" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1ga541c593a183ed38d6d132dd19fe7bad7" prot="public" static="no">
         <name>wxDEPRECATED_INLINE</name>
@@ -1398,7 +1398,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/cpp.h&gt; </v
 </programlisting></para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1575" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1575" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" line="1590" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" bodystart="1590" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1ga432cb09293293bc49f0b8fc96f2ca050" prot="public" static="no">
         <name>wxDEPRECATED_ACCESSOR</name>
@@ -1421,7 +1421,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/cpp.h&gt; </v
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1598" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1598" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" line="1613" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" bodystart="1613" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1ga51a5d09e22172b45f6f26bdc5233bdd5" prot="public" static="no">
         <name>wxDEPRECATED_BUT_USED_INTERNALLY_INLINE</name>
@@ -1433,7 +1433,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/cpp.h&gt; </v
 <para>This macro should be used for deprecated functions called by the library itself (usually for backwards compatibility reasons) and which are defined inline.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1609" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1609" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" line="1624" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" bodystart="1624" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1ga8d9d8ac2fab72355f168e80b00d15908" prot="public" static="no">
         <name>wxEXPLICIT</name>
@@ -1443,7 +1443,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/cpp.h&gt; </v
 <para>Thus, it can be used even in the code which might have to be compiled with an old compiler without support for this language feature but still take advantage of it when it is available.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1620" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1620" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" line="1635" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" bodystart="1635" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1ga08cfc270b9a263fc5a46929d5f85a569" prot="public" static="no">
         <name>wxSUPPRESS_GCC_PRIVATE_DTOR_WARNING</name>
@@ -1466,7 +1466,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/cpp.h&gt; </v
 </programlisting></para><para>Notice that there should be no semicolon after this macro.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/defs.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" line="1652" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/defs.h" bodystart="1652" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" line="1667" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/defs.h" bodystart="1667" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1gac1474244729505912af04277f1351e28" prot="public" static="no">
         <name>wxDYNLIB_FUNCTION</name>
@@ -1501,7 +1501,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/cpp.h&gt; </v
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/dynlib.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynlib.h" line="256" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dynlib.h" bodystart="256" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dynlib.h" line="256" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dynlib.h" bodystart="256" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1ga6203af2f81f7b2a3dd8aa384426631a8" prot="public" static="no">
         <name>wxLongLongFmtSpec</name>
@@ -1516,7 +1516,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/dynlib.h&gt; 
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/longlong.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="226" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" bodystart="226" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="226" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" bodystart="226" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1gac35c626f7edf136246256edd765dcb48" prot="public" static="no">
         <name>wxON_BLOCK_EXIT</name>
@@ -1531,7 +1531,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/longlong.h&gt
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/scopeguard.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" line="79" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" bodystart="79" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" line="79" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" bodystart="79" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1ga39062f9f9053571c0cccc13d3b0f5069" prot="public" static="no">
         <name>wxON_BLOCK_EXIT0</name>
@@ -1542,7 +1542,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/scopeguard.h&
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" line="80" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" bodystart="80" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" line="80" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" bodystart="80" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1ga5afb56ecc6c60e4e9e59c5944297abe5" prot="public" static="no">
         <name>wxON_BLOCK_EXIT1</name>
@@ -1554,7 +1554,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/scopeguard.h&
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" line="81" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" bodystart="81" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" line="81" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" bodystart="81" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1ga567d271a9fa3684cbbe3a163a60ed911" prot="public" static="no">
         <name>wxON_BLOCK_EXIT2</name>
@@ -1567,7 +1567,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/scopeguard.h&
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" line="82" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" bodystart="82" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" line="82" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" bodystart="82" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1gadd21bc55d59bbc2866bb6ff7f9c11467" prot="public" static="no">
         <name>wxON_BLOCK_EXIT3</name>
@@ -1581,7 +1581,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/scopeguard.h&
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" line="83" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" bodystart="83" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" line="83" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" bodystart="83" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1ga540ef8a7d02d2eb817e930ac83f8963d" prot="public" static="no">
         <name>wxON_BLOCK_EXIT_OBJ</name>
@@ -1594,7 +1594,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/scopeguard.h&
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/scopeguard.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" line="94" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" bodystart="94" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" line="94" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" bodystart="94" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1gaae97c094a796b8e1bc78efbc325a99cb" prot="public" static="no">
         <name>wxON_BLOCK_EXIT_OBJ0</name>
@@ -1606,7 +1606,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/scopeguard.h&
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" line="95" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" bodystart="95" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" line="95" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" bodystart="95" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1ga86ff0ebb48b26dc585e52830652c9ed1" prot="public" static="no">
         <name>wxON_BLOCK_EXIT_OBJ1</name>
@@ -1619,7 +1619,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/scopeguard.h&
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" line="96" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" bodystart="96" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" line="96" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" bodystart="96" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1ga58dff6a81f9ecf96d9d7271401017f21" prot="public" static="no">
         <name>wxON_BLOCK_EXIT_OBJ2</name>
@@ -1633,7 +1633,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/scopeguard.h&
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" line="97" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" bodystart="97" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" line="97" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" bodystart="97" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1ga762ab2b3f681de2a4a6ab5e5db4709ae" prot="public" static="no">
         <name>wxON_BLOCK_EXIT_OBJ3</name>
@@ -1648,7 +1648,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/scopeguard.h&
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" line="98" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" bodystart="98" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" line="98" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" bodystart="98" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1gab6e20c8cff9879e49a6b7580901ee1e0" prot="public" static="no">
         <name>wxON_BLOCK_EXIT_THIS</name>
@@ -1660,7 +1660,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/scopeguard.h&
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/scopeguard.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" line="109" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" bodystart="109" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" line="109" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" bodystart="109" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1ga5e3c89d3ac3eb12dd67858b24a85d7e8" prot="public" static="no">
         <name>wxON_BLOCK_EXIT_THIS0</name>
@@ -1671,7 +1671,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/scopeguard.h&
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" line="110" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" bodystart="110" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" line="110" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" bodystart="110" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1ga45f3a4d43346d93549d684903825f2ad" prot="public" static="no">
         <name>wxON_BLOCK_EXIT_THIS1</name>
@@ -1683,7 +1683,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/scopeguard.h&
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" line="111" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" bodystart="111" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" line="111" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" bodystart="111" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1gaef79a24750acd4dfa1cb490236977930" prot="public" static="no">
         <name>wxON_BLOCK_EXIT_THIS2</name>
@@ -1696,7 +1696,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/scopeguard.h&
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" line="112" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" bodystart="112" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" line="112" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" bodystart="112" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1ga9c3d4e9192f82e082dfe9db562481dca" prot="public" static="no">
         <name>wxON_BLOCK_EXIT_THIS3</name>
@@ -1710,7 +1710,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/scopeguard.h&
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" line="113" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" bodystart="113" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" line="113" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" bodystart="113" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1gae42b17d61096fa9aad54dbf329d44372" prot="public" static="no">
         <name>wxON_BLOCK_EXIT_SET</name>
@@ -1732,7 +1732,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/scopeguard.h&
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/scopeguard.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" line="141" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" bodystart="141" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" line="141" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" bodystart="141" bodyend="-1"/>
       </memberdef>
       <memberdef kind="define" id="group__group__funcmacro__misc_1gabe8231ac62cf9cf4486fe53eec49195a" prot="public" static="no">
         <name>wxON_BLOCK_EXIT_NULL</name>
@@ -1743,7 +1743,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/scopeguard.h&
 <para>It must be used instead of <ref refid="group__group__funcmacro__misc_1gae42b17d61096fa9aad54dbf329d44372" kindref="member">wxON_BLOCK_EXIT_SET()</ref> when the value being set is <computeroutput>NULL</computeroutput>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/scopeguard.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" line="151" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/scopeguard.h" bodystart="151" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" line="151" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/scopeguard.h" bodystart="151" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

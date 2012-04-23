@@ -36,7 +36,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1643"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="1643"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -45,49 +45,49 @@
 <para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxadv" kindref="member">wxAdvanced</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dvc" kindref="compound">wxDataViewCtrl Related Classes</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5399">
+      <node id="5494">
         <label>wxDataViewRenderer</label>
         <link refid="classwx_data_view_renderer"/>
-        <childnode refid="5400" relation="public-inheritance">
+        <childnode refid="5495" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5400">
+      <node id="5495">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5398">
+      <node id="5493">
         <label>wxDataViewProgressRenderer</label>
         <link refid="classwx_data_view_progress_renderer"/>
-        <childnode refid="5399" relation="public-inheritance">
+        <childnode refid="5494" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5402">
+      <node id="5497">
         <label>wxDataViewRenderer</label>
         <link refid="classwx_data_view_renderer"/>
-        <childnode refid="5403" relation="public-inheritance">
+        <childnode refid="5498" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5403">
+      <node id="5498">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5404" relation="usage">
+        <childnode refid="5499" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5401">
+      <node id="5496">
         <label>wxDataViewProgressRenderer</label>
         <link refid="classwx_data_view_progress_renderer"/>
-        <childnode refid="5402" relation="public-inheritance">
+        <childnode refid="5497" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5404">
+      <node id="5499">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" line="1635" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dataview.h" bodystart="1634" bodyend="1644"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" line="1635" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dataview.h" bodystart="1634" bodyend="1644"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxDataViewProgressRenderer</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxDataViewProgressRenderer</scope><name>CloneRefData</name></member>

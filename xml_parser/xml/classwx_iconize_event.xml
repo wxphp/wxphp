@@ -26,7 +26,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3995"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3998"/>
       </memberdef>
       <memberdef kind="function" id="classwx_iconize_event_1a41d742b984da007679890ebca271310c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -39,7 +39,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4001"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4004"/>
       </memberdef>
       <memberdef kind="function" id="classwx_iconize_event_1a69bcfddf03e50de7c28bb2273eb95b64" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -52,7 +52,7 @@
 <para><xrefsect id="deprecated_1_deprecated000012"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This function is deprecated in favour of <ref refid="classwx_iconize_event_1a41d742b984da007679890ebca271310c" kindref="member">IsIconized()</ref>.</para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="4006"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="4009"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -66,49 +66,49 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="overview_events" kindref="compound">Events and Event Handling</ref>, <ref refid="classwx_top_level_window_1ae461559192e33ef111c3f147999a26bf" kindref="member">wxTopLevelWindow::Iconize</ref>, <ref refid="classwx_top_level_window_1a33ceb758bdf94d5e30d39180bb4cb284" kindref="member">wxTopLevelWindow::IsIconized</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7226">
+      <node id="7413">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7224">
+      <node id="7411">
         <label>wxIconizeEvent</label>
         <link refid="classwx_iconize_event"/>
-        <childnode refid="7225" relation="public-inheritance">
+        <childnode refid="7412" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7225">
+      <node id="7412">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="7226" relation="public-inheritance">
+        <childnode refid="7413" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7229">
+      <node id="7416">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7230" relation="usage">
+        <childnode refid="7417" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7227">
+      <node id="7414">
         <label>wxIconizeEvent</label>
         <link refid="classwx_iconize_event"/>
-        <childnode refid="7228" relation="public-inheritance">
+        <childnode refid="7415" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7228">
+      <node id="7415">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="7229" relation="public-inheritance">
+        <childnode refid="7416" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7230">
+      <node id="7417">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="3990" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="3989" bodyend="4007"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="3993" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="3992" bodyend="4010"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxIconizeEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxIconizeEvent</scope><name>Clone</name></member>

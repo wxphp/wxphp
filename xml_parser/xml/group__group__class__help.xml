@@ -9,6 +9,7 @@
     <innerclass refid="classwx_context_help_button" prot="public">wxContextHelpButton</innerclass>
     <innerclass refid="classwx_simple_help_provider" prot="public">wxSimpleHelpProvider</innerclass>
     <innerclass refid="classwx_ext_help_controller" prot="public">wxExtHelpController</innerclass>
+    <innerclass refid="classwx_help_controller_base" prot="public">wxHelpControllerBase</innerclass>
     <innerclass refid="classwx_help_controller" prot="public">wxHelpController</innerclass>
     <innerclass refid="classwx_html_help_controller" prot="public">wxHtmlHelpController</innerclass>
     <innerclass refid="classwx_html_modal_help" prot="public">wxHtmlModalHelp</innerclass>

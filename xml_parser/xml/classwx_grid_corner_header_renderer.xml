@@ -54,7 +54,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="949"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="949"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -64,48 +64,48 @@
 <simplesect kind="since"><para>2.9.1 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6764">
+      <node id="6934">
         <label>wxGridHeaderLabelsRenderer</label>
         <link refid="classwx_grid_header_labels_renderer"/>
-        <childnode refid="6762" relation="public-inheritance">
+        <childnode refid="6932" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6762">
+      <node id="6932">
         <label>wxGridCornerHeaderRenderer</label>
         <link refid="classwx_grid_corner_header_renderer"/>
       </node>
-      <node id="6763">
+      <node id="6933">
         <label>wxGridCornerHeaderRendererDefault</label>
         <link refid="classwx_grid_corner_header_renderer_default"/>
-        <childnode refid="6762" relation="public-inheritance">
+        <childnode refid="6932" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6765">
+      <node id="6935">
         <label>wxGridColumnHeaderRenderer</label>
         <link refid="classwx_grid_column_header_renderer"/>
-        <childnode refid="6764" relation="public-inheritance">
+        <childnode refid="6934" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6767">
+      <node id="6937">
         <label>wxGridRowHeaderRenderer</label>
         <link refid="classwx_grid_row_header_renderer"/>
-        <childnode refid="6764" relation="public-inheritance">
+        <childnode refid="6934" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6768">
+      <node id="6938">
         <label>wxGridRowHeaderRendererDefault</label>
         <link refid="classwx_grid_row_header_renderer_default"/>
-        <childnode refid="6767" relation="public-inheritance">
+        <childnode refid="6937" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6766">
+      <node id="6936">
         <label>wxGridColumnHeaderRendererDefault</label>
         <link refid="classwx_grid_column_header_renderer_default"/>
-        <childnode refid="6765" relation="public-inheritance">
+        <childnode refid="6935" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" line="928" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/grid.h" bodystart="927" bodyend="950"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" line="928" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/grid.h" bodystart="927" bodyend="950"/>
     <listofallmembers>
       <member refid="classwx_grid_corner_header_renderer_1ae645864cfd4fe4be47522b2151ee2e45" prot="public" virt="pure-virtual"><scope>wxGridCornerHeaderRenderer</scope><name>DrawBorder</name></member>
     </listofallmembers>

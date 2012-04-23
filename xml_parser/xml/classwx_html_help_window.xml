@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpwnd.h" line="39"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpwnd.h" line="39"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_help_window_1a6680c6bace4d6c0ef3f17d55ce8ceafb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -67,7 +67,7 @@
 <para>For the values of <emphasis>helpStyle</emphasis>, please see the documentation for <ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpwnd.h" line="52"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpwnd.h" line="52"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_help_window_1acd8ae117f58797802f1f7568c56568de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -108,7 +108,7 @@
 <para>See <ref refid="classwx_html_help_window_1a96d90a254e3ad02bf134e108c4656d67" kindref="member">the constructor</ref> for a description of the parameters. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpwnd.h" line="61"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpwnd.h" line="61"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_help_window_1a413d870f3de08f7fd5c2a79721fc3eda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -127,7 +127,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpwnd.h" line="72"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpwnd.h" line="72"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_help_window_1a454309b31fa1f0124a3a7f9c56425d14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -144,7 +144,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpwnd.h" line="80"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpwnd.h" line="80"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_help_window_1aa403995f7cace5a6d5a39404f0018c3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -157,7 +157,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpwnd.h" line="85"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpwnd.h" line="85"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_help_window_1ac96f89f4b976c4958115493a71167893" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -170,7 +170,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpwnd.h" line="90"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpwnd.h" line="90"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_help_window_1a89179a3c6e7c5b7a8c9f0ba7dd87b79f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_html_help_data" kindref="compound">wxHtmlHelpData</ref> *</type>
@@ -183,7 +183,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpwnd.h" line="96"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpwnd.h" line="96"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_help_window_1ae8be7fbc1a5b5d0bb23008a181ab4c9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -195,7 +195,7 @@
           <declname>keyword</declname>
         </param>
         <param>
-          <type>wxHelpSearchMode</type>
+          <type><ref refid="help_8h_1a6545e1763e46507e94ca603a9b75ead9" kindref="member">wxHelpSearchMode</ref></type>
           <declname>mode</declname>
           <defval>wxHELP_SEARCH_ALL</defval>
         </param>
@@ -205,7 +205,7 @@
 <para>Optionally it searches through the index (mode = <computeroutput>wxHELP_SEARCH_INDEX</computeroutput>), default the content (mode = <computeroutput>wxHELP_SEARCH_ALL</computeroutput>). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpwnd.h" line="103"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpwnd.h" line="103"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_help_window_1ac6aea76ccecc25ec4ba91cdc31c1a830" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -228,7 +228,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpwnd.h" line="111"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpwnd.h" line="111"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_help_window_1ab511f9f0cbb96b77d8231fd066805c6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -250,7 +250,7 @@
 <para>It is recommended that you use <ref refid="classwx_html_help_controller_1a9b7e458493b103a45539aeb379f0ef40" kindref="member">wxHtmlHelpController::UseConfig</ref> instead. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpwnd.h" line="118"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpwnd.h" line="118"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_help_window_1ace0635e5da464e5aea047d409bbd759b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -273,7 +273,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpwnd.h" line="126"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpwnd.h" line="126"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_help_window_1a2f8117dccdd9b8b61ceaf4174f67c97a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -286,7 +286,7 @@
 <para>This is necessary if a new book was added. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpwnd.h" line="131"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpwnd.h" line="131"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -301,7 +301,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpwnd.h" line="138"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpwnd.h" line="138"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_help_window_1a0fb3852dc32914ab9b9d155ab11f0988" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -322,7 +322,7 @@
 <para><emphasis>toolBar</emphasis> is a pointer to the toolbar and <emphasis>style</emphasis> is the style flag as passed to the <ref refid="classwx_html_help_window_1acd8ae117f58797802f1f7568c56568de" kindref="member">Create()</ref> method.</para><para><ref refid="classwx_tool_bar_1abb31ce337a2d3c1e30e8e3748905ecbf" kindref="member">wxToolBar::Realize</ref> is called immediately after returning from this function. See <computeroutput>samples/html/helpview</computeroutput> for an example. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpwnd.h" line="148"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpwnd.h" line="148"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_help_window_1ac780aa3aa6e6be5962d3b92f4f3abfa7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -335,7 +335,7 @@
 <para>(May take some time.) </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpwnd.h" line="153"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpwnd.h" line="153"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_help_window_1a47218e2661b7b6a7d77a658acbbcfd38" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -348,7 +348,7 @@
 <para>(May take some time.) </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpwnd.h" line="158"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpwnd.h" line="158"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -367,73 +367,73 @@
 </programlisting></para><para>You should pass the style wxHF_EMBEDDED to the style parameter of <ref refid="classwx_html_help_controller" kindref="compound">wxHtmlHelpController</ref> to allow the embedded window to be destroyed independently of the help controller.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__help" kindref="compound">Help</ref>, <ref refid="group__group__class__html" kindref="compound">HTML</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7055">
+      <node id="7242">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7054">
+      <node id="7241">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7055" relation="public-inheritance">
+        <childnode refid="7242" relation="public-inheritance">
         </childnode>
-        <childnode refid="7056" relation="public-inheritance">
+        <childnode refid="7243" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7056">
+      <node id="7243">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7053">
+      <node id="7240">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7054" relation="public-inheritance">
+        <childnode refid="7241" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7052">
+      <node id="7239">
         <label>wxHtmlHelpWindow</label>
         <link refid="classwx_html_help_window"/>
-        <childnode refid="7053" relation="public-inheritance">
+        <childnode refid="7240" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7060">
+      <node id="7247">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7061" relation="usage">
+        <childnode refid="7248" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7059">
+      <node id="7246">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7060" relation="public-inheritance">
+        <childnode refid="7247" relation="public-inheritance">
         </childnode>
-        <childnode refid="7062" relation="public-inheritance">
+        <childnode refid="7249" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7062">
+      <node id="7249">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7058">
+      <node id="7245">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7059" relation="public-inheritance">
+        <childnode refid="7246" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7057">
+      <node id="7244">
         <label>wxHtmlHelpWindow</label>
         <link refid="classwx_html_help_window"/>
-        <childnode refid="7058" relation="public-inheritance">
+        <childnode refid="7245" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7061">
+      <node id="7248">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpwnd.h" line="37" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpwnd.h" bodystart="36" bodyend="159"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpwnd.h" line="37" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpwnd.h" bodystart="36" bodyend="159"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxHtmlHelpWindow</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxHtmlHelpWindow</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -601,6 +601,7 @@
       <member refid="classwx_window_1aa90a260c0a835a133043460b7d0024a8" prot="public" virt="virtual"><scope>wxHtmlHelpWindow</scope><name>InitDialog</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxHtmlHelpWindow</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxHtmlHelpWindow</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxHtmlHelpWindow</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxHtmlHelpWindow</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxHtmlHelpWindow</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxHtmlHelpWindow</scope><name>IsExposed</name></member>
@@ -616,6 +617,7 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxHtmlHelpWindow</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxHtmlHelpWindow</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxHtmlHelpWindow</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxHtmlHelpWindow</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxHtmlHelpWindow</scope><name>IsUnlinked</name></member>
       <member refid="classwx_html_help_window_1ae8be7fbc1a5b5d0bb23008a181ab4c9b" prot="public" virt="non-virtual"><scope>wxHtmlHelpWindow</scope><name>KeywordSearch</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxHtmlHelpWindow</scope><name>Layout</name></member>
@@ -623,7 +625,6 @@
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxHtmlHelpWindow</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxHtmlHelpWindow</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxHtmlHelpWindow</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxHtmlHelpWindow</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxHtmlHelpWindow</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxHtmlHelpWindow</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxHtmlHelpWindow</scope><name>MoveAfterInTabOrder</name></member>
@@ -743,7 +744,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxHtmlHelpWindow</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxHtmlHelpWindow</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxHtmlHelpWindow</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxHtmlHelpWindow</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxHtmlHelpWindow</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxHtmlHelpWindow</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxHtmlHelpWindow</scope><name>Unlink</name></member>

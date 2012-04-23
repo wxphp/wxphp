@@ -5,9 +5,9 @@
     <title>Process Control</title>
     <innerclass refid="structwx_execute_env" prot="public">wxExecuteEnv</innerclass>
       <sectiondef kind="enum">
-      <memberdef kind="enum" id="group__group__funcmacro__procctrl_1ga7ff5f2dff38e7639981794c43dc9167b" prot="public" static="no">
-        <name>@26</name>
-        <enumvalue id="group__group__funcmacro__procctrl_1gga7ff5f2dff38e7639981794c43dc9167ba457bddfa2a7ce4927358680893910cc8" prot="public">
+      <memberdef kind="enum" id="group__group__funcmacro__procctrl_1ga16685eea158879e41b101ca3634de462" prot="public" static="no">
+        <name>@39</name>
+        <enumvalue id="group__group__funcmacro__procctrl_1gga16685eea158879e41b101ca3634de462a457bddfa2a7ce4927358680893910cc8" prot="public">
           <name>wxEXEC_ASYNC</name>
           <initializer> 0</initializer>
           <briefdescription>
@@ -15,7 +15,7 @@
           <detaileddescription>
 <para>Notice that, due to its value, this is the default. </para>          </detaileddescription>
         </enumvalue>
-        <enumvalue id="group__group__funcmacro__procctrl_1gga7ff5f2dff38e7639981794c43dc9167ba412f75e022e82e7d8415109a6712be36" prot="public">
+        <enumvalue id="group__group__funcmacro__procctrl_1gga16685eea158879e41b101ca3634de462a412f75e022e82e7d8415109a6712be36" prot="public">
           <name>wxEXEC_SYNC</name>
           <initializer> 1</initializer>
           <briefdescription>
@@ -23,7 +23,7 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="group__group__funcmacro__procctrl_1gga7ff5f2dff38e7639981794c43dc9167ba433c517e46d1dd61a5dda1ffeb750552" prot="public">
+        <enumvalue id="group__group__funcmacro__procctrl_1gga16685eea158879e41b101ca3634de462a433c517e46d1dd61a5dda1ffeb750552" prot="public">
           <name>wxEXEC_SHOW_CONSOLE</name>
           <initializer> 2</initializer>
           <briefdescription>
@@ -31,7 +31,7 @@
           <detaileddescription>
 <para>The child console is hidden by default if the child IO is redirected, this flag allows to change this and show it nevertheless.</para><para>This flag is ignored under the other platforms. </para>          </detaileddescription>
         </enumvalue>
-        <enumvalue id="group__group__funcmacro__procctrl_1gga7ff5f2dff38e7639981794c43dc9167bafd7547e6ac65800275cdffc7be65fd74" prot="public">
+        <enumvalue id="group__group__funcmacro__procctrl_1gga16685eea158879e41b101ca3634de462afd7547e6ac65800275cdffc7be65fd74" prot="public">
           <name>wxEXEC_MAKE_GROUP_LEADER</name>
           <initializer> 4</initializer>
           <briefdescription>
@@ -39,23 +39,23 @@
           <detaileddescription>
 <para>Under Unix, if the process is the group leader then passing wxKILL_CHILDREN to <ref refid="group__group__funcmacro__procctrl_1gae3a7de5a29e70c77463dd1bc38fb98cf" kindref="member">wxKill()</ref> kills all children as well as pid.</para><para>Under MSW, applies only to console applications and is only supported under NT family (i.e. not under Windows 9x). It corresponds to the native <computeroutput>CREATE_NEW_PROCESS_GROUP</computeroutput> and, in particular, ensures that Ctrl-Break signals will be sent to all children of this process as well to the process itself. Support for this flag under MSW was added in version 2.9.4 of wxWidgets. </para>          </detaileddescription>
         </enumvalue>
-        <enumvalue id="group__group__funcmacro__procctrl_1gga7ff5f2dff38e7639981794c43dc9167ba8d51ac2386c10f6f5eb7c7a0704addb1" prot="public">
+        <enumvalue id="group__group__funcmacro__procctrl_1gga16685eea158879e41b101ca3634de462a8d51ac2386c10f6f5eb7c7a0704addb1" prot="public">
           <name>wxEXEC_NODISABLE</name>
           <initializer> 8</initializer>
           <briefdescription>
 <para>Don&apos;t disable the program UI while running the child synchronously. </para>          </briefdescription>
           <detaileddescription>
-<para>By default synchronous execution disables all program windows to avoid that the user interacts with the program while the child process is running, you can use this flag to prevent this from happening.</para><para>This flag can only be used with <ref refid="group__group__funcmacro__procctrl_1gga7ff5f2dff38e7639981794c43dc9167ba412f75e022e82e7d8415109a6712be36" kindref="member">wxEXEC_SYNC</ref>. </para>          </detaileddescription>
+<para>By default synchronous execution disables all program windows to avoid that the user interacts with the program while the child process is running, you can use this flag to prevent this from happening.</para><para>This flag can only be used with <ref refid="group__group__funcmacro__procctrl_1gga16685eea158879e41b101ca3634de462a412f75e022e82e7d8415109a6712be36" kindref="member">wxEXEC_SYNC</ref>. </para>          </detaileddescription>
         </enumvalue>
-        <enumvalue id="group__group__funcmacro__procctrl_1gga7ff5f2dff38e7639981794c43dc9167ba00bae6530ff099a5ead1c80f81d5a5c9" prot="public">
+        <enumvalue id="group__group__funcmacro__procctrl_1gga16685eea158879e41b101ca3634de462a00bae6530ff099a5ead1c80f81d5a5c9" prot="public">
           <name>wxEXEC_NOEVENTS</name>
           <initializer> 16</initializer>
           <briefdescription>
 <para>Don&apos;t dispatch events while the child process is executed. </para>          </briefdescription>
           <detaileddescription>
-<para>By default, the event loop is run while waiting for synchronous execution to complete and this flag can be used to simply block the main process until the child process finishes</para><para>This flag can only be used with <ref refid="group__group__funcmacro__procctrl_1gga7ff5f2dff38e7639981794c43dc9167ba412f75e022e82e7d8415109a6712be36" kindref="member">wxEXEC_SYNC</ref>. </para>          </detaileddescription>
+<para>By default, the event loop is run while waiting for synchronous execution to complete and this flag can be used to simply block the main process until the child process finishes</para><para>This flag can only be used with <ref refid="group__group__funcmacro__procctrl_1gga16685eea158879e41b101ca3634de462a412f75e022e82e7d8415109a6712be36" kindref="member">wxEXEC_SYNC</ref>. </para>          </detaileddescription>
         </enumvalue>
-        <enumvalue id="group__group__funcmacro__procctrl_1gga7ff5f2dff38e7639981794c43dc9167ba6eb92c81a5e49ef172b9d74528be55a0" prot="public">
+        <enumvalue id="group__group__funcmacro__procctrl_1gga16685eea158879e41b101ca3634de462a6eb92c81a5e49ef172b9d74528be55a0" prot="public">
           <name>wxEXEC_HIDE_CONSOLE</name>
           <initializer> 32</initializer>
           <briefdescription>
@@ -63,7 +63,7 @@
           <detaileddescription>
 <para>Under MSW, hide the console of the child process if it has one, even if its IO is not redirected.</para><para>This flag is ignored under the other platforms. </para>          </detaileddescription>
         </enumvalue>
-        <enumvalue id="group__group__funcmacro__procctrl_1gga7ff5f2dff38e7639981794c43dc9167ba81dbb296e5efdd73668a1570e7af5716" prot="public">
+        <enumvalue id="group__group__funcmacro__procctrl_1gga16685eea158879e41b101ca3634de462a81dbb296e5efdd73668a1570e7af5716" prot="public">
           <name>wxEXEC_BLOCK</name>
           <initializer> wxEXEC_SYNC | wxEXEC_NOEVENTS</initializer>
           <briefdescription>
@@ -77,7 +77,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="894" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" bodystart="893" bodyend="968"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="897" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" bodystart="896" bodyend="971"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -92,7 +92,7 @@
 <para>Should only be used in an emergency: normally the top-level frame should be deleted (after deleting all other frames) to terminate the application. See <ref refid="classwx_close_event" kindref="compound">wxCloseEvent</ref> and <ref refid="classwx_app" kindref="compound">wxApp</ref>.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/app.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/app.h" line="1079"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/app.h" line="1068"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__procctrl_1gaa276e9e676e26bafeec3141b73399b33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -121,7 +121,7 @@
         <briefdescription>
 <para>Executes another program in Unix or Windows. </para>        </briefdescription>
         <detaileddescription>
-<para>In the overloaded versions of this function, if <emphasis>flags</emphasis> parameter contains <computeroutput>wxEXEC_ASYNC</computeroutput> flag (the default), flow of control immediately returns. If it contains <computeroutput>wxEXEC_SYNC</computeroutput>, the current application waits until the other program has terminated.</para><para>In the case of synchronous execution, the return value is the exit code of the process (which terminates by the moment the function returns) and will be -1 if the process couldn&apos;t be started and typically 0 if the process terminated successfully. Also, while waiting for the process to terminate, <ref refid="group__group__funcmacro__procctrl_1gaa276e9e676e26bafeec3141b73399b33" kindref="member">wxExecute()</ref> will call <ref refid="group__group__funcmacro__appinitterm_1gac386c89a04e364afc07edce6d848c27a" kindref="member">wxYield()</ref>. Because of this, by default this function disables all application windows to avoid unexpected reentrancies which could result from the users interaction with the program while the child process is running. If you are sure that it is safe to not disable the program windows, you may pass <computeroutput>wxEXEC_NODISABLE</computeroutput> flag to prevent this automatic disabling from happening.</para><para>For asynchronous execution, however, the return value is the process id and zero value indicates that the command could not be executed. As an added complication, the return value of -1 in this case indicates that we didn&apos;t launch a new process, but connected to the running one (this can only happen when using DDE under Windows for command execution). In particular, in this case only, the calling code will not get the notification about process termination.</para><para>If <emphasis>callback</emphasis> isn&apos;t NULL and if execution is asynchronous, <ref refid="classwx_process_1aa378b7e705c9191431cad51a81581836" kindref="member">wxProcess::OnTerminate()</ref> will be called when the process finishes. Specifying this parameter also allows you to redirect the standard input and/or output of the process being launched by calling <ref refid="classwx_process_1a9d1fc94d98e373c26dbb128516c2c348" kindref="member">wxProcess::Redirect()</ref>.</para><para>Under Windows, when launching a console process its console is shown by default but hidden if its IO is redirected. Both of these default behaviours may be overridden: if <ref refid="group__group__funcmacro__procctrl_1gga7ff5f2dff38e7639981794c43dc9167ba6eb92c81a5e49ef172b9d74528be55a0" kindref="member">wxEXEC_HIDE_CONSOLE</ref> is specified, the console will never be shown. If <ref refid="group__group__funcmacro__procctrl_1gga7ff5f2dff38e7639981794c43dc9167ba433c517e46d1dd61a5dda1ffeb750552" kindref="member">wxEXEC_SHOW_CONSOLE</ref> is used, the console will be shown even if the child process IO is redirected. Neither of these flags affect non-console Windows applications or does anything under the other systems.</para><para>Under Unix the flag <computeroutput>wxEXEC_MAKE_GROUP_LEADER</computeroutput> may be used to ensure that the new process is a group leader (this will create a new session if needed). Calling <ref refid="group__group__funcmacro__procctrl_1gae3a7de5a29e70c77463dd1bc38fb98cf" kindref="member">wxKill()</ref> passing wxKILL_CHILDREN will kill this process as well as all of its children (except those which have started their own session). Under MSW, this flag can be used with console processes only and corresponds to the native <computeroutput>CREATE_NEW_PROCESS_GROUP</computeroutput> flag.</para><para>The <computeroutput>wxEXEC_NOEVENTS</computeroutput> flag prevents processing of any events from taking place while the child process is running. It should be only used for very short-lived processes as otherwise the application windows risk becoming unresponsive from the users point of view. As this flag only makes sense with <computeroutput>wxEXEC_SYNC</computeroutput>, <computeroutput>wxEXEC_BLOCK</computeroutput> equal to the sum of both of these flags is provided as a convenience.</para><para><simplesect kind="note"><para>Currently <ref refid="group__group__funcmacro__procctrl_1gaa276e9e676e26bafeec3141b73399b33" kindref="member">wxExecute()</ref> can only be used from the main thread, calling this function from another thread will result in an assert failure in debug build and won&apos;t work.</para></simplesect>
+<para>In the overloaded versions of this function, if <emphasis>flags</emphasis> parameter contains <computeroutput>wxEXEC_ASYNC</computeroutput> flag (the default), flow of control immediately returns. If it contains <computeroutput>wxEXEC_SYNC</computeroutput>, the current application waits until the other program has terminated.</para><para>In the case of synchronous execution, the return value is the exit code of the process (which terminates by the moment the function returns) and will be -1 if the process couldn&apos;t be started and typically 0 if the process terminated successfully. Also, while waiting for the process to terminate, <ref refid="group__group__funcmacro__procctrl_1gaa276e9e676e26bafeec3141b73399b33" kindref="member">wxExecute()</ref> will call <ref refid="group__group__funcmacro__appinitterm_1gac386c89a04e364afc07edce6d848c27a" kindref="member">wxYield()</ref>. Because of this, by default this function disables all application windows to avoid unexpected reentrancies which could result from the users interaction with the program while the child process is running. If you are sure that it is safe to not disable the program windows, you may pass <computeroutput>wxEXEC_NODISABLE</computeroutput> flag to prevent this automatic disabling from happening.</para><para>For asynchronous execution, however, the return value is the process id and zero value indicates that the command could not be executed. As an added complication, the return value of -1 in this case indicates that we didn&apos;t launch a new process, but connected to the running one (this can only happen when using DDE under Windows for command execution). In particular, in this case only, the calling code will not get the notification about process termination.</para><para>If <emphasis>callback</emphasis> isn&apos;t NULL and if execution is asynchronous, <ref refid="classwx_process_1aa378b7e705c9191431cad51a81581836" kindref="member">wxProcess::OnTerminate()</ref> will be called when the process finishes. Specifying this parameter also allows you to redirect the standard input and/or output of the process being launched by calling <ref refid="classwx_process_1a9d1fc94d98e373c26dbb128516c2c348" kindref="member">wxProcess::Redirect()</ref>.</para><para>Under Windows, when launching a console process its console is shown by default but hidden if its IO is redirected. Both of these default behaviours may be overridden: if <ref refid="group__group__funcmacro__procctrl_1gga16685eea158879e41b101ca3634de462a6eb92c81a5e49ef172b9d74528be55a0" kindref="member">wxEXEC_HIDE_CONSOLE</ref> is specified, the console will never be shown. If <ref refid="group__group__funcmacro__procctrl_1gga16685eea158879e41b101ca3634de462a433c517e46d1dd61a5dda1ffeb750552" kindref="member">wxEXEC_SHOW_CONSOLE</ref> is used, the console will be shown even if the child process IO is redirected. Neither of these flags affect non-console Windows applications or does anything under the other systems.</para><para>Under Unix the flag <computeroutput>wxEXEC_MAKE_GROUP_LEADER</computeroutput> may be used to ensure that the new process is a group leader (this will create a new session if needed). Calling <ref refid="group__group__funcmacro__procctrl_1gae3a7de5a29e70c77463dd1bc38fb98cf" kindref="member">wxKill()</ref> passing wxKILL_CHILDREN will kill this process as well as all of its children (except those which have started their own session). Under MSW, this flag can be used with console processes only and corresponds to the native <computeroutput>CREATE_NEW_PROCESS_GROUP</computeroutput> flag.</para><para>The <computeroutput>wxEXEC_NOEVENTS</computeroutput> flag prevents processing of any events from taking place while the child process is running. It should be only used for very short-lived processes as otherwise the application windows risk becoming unresponsive from the users point of view. As this flag only makes sense with <computeroutput>wxEXEC_SYNC</computeroutput>, <computeroutput>wxEXEC_BLOCK</computeroutput> equal to the sum of both of these flags is provided as a convenience.</para><para><simplesect kind="note"><para>Currently <ref refid="group__group__funcmacro__procctrl_1gaa276e9e676e26bafeec3141b73399b33" kindref="member">wxExecute()</ref> can only be used from the main thread, calling this function from another thread will result in an assert failure in debug build and won&apos;t work.</para></simplesect>
 <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>command</parametername>
@@ -155,7 +155,7 @@
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim></para><para><bold>wxPerl Note:</bold> In wxPerl this function is called <computeroutput>Wx::ExecuteCommand</computeroutput>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1054"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="1057"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__procctrl_1ga8116ca17aec4eea74b848f1544805960" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -217,7 +217,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim></para><para><bold>wxPerl Note:</bold> In wxPerl this function is called <computeroutput>Wx::ExecuteArgs</computeroutput>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1090"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="1093"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__procctrl_1gabba679a024d6a4a084fc8d16220c4d7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -249,7 +249,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1093"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="1096"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__procctrl_1ga8f0c6749817ce450eae22290194c812e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -296,7 +296,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <parametername>flags</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Combination of flags to which <ref refid="group__group__funcmacro__procctrl_1gga7ff5f2dff38e7639981794c43dc9167ba412f75e022e82e7d8415109a6712be36" kindref="member">wxEXEC_SYNC</ref> is always implicitly added. </para></parameterdescription>
+<para>Combination of flags to which <ref refid="group__group__funcmacro__procctrl_1gga16685eea158879e41b101ca3634de462a412f75e022e82e7d8415109a6712be36" kindref="member">wxEXEC_SYNC</ref> is always implicitly added. </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
@@ -310,7 +310,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim></para><para><bold>wxPerl Note:</bold> This function is called <computeroutput>Wx::ExecuteStdout:</computeroutput> it only takes the <emphasis>command</emphasis> argument, and returns a 2-element list (<computeroutput>status</computeroutput>, <computeroutput>output</computeroutput>), where <computeroutput>output</computeroutput> in an array reference. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1131"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="1134"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__procctrl_1ga481a6f4eb3783d38e022aaca1b6ed757" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -368,7 +368,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <parametername>flags</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Combination of flags to which <ref refid="group__group__funcmacro__procctrl_1gga7ff5f2dff38e7639981794c43dc9167ba412f75e022e82e7d8415109a6712be36" kindref="member">wxEXEC_SYNC</ref> is always implicitly added. </para></parameterdescription>
+<para>Combination of flags to which <ref refid="group__group__funcmacro__procctrl_1gga16685eea158879e41b101ca3634de462a412f75e022e82e7d8415109a6712be36" kindref="member">wxEXEC_SYNC</ref> is always implicitly added. </para></parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
@@ -382,7 +382,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim></para><para><bold>wxPerl Note:</bold> This function is called <computeroutput>Wx::ExecuteStdoutStderr:</computeroutput> it only takes the <emphasis>command</emphasis> argument, and returns a 3-element list (<computeroutput>status</computeroutput>, <computeroutput>output</computeroutput>, <computeroutput>errors</computeroutput>), where <computeroutput>output</computeroutput> and <computeroutput>errors</computeroutput> are array references. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1168"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="1171"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__procctrl_1gab50b6a7e83f7a59d4c1d08d52505f8c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned long</type>
@@ -395,7 +395,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 <para>If an error occurs, 0 is returned.</para><para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1176"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="1179"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__procctrl_1gae3a7de5a29e70c77463dd1bc38fb98cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -455,7 +455,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1235"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="1238"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__procctrl_1gad7f2f357f592f8c786ab05f516578023" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -474,7 +474,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1245"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="1248"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__procctrl_1ga3177c2a68564921806525f8fefa7e5c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -502,7 +502,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; <
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/utils.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/utils.h" line="1266"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/utils.h" line="1269"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

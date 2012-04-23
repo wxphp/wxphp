@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcscreen.h" line="26"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcscreen.h" line="26"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -31,7 +31,7 @@
 <para>This function destroys the temporary window created to implement on-top drawing (X only). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcscreen.h" line="34"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcscreen.h" line="34"/>
       </memberdef>
       <memberdef kind="function" id="classwx_screen_d_c_1af9cdb834dfbdbbe0c0caea14d7724a67" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -49,7 +49,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcscreen.h" line="57"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcscreen.h" line="57"/>
       </memberdef>
       <memberdef kind="function" id="classwx_screen_d_c_1a261ded9137e3b10e972952cad6402655" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -68,7 +68,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcscreen.h" line="80"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcscreen.h" line="80"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -78,49 +78,49 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref></para><para><simplesect kind="see"><para><ref refid="classwx_d_c" kindref="compound">wxDC</ref>, <ref refid="classwx_memory_d_c" kindref="compound">wxMemoryDC</ref>, <ref refid="classwx_paint_d_c" kindref="compound">wxPaintDC</ref>, <ref refid="classwx_client_d_c" kindref="compound">wxClientDC</ref>, <ref refid="classwx_window_d_c" kindref="compound">wxWindowDC</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10090">
+      <node id="10273">
         <label>wxScreenDC</label>
         <link refid="classwx_screen_d_c"/>
-        <childnode refid="10091" relation="public-inheritance">
+        <childnode refid="10274" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10092">
+      <node id="10275">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10091">
+      <node id="10274">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="10092" relation="public-inheritance">
+        <childnode refid="10275" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10093">
+      <node id="10276">
         <label>wxScreenDC</label>
         <link refid="classwx_screen_d_c"/>
-        <childnode refid="10094" relation="public-inheritance">
+        <childnode refid="10277" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10095">
+      <node id="10278">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10096" relation="usage">
+        <childnode refid="10279" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10094">
+      <node id="10277">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="10095" relation="public-inheritance">
+        <childnode refid="10278" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10096">
+      <node id="10279">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcscreen.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcscreen.h" bodystart="20" bodyend="81"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcscreen.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dcscreen.h" bodystart="20" bodyend="81"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxScreenDC</scope><name>AllocExclusive</name></member>
       <member refid="classwx_d_c_1a12bed94a15136b9080683f4151042a34" prot="public" virt="non-virtual"><scope>wxScreenDC</scope><name>Blit</name></member>

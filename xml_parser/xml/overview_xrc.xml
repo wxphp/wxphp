@@ -143,9 +143,9 @@ For example:</para><para><programlisting><codeline><highlight class="normal">$<s
 <codeline><highlight class="normal">$<sp/>wxrc<sp/>resource.xrc<sp/>-v<sp/>-c<sp/>-o<sp/>resource.cpp</highlight></codeline>
 </programlisting></para><para><simplesect kind="note"><para>XRS file is essentially a renamed ZIP archive which means that you can manipulate it with standard ZIP tools. Note that if you are using XRS files, you have to initialize the <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref> archive handler first! It is a simple thing to do:</para></simplesect>
 <programlisting><codeline><highlight class="preprocessor">#include<sp/>&lt;<ref refid="filesys_8h" kindref="compound">wx/filesys.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;wx/fs_arc.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="fs__arc_8h" kindref="compound">wx/fs_arc.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal">...</highlight></codeline>
-<codeline><highlight class="normal">wxFileSystem::AddHandler(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>wxArchiveFSHandler);</highlight></codeline>
+<codeline><highlight class="normal">wxFileSystem::AddHandler(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classwx_archive_f_s_handler" kindref="compound" tooltip="A file system handler for accessing files inside of archives.">wxArchiveFSHandler</ref>);</highlight></codeline>
 </programlisting></para></sect1>
 <sect1 id="overview_xrc_1overview_xrc_embeddedresource">
 <title>Using Embedded Resources</title>

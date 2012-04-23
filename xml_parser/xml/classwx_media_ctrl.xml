@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mediactrl.h" line="227"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mediactrl.h" line="227"/>
       </memberdef>
       <memberdef kind="function" id="classwx_media_ctrl_1a926b17a60c534105dd3f0e5f3d0cd95e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -136,7 +136,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mediactrl.h" line="257"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mediactrl.h" line="257"/>
       </memberdef>
       <memberdef kind="function" id="classwx_media_ctrl_1aa68973c94e2462fe1eba48549bde6284" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -256,7 +256,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mediactrl.h" line="291"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mediactrl.h" line="291"/>
       </memberdef>
       <memberdef kind="function" id="classwx_media_ctrl_1a8f03babae1c8e27f4323fe58c663c454" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -270,13 +270,13 @@
 <para>See <ref refid="classwx_media_ctrl_1mediactrl_video_size" kindref="member">Video size</ref> for more information. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mediactrl.h" line="298"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mediactrl.h" line="298"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_media_ctrl_1af54add73042fce24163647bd69816028" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_media_ctrl_1a9ef1189ed75966001003b9ae79b6a927" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
-        <definition>double wxMediaCtrl::GetPlaybackrate</definition>
+        <definition>double wxMediaCtrl::GetPlaybackRate</definition>
         <argsstring>()</argsstring>
-        <name>GetPlaybackrate</name>
+        <name>GetPlaybackRate</name>
         <briefdescription>
 <para>Obtains the playback rate, or speed of the media. </para>        </briefdescription>
         <detaileddescription>
@@ -284,7 +284,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mediactrl.h" line="307"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mediactrl.h" line="307"/>
       </memberdef>
       <memberdef kind="function" id="classwx_media_ctrl_1aae4ee6ebab0bb0c00730f34565ab8dd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxMediaState</type>
@@ -304,7 +304,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mediactrl.h" line="318"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mediactrl.h" line="318"/>
       </memberdef>
       <memberdef kind="function" id="classwx_media_ctrl_1ad67a464aebcbaf926202e701e4afdb7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -318,7 +318,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mediactrl.h" line="326"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mediactrl.h" line="326"/>
       </memberdef>
       <memberdef kind="function" id="classwx_media_ctrl_1a04d985ab166db734d2e767983d8a59a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__group__funcmacro__file_1ga69d831b3febabc149c67b716c8e22de5" kindref="member">wxFileOffset</ref></type>
@@ -331,7 +331,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mediactrl.h" line="331"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mediactrl.h" line="331"/>
       </memberdef>
       <memberdef kind="function" id="classwx_media_ctrl_1a851c8fa0ba1ea1604d6fa8dabf09dac9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -348,7 +348,7 @@
 <para>Returns false if loading fails. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mediactrl.h" line="336"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mediactrl.h" line="336"/>
       </memberdef>
       <memberdef kind="function" id="classwx_media_ctrl_1a0f17542dabe77d05ced42f68526e8d7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -362,10 +362,10 @@
         <briefdescription>
 <para>Loads the location that uri refers to. </para>        </briefdescription>
         <detaileddescription>
-<para>Note that this is very implementation-dependant, although HTTP URI/URLs are generally supported, for example. Returns false if loading fails. </para>        </detaileddescription>
+<para>Note that this is very implementation-dependent, although HTTP URI/URLs are generally supported, for example. Returns false if loading fails. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mediactrl.h" line="343"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mediactrl.h" line="343"/>
       </memberdef>
       <memberdef kind="function" id="classwx_media_ctrl_1a88e8ec00d742a0e8858d81235f4eb154" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -386,7 +386,7 @@
 <para>Not implemented on most backends so it should be called with caution. Returns false if loading fails. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mediactrl.h" line="350"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mediactrl.h" line="350"/>
       </memberdef>
       <memberdef kind="function" id="classwx_media_ctrl_1a665089329334f368ac465412893ae00d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -403,7 +403,7 @@
 <para>Kept for wxPython compatibility. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mediactrl.h" line="355"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mediactrl.h" line="355"/>
       </memberdef>
       <memberdef kind="function" id="classwx_media_ctrl_1a345dd2cedc1505413cb8368afb0adcf3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -424,7 +424,7 @@
 <para>Kept for wxPython compatibility. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mediactrl.h" line="361"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mediactrl.h" line="361"/>
       </memberdef>
       <memberdef kind="function" id="classwx_media_ctrl_1a3021ec2eb22356e1ecf2eb3a0ae7c9f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -437,7 +437,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mediactrl.h" line="366"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mediactrl.h" line="366"/>
       </memberdef>
       <memberdef kind="function" id="classwx_media_ctrl_1a3ed954585927bc8cffc682bcb7db133c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -450,7 +450,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mediactrl.h" line="371"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mediactrl.h" line="371"/>
       </memberdef>
       <memberdef kind="function" id="classwx_media_ctrl_1a96c7b8cdc6ae6ea1097794f938567c2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__group__funcmacro__file_1ga69d831b3febabc149c67b716c8e22de5" kindref="member">wxFileOffset</ref></type>
@@ -462,17 +462,17 @@
           <declname>where</declname>
         </param>
         <param>
-          <type><ref refid="ffile_8h_1ae3981f8632f0391e5c852bf62eb982b0" kindref="member">wxSeekMode</ref></type>
+          <type><ref refid="group__group__funcmacro__file_1gae3981f8632f0391e5c852bf62eb982b0" kindref="member">wxSeekMode</ref></type>
           <declname>mode</declname>
           <defval>wxFromStart</defval>
         </param>
         <briefdescription>
 <para>Seeks to a position within the movie. </para>        </briefdescription>
         <detaileddescription>
-<para><xrefsect id="todo_1_todo000039"><xreftitle>Todo</xreftitle><xrefdescription><para>Document the wxSeekMode parameter <emphasis>mode</emphasis>, and perhaps also the wxFileOffset and wxSeekMode themselves. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+<para><xrefsect id="todo_1_todo000038"><xreftitle>Todo</xreftitle><xrefdescription><para>Document the wxSeekMode parameter <emphasis>mode</emphasis>, and perhaps also the wxFileOffset and wxSeekMode themselves. </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mediactrl.h" line="379"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mediactrl.h" line="379"/>
       </memberdef>
       <memberdef kind="function" id="classwx_media_ctrl_1a0b7026f35d08af8ebf4ee6fe3ba448c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -489,7 +489,7 @@
 <para><computeroutput>1.0</computeroutput> represents normal speed, while <computeroutput>2.0</computeroutput> represents twice the normal speed of the media, for example. Not supported on the GStreamer (Unix) backend. Returns true if successful. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mediactrl.h" line="387"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mediactrl.h" line="387"/>
       </memberdef>
       <memberdef kind="function" id="classwx_media_ctrl_1a4451b025e1b08a7500f45d35a13bad2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -507,7 +507,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mediactrl.h" line="398"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mediactrl.h" line="398"/>
       </memberdef>
       <memberdef kind="function" id="classwx_media_ctrl_1aeb677324f81580e7647c70b332395012" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -525,7 +525,7 @@
 <para>Applications using native toolkits such as QuickTime usually have a scrollbar, play button, and more provided to them by the toolkit. By default <ref refid="classwx_media_ctrl" kindref="compound">wxMediaCtrl</ref> does not do this. However, on the directshow and quicktime backends you can show or hide the native controls provided by the underlying toolkit at will using <ref refid="classwx_media_ctrl_1aeb677324f81580e7647c70b332395012" kindref="member">ShowPlayerControls()</ref>. Simply calling the function with default parameters tells <ref refid="classwx_media_ctrl" kindref="compound">wxMediaCtrl</ref> to use the default controls provided by the toolkit. The function takes a wxMediaCtrlPlayerControls enumeration, please see available show modes there.</para><para>For more info see <ref refid="classwx_media_ctrl_1mediactrl_player_controls" kindref="member">Player controls</ref>.</para><para>Currently only implemented on the QuickTime and DirectShow backends. The function returns true on success. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mediactrl.h" line="415"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mediactrl.h" line="415"/>
       </memberdef>
       <memberdef kind="function" id="classwx_media_ctrl_1ad596db9b674e926ec8a1bad97159eb47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -538,7 +538,7 @@
 <para>See <ref refid="classwx_media_ctrl_1mediactrl_operation" kindref="member">Operation</ref> for an overview of how stopping works. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mediactrl.h" line="422"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mediactrl.h" line="422"/>
       </memberdef>
       <memberdef kind="function" id="classwx_media_ctrl_1aa859c2a3157cecc823f853540a9097a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="group__group__funcmacro__file_1ga69d831b3febabc149c67b716c8e22de5" kindref="member">wxFileOffset</ref></type>
@@ -551,7 +551,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mediactrl.h" line="427"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mediactrl.h" line="427"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -559,7 +559,7 @@
     <detaileddescription>
 <para><ref refid="classwx_media_ctrl" kindref="compound">wxMediaCtrl</ref> uses native backends to render media, for example on Windows there is a ActiveMovie/DirectShow backend, and on Macintosh there is a QuickTime backend.</para><sect1 id="classwx_media_ctrl_1mediactrl_rendering_media">
 <title>Rendering media</title>
-<para>Depending upon the backend, <ref refid="classwx_media_ctrl" kindref="compound">wxMediaCtrl</ref> can render and display pretty much any kind of media that the native system can - such as an image, mpeg video, or mp3 (without license restrictions - since it relies on native system calls that may not technically have mp3 decoding available, for example, it falls outside the realm of licensing restrictions).</para><para>For general operation, all you need to do is call <ref refid="classwx_media_ctrl_1a851c8fa0ba1ea1604d6fa8dabf09dac9" kindref="member">Load()</ref> to load the file you want to render, catch the <computeroutput>EVT_MEDIA_LOADED</computeroutput> event, and then call <ref refid="classwx_media_ctrl_1a3ed954585927bc8cffc682bcb7db133c" kindref="member">Play()</ref> to show the video/audio of the media in that event.</para><para>More complex operations are generally more heavily dependant on the capabilities of the backend. For example, QuickTime cannot set the playback rate of certain streaming media - while DirectShow is slightly more flexible in that regard.</para></sect1>
+<para>Depending upon the backend, <ref refid="classwx_media_ctrl" kindref="compound">wxMediaCtrl</ref> can render and display pretty much any kind of media that the native system can - such as an image, mpeg video, or mp3 (without license restrictions - since it relies on native system calls that may not technically have mp3 decoding available, for example, it falls outside the realm of licensing restrictions).</para><para>For general operation, all you need to do is call <ref refid="classwx_media_ctrl_1a851c8fa0ba1ea1604d6fa8dabf09dac9" kindref="member">Load()</ref> to load the file you want to render, catch the <computeroutput>EVT_MEDIA_LOADED</computeroutput> event, and then call <ref refid="classwx_media_ctrl_1a3ed954585927bc8cffc682bcb7db133c" kindref="member">Play()</ref> to show the video/audio of the media in that event.</para><para>More complex operations are generally more heavily dependent on the capabilities of the backend. For example, QuickTime cannot set the playback rate of certain streaming media - while DirectShow is slightly more flexible in that regard.</para></sect1>
 <sect1 id="classwx_media_ctrl_1mediactrl_operation">
 <title>Operation</title>
 <para>When <ref refid="classwx_media_ctrl" kindref="compound">wxMediaCtrl</ref> plays a file, it plays until the stop position is reached (currently the end of the file/stream). Right before it hits the end of the stream, it fires off a <computeroutput>EVT_MEDIA_STOP</computeroutput> event to its parent window, at which point the event handler can choose to veto the event, preventing the stream from actually stopping.</para><para>Example:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//connect<sp/>to<sp/>the<sp/>media<sp/>event</highlight><highlight class="normal"></highlight></codeline>
@@ -596,85 +596,85 @@
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="7651">
+      <node id="7844">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7650">
+      <node id="7843">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7651" relation="public-inheritance">
+        <childnode refid="7844" relation="public-inheritance">
         </childnode>
-        <childnode refid="7652" relation="public-inheritance">
+        <childnode refid="7845" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7652">
+      <node id="7845">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7648">
+      <node id="7841">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="7649" relation="public-inheritance">
+        <childnode refid="7842" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7649">
+      <node id="7842">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7650" relation="public-inheritance">
+        <childnode refid="7843" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7647">
+      <node id="7840">
         <label>wxMediaCtrl</label>
         <link refid="classwx_media_ctrl"/>
-        <childnode refid="7648" relation="public-inheritance">
+        <childnode refid="7841" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7657">
+      <node id="7850">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7658" relation="usage">
+        <childnode refid="7851" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7656">
+      <node id="7849">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7657" relation="public-inheritance">
+        <childnode refid="7850" relation="public-inheritance">
         </childnode>
-        <childnode refid="7659" relation="public-inheritance">
+        <childnode refid="7852" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7659">
+      <node id="7852">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7654">
+      <node id="7847">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="7655" relation="public-inheritance">
+        <childnode refid="7848" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7655">
+      <node id="7848">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7656" relation="public-inheritance">
+        <childnode refid="7849" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7653">
+      <node id="7846">
         <label>wxMediaCtrl</label>
         <link refid="classwx_media_ctrl"/>
-        <childnode refid="7654" relation="public-inheritance">
+        <childnode refid="7847" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7658">
+      <node id="7851">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mediactrl.h" line="221" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mediactrl.h" bodystart="220" bodyend="428"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mediactrl.h" line="221" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/mediactrl.h" bodystart="220" bodyend="428"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxMediaCtrl</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxMediaCtrl</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -790,7 +790,7 @@
       <member refid="classwx_evt_handler_1a4b2f853f5c7a64432ae72f9b606698f9" prot="public" virt="non-virtual"><scope>wxMediaCtrl</scope><name>GetNextHandler</name></member>
       <member refid="classwx_window_1a41608736affe2ff115d80d8f69dc832e" prot="public" virt="non-virtual"><scope>wxMediaCtrl</scope><name>GetNextSibling</name></member>
       <member refid="classwx_window_1a63871f881941b99b4b94328d1c4cd163" prot="public" virt="non-virtual"><scope>wxMediaCtrl</scope><name>GetParent</name></member>
-      <member refid="classwx_media_ctrl_1af54add73042fce24163647bd69816028" prot="public" virt="non-virtual"><scope>wxMediaCtrl</scope><name>GetPlaybackrate</name></member>
+      <member refid="classwx_media_ctrl_1a9ef1189ed75966001003b9ae79b6a927" prot="public" virt="non-virtual"><scope>wxMediaCtrl</scope><name>GetPlaybackRate</name></member>
       <member refid="classwx_window_1a9b7de6ea85ca926b668ba0682a61a93e" prot="public" virt="non-virtual"><scope>wxMediaCtrl</scope><name>GetPopupMenuSelectionFromUser</name></member>
       <member refid="classwx_window_1a00f5cb3cac003205317a565a33d4bb27" prot="public" virt="non-virtual"><scope>wxMediaCtrl</scope><name>GetPopupMenuSelectionFromUser</name></member>
       <member refid="classwx_window_1a9f36392b289a1e567e95bee073d6533e" prot="public" virt="non-virtual"><scope>wxMediaCtrl</scope><name>GetPosition</name></member>
@@ -842,6 +842,7 @@
       <member refid="classwx_window_1aa90a260c0a835a133043460b7d0024a8" prot="public" virt="virtual"><scope>wxMediaCtrl</scope><name>InitDialog</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxMediaCtrl</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxMediaCtrl</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxMediaCtrl</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxMediaCtrl</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxMediaCtrl</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxMediaCtrl</scope><name>IsExposed</name></member>
@@ -857,6 +858,7 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxMediaCtrl</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxMediaCtrl</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxMediaCtrl</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxMediaCtrl</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxMediaCtrl</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxMediaCtrl</scope><name>Layout</name></member>
       <member refid="classwx_media_ctrl_1a04d985ab166db734d2e767983d8a59a9" prot="public" virt="non-virtual"><scope>wxMediaCtrl</scope><name>Length</name></member>
@@ -869,7 +871,6 @@
       <member refid="classwx_media_ctrl_1a345dd2cedc1505413cb8368afb0adcf3" prot="public" virt="non-virtual"><scope>wxMediaCtrl</scope><name>LoadURIWithProxy</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxMediaCtrl</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxMediaCtrl</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxMediaCtrl</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxMediaCtrl</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxMediaCtrl</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxMediaCtrl</scope><name>MoveAfterInTabOrder</name></member>
@@ -998,7 +999,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxMediaCtrl</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxMediaCtrl</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxMediaCtrl</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxMediaCtrl</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxMediaCtrl</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxMediaCtrl</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxMediaCtrl</scope><name>Unlink</name></member>

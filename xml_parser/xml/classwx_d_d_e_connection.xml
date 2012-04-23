@@ -34,7 +34,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="74"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="74"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_d_e_connection_1abacdd09626b95fc1140a65aaec35777b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -56,7 +56,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="75"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="75"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_d_e_connection_1a07d9c2ae6ed349ca6048b7087462d28e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -78,7 +78,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="76"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="76"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_d_e_connection_1ab236c72c7bfd9bc4c61bcd602d2ca3d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -100,7 +100,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="77"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="77"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -129,7 +129,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="102"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="102"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_d_e_connection_1ace490e5a3525ea32506118174a3ba7e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -147,7 +147,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="103"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="103"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_d_e_connection_1a43d59d31e34a2c334ecb0bfca94b285c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -165,7 +165,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="104"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="104"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_d_e_connection_1af37dc0ced3eca507875f2c1c725a6b00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -183,7 +183,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="105"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="105"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -216,7 +216,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="170"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="170"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_d_e_connection_1a4ce553933810a97e126f95c7e0d11c6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -238,7 +238,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="171"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="171"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_d_e_connection_1a583220ac2934aae89d7f23b2dba5188e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -260,7 +260,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="172"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="172"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_d_e_connection_1a82d70d7558762d97fe0b923f7117be21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -282,7 +282,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="173"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="173"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -297,7 +297,7 @@
 <para>If no user-defined connection object is to be derived from <ref refid="classwx_d_d_e_connection" kindref="compound">wxDDEConnection</ref>, then the constructor should not be called directly, since the default connection object will be provided on requesting (or accepting) a connection. However, if the user defines his or her own derived connection object, the <ref refid="classwx_d_d_e_server_1ae2ba3d248d3fa46a25b9fded5fbe095d" kindref="member">wxDDEServer::OnAcceptConnection()</ref> and/or <ref refid="classwx_d_d_e_client_1a286079977cd233d29497507fd04d71c0" kindref="member">wxDDEClient::OnMakeConnection()</ref> members should be replaced by functions which construct the new connection object.</para><para>A default buffer will be associated with this connection. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="47"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="47"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_d_e_connection_1a5bb4db4b16c6022de5ef2c7890327187" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -333,7 +333,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="63"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="63"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_d_e_connection_1a5128f4db4e875ad3861f2e7375ee8ee5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -347,7 +347,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="90"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="90"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_d_e_connection_1a13bf3348f8ad73e63a7778feb707f137" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -380,7 +380,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="113"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="113"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_d_e_connection_1a4198c8efc0880341079a27f820d57b1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -393,7 +393,7 @@
 <para>Default behaviour is to delete the connection object. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="120"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="120"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_d_e_connection_1a03bce372e9d07d195ed9fc13ec264b97" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -422,7 +422,7 @@
 <para>Note that there is no item associated with this message. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="128"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="128"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_d_e_connection_1a63548e45b0359b0704f0a36622f32400" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -455,7 +455,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="135"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="135"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_d_e_connection_1a85de14db18cc0305b05ee1356f403cdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>const void *</type>
@@ -484,7 +484,7 @@
 <para>The server should respond by returning a character string from <ref refid="classwx_d_d_e_connection_1a85de14db18cc0305b05ee1356f403cdf" kindref="member">OnRequest()</ref>, or NULL to indicate no data. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="144"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="144"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_d_e_connection_1a1d64612731ecfad916f9f24601724511" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -505,7 +505,7 @@
 <para>The server can refuse to participate by returning false. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="151"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="151"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_d_e_connection_1a8130e48a08d3691a24c87ac04e260c14" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -526,7 +526,7 @@
 <para>The server can refuse to stop the advise loop by returning false, although this doesn&apos;t have much meaning in practice. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="159"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="159"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_d_e_connection_1a2341e697812cc3a9a6adbfeeacc7042d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const void *</type>
@@ -553,7 +553,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="184"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="184"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_d_e_connection_1ab9dceec1d2398c7ec0f33cc1ff305bf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -571,7 +571,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="193"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="193"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_d_e_connection_1aebe2577f6d687d9166fa858a9c3a2e88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -589,7 +589,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="202"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="202"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -599,49 +599,49 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ipc" kindref="compound">Interprocess Communication</ref> Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxmsw" kindref="member">wxMSW</ref> port.  <onlyfor>wxmsw</onlyfor> </para><para><simplesect kind="see"><para><ref refid="classwx_connection_base" kindref="compound">wxConnectionBase</ref>, <ref refid="classwx_d_d_e_client" kindref="compound">wxDDEClient</ref>, <ref refid="classwx_d_d_e_server" kindref="compound">wxDDEServer</ref>, <ref refid="overview_ipc" kindref="compound">Interprocess Communication</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5538">
+      <node id="5633">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5537">
+      <node id="5632">
         <label>wxConnectionBase</label>
         <link refid="classwx_connection_base"/>
-        <childnode refid="5538" relation="public-inheritance">
+        <childnode refid="5633" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5536">
+      <node id="5631">
         <label>wxDDEConnection</label>
         <link refid="classwx_d_d_e_connection"/>
-        <childnode refid="5537" relation="public-inheritance">
+        <childnode refid="5632" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5541">
+      <node id="5636">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5542" relation="usage">
+        <childnode refid="5637" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5540">
+      <node id="5635">
         <label>wxConnectionBase</label>
         <link refid="classwx_connection_base"/>
-        <childnode refid="5541" relation="public-inheritance">
+        <childnode refid="5636" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5539">
+      <node id="5634">
         <label>wxDDEConnection</label>
         <link refid="classwx_d_d_e_connection"/>
-        <childnode refid="5540" relation="public-inheritance">
+        <childnode refid="5635" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5542">
+      <node id="5637">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dde.h" bodystart="32" bodyend="203"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" line="33" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dde.h" bodystart="32" bodyend="203"/>
     <listofallmembers>
       <member refid="classwx_d_d_e_connection_1ae9ca728cf687cf9f1a3d68864e234e64" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>Advise</name></member>
       <member refid="classwx_d_d_e_connection_1abacdd09626b95fc1140a65aaec35777b" prot="public" virt="non-virtual"><scope>wxDDEConnection</scope><name>Advise</name></member>

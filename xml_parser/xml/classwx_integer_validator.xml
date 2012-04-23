@@ -22,7 +22,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" line="205" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" bodystart="205" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valnum.h" line="205" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/valnum.h" bodystart="205" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -62,7 +62,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" line="219"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valnum.h" line="219"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -95,85 +95,85 @@
 <simplesect kind="since"><para>2.9.2 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7305">
+      <node id="7494">
         <label>wxValidator</label>
         <link refid="classwx_validator"/>
-        <childnode refid="7306" relation="public-inheritance">
+        <childnode refid="7495" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7304">
+      <node id="7493">
         <label>wxNumValidator&lt; T &gt;</label>
         <link refid="classwx_num_validator"/>
-        <childnode refid="7305" relation="public-inheritance">
+        <childnode refid="7494" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7303">
+      <node id="7492">
         <label>wxIntegerValidator&lt; T &gt;</label>
         <link refid="classwx_integer_validator"/>
-        <childnode refid="7304" relation="public-inheritance">
+        <childnode refid="7493" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7307">
+      <node id="7496">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7306">
+      <node id="7495">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7307" relation="public-inheritance">
+        <childnode refid="7496" relation="public-inheritance">
         </childnode>
-        <childnode refid="7308" relation="public-inheritance">
+        <childnode refid="7497" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7308">
+      <node id="7497">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7311">
+      <node id="7500">
         <label>wxValidator</label>
         <link refid="classwx_validator"/>
-        <childnode refid="7312" relation="public-inheritance">
+        <childnode refid="7501" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7310">
+      <node id="7499">
         <label>wxNumValidator&lt; T &gt;</label>
         <link refid="classwx_num_validator"/>
-        <childnode refid="7311" relation="public-inheritance">
+        <childnode refid="7500" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7309">
+      <node id="7498">
         <label>wxIntegerValidator&lt; T &gt;</label>
         <link refid="classwx_integer_validator"/>
-        <childnode refid="7310" relation="public-inheritance">
+        <childnode refid="7499" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7313">
+      <node id="7502">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7314" relation="usage">
+        <childnode refid="7503" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7312">
+      <node id="7501">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7313" relation="public-inheritance">
+        <childnode refid="7502" relation="public-inheritance">
         </childnode>
-        <childnode refid="7315" relation="public-inheritance">
+        <childnode refid="7504" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7315">
+      <node id="7504">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7314">
+      <node id="7503">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" line="202" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/valnum.h" bodystart="201" bodyend="220"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/valnum.h" line="202" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/valnum.h" bodystart="201" bodyend="220"/>
     <listofallmembers>
       <member refid="classwx_evt_handler_1a7dc3c701781f4044372049de5004137e" prot="public" virt="non-virtual"><scope>wxIntegerValidator</scope><name>AddFilter</name></member>
       <member refid="classwx_evt_handler_1a0737c6d2cbcd5ded4b1ecdd53ed0def3" prot="public" virt="virtual"><scope>wxIntegerValidator</scope><name>AddPendingEvent</name></member>
@@ -228,7 +228,6 @@
       <member refid="classwx_num_validator_1a629f0860d54bf200fe8779e7daa9a863" prot="public" virt="virtual"><scope>wxIntegerValidator</scope><name>TransferToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxIntegerValidator</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxIntegerValidator</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxIntegerValidator</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxIntegerValidator</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxIntegerValidator</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxIntegerValidator</scope><name>Unlink</name></member>

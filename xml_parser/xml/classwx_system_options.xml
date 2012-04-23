@@ -24,7 +24,7 @@
 <para>The function is case-insensitive to <emphasis>name</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sysopt.h" line="194"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sysopt.h" line="194"/>
       </memberdef>
       <memberdef kind="function" id="classwx_system_options_1abbde7fd57657d7cc3db0a91f9292b28c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -45,7 +45,7 @@
 <para>The function is case-insensitive to <emphasis>name</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sysopt.h" line="195"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sysopt.h" line="195"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -60,7 +60,7 @@
 <para>You don&apos;t need to create an instance of <ref refid="classwx_system_options" kindref="compound">wxSystemOptions</ref> since all of its functions are static. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sysopt.h" line="155"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sysopt.h" line="155"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -80,7 +80,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sysopt.h" line="163"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sysopt.h" line="163"/>
       </memberdef>
       <memberdef kind="function" id="classwx_system_options_1a51e4eb471bfd1472e874c6ca2fd89660" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -98,7 +98,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sysopt.h" line="171"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sysopt.h" line="171"/>
       </memberdef>
       <memberdef kind="function" id="classwx_system_options_1ac53621f9648eda4dc69d43c8da54bd39" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -116,7 +116,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sysopt.h" line="179"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sysopt.h" line="179"/>
       </memberdef>
       <memberdef kind="function" id="classwx_system_options_1a9040fd20567d5f848000d681b0bb4da9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -133,7 +133,7 @@
 <para>This is mostly useful for boolean options for which you can&apos;t use <computeroutput>GetOptionInt(name)</computeroutput> == 0 as this would also be true if the option hadn&apos;t been set at all. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sysopt.h" line="188"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sysopt.h" line="188"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -186,37 +186,37 @@ The compile-time option to include or exclude this functionality is wxUSE_SYSTEM
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="10657">
+      <node id="10842">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10656">
+      <node id="10841">
         <label>wxSystemOptions</label>
         <link refid="classwx_system_options"/>
-        <childnode refid="10657" relation="public-inheritance">
+        <childnode refid="10842" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10659">
+      <node id="10844">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10660" relation="usage">
+        <childnode refid="10845" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10658">
+      <node id="10843">
         <label>wxSystemOptions</label>
         <link refid="classwx_system_options"/>
-        <childnode refid="10659" relation="public-inheritance">
+        <childnode refid="10844" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10660">
+      <node id="10845">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sysopt.h" line="147" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sysopt.h" bodystart="146" bodyend="197"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sysopt.h" line="147" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/sysopt.h" bodystart="146" bodyend="197"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxSystemOptions</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxSystemOptions</scope><name>CloneRefData</name></member>

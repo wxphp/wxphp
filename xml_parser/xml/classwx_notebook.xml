@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notebook.h" line="120"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/notebook.h" line="120"/>
       </memberdef>
       <memberdef kind="function" id="classwx_notebook_1a3f096bce4ab17440ce49c1bf761d074e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -100,7 +100,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notebook.h" line="144"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/notebook.h" line="144"/>
       </memberdef>
       <memberdef kind="function" id="classwx_notebook_1a54f87c85793496015219cb21714b6061" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -113,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notebook.h" line="149"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/notebook.h" line="149"/>
       </memberdef>
       <memberdef kind="function" id="classwx_notebook_1a6ba4f58ec00e3c192bcb856b1244b09f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -155,7 +155,7 @@
 <para>See <ref refid="classwx_notebook_1a7bd68c88ae0ac9b5bfa4d60ef3e0b067" kindref="member">wxNotebook()</ref> for a description of the parameters. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notebook.h" line="159"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/notebook.h" line="159"/>
       </memberdef>
       <memberdef kind="function" id="classwx_notebook_1a3a31f469f2e75d1d76e8b89b41160ec6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -168,7 +168,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notebook.h" line="165"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/notebook.h" line="165"/>
       </memberdef>
       <memberdef kind="function" id="classwx_notebook_1af6bb90cac2b838e2b6460c373b927066" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -181,7 +181,7 @@
 <para>Otherwise, an uninitialised colour will be returned. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notebook.h" line="174"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/notebook.h" line="174"/>
       </memberdef>
       <memberdef kind="function" id="classwx_notebook_1a24783577628b3da1537a9476629cc72b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -199,7 +199,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notebook.h" line="181"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/notebook.h" line="181"/>
       </memberdef>
       <memberdef kind="function" id="classwx_notebook_1ad04a94e412e514319f187e7ec79e0815" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -217,7 +217,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notebook.h" line="188"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/notebook.h" line="188"/>
       </memberdef>
       <memberdef kind="function" id="classwx_notebook_1ab5add4f92341c4679ac445c132cb7b30" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -235,7 +235,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notebook.h" line="191"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/notebook.h" line="191"/>
       </memberdef>
       <memberdef kind="function" id="classwx_notebook_1a9feebdecc3192cea508966a6c1f604f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -257,7 +257,7 @@
 <para><emphasis>image</emphasis> is an index into the image list which was set with <ref refid="classwx_with_images_1a8436e7fdc49a5a23fdca2effebd319ef" kindref="member">SetImageList()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notebook.h" line="192"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/notebook.h" line="192"/>
       </memberdef>
       <memberdef kind="function" id="classwx_notebook_1ac918c84c13ed08e7a185a5edc1116910" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -275,7 +275,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notebook.h" line="193"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/notebook.h" line="193"/>
       </memberdef>
       <memberdef kind="function" id="classwx_notebook_1a4ce9b9ff43822b62560f27beaf0ada49" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -297,7 +297,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notebook.h" line="194"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/notebook.h" line="194"/>
       </memberdef>
       <memberdef kind="function" id="classwx_notebook_1afe7ff049cb2b00bfcc7b55e31ea0f15e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -311,7 +311,7 @@
 <para>Note that this method may return either the previously or newly selected page when called from the <computeroutput>EVT_BOOKCTRL_PAGE_CHANGED</computeroutput> handler depending on the platform and so <ref refid="classwx_book_ctrl_event_1af2721f1f6e9d6e5b83612f03ef36c4b5" kindref="member">wxBookCtrlEvent::GetSelection</ref> should be used instead in this case. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notebook.h" line="195"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/notebook.h" line="195"/>
       </memberdef>
       <memberdef kind="function" id="classwx_notebook_1a140d1743bc93c3aff36fe2c9f1cb2bc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -330,7 +330,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notebook.h" line="196"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/notebook.h" line="196"/>
       </memberdef>
       <memberdef kind="function" id="classwx_notebook_1a82c7c7a09de4f4ec17c92af0753235d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -348,7 +348,7 @@
 <para>This function behaves as <ref refid="classwx_notebook_1a140d1743bc93c3aff36fe2c9f1cb2bc8" kindref="member">SetSelection()</ref> but does <emphasis>not</emphasis> generate the page changing events.</para><para>See <ref refid="overview_events_1overview_events_prog" kindref="member">User Generated Events vs Programmatically Generated Events</ref> for more information. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notebook.h" line="197"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/notebook.h" line="197"/>
       </memberdef>
       <memberdef kind="function" id="classwx_notebook_1a18afa4472fe9768311d7a4990df5ced9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -423,7 +423,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notebook.h" line="199"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/notebook.h" line="199"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -458,109 +458,109 @@ The styles wxNB_LEFT, RIGHT and BOTTOM are not supported under Microsoft Windows
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="7953">
+      <node id="8145">
         <label>wxBookCtrlBase</label>
         <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="7954" relation="public-inheritance">
+        <childnode refid="8146" relation="public-inheritance">
         </childnode>
-        <childnode refid="7959" relation="public-inheritance">
+        <childnode refid="8151" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7957">
+      <node id="8149">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7956">
+      <node id="8148">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7957" relation="public-inheritance">
+        <childnode refid="8149" relation="public-inheritance">
         </childnode>
-        <childnode refid="7958" relation="public-inheritance">
+        <childnode refid="8150" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7958">
+      <node id="8150">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7954">
+      <node id="8146">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="7955" relation="public-inheritance">
+        <childnode refid="8147" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7955">
+      <node id="8147">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7956" relation="public-inheritance">
+        <childnode refid="8148" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7952">
+      <node id="8144">
         <label>wxNotebook</label>
         <link refid="classwx_notebook"/>
-        <childnode refid="7953" relation="public-inheritance">
+        <childnode refid="8145" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7959">
+      <node id="8151">
         <label>wxWithImages</label>
         <link refid="classwx_with_images"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7961">
+      <node id="8153">
         <label>wxBookCtrlBase</label>
         <link refid="classwx_book_ctrl_base"/>
-        <childnode refid="7962" relation="public-inheritance">
+        <childnode refid="8154" relation="public-inheritance">
         </childnode>
-        <childnode refid="7968" relation="public-inheritance">
+        <childnode refid="8160" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7965">
+      <node id="8157">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7966" relation="usage">
+        <childnode refid="8158" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7964">
+      <node id="8156">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="7965" relation="public-inheritance">
+        <childnode refid="8157" relation="public-inheritance">
         </childnode>
-        <childnode refid="7967" relation="public-inheritance">
+        <childnode refid="8159" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7967">
+      <node id="8159">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="7962">
+      <node id="8154">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="7963" relation="public-inheritance">
+        <childnode refid="8155" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7963">
+      <node id="8155">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="7964" relation="public-inheritance">
+        <childnode refid="8156" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7960">
+      <node id="8152">
         <label>wxNotebook</label>
         <link refid="classwx_notebook"/>
-        <childnode refid="7961" relation="public-inheritance">
+        <childnode refid="8153" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7968">
+      <node id="8160">
         <label>wxWithImages</label>
         <link refid="classwx_with_images"/>
       </node>
-      <node id="7966">
+      <node id="8158">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notebook.h" line="114" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/notebook.h" bodystart="113" bodyend="201"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/notebook.h" line="114" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/notebook.h" bodystart="113" bodyend="201"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxNotebook</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxNotebook</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -743,6 +743,7 @@ The styles wxNB_LEFT, RIGHT and BOTTOM are not supported under Microsoft Windows
       <member refid="classwx_notebook_1a18afa4472fe9768311d7a4990df5ced9" prot="public" virt="virtual"><scope>wxNotebook</scope><name>InsertPage</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxNotebook</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxNotebook</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxNotebook</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxNotebook</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxNotebook</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxNotebook</scope><name>IsExposed</name></member>
@@ -758,13 +759,13 @@ The styles wxNB_LEFT, RIGHT and BOTTOM are not supported under Microsoft Windows
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxNotebook</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxNotebook</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxNotebook</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxNotebook</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxNotebook</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxNotebook</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxNotebook</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxNotebook</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxNotebook</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxNotebook</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxNotebook</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxNotebook</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxNotebook</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxNotebook</scope><name>MoveAfterInTabOrder</name></member>
@@ -772,7 +773,7 @@ The styles wxNB_LEFT, RIGHT and BOTTOM are not supported under Microsoft Windows
       <member refid="classwx_window_1a86904f6785df4af6036b33383490a805" prot="public" virt="non-virtual"><scope>wxNotebook</scope><name>Navigate</name></member>
       <member refid="classwx_window_1aa58039c8fc65e19160becf510ee1d1d5" prot="public" virt="non-virtual"><scope>wxNotebook</scope><name>NavigateIn</name></member>
       <member refid="classwx_window_1a8175da594e6045635a1d1cfe775cdddb" prot="public" virt="non-virtual"><scope>wxNotebook</scope><name>NewControlId</name></member>
-      <member refid="classwx_book_ctrl_base_1aed8700a5492ca104d2792d9bafea2167a76a5551525c61310e58ed494b5d4d730" prot="public" virt="non-virtual"><scope>wxNotebook</scope><name>NO_IMAGE</name></member>
+      <member refid="classwx_book_ctrl_base_1a2329dd4eea633a8764dbc29ac353c1a6a76a5551525c61310e58ed494b5d4d730" prot="public" virt="non-virtual"><scope>wxNotebook</scope><name>NO_IMAGE</name></member>
       <member refid="classwx_window_1a6b5654c0c6c6245d592c279521f7099c" prot="public" virt="virtual"><scope>wxNotebook</scope><name>OnInternalIdle</name></member>
       <member refid="classwx_notebook_1a24783577628b3da1537a9476629cc72b" prot="public" virt="non-virtual"><scope>wxNotebook</scope><name>OnSelChange</name></member>
       <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxNotebook</scope><name>operator delete</name></member>
@@ -894,7 +895,6 @@ The styles wxNB_LEFT, RIGHT and BOTTOM are not supported under Microsoft Windows
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxNotebook</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxNotebook</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxNotebook</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxNotebook</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxNotebook</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxNotebook</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxNotebook</scope><name>Unlink</name></member>

@@ -23,7 +23,7 @@
  */
 #define PHP_WXWIDGETS_EXTNAME    "wxWidgets"
 #define PHP_WXWIDGETS_EXTVER    "1.2"
-#define PHP_WXWIDGETS_VERSION	"1.2"
+#define PHP_WXWIDGETS_VERSION	"SVN Revision 71250"
 
 /**
  * Import configure options when building outside 

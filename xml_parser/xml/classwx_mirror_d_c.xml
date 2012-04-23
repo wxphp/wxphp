@@ -24,7 +24,7 @@
 <para>Everything drawn on <ref refid="classwx_mirror_d_c" kindref="compound">wxMirrorDC</ref> will appear (and maybe mirrored) on <emphasis>dc</emphasis>.</para><para><emphasis>mirror</emphasis> specifies if we do mirror (if it is true) or not (if it is false). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcmirror.h" line="34"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcmirror.h" line="34"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -34,49 +34,49 @@
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7814">
+      <node id="8007">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7813">
+      <node id="8006">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="7814" relation="public-inheritance">
+        <childnode refid="8007" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7812">
+      <node id="8005">
         <label>wxMirrorDC</label>
         <link refid="classwx_mirror_d_c"/>
-        <childnode refid="7813" relation="public-inheritance">
+        <childnode refid="8006" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7817">
+      <node id="8010">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7818" relation="usage">
+        <childnode refid="8011" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7816">
+      <node id="8009">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="7817" relation="public-inheritance">
+        <childnode refid="8010" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7815">
+      <node id="8008">
         <label>wxMirrorDC</label>
         <link refid="classwx_mirror_d_c"/>
-        <childnode refid="7816" relation="public-inheritance">
+        <childnode refid="8009" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7818">
+      <node id="8011">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcmirror.h" line="24" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcmirror.h" bodystart="23" bodyend="35"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcmirror.h" line="24" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dcmirror.h" bodystart="23" bodyend="35"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxMirrorDC</scope><name>AllocExclusive</name></member>
       <member refid="classwx_d_c_1a12bed94a15136b9080683f4151042a34" prot="public" virt="non-virtual"><scope>wxMirrorDC</scope><name>Blit</name></member>

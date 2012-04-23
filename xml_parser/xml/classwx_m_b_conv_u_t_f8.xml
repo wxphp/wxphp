@@ -11,30 +11,30 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__conv" kindref="compound">Text Conversion</ref></para><para><simplesect kind="see"><para><ref refid="classwx_m_b_conv_u_t_f7" kindref="compound">wxMBConvUTF7</ref>, <ref refid="overview_mbconv" kindref="compound">wxMBConv Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7596">
+      <node id="7789">
         <label>wxMBConvUTF8</label>
         <link refid="classwx_m_b_conv_u_t_f8"/>
-        <childnode refid="7597" relation="public-inheritance">
+        <childnode refid="7790" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7597">
+      <node id="7790">
         <label>wxMBConv</label>
         <link refid="classwx_m_b_conv"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7598">
+      <node id="7791">
         <label>wxMBConvUTF8</label>
         <link refid="classwx_m_b_conv_u_t_f8"/>
-        <childnode refid="7599" relation="public-inheritance">
+        <childnode refid="7792" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7599">
+      <node id="7792">
         <label>wxMBConv</label>
         <link refid="classwx_m_b_conv"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" line="372" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/strconv.h" bodystart="371" bodyend="373"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/strconv.h" line="372" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/strconv.h" bodystart="371" bodyend="373"/>
     <listofallmembers>
       <member refid="classwx_m_b_conv_1ae6fd1020a2c7c82191c4822682e80d05" prot="public" virt="pure-virtual"><scope>wxMBConvUTF8</scope><name>Clone</name></member>
       <member refid="classwx_m_b_conv_1a0e572efeda6c5c73ddff1292609fa211" prot="public" virt="non-virtual"><scope>wxMBConvUTF8</scope><name>cMB2WC</name></member>

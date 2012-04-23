@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="477"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="477"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_event_1ad25a41eaa76521bef7c9d9a3d2bb0936" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="483"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="483"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_event_1a3731d02a617514a21b3a6e5b6d1bf3f3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref> *</type>
@@ -47,7 +47,7 @@
 <para>This makes it possible to use the same event handler for different sockets. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="489"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="489"/>
       </memberdef>
       <memberdef kind="function" id="classwx_socket_event_1aada3c935e094053efb3379d60932d726" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>wxSocketNotify</type>
@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="494"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="494"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -74,49 +74,49 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref>, <ref refid="classwx_socket_client" kindref="compound">wxSocketClient</ref>, <ref refid="classwx_socket_server" kindref="compound">wxSocketServer</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10302">
+      <node id="10485">
         <label>wxSocketEvent</label>
         <link refid="classwx_socket_event"/>
-        <childnode refid="10303" relation="public-inheritance">
+        <childnode refid="10486" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10304">
+      <node id="10487">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10303">
+      <node id="10486">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10304" relation="public-inheritance">
+        <childnode refid="10487" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10305">
+      <node id="10488">
         <label>wxSocketEvent</label>
         <link refid="classwx_socket_event"/>
-        <childnode refid="10306" relation="public-inheritance">
+        <childnode refid="10489" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10307">
+      <node id="10490">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10308" relation="usage">
+        <childnode refid="10491" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10306">
+      <node id="10489">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10307" relation="public-inheritance">
+        <childnode refid="10490" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10308">
+      <node id="10491">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" line="472" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/socket.h" bodystart="471" bodyend="495"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" line="472" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/socket.h" bodystart="471" bodyend="495"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxSocketEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxSocketEvent</scope><name>Clone</name></member>

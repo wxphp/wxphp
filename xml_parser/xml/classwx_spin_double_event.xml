@@ -31,7 +31,7 @@
 <para>Not normally used by the user code. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/spinctrl.h" line="312"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/spinctrl.h" line="312"/>
       </memberdef>
       <memberdef kind="function" id="classwx_spin_double_event_1a53a641a6232fe880ca13fad00d136b62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -48,7 +48,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/spinctrl.h" line="317"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/spinctrl.h" line="317"/>
       </memberdef>
       <memberdef kind="function" id="classwx_spin_double_event_1a106939d828fc6dffdfc6d76deae70e67" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/spinctrl.h" line="322"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/spinctrl.h" line="322"/>
       </memberdef>
       <memberdef kind="function" id="classwx_spin_double_event_1a895122565354163e3160e0f9085032d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -78,7 +78,7 @@
 <para>(Not normally used by user code.) </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/spinctrl.h" line="328"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/spinctrl.h" line="328"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -92,73 +92,73 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="classwx_spin_ctrl_double" kindref="compound">wxSpinCtrlDouble</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10380">
+      <node id="10563">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10378">
+      <node id="10561">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="10379" relation="public-inheritance">
+        <childnode refid="10562" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10376">
+      <node id="10559">
         <label>wxSpinDoubleEvent</label>
         <link refid="classwx_spin_double_event"/>
-        <childnode refid="10377" relation="public-inheritance">
+        <childnode refid="10560" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10377">
+      <node id="10560">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="10378" relation="public-inheritance">
+        <childnode refid="10561" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10379">
+      <node id="10562">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10380" relation="public-inheritance">
+        <childnode refid="10563" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10385">
+      <node id="10568">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10386" relation="usage">
+        <childnode refid="10569" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10383">
+      <node id="10566">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="10384" relation="public-inheritance">
+        <childnode refid="10567" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10381">
+      <node id="10564">
         <label>wxSpinDoubleEvent</label>
         <link refid="classwx_spin_double_event"/>
-        <childnode refid="10382" relation="public-inheritance">
+        <childnode refid="10565" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10382">
+      <node id="10565">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="10383" relation="public-inheritance">
+        <childnode refid="10566" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10384">
+      <node id="10567">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10385" relation="public-inheritance">
+        <childnode refid="10568" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10386">
+      <node id="10569">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/spinctrl.h" line="306" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/spinctrl.h" bodystart="305" bodyend="329"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/spinctrl.h" line="306" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/spinctrl.h" bodystart="305" bodyend="329"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxSpinDoubleEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_notify_event_1a7b23515f827b2ce1da1e6990d9aafe80" prot="public" virt="non-virtual"><scope>wxSpinDoubleEvent</scope><name>Allow</name></member>

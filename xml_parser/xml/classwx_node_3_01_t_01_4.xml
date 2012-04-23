@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="430"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="430"/>
       </memberdef>
       <memberdef kind="function" id="classwx_node_3_01_t_01_4_1ac7e413f6b9bb67c745b4fc7f6d4c9535" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>wxNode&lt; T &gt; *</type>
@@ -33,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="435"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="435"/>
       </memberdef>
       <memberdef kind="function" id="classwx_node_3_01_t_01_4_1a09aff1d34b26568aaf6af9cb76eb107f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>wxNode&lt; T &gt; *</type>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="440"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="440"/>
       </memberdef>
       <memberdef kind="function" id="classwx_node_3_01_t_01_4_1a7a647f2893f29c40553b85fd16ffb48c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -59,7 +59,7 @@
 <para>The return value will be <computeroutput>wxNOT_FOUND</computeroutput> if the node has not been added to a list yet. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="446"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="446"/>
       </memberdef>
       <memberdef kind="function" id="classwx_node_3_01_t_01_4_1a929534c6f612a52b22ed674a3d61e131" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -76,7 +76,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="452"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="452"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -93,7 +93,7 @@
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="classwx_list_3_01_t_01_4" kindref="compound">wxList&lt;T&gt;</ref>, <ref refid="classwx_hash_table" kindref="compound">wxHashTable</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" line="425" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/list.h" bodystart="424" bodyend="453"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" line="425" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/list.h" bodystart="424" bodyend="453"/>
     <listofallmembers>
       <member refid="classwx_node_3_01_t_01_4_1a41569880ebec6d0de3e9fe9287bdc226" prot="public" virt="non-virtual"><scope>wxNode&lt; T &gt;</scope><name>GetData</name></member>
       <member refid="classwx_node_3_01_t_01_4_1ac7e413f6b9bb67c745b4fc7f6d4c9535" prot="public" virt="non-virtual"><scope>wxNode&lt; T &gt;</scope><name>GetNext</name></member>

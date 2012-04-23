@@ -15,7 +15,7 @@
 <para>Not in <ref refid="classwx_u_long_long" kindref="compound">wxULongLong</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="63"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="63"/>
       </memberdef>
       <memberdef kind="function" id="classwx_long_long_1a0307c69edd5e97bbe79728cde675890e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref> &amp;</type>
@@ -28,7 +28,7 @@
 <para>Not in <ref refid="classwx_u_long_long" kindref="compound">wxULongLong</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="64"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="64"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="134"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="134"/>
       </memberdef>
       <memberdef kind="function" id="classwx_long_long_1a7de3b9948d0a797c8424af76c852e823" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="135"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="135"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -74,7 +74,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="142"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="142"/>
       </memberdef>
       <memberdef kind="function" id="classwx_long_long_1a413ffd977a302be5b501b6abe1c7c486" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
@@ -90,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="143"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="143"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -105,7 +105,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="45"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="45"/>
       </memberdef>
       <memberdef kind="function" id="classwx_long_long_1aa2fcc54f965a709ee16bba5300a4d694" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -122,7 +122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="50"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="50"/>
       </memberdef>
       <memberdef kind="function" id="classwx_long_long_1a71f0fdaa2925f229ab33c6a115b4660d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -143,7 +143,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="56"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="56"/>
       </memberdef>
       <memberdef kind="function" id="classwx_long_long_1a2197ed364fd839c0cfb10f507cf51c1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
@@ -160,7 +160,7 @@
 <para>Such conversion is not always possible in which case the result will be silently truncated in a platform-dependent way. Not in <ref refid="classwx_u_long_long" kindref="compound">wxULongLong</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="73"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="73"/>
       </memberdef>
       <memberdef kind="function" id="classwx_long_long_1a8c9add04ee7065128a0bfa7ccd42d309" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -173,7 +173,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="78"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="78"/>
       </memberdef>
       <memberdef kind="function" id="classwx_long_long_1a2df60397fcd232a15a6b813e115667db" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned long</type>
@@ -186,7 +186,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="83"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="83"/>
       </memberdef>
       <memberdef kind="function" id="classwx_long_long_1a9b10c4f110db0e37b4fcf0250c246454" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>wxLongLong_t</type>
@@ -199,7 +199,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="88"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="88"/>
       </memberdef>
       <memberdef kind="function" id="classwx_long_long_1a5d0d84321018245413ac71939f3d80d2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -212,7 +212,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="93"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="93"/>
       </memberdef>
       <memberdef kind="function" id="classwx_long_long_1a1f3e078524d8d495bbc130c93b6fbdf2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -225,7 +225,7 @@
 <para>If the conversion loses data (i.e. the <ref refid="classwx_long_long" kindref="compound">wxLongLong</ref> value is outside the range of built-in long type), an assert will be triggered in debug mode. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="100"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="100"/>
       </memberdef>
       <memberdef kind="function" id="classwx_long_long_1ab53c850616c14e473d614110f7d5e7ee" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -238,7 +238,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="105"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="105"/>
       </memberdef>
       <memberdef kind="function" id="classwx_long_long_1a916dc41892ced7a0983bfe91d3ee690e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
@@ -255,7 +255,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="111"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="111"/>
       </memberdef>
       <memberdef kind="function" id="classwx_long_long_1a5cd55e4f060afcb029d4f13d22044e7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref> &amp;</type>
@@ -272,7 +272,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="116"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="116"/>
       </memberdef>
       <memberdef kind="function" id="classwx_long_long_1a9ad8af673d63d1e43d6f9339964005f1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
@@ -289,7 +289,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="122"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="122"/>
       </memberdef>
       <memberdef kind="function" id="classwx_long_long_1a125b1c3808992e3497168f0fd8b00b2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref> &amp;</type>
@@ -306,7 +306,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="127"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="127"/>
       </memberdef>
       <memberdef kind="function" id="classwx_long_long_1ac842b7e70f02b64eb41e6bb3df047122" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
@@ -319,7 +319,7 @@
 <para>Not in <ref refid="classwx_u_long_long" kindref="compound">wxULongLong</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="149"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="149"/>
       </memberdef>
       <memberdef kind="function" id="classwx_long_long_1a3633d9dc2e50a822f486ab9a9520c3a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref> &amp;</type>
@@ -337,7 +337,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="156"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="156"/>
       </memberdef>
       <memberdef kind="function" id="classwx_long_long_1ace79a5bc5c19f0b16fae047c2b6e204e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref> &amp;</type>
@@ -354,7 +354,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="161"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="161"/>
       </memberdef>
       <memberdef kind="function" id="classwx_long_long_1a522b90d0342c6ae7e5e1df6fceb2cdad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref> &amp;</type>
@@ -372,7 +372,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="168"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="168"/>
       </memberdef>
       <memberdef kind="function" id="classwx_long_long_1a639b49f3a4efe1e6a06947919a454f14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref> &amp;</type>
@@ -390,7 +390,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="175"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="175"/>
       </memberdef>
       <memberdef kind="function" id="classwx_long_long_1a0c36689c172b743a4ca81ca98b76708f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref> &amp;</type>
@@ -408,7 +408,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="182"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="182"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -418,7 +418,7 @@
 <listitem><para><ref refid="group__group__funcmacro__misc_1ga6203af2f81f7b2a3dd8aa384426631a8" kindref="member">wxLongLongFmtSpec()</ref> for printing 64 bit integers using the standard <computeroutput>printf()</computeroutput> function (but see also <ref refid="classwx_long_long_1ab53c850616c14e473d614110f7d5e7ee" kindref="member">wxLongLong::ToString</ref> for a more portable solution);</para></listitem><listitem><para><ref refid="group__group__funcmacro__misc_1ga8d211f75f18b9dfa770f93a1518e78da" kindref="member">wxLL()</ref> for defining 64 bit integer compile-time constants.</para></listitem></itemizedlist>
 </para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" line="40" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/longlong.h" bodystart="39" bodyend="184"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" line="40" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/longlong.h" bodystart="39" bodyend="184"/>
     <listofallmembers>
       <member refid="classwx_long_long_1a2e9ab7a537f48be3be9c0b190ab085c9" prot="public" virt="non-virtual"><scope>wxLongLong</scope><name>Abs</name></member>
       <member refid="classwx_long_long_1a0307c69edd5e97bbe79728cde675890e" prot="public" virt="non-virtual"><scope>wxLongLong</scope><name>Abs</name></member>

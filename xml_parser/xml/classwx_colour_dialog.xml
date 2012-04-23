@@ -26,7 +26,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colordlg.h" line="35"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colordlg.h" line="35"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_dialog_1aef4109de22ac4dcc7f68490f91fb6398" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -39,7 +39,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colordlg.h" line="40"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colordlg.h" line="40"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_dialog_1a6feb041ce8a28bdb8c70409bc3090174" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -61,7 +61,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colordlg.h" line="45"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colordlg.h" line="45"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_dialog_1a7ef6a7bfc58bea095c898460e7a0d374" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_colour_data" kindref="compound">wxColourData</ref> &amp;</type>
@@ -74,7 +74,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colordlg.h" line="50"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colordlg.h" line="50"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_dialog_1a06684af732f3a6e60be6a016b96f9c9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>int</type>
@@ -88,7 +88,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colordlg.h" line="56"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colordlg.h" line="56"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -98,109 +98,109 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cmndlg" kindref="compound">Common Dialogs</ref></para><para><simplesect kind="see"><para><ref refid="overview_cmndlg_1overview_cmndlg_colour" kindref="member">wxColourDialog Overview</ref>, <ref refid="classwx_colour" kindref="compound">wxColour</ref>, <ref refid="classwx_colour_data" kindref="compound">wxColourData</ref>, <ref refid="group__group__funcmacro__dialog_1gae21ee60a8c039d8b78aeeca9f27bac2b" kindref="member">wxGetColourFromUser()</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4866">
+      <node id="4958">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="4867" relation="public-inheritance">
+        <childnode refid="4959" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4869">
+      <node id="4961">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4868">
+      <node id="4960">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4869" relation="public-inheritance">
+        <childnode refid="4961" relation="public-inheritance">
         </childnode>
-        <childnode refid="4870" relation="public-inheritance">
+        <childnode refid="4962" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4870">
+      <node id="4962">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4867">
+      <node id="4959">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4868" relation="public-inheritance">
+        <childnode refid="4960" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4864">
+      <node id="4956">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="4865" relation="public-inheritance">
+        <childnode refid="4957" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4863">
+      <node id="4955">
         <label>wxColourDialog</label>
         <link refid="classwx_colour_dialog"/>
-        <childnode refid="4864" relation="public-inheritance">
+        <childnode refid="4956" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4865">
+      <node id="4957">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="4866" relation="public-inheritance">
+        <childnode refid="4958" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4874">
+      <node id="4966">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="4875" relation="public-inheritance">
+        <childnode refid="4967" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4877">
+      <node id="4969">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4878" relation="usage">
+        <childnode refid="4970" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4876">
+      <node id="4968">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="4877" relation="public-inheritance">
+        <childnode refid="4969" relation="public-inheritance">
         </childnode>
-        <childnode refid="4879" relation="public-inheritance">
+        <childnode refid="4971" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4879">
+      <node id="4971">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="4875">
+      <node id="4967">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="4876" relation="public-inheritance">
+        <childnode refid="4968" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4872">
+      <node id="4964">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="4873" relation="public-inheritance">
+        <childnode refid="4965" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4871">
+      <node id="4963">
         <label>wxColourDialog</label>
         <link refid="classwx_colour_dialog"/>
-        <childnode refid="4872" relation="public-inheritance">
+        <childnode refid="4964" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4873">
+      <node id="4965">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="4874" relation="public-inheritance">
+        <childnode refid="4966" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4878">
+      <node id="4970">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colordlg.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/colordlg.h" bodystart="20" bodyend="57"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/colordlg.h" line="21" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/colordlg.h" bodystart="20" bodyend="57"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxColourDialog</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxColourDialog</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -245,6 +245,7 @@
       <member refid="classwx_dialog_1a0c6fb55be0b07b934b30550e0225df8f" prot="public" virt="non-virtual"><scope>wxColourDialog</scope><name>CreateSeparatedButtonSizer</name></member>
       <member refid="classwx_dialog_1ab7a5666b612d6cfdfb2660fd9bd3393e" prot="public" virt="non-virtual"><scope>wxColourDialog</scope><name>CreateSeparatedSizer</name></member>
       <member refid="classwx_dialog_1a8f2f565975f843035391ce62b0b9f8e8" prot="public" virt="non-virtual"><scope>wxColourDialog</scope><name>CreateStdDialogButtonSizer</name></member>
+      <member refid="classwx_dialog_1a5bead5e932f17b7c2345dfc41b6cc79c" prot="public" virt="non-virtual"><scope>wxColourDialog</scope><name>CreateTextSizer</name></member>
       <member refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" prot="public" virt="non-virtual"><scope>wxColourDialog</scope><name>DeletePendingEvents</name></member>
       <member refid="classwx_window_1a6bf0c5be864544d9ce0560087667b7fc" prot="public" virt="virtual"><scope>wxColourDialog</scope><name>Destroy</name></member>
       <member refid="classwx_window_1aff47b32c8d42d515ea0bb6a6c2fea917" prot="public" virt="non-virtual"><scope>wxColourDialog</scope><name>DestroyChildren</name></member>
@@ -394,6 +395,7 @@
       <member refid="classwx_top_level_window_1afa58f411cf488eb9279683b1d20a74b6" prot="public" virt="virtual"><scope>wxColourDialog</scope><name>IsActive</name></member>
       <member refid="classwx_top_level_window_1ac0c7a7cb6e6dfdf7e59300ee5d476ce3" prot="public" virt="virtual"><scope>wxColourDialog</scope><name>IsAlwaysMaximized</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxColourDialog</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxColourDialog</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxColourDialog</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxColourDialog</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxColourDialog</scope><name>IsExposed</name></member>
@@ -415,6 +417,7 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxColourDialog</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxColourDialog</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxColourDialog</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxColourDialog</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxColourDialog</scope><name>IsUnlinked</name></member>
       <member refid="classwx_top_level_window_1a305c48ddb8e45f89add1694053185a7d" prot="public" virt="non-virtual"><scope>wxColourDialog</scope><name>IsUsingNativeDecorations</name></member>
       <member refid="classwx_top_level_window_1adfe7e3f4a32f3ed178968f64431bbfe0" prot="public" virt="virtual"><scope>wxColourDialog</scope><name>Layout</name></member>
@@ -422,7 +425,6 @@
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxColourDialog</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxColourDialog</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxColourDialog</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxColourDialog</scope><name>MakeModal</name></member>
       <member refid="classwx_top_level_window_1addb1612e9f00ac82c2e19c2bac6ffc4f" prot="public" virt="virtual"><scope>wxColourDialog</scope><name>Maximize</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxColourDialog</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxColourDialog</scope><name>Move</name></member>
@@ -433,7 +435,6 @@
       <member refid="classwx_window_1aa58039c8fc65e19160becf510ee1d1d5" prot="public" virt="non-virtual"><scope>wxColourDialog</scope><name>NavigateIn</name></member>
       <member refid="classwx_window_1a8175da594e6045635a1d1cfe775cdddb" prot="public" virt="non-virtual"><scope>wxColourDialog</scope><name>NewControlId</name></member>
       <member refid="classwx_window_1a6b5654c0c6c6245d592c279521f7099c" prot="public" virt="virtual"><scope>wxColourDialog</scope><name>OnInternalIdle</name></member>
-      <member refid="classwx_dialog_1a31dde643f83e859e53759b8ae5f07378" prot="public" virt="non-virtual"><scope>wxColourDialog</scope><name>OnSysColourChanged</name></member>
       <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxColourDialog</scope><name>operator delete</name></member>
       <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxColourDialog</scope><name>operator new</name></member>
       <member refid="classwx_top_level_window_1a5890684b71321e27e8f3a223ad3c2445" prot="public" virt="virtual"><scope>wxColourDialog</scope><name>OSXIsModified</name></member>
@@ -568,7 +569,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxColourDialog</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxColourDialog</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxColourDialog</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxColourDialog</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxColourDialog</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxColourDialog</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxColourDialog</scope><name>Unlink</name></member>

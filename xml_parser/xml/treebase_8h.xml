@@ -4,6 +4,151 @@
     <compoundname>treebase.h</compoundname>
     <innerclass refid="classwx_tree_item_id" prot="public">wxTreeItemId</innerclass>
     <innerclass refid="classwx_tree_item_data" prot="public">wxTreeItemData</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="treebase_8h_1aae0f452ca54b4b3d9a7ba1195241cee0" prot="public" static="no">
+        <name>wxTR_NO_BUTTONS</name>
+        <initializer>0x0000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="137" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="treebase_8h_1a6462d00efe537ffeafa1c551a95b606d" prot="public" static="no">
+        <name>wxTR_HAS_BUTTONS</name>
+        <initializer>0x0001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="138" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="treebase_8h_1a9467935179d35ff3e0563bba1840682f" prot="public" static="no">
+        <name>wxTR_NO_LINES</name>
+        <initializer>0x0004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="139" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="treebase_8h_1abb53c239ed27857dfcede5bf54d2c919" prot="public" static="no">
+        <name>wxTR_LINES_AT_ROOT</name>
+        <initializer>0x0008</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="140" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="treebase_8h_1a2794843a65400e602ce73651e39fb2ea" prot="public" static="no">
+        <name>wxTR_TWIST_BUTTONS</name>
+        <initializer>0x0010</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="141" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="treebase_8h_1addc7b5bfbea0ab775758ef75abf89b4c" prot="public" static="no">
+        <name>wxTR_SINGLE</name>
+        <initializer>0x0000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="143" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="treebase_8h_1a7a2d6bc351671c6eec6b815db022b963" prot="public" static="no">
+        <name>wxTR_MULTIPLE</name>
+        <initializer>0x0020</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="144" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="treebase_8h_1a79047816991f0d8a252fcc286cfcfcee" prot="public" static="no">
+        <name>wxTR_HAS_VARIABLE_ROW_HEIGHT</name>
+        <initializer>0x0080</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="146" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="treebase_8h_1a424398c366724c02122ff411ac66208c" prot="public" static="no">
+        <name>wxTR_EDIT_LABELS</name>
+        <initializer>0x0200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="148" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="treebase_8h_1a0b1fa7ce643158c3a71a3068fe97c7d3" prot="public" static="no">
+        <name>wxTR_ROW_LINES</name>
+        <initializer>0x0400</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="149" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="treebase_8h_1a7e69064c5fd65e2213552cd6c64822be" prot="public" static="no">
+        <name>wxTR_HIDE_ROOT</name>
+        <initializer>0x0800</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="150" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="treebase_8h_1a32f02f304dfc57773a8128dc1dae8eff" prot="public" static="no">
+        <name>wxTR_FULL_ROW_HIGHLIGHT</name>
+        <initializer>0x2000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="152" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="treebase_8h_1aa07d994fd4002ad64f4d3eb90c87b080" prot="public" static="no">
+        <name>wxTR_DEFAULT_STYLE</name>
+        <initializer>(wxTR_HAS_BUTTONS | wxTR_LINES_AT_ROOT)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="156" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="enum">
       <memberdef kind="enum" id="treebase_8h_1a61d3d0f9fa2ce703a3cb216f617dd964" prot="public" static="no">
         <name>wxTreeItemIcon</name>
@@ -49,13 +194,298 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treebase.h" line="118" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treebase.h" bodystart="117" bodyend="140"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="107" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="106" bodyend="129"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="treebase_8h_1a52b97fdd51ed1f682d276941d0efa99e" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int wxTREE_ITEMSTATE_NONE</definition>
+        <argsstring></argsstring>
+        <name>wxTREE_ITEMSTATE_NONE</name>
+        <initializer> -1</initializer>
+        <briefdescription>
+<para>special values for the &apos;state&apos; parameter of <ref refid="classwx_tree_ctrl_1a8424e24cb8d4ceedffd11f5bc6218038" kindref="member">wxTreeCtrl::SetItemState()</ref> </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="133" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="treebase_8h_1a0d4b860f16375619222027dc53810342" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int wxTREE_ITEMSTATE_NEXT</definition>
+        <argsstring></argsstring>
+        <name>wxTREE_ITEMSTATE_NEXT</name>
+        <initializer> -2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="134" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="treebase_8h_1a0808b19f27bc2295b7e46910f658b66d" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int wxTREE_ITEMSTATE_PREV</definition>
+        <argsstring></argsstring>
+        <name>wxTREE_ITEMSTATE_PREV</name>
+        <initializer> -3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="135" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="treebase_8h_1ac3c73fb9ff798f65b09c3dd782dd77f3" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int wxTREE_HITTEST_ABOVE</definition>
+        <argsstring></argsstring>
+        <name>wxTREE_HITTEST_ABOVE</name>
+        <initializer> 0x0001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="162" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="treebase_8h_1a15dea15d2280602cfbe1909fd9e1a2c0" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int wxTREE_HITTEST_BELOW</definition>
+        <argsstring></argsstring>
+        <name>wxTREE_HITTEST_BELOW</name>
+        <initializer> 0x0002</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="163" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="treebase_8h_1aa7854788d01d77ec4d7f5edeccd94a58" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int wxTREE_HITTEST_NOWHERE</definition>
+        <argsstring></argsstring>
+        <name>wxTREE_HITTEST_NOWHERE</name>
+        <initializer> 0x0004</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="164" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="treebase_8h_1addd191d3ec5874db2cffe2071b691dd8" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int wxTREE_HITTEST_ONITEMBUTTON</definition>
+        <argsstring></argsstring>
+        <name>wxTREE_HITTEST_ONITEMBUTTON</name>
+        <initializer> 0x0008</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="166" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="treebase_8h_1a2cc897d3cfc5ac70cbb92f05f434af00" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int wxTREE_HITTEST_ONITEMICON</definition>
+        <argsstring></argsstring>
+        <name>wxTREE_HITTEST_ONITEMICON</name>
+        <initializer> 0x0010</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="168" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="treebase_8h_1a616057d48b0a6d16eaf756d3f54e1aec" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int wxTREE_HITTEST_ONITEMINDENT</definition>
+        <argsstring></argsstring>
+        <name>wxTREE_HITTEST_ONITEMINDENT</name>
+        <initializer> 0x0020</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="170" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="treebase_8h_1a037728af5a96ec6423cde5c6b21951b1" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int wxTREE_HITTEST_ONITEMLABEL</definition>
+        <argsstring></argsstring>
+        <name>wxTREE_HITTEST_ONITEMLABEL</name>
+        <initializer> 0x0040</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="172" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="treebase_8h_1a24770fb65ee248143bd298ba6cf9e32e" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int wxTREE_HITTEST_ONITEMRIGHT</definition>
+        <argsstring></argsstring>
+        <name>wxTREE_HITTEST_ONITEMRIGHT</name>
+        <initializer> 0x0080</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="174" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="treebase_8h_1ac16a36a728b2154327253299cf8d0e05" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int wxTREE_HITTEST_ONITEMSTATEICON</definition>
+        <argsstring></argsstring>
+        <name>wxTREE_HITTEST_ONITEMSTATEICON</name>
+        <initializer> 0x0100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="176" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="treebase_8h_1aa0de54829af5618739f0f03cf12401cb" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int wxTREE_HITTEST_TOLEFT</definition>
+        <argsstring></argsstring>
+        <name>wxTREE_HITTEST_TOLEFT</name>
+        <initializer> 0x0200</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="178" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="treebase_8h_1a8adc7ecb98bbbd7c5834a0d18b485e8a" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int wxTREE_HITTEST_TORIGHT</definition>
+        <argsstring></argsstring>
+        <name>wxTREE_HITTEST_TORIGHT</name>
+        <initializer> 0x0400</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="180" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="treebase_8h_1ab781978d6204ef79fd7e4669cc0179cb" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int wxTREE_HITTEST_ONITEMUPPERPART</definition>
+        <argsstring></argsstring>
+        <name>wxTREE_HITTEST_ONITEMUPPERPART</name>
+        <initializer> 0x0800</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="182" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="treebase_8h_1acb2ba91f40ad8c7697cd55cb206d020c" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int wxTREE_HITTEST_ONITEMLOWERPART</definition>
+        <argsstring></argsstring>
+        <name>wxTREE_HITTEST_ONITEMLOWERPART</name>
+        <initializer> 0x1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="184" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="treebase_8h_1a4be8d436e384a3a68f57ac23576dbc77" prot="public" static="yes" mutable="no">
+        <type>const int</type>
+        <definition>const int wxTREE_HITTEST_ONITEM</definition>
+        <argsstring></argsstring>
+        <name>wxTREE_HITTEST_ONITEM</name>
+        <initializer> <ref refid="treebase_8h_1a2cc897d3cfc5ac70cbb92f05f434af00" kindref="member">wxTREE_HITTEST_ONITEMICON</ref> |
+                                          <ref refid="treebase_8h_1a037728af5a96ec6423cde5c6b21951b1" kindref="member">wxTREE_HITTEST_ONITEMLABEL</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="188" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="treebase_8h_1a401a23a2485d8d7288deb9baf041b114" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const wxTreeItemId &amp;left, const wxTreeItemId &amp;right)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="38"/>
+      </memberdef>
+      <memberdef kind="function" id="treebase_8h_1a81b0d5c59050c15066b9df57f38d01ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(const wxTreeItemId &amp;left, const wxTreeItemId &amp;right)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classwx_tree_item_id" kindref="compound">wxTreeItemId</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h" line="39"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treebase.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treebase.h"/>
   </compounddef>
 </doxygen>

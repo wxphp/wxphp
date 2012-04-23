@@ -37,13 +37,13 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/automtn.h" line="17" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/automtn.h" bodystart="16" bodyend="43"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/ole/automtn.h" line="17" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/ole/automtn.h" bodystart="16" bodyend="43"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msw/ole/automtn.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msw/ole/automtn.h"/>
   </compounddef>
 </doxygen>

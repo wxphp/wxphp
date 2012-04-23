@@ -62,13 +62,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/url.h" line="12" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/url.h" bodystart="12" bodyend="20"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/url.h" line="12" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/url.h" bodystart="12" bodyend="20"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/url.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/url.h"/>
   </compounddef>
 </doxygen>

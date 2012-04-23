@@ -4,6 +4,7 @@
     <compoundname>mimetype.h</compoundname>
     <innerclass refid="classwx_mime_types_manager" prot="public">wxMimeTypesManager</innerclass>
     <innerclass refid="classwx_file_type" prot="public">wxFileType</innerclass>
+    <innerclass refid="classwx_file_type_1_1_message_parameters" prot="public">wxFileType::MessageParameters</innerclass>
     <innerclass refid="classwx_file_type_info" prot="public">wxFileTypeInfo</innerclass>
       <sectiondef kind="var">
       <memberdef kind="variable" id="mimetype_8h_1a452e0da90a41ab30e7efe5c981d2522e" prot="public" static="no" mutable="no">
@@ -17,13 +18,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" line="106" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h" bodystart="106" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mimetype.h" line="106" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/mimetype.h" bodystart="106" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/mimetype.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/mimetype.h"/>
   </compounddef>
 </doxygen>

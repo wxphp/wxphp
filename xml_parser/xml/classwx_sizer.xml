@@ -18,7 +18,7 @@
 <para>The elements of type-safe wxList <computeroutput>wxSizerItemList</computeroutput> are pointers to objects of type <ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="426"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="420"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a542ef0705987b3b25cec3d0607dfdca2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const wxSizerItemList &amp;</type>
@@ -31,7 +31,7 @@
 <para>The elements of type-safe wxList <computeroutput>wxSizerItemList</computeroutput> are pointers to objects of type <ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="427"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="421"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -60,7 +60,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="815"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="809"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a486d80e43e6cbd8fea5fa2879d111071" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -83,7 +83,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="816"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="810"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a8e4230a56ca442a3eb3577f6c47094d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -110,7 +110,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="818"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="812"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a9941c644acf3b215678cea0ea15aeec0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -133,7 +133,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="819"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="813"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1aae51219b9dfd74c3af5823e39f558ed4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -160,7 +160,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="821"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="815"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1abc7a754f4a12f80025fad0d131082fbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -183,7 +183,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="822"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="816"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -198,7 +198,7 @@
 <para>Note that <ref refid="classwx_sizer" kindref="compound">wxSizer</ref> is an abstract base class and may not be instantiated. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="122"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="116"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a5d52467e4e1367939ef4d9ddc6876cfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -211,7 +211,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="127"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="121"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
@@ -247,7 +247,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="145"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="139"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a81d21f287c416da96739a73faa54840d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
@@ -320,7 +320,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="185"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="179"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a1c45a17c2d1e2d669c46d558d521d891" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
@@ -356,7 +356,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="203"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="197"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1aaa40babf76cdb56d20f6c37fff282610" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
@@ -429,7 +429,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="243"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="237"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1aa2d6009b34b1d34de920390795d8c0fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
@@ -513,7 +513,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="291"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="285"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a6d7602d14f246395773e00ca46bf816a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
@@ -530,7 +530,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="293"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="287"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1aedfc0bfd98114c348766431dcb49c9f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
@@ -550,7 +550,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="304"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="298"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1af529134a9dc74a0551d12e747af5c976" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
@@ -569,7 +569,7 @@
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="313"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="307"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a371b9b72e55c1fedfbea9d298bc2df77" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -589,7 +589,7 @@
 <para>Here, the sizer will do the actual calculation of its children&apos;s minimal sizes. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="319"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="313"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a5909429d14de1baf1b832d5c1abf7821" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -607,7 +607,7 @@
 <para>If <emphasis>delete_windows</emphasis> is true then child windows will also be deleted. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="325"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="319"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a0da5d65c9b4192bd24cc3feb1be69e59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -626,7 +626,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="341"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="335"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a3056cb4d47ea296e095b6cbc35d61155" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -645,7 +645,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="352"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="346"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a362d7d556185fe9cd1b5d24004b86518" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -663,7 +663,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="364"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="358"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a0283dc800bd1c03cd10d437cef240791" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -681,7 +681,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="376"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="370"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1aef45062fe9096f2c48c20d8ae3ad6476" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -699,7 +699,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="387"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="381"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1abad9cedc0cbe9ade2c799da23462d17e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -718,7 +718,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="399"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="393"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a37904ed600fd389345295ff89aa09fdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -736,7 +736,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="409"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="403"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1ad0cc504036ef6c3a9d670dc3c98df3a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -759,10 +759,10 @@
         <briefdescription>
 <para>Inform sizer about the first direction that has been decided (by parent item). </para>        </briefdescription>
         <detaileddescription>
-<para>Returns true if it made use of the informtion (and recalculated min size). </para>        </detaileddescription>
+<para>Returns true if it made use of the information (and recalculated min size). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="416"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="410"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1afc4df63c94cf062b7ef29d274d2ee6c1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -775,7 +775,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="433"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="427"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1ac0e0239d22c99213b99bbafdade6793d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -788,7 +788,7 @@
 <para>If you just need to test whether the sizer is empty or not you can also use <ref refid="classwx_sizer_1ae456d3459b9b31545100a799eb5e8c2a" kindref="member">IsEmpty()</ref> function. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="441"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="435"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1adca9ab35f05d28156ac0d4bc2e2ed6ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
@@ -810,7 +810,7 @@
 <para>Use parameter <emphasis>recursive</emphasis> to search in subsizers too. Returns pointer to item or NULL. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="448"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="442"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1acb45fd75ab336670f41879fd557a7c65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
@@ -832,7 +832,7 @@
 <para>Use parameter <emphasis>recursive</emphasis> to search in subsizers too. Returns pointer to item or NULL. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="456"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="450"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a2aa7f3c241944ae28ee9cbd6df662227" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
@@ -849,7 +849,7 @@
 <para>Use parameter <emphasis>recursive</emphasis> to search in subsizers too. Returns pointer to item or NULL. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="463"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="457"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1ab94e21f858a3c82055faed4b621e4ad2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
@@ -871,7 +871,7 @@
 <para>This <emphasis>id</emphasis> is not the window id but the id of the <ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> itself. This is mainly useful for retrieving the sizers created from XRC resources. Use parameter <emphasis>recursive</emphasis> to search in subsizers too. Returns pointer to item or NULL. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="472"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="466"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a9fab8d16aefe347dbd57e0bdfe0d810d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -884,7 +884,7 @@
 <para>This is either the combined minimal size of all the children and their borders or the minimal size set by <ref refid="classwx_sizer_1a97bbbf3ee6e55c321d7bb72b4c1b7d79" kindref="member">SetMinSize()</ref>, depending on which is bigger. Note that the returned value is client size, not window size. In particular, if you use the value to set toplevel window&apos;s minimal or actual size, use <ref refid="classwx_window_1a6e35ba44b97e374dfffa460d41d94b31" kindref="member">wxWindow::SetMinClientSize()</ref> or <ref refid="classwx_window_1aa59f715217fffa5bcf14cd97f92e7840" kindref="member">wxWindow::SetClientSize()</ref>, not <ref refid="classwx_window_1a3fc066f4d8083319f004ac43811d545d" kindref="member">wxWindow::SetMinSize()</ref> or <ref refid="classwx_window_1a180312d5ad4a4a5ad805b8d52d67a74e" kindref="member">wxWindow::SetSize()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="484"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="478"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a3907d4a032274c808b57de3c0c70d215" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
@@ -897,7 +897,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="489"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="483"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a4898d4754c1b45e8acc79a2376fc6220" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -910,7 +910,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="494"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="488"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a317299431009a0adb4874f9c3f39ea8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -933,7 +933,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="506"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="500"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1ae822dbd21860bfdbf7f76ca22cdcc1f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -956,7 +956,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="518"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="512"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a53c972f52267daea500d78f606fa0032" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -974,7 +974,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="530"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="524"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1aafc5f53e9d3511440be05f9805bb2871" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
@@ -999,7 +999,7 @@
 <para>See <ref refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" kindref="member">Add()</ref> for the meaning of the other parameters. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="538"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="532"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1aecb6744c0c82c0eb1ae12a532d5d019b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
@@ -1040,7 +1040,7 @@
 <para>See <ref refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" kindref="member">Add()</ref> for the meaning of the other parameters. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="549"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="543"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a244f64c3d5c900615b2384b320f6c17b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
@@ -1065,7 +1065,7 @@
 <para>See <ref refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" kindref="member">Add()</ref> for the meaning of the other parameters. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="557"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="551"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a9308aed2cb55227ac1aec7e14707eb3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
@@ -1106,7 +1106,7 @@
 <para>See <ref refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" kindref="member">Add()</ref> for the meaning of the other parameters. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="568"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="562"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a43cfac9112288a7d9302ceb674694bf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
@@ -1151,7 +1151,7 @@
 <para>See <ref refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" kindref="member">Add()</ref> for the meaning of the other parameters. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="579"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="573"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a6d1daeda52f9f944a0ebd667471ecf6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
@@ -1172,7 +1172,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="581"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="575"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1afb001f9018ff92400937bf6bd494de0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
@@ -1193,7 +1193,7 @@
 <para>More readable way of calling wxSizer::Insert(index, size, size). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="587"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="581"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a8aeaaac2a98635d45a06961e505e8dde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
@@ -1215,7 +1215,7 @@
 <para>More readable way of calling wxSizer::Insert(0, 0, prop). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="593"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="587"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1ae456d3459b9b31545100a799eb5e8c2a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1229,7 +1229,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="600"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="594"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a44f05d5396f62aa3764d319489223536" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1247,7 +1247,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="607"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="601"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a5fd1c503a027709c29e4f56c9707b75c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1265,7 +1265,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="614"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="608"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a7543a671a8ae7193ba8d15532ca8712d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1283,7 +1283,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="621"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="615"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a1ea8589882944f8ac78b6ff8abde1554" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -1296,7 +1296,7 @@
 <para>after having added a child to or removed a child (window, other sizer or space) from the sizer while keeping the current dimension. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="628"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="622"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a7417fb9b0e3b4777c11b381f14cf0153" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
@@ -1317,7 +1317,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="634"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="628"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a66ce726dcc4bf0a283530d3bc425aae9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
@@ -1354,7 +1354,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="643"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="637"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1aedfd27f1b77cd34d23c06e001670a62d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
@@ -1375,7 +1375,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="650"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="644"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a968936425f2d5e6b9c15a3820737e1fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
@@ -1412,7 +1412,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="659"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="653"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a504343f0780c3d1ea7f16bcf1e6e90b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
@@ -1453,7 +1453,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="669"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="663"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a0f34608b8bf5b119938cea846a4b29c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
@@ -1470,7 +1470,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="671"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="665"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1acc707e1e6d0afd18dc4e70052fa21d78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
@@ -1487,7 +1487,7 @@
 <para>More readable way of calling wxSizer::Prepend(size, size, 0). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="677"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="671"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1ac102680023527ab0610a0d2a6340d4e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref> *</type>
@@ -1505,7 +1505,7 @@
 <para>More readable way of calling wxSizer::Prepend(0, 0, prop). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="683"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="677"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1ad8bbc5e78a46f85d445db3c324fe1614" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -1525,7 +1525,7 @@
 <para>Here, the sizer will do the actual calculation of its children&apos;s positions and sizes. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="690"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="684"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a06ef74a0bb6aba1f1d3aab02fb402fec" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -1539,12 +1539,12 @@
         <briefdescription>
 <para>Removes a child window from the sizer, but does <bold>not</bold> destroy it (because windows are owned by their parent window, not the sizer). </para>        </briefdescription>
         <detaileddescription>
-<para><xrefsect id="deprecated_1_deprecated000048"><xreftitle>Deprecated</xreftitle><xrefdescription><para>The overload of this method taking a wxWindow* parameter is deprecated as it does not destroy the window as would usually be expected from <ref refid="classwx_sizer_1a06ef74a0bb6aba1f1d3aab02fb402fec" kindref="member">Remove()</ref>. You should use <ref refid="classwx_sizer_1a362d7d556185fe9cd1b5d24004b86518" kindref="member">Detach()</ref> in new code instead. There is currently no <ref refid="classwx_sizer" kindref="compound">wxSizer</ref> method that will both detach and destroy a <ref refid="classwx_window" kindref="compound">wxWindow</ref> item.</para></xrefdescription></xrefsect></para><para><simplesect kind="note"><para>This method does not cause any layout or resizing to take place, call <ref refid="classwx_sizer_1a1ea8589882944f8ac78b6ff8abde1554" kindref="member">Layout()</ref> to update the layout &quot;on screen&quot; after removing a child from the sizer.</para></simplesect>
+<para><xrefsect id="deprecated_1_deprecated000047"><xreftitle>Deprecated</xreftitle><xrefdescription><para>The overload of this method taking a wxWindow* parameter is deprecated as it does not destroy the window as would usually be expected from <ref refid="classwx_sizer_1a06ef74a0bb6aba1f1d3aab02fb402fec" kindref="member">Remove()</ref>. You should use <ref refid="classwx_sizer_1a362d7d556185fe9cd1b5d24004b86518" kindref="member">Detach()</ref> in new code instead. There is currently no <ref refid="classwx_sizer" kindref="compound">wxSizer</ref> method that will both detach and destroy a <ref refid="classwx_window" kindref="compound">wxWindow</ref> item.</para></xrefdescription></xrefsect></para><para><simplesect kind="note"><para>This method does not cause any layout or resizing to take place, call <ref refid="classwx_sizer_1a1ea8589882944f8ac78b6ff8abde1554" kindref="member">Layout()</ref> to update the layout &quot;on screen&quot; after removing a child from the sizer.</para></simplesect>
 <simplesect kind="return"><para>true if the child item was found and removed, false otherwise. </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="709"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="703"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a7fce6ce0e986e00e6702914436b6191a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -1571,7 +1571,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="722"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="716"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1accad1425ce5f2504fb63d2801b5b85e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -1598,7 +1598,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="738"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="732"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1ade62512b74abfa0c6ff45825ea0c9d9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -1624,7 +1624,7 @@
 <para>The detached child window is <bold>not</bold> deleted (because windows are owned by their parent window, not the sizer).</para><para>Use parameter <emphasis>recursive</emphasis> to search the given element recursively in subsizers.</para><para>This method does not cause any layout or resizing to take place, call <ref refid="classwx_sizer_1a1ea8589882944f8ac78b6ff8abde1554" kindref="member">Layout()</ref> to update the layout &quot;on screen&quot; after replacing a child from the sizer.</para><para>Returns true if the child item was found and removed, false otherwise. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="754"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="748"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a842fc94c0f5e58597216cb952e044509" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -1650,7 +1650,7 @@
 <para>The detached child sizer is deleted.</para><para>Use parameter <emphasis>recursive</emphasis> to search the given element recursively in subsizers.</para><para>This method does not cause any layout or resizing to take place, call <ref refid="classwx_sizer_1a1ea8589882944f8ac78b6ff8abde1554" kindref="member">Layout()</ref> to update the layout &quot;on screen&quot; after replacing a child from the sizer.</para><para>Returns true if the child item was found and removed, false otherwise. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="769"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="763"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a5283d4d5fd059cea93e9401e3708f294" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -1671,7 +1671,7 @@
 <para>The detached child is deleted <bold>only</bold> if it is a sizer or a spacer (but not if it is a <ref refid="classwx_window" kindref="compound">wxWindow</ref> because windows are owned by their parent window, not the sizer).</para><para>This method does not cause any layout or resizing to take place, call <ref refid="classwx_sizer_1a1ea8589882944f8ac78b6ff8abde1554" kindref="member">Layout()</ref> to update the layout &quot;on screen&quot; after replacing a child from the sizer.</para><para>Returns true if the child item was found and removed, false otherwise. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="785"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="779"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a3c5483afdc5b5b5657548e190226f285" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1700,7 +1700,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="792"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="786"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1aa993f4a4534bd4dd24c801bfda6da224" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1721,7 +1721,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="797"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="791"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a97bbbf3ee6e55c321d7bb72b4c1b7d79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1738,7 +1738,7 @@
 <para>Normally, the sizer will calculate its minimal size based purely on how much space its children need. After calling this method <ref refid="classwx_sizer_1a9fab8d16aefe347dbd57e0bdfe0d810d" kindref="member">GetMinSize()</ref> will return either the minimal size as requested by its children or the minimal size set here, depending on which is bigger. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="833"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="827"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a0e89f59e611c0279e8bee1b7ee345446" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1759,7 +1759,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="838"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="832"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1abc460cd0e2bb3bde72142fdb434bc546" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1776,7 +1776,7 @@
 <para>This only makes sense when <emphasis>window</emphasis> is actually a <ref refid="classwx_top_level_window" kindref="compound">wxTopLevelWindow</ref> such as a <ref refid="classwx_frame" kindref="compound">wxFrame</ref> or a <ref refid="classwx_dialog" kindref="compound">wxDialog</ref>, since SetSizeHints only has any effect in these classes. It does nothing in normal windows or controls.</para><para>This method is implicitly used by <ref refid="classwx_window_1a29938af9828fd35da666536cdfb6b73c" kindref="member">wxWindow::SetSizerAndFit()</ref> which is commonly invoked in the constructor of a toplevel window itself (see the sample in the description of <ref refid="classwx_box_sizer" kindref="compound">wxBoxSizer</ref>) if the toplevel window is resizable. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="853"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="847"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a92cab30589d91cc09028a3abfefe6221" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1790,11 +1790,11 @@
         <briefdescription>
 <para>Tell the sizer to set the minimal size of the <emphasis>window</emphasis> virtual area to match the sizer&apos;s minimal size. </para>        </briefdescription>
         <detaileddescription>
-<para>For windows with managed scrollbars this will set them appropriately.</para><para><xrefsect id="deprecated_1_deprecated000049"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This is exactly the same as <ref refid="classwx_sizer_1a37904ed600fd389345295ff89aa09fdc" kindref="member">FitInside()</ref> in wxWidgets 2.9 and later, please replace calls to it with <ref refid="classwx_sizer_1a37904ed600fd389345295ff89aa09fdc" kindref="member">FitInside()</ref>.</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="classwx_scrolled_1af5d940f364bb5097f20fee4a8e1210bb" kindref="member">wxScrolled::SetScrollbars()</ref> </para></simplesect>
+<para>For windows with managed scrollbars this will set them appropriately.</para><para><xrefsect id="deprecated_1_deprecated000048"><xreftitle>Deprecated</xreftitle><xrefdescription><para>This is exactly the same as <ref refid="classwx_sizer_1a37904ed600fd389345295ff89aa09fdc" kindref="member">FitInside()</ref> in wxWidgets 2.9 and later, please replace calls to it with <ref refid="classwx_sizer_1a37904ed600fd389345295ff89aa09fdc" kindref="member">FitInside()</ref>.</para></xrefdescription></xrefsect></para><para><simplesect kind="see"><para><ref refid="classwx_scrolled_1af5d940f364bb5097f20fee4a8e1210bb" kindref="member">wxScrolled::SetScrollbars()</ref> </para></simplesect>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="865"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="859"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1afb6638468fe2253d1870b4d387c57a0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1822,7 +1822,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="878"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="872"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a65289f40a39fb31512f93d8d7f63720e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1850,7 +1850,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="891"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="885"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sizer_1a15f781b11cbe978d6fbc0b62f32bc3b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1873,13 +1873,13 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="901"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="895"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para><ref refid="classwx_sizer" kindref="compound">wxSizer</ref> is the abstract base class used for laying out subwindows in a window. </para>    </briefdescription>
     <detaileddescription>
-<para>You cannot use <ref refid="classwx_sizer" kindref="compound">wxSizer</ref> directly; instead, you will have to use one of the sizer classes derived from it. Currently there are <ref refid="classwx_box_sizer" kindref="compound">wxBoxSizer</ref>, <ref refid="classwx_static_box_sizer" kindref="compound">wxStaticBoxSizer</ref>, <ref refid="classwx_grid_sizer" kindref="compound">wxGridSizer</ref>, <ref refid="classwx_flex_grid_sizer" kindref="compound">wxFlexGridSizer</ref>, <ref refid="classwx_wrap_sizer" kindref="compound">wxWrapSizer</ref> and <ref refid="classwx_grid_bag_sizer" kindref="compound">wxGridBagSizer</ref>.</para><para>The layout algorithm used by sizers in wxWidgets is closely related to layout in other GUI toolkits, such as Java&apos;s AWT, the GTK toolkit or the Qt toolkit. It is based upon the idea of the individual subwindows reporting their minimal required size and their ability to get stretched if the size of the parent window has changed.</para><para>This will most often mean that the programmer does not set the original size of a dialog in the beginning, rather the dialog will be assigned a sizer and this sizer will be queried about the recommended size. The sizer in turn will query its children, which can be normal windows, empty space or other sizers, so that a hierarchy of sizers can be constructed. Note that <ref refid="classwx_sizer" kindref="compound">wxSizer</ref> does not derive from <ref refid="classwx_window" kindref="compound">wxWindow</ref> and thus does not interfere with tab ordering and requires very little resources compared to a real window on screen.</para><para>What makes sizers so well fitted for use in wxWidgets is the fact that every control reports its own minimal size and the algorithm can handle differences in font sizes or different window (dialog item) sizes on different platforms without problems. If e.g. the standard font as well as the overall design of Motif widgets requires more space than on Windows, the initial dialog size will automatically be bigger on Motif than on Windows.</para><para>Sizers may also be used to control the layout of custom drawn items on the window. The <ref refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" kindref="member">wxSizer::Add()</ref>, <ref refid="classwx_sizer_1aafc5f53e9d3511440be05f9805bb2871" kindref="member">wxSizer::Insert()</ref>, and <ref refid="classwx_sizer_1a7417fb9b0e3b4777c11b381f14cf0153" kindref="member">wxSizer::Prepend()</ref> functions return a pointer to the newly added <ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref>. Just add empty space of the desired size and attributes, and then use the <ref refid="classwx_sizer_item_1a3c3a8e59193eb64cb6cf1e120c9ed544" kindref="member">wxSizerItem::GetRect()</ref> method to determine where the drawing operations should take place.</para><para>Please notice that sizers, like child windows, are owned by the library and will be deleted by it which implies that they must be allocated on the heap. However if you create a sizer and do not add it to another sizer or window, the library wouldn&apos;t be able to delete such an orphan sizer and in this, and only this, case it should be deleted explicitly.</para><para><bold>wxPython Note:</bold> If you wish to create a sizer class in wxPython you should derive the class from <computeroutput>wxPySizer</computeroutput> in order to get Python-aware capabilities for the various virtual methods.</para><sect1 id="classwx_sizer_1wxsizer_flags">
+<para>You cannot use <ref refid="classwx_sizer" kindref="compound">wxSizer</ref> directly; instead, you will have to use one of the sizer classes derived from it. Currently there are <ref refid="classwx_box_sizer" kindref="compound">wxBoxSizer</ref>, <ref refid="classwx_static_box_sizer" kindref="compound">wxStaticBoxSizer</ref>, <ref refid="classwx_grid_sizer" kindref="compound">wxGridSizer</ref>, <ref refid="classwx_flex_grid_sizer" kindref="compound">wxFlexGridSizer</ref>, <ref refid="classwx_wrap_sizer" kindref="compound">wxWrapSizer</ref> and <ref refid="classwx_grid_bag_sizer" kindref="compound">wxGridBagSizer</ref>.</para><para>The layout algorithm used by sizers in wxWidgets is closely related to layout in other GUI toolkits, such as Java&apos;s AWT, the GTK toolkit or the Qt toolkit. It is based upon the idea of the individual subwindows reporting their minimal required size and their ability to get stretched if the size of the parent window has changed.</para><para>This will most often mean that the programmer does not set the original size of a dialog in the beginning, rather the dialog will be assigned a sizer and this sizer will be queried about the recommended size. The sizer in turn will query its children, which can be normal windows, empty space or other sizers, so that a hierarchy of sizers can be constructed. Note that <ref refid="classwx_sizer" kindref="compound">wxSizer</ref> does not derive from <ref refid="classwx_window" kindref="compound">wxWindow</ref> and thus does not interfere with tab ordering and requires very little resources compared to a real window on screen.</para><para>What makes sizers so well fitted for use in wxWidgets is the fact that every control reports its own minimal size and the algorithm can handle differences in font sizes or different window (dialog item) sizes on different platforms without problems. If e.g. the standard font as well as the overall design of Motif widgets requires more space than on Windows, the initial dialog size will automatically be bigger on Motif than on Windows.</para><para>Sizers may also be used to control the layout of custom drawn items on the window. The <ref refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" kindref="member">wxSizer::Add()</ref>, <ref refid="classwx_sizer_1aafc5f53e9d3511440be05f9805bb2871" kindref="member">wxSizer::Insert()</ref>, and <ref refid="classwx_sizer_1a7417fb9b0e3b4777c11b381f14cf0153" kindref="member">wxSizer::Prepend()</ref> functions return a pointer to the newly added <ref refid="classwx_sizer_item" kindref="compound">wxSizerItem</ref>. Just add empty space of the desired size and attributes, and then use the <ref refid="classwx_sizer_item_1a3c3a8e59193eb64cb6cf1e120c9ed544" kindref="member">wxSizerItem::GetRect()</ref> method to determine where the drawing operations should take place.</para><para>Please notice that sizers, like child windows, are owned by the library and will be deleted by it which implies that they must be allocated on the heap. However if you create a sizer and do not add it to another sizer or window, the library wouldn&apos;t be able to delete such an orphan sizer and in this, and only this, case it should be deleted explicitly.</para><sect1 id="classwx_sizer_1wxsizer_flags">
 <title>wxSizer flags</title>
 <para>The &quot;flag&quot; argument accepted by wxSizeItem constructors and other functions, e.g. <ref refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" kindref="member">wxSizer::Add()</ref>, is OR-combination of the following flags. Two main behaviours are defined using these flags. One is the border around a window: the border parameter determines the border width whereas the flags given here determine which side(s) of the item that the border will be added. The other flags determine how the sizer item behaves when the space allotted to the sizer changes, and is somewhat dependent on the specific kind of sizer used.</para><para><table rows="6" cols="2"><row>
 <entry thead="no"><para>wxTOP<linebreak/>
@@ -1912,79 +1912,79 @@
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="10239">
+      <node id="10422">
         <label>wxWrapSizer</label>
         <link refid="classwx_wrap_sizer"/>
-        <childnode refid="10236" relation="public-inheritance">
+        <childnode refid="10419" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10241">
+      <node id="10424">
         <label>wxFlexGridSizer</label>
         <link refid="classwx_flex_grid_sizer"/>
-        <childnode refid="10240" relation="public-inheritance">
+        <childnode refid="10423" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10235">
+      <node id="10418">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10242">
+      <node id="10425">
         <label>wxGridBagSizer</label>
         <link refid="classwx_grid_bag_sizer"/>
-        <childnode refid="10241" relation="public-inheritance">
+        <childnode refid="10424" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10238">
+      <node id="10421">
         <label>wxStdDialogButtonSizer</label>
         <link refid="classwx_std_dialog_button_sizer"/>
-        <childnode refid="10236" relation="public-inheritance">
+        <childnode refid="10419" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10237">
+      <node id="10420">
         <label>wxStaticBoxSizer</label>
         <link refid="classwx_static_box_sizer"/>
-        <childnode refid="10236" relation="public-inheritance">
+        <childnode refid="10419" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10236">
+      <node id="10419">
         <label>wxBoxSizer</label>
         <link refid="classwx_box_sizer"/>
-        <childnode refid="10234" relation="public-inheritance">
+        <childnode refid="10417" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10234">
+      <node id="10417">
         <label>wxSizer</label>
         <link refid="classwx_sizer"/>
-        <childnode refid="10235" relation="public-inheritance">
+        <childnode refid="10418" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10240">
+      <node id="10423">
         <label>wxGridSizer</label>
         <link refid="classwx_grid_sizer"/>
-        <childnode refid="10234" relation="public-inheritance">
+        <childnode refid="10417" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10244">
+      <node id="10427">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10245" relation="usage">
+        <childnode refid="10428" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10243">
+      <node id="10426">
         <label>wxSizer</label>
         <link refid="classwx_sizer"/>
-        <childnode refid="10244" relation="public-inheritance">
+        <childnode refid="10427" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10245">
+      <node id="10428">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="116" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" bodystart="115" bodyend="902"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="110" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" bodystart="109" bodyend="896"/>
     <listofallmembers>
       <member refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" prot="public" virt="non-virtual"><scope>wxSizer</scope><name>Add</name></member>
       <member refid="classwx_sizer_1a81d21f287c416da96739a73faa54840d" prot="public" virt="non-virtual"><scope>wxSizer</scope><name>Add</name></member>

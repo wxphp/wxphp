@@ -20,7 +20,7 @@
 <para>The <emphasis>textctrl</emphasis> parameter cannot be NULL. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="581"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="581"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -30,30 +30,30 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref></para><para><simplesect kind="see"><para><ref refid="classwx_text_ctrl" kindref="compound">wxTextCtrl</ref>, <ref refid="classwx_stream_to_text_redirector" kindref="compound">wxStreamToTextRedirector</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7544">
+      <node id="7742">
         <label>wxLog</label>
         <link refid="classwx_log"/>
       </node>
-      <node id="7543">
+      <node id="7741">
         <label>wxLogTextCtrl</label>
         <link refid="classwx_log_text_ctrl"/>
-        <childnode refid="7544" relation="public-inheritance">
+        <childnode refid="7742" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7546">
+      <node id="7744">
         <label>wxLog</label>
         <link refid="classwx_log"/>
       </node>
-      <node id="7545">
+      <node id="7743">
         <label>wxLogTextCtrl</label>
         <link refid="classwx_log_text_ctrl"/>
-        <childnode refid="7546" relation="public-inheritance">
+        <childnode refid="7744" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="575" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="574" bodyend="582"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="575" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" bodystart="574" bodyend="582"/>
     <listofallmembers>
       <member refid="classwx_log_1a4c11ee23ce5264b6c5921a17610cda13" prot="public" virt="non-virtual"><scope>wxLogTextCtrl</scope><name>AddTraceMask</name></member>
       <member refid="classwx_log_1ac6b25e807e4948795aea21def6b5c1e4" prot="public" virt="non-virtual"><scope>wxLogTextCtrl</scope><name>ClearTraceMasks</name></member>

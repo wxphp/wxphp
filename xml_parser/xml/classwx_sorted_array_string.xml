@@ -23,7 +23,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/arrstr.h" line="328"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/arrstr.h" line="334"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sorted_array_string_1a0661fc0625d585d1bca263da7a14f608" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -42,7 +42,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/arrstr.h" line="329"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/arrstr.h" line="335"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -61,7 +61,7 @@
 <para>Constructs a sorted array with the same contents as the (possibly unsorted) &quot;array&quot; argument. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/arrstr.h" line="287"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/arrstr.h" line="293"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sorted_array_string_1ae23142317aff290ee6363f02d67ca2cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -87,7 +87,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/arrstr.h" line="297"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/arrstr.h" line="303"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sorted_array_string_1a1a9c971831f25c01ababe0a1d5ce8d33" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -116,7 +116,7 @@
 </para><para>This function uses binary search for <ref refid="classwx_sorted_array_string" kindref="compound">wxSortedArrayString</ref>, but it ignores the <emphasis>bCase</emphasis> and <emphasis>bFromEnd</emphasis> parameters. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/arrstr.h" line="307"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/arrstr.h" line="313"/>
       </memberdef>
       <memberdef kind="function" id="classwx_sorted_array_string_1ab9d85c1a7d21952209d6fc87dbb5be32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -143,7 +143,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/arrstr.h" line="317"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/arrstr.h" line="323"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -153,30 +153,30 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__containers" kindref="compound">Containers</ref></para><para><simplesect kind="see"><para>wxArray, <ref refid="classwx_string" kindref="compound">wxString</ref>, <ref refid="overview_string" kindref="compound">wxString Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10328">
+      <node id="10511">
         <label>wxSortedArrayString</label>
         <link refid="classwx_sorted_array_string"/>
-        <childnode refid="10329" relation="public-inheritance">
+        <childnode refid="10512" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10329">
+      <node id="10512">
         <label>wxArrayString</label>
         <link refid="classwx_array_string"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10330">
+      <node id="10513">
         <label>wxSortedArrayString</label>
         <link refid="classwx_sorted_array_string"/>
-        <childnode refid="10331" relation="public-inheritance">
+        <childnode refid="10514" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10331">
+      <node id="10514">
         <label>wxArrayString</label>
         <link refid="classwx_array_string"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/arrstr.h" line="278" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/arrstr.h" bodystart="277" bodyend="331"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/arrstr.h" line="284" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/arrstr.h" bodystart="283" bodyend="337"/>
     <listofallmembers>
       <member refid="classwx_sorted_array_string_1ae23142317aff290ee6363f02d67ca2cc" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>Add</name></member>
       <member refid="classwx_array_string_1a7d399eb79ba4f7ad165af03909889894" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>Alloc</name></member>
@@ -188,8 +188,10 @@
       <member refid="classwx_sorted_array_string_1ab9d85c1a7d21952209d6fc87dbb5be32" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>Insert</name></member>
       <member refid="classwx_array_string_1a9913831038ad76b0c4386cbd095b8e0d" prot="public" virt="non-virtual" ambiguityscope="wxArrayString::"><scope>wxSortedArrayString</scope><name>Insert</name></member>
       <member refid="classwx_array_string_1a1eb4f967685188b1c14407026e9ec53c" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>IsEmpty</name></member>
-      <member refid="classwx_array_string_1a461830aff857f321e7b0def8e84cb87f" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>Item</name></member>
-      <member refid="classwx_array_string_1adbae6537d9624510d4e9c1d7b2e2b163" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>Last</name></member>
+      <member refid="classwx_array_string_1a9d02526d49d8b9da9ea184969ca721d2" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>Item</name></member>
+      <member refid="classwx_array_string_1a2eaf5fd9e978099af9a06da914aa30db" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>Item</name></member>
+      <member refid="classwx_array_string_1ae6c05b8d0a6dd18ec1f72a94827dbd03" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>Last</name></member>
+      <member refid="classwx_array_string_1ab02b482011ff086cf024b11dce2eb105" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>Last</name></member>
       <member refid="classwx_array_string_1a3796e3297a21ff4f1dce9f1eecc7f8f7" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>operator!=</name></member>
       <member refid="classwx_array_string_1a87f49b6cea7e371f45a4fc40b0f01548" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>operator=</name></member>
       <member refid="classwx_array_string_1a4ccc608a22d5a805ee1374b3446b09ff" prot="public" virt="non-virtual"><scope>wxSortedArrayString</scope><name>operator==</name></member>

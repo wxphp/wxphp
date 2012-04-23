@@ -25,7 +25,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcsvg.h" line="75"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcsvg.h" line="75"/>
       </memberdef>
       <memberdef kind="function" id="classwx_s_v_g_file_d_c_1a83be1b0f0b66a4949268e34348af3ee8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -39,7 +39,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcsvg.h" line="76"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcsvg.h" line="76"/>
       </memberdef>
       <memberdef kind="function" id="classwx_s_v_g_file_d_c_1af1b54af9382656b98cf4d5bf3f051618" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcsvg.h" line="78"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcsvg.h" line="78"/>
       </memberdef>
       <memberdef kind="function" id="classwx_s_v_g_file_d_c_1a41b2bd5acba931cdb14169019ae106a4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcsvg.h" line="79"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcsvg.h" line="79"/>
       </memberdef>
       <memberdef kind="function" id="classwx_s_v_g_file_d_c_1ae394c964ff6902391b5ae5a370acb8da" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -126,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcsvg.h" line="80"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcsvg.h" line="80"/>
       </memberdef>
       <memberdef kind="function" id="classwx_s_v_g_file_d_c_1aeb64330f4f9430472894df975968059a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -156,7 +156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcsvg.h" line="82"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcsvg.h" line="82"/>
       </memberdef>
       <memberdef kind="function" id="classwx_s_v_g_file_d_c_1a719ce39244b3ae8b202ce7942467cc70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -178,7 +178,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcsvg.h" line="83"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcsvg.h" line="83"/>
       </memberdef>
       <memberdef kind="function" id="classwx_s_v_g_file_d_c_1a280990002cc2671542eb7a0523da6e41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -196,7 +196,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcsvg.h" line="84"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcsvg.h" line="84"/>
       </memberdef>
       <memberdef kind="function" id="classwx_s_v_g_file_d_c_1af80c8d46a9ca278e2ee296d0f35434c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -213,7 +213,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcsvg.h" line="85"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcsvg.h" line="85"/>
       </memberdef>
       <memberdef kind="function" id="classwx_s_v_g_file_d_c_1a56f9674ee5fff78f9f884586c7106bfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -231,7 +231,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcsvg.h" line="86"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcsvg.h" line="86"/>
       </memberdef>
       <memberdef kind="function" id="classwx_s_v_g_file_d_c_1afc23fca3c1919a917ba4fa4ea1a47bd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -249,7 +249,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcsvg.h" line="87"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcsvg.h" line="87"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -283,7 +283,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcsvg.h" line="43"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcsvg.h" line="43"/>
       </memberdef>
       <memberdef kind="function" id="classwx_s_v_g_file_d_c_1aa812de582da4c650dd251129c3a03fab" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -296,7 +296,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcsvg.h" line="48"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcsvg.h" line="48"/>
       </memberdef>
       <memberdef kind="function" id="classwx_s_v_g_file_d_c_1a70fee3fe2c116cd5698e89c63992dfe1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -310,7 +310,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcsvg.h" line="53"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcsvg.h" line="53"/>
       </memberdef>
       <memberdef kind="function" id="classwx_s_v_g_file_d_c_1aabbe60d5f7816974da2ab92195de961a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -324,7 +324,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcsvg.h" line="58"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcsvg.h" line="58"/>
       </memberdef>
       <memberdef kind="function" id="classwx_s_v_g_file_d_c_1a88eb12ff20b15f2e7d91483394a2ed16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -338,7 +338,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcsvg.h" line="63"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcsvg.h" line="63"/>
       </memberdef>
       <memberdef kind="function" id="classwx_s_v_g_file_d_c_1a0450e2e90bf39ed0167c49b59fcb9e31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -356,7 +356,7 @@
 <para>Trying to set one of the other values will fail. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcsvg.h" line="69"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcsvg.h" line="69"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -365,49 +365,49 @@
 <para>This format can be read by a range of programs, including a Netscape plugin (Adobe), full details are given in the SVG Implementation and Resource Directory &lt;<ulink url="http://www.svgi.org/">http://www.svgi.org/</ulink>&gt;. Vector formats may often be smaller than raster formats.</para><para>The intention behind <ref refid="classwx_s_v_g_file_d_c" kindref="compound">wxSVGFileDC</ref> is that it can be used to produce a file corresponding to the screen display context, <ref refid="classwx_s_v_g_file_d_c" kindref="compound">wxSVGFileDC</ref>, by passing the <ref refid="classwx_s_v_g_file_d_c" kindref="compound">wxSVGFileDC</ref> as a parameter instead of a <ref refid="classwx_s_v_g_file_d_c" kindref="compound">wxSVGFileDC</ref>. Thus the <ref refid="classwx_s_v_g_file_d_c" kindref="compound">wxSVGFileDC</ref> is a write-only class.</para><para>As the <ref refid="classwx_s_v_g_file_d_c" kindref="compound">wxSVGFileDC</ref> is a vector format, raster operations like <ref refid="classwx_s_v_g_file_d_c_1ae394c964ff6902391b5ae5a370acb8da" kindref="member">GetPixel()</ref> are unlikely to be supported. However, the SVG specification allows for PNG format raster files to be embedded in the SVG, and so bitmaps, icons and blit operations in <ref refid="classwx_s_v_g_file_d_c" kindref="compound">wxSVGFileDC</ref> are supported.</para><para>A more substantial SVG library (for reading and writing) is available at the wxArt2D website &lt;<ulink url="http://wxart2d.sourceforge.net/">http://wxart2d.sourceforge.net/</ulink>&gt;.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dc" kindref="compound">Device Contexts</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10627">
+      <node id="10812">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10626">
+      <node id="10811">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="10627" relation="public-inheritance">
+        <childnode refid="10812" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10625">
+      <node id="10810">
         <label>wxSVGFileDC</label>
         <link refid="classwx_s_v_g_file_d_c"/>
-        <childnode refid="10626" relation="public-inheritance">
+        <childnode refid="10811" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10630">
+      <node id="10815">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10631" relation="usage">
+        <childnode refid="10816" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10629">
+      <node id="10814">
         <label>wxDC</label>
         <link refid="classwx_d_c"/>
-        <childnode refid="10630" relation="public-inheritance">
+        <childnode refid="10815" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10628">
+      <node id="10813">
         <label>wxSVGFileDC</label>
         <link refid="classwx_s_v_g_file_d_c"/>
-        <childnode refid="10629" relation="public-inheritance">
+        <childnode refid="10814" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10631">
+      <node id="10816">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcsvg.h" line="37" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dcsvg.h" bodystart="36" bodyend="89"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dcsvg.h" line="37" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dcsvg.h" bodystart="36" bodyend="89"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxSVGFileDC</scope><name>AllocExclusive</name></member>
       <member refid="classwx_d_c_1a12bed94a15136b9080683f4151042a34" prot="public" virt="non-virtual"><scope>wxSVGFileDC</scope><name>Blit</name></member>

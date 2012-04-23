@@ -16,12 +16,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dragimag.h" line="51"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dragimag.h" line="46"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_drag_image_1ad8eba7a780f9ffb3ecf20da1ae727907" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_drag_image_1a1aabc326eb82c6aeda17b699b1d45ecb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxDragImage::wxDragImage</definition>
-        <argsstring>(const wxBitmap &amp;image, const wxCursor &amp;cursor=wxNullCursor, const wxPoint &amp;cursorHotspot=wxPoint(0, 0))</argsstring>
+        <argsstring>(const wxBitmap &amp;image, const wxCursor &amp;cursor=wxNullCursor)</argsstring>
         <name>wxDragImage</name>
         <param>
           <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
@@ -31,11 +31,6 @@
           <type>const <ref refid="classwx_cursor" kindref="compound">wxCursor</ref> &amp;</type>
           <declname>cursor</declname>
           <defval><ref refid="cursor_8h_1ace2643fa7246d855696e3415e344d0ac" kindref="member">wxNullCursor</ref></defval>
-        </param>
-        <param>
-          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
-          <declname>cursorHotspot</declname>
-          <defval><ref refid="classwx_point" kindref="compound">wxPoint</ref>(0, 0)</defval>
         </param>
         <briefdescription>
 <para>Constructs a drag image from a bitmap and optional cursor. </para>        </briefdescription>
@@ -54,23 +49,16 @@
 <parameterdescription>
 <para>Optional cursor to combine with the image. </para></parameterdescription>
 </parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>cursorHotspot</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>This parameter is deprecated. </para></parameterdescription>
-</parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dragimag.h" line="63"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dragimag.h" line="55"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_drag_image_1a387e953e9d1b37e3466c0e7a394b8492" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_drag_image_1a7d1efd4e364ffe45c22aff65b52d19f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxDragImage::wxDragImage</definition>
-        <argsstring>(const wxIcon &amp;image, const wxCursor &amp;cursor=wxNullCursor, const wxPoint &amp;cursorHotspot=wxPoint(0, 0))</argsstring>
+        <argsstring>(const wxIcon &amp;image, const wxCursor &amp;cursor=wxNullCursor)</argsstring>
         <name>wxDragImage</name>
         <param>
           <type>const <ref refid="classwx_icon" kindref="compound">wxIcon</ref> &amp;</type>
@@ -80,11 +68,6 @@
           <type>const <ref refid="classwx_cursor" kindref="compound">wxCursor</ref> &amp;</type>
           <declname>cursor</declname>
           <defval><ref refid="cursor_8h_1ace2643fa7246d855696e3415e344d0ac" kindref="member">wxNullCursor</ref></defval>
-        </param>
-        <param>
-          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
-          <declname>cursorHotspot</declname>
-          <defval><ref refid="classwx_point" kindref="compound">wxPoint</ref>(0, 0)</defval>
         </param>
         <briefdescription>
 <para>Constructs a drag image from an icon and optional cursor. </para>        </briefdescription>
@@ -103,23 +86,16 @@
 <parameterdescription>
 <para>Optional cursor to combine with the image. </para></parameterdescription>
 </parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>cursorHotspot</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>This parameter is deprecated.</para></parameterdescription>
-</parameteritem>
 </parameterlist>
-<bold>wxPython Note:</bold> This constructor is called wxDragIcon in wxPython. </para>        </detaileddescription>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dragimag.h" line="79"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dragimag.h" line="64"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_drag_image_1ae53ebbe6578a3c2117c4179f35cc8928" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_drag_image_1a594a13372b1c37b9a853d0817c17e9c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>wxDragImage::wxDragImage</definition>
-        <argsstring>(const wxString &amp;text, const wxCursor &amp;cursor=wxNullCursor, const wxPoint &amp;cursorHotspot=wxPoint(0, 0))</argsstring>
+        <argsstring>(const wxString &amp;text, const wxCursor &amp;cursor=wxNullCursor)</argsstring>
         <name>wxDragImage</name>
         <param>
           <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -129,11 +105,6 @@
           <type>const <ref refid="classwx_cursor" kindref="compound">wxCursor</ref> &amp;</type>
           <declname>cursor</declname>
           <defval><ref refid="cursor_8h_1ace2643fa7246d855696e3415e344d0ac" kindref="member">wxNullCursor</ref></defval>
-        </param>
-        <param>
-          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
-          <declname>cursorHotspot</declname>
-          <defval><ref refid="classwx_point" kindref="compound">wxPoint</ref>(0, 0)</defval>
         </param>
         <briefdescription>
 <para>Constructs a drag image from a text string and optional cursor. </para>        </briefdescription>
@@ -152,18 +123,11 @@
 <parameterdescription>
 <para>Optional cursor to combine with the image. </para></parameterdescription>
 </parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>cursorHotspot</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>This parameter is deprecated.</para></parameterdescription>
-</parameteritem>
 </parameterlist>
-<bold>wxPython Note:</bold> This constructor is called wxDragString in wxPython. </para>        </detaileddescription>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dragimag.h" line="95"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dragimag.h" line="73"/>
       </memberdef>
       <memberdef kind="function" id="classwx_drag_image_1afe1171ec9545ff5fbb6268501ed6ff60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -193,13 +157,13 @@
 <parametername>id</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>Tree control item id.</para></parameterdescription>
+<para>Tree control item id. </para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<bold>wxPython Note:</bold> This constructor is called wxDragTreeItem in wxPython. </para>        </detaileddescription>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dragimag.h" line="109"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dragimag.h" line="83"/>
       </memberdef>
       <memberdef kind="function" id="classwx_drag_image_1a24a75b4679d42593180e1e8b9d29c5a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -229,51 +193,13 @@
 <parametername>id</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>List control item id.</para></parameterdescription>
-</parameteritem>
-</parameterlist>
-<bold>wxPython Note:</bold> This constructor is called wxDragListItem in wxPython. </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dragimag.h" line="123"/>
-      </memberdef>
-      <memberdef kind="function" id="classwx_drag_image_1a6f214a28634018f6e78cabd7f735ddc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>wxDragImage::wxDragImage</definition>
-        <argsstring>(const wxCursor &amp;cursor=wxNullCursor, const wxPoint &amp;cursorHotspot=wxPoint(0, 0))</argsstring>
-        <name>wxDragImage</name>
-        <param>
-          <type>const <ref refid="classwx_cursor" kindref="compound">wxCursor</ref> &amp;</type>
-          <declname>cursor</declname>
-          <defval><ref refid="cursor_8h_1ace2643fa7246d855696e3415e344d0ac" kindref="member">wxNullCursor</ref></defval>
-        </param>
-        <param>
-          <type>const <ref refid="classwx_point" kindref="compound">wxPoint</ref> &amp;</type>
-          <declname>cursorHotspot</declname>
-          <defval><ref refid="classwx_point" kindref="compound">wxPoint</ref>(0, 0)</defval>
-        </param>
-        <briefdescription>
-<para>Constructs a drag image an optional cursor. </para>        </briefdescription>
-        <detaileddescription>
-<para>This constructor is only available for wxGenericDragImage, and can be used when the application supplies <ref refid="classwx_drag_image_1a223db1e40bef00417b1c689553514582" kindref="member">DoDrawImage()</ref> and <ref refid="classwx_drag_image_1a469502a784e1309d52d3ac886d46ef88" kindref="member">GetImageRect()</ref>.</para><para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>cursor</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>Optional cursor to combine with the image. </para></parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>cursorHotspot</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>This parameter is deprecated. </para></parameterdescription>
+<para>List control item id. </para></parameterdescription>
 </parameteritem>
 </parameterlist>
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dragimag.h" line="135"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dragimag.h" line="93"/>
       </memberdef>
       <memberdef kind="function" id="classwx_drag_image_1a7af71929aec6994d903864ed95c7f7b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -333,7 +259,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dragimag.h" line="163"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dragimag.h" line="120"/>
       </memberdef>
       <memberdef kind="function" id="classwx_drag_image_1a351e1e0cdcd0ade8154aac60ae65484d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -380,7 +306,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dragimag.h" line="185"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dragimag.h" line="142"/>
       </memberdef>
       <memberdef kind="function" id="classwx_drag_image_1a223db1e40bef00417b1c689553514582" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -401,7 +327,7 @@
 <para>This function is only available with wxGenericDragImage, to allow applications to draw their own image instead of using an actual bitmap. If you override this function, you must also override <ref refid="classwx_drag_image_1a469502a784e1309d52d3ac886d46ef88" kindref="member">GetImageRect()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dragimag.h" line="195"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dragimag.h" line="152"/>
       </memberdef>
       <memberdef kind="function" id="classwx_drag_image_1a481b3dbce5200247a46623431a99df13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -415,7 +341,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dragimag.h" line="202"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dragimag.h" line="159"/>
       </memberdef>
       <memberdef kind="function" id="classwx_drag_image_1a469502a784e1309d52d3ac886d46ef88" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_rect" kindref="compound">wxRect</ref></type>
@@ -432,7 +358,7 @@
 <para>This function is available in wxGenericDragImage only, and may be overridden (together with <ref refid="classwx_drag_image_1a223db1e40bef00417b1c689553514582" kindref="member">DoDrawImage()</ref>) to provide a virtual drawing capability. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dragimag.h" line="212"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dragimag.h" line="169"/>
       </memberdef>
       <memberdef kind="function" id="classwx_drag_image_1aeda0c97def022fc3cacbc879f053f93a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -445,7 +371,7 @@
 <para>You may wish to call this before updating the window contents (perhaps highlighting an item). Then call <ref refid="classwx_drag_image_1a51b7a0377bbdd79ad8d93c7bb1a67644" kindref="member">Move()</ref> and <ref refid="classwx_drag_image_1a53ba3036e7cf017d32a548e95d9072e3" kindref="member">Show()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dragimag.h" line="218"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dragimag.h" line="175"/>
       </memberdef>
       <memberdef kind="function" id="classwx_drag_image_1a51b7a0377bbdd79ad8d93c7bb1a67644" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -470,7 +396,7 @@
 You can move the image either when the image is hidden or shown, but in general dragging will be smoother if you move the image when it is shown. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dragimag.h" line="233"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dragimag.h" line="190"/>
       </memberdef>
       <memberdef kind="function" id="classwx_drag_image_1a53ba3036e7cf017d32a548e95d9072e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -483,7 +409,7 @@ You can move the image either when the image is hidden or shown, but in general 
 <para>Call this at least once when dragging. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dragimag.h" line="238"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dragimag.h" line="195"/>
       </memberdef>
       <memberdef kind="function" id="classwx_drag_image_1ac9c8b815d7bc1aada1135c6dcf7f05ba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -512,47 +438,47 @@ You can move the image either when the image is hidden or shown, but in general 
 <para>This can be desirable if you wish to avoid flicker by not having to redraw the updated window itself just before dragging, which can cause a flicker just as the drag starts. Instead, paint the drag image&apos;s backing bitmap to show the appropriate graphic <emphasis>minus</emphasis> the objects to be dragged, and leave the window itself to be updated by the drag image. This can provide eerily smooth, flicker-free drag behaviour.</para><para>The default implementation copies the window contents to the backing bitmap. A new implementation will normally copy information from another source, such as from its own backing bitmap if it has one, or directly from internal data structures.</para><para>This function is available in wxGenericDragImage only. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dragimag.h" line="259"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dragimag.h" line="216"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>This class is used when you wish to drag an object on the screen, and a simple cursor is not enough. </para>    </briefdescription>
     <detaileddescription>
-<para>On Windows, the Win32 API is used to achieve smooth dragging. On other platforms, wxGenericDragImage is used. Applications may also prefer to use wxGenericDragImage on Windows, too.</para><para><bold>wxPython Note:</bold> wxPython uses wxGenericDragImage on all platforms, but uses the <ref refid="classwx_drag_image" kindref="compound">wxDragImage</ref> name.</para><para>To use this class, when you wish to start dragging an image, create a <ref refid="classwx_drag_image" kindref="compound">wxDragImage</ref> object and store it somewhere you can access it as the drag progresses. Call <ref refid="classwx_drag_image_1a7af71929aec6994d903864ed95c7f7b6" kindref="member">BeginDrag()</ref> to start, and <ref refid="classwx_drag_image_1a481b3dbce5200247a46623431a99df13" kindref="member">EndDrag()</ref> to stop the drag. To move the image, initially call <ref refid="classwx_drag_image_1a53ba3036e7cf017d32a548e95d9072e3" kindref="member">Show()</ref> and then <ref refid="classwx_drag_image_1a51b7a0377bbdd79ad8d93c7bb1a67644" kindref="member">Move()</ref>. If you wish to update the screen contents during the drag (for example, highlight an item as in the dragimag sample), first call <ref refid="classwx_drag_image_1aeda0c97def022fc3cacbc879f053f93a" kindref="member">Hide()</ref>, update the screen, call <ref refid="classwx_drag_image_1a51b7a0377bbdd79ad8d93c7bb1a67644" kindref="member">Move()</ref>, and then call <ref refid="classwx_drag_image_1a53ba3036e7cf017d32a548e95d9072e3" kindref="member">Show()</ref>.</para><para>You can drag within one window, or you can use full-screen dragging either across the whole screen, or just restricted to one area of the screen to save resources. If you want the user to drag between two windows, then you will need to use full-screen dragging.</para><para>If you wish to draw the image yourself, use wxGenericDragImage and override <ref refid="classwx_drag_image_1a223db1e40bef00417b1c689553514582" kindref="member">DoDrawImage()</ref> and <ref refid="classwx_drag_image_1a469502a784e1309d52d3ac886d46ef88" kindref="member">GetImageRect()</ref>.</para><para><heading level="2"></heading>
+<para>On Windows, the Win32 API is used to achieve smooth dragging. On other platforms, wxGenericDragImage is used. Applications may also prefer to use wxGenericDragImage on Windows, too.</para><para>To use this class, when you wish to start dragging an image, create a <ref refid="classwx_drag_image" kindref="compound">wxDragImage</ref> object and store it somewhere you can access it as the drag progresses. Call <ref refid="classwx_drag_image_1a7af71929aec6994d903864ed95c7f7b6" kindref="member">BeginDrag()</ref> to start, and <ref refid="classwx_drag_image_1a481b3dbce5200247a46623431a99df13" kindref="member">EndDrag()</ref> to stop the drag. To move the image, initially call <ref refid="classwx_drag_image_1a53ba3036e7cf017d32a548e95d9072e3" kindref="member">Show()</ref> and then <ref refid="classwx_drag_image_1a51b7a0377bbdd79ad8d93c7bb1a67644" kindref="member">Move()</ref>. If you wish to update the screen contents during the drag (for example, highlight an item as in the dragimag sample), first call <ref refid="classwx_drag_image_1aeda0c97def022fc3cacbc879f053f93a" kindref="member">Hide()</ref>, update the screen, call <ref refid="classwx_drag_image_1a51b7a0377bbdd79ad8d93c7bb1a67644" kindref="member">Move()</ref>, and then call <ref refid="classwx_drag_image_1a53ba3036e7cf017d32a548e95d9072e3" kindref="member">Show()</ref>.</para><para>You can drag within one window, or you can use full-screen dragging either across the whole screen, or just restricted to one area of the screen to save resources. If you want the user to drag between two windows, then you will need to use full-screen dragging.</para><para>If you wish to draw the image yourself, use wxGenericDragImage and override <ref refid="classwx_drag_image_1a223db1e40bef00417b1c689553514582" kindref="member">DoDrawImage()</ref> and <ref refid="classwx_drag_image_1a469502a784e1309d52d3ac886d46ef88" kindref="member">GetImageRect()</ref>.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__dnd" kindref="compound">Clipboard and Drag &amp; Drop</ref></para><para><simplesect kind="see"><para><ref refid="page_samples_1page_samples_dragimag" kindref="member">Drag Image Sample</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5781">
+      <node id="5896">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5780">
+      <node id="5895">
         <label>wxDragImage</label>
         <link refid="classwx_drag_image"/>
-        <childnode refid="5781" relation="public-inheritance">
+        <childnode refid="5896" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5783">
+      <node id="5898">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5784" relation="usage">
+        <childnode refid="5899" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5782">
+      <node id="5897">
         <label>wxDragImage</label>
         <link refid="classwx_drag_image"/>
-        <childnode refid="5783" relation="public-inheritance">
+        <childnode refid="5898" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5784">
+      <node id="5899">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dragimag.h" line="46" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dragimag.h" bodystart="45" bodyend="260"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dragimag.h" line="41" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dragimag.h" bodystart="40" bodyend="217"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxDragImage</scope><name>AllocExclusive</name></member>
       <member refid="classwx_drag_image_1a7af71929aec6994d903864ed95c7f7b6" prot="public" virt="non-virtual"><scope>wxDragImage</scope><name>BeginDrag</name></member>
@@ -578,12 +504,11 @@ You can move the image either when the image is hidden or shown, but in general 
       <member refid="classwx_object_1a74b40e42d19a4b9e9bec0b57d62a5725" prot="public" virt="non-virtual"><scope>wxDragImage</scope><name>UnShare</name></member>
       <member refid="classwx_drag_image_1ac9c8b815d7bc1aada1135c6dcf7f05ba" prot="public" virt="virtual"><scope>wxDragImage</scope><name>UpdateBackingFromWindow</name></member>
       <member refid="classwx_drag_image_1a1f9e5d1596679795bedb2aebe4841e6d" prot="public" virt="non-virtual"><scope>wxDragImage</scope><name>wxDragImage</name></member>
-      <member refid="classwx_drag_image_1ad8eba7a780f9ffb3ecf20da1ae727907" prot="public" virt="non-virtual"><scope>wxDragImage</scope><name>wxDragImage</name></member>
-      <member refid="classwx_drag_image_1a387e953e9d1b37e3466c0e7a394b8492" prot="public" virt="non-virtual"><scope>wxDragImage</scope><name>wxDragImage</name></member>
-      <member refid="classwx_drag_image_1ae53ebbe6578a3c2117c4179f35cc8928" prot="public" virt="non-virtual"><scope>wxDragImage</scope><name>wxDragImage</name></member>
+      <member refid="classwx_drag_image_1a1aabc326eb82c6aeda17b699b1d45ecb" prot="public" virt="non-virtual"><scope>wxDragImage</scope><name>wxDragImage</name></member>
+      <member refid="classwx_drag_image_1a7d1efd4e364ffe45c22aff65b52d19f3" prot="public" virt="non-virtual"><scope>wxDragImage</scope><name>wxDragImage</name></member>
+      <member refid="classwx_drag_image_1a594a13372b1c37b9a853d0817c17e9c0" prot="public" virt="non-virtual"><scope>wxDragImage</scope><name>wxDragImage</name></member>
       <member refid="classwx_drag_image_1afe1171ec9545ff5fbb6268501ed6ff60" prot="public" virt="non-virtual"><scope>wxDragImage</scope><name>wxDragImage</name></member>
       <member refid="classwx_drag_image_1a24a75b4679d42593180e1e8b9d29c5a5" prot="public" virt="non-virtual"><scope>wxDragImage</scope><name>wxDragImage</name></member>
-      <member refid="classwx_drag_image_1a6f214a28634018f6e78cabd7f735ddc9" prot="public" virt="non-virtual"><scope>wxDragImage</scope><name>wxDragImage</name></member>
       <member refid="classwx_object_1acaa378363a28af421ab56ad7b46eadf0" prot="public" virt="non-virtual"><scope>wxDragImage</scope><name>wxObject</name></member>
       <member refid="classwx_object_1a4721b4dc9b7aff0f30904ba2ea3954cf" prot="public" virt="non-virtual"><scope>wxDragImage</scope><name>wxObject</name></member>
       <member refid="classwx_object_1a2a51aa8bfbab47ca2f051bcf84b3f35b" prot="public" virt="virtual"><scope>wxDragImage</scope><name>~wxObject</name></member>

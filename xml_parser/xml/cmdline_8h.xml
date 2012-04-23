@@ -61,7 +61,7 @@
 <para>Notice that by default (i.e. if flags are just 0), options are optional (sic) and each call to <ref refid="classwx_cmd_line_parser_1a61a92fe66e0c11af3405ba1b63bbe28d" kindref="member">wxCmdLineParser::AddParam()</ref> allows one more parameter - this may be changed by giving non-default flags to it, i.e. use <computeroutput>wxCMD_LINE_OPTION_MANDATORY</computeroutput> to require that the option is given and <computeroutput>wxCMD_LINE_PARAM_OPTIONAL</computeroutput> to make a parameter optional.</para><para>Also, <computeroutput>wxCMD_LINE_PARAM_MULTIPLE</computeroutput> may be specified if the programs accepts a variable number of parameters - but it only can be given for the last parameter in the command line description. If you use this flag, you will probably need to use wxCmdLineEntryDesc::GetParamCount() to retrieve the number of parameters effectively specified after calling wxCmdLineEntryDesc::Parse().</para><para><computeroutput>wxCMD_LINE_NEEDS_SEPARATOR</computeroutput> can be specified to require a separator (either a colon, an equal sign or white space) between the option name and its value. By default, no separator is required.</para><para><computeroutput>wxCMD_LINE_SWITCH_NEGATABLE</computeroutput> can be specified if you want to allow the user to specify the switch in both normal form and in negated one (e.g. /R-). You will need to use <ref refid="classwx_cmd_line_parser_1ac490fe80a90259b976cdc68d50d27d21" kindref="member">wxCmdLineParser::FoundSwitch()</ref> to distinguish between the normal and negated forms of the switch. This flag is new since wxWidgets 2.9.2. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="36" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" bodystart="35" bodyend="43"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="36" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" bodystart="35" bodyend="43"/>
       </memberdef>
       <memberdef kind="enum" id="cmdline_8h_1a25a5da7d58fcc0da36cd70c859306994" prot="public" static="no">
         <name>wxCmdLineParamType</name>
@@ -106,7 +106,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="50" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" bodystart="49" bodyend="56"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="50" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" bodystart="49" bodyend="56"/>
       </memberdef>
       <memberdef kind="enum" id="cmdline_8h_1a8d2905d549d4a4f566a97755c9e4ec7b" prot="public" static="no">
         <name>wxCmdLineEntryType</name>
@@ -151,7 +151,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="62" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" bodystart="61" bodyend="77"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="62" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" bodystart="61" bodyend="77"/>
       </memberdef>
       <memberdef kind="enum" id="cmdline_8h_1a221be5db9115bb24981adcb2837d0889" prot="public" static="no">
         <name>wxCmdLineSwitchState</name>
@@ -176,7 +176,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="85" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" bodystart="84" bodyend="94"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="85" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" bodystart="84" bodyend="94"/>
       </memberdef>
       <memberdef kind="enum" id="cmdline_8h_1acc276a64e55895c17ba9f7b0d235b22c" prot="public" static="no">
         <name>wxCmdLineSplitType</name>
@@ -200,13 +200,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" line="101" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h" bodystart="100" bodyend="104"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" line="101" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h" bodystart="100" bodyend="104"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/cmdline.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/cmdline.h"/>
   </compounddef>
 </doxygen>

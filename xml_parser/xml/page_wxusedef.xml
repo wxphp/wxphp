@@ -177,9 +177,9 @@
 <row>
 <entry thead="no"><para>wxUSE_FONTPICKERCTRL </para></entry><entry thead="no"><para>Use <ref refid="classwx_font_picker_ctrl" kindref="compound">wxFontPickerCtrl</ref> class. </para></entry></row>
 <row>
-<entry thead="no"><para>wxUSE_FS_ARCHIVE </para></entry><entry thead="no"><para>Use virtual archive filesystems like wxArchiveFSHandler in <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref> class. </para></entry></row>
+<entry thead="no"><para>wxUSE_FS_ARCHIVE </para></entry><entry thead="no"><para>Use virtual archive filesystems like <ref refid="classwx_archive_f_s_handler" kindref="compound">wxArchiveFSHandler</ref> in <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref> class. </para></entry></row>
 <row>
-<entry thead="no"><para>wxUSE_FS_INET </para></entry><entry thead="no"><para>Use virtual HTTP/FTP filesystems like wxInternetFSHandler in <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref> class. </para></entry></row>
+<entry thead="no"><para>wxUSE_FS_INET </para></entry><entry thead="no"><para>Use virtual HTTP/FTP filesystems like <ref refid="classwx_internet_f_s_handler" kindref="compound">wxInternetFSHandler</ref> in <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref> class. </para></entry></row>
 <row>
 <entry thead="no"><para>wxUSE_FS_ZIP </para></entry><entry thead="no"><para>Please use wxUSE_FS_ARCHIVE instead. </para></entry></row>
 <row>

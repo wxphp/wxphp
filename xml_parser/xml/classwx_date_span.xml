@@ -35,7 +35,7 @@
 <para>Note that the weeks and days add together if both are given. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1573"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1655"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_span_1a00ddd2972f592a08c2bdbc213862d35c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref></type>
@@ -53,7 +53,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1580"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1662"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_span_1aa5dbce645bc7f851840d2d6f9b24b5a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref> &amp;</type>
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1585"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1667"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_span_1a237be755917c297e3ca445eed6ac93d7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -84,7 +84,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1607"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1689"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_span_1a951c3d7884aeb2f0b324ccfd969e2b64" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -97,7 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1613"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1695"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_span_1a84bf5822fbcb14d85d3c170d0b40d1ea" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -111,7 +111,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1621"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1703"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_span_1a522ac60855ba3e059d74b25c9dc37ae6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -125,7 +125,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1628"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1710"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_span_1adf0b0d066c4820f3b99e5592a02b34a4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -138,7 +138,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1633"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1715"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_span_1a1008611f2389be37786d76d816ffbda1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref></type>
@@ -156,7 +156,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1656"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1738"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_span_1a575ba275ad24b6230b25daa451494ada" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref> &amp;</type>
@@ -174,7 +174,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1663"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1745"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_span_1aa0691b6f99fef9b3e6100041de534f25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref> &amp;</type>
@@ -188,7 +188,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1670"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1752"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_span_1a2b5ab7da75908121c56bfe68124ae94f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref></type>
@@ -202,7 +202,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1677"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1759"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_span_1ad91798a7b6374bcbfdef3b39b4872cb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref> &amp;</type>
@@ -219,7 +219,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1683"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1765"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_span_1a0a96c0606eea73b866e6640a0673345b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref> &amp;</type>
@@ -236,7 +236,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1689"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1771"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_span_1a9ee73c50b3dd688c59a78e8e6f9a1e05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref> &amp;</type>
@@ -253,7 +253,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1695"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1777"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_span_1a779a32a607931e4ea55e87ef193540b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref> &amp;</type>
@@ -270,7 +270,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1701"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1783"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_span_1a571533e12adae46a92b646663238472e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref></type>
@@ -288,7 +288,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1708"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1790"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_span_1a178b607c7ab3c58e0d57590d1af12aa2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref> &amp;</type>
@@ -305,7 +305,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1713"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1795"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_span_1afa82a43c6f8f07e811804abca6270afb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref> &amp;</type>
@@ -322,7 +322,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1746"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1828"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_span_1a490ca0904c06f416d448516bf3a5f375" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref> &amp;</type>
@@ -339,7 +339,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1752"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1834"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_span_1ab75e460324c67c493f462bd9bbb63610" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref> &amp;</type>
@@ -353,7 +353,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1759"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1841"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_span_1aa03d31f7b77c282629224717d013b085" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref> &amp;</type>
@@ -371,15 +371,16 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1767"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1849"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_date_span_1a9aefb2d84b9b34e2214c653f01769aba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_date_span_1a6aea3b6827ff0d9100f0595ca0d010e1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxDateSpan::operator!=</definition>
-        <argsstring>(const wxDateSpan &amp;) const </argsstring>
+        <argsstring>(const wxDateSpan &amp;other) const </argsstring>
         <name>operator!=</name>
         <param>
           <type>const <ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref> &amp;</type>
+          <declname>other</declname>
         </param>
         <briefdescription>
 <para>Returns true if this date span is different from the other one. </para>        </briefdescription>
@@ -387,15 +388,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1772"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1854"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_date_span_1a66fd706df0edf1337a094a9e815aa52e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classwx_date_span_1ae6c25cf7f038ca2aa2f777b8c6716e3e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool wxDateSpan::operator==</definition>
-        <argsstring>(const wxDateSpan &amp;) const </argsstring>
+        <argsstring>(const wxDateSpan &amp;other) const </argsstring>
         <name>operator==</name>
         <param>
           <type>const <ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref> &amp;</type>
+          <declname>other</declname>
         </param>
         <briefdescription>
 <para>Returns true if this date span is equal to the other one. </para>        </briefdescription>
@@ -403,7 +405,7 @@
 <para>Two date spans are considered equal if and only if they have the same number of years and months and the same total number of days (counting both days and weeks). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1780"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1862"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -419,7 +421,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1592"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1674"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_span_1ae6c3547dc9a2f1774340bcc819bb1032" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref></type>
@@ -437,7 +439,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1599"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1681"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_span_1a14e488e59083c754acfd96adf5a291d9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref></type>
@@ -451,7 +453,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1640"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1722"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_span_1af2ec625e1a50d3eaae04b7df46bdacba" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref></type>
@@ -469,7 +471,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1647"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1729"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_span_1a7c3bfb0c1b7727a51b1e72c6e64c3b38" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref></type>
@@ -483,7 +485,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1720"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1802"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_span_1ab5cf7ffff914e960ab0db203663d45eb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref></type>
@@ -501,7 +503,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1727"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1809"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_span_1a36a1d821e59550c4ffb6e441197abacf" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref></type>
@@ -515,7 +517,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1734"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1816"/>
       </memberdef>
       <memberdef kind="function" id="classwx_date_span_1a5395d8b4114e5978376c6330d9f62ea1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_span" kindref="compound">wxDateSpan</ref></type>
@@ -533,7 +535,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1741"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1823"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -543,7 +545,7 @@
 Equality operators are defined for wxDateSpans. Two wxDateSpans are equal if and only if they both give the same target date when added to <bold>every</bold> source date. Thus wxDateSpan::Months(1) is not equal to wxDateSpan::Days(30), because they don&apos;t give the same date when added to Feb 1st. But wxDateSpan::Days(14) is equal to wxDateSpan::Weeks(2).</para><para>Finally, notice that for adding hours, minutes and so on you don&apos;t need this class at all: <ref refid="classwx_time_span" kindref="compound">wxTimeSpan</ref> will do the job because there are no subtleties associated with those (we don&apos;t support leap seconds).</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__data" kindref="compound">Data Structures</ref></para><para><simplesect kind="see"><para><ref refid="overview_datetime" kindref="compound">Date and Time</ref>, <ref refid="classwx_date_time" kindref="compound">wxDateTime</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" line="1566" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/datetime.h" bodystart="1565" bodyend="1781"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" line="1648" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/datetime.h" bodystart="1647" bodyend="1863"/>
     <listofallmembers>
       <member refid="classwx_date_span_1a00ddd2972f592a08c2bdbc213862d35c" prot="public" virt="non-virtual"><scope>wxDateSpan</scope><name>Add</name></member>
       <member refid="classwx_date_span_1aa5dbce645bc7f851840d2d6f9b24b5a8" prot="public" virt="non-virtual"><scope>wxDateSpan</scope><name>Add</name></member>
@@ -560,12 +562,12 @@ Equality operators are defined for wxDateSpans. Two wxDateSpans are equal if and
       <member refid="classwx_date_span_1a575ba275ad24b6230b25daa451494ada" prot="public" virt="non-virtual"><scope>wxDateSpan</scope><name>Multiply</name></member>
       <member refid="classwx_date_span_1aa0691b6f99fef9b3e6100041de534f25" prot="public" virt="non-virtual"><scope>wxDateSpan</scope><name>Neg</name></member>
       <member refid="classwx_date_span_1a2b5ab7da75908121c56bfe68124ae94f" prot="public" virt="non-virtual"><scope>wxDateSpan</scope><name>Negate</name></member>
-      <member refid="classwx_date_span_1a9aefb2d84b9b34e2214c653f01769aba" prot="public" virt="non-virtual"><scope>wxDateSpan</scope><name>operator!=</name></member>
+      <member refid="classwx_date_span_1a6aea3b6827ff0d9100f0595ca0d010e1" prot="public" virt="non-virtual"><scope>wxDateSpan</scope><name>operator!=</name></member>
       <member refid="classwx_date_span_1aa03d31f7b77c282629224717d013b085" prot="public" virt="non-virtual"><scope>wxDateSpan</scope><name>operator*=</name></member>
       <member refid="classwx_date_span_1afa82a43c6f8f07e811804abca6270afb" prot="public" virt="non-virtual"><scope>wxDateSpan</scope><name>operator+=</name></member>
       <member refid="classwx_date_span_1ab75e460324c67c493f462bd9bbb63610" prot="public" virt="non-virtual"><scope>wxDateSpan</scope><name>operator-</name></member>
       <member refid="classwx_date_span_1a490ca0904c06f416d448516bf3a5f375" prot="public" virt="non-virtual"><scope>wxDateSpan</scope><name>operator-=</name></member>
-      <member refid="classwx_date_span_1a66fd706df0edf1337a094a9e815aa52e" prot="public" virt="non-virtual"><scope>wxDateSpan</scope><name>operator==</name></member>
+      <member refid="classwx_date_span_1ae6c25cf7f038ca2aa2f777b8c6716e3e" prot="public" virt="non-virtual"><scope>wxDateSpan</scope><name>operator==</name></member>
       <member refid="classwx_date_span_1ad91798a7b6374bcbfdef3b39b4872cb9" prot="public" virt="non-virtual"><scope>wxDateSpan</scope><name>SetDays</name></member>
       <member refid="classwx_date_span_1a0a96c0606eea73b866e6640a0673345b" prot="public" virt="non-virtual"><scope>wxDateSpan</scope><name>SetMonths</name></member>
       <member refid="classwx_date_span_1a9ee73c50b3dd688c59a78e8e6f9a1e05" prot="public" virt="non-virtual"><scope>wxDateSpan</scope><name>SetWeeks</name></member>

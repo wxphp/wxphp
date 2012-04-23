@@ -21,7 +21,7 @@
 <para>does not contain nor <computeroutput>32</computeroutput> nor <computeroutput>64</computeroutput> strings). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="247"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="247"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1acd8eae1ec948e2f08a12cdb79a234df6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="platinfo_8h_1a604702957b3c219643e1c989766f7047" kindref="member">wxEndianness</ref></type>
@@ -38,7 +38,7 @@
 <para>does not contain nor little nor big strings). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="254"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="254"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1aa8f121eec76070bb530e20cb201975cb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fd" kindref="member">wxOperatingSystemId</ref></type>
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="260"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="260"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1a71cf9ba7a98812378a253735043dc72e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="platinfo_8h_1a4acbc14b366d6ce2875f809be384757b" kindref="member">wxPortId</ref></type>
@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="267"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="267"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="282"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="282"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1a4562d7febedc9e8dbadcc8acdb7d129b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -110,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="287"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="287"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1aaa7f7f09e9378bb43d2849b13dbc1f91" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -127,7 +127,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="294"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="294"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1a0a46c56d316ab6e2d2d5a900fb11f847" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -144,7 +144,7 @@
 <para>This can be a long name (e.g. <computeroutput>Microsoft Windows NT</computeroutput>); use <ref refid="classwx_platform_info_1aaa7f7f09e9378bb43d2849b13dbc1f91" kindref="member">GetOperatingSystemFamilyName()</ref> to retrieve a short, generic name. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="302"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="302"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1ae02f6e50237f1c73e8385bb89c289e17" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -165,7 +165,7 @@
 <para>The <emphasis>usingUniversal</emphasis> argument specifies whether the port is in its native or wxUniversal variant.</para><para>The returned string always starts with the &quot;wx&quot; prefix and is a mixed-case string. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="311"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="311"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1a0a9f18069fc682528866887ddf5cdd37" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -186,7 +186,7 @@
 <para>The <emphasis>usingUniversal</emphasis> argument specifies whether the port is in its native or wxUniversal variant.</para><para>The returned string does not start with the &quot;wx&quot; prefix and is always lower case. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="321"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="321"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1acafecf367278fceae4fc205d03fb695c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -199,7 +199,7 @@
 <para>See <ref refid="group__group__funcmacro__file_1ga26e222d4250fd4cab65f03fc89b7ec45" kindref="member">wxGetOSDirectory()</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="328"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="328"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -215,7 +215,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="341"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="341"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1a231a99f2c187c6bf876cd83dc33c8829" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="platinfo_8h_1a604702957b3c219643e1c989766f7047" kindref="member">wxEndianness</ref></type>
@@ -228,7 +228,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="346"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="346"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1ab95e9c7889ae224744cce280d84fe01a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -242,7 +242,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="354"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="354"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1aa9bc289303d4e13ad9f186d738e1d528" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -256,7 +256,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="362"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="362"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1ab70a9c0bac9a38f05930e5f05a153cff" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="platinfo_8h_1ae1234f6be0bdb09c90c9ba78251056fd" kindref="member">wxOperatingSystemId</ref></type>
@@ -269,7 +269,7 @@
 <para>See <ref refid="group__group__funcmacro__networkuseros_1ga2ca585c288b956d80511478dc7b01533" kindref="member">wxGetOsVersion()</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="369"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="369"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1a6bf561b3421cf7f29c0100a8cf0daa1c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -282,7 +282,7 @@
 <para>See wxGetOSDescription() for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="376"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="376"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1accb2703f09fe6e28497b47e67630e856" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="platinfo_8h_1a4acbc14b366d6ce2875f809be384757b" kindref="member">wxPortId</ref></type>
@@ -295,7 +295,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="381"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="381"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1a79be6e7e9749940c41f208bb29acee3d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="structwx_linux_distribution_info" kindref="compound">wxLinuxDistributionInfo</ref></type>
@@ -308,7 +308,7 @@
 <para>See <ref refid="group__group__funcmacro__networkuseros_1ga06f6fb212c396bd20865ee4e2f69aa1f" kindref="member">wxGetLinuxDistributionInfo()</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="388"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="388"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1a063a96305c6bd54569b1fa50d8a3d49b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -321,7 +321,7 @@
 <para>See <ref refid="classwx_app_traits_1ad333680437446304014c087d2fffedcf" kindref="member">wxAppTraits::GetDesktopEnvironment()</ref> for more info. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="395"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="395"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1aaae61e2fafb958b19da3738916cb032d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -335,7 +335,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="408"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="408"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1a248fe81a2d7d04dc44edc6eb966a4dad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -349,7 +349,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="421"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="421"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -365,7 +365,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="434"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="434"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1aff68c13a9018c27a985827fc64dbba10" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -378,7 +378,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="439"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="439"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1ac275e051d3141036bd921e6a585c1ce4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -391,7 +391,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="445"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="445"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1ae7c90aca295c74184737e50cc673d3fb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -404,7 +404,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="451"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="451"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1a58ebd975d5da5f8ab956fb0d8e105d3c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -417,7 +417,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="457"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="457"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1af0f9bd0622aee3aeca59cf4fb3d649ce" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -430,7 +430,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="463"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="463"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -450,7 +450,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="477"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="477"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1aa8c63894983b04e8db7fb46a896464a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -467,7 +467,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="482"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="482"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1a5ef41076a7ef19ef5ffebbf7613d1f69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -488,7 +488,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="488"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="488"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1a573b7a06315e62379186dfdd60ee6b86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -505,7 +505,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="493"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="493"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1ae3a93e4ad2948a54b9e3f9eb69bfc9fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -522,7 +522,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="498"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="498"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1a79d44037394eecbb3880cf9748305ac1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -543,7 +543,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="503"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="503"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1a0609911ec48b004aac3f89a69e8537b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -560,7 +560,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="508"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="508"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1a8355d5c12d826b85502c8c431a105bfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -577,7 +577,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="513"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="513"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1a7eab116cfe3bd22cd2c189ec95d39f84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -594,7 +594,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="518"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="518"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -610,7 +610,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="177"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="177"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1ae3f8caf189cacc367ba867c8ad480f16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -662,7 +662,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="189"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="189"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1a985a4b626e245e6c427605ab12202655" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -684,7 +684,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="198"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="198"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1aeba41fd25f2b4ff6b33aa8dfa67b102d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -706,7 +706,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="206"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="206"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1a4d9b774fe3d04983b86d840761c89999" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -719,7 +719,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="212"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="212"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1a180dec50a9037acc1f3d71f3ea188ad4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -732,7 +732,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="217"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="217"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1a026496f60d29c419eacf39247842969d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -749,7 +749,7 @@
 <para>Tests all class&apos; internal variables. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="222"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="222"/>
       </memberdef>
       <memberdef kind="function" id="classwx_platform_info_1a24d4c5e9de8bfbd38b760e84dca00efb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -766,7 +766,7 @@
 <para>Tests all class&apos; internal variables. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="227"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="227"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -781,7 +781,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="233"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="233"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -792,7 +792,7 @@
 </programlisting></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__cfg" kindref="compound">Application and System configuration</ref></para><para><simplesect kind="see"><para><ref refid="group__group__funcmacro__networkuseros_1ga2ca585c288b956d80511478dc7b01533" kindref="member">wxGetOsVersion()</ref>, <ref refid="group__group__funcmacro__networkuseros_1gaccf71bf91abcb6469e6b812acf40bd38" kindref="member">wxIsPlatformLittleEndian()</ref>, <ref refid="group__group__funcmacro__networkuseros_1ga56083f0f3875e40b13aa6094e283584e" kindref="member">wxIsPlatform64Bit()</ref>, <ref refid="classwx_app_traits" kindref="compound">wxAppTraits</ref>, <ref refid="group__group__funcmacro__networkuseros" kindref="compound">Network, User and OS</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" line="165" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/platinfo.h" bodystart="164" bodyend="521"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" line="165" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/platinfo.h" bodystart="164" bodyend="521"/>
     <listofallmembers>
       <member refid="classwx_platform_info_1a985a4b626e245e6c427605ab12202655" prot="public" virt="non-virtual"><scope>wxPlatformInfo</scope><name>CheckOSVersion</name></member>
       <member refid="classwx_platform_info_1aeba41fd25f2b4ff6b33aa8dfa67b102d" prot="public" virt="non-virtual"><scope>wxPlatformInfo</scope><name>CheckToolkitVersion</name></member>

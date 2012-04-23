@@ -15,13 +15,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h" bodystart="15" bodyend="-1"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" line="15" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h" bodystart="15" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/textentry.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/textentry.h"/>
   </compounddef>
 </doxygen>

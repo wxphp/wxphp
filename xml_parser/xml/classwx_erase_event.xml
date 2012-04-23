@@ -26,7 +26,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2929"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="2924"/>
       </memberdef>
       <memberdef kind="function" id="classwx_erase_event_1af563f2772663df9fc6a33229aa7e9261" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_d_c" kindref="compound">wxDC</ref> *</type>
@@ -39,7 +39,7 @@
 <para>The returned pointer is never NULL. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2936"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="2931"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -53,49 +53,49 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref></para><para><simplesect kind="see"><para><ref refid="overview_events" kindref="compound">Events and Event Handling</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="5822">
+      <node id="5937">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="5820">
+      <node id="5935">
         <label>wxEraseEvent</label>
         <link refid="classwx_erase_event"/>
-        <childnode refid="5821" relation="public-inheritance">
+        <childnode refid="5936" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5821">
+      <node id="5936">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="5822" relation="public-inheritance">
+        <childnode refid="5937" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="5825">
+      <node id="5940">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="5826" relation="usage">
+        <childnode refid="5941" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="5823">
+      <node id="5938">
         <label>wxEraseEvent</label>
         <link refid="classwx_erase_event"/>
-        <childnode refid="5824" relation="public-inheritance">
+        <childnode refid="5939" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5824">
+      <node id="5939">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="5825" relation="public-inheritance">
+        <childnode refid="5940" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="5826">
+      <node id="5941">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" line="2924" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/event.h" bodystart="2923" bodyend="2937"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" line="2919" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/event.h" bodystart="2918" bodyend="2932"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxEraseEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxEraseEvent</scope><name>Clone</name></member>

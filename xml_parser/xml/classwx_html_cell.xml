@@ -19,29 +19,55 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="94"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="94"/>
       </memberdef>
-      <memberdef kind="function" id="classwx_html_cell_1a0444199b22671fe2a1ac7924002b683a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classwx_html_cell_1a6ac3cb5003fcfbe2a5a5209877303cb5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
         <definition>virtual bool wxHtmlCell::AdjustPagebreak</definition>
-        <argsstring>(int *pagebreak, wxArrayInt &amp;known_pagebreaks) const </argsstring>
+        <argsstring>(int *pagebreak, const wxArrayInt &amp;known_pagebreaks, int pageHeight) const </argsstring>
         <name>AdjustPagebreak</name>
         <param>
           <type>int *</type>
           <declname>pagebreak</declname>
         </param>
         <param>
-          <type><ref refid="dynarray_8h_1add87f199292e36ee87efd6d7f0d4ee66" kindref="member">wxArrayInt</ref> &amp;</type>
+          <type>const <ref refid="dynarray_8h_1add87f199292e36ee87efd6d7f0d4ee66" kindref="member">wxArrayInt</ref> &amp;</type>
           <declname>known_pagebreaks</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pageHeight</declname>
         </param>
         <briefdescription>
 <para>This method is used to adjust pagebreak position. </para>        </briefdescription>
         <detaileddescription>
-<para>The parameter is variable that contains y-coordinate of page break (= horizontal line that should not be crossed by words, images etc.). If this cell cannot be divided into two pieces (each one on another page) then it moves the pagebreak few pixels up. Returns true if pagebreak was modified, false otherwise.</para><para>Usage: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(container-&gt;AdjustPagebreak(&amp;p))<sp/>{}</highlight></codeline>
+<para>The first parameter is a variable that contains the y-coordinate of the page break (= horizontal line that should not be crossed by words, images etc.). If this cell cannot be divided into two pieces (each one on another page) then it either moves the pagebreak a few pixels up, if possible, or, if the cell cannot fit on the page at all, then the cell is forced to split unconditionally.</para><para>Returns true if pagebreak was modified, false otherwise.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pagebreak</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>position in pixel of the pagebreak.</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>known_pagebreaks</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the list of the previous pagebreaks</para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pageHeight</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the height in pixel of the page drawable area</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+Usage: <programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(container-&gt;AdjustPagebreak(&amp;p,<sp/>kp,<sp/>ph))<sp/>{}</highlight></codeline>
 </programlisting> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="110"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="124"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_cell_1abebd247b545b1885e2a6406a1fc20d0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -116,7 +142,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="133"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="147"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_cell_1abe8d7bac1f334d039a55c25eb55626c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -169,7 +195,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="152"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="166"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_cell_1a77d18c7c6a676e3ff14f20469423d2c6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>const <ref refid="classwx_html_cell" kindref="compound">wxHtmlCell</ref> *</type>
@@ -205,7 +231,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="169"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="183"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_cell_1abf0cf712378d49567f0708190fa15f95" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -219,7 +245,7 @@
  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="176"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="190"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_cell_1a9861edcc59cf4241e3377011380a2fcc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_html_cell" kindref="compound">wxHtmlCell</ref> *</type>
@@ -233,7 +259,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="186"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="200"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_cell_1aa4e5f0c1def82d7a9e36cca7b852eef3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -246,7 +272,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="191"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="205"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_cell_1affd3cb3d9817fda15d0dbcd95175764f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -259,7 +285,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="196"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="210"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_cell_1a5c7611ecfbcc5ed32b824e6f85399e8b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_html_link_info" kindref="compound">wxHtmlLinkInfo</ref> *</type>
@@ -291,7 +317,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="207"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="221"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_cell_1a609ca60b7474e5901e150f0267600563" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_cursor" kindref="compound">wxCursor</ref></type>
@@ -316,7 +342,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="215"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="229"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_cell_1aebaf45b9fa4040c5a651f94ad8498739" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_html_cell" kindref="compound">wxHtmlCell</ref> *</type>
@@ -329,7 +355,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="221"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="235"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_cell_1af108492ead23c2e7417d183523126555" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_html_container_cell" kindref="compound">wxHtmlContainerCell</ref> *</type>
@@ -342,7 +368,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="226"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="240"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_cell_1a266568dffdad8970180832b3f8339dbe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -355,7 +381,7 @@
 <para>The returned value is meaningful only if parent&apos;s <ref refid="classwx_html_cell_1ada68b93b129fafc7b251580408b67fd6" kindref="member">Layout()</ref> was called before! </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="233"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="247"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_cell_1a970eec0120d6e2b21bc5711fe28cb243" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -368,7 +394,7 @@
 <para>The returned value is meaningful only if parent&apos;s <ref refid="classwx_html_cell_1ada68b93b129fafc7b251580408b67fd6" kindref="member">Layout()</ref> was called before! </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="240"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="254"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_cell_1a2e8726d5bebf99a3b3f5152af1c01698" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -381,7 +407,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="245"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="259"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_cell_1ada68b93b129fafc7b251580408b67fd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -400,7 +426,7 @@
 </para><para>It must be called before displaying cells structure because m_PosX and m_PosY are undefined (or invalid) before calling <ref refid="classwx_html_cell_1ada68b93b129fafc7b251580408b67fd6" kindref="member">Layout()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="259"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="273"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_cell_1ae6ed35ebd27616ae32905461507fe8db" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -450,7 +476,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="283"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="297"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_cell_1ae70b6dde74d962102a80bbceef1ce372" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -467,7 +493,7 @@
 <para>Default value is no identifier, i.e. empty string. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="288"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="302"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_cell_1af85de831d0381ebe7b862ed3d147f306" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -484,7 +510,7 @@
 <para>(Default value is <ref refid="classwx_html_link_info" kindref="compound">wxHtmlLinkInfo</ref>(&quot;&quot;, &quot;&quot;) (no link)) </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="294"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="308"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_cell_1af744488eb0f3fc67b15e89c88bf8e916" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -501,7 +527,7 @@
 <para>This shouldn&apos;t be called by user - it is to be used only by <ref refid="classwx_html_container_cell_1a84c159f60c4bd8f82622647428720667" kindref="member">wxHtmlContainerCell::InsertCell</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="300"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="314"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_cell_1abd0726c3573d161c7db27f12705ec124" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -518,7 +544,7 @@
 <para>This is called from <ref refid="classwx_html_container_cell_1a84c159f60c4bd8f82622647428720667" kindref="member">wxHtmlContainerCell::InsertCell</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="306"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="320"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_cell_1a6cba35376a5280f83450c3993f517851" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -539,7 +565,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="311"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="325"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -549,57 +575,57 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__html" kindref="compound">HTML</ref></para><para><simplesect kind="see"><para><ref refid="overview_html_1overview_html_cells" kindref="member">Cells and Containers</ref>, <ref refid="classwx_html_container_cell" kindref="compound">wxHtmlContainerCell</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6966">
+      <node id="7148">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6965">
+      <node id="7147">
         <label>wxHtmlCell</label>
         <link refid="classwx_html_cell"/>
-        <childnode refid="6966" relation="public-inheritance">
+        <childnode refid="7148" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6969">
+      <node id="7151">
         <label>wxHtmlWidgetCell</label>
         <link refid="classwx_html_widget_cell"/>
-        <childnode refid="6965" relation="public-inheritance">
+        <childnode refid="7147" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6968">
+      <node id="7150">
         <label>wxHtmlContainerCell</label>
         <link refid="classwx_html_container_cell"/>
-        <childnode refid="6965" relation="public-inheritance">
+        <childnode refid="7147" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6967">
+      <node id="7149">
         <label>wxHtmlColourCell</label>
         <link refid="classwx_html_colour_cell"/>
-        <childnode refid="6965" relation="public-inheritance">
+        <childnode refid="7147" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6971">
+      <node id="7153">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6972" relation="usage">
+        <childnode refid="7154" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6970">
+      <node id="7152">
         <label>wxHtmlCell</label>
         <link refid="classwx_html_cell"/>
-        <childnode refid="6971" relation="public-inheritance">
+        <childnode refid="7153" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6972">
+      <node id="7154">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" line="89" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/htmlcell.h" bodystart="88" bodyend="312"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" line="89" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/html/htmlcell.h" bodystart="88" bodyend="326"/>
     <listofallmembers>
-      <member refid="classwx_html_cell_1a0444199b22671fe2a1ac7924002b683a" prot="public" virt="virtual"><scope>wxHtmlCell</scope><name>AdjustPagebreak</name></member>
+      <member refid="classwx_html_cell_1a6ac3cb5003fcfbe2a5a5209877303cb5" prot="public" virt="virtual"><scope>wxHtmlCell</scope><name>AdjustPagebreak</name></member>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxHtmlCell</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxHtmlCell</scope><name>CloneRefData</name></member>
       <member refid="classwx_object_1a95c6a5e4e1e03ff23c7b9efe4cff0c1a" prot="protected" virt="virtual"><scope>wxHtmlCell</scope><name>CreateRefData</name></member>

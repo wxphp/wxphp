@@ -30,7 +30,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1653"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="1647"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_sizer_1a6b0493be4197aff5bf59f1e68676d711" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -53,7 +53,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1654"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="1648"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_sizer_1a1f0a163a3a216ed647452a31951b66bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -83,7 +83,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1656"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="1650"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_sizer_1afa96e5d782116e2418ee440724b1a312" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -109,7 +109,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1657"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="1651"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -124,7 +124,7 @@
 <para>Returns zero if the sizer is automatically adjusting the number of columns depending on number of its children. To get the effective number of columns or rows being currently used, see <ref refid="classwx_grid_sizer_1a107ab1f41dee07ced0de5b3ed2e53e60" kindref="member">GetEffectiveColsCount()</ref> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1668"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="1662"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_sizer_1abe7f77c9c2a22a957e763b7f25f98a96" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -137,7 +137,7 @@
 <para>Returns zero if the sizer is automatically adjusting the number of rows depending on number of its children. To get the effective number of columns or rows being currently used, see <ref refid="classwx_grid_sizer_1a9e94e9f0ad79977117ca9ed62c59f9f8" kindref="member">GetEffectiveRowsCount()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1678"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="1672"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_sizer_1a107ab1f41dee07ced0de5b3ed2e53e60" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -151,7 +151,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1688"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="1682"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_sizer_1a9e94e9f0ad79977117ca9ed62c59f9f8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -165,7 +165,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1698"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="1692"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_sizer_1a30f4453dc4ca68b3b9edacf865014dc2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -178,7 +178,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1703"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="1697"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_sizer_1a8b7b88e632daf2138fc33a766ed09dc4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -191,7 +191,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1708"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="1702"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_sizer_1aaa0e5a8e167de18b0fd3066febed5cad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -208,7 +208,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1713"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="1707"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_sizer_1acf9b3399f7b6044f1d75446015f28747" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -225,7 +225,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1718"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="1712"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_sizer_1a66b7cccb173e76a06a70256ba2cbaf33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -242,7 +242,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1723"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="1717"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_sizer_1a89c28d0796cead886b0e2218178125f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -259,7 +259,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1728"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="1722"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_sizer_1a6ea31d3cb8b6d101d5d279e84b58ba39" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -275,7 +275,7 @@
 <para>Here, the sizer will do the actual calculation of its children&apos;s minimal sizes. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1730"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="1724"/>
       </memberdef>
       <memberdef kind="function" id="classwx_grid_sizer_1ae77a4c0a71b771157989af8f1b5b44f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -291,7 +291,7 @@
 <para>Here, the sizer will do the actual calculation of its children&apos;s positions and sizes. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1731"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="1725"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -301,61 +301,61 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__winlayout" kindref="compound">Window Layout</ref></para><para><simplesect kind="see"><para><ref refid="classwx_sizer" kindref="compound">wxSizer</ref>, <ref refid="overview_sizer" kindref="compound">Sizers Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6842">
+      <node id="7012">
         <label>wxFlexGridSizer</label>
         <link refid="classwx_flex_grid_sizer"/>
-        <childnode refid="6839" relation="public-inheritance">
+        <childnode refid="7009" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6841">
+      <node id="7011">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="6843">
+      <node id="7013">
         <label>wxGridBagSizer</label>
         <link refid="classwx_grid_bag_sizer"/>
-        <childnode refid="6842" relation="public-inheritance">
+        <childnode refid="7012" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6840">
+      <node id="7010">
         <label>wxSizer</label>
         <link refid="classwx_sizer"/>
-        <childnode refid="6841" relation="public-inheritance">
+        <childnode refid="7011" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6839">
+      <node id="7009">
         <label>wxGridSizer</label>
         <link refid="classwx_grid_sizer"/>
-        <childnode refid="6840" relation="public-inheritance">
+        <childnode refid="7010" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6846">
+      <node id="7016">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6847" relation="usage">
+        <childnode refid="7017" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6845">
+      <node id="7015">
         <label>wxSizer</label>
         <link refid="classwx_sizer"/>
-        <childnode refid="6846" relation="public-inheritance">
+        <childnode refid="7016" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6844">
+      <node id="7014">
         <label>wxGridSizer</label>
         <link refid="classwx_grid_sizer"/>
-        <childnode refid="6845" relation="public-inheritance">
+        <childnode refid="7015" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6847">
+      <node id="7017">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" line="1624" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/sizer.h" bodystart="1623" bodyend="1732"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" line="1618" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/sizer.h" bodystart="1617" bodyend="1726"/>
     <listofallmembers>
       <member refid="classwx_sizer_1a4e2122f2749261473c21cb192d00709f" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>Add</name></member>
       <member refid="classwx_sizer_1a81d21f287c416da96739a73faa54840d" prot="public" virt="non-virtual"><scope>wxGridSizer</scope><name>Add</name></member>

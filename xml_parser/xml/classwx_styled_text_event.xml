@@ -26,7 +26,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="26"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="29"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a8279354e8ff8c26b6a6edf43e920ffb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="27"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="30"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="33"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="36"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a0ba1402159c307022f0bc1f2fb9a13c7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="38"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="41"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a2547fab4336f2863750fb8273a3f913a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -84,7 +84,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="43"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="46"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1aad6985b4c7452986177b361aa1fe0ebb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="interface_2wx_2dnd_8h_1adbd4b292582eebbc9a6ce3dee31c2afb" kindref="member">wxDragResult</ref></type>
@@ -97,7 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="48"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="51"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a8fcde815326750cc413db29532386c92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -110,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="53"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="56"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a10d5d8c842c9f368613a782a8547efa7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -123,7 +123,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="58"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="61"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a8f36a0d01af813cf7955a3f8d09f97ca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -136,7 +136,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="63"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="66"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a7a54042037329de8590f64af4e9bccbc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -149,7 +149,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="68"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="71"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a7ddc06bf12d760fde5244cfa42f1d9f6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -162,7 +162,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="73"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="76"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a60b30eb034a32b804dff28d912eb69df" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -175,7 +175,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="78"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="81"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a6e00155f6e8a9a7fad822cbd8142476d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -188,7 +188,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="83"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="86"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a7f25708a1025fd3dcd8d59a357c2c3db" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -201,7 +201,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="88"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="91"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a509a3fb8ee02a1466f6863c0a32ebd3b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -214,7 +214,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="93"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="96"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1aa6d8f24cbefcd4ac87a6177be72b6fdf" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -227,7 +227,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="98"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="101"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a8f247b892cea09fc17d2330df6ee5824" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -240,7 +240,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="103"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="106"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a6cc693e33cb197012935babff11be8f2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -253,7 +253,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="108"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="111"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a8a117d71aa8a5fbe7199230963d93c6e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -266,7 +266,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="113"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="116"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a5522bebc4ca0fd54e299f09016ff2785" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -279,7 +279,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="118"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="121"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a925ff9e8b4471b73ec720f12a9ad3167" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -292,7 +292,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="123"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="126"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1abe1d425787992b2ee20f8b4580406409" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -305,7 +305,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="128"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="131"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a58dfaf5226929f0456d268a81b1aaa3c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -318,7 +318,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="133"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="136"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a67fa6fe0352258b14d8c04d78be7c283" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -331,7 +331,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="138"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="141"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a10d56fe3fbae29c3d8f5e0d2a5355e34" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -344,7 +344,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="143"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="146"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a514e130701c21c56751a9ee1b2500f1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -361,7 +361,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="148"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="151"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a5247d9338bbae9d2f1d178eb7b923ebd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -378,7 +378,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="153"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="156"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1ad0a642b038ae175f2bdc96e0e182d3dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -395,7 +395,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="158"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="161"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a65bb4d25fe464ae215db46657fa43e48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -412,7 +412,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="163"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="166"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a26cdb60a8f6118d83116345dce7aba4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -429,7 +429,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="168"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="171"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1ab5a70c91ee066c33901220597faf801e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -446,7 +446,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="173"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="176"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a52a41758786d8439874b5c4a463ff8a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -463,7 +463,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="178"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="181"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1acfd2ec4af69b166e9a1f3b2b6cd748a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -480,7 +480,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="183"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="186"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a5a5ded1d5f4b3264d102d17126dad124" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -497,7 +497,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="188"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="191"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a91377ba6defe2bf60e44ab179e0d3c21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -514,7 +514,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="193"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="196"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1acebc4a692d3aa51235c5d230341a6220" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -531,7 +531,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="198"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="201"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1aa9563e793e631551603e6c1acd963efa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -548,7 +548,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="203"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="206"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1aa5d7012504e37f0a2127a2d1dec016ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -565,7 +565,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="208"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="211"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a39c5b50beac9216280cd9b86c4791704" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -582,7 +582,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="213"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="216"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1abc5abc6f44b266b8e930616dbe17f7b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -599,7 +599,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="218"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="221"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1af261b54ce46dde38624c8856eef14f33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -616,7 +616,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="223"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="226"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a0e2f8c57dde6dafbb54bb5bf067b373d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -633,7 +633,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="228"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="231"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a741d3ce054a1489f2e9509a6a11c5645" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -650,7 +650,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="233"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="236"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a802dc603e8ab1ff7f82d57d393558836" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -667,7 +667,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="238"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="241"/>
       </memberdef>
       <memberdef kind="function" id="classwx_styled_text_event_1a66bd9e86614d08a09681407f55592055" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -684,70 +684,70 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="243"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="246"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>The type of events sent from <ref refid="classwx_styled_text_ctrl" kindref="compound">wxStyledTextCtrl</ref>. </para>    </briefdescription>
     <detaileddescription>
-<para><xrefsect id="todo_1_todo000060"><xreftitle>Todo</xreftitle><xrefdescription><para>list styled text ctrl events.</para></xrefdescription></xrefsect></para><para><heading level="2"></heading>
+<para><xrefsect id="todo_1_todo000059"><xreftitle>Todo</xreftitle><xrefdescription><para>list styled text ctrl events.</para></xrefdescription></xrefsect></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref>, <ref refid="group__group__class__stc" kindref="compound">Scintilla Text Editor</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="10619">
+      <node id="10804">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="10617">
+      <node id="10802">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="10618" relation="public-inheritance">
+        <childnode refid="10803" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10616">
+      <node id="10801">
         <label>wxStyledTextEvent</label>
         <link refid="classwx_styled_text_event"/>
-        <childnode refid="10617" relation="public-inheritance">
+        <childnode refid="10802" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10618">
+      <node id="10803">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10619" relation="public-inheritance">
+        <childnode refid="10804" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="10623">
+      <node id="10808">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="10624" relation="usage">
+        <childnode refid="10809" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="10621">
+      <node id="10806">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="10622" relation="public-inheritance">
+        <childnode refid="10807" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10620">
+      <node id="10805">
         <label>wxStyledTextEvent</label>
         <link refid="classwx_styled_text_event"/>
-        <childnode refid="10621" relation="public-inheritance">
+        <childnode refid="10806" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10622">
+      <node id="10807">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="10623" relation="public-inheritance">
+        <childnode refid="10808" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="10624">
+      <node id="10809">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" line="20" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stc/stc.h" bodystart="19" bodyend="244"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" line="23" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/stc/stc.h" bodystart="22" bodyend="247"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxStyledTextEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_event_1a26878097a702e8d0368da150125d4158" prot="public" virt="pure-virtual"><scope>wxStyledTextEvent</scope><name>Clone</name></member>

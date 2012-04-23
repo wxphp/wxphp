@@ -19,7 +19,7 @@
 <para>The constructor saves the value of the flag to be able to return the correct value from <ref refid="classwx_recursion_guard_1a82df654ab0277174eef32eae3bcd02d1" kindref="member">IsInside()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/recguard.h" line="77"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/recguard.h" line="77"/>
       </memberdef>
       <memberdef kind="function" id="classwx_recursion_guard_1adeb06fb439b4529d96f3e45544a27187" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -33,7 +33,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/recguard.h" line="86"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/recguard.h" line="86"/>
       </memberdef>
       <memberdef kind="function" id="classwx_recursion_guard_1a82df654ab0277174eef32eae3bcd02d1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -46,7 +46,7 @@
 <para>between this line and the end of current scope). Usually the function using <ref refid="classwx_recursion_guard" kindref="compound">wxRecursionGuard</ref> takes some specific actions in such case (may be simply returning) to prevent reentrant calls to itself.</para><para>If this method returns false, it is safe to continue. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/recguard.h" line="96"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/recguard.h" line="96"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -66,7 +66,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para>As you can see, <ref refid="classwx_recursion_guard" kindref="compound">wxRecursionGuard</ref> simply tests the flag value and sets it to true if it hadn&apos;t been already set. <ref refid="classwx_recursion_guard_1a82df654ab0277174eef32eae3bcd02d1" kindref="member">IsInside()</ref> allows testing the old flag value. The advantage of using this class compared to directly manipulating the flag is that the flag is always reset in the <ref refid="classwx_recursion_guard" kindref="compound">wxRecursionGuard</ref> destructor and so you don&apos;t risk to forget to do it even if the function returns in an unexpected way (for example because an exception has been thrown).</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__misc" kindref="compound">Miscellaneous</ref> </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/recguard.h" line="69" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/recguard.h" bodystart="68" bodyend="97"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/recguard.h" line="69" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/recguard.h" bodystart="68" bodyend="97"/>
     <listofallmembers>
       <member refid="classwx_recursion_guard_1a82df654ab0277174eef32eae3bcd02d1" prot="public" virt="non-virtual"><scope>wxRecursionGuard</scope><name>IsInside</name></member>
       <member refid="classwx_recursion_guard_1a9dde9c6284b26edda237c219eff09145" prot="public" virt="non-virtual"><scope>wxRecursionGuard</scope><name>wxRecursionGuard</name></member>

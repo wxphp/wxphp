@@ -16,7 +16,7 @@
 <para>This is the item being selected, expanded, checked or activated (depending on the event type). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treelist.h" line="860"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treelist.h" line="860"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_list_event_1a3159d398419defcd443c2dc215f6f3eb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="checkbox_8h_1ab7ff30e019a8312536b5bb723606febf" kindref="member">wxCheckBoxState</ref></type>
@@ -26,10 +26,10 @@
         <briefdescription>
 <para>Return the previous state of the item checkbox. </para>        </briefdescription>
         <detaileddescription>
-<para>This method can be used with <computeroutput>wxEVT_COMMAND_TREELIST_ITEM_CHeCKED</computeroutput> events only.</para><para>Notice that the new state of the item can be retrieved using <ref refid="classwx_tree_list_ctrl_1a6226030a1caa9aac745865f2eaa05589" kindref="member">wxTreeListCtrl::GetCheckedState()</ref>. </para>        </detaileddescription>
+<para>This method can be used with <computeroutput>wxEVT_COMMAND_TREELIST_ITEM_CHECKED</computeroutput> events only.</para><para>Notice that the new state of the item can be retrieved using <ref refid="classwx_tree_list_ctrl_1a6226030a1caa9aac745865f2eaa05589" kindref="member">wxTreeListCtrl::GetCheckedState()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treelist.h" line="871"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treelist.h" line="871"/>
       </memberdef>
       <memberdef kind="function" id="classwx_tree_list_event_1a3efa4e741b56f610caf6376599390a15" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned</type>
@@ -42,7 +42,7 @@
 <para>This is currently only used with <computeroutput>wxEVT_COMMAND_TREELIST_COLUMN_SORTED</computeroutput> event. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treelist.h" line="879"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treelist.h" line="879"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -51,73 +51,73 @@
 <para><simplesect kind="since"><para>2.9.3 </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11233">
+      <node id="11422">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11231">
+      <node id="11420">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="11232" relation="public-inheritance">
+        <childnode refid="11421" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11229">
+      <node id="11418">
         <label>wxTreeListEvent</label>
         <link refid="classwx_tree_list_event"/>
-        <childnode refid="11230" relation="public-inheritance">
+        <childnode refid="11419" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11230">
+      <node id="11419">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="11231" relation="public-inheritance">
+        <childnode refid="11420" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11232">
+      <node id="11421">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="11233" relation="public-inheritance">
+        <childnode refid="11422" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11238">
+      <node id="11427">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11239" relation="usage">
+        <childnode refid="11428" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11236">
+      <node id="11425">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="11237" relation="public-inheritance">
+        <childnode refid="11426" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11234">
+      <node id="11423">
         <label>wxTreeListEvent</label>
         <link refid="classwx_tree_list_event"/>
-        <childnode refid="11235" relation="public-inheritance">
+        <childnode refid="11424" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11235">
+      <node id="11424">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="11236" relation="public-inheritance">
+        <childnode refid="11425" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11237">
+      <node id="11426">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="11238" relation="public-inheritance">
+        <childnode refid="11427" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11239">
+      <node id="11428">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treelist.h" line="852" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/treelist.h" bodystart="851" bodyend="880"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/treelist.h" line="852" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/treelist.h" bodystart="851" bodyend="880"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxTreeListEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_notify_event_1a7b23515f827b2ce1da1e6990d9aafe80" prot="public" virt="non-virtual"><scope>wxTreeListEvent</scope><name>Allow</name></member>

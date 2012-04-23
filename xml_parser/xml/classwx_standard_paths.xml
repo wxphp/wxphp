@@ -26,7 +26,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdpaths.h" line="62" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdpaths.h" bodystart="61" bodyend="68"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stdpaths.h" line="62" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/stdpaths.h" bodystart="61" bodyend="68"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -42,7 +42,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdpaths.h" line="82"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stdpaths.h" line="82"/>
       </memberdef>
       <memberdef kind="function" id="classwx_standard_paths_1ae67e85d9e97f134bad9f2fa8acb29eef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -59,7 +59,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdpaths.h" line="104"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stdpaths.h" line="104"/>
       </memberdef>
       <memberdef kind="function" id="classwx_standard_paths_1ae17c730ec91dca81b3574a27a9add456" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -75,7 +75,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdpaths.h" line="115"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stdpaths.h" line="115"/>
       </memberdef>
       <memberdef kind="function" id="classwx_standard_paths_1a2453024a2a5305bbda3bc6d4c0664cba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -91,7 +91,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdpaths.h" line="136"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stdpaths.h" line="136"/>
       </memberdef>
       <memberdef kind="function" id="classwx_standard_paths_1aa87a172690af8f7535cc37f2e9b59c43" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -108,7 +108,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdpaths.h" line="150"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stdpaths.h" line="150"/>
       </memberdef>
       <memberdef kind="function" id="classwx_standard_paths_1aca76479d42511c0b45f39b0cfbb35c6b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -123,7 +123,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdpaths.h" line="159"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stdpaths.h" line="159"/>
       </memberdef>
       <memberdef kind="function" id="classwx_standard_paths_1a318d939990abd7589a7a2890bc0856de" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -133,11 +133,11 @@
         <briefdescription>
 <para>Return the program installation prefix, e.g. </para>        </briefdescription>
         <detaileddescription>
-<para><computeroutput>/usr</computeroutput>, <computeroutput>/opt</computeroutput> or <computeroutput>/home/zeitlin</computeroutput>.</para><para>If the prefix had been previously by <ref refid="classwx_standard_paths_1a80af124a7df05bf1a1f7bee7406d278f" kindref="member">SetInstallPrefix()</ref>, returns that value, otherwise tries to determine it automatically (Linux only right now) and finally returns the default <computeroutput>/usr/local</computeroutput> value if it failed.</para><para><simplesect kind="note"><para>This function is only available under Unix. </para></simplesect>
-</para>        </detaileddescription>
+<para><computeroutput>/usr</computeroutput>, <computeroutput>/opt</computeroutput> or <computeroutput>/home/zeitlin</computeroutput>.</para><para>If the prefix had been previously by <ref refid="classwx_standard_paths_1a80af124a7df05bf1a1f7bee7406d278f" kindref="member">SetInstallPrefix()</ref>, returns that value, otherwise tries to determine it automatically (Linux only right now) and finally returns the default <computeroutput>/usr/local</computeroutput> value if it failed.</para><para><simplesect kind="note"><para>This function is only available under Unix platforms (but not limited to wxGTK mentioned below).</para></simplesect>
+Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxos2" kindref="member">wxOS2</ref>, <ref refid="page_port_1page_port_wxgtk" kindref="member">wxGTK</ref> ports.  <onlyfor>wxos2,wxgtk</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdpaths.h" line="170"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stdpaths.h" line="173"/>
       </memberdef>
       <memberdef kind="function" id="classwx_standard_paths_1ac935a5c1764c513a4b6d4b8b66d5b808" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -150,7 +150,7 @@
 <para>This is the same as <ref refid="classwx_standard_paths_1a2453024a2a5305bbda3bc6d4c0664cba" kindref="member">GetDataDir()</ref> except under Unix where it returns <computeroutput>/etc/appinfo</computeroutput>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdpaths.h" line="178"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stdpaths.h" line="181"/>
       </memberdef>
       <memberdef kind="function" id="classwx_standard_paths_1a3dc46e76d0a5045a9331d02fd429173c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -173,7 +173,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdpaths.h" line="193"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stdpaths.h" line="196"/>
       </memberdef>
       <memberdef kind="function" id="classwx_standard_paths_1a6eeeafa8476b389b322454d3f352d7e9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -189,7 +189,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdpaths.h" line="204"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stdpaths.h" line="207"/>
       </memberdef>
       <memberdef kind="function" id="classwx_standard_paths_1a5514bf6288ee9f5a0acaf065762ad95d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -206,7 +206,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdpaths.h" line="222"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stdpaths.h" line="225"/>
       </memberdef>
       <memberdef kind="function" id="classwx_standard_paths_1a6da8efb476e9a2c23f28761523b51986" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -220,7 +220,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdpaths.h" line="231"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stdpaths.h" line="234"/>
       </memberdef>
       <memberdef kind="function" id="classwx_standard_paths_1a7c7cf595d94d29147360d031647476b0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -232,10 +232,10 @@
         <detaileddescription>
 <para><itemizedlist>
 <listitem><para>Unix: <computeroutput>~</computeroutput> (the home directory)</para></listitem><listitem><para>Windows: <computeroutput>&quot;C:\Documents and Settings\username\Application Data&quot;</computeroutput> </para></listitem><listitem><para>Mac: <computeroutput>~/Library/Preferences</computeroutput> </para></listitem></itemizedlist>
-</para><para>Only use this method if you have a single configuration file to put in this directory, otherwise <ref refid="classwx_standard_paths_1a4752213ef4d7bdc71170b9e5c3691f0f" kindref="member">GetUserDataDir()</ref> is more appropriate. </para>        </detaileddescription>
+</para><para>Only use this method if you have a single configuration file to put in this directory, otherwise <ref refid="classwx_standard_paths_1a4752213ef4d7bdc71170b9e5c3691f0f" kindref="member">GetUserDataDir()</ref> is more appropriate as the latter adds <computeroutput>appinfo</computeroutput> to the path, unlike this function. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdpaths.h" line="242"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stdpaths.h" line="246"/>
       </memberdef>
       <memberdef kind="function" id="classwx_standard_paths_1a4752213ef4d7bdc71170b9e5c3691f0f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -250,7 +250,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdpaths.h" line="250"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stdpaths.h" line="254"/>
       </memberdef>
       <memberdef kind="function" id="classwx_standard_paths_1a456fcd2e246c57a61dda9511e4dac9c3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -263,7 +263,7 @@
 <para>This is the same as <ref refid="classwx_standard_paths_1a4752213ef4d7bdc71170b9e5c3691f0f" kindref="member">GetUserDataDir()</ref> for all platforms except Windows where it returns <computeroutput>&quot;C:\Documents and Settings\username\Local Settings\Application Data\appinfo&quot;</computeroutput> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdpaths.h" line="259"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stdpaths.h" line="263"/>
       </memberdef>
       <memberdef kind="function" id="classwx_standard_paths_1ab7534e9987d802dada6c02ab70fbaa96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -292,7 +292,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdpaths.h" line="292"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stdpaths.h" line="296"/>
       </memberdef>
       <memberdef kind="function" id="classwx_standard_paths_1a36a497e73df7226240f8ac0f0dfa52bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -306,7 +306,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdpaths.h" line="306"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stdpaths.h" line="310"/>
       </memberdef>
       <memberdef kind="function" id="classwx_standard_paths_1a80af124a7df05bf1a1f7bee7406d278f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -320,11 +320,11 @@
         <briefdescription>
 <para>Lets <ref refid="classwx_standard_paths" kindref="compound">wxStandardPaths</ref> know about the real program installation prefix on a Unix system. </para>        </briefdescription>
         <detaileddescription>
-<para>By default, the value returned by <ref refid="classwx_standard_paths_1a318d939990abd7589a7a2890bc0856de" kindref="member">GetInstallPrefix()</ref> is used.</para><para>Although under Linux systems the program prefix may usually be determined automatically, portable programs should call this function. Usually the prefix is set during program configuration if using GNU autotools and so it is enough to pass its value defined in <computeroutput>config.h</computeroutput> to this function.</para><para><simplesect kind="note"><para>This function is only available under Unix. </para></simplesect>
-</para>        </detaileddescription>
+<para>By default, the value returned by <ref refid="classwx_standard_paths_1a318d939990abd7589a7a2890bc0856de" kindref="member">GetInstallPrefix()</ref> is used.</para><para>Although under Linux systems the program prefix may usually be determined automatically, portable programs should call this function. Usually the prefix is set during program configuration if using GNU autotools and so it is enough to pass its value defined in <computeroutput>config.h</computeroutput> to this function.</para><para><simplesect kind="note"><para>This function is only available under Unix platforms (but not limited to wxGTK mentioned below).</para></simplesect>
+Availability:<nonbreakablespace/><nonbreakablespace/>only available for the <ref refid="page_port_1page_port_wxos2" kindref="member">wxOS2</ref>, <ref refid="page_port_1page_port_wxgtk" kindref="member">wxGTK</ref> ports.  <onlyfor>wxos2,wxgtk</onlyfor>  </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdpaths.h" line="339"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stdpaths.h" line="346"/>
       </memberdef>
       <memberdef kind="function" id="classwx_standard_paths_1ada72c782dcab502f17c348c0e5d3874c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -346,7 +346,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdpaths.h" line="358"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stdpaths.h" line="365"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -361,7 +361,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdpaths.h" line="87"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stdpaths.h" line="87"/>
       </memberdef>
       <memberdef kind="function" id="classwx_standard_paths_1a5a523db5b6aca46154ac76d264d2bb57" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -392,7 +392,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdpaths.h" line="326"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stdpaths.h" line="330"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -401,7 +401,7 @@
 <para>Note that you must not create objects of class <ref refid="classwx_standard_paths" kindref="compound">wxStandardPaths</ref> directly, but use the global standard paths object returned by <ref refid="classwx_standard_paths_1a19601f7f8ed84aa28a0a0942dafb19c9" kindref="member">wxStandardPaths::Get()</ref> (which can be of a type derived from <ref refid="classwx_standard_paths" kindref="compound">wxStandardPaths</ref> and not of exactly this type) and call the methods you need on it. The object returned by <ref refid="classwx_standard_paths_1a19601f7f8ed84aa28a0a0942dafb19c9" kindref="member">Get()</ref> may be customized by overriding <ref refid="classwx_app_traits_1ae9bd1317e78e21695c394220873b2cdc" kindref="member">wxAppTraits::GetStandardPaths()</ref> methods.</para><para>In the description of the methods below, the example return values are given for the Unix, Windows and Mac OS X systems, however please note that these are just the examples and the actual values may differ. For example, under Windows: the system administrator may change the standard directories locations, e.g. the Windows directory may be named <computeroutput>&quot;W:\Win2003&quot;</computeroutput> instead of the default <computeroutput>&quot;C:\Windows&quot;</computeroutput>.</para><para>Notice that in the examples below the string <computeroutput>appinfo</computeroutput> may be either just the application name (as returned by <ref refid="classwx_app_console_1a2bfe9c53c57d61f8b115705796f258eb" kindref="member">wxApp::GetAppName()</ref>) or a combination of the vendor name (<ref refid="classwx_app_console_1af73ec0d186dd10b7fdabb57cf097bef8" kindref="member">wxApp::GetVendorName()</ref>) and the application name, with a path separator between them. By default, only the application name is used, use <ref refid="classwx_standard_paths_1ada72c782dcab502f17c348c0e5d3874c" kindref="member">UseAppInfo()</ref> to change this.</para><para>The other placeholders should be self-explanatory: the string <computeroutput>username</computeroutput> should be replaced with the value the name of the currently logged in user. and <computeroutput>prefix</computeroutput> is only used under Unix and is <computeroutput>/usr/local</computeroutput> by default but may be changed using <ref refid="classwx_standard_paths_1a80af124a7df05bf1a1f7bee7406d278f" kindref="member">wxStandardPaths::SetInstallPrefix()</ref>.</para><para>The directories returned by the methods of this class may or may not exist. If they don&apos;t exist, it&apos;s up to the caller to create them, <ref refid="classwx_standard_paths" kindref="compound">wxStandardPaths</ref> doesn&apos;t do it.</para><para>Finally note that these functions only work with standardly packaged applications. I.e. under Unix you should follow the standard installation conventions and under Mac you should create your application bundle according to the Apple guidelines. Again, this class doesn&apos;t help you to do it.</para><para>This class is MT-safe: its methods may be called concurrently from different threads without additional locking.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__file" kindref="compound">File Handling</ref></para><para><simplesect kind="see"><para><ref refid="classwx_file_config" kindref="compound">wxFileConfig</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdpaths.h" line="58" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/stdpaths.h" bodystart="57" bodyend="359"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/stdpaths.h" line="58" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/stdpaths.h" bodystart="57" bodyend="366"/>
     <listofallmembers>
       <member refid="classwx_standard_paths_1a3348987c98140398e567ef76509400b6" prot="public" virt="non-virtual"><scope>wxStandardPaths</scope><name>DontIgnoreAppSubDir</name></member>
       <member refid="classwx_standard_paths_1a19601f7f8ed84aa28a0a0942dafb19c9" prot="public" virt="non-virtual"><scope>wxStandardPaths</scope><name>Get</name></member>

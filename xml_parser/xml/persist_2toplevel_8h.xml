@@ -19,13 +19,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist/toplevel.h" line="43"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist/toplevel.h" line="43"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/persist/toplevel.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/persist/toplevel.h"/>
   </compounddef>
 </doxygen>

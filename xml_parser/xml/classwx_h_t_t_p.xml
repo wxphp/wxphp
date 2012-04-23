@@ -20,7 +20,7 @@
 <para>By default, connection is made to the port 80 of the specified <emphasis>host</emphasis>. You may connect to a non-default port by specifying it explicitly using the second overload.</para><para>Currently <ref refid="classwx_h_t_t_p" kindref="compound">wxHTTP</ref> only supports IPv4.</para><para>For the overload taking <ref refid="classwx_sock_address" kindref="compound">wxSockAddress</ref>, the <emphasis>wait</emphasis> argument is ignored. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="46"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/http.h" line="46"/>
       </memberdef>
       <memberdef kind="function" id="classwx_h_t_t_p_1aed7b691790b36a73d8b0d3ab64c975d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -41,7 +41,7 @@
 <para>By default, connection is made to the port 80 of the specified <emphasis>host</emphasis>. You may connect to a non-default port by specifying it explicitly using the second overload.</para><para>Currently <ref refid="classwx_h_t_t_p" kindref="compound">wxHTTP</ref> only supports IPv4.</para><para>For the overload taking <ref refid="classwx_sock_address" kindref="compound">wxSockAddress</ref>, the <emphasis>wait</emphasis> argument is ignored. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="47"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/http.h" line="47"/>
       </memberdef>
       <memberdef kind="function" id="classwx_h_t_t_p_1a9697a75df07e36219114dbb02b5211b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -63,7 +63,7 @@
 <para>By default, connection is made to the port 80 of the specified <emphasis>host</emphasis>. You may connect to a non-default port by specifying it explicitly using the second overload.</para><para>Currently <ref refid="classwx_h_t_t_p" kindref="compound">wxHTTP</ref> only supports IPv4.</para><para>For the overload taking <ref refid="classwx_sock_address" kindref="compound">wxSockAddress</ref>, the <emphasis>wait</emphasis> argument is ignored. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="48"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/http.h" line="48"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -78,7 +78,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="27"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/http.h" line="27"/>
       </memberdef>
       <memberdef kind="function" id="classwx_h_t_t_p_1a062c2eb44cb5c94313c67588a42af83f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -91,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="32"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/http.h" line="32"/>
       </memberdef>
       <memberdef kind="function" id="classwx_h_t_t_p_1a1faf426ee158f85da4ae93486ca1b9d6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -109,7 +109,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="59"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/http.h" line="59"/>
       </memberdef>
       <memberdef kind="function" id="classwx_h_t_t_p_1a10939b192691ad1d619d9770116368bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> *</type>
@@ -129,7 +129,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="84"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/http.h" line="84"/>
       </memberdef>
       <memberdef kind="function" id="classwx_h_t_t_p_1a43ad1c663124078842e51cd8b5a641d4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -142,7 +142,7 @@
 <para>Please refer to RFC 2616 for the list of responses. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="91"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/http.h" line="91"/>
       </memberdef>
       <memberdef kind="function" id="classwx_h_t_t_p_1aea82189f5866ed3405f5a846c7218b6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -163,7 +163,7 @@
 <para>The field name is specified by <emphasis>header</emphasis> and the content by <emphasis>h_data</emphasis>. This is a low level function and it assumes that you know what you are doing. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="99"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/http.h" line="99"/>
       </memberdef>
       <memberdef kind="function" id="classwx_h_t_t_p_1a390fc182810a4610233a1e4d3ef72d4f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -180,7 +180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="105"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/http.h" line="105"/>
       </memberdef>
       <memberdef kind="function" id="classwx_h_t_t_p_1aa5fb6a529d6f4db192e7a5af6fb31724" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -193,7 +193,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="110"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/http.h" line="110"/>
       </memberdef>
       <memberdef kind="function" id="classwx_h_t_t_p_1ac4acb133b80ff1b50c8877eedecd66c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -231,7 +231,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="130"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/http.h" line="130"/>
       </memberdef>
       <memberdef kind="function" id="classwx_h_t_t_p_1a093776860284bbdc4ac50c12314dae61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -282,7 +282,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="158"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/http.h" line="158"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -292,73 +292,73 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxnet" kindref="member">wxNet</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__net" kindref="compound">Networking</ref></para><para><simplesect kind="see"><para><ref refid="classwx_socket_base" kindref="compound">wxSocketBase</ref>, <ref refid="classwx_u_r_l" kindref="compound">wxURL</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7159">
+      <node id="7346">
         <label>wxSocketBase</label>
         <link refid="classwx_socket_base"/>
-        <childnode refid="7160" relation="public-inheritance">
+        <childnode refid="7347" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7160">
+      <node id="7347">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7158">
+      <node id="7345">
         <label>wxSocketClient</label>
         <link refid="classwx_socket_client"/>
-        <childnode refid="7159" relation="public-inheritance">
+        <childnode refid="7346" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7156">
+      <node id="7343">
         <label>wxHTTP</label>
         <link refid="classwx_h_t_t_p"/>
-        <childnode refid="7157" relation="public-inheritance">
+        <childnode refid="7344" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7157">
+      <node id="7344">
         <label>wxProtocol</label>
         <link refid="classwx_protocol"/>
-        <childnode refid="7158" relation="public-inheritance">
+        <childnode refid="7345" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7164">
+      <node id="7351">
         <label>wxSocketBase</label>
         <link refid="classwx_socket_base"/>
-        <childnode refid="7165" relation="public-inheritance">
+        <childnode refid="7352" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7165">
+      <node id="7352">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7166" relation="usage">
+        <childnode refid="7353" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7163">
+      <node id="7350">
         <label>wxSocketClient</label>
         <link refid="classwx_socket_client"/>
-        <childnode refid="7164" relation="public-inheritance">
+        <childnode refid="7351" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7161">
+      <node id="7348">
         <label>wxHTTP</label>
         <link refid="classwx_h_t_t_p"/>
-        <childnode refid="7162" relation="public-inheritance">
+        <childnode refid="7349" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7162">
+      <node id="7349">
         <label>wxProtocol</label>
         <link refid="classwx_protocol"/>
-        <childnode refid="7163" relation="public-inheritance">
+        <childnode refid="7350" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7166">
+      <node id="7353">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/protocol/http.h" bodystart="21" bodyend="159"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/http.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/protocol/http.h" bodystart="21" bodyend="159"/>
     <listofallmembers>
       <member refid="classwx_protocol_1a251f4c7e9d13fc23a863540bbbedd81b" prot="public" virt="pure-virtual"><scope>wxHTTP</scope><name>Abort</name></member>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxHTTP</scope><name>AllocExclusive</name></member>

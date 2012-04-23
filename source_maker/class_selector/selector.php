@@ -292,13 +292,17 @@ class myFrame extends wxFrame
 					
 					foreach($method_definition["parameters_type"] as $parameter_index=>$parameter_type)
 					{	
-						//Argument without default value
-						if(is_null($method_definition["parameters_default_value"][$parameter_index]))
-							$arguments[] = $parameter_type . " " . $method_definition["parameters_name"][$parameter_index] ;
+						$argument_string = $parameter_type . " " . $method_definition["parameters_name"][$parameter_index];
 						
-						//Argument with default value
-						else
-							$arguments[] = $parameter_type . " " . $method_definition["parameters_name"][$parameter_index] . " = " .  $method_definition["parameters_default_value"][$parameter_index];
+						//Argument is array
+						if($method_definition["parameters_is_array"][$parameter_index])
+							$argument_string .= "[]";
+						
+						//Argument without default value
+						if(!is_null($method_definition["parameters_default_value"][$parameter_index]))
+							$argument_string .= " = " .  $method_definition["parameters_default_value"][$parameter_index];
+							
+						$arguments[] = $argument_string;
 					}
 					
 					$arguments_string = join(', ',$arguments);

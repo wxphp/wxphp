@@ -7,10 +7,38 @@
     <innerclass refid="classwx_message_output_best" prot="public">wxMessageOutputBest</innerclass>
     <innerclass refid="classwx_message_output_debug" prot="public">wxMessageOutputDebug</innerclass>
     <innerclass refid="classwx_message_output_message_box" prot="public">wxMessageOutputMessageBox</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="msgout_8h_1a970fc3d926c8c1bb46a15dd42429e123" prot="public" static="no">
+        <name>wxMessageOutputFlags</name>
+        <enumvalue id="msgout_8h_1a970fc3d926c8c1bb46a15dd42429e123a45bb11e54f49b8a06a12b9a5e9d7e601" prot="public">
+          <name>wxMSGOUT_PREFER_STDERR</name>
+          <initializer> 0</initializer>
+          <briefdescription>
+<para>use stderr if available (this is the default) </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="msgout_8h_1a970fc3d926c8c1bb46a15dd42429e123a5d1734c69a0474fff0d58199564f47dd" prot="public">
+          <name>wxMSGOUT_PREFER_MSGBOX</name>
+          <initializer> 1</initializer>
+          <briefdescription>
+<para>always use message box if available </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Flags used with <ref refid="classwx_message_output_best" kindref="compound">wxMessageOutputBest</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="classwx_message_output_best_1a8dc10016b58fecd43106dbd3efe205d4" kindref="member">wxMessageOutputBest::wxMessageOutputBest()</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgout.h" line="122" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/msgout.h" bodystart="121" bodyend="125"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/msgout.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/msgout.h"/>
   </compounddef>
 </doxygen>

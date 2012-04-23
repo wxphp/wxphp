@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpdata.h" line="27"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpdata.h" line="27"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_help_data_1a7eeeffc18bab6842306823537ed33f3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -33,7 +33,7 @@
 <para><emphasis>book_url</emphasis> is URL (not filename!) of HTML help project (hhp) or ZIP file that contains arbitrary number of .hhp projects (this zip file can have either .zip or .htb extension, htb stands for &quot;html book&quot;).</para><para>Returns success. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpdata.h" line="38"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpdata.h" line="38"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_help_data_1a11ab7616ff863656fab1c67e71ccf5e4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -50,7 +50,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpdata.h" line="43"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpdata.h" line="43"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_help_data_1ab16f4705bab7f552b0108c50fb86a91b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpdata.h" line="48"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpdata.h" line="48"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_help_data_1a122d58dc3a0534e6c784bf94a26c345c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const wxHtmlBookRecArray &amp;</type>
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpdata.h" line="53"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpdata.h" line="53"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_help_data_1a5635ac4a72f93869bc926ec4e455b396" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const wxHtmlHelpDataItems &amp;</type>
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpdata.h" line="58"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpdata.h" line="58"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_help_data_1a1efb3faa96f284aa94ab02bd4757e9ac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const wxHtmlHelpDataItems &amp;</type>
@@ -106,7 +106,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpdata.h" line="63"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpdata.h" line="63"/>
       </memberdef>
       <memberdef kind="function" id="classwx_html_help_data_1a257f2986e455be6972518cf8ffd0bcf5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -123,7 +123,7 @@
 <para>(This is turned off by default and you can enable this feature by setting non-empty temp dir.) </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpdata.h" line="70"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpdata.h" line="70"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -132,37 +132,37 @@
 <para>It is internal class and should not be used directly - except for the case you&apos;re writing your own HTML help controller.</para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxhtml" kindref="member">wxHTML</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__help" kindref="compound">Help</ref>, <ref refid="group__group__class__html" kindref="compound">HTML</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7014">
+      <node id="7201">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="7013">
+      <node id="7200">
         <label>wxHtmlHelpData</label>
         <link refid="classwx_html_help_data"/>
-        <childnode refid="7014" relation="public-inheritance">
+        <childnode refid="7201" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7016">
+      <node id="7203">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="7017" relation="usage">
+        <childnode refid="7204" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="7015">
+      <node id="7202">
         <label>wxHtmlHelpData</label>
         <link refid="classwx_html_help_data"/>
-        <childnode refid="7016" relation="public-inheritance">
+        <childnode refid="7203" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="7017">
+      <node id="7204">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpdata.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/html/helpdata.h" bodystart="21" bodyend="71"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpdata.h" line="22" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/html/helpdata.h" bodystart="21" bodyend="71"/>
     <listofallmembers>
       <member refid="classwx_html_help_data_1a7eeeffc18bab6842306823537ed33f3e" prot="public" virt="non-virtual"><scope>wxHtmlHelpData</scope><name>AddBook</name></member>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxHtmlHelpData</scope><name>AllocExclusive</name></member>

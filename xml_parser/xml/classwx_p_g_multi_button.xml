@@ -24,7 +24,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" line="287"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/editors.h" line="287"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_multi_button_1aafdf2f6c9e3483b0465fa04cb2e55513" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type></type>
@@ -37,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" line="292" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" bodystart="292" bodyend="292"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/editors.h" line="292" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/editors.h" bodystart="292" bodyend="292"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_multi_button_1a552a07b4c393f715a4c41c7831191f07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" line="297"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/editors.h" line="297"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_multi_button_1afa6eeb110522296bd2e05f537e686433" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" line="302"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/editors.h" line="302"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_multi_button_1ac3ecf2ccd1cd97b7916ccabeabebc803" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -117,7 +117,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" line="314"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/editors.h" line="314"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_multi_button_1a212fd62c7314b13ebe86de0f4ae544a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_window" kindref="compound">wxWindow</ref> *</type>
@@ -134,7 +134,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" line="319"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/editors.h" line="319"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_multi_button_1acc7a39ae647f377106894f739995ad76" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -151,7 +151,7 @@
 <para>This is utility function to be used in event handlers. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" line="325"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/editors.h" line="325"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_multi_button_1abffd69c5dac1ea9a6a60c02167f8d293" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned int</type>
@@ -164,7 +164,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" line="330"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/editors.h" line="330"/>
       </memberdef>
       <memberdef kind="function" id="classwx_p_g_multi_button_1a9f6e4cce4afba9fbf4f175724f887df4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -177,7 +177,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" line="336"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/editors.h" line="336"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -219,7 +219,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buttons-&gt;<ref refid="classwx_p_g_multi_button_1a552a07b4c393f715a4c41c7831191f07" kindref="member" tooltip="Adds new button, with given label.">Add</ref>(<sp/></highlight><highlight class="stringliteral">&quot;...&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buttons-&gt;<ref refid="classwx_p_g_multi_button_1a552a07b4c393f715a4c41c7831191f07" kindref="member" tooltip="Adds new button, with given label.">Add</ref>(<sp/></highlight><highlight class="stringliteral">&quot;A&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>a<sp/>bitmap<sp/>button</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buttons-&gt;<ref refid="classwx_p_g_multi_button_1a552a07b4c393f715a4c41c7831191f07" kindref="member" tooltip="Adds new button, with given label.">Add</ref>(<sp/><ref refid="classwx_art_provider_1a405ecf7cdead6dbfb092376a51a856c4" kindref="member" tooltip="Query registered providers for bitmap with given ID.">wxArtProvider::GetBitmap</ref>(wxART_FOLDER)<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buttons-&gt;<ref refid="classwx_p_g_multi_button_1a552a07b4c393f715a4c41c7831191f07" kindref="member" tooltip="Adds new button, with given label.">Add</ref>(<sp/><ref refid="classwx_art_provider_1a405ecf7cdead6dbfb092376a51a856c4" kindref="member" tooltip="Query registered providers for bitmap with given ID.">wxArtProvider::GetBitmap</ref>(<ref refid="artprov_8h_1ad0e8b7de479ce856f993bad7f39df696" kindref="member">wxART_FOLDER</ref>)<sp/>);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>the<sp/>&apos;primary&apos;<sp/>editor<sp/>control<sp/>(textctrl<sp/>in<sp/>this<sp/>case)</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>wxPGWindowList<sp/>wndList<sp/>=<sp/>wxPGTextCtrlEditor::CreateControls</highlight></codeline>
@@ -264,7 +264,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 </programlisting></para><para>Further to use this editor, code like this can be used:</para><para><programlisting><codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Register<sp/>editor<sp/>class<sp/>-<sp/>needs<sp/>only<sp/>to<sp/>be<sp/>called<sp/>once</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_p_g_editor" kindref="compound" tooltip="Base class for custom wxPropertyGrid editors.">wxPGEditor</ref>*<sp/>multiButtonEditor<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>wxSampleMultiButtonEditor();</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_property_grid_1a89ee01017530df27ff2c469bfbe0605e" kindref="member" tooltip="Registers a new editor class.">wxPropertyGrid::RegisterEditorClass</ref>(<sp/>multiButtonEditor<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classwx_property_grid_1adb8c3d0d29d1c051a8a9ece93d40f6b7" kindref="member" tooltip="Forwards to DoRegisterEditorClass with empty name.">wxPropertyGrid::RegisterEditorClass</ref>(<sp/>multiButtonEditor<sp/>);</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Insert<sp/>the<sp/>property<sp/>that<sp/>will<sp/>have<sp/>multiple<sp/>buttons</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>propGrid-&gt;<ref refid="classwx_property_grid_interface_1a8496963f469db86941157f8ce67896c4" kindref="member" tooltip="Appends property to the list.">Append</ref>(<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>wxLongStringProperty(</highlight><highlight class="stringliteral">&quot;MultipleButtons&quot;</highlight><highlight class="normal">,<sp/>wxPG_LABEL)<sp/>);</highlight></codeline>
@@ -274,73 +274,73 @@
 </programlisting></para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxpropgrid" kindref="member">wxPropertyGrid</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__propgrid" kindref="compound">wxPropertyGrid</ref> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="8656">
+      <node id="8849">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="8655">
+      <node id="8848">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8656" relation="public-inheritance">
+        <childnode refid="8849" relation="public-inheritance">
         </childnode>
-        <childnode refid="8657" relation="public-inheritance">
+        <childnode refid="8850" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8653">
+      <node id="8846">
         <label>wxPGMultiButton</label>
         <link refid="classwx_p_g_multi_button"/>
-        <childnode refid="8654" relation="public-inheritance">
+        <childnode refid="8847" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8657">
+      <node id="8850">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8654">
+      <node id="8847">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="8655" relation="public-inheritance">
+        <childnode refid="8848" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="8661">
+      <node id="8854">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="8662" relation="usage">
+        <childnode refid="8855" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="8660">
+      <node id="8853">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="8661" relation="public-inheritance">
+        <childnode refid="8854" relation="public-inheritance">
         </childnode>
-        <childnode refid="8663" relation="public-inheritance">
+        <childnode refid="8856" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8658">
+      <node id="8851">
         <label>wxPGMultiButton</label>
         <link refid="classwx_p_g_multi_button"/>
-        <childnode refid="8659" relation="public-inheritance">
+        <childnode refid="8852" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8663">
+      <node id="8856">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="8659">
+      <node id="8852">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="8660" relation="public-inheritance">
+        <childnode refid="8853" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="8662">
+      <node id="8855">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" line="282" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/propgrid/editors.h" bodystart="281" bodyend="337"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/editors.h" line="282" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/propgrid/editors.h" bodystart="281" bodyend="337"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxPGMultiButton</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxPGMultiButton</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -505,6 +505,7 @@
       <member refid="classwx_window_1aa90a260c0a835a133043460b7d0024a8" prot="public" virt="virtual"><scope>wxPGMultiButton</scope><name>InitDialog</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxPGMultiButton</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxPGMultiButton</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxPGMultiButton</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxPGMultiButton</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxPGMultiButton</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxPGMultiButton</scope><name>IsExposed</name></member>
@@ -520,13 +521,13 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxPGMultiButton</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxPGMultiButton</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxPGMultiButton</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxPGMultiButton</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxPGMultiButton</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxPGMultiButton</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxPGMultiButton</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxPGMultiButton</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxPGMultiButton</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxPGMultiButton</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxPGMultiButton</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxPGMultiButton</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxPGMultiButton</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxPGMultiButton</scope><name>MoveAfterInTabOrder</name></member>
@@ -644,7 +645,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxPGMultiButton</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxPGMultiButton</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxPGMultiButton</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxPGMultiButton</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxPGMultiButton</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxPGMultiButton</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxPGMultiButton</scope><name>Unlink</name></member>

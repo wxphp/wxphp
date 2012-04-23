@@ -38,7 +38,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1682"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1653"/>
       </memberdef>
       <memberdef kind="function" id="classwx_d_c_pen_changer_1a38e33e724a0d0cd9f4dc1bb7362a1de8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -51,7 +51,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1687"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1658"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -60,7 +60,7 @@
 <para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_d_c_1a0d229733fbc83c7e4c483c0714d090b2" kindref="member">wxDC::SetPen()</ref>, <ref refid="classwx_d_c_font_changer" kindref="compound">wxDCFontChanger</ref>, <ref refid="classwx_d_c_text_colour_changer" kindref="compound">wxDCTextColourChanger</ref>, <ref refid="classwx_d_c_brush_changer" kindref="compound">wxDCBrushChanger</ref>, <ref refid="classwx_d_c_clipper" kindref="compound">wxDCClipper</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" line="1672" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/dc.h" bodystart="1671" bodyend="1688"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" line="1643" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/dc.h" bodystart="1642" bodyend="1659"/>
     <listofallmembers>
       <member refid="classwx_d_c_pen_changer_1abefe06367f53d64e35aeb203537e50e3" prot="public" virt="non-virtual"><scope>wxDCPenChanger</scope><name>wxDCPenChanger</name></member>
       <member refid="classwx_d_c_pen_changer_1a38e33e724a0d0cd9f4dc1bb7362a1de8" prot="public" virt="non-virtual"><scope>wxDCPenChanger</scope><name>~wxDCPenChanger</name></member>

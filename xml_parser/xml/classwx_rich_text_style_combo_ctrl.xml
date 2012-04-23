@@ -40,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="366"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="361"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_combo_ctrl_1a9c6ec8f44e0a4ef2b5382dffc65ffac3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="371"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="366"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_combo_ctrl_1ab95cd07a8ba79f4a928c32984777da89" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rich_text_ctrl" kindref="compound">wxRichTextCtrl</ref> *</type>
@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="376"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="371"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_combo_ctrl_1a127e1ca05547991a08d54501d7e54ead" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rich_text_style_sheet" kindref="compound">wxRichTextStyleSheet</ref> *</type>
@@ -79,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="381"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="376"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_combo_ctrl_1ab0ecb9b79a44f418573100fb15240678" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -96,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="386"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="381"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_combo_ctrl_1a5707d8235380fb79eff95e23741e94d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -113,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="391"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="386"/>
       </memberdef>
       <memberdef kind="function" id="classwx_rich_text_style_combo_ctrl_1aa6297094dffb4b171405284613272c19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -126,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="396"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="391"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -136,109 +136,109 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxrichtext" kindref="member">wxRichText</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__richtext" kindref="compound">Rich Text</ref></para><para><simplesect kind="see"><para><ref refid="classwx_rich_text_style_list_box" kindref="compound">wxRichTextStyleListBox</ref>, <ref refid="overview_richtextctrl" kindref="compound">wxRichTextCtrl Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="9907">
+      <node id="10090">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="9906">
+      <node id="10089">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="9907" relation="public-inheritance">
+        <childnode refid="10090" relation="public-inheritance">
         </childnode>
-        <childnode refid="9908" relation="public-inheritance">
+        <childnode refid="10091" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9908">
+      <node id="10091">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="9909">
+      <node id="10092">
         <label>wxTextEntry</label>
         <link refid="classwx_text_entry"/>
       </node>
-      <node id="9904">
+      <node id="10087">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="9905" relation="public-inheritance">
+        <childnode refid="10088" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9905">
+      <node id="10088">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="9906" relation="public-inheritance">
+        <childnode refid="10089" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9903">
+      <node id="10086">
         <label>wxComboCtrl</label>
         <link refid="classwx_combo_ctrl"/>
-        <childnode refid="9904" relation="public-inheritance">
+        <childnode refid="10087" relation="public-inheritance">
         </childnode>
-        <childnode refid="9909" relation="public-inheritance">
+        <childnode refid="10092" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9902">
+      <node id="10085">
         <label>wxRichTextStyleComboCtrl</label>
         <link refid="classwx_rich_text_style_combo_ctrl"/>
-        <childnode refid="9903" relation="public-inheritance">
+        <childnode refid="10086" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="9915">
+      <node id="10098">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="9916" relation="usage">
+        <childnode refid="10099" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="9914">
+      <node id="10097">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="9915" relation="public-inheritance">
+        <childnode refid="10098" relation="public-inheritance">
         </childnode>
-        <childnode refid="9917" relation="public-inheritance">
+        <childnode refid="10100" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9917">
+      <node id="10100">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="9918">
+      <node id="10101">
         <label>wxTextEntry</label>
         <link refid="classwx_text_entry"/>
       </node>
-      <node id="9912">
+      <node id="10095">
         <label>wxControl</label>
         <link refid="classwx_control"/>
-        <childnode refid="9913" relation="public-inheritance">
+        <childnode refid="10096" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9913">
+      <node id="10096">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="9914" relation="public-inheritance">
+        <childnode refid="10097" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9911">
+      <node id="10094">
         <label>wxComboCtrl</label>
         <link refid="classwx_combo_ctrl"/>
-        <childnode refid="9912" relation="public-inheritance">
+        <childnode refid="10095" relation="public-inheritance">
         </childnode>
-        <childnode refid="9918" relation="public-inheritance">
+        <childnode refid="10101" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9910">
+      <node id="10093">
         <label>wxRichTextStyleComboCtrl</label>
         <link refid="classwx_rich_text_style_combo_ctrl"/>
-        <childnode refid="9911" relation="public-inheritance">
+        <childnode refid="10094" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="9916">
+      <node id="10099">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" line="357" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/richtext/richtextstyles.h" bodystart="356" bodyend="397"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" line="352" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/richtext/richtextstyles.h" bodystart="351" bodyend="392"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxRichTextStyleComboCtrl</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxRichTextStyleComboCtrl</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -445,6 +445,7 @@
       <member refid="classwx_window_1aa90a260c0a835a133043460b7d0024a8" prot="public" virt="virtual"><scope>wxRichTextStyleComboCtrl</scope><name>InitDialog</name></member>
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxRichTextStyleComboCtrl</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxRichTextStyleComboCtrl</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxRichTextStyleComboCtrl</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxRichTextStyleComboCtrl</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_text_entry_1a2bb43512241850ba7cef54dee029fb86" prot="public" virt="virtual"><scope>wxRichTextStyleComboCtrl</scope><name>IsEditable</name></member>
       <member refid="classwx_text_entry_1a84d0559b6e7720cc230ba35e74e1e158" prot="public" virt="virtual"><scope>wxRichTextStyleComboCtrl</scope><name>IsEmpty</name></member>
@@ -464,13 +465,13 @@
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxRichTextStyleComboCtrl</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxRichTextStyleComboCtrl</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxRichTextStyleComboCtrl</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxRichTextStyleComboCtrl</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxRichTextStyleComboCtrl</scope><name>IsUnlinked</name></member>
       <member refid="classwx_window_1a1b143c3e72bd0af533b76db4830a6113" prot="public" virt="virtual"><scope>wxRichTextStyleComboCtrl</scope><name>Layout</name></member>
       <member refid="classwx_window_1ade808784f0e64d9985e2f279b5ca8c02" prot="public" virt="non-virtual"><scope>wxRichTextStyleComboCtrl</scope><name>LineDown</name></member>
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxRichTextStyleComboCtrl</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxRichTextStyleComboCtrl</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxRichTextStyleComboCtrl</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxRichTextStyleComboCtrl</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxRichTextStyleComboCtrl</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxRichTextStyleComboCtrl</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxRichTextStyleComboCtrl</scope><name>MoveAfterInTabOrder</name></member>
@@ -553,7 +554,7 @@
       <member refid="classwx_window_1a9ab11e7da57a1d08918aa75fc33f6ad3" prot="public" virt="virtual"><scope>wxRichTextStyleComboCtrl</scope><name>SetFont</name></member>
       <member refid="classwx_window_1a69f1e1c7ddd370d72e68c70f13ac8de9" prot="public" virt="virtual"><scope>wxRichTextStyleComboCtrl</scope><name>SetForegroundColour</name></member>
       <member refid="classwx_window_1a4c1a2cbc7363237b3a7c70af4e702c72" prot="public" virt="non-virtual"><scope>wxRichTextStyleComboCtrl</scope><name>SetHelpText</name></member>
-      <member refid="classwx_combo_ctrl_1afd6de67563df02c3e57d48a0a55842fa" prot="public" virt="virtual"><scope>wxRichTextStyleComboCtrl</scope><name>SetHint</name></member>
+      <member refid="classwx_combo_ctrl_1a68221bdd4af63abfd9840e5de13f4ba6" prot="public" virt="virtual"><scope>wxRichTextStyleComboCtrl</scope><name>SetHint</name></member>
       <member refid="classwx_window_1a7f27d0faed14effa013381bdc40e1bcd" prot="public" virt="non-virtual"><scope>wxRichTextStyleComboCtrl</scope><name>SetId</name></member>
       <member refid="classwx_window_1ae6dfe0b0d4a8c666b21ce8df8d96727b" prot="protected" virt="virtual"><scope>wxRichTextStyleComboCtrl</scope><name>SetInitialBestSize</name></member>
       <member refid="classwx_window_1a1b309ca50ba87e34f968c83b79af1397" prot="public" virt="non-virtual"><scope>wxRichTextStyleComboCtrl</scope><name>SetInitialSize</name></member>
@@ -606,7 +607,6 @@
       <member refid="classwx_window_1ac8cf4398cec50ac36634760f45a0656f" prot="public" virt="virtual"><scope>wxRichTextStyleComboCtrl</scope><name>SetTransparent</name></member>
       <member refid="classwx_window_1a00066c70049a7be3ce6b648d206e6432" prot="public" virt="virtual"><scope>wxRichTextStyleComboCtrl</scope><name>SetValidator</name></member>
       <member refid="classwx_combo_ctrl_1a4202edbc9fc83623c658a83fe4c6d7be" prot="public" virt="virtual"><scope>wxRichTextStyleComboCtrl</scope><name>SetValue</name></member>
-      <member refid="classwx_combo_ctrl_1af70ad872f5f8ca4c5598739556a73554" prot="public" virt="non-virtual"><scope>wxRichTextStyleComboCtrl</scope><name>SetValueWithEvent</name></member>
       <member refid="classwx_window_1a37f293b7904bc6668b86cccb0aea5669" prot="public" virt="non-virtual"><scope>wxRichTextStyleComboCtrl</scope><name>SetVirtualSize</name></member>
       <member refid="classwx_window_1a8e95201edebe43b9623bd3bdc555af4d" prot="public" virt="non-virtual"><scope>wxRichTextStyleComboCtrl</scope><name>SetVirtualSize</name></member>
       <member refid="classwx_window_1a306af30adec68689f74ed537b4f9d5fd" prot="public" virt="non-virtual"><scope>wxRichTextStyleComboCtrl</scope><name>SetWindowStyle</name></member>
@@ -622,7 +622,6 @@
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxRichTextStyleComboCtrl</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxRichTextStyleComboCtrl</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxRichTextStyleComboCtrl</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxRichTextStyleComboCtrl</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxRichTextStyleComboCtrl</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxRichTextStyleComboCtrl</scope><name>Unbind</name></member>
       <member refid="classwx_combo_ctrl_1a9da1ff37488b9c33ed02ba2064ad6d85" prot="public" virt="virtual"><scope>wxRichTextStyleComboCtrl</scope><name>Undo</name></member>

@@ -3,10 +3,11 @@
   <compounddef id="affinematrix2dbase_8h" kind="file">
     <compoundname>affinematrix2dbase.h</compoundname>
     <innerclass refid="structwx_matrix2_d" prot="public">wxMatrix2D</innerclass>
+    <innerclass refid="classwx_affine_matrix2_d_base" prot="public">wxAffineMatrix2DBase</innerclass>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/affinematrix2dbase.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/affinematrix2dbase.h"/>
   </compounddef>
 </doxygen>

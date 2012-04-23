@@ -15,7 +15,7 @@
 <para>It will be initialized at the first use. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="749"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="749"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_database_1ab52ecdf5e71d9ed0229236e799fc7dea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -36,7 +36,7 @@
 <para>If a colour with the same name already exists, it is replaced. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="755"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="755"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_database_1af4770b188676ad4bd97ab4525d7c2d2a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_colour" kindref="compound">wxColour</ref></type>
@@ -53,7 +53,7 @@
 <para>Returns an invalid colour object (that is, <ref refid="classwx_colour_1a5616c16dbc5f312421adb50a49720320" kindref="member">wxColour::IsOk()</ref> will return false) if the colour wasn&apos;t found in the database. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="762"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="762"/>
       </memberdef>
       <memberdef kind="function" id="classwx_colour_database_1a81131df659fe2500832e7443bacb3015" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -70,7 +70,7 @@
 <para>Returns an empty string if the colour is not found in the database. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="768"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="768"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -146,7 +146,7 @@
 </para><para><heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__gdi" kindref="compound">Graphics Device Interface (GDI)</ref></para><para><simplesect kind="see"><para><ref refid="classwx_colour" kindref="compound">wxColour</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" line="743" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/gdicmn.h" bodystart="742" bodyend="769"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" line="743" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/gdicmn.h" bodystart="742" bodyend="769"/>
     <listofallmembers>
       <member refid="classwx_colour_database_1ab52ecdf5e71d9ed0229236e799fc7dea" prot="public" virt="non-virtual"><scope>wxColourDatabase</scope><name>AddColour</name></member>
       <member refid="classwx_colour_database_1af4770b188676ad4bd97ab4525d7c2d2a" prot="public" virt="non-virtual"><scope>wxColourDatabase</scope><name>Find</name></member>

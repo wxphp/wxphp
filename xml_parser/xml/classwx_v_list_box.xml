@@ -21,7 +21,7 @@
 <para>By default both margins are 0. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="245"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="245"/>
       </memberdef>
       <memberdef kind="function" id="classwx_v_list_box_1a20ef3b7013828036d0c3901500d23cf3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -42,7 +42,7 @@
 <para>By default both margins are 0. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="246"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="246"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="42"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="42"/>
       </memberdef>
       <memberdef kind="function" id="classwx_v_list_box_1abf0f414c7638c76d5bf306349f39b280" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="49"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="49"/>
       </memberdef>
       <memberdef kind="function" id="classwx_v_list_box_1a302339253a1e8e4f2d3cc6c33166d7ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -112,7 +112,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="54"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="54"/>
       </memberdef>
       <memberdef kind="function" id="classwx_v_list_box_1aaf92fc38649bd6efc5b1f72c508a5f6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -125,7 +125,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="59"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="59"/>
       </memberdef>
       <memberdef kind="function" id="classwx_v_list_box_1ab04914d5db45af7c3c032e19fa2b2615" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -170,7 +170,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="74"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="74"/>
       </memberdef>
       <memberdef kind="function" id="classwx_v_list_box_1a3d922a858e2af9eb94026a5360e2c443" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -185,7 +185,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="86"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="86"/>
       </memberdef>
       <memberdef kind="function" id="classwx_v_list_box_1a44a07d450268cb40d60cb5320309bef2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -209,7 +209,7 @@
 </programlisting></para><para>This method is only valid for multi selection listboxes. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="110"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="110"/>
       </memberdef>
       <memberdef kind="function" id="classwx_v_list_box_1adb8472a48e56b43070c526c13c084e28" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -223,7 +223,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="117"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="117"/>
       </memberdef>
       <memberdef kind="function" id="classwx_v_list_box_1a297b81765b7f60c7125595fd01869294" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_point" kindref="compound">wxPoint</ref></type>
@@ -237,7 +237,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="125"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="125"/>
       </memberdef>
       <memberdef kind="function" id="classwx_v_list_box_1ad80e30710423e8c673416fcb4d3989fa" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_rect" kindref="compound">wxRect</ref></type>
@@ -255,7 +255,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="134"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="134"/>
       </memberdef>
       <memberdef kind="function" id="classwx_v_list_box_1abbc72b73be6e13aa2edd0ef08b30d235" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -273,7 +273,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="144"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="144"/>
       </memberdef>
       <memberdef kind="function" id="classwx_v_list_box_1a729b869aec06e50cc60c0abe72bcfac2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -287,7 +287,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="154"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="154"/>
       </memberdef>
       <memberdef kind="function" id="classwx_v_list_box_1ad133e56ceb5baae37d4f62c0a5fa2c2b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -300,7 +300,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="160"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="160"/>
       </memberdef>
       <memberdef kind="function" id="classwx_v_list_box_1a573faf189bae0c82d0f6f8bbd60d009f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
@@ -314,7 +314,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="168"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="168"/>
       </memberdef>
       <memberdef kind="function" id="classwx_v_list_box_1a4b30ca1c9e37ee9f6670c99e65b6dbb5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -327,7 +327,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="175"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="175"/>
       </memberdef>
       <memberdef kind="function" id="classwx_v_list_box_1adbef7038b847654aba0823d81496b60b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -344,7 +344,7 @@
 <para>The current item is always the same as selected one for the single selection listbox and in this case this method is equivalent to <ref refid="classwx_v_list_box_1ae0e866eff39e92d81e090aa316769333" kindref="member">IsSelected()</ref> but they are different for multi selection listboxes where many items may be selected but only one (at most) is current. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="185"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="185"/>
       </memberdef>
       <memberdef kind="function" id="classwx_v_list_box_1ae0e866eff39e92d81e090aa316769333" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -361,7 +361,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="190"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="190"/>
       </memberdef>
       <memberdef kind="function" id="classwx_v_list_box_1a0b49818db23a5fbd987438ca5ea0f607" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -384,7 +384,7 @@
 This function is only valid for the multiple selection listboxes, use <ref refid="classwx_v_list_box_1aee1df263dbb96e49dbc44684fb7d9dad" kindref="member">SetSelection()</ref> for the single selection ones. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="202"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="202"/>
       </memberdef>
       <memberdef kind="function" id="classwx_v_list_box_1a46d5153f9c50bff13663d1768818255e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -399,7 +399,7 @@ This method is only valid for multi selection listboxes.</para><para><simplesect
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="215"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="215"/>
       </memberdef>
       <memberdef kind="function" id="classwx_v_list_box_1ab148ec397eacecb1a71e829c2b5aa13a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -422,7 +422,7 @@ This method is only valid for multi selection listboxes.</para><para><simplesect
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="228"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="228"/>
       </memberdef>
       <memberdef kind="function" id="classwx_v_list_box_1a205615c79836dc7999d20e083a4a8ffb" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -439,7 +439,7 @@ This method is only valid for multi selection listboxes.</para><para><simplesect
 <para>This is just a synonym for <ref refid="classwx_var_v_scroll_helper_1adcf2e7fa5ea560587a7a1055cf0659ad" kindref="member">wxVScrolledWindow::SetRowCount()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="235"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="235"/>
       </memberdef>
       <memberdef kind="function" id="classwx_v_list_box_1aee1df263dbb96e49dbc44684fb7d9dad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -456,7 +456,7 @@ This method is only valid for multi selection listboxes.</para><para><simplesect
 <para>The selected item will be automatically scrolled into view if it isn&apos;t currently visible.</para><para>This method may be used both with single and multiple selection listboxes. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="257"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="257"/>
       </memberdef>
       <memberdef kind="function" id="classwx_v_list_box_1aad25b40caedb9a864ab347d50e8c5e8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -475,7 +475,7 @@ This method is only valid for multi selection listboxes.</para><para><simplesect
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="270"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="270"/>
       </memberdef>
       <memberdef kind="function" id="classwx_v_list_box_1ae530f18573bd96ea497d64b1b1b18905" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -493,7 +493,7 @@ This method is only valid for multi selection listboxes.</para><para><simplesect
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="280"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="280"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -539,10 +539,10 @@ This method is only valid for multi selection listboxes.</para><para><simplesect
 <para>The index of the item to be drawn.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<xrefsect id="todo_1_todo000061"><xreftitle>Todo</xreftitle><xrefdescription><para>Change this function signature to non-const. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+<xrefsect id="todo_1_todo000060"><xreftitle>Todo</xreftitle><xrefdescription><para>Change this function signature to non-const. </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="298"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="298"/>
       </memberdef>
       <memberdef kind="function" id="classwx_v_list_box_1a8c0f38e3e18eb34b3c793a2c7abd07d8" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -564,10 +564,10 @@ This method is only valid for multi selection listboxes.</para><para><simplesect
         <briefdescription>
 <para>This method is used to draw the items background and, maybe, a border around it. </para>        </briefdescription>
         <detaileddescription>
-<para>The base class version implements a reasonable default behaviour which consists in drawing the selected item with the standard background colour and drawing a border around the item if it is either selected or current.</para><para><xrefsect id="todo_1_todo000062"><xreftitle>Todo</xreftitle><xrefdescription><para>Change this function signature to non-const. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+<para>The base class version implements a reasonable default behaviour which consists in drawing the selected item with the standard background colour and drawing a border around the item if it is either selected or current.</para><para><xrefsect id="todo_1_todo000061"><xreftitle>Todo</xreftitle><xrefdescription><para>Change this function signature to non-const. </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="311"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="311"/>
       </memberdef>
       <memberdef kind="function" id="classwx_v_list_box_1a1cf1eb252fe80386f77d30d183bd072e" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -611,10 +611,10 @@ This method is only valid for multi selection listboxes.</para><para><simplesect
 <para>The index of the item.</para></parameterdescription>
 </parameteritem>
 </parameterlist>
-<xrefsect id="todo_1_todo000063"><xreftitle>Todo</xreftitle><xrefdescription><para>Change this function signature to non-const. </para></xrefdescription></xrefsect></para>        </detaileddescription>
+<xrefsect id="todo_1_todo000062"><xreftitle>Todo</xreftitle><xrefdescription><para>Change this function signature to non-const. </para></xrefdescription></xrefsect></para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="329"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="329"/>
       </memberdef>
       <memberdef kind="function" id="classwx_v_list_box_1a25c651d397f60c62039dd89bd6f92152" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
         <type><ref refid="defs_8h_1a11f6efc0e8d8d680f3ec8e82aa4f1770" kindref="member">wxCoord</ref></type>
@@ -631,7 +631,7 @@ This method is only valid for multi selection listboxes.</para><para><simplesect
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="335"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="335"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -641,139 +641,139 @@ This method is only valid for multi selection listboxes.</para><para><simplesect
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__ctrl" kindref="compound">Controls</ref></para><para><simplesect kind="see"><para><ref refid="classwx_simple_html_list_box" kindref="compound">wxSimpleHtmlListBox</ref>, <ref refid="classwx_html_list_box" kindref="compound">wxHtmlListBox</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="11385">
+      <node id="11574">
         <label>wxVarScrollHelperBase</label>
         <link refid="classwx_var_scroll_helper_base"/>
       </node>
-      <node id="11377">
+      <node id="11566">
         <label>wxVListBox</label>
         <link refid="classwx_v_list_box"/>
-        <childnode refid="11378" relation="public-inheritance">
+        <childnode refid="11567" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11382">
+      <node id="11571">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11388">
+      <node id="11577">
         <label>wxSimpleHtmlListBox</label>
         <link refid="classwx_simple_html_list_box"/>
-        <childnode refid="11386" relation="public-inheritance">
+        <childnode refid="11575" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11378">
+      <node id="11567">
         <label>wxVScrolledWindow</label>
         <link refid="classwx_v_scrolled_window"/>
-        <childnode refid="11379" relation="public-inheritance">
+        <childnode refid="11568" relation="public-inheritance">
         </childnode>
-        <childnode refid="11384" relation="public-inheritance">
+        <childnode refid="11573" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11381">
+      <node id="11570">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="11382" relation="public-inheritance">
+        <childnode refid="11571" relation="public-inheritance">
         </childnode>
-        <childnode refid="11383" relation="public-inheritance">
+        <childnode refid="11572" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11379">
+      <node id="11568">
         <label>wxPanel</label>
         <link refid="classwx_panel"/>
-        <childnode refid="11380" relation="public-inheritance">
+        <childnode refid="11569" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11383">
+      <node id="11572">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="11387">
+      <node id="11576">
         <label>wxRichTextStyleListBox</label>
         <link refid="classwx_rich_text_style_list_box"/>
-        <childnode refid="11386" relation="public-inheritance">
+        <childnode refid="11575" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11380">
+      <node id="11569">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="11381" relation="public-inheritance">
+        <childnode refid="11570" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11386">
+      <node id="11575">
         <label>wxHtmlListBox</label>
         <link refid="classwx_html_list_box"/>
-        <childnode refid="11377" relation="public-inheritance">
+        <childnode refid="11566" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11384">
+      <node id="11573">
         <label>wxVarVScrollHelper</label>
         <link refid="classwx_var_v_scroll_helper"/>
-        <childnode refid="11385" relation="public-inheritance">
+        <childnode refid="11574" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11398">
+      <node id="11587">
         <label>wxVarScrollHelperBase</label>
         <link refid="classwx_var_scroll_helper_base"/>
       </node>
-      <node id="11389">
+      <node id="11578">
         <label>wxVListBox</label>
         <link refid="classwx_v_list_box"/>
-        <childnode refid="11390" relation="public-inheritance">
+        <childnode refid="11579" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11394">
+      <node id="11583">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11395" relation="usage">
+        <childnode refid="11584" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11390">
+      <node id="11579">
         <label>wxVScrolledWindow</label>
         <link refid="classwx_v_scrolled_window"/>
-        <childnode refid="11391" relation="public-inheritance">
+        <childnode refid="11580" relation="public-inheritance">
         </childnode>
-        <childnode refid="11397" relation="public-inheritance">
+        <childnode refid="11586" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11393">
+      <node id="11582">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="11394" relation="public-inheritance">
+        <childnode refid="11583" relation="public-inheritance">
         </childnode>
-        <childnode refid="11396" relation="public-inheritance">
+        <childnode refid="11585" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11391">
+      <node id="11580">
         <label>wxPanel</label>
         <link refid="classwx_panel"/>
-        <childnode refid="11392" relation="public-inheritance">
+        <childnode refid="11581" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11396">
+      <node id="11585">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="11392">
+      <node id="11581">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="11393" relation="public-inheritance">
+        <childnode refid="11582" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11397">
+      <node id="11586">
         <label>wxVarVScrollHelper</label>
         <link refid="classwx_var_v_scroll_helper"/>
-        <childnode refid="11398" relation="public-inheritance">
+        <childnode refid="11587" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11395">
+      <node id="11584">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" line="37" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/vlbox.h" bodystart="36" bodyend="336"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" line="37" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/vlbox.h" bodystart="36" bodyend="336"/>
     <listofallmembers>
       <member refid="classwx_panel_1ad43482bf961c0a8185624085facd0853" prot="public" virt="virtual"><scope>wxVListBox</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxVListBox</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -957,6 +957,7 @@ This method is only valid for multi selection listboxes.</para><para><simplesect
       <member refid="classwx_window_1ae1b56ca87d8590ee5e576012229a380a" prot="public" virt="non-virtual"><scope>wxVListBox</scope><name>InvalidateBestSize</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxVListBox</scope><name>IsBeingDeleted</name></member>
       <member refid="classwx_v_list_box_1adbef7038b847654aba0823d81496b60b" prot="public" virt="non-virtual"><scope>wxVListBox</scope><name>IsCurrent</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxVListBox</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxVListBox</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxVListBox</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxVListBox</scope><name>IsExposed</name></member>
@@ -974,6 +975,7 @@ This method is only valid for multi selection listboxes.</para><para><simplesect
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxVListBox</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxVListBox</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxVListBox</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxVListBox</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxVListBox</scope><name>IsUnlinked</name></member>
       <member refid="classwx_var_scroll_helper_base_1aeb032c41e1436c630b9fadf3c198c91d" prot="public" virt="non-virtual"><scope>wxVListBox</scope><name>IsVisible</name></member>
       <member refid="classwx_panel_1a6ded9b75baf21e2c9f5496f746b68bf0" prot="public" virt="virtual"><scope>wxVListBox</scope><name>Layout</name></member>
@@ -981,7 +983,6 @@ This method is only valid for multi selection listboxes.</para><para><simplesect
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxVListBox</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxVListBox</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxVListBox</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxVListBox</scope><name>MakeModal</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxVListBox</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxVListBox</scope><name>Move</name></member>
       <member refid="classwx_window_1a79e66079125e8420de269811bdb6f2b6" prot="public" virt="non-virtual"><scope>wxVListBox</scope><name>MoveAfterInTabOrder</name></member>
@@ -1126,7 +1127,6 @@ This method is only valid for multi selection listboxes.</para><para><simplesect
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxVListBox</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxVListBox</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxVListBox</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxVListBox</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxVListBox</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxVListBox</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxVListBox</scope><name>Unlink</name></member>

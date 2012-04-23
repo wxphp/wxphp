@@ -21,7 +21,7 @@
 <para>If it is NULL, the messages are sent to <computeroutput>cerr</computeroutput>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="463"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="463"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -31,30 +31,30 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__logging" kindref="compound">Logging</ref></para><para><simplesect kind="see"><para><ref refid="classwx_log_stderr" kindref="compound">wxLogStderr</ref>, <ref refid="classwx_stream_to_text_redirector" kindref="compound">wxStreamToTextRedirector</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="7540">
+      <node id="7738">
         <label>wxLog</label>
         <link refid="classwx_log"/>
       </node>
-      <node id="7539">
+      <node id="7737">
         <label>wxLogStream</label>
         <link refid="classwx_log_stream"/>
-        <childnode refid="7540" relation="public-inheritance">
+        <childnode refid="7738" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="7542">
+      <node id="7740">
         <label>wxLog</label>
         <link refid="classwx_log"/>
       </node>
-      <node id="7541">
+      <node id="7739">
         <label>wxLogStream</label>
         <link refid="classwx_log_stream"/>
-        <childnode refid="7542" relation="public-inheritance">
+        <childnode refid="7740" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" line="457" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/log.h" bodystart="456" bodyend="464"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" line="457" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/log.h" bodystart="456" bodyend="464"/>
     <listofallmembers>
       <member refid="classwx_log_1a4c11ee23ce5264b6c5921a17610cda13" prot="public" virt="non-virtual"><scope>wxLogStream</scope><name>AddTraceMask</name></member>
       <member refid="classwx_log_1ac6b25e807e4948795aea21def6b5c1e4" prot="public" virt="non-virtual"><scope>wxLogStream</scope><name>ClearTraceMasks</name></member>

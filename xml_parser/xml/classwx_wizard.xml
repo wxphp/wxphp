@@ -16,7 +16,7 @@
 <para>Use this if you wish to derive from <ref refid="classwx_wizard" kindref="compound">wxWizard</ref> and then call <ref refid="classwx_wizard_1a9e862edc50c6319c6750f7503f106e79" kindref="member">Create()</ref>, for example if you wish to set an extra style with <ref refid="classwx_window_1ae9655f7c35ce7ac89cac2f6c0054b103" kindref="member">wxWindow::SetExtraStyle()</ref> between the two calls. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wizard.h" line="273"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wizard.h" line="281"/>
       </memberdef>
       <memberdef kind="function" id="classwx_wizard_1a1cb67a09c7002d399b1d36d729eec40a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -101,7 +101,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wizard.h" line="301"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wizard.h" line="309"/>
       </memberdef>
       <memberdef kind="function" id="classwx_wizard_1a9e862edc50c6319c6750f7503f106e79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -186,7 +186,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wizard.h" line="328"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wizard.h" line="336"/>
       </memberdef>
       <memberdef kind="function" id="classwx_wizard_1a2348b05acbe3e9ec5a54e5a6a7c9a042" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -203,7 +203,7 @@
 <para>Sets the page size to be big enough for all the pages accessible via the given <emphasis>firstPage</emphasis>, i.e. this page, its next page and so on.</para><para>This method may be called more than once and it will only change the page size if the size required by the new page is bigger than the previously set one. This is useful if the decision about which pages to show is taken during run-time, as in this case, the wizard won&apos;t be able to get to all pages starting from a single one and you should call <emphasis>Fit</emphasis> separately for the others. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wizard.h" line="342"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wizard.h" line="350"/>
       </memberdef>
       <memberdef kind="function" id="classwx_wizard_1a884e1a4276a1db73fab17975617fa66c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_bitmap" kindref="compound">wxBitmap</ref> &amp;</type>
@@ -216,7 +216,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wizard.h" line="347"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wizard.h" line="355"/>
       </memberdef>
       <memberdef kind="function" id="classwx_wizard_1a7c9074df20c4737ff572f5245cf3924e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_colour" kindref="compound">wxColour</ref> &amp;</type>
@@ -229,7 +229,7 @@
 <para>See also <ref refid="classwx_wizard_1a862344eb45f192916e6b6ca83b588eb6" kindref="member">SetBitmapPlacement()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wizard.h" line="355"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wizard.h" line="363"/>
       </memberdef>
       <memberdef kind="function" id="classwx_wizard_1a415b63ae02e9c5edb56e874c6b8257b9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -242,7 +242,7 @@
 <para>By default, placement is 0 (no expansion is done).</para><para>See also <ref refid="classwx_wizard_1a862344eb45f192916e6b6ca83b588eb6" kindref="member">SetBitmapPlacement()</ref> for the possible values. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wizard.h" line="363"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wizard.h" line="371"/>
       </memberdef>
       <memberdef kind="function" id="classwx_wizard_1acaa32c8901ac2ad5d7bb340870167760" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_wizard_page" kindref="compound">wxWizardPage</ref> *</type>
@@ -255,7 +255,7 @@
 <para>NULL is returned if <ref refid="classwx_wizard_1ae4ed7afb38e10d782a66a1daba8fa83d" kindref="member">RunWizard()</ref> is not being executed now. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wizard.h" line="369"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wizard.h" line="377"/>
       </memberdef>
       <memberdef kind="function" id="classwx_wizard_1a6460f2c5749c214dcbe1cbfc533c33c3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -268,7 +268,7 @@
 <para>See also <ref refid="classwx_wizard_1a862344eb45f192916e6b6ca83b588eb6" kindref="member">SetBitmapPlacement()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wizard.h" line="377"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wizard.h" line="385"/>
       </memberdef>
       <memberdef kind="function" id="classwx_wizard_1a92daecc05884e3c33f921542be62b6e3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_sizer" kindref="compound">wxSizer</ref> *</type>
@@ -281,7 +281,7 @@
 <para>The wizard is laid out using sizers and the page area sizer is the place-holder for the pages. All pages are resized before being shown to match the wizard page area.</para><para>Page area sizer has a minimal size that is the maximum of several values. First, all pages (or other objects) added to the sizer. Second, all pages reachable by repeatedly applying <ref refid="classwx_wizard_page_1a90f7e694f3c8680a751a8240a1538a60" kindref="member">wxWizardPage::GetNext()</ref> to any page inserted into the sizer.</para><para>Third, the minimal size specified using <ref refid="classwx_wizard_1af54b79bba58c1bdd6e4d389953131344" kindref="member">SetPageSize()</ref> and <ref refid="classwx_wizard_1a2348b05acbe3e9ec5a54e5a6a7c9a042" kindref="member">FitToPage()</ref>. Fourth, the total wizard height may be increased to accommodate the bitmap height. Fifth and finally, wizards are never smaller than some built-in minimal size to avoid wizards that are too small.</para><para>The caller can use <ref refid="classwx_sizer_1a97bbbf3ee6e55c321d7bb72b4c1b7d79" kindref="member">wxSizer::SetMinSize</ref> to enlarge it beyond the minimal size. If <computeroutput>wxRESIZE_BORDER</computeroutput> was passed to constructor, user can resize wizard and consequently the page area (but not make it smaller than the minimal size).</para><para>It is recommended to add the first page to the page area sizer. For simple wizards, this will enlarge the wizard to fit the biggest page.</para><para>For non-linear wizards, the first page of every separate chain should be added. Caller-specified size can be accomplished using <ref refid="classwx_sizer_1a97bbbf3ee6e55c321d7bb72b4c1b7d79" kindref="member">wxSizer::SetMinSize()</ref>. Adding pages to the page area sizer affects the default border width around page area that can be altered with <ref refid="classwx_wizard_1aaa18c0f177ddae29bb096f3e8c2f5d72" kindref="member">SetBorder()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wizard.h" line="405"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wizard.h" line="413"/>
       </memberdef>
       <memberdef kind="function" id="classwx_wizard_1a7adde3c7c6574734a51fb90cb1209f1c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type><ref refid="classwx_size" kindref="compound">wxSize</ref></type>
@@ -294,7 +294,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wizard.h" line="410"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wizard.h" line="418"/>
       </memberdef>
       <memberdef kind="function" id="classwx_wizard_1a8166f3467d70856c2cb08ba61bc3b46d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -312,7 +312,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wizard.h" line="420"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wizard.h" line="428"/>
       </memberdef>
       <memberdef kind="function" id="classwx_wizard_1a9fe21e8524c76db5b8d0db752bc10d81" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -330,7 +330,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wizard.h" line="430"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wizard.h" line="438"/>
       </memberdef>
       <memberdef kind="function" id="classwx_wizard_1ae4ed7afb38e10d782a66a1daba8fa83d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -347,7 +347,7 @@
 <para>The <emphasis>firstPage</emphasis> cannot be NULL. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wizard.h" line="437"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wizard.h" line="445"/>
       </memberdef>
       <memberdef kind="function" id="classwx_wizard_1ae622c4c1f89b4d8f743feb68e48d55f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -364,7 +364,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wizard.h" line="442"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wizard.h" line="450"/>
       </memberdef>
       <memberdef kind="function" id="classwx_wizard_1a7ec9f8483c4c79a76899f61d3719d51d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -381,7 +381,7 @@
 <para>See also <ref refid="classwx_wizard_1a862344eb45f192916e6b6ca83b588eb6" kindref="member">SetBitmapPlacement()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wizard.h" line="450"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wizard.h" line="458"/>
       </memberdef>
       <memberdef kind="function" id="classwx_wizard_1a862344eb45f192916e6b6ca83b588eb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -396,11 +396,11 @@
 <para>Sets the flags indicating how the wizard or page bitmap should be expanded and positioned to fit the page height. </para>        </briefdescription>
         <detaileddescription>
 <para>By default, placement is 0 (no expansion is done). <emphasis>placement</emphasis> is a bitlist with the following possible values:</para><para><itemizedlist>
-<listitem><para><bold>wxWIZARD_VALIGN_TOP:</bold> Aligns the bitmap at the top.</para></listitem><listitem><para><bold>wxWIZARD_VALIGN_CENTRE:</bold> Centres the bitmap vertically.</para></listitem><listitem><para><bold>wxWIZARD_VALIGN_BOTTOM:</bold> Aligns the bitmap at the bottom.</para></listitem><listitem><para><bold>wxWIZARD_HALIGN_LEFT:</bold> Left-aligns the bitmap.</para></listitem><listitem><para><bold>wxWIZARD_HALIGN_CENTRE:</bold> Centres the bitmap horizontally.</para></listitem><listitem><para><bold>wxWIZARD_HALIGN_RIGHT:</bold> Right-aligns the bitmap.</para></listitem><listitem><para><bold>wxWIZARD_TILE:</bold>  todo 65.</para></listitem></itemizedlist>
+<listitem><para><bold>wxWIZARD_VALIGN_TOP:</bold> Aligns the bitmap at the top.</para></listitem><listitem><para><bold>wxWIZARD_VALIGN_CENTRE:</bold> Centres the bitmap vertically.</para></listitem><listitem><para><bold>wxWIZARD_VALIGN_BOTTOM:</bold> Aligns the bitmap at the bottom.</para></listitem><listitem><para><bold>wxWIZARD_HALIGN_LEFT:</bold> Left-aligns the bitmap.</para></listitem><listitem><para><bold>wxWIZARD_HALIGN_CENTRE:</bold> Centres the bitmap horizontally.</para></listitem><listitem><para><bold>wxWIZARD_HALIGN_RIGHT:</bold> Right-aligns the bitmap.</para></listitem><listitem><para><bold>wxWIZARD_TILE:</bold>  todo 64.</para></listitem></itemizedlist>
 </para><para>See also <ref refid="classwx_wizard_1aacea5d1dc302604fc757bd1eb89b50f3" kindref="member">SetMinimumBitmapWidth()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wizard.h" line="469"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wizard.h" line="477"/>
       </memberdef>
       <memberdef kind="function" id="classwx_wizard_1aaa18c0f177ddae29bb096f3e8c2f5d72" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -417,7 +417,7 @@
 <para>Default is zero. For backward compatibility, if there are no pages in <ref refid="classwx_wizard_1a92daecc05884e3c33f921542be62b6e3" kindref="member">GetPageAreaSizer()</ref>, the default is 5 pixels.</para><para>If there is a five point border around all controls in a page and the border around page area is left as zero, a five point white space along all dialog borders will be added to the control border in order to space page controls ten points from the dialog border and non-page controls. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wizard.h" line="481"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wizard.h" line="489"/>
       </memberdef>
       <memberdef kind="function" id="classwx_wizard_1aacea5d1dc302604fc757bd1eb89b50f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -434,7 +434,7 @@
 <para>If this is not set when using bitmap placement, the initial layout may be incorrect.</para><para>See also <ref refid="classwx_wizard_1a862344eb45f192916e6b6ca83b588eb6" kindref="member">SetBitmapPlacement()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wizard.h" line="490"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wizard.h" line="498"/>
       </memberdef>
       <memberdef kind="function" id="classwx_wizard_1af54b79bba58c1bdd6e4d389953131344" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -451,7 +451,7 @@
 <para>The wizard will take into account the size of the bitmap (if any) itself. Also, the wizard will never be smaller than the default size.</para><para>The recommended way to use this function is to lay out all wizard pages using the sizers (even though the wizard is not resizable) and then use <ref refid="classwx_sizer_1a371b9b72e55c1fedfbea9d298bc2df77" kindref="member">wxSizer::CalcMin()</ref> in a loop to calculate the maximum of minimal sizes of the pages and pass it to <ref refid="classwx_wizard_1af54b79bba58c1bdd6e4d389953131344" kindref="member">SetPageSize()</ref>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wizard.h" line="502"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wizard.h" line="510"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -461,6 +461,7 @@
 </para><para>The following event handler macros redirect the events to member function handlers &apos;<bold>func</bold>&apos; with prototypes like: void<nonbreakablespace/>handlerFuncName(<ref refid="classwx_wizard_event" kindref="compound">wxWizardEvent</ref>&amp;<nonbreakablespace/>event)Event macros for events emitted by this class: For some events, Veto() can be called to prevent the event from happening. <itemizedlist>
 <listitem><para>EVT_WIZARD_PAGE_CHANGED(id,  func): The page has just been changed (this event cannot be vetoed). </para></listitem>
 <listitem><para>EVT_WIZARD_PAGE_CHANGING(id,  func): The page is being changed (this event can be vetoed). </para></listitem>
+<listitem><para>EVT_WIZARD_BEFORE_PAGE_CHANGED(id,  func): Called after Next is clicked but before GetNext is called. Unlike EVT_WIZARD_CHANGING, the handler for this function can change state that might affect the return value of GetNext. This event can be vetoed. </para></listitem>
 <listitem><para>EVT_WIZARD_PAGE_SHOWN(id,  func): The page was shown and laid out (this event cannot be vetoed). </para></listitem>
 <listitem><para>EVT_WIZARD_CANCEL(id,  func): The user attempted to cancel the wizard (this event may also be vetoed). </para></listitem>
 <listitem><para>EVT_WIZARD_HELP(id,  func): The wizard help button was pressed. </para></listitem>
@@ -478,109 +479,109 @@ See also <ref refid="classwx_dialog" kindref="compound">wxDialog</ref> for other
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="11662">
+      <node id="11851">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="11663" relation="public-inheritance">
+        <childnode refid="11852" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11665">
+      <node id="11854">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11664">
+      <node id="11853">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="11665" relation="public-inheritance">
+        <childnode refid="11854" relation="public-inheritance">
         </childnode>
-        <childnode refid="11666" relation="public-inheritance">
+        <childnode refid="11855" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11659">
+      <node id="11848">
         <label>wxWizard</label>
         <link refid="classwx_wizard"/>
-        <childnode refid="11660" relation="public-inheritance">
+        <childnode refid="11849" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11666">
+      <node id="11855">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="11663">
+      <node id="11852">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="11664" relation="public-inheritance">
+        <childnode refid="11853" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11660">
+      <node id="11849">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="11661" relation="public-inheritance">
+        <childnode refid="11850" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11661">
+      <node id="11850">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="11662" relation="public-inheritance">
+        <childnode refid="11851" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11670">
+      <node id="11859">
         <label>wxNonOwnedWindow</label>
         <link refid="classwx_non_owned_window"/>
-        <childnode refid="11671" relation="public-inheritance">
+        <childnode refid="11860" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11673">
+      <node id="11862">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11674" relation="usage">
+        <childnode refid="11863" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11672">
+      <node id="11861">
         <label>wxEvtHandler</label>
         <link refid="classwx_evt_handler"/>
-        <childnode refid="11673" relation="public-inheritance">
+        <childnode refid="11862" relation="public-inheritance">
         </childnode>
-        <childnode refid="11675" relation="public-inheritance">
+        <childnode refid="11864" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11667">
+      <node id="11856">
         <label>wxWizard</label>
         <link refid="classwx_wizard"/>
-        <childnode refid="11668" relation="public-inheritance">
+        <childnode refid="11857" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11675">
+      <node id="11864">
         <label>wxTrackable</label>
         <link refid="classwx_trackable"/>
       </node>
-      <node id="11671">
+      <node id="11860">
         <label>wxWindow</label>
         <link refid="classwx_window"/>
-        <childnode refid="11672" relation="public-inheritance">
+        <childnode refid="11861" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11668">
+      <node id="11857">
         <label>wxDialog</label>
         <link refid="classwx_dialog"/>
-        <childnode refid="11669" relation="public-inheritance">
+        <childnode refid="11858" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11669">
+      <node id="11858">
         <label>wxTopLevelWindow</label>
         <link refid="classwx_top_level_window"/>
-        <childnode refid="11670" relation="public-inheritance">
+        <childnode refid="11859" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11674">
+      <node id="11863">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wizard.h" line="264" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/wizard.h" bodystart="263" bodyend="503"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/wizard.h" line="272" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/wizard.h" bodystart="271" bodyend="511"/>
     <listofallmembers>
       <member refid="classwx_window_1a3afbd49b1ea2f8275e3600dcac102923" prot="public" virt="virtual"><scope>wxWizard</scope><name>AcceptsFocus</name></member>
       <member refid="classwx_window_1a2370bdd3ab08e7ef3c7555c6aa8301b8" prot="public" virt="virtual"><scope>wxWizard</scope><name>AcceptsFocusFromKeyboard</name></member>
@@ -625,6 +626,7 @@ See also <ref refid="classwx_dialog" kindref="compound">wxDialog</ref> for other
       <member refid="classwx_dialog_1a0c6fb55be0b07b934b30550e0225df8f" prot="public" virt="non-virtual"><scope>wxWizard</scope><name>CreateSeparatedButtonSizer</name></member>
       <member refid="classwx_dialog_1ab7a5666b612d6cfdfb2660fd9bd3393e" prot="public" virt="non-virtual"><scope>wxWizard</scope><name>CreateSeparatedSizer</name></member>
       <member refid="classwx_dialog_1a8f2f565975f843035391ce62b0b9f8e8" prot="public" virt="non-virtual"><scope>wxWizard</scope><name>CreateStdDialogButtonSizer</name></member>
+      <member refid="classwx_dialog_1a5bead5e932f17b7c2345dfc41b6cc79c" prot="public" virt="non-virtual"><scope>wxWizard</scope><name>CreateTextSizer</name></member>
       <member refid="classwx_evt_handler_1a6e7f9cf4ebd0623c1d94979855d096f8" prot="public" virt="non-virtual"><scope>wxWizard</scope><name>DeletePendingEvents</name></member>
       <member refid="classwx_window_1a6bf0c5be864544d9ce0560087667b7fc" prot="public" virt="virtual"><scope>wxWizard</scope><name>Destroy</name></member>
       <member refid="classwx_window_1aff47b32c8d42d515ea0bb6a6c2fea917" prot="public" virt="non-virtual"><scope>wxWizard</scope><name>DestroyChildren</name></member>
@@ -783,6 +785,7 @@ See also <ref refid="classwx_dialog" kindref="compound">wxDialog</ref> for other
       <member refid="classwx_top_level_window_1afa58f411cf488eb9279683b1d20a74b6" prot="public" virt="virtual"><scope>wxWizard</scope><name>IsActive</name></member>
       <member refid="classwx_top_level_window_1ac0c7a7cb6e6dfdf7e59300ee5d476ce3" prot="public" virt="virtual"><scope>wxWizard</scope><name>IsAlwaysMaximized</name></member>
       <member refid="classwx_window_1af918e6fe8565c2d5235973cc3de84a43" prot="public" virt="non-virtual"><scope>wxWizard</scope><name>IsBeingDeleted</name></member>
+      <member refid="classwx_window_1a469f0881da248d37691440c9d4cc7200" prot="public" virt="non-virtual"><scope>wxWizard</scope><name>IsDescendant</name></member>
       <member refid="classwx_window_1a9d1be1bbb625ebf87ad4ad47e49a0194" prot="public" virt="virtual"><scope>wxWizard</scope><name>IsDoubleBuffered</name></member>
       <member refid="classwx_window_1a59452a5bd42f5ea4b31d7fc4aa59644f" prot="public" virt="non-virtual"><scope>wxWizard</scope><name>IsEnabled</name></member>
       <member refid="classwx_window_1af27ef77c913e32050543f3b0ca435a0d" prot="public" virt="non-virtual"><scope>wxWizard</scope><name>IsExposed</name></member>
@@ -804,6 +807,7 @@ See also <ref refid="classwx_dialog" kindref="compound">wxDialog</ref> for other
       <member refid="classwx_window_1a72d70fd14e3565bf782fbcd3271d8930" prot="public" virt="virtual"><scope>wxWizard</scope><name>IsShownOnScreen</name></member>
       <member refid="classwx_window_1a657ef8b6055eb06df894ac5e6ddfecf8" prot="public" virt="non-virtual"><scope>wxWizard</scope><name>IsThisEnabled</name></member>
       <member refid="classwx_window_1a0002826ad05f2a5661b4c8995713f37f" prot="public" virt="virtual"><scope>wxWizard</scope><name>IsTopLevel</name></member>
+      <member refid="classwx_window_1a7940d510c5bdc062a2b109a1022dd8c2" prot="public" virt="virtual"><scope>wxWizard</scope><name>IsTransparentBackgroundSupported</name></member>
       <member refid="classwx_evt_handler_1a360fdeefcf53b62fb49fb828406bb8a6" prot="public" virt="non-virtual"><scope>wxWizard</scope><name>IsUnlinked</name></member>
       <member refid="classwx_top_level_window_1a305c48ddb8e45f89add1694053185a7d" prot="public" virt="non-virtual"><scope>wxWizard</scope><name>IsUsingNativeDecorations</name></member>
       <member refid="classwx_top_level_window_1adfe7e3f4a32f3ed178968f64431bbfe0" prot="public" virt="virtual"><scope>wxWizard</scope><name>Layout</name></member>
@@ -811,7 +815,6 @@ See also <ref refid="classwx_dialog" kindref="compound">wxDialog</ref> for other
       <member refid="classwx_window_1afc0816a174ceee6d36d1995c6824a273" prot="public" virt="non-virtual"><scope>wxWizard</scope><name>LineUp</name></member>
       <member refid="classwx_window_1a124944524f36b71385dad8fddaad8ded" prot="public" virt="virtual"><scope>wxWizard</scope><name>Lower</name></member>
       <member refid="classwx_object_1a9e31954530a0abd54982effc443ed2b8" prot="protected" virt="non-virtual"><scope>wxWizard</scope><name>m_refData</name></member>
-      <member refid="classwx_window_1a192fc8b467845d093c16452db96c65c5" prot="public" virt="virtual"><scope>wxWizard</scope><name>MakeModal</name></member>
       <member refid="classwx_top_level_window_1addb1612e9f00ac82c2e19c2bac6ffc4f" prot="public" virt="virtual"><scope>wxWizard</scope><name>Maximize</name></member>
       <member refid="classwx_window_1ab1cb98c8d25b9e6ff7b706b1446c3df7" prot="public" virt="non-virtual"><scope>wxWizard</scope><name>Move</name></member>
       <member refid="classwx_window_1a22a22c1e23ca05776707e7999d8047fe" prot="public" virt="non-virtual"><scope>wxWizard</scope><name>Move</name></member>
@@ -822,7 +825,6 @@ See also <ref refid="classwx_dialog" kindref="compound">wxDialog</ref> for other
       <member refid="classwx_window_1aa58039c8fc65e19160becf510ee1d1d5" prot="public" virt="non-virtual"><scope>wxWizard</scope><name>NavigateIn</name></member>
       <member refid="classwx_window_1a8175da594e6045635a1d1cfe775cdddb" prot="public" virt="non-virtual"><scope>wxWizard</scope><name>NewControlId</name></member>
       <member refid="classwx_window_1a6b5654c0c6c6245d592c279521f7099c" prot="public" virt="virtual"><scope>wxWizard</scope><name>OnInternalIdle</name></member>
-      <member refid="classwx_dialog_1a31dde643f83e859e53759b8ae5f07378" prot="public" virt="non-virtual"><scope>wxWizard</scope><name>OnSysColourChanged</name></member>
       <member refid="classwx_object_1a07b8f34f5afc5743195c5fed052f55d3" prot="public" virt="non-virtual"><scope>wxWizard</scope><name>operator delete</name></member>
       <member refid="classwx_object_1a96fa423a1dbc212c8227a5d83825971f" prot="public" virt="non-virtual"><scope>wxWizard</scope><name>operator new</name></member>
       <member refid="classwx_top_level_window_1a5890684b71321e27e8f3a223ad3c2445" prot="public" virt="virtual"><scope>wxWizard</scope><name>OSXIsModified</name></member>
@@ -964,7 +966,6 @@ See also <ref refid="classwx_dialog" kindref="compound">wxDialog</ref> for other
       <member refid="classwx_window_1a88cc65e424a129d9b0057756cdb67ec9" prot="public" virt="virtual"><scope>wxWizard</scope><name>TransferDataToWindow</name></member>
       <member refid="classwx_evt_handler_1a5e25fece1cb6cbc11fd1d41ec140319c" prot="protected" virt="virtual"><scope>wxWizard</scope><name>TryAfter</name></member>
       <member refid="classwx_evt_handler_1ad4b0eac704dd005ac6a88fdb1e673c13" prot="protected" virt="virtual"><scope>wxWizard</scope><name>TryBefore</name></member>
-      <member refid="classwx_evt_handler_1a3fe413e43f1cbcb083802d53ce9bf7f9" prot="protected" virt="non-virtual"><scope>wxWizard</scope><name>TryThis</name></member>
       <member refid="classwx_evt_handler_1a5d3854b4dfb6230fd9d3cf3871c6a607" prot="public" virt="non-virtual"><scope>wxWizard</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a9992b15750a133127d76ad6e9be7e11f" prot="public" virt="non-virtual"><scope>wxWizard</scope><name>Unbind</name></member>
       <member refid="classwx_evt_handler_1a22e5db2ec1d19c8252c056fd116975d7" prot="public" virt="non-virtual"><scope>wxWizard</scope><name>Unlink</name></member>

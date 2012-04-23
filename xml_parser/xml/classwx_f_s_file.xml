@@ -81,7 +81,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="242"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="247"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_s_file_1a1851086ffe35d936abd68cf33fca9985" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> *</type>
@@ -91,10 +91,10 @@
         <briefdescription>
 <para>Detaches the stream from the <ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref> object. </para>        </briefdescription>
         <detaileddescription>
-<para>That is, the stream obtained with <ref refid="classwx_f_s_file_1a0508b48f21d366aa209eed0b848a303b" kindref="member">GetStream()</ref> will continue its existance after the <ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref> object is deleted.</para><para>You will have to delete the stream yourself. </para>        </detaileddescription>
+<para>That is, the stream obtained with <ref refid="classwx_f_s_file_1a0508b48f21d366aa209eed0b848a303b" kindref="member">GetStream()</ref> will continue its existence after the <ref refid="classwx_f_s_file" kindref="compound">wxFSFile</ref> object is deleted.</para><para>You will have to delete the stream yourself. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="251"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="256"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_s_file_1acba1c1772723faac368d0f0e9f002745" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -112,7 +112,7 @@
         </verbatim></para><para>Usually an anchor is presented only if the MIME type is &apos;text/html&apos;. But it may have some meaning with other files; for example myanim.avi#200 may refer to position in animation or reality.wrl::MyView may refer to a predefined view in VRML. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="269"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="274"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_s_file_1a1f66063fc26adc1ede01ff072f46af5d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -130,7 +130,7 @@
         </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="282"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="287"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_s_file_1a85fc1cc7032d21d27457d0ee6824b398" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -143,7 +143,7 @@
 <para>It is either extension-based (see <ref refid="classwx_mime_types_manager" kindref="compound">wxMimeTypesManager</ref>) or extracted from HTTP protocol Content-Type header. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="290"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="295"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_s_file_1ae3bda7d24f3f2b67ef7b4b0e20610fc6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
@@ -156,7 +156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="295"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="300"/>
       </memberdef>
       <memberdef kind="function" id="classwx_f_s_file_1a0508b48f21d366aa209eed0b848a303b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_input_stream" kindref="compound">wxInputStream</ref> *</type>
@@ -169,7 +169,7 @@
 <para>You can use the returned stream to directly access data. You may suppose that the stream provide Seek and GetSize functionality (even in the case of the HTTP protocol which doesn&apos;t provide this by default. wxHtml uses local cache to work around this and to speed up the connection). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="306"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="311"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -180,37 +180,37 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxbase" kindref="member">wxBase</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__vfs" kindref="compound">Virtual File System</ref>, <ref refid="group__group__class__file" kindref="compound">File Handling</ref></para><para><simplesect kind="see"><para><ref refid="classwx_file_system_handler" kindref="compound">wxFileSystemHandler</ref>, <ref refid="classwx_file_system" kindref="compound">wxFileSystem</ref>, <ref refid="overview_fs" kindref="compound">wxFileSystem Overview</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="6451">
+      <node id="6591">
         <label>wxFSFile</label>
         <link refid="classwx_f_s_file"/>
-        <childnode refid="6452" relation="public-inheritance">
+        <childnode refid="6592" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6452">
+      <node id="6592">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="6453">
+      <node id="6593">
         <label>wxFSFile</label>
         <link refid="classwx_f_s_file"/>
-        <childnode refid="6454" relation="public-inheritance">
+        <childnode refid="6594" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="6454">
+      <node id="6594">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="6455" relation="usage">
+        <childnode refid="6595" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="6455">
+      <node id="6595">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" line="200" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/filesys.h" bodystart="199" bodyend="307"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" line="205" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/filesys.h" bodystart="204" bodyend="312"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxFSFile</scope><name>AllocExclusive</name></member>
       <member refid="classwx_object_1a1d39f1d3650fe0982c9a1abe7f9fe7b7" prot="protected" virt="virtual"><scope>wxFSFile</scope><name>CloneRefData</name></member>

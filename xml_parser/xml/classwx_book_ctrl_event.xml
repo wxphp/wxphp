@@ -37,7 +37,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="366"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="382"/>
       </memberdef>
       <memberdef kind="function" id="classwx_book_ctrl_event_1a0344c53a8c97299ae5bb1a99e9e825a3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -50,7 +50,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="372"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="388"/>
       </memberdef>
       <memberdef kind="function" id="classwx_book_ctrl_event_1af2721f1f6e9d6e5b83612f03ef36c4b5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -65,7 +65,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="382"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="398"/>
       </memberdef>
       <memberdef kind="function" id="classwx_book_ctrl_event_1abf4ac02fe4445dce418536b94fbebc84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="387"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="403"/>
       </memberdef>
       <memberdef kind="function" id="classwx_book_ctrl_event_1a7afa201992c65fe827b905d8941b1b66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="392"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="408"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -109,79 +109,79 @@
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxcore" kindref="member">wxCore</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref>, <ref refid="group__group__class__bookctrl" kindref="compound">Book Controls</ref></para><para><simplesect kind="see"><para><ref refid="classwx_notebook" kindref="compound">wxNotebook</ref>, <ref refid="classwx_listbook" kindref="compound">wxListbook</ref>, <ref refid="classwx_choicebook" kindref="compound">wxChoicebook</ref>, <ref refid="classwx_treebook" kindref="compound">wxTreebook</ref>, <ref refid="classwx_toolbook" kindref="compound">wxToolbook</ref>, <ref refid="classwx_aui_notebook" kindref="compound">wxAuiNotebook</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4568">
+      <node id="4658">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4566">
+      <node id="4656">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="4567" relation="public-inheritance">
+        <childnode refid="4657" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4564">
+      <node id="4654">
         <label>wxBookCtrlEvent</label>
         <link refid="classwx_book_ctrl_event"/>
-        <childnode refid="4565" relation="public-inheritance">
+        <childnode refid="4655" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4565">
+      <node id="4655">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="4566" relation="public-inheritance">
+        <childnode refid="4656" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4569">
+      <node id="4659">
         <label>wxAuiNotebookEvent</label>
         <link refid="classwx_aui_notebook_event"/>
-        <childnode refid="4564" relation="public-inheritance">
+        <childnode refid="4654" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4567">
+      <node id="4657">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="4568" relation="public-inheritance">
+        <childnode refid="4658" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4574">
+      <node id="4664">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4575" relation="usage">
+        <childnode refid="4665" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4572">
+      <node id="4662">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="4573" relation="public-inheritance">
+        <childnode refid="4663" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4570">
+      <node id="4660">
         <label>wxBookCtrlEvent</label>
         <link refid="classwx_book_ctrl_event"/>
-        <childnode refid="4571" relation="public-inheritance">
+        <childnode refid="4661" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4571">
+      <node id="4661">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="4572" relation="public-inheritance">
+        <childnode refid="4662" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4573">
+      <node id="4663">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="4574" relation="public-inheritance">
+        <childnode refid="4664" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4575">
+      <node id="4665">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" line="360" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/bookctrl.h" bodystart="359" bodyend="393"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" line="376" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/bookctrl.h" bodystart="375" bodyend="409"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxBookCtrlEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_notify_event_1a7b23515f827b2ce1da1e6990d9aafe80" prot="public" virt="non-virtual"><scope>wxBookCtrlEvent</scope><name>Allow</name></member>

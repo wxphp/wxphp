@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="39"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/translation.h" line="39"/>
       </memberdef>
       <memberdef kind="function" id="classwx_translations_1a45c81bf49c3645eebb2032a18fe37056" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -33,7 +33,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="63"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/translation.h" line="63"/>
       </memberdef>
       <memberdef kind="function" id="classwx_translations_1a098d9f1c908b8c756866c99720c35787" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -50,7 +50,7 @@
 <para>wxLANGUAGE_DEFAULT has special meaning: best suitable translation, given user&apos;s preference and available translations, will be used. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="71"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/translation.h" line="71"/>
       </memberdef>
       <memberdef kind="function" id="classwx_translations_1a3f69c37cb245569da0cbae9577a606f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -67,7 +67,7 @@
 <para>Empty <emphasis>lang</emphasis> string has the same meaning as wxLANGUAGE_DEFAULT in <ref refid="classwx_translations_1a098d9f1c908b8c756866c99720c35787" kindref="member">SetLanguage(wxLanguage)</ref>: best suitable translation, given user&apos;s preference and available translations, will be used. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="80"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/translation.h" line="80"/>
       </memberdef>
       <memberdef kind="function" id="classwx_translations_1a2f88b45d68673e72324713142be95557" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_array_string" kindref="compound">wxArrayString</ref></type>
@@ -84,7 +84,7 @@
 <para>This method can be used e.g. to populate list of application&apos;s translations offered to the user. To do this, pass the app&apos;s main catalog as <emphasis>domain</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="89"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/translation.h" line="89"/>
       </memberdef>
       <memberdef kind="function" id="classwx_translations_1ab76302f702b7559c8a7274e2969f4df2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -99,7 +99,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="99"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/translation.h" line="99"/>
       </memberdef>
       <memberdef kind="function" id="classwx_translations_1a3074f9d91c92bd0ade9e6aea4affc652" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -117,7 +117,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="121"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/translation.h" line="121"/>
       </memberdef>
       <memberdef kind="function" id="classwx_translations_1a8b0bc47ae1b33f14ae294dbe55da76bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -154,7 +154,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="141"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/translation.h" line="141"/>
       </memberdef>
       <memberdef kind="function" id="classwx_translations_1a7e049aa6b090972e7924392c6f5d6a99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -202,7 +202,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="169"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/translation.h" line="169"/>
       </memberdef>
       <memberdef kind="function" id="classwx_translations_1a1baf790dc4226869a727e03a59ff5b25" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -220,7 +220,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="179"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/translation.h" line="179"/>
       </memberdef>
       <memberdef kind="function" id="classwx_translations_1abc65ffea4b238c11c7131e5303f174f2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -243,7 +243,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="193"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/translation.h" line="193"/>
       </memberdef>
       <memberdef kind="function" id="classwx_translations_1a7480771c24a53e0ccf1170a3a70b2ba4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -274,7 +274,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="225"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/translation.h" line="225"/>
       </memberdef>
       <memberdef kind="function" id="classwx_translations_1a49b9c3ec1e9487a4473f09259284c61a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -296,7 +296,7 @@
 <para>The search for <emphasis>header</emphasis> is case sensitive. If an <emphasis>domain</emphasis> is passed, this domain is searched. Else all domains will be searched until a header has been found.</para><para>The return value is the value of the header if found. Else this will be empty. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="236"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/translation.h" line="236"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -311,7 +311,7 @@
 <para>You must either call this early in app initialization code, or let <ref refid="classwx_locale" kindref="compound">wxLocale</ref> do it for you. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="47"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/translation.h" line="47"/>
       </memberdef>
       <memberdef kind="function" id="classwx_translations_1a7e919eb4e20865fb0f5f75d67791351d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -328,7 +328,7 @@
 <para>Deletes previous translation object and takes ownership of <emphasis>t</emphasis>. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="54"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/translation.h" line="54"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -337,7 +337,7 @@
 <para>In wxWidgets this class manages message catalogs which contain the translations of the strings used to the current language. Unlike <ref refid="classwx_locale" kindref="compound">wxLocale</ref>, it isn&apos;t bound to locale. It can be used either independently of, or in conjunction with <ref refid="classwx_locale" kindref="compound">wxLocale</ref>. In the latter case, you should initialize <ref refid="classwx_locale" kindref="compound">wxLocale</ref> (which creates <ref refid="classwx_translations" kindref="compound">wxTranslations</ref> instance) first; in the former, you need to create a <ref refid="classwx_translations" kindref="compound">wxTranslations</ref> object and <ref refid="classwx_translations_1a7e919eb4e20865fb0f5f75d67791351d" kindref="member">Set()</ref> it manually.</para><para>Only one <ref refid="classwx_translations" kindref="compound">wxTranslations</ref> instance is active at a time; it is set with the <ref refid="classwx_translations_1a7e919eb4e20865fb0f5f75d67791351d" kindref="member">Set()</ref> method and obtained using <ref refid="classwx_translations_1ab384ea68c44e74cfd2cd59e782529540" kindref="member">Get()</ref>.</para><para>Unlike <ref refid="classwx_locale" kindref="compound">wxLocale</ref>, wxTranslations&apos; primary mean of identifying language is by its &quot;canonical name&quot;, i.e. ISO 639 code, possibly combined with ISO 3166 country code and additional modifiers (examples include &quot;fr&quot;, &quot;en_GB&quot; or &quot;ca@valencia&quot;; see <ref refid="classwx_locale_1a89f8b4899148e754d1300bda2fe6600f" kindref="member">wxLocale::GetCanonicalName()</ref> for more information). This allows apps using <ref refid="classwx_translations" kindref="compound">wxTranslations</ref> API to use even languages not recognized by the operating system or not listed in wxLanguage enum.</para><para><simplesect kind="since"><para>2.9.1</para></simplesect>
 <simplesect kind="see"><para><ref refid="classwx_locale" kindref="compound">wxLocale</ref> </para></simplesect>
 </para>    </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" line="36" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/translation.h" bodystart="35" bodyend="237"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/translation.h" line="36" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/translation.h" bodystart="35" bodyend="237"/>
     <listofallmembers>
       <member refid="classwx_translations_1a3074f9d91c92bd0ade9e6aea4affc652" prot="public" virt="non-virtual"><scope>wxTranslations</scope><name>AddCatalog</name></member>
       <member refid="classwx_translations_1a8b0bc47ae1b33f14ae294dbe55da76bd" prot="public" virt="non-virtual"><scope>wxTranslations</scope><name>AddCatalog</name></member>

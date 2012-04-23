@@ -21,7 +21,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="270"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="270"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1afcdfcdf494f5751dd46d165773fc0efe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_variant" kindref="compound">wxVariant</ref> &amp;</type>
@@ -38,7 +38,7 @@
 <para>This can be used to change the value at this index. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="275"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="275"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1aee18e84b818827d3c40308bfadc7634b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -55,7 +55,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="280"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="280"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a7edd81c06681863498e63c29e22a8837" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -68,7 +68,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="286"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="286"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1ac7399aa8b12e52d219cb25e3df87d259" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="291"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="291"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a29c34a65720f05a231bad8c2367ffdb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -98,7 +98,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="296"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="296"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a05ff19ccd483ca93e0dc432d99bc85e0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>size_t</type>
@@ -111,7 +111,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="301"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="301"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a92eb52a1218bbafae28acdb3d5ec9cf1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>wxVariantList &amp;</type>
@@ -124,7 +124,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="307"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="307"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a9d503bb4a843eb149d79f9f3dcec1e3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -141,7 +141,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="312"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="312"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1aa3e04b503d2b550d38a0e0314c8128a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -154,7 +154,7 @@
 <para>This differs from a null variant which has no data; a null list is of type list, but the number of elements in the list is zero. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="319"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="319"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -173,7 +173,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="329"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="329"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a321c33f17f091a11d23d0be83a84737c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -190,7 +190,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="330"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="330"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1aad2c3bdfe0e1800fcf9f1c3c30530df8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -207,7 +207,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="331"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="331"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1ab0a8d43d65a754366083b3e8cd9cfd29" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -224,7 +224,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="332"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="332"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a139a60ef6d6955207907896e4efdda2f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -241,7 +241,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="333"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="333"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a117ab82459602eb4f258213ee465e240" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -258,7 +258,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="334"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="334"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1ab49b307a597a2fef536e2ece81281303" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -275,7 +275,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="335"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="335"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a1950ce22490a1b49f8240010e36cf46e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -292,7 +292,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="336"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="336"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -311,7 +311,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="486"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="486"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a1e460479c4ca73f41a8ecf1a8f725b34" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -328,7 +328,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="487"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="487"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a6a9ae72a73e722d3cc13054437cd9d3e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -345,7 +345,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="488"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="488"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a2ad7fe22d2c406bc6ea604cdd9a08491" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -362,7 +362,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="489"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="489"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1abec79e4427dc32173cd90953f5bc769d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -379,7 +379,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="490"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="490"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a8bc81f33a97e8362904e0cbf70b3906e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -396,7 +396,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="491"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="491"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a2115b91be8551114ba969ef06911a21d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -413,7 +413,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="492"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="492"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1aa6b6c0e582827523ee058f148ea81520" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -430,7 +430,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="493"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="493"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a3bcd20264bbb350128805d43df6cd7fe" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -447,7 +447,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="494"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="494"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a4fc8505a3374a36a70fe4104361d1a3e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -464,7 +464,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="495"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="495"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1ad2d5da867b8772d409a0a7a04a247a95" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -481,7 +481,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="496"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="496"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a440f8513f48afc120e3e0458c5c87728" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -498,7 +498,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="497"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="497"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a05d775d7d879443c5183b918e68b11fb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -515,7 +515,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="498"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="498"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1ab31cec4b27208a1c33525263081d8dda" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -532,7 +532,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="499"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="499"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -551,7 +551,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="507"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="507"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a352aa0714d6a5a588e6d92368ec5706a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -568,7 +568,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="508"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="508"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1aa1bfecd4bef25ee181a5ab80c53c9acf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -585,7 +585,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="509"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="509"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a52af8de8154b85e5902e187befe608fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -602,7 +602,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="510"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="510"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a04862a2cbf9c28c93fa2ba6d7eacf6c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -619,7 +619,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="511"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="511"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1aa6f0109357daf1099453922a58a5dca5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -636,7 +636,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="512"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="512"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a97508fe2ddfe4d32bc9d9d28a6ab48f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -653,7 +653,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="513"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="513"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a6ea55ffa1a509ffcd97761e4c83dabaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -670,7 +670,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="514"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="514"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1ade9d0216cc9b16c895f8c9a53e717e17" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -687,7 +687,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="515"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="515"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a7e5649a39774c6ef10629edd09b91418" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -704,7 +704,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="516"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="516"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a16ca9d55e5bd0a09d7e203ba53ad11ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -721,7 +721,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="517"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="517"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a1df87ada8ae973b24a2aa2d83259ed93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -738,7 +738,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="518"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="518"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1aeb22e27761b1979b6d616322459724b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -755,7 +755,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="519"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="519"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a1f76769caeb0be9668bf00b25b9ddf7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -772,7 +772,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="520"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="520"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1adcf63057c97e796270ca2f31e284362a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -789,7 +789,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="521"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="521"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -808,7 +808,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="528"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="528"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a6f6c0a094c02a07ae8fa0418ee464904" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -825,7 +825,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="529"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="529"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a16ae3f2bbe886cd35de3e00e3215a6db" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -842,7 +842,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="530"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="530"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1ac1b0df2e9bd04ac55517a2e48c2ce3de" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -859,7 +859,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="531"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="531"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1af609de22387b7928ef5dd1a3d4d2427e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -876,7 +876,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="532"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="532"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a000cb251633827e6ea73879fbe721ad4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -893,7 +893,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="533"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="533"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a30c647e74e5ac198a491ec83349a4dad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -910,7 +910,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="534"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="534"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a75b36034a35c1f47b5eb144699cf4a35" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -927,7 +927,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="535"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="535"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a99deba4f2d8f2b7c9bf8fc093d92a178" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -944,7 +944,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="536"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="536"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1ab82c1f43299cc96357263e5a684918c6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -961,7 +961,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="537"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="537"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1af6d1ad46effb9d3e9d79464fcf555b91" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -978,7 +978,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="538"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="538"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a5eb73d91d84df99a9bff527668c40826" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -995,7 +995,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="539"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="539"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a10c5e3b296425eb75820822cc19d7fd1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1012,7 +1012,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="540"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="540"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a6276bfd57a83aa973350f178977fcf2d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1029,7 +1029,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="541"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="541"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="user-defined">
@@ -1044,7 +1044,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="549"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="549"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1aed0cb7db3e14db9a7a321ddb44bb835c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -1057,7 +1057,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="550"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="550"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a08d632cd0c255109e2bcad6ff1e4cf07" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
@@ -1070,7 +1070,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="551"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="551"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1ac292a49388189d00a8ddee8bd731a9b2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_u_long_long" kindref="compound">wxULongLong</ref></type>
@@ -1083,7 +1083,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="552"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="552"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -1098,7 +1098,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="165"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="165"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a6eaf045a214c9b1bb3263d93191b48bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -1120,7 +1120,7 @@
 <para><ref refid="classwx_variant" kindref="compound">wxVariant</ref> will take ownership of the <ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> and will not increase its reference count. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="172"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="172"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1ae25669a56d8fe5459307e2fc1e3afe85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -1137,7 +1137,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="178"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="178"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1ad40b5e70a52ff37abbc0f0d4f46c5b78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -1154,7 +1154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="183"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="183"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a91a257f88e70b005bbf26b03db161d86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -1176,7 +1176,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="188"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="188"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a1c982a17378afbfcb61c164fb0c980cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -1198,7 +1198,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="193"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="193"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1ab949925b14806fe41cb5d505f68f1df2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -1220,7 +1220,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="198"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="198"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1aec7d26c6cb4820736e0b7d3aea104bae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -1242,7 +1242,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="203"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="203"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1aced3af54318f3868346e2698ffec63c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -1264,7 +1264,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="208"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="208"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1acf020eba160a834eb3b5d7c9b5810872" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -1286,7 +1286,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="213"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="213"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a163e302c287ede9d4d5a40b26a899495" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -1308,7 +1308,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="218"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="218"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1acbe6bb4228639473256673079188c2d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -1330,7 +1330,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="223"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="223"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a53f93a36cde0dfb057c78dd76b6baad4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -1352,7 +1352,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="228"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="228"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1adb07bd315f16345db875c0e7e7f9534f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -1374,7 +1374,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="233"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="233"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1ae89736ab7dc6ae6d7356946b1df9a3f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -1396,7 +1396,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="239"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="239"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a7246be0b9ceedaaeff4a54d98b1812de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -1418,7 +1418,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="244"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="244"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1ab2527fd5571ad1d8a00cda438572ad79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -1440,7 +1440,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="249"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="249"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a6acf52ce788f9fc15067be48418d15a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -1454,7 +1454,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="259"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="259"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1ad324e3fcff9b9255e08e06bffd0b1fd6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_any" kindref="compound">wxAny</ref></type>
@@ -1467,7 +1467,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="342"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="342"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1adff9c50c5b888c5aa1b3d7bf85ecbf4b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_array_string" kindref="compound">wxArrayString</ref></type>
@@ -1480,7 +1480,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="347"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="347"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a5104c06c11cc78894d1cbb760b8d4433" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1493,7 +1493,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="352"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="352"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a08a8bc78ee3bbd6f4736640a53d7d239" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_uni_char" kindref="compound">wxUniChar</ref></type>
@@ -1506,7 +1506,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="357"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="357"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1ab19d60e906ce83fe9d800faab619dfc5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_variant_data" kindref="compound">wxVariantData</ref> *</type>
@@ -1519,7 +1519,7 @@
 <para>To take ownership of this data, you must call its <ref refid="classwx_variant_data_1ae25c62e3451463ed287367a7b709e51d" kindref="member">wxVariantData::IncRef()</ref> method. When you stop using it, <ref refid="classwx_variant_data_1a5c90358b8b5d3bc99c0c3410cf565010" kindref="member">wxVariantData::DecRef()</ref> must be called as well. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="364"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="364"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a6ae1f08e07e367e398545ecf360eeaa9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_date_time" kindref="compound">wxDateTime</ref></type>
@@ -1532,7 +1532,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="369"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="369"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a32c047eeefe5fb56a2a343e73e70dbab" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -1545,7 +1545,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="374"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="374"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1ab8a21610ac6295f3f12a5a38581f93a3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -1558,7 +1558,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="379"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="379"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a33dcbb01cb7cf912a3516711ac6932ed" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
@@ -1571,7 +1571,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="384"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="384"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a764f238aa659aa871f20f74dff3e4826" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classwx_string" kindref="compound">wxString</ref> &amp;</type>
@@ -1584,7 +1584,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="389"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="389"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1adb41f1bdb7d1023ab5e51453c8fb21ba" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1597,7 +1597,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="394"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="394"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a585b00398c7800fe3d83d4067a323aa9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1612,7 +1612,7 @@
 </para><para>If the variant is null, the value type returned is the string &quot;null&quot; (not the empty string). </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="415"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="415"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1ac811393f688e5f3d9a4dda92b5ca3cf0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_u_long_long" kindref="compound">wxULongLong</ref></type>
@@ -1625,7 +1625,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="420"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="420"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1ad4f911603b4b265b7aaf330b48ea027d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -1638,7 +1638,7 @@
 <para>Notice that this method can be used for null objects (i.e. those for which <ref refid="classwx_variant_1a60ce75cca3c61a25f3218d35a438f799" kindref="member">IsNull()</ref> returns true) and will return NULL for them. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="428"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="428"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1aec88e406d8c839f6ddbddeb8f60000b2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_object" kindref="compound">wxObject</ref> *</type>
@@ -1651,7 +1651,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="433"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="433"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a60ce75cca3c61a25f3218d35a438f799" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1664,7 +1664,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="439"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="439"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a0afc31d5ac845edfdfe648801a86d0a8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1681,7 +1681,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="445"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="445"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a0722c6e192220202584211deaddc55bb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1698,7 +1698,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="451"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="451"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1ae626ad693c64badb2cfc5e8fe7a7edd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1711,7 +1711,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="456"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="456"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1ad6843bd4389d5140f40c39d0b12f35d9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1724,7 +1724,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="461"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="461"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1ac28c74227400cd94366d081eaf4fc3dc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1741,7 +1741,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="466"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="466"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a1ff85149312b1f6e278f136c4b4af861" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1758,7 +1758,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="472"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="472"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1af5021c0a8bfb8ce1b987764ab662b132" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -1771,7 +1771,7 @@
 <para>For this to work, <ref refid="classwx_variant_data_1a1dff3469897917c2d583c54ec03a1795" kindref="member">wxVariantData::Clone()</ref> must be implemented for the data types you are working with. <ref refid="classwx_variant_data_1a1dff3469897917c2d583c54ec03a1795" kindref="member">wxVariantData::Clone()</ref> is implemented for all the default data types. </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="480"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="480"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a868dfef679c301987451736079649efc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -1784,7 +1784,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="559"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="559"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a7de87946dd8c1e47f5805b9c517d8f72" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>char</type>
@@ -1797,7 +1797,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="564"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="564"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a342b8c3667306dc2dd5588b9953c50e8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>void *</type>
@@ -1810,7 +1810,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="570"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="570"/>
       </memberdef>
       <memberdef kind="function" id="classwx_variant_1a335640fb09ecc7dd826f7ad7bb48893b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_string" kindref="compound">wxString</ref></type>
@@ -1823,7 +1823,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="575"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="575"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1886,37 +1886,37 @@ Supplied conversion functions will automatically work with all built-in <ref ref
 </para></sect1>
     </detaileddescription>
     <inheritancegraph>
-      <node id="11315">
+      <node id="11504">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="11314">
+      <node id="11503">
         <label>wxVariant</label>
         <link refid="classwx_variant"/>
-        <childnode refid="11315" relation="public-inheritance">
+        <childnode refid="11504" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="11317">
+      <node id="11506">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="11318" relation="usage">
+        <childnode refid="11507" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="11316">
+      <node id="11505">
         <label>wxVariant</label>
         <link refid="classwx_variant"/>
-        <childnode refid="11317" relation="public-inheritance">
+        <childnode refid="11506" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="11318">
+      <node id="11507">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" line="160" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/variant.h" bodystart="159" bodyend="576"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" line="160" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/variant.h" bodystart="159" bodyend="576"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxVariant</scope><name>AllocExclusive</name></member>
       <member refid="classwx_variant_1aee18e84b818827d3c40308bfadc7634b" prot="public" virt="non-virtual"><scope>wxVariant</scope><name>Append</name></member>

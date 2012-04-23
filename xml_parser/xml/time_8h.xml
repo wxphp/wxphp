@@ -14,7 +14,7 @@
 <para>Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/time.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/time.h" line="19"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/time.h" line="19"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__time_1gaa47bc61fdb1251cfc6ee234520e1df27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -28,7 +28,7 @@
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/time.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/time.h" line="28"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/time.h" line="28"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__time_1ga163e97c4b3b5eeb0c8de80cd81ae09da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
@@ -42,7 +42,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/time.h&gt; </
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/time.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/time.h" line="41"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/time.h" line="41"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__time_1ga673d50c96dd575ba6658fa1b094dc769" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>long</type>
@@ -56,7 +56,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/time.h&gt; </
 Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/time.h&gt; </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/time.h" line="50"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/time.h" line="50"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__time_1ga9e6cb143b3e04cf0459aa3f9763eec82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
@@ -70,7 +70,7 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/time.h&gt; </
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/time.h" line="59"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/time.h" line="59"/>
       </memberdef>
       <memberdef kind="function" id="group__group__funcmacro__time_1gafd807c12555028ba730f4aa56983339c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_long_long" kindref="compound">wxLongLong</ref></type>
@@ -84,13 +84,13 @@ Include <ulink url="file:">file:</ulink> <verbatim>#include &lt;wx/time.h&gt; </
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/time.h" line="68"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/time.h" line="68"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/time.h"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/time.h"/>
   </compounddef>
 </doxygen>

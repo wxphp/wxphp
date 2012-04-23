@@ -26,7 +26,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="472"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="521"/>
       </memberdef>
       <memberdef kind="function" id="classwx_aui_notebook_event_1af6023fdf114290606e494b135e603965" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classwx_event" kindref="compound">wxEvent</ref> *</type>
@@ -39,7 +39,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="474"/>
+        <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="523"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -48,6 +48,7 @@
 <para><heading level="2">Events emitted by this class</heading>
 </para><para>The following event handler macros redirect the events to member function handlers &apos;<bold>func</bold>&apos; with prototypes like: void<nonbreakablespace/>handlerFuncName(<ref refid="classwx_aui_notebook_event" kindref="compound">wxAuiNotebookEvent</ref>&amp;<nonbreakablespace/>event)Event macros for events emitted by this class: <itemizedlist>
 <listitem><para>EVT_AUINOTEBOOK_PAGE_CLOSE(id,  func): A page is about to be closed. Processes a <computeroutput>wxEVT_COMMAND_AUINOTEBOOK_PAGE_CLOSE</computeroutput> event. </para></listitem>
+<listitem><para>EVT_AUINOTEBOOK_PAGE_CLOSED(winid,  fn): A page has been closed. Processes a <computeroutput>wxEVT_COMMAND_AUINOTEBOOK_PAGE_CLOSED</computeroutput> event. </para></listitem>
 <listitem><para>EVT_AUINOTEBOOK_PAGE_CHANGED(id,  func): The page selection was changed. Processes a <computeroutput>wxEVT_COMMAND_AUINOTEBOOK_PAGE_CHANGED</computeroutput> event. </para></listitem>
 <listitem><para>EVT_AUINOTEBOOK_PAGE_CHANGING(id,  func): The page selection is about to be changed. Processes a <computeroutput>wxEVT_COMMAND_AUINOTEBOOK_PAGE_CHANGING</computeroutput> event. This event can be vetoed. </para></listitem>
 <listitem><para>EVT_AUINOTEBOOK_BUTTON(id,  func): The window list button has been pressed. Processes a <computeroutput>wxEVT_COMMAND_AUINOTEBOOK_BUTTON</computeroutput> event. </para></listitem>
@@ -55,90 +56,96 @@
 <listitem><para>EVT_AUINOTEBOOK_END_DRAG(id,  func): Dragging has ended. Processes a <computeroutput>wxEVT_COMMAND_AUINOTEBOOK_END_DRAG</computeroutput> event. </para></listitem>
 <listitem><para>EVT_AUINOTEBOOK_DRAG_MOTION(id,  func): Emitted during a drag and drop operation. Processes a <computeroutput>wxEVT_COMMAND_AUINOTEBOOK_DRAG_MOTION</computeroutput> event. </para></listitem>
 <listitem><para>EVT_AUINOTEBOOK_ALLOW_DND(id,  func): Whether to allow a tab to be dropped. Processes a <computeroutput>wxEVT_COMMAND_AUINOTEBOOK_ALLOW_DND</computeroutput> event. This event must be specially allowed. </para></listitem>
+<listitem><para>EVT_AUINOTEBOOK_DRAG_DONE(winid,  fn): Notify that the tab has been dragged. Processes a <computeroutput>wxEVT_COMMAND_AUINOTEBOOK_DRAG_DONE</computeroutput> event. </para></listitem>
+<listitem><para>EVT_AUINOTEBOOK_TAB_MIDDLE_DOWN(winid,  fn): The middle mouse button is pressed on a tab. Processes a <computeroutput>wxEVT_COMMAND_AUINOTEBOOK_TAB_MIDDLE_DOWN</computeroutput> event. </para></listitem>
+<listitem><para>EVT_AUINOTEBOOK_TAB_MIDDLE_UP(winid,  fn): The middle mouse button is released on a tab. Processes a <computeroutput>wxEVT_COMMAND_AUINOTEBOOK_TAB_MIDDLE_UP</computeroutput> event. </para></listitem>
+<listitem><para>EVT_AUINOTEBOOK_TAB_RIGHT_DOWN(winid,  fn): The right mouse button is pressed on a tab. Processes a <computeroutput>wxEVT_COMMAND_AUINOTEBOOK_TAB_RIGHT_DOWN</computeroutput> event. </para></listitem>
+<listitem><para>EVT_AUINOTEBOOK_TAB_RIGHT_UP(winid,  fn): The right mouse button is released on a tab. Processes a <computeroutput>wxEVT_COMMAND_AUINOTEBOOK_TAB_RIGHT_UP</computeroutput> event. </para></listitem>
+<listitem><para>EVT_AUINOTEBOOK_BG_DCLICK(winid,  fn): Double clicked on the tabs background area. Processes a <computeroutput>wxEVT_COMMAND_AUINOTEBOOK_BG_DCLICK</computeroutput> event. </para></listitem>
 </itemizedlist>
 <heading level="2"></heading>
 </para><para>Library:<nonbreakablespace/><nonbreakablespace/><ref refid="page_libs_1page_libs_wxaui" kindref="member">wxAui</ref></para><para>Category:<nonbreakablespace/><nonbreakablespace/><ref refid="group__group__class__events" kindref="compound">Events</ref>, <ref refid="group__group__class__bookctrl" kindref="compound">Book Controls</ref></para><para><simplesect kind="see"><para><ref refid="classwx_aui_notebook" kindref="compound">wxAuiNotebook</ref>, <ref refid="classwx_book_ctrl_event" kindref="compound">wxBookCtrlEvent</ref> </para></simplesect>
 </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="4399">
+      <node id="4489">
         <label>wxObject</label>
         <link refid="classwx_object"/>
       </node>
-      <node id="4397">
+      <node id="4487">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="4398" relation="public-inheritance">
+        <childnode refid="4488" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4395">
+      <node id="4485">
         <label>wxBookCtrlEvent</label>
         <link refid="classwx_book_ctrl_event"/>
-        <childnode refid="4396" relation="public-inheritance">
+        <childnode refid="4486" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4396">
+      <node id="4486">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="4397" relation="public-inheritance">
+        <childnode refid="4487" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4394">
+      <node id="4484">
         <label>wxAuiNotebookEvent</label>
         <link refid="classwx_aui_notebook_event"/>
-        <childnode refid="4395" relation="public-inheritance">
+        <childnode refid="4485" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4398">
+      <node id="4488">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="4399" relation="public-inheritance">
+        <childnode refid="4489" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="4405">
+      <node id="4495">
         <label>wxObject</label>
         <link refid="classwx_object"/>
-        <childnode refid="4406" relation="usage">
+        <childnode refid="4496" relation="usage">
           <edgelabel>m_refData</edgelabel>
         </childnode>
       </node>
-      <node id="4403">
+      <node id="4493">
         <label>wxCommandEvent</label>
         <link refid="classwx_command_event"/>
-        <childnode refid="4404" relation="public-inheritance">
+        <childnode refid="4494" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4401">
+      <node id="4491">
         <label>wxBookCtrlEvent</label>
         <link refid="classwx_book_ctrl_event"/>
-        <childnode refid="4402" relation="public-inheritance">
+        <childnode refid="4492" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4402">
+      <node id="4492">
         <label>wxNotifyEvent</label>
         <link refid="classwx_notify_event"/>
-        <childnode refid="4403" relation="public-inheritance">
+        <childnode refid="4493" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4400">
+      <node id="4490">
         <label>wxAuiNotebookEvent</label>
         <link refid="classwx_aui_notebook_event"/>
-        <childnode refid="4401" relation="public-inheritance">
+        <childnode refid="4491" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4404">
+      <node id="4494">
         <label>wxEvent</label>
         <link refid="classwx_event"/>
-        <childnode refid="4405" relation="public-inheritance">
+        <childnode refid="4495" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="4406">
+      <node id="4496">
         <label>wxObjectRefData</label>
         <link refid="classwx_object_ref_data"/>
       </node>
     </collaborationgraph>
-    <location file="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" line="467" bodyfile="/home/jgm/Development/wxWidgets-2.9.3/interface/wx/aui/auibook.h" bodystart="466" bodyend="475"/>
+    <location file="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" line="516" bodyfile="/home/jgm/Development/wxWidgets-svn/interface/wx/aui/auibook.h" bodystart="515" bodyend="524"/>
     <listofallmembers>
       <member refid="classwx_object_1a60204063f3cc3aa2fa1c7ff5bda9eb13" prot="protected" virt="non-virtual"><scope>wxAuiNotebookEvent</scope><name>AllocExclusive</name></member>
       <member refid="classwx_notify_event_1a7b23515f827b2ce1da1e6990d9aafe80" prot="public" virt="non-virtual"><scope>wxAuiNotebookEvent</scope><name>Allow</name></member>
