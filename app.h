@@ -1,4 +1,4 @@
-/**
+/*
  * @author Mário Soares
  * 
  * @license 

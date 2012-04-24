@@ -422,6 +422,7 @@ foreach($defConsts as $constant_name => $constant_value)
 $classes .= "\n";
 $classes .= "\t//Variables found on global_variables.json\n";
 $classes .= "\n";
+$object_constants = ""; //To store constants of type object since they need to be initialized on the RINIT
 foreach($defGlobals as $variable_name => $variable_type)
 {
 	//Skip already defined (repeated) constants
@@ -440,8 +441,8 @@ foreach($defGlobals as $variable_name => $variable_type)
 	//defined as #define wxTransparentColour wxColour(0, 0, 0, wxALPHA_TRANSPARENT) on wx/colour.h
 	if($variable_name == "wxTransparentColour")
 	{
-		$classes .= "\twxColour* _wx_transparent_color = new wxColour(0, 0, 0, wxALPHA_TRANSPARENT);\n";
-		$classes .= "\twxPHP_REGISTER_RESOURCE_CONSTANT(\"wxTransparentColour\", (void*) _wx_transparent_color, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);\n";
+		$object_constants .= tabs(2) . "wxColour* _wx_transparent_color = new wxColour(0, 0, 0, wxALPHA_TRANSPARENT);\n";
+		$object_constants .= tabs(2) . "wxPHP_REGISTER_RESOURCE_CONSTANT(\"wxTransparentColour\", (void*) _wx_transparent_color, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);\n";
 		continue;
 	}
 	
@@ -576,14 +577,14 @@ foreach($defGlobals as $variable_name => $variable_type)
 			{
 				case "pointer":
 				case "const_pointer":
-					$classes .= "\twxPHP_REGISTER_RESOURCE_CONSTANT(\"$variable_name\", (void*) {$variable_name}, php_{$plain_type}_entry, le_{$plain_type}, CONST_CS | CONST_PERSISTENT);\n";
+					$object_constants .= tabs(2) . "wxPHP_REGISTER_RESOURCE_CONSTANT(\"$variable_name\", (void*) {$variable_name}, php_{$plain_type}_entry, le_{$plain_type}, CONST_CS | CONST_PERSISTENT);\n";
 					break;
 					
 				case "reference":
 				case "const_reference":
 				case "none":
 				case "const_none":
-					$classes .= "\twxPHP_REGISTER_RESOURCE_CONSTANT(\"$variable_name\", (void*) &{$variable_name}, php_{$plain_type}_entry, le_{$plain_type}, CONST_CS | CONST_PERSISTENT);\n";
+					$object_constants .= tabs(2) . "wxPHP_REGISTER_RESOURCE_CONSTANT(\"$variable_name\", (void*) &{$variable_name}, php_{$plain_type}_entry, le_{$plain_type}, CONST_CS | CONST_PERSISTENT);\n";
 					break;
 			}
 			break;

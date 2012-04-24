@@ -18945,6 +18945,96 @@ static zend_function_entry php_wxWidgets_functions[] = {
 	PHP_FE_END //Equivalent to { NULL, NULL, NULL, 0, 0 } at time of writing on PHP 5.4
 };
 
+PHP_RINIT_FUNCTION(php_wxWidgets)
+{
+	static int objects_intialized = 0;
+	
+	/**
+	 * Space reserved for the initialization of global object 
+	 * constants, since the php engine doesnt initializes the object
+	 * store prior to calling extensions MINIT function.
+	 * 
+	 * Note:
+	 * 
+	 * Predefined fonts, pens brushes, colors and cursos are  initilized 
+	 * by 'wxStockGDI::instance().Get*(item)' functions and it needs 
+	 * wxInitilize call in order to work (learned this the hard way)
+	 */
+	 
+	if(objects_intialized < 1)
+	{
+		wxInitialize();
+	 
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullBitmap", (void*) &wxNullBitmap, php_wxBitmap_entry, le_wxBitmap, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullFont", (void*) &wxNullFont, php_wxFont_entry, le_wxFont, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNORMAL_FONT", (void*) wxNORMAL_FONT, php_wxFont_entry, le_wxFont, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxSMALL_FONT", (void*) wxSMALL_FONT, php_wxFont_entry, le_wxFont, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxITALIC_FONT", (void*) wxITALIC_FONT, php_wxFont_entry, le_wxFont, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxSWISS_FONT", (void*) wxSWISS_FONT, php_wxFont_entry, le_wxFont, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxTheFontList", (void*) wxTheFontList, php_wxFontList_entry, le_wxFontList, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullAnimation", (void*) &wxNullAnimation, php_wxAnimation_entry, le_wxAnimation, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullBrush", (void*) &wxNullBrush, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxBLUE_BRUSH", (void*) wxBLUE_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxGREEN_BRUSH", (void*) wxGREEN_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxYELLOW_BRUSH", (void*) wxYELLOW_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxWHITE_BRUSH", (void*) wxWHITE_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxBLACK_BRUSH", (void*) wxBLACK_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxGREY_BRUSH", (void*) wxGREY_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxMEDIUM_GREY_BRUSH", (void*) wxMEDIUM_GREY_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxLIGHT_GREY_BRUSH", (void*) wxLIGHT_GREY_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxTRANSPARENT_BRUSH", (void*) wxTRANSPARENT_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxCYAN_BRUSH", (void*) wxCYAN_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxRED_BRUSH", (void*) wxRED_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullColour", (void*) &wxNullColour, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
+		wxColour* _wx_transparent_color = new wxColour(0, 0, 0, wxALPHA_TRANSPARENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxTransparentColour", (void*) _wx_transparent_color, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxBLACK", (void*) wxBLACK, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxBLUE", (void*) wxBLUE, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxCYAN", (void*) wxCYAN, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxGREEN", (void*) wxGREEN, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxYELLOW", (void*) wxYELLOW, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxLIGHT_GREY", (void*) wxLIGHT_GREY, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxRED", (void*) wxRED, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxWHITE", (void*) wxWHITE, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullCursor", (void*) &wxNullCursor, php_wxCursor_entry, le_wxCursor, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxSTANDARD_CURSOR", (void*) wxSTANDARD_CURSOR, php_wxCursor_entry, le_wxCursor, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxHOURGLASS_CURSOR", (void*) wxHOURGLASS_CURSOR, php_wxCursor_entry, le_wxCursor, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxCROSS_CURSOR", (void*) wxCROSS_CURSOR, php_wxCursor_entry, le_wxCursor, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxDefaultSpan", (void*) &wxDefaultSpan, php_wxGBSpan_entry, le_wxGBSpan, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxDefaultPosition", (void*) &wxDefaultPosition, php_wxPoint_entry, le_wxPoint, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxTheColourDatabase", (void*) wxTheColourDatabase, php_wxColourDatabase_entry, le_wxColourDatabase, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxDefaultSize", (void*) &wxDefaultSize, php_wxSize_entry, le_wxSize, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullGraphicsMatrix", (void*) &wxNullGraphicsMatrix, php_wxGraphicsMatrix_entry, le_wxGraphicsMatrix, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullIcon", (void*) &wxNullIcon, php_wxIcon_entry, le_wxIcon, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullIconBundle", (void*) &wxNullIconBundle, php_wxIconBundle_entry, le_wxIconBundle, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullImage", (void*) &wxNullImage, php_wxImage_entry, le_wxImage, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullPalette", (void*) &wxNullPalette, php_wxPalette_entry, le_wxPalette, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullPen", (void*) &wxNullPen, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxRED_PEN", (void*) wxRED_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxBLUE_PEN", (void*) wxBLUE_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxCYAN_PEN", (void*) wxCYAN_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxGREEN_PEN", (void*) wxGREEN_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxYELLOW_PEN", (void*) wxYELLOW_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxBLACK_PEN", (void*) wxBLACK_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxWHITE_PEN", (void*) wxWHITE_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxTRANSPARENT_PEN", (void*) wxTRANSPARENT_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxBLACK_DASHED_PEN", (void*) wxBLACK_DASHED_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxGREY_PEN", (void*) wxGREY_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxMEDIUM_GREY_PEN", (void*) wxMEDIUM_GREY_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxLIGHT_GREY_PEN", (void*) wxLIGHT_GREY_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxThePenList", (void*) wxThePenList, php_wxPenList_entry, le_wxPenList, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxTLI_FIRST", (void*) &wxTLI_FIRST, php_wxTreeListItem_entry, le_wxTreeListItem, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxTLI_LAST", (void*) &wxTLI_LAST, php_wxTreeListItem_entry, le_wxTreeListItem, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxDefaultValidator", (void*) &wxDefaultValidator, php_wxValidator_entry, le_wxValidator, CONST_CS | CONST_PERSISTENT);
+		wxPHP_REGISTER_RESOURCE_CONSTANT("wxDefaultVideoMode", (void*) &wxDefaultVideoMode, php_wxVideoMode_entry, le_wxVideoMode, CONST_CS | CONST_PERSISTENT);
+	
+		wxUninitialize(); //Maybe this shouldn't be called for references like wxNORMAL_FONT
+		
+		objects_intialized = 1;
+	}
+		
+    return SUCCESS;
+}
 
 PHP_MINIT_FUNCTION(php_wxWidgets)
 {
@@ -18961,15 +19051,8 @@ PHP_MINIT_FUNCTION(php_wxWidgets)
 	/**
 	 * Space reserved for the initialization of autogenerated classes,
 	 * class enumerations and global constants
-	 * 
-	 * Note:
-	 * 
-	 * Predefined fonts, pens brushes, colors and cursos are  initilized 
-	 * by 'wxStockGDI::instance().Get*(item)' functions and it needs 
-	 * wxInitilize call in order to work (learned this the hard way)
 	 */
-	 wxInitialize();
-	 
+	  
 	INIT_CLASS_ENTRY(ce, PHP_wxScrolledWindow_NAME , php_wxScrolledWindow_functions);
 	php_wxScrolledWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxScrolledWindow = zend_register_list_destructors_ex(php_wxScrolledWindow_destruction_handler, NULL, le_wxScrolledWindow_name, module_number);
@@ -23652,17 +23735,9 @@ PHP_MINIT_FUNCTION(php_wxWidgets)
 
 	//Variables found on global_variables.json
 
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullBitmap", (void*) &wxNullBitmap, php_wxBitmap_entry, le_wxBitmap, CONST_CS | CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxDefaultDateTime", time(NULL), CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullFont", (void*) &wxNullFont, php_wxFont_entry, le_wxFont, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxNORMAL_FONT", (void*) wxNORMAL_FONT, php_wxFont_entry, le_wxFont, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxSMALL_FONT", (void*) wxSMALL_FONT, php_wxFont_entry, le_wxFont, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxITALIC_FONT", (void*) wxITALIC_FONT, php_wxFont_entry, le_wxFont, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxSWISS_FONT", (void*) wxSWISS_FONT, php_wxFont_entry, le_wxFont, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxTheFontList", (void*) wxTheFontList, php_wxFontList_entry, le_wxFontList, CONST_CS | CONST_PERSISTENT);
 	char _wx_empty_string[] = "";
 	REGISTER_STRING_CONSTANT("wxEmptyString", _wx_empty_string, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullAnimation", (void*) &wxNullAnimation, php_wxAnimation_entry, le_wxAnimation, CONST_CS | CONST_PERSISTENT);
 	char _wxchar_wxART_TOOLBAR[] = wxART_TOOLBAR;
 	REGISTER_STRING_CONSTANT("wxART_TOOLBAR", _wxchar_wxART_TOOLBAR, CONST_CS | CONST_PERSISTENT);
 	char _wxchar_wxART_MENU[] = wxART_MENU;
@@ -23787,37 +23862,10 @@ PHP_MINIT_FUNCTION(php_wxWidgets)
 	REGISTER_STRING_CONSTANT("wxART_FIND", _wxchar_wxART_FIND, CONST_CS | CONST_PERSISTENT);
 	char _wxchar_wxART_FIND_AND_REPLACE[] = wxART_FIND_AND_REPLACE;
 	REGISTER_STRING_CONSTANT("wxART_FIND_AND_REPLACE", _wxchar_wxART_FIND_AND_REPLACE, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullBrush", (void*) &wxNullBrush, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxBLUE_BRUSH", (void*) wxBLUE_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxGREEN_BRUSH", (void*) wxGREEN_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxYELLOW_BRUSH", (void*) wxYELLOW_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxWHITE_BRUSH", (void*) wxWHITE_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxBLACK_BRUSH", (void*) wxBLACK_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxGREY_BRUSH", (void*) wxGREY_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxMEDIUM_GREY_BRUSH", (void*) wxMEDIUM_GREY_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxLIGHT_GREY_BRUSH", (void*) wxLIGHT_GREY_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxTRANSPARENT_BRUSH", (void*) wxTRANSPARENT_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxCYAN_BRUSH", (void*) wxCYAN_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxRED_BRUSH", (void*) wxRED_BRUSH, php_wxBrush_entry, le_wxBrush, CONST_CS | CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxEVT_CALENDAR_PAGE_CHANGED", wxEVT_CALENDAR_PAGE_CHANGED, CONST_CS | CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxEVT_CALENDAR_WEEK_CLICKED", wxEVT_CALENDAR_WEEK_CLICKED, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullColour", (void*) &wxNullColour, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
-	wxColour* _wx_transparent_color = new wxColour(0, 0, 0, wxALPHA_TRANSPARENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxTransparentColour", (void*) _wx_transparent_color, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxBLACK", (void*) wxBLACK, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxBLUE", (void*) wxBLUE, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxCYAN", (void*) wxCYAN, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxGREEN", (void*) wxGREEN, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxYELLOW", (void*) wxYELLOW, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxLIGHT_GREY", (void*) wxLIGHT_GREY, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxRED", (void*) wxRED, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxWHITE", (void*) wxWHITE, php_wxColour_entry, le_wxColour, CONST_CS | CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxALPHA_TRANSPARENT", wxALPHA_TRANSPARENT, CONST_CS | CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxALPHA_OPAQUE", wxALPHA_OPAQUE, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullCursor", (void*) &wxNullCursor, php_wxCursor_entry, le_wxCursor, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxSTANDARD_CURSOR", (void*) wxSTANDARD_CURSOR, php_wxCursor_entry, le_wxCursor, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxHOURGLASS_CURSOR", (void*) wxHOURGLASS_CURSOR, php_wxCursor_entry, le_wxCursor, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxCROSS_CURSOR", (void*) wxCROSS_CURSOR, php_wxCursor_entry, le_wxCursor, CONST_CS | CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxEVT_COMMAND_DATAVIEW_SELECTION_CHANGED", wxEVT_COMMAND_DATAVIEW_SELECTION_CHANGED, CONST_CS | CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxEVT_COMMAND_DATAVIEW_ITEM_ACTIVATED", wxEVT_COMMAND_DATAVIEW_ITEM_ACTIVATED, CONST_CS | CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxEVT_COMMAND_DATAVIEW_ITEM_COLLAPSING", wxEVT_COMMAND_DATAVIEW_ITEM_COLLAPSING, CONST_CS | CONST_PERSISTENT);
@@ -23868,34 +23916,11 @@ PHP_MINIT_FUNCTION(php_wxWidgets)
 	REGISTER_LONG_CONSTANT("wxEVT_FILECTRL_FILTERCHANGED", wxEVT_FILECTRL_FILTERCHANGED, CONST_CS | CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxFileSelectorDefaultWildcardStr", reinterpret_cast<long int>(wxFileSelectorDefaultWildcardStr), CONST_CS | CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxInvalidOffset", wxInvalidOffset, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxDefaultSpan", (void*) &wxDefaultSpan, php_wxGBSpan_entry, le_wxGBSpan, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxDefaultPosition", (void*) &wxDefaultPosition, php_wxPoint_entry, le_wxPoint, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxTheColourDatabase", (void*) wxTheColourDatabase, php_wxColourDatabase_entry, le_wxColourDatabase, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxDefaultSize", (void*) &wxDefaultSize, php_wxSize_entry, le_wxSize, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullGraphicsMatrix", (void*) &wxNullGraphicsMatrix, php_wxGraphicsMatrix_entry, le_wxGraphicsMatrix, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullIcon", (void*) &wxNullIcon, php_wxIcon_entry, le_wxIcon, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullIconBundle", (void*) &wxNullIconBundle, php_wxIconBundle_entry, le_wxIconBundle, CONST_CS | CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxIMAGE_ALPHA_TRANSPARENT", wxIMAGE_ALPHA_TRANSPARENT, CONST_CS | CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxIMAGE_ALPHA_OPAQUE", wxIMAGE_ALPHA_OPAQUE, CONST_CS | CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxIMAGE_ALPHA_THRESHOLD", wxIMAGE_ALPHA_THRESHOLD, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullImage", (void*) &wxNullImage, php_wxImage_entry, le_wxImage, CONST_CS | CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxLAYOUT_DEFAULT_MARGIN", wxLAYOUT_DEFAULT_MARGIN, CONST_CS | CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxMessageBoxCaptionStr", reinterpret_cast<long int>(wxMessageBoxCaptionStr), CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullPalette", (void*) &wxNullPalette, php_wxPalette_entry, le_wxPalette, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxNullPen", (void*) &wxNullPen, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxRED_PEN", (void*) wxRED_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxBLUE_PEN", (void*) wxBLUE_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxCYAN_PEN", (void*) wxCYAN_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxGREEN_PEN", (void*) wxGREEN_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxYELLOW_PEN", (void*) wxYELLOW_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxBLACK_PEN", (void*) wxBLACK_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxWHITE_PEN", (void*) wxWHITE_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxTRANSPARENT_PEN", (void*) wxTRANSPARENT_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxBLACK_DASHED_PEN", (void*) wxBLACK_DASHED_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxGREY_PEN", (void*) wxGREY_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxMEDIUM_GREY_PEN", (void*) wxMEDIUM_GREY_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxLIGHT_GREY_PEN", (void*) wxLIGHT_GREY_PEN, php_wxPen_entry, le_wxPen, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxThePenList", (void*) wxThePenList, php_wxPenList_entry, le_wxPenList, CONST_CS | CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxEVT_COMMAND_SPINCTRLDOUBLE_UPDATED", wxEVT_COMMAND_SPINCTRLDOUBLE_UPDATED, CONST_CS | CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxEVT_TASKBAR_BALLOON_TIMEOUT", wxEVT_TASKBAR_BALLOON_TIMEOUT, CONST_CS | CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxEVT_TASKBAR_BALLOON_CLICK", wxEVT_TASKBAR_BALLOON_CLICK, CONST_CS | CONST_PERSISTENT);
@@ -23918,10 +23943,6 @@ PHP_MINIT_FUNCTION(php_wxWidgets)
 	REGISTER_LONG_CONSTANT("wxTREE_HITTEST_ONITEMUPPERPART", wxTREE_HITTEST_ONITEMUPPERPART, CONST_CS | CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxTREE_HITTEST_ONITEMLOWERPART", wxTREE_HITTEST_ONITEMLOWERPART, CONST_CS | CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxTREE_HITTEST_ONITEM", wxTREE_HITTEST_ONITEM, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxTLI_FIRST", (void*) &wxTLI_FIRST, php_wxTreeListItem_entry, le_wxTreeListItem, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxTLI_LAST", (void*) &wxTLI_LAST, php_wxTreeListItem_entry, le_wxTreeListItem, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxDefaultValidator", (void*) &wxDefaultValidator, php_wxValidator_entry, le_wxValidator, CONST_CS | CONST_PERSISTENT);
-	wxPHP_REGISTER_RESOURCE_CONSTANT("wxDefaultVideoMode", (void*) &wxDefaultVideoMode, php_wxVideoMode_entry, le_wxVideoMode, CONST_CS | CONST_PERSISTENT);
 
 	//Class enumerations
 
@@ -23959,8 +23980,6 @@ PHP_MINIT_FUNCTION(php_wxWidgets)
 	zend_declare_class_constant_long(php_wxStandardPaths_entry, "ResourceCat_None", 1,  wxStandardPaths::ResourceCat_None TSRMLS_DC);
 	zend_declare_class_constant_long(php_wxStandardPaths_entry, "ResourceCat_Messages", 1,  wxStandardPaths::ResourceCat_Messages TSRMLS_DC);
 	
-	wxUninitialize(); //Maybe this shouldn't be called for references like wxNORMAL_FONT
-	
     return SUCCESS;
 }
 
@@ -23989,7 +24008,7 @@ zend_module_entry wxWidgets_module_entry = {
     php_wxWidgets_functions, 	/* Functions (module functions) */
     PHP_MINIT(php_wxWidgets), 	/* MINIT (module initialization function) */
     NULL, 						/* MSHUTDOWN (module shutdown function) */
-    NULL, 						/* RINIT (request initialization function) */
+    PHP_RINIT(php_wxWidgets),	/* RINIT (request initialization function) */
     NULL, 						/* RSHUTDOWN (request shutdown function) */
     NULL, 						/* MINFO (module information function) */
 #if ZEND_MODULE_API_NO >= 20010901

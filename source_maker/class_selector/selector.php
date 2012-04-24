@@ -15,7 +15,10 @@
 */
 
 //Load the wxPHP module
-dl("wxwidgets.so");
+if(!extension_loaded('wxwidgets'))
+{
+	dl('wxwidgets.' . PHP_SHLIB_SUFFIX);
+}
 
 //Change to correct working directory to be able to execute the script from everywhere
 if($argv[0] == $_SERVER["SCRIPT_NAME"])

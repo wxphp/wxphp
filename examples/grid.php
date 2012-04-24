@@ -1,7 +1,10 @@
 <?php
 
 //Load the wxPHP module
-dl("wxwidgets.so");
+if(!extension_loaded('wxwidgets'))
+{
+	dl('wxwidgets.' . PHP_SHLIB_SUFFIX);
+}
 
 /*
 * PHP code generated with wxFormBuilder (version Jan  5 2012)

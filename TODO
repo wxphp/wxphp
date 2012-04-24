@@ -3,6 +3,9 @@ Short term TODO
 
 * Fix segmentation bug that occurs on shutdown (FIXED).
 
+* Check why PHP Segfaults when loading the library from the php.ini while
+  loading it with dl function works as expected. (FIXED)
+
 * fix xml_parser not using <array>[]</array> on argument types (DONE)
 
 * Update config.w32 and configd.w32 to use new wxWidgets 2.9.x (almost done)
@@ -16,8 +19,9 @@ Short term TODO
 * Implement compare_objects handler for wxWidget classes that implement
   operator== etc...
   
-* Check why PHP Segfaults when loading the library from the php.ini while
-  loading it with dl function works as expected.
+* Fix strange behaviour on wxOSX where the application receives mouse
+  events correctly but not keyboard ones. I suspect of the way
+  we are initliazing the wxPHP library to run applications.
   
   
 Long term TODO
