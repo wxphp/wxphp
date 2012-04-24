@@ -7,14 +7,19 @@
  * 
  * @description
  * Small application for converting pdf documents to ready to use swf
- * documents for the web using viewers like flexpaper.
+ * documents for the web using viewers like flexpaper. This script relies
+ * on the swftools pdf2swf utility, so you need to have it set on your path.
  * 
  * @note 
  * Parts of the GUI generated with wxFormBuilder
  * 
  */
  
-dl("wxwidgets.so");
+//Load the wxPHP module
+if(!extension_loaded('wxwidgets'))
+{
+	dl('wxwidgets.' . PHP_SHLIB_SUFFIX);
+}
 
 class DocumentConverter extends wxThread
 {

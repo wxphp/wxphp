@@ -14,7 +14,7 @@ very similar to the one used on original implementation of wxWidgets C++.
 Building in Windows
 ========================================================================
 
-. Download and install wxWidgets 2.9.3
+. Download and install wxWidgets Latest SVN Trunk
 	make sure to have your enviroment variables configured.
 	set LIB=%LIB%;%WXWIN%\lib\vc_lib
 	set INCLUDE=%INCLUDE%;%WXWIN%\include
@@ -34,12 +34,12 @@ Building and Installing on Linux
 ========================================================================
 
 . Compile wxWidgets library and development packages, currently we have
-  tested with latest 2.9.3 distributed on wxwidgets.org
+  tested with latest svn revision 71250 distributed on wxwidgets.org
 
 	Download wxWidgets tar file and uncompress it on your
 	directory of choice on the console change to that directory
 	and:
-		./configure --prefix=/opt/wxWidgets-2.9.3 --enable-monolithic
+		./configure --prefix=/opt/wxWidgets-svn --enable-monolithic
 	
 . Install php5 development packages 
 
@@ -49,14 +49,14 @@ Building and Installing on Linux
 . Configure and build the extension
 	cd wxPHP
 	phpize
-	./configure --with-wxwidgets=/opt/wxWidgets-2.9.3
+	./configure --with-wxwidgets=/opt/wxWidgets-svn
 	make
 	
 . Installing the extension
 	Copy the resulting wxwidgets.so file on the modules directory to the php 
 	extensions directory (you can make this file smaller by running strip
 	on it). PHP extensions directory is usually found on /usr/lib/php5/
-	On ubuntu 10.04 this directory is /usr/lib/php5/20090626/
+	On ubuntu 10.04 - 11.10 this directory is /usr/lib/php5/20090626/
 	
 	If you want the wxWidget extension to be automatically loaded, add the
 	following lines to your php.ini:
@@ -93,6 +93,7 @@ Support
 Any problems, please refer to the official website:
 	
 	http://wxphp.org/
+	http://forums.wxphp.org/
 	
 or visit the sourceforge.net project page at:
 	
