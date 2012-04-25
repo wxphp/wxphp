@@ -50,7 +50,7 @@ extern zend_module_entry wxWidgets_module_entry;
  */
 #define wxPHP_REGISTER_RESOURCE_CONSTANT(name, resource, class_entry, list_entry, flags)  wxphp_register_resource_constant((name), sizeof(name), (resource), (class_entry), (list_entry), (flags), module_number TSRMLS_CC)
 BEGIN_EXTERN_C()
-ZEND_API void wxphp_register_resource_constant(const char *name, uint name_len, void* resource, zend_class_entry* class_entry, int list_entry, int flags, int module_number TSRMLS_DC);
+void wxphp_register_resource_constant(const char *name, uint name_len, void* resource, zend_class_entry* class_entry, int list_entry, int flags, int module_number TSRMLS_DC);
 END_EXTERN_C()
 
 

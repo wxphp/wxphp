@@ -256,8 +256,12 @@ PHP_METHOD(php_wxFFile, Write)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFFile){
 				references = &((wxFFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -346,8 +350,12 @@ PHP_METHOD(php_wxFFile, Tell)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFFile){
 				references = &((wxFFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -429,8 +437,12 @@ PHP_METHOD(php_wxFFile, SeekEnd)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFFile){
 				references = &((wxFFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -528,8 +540,12 @@ PHP_METHOD(php_wxFFile, Seek)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFFile){
 				references = &((wxFFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -628,8 +644,12 @@ PHP_METHOD(php_wxFFile, Read)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFFile){
 				references = &((wxFFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -723,8 +743,12 @@ PHP_METHOD(php_wxFFile, Open)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFFile){
 				references = &((wxFFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -825,8 +849,12 @@ PHP_METHOD(php_wxFFile, Length)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFFile){
 				references = &((wxFFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -908,8 +936,12 @@ PHP_METHOD(php_wxFFile, IsOpened)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFFile){
 				references = &((wxFFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -991,8 +1023,12 @@ PHP_METHOD(php_wxFFile, GetKind)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFFile){
 				references = &((wxFFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1074,8 +1110,12 @@ PHP_METHOD(php_wxFFile, Flush)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFFile){
 				references = &((wxFFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1157,8 +1197,12 @@ PHP_METHOD(php_wxFFile, Error)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFFile){
 				references = &((wxFFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1240,8 +1284,12 @@ PHP_METHOD(php_wxFFile, Eof)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFFile){
 				references = &((wxFFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1323,8 +1371,12 @@ PHP_METHOD(php_wxFFile, Detach)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFFile){
 				references = &((wxFFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1406,8 +1458,12 @@ PHP_METHOD(php_wxFFile, Close)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFFile){
 				references = &((wxFFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1530,8 +1586,12 @@ PHP_METHOD(php_wxFile, Seek)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFile){
 				references = &((wxFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1630,8 +1690,12 @@ PHP_METHOD(php_wxFile, SeekEnd)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFile){
 				references = &((wxFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1729,8 +1793,12 @@ PHP_METHOD(php_wxFile, Tell)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFile){
 				references = &((wxFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1812,8 +1880,12 @@ PHP_METHOD(php_wxFile, Write)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFile){
 				references = &((wxFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1902,8 +1974,12 @@ PHP_METHOD(php_wxFile, fd)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFile){
 				references = &((wxFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2149,8 +2225,12 @@ PHP_METHOD(php_wxFile, Open)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFile){
 				references = &((wxFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2262,8 +2342,12 @@ PHP_METHOD(php_wxFile, Length)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFile){
 				references = &((wxFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2345,8 +2429,12 @@ PHP_METHOD(php_wxFile, IsOpened)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFile){
 				references = &((wxFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2428,8 +2516,12 @@ PHP_METHOD(php_wxFile, GetLastError)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFile){
 				references = &((wxFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2511,8 +2603,12 @@ PHP_METHOD(php_wxFile, GetKind)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFile){
 				references = &((wxFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2594,8 +2690,12 @@ PHP_METHOD(php_wxFile, Flush)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFile){
 				references = &((wxFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2677,8 +2777,12 @@ PHP_METHOD(php_wxFile, Exists)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFile){
 				references = &((wxFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2767,8 +2871,12 @@ PHP_METHOD(php_wxFile, Eof)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFile){
 				references = &((wxFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2850,8 +2958,12 @@ PHP_METHOD(php_wxFile, Detach)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFile){
 				references = &((wxFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2933,8 +3045,12 @@ PHP_METHOD(php_wxFile, Create)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFile){
 				references = &((wxFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3046,8 +3162,12 @@ PHP_METHOD(php_wxFile, Close)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFile){
 				references = &((wxFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3129,8 +3249,12 @@ PHP_METHOD(php_wxFile, ClearLastError)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFile){
 				references = &((wxFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3212,8 +3336,12 @@ PHP_METHOD(php_wxFile, Attach)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFile){
 				references = &((wxFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3300,8 +3428,12 @@ PHP_METHOD(php_wxFile, Access)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFile){
 				references = &((wxFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3432,8 +3564,12 @@ PHP_METHOD(php_wxPathList, Add)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPathList)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPathList){
 				references = &((wxPathList_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3576,8 +3712,12 @@ PHP_METHOD(php_wxPathList, AddEnvList)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPathList)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPathList){
 				references = &((wxPathList_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3665,8 +3805,12 @@ PHP_METHOD(php_wxPathList, EnsureFileAccessible)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPathList)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPathList){
 				references = &((wxPathList_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3754,8 +3898,12 @@ PHP_METHOD(php_wxPathList, FindAbsoluteValidPath)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPathList)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPathList){
 				references = &((wxPathList_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3849,8 +3997,12 @@ PHP_METHOD(php_wxPathList, FindValidPath)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPathList)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPathList){
 				references = &((wxPathList_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4119,8 +4271,12 @@ PHP_METHOD(php_wxFileName, AppendDir)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4208,8 +4364,12 @@ PHP_METHOD(php_wxFileName, Assign)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4921,8 +5081,12 @@ PHP_METHOD(php_wxFileName, Touch)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5004,8 +5168,12 @@ PHP_METHOD(php_wxFileName, StripExtension)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5100,8 +5268,12 @@ PHP_METHOD(php_wxFileName, SplitVolume)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5240,8 +5412,12 @@ PHP_METHOD(php_wxFileName, SplitPath)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5657,8 +5833,12 @@ PHP_METHOD(php_wxFileName, SetVolume)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5746,8 +5926,12 @@ PHP_METHOD(php_wxFileName, SetTimes)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5782,34 +5966,34 @@ PHP_METHOD(php_wxFileName, SetTimes)
 		
 	if(overload0_called)
 	{
-		int array_count0_0 = 0;
+		int array_count0_0 = 1;
 		HashTable* arr_hash0_0;
 		if(arguments_received > 0)
 		{
 			arr_hash0_0 = Z_ARRVAL_P(dtAccess0);
 			array_count0_0 = zend_hash_num_elements(arr_hash0_0);
 		}
-		wxDateTime dates_array0_0[array_count0_0];
+		wxDateTime* dates_array0_0 = new wxDateTime[array_count0_0];
 		bool dates_continue0_0 = true;
 
-		int array_count0_1 = 0;
+		int array_count0_1 = 1;
 		HashTable* arr_hash0_1;
 		if(arguments_received > 1)
 		{
 			arr_hash0_1 = Z_ARRVAL_P(dtMod0);
 			array_count0_1 = zend_hash_num_elements(arr_hash0_1);
 		}
-		wxDateTime dates_array0_1[array_count0_1];
+		wxDateTime* dates_array0_1 = new wxDateTime[array_count0_1];
 		bool dates_continue0_1 = true;
 
-		int array_count0_2 = 0;
+		int array_count0_2 = 1;
 		HashTable* arr_hash0_2;
 		if(arguments_received > 2)
 		{
 			arr_hash0_2 = Z_ARRVAL_P(dtCreate0);
 			array_count0_2 = zend_hash_num_elements(arr_hash0_2);
 		}
-		wxDateTime dates_array0_2[array_count0_2];
+		wxDateTime* dates_array0_2 = new wxDateTime[array_count0_2];
 		bool dates_continue0_2 = true;
 
 		switch(arguments_received)
@@ -5911,8 +6095,12 @@ PHP_METHOD(php_wxFileName, SetPath)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -6012,8 +6200,12 @@ PHP_METHOD(php_wxFileName, SetName)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -6101,8 +6293,12 @@ PHP_METHOD(php_wxFileName, SetFullName)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -6190,8 +6386,12 @@ PHP_METHOD(php_wxFileName, SetExt)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -6279,8 +6479,12 @@ PHP_METHOD(php_wxFileName, SetEmptyExt)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -6362,8 +6566,12 @@ PHP_METHOD(php_wxFileName, SetCwd)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -6484,8 +6692,12 @@ PHP_METHOD(php_wxFileName, SameAs)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -6603,8 +6815,12 @@ PHP_METHOD(php_wxFileName, Rmdir)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -6754,8 +6970,12 @@ PHP_METHOD(php_wxFileName, ReplaceHomeDir)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -6853,8 +7073,12 @@ PHP_METHOD(php_wxFileName, ReplaceEnvVariable)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -6967,8 +7191,12 @@ PHP_METHOD(php_wxFileName, RemoveLastDir)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -7050,8 +7278,12 @@ PHP_METHOD(php_wxFileName, RemoveDir)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -7138,8 +7370,12 @@ PHP_METHOD(php_wxFileName, PrependDir)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -7227,8 +7463,12 @@ PHP_METHOD(php_wxFileName, AssignCwd)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -7327,8 +7567,12 @@ PHP_METHOD(php_wxFileName, AssignDir)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -7428,8 +7672,12 @@ PHP_METHOD(php_wxFileName, AssignHomeDir)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -7511,8 +7759,12 @@ PHP_METHOD(php_wxFileName, AssignTempFileName)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -7714,8 +7966,12 @@ PHP_METHOD(php_wxFileName, Clear)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -7797,8 +8053,12 @@ PHP_METHOD(php_wxFileName, ClearExt)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -7880,8 +8140,12 @@ PHP_METHOD(php_wxFileName, CreateTempFileName)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -8093,8 +8357,12 @@ PHP_METHOD(php_wxFileName, DirExists)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -8215,8 +8483,12 @@ PHP_METHOD(php_wxFileName, DirName)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -8336,8 +8608,12 @@ PHP_METHOD(php_wxFileName, FileExists)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -8458,8 +8734,12 @@ PHP_METHOD(php_wxFileName, FileName)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -8579,8 +8859,12 @@ PHP_METHOD(php_wxFileName, GetCwd)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -8693,8 +8977,12 @@ PHP_METHOD(php_wxFileName, GetDirCount)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -8776,8 +9064,12 @@ PHP_METHOD(php_wxFileName, GetDirs)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -8869,8 +9161,12 @@ PHP_METHOD(php_wxFileName, GetExt)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -8958,8 +9254,12 @@ PHP_METHOD(php_wxFileName, GetForbiddenChars)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -9071,8 +9371,12 @@ PHP_METHOD(php_wxFileName, GetFormat)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -9172,8 +9476,12 @@ PHP_METHOD(php_wxFileName, GetFullName)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -9261,8 +9569,12 @@ PHP_METHOD(php_wxFileName, GetFullPath)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -9372,8 +9684,12 @@ PHP_METHOD(php_wxFileName, GetHomeDir)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -9462,8 +9778,12 @@ PHP_METHOD(php_wxFileName, GetHumanReadableSize)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -9610,8 +9930,12 @@ PHP_METHOD(php_wxFileName, GetLongPath)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -9699,8 +10023,12 @@ PHP_METHOD(php_wxFileName, GetName)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -9788,8 +10116,12 @@ PHP_METHOD(php_wxFileName, GetModificationTime)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -9873,8 +10205,12 @@ PHP_METHOD(php_wxFileName, GetPath)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -10002,8 +10338,12 @@ PHP_METHOD(php_wxFileName, GetPathSeparators)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -10115,8 +10455,12 @@ PHP_METHOD(php_wxFileName, GetPathTerminators)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -10228,8 +10572,12 @@ PHP_METHOD(php_wxFileName, GetPathWithSep)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -10339,8 +10687,12 @@ PHP_METHOD(php_wxFileName, GetShortPath)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -10428,8 +10780,12 @@ PHP_METHOD(php_wxFileName, GetTempDir)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -10518,8 +10874,12 @@ PHP_METHOD(php_wxFileName, GetVolumeSeparator)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -10631,8 +10991,12 @@ PHP_METHOD(php_wxFileName, GetVolume)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -10720,8 +11084,12 @@ PHP_METHOD(php_wxFileName, HasExt)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -10803,8 +11171,12 @@ PHP_METHOD(php_wxFileName, HasName)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -10886,8 +11258,12 @@ PHP_METHOD(php_wxFileName, HasVolume)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -10969,8 +11345,12 @@ PHP_METHOD(php_wxFileName, InsertDir)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -11059,8 +11439,12 @@ PHP_METHOD(php_wxFileName, IsAbsolute)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -11158,8 +11542,12 @@ PHP_METHOD(php_wxFileName, IsCaseSensitive)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -11259,8 +11647,12 @@ PHP_METHOD(php_wxFileName, IsDir)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -11342,8 +11734,12 @@ PHP_METHOD(php_wxFileName, IsDirReadable)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -11464,8 +11860,12 @@ PHP_METHOD(php_wxFileName, IsDirWritable)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -11586,8 +11986,12 @@ PHP_METHOD(php_wxFileName, IsFileExecutable)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -11708,8 +12112,12 @@ PHP_METHOD(php_wxFileName, IsFileReadable)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -11830,8 +12238,12 @@ PHP_METHOD(php_wxFileName, IsFileWritable)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -11952,8 +12364,12 @@ PHP_METHOD(php_wxFileName, IsMSWUniqueVolumeNamePath)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -12055,8 +12471,12 @@ PHP_METHOD(php_wxFileName, IsOk)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -12138,8 +12558,12 @@ PHP_METHOD(php_wxFileName, IsRelative)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -12237,8 +12661,12 @@ PHP_METHOD(php_wxFileName, MakeAbsolute)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -12349,8 +12777,12 @@ PHP_METHOD(php_wxFileName, MakeRelativeTo)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -12461,8 +12893,12 @@ PHP_METHOD(php_wxFileName, Mkdir)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -12637,8 +13073,12 @@ PHP_METHOD(php_wxFileName, Normalize)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileName)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileName){
 				references = &((wxFileName_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -12912,8 +13352,12 @@ PHP_METHOD(php_wxFSFile, GetStream)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFSFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFSFile){
 				references = &((wxFSFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -13017,8 +13461,12 @@ PHP_METHOD(php_wxFSFile, GetModificationTime)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFSFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFSFile){
 				references = &((wxFSFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -13102,8 +13550,12 @@ PHP_METHOD(php_wxFSFile, GetMimeType)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFSFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFSFile){
 				references = &((wxFSFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -13191,8 +13643,12 @@ PHP_METHOD(php_wxFSFile, GetLocation)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFSFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFSFile){
 				references = &((wxFSFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -13280,8 +13736,12 @@ PHP_METHOD(php_wxFSFile, GetAnchor)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFSFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFSFile){
 				references = &((wxFSFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -13369,8 +13829,12 @@ PHP_METHOD(php_wxFSFile, DetachStream)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFSFile)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFSFile){
 				references = &((wxFSFile_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -13515,8 +13979,12 @@ PHP_METHOD(php_wxFileSystemWatcher, Add)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileSystemWatcher)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileSystemWatcher){
 				references = &((wxFileSystemWatcher_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -13634,8 +14102,12 @@ PHP_METHOD(php_wxFileSystemWatcher, AddTree)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileSystemWatcher)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileSystemWatcher){
 				references = &((wxFileSystemWatcher_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -13767,8 +14239,12 @@ PHP_METHOD(php_wxFileSystemWatcher, GetWatchedPathsCount)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileSystemWatcher)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileSystemWatcher){
 				references = &((wxFileSystemWatcher_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -13850,8 +14326,12 @@ PHP_METHOD(php_wxFileSystemWatcher, Remove)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileSystemWatcher)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileSystemWatcher){
 				references = &((wxFileSystemWatcher_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -13956,8 +14436,12 @@ PHP_METHOD(php_wxFileSystemWatcher, RemoveAll)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileSystemWatcher)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileSystemWatcher){
 				references = &((wxFileSystemWatcher_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -14039,8 +14523,12 @@ PHP_METHOD(php_wxFileSystemWatcher, RemoveTree)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileSystemWatcher)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileSystemWatcher){
 				references = &((wxFileSystemWatcher_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -14145,8 +14633,12 @@ PHP_METHOD(php_wxFileSystemWatcher, SetOwner)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileSystemWatcher)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileSystemWatcher){
 				references = &((wxFileSystemWatcher_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -14372,8 +14864,12 @@ PHP_METHOD(php_wxStandardPaths, Get)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxStandardPaths)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxStandardPaths){
 				references = &((wxStandardPaths_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -14471,8 +14967,12 @@ PHP_METHOD(php_wxStandardPaths, GetAppDocumentsDir)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxStandardPaths)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxStandardPaths){
 				references = &((wxStandardPaths_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -14563,8 +15063,12 @@ PHP_METHOD(php_wxStandardPaths, GetConfigDir)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxStandardPaths)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxStandardPaths){
 				references = &((wxStandardPaths_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -14655,8 +15159,12 @@ PHP_METHOD(php_wxStandardPaths, GetDataDir)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxStandardPaths)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxStandardPaths){
 				references = &((wxStandardPaths_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -14747,8 +15255,12 @@ PHP_METHOD(php_wxStandardPaths, GetDocumentsDir)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxStandardPaths)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxStandardPaths){
 				references = &((wxStandardPaths_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -14839,8 +15351,12 @@ PHP_METHOD(php_wxStandardPaths, GetExecutablePath)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxStandardPaths)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxStandardPaths){
 				references = &((wxStandardPaths_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -14931,8 +15447,12 @@ PHP_METHOD(php_wxStandardPaths, GetLocalDataDir)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxStandardPaths)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxStandardPaths){
 				references = &((wxStandardPaths_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -15023,8 +15543,12 @@ PHP_METHOD(php_wxStandardPaths, GetPluginsDir)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxStandardPaths)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxStandardPaths){
 				references = &((wxStandardPaths_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -15115,8 +15639,12 @@ PHP_METHOD(php_wxStandardPaths, GetResourcesDir)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxStandardPaths)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxStandardPaths){
 				references = &((wxStandardPaths_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -15207,8 +15735,12 @@ PHP_METHOD(php_wxStandardPaths, GetTempDir)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxStandardPaths)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxStandardPaths){
 				references = &((wxStandardPaths_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -15299,8 +15831,12 @@ PHP_METHOD(php_wxStandardPaths, GetUserConfigDir)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxStandardPaths)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxStandardPaths){
 				references = &((wxStandardPaths_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -15391,8 +15927,12 @@ PHP_METHOD(php_wxStandardPaths, GetUserDataDir)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxStandardPaths)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxStandardPaths){
 				references = &((wxStandardPaths_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -15483,8 +16023,12 @@ PHP_METHOD(php_wxStandardPaths, GetUserLocalDataDir)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxStandardPaths)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxStandardPaths){
 				references = &((wxStandardPaths_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -15575,8 +16119,12 @@ PHP_METHOD(php_wxStandardPaths, UseAppInfo)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxStandardPaths)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxStandardPaths){
 				references = &((wxStandardPaths_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else

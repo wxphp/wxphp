@@ -127,30 +127,56 @@ PHP_METHOD(php_wxDC, StartPage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -279,30 +305,56 @@ PHP_METHOD(php_wxDC, StartDoc)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -437,30 +489,56 @@ PHP_METHOD(php_wxDC, SetUserScale)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -595,30 +673,56 @@ PHP_METHOD(php_wxDC, SetTextForeground)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -770,30 +874,56 @@ PHP_METHOD(php_wxDC, SetTextBackground)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -945,30 +1075,56 @@ PHP_METHOD(php_wxDC, CalcBoundingBox)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1103,30 +1259,56 @@ PHP_METHOD(php_wxDC, CanUseTransformMatrix)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1255,30 +1437,56 @@ PHP_METHOD(php_wxDC, Clear)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1407,30 +1615,56 @@ PHP_METHOD(php_wxDC, CopyAttributes)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1582,30 +1816,56 @@ PHP_METHOD(php_wxDC, CrossHair)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1842,30 +2102,56 @@ PHP_METHOD(php_wxDC, DestroyClippingRegion)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1994,30 +2280,56 @@ PHP_METHOD(php_wxDC, DeviceToLogicalX)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2151,30 +2463,56 @@ PHP_METHOD(php_wxDC, DeviceToLogicalXRel)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2308,30 +2646,56 @@ PHP_METHOD(php_wxDC, DeviceToLogicalY)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2465,30 +2829,56 @@ PHP_METHOD(php_wxDC, DeviceToLogicalYRel)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2622,30 +3012,56 @@ PHP_METHOD(php_wxDC, DrawArc)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2924,30 +3340,56 @@ PHP_METHOD(php_wxDC, DrawBitmap)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3343,30 +3785,56 @@ PHP_METHOD(php_wxDC, DrawCheckMark)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3605,30 +4073,56 @@ PHP_METHOD(php_wxDC, DrawCircle)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3867,30 +4361,56 @@ PHP_METHOD(php_wxDC, DrawEllipse)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4250,30 +4770,56 @@ PHP_METHOD(php_wxDC, DrawEllipticArc)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4535,30 +5081,56 @@ PHP_METHOD(php_wxDC, DrawIcon)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4833,30 +5405,56 @@ PHP_METHOD(php_wxDC, DrawLabel)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5454,30 +6052,56 @@ PHP_METHOD(php_wxDC, DrawLine)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5735,30 +6359,56 @@ PHP_METHOD(php_wxDC, DrawPoint)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5995,30 +6645,56 @@ PHP_METHOD(php_wxDC, DrawRectangle)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -6378,30 +7054,56 @@ PHP_METHOD(php_wxDC, DrawRotatedText)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -6644,30 +7346,56 @@ PHP_METHOD(php_wxDC, DrawRoundedRectangle)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -7030,30 +7758,56 @@ PHP_METHOD(php_wxDC, DrawSpline)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -7192,30 +7946,56 @@ PHP_METHOD(php_wxDC, DrawText)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -7456,30 +8236,56 @@ PHP_METHOD(php_wxDC, EndDoc)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -7608,30 +8414,56 @@ PHP_METHOD(php_wxDC, EndPage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -7760,30 +8592,56 @@ PHP_METHOD(php_wxDC, FloodFill)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -8179,30 +9037,56 @@ PHP_METHOD(php_wxDC, GetBackground)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -8361,30 +9245,56 @@ PHP_METHOD(php_wxDC, GetBackgroundMode)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -8513,30 +9423,56 @@ PHP_METHOD(php_wxDC, GetBrush)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -8695,30 +9631,56 @@ PHP_METHOD(php_wxDC, GetCharHeight)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -8847,30 +9809,56 @@ PHP_METHOD(php_wxDC, GetCharWidth)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -8999,30 +9987,56 @@ PHP_METHOD(php_wxDC, GetClippingBox)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -9159,30 +10173,56 @@ PHP_METHOD(php_wxDC, GetDepth)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -9311,30 +10351,56 @@ PHP_METHOD(php_wxDC, GetDeviceOrigin)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -9512,30 +10578,56 @@ PHP_METHOD(php_wxDC, GetFont)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -9694,30 +10786,56 @@ PHP_METHOD(php_wxDC, GetLayoutDirection)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -9846,30 +10964,56 @@ PHP_METHOD(php_wxDC, GetLogicalFunction)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -9998,30 +11142,56 @@ PHP_METHOD(php_wxDC, GetLogicalOrigin)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -10284,30 +11454,56 @@ PHP_METHOD(php_wxDC, GetLogicalScale)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -10459,30 +11655,56 @@ PHP_METHOD(php_wxDC, GetMapMode)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -10611,30 +11833,56 @@ PHP_METHOD(php_wxDC, GetMultiLineTextExtent)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -11041,30 +12289,56 @@ PHP_METHOD(php_wxDC, GetPPI)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -11242,30 +12516,56 @@ PHP_METHOD(php_wxDC, GetPen)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -11424,30 +12724,56 @@ PHP_METHOD(php_wxDC, GetPixel)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -11601,30 +12927,56 @@ PHP_METHOD(php_wxDC, GetSize)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -11887,30 +13239,56 @@ PHP_METHOD(php_wxDC, GetSizeMM)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -12173,30 +13551,56 @@ PHP_METHOD(php_wxDC, GetTextBackground)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -12355,30 +13759,56 @@ PHP_METHOD(php_wxDC, GetTextExtent)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -12844,30 +14274,56 @@ PHP_METHOD(php_wxDC, GetTextForeground)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -13026,30 +14482,56 @@ PHP_METHOD(php_wxDC, GetUserScale)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -13201,30 +14683,56 @@ PHP_METHOD(php_wxDC, GradientFillConcentric)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -13573,30 +15081,56 @@ PHP_METHOD(php_wxDC, GradientFillLinear)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -13848,30 +15382,56 @@ PHP_METHOD(php_wxDC, IsOk)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -14000,30 +15560,56 @@ PHP_METHOD(php_wxDC, LogicalToDeviceX)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -14157,30 +15743,56 @@ PHP_METHOD(php_wxDC, LogicalToDeviceY)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -14314,30 +15926,56 @@ PHP_METHOD(php_wxDC, LogicalToDeviceXRel)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -14471,30 +16109,56 @@ PHP_METHOD(php_wxDC, LogicalToDeviceYRel)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -14628,30 +16292,56 @@ PHP_METHOD(php_wxDC, MaxX)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -14780,30 +16470,56 @@ PHP_METHOD(php_wxDC, MaxY)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -14932,30 +16648,56 @@ PHP_METHOD(php_wxDC, MinX)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -15084,30 +16826,56 @@ PHP_METHOD(php_wxDC, MinY)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -15236,30 +17004,56 @@ PHP_METHOD(php_wxDC, ResetBoundingBox)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -15388,30 +17182,56 @@ PHP_METHOD(php_wxDC, ResetTransformMatrix)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -15540,30 +17360,56 @@ PHP_METHOD(php_wxDC, SetAxisOrientation)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -15698,30 +17544,56 @@ PHP_METHOD(php_wxDC, SetBackground)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -15873,30 +17745,56 @@ PHP_METHOD(php_wxDC, SetBackgroundMode)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -16030,30 +17928,56 @@ PHP_METHOD(php_wxDC, SetBrush)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -16205,30 +18129,56 @@ PHP_METHOD(php_wxDC, SetClippingRegion)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -16588,30 +18538,56 @@ PHP_METHOD(php_wxDC, SetDeviceClippingRegion)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -16763,30 +18739,56 @@ PHP_METHOD(php_wxDC, SetDeviceOrigin)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -16921,30 +18923,56 @@ PHP_METHOD(php_wxDC, SetFont)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -17096,30 +19124,56 @@ PHP_METHOD(php_wxDC, SetLayoutDirection)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -17253,30 +19307,56 @@ PHP_METHOD(php_wxDC, SetLogicalFunction)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -17410,30 +19490,56 @@ PHP_METHOD(php_wxDC, SetLogicalOrigin)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -17568,30 +19674,56 @@ PHP_METHOD(php_wxDC, SetLogicalScale)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -17726,30 +19858,56 @@ PHP_METHOD(php_wxDC, SetMapMode)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -17883,30 +20041,56 @@ PHP_METHOD(php_wxDC, SetPalette)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -18058,30 +20242,56 @@ PHP_METHOD(php_wxDC, SetPen)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -18233,30 +20443,56 @@ PHP_METHOD(php_wxDC, StretchBlit)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -18656,30 +20892,56 @@ PHP_METHOD(php_wxDC, Blit)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDC){
 				references = &((wxDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWindowDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWindowDC) && (!reference_type_found)){
 				references = &((wxWindowDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxClientDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxClientDC) && (!reference_type_found)){
 				references = &((wxClientDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPaintDC) && (!reference_type_found)){
 				references = &((wxPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxScreenDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxScreenDC) && (!reference_type_found)){
 				references = &((wxScreenDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPostScriptDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPostScriptDC) && (!reference_type_found)){
 				references = &((wxPostScriptDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrinterDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrinterDC) && (!reference_type_found)){
 				references = &((wxPrinterDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMemoryDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMemoryDC) && (!reference_type_found)){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMirrorDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMirrorDC) && (!reference_type_found)){
 				references = &((wxMirrorDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -19118,12 +21380,20 @@ PHP_METHOD(php_wxBufferedDC, Init)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxBufferedDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxBufferedDC){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -20483,14 +22753,24 @@ PHP_METHOD(php_wxMemoryDC, SelectObject)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxMemoryDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxMemoryDC){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -20595,14 +22875,24 @@ PHP_METHOD(php_wxMemoryDC, SelectObjectAsSource)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxMemoryDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxMemoryDC){
 				references = &((wxMemoryDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedDC) && (!reference_type_found)){
 				references = &((wxBufferedDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxBufferedPaintDC_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxAutoBufferedPaintDC)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxAutoBufferedPaintDC) && (!reference_type_found)){
 				references = &((wxAutoBufferedPaintDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -21256,8 +23546,12 @@ PHP_METHOD(php_wxScreenDC, EndDrawingOnTop)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxScreenDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxScreenDC){
 				references = &((wxScreenDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -21340,8 +23634,12 @@ PHP_METHOD(php_wxScreenDC, StartDrawingOnTop)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxScreenDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxScreenDC){
 				references = &((wxScreenDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else

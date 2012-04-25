@@ -9,12 +9,23 @@
  * Some parts of this file are auto-generated.
 */
 
-#ifdef PHP_WIN32
-	#include <winsock2.h>
-#endif
-
 #ifdef __BORLANDC__
 	#pragma hdrstop
+#endif
+
+#ifdef PHP_WIN32
+	//To prevent some character strings to 
+	//wide characters string compilation errors
+	#define _WINSOCKAPI_
+	
+	//For disabling warnings about 
+	//unreferenced local variable
+	#pragma warning (disable : 4101)
+	#pragma warning (disable : 4102)
+	#pragma warning (disable : 4700)
+	
+	//Disable forcing zend_bool to bool warnings
+	#pragma warning (disable : 4800)
 #endif
 
 #ifndef WX_PRECOMP
@@ -22,7 +33,6 @@
 #else
 	#include <wx/wxprec.h>
 #endif
-
 
 #if !wxUSE_THREADS
     #error "This sample requires thread support!"
@@ -63,6 +73,13 @@
 
 #ifdef _WIN32_WINNT
 	#undef _WIN32_WINNT
+#endif
+
+/**
+ * Conflicting macro redifined on PHP, previously defined on wxWidgets
+ */
+#ifdef PHP_WIN32
+	#undef HAVE_STRNLEN
 #endif
 
 /**

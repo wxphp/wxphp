@@ -207,8 +207,12 @@ PHP_METHOD(php_wxFileSystem, URLToFileName)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileSystem)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileSystem){
 				references = &((wxFileSystem_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -306,8 +310,12 @@ PHP_METHOD(php_wxFileSystem, OpenFile)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileSystem)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileSystem){
 				references = &((wxFileSystem_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -451,8 +459,12 @@ PHP_METHOD(php_wxFileSystem, HasHandlerForPath)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileSystem)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileSystem){
 				references = &((wxFileSystem_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -541,8 +553,12 @@ PHP_METHOD(php_wxFileSystem, GetPath)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileSystem)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileSystem){
 				references = &((wxFileSystem_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -630,8 +646,12 @@ PHP_METHOD(php_wxFileSystem, FindNext)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileSystem)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileSystem){
 				references = &((wxFileSystem_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -719,8 +739,12 @@ PHP_METHOD(php_wxFileSystem, FindFirst)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileSystem)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileSystem){
 				references = &((wxFileSystem_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -832,8 +856,12 @@ PHP_METHOD(php_wxFileSystem, FindFileInPath)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileSystem)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileSystem){
 				references = &((wxFileSystem_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -936,8 +964,12 @@ PHP_METHOD(php_wxFileSystem, FileNameToURL)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileSystem)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileSystem){
 				references = &((wxFileSystem_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1048,8 +1080,12 @@ PHP_METHOD(php_wxFileSystem, ChangePathTo)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileSystem)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileSystem){
 				references = &((wxFileSystem_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1149,8 +1185,12 @@ PHP_METHOD(php_wxFileSystem, AddHandler)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileSystem)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileSystem){
 				references = &((wxFileSystem_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1358,8 +1398,12 @@ PHP_METHOD(php_wxFileSystemHandler, FindFirst)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileSystemHandler)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileSystemHandler){
 				references = &((wxFileSystemHandler_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1471,8 +1515,12 @@ PHP_METHOD(php_wxFileSystemHandler, FindNext)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileSystemHandler)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileSystemHandler){
 				references = &((wxFileSystemHandler_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1560,8 +1608,12 @@ PHP_METHOD(php_wxFileSystemHandler, GetMimeTypeFromExt)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileSystemHandler)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileSystemHandler){
 				references = &((wxFileSystemHandler_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else

@@ -19,7 +19,7 @@
  * Custom function to register global objects as constants
  */
 BEGIN_EXTERN_C()
-ZEND_API void wxphp_register_resource_constant(const char *name, uint name_len, void* resource, zend_class_entry* class_entry, int list_entry, int flags, int module_number TSRMLS_DC)
+void wxphp_register_resource_constant(const char *name, uint name_len, void* resource, zend_class_entry* class_entry, int list_entry, int flags, int module_number TSRMLS_DC)
 {
 	zend_constant c;
 	char _wxResource[] = "wxResource";

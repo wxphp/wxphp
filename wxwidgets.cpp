@@ -19,7 +19,7 @@
  * Custom function to register global objects as constants
  */
 BEGIN_EXTERN_C()
-ZEND_API void wxphp_register_resource_constant(const char *name, uint name_len, void* resource, zend_class_entry* class_entry, int list_entry, int flags, int module_number TSRMLS_DC)
+void wxphp_register_resource_constant(const char *name, uint name_len, void* resource, zend_class_entry* class_entry, int list_entry, int flags, int module_number TSRMLS_DC)
 {
 	zend_constant c;
 	char _wxResource[] = "wxResource";
@@ -4301,14 +4301,14 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 
 	if(overload1_called)
 	{
-		int array_count1_3 = 0;
+		int array_count1_3 = 1;
 		HashTable* arr_hash1_3;
 		if(arguments_received > 3)
 		{
 			arr_hash1_3 = Z_ARRVAL_P(choices1);
 			array_count1_3 = zend_hash_num_elements(arr_hash1_3);
 		}
-		wxString strings_array1_3[array_count1_3];
+		wxString* strings_array1_3 = new wxString[array_count1_3];
 		bool strings_continue1_3 = true;
 
 		switch(arguments_received)
@@ -4588,14 +4588,14 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 
 	if(overload3_called)
 	{
-		int array_count3_3 = 0;
+		int array_count3_3 = 1;
 		HashTable* arr_hash3_3;
 		if(arguments_received > 3)
 		{
 			arr_hash3_3 = Z_ARRVAL_P(choices3);
 			array_count3_3 = zend_hash_num_elements(arr_hash3_3);
 		}
-		wxString strings_array3_3[array_count3_3];
+		wxString* strings_array3_3 = new wxString[array_count3_3];
 		bool strings_continue3_3 = true;
 
 		switch(arguments_received)
@@ -5126,14 +5126,14 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 
 	if(overload1_called)
 	{
-		int array_count1_3 = 0;
+		int array_count1_3 = 1;
 		HashTable* arr_hash1_3;
 		if(arguments_received > 3)
 		{
 			arr_hash1_3 = Z_ARRVAL_P(choices1);
 			array_count1_3 = zend_hash_num_elements(arr_hash1_3);
 		}
-		wxString strings_array1_3[array_count1_3];
+		wxString* strings_array1_3 = new wxString[array_count1_3];
 		bool strings_continue1_3 = true;
 
 		switch(arguments_received)
@@ -5473,14 +5473,14 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 
 	if(overload3_called)
 	{
-		int array_count3_3 = 0;
+		int array_count3_3 = 1;
 		HashTable* arr_hash3_3;
 		if(arguments_received > 3)
 		{
 			arr_hash3_3 = Z_ARRVAL_P(choices3);
 			array_count3_3 = zend_hash_num_elements(arr_hash3_3);
 		}
-		wxString strings_array3_3[array_count3_3];
+		wxString* strings_array3_3 = new wxString[array_count3_3];
 		bool strings_continue3_3 = true;
 
 		switch(arguments_received)
@@ -23946,39 +23946,39 @@ PHP_MINIT_FUNCTION(php_wxWidgets)
 
 	//Class enumerations
 
-	zend_declare_class_constant_long(php_wxConfigBase_entry, "Type_Unknown", 1,  wxConfigBase::Type_Unknown TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxConfigBase_entry, "Type_String", 1,  wxConfigBase::Type_String TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxConfigBase_entry, "Type_Boolean", 1,  wxConfigBase::Type_Boolean TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxConfigBase_entry, "Type_Integer", 1,  wxConfigBase::Type_Integer TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxConfigBase_entry, "Type_Float", 1,  wxConfigBase::Type_Float TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxDataObject_entry, "Get", 1,  wxDataObject::Get TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxDataObject_entry, "Set", 1,  wxDataObject::Set TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxDataObject_entry, "Both", 1,  wxDataObject::Both TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxFile_entry, "read", 1,  wxFile::read TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxFile_entry, "write", 1,  wxFile::write TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxFile_entry, "read_write", 1,  wxFile::read_write TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxFile_entry, "write_append", 1,  wxFile::write_append TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxFile_entry, "write_excl", 1,  wxFile::write_excl TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxGrid_entry, "wxGridSelectCells", 1,  wxGrid::wxGridSelectCells TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxGrid_entry, "wxGridSelectRows", 1,  wxGrid::wxGridSelectRows TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxGrid_entry, "wxGridSelectColumns", 1,  wxGrid::wxGridSelectColumns TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxGrid_entry, "wxGridSelectRowsOrColumns", 1,  wxGrid::wxGridSelectRowsOrColumns TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxGrid_entry, "CellSpan_Inside", 1,  wxGrid::CellSpan_Inside TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxGrid_entry, "CellSpan_None", 1,  wxGrid::CellSpan_None TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxGrid_entry, "CellSpan_Main", 1,  wxGrid::CellSpan_Main TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxGridCellAttr_entry, "Any", 1,  wxGridCellAttr::Any TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxGridCellAttr_entry, "Cell", 1,  wxGridCellAttr::Cell TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxGridCellAttr_entry, "Row", 1,  wxGridCellAttr::Row TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxGridCellAttr_entry, "Col", 1,  wxGridCellAttr::Col TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxHelpEvent_entry, "Origin_Unknown", 1,  wxHelpEvent::Origin_Unknown TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxHelpEvent_entry, "Origin_Keyboard", 1,  wxHelpEvent::Origin_Keyboard TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxHelpEvent_entry, "Origin_HelpButton", 1,  wxHelpEvent::Origin_HelpButton TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxNavigationKeyEvent_entry, "IsBackward", 1,  wxNavigationKeyEvent::IsBackward TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxNavigationKeyEvent_entry, "IsForward", 1,  wxNavigationKeyEvent::IsForward TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxNavigationKeyEvent_entry, "WinChange", 1,  wxNavigationKeyEvent::WinChange TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxNavigationKeyEvent_entry, "FromTab", 1,  wxNavigationKeyEvent::FromTab TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxStandardPaths_entry, "ResourceCat_None", 1,  wxStandardPaths::ResourceCat_None TSRMLS_DC);
-	zend_declare_class_constant_long(php_wxStandardPaths_entry, "ResourceCat_Messages", 1,  wxStandardPaths::ResourceCat_Messages TSRMLS_DC);
+	zend_declare_class_constant_long(php_wxConfigBase_entry, "Type_Unknown", 12,  wxConfigBase::Type_Unknown TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxConfigBase_entry, "Type_String", 11,  wxConfigBase::Type_String TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxConfigBase_entry, "Type_Boolean", 12,  wxConfigBase::Type_Boolean TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxConfigBase_entry, "Type_Integer", 12,  wxConfigBase::Type_Integer TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxConfigBase_entry, "Type_Float", 10,  wxConfigBase::Type_Float TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxDataObject_entry, "Get", 3,  wxDataObject::Get TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxDataObject_entry, "Set", 3,  wxDataObject::Set TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxDataObject_entry, "Both", 4,  wxDataObject::Both TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxFile_entry, "read", 4,  wxFile::read TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxFile_entry, "write", 5,  wxFile::write TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxFile_entry, "read_write", 10,  wxFile::read_write TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxFile_entry, "write_append", 12,  wxFile::write_append TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxFile_entry, "write_excl", 10,  wxFile::write_excl TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxGrid_entry, "wxGridSelectCells", 17,  wxGrid::wxGridSelectCells TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxGrid_entry, "wxGridSelectRows", 16,  wxGrid::wxGridSelectRows TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxGrid_entry, "wxGridSelectColumns", 19,  wxGrid::wxGridSelectColumns TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxGrid_entry, "wxGridSelectRowsOrColumns", 25,  wxGrid::wxGridSelectRowsOrColumns TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxGrid_entry, "CellSpan_Inside", 15,  wxGrid::CellSpan_Inside TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxGrid_entry, "CellSpan_None", 13,  wxGrid::CellSpan_None TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxGrid_entry, "CellSpan_Main", 13,  wxGrid::CellSpan_Main TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxGridCellAttr_entry, "Any", 3,  wxGridCellAttr::Any TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxGridCellAttr_entry, "Cell", 4,  wxGridCellAttr::Cell TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxGridCellAttr_entry, "Row", 3,  wxGridCellAttr::Row TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxGridCellAttr_entry, "Col", 3,  wxGridCellAttr::Col TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxHelpEvent_entry, "Origin_Unknown", 14,  wxHelpEvent::Origin_Unknown TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxHelpEvent_entry, "Origin_Keyboard", 15,  wxHelpEvent::Origin_Keyboard TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxHelpEvent_entry, "Origin_HelpButton", 17,  wxHelpEvent::Origin_HelpButton TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxNavigationKeyEvent_entry, "IsBackward", 10,  wxNavigationKeyEvent::IsBackward TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxNavigationKeyEvent_entry, "IsForward", 9,  wxNavigationKeyEvent::IsForward TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxNavigationKeyEvent_entry, "WinChange", 9,  wxNavigationKeyEvent::WinChange TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxNavigationKeyEvent_entry, "FromTab", 7,  wxNavigationKeyEvent::FromTab TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxStandardPaths_entry, "ResourceCat_None", 16,  wxStandardPaths::ResourceCat_None TSRMLS_CC);
+	zend_declare_class_constant_long(php_wxStandardPaths_entry, "ResourceCat_Messages", 20,  wxStandardPaths::ResourceCat_Messages TSRMLS_CC);
 	
     return SUCCESS;
 }

@@ -298,8 +298,12 @@ PHP_METHOD(php_wxEventLoopBase, GetActive)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxEventLoopBase)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxEventLoopBase){
 				references = &((wxEventLoopBase_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -400,8 +404,12 @@ PHP_METHOD(php_wxEventLoopBase, IsEventAllowedInsideYield)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxEventLoopBase)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxEventLoopBase){
 				references = &((wxEventLoopBase_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -491,8 +499,12 @@ PHP_METHOD(php_wxEventLoopBase, IsMain)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxEventLoopBase)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxEventLoopBase){
 				references = &((wxEventLoopBase_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -577,8 +589,12 @@ PHP_METHOD(php_wxEventLoopBase, IsOk)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxEventLoopBase)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxEventLoopBase){
 				references = &((wxEventLoopBase_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -663,8 +679,12 @@ PHP_METHOD(php_wxEventLoopBase, IsRunning)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxEventLoopBase)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxEventLoopBase){
 				references = &((wxEventLoopBase_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -749,8 +769,12 @@ PHP_METHOD(php_wxEventLoopBase, IsYielding)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxEventLoopBase)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxEventLoopBase){
 				references = &((wxEventLoopBase_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -940,8 +964,12 @@ PHP_METHOD(php_wxEventLoopBase, ProcessIdle)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxEventLoopBase)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxEventLoopBase){
 				references = &((wxEventLoopBase_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1079,8 +1107,12 @@ PHP_METHOD(php_wxEventLoopBase, SetActive)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxEventLoopBase)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxEventLoopBase){
 				references = &((wxEventLoopBase_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1238,8 +1270,12 @@ PHP_METHOD(php_wxEventLoopBase, WakeUpIdle)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxEventLoopBase)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxEventLoopBase){
 				references = &((wxEventLoopBase_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1324,8 +1360,12 @@ PHP_METHOD(php_wxEventLoopBase, Yield)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxEventLoopBase)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxEventLoopBase){
 				references = &((wxEventLoopBase_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1429,8 +1469,12 @@ PHP_METHOD(php_wxEventLoopBase, YieldFor)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxEventLoopBase)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxEventLoopBase){
 				references = &((wxEventLoopBase_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1932,8 +1976,12 @@ PHP_METHOD(php_wxProcess, CloseOutput)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxProcess)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxProcess){
 				references = &((wxProcess_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2015,8 +2063,12 @@ PHP_METHOD(php_wxProcess, Detach)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxProcess)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxProcess){
 				references = &((wxProcess_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2098,8 +2150,12 @@ PHP_METHOD(php_wxProcess, Exists)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxProcess)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxProcess){
 				references = &((wxProcess_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2187,8 +2243,12 @@ PHP_METHOD(php_wxProcess, GetErrorStream)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxProcess)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxProcess){
 				references = &((wxProcess_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2292,8 +2352,12 @@ PHP_METHOD(php_wxProcess, GetInputStream)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxProcess)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxProcess){
 				references = &((wxProcess_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2397,8 +2461,12 @@ PHP_METHOD(php_wxProcess, GetOutputStream)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxProcess)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxProcess){
 				references = &((wxProcess_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2502,8 +2570,12 @@ PHP_METHOD(php_wxProcess, GetPid)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxProcess)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxProcess){
 				references = &((wxProcess_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2585,8 +2657,12 @@ PHP_METHOD(php_wxProcess, IsErrorAvailable)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxProcess)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxProcess){
 				references = &((wxProcess_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2668,8 +2744,12 @@ PHP_METHOD(php_wxProcess, IsInputOpened)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxProcess)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxProcess){
 				references = &((wxProcess_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2751,8 +2831,12 @@ PHP_METHOD(php_wxProcess, Kill)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxProcess)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxProcess){
 				references = &((wxProcess_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2866,8 +2950,12 @@ PHP_METHOD(php_wxProcess, IsInputAvailable)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxProcess)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxProcess){
 				references = &((wxProcess_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3008,8 +3096,12 @@ PHP_METHOD(php_wxProcess, Redirect)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxProcess)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxProcess){
 				references = &((wxProcess_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3091,8 +3183,12 @@ PHP_METHOD(php_wxProcess, Open)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxProcess)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxProcess){
 				references = &((wxProcess_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3432,8 +3528,12 @@ PHP_METHOD(php_wxSingleInstanceChecker, Create)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxSingleInstanceChecker)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxSingleInstanceChecker){
 				references = &((wxSingleInstanceChecker_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3534,8 +3634,12 @@ PHP_METHOD(php_wxSingleInstanceChecker, CreateDefault)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxSingleInstanceChecker)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxSingleInstanceChecker){
 				references = &((wxSingleInstanceChecker_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3617,8 +3721,12 @@ PHP_METHOD(php_wxSingleInstanceChecker, IsAnotherRunning)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxSingleInstanceChecker)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxSingleInstanceChecker){
 				references = &((wxSingleInstanceChecker_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else

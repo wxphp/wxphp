@@ -127,8 +127,12 @@ PHP_METHOD(php_wxLogWindow, GetFrame)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLogWindow)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLogWindow){
 				references = &((wxLogWindow_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -409,8 +413,12 @@ PHP_METHOD(php_wxLogWindow, Show)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLogWindow)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLogWindow){
 				references = &((wxLogWindow_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -678,12 +686,20 @@ PHP_METHOD(php_wxLogChain, DetachOldLog)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLogChain)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLogChain){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -765,12 +781,20 @@ PHP_METHOD(php_wxLogChain, GetOldLog)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLogChain)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLogChain){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -874,12 +898,20 @@ PHP_METHOD(php_wxLogChain, IsPassingMessages)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLogChain)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLogChain){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -961,12 +993,20 @@ PHP_METHOD(php_wxLogChain, PassMessages)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLogChain)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLogChain){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1053,12 +1093,20 @@ PHP_METHOD(php_wxLogChain, SetLog)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLogChain)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLogChain){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1307,8 +1355,12 @@ PHP_METHOD(php_wxLogGui, Flush)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLogGui)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLogGui){
 				references = &((wxLogGui_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1590,8 +1642,12 @@ PHP_METHOD(php_wxLogBuffer, Flush)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLogBuffer)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLogBuffer){
 				references = &((wxLogBuffer_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1673,8 +1729,12 @@ PHP_METHOD(php_wxLogBuffer, GetBuffer)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLogBuffer)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLogBuffer){
 				references = &((wxLogBuffer_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2148,20 +2208,36 @@ PHP_METHOD(php_wxLog, AddTraceMask)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLog){
 				references = &((wxLog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogBuffer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogBuffer) && (!reference_type_found)){
 				references = &((wxLogBuffer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogChain)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogChain) && (!reference_type_found)){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogGui)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogGui) && (!reference_type_found)){
 				references = &((wxLogGui_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogTextCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogTextCtrl) && (!reference_type_found)){
 				references = &((wxLogTextCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2250,20 +2326,36 @@ PHP_METHOD(php_wxLog, ClearTraceMasks)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLog){
 				references = &((wxLog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogBuffer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogBuffer) && (!reference_type_found)){
 				references = &((wxLogBuffer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogChain)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogChain) && (!reference_type_found)){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogGui)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogGui) && (!reference_type_found)){
 				references = &((wxLogGui_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogTextCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogTextCtrl) && (!reference_type_found)){
 				references = &((wxLogTextCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2346,20 +2438,36 @@ PHP_METHOD(php_wxLog, DisableTimestamp)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLog){
 				references = &((wxLog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogBuffer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogBuffer) && (!reference_type_found)){
 				references = &((wxLogBuffer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogChain)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogChain) && (!reference_type_found)){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogGui)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogGui) && (!reference_type_found)){
 				references = &((wxLogGui_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogTextCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogTextCtrl) && (!reference_type_found)){
 				references = &((wxLogTextCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2565,20 +2673,36 @@ PHP_METHOD(php_wxLog, DontCreateOnDemand)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLog){
 				references = &((wxLog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogBuffer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogBuffer) && (!reference_type_found)){
 				references = &((wxLogBuffer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogChain)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogChain) && (!reference_type_found)){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogGui)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogGui) && (!reference_type_found)){
 				references = &((wxLogGui_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogTextCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogTextCtrl) && (!reference_type_found)){
 				references = &((wxLogTextCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2661,20 +2785,36 @@ PHP_METHOD(php_wxLog, EnableLogging)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLog){
 				references = &((wxLog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogBuffer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogBuffer) && (!reference_type_found)){
 				references = &((wxLogBuffer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogChain)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogChain) && (!reference_type_found)){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogGui)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogGui) && (!reference_type_found)){
 				references = &((wxLogGui_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogTextCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogTextCtrl) && (!reference_type_found)){
 				references = &((wxLogTextCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2774,20 +2914,36 @@ PHP_METHOD(php_wxLog, Flush)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLog){
 				references = &((wxLog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogBuffer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogBuffer) && (!reference_type_found)){
 				references = &((wxLogBuffer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogChain)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogChain) && (!reference_type_found)){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogGui)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogGui) && (!reference_type_found)){
 				references = &((wxLogGui_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogTextCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogTextCtrl) && (!reference_type_found)){
 				references = &((wxLogTextCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2888,20 +3044,36 @@ PHP_METHOD(php_wxLog, FlushActive)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLog){
 				references = &((wxLog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogBuffer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogBuffer) && (!reference_type_found)){
 				references = &((wxLogBuffer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogChain)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogChain) && (!reference_type_found)){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogGui)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogGui) && (!reference_type_found)){
 				references = &((wxLogGui_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogTextCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogTextCtrl) && (!reference_type_found)){
 				references = &((wxLogTextCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2984,20 +3156,36 @@ PHP_METHOD(php_wxLog, GetActiveTarget)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLog){
 				references = &((wxLog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogBuffer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogBuffer) && (!reference_type_found)){
 				references = &((wxLogBuffer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogChain)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogChain) && (!reference_type_found)){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogGui)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogGui) && (!reference_type_found)){
 				references = &((wxLogGui_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogTextCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogTextCtrl) && (!reference_type_found)){
 				references = &((wxLogTextCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3098,20 +3286,36 @@ PHP_METHOD(php_wxLog, GetLogLevel)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLog){
 				references = &((wxLog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogBuffer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogBuffer) && (!reference_type_found)){
 				references = &((wxLogBuffer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogChain)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogChain) && (!reference_type_found)){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogGui)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogGui) && (!reference_type_found)){
 				references = &((wxLogGui_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogTextCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogTextCtrl) && (!reference_type_found)){
 				references = &((wxLogTextCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3194,20 +3398,36 @@ PHP_METHOD(php_wxLog, GetRepetitionCounting)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLog){
 				references = &((wxLog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogBuffer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogBuffer) && (!reference_type_found)){
 				references = &((wxLogBuffer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogChain)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogChain) && (!reference_type_found)){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogGui)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogGui) && (!reference_type_found)){
 				references = &((wxLogGui_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogTextCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogTextCtrl) && (!reference_type_found)){
 				references = &((wxLogTextCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3290,20 +3510,36 @@ PHP_METHOD(php_wxLog, GetTimestamp)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLog){
 				references = &((wxLog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogBuffer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogBuffer) && (!reference_type_found)){
 				references = &((wxLogBuffer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogChain)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogChain) && (!reference_type_found)){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogGui)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogGui) && (!reference_type_found)){
 				references = &((wxLogGui_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogTextCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogTextCtrl) && (!reference_type_found)){
 				references = &((wxLogTextCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3392,20 +3628,36 @@ PHP_METHOD(php_wxLog, GetTraceMasks)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLog){
 				references = &((wxLog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogBuffer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogBuffer) && (!reference_type_found)){
 				references = &((wxLogBuffer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogChain)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogChain) && (!reference_type_found)){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogGui)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogGui) && (!reference_type_found)){
 				references = &((wxLogGui_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogTextCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogTextCtrl) && (!reference_type_found)){
 				references = &((wxLogTextCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3498,20 +3750,36 @@ PHP_METHOD(php_wxLog, GetVerbose)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLog){
 				references = &((wxLog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogBuffer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogBuffer) && (!reference_type_found)){
 				references = &((wxLogBuffer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogChain)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogChain) && (!reference_type_found)){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogGui)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogGui) && (!reference_type_found)){
 				references = &((wxLogGui_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogTextCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogTextCtrl) && (!reference_type_found)){
 				references = &((wxLogTextCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3594,20 +3862,36 @@ PHP_METHOD(php_wxLog, IsAllowedTraceMask)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLog){
 				references = &((wxLog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogBuffer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogBuffer) && (!reference_type_found)){
 				references = &((wxLogBuffer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogChain)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogChain) && (!reference_type_found)){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogGui)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogGui) && (!reference_type_found)){
 				references = &((wxLogGui_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogTextCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogTextCtrl) && (!reference_type_found)){
 				references = &((wxLogTextCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3696,20 +3980,36 @@ PHP_METHOD(php_wxLog, IsEnabled)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLog){
 				references = &((wxLog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogBuffer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogBuffer) && (!reference_type_found)){
 				references = &((wxLogBuffer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogChain)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogChain) && (!reference_type_found)){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogGui)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogGui) && (!reference_type_found)){
 				references = &((wxLogGui_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogTextCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogTextCtrl) && (!reference_type_found)){
 				references = &((wxLogTextCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3792,20 +4092,36 @@ PHP_METHOD(php_wxLog, IsLevelEnabled)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLog){
 				references = &((wxLog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogBuffer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogBuffer) && (!reference_type_found)){
 				references = &((wxLogBuffer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogChain)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogChain) && (!reference_type_found)){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogGui)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogGui) && (!reference_type_found)){
 				references = &((wxLogGui_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogTextCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogTextCtrl) && (!reference_type_found)){
 				references = &((wxLogTextCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3895,20 +4211,36 @@ PHP_METHOD(php_wxLog, RemoveTraceMask)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLog){
 				references = &((wxLog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogBuffer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogBuffer) && (!reference_type_found)){
 				references = &((wxLogBuffer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogChain)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogChain) && (!reference_type_found)){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogGui)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogGui) && (!reference_type_found)){
 				references = &((wxLogGui_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogTextCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogTextCtrl) && (!reference_type_found)){
 				references = &((wxLogTextCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3997,20 +4329,36 @@ PHP_METHOD(php_wxLog, Resume)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLog){
 				references = &((wxLog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogBuffer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogBuffer) && (!reference_type_found)){
 				references = &((wxLogBuffer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogChain)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogChain) && (!reference_type_found)){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogGui)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogGui) && (!reference_type_found)){
 				references = &((wxLogGui_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogTextCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogTextCtrl) && (!reference_type_found)){
 				references = &((wxLogTextCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4093,20 +4441,36 @@ PHP_METHOD(php_wxLog, SetActiveTarget)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLog){
 				references = &((wxLog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogBuffer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogBuffer) && (!reference_type_found)){
 				references = &((wxLogBuffer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogChain)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogChain) && (!reference_type_found)){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogGui)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogGui) && (!reference_type_found)){
 				references = &((wxLogGui_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogTextCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogTextCtrl) && (!reference_type_found)){
 				references = &((wxLogTextCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4229,20 +4593,36 @@ PHP_METHOD(php_wxLog, SetComponentLevel)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLog){
 				references = &((wxLog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogBuffer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogBuffer) && (!reference_type_found)){
 				references = &((wxLogBuffer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogChain)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogChain) && (!reference_type_found)){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogGui)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogGui) && (!reference_type_found)){
 				references = &((wxLogGui_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogTextCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogTextCtrl) && (!reference_type_found)){
 				references = &((wxLogTextCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4332,20 +4712,36 @@ PHP_METHOD(php_wxLog, SetLogLevel)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLog){
 				references = &((wxLog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogBuffer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogBuffer) && (!reference_type_found)){
 				references = &((wxLogBuffer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogChain)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogChain) && (!reference_type_found)){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogGui)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogGui) && (!reference_type_found)){
 				references = &((wxLogGui_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogTextCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogTextCtrl) && (!reference_type_found)){
 				references = &((wxLogTextCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4433,20 +4829,36 @@ PHP_METHOD(php_wxLog, SetRepetitionCounting)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLog){
 				references = &((wxLog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogBuffer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogBuffer) && (!reference_type_found)){
 				references = &((wxLogBuffer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogChain)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogChain) && (!reference_type_found)){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogGui)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogGui) && (!reference_type_found)){
 				references = &((wxLogGui_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogTextCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogTextCtrl) && (!reference_type_found)){
 				references = &((wxLogTextCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4546,20 +4958,36 @@ PHP_METHOD(php_wxLog, SetThreadActiveTarget)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLog){
 				references = &((wxLog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogBuffer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogBuffer) && (!reference_type_found)){
 				references = &((wxLogBuffer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogChain)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogChain) && (!reference_type_found)){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogGui)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogGui) && (!reference_type_found)){
 				references = &((wxLogGui_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogTextCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogTextCtrl) && (!reference_type_found)){
 				references = &((wxLogTextCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4682,20 +5110,36 @@ PHP_METHOD(php_wxLog, SetTimestamp)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLog){
 				references = &((wxLog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogBuffer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogBuffer) && (!reference_type_found)){
 				references = &((wxLogBuffer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogChain)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogChain) && (!reference_type_found)){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogGui)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogGui) && (!reference_type_found)){
 				references = &((wxLogGui_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogTextCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogTextCtrl) && (!reference_type_found)){
 				references = &((wxLogTextCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4784,20 +5228,36 @@ PHP_METHOD(php_wxLog, SetVerbose)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLog){
 				references = &((wxLog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogBuffer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogBuffer) && (!reference_type_found)){
 				references = &((wxLogBuffer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogChain)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogChain) && (!reference_type_found)){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogGui)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogGui) && (!reference_type_found)){
 				references = &((wxLogGui_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogTextCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogTextCtrl) && (!reference_type_found)){
 				references = &((wxLogTextCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4897,20 +5357,36 @@ PHP_METHOD(php_wxLog, Suspend)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxLog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxLog){
 				references = &((wxLog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogBuffer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogBuffer) && (!reference_type_found)){
 				references = &((wxLogBuffer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogChain)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogChain) && (!reference_type_found)){
 				references = &((wxLogChain_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogInterposer)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogInterposer) && (!reference_type_found)){
 				references = &((wxLogInterposer_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogWindow)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogWindow) && (!reference_type_found)){
 				references = &((wxLogWindow_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogGui)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogGui) && (!reference_type_found)){
 				references = &((wxLogGui_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxLogTextCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxLogTextCtrl) && (!reference_type_found)){
 				references = &((wxLogTextCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else

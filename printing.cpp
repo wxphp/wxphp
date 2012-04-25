@@ -127,8 +127,12 @@ PHP_METHOD(php_wxPrinterDC, GetPaperRect)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrinterDC)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrinterDC){
 				references = &((wxPrinterDC_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -326,8 +330,12 @@ PHP_METHOD(php_wxPreviewControlBar, CreateButtons)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPreviewControlBar)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPreviewControlBar){
 				references = &((wxPreviewControlBar_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -409,8 +417,12 @@ PHP_METHOD(php_wxPreviewControlBar, GetZoomControl)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPreviewControlBar)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPreviewControlBar){
 				references = &((wxPreviewControlBar_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -492,8 +504,12 @@ PHP_METHOD(php_wxPreviewControlBar, SetZoomControl)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPreviewControlBar)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPreviewControlBar){
 				references = &((wxPreviewControlBar_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1026,8 +1042,12 @@ PHP_METHOD(php_wxPreviewFrame, CreateCanvas)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPreviewFrame)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPreviewFrame){
 				references = &((wxPreviewFrame_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1112,8 +1132,12 @@ PHP_METHOD(php_wxPreviewFrame, CreateControlBar)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPreviewFrame)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPreviewFrame){
 				references = &((wxPreviewFrame_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1198,8 +1222,12 @@ PHP_METHOD(php_wxPreviewFrame, Initialize)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPreviewFrame)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPreviewFrame){
 				references = &((wxPreviewFrame_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1284,8 +1312,12 @@ PHP_METHOD(php_wxPreviewFrame, InitializeWithModality)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPreviewFrame)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPreviewFrame){
 				references = &((wxPreviewFrame_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1416,8 +1448,12 @@ PHP_METHOD(php_wxPrintPreview, GetCanvas)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintPreview)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintPreview){
 				references = &((wxPrintPreview_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1521,8 +1557,12 @@ PHP_METHOD(php_wxPrintPreview, GetCurrentPage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintPreview)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintPreview){
 				references = &((wxPrintPreview_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1604,8 +1644,12 @@ PHP_METHOD(php_wxPrintPreview, GetFrame)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintPreview)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintPreview){
 				references = &((wxPrintPreview_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1709,8 +1753,12 @@ PHP_METHOD(php_wxPrintPreview, GetMaxPage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintPreview)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintPreview){
 				references = &((wxPrintPreview_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1792,8 +1840,12 @@ PHP_METHOD(php_wxPrintPreview, GetMinPage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintPreview)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintPreview){
 				references = &((wxPrintPreview_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1875,8 +1927,12 @@ PHP_METHOD(php_wxPrintPreview, GetPrintout)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintPreview)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintPreview){
 				references = &((wxPrintPreview_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1980,8 +2036,12 @@ PHP_METHOD(php_wxPrintPreview, GetPrintoutForPrinting)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintPreview)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintPreview){
 				references = &((wxPrintPreview_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2085,8 +2145,12 @@ PHP_METHOD(php_wxPrintPreview, IsOk)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintPreview)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintPreview){
 				references = &((wxPrintPreview_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2168,8 +2232,12 @@ PHP_METHOD(php_wxPrintPreview, PaintPage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintPreview)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintPreview){
 				references = &((wxPrintPreview_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2293,8 +2361,12 @@ PHP_METHOD(php_wxPrintPreview, Print)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintPreview)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintPreview){
 				references = &((wxPrintPreview_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2381,8 +2453,12 @@ PHP_METHOD(php_wxPrintPreview, RenderPage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintPreview)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintPreview){
 				references = &((wxPrintPreview_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2469,8 +2545,12 @@ PHP_METHOD(php_wxPrintPreview, SetCanvas)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintPreview)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintPreview){
 				references = &((wxPrintPreview_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2575,8 +2655,12 @@ PHP_METHOD(php_wxPrintPreview, SetCurrentPage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintPreview)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintPreview){
 				references = &((wxPrintPreview_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2663,8 +2747,12 @@ PHP_METHOD(php_wxPrintPreview, SetFrame)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintPreview)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintPreview){
 				references = &((wxPrintPreview_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2769,8 +2857,12 @@ PHP_METHOD(php_wxPrintPreview, SetPrintout)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintPreview)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintPreview){
 				references = &((wxPrintPreview_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2875,8 +2967,12 @@ PHP_METHOD(php_wxPrintPreview, SetZoom)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintPreview)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintPreview){
 				references = &((wxPrintPreview_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3168,8 +3264,12 @@ PHP_METHOD(php_wxPrinter, CreateAbortWindow)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrinter)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrinter){
 				references = &((wxPrinter_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3315,8 +3415,12 @@ PHP_METHOD(php_wxPrinter, GetAbort)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrinter)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrinter){
 				references = &((wxPrinter_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3398,8 +3502,12 @@ PHP_METHOD(php_wxPrinter, GetLastError)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrinter)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrinter){
 				references = &((wxPrinter_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3482,8 +3590,12 @@ PHP_METHOD(php_wxPrinter, GetPrintDialogData)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrinter)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrinter){
 				references = &((wxPrinter_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3584,8 +3696,12 @@ PHP_METHOD(php_wxPrinter, Print)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrinter)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrinter){
 				references = &((wxPrinter_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3723,8 +3839,12 @@ PHP_METHOD(php_wxPrinter, PrintDialog)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrinter)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrinter){
 				references = &((wxPrinter_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3851,8 +3971,12 @@ PHP_METHOD(php_wxPrinter, ReportError)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrinter)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrinter){
 				references = &((wxPrinter_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3978,8 +4102,12 @@ PHP_METHOD(php_wxPrinter, Setup)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrinter)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrinter){
 				references = &((wxPrinter_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4238,10 +4366,16 @@ PHP_METHOD(php_wxPrintout, FitThisSizeToPage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintout)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintout){
 				references = &((wxPrintout_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxHtmlPrintout)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxHtmlPrintout) && (!reference_type_found)){
 				references = &((wxHtmlPrintout_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4346,10 +4480,16 @@ PHP_METHOD(php_wxPrintout, FitThisSizeToPageMargins)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintout)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintout){
 				references = &((wxPrintout_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxHtmlPrintout)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxHtmlPrintout) && (!reference_type_found)){
 				references = &((wxHtmlPrintout_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4473,10 +4613,16 @@ PHP_METHOD(php_wxPrintout, FitThisSizeToPaper)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintout)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintout){
 				references = &((wxPrintout_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxHtmlPrintout)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxHtmlPrintout) && (!reference_type_found)){
 				references = &((wxHtmlPrintout_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4581,10 +4727,16 @@ PHP_METHOD(php_wxPrintout, GetDC)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintout)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintout){
 				references = &((wxPrintout_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxHtmlPrintout)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxHtmlPrintout) && (!reference_type_found)){
 				references = &((wxHtmlPrintout_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4688,10 +4840,16 @@ PHP_METHOD(php_wxPrintout, GetLogicalPageMarginsRect)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintout)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintout){
 				references = &((wxPrintout_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxHtmlPrintout)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxHtmlPrintout) && (!reference_type_found)){
 				references = &((wxHtmlPrintout_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4801,10 +4959,16 @@ PHP_METHOD(php_wxPrintout, GetLogicalPageRect)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintout)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintout){
 				references = &((wxPrintout_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxHtmlPrintout)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxHtmlPrintout) && (!reference_type_found)){
 				references = &((wxHtmlPrintout_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4891,10 +5055,16 @@ PHP_METHOD(php_wxPrintout, GetLogicalPaperRect)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintout)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintout){
 				references = &((wxPrintout_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxHtmlPrintout)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxHtmlPrintout) && (!reference_type_found)){
 				references = &((wxHtmlPrintout_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4981,10 +5151,16 @@ PHP_METHOD(php_wxPrintout, GetPPIPrinter)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintout)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintout){
 				references = &((wxPrintout_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxHtmlPrintout)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxHtmlPrintout) && (!reference_type_found)){
 				references = &((wxHtmlPrintout_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5089,10 +5265,16 @@ PHP_METHOD(php_wxPrintout, GetPPIScreen)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintout)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintout){
 				references = &((wxPrintout_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxHtmlPrintout)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxHtmlPrintout) && (!reference_type_found)){
 				references = &((wxHtmlPrintout_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5197,10 +5379,16 @@ PHP_METHOD(php_wxPrintout, GetPageInfo)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintout)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintout){
 				references = &((wxPrintout_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxHtmlPrintout)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxHtmlPrintout) && (!reference_type_found)){
 				references = &((wxHtmlPrintout_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5321,10 +5509,16 @@ PHP_METHOD(php_wxPrintout, GetPageSizeMM)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintout)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintout){
 				references = &((wxPrintout_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxHtmlPrintout)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxHtmlPrintout) && (!reference_type_found)){
 				references = &((wxHtmlPrintout_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5429,10 +5623,16 @@ PHP_METHOD(php_wxPrintout, GetPageSizePixels)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintout)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintout){
 				references = &((wxPrintout_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxHtmlPrintout)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxHtmlPrintout) && (!reference_type_found)){
 				references = &((wxHtmlPrintout_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5537,10 +5737,16 @@ PHP_METHOD(php_wxPrintout, GetPaperRectPixels)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintout)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintout){
 				references = &((wxPrintout_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxHtmlPrintout)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxHtmlPrintout) && (!reference_type_found)){
 				references = &((wxHtmlPrintout_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5627,10 +5833,16 @@ PHP_METHOD(php_wxPrintout, GetPreview)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintout)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintout){
 				references = &((wxPrintout_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxHtmlPrintout)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxHtmlPrintout) && (!reference_type_found)){
 				references = &((wxHtmlPrintout_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5734,10 +5946,16 @@ PHP_METHOD(php_wxPrintout, GetTitle)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintout)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintout){
 				references = &((wxPrintout_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxHtmlPrintout)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxHtmlPrintout) && (!reference_type_found)){
 				references = &((wxHtmlPrintout_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5825,10 +6043,16 @@ PHP_METHOD(php_wxPrintout, HasPage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintout)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintout){
 				references = &((wxPrintout_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxHtmlPrintout)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxHtmlPrintout) && (!reference_type_found)){
 				references = &((wxHtmlPrintout_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5915,10 +6139,16 @@ PHP_METHOD(php_wxPrintout, IsPreview)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintout)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintout){
 				references = &((wxPrintout_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxHtmlPrintout)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxHtmlPrintout) && (!reference_type_found)){
 				references = &((wxHtmlPrintout_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -6000,10 +6230,16 @@ PHP_METHOD(php_wxPrintout, MapScreenSizeToDevice)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintout)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintout){
 				references = &((wxPrintout_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxHtmlPrintout)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxHtmlPrintout) && (!reference_type_found)){
 				references = &((wxHtmlPrintout_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -6085,10 +6321,16 @@ PHP_METHOD(php_wxPrintout, MapScreenSizeToPage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintout)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintout){
 				references = &((wxPrintout_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxHtmlPrintout)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxHtmlPrintout) && (!reference_type_found)){
 				references = &((wxHtmlPrintout_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -6170,10 +6412,16 @@ PHP_METHOD(php_wxPrintout, MapScreenSizeToPageMargins)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintout)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintout){
 				references = &((wxPrintout_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxHtmlPrintout)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxHtmlPrintout) && (!reference_type_found)){
 				references = &((wxHtmlPrintout_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -6278,10 +6526,16 @@ PHP_METHOD(php_wxPrintout, MapScreenSizeToPaper)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintout)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintout){
 				references = &((wxPrintout_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxHtmlPrintout)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxHtmlPrintout) && (!reference_type_found)){
 				references = &((wxHtmlPrintout_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -6363,10 +6617,16 @@ PHP_METHOD(php_wxPrintout, OffsetLogicalOrigin)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintout)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintout){
 				references = &((wxPrintout_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxHtmlPrintout)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxHtmlPrintout) && (!reference_type_found)){
 				references = &((wxHtmlPrintout_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -6780,10 +7040,16 @@ PHP_METHOD(php_wxPrintout, SetLogicalOrigin)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintout)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintout){
 				references = &((wxPrintout_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxHtmlPrintout)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxHtmlPrintout) && (!reference_type_found)){
 				references = &((wxHtmlPrintout_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -6972,8 +7238,12 @@ PHP_METHOD(php_wxPrintDialog, GetPrintDC)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintDialog){
 				references = &((wxPrintDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -7077,8 +7347,12 @@ PHP_METHOD(php_wxPrintDialog, GetPrintDialogData)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintDialog){
 				references = &((wxPrintDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -7179,8 +7453,12 @@ PHP_METHOD(php_wxPrintDialog, ShowModal)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintDialog){
 				references = &((wxPrintDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -7400,8 +7678,12 @@ PHP_METHOD(php_wxPageSetupDialog, GetPageSetupData)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPageSetupDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPageSetupDialog){
 				references = &((wxPageSetupDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -7635,8 +7917,12 @@ PHP_METHOD(php_wxPageSetupDialog, ShowModal)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPageSetupDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPageSetupDialog){
 				references = &((wxPageSetupDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else

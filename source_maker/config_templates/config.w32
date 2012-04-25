@@ -1,51 +1,51 @@
-ARG_ENABLE("wxWidgets", "enable wxWdigets extension", "no");
+ARG_ENABLE("wxwidgets", "enable wxwidgets extension", "no");
 ARG_ENABLE("wxwidgets-debug", "enable debugging messages support in wxPHP", "no");
 
 if (PHP_WXWIDGETS != "no") {
 	if (
-		CHECK_LIB("wxbase29u.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxbase29u_net.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxbase29u_xml.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxexpat.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxjpeg.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxmsw29u_adv.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxmsw29u_aui.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxmsw29u_core.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxmsw29u_gl.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxmsw29u_html.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxmsw29u_media.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxmsw29u_propgrid.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxmsw29u_qa.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxmsw29u_ribbon.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxmsw29u_richtext.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxmsw29u_stc.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxmsw29u_webview.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxmsw29u_xrc.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxpng.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxregexu.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxscintilla.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxtiff.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wxzlib.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("gdi32.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("comdlg32.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("winspool.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("winmm.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("comctl32.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("oleaut32.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("uuid.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("rpcrt4.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("advapi32.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("wsock32.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("odbc32.lib", "wxWidgets", PHP_WXWIDGETS) &&
-		CHECK_LIB("oleacc.lib", "wxWidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxbase29u.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxbase29u_net.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxbase29u_xml.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxexpat.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxjpeg.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxmsw29u_adv.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxmsw29u_aui.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxmsw29u_core.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxmsw29u_gl.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxmsw29u_html.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxmsw29u_media.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxmsw29u_propgrid.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxmsw29u_qa.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxmsw29u_ribbon.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxmsw29u_richtext.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxmsw29u_stc.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxmsw29u_webview.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxmsw29u_xrc.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxpng.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxregexu.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxscintilla.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxtiff.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wxzlib.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("gdi32.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("comdlg32.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("winspool.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("winmm.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("comctl32.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("oleaut32.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("uuid.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("rpcrt4.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("advapi32.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("wsock32.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("odbc32.lib", "wxwidgets", PHP_WXWIDGETS) &&
+		CHECK_LIB("oleacc.lib", "wxwidgets", PHP_WXWIDGETS) &&
 		CHECK_HEADER_ADD_INCLUDE("wx\\wx.h", "CFLAGS_WXWIDGETS")) {
 		
 		if (PHP_WXWIDGETS_DEBUG != "no") {
 			AC_DEFINE('USE_WXPHP_DEBUG', 1, 'Print debugging messages');
 		}
 		
-		EXTENSION("wxWidgets", "app.cpp references.cpp <?=$source_files?> wxwidgets.cpp");
-		ADD_FLAG("CFLAGS_WXWIDGETS", "/TP /EHsc");
+		EXTENSION("wxwidgets", "app.cpp references.cpp <?=$source_files?> wxwidgets.cpp");
+		ADD_FLAG("CFLAGS_WXWIDGETS", "/TP /EHsc /DWIN32 /D__WIN32__ /D__WXMSW__ /DwxUSE_UNICODE /D_UNICODE /D_WINDOWS");
 		AC_DEFINE('WX_DEBUG', 0, 'Have WX_DEBug library');
 		
 	} else {

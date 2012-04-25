@@ -1,6 +1,6 @@
-cp class_selector/classes.json dumps/
+copy class_selector\classes.json dumps\ /Y
 php parser.php
 del ..\wxwidgets.cpp
 php update.php
-cp config.m4 ../
-cp config.w32 ../
+copy config.m4 ..\ /Y
+copy config.w32 ..\ /Y
