@@ -23,6 +23,10 @@ Short term TODO
   events correctly but not keyboard ones. I suspect of the way
   we are initliazing the wxPHP library to run applications.
   
+* Methods returning references to its own object return null,
+  this was fixed before, but after introducing wxPHPObjectReferences
+  it break up.
+  
   
 Long term TODO
 ==============================
