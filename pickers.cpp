@@ -94,8 +94,12 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxColourPickerCtrl)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxColourPickerCtrl){
 				references = &((wxColourPickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -365,8 +369,12 @@ PHP_METHOD(php_wxColourPickerCtrl, GetColour)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxColourPickerCtrl)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxColourPickerCtrl){
 				references = &((wxColourPickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -453,8 +461,12 @@ PHP_METHOD(php_wxColourPickerCtrl, SetColour)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxColourPickerCtrl)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxColourPickerCtrl){
 				references = &((wxColourPickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1106,8 +1118,12 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDatePickerCtrl)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDatePickerCtrl){
 				references = &((wxDatePickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1354,8 +1370,12 @@ PHP_METHOD(php_wxDatePickerCtrl, SetValue)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDatePickerCtrl)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDatePickerCtrl){
 				references = &((wxDatePickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1442,8 +1462,12 @@ PHP_METHOD(php_wxDatePickerCtrl, SetRange)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDatePickerCtrl)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDatePickerCtrl){
 				references = &((wxDatePickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1531,8 +1555,12 @@ PHP_METHOD(php_wxDatePickerCtrl, GetValue)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDatePickerCtrl)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDatePickerCtrl){
 				references = &((wxDatePickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1616,8 +1644,12 @@ PHP_METHOD(php_wxDatePickerCtrl, GetRange)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDatePickerCtrl)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDatePickerCtrl){
 				references = &((wxDatePickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1722,8 +1754,12 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFilePickerCtrl)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFilePickerCtrl){
 				references = &((wxFilePickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1999,8 +2035,12 @@ PHP_METHOD(php_wxFilePickerCtrl, GetPath)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFilePickerCtrl)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFilePickerCtrl){
 				references = &((wxFilePickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2088,8 +2128,12 @@ PHP_METHOD(php_wxFilePickerCtrl, SetFileName)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFilePickerCtrl)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFilePickerCtrl){
 				references = &((wxFilePickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2194,8 +2238,12 @@ PHP_METHOD(php_wxFilePickerCtrl, SetPath)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFilePickerCtrl)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFilePickerCtrl){
 				references = &((wxFilePickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2549,8 +2597,12 @@ PHP_METHOD(php_wxFilePickerCtrl, GetFileName)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFilePickerCtrl)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFilePickerCtrl){
 				references = &((wxFilePickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2645,8 +2697,12 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDirPickerCtrl)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDirPickerCtrl){
 				references = &((wxDirPickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2908,8 +2964,12 @@ PHP_METHOD(php_wxDirPickerCtrl, GetDirName)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDirPickerCtrl)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDirPickerCtrl){
 				references = &((wxDirPickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2996,8 +3056,12 @@ PHP_METHOD(php_wxDirPickerCtrl, GetPath)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDirPickerCtrl)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDirPickerCtrl){
 				references = &((wxDirPickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3085,8 +3149,12 @@ PHP_METHOD(php_wxDirPickerCtrl, SetDirName)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDirPickerCtrl)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDirPickerCtrl){
 				references = &((wxDirPickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3191,8 +3259,12 @@ PHP_METHOD(php_wxDirPickerCtrl, SetPath)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDirPickerCtrl)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDirPickerCtrl){
 				references = &((wxDirPickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3541,8 +3613,12 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFontPickerCtrl)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFontPickerCtrl){
 				references = &((wxFontPickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3812,8 +3888,12 @@ PHP_METHOD(php_wxFontPickerCtrl, GetMaxPointSize)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFontPickerCtrl)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFontPickerCtrl){
 				references = &((wxFontPickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3895,8 +3975,12 @@ PHP_METHOD(php_wxFontPickerCtrl, GetSelectedFont)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFontPickerCtrl)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFontPickerCtrl){
 				references = &((wxFontPickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3983,8 +4067,12 @@ PHP_METHOD(php_wxFontPickerCtrl, SetMaxPointSize)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFontPickerCtrl)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFontPickerCtrl){
 				references = &((wxFontPickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4071,8 +4159,12 @@ PHP_METHOD(php_wxFontPickerCtrl, SetSelectedFont)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFontPickerCtrl)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFontPickerCtrl){
 				references = &((wxFontPickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4447,16 +4539,28 @@ PHP_METHOD(php_wxPickerBase, GetInternalMargin)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPickerBase)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPickerBase){
 				references = &((wxPickerBase_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourPickerCtrl) && (!reference_type_found)){
 				references = &((wxColourPickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontPickerCtrl) && (!reference_type_found)){
 				references = &((wxFontPickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFilePickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFilePickerCtrl) && (!reference_type_found)){
 				references = &((wxFilePickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirPickerCtrl) && (!reference_type_found)){
 				references = &((wxDirPickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4557,16 +4661,28 @@ PHP_METHOD(php_wxPickerBase, GetPickerCtrl)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPickerBase)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPickerBase){
 				references = &((wxPickerBase_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourPickerCtrl) && (!reference_type_found)){
 				references = &((wxColourPickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontPickerCtrl) && (!reference_type_found)){
 				references = &((wxFontPickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFilePickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFilePickerCtrl) && (!reference_type_found)){
 				references = &((wxFilePickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirPickerCtrl) && (!reference_type_found)){
 				references = &((wxDirPickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4693,16 +4809,28 @@ PHP_METHOD(php_wxPickerBase, GetPickerCtrlProportion)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPickerBase)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPickerBase){
 				references = &((wxPickerBase_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourPickerCtrl) && (!reference_type_found)){
 				references = &((wxColourPickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontPickerCtrl) && (!reference_type_found)){
 				references = &((wxFontPickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFilePickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFilePickerCtrl) && (!reference_type_found)){
 				references = &((wxFilePickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirPickerCtrl) && (!reference_type_found)){
 				references = &((wxDirPickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4803,16 +4931,28 @@ PHP_METHOD(php_wxPickerBase, GetTextCtrl)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPickerBase)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPickerBase){
 				references = &((wxPickerBase_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourPickerCtrl) && (!reference_type_found)){
 				references = &((wxColourPickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontPickerCtrl) && (!reference_type_found)){
 				references = &((wxFontPickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFilePickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFilePickerCtrl) && (!reference_type_found)){
 				references = &((wxFilePickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirPickerCtrl) && (!reference_type_found)){
 				references = &((wxDirPickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4939,16 +5079,28 @@ PHP_METHOD(php_wxPickerBase, GetTextCtrlProportion)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPickerBase)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPickerBase){
 				references = &((wxPickerBase_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourPickerCtrl) && (!reference_type_found)){
 				references = &((wxColourPickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontPickerCtrl) && (!reference_type_found)){
 				references = &((wxFontPickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFilePickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFilePickerCtrl) && (!reference_type_found)){
 				references = &((wxFilePickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirPickerCtrl) && (!reference_type_found)){
 				references = &((wxDirPickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5049,16 +5201,28 @@ PHP_METHOD(php_wxPickerBase, HasTextCtrl)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPickerBase)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPickerBase){
 				references = &((wxPickerBase_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourPickerCtrl) && (!reference_type_found)){
 				references = &((wxColourPickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontPickerCtrl) && (!reference_type_found)){
 				references = &((wxFontPickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFilePickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFilePickerCtrl) && (!reference_type_found)){
 				references = &((wxFilePickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirPickerCtrl) && (!reference_type_found)){
 				references = &((wxDirPickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5159,16 +5323,28 @@ PHP_METHOD(php_wxPickerBase, IsPickerCtrlGrowable)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPickerBase)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPickerBase){
 				references = &((wxPickerBase_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourPickerCtrl) && (!reference_type_found)){
 				references = &((wxColourPickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontPickerCtrl) && (!reference_type_found)){
 				references = &((wxFontPickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFilePickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFilePickerCtrl) && (!reference_type_found)){
 				references = &((wxFilePickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirPickerCtrl) && (!reference_type_found)){
 				references = &((wxDirPickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5269,16 +5445,28 @@ PHP_METHOD(php_wxPickerBase, IsTextCtrlGrowable)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPickerBase)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPickerBase){
 				references = &((wxPickerBase_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourPickerCtrl) && (!reference_type_found)){
 				references = &((wxColourPickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontPickerCtrl) && (!reference_type_found)){
 				references = &((wxFontPickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFilePickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFilePickerCtrl) && (!reference_type_found)){
 				references = &((wxFilePickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirPickerCtrl) && (!reference_type_found)){
 				references = &((wxDirPickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5379,16 +5567,28 @@ PHP_METHOD(php_wxPickerBase, SetInternalMargin)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPickerBase)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPickerBase){
 				references = &((wxPickerBase_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourPickerCtrl) && (!reference_type_found)){
 				references = &((wxColourPickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontPickerCtrl) && (!reference_type_found)){
 				references = &((wxFontPickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFilePickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFilePickerCtrl) && (!reference_type_found)){
 				references = &((wxFilePickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirPickerCtrl) && (!reference_type_found)){
 				references = &((wxDirPickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5494,16 +5694,28 @@ PHP_METHOD(php_wxPickerBase, SetPickerCtrlGrowable)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPickerBase)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPickerBase){
 				references = &((wxPickerBase_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourPickerCtrl) && (!reference_type_found)){
 				references = &((wxColourPickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontPickerCtrl) && (!reference_type_found)){
 				references = &((wxFontPickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFilePickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFilePickerCtrl) && (!reference_type_found)){
 				references = &((wxFilePickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirPickerCtrl) && (!reference_type_found)){
 				references = &((wxDirPickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5639,16 +5851,28 @@ PHP_METHOD(php_wxPickerBase, SetPickerCtrlProportion)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPickerBase)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPickerBase){
 				references = &((wxPickerBase_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourPickerCtrl) && (!reference_type_found)){
 				references = &((wxColourPickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontPickerCtrl) && (!reference_type_found)){
 				references = &((wxFontPickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFilePickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFilePickerCtrl) && (!reference_type_found)){
 				references = &((wxFilePickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirPickerCtrl) && (!reference_type_found)){
 				references = &((wxDirPickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5754,16 +5978,28 @@ PHP_METHOD(php_wxPickerBase, SetTextCtrlGrowable)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPickerBase)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPickerBase){
 				references = &((wxPickerBase_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourPickerCtrl) && (!reference_type_found)){
 				references = &((wxColourPickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontPickerCtrl) && (!reference_type_found)){
 				references = &((wxFontPickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFilePickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFilePickerCtrl) && (!reference_type_found)){
 				references = &((wxFilePickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirPickerCtrl) && (!reference_type_found)){
 				references = &((wxDirPickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5899,16 +6135,28 @@ PHP_METHOD(php_wxPickerBase, SetTextCtrlProportion)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPickerBase)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPickerBase){
 				references = &((wxPickerBase_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourPickerCtrl) && (!reference_type_found)){
 				references = &((wxColourPickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontPickerCtrl) && (!reference_type_found)){
 				references = &((wxFontPickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFilePickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFilePickerCtrl) && (!reference_type_found)){
 				references = &((wxFilePickerCtrl_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirPickerCtrl)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirPickerCtrl) && (!reference_type_found)){
 				references = &((wxDirPickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -6373,8 +6621,12 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxTimePickerCtrl)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxTimePickerCtrl){
 				references = &((wxTimePickerCtrl_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else

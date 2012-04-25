@@ -24669,34 +24669,6 @@
 				]
 			}
 		],
-		"AssignButtonsImageList":[
-			{
-				"return_type":"void",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"wxImageList*"
-				],
-				"parameters_is_array":[
-					false
-				],
-				"parameters_extra":[
-					false
-				],
-				"parameters_name":[
-					"imageList"
-				],
-				"parameters_required":[
-					true
-				],
-				"parameters_default_value":[
-					null
-				]
-			}
-		],
 		"AssignImageList":[
 			{
 				"return_type":"void",
@@ -25216,34 +25188,6 @@
 					null,
 					null,
 					"false"
-				]
-			}
-		],
-		"GetButtonsImageList":[
-			{
-				"return_type":"wxImageList*",
-				"constant":true,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					
-				],
-				"parameters_is_array":[
-					
-				],
-				"parameters_extra":[
-					
-				],
-				"parameters_name":[
-					
-				],
-				"parameters_required":[
-					
-				],
-				"parameters_default_value":[
-					
 				]
 			}
 		],
@@ -26408,34 +26352,6 @@
 				"parameters_default_value":[
 					null,
 					"true"
-				]
-			}
-		],
-		"SetButtonsImageList":[
-			{
-				"return_type":"void",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"wxImageList*"
-				],
-				"parameters_is_array":[
-					false
-				],
-				"parameters_extra":[
-					false
-				],
-				"parameters_name":[
-					"imageList"
-				],
-				"parameters_required":[
-					true
-				],
-				"parameters_default_value":[
-					null
 				]
 			}
 		],

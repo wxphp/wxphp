@@ -743,14 +743,14 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 					switch($argument_type_modifier)
 					{
 						case  "const_pointer":
-							$return_called_overload .= tabs(2) . "int array_count{$declaration_index}_{$parameter_index} = 0;\n";
+							$return_called_overload .= tabs(2) . "int array_count{$declaration_index}_{$parameter_index} = 1;\n";
 							$return_called_overload .= tabs(2) . "HashTable* arr_hash{$declaration_index}_{$parameter_index};\n";
 							$return_called_overload .= tabs(2) . "if(arguments_received > $parameter_index)\n";
 							$return_called_overload .= tabs(2) . "{\n";
 							$return_called_overload .= tabs(3) . "arr_hash{$declaration_index}_{$parameter_index} = Z_ARRVAL_P(".$declaration[$parameter_names][$parameter_index] . $declaration_index.");\n";
 							$return_called_overload .= tabs(3) . "array_count{$declaration_index}_{$parameter_index} = zend_hash_num_elements(arr_hash{$declaration_index}_{$parameter_index});\n";
 							$return_called_overload .= tabs(2) . "}\n";
-							$return_called_overload .= tabs(2) . "bool bools_array{$declaration_index}_{$parameter_index}[array_count{$declaration_index}_{$parameter_index}];\n";
+							$return_called_overload .= tabs(2) . "bool* bools_array{$declaration_index}_{$parameter_index} = new bool[array_count{$declaration_index}_{$parameter_index}];\n";
 							$return_called_overload .= tabs(2) . "bool bools_continue{$declaration_index}_{$parameter_index} = true;\n\n";
 							break;
 					}
@@ -760,14 +760,14 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 					switch($argument_type_modifier)
 					{
 						case  "const_pointer":
-							$return_called_overload .= tabs(2) . "int array_count{$declaration_index}_{$parameter_index} = 0;\n";
+							$return_called_overload .= tabs(2) . "int array_count{$declaration_index}_{$parameter_index} = 1;\n";
 							$return_called_overload .= tabs(2) . "HashTable* arr_hash{$declaration_index}_{$parameter_index};\n";
 							$return_called_overload .= tabs(2) . "if(arguments_received > $parameter_index)\n";
 							$return_called_overload .= tabs(2) . "{\n";
 							$return_called_overload .= tabs(3) . "arr_hash{$declaration_index}_{$parameter_index} = Z_ARRVAL_P(".$declaration[$parameter_names][$parameter_index] . $declaration_index.");\n";
 							$return_called_overload .= tabs(3) . "array_count{$declaration_index}_{$parameter_index} = zend_hash_num_elements(arr_hash{$declaration_index}_{$parameter_index});\n";
 							$return_called_overload .= tabs(2) . "}\n";
-							$return_called_overload .= tabs(2) . "$plain_type integers_array{$declaration_index}_{$parameter_index}[array_count{$declaration_index}_{$parameter_index}];\n";
+							$return_called_overload .= tabs(2) . "{$plain_type}* integers_array{$declaration_index}_{$parameter_index} = new {$plain_type}[array_count{$declaration_index}_{$parameter_index}];\n";
 							$return_called_overload .= tabs(2) . "bool integers_continue{$declaration_index}_{$parameter_index} = true;\n\n";
 							break;
 					}
@@ -777,14 +777,14 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 					switch($argument_type_modifier)
 					{
 						case  "const_pointer":
-							$return_called_overload .= tabs(2) . "int array_count{$declaration_index}_{$parameter_index} = 0;\n";
+							$return_called_overload .= tabs(2) . "int array_count{$declaration_index}_{$parameter_index} = 1;\n";
 							$return_called_overload .= tabs(2) . "HashTable* arr_hash{$declaration_index}_{$parameter_index};\n";
 							$return_called_overload .= tabs(2) . "if(arguments_received > $parameter_index)\n";
 							$return_called_overload .= tabs(2) . "{\n";
 							$return_called_overload .= tabs(3) . "arr_hash{$declaration_index}_{$parameter_index} = Z_ARRVAL_P(".$declaration[$parameter_names][$parameter_index] . $declaration_index.");\n";
 							$return_called_overload .= tabs(3) . "array_count{$declaration_index}_{$parameter_index} = zend_hash_num_elements(arr_hash{$declaration_index}_{$parameter_index});\n";
 							$return_called_overload .= tabs(2) . "}\n";
-							$return_called_overload .= tabs(2) . "$plain_type floats_array{$declaration_index}_{$parameter_index}[array_count{$declaration_index}_{$parameter_index}];\n";
+							$return_called_overload .= tabs(2) . "{$plain_type}* floats_array{$declaration_index}_{$parameter_index} = new {$plain_type}[array_count{$declaration_index}_{$parameter_index}];\n";
 							$return_called_overload .= tabs(2) . "bool floats_continue{$declaration_index}_{$parameter_index} = true;\n\n";
 							break;
 					}
@@ -797,14 +797,14 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 						case "const_reference_array": //const wxString&[]
 						case "const_none_array": //const wxString[]
 						case "none_array": //wxString[]
-							$return_called_overload .= tabs(2) . "int array_count{$declaration_index}_{$parameter_index} = 0;\n";
+							$return_called_overload .= tabs(2) . "int array_count{$declaration_index}_{$parameter_index} = 1;\n";
 							$return_called_overload .= tabs(2) . "HashTable* arr_hash{$declaration_index}_{$parameter_index};\n";
 							$return_called_overload .= tabs(2) . "if(arguments_received > $parameter_index)\n";
 							$return_called_overload .= tabs(2) . "{\n";
 							$return_called_overload .= tabs(3) . "arr_hash{$declaration_index}_{$parameter_index} = Z_ARRVAL_P(".$declaration[$parameter_names][$parameter_index] . $declaration_index.");\n";
 							$return_called_overload .= tabs(3) . "array_count{$declaration_index}_{$parameter_index} = zend_hash_num_elements(arr_hash{$declaration_index}_{$parameter_index});\n";
 							$return_called_overload .= tabs(2) . "}\n";
-							$return_called_overload .= tabs(2) . "wxString strings_array{$declaration_index}_{$parameter_index}[array_count{$declaration_index}_{$parameter_index}];\n";
+							$return_called_overload .= tabs(2) . "wxString* strings_array{$declaration_index}_{$parameter_index} = new wxString[array_count{$declaration_index}_{$parameter_index}];\n";
 							$return_called_overload .= tabs(2) . "bool strings_continue{$declaration_index}_{$parameter_index} = true;\n\n";
 							break;
 					}
@@ -819,14 +819,14 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 					switch($argument_type_modifier)
 					{
 						case  "const_pointer":
-							$return_called_overload .= tabs(2) . "int array_count{$declaration_index}_{$parameter_index} = 0;\n";
+							$return_called_overload .= tabs(2) . "int array_count{$declaration_index}_{$parameter_index} = 1;\n";
 							$return_called_overload .= tabs(2) . "HashTable* arr_hash{$declaration_index}_{$parameter_index};\n";
 							$return_called_overload .= tabs(2) . "if(arguments_received > $parameter_index)\n";
 							$return_called_overload .= tabs(2) . "{\n";
 							$return_called_overload .= tabs(3) . "arr_hash{$declaration_index}_{$parameter_index} = Z_ARRVAL_P(".$declaration[$parameter_names][$parameter_index] . $declaration_index.");\n";
 							$return_called_overload .= tabs(3) . "array_count{$declaration_index}_{$parameter_index} = zend_hash_num_elements(arr_hash{$declaration_index}_{$parameter_index});\n";
 							$return_called_overload .= tabs(2) . "}\n";
-							$return_called_overload .= tabs(2) . "wxDateTime dates_array{$declaration_index}_{$parameter_index}[array_count{$declaration_index}_{$parameter_index}];\n";
+							$return_called_overload .= tabs(2) . "wxDateTime* dates_array{$declaration_index}_{$parameter_index} = new wxDateTime[array_count{$declaration_index}_{$parameter_index}];\n";
 							$return_called_overload .= tabs(2) . "bool dates_continue{$declaration_index}_{$parameter_index} = true;\n\n";
 							break;
 					}
@@ -2219,13 +2219,20 @@ function references_cast_code($class_name)
 {
 	$derivations = derivationsOfClass($class_name);
 	
-	$code .= "if(parent_rsrc_type == le_{$class_name})\n";
+	//Instead of using elseif we have to break it in multiple if since
+	//MS Visual C++ compiler doesnt supports a very deep elseif sequence.
+	$code .= "bool reference_type_found = false;\n\n";
+	$code .= tabs(3) . "if(parent_rsrc_type == le_{$class_name}){\n";
 	$code .= tabs(4) . "references = &(({$class_name}_php*)_this)->references;\n";
+	$code .= tabs(4) . "reference_type_found = true;\n";
+	$code .= tabs(3) . "}\n";
 	
 	foreach($derivations as $derivation_name=>$derivation_value)
 	{
-		$code .= tabs(3) . "else if(parent_rsrc_type == le_{$derivation_name})\n";
+		$code .= tabs(3) . "if((parent_rsrc_type == le_{$derivation_name}) && (!reference_type_found)){\n";
 		$code .= tabs(4) . "references = &(({$derivation_name}_php*)_this)->references;\n";
+		$code .= tabs(4) . "reference_type_found = true;\n";
+		$code .= tabs(3) . "}\n";
 	}
 	
 	return $code;

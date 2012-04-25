@@ -127,8 +127,12 @@ PHP_METHOD(php_wxSound, Create)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxSound)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxSound){
 				references = &((wxSound_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -228,8 +232,12 @@ PHP_METHOD(php_wxSound, IsOk)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxSound)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxSound){
 				references = &((wxSound_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -311,8 +319,12 @@ PHP_METHOD(php_wxSound, Play)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxSound)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxSound){
 				references = &((wxSound_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -462,8 +474,12 @@ PHP_METHOD(php_wxSound, Stop)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxSound)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxSound){
 				references = &((wxSound_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else

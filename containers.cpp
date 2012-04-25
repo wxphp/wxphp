@@ -248,8 +248,12 @@ PHP_METHOD(php_wxTreeItemData, GetId)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxTreeItemData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxTreeItemData){
 				references = &((wxTreeItemData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -350,8 +354,12 @@ PHP_METHOD(php_wxTreeItemData, SetId)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxTreeItemData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxTreeItemData){
 				references = &((wxTreeItemData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else

@@ -175,7 +175,7 @@ function funcsOfClass($classN, $ctor=0, &$output, $ar = array())
 		if($classN==$funcName)
 		{
 			if(!$ctor)
-					continue;
+				continue;
 					
 			$funcName2 = "__construct";
 		}

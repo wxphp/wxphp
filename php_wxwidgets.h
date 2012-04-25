@@ -50,7 +50,7 @@ extern zend_module_entry wxWidgets_module_entry;
  */
 #define wxPHP_REGISTER_RESOURCE_CONSTANT(name, resource, class_entry, list_entry, flags)  wxphp_register_resource_constant((name), sizeof(name), (resource), (class_entry), (list_entry), (flags), module_number TSRMLS_CC)
 BEGIN_EXTERN_C()
-ZEND_API void wxphp_register_resource_constant(const char *name, uint name_len, void* resource, zend_class_entry* class_entry, int list_entry, int flags, int module_number TSRMLS_DC);
+void wxphp_register_resource_constant(const char *name, uint name_len, void* resource, zend_class_entry* class_entry, int list_entry, int flags, int module_number TSRMLS_DC);
 END_EXTERN_C()
 
 
@@ -744,7 +744,6 @@ PHP_METHOD(php_wxRect, GetLeft);
 PHP_METHOD(php_wxTreeCtrl, __construct);
 PHP_METHOD(php_wxTreeCtrl, AddRoot);
 PHP_METHOD(php_wxTreeCtrl, AppendItem);
-PHP_METHOD(php_wxTreeCtrl, AssignButtonsImageList);
 PHP_METHOD(php_wxTreeCtrl, AssignImageList);
 PHP_METHOD(php_wxTreeCtrl, AssignStateImageList);
 PHP_METHOD(php_wxTreeCtrl, ClearFocusedItem);
@@ -762,7 +761,6 @@ PHP_METHOD(php_wxTreeCtrl, Expand);
 PHP_METHOD(php_wxTreeCtrl, ExpandAll);
 PHP_METHOD(php_wxTreeCtrl, ExpandAllChildren);
 PHP_METHOD(php_wxTreeCtrl, GetBoundingRect);
-PHP_METHOD(php_wxTreeCtrl, GetButtonsImageList);
 PHP_METHOD(php_wxTreeCtrl, GetChildrenCount);
 PHP_METHOD(php_wxTreeCtrl, GetCount);
 PHP_METHOD(php_wxTreeCtrl, GetEditControl);
@@ -799,7 +797,6 @@ PHP_METHOD(php_wxTreeCtrl, PrependItem);
 PHP_METHOD(php_wxTreeCtrl, ScrollTo);
 PHP_METHOD(php_wxTreeCtrl, SelectChildren);
 PHP_METHOD(php_wxTreeCtrl, SelectItem);
-PHP_METHOD(php_wxTreeCtrl, SetButtonsImageList);
 PHP_METHOD(php_wxTreeCtrl, SetFocusedItem);
 PHP_METHOD(php_wxTreeCtrl, SetImageList);
 PHP_METHOD(php_wxTreeCtrl, SetIndent);

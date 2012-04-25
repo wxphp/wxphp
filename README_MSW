@@ -1,0 +1,15 @@
+Windows Compilation Issues:
+=====================================
+
+mode_t is defined on wxWidgets and PHP at the same time
+
+	Fix: Comment out on PHP source TSRM/tsrm_virtual_cwd.h the following:
+		typedef unsigned short mode_t;
+		
+	Then when the zend engine files are compiling you are going to receive
+	a compilation error, so uncomment the line again and nmake to continue compiling
+		
+wxPosScriptDC Not enabled by default on wxMSW
+
+	Fix: On wxWidgets lib\vc_lib\mswu\wx\setup.h set:
+		wxUSE_POSTSCRIPT 1 

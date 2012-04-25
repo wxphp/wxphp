@@ -213,8 +213,12 @@ PHP_METHOD(php_wxToolTip, SetTip)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxToolTip)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxToolTip){
 				references = &((wxToolTip_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -302,8 +306,12 @@ PHP_METHOD(php_wxToolTip, SetReshow)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxToolTip)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxToolTip){
 				references = &((wxToolTip_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -391,8 +399,12 @@ PHP_METHOD(php_wxToolTip, SetDelay)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxToolTip)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxToolTip){
 				references = &((wxToolTip_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -480,8 +492,12 @@ PHP_METHOD(php_wxToolTip, SetAutoPop)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxToolTip)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxToolTip){
 				references = &((wxToolTip_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -569,8 +585,12 @@ PHP_METHOD(php_wxToolTip, GetWindow)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxToolTip)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxToolTip){
 				references = &((wxToolTip_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -674,8 +694,12 @@ PHP_METHOD(php_wxToolTip, GetTip)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxToolTip)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxToolTip){
 				references = &((wxToolTip_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -763,8 +787,12 @@ PHP_METHOD(php_wxToolTip, Enable)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxToolTip)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxToolTip){
 				references = &((wxToolTip_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else

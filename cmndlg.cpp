@@ -207,8 +207,12 @@ PHP_METHOD(php_wxAboutDialogInfo, SetWebSite)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxAboutDialogInfo)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxAboutDialogInfo){
 				references = &((wxAboutDialogInfo_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -309,8 +313,12 @@ PHP_METHOD(php_wxAboutDialogInfo, SetVersion)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxAboutDialogInfo)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxAboutDialogInfo){
 				references = &((wxAboutDialogInfo_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -411,8 +419,12 @@ PHP_METHOD(php_wxAboutDialogInfo, AddDeveloper)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxAboutDialogInfo)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxAboutDialogInfo){
 				references = &((wxAboutDialogInfo_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -500,8 +512,12 @@ PHP_METHOD(php_wxAboutDialogInfo, AddDocWriter)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxAboutDialogInfo)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxAboutDialogInfo){
 				references = &((wxAboutDialogInfo_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -589,8 +605,12 @@ PHP_METHOD(php_wxAboutDialogInfo, AddTranslator)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxAboutDialogInfo)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxAboutDialogInfo){
 				references = &((wxAboutDialogInfo_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -678,8 +698,12 @@ PHP_METHOD(php_wxAboutDialogInfo, GetCopyright)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxAboutDialogInfo)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxAboutDialogInfo){
 				references = &((wxAboutDialogInfo_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -767,8 +791,12 @@ PHP_METHOD(php_wxAboutDialogInfo, GetDescription)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxAboutDialogInfo)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxAboutDialogInfo){
 				references = &((wxAboutDialogInfo_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -856,8 +884,12 @@ PHP_METHOD(php_wxAboutDialogInfo, HasCopyright)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxAboutDialogInfo)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxAboutDialogInfo){
 				references = &((wxAboutDialogInfo_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -939,8 +971,12 @@ PHP_METHOD(php_wxAboutDialogInfo, HasDescription)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxAboutDialogInfo)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxAboutDialogInfo){
 				references = &((wxAboutDialogInfo_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1022,8 +1058,12 @@ PHP_METHOD(php_wxAboutDialogInfo, SetArtists)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxAboutDialogInfo)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxAboutDialogInfo){
 				references = &((wxAboutDialogInfo_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1128,8 +1168,12 @@ PHP_METHOD(php_wxAboutDialogInfo, SetCopyright)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxAboutDialogInfo)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxAboutDialogInfo){
 				references = &((wxAboutDialogInfo_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1217,8 +1261,12 @@ PHP_METHOD(php_wxAboutDialogInfo, SetDescription)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxAboutDialogInfo)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxAboutDialogInfo){
 				references = &((wxAboutDialogInfo_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1306,8 +1354,12 @@ PHP_METHOD(php_wxAboutDialogInfo, SetDevelopers)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxAboutDialogInfo)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxAboutDialogInfo){
 				references = &((wxAboutDialogInfo_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1412,8 +1464,12 @@ PHP_METHOD(php_wxAboutDialogInfo, SetDocWriters)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxAboutDialogInfo)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxAboutDialogInfo){
 				references = &((wxAboutDialogInfo_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1518,8 +1574,12 @@ PHP_METHOD(php_wxAboutDialogInfo, SetIcon)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxAboutDialogInfo)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxAboutDialogInfo){
 				references = &((wxAboutDialogInfo_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1624,8 +1684,12 @@ PHP_METHOD(php_wxAboutDialogInfo, SetLicence)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxAboutDialogInfo)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxAboutDialogInfo){
 				references = &((wxAboutDialogInfo_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1713,8 +1777,12 @@ PHP_METHOD(php_wxAboutDialogInfo, SetLicense)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxAboutDialogInfo)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxAboutDialogInfo){
 				references = &((wxAboutDialogInfo_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1802,8 +1870,12 @@ PHP_METHOD(php_wxAboutDialogInfo, SetName)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxAboutDialogInfo)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxAboutDialogInfo){
 				references = &((wxAboutDialogInfo_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1891,8 +1963,12 @@ PHP_METHOD(php_wxAboutDialogInfo, SetTranslators)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxAboutDialogInfo)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxAboutDialogInfo){
 				references = &((wxAboutDialogInfo_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -1997,8 +2073,12 @@ PHP_METHOD(php_wxAboutDialogInfo, AddArtist)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxAboutDialogInfo)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxAboutDialogInfo){
 				references = &((wxAboutDialogInfo_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2086,8 +2166,12 @@ PHP_METHOD(php_wxAboutDialogInfo, GetName)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxAboutDialogInfo)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxAboutDialogInfo){
 				references = &((wxAboutDialogInfo_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2336,8 +2420,12 @@ PHP_METHOD(php_wxSingleChoiceDialog, GetSelection)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxSingleChoiceDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxSingleChoiceDialog){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2419,8 +2507,12 @@ PHP_METHOD(php_wxSingleChoiceDialog, GetStringSelection)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxSingleChoiceDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxSingleChoiceDialog){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2508,8 +2600,12 @@ PHP_METHOD(php_wxSingleChoiceDialog, SetSelection)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxSingleChoiceDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxSingleChoiceDialog){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2596,8 +2692,12 @@ PHP_METHOD(php_wxSingleChoiceDialog, ShowModal)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxSingleChoiceDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxSingleChoiceDialog){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -2799,14 +2899,14 @@ PHP_METHOD(php_wxSingleChoiceDialog, __construct)
 		
 	if(overload0_called)
 	{
-		int array_count0_4 = 0;
+		int array_count0_4 = 1;
 		HashTable* arr_hash0_4;
 		if(arguments_received > 4)
 		{
 			arr_hash0_4 = Z_ARRVAL_P(choices0);
 			array_count0_4 = zend_hash_num_elements(arr_hash0_4);
 		}
-		wxString strings_array0_4[array_count0_4];
+		wxString* strings_array0_4 = new wxString[array_count0_4];
 		bool strings_continue0_4 = true;
 
 		switch(arguments_received)
@@ -3098,8 +3198,12 @@ PHP_METHOD(php_wxSingleChoiceDialog, GetSelectionData)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxSingleChoiceDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxSingleChoiceDialog){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3222,8 +3326,12 @@ PHP_METHOD(php_wxPrintDialogData, EnableHelp)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintDialogData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintDialogData){
 				references = &((wxPrintDialogData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3310,8 +3418,12 @@ PHP_METHOD(php_wxPrintDialogData, EnablePageNumbers)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintDialogData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintDialogData){
 				references = &((wxPrintDialogData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3398,8 +3510,12 @@ PHP_METHOD(php_wxPrintDialogData, EnablePrintToFile)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintDialogData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintDialogData){
 				references = &((wxPrintDialogData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3486,8 +3602,12 @@ PHP_METHOD(php_wxPrintDialogData, EnableSelection)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintDialogData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintDialogData){
 				references = &((wxPrintDialogData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3574,8 +3694,12 @@ PHP_METHOD(php_wxPrintDialogData, GetAllPages)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintDialogData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintDialogData){
 				references = &((wxPrintDialogData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3657,8 +3781,12 @@ PHP_METHOD(php_wxPrintDialogData, GetCollate)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintDialogData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintDialogData){
 				references = &((wxPrintDialogData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3740,8 +3868,12 @@ PHP_METHOD(php_wxPrintDialogData, GetFromPage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintDialogData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintDialogData){
 				references = &((wxPrintDialogData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3823,8 +3955,12 @@ PHP_METHOD(php_wxPrintDialogData, GetMaxPage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintDialogData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintDialogData){
 				references = &((wxPrintDialogData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3906,8 +4042,12 @@ PHP_METHOD(php_wxPrintDialogData, GetMinPage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintDialogData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintDialogData){
 				references = &((wxPrintDialogData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -3989,8 +4129,12 @@ PHP_METHOD(php_wxPrintDialogData, GetNoCopies)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintDialogData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintDialogData){
 				references = &((wxPrintDialogData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4072,8 +4216,12 @@ PHP_METHOD(php_wxPrintDialogData, GetPrintData)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintDialogData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintDialogData){
 				references = &((wxPrintDialogData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4174,8 +4322,12 @@ PHP_METHOD(php_wxPrintDialogData, GetPrintToFile)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintDialogData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintDialogData){
 				references = &((wxPrintDialogData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4257,8 +4409,12 @@ PHP_METHOD(php_wxPrintDialogData, GetSelection)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintDialogData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintDialogData){
 				references = &((wxPrintDialogData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4340,8 +4496,12 @@ PHP_METHOD(php_wxPrintDialogData, GetToPage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintDialogData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintDialogData){
 				references = &((wxPrintDialogData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4423,8 +4583,12 @@ PHP_METHOD(php_wxPrintDialogData, IsOk)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintDialogData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintDialogData){
 				references = &((wxPrintDialogData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4506,8 +4670,12 @@ PHP_METHOD(php_wxPrintDialogData, SetCollate)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintDialogData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintDialogData){
 				references = &((wxPrintDialogData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4594,8 +4762,12 @@ PHP_METHOD(php_wxPrintDialogData, SetFromPage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintDialogData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintDialogData){
 				references = &((wxPrintDialogData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4682,8 +4854,12 @@ PHP_METHOD(php_wxPrintDialogData, SetMaxPage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintDialogData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintDialogData){
 				references = &((wxPrintDialogData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4770,8 +4946,12 @@ PHP_METHOD(php_wxPrintDialogData, SetMinPage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintDialogData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintDialogData){
 				references = &((wxPrintDialogData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4858,8 +5038,12 @@ PHP_METHOD(php_wxPrintDialogData, SetNoCopies)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintDialogData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintDialogData){
 				references = &((wxPrintDialogData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -4946,8 +5130,12 @@ PHP_METHOD(php_wxPrintDialogData, SetPrintData)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintDialogData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintDialogData){
 				references = &((wxPrintDialogData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5052,8 +5240,12 @@ PHP_METHOD(php_wxPrintDialogData, SetPrintToFile)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintDialogData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintDialogData){
 				references = &((wxPrintDialogData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5140,8 +5332,12 @@ PHP_METHOD(php_wxPrintDialogData, SetSelection)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintDialogData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintDialogData){
 				references = &((wxPrintDialogData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5228,8 +5424,12 @@ PHP_METHOD(php_wxPrintDialogData, SetToPage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxPrintDialogData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxPrintDialogData){
 				references = &((wxPrintDialogData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5588,8 +5788,12 @@ PHP_METHOD(php_wxColourDialog, ShowModal)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxColourDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxColourDialog){
 				references = &((wxColourDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5671,8 +5875,12 @@ PHP_METHOD(php_wxColourDialog, GetColourData)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxColourDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxColourDialog){
 				references = &((wxColourDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -5773,8 +5981,12 @@ PHP_METHOD(php_wxColourDialog, Create)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxColourDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxColourDialog){
 				references = &((wxColourDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -6031,8 +6243,12 @@ PHP_METHOD(php_wxColourData, ToString)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxColourData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxColourData){
 				references = &((wxColourData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -6120,8 +6336,12 @@ PHP_METHOD(php_wxColourData, SetCustomColour)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxColourData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxColourData){
 				references = &((wxColourData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -6227,8 +6447,12 @@ PHP_METHOD(php_wxColourData, SetColour)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxColourData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxColourData){
 				references = &((wxColourData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -6333,8 +6557,12 @@ PHP_METHOD(php_wxColourData, SetChooseFull)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxColourData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxColourData){
 				references = &((wxColourData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -6421,8 +6649,12 @@ PHP_METHOD(php_wxColourData, GetCustomColour)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxColourData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxColourData){
 				references = &((wxColourData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -6514,8 +6746,12 @@ PHP_METHOD(php_wxColourData, GetColour)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxColourData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxColourData){
 				references = &((wxColourData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -6616,8 +6852,12 @@ PHP_METHOD(php_wxColourData, GetChooseFull)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxColourData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxColourData){
 				references = &((wxColourData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -6699,8 +6939,12 @@ PHP_METHOD(php_wxColourData, FromString)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxColourData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxColourData){
 				references = &((wxColourData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -6793,40 +7037,76 @@ PHP_METHOD(php_wxDialog, AddMainButtonId)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -6913,40 +7193,76 @@ PHP_METHOD(php_wxDialog, Centre)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -7044,40 +7360,76 @@ PHP_METHOD(php_wxDialog, Create)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -7279,40 +7631,76 @@ PHP_METHOD(php_wxDialog, CreateButtonSizer)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -7421,40 +7809,76 @@ PHP_METHOD(php_wxDialog, CreateSeparatedButtonSizer)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -7563,40 +7987,76 @@ PHP_METHOD(php_wxDialog, CreateSeparatedSizer)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -7723,40 +8183,76 @@ PHP_METHOD(php_wxDialog, CreateStdDialogButtonSizer)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -7865,40 +8361,76 @@ PHP_METHOD(php_wxDialog, EndModal)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -7985,40 +8517,76 @@ PHP_METHOD(php_wxDialog, GetAffirmativeId)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -8100,40 +8668,76 @@ PHP_METHOD(php_wxDialog, GetContentWindow)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -8237,40 +8841,76 @@ PHP_METHOD(php_wxDialog, GetEscapeId)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -8352,40 +8992,76 @@ PHP_METHOD(php_wxDialog, GetReturnCode)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -8467,40 +9143,76 @@ PHP_METHOD(php_wxDialog, Iconize)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -8598,40 +9310,76 @@ PHP_METHOD(php_wxDialog, IsIconized)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -8713,40 +9461,76 @@ PHP_METHOD(php_wxDialog, IsModal)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -8828,40 +9612,76 @@ PHP_METHOD(php_wxDialog, SetAffirmativeId)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -9175,40 +9995,76 @@ PHP_METHOD(php_wxDialog, ShowWindowModal)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -9290,40 +10146,76 @@ PHP_METHOD(php_wxDialog, ShowModal)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -9405,40 +10297,76 @@ PHP_METHOD(php_wxDialog, Show)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -9536,40 +10464,76 @@ PHP_METHOD(php_wxDialog, SetReturnCode)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -9656,40 +10620,76 @@ PHP_METHOD(php_wxDialog, SetLayoutAdaptationMode)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -9776,40 +10776,76 @@ PHP_METHOD(php_wxDialog, SetLayoutAdaptationLevel)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -9896,40 +10932,76 @@ PHP_METHOD(php_wxDialog, SetIcons)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -10034,40 +11106,76 @@ PHP_METHOD(php_wxDialog, SetIcon)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -10172,40 +11280,76 @@ PHP_METHOD(php_wxDialog, SetEscapeId)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -10292,40 +11436,76 @@ PHP_METHOD(php_wxDialog, SetLayoutAdaptationDone)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -10412,40 +11592,76 @@ PHP_METHOD(php_wxDialog, GetLayoutAdaptationDone)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -10527,40 +11743,76 @@ PHP_METHOD(php_wxDialog, GetLayoutAdaptationLevel)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -10642,40 +11894,76 @@ PHP_METHOD(php_wxDialog, EnableLayoutAdaptation)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -10763,40 +12051,76 @@ PHP_METHOD(php_wxDialog, DoLayoutAdaptation)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -10878,40 +12202,76 @@ PHP_METHOD(php_wxDialog, CanDoLayoutAdaptation)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -10993,40 +12353,76 @@ PHP_METHOD(php_wxDialog, IsLayoutAdaptationEnabled)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDialog){
 				references = &((wxDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxTextEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextEntryDialog) && (!reference_type_found)){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxMessageDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxMessageDialog) && (!reference_type_found)){
 				references = &((wxMessageDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFindReplaceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFindReplaceDialog) && (!reference_type_found)){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxDirDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxDirDialog) && (!reference_type_found)){
 				references = &((wxDirDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSymbolPickerDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSymbolPickerDialog) && (!reference_type_found)){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPropertySheetDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPropertySheetDialog) && (!reference_type_found)){
 				references = &((wxPropertySheetDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxWizard)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWizard) && (!reference_type_found)){
 				references = &((wxWizard_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxColourDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxColourDialog) && (!reference_type_found)){
 				references = &((wxColourDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFileDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDialog) && (!reference_type_found)){
 				references = &((wxFileDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxFontDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFontDialog) && (!reference_type_found)){
 				references = &((wxFontDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPageSetupDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPageSetupDialog) && (!reference_type_found)){
 				references = &((wxPageSetupDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPrintDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPrintDialog) && (!reference_type_found)){
 				references = &((wxPrintDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxSingleChoiceDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxSingleChoiceDialog) && (!reference_type_found)){
 				references = &((wxSingleChoiceDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxGenericProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxGenericProgressDialog) && (!reference_type_found)){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -11114,8 +12510,12 @@ PHP_METHOD(php_wxDirDialog, GetMessage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDirDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDirDialog){
 				references = &((wxDirDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -11203,8 +12603,12 @@ PHP_METHOD(php_wxDirDialog, GetPath)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDirDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDirDialog){
 				references = &((wxDirDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -11292,8 +12696,12 @@ PHP_METHOD(php_wxDirDialog, SetMessage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDirDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDirDialog){
 				references = &((wxDirDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -11381,8 +12789,12 @@ PHP_METHOD(php_wxDirDialog, SetPath)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDirDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDirDialog){
 				references = &((wxDirDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -11470,8 +12882,12 @@ PHP_METHOD(php_wxDirDialog, ShowModal)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxDirDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDirDialog){
 				references = &((wxDirDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -11811,8 +13227,12 @@ PHP_METHOD(php_wxFindReplaceData, GetFindString)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFindReplaceData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFindReplaceData){
 				references = &((wxFindReplaceData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -11900,8 +13320,12 @@ PHP_METHOD(php_wxFindReplaceData, GetFlags)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFindReplaceData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFindReplaceData){
 				references = &((wxFindReplaceData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -11983,8 +13407,12 @@ PHP_METHOD(php_wxFindReplaceData, GetReplaceString)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFindReplaceData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFindReplaceData){
 				references = &((wxFindReplaceData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -12072,8 +13500,12 @@ PHP_METHOD(php_wxFindReplaceData, SetFindString)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFindReplaceData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFindReplaceData){
 				references = &((wxFindReplaceData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -12161,8 +13593,12 @@ PHP_METHOD(php_wxFindReplaceData, SetFlags)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFindReplaceData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFindReplaceData){
 				references = &((wxFindReplaceData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -12249,8 +13685,12 @@ PHP_METHOD(php_wxFindReplaceData, SetReplaceString)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFindReplaceData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFindReplaceData){
 				references = &((wxFindReplaceData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -12438,8 +13878,12 @@ PHP_METHOD(php_wxFindReplaceDialog, Create)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFindReplaceDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFindReplaceDialog){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -12579,8 +14023,12 @@ PHP_METHOD(php_wxFindReplaceDialog, GetData)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFindReplaceDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFindReplaceDialog){
 				references = &((wxFindReplaceDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -13100,8 +14548,12 @@ PHP_METHOD(php_wxFileDialog, ShowModal)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileDialog){
 				references = &((wxFileDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -13183,8 +14635,12 @@ PHP_METHOD(php_wxFileDialog, SetWildcard)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileDialog){
 				references = &((wxFileDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -13272,8 +14728,12 @@ PHP_METHOD(php_wxFileDialog, SetPath)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileDialog){
 				references = &((wxFileDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -13361,8 +14821,12 @@ PHP_METHOD(php_wxFileDialog, SetMessage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileDialog){
 				references = &((wxFileDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -13450,8 +14914,12 @@ PHP_METHOD(php_wxFileDialog, SetFilterIndex)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileDialog){
 				references = &((wxFileDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -13538,8 +15006,12 @@ PHP_METHOD(php_wxFileDialog, SetFilename)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileDialog){
 				references = &((wxFileDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -13627,8 +15099,12 @@ PHP_METHOD(php_wxFileDialog, SetDirectory)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileDialog){
 				references = &((wxFileDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -13716,8 +15192,12 @@ PHP_METHOD(php_wxFileDialog, GetWildcard)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileDialog){
 				references = &((wxFileDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -13805,8 +15285,12 @@ PHP_METHOD(php_wxFileDialog, GetPaths)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileDialog){
 				references = &((wxFileDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -13922,8 +15406,12 @@ PHP_METHOD(php_wxFileDialog, GetMessage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileDialog){
 				references = &((wxFileDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -14011,8 +15499,12 @@ PHP_METHOD(php_wxFileDialog, GetPath)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileDialog){
 				references = &((wxFileDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -14100,8 +15592,12 @@ PHP_METHOD(php_wxFileDialog, GetFilterIndex)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileDialog){
 				references = &((wxFileDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -14183,8 +15679,12 @@ PHP_METHOD(php_wxFileDialog, GetFilenames)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileDialog){
 				references = &((wxFileDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -14300,8 +15800,12 @@ PHP_METHOD(php_wxFileDialog, GetFilename)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileDialog){
 				references = &((wxFileDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -14389,8 +15893,12 @@ PHP_METHOD(php_wxFileDialog, GetExtraControl)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileDialog){
 				references = &((wxFileDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -14494,8 +16002,12 @@ PHP_METHOD(php_wxFileDialog, GetDirectory)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFileDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFileDialog){
 				references = &((wxFileDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -14704,8 +16216,12 @@ PHP_METHOD(php_wxFontData, SetShowHelp)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFontData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFontData){
 				references = &((wxFontData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -14792,8 +16308,12 @@ PHP_METHOD(php_wxFontData, SetRange)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFontData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFontData){
 				references = &((wxFontData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -14881,8 +16401,12 @@ PHP_METHOD(php_wxFontData, SetInitialFont)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFontData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFontData){
 				references = &((wxFontData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -14987,8 +16511,12 @@ PHP_METHOD(php_wxFontData, SetColour)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFontData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFontData){
 				references = &((wxFontData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -15093,8 +16621,12 @@ PHP_METHOD(php_wxFontData, SetChosenFont)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFontData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFontData){
 				references = &((wxFontData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -15199,8 +16731,12 @@ PHP_METHOD(php_wxFontData, SetAllowSymbols)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFontData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFontData){
 				references = &((wxFontData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -15287,8 +16823,12 @@ PHP_METHOD(php_wxFontData, GetShowHelp)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFontData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFontData){
 				references = &((wxFontData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -15370,8 +16910,12 @@ PHP_METHOD(php_wxFontData, GetInitialFont)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFontData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFontData){
 				references = &((wxFontData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -15458,8 +17002,12 @@ PHP_METHOD(php_wxFontData, GetEnableEffects)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFontData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFontData){
 				references = &((wxFontData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -15541,8 +17089,12 @@ PHP_METHOD(php_wxFontData, GetColour)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFontData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFontData){
 				references = &((wxFontData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -15643,8 +17195,12 @@ PHP_METHOD(php_wxFontData, GetChosenFont)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFontData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFontData){
 				references = &((wxFontData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -15731,8 +17287,12 @@ PHP_METHOD(php_wxFontData, GetAllowSymbols)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFontData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFontData){
 				references = &((wxFontData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -15814,8 +17374,12 @@ PHP_METHOD(php_wxFontData, EnableEffects)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFontData)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFontData){
 				references = &((wxFontData_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -15907,8 +17471,12 @@ PHP_METHOD(php_wxFontDialog, Create)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFontDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFontDialog){
 				references = &((wxFontDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -16087,8 +17655,12 @@ PHP_METHOD(php_wxFontDialog, GetFontData)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFontDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFontDialog){
 				references = &((wxFontDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -16240,8 +17812,12 @@ PHP_METHOD(php_wxFontDialog, ShowModal)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxFontDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxFontDialog){
 				references = &((wxFontDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -16535,8 +18111,12 @@ PHP_METHOD(php_wxMessageDialog, GetCancelLabel)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxMessageDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxMessageDialog){
 				references = &((wxMessageDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -16624,8 +18204,12 @@ PHP_METHOD(php_wxMessageDialog, GetCaption)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxMessageDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxMessageDialog){
 				references = &((wxMessageDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -16713,8 +18297,12 @@ PHP_METHOD(php_wxMessageDialog, GetEffectiveIcon)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxMessageDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxMessageDialog){
 				references = &((wxMessageDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -16796,8 +18384,12 @@ PHP_METHOD(php_wxMessageDialog, GetExtendedMessage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxMessageDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxMessageDialog){
 				references = &((wxMessageDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -16885,8 +18477,12 @@ PHP_METHOD(php_wxMessageDialog, GetHelpLabel)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxMessageDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxMessageDialog){
 				references = &((wxMessageDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -16974,8 +18570,12 @@ PHP_METHOD(php_wxMessageDialog, GetMessage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxMessageDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxMessageDialog){
 				references = &((wxMessageDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -17063,8 +18663,12 @@ PHP_METHOD(php_wxMessageDialog, GetMessageDialogStyle)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxMessageDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxMessageDialog){
 				references = &((wxMessageDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -17146,8 +18750,12 @@ PHP_METHOD(php_wxMessageDialog, GetNoLabel)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxMessageDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxMessageDialog){
 				references = &((wxMessageDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -17235,8 +18843,12 @@ PHP_METHOD(php_wxMessageDialog, GetOKLabel)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxMessageDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxMessageDialog){
 				references = &((wxMessageDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -17324,8 +18936,12 @@ PHP_METHOD(php_wxMessageDialog, GetYesLabel)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxMessageDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxMessageDialog){
 				references = &((wxMessageDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -17413,8 +19029,12 @@ PHP_METHOD(php_wxMessageDialog, HasCustomLabels)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxMessageDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxMessageDialog){
 				references = &((wxMessageDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -17496,8 +19116,12 @@ PHP_METHOD(php_wxMessageDialog, SetExtendedMessage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxMessageDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxMessageDialog){
 				references = &((wxMessageDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -17745,8 +19369,12 @@ PHP_METHOD(php_wxMessageDialog, ShowModal)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxMessageDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxMessageDialog){
 				references = &((wxMessageDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -17828,8 +19456,12 @@ PHP_METHOD(php_wxMessageDialog, SetYesNoLabels)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxMessageDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxMessageDialog){
 				references = &((wxMessageDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -17919,8 +19551,12 @@ PHP_METHOD(php_wxMessageDialog, SetYesNoCancelLabels)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxMessageDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxMessageDialog){
 				references = &((wxMessageDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -18012,8 +19648,12 @@ PHP_METHOD(php_wxMessageDialog, SetOKLabel)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxMessageDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxMessageDialog){
 				references = &((wxMessageDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -18101,8 +19741,12 @@ PHP_METHOD(php_wxMessageDialog, SetOKCancelLabels)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxMessageDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxMessageDialog){
 				references = &((wxMessageDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -18192,8 +19836,12 @@ PHP_METHOD(php_wxMessageDialog, SetMessage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxMessageDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxMessageDialog){
 				references = &((wxMessageDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -18281,8 +19929,12 @@ PHP_METHOD(php_wxMessageDialog, SetHelpLabel)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxMessageDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxMessageDialog){
 				references = &((wxMessageDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -18375,10 +20027,16 @@ PHP_METHOD(php_wxGenericProgressDialog, GetMessage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxGenericProgressDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxGenericProgressDialog){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -18466,10 +20124,16 @@ PHP_METHOD(php_wxGenericProgressDialog, GetRange)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxGenericProgressDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxGenericProgressDialog){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -18551,10 +20215,16 @@ PHP_METHOD(php_wxGenericProgressDialog, GetValue)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxGenericProgressDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxGenericProgressDialog){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -18636,10 +20306,16 @@ PHP_METHOD(php_wxGenericProgressDialog, Resume)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxGenericProgressDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxGenericProgressDialog){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -18721,10 +20397,16 @@ PHP_METHOD(php_wxGenericProgressDialog, Pulse)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxGenericProgressDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxGenericProgressDialog){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -18845,10 +20527,16 @@ PHP_METHOD(php_wxGenericProgressDialog, SetRange)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxGenericProgressDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxGenericProgressDialog){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -18935,10 +20623,16 @@ PHP_METHOD(php_wxGenericProgressDialog, Update)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxGenericProgressDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxGenericProgressDialog){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -19060,10 +20754,16 @@ PHP_METHOD(php_wxGenericProgressDialog, WasCancelled)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxGenericProgressDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxGenericProgressDialog){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -19145,10 +20845,16 @@ PHP_METHOD(php_wxGenericProgressDialog, WasSkipped)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxGenericProgressDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxGenericProgressDialog){
 				references = &((wxGenericProgressDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxProgressDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxProgressDialog) && (!reference_type_found)){
 				references = &((wxProgressDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -19411,8 +21117,12 @@ PHP_METHOD(php_wxRearrangeDialog, AddExtraControls)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxRearrangeDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxRearrangeDialog){
 				references = &((wxRearrangeDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -19517,8 +21227,12 @@ PHP_METHOD(php_wxRearrangeDialog, GetList)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxRearrangeDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxRearrangeDialog){
 				references = &((wxRearrangeDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -19707,8 +21421,12 @@ PHP_METHOD(php_wxSymbolPickerDialog, Create)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxSymbolPickerDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxSymbolPickerDialog){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -19924,8 +21642,12 @@ PHP_METHOD(php_wxSymbolPickerDialog, GetFontName)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxSymbolPickerDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxSymbolPickerDialog){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -20013,8 +21735,12 @@ PHP_METHOD(php_wxSymbolPickerDialog, GetFromUnicode)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxSymbolPickerDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxSymbolPickerDialog){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -20096,8 +21822,12 @@ PHP_METHOD(php_wxSymbolPickerDialog, GetNormalTextFontName)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxSymbolPickerDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxSymbolPickerDialog){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -20185,8 +21915,12 @@ PHP_METHOD(php_wxSymbolPickerDialog, GetSymbol)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxSymbolPickerDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxSymbolPickerDialog){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -20274,8 +22008,12 @@ PHP_METHOD(php_wxSymbolPickerDialog, GetSymbolChar)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxSymbolPickerDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxSymbolPickerDialog){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -20357,8 +22095,12 @@ PHP_METHOD(php_wxSymbolPickerDialog, HasSelection)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxSymbolPickerDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxSymbolPickerDialog){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -20440,8 +22182,12 @@ PHP_METHOD(php_wxSymbolPickerDialog, SetFontName)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxSymbolPickerDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxSymbolPickerDialog){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -20529,8 +22275,12 @@ PHP_METHOD(php_wxSymbolPickerDialog, SetFromUnicode)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxSymbolPickerDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxSymbolPickerDialog){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -20617,8 +22367,12 @@ PHP_METHOD(php_wxSymbolPickerDialog, SetNormalTextFontName)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxSymbolPickerDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxSymbolPickerDialog){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -20706,8 +22460,12 @@ PHP_METHOD(php_wxSymbolPickerDialog, SetSymbol)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxSymbolPickerDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxSymbolPickerDialog){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -20795,8 +22553,12 @@ PHP_METHOD(php_wxSymbolPickerDialog, SetUnicodeMode)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxSymbolPickerDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxSymbolPickerDialog){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -20883,8 +22645,12 @@ PHP_METHOD(php_wxSymbolPickerDialog, UseNormalFont)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxSymbolPickerDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxSymbolPickerDialog){
 				references = &((wxSymbolPickerDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -21389,10 +23155,16 @@ PHP_METHOD(php_wxTextEntryDialog, GetValue)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxTextEntryDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxTextEntryDialog){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -21480,10 +23252,16 @@ PHP_METHOD(php_wxTextEntryDialog, SetValue)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxTextEntryDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxTextEntryDialog){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -21571,10 +23349,16 @@ PHP_METHOD(php_wxTextEntryDialog, ShowModal)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxTextEntryDialog)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxTextEntryDialog){
 				references = &((wxTextEntryDialog_php*)_this)->references;
-			else if(parent_rsrc_type == le_wxPasswordEntryDialog)
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxPasswordEntryDialog) && (!reference_type_found)){
 				references = &((wxPasswordEntryDialog_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -21834,8 +23618,12 @@ PHP_METHOD(php_wxWizard, Create)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxWizard)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWizard){
 				references = &((wxWizard_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -22045,8 +23833,12 @@ PHP_METHOD(php_wxWizard, FitToPage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxWizard)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWizard){
 				references = &((wxWizard_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -22151,8 +23943,12 @@ PHP_METHOD(php_wxWizard, GetBitmap)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxWizard)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWizard){
 				references = &((wxWizard_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -22253,8 +24049,12 @@ PHP_METHOD(php_wxWizard, GetBitmapBackgroundColour)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxWizard)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWizard){
 				references = &((wxWizard_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -22355,8 +24155,12 @@ PHP_METHOD(php_wxWizard, GetBitmapPlacement)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxWizard)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWizard){
 				references = &((wxWizard_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -22438,8 +24242,12 @@ PHP_METHOD(php_wxWizard, GetCurrentPage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxWizard)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWizard){
 				references = &((wxWizard_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -22543,8 +24351,12 @@ PHP_METHOD(php_wxWizard, GetMinimumBitmapWidth)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxWizard)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWizard){
 				references = &((wxWizard_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -22626,8 +24438,12 @@ PHP_METHOD(php_wxWizard, GetPageSize)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxWizard)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWizard){
 				references = &((wxWizard_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -22714,8 +24530,12 @@ PHP_METHOD(php_wxWizard, HasNextPage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxWizard)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWizard){
 				references = &((wxWizard_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -22820,8 +24640,12 @@ PHP_METHOD(php_wxWizard, HasPrevPage)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxWizard)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWizard){
 				references = &((wxWizard_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -22926,8 +24750,12 @@ PHP_METHOD(php_wxWizard, RunWizard)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxWizard)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWizard){
 				references = &((wxWizard_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -23032,8 +24860,12 @@ PHP_METHOD(php_wxWizard, SetBitmap)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxWizard)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWizard){
 				references = &((wxWizard_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -23138,8 +24970,12 @@ PHP_METHOD(php_wxWizard, SetBitmapBackgroundColour)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxWizard)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWizard){
 				references = &((wxWizard_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -23244,8 +25080,12 @@ PHP_METHOD(php_wxWizard, SetBitmapPlacement)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxWizard)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWizard){
 				references = &((wxWizard_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -23332,8 +25172,12 @@ PHP_METHOD(php_wxWizard, SetBorder)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxWizard)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWizard){
 				references = &((wxWizard_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -23420,8 +25264,12 @@ PHP_METHOD(php_wxWizard, SetMinimumBitmapWidth)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxWizard)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWizard){
 				references = &((wxWizard_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -23508,8 +25356,12 @@ PHP_METHOD(php_wxWizard, SetPageSize)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxWizard)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWizard){
 				references = &((wxWizard_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else
@@ -23848,8 +25700,12 @@ PHP_METHOD(php_wxWizard, GetPageAreaSizer)
 			id_to_find = Z_RESVAL_P(*tmp);
 			_this = zend_list_find(id_to_find, &parent_rsrc_type);
 			
-			if(parent_rsrc_type == le_wxWizard)
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxWizard){
 				references = &((wxWizard_php*)_this)->references;
+				reference_type_found = true;
+			}
 		}
 	}
 	else

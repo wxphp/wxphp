@@ -609,7 +609,7 @@ foreach($defEnums[0] as $enumClassName=>$classEnums)
 			{
 				//To produce constant with class property syntax class::constant
 				//Gives a type 'void' unexpected error when compiling on windows
-				$classes .= "\tzend_declare_class_constant_long(php_{$enumClassName}_entry, \"$enumValue\", " . strlen($enumOption) . ",  $enumClassName::$enumValue TSRMLS_DC);\n";
+				$classes .= "\tzend_declare_class_constant_long(php_{$enumClassName}_entry, \"$enumValue\", " . strlen($enumValue) . ",  $enumClassName::$enumValue TSRMLS_CC);\n";
 				
 				//Constant in global scope
 				//$classes .= "REGISTER_LONG_CONSTANT(\"$enumOption\", $enumClassName::$enumOption, CONST_CS | CONST_PERSISTENT);\n";
