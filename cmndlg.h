@@ -39,6 +39,7 @@ class wxAboutDialogInfo_php: public wxAboutDialogInfo{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxAboutDialogInfo_functions[] = {
 	PHP_ME(php_wxAboutDialogInfo, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxAboutDialogInfo, SetWebSite, NULL, ZEND_ACC_PUBLIC)
@@ -64,6 +65,7 @@ static zend_function_entry php_wxAboutDialogInfo_functions[] = {
 	PHP_ME(php_wxAboutDialogInfo, GetName, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxBusyInfo;
 extern zend_class_entry *php_wxBusyInfo_entry;
@@ -86,10 +88,12 @@ class wxBusyInfo_php: public wxBusyInfo{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxBusyInfo_functions[] = {
 	PHP_ME(php_wxBusyInfo, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxSingleChoiceDialog;
 extern zend_class_entry *php_wxSingleChoiceDialog_entry;
@@ -113,6 +117,7 @@ class wxSingleChoiceDialog_php: public wxSingleChoiceDialog{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxSingleChoiceDialog_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -400,6 +405,7 @@ static zend_function_entry php_wxSingleChoiceDialog_functions[] = {
 	PHP_ME(php_wxSingleChoiceDialog, GetSelectionData, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxPrintDialogData;
 extern zend_class_entry *php_wxPrintDialogData_entry;
@@ -423,6 +429,7 @@ class wxPrintDialogData_php: public wxPrintDialogData{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPrintDialogData_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -457,6 +464,7 @@ static zend_function_entry php_wxPrintDialogData_functions[] = {
 	PHP_ME(php_wxPrintDialogData, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxColourDialog;
 extern zend_class_entry *php_wxColourDialog_entry;
@@ -479,6 +487,7 @@ class wxColourDialog_php: public wxColourDialog{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxColourDialog_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -763,6 +772,7 @@ static zend_function_entry php_wxColourDialog_functions[] = {
 	PHP_ME(php_wxColourDialog, Create, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxColourData;
 extern zend_class_entry *php_wxColourData_entry;
@@ -785,6 +795,7 @@ class wxColourData_php: public wxColourData{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxColourData_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -803,6 +814,7 @@ static zend_function_entry php_wxColourData_functions[] = {
 	PHP_ME(php_wxColourData, FromString, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxDialog;
 extern zend_class_entry *php_wxDialog_entry;
@@ -826,6 +838,7 @@ class wxDialog_php: public wxDialog{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDialog_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1109,6 +1122,7 @@ static zend_function_entry php_wxDialog_functions[] = {
 	PHP_ME(php_wxDialog, IsLayoutAdaptationEnabled, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxDirDialog;
 extern zend_class_entry *php_wxDirDialog_entry;
@@ -1131,6 +1145,7 @@ class wxDirDialog_php: public wxDirDialog{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDirDialog_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1418,6 +1433,7 @@ static zend_function_entry php_wxDirDialog_functions[] = {
 	PHP_ME(php_wxDirDialog, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxFindReplaceData;
 extern zend_class_entry *php_wxFindReplaceData_entry;
@@ -1440,6 +1456,7 @@ class wxFindReplaceData_php: public wxFindReplaceData{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFindReplaceData_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1456,6 +1473,7 @@ static zend_function_entry php_wxFindReplaceData_functions[] = {
 	PHP_ME(php_wxFindReplaceData, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxFindReplaceDialog;
 extern zend_class_entry *php_wxFindReplaceDialog_entry;
@@ -1479,6 +1497,7 @@ class wxFindReplaceDialog_php: public wxFindReplaceDialog{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFindReplaceDialog_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1763,6 +1782,7 @@ static zend_function_entry php_wxFindReplaceDialog_functions[] = {
 	PHP_ME(php_wxFindReplaceDialog, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxFileDialog;
 extern zend_class_entry *php_wxFileDialog_entry;
@@ -1785,6 +1805,7 @@ class wxFileDialog_php: public wxFileDialog{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileDialog_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -2083,6 +2104,7 @@ static zend_function_entry php_wxFileDialog_functions[] = {
 	PHP_ME(php_wxFileDialog, GetDirectory, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxFontData;
 extern zend_class_entry *php_wxFontData_entry;
@@ -2105,6 +2127,7 @@ class wxFontData_php: public wxFontData{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFontData_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -2128,6 +2151,7 @@ static zend_function_entry php_wxFontData_functions[] = {
 	PHP_ME(php_wxFontData, EnableEffects, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxFontDialog;
 extern zend_class_entry *php_wxFontDialog_entry;
@@ -2152,6 +2176,7 @@ class wxFontDialog_php: public wxFontDialog{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFontDialog_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -2436,6 +2461,7 @@ static zend_function_entry php_wxFontDialog_functions[] = {
 	PHP_ME(php_wxFontDialog, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxMessageDialog;
 extern zend_class_entry *php_wxMessageDialog_entry;
@@ -2458,6 +2484,7 @@ class wxMessageDialog_php: public wxMessageDialog{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxMessageDialog_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -2759,6 +2786,7 @@ static zend_function_entry php_wxMessageDialog_functions[] = {
 	PHP_ME(php_wxMessageDialog, SetHelpLabel, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGenericProgressDialog;
 extern zend_class_entry *php_wxGenericProgressDialog_entry;
@@ -2781,6 +2809,7 @@ class wxGenericProgressDialog_php: public wxGenericProgressDialog{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGenericProgressDialog_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -3072,6 +3101,7 @@ static zend_function_entry php_wxGenericProgressDialog_functions[] = {
 	PHP_ME(php_wxGenericProgressDialog, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxRearrangeDialog;
 extern zend_class_entry *php_wxRearrangeDialog_entry;
@@ -3094,12 +3124,14 @@ class wxRearrangeDialog_php: public wxRearrangeDialog{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRearrangeDialog_functions[] = {
 	PHP_ME(php_wxRearrangeDialog, AddExtraControls, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxRearrangeDialog, GetList, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxRearrangeDialog, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxSymbolPickerDialog;
 extern zend_class_entry *php_wxSymbolPickerDialog_entry;
@@ -3123,6 +3155,7 @@ class wxSymbolPickerDialog_php: public wxSymbolPickerDialog{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxSymbolPickerDialog_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -3418,6 +3451,7 @@ static zend_function_entry php_wxSymbolPickerDialog_functions[] = {
 	PHP_ME(php_wxSymbolPickerDialog, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxPasswordEntryDialog;
 extern zend_class_entry *php_wxPasswordEntryDialog_entry;
@@ -3440,6 +3474,7 @@ class wxPasswordEntryDialog_php: public wxPasswordEntryDialog{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPasswordEntryDialog_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -3725,6 +3760,7 @@ static zend_function_entry php_wxPasswordEntryDialog_functions[] = {
 	PHP_ME(php_wxPasswordEntryDialog, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxTextEntryDialog;
 extern zend_class_entry *php_wxTextEntryDialog_entry;
@@ -3747,6 +3783,7 @@ class wxTextEntryDialog_php: public wxTextEntryDialog{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxTextEntryDialog_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -4032,6 +4069,7 @@ static zend_function_entry php_wxTextEntryDialog_functions[] = {
 	PHP_ME(php_wxTextEntryDialog, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxWizard;
 extern zend_class_entry *php_wxWizard_entry;
@@ -4055,6 +4093,7 @@ class wxWizard_php: public wxWizard{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxWizard_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -4355,5 +4394,6 @@ static zend_function_entry php_wxWizard_functions[] = {
 	PHP_ME(php_wxWizard, GetPageAreaSizer, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_CMNDLG_H_GUARD

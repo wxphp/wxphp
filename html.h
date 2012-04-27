@@ -41,6 +41,7 @@ class wxHtmlHelpController_php: public wxHtmlHelpController{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlHelpController_functions[] = {
 	PHP_ME(php_wxHtmlHelpController, AddBook, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxHtmlHelpController, Display, NULL, ZEND_ACC_PUBLIC)
@@ -56,6 +57,7 @@ static zend_function_entry php_wxHtmlHelpController_functions[] = {
 	PHP_ME(php_wxHtmlHelpController, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxHtmlModalHelp;
 extern zend_class_entry *php_wxHtmlModalHelp_entry;
@@ -78,10 +80,12 @@ class wxHtmlModalHelp_php: public wxHtmlModalHelp{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlModalHelp_functions[] = {
 	PHP_ME(php_wxHtmlModalHelp, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxHtmlHelpData;
 extern zend_class_entry *php_wxHtmlHelpData_entry;
@@ -104,6 +108,7 @@ class wxHtmlHelpData_php: public wxHtmlHelpData{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlHelpData_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -118,6 +123,7 @@ static zend_function_entry php_wxHtmlHelpData_functions[] = {
 	PHP_ME(php_wxHtmlHelpData, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxHtmlHelpDialog;
 extern zend_class_entry *php_wxHtmlHelpDialog_entry;
@@ -141,6 +147,7 @@ class wxHtmlHelpDialog_php: public wxHtmlHelpDialog{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlHelpDialog_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -418,6 +425,7 @@ static zend_function_entry php_wxHtmlHelpDialog_functions[] = {
 	PHP_ME(php_wxHtmlHelpDialog, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxHtmlHelpFrame;
 extern zend_class_entry *php_wxHtmlHelpFrame_entry;
@@ -441,6 +449,7 @@ class wxHtmlHelpFrame_php: public wxHtmlHelpFrame{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlHelpFrame_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -718,6 +727,7 @@ static zend_function_entry php_wxHtmlHelpFrame_functions[] = {
 	PHP_ME(php_wxHtmlHelpFrame, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxHtmlHelpWindow;
 extern zend_class_entry *php_wxHtmlHelpWindow_entry;
@@ -742,6 +752,7 @@ class wxHtmlHelpWindow_php: public wxHtmlHelpWindow{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlHelpWindow_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -986,6 +997,7 @@ static zend_function_entry php_wxHtmlHelpWindow_functions[] = {
 	PHP_ME(php_wxHtmlHelpWindow, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxHtmlRenderingStyle;
 extern zend_class_entry *php_wxHtmlRenderingStyle_entry;
@@ -1009,9 +1021,11 @@ class wxHtmlRenderingStyle_php: public wxHtmlRenderingStyle{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlRenderingStyle_functions[] = {
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxHtmlRenderingInfo;
 extern zend_class_entry *php_wxHtmlRenderingInfo_entry;
@@ -1034,12 +1048,14 @@ class wxHtmlRenderingInfo_php: public wxHtmlRenderingInfo{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlRenderingInfo_functions[] = {
 	PHP_ME(php_wxHtmlRenderingInfo, GetStyle, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxHtmlRenderingInfo, SetStyle, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxHtmlRenderingInfo, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxHtmlCell;
 extern zend_class_entry *php_wxHtmlCell_entry;
@@ -1062,6 +1078,7 @@ class wxHtmlCell_php: public wxHtmlCell{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlCell_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1089,6 +1106,7 @@ static zend_function_entry php_wxHtmlCell_functions[] = {
 	PHP_ME(php_wxHtmlCell, Find, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxHtmlContainerCell;
 extern zend_class_entry *php_wxHtmlContainerCell_entry;
@@ -1111,6 +1129,7 @@ class wxHtmlContainerCell_php: public wxHtmlContainerCell{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlContainerCell_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1152,6 +1171,7 @@ static zend_function_entry php_wxHtmlContainerCell_functions[] = {
 	PHP_ME(php_wxHtmlContainerCell, GetAlignHor, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxHtmlLinkInfo;
 extern zend_class_entry *php_wxHtmlLinkInfo_entry;
@@ -1175,6 +1195,7 @@ class wxHtmlLinkInfo_php: public wxHtmlLinkInfo{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlLinkInfo_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1189,6 +1210,7 @@ static zend_function_entry php_wxHtmlLinkInfo_functions[] = {
 	PHP_ME(php_wxHtmlLinkInfo, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxHtmlColourCell;
 extern zend_class_entry *php_wxHtmlColourCell_entry;
@@ -1211,6 +1233,7 @@ class wxHtmlColourCell_php: public wxHtmlColourCell{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlColourCell_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1238,6 +1261,7 @@ static zend_function_entry php_wxHtmlColourCell_functions[] = {
 	PHP_ME(php_wxHtmlColourCell, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxHtmlWidgetCell;
 extern zend_class_entry *php_wxHtmlWidgetCell_entry;
@@ -1260,6 +1284,7 @@ class wxHtmlWidgetCell_php: public wxHtmlWidgetCell{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlWidgetCell_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1287,6 +1312,7 @@ static zend_function_entry php_wxHtmlWidgetCell_functions[] = {
 	PHP_ME(php_wxHtmlWidgetCell, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxHtmlFilter;
 extern zend_class_entry *php_wxHtmlFilter_entry;
@@ -1311,6 +1337,7 @@ class wxHtmlFilter_php: public wxHtmlFilter{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlFilter_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1321,6 +1348,7 @@ static zend_function_entry php_wxHtmlFilter_functions[] = {
 	PHP_ME(php_wxHtmlFilter, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxHtmlTagHandler;
 extern zend_class_entry *php_wxHtmlTagHandler_entry;
@@ -1349,6 +1377,7 @@ class wxHtmlTagHandler_php: public wxHtmlTagHandler{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlTagHandler_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1360,6 +1389,7 @@ static zend_function_entry php_wxHtmlTagHandler_functions[] = {
 	PHP_ME(php_wxHtmlTagHandler, __get, wxphp_html_get_args, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxHtmlTag;
 extern zend_class_entry *php_wxHtmlTag_entry;
@@ -1381,6 +1411,7 @@ class wxHtmlTag_php: public wxHtmlTag{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlTag_functions[] = {
 	PHP_ME(php_wxHtmlTag, GetAllParams, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxHtmlTag, GetBeginPos, NULL, ZEND_ACC_PUBLIC)
@@ -1396,6 +1427,7 @@ static zend_function_entry php_wxHtmlTag_functions[] = {
 	PHP_ME(php_wxHtmlTag, GetParamAsInt, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxHtmlWindow;
 extern zend_class_entry *php_wxHtmlWindow_entry;
@@ -1423,6 +1455,7 @@ class wxHtmlWindow_php: public wxHtmlWindow{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlWindow_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1684,6 +1717,7 @@ static zend_function_entry php_wxHtmlWindow_functions[] = {
 	PHP_ME(php_wxHtmlWindow, SetFonts, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxHtmlLinkEvent;
 extern zend_class_entry *php_wxHtmlLinkEvent_entry;
@@ -1706,6 +1740,7 @@ class wxHtmlLinkEvent_php: public wxHtmlLinkEvent{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlLinkEvent_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1741,6 +1776,7 @@ static zend_function_entry php_wxHtmlLinkEvent_functions[] = {
 	PHP_ME(php_wxHtmlLinkEvent, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxHtmlCellEvent;
 extern zend_class_entry *php_wxHtmlCellEvent_entry;
@@ -1763,6 +1799,7 @@ class wxHtmlCellEvent_php: public wxHtmlCellEvent{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlCellEvent_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1801,6 +1838,7 @@ static zend_function_entry php_wxHtmlCellEvent_functions[] = {
 	PHP_ME(php_wxHtmlCellEvent, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxHtmlDCRenderer;
 extern zend_class_entry *php_wxHtmlDCRenderer_entry;
@@ -1823,6 +1861,7 @@ class wxHtmlDCRenderer_php: public wxHtmlDCRenderer{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlDCRenderer_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1840,6 +1879,7 @@ static zend_function_entry php_wxHtmlDCRenderer_functions[] = {
 	PHP_ME(php_wxHtmlDCRenderer, SetDC, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxHtmlEasyPrinting;
 extern zend_class_entry *php_wxHtmlEasyPrinting_entry;
@@ -1862,6 +1902,7 @@ class wxHtmlEasyPrinting_php: public wxHtmlEasyPrinting{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlEasyPrinting_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1887,6 +1928,7 @@ static zend_function_entry php_wxHtmlEasyPrinting_functions[] = {
 	PHP_ME(php_wxHtmlEasyPrinting, SetFonts, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxHtmlPrintout;
 extern zend_class_entry *php_wxHtmlPrintout_entry;
@@ -1909,6 +1951,7 @@ class wxHtmlPrintout_php: public wxHtmlPrintout{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlPrintout_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1949,6 +1992,7 @@ static zend_function_entry php_wxHtmlPrintout_functions[] = {
 	PHP_ME(php_wxHtmlPrintout, AddFilter, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxHtmlTagsModule;
 extern zend_class_entry *php_wxHtmlTagsModule_entry;
@@ -1970,6 +2014,7 @@ class wxHtmlTagsModule_php: public wxHtmlTagsModule{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlTagsModule_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1980,6 +2025,7 @@ static zend_function_entry php_wxHtmlTagsModule_functions[] = {
 	PHP_ME(php_wxHtmlTagsModule, FillHandlersTable, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxHtmlWinTagHandler;
 extern zend_class_entry *php_wxHtmlWinTagHandler_entry;
@@ -2005,6 +2051,7 @@ class wxHtmlWinTagHandler_php: public wxHtmlWinTagHandler{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlWinTagHandler_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -2014,6 +2061,7 @@ static zend_function_entry php_wxHtmlWinTagHandler_functions[] = {
 	PHP_ME(php_wxObject, IsKindOf, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxHtmlWinParser;
 extern zend_class_entry *php_wxHtmlWinParser_entry;
@@ -2035,6 +2083,7 @@ class wxHtmlWinParser_php: public wxHtmlWinParser{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHtmlWinParser_functions[] = {
 	PHP_ME(php_wxHtmlWinParser, AddModule, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxHtmlWinParser, CloseContainer, NULL, ZEND_ACC_PUBLIC)
@@ -2069,5 +2118,6 @@ static zend_function_entry php_wxHtmlWinParser_functions[] = {
 	PHP_ME(php_wxHtmlWinParser, SetLinkColor, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_HTML_H_GUARD

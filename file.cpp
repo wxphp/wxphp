@@ -6046,6 +6046,9 @@ PHP_METHOD(php_wxFileName, SetTimes)
 				#endif
 				ZVAL_BOOL(return_value, ((wxFileName_php*)_this)->SetTimes(dates_array0_0, dates_array0_1, dates_array0_2));
 
+				delete[] dates_array0_0;
+				delete[] dates_array0_1;
+				delete[] dates_array0_2;
 
 				return;
 				break;

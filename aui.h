@@ -40,6 +40,7 @@ class wxAuiNotebook_php: public wxAuiNotebook{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxAuiNotebook_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -313,6 +314,7 @@ static zend_function_entry php_wxAuiNotebook_functions[] = {
 	PHP_ME(php_wxAuiNotebook, SetSelection, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxAuiTabArt;
 extern zend_class_entry *php_wxAuiTabArt_entry;
@@ -346,9 +348,11 @@ class wxAuiTabArt_php: public wxAuiTabArt{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxAuiTabArt_functions[] = {
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxAuiDockArt;
 extern zend_class_entry *php_wxAuiDockArt_entry;
@@ -383,10 +387,12 @@ class wxAuiDockArt_php: public wxAuiDockArt{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxAuiDockArt_functions[] = {
 	PHP_ME(php_wxAuiDockArt, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxAuiManager;
 extern zend_class_entry *php_wxAuiManager_entry;
@@ -410,6 +416,7 @@ class wxAuiManager_php: public wxAuiManager{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxAuiManager_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -459,6 +466,7 @@ static zend_function_entry php_wxAuiManager_functions[] = {
 	PHP_ME(php_wxAuiManager, AddPane, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxAuiPaneInfo;
 extern zend_class_entry *php_wxAuiPaneInfo_entry;
@@ -482,6 +490,7 @@ class wxAuiPaneInfo_php: public wxAuiPaneInfo{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxAuiPaneInfo_functions[] = {
 	PHP_ME(php_wxAuiPaneInfo, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxAuiPaneInfo, Window, NULL, ZEND_ACC_PUBLIC)
@@ -557,6 +566,7 @@ static zend_function_entry php_wxAuiPaneInfo_functions[] = {
 	PHP_ME(php_wxAuiPaneInfo, BestSize, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxAuiToolBarEvent;
 extern zend_class_entry *php_wxAuiToolBarEvent_entry;
@@ -578,6 +588,7 @@ class wxAuiToolBarEvent_php: public wxAuiToolBarEvent{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxAuiToolBarEvent_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -618,6 +629,7 @@ static zend_function_entry php_wxAuiToolBarEvent_functions[] = {
 	PHP_ME(php_wxAuiToolBarEvent, IsDropDownClicked, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxAuiToolBarItem;
 extern zend_class_entry *php_wxAuiToolBarItem_entry;
@@ -641,6 +653,7 @@ class wxAuiToolBarItem_php: public wxAuiToolBarItem{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxAuiToolBarItem_functions[] = {
 	PHP_ME(php_wxAuiToolBarItem, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxAuiToolBarItem, SetWindow, NULL, ZEND_ACC_PUBLIC)
@@ -684,6 +697,7 @@ static zend_function_entry php_wxAuiToolBarItem_functions[] = {
 	PHP_ME(php_wxAuiToolBarItem, Assign, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxAuiToolBarArt;
 extern zend_class_entry *php_wxAuiToolBarArt_entry;
@@ -724,9 +738,11 @@ class wxAuiToolBarArt_php: public wxAuiToolBarArt{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxAuiToolBarArt_functions[] = {
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxAuiDefaultToolBarArt;
 extern zend_class_entry *php_wxAuiDefaultToolBarArt_entry;
@@ -749,6 +765,7 @@ class wxAuiDefaultToolBarArt_php: public wxAuiDefaultToolBarArt{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxAuiDefaultToolBarArt_functions[] = {
 	PHP_ME(php_wxAuiDefaultToolBarArt, Clone, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxAuiDefaultToolBarArt, DrawBackground, NULL, ZEND_ACC_PUBLIC)
@@ -772,6 +789,7 @@ static zend_function_entry php_wxAuiDefaultToolBarArt_functions[] = {
 	PHP_ME(php_wxAuiDefaultToolBarArt, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxAuiToolBar;
 extern zend_class_entry *php_wxAuiToolBar_entry;
@@ -794,6 +812,7 @@ class wxAuiToolBar_php: public wxAuiToolBar{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxAuiToolBar_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1093,5 +1112,6 @@ static zend_function_entry php_wxAuiToolBar_functions[] = {
 	PHP_ME(php_wxAuiToolBar, AddTool, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_AUI_H_GUARD

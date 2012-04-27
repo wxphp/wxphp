@@ -40,6 +40,7 @@ class wxFFile_php: public wxFFile{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFFile_functions[] = {
 	PHP_ME(php_wxFFile, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxFFile, Write, NULL, ZEND_ACC_PUBLIC)
@@ -58,6 +59,7 @@ static zend_function_entry php_wxFFile_functions[] = {
 	PHP_ME(php_wxFFile, Close, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxFile;
 extern zend_class_entry *php_wxFile_entry;
@@ -82,6 +84,7 @@ class wxFile_php: public wxFile{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFile_functions[] = {
 	PHP_ME(php_wxFile, Seek, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFile, SeekEnd, NULL, ZEND_ACC_PUBLIC)
@@ -105,6 +108,7 @@ static zend_function_entry php_wxFile_functions[] = {
 	PHP_ME(php_wxFile, Access, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxPathList;
 extern zend_class_entry *php_wxPathList_entry;
@@ -128,6 +132,7 @@ class wxPathList_php: public wxPathList{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPathList_functions[] = {
 	PHP_ME(php_wxPathList, Add, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxPathList, AddEnvList, NULL, ZEND_ACC_PUBLIC)
@@ -137,6 +142,7 @@ static zend_function_entry php_wxPathList_functions[] = {
 	PHP_ME(php_wxPathList, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxFileName;
 extern zend_class_entry *php_wxFileName_entry;
@@ -164,6 +170,7 @@ class wxFileName_php: public wxFileName{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileName_functions[] = {
 	PHP_ME(php_wxFileName, AppendDir, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFileName, Assign, NULL, ZEND_ACC_PUBLIC)
@@ -240,6 +247,7 @@ static zend_function_entry php_wxFileName_functions[] = {
 	PHP_ME(php_wxFileName, Normalize, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxFSFile;
 extern zend_class_entry *php_wxFSFile_entry;
@@ -262,6 +270,7 @@ class wxFSFile_php: public wxFSFile{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFSFile_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -278,6 +287,7 @@ static zend_function_entry php_wxFSFile_functions[] = {
 	PHP_ME(php_wxFSFile, DetachStream, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxFileSystemWatcher;
 extern zend_class_entry *php_wxFileSystemWatcher_entry;
@@ -300,6 +310,7 @@ class wxFileSystemWatcher_php: public wxFileSystemWatcher{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileSystemWatcher_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -335,6 +346,7 @@ static zend_function_entry php_wxFileSystemWatcher_functions[] = {
 	PHP_ME(php_wxFileSystemWatcher, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxStandardPaths;
 extern zend_class_entry *php_wxStandardPaths_entry;
@@ -356,6 +368,7 @@ class wxStandardPaths_php: public wxStandardPaths{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxStandardPaths_functions[] = {
 	PHP_ME(php_wxStandardPaths, Get, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxStandardPaths, GetAppDocumentsDir, NULL, ZEND_ACC_PUBLIC)
@@ -373,5 +386,6 @@ static zend_function_entry php_wxStandardPaths_functions[] = {
 	PHP_ME(php_wxStandardPaths, UseAppInfo, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_FILE_H_GUARD

@@ -15529,6 +15529,7 @@ PHP_METHOD(php_wxHtmlWindow, SetFonts)
 				#endif
 				((wxHtmlWindow_php*)_this)->SetFonts(wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8), (const int*) integers_array0_2);
 
+				delete[] integers_array0_2;
 
 				return;
 				break;
@@ -17110,6 +17111,7 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetFonts)
 				#endif
 				((wxHtmlDCRenderer_php*)_this)->SetFonts(wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8), (const int*) integers_array0_2);
 
+				delete[] integers_array0_2;
 
 				return;
 				break;
@@ -18980,6 +18982,7 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetFonts)
 				#endif
 				((wxHtmlEasyPrinting_php*)_this)->SetFonts(wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8), (const int*) integers_array0_2);
 
+				delete[] integers_array0_2;
 
 				return;
 				break;
@@ -19820,6 +19823,7 @@ PHP_METHOD(php_wxHtmlPrintout, SetFonts)
 				#endif
 				((wxHtmlPrintout_php*)_this)->SetFonts(wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8), (const int*) integers_array0_2);
 
+				delete[] integers_array0_2;
 
 				return;
 				break;
@@ -23166,6 +23170,7 @@ PHP_METHOD(php_wxHtmlWinParser, SetFonts)
 					((wxHtmlWinParser_php*)_this)->SetFonts(wxString(normal_face0, wxConvUTF8), wxString(fixed_face0, wxConvUTF8), (const int*) integers_array0_2);
 				}
 
+				delete[] integers_array0_2;
 
 				return;
 				break;

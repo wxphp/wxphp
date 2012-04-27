@@ -41,6 +41,7 @@ class wxXmlNode_php: public wxXmlNode{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxXmlNode_functions[] = {
 	PHP_ME(php_wxXmlNode, AddAttribute, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxXmlNode, AddChild, NULL, ZEND_ACC_PUBLIC)
@@ -73,6 +74,7 @@ static zend_function_entry php_wxXmlNode_functions[] = {
 	PHP_ME(php_wxXmlNode, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxXmlAttribute;
 extern zend_class_entry *php_wxXmlAttribute_entry;
@@ -96,6 +98,7 @@ class wxXmlAttribute_php: public wxXmlAttribute{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxXmlAttribute_functions[] = {
 	PHP_ME(php_wxXmlAttribute, GetName, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxXmlAttribute, GetNext, NULL, ZEND_ACC_PUBLIC)
@@ -106,6 +109,7 @@ static zend_function_entry php_wxXmlAttribute_functions[] = {
 	PHP_ME(php_wxXmlAttribute, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxXmlDocument;
 extern zend_class_entry *php_wxXmlDocument_entry;
@@ -131,6 +135,7 @@ class wxXmlDocument_php: public wxXmlDocument{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxXmlDocument_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -156,5 +161,6 @@ static zend_function_entry php_wxXmlDocument_functions[] = {
 	PHP_ME(php_wxXmlDocument, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_XML_H_GUARD

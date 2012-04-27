@@ -24,6 +24,7 @@ class <?=$class_name?>_php<?if(!$class_methods["_forward_declaration"]){?>: publ
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_<?=$class_name?>_functions[] = {
 <?php
 	$methods_entry = "";
@@ -35,4 +36,5 @@ static zend_function_entry php_<?=$class_name?>_functions[] = {
 <?}?>
 	PHP_FE_END
 };
+#endif
 

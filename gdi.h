@@ -39,6 +39,7 @@ class wxGraphicsGradientStop_php: public wxGraphicsGradientStop{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGraphicsGradientStop_functions[] = {
 	PHP_ME(php_wxGraphicsGradientStop, GetColour, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGraphicsGradientStop, GetPosition, NULL, ZEND_ACC_PUBLIC)
@@ -47,6 +48,7 @@ static zend_function_entry php_wxGraphicsGradientStop_functions[] = {
 	PHP_ME(php_wxGraphicsGradientStop, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGraphicsGradientStops;
 extern zend_class_entry *php_wxGraphicsGradientStops_entry;
@@ -69,6 +71,7 @@ class wxGraphicsGradientStops_php: public wxGraphicsGradientStops{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGraphicsGradientStops_functions[] = {
 	PHP_ME(php_wxGraphicsGradientStops, Add, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGraphicsGradientStops, GetCount, NULL, ZEND_ACC_PUBLIC)
@@ -80,6 +83,7 @@ static zend_function_entry php_wxGraphicsGradientStops_functions[] = {
 	PHP_ME(php_wxGraphicsGradientStops, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxAnimation;
 extern zend_class_entry *php_wxAnimation_entry;
@@ -103,6 +107,7 @@ class wxAnimation_php: public wxAnimation{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxAnimation_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -120,6 +125,7 @@ static zend_function_entry php_wxAnimation_functions[] = {
 	PHP_ME(php_wxAnimation, Load, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxBitmapHandler;
 extern zend_class_entry *php_wxBitmapHandler_entry;
@@ -142,6 +148,7 @@ class wxBitmapHandler_php: public wxBitmapHandler{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxBitmapHandler_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -161,6 +168,7 @@ static zend_function_entry php_wxBitmapHandler_functions[] = {
 	PHP_ME(php_wxBitmapHandler, Create, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxBitmap;
 extern zend_class_entry *php_wxBitmap_entry;
@@ -188,6 +196,7 @@ class wxBitmap_php: public wxBitmap{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxBitmap_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -223,6 +232,7 @@ static zend_function_entry php_wxBitmap_functions[] = {
 	PHP_ME(php_wxBitmap, SetPalette, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxMask;
 extern zend_class_entry *php_wxMask_entry;
@@ -248,6 +258,7 @@ class wxMask_php: public wxMask{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxMask_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -259,6 +270,7 @@ static zend_function_entry php_wxMask_functions[] = {
 	PHP_ME(php_wxMask, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxBrush;
 extern zend_class_entry *php_wxBrush_entry;
@@ -283,6 +295,7 @@ class wxBrush_php: public wxBrush{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxBrush_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -303,6 +316,7 @@ static zend_function_entry php_wxBrush_functions[] = {
 	PHP_ME(php_wxBrush, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxColour;
 extern zend_class_entry *php_wxColour_entry;
@@ -329,6 +343,7 @@ class wxColour_php: public wxColour{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxColour_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -348,6 +363,7 @@ static zend_function_entry php_wxColour_functions[] = {
 	PHP_ME(php_wxColour, Alpha, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxCursor;
 extern zend_class_entry *php_wxCursor_entry;
@@ -373,6 +389,7 @@ class wxCursor_php: public wxCursor{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxCursor_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -384,6 +401,7 @@ static zend_function_entry php_wxCursor_functions[] = {
 	PHP_ME(php_wxCursor, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxDCClipper;
 extern zend_class_entry *php_wxDCClipper_entry;
@@ -408,10 +426,12 @@ class wxDCClipper_php: public wxDCClipper{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDCClipper_functions[] = {
 	PHP_ME(php_wxDCClipper, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxFont;
 extern zend_class_entry *php_wxFont_entry;
@@ -439,6 +459,7 @@ class wxFont_php: public wxFont{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFont_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -489,6 +510,7 @@ static zend_function_entry php_wxFont_functions[] = {
 	PHP_ME(php_wxFont, GetNativeFontInfo, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxFontList;
 extern zend_class_entry *php_wxFontList_entry;
@@ -511,11 +533,13 @@ class wxFontList_php: public wxFontList{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFontList_functions[] = {
 	PHP_ME(php_wxFontList, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxFontList, FindOrCreateFont, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxFontEnumerator;
 extern zend_class_entry *php_wxFontEnumerator_entry;
@@ -539,6 +563,7 @@ class wxFontEnumerator_php: public wxFontEnumerator{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFontEnumerator_functions[] = {
 	PHP_ME(php_wxFontEnumerator, IsValidFacename, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFontEnumerator, GetFacenames, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
@@ -547,6 +572,7 @@ static zend_function_entry php_wxFontEnumerator_functions[] = {
 	PHP_ME(php_wxFontEnumerator, EnumerateEncodings, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxNativeFontInfo;
 extern zend_class_entry *php_wxNativeFontInfo_entry;
@@ -570,6 +596,7 @@ class wxNativeFontInfo_php: public wxNativeFontInfo{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxNativeFontInfo_functions[] = {
 	PHP_ME(php_wxNativeFontInfo, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxNativeFontInfo, FromString, NULL, ZEND_ACC_PUBLIC)
@@ -596,6 +623,7 @@ static zend_function_entry php_wxNativeFontInfo_functions[] = {
 	PHP_ME(php_wxNativeFontInfo, ToUserString, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxColourDatabase;
 extern zend_class_entry *php_wxColourDatabase_entry;
@@ -618,6 +646,7 @@ class wxColourDatabase_php: public wxColourDatabase{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxColourDatabase_functions[] = {
 	PHP_ME(php_wxColourDatabase, AddColour, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxColourDatabase, Find, NULL, ZEND_ACC_PUBLIC)
@@ -625,6 +654,7 @@ static zend_function_entry php_wxColourDatabase_functions[] = {
 	PHP_ME(php_wxColourDatabase, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGDIObject;
 extern zend_class_entry *php_wxGDIObject_entry;
@@ -646,6 +676,7 @@ class wxGDIObject_php: public wxGDIObject{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGDIObject_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -655,6 +686,7 @@ static zend_function_entry php_wxGDIObject_functions[] = {
 	PHP_ME(php_wxObject, IsKindOf, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGraphicsRenderer;
 extern zend_class_entry *php_wxGraphicsRenderer_entry;
@@ -676,6 +708,7 @@ class wxGraphicsRenderer_php: public wxGraphicsRenderer{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGraphicsRenderer_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -685,6 +718,7 @@ static zend_function_entry php_wxGraphicsRenderer_functions[] = {
 	PHP_ME(php_wxObject, IsKindOf, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGraphicsMatrix;
 extern zend_class_entry *php_wxGraphicsMatrix_entry;
@@ -706,9 +740,11 @@ class wxGraphicsMatrix_php: public wxGraphicsMatrix{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGraphicsMatrix_functions[] = {
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxIcon;
 extern zend_class_entry *php_wxIcon_entry;
@@ -733,6 +769,7 @@ class wxIcon_php: public wxIcon{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxIcon_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -752,6 +789,7 @@ static zend_function_entry php_wxIcon_functions[] = {
 	PHP_ME(php_wxIcon, CopyFromBitmap, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxIconBundle;
 extern zend_class_entry *php_wxIconBundle_entry;
@@ -778,6 +816,7 @@ class wxIconBundle_php: public wxIconBundle{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxIconBundle_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -794,6 +833,7 @@ static zend_function_entry php_wxIconBundle_functions[] = {
 	PHP_ME(php_wxIconBundle, GetIcon, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxImageHandler;
 extern zend_class_entry *php_wxImageHandler_entry;
@@ -815,6 +855,7 @@ class wxImageHandler_php: public wxImageHandler{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxImageHandler_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -837,6 +878,7 @@ static zend_function_entry php_wxImageHandler_functions[] = {
 	PHP_ME(php_wxImageHandler, SetName, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxImage;
 extern zend_class_entry *php_wxImage_entry;
@@ -869,6 +911,7 @@ class wxImage_php: public wxImage{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxImage_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -947,6 +990,7 @@ static zend_function_entry php_wxImage_functions[] = {
 	PHP_ME(php_wxImage, Size, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxImageList;
 extern zend_class_entry *php_wxImageList_entry;
@@ -970,6 +1014,7 @@ class wxImageList_php: public wxImageList{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxImageList_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -990,6 +1035,7 @@ static zend_function_entry php_wxImageList_functions[] = {
 	PHP_ME(php_wxImageList, Draw, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxPalette;
 extern zend_class_entry *php_wxPalette_entry;
@@ -1014,6 +1060,7 @@ class wxPalette_php: public wxPalette{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPalette_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1029,6 +1076,7 @@ static zend_function_entry php_wxPalette_functions[] = {
 	PHP_ME(php_wxPalette, GetRGB, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxPen;
 extern zend_class_entry *php_wxPen_entry;
@@ -1052,6 +1100,7 @@ class wxPen_php: public wxPen{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPen_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1077,6 +1126,7 @@ static zend_function_entry php_wxPen_functions[] = {
 	PHP_ME(php_wxPen, SetCap, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxPenList;
 extern zend_class_entry *php_wxPenList_entry;
@@ -1099,11 +1149,13 @@ class wxPenList_php: public wxPenList{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPenList_functions[] = {
 	PHP_ME(php_wxPenList, FindOrCreatePen, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxPenList, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxRendererNative;
 extern zend_class_entry *php_wxRendererNative_entry;
@@ -1141,6 +1193,7 @@ class wxRendererNative_php: public wxRendererNative{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRendererNative_functions[] = {
 	PHP_ME(php_wxRendererNative, Get, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxRendererNative, GetDefault, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
@@ -1149,5 +1202,6 @@ static zend_function_entry php_wxRendererNative_functions[] = {
 	PHP_ME(php_wxRendererNative, Set, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_GDI_H_GUARD

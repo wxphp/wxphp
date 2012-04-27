@@ -54,6 +54,7 @@ class wxConfigBase_php: public wxConfigBase{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxConfigBase_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -80,6 +81,7 @@ static zend_function_entry php_wxConfigBase_functions[] = {
 	PHP_ME(php_wxConfigBase, Write, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxDisplay;
 extern zend_class_entry *php_wxDisplay_entry;
@@ -102,6 +104,7 @@ class wxDisplay_php: public wxDisplay{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDisplay_functions[] = {
 	PHP_ME(php_wxDisplay, ChangeMode, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDisplay, GetClientArea, NULL, ZEND_ACC_PUBLIC)
@@ -115,6 +118,7 @@ static zend_function_entry php_wxDisplay_functions[] = {
 	PHP_ME(php_wxDisplay, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxFileConfig;
 extern zend_class_entry *php_wxFileConfig_entry;
@@ -136,6 +140,7 @@ class wxFileConfig_php: public wxFileConfig{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileConfig_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -183,6 +188,7 @@ static zend_function_entry php_wxFileConfig_functions[] = {
 	PHP_ME(php_wxFileConfig, SetUmask, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxFontMapper;
 extern zend_class_entry *php_wxFontMapper_entry;
@@ -205,6 +211,7 @@ class wxFontMapper_php: public wxFontMapper{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFontMapper_functions[] = {
 	PHP_ME(php_wxFontMapper, CharsetToEncoding, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFontMapper, Get, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
@@ -222,6 +229,7 @@ static zend_function_entry php_wxFontMapper_functions[] = {
 	PHP_ME(php_wxFontMapper, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxPlatformInfo;
 extern zend_class_entry *php_wxPlatformInfo_entry;
@@ -245,6 +253,7 @@ class wxPlatformInfo_php: public wxPlatformInfo{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPlatformInfo_functions[] = {
 	PHP_ME(php_wxPlatformInfo, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxPlatformInfo, CheckOSVersion, NULL, ZEND_ACC_PUBLIC)
@@ -280,6 +289,7 @@ static zend_function_entry php_wxPlatformInfo_functions[] = {
 	PHP_ME(php_wxPlatformInfo, SetToolkitVersion, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxSystemSettings;
 extern zend_class_entry *php_wxSystemSettings_entry;
@@ -301,6 +311,7 @@ class wxSystemSettings_php: public wxSystemSettings{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxSystemSettings_functions[] = {
 	PHP_ME(php_wxSystemSettings, GetColour, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxSystemSettings, GetFont, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
@@ -309,6 +320,7 @@ static zend_function_entry php_wxSystemSettings_functions[] = {
 	PHP_ME(php_wxSystemSettings, HasFeature, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxSystemOptions;
 extern zend_class_entry *php_wxSystemOptions_entry;
@@ -330,6 +342,7 @@ class wxSystemOptions_php: public wxSystemOptions{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxSystemOptions_functions[] = {
 	PHP_ME(php_wxSystemOptions, GetOption, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxSystemOptions, GetOptionInt, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
@@ -338,6 +351,7 @@ static zend_function_entry php_wxSystemOptions_functions[] = {
 	PHP_ME(php_wxSystemOptions, SetOption, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxVideoMode;
 extern zend_class_entry *php_wxVideoMode_entry;
@@ -367,6 +381,7 @@ class wxVideoMode_php: public wxVideoMode{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxVideoMode_functions[] = {
 	PHP_ME(php_wxVideoMode, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxVideoMode, Matches, NULL, ZEND_ACC_PUBLIC)
@@ -377,5 +392,6 @@ static zend_function_entry php_wxVideoMode_functions[] = {
 	PHP_ME(php_wxVideoMode, __get, wxphp_cfg_get_args, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_CFG_H_GUARD

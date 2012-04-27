@@ -8096,6 +8096,7 @@ PHP_METHOD(php_wxBitmapComboBox, Create)
 				references->AddReference(parent1);
 				references->AddReference(pos1);
 				references->AddReference(size1);
+				delete[] strings_array1_6;
 
 				return;
 				break;
@@ -8125,6 +8126,7 @@ PHP_METHOD(php_wxBitmapComboBox, Create)
 				references->AddReference(parent1);
 				references->AddReference(pos1);
 				references->AddReference(size1);
+				delete[] strings_array1_6;
 
 				return;
 				break;
@@ -8154,6 +8156,7 @@ PHP_METHOD(php_wxBitmapComboBox, Create)
 				references->AddReference(parent1);
 				references->AddReference(pos1);
 				references->AddReference(size1);
+				delete[] strings_array1_6;
 				references->AddReference(validator1);
 
 				return;
@@ -8184,6 +8187,7 @@ PHP_METHOD(php_wxBitmapComboBox, Create)
 				references->AddReference(parent1);
 				references->AddReference(pos1);
 				references->AddReference(size1);
+				delete[] strings_array1_6;
 				references->AddReference(validator1);
 
 				return;
@@ -14353,6 +14357,7 @@ PHP_METHOD(php_wxCheckListBox, Create)
 				references->AddReference(parent0);
 				references->AddReference(pos0);
 				references->AddReference(size0);
+				delete[] strings_array0_5;
 
 				return;
 				break;
@@ -14382,6 +14387,7 @@ PHP_METHOD(php_wxCheckListBox, Create)
 				references->AddReference(parent0);
 				references->AddReference(pos0);
 				references->AddReference(size0);
+				delete[] strings_array0_5;
 
 				return;
 				break;
@@ -14411,6 +14417,7 @@ PHP_METHOD(php_wxCheckListBox, Create)
 				references->AddReference(parent0);
 				references->AddReference(pos0);
 				references->AddReference(size0);
+				delete[] strings_array0_5;
 				references->AddReference(validator0);
 
 				return;
@@ -14441,6 +14448,7 @@ PHP_METHOD(php_wxCheckListBox, Create)
 				references->AddReference(parent0);
 				references->AddReference(pos0);
 				references->AddReference(size0);
+				delete[] strings_array0_5;
 				references->AddReference(validator0);
 
 				return;
@@ -16671,6 +16679,7 @@ PHP_METHOD(php_wxChoice, Create)
 				references->AddReference(parent1);
 				references->AddReference(pos1);
 				references->AddReference(size1);
+				delete[] strings_array1_5;
 
 				return;
 				break;
@@ -16700,6 +16709,7 @@ PHP_METHOD(php_wxChoice, Create)
 				references->AddReference(parent1);
 				references->AddReference(pos1);
 				references->AddReference(size1);
+				delete[] strings_array1_5;
 
 				return;
 				break;
@@ -16729,6 +16739,7 @@ PHP_METHOD(php_wxChoice, Create)
 				references->AddReference(parent1);
 				references->AddReference(pos1);
 				references->AddReference(size1);
+				delete[] strings_array1_5;
 				references->AddReference(validator1);
 
 				return;
@@ -16759,6 +16770,7 @@ PHP_METHOD(php_wxChoice, Create)
 				references->AddReference(parent1);
 				references->AddReference(pos1);
 				references->AddReference(size1);
+				delete[] strings_array1_5;
 				references->AddReference(validator1);
 
 				return;
@@ -25228,6 +25240,7 @@ PHP_METHOD(php_wxComboBox, Create)
 				references->AddReference(parent0);
 				references->AddReference(pos0);
 				references->AddReference(size0);
+				delete[] strings_array0_6;
 
 				return;
 				break;
@@ -25257,6 +25270,7 @@ PHP_METHOD(php_wxComboBox, Create)
 				references->AddReference(parent0);
 				references->AddReference(pos0);
 				references->AddReference(size0);
+				delete[] strings_array0_6;
 
 				return;
 				break;
@@ -25286,6 +25300,7 @@ PHP_METHOD(php_wxComboBox, Create)
 				references->AddReference(parent0);
 				references->AddReference(pos0);
 				references->AddReference(size0);
+				delete[] strings_array0_6;
 				references->AddReference(validator0);
 
 				return;
@@ -25316,6 +25331,7 @@ PHP_METHOD(php_wxComboBox, Create)
 				references->AddReference(parent0);
 				references->AddReference(pos0);
 				references->AddReference(size0);
+				delete[] strings_array0_6;
 				references->AddReference(validator0);
 
 				return;
@@ -61897,6 +61913,7 @@ PHP_METHOD(php_wxSimpleHtmlListBox, Create)
 				references->AddReference(parent0);
 				references->AddReference(pos0);
 				references->AddReference(size0);
+				delete[] strings_array0_5;
 
 				return;
 				break;
@@ -61926,6 +61943,7 @@ PHP_METHOD(php_wxSimpleHtmlListBox, Create)
 				references->AddReference(parent0);
 				references->AddReference(pos0);
 				references->AddReference(size0);
+				delete[] strings_array0_5;
 
 				return;
 				break;
@@ -61955,6 +61973,7 @@ PHP_METHOD(php_wxSimpleHtmlListBox, Create)
 				references->AddReference(parent0);
 				references->AddReference(pos0);
 				references->AddReference(size0);
+				delete[] strings_array0_5;
 				references->AddReference(validator0);
 
 				return;
@@ -61985,6 +62004,7 @@ PHP_METHOD(php_wxSimpleHtmlListBox, Create)
 				references->AddReference(parent0);
 				references->AddReference(pos0);
 				references->AddReference(size0);
+				delete[] strings_array0_5;
 				references->AddReference(validator0);
 
 				return;
@@ -66077,6 +66097,7 @@ PHP_METHOD(php_wxListBox, Create)
 				references->AddReference(parent1);
 				references->AddReference(pos1);
 				references->AddReference(size1);
+				delete[] strings_array1_5;
 
 				return;
 				break;
@@ -66106,6 +66127,7 @@ PHP_METHOD(php_wxListBox, Create)
 				references->AddReference(parent1);
 				references->AddReference(pos1);
 				references->AddReference(size1);
+				delete[] strings_array1_5;
 
 				return;
 				break;
@@ -66135,6 +66157,7 @@ PHP_METHOD(php_wxListBox, Create)
 				references->AddReference(parent1);
 				references->AddReference(pos1);
 				references->AddReference(size1);
+				delete[] strings_array1_5;
 				references->AddReference(validator1);
 
 				return;
@@ -66165,6 +66188,7 @@ PHP_METHOD(php_wxListBox, Create)
 				references->AddReference(parent1);
 				references->AddReference(pos1);
 				references->AddReference(size1);
+				delete[] strings_array1_5;
 				references->AddReference(validator1);
 
 				return;
@@ -73997,6 +74021,7 @@ PHP_METHOD(php_wxRadioBox, Create)
 				references->AddReference(parent0);
 				references->AddReference(pos0);
 				references->AddReference(size0);
+				delete[] strings_array0_6;
 
 				return;
 				break;
@@ -74026,6 +74051,7 @@ PHP_METHOD(php_wxRadioBox, Create)
 				references->AddReference(parent0);
 				references->AddReference(pos0);
 				references->AddReference(size0);
+				delete[] strings_array0_6;
 
 				return;
 				break;
@@ -74055,6 +74081,7 @@ PHP_METHOD(php_wxRadioBox, Create)
 				references->AddReference(parent0);
 				references->AddReference(pos0);
 				references->AddReference(size0);
+				delete[] strings_array0_6;
 
 				return;
 				break;
@@ -74084,6 +74111,7 @@ PHP_METHOD(php_wxRadioBox, Create)
 				references->AddReference(parent0);
 				references->AddReference(pos0);
 				references->AddReference(size0);
+				delete[] strings_array0_6;
 				references->AddReference(validator0);
 
 				return;
@@ -74114,6 +74142,7 @@ PHP_METHOD(php_wxRadioBox, Create)
 				references->AddReference(parent0);
 				references->AddReference(pos0);
 				references->AddReference(size0);
+				delete[] strings_array0_6;
 				references->AddReference(validator0);
 
 				return;

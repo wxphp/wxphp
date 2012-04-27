@@ -1992,6 +1992,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 				#endif
 				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3));
 
+				delete[] strings_array1_3;
 
 				return;
 				break;
@@ -2018,6 +2019,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 				#endif
 				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4));
 
+				delete[] strings_array1_3;
 
 				return;
 				break;
@@ -2044,6 +2046,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 				#endif
 				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1));
 
+				delete[] strings_array1_3;
 
 				return;
 				break;
@@ -2070,6 +2073,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 				#endif
 				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1));
 
+				delete[] strings_array1_3;
 
 				return;
 				break;
@@ -2096,6 +2100,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 				#endif
 				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1));
 
+				delete[] strings_array1_3;
 
 				return;
 				break;
@@ -2122,6 +2127,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 				#endif
 				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1, (int) width1));
 
+				delete[] strings_array1_3;
 
 				return;
 				break;
@@ -2148,6 +2154,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 				#endif
 				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1, (int) width1, (int) height1));
 
+				delete[] strings_array1_3;
 
 				return;
 				break;
@@ -2174,6 +2181,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 				#endif
 				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1, (int) width1, (int) height1, (int) initialSelection1));
 
+				delete[] strings_array1_3;
 
 				return;
 				break;
@@ -2279,6 +2287,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 				#endif
 				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message3, wxConvUTF8), wxString(caption3, wxConvUTF8), (int) n3, strings_array3_3, (int) initialSelection3));
 
+				delete[] strings_array3_3;
 
 				return;
 				break;
@@ -2305,6 +2314,7 @@ PHP_FUNCTION(php_wxGetSingleChoiceIndex)
 				#endif
 				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message3, wxConvUTF8), wxString(caption3, wxConvUTF8), (int) n3, strings_array3_3, (int) initialSelection3, (wxWindow*) object_pointer3_5));
 
+				delete[] strings_array3_3;
 
 				return;
 				break;
@@ -2823,6 +2833,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 				ZVAL_STRING(return_value, temp_string4, 1);
 				free(temp_string4);
 
+				delete[] strings_array1_3;
 
 				return;
 				break;
@@ -2855,6 +2866,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 				ZVAL_STRING(return_value, temp_string5, 1);
 				free(temp_string5);
 
+				delete[] strings_array1_3;
 
 				return;
 				break;
@@ -2887,6 +2899,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 				ZVAL_STRING(return_value, temp_string6, 1);
 				free(temp_string6);
 
+				delete[] strings_array1_3;
 
 				return;
 				break;
@@ -2919,6 +2932,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 				ZVAL_STRING(return_value, temp_string7, 1);
 				free(temp_string7);
 
+				delete[] strings_array1_3;
 
 				return;
 				break;
@@ -2951,6 +2965,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 				ZVAL_STRING(return_value, temp_string8, 1);
 				free(temp_string8);
 
+				delete[] strings_array1_3;
 
 				return;
 				break;
@@ -2983,6 +2998,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 				ZVAL_STRING(return_value, temp_string9, 1);
 				free(temp_string9);
 
+				delete[] strings_array1_3;
 
 				return;
 				break;
@@ -3015,6 +3031,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 				ZVAL_STRING(return_value, temp_string10, 1);
 				free(temp_string10);
 
+				delete[] strings_array1_3;
 
 				return;
 				break;
@@ -3047,6 +3064,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 				ZVAL_STRING(return_value, temp_string11, 1);
 				free(temp_string11);
 
+				delete[] strings_array1_3;
 
 				return;
 				break;
@@ -3170,6 +3188,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 				ZVAL_STRING(return_value, temp_string5, 1);
 				free(temp_string5);
 
+				delete[] strings_array3_3;
 
 				return;
 				break;
@@ -3202,6 +3221,7 @@ PHP_FUNCTION(php_wxGetSingleChoice)
 				ZVAL_STRING(return_value, temp_string6, 1);
 				free(temp_string6);
 
+				delete[] strings_array3_3;
 
 				return;
 				break;

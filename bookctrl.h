@@ -39,6 +39,7 @@ class wxAuiNotebookEvent_php: public wxAuiNotebookEvent{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxAuiNotebookEvent_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -80,6 +81,7 @@ static zend_function_entry php_wxAuiNotebookEvent_functions[] = {
 	PHP_ME(php_wxAuiNotebookEvent, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxBookCtrlBase;
 extern zend_class_entry *php_wxBookCtrlBase_entry;
@@ -109,6 +111,7 @@ class wxBookCtrlBase_php: public wxBookCtrlBase{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxBookCtrlBase_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -361,6 +364,7 @@ static zend_function_entry php_wxBookCtrlBase_functions[] = {
 	PHP_ME(php_wxBookCtrlBase, SetPageSize, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxBookCtrlEvent;
 extern zend_class_entry *php_wxBookCtrlEvent_entry;
@@ -383,6 +387,7 @@ class wxBookCtrlEvent_php: public wxBookCtrlEvent{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxBookCtrlEvent_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -423,6 +428,7 @@ static zend_function_entry php_wxBookCtrlEvent_functions[] = {
 	PHP_ME(php_wxBookCtrlEvent, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxChoicebook;
 extern zend_class_entry *php_wxChoicebook_entry;
@@ -446,6 +452,7 @@ class wxChoicebook_php: public wxChoicebook{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxChoicebook_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -700,6 +707,7 @@ static zend_function_entry php_wxChoicebook_functions[] = {
 	PHP_ME(php_wxChoicebook, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxListbook;
 extern zend_class_entry *php_wxListbook_entry;
@@ -723,6 +731,7 @@ class wxListbook_php: public wxListbook{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxListbook_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -977,6 +986,7 @@ static zend_function_entry php_wxListbook_functions[] = {
 	PHP_ME(php_wxListbook, GetListView, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxNotebook;
 extern zend_class_entry *php_wxNotebook_entry;
@@ -1000,6 +1010,7 @@ class wxNotebook_php: public wxNotebook{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxNotebook_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1264,6 +1275,7 @@ static zend_function_entry php_wxNotebook_functions[] = {
 	PHP_ME(php_wxNotebook, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxToolbook;
 extern zend_class_entry *php_wxToolbook_entry;
@@ -1287,6 +1299,7 @@ class wxToolbook_php: public wxToolbook{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxToolbook_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1541,6 +1554,7 @@ static zend_function_entry php_wxToolbook_functions[] = {
 	PHP_ME(php_wxToolbook, GetToolBar, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxTreebook;
 extern zend_class_entry *php_wxTreebook_entry;
@@ -1564,6 +1578,7 @@ class wxTreebook_php: public wxTreebook{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxTreebook_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1825,5 +1840,6 @@ static zend_function_entry php_wxTreebook_functions[] = {
 	PHP_ME(php_wxTreebook, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_BOOKCTRL_H_GUARD

@@ -39,6 +39,7 @@ class wxRefCounter_php: public wxRefCounter{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRefCounter_functions[] = {
 	PHP_ME(php_wxRefCounter, DecRef, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxRefCounter, GetRefCount, NULL, ZEND_ACC_PUBLIC)
@@ -46,6 +47,7 @@ static zend_function_entry php_wxRefCounter_functions[] = {
 	PHP_ME(php_wxRefCounter, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxObject;
 extern zend_class_entry *php_wxObject_entry;
@@ -73,6 +75,7 @@ class wxObject_php: public wxObject{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxObject_functions[] = {
 	PHP_ME(php_wxObject, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
@@ -84,6 +87,7 @@ static zend_function_entry php_wxObject_functions[] = {
 	PHP_ME(php_wxObject, __get, wxphp_rtti_get_args, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxClassInfo;
 extern zend_class_entry *php_wxClassInfo_entry;
@@ -105,6 +109,7 @@ class wxClassInfo_php: public wxClassInfo{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxClassInfo_functions[] = {
 	PHP_ME(php_wxClassInfo, CreateObject, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxClassInfo, FindClass, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
@@ -113,5 +118,6 @@ static zend_function_entry php_wxClassInfo_functions[] = {
 	PHP_ME(php_wxClassInfo, IsKindOf, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_RTTI_H_GUARD

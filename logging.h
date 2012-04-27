@@ -42,6 +42,7 @@ class wxLogWindow_php: public wxLogWindow{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxLogWindow_functions[] = {
 	PHP_ME(php_wxLog, AddTraceMask, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxLog, ClearTraceMasks, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
@@ -79,6 +80,7 @@ static zend_function_entry php_wxLogWindow_functions[] = {
 	PHP_ME(php_wxLogWindow, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxLogChain;
 extern zend_class_entry *php_wxLogChain_entry;
@@ -101,6 +103,7 @@ class wxLogChain_php: public wxLogChain{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxLogChain_functions[] = {
 	PHP_ME(php_wxLog, AddTraceMask, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxLog, ClearTraceMasks, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
@@ -136,6 +139,7 @@ static zend_function_entry php_wxLogChain_functions[] = {
 	PHP_ME(php_wxLogChain, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxLogGui;
 extern zend_class_entry *php_wxLogGui_entry;
@@ -167,6 +171,7 @@ class wxLogGui_php: public wxLogGui{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxLogGui_functions[] = {
 	PHP_ME(php_wxLog, AddTraceMask, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxLog, ClearTraceMasks, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
@@ -198,6 +203,7 @@ static zend_function_entry php_wxLogGui_functions[] = {
 	PHP_ME(php_wxLogGui, __get, wxphp_logging_get_args, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxLogBuffer;
 extern zend_class_entry *php_wxLogBuffer_entry;
@@ -220,6 +226,7 @@ class wxLogBuffer_php: public wxLogBuffer{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxLogBuffer_functions[] = {
 	PHP_ME(php_wxLog, AddTraceMask, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxLog, ClearTraceMasks, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
@@ -251,6 +258,7 @@ static zend_function_entry php_wxLogBuffer_functions[] = {
 	PHP_ME(php_wxLogBuffer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxLogInterposer;
 extern zend_class_entry *php_wxLogInterposer_entry;
@@ -273,6 +281,7 @@ class wxLogInterposer_php: public wxLogInterposer{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxLogInterposer_functions[] = {
 	PHP_ME(php_wxLog, AddTraceMask, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxLog, ClearTraceMasks, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
@@ -308,6 +317,7 @@ static zend_function_entry php_wxLogInterposer_functions[] = {
 	PHP_ME(php_wxLogInterposer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxLogTextCtrl;
 extern zend_class_entry *php_wxLogTextCtrl_entry;
@@ -330,6 +340,7 @@ class wxLogTextCtrl_php: public wxLogTextCtrl{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxLogTextCtrl_functions[] = {
 	PHP_ME(php_wxLog, AddTraceMask, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxLog, ClearTraceMasks, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
@@ -360,6 +371,7 @@ static zend_function_entry php_wxLogTextCtrl_functions[] = {
 	PHP_ME(php_wxLogTextCtrl, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxLog;
 extern zend_class_entry *php_wxLog_entry;
@@ -383,6 +395,7 @@ class wxLog_php: public wxLog{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxLog_functions[] = {
 	PHP_ME(php_wxLog, AddTraceMask, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxLog, ClearTraceMasks, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
@@ -412,5 +425,6 @@ static zend_function_entry php_wxLog_functions[] = {
 	PHP_ME(php_wxLog, Suspend, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_LOGGING_H_GUARD

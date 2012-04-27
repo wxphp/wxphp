@@ -41,6 +41,7 @@ class wxSound_php: public wxSound{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxSound_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -55,5 +56,6 @@ static zend_function_entry php_wxSound_functions[] = {
 	PHP_ME(php_wxSound, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_MEDIA_H_GUARD

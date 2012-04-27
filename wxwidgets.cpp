@@ -17,6 +17,12 @@
 #include "functions.h"
 
 /**
+ * To enable inclusion of class methods tables entries code 
+ * on the generated headers
+ */
+#define WXPHP_INCLUDE_METHOD_TABLES
+
+/**
  * Space reserved for the zend_class_entry declaration of each class
  * as the resource id and its include files
  */
