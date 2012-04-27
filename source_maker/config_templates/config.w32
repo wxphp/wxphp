@@ -45,7 +45,7 @@ if (PHP_WXWIDGETS != "no") {
 		}
 		
 		EXTENSION("wxwidgets", "app.cpp references.cpp <?=$source_files?> functions.cpp wxwidgets.cpp");
-		ADD_FLAG("CFLAGS_WXWIDGETS", "/TP /EHsc /D_UNICODE");
+		ADD_FLAG("CFLAGS_WXWIDGETS", "/TP /EHsc /D__WXMSW__ /D_UNICODE");
 		AC_DEFINE('WX_DEBUG', 0, 'Have WX_DEBug library');
 		
 	} else {

@@ -45,7 +45,7 @@ if (PHP_WXWIDGETS != "no") {
 		}
 		
 		EXTENSION("wxwidgets", "app.cpp references.cpp appmanagement.cpp cfg.cpp bookctrl.cpp dnd.cpp cmndlg.cpp containers.cpp ctrl.cpp data.cpp dc.cpp docview.cpp events.cpp file.cpp gdi.cpp grid.cpp html.cpp help.cpp logging.cpp managedwnd.cpp menus.cpp misc.cpp miscwnd.cpp media.cpp pickers.cpp printing.cpp ribbon.cpp richtext.cpp rtti.cpp stc.cpp streams.cpp threading.cpp validator.cpp vfs.cpp aui.cpp winlayout.cpp xml.cpp xrc.cpp dvc.cpp others.cpp functions.cpp wxwidgets.cpp");
-		ADD_FLAG("CFLAGS_WXWIDGETS", "/TP /EHsc /D_UNICODE");
+		ADD_FLAG("CFLAGS_WXWIDGETS", "/TP /EHsc /D__WXMSW__ /D_UNICODE");
 		AC_DEFINE('WX_DEBUG', 0, 'Have WX_DEBug library');
 		
 	} else {
