@@ -6,8 +6,9 @@
  *  
 */
 
-#ifndef wxphp_references_h
-#define wxphp_references_h
+#ifndef WXPHP_REFERENCES_H_GUARD
+#define WXPHP_REFERENCES_H_GUARD
+
 
 #include "common.h"
 #include <vector>
@@ -61,4 +62,4 @@ class wxPHPObjectReferences
 	std::vector<zval*> m_references; /**< Vector that keeps a registry of all zvals* which refcount was incremented */
 };
 
-#endif //wxphp_references_h
+#endif //WXPHP_REFERENCES_H_GUARD

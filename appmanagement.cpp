@@ -50,7 +50,6 @@
 #include "others.h"
 
 
-
 void php_wxEventLoopBase_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -346,7 +345,8 @@ PHP_METHOD(php_wxEventLoopBase, GetActive)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -1528,7 +1528,6 @@ PHP_METHOD(php_wxEventLoopBase, YieldFor)
 
 		
 }
-
 void php_wxEventLoopActivator_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1672,7 +1671,6 @@ PHP_METHOD(php_wxEventLoopActivator, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxModule_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1899,7 +1897,6 @@ PHP_METHOD(php_wxModule, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxProcess_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2291,7 +2288,8 @@ PHP_METHOD(php_wxProcess, GetErrorStream)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -2400,7 +2398,8 @@ PHP_METHOD(php_wxProcess, GetInputStream)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -2509,7 +2508,8 @@ PHP_METHOD(php_wxProcess, GetOutputStream)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3238,7 +3238,8 @@ PHP_METHOD(php_wxProcess, Open)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3268,7 +3269,8 @@ PHP_METHOD(php_wxProcess, Open)
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
 					if(value_to_return2->phpObj != NULL){
-						return_value = value_to_return2->phpObj;
+						*return_value = *value_to_return2->phpObj;
+						zval_add_ref(&value_to_return2->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3451,7 +3453,6 @@ PHP_METHOD(php_wxProcess, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxSingleInstanceChecker_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG

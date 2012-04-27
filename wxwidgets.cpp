@@ -14,30 +14,11 @@
 
 #include "php_wxwidgets.h"
 #include "app.h"
-
-/**
- * Custom function to register global objects as constants
- */
-BEGIN_EXTERN_C()
-void wxphp_register_resource_constant(const char *name, uint name_len, void* resource, zend_class_entry* class_entry, int list_entry, int flags, int module_number TSRMLS_DC)
-{
-	zend_constant c;
-	char _wxResource[] = "wxResource";
-	
-	object_init_ex(&c.value, class_entry);
-	add_property_resource(&c.value, _wxResource, zend_list_insert(resource, list_entry));
-	
-	c.value.type = IS_OBJECT;
-	c.flags = flags;
-	c.name = zend_strndup(name, name_len-1);
-	c.name_len = name_len;
-	c.module_number = module_number;
-	zend_register_constant(&c TSRMLS_CC);
-}
-END_EXTERN_C()
+#include "functions.h"
 
 /**
  * Space reserved for the zend_class_entry declaration of each class
+ * as the resource id and its include files
  */
 #include "appmanagement.h"
 #include "cfg.h"
@@ -78,18707 +59,1423 @@ END_EXTERN_C()
 #include "dvc.h"
 #include "others.h"
 
-char PHP_wxScrolledWindow_NAME[] = "wxScrolledWindow";
-char le_wxScrolledWindow_name[] = "native wxScrolledWindow";
-zend_class_entry *php_wxScrolledWindow_entry;
+zend_class_entry* php_wxScrolledWindow_entry;
 int le_wxScrolledWindow;
 
-char PHP_wxRibbonButtonBarButtonBase_NAME[] = "wxRibbonButtonBarButtonBase";
-char le_wxRibbonButtonBarButtonBase_name[] = "native wxRibbonButtonBarButtonBase";
-zend_class_entry *php_wxRibbonButtonBarButtonBase_entry;
+zend_class_entry* php_wxRibbonButtonBarButtonBase_entry;
 int le_wxRibbonButtonBarButtonBase;
 
-char PHP_wxRibbonGalleryItem_NAME[] = "wxRibbonGalleryItem";
-char le_wxRibbonGalleryItem_name[] = "native wxRibbonGalleryItem";
-zend_class_entry *php_wxRibbonGalleryItem_entry;
+zend_class_entry* php_wxRibbonGalleryItem_entry;
 int le_wxRibbonGalleryItem;
 
-char PHP_wxRibbonToolBarToolBase_NAME[] = "wxRibbonToolBarToolBase";
-char le_wxRibbonToolBarToolBase_name[] = "native wxRibbonToolBarToolBase";
-zend_class_entry *php_wxRibbonToolBarToolBase_entry;
+zend_class_entry* php_wxRibbonToolBarToolBase_entry;
 int le_wxRibbonToolBarToolBase;
 
-char PHP_wxAboutDialogInfo_NAME[] = "wxAboutDialogInfo";
-char le_wxAboutDialogInfo_name[] = "native wxAboutDialogInfo";
-zend_class_entry *php_wxAboutDialogInfo_entry;
+zend_class_entry* php_wxAboutDialogInfo_entry;
 int le_wxAboutDialogInfo;
 
-char PHP_wxFrame_NAME[] = "wxFrame";
-char le_wxFrame_name[] = "native wxFrame";
-zend_class_entry *php_wxFrame_entry;
+zend_class_entry* php_wxFrame_entry;
 int le_wxFrame;
 
-char PHP_wxTopLevelWindow_NAME[] = "wxTopLevelWindow";
-char le_wxTopLevelWindow_name[] = "native wxTopLevelWindow";
-zend_class_entry *php_wxTopLevelWindow_entry;
+zend_class_entry* php_wxTopLevelWindow_entry;
 int le_wxTopLevelWindow;
 
-char PHP_wxNonOwnedWindow_NAME[] = "wxNonOwnedWindow";
-char le_wxNonOwnedWindow_name[] = "native wxNonOwnedWindow";
-zend_class_entry *php_wxNonOwnedWindow_entry;
+zend_class_entry* php_wxNonOwnedWindow_entry;
 int le_wxNonOwnedWindow;
 
-char PHP_wxWindow_NAME[] = "wxWindow";
-char le_wxWindow_name[] = "native wxWindow";
-zend_class_entry *php_wxWindow_entry;
+zend_class_entry* php_wxWindow_entry;
 int le_wxWindow;
 
-char PHP_wxSize_NAME[] = "wxSize";
-char le_wxSize_name[] = "native wxSize";
-zend_class_entry *php_wxSize_entry;
+zend_class_entry* php_wxSize_entry;
 int le_wxSize;
 
-char PHP_wxPoint_NAME[] = "wxPoint";
-char le_wxPoint_name[] = "native wxPoint";
-zend_class_entry *php_wxPoint_entry;
+zend_class_entry* php_wxPoint_entry;
 int le_wxPoint;
 
-char PHP_wxRealPoint_NAME[] = "wxRealPoint";
-char le_wxRealPoint_name[] = "native wxRealPoint";
-zend_class_entry *php_wxRealPoint_entry;
+zend_class_entry* php_wxRealPoint_entry;
 int le_wxRealPoint;
 
-char PHP_wxEvtHandler_NAME[] = "wxEvtHandler";
-char le_wxEvtHandler_name[] = "native wxEvtHandler";
-zend_class_entry *php_wxEvtHandler_entry;
+zend_class_entry* php_wxEvtHandler_entry;
 int le_wxEvtHandler;
 
-char PHP_wxStatusBar_NAME[] = "wxStatusBar";
-char le_wxStatusBar_name[] = "native wxStatusBar";
-zend_class_entry *php_wxStatusBar_entry;
+zend_class_entry* php_wxStatusBar_entry;
 int le_wxStatusBar;
 
-char PHP_wxButton_NAME[] = "wxButton";
-char le_wxButton_name[] = "native wxButton";
-zend_class_entry *php_wxButton_entry;
+zend_class_entry* php_wxButton_entry;
 int le_wxButton;
 
-char PHP_wxAnyButton_NAME[] = "wxAnyButton";
-char le_wxAnyButton_name[] = "native wxAnyButton";
-zend_class_entry *php_wxAnyButton_entry;
+zend_class_entry* php_wxAnyButton_entry;
 int le_wxAnyButton;
 
-char PHP_wxControl_NAME[] = "wxControl";
-char le_wxControl_name[] = "native wxControl";
-zend_class_entry *php_wxControl_entry;
+zend_class_entry* php_wxControl_entry;
 int le_wxControl;
 
-char PHP_wxValidator_NAME[] = "wxValidator";
-char le_wxValidator_name[] = "native wxValidator";
-zend_class_entry *php_wxValidator_entry;
+zend_class_entry* php_wxValidator_entry;
 int le_wxValidator;
 
-char PHP_wxBitmapHandler_NAME[] = "wxBitmapHandler";
-char le_wxBitmapHandler_name[] = "native wxBitmapHandler";
-zend_class_entry *php_wxBitmapHandler_entry;
+zend_class_entry* php_wxBitmapHandler_entry;
 int le_wxBitmapHandler;
 
-char PHP_wxBitmap_NAME[] = "wxBitmap";
-char le_wxBitmap_name[] = "native wxBitmap";
-zend_class_entry *php_wxBitmap_entry;
+zend_class_entry* php_wxBitmap_entry;
 int le_wxBitmap;
 
-char PHP_wxPalette_NAME[] = "wxPalette";
-char le_wxPalette_name[] = "native wxPalette";
-zend_class_entry *php_wxPalette_entry;
+zend_class_entry* php_wxPalette_entry;
 int le_wxPalette;
 
-char PHP_wxImage_NAME[] = "wxImage";
-char le_wxImage_name[] = "native wxImage";
-zend_class_entry *php_wxImage_entry;
+zend_class_entry* php_wxImage_entry;
 int le_wxImage;
 
-char PHP_wxIcon_NAME[] = "wxIcon";
-char le_wxIcon_name[] = "native wxIcon";
-zend_class_entry *php_wxIcon_entry;
+zend_class_entry* php_wxIcon_entry;
 int le_wxIcon;
 
-char PHP_wxSplitterWindow_NAME[] = "wxSplitterWindow";
-char le_wxSplitterWindow_name[] = "native wxSplitterWindow";
-zend_class_entry *php_wxSplitterWindow_entry;
+zend_class_entry* php_wxSplitterWindow_entry;
 int le_wxSplitterWindow;
 
-char PHP_wxBoxSizer_NAME[] = "wxBoxSizer";
-char le_wxBoxSizer_name[] = "native wxBoxSizer";
-zend_class_entry *php_wxBoxSizer_entry;
+zend_class_entry* php_wxBoxSizer_entry;
 int le_wxBoxSizer;
 
-char PHP_wxSizer_NAME[] = "wxSizer";
-char le_wxSizer_name[] = "native wxSizer";
-zend_class_entry *php_wxSizer_entry;
+zend_class_entry* php_wxSizer_entry;
 int le_wxSizer;
 
-char PHP_wxSizerItem_NAME[] = "wxSizerItem";
-char le_wxSizerItem_name[] = "native wxSizerItem";
-zend_class_entry *php_wxSizerItem_entry;
+zend_class_entry* php_wxSizerItem_entry;
 int le_wxSizerItem;
 
-char PHP_wxSizerFlags_NAME[] = "wxSizerFlags";
-char le_wxSizerFlags_name[] = "native wxSizerFlags";
-zend_class_entry *php_wxSizerFlags_entry;
+zend_class_entry* php_wxSizerFlags_entry;
 int le_wxSizerFlags;
 
-char PHP_wxRect_NAME[] = "wxRect";
-char le_wxRect_name[] = "native wxRect";
-zend_class_entry *php_wxRect_entry;
+zend_class_entry* php_wxRect_entry;
 int le_wxRect;
 
-char PHP_wxTreeCtrl_NAME[] = "wxTreeCtrl";
-char le_wxTreeCtrl_name[] = "native wxTreeCtrl";
-zend_class_entry *php_wxTreeCtrl_entry;
+zend_class_entry* php_wxTreeCtrl_entry;
 int le_wxTreeCtrl;
 
-char PHP_wxTreeItemId_NAME[] = "wxTreeItemId";
-char le_wxTreeItemId_name[] = "native wxTreeItemId";
-zend_class_entry *php_wxTreeItemId_entry;
+zend_class_entry* php_wxTreeItemId_entry;
 int le_wxTreeItemId;
 
-char PHP_wxTreeItemData_NAME[] = "wxTreeItemData";
-char le_wxTreeItemData_name[] = "native wxTreeItemData";
-zend_class_entry *php_wxTreeItemData_entry;
+zend_class_entry* php_wxTreeItemData_entry;
 int le_wxTreeItemData;
 
-char PHP_wxClientData_NAME[] = "wxClientData";
-char le_wxClientData_name[] = "native wxClientData";
-zend_class_entry *php_wxClientData_entry;
+zend_class_entry* php_wxClientData_entry;
 int le_wxClientData;
 
-char PHP_wxImageList_NAME[] = "wxImageList";
-char le_wxImageList_name[] = "native wxImageList";
-zend_class_entry *php_wxImageList_entry;
+zend_class_entry* php_wxImageList_entry;
 int le_wxImageList;
 
-char PHP_wxDC_NAME[] = "wxDC";
-char le_wxDC_name[] = "native wxDC";
-zend_class_entry *php_wxDC_entry;
+zend_class_entry* php_wxDC_entry;
 int le_wxDC;
 
-char PHP_wxColour_NAME[] = "wxColour";
-char le_wxColour_name[] = "native wxColour";
-zend_class_entry *php_wxColour_entry;
+zend_class_entry* php_wxColour_entry;
 int le_wxColour;
 
-char PHP_wxFont_NAME[] = "wxFont";
-char le_wxFont_name[] = "native wxFont";
-zend_class_entry *php_wxFont_entry;
+zend_class_entry* php_wxFont_entry;
 int le_wxFont;
 
-char PHP_wxPanel_NAME[] = "wxPanel";
-char le_wxPanel_name[] = "native wxPanel";
-zend_class_entry *php_wxPanel_entry;
+zend_class_entry* php_wxPanel_entry;
 int le_wxPanel;
 
-char PHP_wxCheckListBox_NAME[] = "wxCheckListBox";
-char le_wxCheckListBox_name[] = "native wxCheckListBox";
-zend_class_entry *php_wxCheckListBox_entry;
+zend_class_entry* php_wxCheckListBox_entry;
 int le_wxCheckListBox;
 
-char PHP_wxListBox_NAME[] = "wxListBox";
-char le_wxListBox_name[] = "native wxListBox";
-zend_class_entry *php_wxListBox_entry;
+zend_class_entry* php_wxListBox_entry;
 int le_wxListBox;
 
-char PHP_wxControlWithItems_NAME[] = "wxControlWithItems";
-char le_wxControlWithItems_name[] = "native wxControlWithItems";
-zend_class_entry *php_wxControlWithItems_entry;
+zend_class_entry* php_wxControlWithItems_entry;
 int le_wxControlWithItems;
 
-char PHP_wxMenuBar_NAME[] = "wxMenuBar";
-char le_wxMenuBar_name[] = "native wxMenuBar";
-zend_class_entry *php_wxMenuBar_entry;
+zend_class_entry* php_wxMenuBar_entry;
 int le_wxMenuBar;
 
-char PHP_wxMenuEvent_NAME[] = "wxMenuEvent";
-char le_wxMenuEvent_name[] = "native wxMenuEvent";
-zend_class_entry *php_wxMenuEvent_entry;
+zend_class_entry* php_wxMenuEvent_entry;
 int le_wxMenuEvent;
 
-char PHP_wxMenuItem_NAME[] = "wxMenuItem";
-char le_wxMenuItem_name[] = "native wxMenuItem";
-zend_class_entry *php_wxMenuItem_entry;
+zend_class_entry* php_wxMenuItem_entry;
 int le_wxMenuItem;
 
-char PHP_wxMenu_NAME[] = "wxMenu";
-char le_wxMenu_name[] = "native wxMenu";
-zend_class_entry *php_wxMenu_entry;
+zend_class_entry* php_wxMenu_entry;
 int le_wxMenu;
 
-char PHP_wxEvent_NAME[] = "wxEvent";
-char le_wxEvent_name[] = "native wxEvent";
-zend_class_entry *php_wxEvent_entry;
+zend_class_entry* php_wxEvent_entry;
 int le_wxEvent;
 
-char PHP_wxTreeEvent_NAME[] = "wxTreeEvent";
-char le_wxTreeEvent_name[] = "native wxTreeEvent";
-zend_class_entry *php_wxTreeEvent_entry;
+zend_class_entry* php_wxTreeEvent_entry;
 int le_wxTreeEvent;
 
-char PHP_wxKeyEvent_NAME[] = "wxKeyEvent";
-char le_wxKeyEvent_name[] = "native wxKeyEvent";
-zend_class_entry *php_wxKeyEvent_entry;
+zend_class_entry* php_wxKeyEvent_entry;
 int le_wxKeyEvent;
 
-char PHP_wxKeyboardState_NAME[] = "wxKeyboardState";
-char le_wxKeyboardState_name[] = "native wxKeyboardState";
-zend_class_entry *php_wxKeyboardState_entry;
+zend_class_entry* php_wxKeyboardState_entry;
 int le_wxKeyboardState;
 
-char PHP_wxNotifyEvent_NAME[] = "wxNotifyEvent";
-char le_wxNotifyEvent_name[] = "native wxNotifyEvent";
-zend_class_entry *php_wxNotifyEvent_entry;
+zend_class_entry* php_wxNotifyEvent_entry;
 int le_wxNotifyEvent;
 
-char PHP_wxCommandEvent_NAME[] = "wxCommandEvent";
-char le_wxCommandEvent_name[] = "native wxCommandEvent";
-zend_class_entry *php_wxCommandEvent_entry;
+zend_class_entry* php_wxCommandEvent_entry;
 int le_wxCommandEvent;
 
-char PHP_wxCloseEvent_NAME[] = "wxCloseEvent";
-char le_wxCloseEvent_name[] = "native wxCloseEvent";
-zend_class_entry *php_wxCloseEvent_entry;
+zend_class_entry* php_wxCloseEvent_entry;
 int le_wxCloseEvent;
 
-char PHP_wxActivateEvent_NAME[] = "wxActivateEvent";
-char le_wxActivateEvent_name[] = "native wxActivateEvent";
-zend_class_entry *php_wxActivateEvent_entry;
+zend_class_entry* php_wxActivateEvent_entry;
 int le_wxActivateEvent;
 
-char PHP_wxAuiManager_NAME[] = "wxAuiManager";
-char le_wxAuiManager_name[] = "native wxAuiManager";
-zend_class_entry *php_wxAuiManager_entry;
+zend_class_entry* php_wxAuiManager_entry;
 int le_wxAuiManager;
 
-char PHP_wxAuiDockArt_NAME[] = "wxAuiDockArt";
-char le_wxAuiDockArt_name[] = "native wxAuiDockArt";
-zend_class_entry *php_wxAuiDockArt_entry;
+zend_class_entry* php_wxAuiDockArt_entry;
 int le_wxAuiDockArt;
 
-char PHP_wxAuiPaneInfo_NAME[] = "wxAuiPaneInfo";
-char le_wxAuiPaneInfo_name[] = "native wxAuiPaneInfo";
-zend_class_entry *php_wxAuiPaneInfo_entry;
+zend_class_entry* php_wxAuiPaneInfo_entry;
 int le_wxAuiPaneInfo;
 
-char PHP_wxAuiManagerEvent_NAME[] = "wxAuiManagerEvent";
-char le_wxAuiManagerEvent_name[] = "native wxAuiManagerEvent";
-zend_class_entry *php_wxAuiManagerEvent_entry;
+zend_class_entry* php_wxAuiManagerEvent_entry;
 int le_wxAuiManagerEvent;
 
-char PHP_wxAuiNotebook_NAME[] = "wxAuiNotebook";
-char le_wxAuiNotebook_name[] = "native wxAuiNotebook";
-zend_class_entry *php_wxAuiNotebook_entry;
+zend_class_entry* php_wxAuiNotebook_entry;
 int le_wxAuiNotebook;
 
-char PHP_wxAuiNotebookEvent_NAME[] = "wxAuiNotebookEvent";
-char le_wxAuiNotebookEvent_name[] = "native wxAuiNotebookEvent";
-zend_class_entry *php_wxAuiNotebookEvent_entry;
+zend_class_entry* php_wxAuiNotebookEvent_entry;
 int le_wxAuiNotebookEvent;
 
-char PHP_wxBookCtrlEvent_NAME[] = "wxBookCtrlEvent";
-char le_wxBookCtrlEvent_name[] = "native wxBookCtrlEvent";
-zend_class_entry *php_wxBookCtrlEvent_entry;
+zend_class_entry* php_wxBookCtrlEvent_entry;
 int le_wxBookCtrlEvent;
 
-char PHP_wxAuiDefaultToolBarArt_NAME[] = "wxAuiDefaultToolBarArt";
-char le_wxAuiDefaultToolBarArt_name[] = "native wxAuiDefaultToolBarArt";
-zend_class_entry *php_wxAuiDefaultToolBarArt_entry;
+zend_class_entry* php_wxAuiDefaultToolBarArt_entry;
 int le_wxAuiDefaultToolBarArt;
 
-char PHP_wxBookCtrlBase_NAME[] = "wxBookCtrlBase";
-char le_wxBookCtrlBase_name[] = "native wxBookCtrlBase";
-zend_class_entry *php_wxBookCtrlBase_entry;
+zend_class_entry* php_wxBookCtrlBase_entry;
 int le_wxBookCtrlBase;
 
-char PHP_wxWithImages_NAME[] = "wxWithImages";
-char le_wxWithImages_name[] = "native wxWithImages";
-zend_class_entry *php_wxWithImages_entry;
+zend_class_entry* php_wxWithImages_entry;
 int le_wxWithImages;
 
-char PHP_wxAcceleratorEntry_NAME[] = "wxAcceleratorEntry";
-char le_wxAcceleratorEntry_name[] = "native wxAcceleratorEntry";
-zend_class_entry *php_wxAcceleratorEntry_entry;
+zend_class_entry* php_wxAcceleratorEntry_entry;
 int le_wxAcceleratorEntry;
 
-char PHP_wxAcceleratorTable_NAME[] = "wxAcceleratorTable";
-char le_wxAcceleratorTable_name[] = "native wxAcceleratorTable";
-zend_class_entry *php_wxAcceleratorTable_entry;
+zend_class_entry* php_wxAcceleratorTable_entry;
 int le_wxAcceleratorTable;
 
-char PHP_wxGDIObject_NAME[] = "wxGDIObject";
-char le_wxGDIObject_name[] = "native wxGDIObject";
-zend_class_entry *php_wxGDIObject_entry;
+zend_class_entry* php_wxGDIObject_entry;
 int le_wxGDIObject;
 
-char PHP_wxAnimation_NAME[] = "wxAnimation";
-char le_wxAnimation_name[] = "native wxAnimation";
-zend_class_entry *php_wxAnimation_entry;
+zend_class_entry* php_wxAnimation_entry;
 int le_wxAnimation;
 
-char PHP_wxAnimationCtrl_NAME[] = "wxAnimationCtrl";
-char le_wxAnimationCtrl_name[] = "native wxAnimationCtrl";
-zend_class_entry *php_wxAnimationCtrl_entry;
+zend_class_entry* php_wxAnimationCtrl_entry;
 int le_wxAnimationCtrl;
 
-char PHP_wxArtProvider_NAME[] = "wxArtProvider";
-char le_wxArtProvider_name[] = "native wxArtProvider";
-zend_class_entry *php_wxArtProvider_entry;
+zend_class_entry* php_wxArtProvider_entry;
 int le_wxArtProvider;
 
-char PHP_wxIconBundle_NAME[] = "wxIconBundle";
-char le_wxIconBundle_name[] = "native wxIconBundle";
-zend_class_entry *php_wxIconBundle_entry;
+zend_class_entry* php_wxIconBundle_entry;
 int le_wxIconBundle;
 
-char PHP_wxStyledTextCtrl_NAME[] = "wxStyledTextCtrl";
-char le_wxStyledTextCtrl_name[] = "native wxStyledTextCtrl";
-zend_class_entry *php_wxStyledTextCtrl_entry;
+zend_class_entry* php_wxStyledTextCtrl_entry;
 int le_wxStyledTextCtrl;
 
-char PHP_wxStyledTextEvent_NAME[] = "wxStyledTextEvent";
-char le_wxStyledTextEvent_name[] = "native wxStyledTextEvent";
-zend_class_entry *php_wxStyledTextEvent_entry;
+zend_class_entry* php_wxStyledTextEvent_entry;
 int le_wxStyledTextEvent;
 
-char PHP_wxVersionInfo_NAME[] = "wxVersionInfo";
-char le_wxVersionInfo_name[] = "native wxVersionInfo";
-zend_class_entry *php_wxVersionInfo_entry;
+zend_class_entry* php_wxVersionInfo_entry;
 int le_wxVersionInfo;
 
-char PHP_wxScrollBar_NAME[] = "wxScrollBar";
-char le_wxScrollBar_name[] = "native wxScrollBar";
-zend_class_entry *php_wxScrollBar_entry;
+zend_class_entry* php_wxScrollBar_entry;
 int le_wxScrollBar;
 
-char PHP_wxStaticText_NAME[] = "wxStaticText";
-char le_wxStaticText_name[] = "native wxStaticText";
-zend_class_entry *php_wxStaticText_entry;
+zend_class_entry* php_wxStaticText_entry;
 int le_wxStaticText;
 
-char PHP_wxStatusBarPane_NAME[] = "wxStatusBarPane";
-char le_wxStatusBarPane_name[] = "native wxStatusBarPane";
-zend_class_entry *php_wxStatusBarPane_entry;
+zend_class_entry* php_wxStatusBarPane_entry;
 int le_wxStatusBarPane;
 
-char PHP_wxStaticLine_NAME[] = "wxStaticLine";
-char le_wxStaticLine_name[] = "native wxStaticLine";
-zend_class_entry *php_wxStaticLine_entry;
+zend_class_entry* php_wxStaticLine_entry;
 int le_wxStaticLine;
 
-char PHP_wxStaticBoxSizer_NAME[] = "wxStaticBoxSizer";
-char le_wxStaticBoxSizer_name[] = "native wxStaticBoxSizer";
-zend_class_entry *php_wxStaticBoxSizer_entry;
+zend_class_entry* php_wxStaticBoxSizer_entry;
 int le_wxStaticBoxSizer;
 
-char PHP_wxStaticBox_NAME[] = "wxStaticBox";
-char le_wxStaticBox_name[] = "native wxStaticBox";
-zend_class_entry *php_wxStaticBox_entry;
+zend_class_entry* php_wxStaticBox_entry;
 int le_wxStaticBox;
 
-char PHP_wxStaticBitmap_NAME[] = "wxStaticBitmap";
-char le_wxStaticBitmap_name[] = "native wxStaticBitmap";
-zend_class_entry *php_wxStaticBitmap_entry;
+zend_class_entry* php_wxStaticBitmap_entry;
 int le_wxStaticBitmap;
 
-char PHP_wxAuiToolBarItem_NAME[] = "wxAuiToolBarItem";
-char le_wxAuiToolBarItem_name[] = "native wxAuiToolBarItem";
-zend_class_entry *php_wxAuiToolBarItem_entry;
+zend_class_entry* php_wxAuiToolBarItem_entry;
 int le_wxAuiToolBarItem;
 
-char PHP_wxCheckBox_NAME[] = "wxCheckBox";
-char le_wxCheckBox_name[] = "native wxCheckBox";
-zend_class_entry *php_wxCheckBox_entry;
+zend_class_entry* php_wxCheckBox_entry;
 int le_wxCheckBox;
 
-char PHP_wxWrapSizer_NAME[] = "wxWrapSizer";
-char le_wxWrapSizer_name[] = "native wxWrapSizer";
-zend_class_entry *php_wxWrapSizer_entry;
+zend_class_entry* php_wxWrapSizer_entry;
 int le_wxWrapSizer;
 
-char PHP_wxBitmapButton_NAME[] = "wxBitmapButton";
-char le_wxBitmapButton_name[] = "native wxBitmapButton";
-zend_class_entry *php_wxBitmapButton_entry;
+zend_class_entry* php_wxBitmapButton_entry;
 int le_wxBitmapButton;
 
-char PHP_wxTextEntry_NAME[] = "wxTextEntry";
-char le_wxTextEntry_name[] = "native wxTextEntry";
-zend_class_entry *php_wxTextEntry_entry;
+zend_class_entry* php_wxTextEntry_entry;
 int le_wxTextEntry;
 
-char PHP_wxTextCompleter_NAME[] = "wxTextCompleter";
-char le_wxTextCompleter_name[] = "native wxTextCompleter";
-zend_class_entry *php_wxTextCompleter_entry;
+zend_class_entry* php_wxTextCompleter_entry;
 int le_wxTextCompleter;
 
-char PHP_wxTextCtrl_NAME[] = "wxTextCtrl";
-char le_wxTextCtrl_name[] = "native wxTextCtrl";
-zend_class_entry *php_wxTextCtrl_entry;
+zend_class_entry* php_wxTextCtrl_entry;
 int le_wxTextCtrl;
 
-char PHP_wxTextAttr_NAME[] = "wxTextAttr";
-char le_wxTextAttr_name[] = "native wxTextAttr";
-zend_class_entry *php_wxTextAttr_entry;
+zend_class_entry* php_wxTextAttr_entry;
 int le_wxTextAttr;
 
-char PHP_wxTextEntryDialog_NAME[] = "wxTextEntryDialog";
-char le_wxTextEntryDialog_name[] = "native wxTextEntryDialog";
-zend_class_entry *php_wxTextEntryDialog_entry;
+zend_class_entry* php_wxTextEntryDialog_entry;
 int le_wxTextEntryDialog;
 
-char PHP_wxComboBox_NAME[] = "wxComboBox";
-char le_wxComboBox_name[] = "native wxComboBox";
-zend_class_entry *php_wxComboBox_entry;
+zend_class_entry* php_wxComboBox_entry;
 int le_wxComboBox;
 
-char PHP_wxItemContainer_NAME[] = "wxItemContainer";
-char le_wxItemContainer_name[] = "native wxItemContainer";
-zend_class_entry *php_wxItemContainer_entry;
+zend_class_entry* php_wxItemContainer_entry;
 int le_wxItemContainer;
 
-char PHP_wxItemContainerImmutable_NAME[] = "wxItemContainerImmutable";
-char le_wxItemContainerImmutable_name[] = "native wxItemContainerImmutable";
-zend_class_entry *php_wxItemContainerImmutable_entry;
+zend_class_entry* php_wxItemContainerImmutable_entry;
 int le_wxItemContainerImmutable;
 
-char PHP_wxBitmapComboBox_NAME[] = "wxBitmapComboBox";
-char le_wxBitmapComboBox_name[] = "native wxBitmapComboBox";
-zend_class_entry *php_wxBitmapComboBox_entry;
+zend_class_entry* php_wxBitmapComboBox_entry;
 int le_wxBitmapComboBox;
 
-char PHP_wxAuiToolBarEvent_NAME[] = "wxAuiToolBarEvent";
-char le_wxAuiToolBarEvent_name[] = "native wxAuiToolBarEvent";
-zend_class_entry *php_wxAuiToolBarEvent_entry;
+zend_class_entry* php_wxAuiToolBarEvent_entry;
 int le_wxAuiToolBarEvent;
 
-char PHP_wxAuiToolBar_NAME[] = "wxAuiToolBar";
-char le_wxAuiToolBar_name[] = "native wxAuiToolBar";
-zend_class_entry *php_wxAuiToolBar_entry;
+zend_class_entry* php_wxAuiToolBar_entry;
 int le_wxAuiToolBar;
 
-char PHP_wxBannerWindow_NAME[] = "wxBannerWindow";
-char le_wxBannerWindow_name[] = "native wxBannerWindow";
-zend_class_entry *php_wxBannerWindow_entry;
+zend_class_entry* php_wxBannerWindow_entry;
 int le_wxBannerWindow;
 
-char PHP_wxChoice_NAME[] = "wxChoice";
-char le_wxChoice_name[] = "native wxChoice";
-zend_class_entry *php_wxChoice_entry;
+zend_class_entry* php_wxChoice_entry;
 int le_wxChoice;
 
-char PHP_wxListEvent_NAME[] = "wxListEvent";
-char le_wxListEvent_name[] = "native wxListEvent";
-zend_class_entry *php_wxListEvent_entry;
+zend_class_entry* php_wxListEvent_entry;
 int le_wxListEvent;
 
-char PHP_wxListCtrl_NAME[] = "wxListCtrl";
-char le_wxListCtrl_name[] = "native wxListCtrl";
-zend_class_entry *php_wxListCtrl_entry;
+zend_class_entry* php_wxListCtrl_entry;
 int le_wxListCtrl;
 
-char PHP_wxListItemAttr_NAME[] = "wxListItemAttr";
-char le_wxListItemAttr_name[] = "native wxListItemAttr";
-zend_class_entry *php_wxListItemAttr_entry;
+zend_class_entry* php_wxListItemAttr_entry;
 int le_wxListItemAttr;
 
-char PHP_wxListItem_NAME[] = "wxListItem";
-char le_wxListItem_name[] = "native wxListItem";
-zend_class_entry *php_wxListItem_entry;
+zend_class_entry* php_wxListItem_entry;
 int le_wxListItem;
 
-char PHP_wxListbook_NAME[] = "wxListbook";
-char le_wxListbook_name[] = "native wxListbook";
-zend_class_entry *php_wxListbook_entry;
+zend_class_entry* php_wxListbook_entry;
 int le_wxListbook;
 
-char PHP_wxChildFocusEvent_NAME[] = "wxChildFocusEvent";
-char le_wxChildFocusEvent_name[] = "native wxChildFocusEvent";
-zend_class_entry *php_wxChildFocusEvent_entry;
+zend_class_entry* php_wxChildFocusEvent_entry;
 int le_wxChildFocusEvent;
 
-char PHP_wxChoicebook_NAME[] = "wxChoicebook";
-char le_wxChoicebook_name[] = "native wxChoicebook";
-zend_class_entry *php_wxChoicebook_entry;
+zend_class_entry* php_wxChoicebook_entry;
 int le_wxChoicebook;
 
-char PHP_wxRadioBox_NAME[] = "wxRadioBox";
-char le_wxRadioBox_name[] = "native wxRadioBox";
-zend_class_entry *php_wxRadioBox_entry;
+zend_class_entry* php_wxRadioBox_entry;
 int le_wxRadioBox;
 
-char PHP_wxRadioButton_NAME[] = "wxRadioButton";
-char le_wxRadioButton_name[] = "native wxRadioButton";
-zend_class_entry *php_wxRadioButton_entry;
+zend_class_entry* php_wxRadioButton_entry;
 int le_wxRadioButton;
 
-char PHP_wxRearrangeCtrl_NAME[] = "wxRearrangeCtrl";
-char le_wxRearrangeCtrl_name[] = "native wxRearrangeCtrl";
-zend_class_entry *php_wxRearrangeCtrl_entry;
+zend_class_entry* php_wxRearrangeCtrl_entry;
 int le_wxRearrangeCtrl;
 
-char PHP_wxRearrangeDialog_NAME[] = "wxRearrangeDialog";
-char le_wxRearrangeDialog_name[] = "native wxRearrangeDialog";
-zend_class_entry *php_wxRearrangeDialog_entry;
+zend_class_entry* php_wxRearrangeDialog_entry;
 int le_wxRearrangeDialog;
 
-char PHP_wxRearrangeList_NAME[] = "wxRearrangeList";
-char le_wxRearrangeList_name[] = "native wxRearrangeList";
-zend_class_entry *php_wxRearrangeList_entry;
+zend_class_entry* php_wxRearrangeList_entry;
 int le_wxRearrangeList;
 
-char PHP_wxSlider_NAME[] = "wxSlider";
-char le_wxSlider_name[] = "native wxSlider";
-zend_class_entry *php_wxSlider_entry;
+zend_class_entry* php_wxSlider_entry;
 int le_wxSlider;
 
-char PHP_wxSpinCtrl_NAME[] = "wxSpinCtrl";
-char le_wxSpinCtrl_name[] = "native wxSpinCtrl";
-zend_class_entry *php_wxSpinCtrl_entry;
+zend_class_entry* php_wxSpinCtrl_entry;
 int le_wxSpinCtrl;
 
-char PHP_wxSpinButton_NAME[] = "wxSpinButton";
-char le_wxSpinButton_name[] = "native wxSpinButton";
-zend_class_entry *php_wxSpinButton_entry;
+zend_class_entry* php_wxSpinButton_entry;
 int le_wxSpinButton;
 
-char PHP_wxSpinEvent_NAME[] = "wxSpinEvent";
-char le_wxSpinEvent_name[] = "native wxSpinEvent";
-zend_class_entry *php_wxSpinEvent_entry;
+zend_class_entry* php_wxSpinEvent_entry;
 int le_wxSpinEvent;
 
-char PHP_wxSplitterEvent_NAME[] = "wxSplitterEvent";
-char le_wxSplitterEvent_name[] = "native wxSplitterEvent";
-zend_class_entry *php_wxSplitterEvent_entry;
+zend_class_entry* php_wxSplitterEvent_entry;
 int le_wxSplitterEvent;
 
-char PHP_wxSplashScreen_NAME[] = "wxSplashScreen";
-char le_wxSplashScreen_name[] = "native wxSplashScreen";
-zend_class_entry *php_wxSplashScreen_entry;
+zend_class_entry* php_wxSplashScreen_entry;
 int le_wxSplashScreen;
 
-char PHP_wxSizeEvent_NAME[] = "wxSizeEvent";
-char le_wxSizeEvent_name[] = "native wxSizeEvent";
-zend_class_entry *php_wxSizeEvent_entry;
+zend_class_entry* php_wxSizeEvent_entry;
 int le_wxSizeEvent;
 
-char PHP_wxGauge_NAME[] = "wxGauge";
-char le_wxGauge_name[] = "native wxGauge";
-zend_class_entry *php_wxGauge_entry;
+zend_class_entry* php_wxGauge_entry;
 int le_wxGauge;
 
-char PHP_wxHtmlWindow_NAME[] = "wxHtmlWindow";
-char le_wxHtmlWindow_name[] = "native wxHtmlWindow";
-zend_class_entry *php_wxHtmlWindow_entry;
+zend_class_entry* php_wxHtmlWindow_entry;
 int le_wxHtmlWindow;
 
-char PHP_wxHtmlContainerCell_NAME[] = "wxHtmlContainerCell";
-char le_wxHtmlContainerCell_name[] = "native wxHtmlContainerCell";
-zend_class_entry *php_wxHtmlContainerCell_entry;
+zend_class_entry* php_wxHtmlContainerCell_entry;
 int le_wxHtmlContainerCell;
 
-char PHP_wxHtmlCell_NAME[] = "wxHtmlCell";
-char le_wxHtmlCell_name[] = "native wxHtmlCell";
-zend_class_entry *php_wxHtmlCell_entry;
+zend_class_entry* php_wxHtmlCell_entry;
 int le_wxHtmlCell;
 
-char PHP_wxHtmlCellEvent_NAME[] = "wxHtmlCellEvent";
-char le_wxHtmlCellEvent_name[] = "native wxHtmlCellEvent";
-zend_class_entry *php_wxHtmlCellEvent_entry;
+zend_class_entry* php_wxHtmlCellEvent_entry;
 int le_wxHtmlCellEvent;
 
-char PHP_wxHtmlColourCell_NAME[] = "wxHtmlColourCell";
-char le_wxHtmlColourCell_name[] = "native wxHtmlColourCell";
-zend_class_entry *php_wxHtmlColourCell_entry;
+zend_class_entry* php_wxHtmlColourCell_entry;
 int le_wxHtmlColourCell;
 
-char PHP_wxHtmlEasyPrinting_NAME[] = "wxHtmlEasyPrinting";
-char le_wxHtmlEasyPrinting_name[] = "native wxHtmlEasyPrinting";
-zend_class_entry *php_wxHtmlEasyPrinting_entry;
+zend_class_entry* php_wxHtmlEasyPrinting_entry;
 int le_wxHtmlEasyPrinting;
 
-char PHP_wxHtmlLinkEvent_NAME[] = "wxHtmlLinkEvent";
-char le_wxHtmlLinkEvent_name[] = "native wxHtmlLinkEvent";
-zend_class_entry *php_wxHtmlLinkEvent_entry;
+zend_class_entry* php_wxHtmlLinkEvent_entry;
 int le_wxHtmlLinkEvent;
 
-char PHP_wxHtmlLinkInfo_NAME[] = "wxHtmlLinkInfo";
-char le_wxHtmlLinkInfo_name[] = "native wxHtmlLinkInfo";
-zend_class_entry *php_wxHtmlLinkInfo_entry;
+zend_class_entry* php_wxHtmlLinkInfo_entry;
 int le_wxHtmlLinkInfo;
 
-char PHP_wxMouseEvent_NAME[] = "wxMouseEvent";
-char le_wxMouseEvent_name[] = "native wxMouseEvent";
-zend_class_entry *php_wxMouseEvent_entry;
+zend_class_entry* php_wxMouseEvent_entry;
 int le_wxMouseEvent;
 
-char PHP_wxMouseState_NAME[] = "wxMouseState";
-char le_wxMouseState_name[] = "native wxMouseState";
-zend_class_entry *php_wxMouseState_entry;
+zend_class_entry* php_wxMouseState_entry;
 int le_wxMouseState;
 
-char PHP_wxMoveEvent_NAME[] = "wxMoveEvent";
-char le_wxMoveEvent_name[] = "native wxMoveEvent";
-zend_class_entry *php_wxMoveEvent_entry;
+zend_class_entry* php_wxMoveEvent_entry;
 int le_wxMoveEvent;
 
-char PHP_wxMouseEventsManager_NAME[] = "wxMouseEventsManager";
-char le_wxMouseEventsManager_name[] = "native wxMouseEventsManager";
-zend_class_entry *php_wxMouseEventsManager_entry;
+zend_class_entry* php_wxMouseEventsManager_entry;
 int le_wxMouseEventsManager;
 
-char PHP_wxMessageDialog_NAME[] = "wxMessageDialog";
-char le_wxMessageDialog_name[] = "native wxMessageDialog";
-zend_class_entry *php_wxMessageDialog_entry;
+zend_class_entry* php_wxMessageDialog_entry;
 int le_wxMessageDialog;
 
-char PHP_wxHtmlListBox_NAME[] = "wxHtmlListBox";
-char le_wxHtmlListBox_name[] = "native wxHtmlListBox";
-zend_class_entry *php_wxHtmlListBox_entry;
+zend_class_entry* php_wxHtmlListBox_entry;
 int le_wxHtmlListBox;
 
-char PHP_wxVListBox_NAME[] = "wxVListBox";
-char le_wxVListBox_name[] = "native wxVListBox";
-zend_class_entry *php_wxVListBox_entry;
+zend_class_entry* php_wxVListBox_entry;
 int le_wxVListBox;
 
-char PHP_wxHtmlTag_NAME[] = "wxHtmlTag";
-char le_wxHtmlTag_name[] = "native wxHtmlTag";
-zend_class_entry *php_wxHtmlTag_entry;
+zend_class_entry* php_wxHtmlTag_entry;
 int le_wxHtmlTag;
 
-char PHP_wxHyperlinkCtrl_NAME[] = "wxHyperlinkCtrl";
-char le_wxHyperlinkCtrl_name[] = "native wxHyperlinkCtrl";
-zend_class_entry *php_wxHyperlinkCtrl_entry;
+zend_class_entry* php_wxHyperlinkCtrl_entry;
 int le_wxHyperlinkCtrl;
 
-char PHP_wxHyperlinkEvent_NAME[] = "wxHyperlinkEvent";
-char le_wxHyperlinkEvent_name[] = "native wxHyperlinkEvent";
-zend_class_entry *php_wxHyperlinkEvent_entry;
+zend_class_entry* php_wxHyperlinkEvent_entry;
 int le_wxHyperlinkEvent;
 
-char PHP_wxCursor_NAME[] = "wxCursor";
-char le_wxCursor_name[] = "native wxCursor";
-zend_class_entry *php_wxCursor_entry;
+zend_class_entry* php_wxCursor_entry;
 int le_wxCursor;
 
-char PHP_wxToggleButton_NAME[] = "wxToggleButton";
-char le_wxToggleButton_name[] = "native wxToggleButton";
-zend_class_entry *php_wxToggleButton_entry;
+zend_class_entry* php_wxToggleButton_entry;
 int le_wxToggleButton;
 
-char PHP_wxTimer_NAME[] = "wxTimer";
-char le_wxTimer_name[] = "native wxTimer";
-zend_class_entry *php_wxTimer_entry;
+zend_class_entry* php_wxTimer_entry;
 int le_wxTimer;
 
-char PHP_wxTimerEvent_NAME[] = "wxTimerEvent";
-char le_wxTimerEvent_name[] = "native wxTimerEvent";
-zend_class_entry *php_wxTimerEvent_entry;
+zend_class_entry* php_wxTimerEvent_entry;
 int le_wxTimerEvent;
 
-char PHP_wxThreadEvent_NAME[] = "wxThreadEvent";
-char le_wxThreadEvent_name[] = "native wxThreadEvent";
-zend_class_entry *php_wxThreadEvent_entry;
+zend_class_entry* php_wxThreadEvent_entry;
 int le_wxThreadEvent;
 
-char PHP_wxSearchCtrl_NAME[] = "wxSearchCtrl";
-char le_wxSearchCtrl_name[] = "native wxSearchCtrl";
-zend_class_entry *php_wxSearchCtrl_entry;
+zend_class_entry* php_wxSearchCtrl_entry;
 int le_wxSearchCtrl;
 
-char PHP_wxColourPickerEvent_NAME[] = "wxColourPickerEvent";
-char le_wxColourPickerEvent_name[] = "native wxColourPickerEvent";
-zend_class_entry *php_wxColourPickerEvent_entry;
+zend_class_entry* php_wxColourPickerEvent_entry;
 int le_wxColourPickerEvent;
 
-char PHP_wxColourPickerCtrl_NAME[] = "wxColourPickerCtrl";
-char le_wxColourPickerCtrl_name[] = "native wxColourPickerCtrl";
-zend_class_entry *php_wxColourPickerCtrl_entry;
+zend_class_entry* php_wxColourPickerCtrl_entry;
 int le_wxColourPickerCtrl;
 
-char PHP_wxFontPickerCtrl_NAME[] = "wxFontPickerCtrl";
-char le_wxFontPickerCtrl_name[] = "native wxFontPickerCtrl";
-zend_class_entry *php_wxFontPickerCtrl_entry;
+zend_class_entry* php_wxFontPickerCtrl_entry;
 int le_wxFontPickerCtrl;
 
-char PHP_wxFontPickerEvent_NAME[] = "wxFontPickerEvent";
-char le_wxFontPickerEvent_name[] = "native wxFontPickerEvent";
-zend_class_entry *php_wxFontPickerEvent_entry;
+zend_class_entry* php_wxFontPickerEvent_entry;
 int le_wxFontPickerEvent;
 
-char PHP_wxFilePickerCtrl_NAME[] = "wxFilePickerCtrl";
-char le_wxFilePickerCtrl_name[] = "native wxFilePickerCtrl";
-zend_class_entry *php_wxFilePickerCtrl_entry;
+zend_class_entry* php_wxFilePickerCtrl_entry;
 int le_wxFilePickerCtrl;
 
-char PHP_wxFindReplaceDialog_NAME[] = "wxFindReplaceDialog";
-char le_wxFindReplaceDialog_name[] = "native wxFindReplaceDialog";
-zend_class_entry *php_wxFindReplaceDialog_entry;
+zend_class_entry* php_wxFindReplaceDialog_entry;
 int le_wxFindReplaceDialog;
 
-char PHP_wxFindReplaceData_NAME[] = "wxFindReplaceData";
-char le_wxFindReplaceData_name[] = "native wxFindReplaceData";
-zend_class_entry *php_wxFindReplaceData_entry;
+zend_class_entry* php_wxFindReplaceData_entry;
 int le_wxFindReplaceData;
 
-char PHP_wxDirPickerCtrl_NAME[] = "wxDirPickerCtrl";
-char le_wxDirPickerCtrl_name[] = "native wxDirPickerCtrl";
-zend_class_entry *php_wxDirPickerCtrl_entry;
+zend_class_entry* php_wxDirPickerCtrl_entry;
 int le_wxDirPickerCtrl;
 
-char PHP_wxDirDialog_NAME[] = "wxDirDialog";
-char le_wxDirDialog_name[] = "native wxDirDialog";
-zend_class_entry *php_wxDirDialog_entry;
+zend_class_entry* php_wxDirDialog_entry;
 int le_wxDirDialog;
 
-char PHP_wxSpinDoubleEvent_NAME[] = "wxSpinDoubleEvent";
-char le_wxSpinDoubleEvent_name[] = "native wxSpinDoubleEvent";
-zend_class_entry *php_wxSpinDoubleEvent_entry;
+zend_class_entry* php_wxSpinDoubleEvent_entry;
 int le_wxSpinDoubleEvent;
 
-char PHP_wxSpinCtrlDouble_NAME[] = "wxSpinCtrlDouble";
-char le_wxSpinCtrlDouble_name[] = "native wxSpinCtrlDouble";
-zend_class_entry *php_wxSpinCtrlDouble_entry;
+zend_class_entry* php_wxSpinCtrlDouble_entry;
 int le_wxSpinCtrlDouble;
 
-char PHP_wxGenericDirCtrl_NAME[] = "wxGenericDirCtrl";
-char le_wxGenericDirCtrl_name[] = "native wxGenericDirCtrl";
-zend_class_entry *php_wxGenericDirCtrl_entry;
+zend_class_entry* php_wxGenericDirCtrl_entry;
 int le_wxGenericDirCtrl;
 
-char PHP_wxFileName_NAME[] = "wxFileName";
-char le_wxFileName_name[] = "native wxFileName";
-zend_class_entry *php_wxFileName_entry;
+zend_class_entry* php_wxFileName_entry;
 int le_wxFileName;
 
-char PHP_wxGridSizeEvent_NAME[] = "wxGridSizeEvent";
-char le_wxGridSizeEvent_name[] = "native wxGridSizeEvent";
-zend_class_entry *php_wxGridSizeEvent_entry;
+zend_class_entry* php_wxGridSizeEvent_entry;
 int le_wxGridSizeEvent;
 
-char PHP_wxGridSizer_NAME[] = "wxGridSizer";
-char le_wxGridSizer_name[] = "native wxGridSizer";
-zend_class_entry *php_wxGridSizer_entry;
+zend_class_entry* php_wxGridSizer_entry;
 int le_wxGridSizer;
 
-char PHP_wxFlexGridSizer_NAME[] = "wxFlexGridSizer";
-char le_wxFlexGridSizer_name[] = "native wxFlexGridSizer";
-zend_class_entry *php_wxFlexGridSizer_entry;
+zend_class_entry* php_wxFlexGridSizer_entry;
 int le_wxFlexGridSizer;
 
-char PHP_wxGridBagSizer_NAME[] = "wxGridBagSizer";
-char le_wxGridBagSizer_name[] = "native wxGridBagSizer";
-zend_class_entry *php_wxGridBagSizer_entry;
+zend_class_entry* php_wxGridBagSizer_entry;
 int le_wxGridBagSizer;
 
-char PHP_wxStdDialogButtonSizer_NAME[] = "wxStdDialogButtonSizer";
-char le_wxStdDialogButtonSizer_name[] = "native wxStdDialogButtonSizer";
-zend_class_entry *php_wxStdDialogButtonSizer_entry;
+zend_class_entry* php_wxStdDialogButtonSizer_entry;
 int le_wxStdDialogButtonSizer;
 
-char PHP_wxScrollEvent_NAME[] = "wxScrollEvent";
-char le_wxScrollEvent_name[] = "native wxScrollEvent";
-zend_class_entry *php_wxScrollEvent_entry;
+zend_class_entry* php_wxScrollEvent_entry;
 int le_wxScrollEvent;
 
-char PHP_wxScrollWinEvent_NAME[] = "wxScrollWinEvent";
-char le_wxScrollWinEvent_name[] = "native wxScrollWinEvent";
-zend_class_entry *php_wxScrollWinEvent_entry;
+zend_class_entry* php_wxScrollWinEvent_entry;
 int le_wxScrollWinEvent;
 
-char PHP_wxNotebook_NAME[] = "wxNotebook";
-char le_wxNotebook_name[] = "native wxNotebook";
-zend_class_entry *php_wxNotebook_entry;
+zend_class_entry* php_wxNotebook_entry;
 int le_wxNotebook;
 
-char PHP_wxDialog_NAME[] = "wxDialog";
-char le_wxDialog_name[] = "native wxDialog";
-zend_class_entry *php_wxDialog_entry;
+zend_class_entry* php_wxDialog_entry;
 int le_wxDialog;
 
-char PHP_wxSysColourChangedEvent_NAME[] = "wxSysColourChangedEvent";
-char le_wxSysColourChangedEvent_name[] = "native wxSysColourChangedEvent";
-zend_class_entry *php_wxSysColourChangedEvent_entry;
+zend_class_entry* php_wxSysColourChangedEvent_entry;
 int le_wxSysColourChangedEvent;
 
-char PHP_wxSymbolPickerDialog_NAME[] = "wxSymbolPickerDialog";
-char le_wxSymbolPickerDialog_name[] = "native wxSymbolPickerDialog";
-zend_class_entry *php_wxSymbolPickerDialog_entry;
+zend_class_entry* php_wxSymbolPickerDialog_entry;
 int le_wxSymbolPickerDialog;
 
-char PHP_wxGBPosition_NAME[] = "wxGBPosition";
-char le_wxGBPosition_name[] = "native wxGBPosition";
-zend_class_entry *php_wxGBPosition_entry;
+zend_class_entry* php_wxGBPosition_entry;
 int le_wxGBPosition;
 
-char PHP_wxGBSpan_NAME[] = "wxGBSpan";
-char le_wxGBSpan_name[] = "native wxGBSpan";
-zend_class_entry *php_wxGBSpan_entry;
+zend_class_entry* php_wxGBSpan_entry;
 int le_wxGBSpan;
 
-char PHP_wxGBSizerItem_NAME[] = "wxGBSizerItem";
-char le_wxGBSizerItem_name[] = "native wxGBSizerItem";
-zend_class_entry *php_wxGBSizerItem_entry;
+zend_class_entry* php_wxGBSizerItem_entry;
 int le_wxGBSizerItem;
 
-char PHP_wxPopupWindow_NAME[] = "wxPopupWindow";
-char le_wxPopupWindow_name[] = "native wxPopupWindow";
-zend_class_entry *php_wxPopupWindow_entry;
+zend_class_entry* php_wxPopupWindow_entry;
 int le_wxPopupWindow;
 
-char PHP_wxMDIChildFrame_NAME[] = "wxMDIChildFrame";
-char le_wxMDIChildFrame_name[] = "native wxMDIChildFrame";
-zend_class_entry *php_wxMDIChildFrame_entry;
+zend_class_entry* php_wxMDIChildFrame_entry;
 int le_wxMDIChildFrame;
 
-char PHP_wxMDIClientWindow_NAME[] = "wxMDIClientWindow";
-char le_wxMDIClientWindow_name[] = "native wxMDIClientWindow";
-zend_class_entry *php_wxMDIClientWindow_entry;
+zend_class_entry* php_wxMDIClientWindow_entry;
 int le_wxMDIClientWindow;
 
-char PHP_wxMDIParentFrame_NAME[] = "wxMDIParentFrame";
-char le_wxMDIParentFrame_name[] = "native wxMDIParentFrame";
-zend_class_entry *php_wxMDIParentFrame_entry;
+zend_class_entry* php_wxMDIParentFrame_entry;
 int le_wxMDIParentFrame;
 
-char PHP_wxMiniFrame_NAME[] = "wxMiniFrame";
-char le_wxMiniFrame_name[] = "native wxMiniFrame";
-zend_class_entry *php_wxMiniFrame_entry;
+zend_class_entry* php_wxMiniFrame_entry;
 int le_wxMiniFrame;
 
-char PHP_wxPropertySheetDialog_NAME[] = "wxPropertySheetDialog";
-char le_wxPropertySheetDialog_name[] = "native wxPropertySheetDialog";
-zend_class_entry *php_wxPropertySheetDialog_entry;
+zend_class_entry* php_wxPropertySheetDialog_entry;
 int le_wxPropertySheetDialog;
 
-char PHP_wxWizard_NAME[] = "wxWizard";
-char le_wxWizard_name[] = "native wxWizard";
-zend_class_entry *php_wxWizard_entry;
+zend_class_entry* php_wxWizard_entry;
 int le_wxWizard;
 
-char PHP_wxWizardEvent_NAME[] = "wxWizardEvent";
-char le_wxWizardEvent_name[] = "native wxWizardEvent";
-zend_class_entry *php_wxWizardEvent_entry;
+zend_class_entry* php_wxWizardEvent_entry;
 int le_wxWizardEvent;
 
-char PHP_wxWizardPage_NAME[] = "wxWizardPage";
-char le_wxWizardPage_name[] = "native wxWizardPage";
-zend_class_entry *php_wxWizardPage_entry;
+zend_class_entry* php_wxWizardPage_entry;
 int le_wxWizardPage;
 
-char PHP_wxWizardPageSimple_NAME[] = "wxWizardPageSimple";
-char le_wxWizardPageSimple_name[] = "native wxWizardPageSimple";
-zend_class_entry *php_wxWizardPageSimple_entry;
+zend_class_entry* php_wxWizardPageSimple_entry;
 int le_wxWizardPageSimple;
 
-char PHP_wxWindowModalDialogEvent_NAME[] = "wxWindowModalDialogEvent";
-char le_wxWindowModalDialogEvent_name[] = "native wxWindowModalDialogEvent";
-zend_class_entry *php_wxWindowModalDialogEvent_entry;
+zend_class_entry* php_wxWindowModalDialogEvent_entry;
 int le_wxWindowModalDialogEvent;
 
-char PHP_wxTreeListItem_NAME[] = "wxTreeListItem";
-char le_wxTreeListItem_name[] = "native wxTreeListItem";
-zend_class_entry *php_wxTreeListItem_entry;
+zend_class_entry* php_wxTreeListItem_entry;
 int le_wxTreeListItem;
 
-char PHP_wxTreebook_NAME[] = "wxTreebook";
-char le_wxTreebook_name[] = "native wxTreebook";
-zend_class_entry *php_wxTreebook_entry;
+zend_class_entry* php_wxTreebook_entry;
 int le_wxTreebook;
 
-char PHP_wxTreeListCtrl_NAME[] = "wxTreeListCtrl";
-char le_wxTreeListCtrl_name[] = "native wxTreeListCtrl";
-zend_class_entry *php_wxTreeListCtrl_entry;
+zend_class_entry* php_wxTreeListCtrl_entry;
 int le_wxTreeListCtrl;
 
-char PHP_wxSound_NAME[] = "wxSound";
-char le_wxSound_name[] = "native wxSound";
-zend_class_entry *php_wxSound_entry;
+zend_class_entry* php_wxSound_entry;
 int le_wxSound;
 
-char PHP_wxSimpleHtmlListBox_NAME[] = "wxSimpleHtmlListBox";
-char le_wxSimpleHtmlListBox_name[] = "native wxSimpleHtmlListBox";
-zend_class_entry *php_wxSimpleHtmlListBox_entry;
+zend_class_entry* php_wxSimpleHtmlListBox_entry;
 int le_wxSimpleHtmlListBox;
 
-char PHP_wxFileSystem_NAME[] = "wxFileSystem";
-char le_wxFileSystem_name[] = "native wxFileSystem";
-zend_class_entry *php_wxFileSystem_entry;
+zend_class_entry* php_wxFileSystem_entry;
 int le_wxFileSystem;
 
-char PHP_wxFileSystemHandler_NAME[] = "wxFileSystemHandler";
-char le_wxFileSystemHandler_name[] = "native wxFileSystemHandler";
-zend_class_entry *php_wxFileSystemHandler_entry;
+zend_class_entry* php_wxFileSystemHandler_entry;
 int le_wxFileSystemHandler;
 
-char PHP_wxNativeFontInfo_NAME[] = "wxNativeFontInfo";
-char le_wxNativeFontInfo_name[] = "native wxNativeFontInfo";
-zend_class_entry *php_wxNativeFontInfo_entry;
+zend_class_entry* php_wxNativeFontInfo_entry;
 int le_wxNativeFontInfo;
 
-char PHP_wxDateEvent_NAME[] = "wxDateEvent";
-char le_wxDateEvent_name[] = "native wxDateEvent";
-zend_class_entry *php_wxDateEvent_entry;
+zend_class_entry* php_wxDateEvent_entry;
 int le_wxDateEvent;
 
-char PHP_wxBitmapToggleButton_NAME[] = "wxBitmapToggleButton";
-char le_wxBitmapToggleButton_name[] = "native wxBitmapToggleButton";
-zend_class_entry *php_wxBitmapToggleButton_entry;
+zend_class_entry* php_wxBitmapToggleButton_entry;
 int le_wxBitmapToggleButton;
 
-char PHP_wxCalendarDateAttr_NAME[] = "wxCalendarDateAttr";
-char le_wxCalendarDateAttr_name[] = "native wxCalendarDateAttr";
-zend_class_entry *php_wxCalendarDateAttr_entry;
+zend_class_entry* php_wxCalendarDateAttr_entry;
 int le_wxCalendarDateAttr;
 
-char PHP_wxCalendarCtrl_NAME[] = "wxCalendarCtrl";
-char le_wxCalendarCtrl_name[] = "native wxCalendarCtrl";
-zend_class_entry *php_wxCalendarCtrl_entry;
+zend_class_entry* php_wxCalendarCtrl_entry;
 int le_wxCalendarCtrl;
 
-char PHP_wxMask_NAME[] = "wxMask";
-char le_wxMask_name[] = "native wxMask";
-zend_class_entry *php_wxMask_entry;
+zend_class_entry* php_wxMask_entry;
 int le_wxMask;
 
-char PHP_wxToolTip_NAME[] = "wxToolTip";
-char le_wxToolTip_name[] = "native wxToolTip";
-zend_class_entry *php_wxToolTip_entry;
+zend_class_entry* php_wxToolTip_entry;
 int le_wxToolTip;
 
-char PHP_wxCaret_NAME[] = "wxCaret";
-char le_wxCaret_name[] = "native wxCaret";
-zend_class_entry *php_wxCaret_entry;
+zend_class_entry* php_wxCaret_entry;
 int le_wxCaret;
 
-char PHP_wxRegion_NAME[] = "wxRegion";
-char le_wxRegion_name[] = "native wxRegion";
-zend_class_entry *php_wxRegion_entry;
+zend_class_entry* php_wxRegion_entry;
 int le_wxRegion;
 
-char PHP_wxPoint2DDouble_NAME[] = "wxPoint2DDouble";
-char le_wxPoint2DDouble_name[] = "native wxPoint2DDouble";
-zend_class_entry *php_wxPoint2DDouble_entry;
+zend_class_entry* php_wxPoint2DDouble_entry;
 int le_wxPoint2DDouble;
 
-char PHP_wxPoint2DInt_NAME[] = "wxPoint2DInt";
-char le_wxPoint2DInt_name[] = "native wxPoint2DInt";
-zend_class_entry *php_wxPoint2DInt_entry;
+zend_class_entry* php_wxPoint2DInt_entry;
 int le_wxPoint2DInt;
 
-char PHP_wxPopupTransientWindow_NAME[] = "wxPopupTransientWindow";
-char le_wxPopupTransientWindow_name[] = "native wxPopupTransientWindow";
-zend_class_entry *php_wxPopupTransientWindow_entry;
+zend_class_entry* php_wxPopupTransientWindow_entry;
 int le_wxPopupTransientWindow;
 
-char PHP_wxProcessEvent_NAME[] = "wxProcessEvent";
-char le_wxProcessEvent_name[] = "native wxProcessEvent";
-zend_class_entry *php_wxProcessEvent_entry;
+zend_class_entry* php_wxProcessEvent_entry;
 int le_wxProcessEvent;
 
-char PHP_wxProgressDialog_NAME[] = "wxProgressDialog";
-char le_wxProgressDialog_name[] = "native wxProgressDialog";
-zend_class_entry *php_wxProgressDialog_entry;
+zend_class_entry* php_wxProgressDialog_entry;
 int le_wxProgressDialog;
 
-char PHP_wxGraphicsMatrix_NAME[] = "wxGraphicsMatrix";
-char le_wxGraphicsMatrix_name[] = "native wxGraphicsMatrix";
-zend_class_entry *php_wxGraphicsMatrix_entry;
+zend_class_entry* php_wxGraphicsMatrix_entry;
 int le_wxGraphicsMatrix;
 
-char PHP_wxGraphicsRenderer_NAME[] = "wxGraphicsRenderer";
-char le_wxGraphicsRenderer_name[] = "native wxGraphicsRenderer";
-zend_class_entry *php_wxGraphicsRenderer_entry;
+zend_class_entry* php_wxGraphicsRenderer_entry;
 int le_wxGraphicsRenderer;
 
-char PHP_wxWindowDC_NAME[] = "wxWindowDC";
-char le_wxWindowDC_name[] = "native wxWindowDC";
-zend_class_entry *php_wxWindowDC_entry;
+zend_class_entry* php_wxWindowDC_entry;
 int le_wxWindowDC;
 
-char PHP_wxWindowCreateEvent_NAME[] = "wxWindowCreateEvent";
-char le_wxWindowCreateEvent_name[] = "native wxWindowCreateEvent";
-zend_class_entry *php_wxWindowCreateEvent_entry;
+zend_class_entry* php_wxWindowCreateEvent_entry;
 int le_wxWindowCreateEvent;
 
-char PHP_wxWindowDestroyEvent_NAME[] = "wxWindowDestroyEvent";
-char le_wxWindowDestroyEvent_name[] = "native wxWindowDestroyEvent";
-zend_class_entry *php_wxWindowDestroyEvent_entry;
+zend_class_entry* php_wxWindowDestroyEvent_entry;
 int le_wxWindowDestroyEvent;
 
-char PHP_wxGraphicsGradientStop_NAME[] = "wxGraphicsGradientStop";
-char le_wxGraphicsGradientStop_name[] = "native wxGraphicsGradientStop";
-zend_class_entry *php_wxGraphicsGradientStop_entry;
+zend_class_entry* php_wxGraphicsGradientStop_entry;
 int le_wxGraphicsGradientStop;
 
-char PHP_wxGraphicsGradientStops_NAME[] = "wxGraphicsGradientStops";
-char le_wxGraphicsGradientStops_name[] = "native wxGraphicsGradientStops";
-zend_class_entry *php_wxGraphicsGradientStops_entry;
+zend_class_entry* php_wxGraphicsGradientStops_entry;
 int le_wxGraphicsGradientStops;
 
-char PHP_wxEventFilter_NAME[] = "wxEventFilter";
-char le_wxEventFilter_name[] = "native wxEventFilter";
-zend_class_entry *php_wxEventFilter_entry;
+zend_class_entry* php_wxEventFilter_entry;
 int le_wxEventFilter;
 
-char PHP_wxEventBlocker_NAME[] = "wxEventBlocker";
-char le_wxEventBlocker_name[] = "native wxEventBlocker";
-zend_class_entry *php_wxEventBlocker_entry;
+zend_class_entry* php_wxEventBlocker_entry;
 int le_wxEventBlocker;
 
-char PHP_wxEraseEvent_NAME[] = "wxEraseEvent";
-char le_wxEraseEvent_name[] = "native wxEraseEvent";
-zend_class_entry *php_wxEraseEvent_entry;
+zend_class_entry* php_wxEraseEvent_entry;
 int le_wxEraseEvent;
 
-char PHP_wxEventLoopActivator_NAME[] = "wxEventLoopActivator";
-char le_wxEventLoopActivator_name[] = "native wxEventLoopActivator";
-zend_class_entry *php_wxEventLoopActivator_entry;
+zend_class_entry* php_wxEventLoopActivator_entry;
 int le_wxEventLoopActivator;
 
-char PHP_wxEventLoopBase_NAME[] = "wxEventLoopBase";
-char le_wxEventLoopBase_name[] = "native wxEventLoopBase";
-zend_class_entry *php_wxEventLoopBase_entry;
+zend_class_entry* php_wxEventLoopBase_entry;
 int le_wxEventLoopBase;
 
-char PHP_wxPickerBase_NAME[] = "wxPickerBase";
-char le_wxPickerBase_name[] = "native wxPickerBase";
-zend_class_entry *php_wxPickerBase_entry;
+zend_class_entry* php_wxPickerBase_entry;
 int le_wxPickerBase;
 
-char PHP_wxGridEvent_NAME[] = "wxGridEvent";
-char le_wxGridEvent_name[] = "native wxGridEvent";
-zend_class_entry *php_wxGridEvent_entry;
+zend_class_entry* php_wxGridEvent_entry;
 int le_wxGridEvent;
 
-char PHP_wxUpdateUIEvent_NAME[] = "wxUpdateUIEvent";
-char le_wxUpdateUIEvent_name[] = "native wxUpdateUIEvent";
-zend_class_entry *php_wxUpdateUIEvent_entry;
+zend_class_entry* php_wxUpdateUIEvent_entry;
 int le_wxUpdateUIEvent;
 
-char PHP_wxHelpEvent_NAME[] = "wxHelpEvent";
-char le_wxHelpEvent_name[] = "native wxHelpEvent";
-zend_class_entry *php_wxHelpEvent_entry;
+zend_class_entry* php_wxHelpEvent_entry;
 int le_wxHelpEvent;
 
-char PHP_wxLayoutConstraints_NAME[] = "wxLayoutConstraints";
-char le_wxLayoutConstraints_name[] = "native wxLayoutConstraints";
-zend_class_entry *php_wxLayoutConstraints_entry;
+zend_class_entry* php_wxLayoutConstraints_entry;
 int le_wxLayoutConstraints;
 
-char PHP_wxDropTarget_NAME[] = "wxDropTarget";
-char le_wxDropTarget_name[] = "native wxDropTarget";
-zend_class_entry *php_wxDropTarget_entry;
+zend_class_entry* php_wxDropTarget_entry;
 int le_wxDropTarget;
 
-char PHP_wxObject_NAME[] = "wxObject";
-char le_wxObject_name[] = "native wxObject";
-zend_class_entry *php_wxObject_entry;
+zend_class_entry* php_wxObject_entry;
 int le_wxObject;
 
-char PHP_wxFFile_NAME[] = "wxFFile";
-char le_wxFFile_name[] = "native wxFFile";
-zend_class_entry *php_wxFFile_entry;
+zend_class_entry* php_wxFFile_entry;
 int le_wxFFile;
 
-char PHP_wxFSFile_NAME[] = "wxFSFile";
-char le_wxFSFile_name[] = "native wxFSFile";
-zend_class_entry *php_wxFSFile_entry;
+zend_class_entry* php_wxFSFile_entry;
 int le_wxFSFile;
 
-char PHP_wxInputStream_NAME[] = "wxInputStream";
-char le_wxInputStream_name[] = "native wxInputStream";
-zend_class_entry *php_wxInputStream_entry;
+zend_class_entry* php_wxInputStream_entry;
 int le_wxInputStream;
 
-char PHP_wxStreamBase_NAME[] = "wxStreamBase";
-char le_wxStreamBase_name[] = "native wxStreamBase";
-zend_class_entry *php_wxStreamBase_entry;
+zend_class_entry* php_wxStreamBase_entry;
 int le_wxStreamBase;
 
-char PHP_wxThread_NAME[] = "wxThread";
-char le_wxThread_name[] = "native wxThread";
-zend_class_entry *php_wxThread_entry;
+zend_class_entry* php_wxThread_entry;
 int le_wxThread;
 
-char PHP_wxTimePickerCtrl_NAME[] = "wxTimePickerCtrl";
-char le_wxTimePickerCtrl_name[] = "native wxTimePickerCtrl";
-zend_class_entry *php_wxTimePickerCtrl_entry;
+zend_class_entry* php_wxTimePickerCtrl_entry;
 int le_wxTimePickerCtrl;
 
-char PHP_wxOutputStream_NAME[] = "wxOutputStream";
-char le_wxOutputStream_name[] = "native wxOutputStream";
-zend_class_entry *php_wxOutputStream_entry;
+zend_class_entry* php_wxOutputStream_entry;
 int le_wxOutputStream;
 
-char PHP_wxColourDialog_NAME[] = "wxColourDialog";
-char le_wxColourDialog_name[] = "native wxColourDialog";
-zend_class_entry *php_wxColourDialog_entry;
+zend_class_entry* php_wxColourDialog_entry;
 int le_wxColourDialog;
 
-char PHP_wxColourData_NAME[] = "wxColourData";
-char le_wxColourData_name[] = "native wxColourData";
-zend_class_entry *php_wxColourData_entry;
+zend_class_entry* php_wxColourData_entry;
 int le_wxColourData;
 
-char PHP_wxFileDialog_NAME[] = "wxFileDialog";
-char le_wxFileDialog_name[] = "native wxFileDialog";
-zend_class_entry *php_wxFileDialog_entry;
+zend_class_entry* php_wxFileDialog_entry;
 int le_wxFileDialog;
 
-char PHP_wxFontData_NAME[] = "wxFontData";
-char le_wxFontData_name[] = "native wxFontData";
-zend_class_entry *php_wxFontData_entry;
+zend_class_entry* php_wxFontData_entry;
 int le_wxFontData;
 
-char PHP_wxFontDialog_NAME[] = "wxFontDialog";
-char le_wxFontDialog_name[] = "native wxFontDialog";
-zend_class_entry *php_wxFontDialog_entry;
+zend_class_entry* php_wxFontDialog_entry;
 int le_wxFontDialog;
 
-char PHP_wxThreadHelper_NAME[] = "wxThreadHelper";
-char le_wxThreadHelper_name[] = "native wxThreadHelper";
-zend_class_entry *php_wxThreadHelper_entry;
+zend_class_entry* php_wxThreadHelper_entry;
 int le_wxThreadHelper;
 
-char PHP_wxToolBar_NAME[] = "wxToolBar";
-char le_wxToolBar_name[] = "native wxToolBar";
-zend_class_entry *php_wxToolBar_entry;
+zend_class_entry* php_wxToolBar_entry;
 int le_wxToolBar;
 
-char PHP_wxAuiTabArt_NAME[] = "wxAuiTabArt";
-char le_wxAuiTabArt_name[] = "native wxAuiTabArt";
-zend_class_entry *php_wxAuiTabArt_entry;
+zend_class_entry* php_wxAuiTabArt_entry;
 int le_wxAuiTabArt;
 
-char PHP_wxCalendarEvent_NAME[] = "wxCalendarEvent";
-char le_wxCalendarEvent_name[] = "native wxCalendarEvent";
-zend_class_entry *php_wxCalendarEvent_entry;
+zend_class_entry* php_wxCalendarEvent_entry;
 int le_wxCalendarEvent;
 
-char PHP_wxGrid_NAME[] = "wxGrid";
-char le_wxGrid_name[] = "native wxGrid";
-zend_class_entry *php_wxGrid_entry;
+zend_class_entry* php_wxGrid_entry;
 int le_wxGrid;
 
-char PHP_wxGridCellAttr_NAME[] = "wxGridCellAttr";
-char le_wxGridCellAttr_name[] = "native wxGridCellAttr";
-zend_class_entry *php_wxGridCellAttr_entry;
+zend_class_entry* php_wxGridCellAttr_entry;
 int le_wxGridCellAttr;
 
-char PHP_wxGridCellAttrProvider_NAME[] = "wxGridCellAttrProvider";
-char le_wxGridCellAttrProvider_name[] = "native wxGridCellAttrProvider";
-zend_class_entry *php_wxGridCellAttrProvider_entry;
+zend_class_entry* php_wxGridCellAttrProvider_entry;
 int le_wxGridCellAttrProvider;
 
-char PHP_wxGridCellBoolEditor_NAME[] = "wxGridCellBoolEditor";
-char le_wxGridCellBoolEditor_name[] = "native wxGridCellBoolEditor";
-zend_class_entry *php_wxGridCellBoolEditor_entry;
+zend_class_entry* php_wxGridCellBoolEditor_entry;
 int le_wxGridCellBoolEditor;
 
-char PHP_wxGridCellChoiceEditor_NAME[] = "wxGridCellChoiceEditor";
-char le_wxGridCellChoiceEditor_name[] = "native wxGridCellChoiceEditor";
-zend_class_entry *php_wxGridCellChoiceEditor_entry;
+zend_class_entry* php_wxGridCellChoiceEditor_entry;
 int le_wxGridCellChoiceEditor;
 
-char PHP_wxGridCellDateTimeRenderer_NAME[] = "wxGridCellDateTimeRenderer";
-char le_wxGridCellDateTimeRenderer_name[] = "native wxGridCellDateTimeRenderer";
-zend_class_entry *php_wxGridCellDateTimeRenderer_entry;
+zend_class_entry* php_wxGridCellDateTimeRenderer_entry;
 int le_wxGridCellDateTimeRenderer;
 
-char PHP_wxGridCellBoolRenderer_NAME[] = "wxGridCellBoolRenderer";
-char le_wxGridCellBoolRenderer_name[] = "native wxGridCellBoolRenderer";
-zend_class_entry *php_wxGridCellBoolRenderer_entry;
+zend_class_entry* php_wxGridCellBoolRenderer_entry;
 int le_wxGridCellBoolRenderer;
 
-char PHP_wxGridCellAutoWrapStringRenderer_NAME[] = "wxGridCellAutoWrapStringRenderer";
-char le_wxGridCellAutoWrapStringRenderer_name[] = "native wxGridCellAutoWrapStringRenderer";
-zend_class_entry *php_wxGridCellAutoWrapStringRenderer_entry;
+zend_class_entry* php_wxGridCellAutoWrapStringRenderer_entry;
 int le_wxGridCellAutoWrapStringRenderer;
 
-char PHP_wxGridCellAutoWrapStringEditor_NAME[] = "wxGridCellAutoWrapStringEditor";
-char le_wxGridCellAutoWrapStringEditor_name[] = "native wxGridCellAutoWrapStringEditor";
-zend_class_entry *php_wxGridCellAutoWrapStringEditor_entry;
+zend_class_entry* php_wxGridCellAutoWrapStringEditor_entry;
 int le_wxGridCellAutoWrapStringEditor;
 
-char PHP_wxGridCellEditor_NAME[] = "wxGridCellEditor";
-char le_wxGridCellEditor_name[] = "native wxGridCellEditor";
-zend_class_entry *php_wxGridCellEditor_entry;
+zend_class_entry* php_wxGridCellEditor_entry;
 int le_wxGridCellEditor;
 
-char PHP_wxGridCellEnumEditor_NAME[] = "wxGridCellEnumEditor";
-char le_wxGridCellEnumEditor_name[] = "native wxGridCellEnumEditor";
-zend_class_entry *php_wxGridCellEnumEditor_entry;
+zend_class_entry* php_wxGridCellEnumEditor_entry;
 int le_wxGridCellEnumEditor;
 
-char PHP_wxGridCellEnumRenderer_NAME[] = "wxGridCellEnumRenderer";
-char le_wxGridCellEnumRenderer_name[] = "native wxGridCellEnumRenderer";
-zend_class_entry *php_wxGridCellEnumRenderer_entry;
+zend_class_entry* php_wxGridCellEnumRenderer_entry;
 int le_wxGridCellEnumRenderer;
 
-char PHP_wxGridCellFloatEditor_NAME[] = "wxGridCellFloatEditor";
-char le_wxGridCellFloatEditor_name[] = "native wxGridCellFloatEditor";
-zend_class_entry *php_wxGridCellFloatEditor_entry;
+zend_class_entry* php_wxGridCellFloatEditor_entry;
 int le_wxGridCellFloatEditor;
 
-char PHP_wxGridCellFloatRenderer_NAME[] = "wxGridCellFloatRenderer";
-char le_wxGridCellFloatRenderer_name[] = "native wxGridCellFloatRenderer";
-zend_class_entry *php_wxGridCellFloatRenderer_entry;
+zend_class_entry* php_wxGridCellFloatRenderer_entry;
 int le_wxGridCellFloatRenderer;
 
-char PHP_wxGridCellNumberEditor_NAME[] = "wxGridCellNumberEditor";
-char le_wxGridCellNumberEditor_name[] = "native wxGridCellNumberEditor";
-zend_class_entry *php_wxGridCellNumberEditor_entry;
+zend_class_entry* php_wxGridCellNumberEditor_entry;
 int le_wxGridCellNumberEditor;
 
-char PHP_wxGridCellNumberRenderer_NAME[] = "wxGridCellNumberRenderer";
-char le_wxGridCellNumberRenderer_name[] = "native wxGridCellNumberRenderer";
-zend_class_entry *php_wxGridCellNumberRenderer_entry;
+zend_class_entry* php_wxGridCellNumberRenderer_entry;
 int le_wxGridCellNumberRenderer;
 
-char PHP_wxGridCellRenderer_NAME[] = "wxGridCellRenderer";
-char le_wxGridCellRenderer_name[] = "native wxGridCellRenderer";
-zend_class_entry *php_wxGridCellRenderer_entry;
+zend_class_entry* php_wxGridCellRenderer_entry;
 int le_wxGridCellRenderer;
 
-char PHP_wxGridCellStringRenderer_NAME[] = "wxGridCellStringRenderer";
-char le_wxGridCellStringRenderer_name[] = "native wxGridCellStringRenderer";
-zend_class_entry *php_wxGridCellStringRenderer_entry;
+zend_class_entry* php_wxGridCellStringRenderer_entry;
 int le_wxGridCellStringRenderer;
 
-char PHP_wxGridCellTextEditor_NAME[] = "wxGridCellTextEditor";
-char le_wxGridCellTextEditor_name[] = "native wxGridCellTextEditor";
-zend_class_entry *php_wxGridCellTextEditor_entry;
+zend_class_entry* php_wxGridCellTextEditor_entry;
 int le_wxGridCellTextEditor;
 
-char PHP_wxGridColumnHeaderRenderer_NAME[] = "wxGridColumnHeaderRenderer";
-char le_wxGridColumnHeaderRenderer_name[] = "native wxGridColumnHeaderRenderer";
-zend_class_entry *php_wxGridColumnHeaderRenderer_entry;
+zend_class_entry* php_wxGridColumnHeaderRenderer_entry;
 int le_wxGridColumnHeaderRenderer;
 
-char PHP_wxGridColumnHeaderRendererDefault_NAME[] = "wxGridColumnHeaderRendererDefault";
-char le_wxGridColumnHeaderRendererDefault_name[] = "native wxGridColumnHeaderRendererDefault";
-zend_class_entry *php_wxGridColumnHeaderRendererDefault_entry;
+zend_class_entry* php_wxGridColumnHeaderRendererDefault_entry;
 int le_wxGridColumnHeaderRendererDefault;
 
-char PHP_wxGridCornerHeaderRenderer_NAME[] = "wxGridCornerHeaderRenderer";
-char le_wxGridCornerHeaderRenderer_name[] = "native wxGridCornerHeaderRenderer";
-zend_class_entry *php_wxGridCornerHeaderRenderer_entry;
+zend_class_entry* php_wxGridCornerHeaderRenderer_entry;
 int le_wxGridCornerHeaderRenderer;
 
-char PHP_wxGridCornerHeaderRendererDefault_NAME[] = "wxGridCornerHeaderRendererDefault";
-char le_wxGridCornerHeaderRendererDefault_name[] = "native wxGridCornerHeaderRendererDefault";
-zend_class_entry *php_wxGridCornerHeaderRendererDefault_entry;
+zend_class_entry* php_wxGridCornerHeaderRendererDefault_entry;
 int le_wxGridCornerHeaderRendererDefault;
 
-char PHP_wxGridEditorCreatedEvent_NAME[] = "wxGridEditorCreatedEvent";
-char le_wxGridEditorCreatedEvent_name[] = "native wxGridEditorCreatedEvent";
-zend_class_entry *php_wxGridEditorCreatedEvent_entry;
+zend_class_entry* php_wxGridEditorCreatedEvent_entry;
 int le_wxGridEditorCreatedEvent;
 
-char PHP_wxGridHeaderLabelsRenderer_NAME[] = "wxGridHeaderLabelsRenderer";
-char le_wxGridHeaderLabelsRenderer_name[] = "native wxGridHeaderLabelsRenderer";
-zend_class_entry *php_wxGridHeaderLabelsRenderer_entry;
+zend_class_entry* php_wxGridHeaderLabelsRenderer_entry;
 int le_wxGridHeaderLabelsRenderer;
 
-char PHP_wxGridRangeSelectEvent_NAME[] = "wxGridRangeSelectEvent";
-char le_wxGridRangeSelectEvent_name[] = "native wxGridRangeSelectEvent";
-zend_class_entry *php_wxGridRangeSelectEvent_entry;
+zend_class_entry* php_wxGridRangeSelectEvent_entry;
 int le_wxGridRangeSelectEvent;
 
-char PHP_wxGridRowHeaderRenderer_NAME[] = "wxGridRowHeaderRenderer";
-char le_wxGridRowHeaderRenderer_name[] = "native wxGridRowHeaderRenderer";
-zend_class_entry *php_wxGridRowHeaderRenderer_entry;
+zend_class_entry* php_wxGridRowHeaderRenderer_entry;
 int le_wxGridRowHeaderRenderer;
 
-char PHP_wxGridRowHeaderRendererDefault_NAME[] = "wxGridRowHeaderRendererDefault";
-char le_wxGridRowHeaderRendererDefault_name[] = "native wxGridRowHeaderRendererDefault";
-zend_class_entry *php_wxGridRowHeaderRendererDefault_entry;
+zend_class_entry* php_wxGridRowHeaderRendererDefault_entry;
 int le_wxGridRowHeaderRendererDefault;
 
-char PHP_wxGridSizesInfo_NAME[] = "wxGridSizesInfo";
-char le_wxGridSizesInfo_name[] = "native wxGridSizesInfo";
-zend_class_entry *php_wxGridSizesInfo_entry;
+zend_class_entry* php_wxGridSizesInfo_entry;
 int le_wxGridSizesInfo;
 
-char PHP_wxGridTableBase_NAME[] = "wxGridTableBase";
-char le_wxGridTableBase_name[] = "native wxGridTableBase";
-zend_class_entry *php_wxGridTableBase_entry;
+zend_class_entry* php_wxGridTableBase_entry;
 int le_wxGridTableBase;
 
-char PHP_wxGridUpdateLocker_NAME[] = "wxGridUpdateLocker";
-char le_wxGridUpdateLocker_name[] = "native wxGridUpdateLocker";
-zend_class_entry *php_wxGridUpdateLocker_entry;
+zend_class_entry* php_wxGridUpdateLocker_entry;
 int le_wxGridUpdateLocker;
 
-char PHP_wxDatePickerCtrl_NAME[] = "wxDatePickerCtrl";
-char le_wxDatePickerCtrl_name[] = "native wxDatePickerCtrl";
-zend_class_entry *php_wxDatePickerCtrl_entry;
+zend_class_entry* php_wxDatePickerCtrl_entry;
 int le_wxDatePickerCtrl;
 
-char PHP_wxPasswordEntryDialog_NAME[] = "wxPasswordEntryDialog";
-char le_wxPasswordEntryDialog_name[] = "native wxPasswordEntryDialog";
-zend_class_entry *php_wxPasswordEntryDialog_entry;
+zend_class_entry* php_wxPasswordEntryDialog_entry;
 int le_wxPasswordEntryDialog;
 
-char PHP_wxScreenDC_NAME[] = "wxScreenDC";
-char le_wxScreenDC_name[] = "native wxScreenDC";
-zend_class_entry *php_wxScreenDC_entry;
+zend_class_entry* php_wxScreenDC_entry;
 int le_wxScreenDC;
 
-char PHP_wxCollapsiblePane_NAME[] = "wxCollapsiblePane";
-char le_wxCollapsiblePane_name[] = "native wxCollapsiblePane";
-zend_class_entry *php_wxCollapsiblePane_entry;
+zend_class_entry* php_wxCollapsiblePane_entry;
 int le_wxCollapsiblePane;
 
-char PHP_wxCollapsiblePaneEvent_NAME[] = "wxCollapsiblePaneEvent";
-char le_wxCollapsiblePaneEvent_name[] = "native wxCollapsiblePaneEvent";
-zend_class_entry *php_wxCollapsiblePaneEvent_entry;
+zend_class_entry* php_wxCollapsiblePaneEvent_entry;
 int le_wxCollapsiblePaneEvent;
 
-char PHP_wxComboCtrl_NAME[] = "wxComboCtrl";
-char le_wxComboCtrl_name[] = "native wxComboCtrl";
-zend_class_entry *php_wxComboCtrl_entry;
+zend_class_entry* php_wxComboCtrl_entry;
 int le_wxComboCtrl;
 
-char PHP_wxComboPopup_NAME[] = "wxComboPopup";
-char le_wxComboPopup_name[] = "native wxComboPopup";
-zend_class_entry *php_wxComboPopup_entry;
+zend_class_entry* php_wxComboPopup_entry;
 int le_wxComboPopup;
 
-char PHP_wxDataViewCtrl_NAME[] = "wxDataViewCtrl";
-char le_wxDataViewCtrl_name[] = "native wxDataViewCtrl";
-zend_class_entry *php_wxDataViewCtrl_entry;
+zend_class_entry* php_wxDataViewCtrl_entry;
 int le_wxDataViewCtrl;
 
-char PHP_wxDataViewItem_NAME[] = "wxDataViewItem";
-char le_wxDataViewItem_name[] = "native wxDataViewItem";
-zend_class_entry *php_wxDataViewItem_entry;
+zend_class_entry* php_wxDataViewItem_entry;
 int le_wxDataViewItem;
 
-char PHP_wxDataViewColumn_NAME[] = "wxDataViewColumn";
-char le_wxDataViewColumn_name[] = "native wxDataViewColumn";
-zend_class_entry *php_wxDataViewColumn_entry;
+zend_class_entry* php_wxDataViewColumn_entry;
 int le_wxDataViewColumn;
 
-char PHP_wxDataViewRenderer_NAME[] = "wxDataViewRenderer";
-char le_wxDataViewRenderer_name[] = "native wxDataViewRenderer";
-zend_class_entry *php_wxDataViewRenderer_entry;
+zend_class_entry* php_wxDataViewRenderer_entry;
 int le_wxDataViewRenderer;
 
-char PHP_wxDataViewModel_NAME[] = "wxDataViewModel";
-char le_wxDataViewModel_name[] = "native wxDataViewModel";
-zend_class_entry *php_wxDataViewModel_entry;
+zend_class_entry* php_wxDataViewModel_entry;
 int le_wxDataViewModel;
 
-char PHP_wxDataViewModelNotifier_NAME[] = "wxDataViewModelNotifier";
-char le_wxDataViewModelNotifier_name[] = "native wxDataViewModelNotifier";
-zend_class_entry *php_wxDataViewModelNotifier_entry;
+zend_class_entry* php_wxDataViewModelNotifier_entry;
 int le_wxDataViewModelNotifier;
 
-char PHP_wxRefCounter_NAME[] = "wxRefCounter";
-char le_wxRefCounter_name[] = "native wxRefCounter";
-zend_class_entry *php_wxRefCounter_entry;
+zend_class_entry* php_wxRefCounter_entry;
 int le_wxRefCounter;
 
-char PHP_wxDataViewListCtrl_NAME[] = "wxDataViewListCtrl";
-char le_wxDataViewListCtrl_name[] = "native wxDataViewListCtrl";
-zend_class_entry *php_wxDataViewListCtrl_entry;
+zend_class_entry* php_wxDataViewListCtrl_entry;
 int le_wxDataViewListCtrl;
 
-char PHP_wxDataViewListStore_NAME[] = "wxDataViewListStore";
-char le_wxDataViewListStore_name[] = "native wxDataViewListStore";
-zend_class_entry *php_wxDataViewListStore_entry;
+zend_class_entry* php_wxDataViewListStore_entry;
 int le_wxDataViewListStore;
 
-char PHP_wxDataViewListModel_NAME[] = "wxDataViewListModel";
-char le_wxDataViewListModel_name[] = "native wxDataViewListModel";
-zend_class_entry *php_wxDataViewListModel_entry;
+zend_class_entry* php_wxDataViewListModel_entry;
 int le_wxDataViewListModel;
 
-char PHP_wxDataViewEvent_NAME[] = "wxDataViewEvent";
-char le_wxDataViewEvent_name[] = "native wxDataViewEvent";
-zend_class_entry *php_wxDataViewEvent_entry;
+zend_class_entry* php_wxDataViewEvent_entry;
 int le_wxDataViewEvent;
 
-char PHP_wxDataFormat_NAME[] = "wxDataFormat";
-char le_wxDataFormat_name[] = "native wxDataFormat";
-zend_class_entry *php_wxDataFormat_entry;
+zend_class_entry* php_wxDataFormat_entry;
 int le_wxDataFormat;
 
-char PHP_wxDataInputStream_NAME[] = "wxDataInputStream";
-char le_wxDataInputStream_name[] = "native wxDataInputStream";
-zend_class_entry *php_wxDataInputStream_entry;
+zend_class_entry* php_wxDataInputStream_entry;
 int le_wxDataInputStream;
 
-char PHP_wxDataObject_NAME[] = "wxDataObject";
-char le_wxDataObject_name[] = "native wxDataObject";
-zend_class_entry *php_wxDataObject_entry;
+zend_class_entry* php_wxDataObject_entry;
 int le_wxDataObject;
 
-char PHP_wxDataObjectComposite_NAME[] = "wxDataObjectComposite";
-char le_wxDataObjectComposite_name[] = "native wxDataObjectComposite";
-zend_class_entry *php_wxDataObjectComposite_entry;
+zend_class_entry* php_wxDataObjectComposite_entry;
 int le_wxDataObjectComposite;
 
-char PHP_wxDataObjectSimple_NAME[] = "wxDataObjectSimple";
-char le_wxDataObjectSimple_name[] = "native wxDataObjectSimple";
-zend_class_entry *php_wxDataObjectSimple_entry;
+zend_class_entry* php_wxDataObjectSimple_entry;
 int le_wxDataObjectSimple;
 
-char PHP_wxDataOutputStream_NAME[] = "wxDataOutputStream";
-char le_wxDataOutputStream_name[] = "native wxDataOutputStream";
-zend_class_entry *php_wxDataOutputStream_entry;
+zend_class_entry* php_wxDataOutputStream_entry;
 int le_wxDataOutputStream;
 
-char PHP_wxDataViewBitmapRenderer_NAME[] = "wxDataViewBitmapRenderer";
-char le_wxDataViewBitmapRenderer_name[] = "native wxDataViewBitmapRenderer";
-zend_class_entry *php_wxDataViewBitmapRenderer_entry;
+zend_class_entry* php_wxDataViewBitmapRenderer_entry;
 int le_wxDataViewBitmapRenderer;
 
-char PHP_wxDataViewChoiceRenderer_NAME[] = "wxDataViewChoiceRenderer";
-char le_wxDataViewChoiceRenderer_name[] = "native wxDataViewChoiceRenderer";
-zend_class_entry *php_wxDataViewChoiceRenderer_entry;
+zend_class_entry* php_wxDataViewChoiceRenderer_entry;
 int le_wxDataViewChoiceRenderer;
 
-char PHP_wxDataViewCustomRenderer_NAME[] = "wxDataViewCustomRenderer";
-char le_wxDataViewCustomRenderer_name[] = "native wxDataViewCustomRenderer";
-zend_class_entry *php_wxDataViewCustomRenderer_entry;
+zend_class_entry* php_wxDataViewCustomRenderer_entry;
 int le_wxDataViewCustomRenderer;
 
-char PHP_wxDataViewDateRenderer_NAME[] = "wxDataViewDateRenderer";
-char le_wxDataViewDateRenderer_name[] = "native wxDataViewDateRenderer";
-zend_class_entry *php_wxDataViewDateRenderer_entry;
+zend_class_entry* php_wxDataViewDateRenderer_entry;
 int le_wxDataViewDateRenderer;
 
-char PHP_wxDataViewIconText_NAME[] = "wxDataViewIconText";
-char le_wxDataViewIconText_name[] = "native wxDataViewIconText";
-zend_class_entry *php_wxDataViewIconText_entry;
+zend_class_entry* php_wxDataViewIconText_entry;
 int le_wxDataViewIconText;
 
-char PHP_wxDataViewIconTextRenderer_NAME[] = "wxDataViewIconTextRenderer";
-char le_wxDataViewIconTextRenderer_name[] = "native wxDataViewIconTextRenderer";
-zend_class_entry *php_wxDataViewIconTextRenderer_entry;
+zend_class_entry* php_wxDataViewIconTextRenderer_entry;
 int le_wxDataViewIconTextRenderer;
 
-char PHP_wxDataViewIndexListModel_NAME[] = "wxDataViewIndexListModel";
-char le_wxDataViewIndexListModel_name[] = "native wxDataViewIndexListModel";
-zend_class_entry *php_wxDataViewIndexListModel_entry;
+zend_class_entry* php_wxDataViewIndexListModel_entry;
 int le_wxDataViewIndexListModel;
 
-char PHP_wxDataViewItemAttr_NAME[] = "wxDataViewItemAttr";
-char le_wxDataViewItemAttr_name[] = "native wxDataViewItemAttr";
-zend_class_entry *php_wxDataViewItemAttr_entry;
+zend_class_entry* php_wxDataViewItemAttr_entry;
 int le_wxDataViewItemAttr;
 
-char PHP_wxDataViewProgressRenderer_NAME[] = "wxDataViewProgressRenderer";
-char le_wxDataViewProgressRenderer_name[] = "native wxDataViewProgressRenderer";
-zend_class_entry *php_wxDataViewProgressRenderer_entry;
+zend_class_entry* php_wxDataViewProgressRenderer_entry;
 int le_wxDataViewProgressRenderer;
 
-char PHP_wxDataViewSpinRenderer_NAME[] = "wxDataViewSpinRenderer";
-char le_wxDataViewSpinRenderer_name[] = "native wxDataViewSpinRenderer";
-zend_class_entry *php_wxDataViewSpinRenderer_entry;
+zend_class_entry* php_wxDataViewSpinRenderer_entry;
 int le_wxDataViewSpinRenderer;
 
-char PHP_wxDataViewTextRenderer_NAME[] = "wxDataViewTextRenderer";
-char le_wxDataViewTextRenderer_name[] = "native wxDataViewTextRenderer";
-zend_class_entry *php_wxDataViewTextRenderer_entry;
+zend_class_entry* php_wxDataViewTextRenderer_entry;
 int le_wxDataViewTextRenderer;
 
-char PHP_wxDataViewToggleRenderer_NAME[] = "wxDataViewToggleRenderer";
-char le_wxDataViewToggleRenderer_name[] = "native wxDataViewToggleRenderer";
-zend_class_entry *php_wxDataViewToggleRenderer_entry;
+zend_class_entry* php_wxDataViewToggleRenderer_entry;
 int le_wxDataViewToggleRenderer;
 
-char PHP_wxDataViewTreeCtrl_NAME[] = "wxDataViewTreeCtrl";
-char le_wxDataViewTreeCtrl_name[] = "native wxDataViewTreeCtrl";
-zend_class_entry *php_wxDataViewTreeCtrl_entry;
+zend_class_entry* php_wxDataViewTreeCtrl_entry;
 int le_wxDataViewTreeCtrl;
 
-char PHP_wxDataViewTreeStore_NAME[] = "wxDataViewTreeStore";
-char le_wxDataViewTreeStore_name[] = "native wxDataViewTreeStore";
-zend_class_entry *php_wxDataViewTreeStore_entry;
+zend_class_entry* php_wxDataViewTreeStore_entry;
 int le_wxDataViewTreeStore;
 
-char PHP_wxDataViewVirtualListModel_NAME[] = "wxDataViewVirtualListModel";
-char le_wxDataViewVirtualListModel_name[] = "native wxDataViewVirtualListModel";
-zend_class_entry *php_wxDataViewVirtualListModel_entry;
+zend_class_entry* php_wxDataViewVirtualListModel_entry;
 int le_wxDataViewVirtualListModel;
 
-char PHP_wxVariant_NAME[] = "wxVariant";
-char le_wxVariant_name[] = "native wxVariant";
-zend_class_entry *php_wxVariant_entry;
+zend_class_entry* php_wxVariant_entry;
 int le_wxVariant;
 
-char PHP_wxVariantData_NAME[] = "wxVariantData";
-char le_wxVariantData_name[] = "native wxVariantData";
-zend_class_entry *php_wxVariantData_entry;
+zend_class_entry* php_wxVariantData_entry;
 int le_wxVariantData;
 
-char PHP_wxClassInfo_NAME[] = "wxClassInfo";
-char le_wxClassInfo_name[] = "native wxClassInfo";
-zend_class_entry *php_wxClassInfo_entry;
+zend_class_entry* php_wxClassInfo_entry;
 int le_wxClassInfo;
 
-char PHP_wxColourDatabase_NAME[] = "wxColourDatabase";
-char le_wxColourDatabase_name[] = "native wxColourDatabase";
-zend_class_entry *php_wxColourDatabase_entry;
+zend_class_entry* php_wxColourDatabase_entry;
 int le_wxColourDatabase;
 
-char PHP_wxClipboard_NAME[] = "wxClipboard";
-char le_wxClipboard_name[] = "native wxClipboard";
-zend_class_entry *php_wxClipboard_entry;
+zend_class_entry* php_wxClipboard_entry;
 int le_wxClipboard;
 
-char PHP_wxClipboardTextEvent_NAME[] = "wxClipboardTextEvent";
-char le_wxClipboardTextEvent_name[] = "native wxClipboardTextEvent";
-zend_class_entry *php_wxClipboardTextEvent_entry;
+zend_class_entry* php_wxClipboardTextEvent_entry;
 int le_wxClipboardTextEvent;
 
-char PHP_wxListView_NAME[] = "wxListView";
-char le_wxListView_name[] = "native wxListView";
-zend_class_entry *php_wxListView_entry;
+zend_class_entry* php_wxListView_entry;
 int le_wxListView;
 
-char PHP_wxConfigBase_NAME[] = "wxConfigBase";
-char le_wxConfigBase_name[] = "native wxConfigBase";
-zend_class_entry *php_wxConfigBase_entry;
+zend_class_entry* php_wxConfigBase_entry;
 int le_wxConfigBase;
 
-char PHP_wxHeaderCtrlEvent_NAME[] = "wxHeaderCtrlEvent";
-char le_wxHeaderCtrlEvent_name[] = "native wxHeaderCtrlEvent";
-zend_class_entry *php_wxHeaderCtrlEvent_entry;
+zend_class_entry* php_wxHeaderCtrlEvent_entry;
 int le_wxHeaderCtrlEvent;
 
-char PHP_wxHeaderCtrl_NAME[] = "wxHeaderCtrl";
-char le_wxHeaderCtrl_name[] = "native wxHeaderCtrl";
-zend_class_entry *php_wxHeaderCtrl_entry;
+zend_class_entry* php_wxHeaderCtrl_entry;
 int le_wxHeaderCtrl;
 
-char PHP_wxHeaderColumn_NAME[] = "wxHeaderColumn";
-char le_wxHeaderColumn_name[] = "native wxHeaderColumn";
-zend_class_entry *php_wxHeaderColumn_entry;
+zend_class_entry* php_wxHeaderColumn_entry;
 int le_wxHeaderColumn;
 
-char PHP_wxHeaderCtrlSimple_NAME[] = "wxHeaderCtrlSimple";
-char le_wxHeaderCtrlSimple_name[] = "native wxHeaderCtrlSimple";
-zend_class_entry *php_wxHeaderCtrlSimple_entry;
+zend_class_entry* php_wxHeaderCtrlSimple_entry;
 int le_wxHeaderCtrlSimple;
 
-char PHP_wxHeaderColumnSimple_NAME[] = "wxHeaderColumnSimple";
-char le_wxHeaderColumnSimple_name[] = "native wxHeaderColumnSimple";
-zend_class_entry *php_wxHeaderColumnSimple_entry;
+zend_class_entry* php_wxHeaderColumnSimple_entry;
 int le_wxHeaderColumnSimple;
 
-char PHP_wxSettableHeaderColumn_NAME[] = "wxSettableHeaderColumn";
-char le_wxSettableHeaderColumn_name[] = "native wxSettableHeaderColumn";
-zend_class_entry *php_wxSettableHeaderColumn_entry;
+zend_class_entry* php_wxSettableHeaderColumn_entry;
 int le_wxSettableHeaderColumn;
 
-char PHP_wxSetCursorEvent_NAME[] = "wxSetCursorEvent";
-char le_wxSetCursorEvent_name[] = "native wxSetCursorEvent";
-zend_class_entry *php_wxSetCursorEvent_entry;
+zend_class_entry* php_wxSetCursorEvent_entry;
 int le_wxSetCursorEvent;
 
-char PHP_wxIdleEvent_NAME[] = "wxIdleEvent";
-char le_wxIdleEvent_name[] = "native wxIdleEvent";
-zend_class_entry *php_wxIdleEvent_entry;
+zend_class_entry* php_wxIdleEvent_entry;
 int le_wxIdleEvent;
 
-char PHP_wxPen_NAME[] = "wxPen";
-char le_wxPen_name[] = "native wxPen";
-zend_class_entry *php_wxPen_entry;
+zend_class_entry* php_wxPen_entry;
 int le_wxPen;
 
-char PHP_wxEditableListBox_NAME[] = "wxEditableListBox";
-char le_wxEditableListBox_name[] = "native wxEditableListBox";
-zend_class_entry *php_wxEditableListBox_entry;
+zend_class_entry* php_wxEditableListBox_entry;
 int le_wxEditableListBox;
 
-char PHP_wxFileCtrlEvent_NAME[] = "wxFileCtrlEvent";
-char le_wxFileCtrlEvent_name[] = "native wxFileCtrlEvent";
-zend_class_entry *php_wxFileCtrlEvent_entry;
+zend_class_entry* php_wxFileCtrlEvent_entry;
 int le_wxFileCtrlEvent;
 
-char PHP_wxFileCtrl_NAME[] = "wxFileCtrl";
-char le_wxFileCtrl_name[] = "native wxFileCtrl";
-zend_class_entry *php_wxFileCtrl_entry;
+zend_class_entry* php_wxFileCtrl_entry;
 int le_wxFileCtrl;
 
-char PHP_wxProcess_NAME[] = "wxProcess";
-char le_wxProcess_name[] = "native wxProcess";
-zend_class_entry *php_wxProcess_entry;
+zend_class_entry* php_wxProcess_entry;
 int le_wxProcess;
 
-char PHP_wxTextValidator_NAME[] = "wxTextValidator";
-char le_wxTextValidator_name[] = "native wxTextValidator";
-zend_class_entry *php_wxTextValidator_entry;
+zend_class_entry* php_wxTextValidator_entry;
 int le_wxTextValidator;
 
-char PHP_wxHScrolledWindow_NAME[] = "wxHScrolledWindow";
-char le_wxHScrolledWindow_name[] = "native wxHScrolledWindow";
-zend_class_entry *php_wxHScrolledWindow_entry;
+zend_class_entry* php_wxHScrolledWindow_entry;
 int le_wxHScrolledWindow;
 
-char PHP_wxInfoBar_NAME[] = "wxInfoBar";
-char le_wxInfoBar_name[] = "native wxInfoBar";
-zend_class_entry *php_wxInfoBar_entry;
+zend_class_entry* php_wxInfoBar_entry;
 int le_wxInfoBar;
 
-char PHP_wxRichToolTip_NAME[] = "wxRichToolTip";
-char le_wxRichToolTip_name[] = "native wxRichToolTip";
-zend_class_entry *php_wxRichToolTip_entry;
+zend_class_entry* php_wxRichToolTip_entry;
 int le_wxRichToolTip;
 
-char PHP_wxPosition_NAME[] = "wxPosition";
-char le_wxPosition_name[] = "native wxPosition";
-zend_class_entry *php_wxPosition_entry;
+zend_class_entry* php_wxPosition_entry;
 int le_wxPosition;
 
-char PHP_wxMutex_NAME[] = "wxMutex";
-char le_wxMutex_name[] = "native wxMutex";
-zend_class_entry *php_wxMutex_entry;
+zend_class_entry* php_wxMutex_entry;
 int le_wxMutex;
 
-char PHP_wxMutexLocker_NAME[] = "wxMutexLocker";
-char le_wxMutexLocker_name[] = "native wxMutexLocker";
-zend_class_entry *php_wxMutexLocker_entry;
+zend_class_entry* php_wxMutexLocker_entry;
 int le_wxMutexLocker;
 
-char PHP_wxXmlResource_NAME[] = "wxXmlResource";
-char le_wxXmlResource_name[] = "native wxXmlResource";
-zend_class_entry *php_wxXmlResource_entry;
+zend_class_entry* php_wxXmlResource_entry;
 int le_wxXmlResource;
 
-char PHP_wxGenericValidator_NAME[] = "wxGenericValidator";
-char le_wxGenericValidator_name[] = "native wxGenericValidator";
-zend_class_entry *php_wxGenericValidator_entry;
+zend_class_entry* php_wxGenericValidator_entry;
 int le_wxGenericValidator;
 
-char PHP_wxSashWindow_NAME[] = "wxSashWindow";
-char le_wxSashWindow_name[] = "native wxSashWindow";
-zend_class_entry *php_wxSashWindow_entry;
+zend_class_entry* php_wxSashWindow_entry;
 int le_wxSashWindow;
 
-char PHP_wxSashEvent_NAME[] = "wxSashEvent";
-char le_wxSashEvent_name[] = "native wxSashEvent";
-zend_class_entry *php_wxSashEvent_entry;
+zend_class_entry* php_wxSashEvent_entry;
 int le_wxSashEvent;
 
-char PHP_wxSashLayoutWindow_NAME[] = "wxSashLayoutWindow";
-char le_wxSashLayoutWindow_name[] = "native wxSashLayoutWindow";
-zend_class_entry *php_wxSashLayoutWindow_entry;
+zend_class_entry* php_wxSashLayoutWindow_entry;
 int le_wxSashLayoutWindow;
 
-char PHP_wxSemaphore_NAME[] = "wxSemaphore";
-char le_wxSemaphore_name[] = "native wxSemaphore";
-zend_class_entry *php_wxSemaphore_entry;
+zend_class_entry* php_wxSemaphore_entry;
 int le_wxSemaphore;
 
-char PHP_wxAuiToolBarArt_NAME[] = "wxAuiToolBarArt";
-char le_wxAuiToolBarArt_name[] = "native wxAuiToolBarArt";
-zend_class_entry *php_wxAuiToolBarArt_entry;
+zend_class_entry* php_wxAuiToolBarArt_entry;
 int le_wxAuiToolBarArt;
 
-char PHP_wxBrush_NAME[] = "wxBrush";
-char le_wxBrush_name[] = "native wxBrush";
-zend_class_entry *php_wxBrush_entry;
+zend_class_entry* php_wxBrush_entry;
 int le_wxBrush;
 
-char PHP_wxPlatformInfo_NAME[] = "wxPlatformInfo";
-char le_wxPlatformInfo_name[] = "native wxPlatformInfo";
-zend_class_entry *php_wxPlatformInfo_entry;
+zend_class_entry* php_wxPlatformInfo_entry;
 int le_wxPlatformInfo;
 
-char PHP_wxPageSetupDialog_NAME[] = "wxPageSetupDialog";
-char le_wxPageSetupDialog_name[] = "native wxPageSetupDialog";
-zend_class_entry *php_wxPageSetupDialog_entry;
+zend_class_entry* php_wxPageSetupDialog_entry;
 int le_wxPageSetupDialog;
 
-char PHP_wxPageSetupDialogData_NAME[] = "wxPageSetupDialogData";
-char le_wxPageSetupDialogData_name[] = "native wxPageSetupDialogData";
-zend_class_entry *php_wxPageSetupDialogData_entry;
+zend_class_entry* php_wxPageSetupDialogData_entry;
 int le_wxPageSetupDialogData;
 
-char PHP_wxPrintDialog_NAME[] = "wxPrintDialog";
-char le_wxPrintDialog_name[] = "native wxPrintDialog";
-zend_class_entry *php_wxPrintDialog_entry;
+zend_class_entry* php_wxPrintDialog_entry;
 int le_wxPrintDialog;
 
-char PHP_wxPrintDialogData_NAME[] = "wxPrintDialogData";
-char le_wxPrintDialogData_name[] = "native wxPrintDialogData";
-zend_class_entry *php_wxPrintDialogData_entry;
+zend_class_entry* php_wxPrintDialogData_entry;
 int le_wxPrintDialogData;
 
-char PHP_wxPrintData_NAME[] = "wxPrintData";
-char le_wxPrintData_name[] = "native wxPrintData";
-zend_class_entry *php_wxPrintData_entry;
+zend_class_entry* php_wxPrintData_entry;
 int le_wxPrintData;
 
-char PHP_wxPostScriptDC_NAME[] = "wxPostScriptDC";
-char le_wxPostScriptDC_name[] = "native wxPostScriptDC";
-zend_class_entry *php_wxPostScriptDC_entry;
+zend_class_entry* php_wxPostScriptDC_entry;
 int le_wxPostScriptDC;
 
-char PHP_wxPrintPreview_NAME[] = "wxPrintPreview";
-char le_wxPrintPreview_name[] = "native wxPrintPreview";
-zend_class_entry *php_wxPrintPreview_entry;
+zend_class_entry* php_wxPrintPreview_entry;
 int le_wxPrintPreview;
 
-char PHP_wxPrinter_NAME[] = "wxPrinter";
-char le_wxPrinter_name[] = "native wxPrinter";
-zend_class_entry *php_wxPrinter_entry;
+zend_class_entry* php_wxPrinter_entry;
 int le_wxPrinter;
 
-char PHP_wxPrinterDC_NAME[] = "wxPrinterDC";
-char le_wxPrinterDC_name[] = "native wxPrinterDC";
-zend_class_entry *php_wxPrinterDC_entry;
+zend_class_entry* php_wxPrinterDC_entry;
 int le_wxPrinterDC;
 
-char PHP_wxPrintout_NAME[] = "wxPrintout";
-char le_wxPrintout_name[] = "native wxPrintout";
-zend_class_entry *php_wxPrintout_entry;
+zend_class_entry* php_wxPrintout_entry;
 int le_wxPrintout;
 
-char PHP_wxPreviewFrame_NAME[] = "wxPreviewFrame";
-char le_wxPreviewFrame_name[] = "native wxPreviewFrame";
-zend_class_entry *php_wxPreviewFrame_entry;
+zend_class_entry* php_wxPreviewFrame_entry;
 int le_wxPreviewFrame;
 
-char PHP_wxPreviewControlBar_NAME[] = "wxPreviewControlBar";
-char le_wxPreviewControlBar_name[] = "native wxPreviewControlBar";
-zend_class_entry *php_wxPreviewControlBar_entry;
+zend_class_entry* php_wxPreviewControlBar_entry;
 int le_wxPreviewControlBar;
 
-char PHP_wxPreviewCanvas_NAME[] = "wxPreviewCanvas";
-char le_wxPreviewCanvas_name[] = "native wxPreviewCanvas";
-zend_class_entry *php_wxPreviewCanvas_entry;
+zend_class_entry* php_wxPreviewCanvas_entry;
 int le_wxPreviewCanvas;
 
-char PHP_wxSingleChoiceDialog_NAME[] = "wxSingleChoiceDialog";
-char le_wxSingleChoiceDialog_name[] = "native wxSingleChoiceDialog";
-zend_class_entry *php_wxSingleChoiceDialog_entry;
+zend_class_entry* php_wxSingleChoiceDialog_entry;
 int le_wxSingleChoiceDialog;
 
-char PHP_wxHtmlDCRenderer_NAME[] = "wxHtmlDCRenderer";
-char le_wxHtmlDCRenderer_name[] = "native wxHtmlDCRenderer";
-zend_class_entry *php_wxHtmlDCRenderer_entry;
+zend_class_entry* php_wxHtmlDCRenderer_entry;
 int le_wxHtmlDCRenderer;
 
-char PHP_wxHtmlFilter_NAME[] = "wxHtmlFilter";
-char le_wxHtmlFilter_name[] = "native wxHtmlFilter";
-zend_class_entry *php_wxHtmlFilter_entry;
+zend_class_entry* php_wxHtmlFilter_entry;
 int le_wxHtmlFilter;
 
-char PHP_wxHtmlHelpController_NAME[] = "wxHtmlHelpController";
-char le_wxHtmlHelpController_name[] = "native wxHtmlHelpController";
-zend_class_entry *php_wxHtmlHelpController_entry;
+zend_class_entry* php_wxHtmlHelpController_entry;
 int le_wxHtmlHelpController;
 
-char PHP_wxHtmlHelpData_NAME[] = "wxHtmlHelpData";
-char le_wxHtmlHelpData_name[] = "native wxHtmlHelpData";
-zend_class_entry *php_wxHtmlHelpData_entry;
+zend_class_entry* php_wxHtmlHelpData_entry;
 int le_wxHtmlHelpData;
 
-char PHP_wxHtmlHelpDialog_NAME[] = "wxHtmlHelpDialog";
-char le_wxHtmlHelpDialog_name[] = "native wxHtmlHelpDialog";
-zend_class_entry *php_wxHtmlHelpDialog_entry;
+zend_class_entry* php_wxHtmlHelpDialog_entry;
 int le_wxHtmlHelpDialog;
 
-char PHP_wxHtmlHelpFrame_NAME[] = "wxHtmlHelpFrame";
-char le_wxHtmlHelpFrame_name[] = "native wxHtmlHelpFrame";
-zend_class_entry *php_wxHtmlHelpFrame_entry;
+zend_class_entry* php_wxHtmlHelpFrame_entry;
 int le_wxHtmlHelpFrame;
 
-char PHP_wxHtmlHelpWindow_NAME[] = "wxHtmlHelpWindow";
-char le_wxHtmlHelpWindow_name[] = "native wxHtmlHelpWindow";
-zend_class_entry *php_wxHtmlHelpWindow_entry;
+zend_class_entry* php_wxHtmlHelpWindow_entry;
 int le_wxHtmlHelpWindow;
 
-char PHP_wxHtmlModalHelp_NAME[] = "wxHtmlModalHelp";
-char le_wxHtmlModalHelp_name[] = "native wxHtmlModalHelp";
-zend_class_entry *php_wxHtmlModalHelp_entry;
+zend_class_entry* php_wxHtmlModalHelp_entry;
 int le_wxHtmlModalHelp;
 
-char PHP_wxHtmlPrintout_NAME[] = "wxHtmlPrintout";
-char le_wxHtmlPrintout_name[] = "native wxHtmlPrintout";
-zend_class_entry *php_wxHtmlPrintout_entry;
+zend_class_entry* php_wxHtmlPrintout_entry;
 int le_wxHtmlPrintout;
 
-char PHP_wxHtmlRenderingInfo_NAME[] = "wxHtmlRenderingInfo";
-char le_wxHtmlRenderingInfo_name[] = "native wxHtmlRenderingInfo";
-zend_class_entry *php_wxHtmlRenderingInfo_entry;
+zend_class_entry* php_wxHtmlRenderingInfo_entry;
 int le_wxHtmlRenderingInfo;
 
-char PHP_wxHtmlRenderingStyle_NAME[] = "wxHtmlRenderingStyle";
-char le_wxHtmlRenderingStyle_name[] = "native wxHtmlRenderingStyle";
-zend_class_entry *php_wxHtmlRenderingStyle_entry;
+zend_class_entry* php_wxHtmlRenderingStyle_entry;
 int le_wxHtmlRenderingStyle;
 
-char PHP_wxHtmlTagHandler_NAME[] = "wxHtmlTagHandler";
-char le_wxHtmlTagHandler_name[] = "native wxHtmlTagHandler";
-zend_class_entry *php_wxHtmlTagHandler_entry;
+zend_class_entry* php_wxHtmlTagHandler_entry;
 int le_wxHtmlTagHandler;
 
-char PHP_wxHtmlTagsModule_NAME[] = "wxHtmlTagsModule";
-char le_wxHtmlTagsModule_name[] = "native wxHtmlTagsModule";
-zend_class_entry *php_wxHtmlTagsModule_entry;
+zend_class_entry* php_wxHtmlTagsModule_entry;
 int le_wxHtmlTagsModule;
 
-char PHP_wxModule_NAME[] = "wxModule";
-char le_wxModule_name[] = "native wxModule";
-zend_class_entry *php_wxModule_entry;
+zend_class_entry* php_wxModule_entry;
 int le_wxModule;
 
-char PHP_wxHtmlWidgetCell_NAME[] = "wxHtmlWidgetCell";
-char le_wxHtmlWidgetCell_name[] = "native wxHtmlWidgetCell";
-zend_class_entry *php_wxHtmlWidgetCell_entry;
+zend_class_entry* php_wxHtmlWidgetCell_entry;
 int le_wxHtmlWidgetCell;
 
-char PHP_wxHtmlWinParser_NAME[] = "wxHtmlWinParser";
-char le_wxHtmlWinParser_name[] = "native wxHtmlWinParser";
-zend_class_entry *php_wxHtmlWinParser_entry;
+zend_class_entry* php_wxHtmlWinParser_entry;
 int le_wxHtmlWinParser;
 
-char PHP_wxHtmlWinTagHandler_NAME[] = "wxHtmlWinTagHandler";
-char le_wxHtmlWinTagHandler_name[] = "native wxHtmlWinTagHandler";
-zend_class_entry *php_wxHtmlWinTagHandler_entry;
+zend_class_entry* php_wxHtmlWinTagHandler_entry;
 int le_wxHtmlWinTagHandler;
 
-char PHP_wxAutoBufferedPaintDC_NAME[] = "wxAutoBufferedPaintDC";
-char le_wxAutoBufferedPaintDC_name[] = "native wxAutoBufferedPaintDC";
-zend_class_entry *php_wxAutoBufferedPaintDC_entry;
+zend_class_entry* php_wxAutoBufferedPaintDC_entry;
 int le_wxAutoBufferedPaintDC;
 
-char PHP_wxBufferedDC_NAME[] = "wxBufferedDC";
-char le_wxBufferedDC_name[] = "native wxBufferedDC";
-zend_class_entry *php_wxBufferedDC_entry;
+zend_class_entry* php_wxBufferedDC_entry;
 int le_wxBufferedDC;
 
-char PHP_wxBufferedPaintDC_NAME[] = "wxBufferedPaintDC";
-char le_wxBufferedPaintDC_name[] = "native wxBufferedPaintDC";
-zend_class_entry *php_wxBufferedPaintDC_entry;
+zend_class_entry* php_wxBufferedPaintDC_entry;
 int le_wxBufferedPaintDC;
 
-char PHP_wxClientDC_NAME[] = "wxClientDC";
-char le_wxClientDC_name[] = "native wxClientDC";
-zend_class_entry *php_wxClientDC_entry;
+zend_class_entry* php_wxClientDC_entry;
 int le_wxClientDC;
 
-char PHP_wxPaintEvent_NAME[] = "wxPaintEvent";
-char le_wxPaintEvent_name[] = "native wxPaintEvent";
-zend_class_entry *php_wxPaintEvent_entry;
+zend_class_entry* php_wxPaintEvent_entry;
 int le_wxPaintEvent;
 
-char PHP_wxPaintDC_NAME[] = "wxPaintDC";
-char le_wxPaintDC_name[] = "native wxPaintDC";
-zend_class_entry *php_wxPaintDC_entry;
+zend_class_entry* php_wxPaintDC_entry;
 int le_wxPaintDC;
 
-char PHP_wxMemoryDC_NAME[] = "wxMemoryDC";
-char le_wxMemoryDC_name[] = "native wxMemoryDC";
-zend_class_entry *php_wxMemoryDC_entry;
+zend_class_entry* php_wxMemoryDC_entry;
 int le_wxMemoryDC;
 
-char PHP_wxMirrorDC_NAME[] = "wxMirrorDC";
-char le_wxMirrorDC_name[] = "native wxMirrorDC";
-zend_class_entry *php_wxMirrorDC_entry;
+zend_class_entry* php_wxMirrorDC_entry;
 int le_wxMirrorDC;
 
-char PHP_wxDCClipper_NAME[] = "wxDCClipper";
-char le_wxDCClipper_name[] = "native wxDCClipper";
-zend_class_entry *php_wxDCClipper_entry;
+zend_class_entry* php_wxDCClipper_entry;
 int le_wxDCClipper;
 
-char PHP_wxFontList_NAME[] = "wxFontList";
-char le_wxFontList_name[] = "native wxFontList";
-zend_class_entry *php_wxFontList_entry;
+zend_class_entry* php_wxFontList_entry;
 int le_wxFontList;
 
-char PHP_wxPenList_NAME[] = "wxPenList";
-char le_wxPenList_name[] = "native wxPenList";
-zend_class_entry *php_wxPenList_entry;
+zend_class_entry* php_wxPenList_entry;
 int le_wxPenList;
 
-char PHP_wxPaletteChangedEvent_NAME[] = "wxPaletteChangedEvent";
-char le_wxPaletteChangedEvent_name[] = "native wxPaletteChangedEvent";
-zend_class_entry *php_wxPaletteChangedEvent_entry;
+zend_class_entry* php_wxPaletteChangedEvent_entry;
 int le_wxPaletteChangedEvent;
 
-char PHP_wxRendererNative_NAME[] = "wxRendererNative";
-char le_wxRendererNative_name[] = "native wxRendererNative";
-zend_class_entry *php_wxRendererNative_entry;
+zend_class_entry* php_wxRendererNative_entry;
 int le_wxRendererNative;
 
-char PHP_wxImageHandler_NAME[] = "wxImageHandler";
-char le_wxImageHandler_name[] = "native wxImageHandler";
-zend_class_entry *php_wxImageHandler_entry;
+zend_class_entry* php_wxImageHandler_entry;
 int le_wxImageHandler;
 
-char PHP_wxInitDialogEvent_NAME[] = "wxInitDialogEvent";
-char le_wxInitDialogEvent_name[] = "native wxInitDialogEvent";
-zend_class_entry *php_wxInitDialogEvent_entry;
+zend_class_entry* php_wxInitDialogEvent_entry;
 int le_wxInitDialogEvent;
 
-char PHP_wxMaximizeEvent_NAME[] = "wxMaximizeEvent";
-char le_wxMaximizeEvent_name[] = "native wxMaximizeEvent";
-zend_class_entry *php_wxMaximizeEvent_entry;
+zend_class_entry* php_wxMaximizeEvent_entry;
 int le_wxMaximizeEvent;
 
-char PHP_wxNavigationKeyEvent_NAME[] = "wxNavigationKeyEvent";
-char le_wxNavigationKeyEvent_name[] = "native wxNavigationKeyEvent";
-zend_class_entry *php_wxNavigationKeyEvent_entry;
+zend_class_entry* php_wxNavigationKeyEvent_entry;
 int le_wxNavigationKeyEvent;
 
-char PHP_wxPathList_NAME[] = "wxPathList";
-char le_wxPathList_name[] = "native wxPathList";
-zend_class_entry *php_wxPathList_entry;
+zend_class_entry* php_wxPathList_entry;
 int le_wxPathList;
 
-char PHP_wxCriticalSection_NAME[] = "wxCriticalSection";
-char le_wxCriticalSection_name[] = "native wxCriticalSection";
-zend_class_entry *php_wxCriticalSection_entry;
+zend_class_entry* php_wxCriticalSection_entry;
 int le_wxCriticalSection;
 
-char PHP_wxCriticalSectionLocker_NAME[] = "wxCriticalSectionLocker";
-char le_wxCriticalSectionLocker_name[] = "native wxCriticalSectionLocker";
-zend_class_entry *php_wxCriticalSectionLocker_entry;
+zend_class_entry* php_wxCriticalSectionLocker_entry;
 int le_wxCriticalSectionLocker;
 
-char PHP_wxCondition_NAME[] = "wxCondition";
-char le_wxCondition_name[] = "native wxCondition";
-zend_class_entry *php_wxCondition_entry;
+zend_class_entry* php_wxCondition_entry;
 int le_wxCondition;
 
-char PHP_wxBusyCursor_NAME[] = "wxBusyCursor";
-char le_wxBusyCursor_name[] = "native wxBusyCursor";
-zend_class_entry *php_wxBusyCursor_entry;
+zend_class_entry* php_wxBusyCursor_entry;
 int le_wxBusyCursor;
 
-char PHP_wxBusyInfo_NAME[] = "wxBusyInfo";
-char le_wxBusyInfo_name[] = "native wxBusyInfo";
-zend_class_entry *php_wxBusyInfo_entry;
+zend_class_entry* php_wxBusyInfo_entry;
 int le_wxBusyInfo;
 
-char PHP_wxXmlResourceHandler_NAME[] = "wxXmlResourceHandler";
-char le_wxXmlResourceHandler_name[] = "native wxXmlResourceHandler";
-zend_class_entry *php_wxXmlResourceHandler_entry;
+zend_class_entry* php_wxXmlResourceHandler_entry;
 int le_wxXmlResourceHandler;
 
-char PHP_wxXmlNode_NAME[] = "wxXmlNode";
-char le_wxXmlNode_name[] = "native wxXmlNode";
-zend_class_entry *php_wxXmlNode_entry;
+zend_class_entry* php_wxXmlNode_entry;
 int le_wxXmlNode;
 
-char PHP_wxXmlDocument_NAME[] = "wxXmlDocument";
-char le_wxXmlDocument_name[] = "native wxXmlDocument";
-zend_class_entry *php_wxXmlDocument_entry;
+zend_class_entry* php_wxXmlDocument_entry;
 int le_wxXmlDocument;
 
-char PHP_wxXmlAttribute_NAME[] = "wxXmlAttribute";
-char le_wxXmlAttribute_name[] = "native wxXmlAttribute";
-zend_class_entry *php_wxXmlAttribute_entry;
+zend_class_entry* php_wxXmlAttribute_entry;
 int le_wxXmlAttribute;
 
-char PHP_wxLayoutAlgorithm_NAME[] = "wxLayoutAlgorithm";
-char le_wxLayoutAlgorithm_name[] = "native wxLayoutAlgorithm";
-zend_class_entry *php_wxLayoutAlgorithm_entry;
+zend_class_entry* php_wxLayoutAlgorithm_entry;
 int le_wxLayoutAlgorithm;
 
-char PHP_wxFocusEvent_NAME[] = "wxFocusEvent";
-char le_wxFocusEvent_name[] = "native wxFocusEvent";
-zend_class_entry *php_wxFocusEvent_entry;
+zend_class_entry* php_wxFocusEvent_entry;
 int le_wxFocusEvent;
 
-char PHP_wxFontMapper_NAME[] = "wxFontMapper";
-char le_wxFontMapper_name[] = "native wxFontMapper";
-zend_class_entry *php_wxFontMapper_entry;
+zend_class_entry* php_wxFontMapper_entry;
 int le_wxFontMapper;
 
-char PHP_wxFontEnumerator_NAME[] = "wxFontEnumerator";
-char le_wxFontEnumerator_name[] = "native wxFontEnumerator";
-zend_class_entry *php_wxFontEnumerator_entry;
+zend_class_entry* php_wxFontEnumerator_entry;
 int le_wxFontEnumerator;
 
-char PHP_wxFFileInputStream_NAME[] = "wxFFileInputStream";
-char le_wxFFileInputStream_name[] = "native wxFFileInputStream";
-zend_class_entry *php_wxFFileInputStream_entry;
+zend_class_entry* php_wxFFileInputStream_entry;
 int le_wxFFileInputStream;
 
-char PHP_wxFFileOutputStream_NAME[] = "wxFFileOutputStream";
-char le_wxFFileOutputStream_name[] = "native wxFFileOutputStream";
-zend_class_entry *php_wxFFileOutputStream_entry;
+zend_class_entry* php_wxFFileOutputStream_entry;
 int le_wxFFileOutputStream;
 
-char PHP_wxFFileStream_NAME[] = "wxFFileStream";
-char le_wxFFileStream_name[] = "native wxFFileStream";
-zend_class_entry *php_wxFFileStream_entry;
+zend_class_entry* php_wxFFileStream_entry;
 int le_wxFFileStream;
 
-char PHP_wxFile_NAME[] = "wxFile";
-char le_wxFile_name[] = "native wxFile";
-zend_class_entry *php_wxFile_entry;
+zend_class_entry* php_wxFile_entry;
 int le_wxFile;
 
-char PHP_wxFileConfig_NAME[] = "wxFileConfig";
-char le_wxFileConfig_name[] = "native wxFileConfig";
-zend_class_entry *php_wxFileConfig_entry;
+zend_class_entry* php_wxFileConfig_entry;
 int le_wxFileConfig;
 
-char PHP_wxFileDirPickerEvent_NAME[] = "wxFileDirPickerEvent";
-char le_wxFileDirPickerEvent_name[] = "native wxFileDirPickerEvent";
-zend_class_entry *php_wxFileDirPickerEvent_entry;
+zend_class_entry* php_wxFileDirPickerEvent_entry;
 int le_wxFileDirPickerEvent;
 
-char PHP_wxFileHistory_NAME[] = "wxFileHistory";
-char le_wxFileHistory_name[] = "native wxFileHistory";
-zend_class_entry *php_wxFileHistory_entry;
+zend_class_entry* php_wxFileHistory_entry;
 int le_wxFileHistory;
 
-char PHP_wxFileInputStream_NAME[] = "wxFileInputStream";
-char le_wxFileInputStream_name[] = "native wxFileInputStream";
-zend_class_entry *php_wxFileInputStream_entry;
+zend_class_entry* php_wxFileInputStream_entry;
 int le_wxFileInputStream;
 
-char PHP_wxFileDropTarget_NAME[] = "wxFileDropTarget";
-char le_wxFileDropTarget_name[] = "native wxFileDropTarget";
-zend_class_entry *php_wxFileDropTarget_entry;
+zend_class_entry* php_wxFileDropTarget_entry;
 int le_wxFileDropTarget;
 
-char PHP_wxFileOutputStream_NAME[] = "wxFileOutputStream";
-char le_wxFileOutputStream_name[] = "native wxFileOutputStream";
-zend_class_entry *php_wxFileOutputStream_entry;
+zend_class_entry* php_wxFileOutputStream_entry;
 int le_wxFileOutputStream;
 
-char PHP_wxFileStream_NAME[] = "wxFileStream";
-char le_wxFileStream_name[] = "native wxFileStream";
-zend_class_entry *php_wxFileStream_entry;
+zend_class_entry* php_wxFileStream_entry;
 int le_wxFileStream;
 
-char PHP_wxFileSystemWatcher_NAME[] = "wxFileSystemWatcher";
-char le_wxFileSystemWatcher_name[] = "native wxFileSystemWatcher";
-zend_class_entry *php_wxFileSystemWatcher_entry;
+zend_class_entry* php_wxFileSystemWatcher_entry;
 int le_wxFileSystemWatcher;
 
-char PHP_wxFileSystemWatcherEvent_NAME[] = "wxFileSystemWatcherEvent";
-char le_wxFileSystemWatcherEvent_name[] = "native wxFileSystemWatcherEvent";
-zend_class_entry *php_wxFileSystemWatcherEvent_entry;
+zend_class_entry* php_wxFileSystemWatcherEvent_entry;
 int le_wxFileSystemWatcherEvent;
 
-char PHP_wxFileType_NAME[] = "wxFileType";
-char le_wxFileType_name[] = "native wxFileType";
-zend_class_entry *php_wxFileType_entry;
+zend_class_entry* php_wxFileType_entry;
 int le_wxFileType;
 
-char PHP_wxFileTypeInfo_NAME[] = "wxFileTypeInfo";
-char le_wxFileTypeInfo_name[] = "native wxFileTypeInfo";
-zend_class_entry *php_wxFileTypeInfo_entry;
+zend_class_entry* php_wxFileTypeInfo_entry;
 int le_wxFileTypeInfo;
 
-char PHP_wxStopWatch_NAME[] = "wxStopWatch";
-char le_wxStopWatch_name[] = "native wxStopWatch";
-zend_class_entry *php_wxStopWatch_entry;
+zend_class_entry* php_wxStopWatch_entry;
 int le_wxStopWatch;
 
-char PHP_wxSingleInstanceChecker_NAME[] = "wxSingleInstanceChecker";
-char le_wxSingleInstanceChecker_name[] = "native wxSingleInstanceChecker";
-zend_class_entry *php_wxSingleInstanceChecker_entry;
+zend_class_entry* php_wxSingleInstanceChecker_entry;
 int le_wxSingleInstanceChecker;
 
-char PHP_wxStandardPaths_NAME[] = "wxStandardPaths";
-char le_wxStandardPaths_name[] = "native wxStandardPaths";
-zend_class_entry *php_wxStandardPaths_entry;
+zend_class_entry* php_wxStandardPaths_entry;
 int le_wxStandardPaths;
 
-char PHP_wxLog_NAME[] = "wxLog";
-char le_wxLog_name[] = "native wxLog";
-zend_class_entry *php_wxLog_entry;
+zend_class_entry* php_wxLog_entry;
 int le_wxLog;
 
-char PHP_wxLogBuffer_NAME[] = "wxLogBuffer";
-char le_wxLogBuffer_name[] = "native wxLogBuffer";
-zend_class_entry *php_wxLogBuffer_entry;
+zend_class_entry* php_wxLogBuffer_entry;
 int le_wxLogBuffer;
 
-char PHP_wxLogChain_NAME[] = "wxLogChain";
-char le_wxLogChain_name[] = "native wxLogChain";
-zend_class_entry *php_wxLogChain_entry;
+zend_class_entry* php_wxLogChain_entry;
 int le_wxLogChain;
 
-char PHP_wxLogGui_NAME[] = "wxLogGui";
-char le_wxLogGui_name[] = "native wxLogGui";
-zend_class_entry *php_wxLogGui_entry;
+zend_class_entry* php_wxLogGui_entry;
 int le_wxLogGui;
 
-char PHP_wxLogInterposer_NAME[] = "wxLogInterposer";
-char le_wxLogInterposer_name[] = "native wxLogInterposer";
-zend_class_entry *php_wxLogInterposer_entry;
+zend_class_entry* php_wxLogInterposer_entry;
 int le_wxLogInterposer;
 
-char PHP_wxLogWindow_NAME[] = "wxLogWindow";
-char le_wxLogWindow_name[] = "native wxLogWindow";
-zend_class_entry *php_wxLogWindow_entry;
+zend_class_entry* php_wxLogWindow_entry;
 int le_wxLogWindow;
 
-char PHP_wxLogTextCtrl_NAME[] = "wxLogTextCtrl";
-char le_wxLogTextCtrl_name[] = "native wxLogTextCtrl";
-zend_class_entry *php_wxLogTextCtrl_entry;
+zend_class_entry* php_wxLogTextCtrl_entry;
 int le_wxLogTextCtrl;
 
-char PHP_wxTextDataObject_NAME[] = "wxTextDataObject";
-char le_wxTextDataObject_name[] = "native wxTextDataObject";
-zend_class_entry *php_wxTextDataObject_entry;
+zend_class_entry* php_wxTextDataObject_entry;
 int le_wxTextDataObject;
 
-char PHP_wxFileDataObject_NAME[] = "wxFileDataObject";
-char le_wxFileDataObject_name[] = "native wxFileDataObject";
-zend_class_entry *php_wxFileDataObject_entry;
+zend_class_entry* php_wxFileDataObject_entry;
 int le_wxFileDataObject;
 
-char PHP_wxBitmapDataObject_NAME[] = "wxBitmapDataObject";
-char le_wxBitmapDataObject_name[] = "native wxBitmapDataObject";
-zend_class_entry *php_wxBitmapDataObject_entry;
+zend_class_entry* php_wxBitmapDataObject_entry;
 int le_wxBitmapDataObject;
 
-char PHP_wxURLDataObject_NAME[] = "wxURLDataObject";
-char le_wxURLDataObject_name[] = "native wxURLDataObject";
-zend_class_entry *php_wxURLDataObject_entry;
+zend_class_entry* php_wxURLDataObject_entry;
 int le_wxURLDataObject;
 
-char PHP_wxCustomDataObject_NAME[] = "wxCustomDataObject";
-char le_wxCustomDataObject_name[] = "native wxCustomDataObject";
-zend_class_entry *php_wxCustomDataObject_entry;
+zend_class_entry* php_wxCustomDataObject_entry;
 int le_wxCustomDataObject;
 
-char PHP_wxTextDropTarget_NAME[] = "wxTextDropTarget";
-char le_wxTextDropTarget_name[] = "native wxTextDropTarget";
-zend_class_entry *php_wxTextDropTarget_entry;
+zend_class_entry* php_wxTextDropTarget_entry;
 int le_wxTextDropTarget;
 
-char PHP_wxDisplay_NAME[] = "wxDisplay";
-char le_wxDisplay_name[] = "native wxDisplay";
-zend_class_entry *php_wxDisplay_entry;
+zend_class_entry* php_wxDisplay_entry;
 int le_wxDisplay;
 
-char PHP_wxDisplayChangedEvent_NAME[] = "wxDisplayChangedEvent";
-char le_wxDisplayChangedEvent_name[] = "native wxDisplayChangedEvent";
-zend_class_entry *php_wxDisplayChangedEvent_entry;
+zend_class_entry* php_wxDisplayChangedEvent_entry;
 int le_wxDisplayChangedEvent;
 
-char PHP_wxCalculateLayoutEvent_NAME[] = "wxCalculateLayoutEvent";
-char le_wxCalculateLayoutEvent_name[] = "native wxCalculateLayoutEvent";
-zend_class_entry *php_wxCalculateLayoutEvent_entry;
+zend_class_entry* php_wxCalculateLayoutEvent_entry;
 int le_wxCalculateLayoutEvent;
 
-char PHP_wxContextMenuEvent_NAME[] = "wxContextMenuEvent";
-char le_wxContextMenuEvent_name[] = "native wxContextMenuEvent";
-zend_class_entry *php_wxContextMenuEvent_entry;
+zend_class_entry* php_wxContextMenuEvent_entry;
 int le_wxContextMenuEvent;
 
-char PHP_wxQueryLayoutInfoEvent_NAME[] = "wxQueryLayoutInfoEvent";
-char le_wxQueryLayoutInfoEvent_name[] = "native wxQueryLayoutInfoEvent";
-zend_class_entry *php_wxQueryLayoutInfoEvent_entry;
+zend_class_entry* php_wxQueryLayoutInfoEvent_entry;
 int le_wxQueryLayoutInfoEvent;
 
-char PHP_wxToolbook_NAME[] = "wxToolbook";
-char le_wxToolbook_name[] = "native wxToolbook";
-zend_class_entry *php_wxToolbook_entry;
+zend_class_entry* php_wxToolbook_entry;
 int le_wxToolbook;
 
-char PHP_wxVideoMode_NAME[] = "wxVideoMode";
-char le_wxVideoMode_name[] = "native wxVideoMode";
-zend_class_entry *php_wxVideoMode_entry;
+zend_class_entry* php_wxVideoMode_entry;
 int le_wxVideoMode;
 
-char PHP_wxRibbonControl_NAME[] = "wxRibbonControl";
-char le_wxRibbonControl_name[] = "native wxRibbonControl";
-zend_class_entry *php_wxRibbonControl_entry;
+zend_class_entry* php_wxRibbonControl_entry;
 int le_wxRibbonControl;
 
-char PHP_wxRibbonBar_NAME[] = "wxRibbonBar";
-char le_wxRibbonBar_name[] = "native wxRibbonBar";
-zend_class_entry *php_wxRibbonBar_entry;
+zend_class_entry* php_wxRibbonBar_entry;
 int le_wxRibbonBar;
 
-char PHP_wxRibbonBarEvent_NAME[] = "wxRibbonBarEvent";
-char le_wxRibbonBarEvent_name[] = "native wxRibbonBarEvent";
-zend_class_entry *php_wxRibbonBarEvent_entry;
+zend_class_entry* php_wxRibbonBarEvent_entry;
 int le_wxRibbonBarEvent;
 
-char PHP_wxRibbonButtonBar_NAME[] = "wxRibbonButtonBar";
-char le_wxRibbonButtonBar_name[] = "native wxRibbonButtonBar";
-zend_class_entry *php_wxRibbonButtonBar_entry;
+zend_class_entry* php_wxRibbonButtonBar_entry;
 int le_wxRibbonButtonBar;
 
-char PHP_wxRibbonButtonBarEvent_NAME[] = "wxRibbonButtonBarEvent";
-char le_wxRibbonButtonBarEvent_name[] = "native wxRibbonButtonBarEvent";
-zend_class_entry *php_wxRibbonButtonBarEvent_entry;
+zend_class_entry* php_wxRibbonButtonBarEvent_entry;
 int le_wxRibbonButtonBarEvent;
 
-char PHP_wxRibbonArtProvider_NAME[] = "wxRibbonArtProvider";
-char le_wxRibbonArtProvider_name[] = "native wxRibbonArtProvider";
-zend_class_entry *php_wxRibbonArtProvider_entry;
+zend_class_entry* php_wxRibbonArtProvider_entry;
 int le_wxRibbonArtProvider;
 
-char PHP_wxRibbonGallery_NAME[] = "wxRibbonGallery";
-char le_wxRibbonGallery_name[] = "native wxRibbonGallery";
-zend_class_entry *php_wxRibbonGallery_entry;
+zend_class_entry* php_wxRibbonGallery_entry;
 int le_wxRibbonGallery;
 
-char PHP_wxRibbonGalleryEvent_NAME[] = "wxRibbonGalleryEvent";
-char le_wxRibbonGalleryEvent_name[] = "native wxRibbonGalleryEvent";
-zend_class_entry *php_wxRibbonGalleryEvent_entry;
+zend_class_entry* php_wxRibbonGalleryEvent_entry;
 int le_wxRibbonGalleryEvent;
 
-char PHP_wxRibbonPage_NAME[] = "wxRibbonPage";
-char le_wxRibbonPage_name[] = "native wxRibbonPage";
-zend_class_entry *php_wxRibbonPage_entry;
+zend_class_entry* php_wxRibbonPage_entry;
 int le_wxRibbonPage;
 
-char PHP_wxRibbonPanel_NAME[] = "wxRibbonPanel";
-char le_wxRibbonPanel_name[] = "native wxRibbonPanel";
-zend_class_entry *php_wxRibbonPanel_entry;
+zend_class_entry* php_wxRibbonPanel_entry;
 int le_wxRibbonPanel;
 
-char PHP_wxRibbonToolBar_NAME[] = "wxRibbonToolBar";
-char le_wxRibbonToolBar_name[] = "native wxRibbonToolBar";
-zend_class_entry *php_wxRibbonToolBar_entry;
+zend_class_entry* php_wxRibbonToolBar_entry;
 int le_wxRibbonToolBar;
 
-char PHP_wxTaskBarIcon_NAME[] = "wxTaskBarIcon";
-char le_wxTaskBarIcon_name[] = "native wxTaskBarIcon";
-zend_class_entry *php_wxTaskBarIcon_entry;
+zend_class_entry* php_wxTaskBarIcon_entry;
 int le_wxTaskBarIcon;
 
-char PHP_wxTaskBarIconEvent_NAME[] = "wxTaskBarIconEvent";
-char le_wxTaskBarIconEvent_name[] = "native wxTaskBarIconEvent";
-zend_class_entry *php_wxTaskBarIconEvent_entry;
+zend_class_entry* php_wxTaskBarIconEvent_entry;
 int le_wxTaskBarIconEvent;
 
-char PHP_wxTimerRunner_NAME[] = "wxTimerRunner";
-char le_wxTimerRunner_name[] = "native wxTimerRunner";
-zend_class_entry *php_wxTimerRunner_entry;
+zend_class_entry* php_wxTimerRunner_entry;
 int le_wxTimerRunner;
 
-char PHP_wxNotificationMessage_NAME[] = "wxNotificationMessage";
-char le_wxNotificationMessage_name[] = "native wxNotificationMessage";
-zend_class_entry *php_wxNotificationMessage_entry;
+zend_class_entry* php_wxNotificationMessage_entry;
 int le_wxNotificationMessage;
 
-char PHP_wxSystemOptions_NAME[] = "wxSystemOptions";
-char le_wxSystemOptions_name[] = "native wxSystemOptions";
-zend_class_entry *php_wxSystemOptions_entry;
+zend_class_entry* php_wxSystemOptions_entry;
 int le_wxSystemOptions;
 
-char PHP_wxSystemSettings_NAME[] = "wxSystemSettings";
-char le_wxSystemSettings_name[] = "native wxSystemSettings";
-zend_class_entry *php_wxSystemSettings_entry;
+zend_class_entry* php_wxSystemSettings_entry;
 int le_wxSystemSettings;
 
-char PHP_wxWindowDisabler_NAME[] = "wxWindowDisabler";
-char le_wxWindowDisabler_name[] = "native wxWindowDisabler";
-zend_class_entry *php_wxWindowDisabler_entry;
+zend_class_entry* php_wxWindowDisabler_entry;
 int le_wxWindowDisabler;
 
-char PHP_wxGenericProgressDialog_NAME[] = "wxGenericProgressDialog";
-char le_wxGenericProgressDialog_name[] = "native wxGenericProgressDialog";
-zend_class_entry *php_wxGenericProgressDialog_entry;
+zend_class_entry* php_wxGenericProgressDialog_entry;
 int le_wxGenericProgressDialog;
 
-char PHP_wxToolBarToolBase_NAME[] = "wxToolBarToolBase";
-char le_wxToolBarToolBase_name[] = "native wxToolBarToolBase";
-zend_class_entry *php_wxToolBarToolBase_entry;
+zend_class_entry* php_wxToolBarToolBase_entry;
 int le_wxToolBarToolBase;
 
 
 /**
  * Predefined handcoded class entry for wxApp
  */
-char PHP_wxApp_NAME[] = "wxApp";
-char le_wxApp_name[] = "native wxApp";
 zend_class_entry *php_wxApp_entry;
 int le_wxApp;
 
 /**
- * Predefined handcoded set of functions
+ * Custom function to register global objects as constants
  */
-PHP_FUNCTION(php_wxInitialize)
+BEGIN_EXTERN_C()
+void wxphp_register_resource_constant(const char *name, uint name_len, void* resource, zend_class_entry* class_entry, int list_entry, int flags, int module_number TSRMLS_DC)
 {
-	wxInitAllImageHandlers();
-	RETVAL_BOOL(wxInitialize());
-}
-
-PHP_FUNCTION(php_wxInitAllImageHandlers)
-{
-	wxInitAllImageHandlers();
-	RETVAL_TRUE;
-}
-
-PHP_FUNCTION(php_wxExecute)
-{
-	char* _argStr0;
-	int _argStr0_len;
-	
-	char parse_parameters[] = "s";
-    
-	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, parse_parameters, &_argStr0 , &_argStr0_len ) == SUCCESS)
-	{
-		long ret0;
-		ret0 = wxExecute(wxString(_argStr0, wxConvUTF8));
-		
-		RETURN_LONG((long)ret0)
-	}
-}
-
-PHP_FUNCTION(php_wxEntry)
-{
-	int argc = 1;
-	char application_name[] = "wxPHP";
-	char *argv[2] = { application_name, NULL };
-	
-	RETVAL_LONG(wxEntry(argc,argv));
-}
-
-PHP_FUNCTION(php_wxAboutBox)
-{
-    zval **tmp;
-	int id_to_find;
-	wxAboutDialogInfo *property;
-	zval *objvar;
+	zend_constant c;
 	char _wxResource[] = "wxResource";
 	
-	char parse_parameters[] = "O";
+	object_init_ex(&c.value, class_entry);
+	add_property_resource(&c.value, _wxResource, zend_list_insert(resource, list_entry));
 	
-	if(zend_parse_parameters(ZEND_NUM_ARGS() TSRMLS_CC, parse_parameters, &objvar, php_wxAboutDialogInfo_entry) == FAILURE)
-	{
-		RETURN_NULL();
-	}
-	
-	if(zend_hash_find(Z_OBJPROP_P(objvar), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE) 
-	{
-		return;
-	}
-	
-	id_to_find = Z_LVAL_PP(tmp);
-	
-	property = (wxAboutDialogInfo*) zend_list_find(id_to_find, &le_wxAboutDialogInfo);
-	
-	wxAboutBox(*property);
+	c.value.type = IS_OBJECT;
+	c.flags = flags;
+	c.name = zend_strndup(name, name_len-1);
+	c.name_len = name_len;
+	c.module_number = module_number;
+	zend_register_constant(&c TSRMLS_CC);
 }
+END_EXTERN_C()
 
 /**
- * Space reserved for autogenerated functions
+ * Global functions table entry used on the module initialization code
  */
-PHP_FUNCTION(php_wxHandleFatalExceptions)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxHandleFatalExceptions\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool doIt0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 0  && arguments_received <= 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '|b' (&doIt0)\n");
-		#endif
-		char parse_parameters_string[] = "|b";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &doIt0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxHandleFatalExceptions())\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxHandleFatalExceptions());
-
-
-				return;
-				break;
-			}
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxHandleFatalExceptions(doIt0))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxHandleFatalExceptions(doIt0));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxUninitialize)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxUninitialize\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-	//Parameters for overload 1
-	bool overload1_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload1_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxUninitialize()\n\n");
-				#endif
-				wxUninitialize();
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxUninitialize()\n\n");
-				#endif
-				wxUninitialize();
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxWakeUpIdle)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxWakeUpIdle\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxWakeUpIdle()\n\n");
-				#endif
-				wxWakeUpIdle();
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxYield)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxYield\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxYield())\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxYield());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxSafeYield)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxSafeYield\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	zval* win0 = 0;
-	void* object_pointer0_0 = 0;
-	bool onlyIfNeeded0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 0  && arguments_received <= 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '|zb' (&win0, &onlyIfNeeded0)\n");
-		#endif
-		char parse_parameters_string[] = "|zb";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &win0, &onlyIfNeeded0 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(win0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(win0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(win0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxSafeYield())\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxSafeYield());
-
-
-				return;
-				break;
-			}
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxSafeYield((wxWindow*) object_pointer0_0))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxSafeYield((wxWindow*) object_pointer0_0));
-
-
-				return;
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxSafeYield((wxWindow*) object_pointer0_0, onlyIfNeeded0))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxSafeYield((wxWindow*) object_pointer0_0, onlyIfNeeded0));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxExit)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxExit\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxExit()\n\n");
-				#endif
-				wxExit();
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxFromString)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxFromString\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* string0;
-	long string_len0;
-	zval* font0 = 0;
-	void* object_pointer0_1 = 0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	char* string1;
-	long string_len1;
-	zval* colour1 = 0;
-	void* object_pointer1_1 = 0;
-	bool overload1_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'sz' (&string0, &string_len0, &font0)\n");
-		#endif
-		char parse_parameters_string[] = "sz";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &string0, &string_len0, &font0 ) == SUCCESS)
-		{
-			if(arguments_received >= 2){
-				if(Z_TYPE_P(font0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(font0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_1 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_1 )
-					{
-						goto overload1;
-					}
-				}
-				else if(Z_TYPE_P(font0) != IS_NULL)
-				{
-						goto overload1;
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'sz' (&string1, &string_len1, &colour1)\n");
-		#endif
-		char parse_parameters_string[] = "sz";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &string1, &string_len1, &colour1 ) == SUCCESS)
-		{
-			if(arguments_received >= 2){
-				if(Z_TYPE_P(colour1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(colour1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer1_1 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer1_1 )
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(colour1) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload1_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxFromString(wxString(string0, wxConvUTF8), (wxFont*) object_pointer0_1))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxFromString(wxString(string0, wxConvUTF8), (wxFont*) object_pointer0_1));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxFromString(wxString(string1, wxConvUTF8), (wxColour*) object_pointer1_1))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxFromString(wxString(string1, wxConvUTF8), (wxColour*) object_pointer1_1));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxToString)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxToString\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	zval* font0 = 0;
-	void* object_pointer0_0 = 0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	zval* colour1 = 0;
-	void* object_pointer1_0 = 0;
-	bool overload1_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&font0, php_wxFont_entry)\n");
-		#endif
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &font0, php_wxFont_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(font0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(font0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 )
-					{
-						goto overload1;
-					}
-				}
-				else if(Z_TYPE_P(font0) != IS_NULL)
-				{
-						goto overload1;
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&colour1, php_wxColour_entry)\n");
-		#endif
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &colour1, php_wxColour_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(colour1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(colour1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer1_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer1_0 )
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(colour1) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload1_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxToString(*(wxFont*) object_pointer0_0).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return1;
-				value_to_return1 = wxToString(*(wxFont*) object_pointer0_0);
-				char* temp_string1;
-				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
-				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
-				ZVAL_STRING(return_value, temp_string1, 1);
-				free(temp_string1);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxToString(*(wxColour*) object_pointer1_0).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return1;
-				value_to_return1 = wxToString(*(wxColour*) object_pointer1_0);
-				char* temp_string1;
-				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
-				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
-				ZVAL_STRING(return_value, temp_string1, 1);
-				free(temp_string1);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxSafeShowMessage)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxSafeShowMessage\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* title0;
-	long title_len0;
-	char* text0;
-	long text_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ss' (&title0, &title_len0, &text0, &text_len0)\n");
-		#endif
-		char parse_parameters_string[] = "ss";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &title0, &title_len0, &text0, &text_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxSafeShowMessage(wxString(title0, wxConvUTF8), wxString(text0, wxConvUTF8))\n\n");
-				#endif
-				wxSafeShowMessage(wxString(title0, wxConvUTF8), wxString(text0, wxConvUTF8));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxSysErrorCode)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxSysErrorCode\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxSysErrorCode())\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxSysErrorCode());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxIsMainThread)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxIsMainThread\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxIsMainThread())\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxIsMainThread());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxMutexGuiEnter)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxMutexGuiEnter\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxMutexGuiEnter()\n\n");
-				#endif
-				wxMutexGuiEnter();
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxMutexGuiLeave)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxMutexGuiLeave\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxMutexGuiLeave()\n\n");
-				#endif
-				wxMutexGuiLeave();
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxBase64Encode)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxBase64Encode\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* dst0;
-	long dst_len0;
-	zval* dst0_ref;
-	long dstLen0;
-	char* src0;
-	long src_len0;
-	long srcLen0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	char* src1;
-	long src_len1;
-	long srcLen1;
-	bool overload1_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 4)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'slsl' (&dst0, &dst_len0, &dstLen0, &src0, &src_len0, &srcLen0)\n");
-		#endif
-		char parse_parameters_string[] = "slsl";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dst0, &dst_len0, &dstLen0, &src0, &src_len0, &srcLen0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "zzzz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &dst0_ref, &dummy, &dummy, &dummy );
-		}
-	}
-
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'sl' (&src1, &src_len1, &srcLen1)\n");
-		#endif
-		char parse_parameters_string[] = "sl";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &src1, &src_len1, &srcLen1 ) == SUCCESS)
-		{
-			overload1_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 4:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxBase64Encode(dst0, (size_t) dstLen0, (const void*) src0, (size_t) srcLen0))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxBase64Encode(dst0, (size_t) dstLen0, (const void*) src0, (size_t) srcLen0));
-
-				ZVAL_STRING(dst0_ref, dst0, 1);
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxBase64Encode((const void*) src1, (size_t) srcLen1).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return2;
-				value_to_return2 = wxBase64Encode((const void*) src1, (size_t) srcLen1);
-				char* temp_string2;
-				temp_string2 = (char*)malloc(sizeof(wxChar)*(value_to_return2.size()+1));
-				strcpy (temp_string2, (const char *) value_to_return2.char_str() );
-				ZVAL_STRING(return_value, temp_string2, 1);
-				free(temp_string2);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxBase64DecodedSize)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxBase64DecodedSize\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	long srcLen0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l' (&srcLen0)\n");
-		#endif
-		char parse_parameters_string[] = "l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &srcLen0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxBase64DecodedSize((size_t) srcLen0))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxBase64DecodedSize((size_t) srcLen0));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxBase64EncodedSize)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxBase64EncodedSize\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	long len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l' (&len0)\n");
-		#endif
-		char parse_parameters_string[] = "l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxBase64EncodedSize((size_t) len0))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxBase64EncodedSize((size_t) len0));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxBase64Decode)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxBase64Decode\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* dst0;
-	long dst_len0;
-	zval* dst0_ref;
-	long dstLen0;
-	char* src0;
-	long src_len0;
-	long srcLen0;
-	long mode0;
-	long* posErr0;
-	zval* posErr0_ref;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	char* dst1;
-	long dst_len1;
-	zval* dst1_ref;
-	long dstLen1;
-	char* str1;
-	long str_len1;
-	long mode1;
-	long* posErr1;
-	zval* posErr1_ref;
-	bool overload1_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 3  && arguments_received <= 6)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'sls|lll' (&dst0, &dst_len0, &dstLen0, &src0, &src_len0, &srcLen0, &mode0, posErr0)\n");
-		#endif
-		char parse_parameters_string[] = "sls|lll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dst0, &dst_len0, &dstLen0, &src0, &src_len0, &srcLen0, &mode0, posErr0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "zzz|zzz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &dst0_ref, &dummy, &dummy, &dummy, &dummy, &posErr0_ref );
-		}
-	}
-
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received >= 3  && arguments_received <= 5)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'sls|ll' (&dst1, &dst_len1, &dstLen1, &str1, &str_len1, &mode1, posErr1)\n");
-		#endif
-		char parse_parameters_string[] = "sls|ll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dst1, &dst_len1, &dstLen1, &str1, &str_len1, &mode1, posErr1 ) == SUCCESS)
-		{
-			overload1_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "zzz|zz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &dst1_ref, &dummy, &dummy, &dummy, &posErr1_ref );
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxBase64Decode((void*) dst0, (size_t) dstLen0, src0))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxBase64Decode((void*) dst0, (size_t) dstLen0, src0));
-
-				ZVAL_STRING(dst0_ref, (char*) dst0, 1);
-
-				return;
-				break;
-			}
-			case 4:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxBase64Decode((void*) dst0, (size_t) dstLen0, src0, (size_t) srcLen0))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxBase64Decode((void*) dst0, (size_t) dstLen0, src0, (size_t) srcLen0));
-
-				ZVAL_STRING(dst0_ref, (char*) dst0, 1);
-
-				return;
-				break;
-			}
-			case 5:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxBase64Decode((void*) dst0, (size_t) dstLen0, src0, (size_t) srcLen0, (wxBase64DecodeMode) mode0))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxBase64Decode((void*) dst0, (size_t) dstLen0, src0, (size_t) srcLen0, (wxBase64DecodeMode) mode0));
-
-				ZVAL_STRING(dst0_ref, (char*) dst0, 1);
-
-				return;
-				break;
-			}
-			case 6:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxBase64Decode((void*) dst0, (size_t) dstLen0, src0, (size_t) srcLen0, (wxBase64DecodeMode) mode0, (size_t*) posErr0))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxBase64Decode((void*) dst0, (size_t) dstLen0, src0, (size_t) srcLen0, (wxBase64DecodeMode) mode0, (size_t*) posErr0));
-
-				ZVAL_STRING(dst0_ref, (char*) dst0, 1);
-				size_t elements_returned0_5 = sizeof(posErr0)/sizeof(*posErr0);
-				array_init(posErr0_ref);
-				for(size_t i=0; i<elements_returned0_5; i++)
-				{
-					add_next_index_long(posErr0_ref, posErr0[i]);
-				}
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxBase64Decode((void*) dst1, (size_t) dstLen1, wxString(str1, wxConvUTF8)))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxBase64Decode((void*) dst1, (size_t) dstLen1, wxString(str1, wxConvUTF8)));
-
-				ZVAL_STRING(dst1_ref, (char*) dst1, 1);
-
-				return;
-				break;
-			}
-			case 4:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxBase64Decode((void*) dst1, (size_t) dstLen1, wxString(str1, wxConvUTF8), (wxBase64DecodeMode) mode1))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxBase64Decode((void*) dst1, (size_t) dstLen1, wxString(str1, wxConvUTF8), (wxBase64DecodeMode) mode1));
-
-				ZVAL_STRING(dst1_ref, (char*) dst1, 1);
-
-				return;
-				break;
-			}
-			case 5:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxBase64Decode((void*) dst1, (size_t) dstLen1, wxString(str1, wxConvUTF8), (wxBase64DecodeMode) mode1, (size_t*) posErr1))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxBase64Decode((void*) dst1, (size_t) dstLen1, wxString(str1, wxConvUTF8), (wxBase64DecodeMode) mode1, (size_t*) posErr1));
-
-				ZVAL_STRING(dst1_ref, (char*) dst1, 1);
-				size_t elements_returned1_4 = sizeof(posErr1)/sizeof(*posErr1);
-				array_init(posErr1_ref);
-				for(size_t i=0; i<elements_returned1_4; i++)
-				{
-					add_next_index_long(posErr1_ref, posErr1[i]);
-				}
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetSingleChoiceIndex)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetSingleChoiceIndex\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* message0;
-	long message_len0;
-	char* caption0;
-	long caption_len0;
-	zval* aChoices0 = 0;
-	zval* parent0 = 0;
-	void* object_pointer0_3 = 0;
-	long x0;
-	long y0;
-	bool centre0;
-	long width0;
-	long height0;
-	long initialSelection0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	char* message1;
-	long message_len1;
-	char* caption1;
-	long caption_len1;
-	long n1;
-	zval* choices1;
-	zval* parent1 = 0;
-	void* object_pointer1_4 = 0;
-	long x1;
-	long y1;
-	bool centre1;
-	long width1;
-	long height1;
-	long initialSelection1;
-	bool overload1_called = false;
-	//Parameters for overload 2
-	char* message2;
-	long message_len2;
-	char* caption2;
-	long caption_len2;
-	zval* choices2 = 0;
-	long initialSelection2;
-	zval* parent2 = 0;
-	void* object_pointer2_4 = 0;
-	bool overload2_called = false;
-	//Parameters for overload 3
-	char* message3;
-	long message_len3;
-	char* caption3;
-	long caption_len3;
-	long n3;
-	zval* choices3;
-	long initialSelection3;
-	zval* parent3 = 0;
-	void* object_pointer3_5 = 0;
-	bool overload3_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 3  && arguments_received <= 10)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ssa|zllblll' (&message0, &message_len0, &caption0, &caption_len0, &aChoices0, &parent0, &x0, &y0, &centre0, &width0, &height0, &initialSelection0)\n");
-		#endif
-		char parse_parameters_string[] = "ssa|zllblll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &message0, &message_len0, &caption0, &caption_len0, &aChoices0, &parent0, &x0, &y0, &centre0, &width0, &height0, &initialSelection0 ) == SUCCESS)
-		{
-			if(arguments_received >= 4){
-				if(Z_TYPE_P(parent0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_3 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_3 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
-					{
-						goto overload1;
-					}
-				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
-				{
-						goto overload1;
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received >= 4  && arguments_received <= 11)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ssla|zllblll' (&message1, &message_len1, &caption1, &caption_len1, &n1, &choices1, &parent1, &x1, &y1, &centre1, &width1, &height1, &initialSelection1)\n");
-		#endif
-		char parse_parameters_string[] = "ssla|zllblll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &message1, &message_len1, &caption1, &caption_len1, &n1, &choices1, &parent1, &x1, &y1, &centre1, &width1, &height1, &initialSelection1 ) == SUCCESS)
-		{
-			if(arguments_received >= 5){
-				if(Z_TYPE_P(parent1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer1_4 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer1_4 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
-					{
-						goto overload2;
-					}
-				}
-				else if(Z_TYPE_P(parent1) != IS_NULL)
-				{
-						goto overload2;
-				}
-			}
-
-			overload1_called = true;
-			already_called = true;
-		}
-	}
-
-	//Overload 2
-	overload2:
-	if(!already_called && arguments_received >= 4  && arguments_received <= 5)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ssal|z' (&message2, &message_len2, &caption2, &caption_len2, &choices2, &initialSelection2, &parent2)\n");
-		#endif
-		char parse_parameters_string[] = "ssal|z";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &message2, &message_len2, &caption2, &caption_len2, &choices2, &initialSelection2, &parent2 ) == SUCCESS)
-		{
-			if(arguments_received >= 5){
-				if(Z_TYPE_P(parent2) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent2), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer2_4 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer2_4 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
-					{
-						goto overload3;
-					}
-				}
-				else if(Z_TYPE_P(parent2) != IS_NULL)
-				{
-						goto overload3;
-				}
-			}
-
-			overload2_called = true;
-			already_called = true;
-		}
-	}
-
-	//Overload 3
-	overload3:
-	if(!already_called && arguments_received >= 5  && arguments_received <= 6)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'sslal|z' (&message3, &message_len3, &caption3, &caption_len3, &n3, &choices3, &initialSelection3, &parent3)\n");
-		#endif
-		char parse_parameters_string[] = "sslal|z";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &message3, &message_len3, &caption3, &caption_len3, &n3, &choices3, &initialSelection3, &parent3 ) == SUCCESS)
-		{
-			if(arguments_received >= 6){
-				if(Z_TYPE_P(parent3) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent3), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer3_5 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer3_5 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(parent3) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload3_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		wxArrayString strings_array0_2;
-		bool strings_continue0_2 = true;
-
-		switch(arguments_received)
-		{
-			case 3:
-			{
-				int array_index0_2 = 0;
-				zval** temp_array_value0_2 = 0;
-				while(strings_continue0_2)
-				{
-					if(zend_hash_index_find(HASH_OF(aChoices0), array_index0_2, (void**)&temp_array_value0_2) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value0_2);
-						strings_array0_2.Add(wxString(Z_STRVAL_PP(temp_array_value0_2), wxConvUTF8));
-						array_index0_2++;
-					}
-					else
-					{
-						strings_continue0_2 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2));
-
-
-				return;
-				break;
-			}
-			case 4:
-			{
-				int array_index0_2 = 0;
-				zval** temp_array_value0_2 = 0;
-				while(strings_continue0_2)
-				{
-					if(zend_hash_index_find(HASH_OF(aChoices0), array_index0_2, (void**)&temp_array_value0_2) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value0_2);
-						strings_array0_2.Add(wxString(Z_STRVAL_PP(temp_array_value0_2), wxConvUTF8));
-						array_index0_2++;
-					}
-					else
-					{
-						strings_continue0_2 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3));
-
-
-				return;
-				break;
-			}
-			case 5:
-			{
-				int array_index0_2 = 0;
-				zval** temp_array_value0_2 = 0;
-				while(strings_continue0_2)
-				{
-					if(zend_hash_index_find(HASH_OF(aChoices0), array_index0_2, (void**)&temp_array_value0_2) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value0_2);
-						strings_array0_2.Add(wxString(Z_STRVAL_PP(temp_array_value0_2), wxConvUTF8));
-						array_index0_2++;
-					}
-					else
-					{
-						strings_continue0_2 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0));
-
-
-				return;
-				break;
-			}
-			case 6:
-			{
-				int array_index0_2 = 0;
-				zval** temp_array_value0_2 = 0;
-				while(strings_continue0_2)
-				{
-					if(zend_hash_index_find(HASH_OF(aChoices0), array_index0_2, (void**)&temp_array_value0_2) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value0_2);
-						strings_array0_2.Add(wxString(Z_STRVAL_PP(temp_array_value0_2), wxConvUTF8));
-						array_index0_2++;
-					}
-					else
-					{
-						strings_continue0_2 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0));
-
-
-				return;
-				break;
-			}
-			case 7:
-			{
-				int array_index0_2 = 0;
-				zval** temp_array_value0_2 = 0;
-				while(strings_continue0_2)
-				{
-					if(zend_hash_index_find(HASH_OF(aChoices0), array_index0_2, (void**)&temp_array_value0_2) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value0_2);
-						strings_array0_2.Add(wxString(Z_STRVAL_PP(temp_array_value0_2), wxConvUTF8));
-						array_index0_2++;
-					}
-					else
-					{
-						strings_continue0_2 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0));
-
-
-				return;
-				break;
-			}
-			case 8:
-			{
-				int array_index0_2 = 0;
-				zval** temp_array_value0_2 = 0;
-				while(strings_continue0_2)
-				{
-					if(zend_hash_index_find(HASH_OF(aChoices0), array_index0_2, (void**)&temp_array_value0_2) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value0_2);
-						strings_array0_2.Add(wxString(Z_STRVAL_PP(temp_array_value0_2), wxConvUTF8));
-						array_index0_2++;
-					}
-					else
-					{
-						strings_continue0_2 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0, (int) width0))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0, (int) width0));
-
-
-				return;
-				break;
-			}
-			case 9:
-			{
-				int array_index0_2 = 0;
-				zval** temp_array_value0_2 = 0;
-				while(strings_continue0_2)
-				{
-					if(zend_hash_index_find(HASH_OF(aChoices0), array_index0_2, (void**)&temp_array_value0_2) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value0_2);
-						strings_array0_2.Add(wxString(Z_STRVAL_PP(temp_array_value0_2), wxConvUTF8));
-						array_index0_2++;
-					}
-					else
-					{
-						strings_continue0_2 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0, (int) width0, (int) height0))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0, (int) width0, (int) height0));
-
-
-				return;
-				break;
-			}
-			case 10:
-			{
-				int array_index0_2 = 0;
-				zval** temp_array_value0_2 = 0;
-				while(strings_continue0_2)
-				{
-					if(zend_hash_index_find(HASH_OF(aChoices0), array_index0_2, (void**)&temp_array_value0_2) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value0_2);
-						strings_array0_2.Add(wxString(Z_STRVAL_PP(temp_array_value0_2), wxConvUTF8));
-						array_index0_2++;
-					}
-					else
-					{
-						strings_continue0_2 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0, (int) width0, (int) height0, (int) initialSelection0))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0, (int) width0, (int) height0, (int) initialSelection0));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload1_called)
-	{
-		int array_count1_3 = 1;
-		HashTable* arr_hash1_3;
-		if(arguments_received > 3)
-		{
-			arr_hash1_3 = Z_ARRVAL_P(choices1);
-			array_count1_3 = zend_hash_num_elements(arr_hash1_3);
-		}
-		wxString* strings_array1_3 = new wxString[array_count1_3];
-		bool strings_continue1_3 = true;
-
-		switch(arguments_received)
-		{
-			case 4:
-			{
-				int array_index1_3 = 0;
-				zval** temp_array_value1_3 = 0;
-				while(strings_continue1_3)
-				{
-					if(zend_hash_index_find(HASH_OF(choices1), array_index1_3, (void**)&temp_array_value1_3) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value1_3);
-						strings_array1_3[array_index1_3] = wxString(Z_STRVAL_PP(temp_array_value1_3), wxConvUTF8);
-						array_index1_3++;
-					}
-					else
-					{
-						strings_continue1_3 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3));
-
-
-				return;
-				break;
-			}
-			case 5:
-			{
-				int array_index1_3 = 0;
-				zval** temp_array_value1_3 = 0;
-				while(strings_continue1_3)
-				{
-					if(zend_hash_index_find(HASH_OF(choices1), array_index1_3, (void**)&temp_array_value1_3) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value1_3);
-						strings_array1_3[array_index1_3] = wxString(Z_STRVAL_PP(temp_array_value1_3), wxConvUTF8);
-						array_index1_3++;
-					}
-					else
-					{
-						strings_continue1_3 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4));
-
-
-				return;
-				break;
-			}
-			case 6:
-			{
-				int array_index1_3 = 0;
-				zval** temp_array_value1_3 = 0;
-				while(strings_continue1_3)
-				{
-					if(zend_hash_index_find(HASH_OF(choices1), array_index1_3, (void**)&temp_array_value1_3) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value1_3);
-						strings_array1_3[array_index1_3] = wxString(Z_STRVAL_PP(temp_array_value1_3), wxConvUTF8);
-						array_index1_3++;
-					}
-					else
-					{
-						strings_continue1_3 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1));
-
-
-				return;
-				break;
-			}
-			case 7:
-			{
-				int array_index1_3 = 0;
-				zval** temp_array_value1_3 = 0;
-				while(strings_continue1_3)
-				{
-					if(zend_hash_index_find(HASH_OF(choices1), array_index1_3, (void**)&temp_array_value1_3) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value1_3);
-						strings_array1_3[array_index1_3] = wxString(Z_STRVAL_PP(temp_array_value1_3), wxConvUTF8);
-						array_index1_3++;
-					}
-					else
-					{
-						strings_continue1_3 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1));
-
-
-				return;
-				break;
-			}
-			case 8:
-			{
-				int array_index1_3 = 0;
-				zval** temp_array_value1_3 = 0;
-				while(strings_continue1_3)
-				{
-					if(zend_hash_index_find(HASH_OF(choices1), array_index1_3, (void**)&temp_array_value1_3) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value1_3);
-						strings_array1_3[array_index1_3] = wxString(Z_STRVAL_PP(temp_array_value1_3), wxConvUTF8);
-						array_index1_3++;
-					}
-					else
-					{
-						strings_continue1_3 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1));
-
-
-				return;
-				break;
-			}
-			case 9:
-			{
-				int array_index1_3 = 0;
-				zval** temp_array_value1_3 = 0;
-				while(strings_continue1_3)
-				{
-					if(zend_hash_index_find(HASH_OF(choices1), array_index1_3, (void**)&temp_array_value1_3) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value1_3);
-						strings_array1_3[array_index1_3] = wxString(Z_STRVAL_PP(temp_array_value1_3), wxConvUTF8);
-						array_index1_3++;
-					}
-					else
-					{
-						strings_continue1_3 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1, (int) width1))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1, (int) width1));
-
-
-				return;
-				break;
-			}
-			case 10:
-			{
-				int array_index1_3 = 0;
-				zval** temp_array_value1_3 = 0;
-				while(strings_continue1_3)
-				{
-					if(zend_hash_index_find(HASH_OF(choices1), array_index1_3, (void**)&temp_array_value1_3) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value1_3);
-						strings_array1_3[array_index1_3] = wxString(Z_STRVAL_PP(temp_array_value1_3), wxConvUTF8);
-						array_index1_3++;
-					}
-					else
-					{
-						strings_continue1_3 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1, (int) width1, (int) height1))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1, (int) width1, (int) height1));
-
-
-				return;
-				break;
-			}
-			case 11:
-			{
-				int array_index1_3 = 0;
-				zval** temp_array_value1_3 = 0;
-				while(strings_continue1_3)
-				{
-					if(zend_hash_index_find(HASH_OF(choices1), array_index1_3, (void**)&temp_array_value1_3) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value1_3);
-						strings_array1_3[array_index1_3] = wxString(Z_STRVAL_PP(temp_array_value1_3), wxConvUTF8);
-						array_index1_3++;
-					}
-					else
-					{
-						strings_continue1_3 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1, (int) width1, (int) height1, (int) initialSelection1))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1, (int) width1, (int) height1, (int) initialSelection1));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload2_called)
-	{
-		wxArrayString strings_array2_2;
-		bool strings_continue2_2 = true;
-
-		switch(arguments_received)
-		{
-			case 4:
-			{
-				int array_index2_2 = 0;
-				zval** temp_array_value2_2 = 0;
-				while(strings_continue2_2)
-				{
-					if(zend_hash_index_find(HASH_OF(choices2), array_index2_2, (void**)&temp_array_value2_2) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value2_2);
-						strings_array2_2.Add(wxString(Z_STRVAL_PP(temp_array_value2_2), wxConvUTF8));
-						array_index2_2++;
-					}
-					else
-					{
-						strings_continue2_2 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message2, wxConvUTF8), wxString(caption2, wxConvUTF8), strings_array2_2, (int) initialSelection2))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message2, wxConvUTF8), wxString(caption2, wxConvUTF8), strings_array2_2, (int) initialSelection2));
-
-
-				return;
-				break;
-			}
-			case 5:
-			{
-				int array_index2_2 = 0;
-				zval** temp_array_value2_2 = 0;
-				while(strings_continue2_2)
-				{
-					if(zend_hash_index_find(HASH_OF(choices2), array_index2_2, (void**)&temp_array_value2_2) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value2_2);
-						strings_array2_2.Add(wxString(Z_STRVAL_PP(temp_array_value2_2), wxConvUTF8));
-						array_index2_2++;
-					}
-					else
-					{
-						strings_continue2_2 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message2, wxConvUTF8), wxString(caption2, wxConvUTF8), strings_array2_2, (int) initialSelection2, (wxWindow*) object_pointer2_4))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message2, wxConvUTF8), wxString(caption2, wxConvUTF8), strings_array2_2, (int) initialSelection2, (wxWindow*) object_pointer2_4));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload3_called)
-	{
-		int array_count3_3 = 1;
-		HashTable* arr_hash3_3;
-		if(arguments_received > 3)
-		{
-			arr_hash3_3 = Z_ARRVAL_P(choices3);
-			array_count3_3 = zend_hash_num_elements(arr_hash3_3);
-		}
-		wxString* strings_array3_3 = new wxString[array_count3_3];
-		bool strings_continue3_3 = true;
-
-		switch(arguments_received)
-		{
-			case 5:
-			{
-				int array_index3_3 = 0;
-				zval** temp_array_value3_3 = 0;
-				while(strings_continue3_3)
-				{
-					if(zend_hash_index_find(HASH_OF(choices3), array_index3_3, (void**)&temp_array_value3_3) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value3_3);
-						strings_array3_3[array_index3_3] = wxString(Z_STRVAL_PP(temp_array_value3_3), wxConvUTF8);
-						array_index3_3++;
-					}
-					else
-					{
-						strings_continue3_3 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message3, wxConvUTF8), wxString(caption3, wxConvUTF8), (int) n3, strings_array3_3, (int) initialSelection3))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message3, wxConvUTF8), wxString(caption3, wxConvUTF8), (int) n3, strings_array3_3, (int) initialSelection3));
-
-
-				return;
-				break;
-			}
-			case 6:
-			{
-				int array_index3_3 = 0;
-				zval** temp_array_value3_3 = 0;
-				while(strings_continue3_3)
-				{
-					if(zend_hash_index_find(HASH_OF(choices3), array_index3_3, (void**)&temp_array_value3_3) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value3_3);
-						strings_array3_3[array_index3_3] = wxString(Z_STRVAL_PP(temp_array_value3_3), wxConvUTF8);
-						array_index3_3++;
-					}
-					else
-					{
-						strings_continue3_3 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxGetSingleChoiceIndex(wxString(message3, wxConvUTF8), wxString(caption3, wxConvUTF8), (int) n3, strings_array3_3, (int) initialSelection3, (wxWindow*) object_pointer3_5))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxGetSingleChoiceIndex(wxString(message3, wxConvUTF8), wxString(caption3, wxConvUTF8), (int) n3, strings_array3_3, (int) initialSelection3, (wxWindow*) object_pointer3_5));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetSingleChoice)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetSingleChoice\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* message0;
-	long message_len0;
-	char* caption0;
-	long caption_len0;
-	zval* aChoices0 = 0;
-	zval* parent0 = 0;
-	void* object_pointer0_3 = 0;
-	long x0;
-	long y0;
-	bool centre0;
-	long width0;
-	long height0;
-	long initialSelection0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	char* message1;
-	long message_len1;
-	char* caption1;
-	long caption_len1;
-	long n1;
-	zval* choices1;
-	zval* parent1 = 0;
-	void* object_pointer1_4 = 0;
-	long x1;
-	long y1;
-	bool centre1;
-	long width1;
-	long height1;
-	long initialSelection1;
-	bool overload1_called = false;
-	//Parameters for overload 2
-	char* message2;
-	long message_len2;
-	char* caption2;
-	long caption_len2;
-	zval* choices2 = 0;
-	long initialSelection2;
-	zval* parent2 = 0;
-	void* object_pointer2_4 = 0;
-	bool overload2_called = false;
-	//Parameters for overload 3
-	char* message3;
-	long message_len3;
-	char* caption3;
-	long caption_len3;
-	long n3;
-	zval* choices3;
-	long initialSelection3;
-	zval* parent3 = 0;
-	void* object_pointer3_5 = 0;
-	bool overload3_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 3  && arguments_received <= 10)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ssa|zllblll' (&message0, &message_len0, &caption0, &caption_len0, &aChoices0, &parent0, &x0, &y0, &centre0, &width0, &height0, &initialSelection0)\n");
-		#endif
-		char parse_parameters_string[] = "ssa|zllblll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &message0, &message_len0, &caption0, &caption_len0, &aChoices0, &parent0, &x0, &y0, &centre0, &width0, &height0, &initialSelection0 ) == SUCCESS)
-		{
-			if(arguments_received >= 4){
-				if(Z_TYPE_P(parent0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_3 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_3 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
-					{
-						goto overload1;
-					}
-				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
-				{
-						goto overload1;
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received >= 4  && arguments_received <= 11)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ssla|zllblll' (&message1, &message_len1, &caption1, &caption_len1, &n1, &choices1, &parent1, &x1, &y1, &centre1, &width1, &height1, &initialSelection1)\n");
-		#endif
-		char parse_parameters_string[] = "ssla|zllblll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &message1, &message_len1, &caption1, &caption_len1, &n1, &choices1, &parent1, &x1, &y1, &centre1, &width1, &height1, &initialSelection1 ) == SUCCESS)
-		{
-			if(arguments_received >= 5){
-				if(Z_TYPE_P(parent1) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent1), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer1_4 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer1_4 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
-					{
-						goto overload2;
-					}
-				}
-				else if(Z_TYPE_P(parent1) != IS_NULL)
-				{
-						goto overload2;
-				}
-			}
-
-			overload1_called = true;
-			already_called = true;
-		}
-	}
-
-	//Overload 2
-	overload2:
-	if(!already_called && arguments_received >= 4  && arguments_received <= 5)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ssal|z' (&message2, &message_len2, &caption2, &caption_len2, &choices2, &initialSelection2, &parent2)\n");
-		#endif
-		char parse_parameters_string[] = "ssal|z";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &message2, &message_len2, &caption2, &caption_len2, &choices2, &initialSelection2, &parent2 ) == SUCCESS)
-		{
-			if(arguments_received >= 5){
-				if(Z_TYPE_P(parent2) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent2), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer2_4 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer2_4 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
-					{
-						goto overload3;
-					}
-				}
-				else if(Z_TYPE_P(parent2) != IS_NULL)
-				{
-						goto overload3;
-				}
-			}
-
-			overload2_called = true;
-			already_called = true;
-		}
-	}
-
-	//Overload 3
-	overload3:
-	if(!already_called && arguments_received >= 5  && arguments_received <= 6)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'sslal|z' (&message3, &message_len3, &caption3, &caption_len3, &n3, &choices3, &initialSelection3, &parent3)\n");
-		#endif
-		char parse_parameters_string[] = "sslal|z";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &message3, &message_len3, &caption3, &caption_len3, &n3, &choices3, &initialSelection3, &parent3 ) == SUCCESS)
-		{
-			if(arguments_received >= 6){
-				if(Z_TYPE_P(parent3) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent3), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer3_5 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer3_5 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(parent3) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload3_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		wxArrayString strings_array0_2;
-		bool strings_continue0_2 = true;
-
-		switch(arguments_received)
-		{
-			case 3:
-			{
-				int array_index0_2 = 0;
-				zval** temp_array_value0_2 = 0;
-				while(strings_continue0_2)
-				{
-					if(zend_hash_index_find(HASH_OF(aChoices0), array_index0_2, (void**)&temp_array_value0_2) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value0_2);
-						strings_array0_2.Add(wxString(Z_STRVAL_PP(temp_array_value0_2), wxConvUTF8));
-						array_index0_2++;
-					}
-					else
-					{
-						strings_continue0_2 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return3;
-				value_to_return3 = wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2);
-				char* temp_string3;
-				temp_string3 = (char*)malloc(sizeof(wxChar)*(value_to_return3.size()+1));
-				strcpy (temp_string3, (const char *) value_to_return3.char_str() );
-				ZVAL_STRING(return_value, temp_string3, 1);
-				free(temp_string3);
-
-
-				return;
-				break;
-			}
-			case 4:
-			{
-				int array_index0_2 = 0;
-				zval** temp_array_value0_2 = 0;
-				while(strings_continue0_2)
-				{
-					if(zend_hash_index_find(HASH_OF(aChoices0), array_index0_2, (void**)&temp_array_value0_2) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value0_2);
-						strings_array0_2.Add(wxString(Z_STRVAL_PP(temp_array_value0_2), wxConvUTF8));
-						array_index0_2++;
-					}
-					else
-					{
-						strings_continue0_2 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return4;
-				value_to_return4 = wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3);
-				char* temp_string4;
-				temp_string4 = (char*)malloc(sizeof(wxChar)*(value_to_return4.size()+1));
-				strcpy (temp_string4, (const char *) value_to_return4.char_str() );
-				ZVAL_STRING(return_value, temp_string4, 1);
-				free(temp_string4);
-
-
-				return;
-				break;
-			}
-			case 5:
-			{
-				int array_index0_2 = 0;
-				zval** temp_array_value0_2 = 0;
-				while(strings_continue0_2)
-				{
-					if(zend_hash_index_find(HASH_OF(aChoices0), array_index0_2, (void**)&temp_array_value0_2) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value0_2);
-						strings_array0_2.Add(wxString(Z_STRVAL_PP(temp_array_value0_2), wxConvUTF8));
-						array_index0_2++;
-					}
-					else
-					{
-						strings_continue0_2 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return5;
-				value_to_return5 = wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0);
-				char* temp_string5;
-				temp_string5 = (char*)malloc(sizeof(wxChar)*(value_to_return5.size()+1));
-				strcpy (temp_string5, (const char *) value_to_return5.char_str() );
-				ZVAL_STRING(return_value, temp_string5, 1);
-				free(temp_string5);
-
-
-				return;
-				break;
-			}
-			case 6:
-			{
-				int array_index0_2 = 0;
-				zval** temp_array_value0_2 = 0;
-				while(strings_continue0_2)
-				{
-					if(zend_hash_index_find(HASH_OF(aChoices0), array_index0_2, (void**)&temp_array_value0_2) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value0_2);
-						strings_array0_2.Add(wxString(Z_STRVAL_PP(temp_array_value0_2), wxConvUTF8));
-						array_index0_2++;
-					}
-					else
-					{
-						strings_continue0_2 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return6;
-				value_to_return6 = wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0);
-				char* temp_string6;
-				temp_string6 = (char*)malloc(sizeof(wxChar)*(value_to_return6.size()+1));
-				strcpy (temp_string6, (const char *) value_to_return6.char_str() );
-				ZVAL_STRING(return_value, temp_string6, 1);
-				free(temp_string6);
-
-
-				return;
-				break;
-			}
-			case 7:
-			{
-				int array_index0_2 = 0;
-				zval** temp_array_value0_2 = 0;
-				while(strings_continue0_2)
-				{
-					if(zend_hash_index_find(HASH_OF(aChoices0), array_index0_2, (void**)&temp_array_value0_2) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value0_2);
-						strings_array0_2.Add(wxString(Z_STRVAL_PP(temp_array_value0_2), wxConvUTF8));
-						array_index0_2++;
-					}
-					else
-					{
-						strings_continue0_2 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return7;
-				value_to_return7 = wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0);
-				char* temp_string7;
-				temp_string7 = (char*)malloc(sizeof(wxChar)*(value_to_return7.size()+1));
-				strcpy (temp_string7, (const char *) value_to_return7.char_str() );
-				ZVAL_STRING(return_value, temp_string7, 1);
-				free(temp_string7);
-
-
-				return;
-				break;
-			}
-			case 8:
-			{
-				int array_index0_2 = 0;
-				zval** temp_array_value0_2 = 0;
-				while(strings_continue0_2)
-				{
-					if(zend_hash_index_find(HASH_OF(aChoices0), array_index0_2, (void**)&temp_array_value0_2) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value0_2);
-						strings_array0_2.Add(wxString(Z_STRVAL_PP(temp_array_value0_2), wxConvUTF8));
-						array_index0_2++;
-					}
-					else
-					{
-						strings_continue0_2 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0, (int) width0).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return8;
-				value_to_return8 = wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0, (int) width0);
-				char* temp_string8;
-				temp_string8 = (char*)malloc(sizeof(wxChar)*(value_to_return8.size()+1));
-				strcpy (temp_string8, (const char *) value_to_return8.char_str() );
-				ZVAL_STRING(return_value, temp_string8, 1);
-				free(temp_string8);
-
-
-				return;
-				break;
-			}
-			case 9:
-			{
-				int array_index0_2 = 0;
-				zval** temp_array_value0_2 = 0;
-				while(strings_continue0_2)
-				{
-					if(zend_hash_index_find(HASH_OF(aChoices0), array_index0_2, (void**)&temp_array_value0_2) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value0_2);
-						strings_array0_2.Add(wxString(Z_STRVAL_PP(temp_array_value0_2), wxConvUTF8));
-						array_index0_2++;
-					}
-					else
-					{
-						strings_continue0_2 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0, (int) width0, (int) height0).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return9;
-				value_to_return9 = wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0, (int) width0, (int) height0);
-				char* temp_string9;
-				temp_string9 = (char*)malloc(sizeof(wxChar)*(value_to_return9.size()+1));
-				strcpy (temp_string9, (const char *) value_to_return9.char_str() );
-				ZVAL_STRING(return_value, temp_string9, 1);
-				free(temp_string9);
-
-
-				return;
-				break;
-			}
-			case 10:
-			{
-				int array_index0_2 = 0;
-				zval** temp_array_value0_2 = 0;
-				while(strings_continue0_2)
-				{
-					if(zend_hash_index_find(HASH_OF(aChoices0), array_index0_2, (void**)&temp_array_value0_2) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value0_2);
-						strings_array0_2.Add(wxString(Z_STRVAL_PP(temp_array_value0_2), wxConvUTF8));
-						array_index0_2++;
-					}
-					else
-					{
-						strings_continue0_2 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0, (int) width0, (int) height0, (int) initialSelection0).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return10;
-				value_to_return10 = wxGetSingleChoice(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), strings_array0_2, (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0, (int) width0, (int) height0, (int) initialSelection0);
-				char* temp_string10;
-				temp_string10 = (char*)malloc(sizeof(wxChar)*(value_to_return10.size()+1));
-				strcpy (temp_string10, (const char *) value_to_return10.char_str() );
-				ZVAL_STRING(return_value, temp_string10, 1);
-				free(temp_string10);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload1_called)
-	{
-		int array_count1_3 = 1;
-		HashTable* arr_hash1_3;
-		if(arguments_received > 3)
-		{
-			arr_hash1_3 = Z_ARRVAL_P(choices1);
-			array_count1_3 = zend_hash_num_elements(arr_hash1_3);
-		}
-		wxString* strings_array1_3 = new wxString[array_count1_3];
-		bool strings_continue1_3 = true;
-
-		switch(arguments_received)
-		{
-			case 4:
-			{
-				int array_index1_3 = 0;
-				zval** temp_array_value1_3 = 0;
-				while(strings_continue1_3)
-				{
-					if(zend_hash_index_find(HASH_OF(choices1), array_index1_3, (void**)&temp_array_value1_3) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value1_3);
-						strings_array1_3[array_index1_3] = wxString(Z_STRVAL_PP(temp_array_value1_3), wxConvUTF8);
-						array_index1_3++;
-					}
-					else
-					{
-						strings_continue1_3 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return4;
-				value_to_return4 = wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3);
-				char* temp_string4;
-				temp_string4 = (char*)malloc(sizeof(wxChar)*(value_to_return4.size()+1));
-				strcpy (temp_string4, (const char *) value_to_return4.char_str() );
-				ZVAL_STRING(return_value, temp_string4, 1);
-				free(temp_string4);
-
-
-				return;
-				break;
-			}
-			case 5:
-			{
-				int array_index1_3 = 0;
-				zval** temp_array_value1_3 = 0;
-				while(strings_continue1_3)
-				{
-					if(zend_hash_index_find(HASH_OF(choices1), array_index1_3, (void**)&temp_array_value1_3) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value1_3);
-						strings_array1_3[array_index1_3] = wxString(Z_STRVAL_PP(temp_array_value1_3), wxConvUTF8);
-						array_index1_3++;
-					}
-					else
-					{
-						strings_continue1_3 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return5;
-				value_to_return5 = wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4);
-				char* temp_string5;
-				temp_string5 = (char*)malloc(sizeof(wxChar)*(value_to_return5.size()+1));
-				strcpy (temp_string5, (const char *) value_to_return5.char_str() );
-				ZVAL_STRING(return_value, temp_string5, 1);
-				free(temp_string5);
-
-
-				return;
-				break;
-			}
-			case 6:
-			{
-				int array_index1_3 = 0;
-				zval** temp_array_value1_3 = 0;
-				while(strings_continue1_3)
-				{
-					if(zend_hash_index_find(HASH_OF(choices1), array_index1_3, (void**)&temp_array_value1_3) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value1_3);
-						strings_array1_3[array_index1_3] = wxString(Z_STRVAL_PP(temp_array_value1_3), wxConvUTF8);
-						array_index1_3++;
-					}
-					else
-					{
-						strings_continue1_3 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return6;
-				value_to_return6 = wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1);
-				char* temp_string6;
-				temp_string6 = (char*)malloc(sizeof(wxChar)*(value_to_return6.size()+1));
-				strcpy (temp_string6, (const char *) value_to_return6.char_str() );
-				ZVAL_STRING(return_value, temp_string6, 1);
-				free(temp_string6);
-
-
-				return;
-				break;
-			}
-			case 7:
-			{
-				int array_index1_3 = 0;
-				zval** temp_array_value1_3 = 0;
-				while(strings_continue1_3)
-				{
-					if(zend_hash_index_find(HASH_OF(choices1), array_index1_3, (void**)&temp_array_value1_3) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value1_3);
-						strings_array1_3[array_index1_3] = wxString(Z_STRVAL_PP(temp_array_value1_3), wxConvUTF8);
-						array_index1_3++;
-					}
-					else
-					{
-						strings_continue1_3 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return7;
-				value_to_return7 = wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1);
-				char* temp_string7;
-				temp_string7 = (char*)malloc(sizeof(wxChar)*(value_to_return7.size()+1));
-				strcpy (temp_string7, (const char *) value_to_return7.char_str() );
-				ZVAL_STRING(return_value, temp_string7, 1);
-				free(temp_string7);
-
-
-				return;
-				break;
-			}
-			case 8:
-			{
-				int array_index1_3 = 0;
-				zval** temp_array_value1_3 = 0;
-				while(strings_continue1_3)
-				{
-					if(zend_hash_index_find(HASH_OF(choices1), array_index1_3, (void**)&temp_array_value1_3) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value1_3);
-						strings_array1_3[array_index1_3] = wxString(Z_STRVAL_PP(temp_array_value1_3), wxConvUTF8);
-						array_index1_3++;
-					}
-					else
-					{
-						strings_continue1_3 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return8;
-				value_to_return8 = wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1);
-				char* temp_string8;
-				temp_string8 = (char*)malloc(sizeof(wxChar)*(value_to_return8.size()+1));
-				strcpy (temp_string8, (const char *) value_to_return8.char_str() );
-				ZVAL_STRING(return_value, temp_string8, 1);
-				free(temp_string8);
-
-
-				return;
-				break;
-			}
-			case 9:
-			{
-				int array_index1_3 = 0;
-				zval** temp_array_value1_3 = 0;
-				while(strings_continue1_3)
-				{
-					if(zend_hash_index_find(HASH_OF(choices1), array_index1_3, (void**)&temp_array_value1_3) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value1_3);
-						strings_array1_3[array_index1_3] = wxString(Z_STRVAL_PP(temp_array_value1_3), wxConvUTF8);
-						array_index1_3++;
-					}
-					else
-					{
-						strings_continue1_3 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1, (int) width1).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return9;
-				value_to_return9 = wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1, (int) width1);
-				char* temp_string9;
-				temp_string9 = (char*)malloc(sizeof(wxChar)*(value_to_return9.size()+1));
-				strcpy (temp_string9, (const char *) value_to_return9.char_str() );
-				ZVAL_STRING(return_value, temp_string9, 1);
-				free(temp_string9);
-
-
-				return;
-				break;
-			}
-			case 10:
-			{
-				int array_index1_3 = 0;
-				zval** temp_array_value1_3 = 0;
-				while(strings_continue1_3)
-				{
-					if(zend_hash_index_find(HASH_OF(choices1), array_index1_3, (void**)&temp_array_value1_3) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value1_3);
-						strings_array1_3[array_index1_3] = wxString(Z_STRVAL_PP(temp_array_value1_3), wxConvUTF8);
-						array_index1_3++;
-					}
-					else
-					{
-						strings_continue1_3 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1, (int) width1, (int) height1).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return10;
-				value_to_return10 = wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1, (int) width1, (int) height1);
-				char* temp_string10;
-				temp_string10 = (char*)malloc(sizeof(wxChar)*(value_to_return10.size()+1));
-				strcpy (temp_string10, (const char *) value_to_return10.char_str() );
-				ZVAL_STRING(return_value, temp_string10, 1);
-				free(temp_string10);
-
-
-				return;
-				break;
-			}
-			case 11:
-			{
-				int array_index1_3 = 0;
-				zval** temp_array_value1_3 = 0;
-				while(strings_continue1_3)
-				{
-					if(zend_hash_index_find(HASH_OF(choices1), array_index1_3, (void**)&temp_array_value1_3) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value1_3);
-						strings_array1_3[array_index1_3] = wxString(Z_STRVAL_PP(temp_array_value1_3), wxConvUTF8);
-						array_index1_3++;
-					}
-					else
-					{
-						strings_continue1_3 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1, (int) width1, (int) height1, (int) initialSelection1).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return11;
-				value_to_return11 = wxGetSingleChoice(wxString(message1, wxConvUTF8), wxString(caption1, wxConvUTF8), (int) n1, strings_array1_3, (wxWindow*) object_pointer1_4, (int) x1, (int) y1, centre1, (int) width1, (int) height1, (int) initialSelection1);
-				char* temp_string11;
-				temp_string11 = (char*)malloc(sizeof(wxChar)*(value_to_return11.size()+1));
-				strcpy (temp_string11, (const char *) value_to_return11.char_str() );
-				ZVAL_STRING(return_value, temp_string11, 1);
-				free(temp_string11);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload2_called)
-	{
-		wxArrayString strings_array2_2;
-		bool strings_continue2_2 = true;
-
-		switch(arguments_received)
-		{
-			case 4:
-			{
-				int array_index2_2 = 0;
-				zval** temp_array_value2_2 = 0;
-				while(strings_continue2_2)
-				{
-					if(zend_hash_index_find(HASH_OF(choices2), array_index2_2, (void**)&temp_array_value2_2) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value2_2);
-						strings_array2_2.Add(wxString(Z_STRVAL_PP(temp_array_value2_2), wxConvUTF8));
-						array_index2_2++;
-					}
-					else
-					{
-						strings_continue2_2 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message2, wxConvUTF8), wxString(caption2, wxConvUTF8), strings_array2_2, (int) initialSelection2).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return4;
-				value_to_return4 = wxGetSingleChoice(wxString(message2, wxConvUTF8), wxString(caption2, wxConvUTF8), strings_array2_2, (int) initialSelection2);
-				char* temp_string4;
-				temp_string4 = (char*)malloc(sizeof(wxChar)*(value_to_return4.size()+1));
-				strcpy (temp_string4, (const char *) value_to_return4.char_str() );
-				ZVAL_STRING(return_value, temp_string4, 1);
-				free(temp_string4);
-
-
-				return;
-				break;
-			}
-			case 5:
-			{
-				int array_index2_2 = 0;
-				zval** temp_array_value2_2 = 0;
-				while(strings_continue2_2)
-				{
-					if(zend_hash_index_find(HASH_OF(choices2), array_index2_2, (void**)&temp_array_value2_2) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value2_2);
-						strings_array2_2.Add(wxString(Z_STRVAL_PP(temp_array_value2_2), wxConvUTF8));
-						array_index2_2++;
-					}
-					else
-					{
-						strings_continue2_2 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message2, wxConvUTF8), wxString(caption2, wxConvUTF8), strings_array2_2, (int) initialSelection2, (wxWindow*) object_pointer2_4).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return5;
-				value_to_return5 = wxGetSingleChoice(wxString(message2, wxConvUTF8), wxString(caption2, wxConvUTF8), strings_array2_2, (int) initialSelection2, (wxWindow*) object_pointer2_4);
-				char* temp_string5;
-				temp_string5 = (char*)malloc(sizeof(wxChar)*(value_to_return5.size()+1));
-				strcpy (temp_string5, (const char *) value_to_return5.char_str() );
-				ZVAL_STRING(return_value, temp_string5, 1);
-				free(temp_string5);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload3_called)
-	{
-		int array_count3_3 = 1;
-		HashTable* arr_hash3_3;
-		if(arguments_received > 3)
-		{
-			arr_hash3_3 = Z_ARRVAL_P(choices3);
-			array_count3_3 = zend_hash_num_elements(arr_hash3_3);
-		}
-		wxString* strings_array3_3 = new wxString[array_count3_3];
-		bool strings_continue3_3 = true;
-
-		switch(arguments_received)
-		{
-			case 5:
-			{
-				int array_index3_3 = 0;
-				zval** temp_array_value3_3 = 0;
-				while(strings_continue3_3)
-				{
-					if(zend_hash_index_find(HASH_OF(choices3), array_index3_3, (void**)&temp_array_value3_3) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value3_3);
-						strings_array3_3[array_index3_3] = wxString(Z_STRVAL_PP(temp_array_value3_3), wxConvUTF8);
-						array_index3_3++;
-					}
-					else
-					{
-						strings_continue3_3 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message3, wxConvUTF8), wxString(caption3, wxConvUTF8), (int) n3, strings_array3_3, (int) initialSelection3).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return5;
-				value_to_return5 = wxGetSingleChoice(wxString(message3, wxConvUTF8), wxString(caption3, wxConvUTF8), (int) n3, strings_array3_3, (int) initialSelection3);
-				char* temp_string5;
-				temp_string5 = (char*)malloc(sizeof(wxChar)*(value_to_return5.size()+1));
-				strcpy (temp_string5, (const char *) value_to_return5.char_str() );
-				ZVAL_STRING(return_value, temp_string5, 1);
-				free(temp_string5);
-
-
-				return;
-				break;
-			}
-			case 6:
-			{
-				int array_index3_3 = 0;
-				zval** temp_array_value3_3 = 0;
-				while(strings_continue3_3)
-				{
-					if(zend_hash_index_find(HASH_OF(choices3), array_index3_3, (void**)&temp_array_value3_3) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value3_3);
-						strings_array3_3[array_index3_3] = wxString(Z_STRVAL_PP(temp_array_value3_3), wxConvUTF8);
-						array_index3_3++;
-					}
-					else
-					{
-						strings_continue3_3 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetSingleChoice(wxString(message3, wxConvUTF8), wxString(caption3, wxConvUTF8), (int) n3, strings_array3_3, (int) initialSelection3, (wxWindow*) object_pointer3_5).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return6;
-				value_to_return6 = wxGetSingleChoice(wxString(message3, wxConvUTF8), wxString(caption3, wxConvUTF8), (int) n3, strings_array3_3, (int) initialSelection3, (wxWindow*) object_pointer3_5);
-				char* temp_string6;
-				temp_string6 = (char*)malloc(sizeof(wxChar)*(value_to_return6.size()+1));
-				strcpy (temp_string6, (const char *) value_to_return6.char_str() );
-				ZVAL_STRING(return_value, temp_string6, 1);
-				free(temp_string6);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetColourFromUser)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetColourFromUser\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	zval* parent0 = 0;
-	void* object_pointer0_0 = 0;
-	zval* colInit0 = 0;
-	void* object_pointer0_1 = 0;
-	char* caption0;
-	long caption_len0;
-	zval* data0 = 0;
-	void* object_pointer0_3 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 2  && arguments_received <= 4)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zO|sz' (&parent0, &colInit0, php_wxColour_entry, &caption0, &caption_len0, &data0)\n");
-		#endif
-		char parse_parameters_string[] = "zO|sz";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &colInit0, php_wxColour_entry, &caption0, &caption_len0, &data0 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			if(arguments_received >= 2){
-				if(Z_TYPE_P(colInit0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(colInit0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_1 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_1 )
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(colInit0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			if(arguments_received >= 4){
-				if(Z_TYPE_P(data0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(data0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_3 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_3 )
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(data0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxGetColourFromUser((wxWindow*) object_pointer0_0, *(wxColour*) object_pointer0_1) to return new object\n\n");
-				#endif
-				wxColour value_to_return2;
-				value_to_return2 = wxGetColourFromUser((wxWindow*) object_pointer0_0, *(wxColour*) object_pointer0_1);
-				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return2, sizeof(wxColour));
-				object_init_ex(return_value, php_wxColour_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxColour));
-
-
-				return;
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxGetColourFromUser((wxWindow*) object_pointer0_0, *(wxColour*) object_pointer0_1, wxString(caption0, wxConvUTF8)) to return new object\n\n");
-				#endif
-				wxColour value_to_return3;
-				value_to_return3 = wxGetColourFromUser((wxWindow*) object_pointer0_0, *(wxColour*) object_pointer0_1, wxString(caption0, wxConvUTF8));
-				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return3, sizeof(wxColour));
-				object_init_ex(return_value, php_wxColour_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxColour));
-
-
-				return;
-				break;
-			}
-			case 4:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxGetColourFromUser((wxWindow*) object_pointer0_0, *(wxColour*) object_pointer0_1, wxString(caption0, wxConvUTF8), (wxColourData*) object_pointer0_3) to return new object\n\n");
-				#endif
-				wxColour value_to_return4;
-				value_to_return4 = wxGetColourFromUser((wxWindow*) object_pointer0_0, *(wxColour*) object_pointer0_1, wxString(caption0, wxConvUTF8), (wxColourData*) object_pointer0_3);
-				void* ptr = safe_emalloc(1, sizeof(wxColour_php), 0);
-				memcpy(ptr, &value_to_return4, sizeof(wxColour));
-				object_init_ex(return_value, php_wxColour_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxColour));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxAbort)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxAbort\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxAbort()\n\n");
-				#endif
-				wxAbort();
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxDisableAsserts)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxDisableAsserts\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxDisableAsserts()\n\n");
-				#endif
-				wxDisableAsserts();
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxIsDebuggerRunning)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxIsDebuggerRunning\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxIsDebuggerRunning())\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxIsDebuggerRunning());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxSetDefaultAssertHandler)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxSetDefaultAssertHandler\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxSetDefaultAssertHandler()\n\n");
-				#endif
-				wxSetDefaultAssertHandler();
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxTrap)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxTrap\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxTrap()\n\n");
-				#endif
-				wxTrap();
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxDirSelector)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxDirSelector\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* message0;
-	long message_len0;
-	char* default_path0;
-	long default_path_len0;
-	long style0;
-	zval* pos0 = 0;
-	void* object_pointer0_3 = 0;
-	zval* parent0 = 0;
-	void* object_pointer0_4 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 0  && arguments_received <= 5)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '|sslOz' (&message0, &message_len0, &default_path0, &default_path_len0, &style0, &pos0, php_wxPoint_entry, &parent0)\n");
-		#endif
-		char parse_parameters_string[] = "|sslOz";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &message0, &message_len0, &default_path0, &default_path_len0, &style0, &pos0, php_wxPoint_entry, &parent0 ) == SUCCESS)
-		{
-			if(arguments_received >= 4){
-				if(Z_TYPE_P(pos0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(pos0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_3 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_3 )
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(pos0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			if(arguments_received >= 5){
-				if(Z_TYPE_P(parent0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_4 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_4 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxDirSelector().fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return0;
-				value_to_return0 = wxDirSelector();
-				char* temp_string0;
-				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
-				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
-				ZVAL_STRING(return_value, temp_string0, 1);
-				free(temp_string0);
-
-
-				return;
-				break;
-			}
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxDirSelector(wxString(message0, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return1;
-				value_to_return1 = wxDirSelector(wxString(message0, wxConvUTF8));
-				char* temp_string1;
-				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
-				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
-				ZVAL_STRING(return_value, temp_string1, 1);
-				free(temp_string1);
-
-
-				return;
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxDirSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return2;
-				value_to_return2 = wxDirSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8));
-				char* temp_string2;
-				temp_string2 = (char*)malloc(sizeof(wxChar)*(value_to_return2.size()+1));
-				strcpy (temp_string2, (const char *) value_to_return2.char_str() );
-				ZVAL_STRING(return_value, temp_string2, 1);
-				free(temp_string2);
-
-
-				return;
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxDirSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), (long) style0).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return3;
-				value_to_return3 = wxDirSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), (long) style0);
-				char* temp_string3;
-				temp_string3 = (char*)malloc(sizeof(wxChar)*(value_to_return3.size()+1));
-				strcpy (temp_string3, (const char *) value_to_return3.char_str() );
-				ZVAL_STRING(return_value, temp_string3, 1);
-				free(temp_string3);
-
-
-				return;
-				break;
-			}
-			case 4:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxDirSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), (long) style0, *(wxPoint*) object_pointer0_3).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return4;
-				value_to_return4 = wxDirSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), (long) style0, *(wxPoint*) object_pointer0_3);
-				char* temp_string4;
-				temp_string4 = (char*)malloc(sizeof(wxChar)*(value_to_return4.size()+1));
-				strcpy (temp_string4, (const char *) value_to_return4.char_str() );
-				ZVAL_STRING(return_value, temp_string4, 1);
-				free(temp_string4);
-
-
-				return;
-				break;
-			}
-			case 5:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxDirSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), (long) style0, *(wxPoint*) object_pointer0_3, (wxWindow*) object_pointer0_4).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return5;
-				value_to_return5 = wxDirSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), (long) style0, *(wxPoint*) object_pointer0_3, (wxWindow*) object_pointer0_4);
-				char* temp_string5;
-				temp_string5 = (char*)malloc(sizeof(wxChar)*(value_to_return5.size()+1));
-				strcpy (temp_string5, (const char *) value_to_return5.char_str() );
-				ZVAL_STRING(return_value, temp_string5, 1);
-				free(temp_string5);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxNewEventType)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxNewEventType\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxNewEventType())\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxNewEventType());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxPostEvent)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxPostEvent\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	zval* dest0 = 0;
-	void* object_pointer0_0 = 0;
-	zval* event0 = 0;
-	void* object_pointer0_1 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zO' (&dest0, &event0, php_wxEvent_entry)\n");
-		#endif
-		char parse_parameters_string[] = "zO";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dest0, &event0, php_wxEvent_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(dest0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(dest0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow && rsrc_type != le_wxValidator && rsrc_type != le_wxTextValidator && rsrc_type != le_wxGenericValidator && rsrc_type != le_wxMenu && rsrc_type != le_wxAuiManager && rsrc_type != le_wxMouseEventsManager && rsrc_type != le_wxTimer && rsrc_type != le_wxEventBlocker && rsrc_type != le_wxProcess && rsrc_type != le_wxFileSystemWatcher && rsrc_type != le_wxTaskBarIcon && rsrc_type != le_wxNotificationMessage))
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(dest0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			if(arguments_received >= 2){
-				if(Z_TYPE_P(event0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(event0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_1 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_1 )
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(event0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxPostEvent((wxEvtHandler*) object_pointer0_0, *(wxEvent*) object_pointer0_1)\n\n");
-				#endif
-				wxPostEvent((wxEvtHandler*) object_pointer0_0, *(wxEvent*) object_pointer0_1);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxQueueEvent)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxQueueEvent\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	zval* dest0 = 0;
-	void* object_pointer0_0 = 0;
-	zval* event0 = 0;
-	void* object_pointer0_1 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zz' (&dest0, &event0)\n");
-		#endif
-		char parse_parameters_string[] = "zz";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dest0, &event0 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(dest0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(dest0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxWindow && rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow && rsrc_type != le_wxValidator && rsrc_type != le_wxTextValidator && rsrc_type != le_wxGenericValidator && rsrc_type != le_wxMenu && rsrc_type != le_wxAuiManager && rsrc_type != le_wxMouseEventsManager && rsrc_type != le_wxTimer && rsrc_type != le_wxEventBlocker && rsrc_type != le_wxProcess && rsrc_type != le_wxFileSystemWatcher && rsrc_type != le_wxTaskBarIcon && rsrc_type != le_wxNotificationMessage))
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(dest0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			if(arguments_received >= 2){
-				if(Z_TYPE_P(event0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(event0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_1 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_1 || (rsrc_type != le_wxMenuEvent && rsrc_type != le_wxKeyEvent && rsrc_type != le_wxCommandEvent && rsrc_type != le_wxNotifyEvent && rsrc_type != le_wxTreeEvent && rsrc_type != le_wxBookCtrlEvent && rsrc_type != le_wxAuiNotebookEvent && rsrc_type != le_wxAuiToolBarEvent && rsrc_type != le_wxListEvent && rsrc_type != le_wxSpinEvent && rsrc_type != le_wxSplitterEvent && rsrc_type != le_wxSpinDoubleEvent && rsrc_type != le_wxGridSizeEvent && rsrc_type != le_wxWizardEvent && rsrc_type != le_wxGridEvent && rsrc_type != le_wxGridRangeSelectEvent && rsrc_type != le_wxDataViewEvent && rsrc_type != le_wxHeaderCtrlEvent && rsrc_type != le_wxRibbonBarEvent && rsrc_type != le_wxStyledTextEvent && rsrc_type != le_wxChildFocusEvent && rsrc_type != le_wxHtmlCellEvent && rsrc_type != le_wxHtmlLinkEvent && rsrc_type != le_wxHyperlinkEvent && rsrc_type != le_wxColourPickerEvent && rsrc_type != le_wxFontPickerEvent && rsrc_type != le_wxScrollEvent && rsrc_type != le_wxWindowModalDialogEvent && rsrc_type != le_wxDateEvent && rsrc_type != le_wxCalendarEvent && rsrc_type != le_wxWindowCreateEvent && rsrc_type != le_wxWindowDestroyEvent && rsrc_type != le_wxUpdateUIEvent && rsrc_type != le_wxHelpEvent && rsrc_type != le_wxGridEditorCreatedEvent && rsrc_type != le_wxCollapsiblePaneEvent && rsrc_type != le_wxClipboardTextEvent && rsrc_type != le_wxFileCtrlEvent && rsrc_type != le_wxSashEvent && rsrc_type != le_wxFileDirPickerEvent && rsrc_type != le_wxContextMenuEvent && rsrc_type != le_wxRibbonButtonBarEvent && rsrc_type != le_wxRibbonGalleryEvent && rsrc_type != le_wxCloseEvent && rsrc_type != le_wxActivateEvent && rsrc_type != le_wxAuiManagerEvent && rsrc_type != le_wxSizeEvent && rsrc_type != le_wxMouseEvent && rsrc_type != le_wxMoveEvent && rsrc_type != le_wxTimerEvent && rsrc_type != le_wxThreadEvent && rsrc_type != le_wxScrollWinEvent && rsrc_type != le_wxSysColourChangedEvent && rsrc_type != le_wxProcessEvent && rsrc_type != le_wxEraseEvent && rsrc_type != le_wxSetCursorEvent && rsrc_type != le_wxIdleEvent && rsrc_type != le_wxPaintEvent && rsrc_type != le_wxPaletteChangedEvent && rsrc_type != le_wxInitDialogEvent && rsrc_type != le_wxMaximizeEvent && rsrc_type != le_wxNavigationKeyEvent && rsrc_type != le_wxFocusEvent && rsrc_type != le_wxFileSystemWatcherEvent && rsrc_type != le_wxDisplayChangedEvent && rsrc_type != le_wxCalculateLayoutEvent && rsrc_type != le_wxQueryLayoutInfoEvent && rsrc_type != le_wxTaskBarIconEvent))
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(event0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxQueueEvent((wxEvtHandler*) object_pointer0_0, (wxEvent*) object_pointer0_1)\n\n");
-				#endif
-				wxQueueEvent((wxEvtHandler*) object_pointer0_0, (wxEvent*) object_pointer0_1);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxFileSelector)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxFileSelector\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* message0;
-	long message_len0;
-	char* default_path0;
-	long default_path_len0;
-	char* default_filename0;
-	long default_filename_len0;
-	char* default_extension0;
-	long default_extension_len0;
-	char* wildcard0;
-	long wildcard_len0;
-	long flags0;
-	zval* parent0 = 0;
-	void* object_pointer0_6 = 0;
-	long x0;
-	long y0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 1  && arguments_received <= 9)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's|sssslzll' (&message0, &message_len0, &default_path0, &default_path_len0, &default_filename0, &default_filename_len0, &default_extension0, &default_extension_len0, &wildcard0, &wildcard_len0, &flags0, &parent0, &x0, &y0)\n");
-		#endif
-		char parse_parameters_string[] = "s|sssslzll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &message0, &message_len0, &default_path0, &default_path_len0, &default_filename0, &default_filename_len0, &default_extension0, &default_extension_len0, &wildcard0, &wildcard_len0, &flags0, &parent0, &x0, &y0 ) == SUCCESS)
-		{
-			if(arguments_received >= 7){
-				if(Z_TYPE_P(parent0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_6 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_6 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxFileSelector(wxString(message0, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return1;
-				value_to_return1 = wxFileSelector(wxString(message0, wxConvUTF8));
-				char* temp_string1;
-				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
-				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
-				ZVAL_STRING(return_value, temp_string1, 1);
-				free(temp_string1);
-
-
-				return;
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return2;
-				value_to_return2 = wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8));
-				char* temp_string2;
-				temp_string2 = (char*)malloc(sizeof(wxChar)*(value_to_return2.size()+1));
-				strcpy (temp_string2, (const char *) value_to_return2.char_str() );
-				ZVAL_STRING(return_value, temp_string2, 1);
-				free(temp_string2);
-
-
-				return;
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return3;
-				value_to_return3 = wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8));
-				char* temp_string3;
-				temp_string3 = (char*)malloc(sizeof(wxChar)*(value_to_return3.size()+1));
-				strcpy (temp_string3, (const char *) value_to_return3.char_str() );
-				ZVAL_STRING(return_value, temp_string3, 1);
-				free(temp_string3);
-
-
-				return;
-				break;
-			}
-			case 4:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), wxString(default_extension0, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return4;
-				value_to_return4 = wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), wxString(default_extension0, wxConvUTF8));
-				char* temp_string4;
-				temp_string4 = (char*)malloc(sizeof(wxChar)*(value_to_return4.size()+1));
-				strcpy (temp_string4, (const char *) value_to_return4.char_str() );
-				ZVAL_STRING(return_value, temp_string4, 1);
-				free(temp_string4);
-
-
-				return;
-				break;
-			}
-			case 5:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), wxString(default_extension0, wxConvUTF8), wxString(wildcard0, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return5;
-				value_to_return5 = wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), wxString(default_extension0, wxConvUTF8), wxString(wildcard0, wxConvUTF8));
-				char* temp_string5;
-				temp_string5 = (char*)malloc(sizeof(wxChar)*(value_to_return5.size()+1));
-				strcpy (temp_string5, (const char *) value_to_return5.char_str() );
-				ZVAL_STRING(return_value, temp_string5, 1);
-				free(temp_string5);
-
-
-				return;
-				break;
-			}
-			case 6:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), wxString(default_extension0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), (int) flags0).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return6;
-				value_to_return6 = wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), wxString(default_extension0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), (int) flags0);
-				char* temp_string6;
-				temp_string6 = (char*)malloc(sizeof(wxChar)*(value_to_return6.size()+1));
-				strcpy (temp_string6, (const char *) value_to_return6.char_str() );
-				ZVAL_STRING(return_value, temp_string6, 1);
-				free(temp_string6);
-
-
-				return;
-				break;
-			}
-			case 7:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), wxString(default_extension0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), (int) flags0, (wxWindow*) object_pointer0_6).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return7;
-				value_to_return7 = wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), wxString(default_extension0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), (int) flags0, (wxWindow*) object_pointer0_6);
-				char* temp_string7;
-				temp_string7 = (char*)malloc(sizeof(wxChar)*(value_to_return7.size()+1));
-				strcpy (temp_string7, (const char *) value_to_return7.char_str() );
-				ZVAL_STRING(return_value, temp_string7, 1);
-				free(temp_string7);
-
-
-				return;
-				break;
-			}
-			case 8:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), wxString(default_extension0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), (int) flags0, (wxWindow*) object_pointer0_6, (int) x0).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return8;
-				value_to_return8 = wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), wxString(default_extension0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), (int) flags0, (wxWindow*) object_pointer0_6, (int) x0);
-				char* temp_string8;
-				temp_string8 = (char*)malloc(sizeof(wxChar)*(value_to_return8.size()+1));
-				strcpy (temp_string8, (const char *) value_to_return8.char_str() );
-				ZVAL_STRING(return_value, temp_string8, 1);
-				free(temp_string8);
-
-
-				return;
-				break;
-			}
-			case 9:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), wxString(default_extension0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), (int) flags0, (wxWindow*) object_pointer0_6, (int) x0, (int) y0).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return9;
-				value_to_return9 = wxFileSelector(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), wxString(default_extension0, wxConvUTF8), wxString(wildcard0, wxConvUTF8), (int) flags0, (wxWindow*) object_pointer0_6, (int) x0, (int) y0);
-				char* temp_string9;
-				temp_string9 = (char*)malloc(sizeof(wxChar)*(value_to_return9.size()+1));
-				strcpy (temp_string9, (const char *) value_to_return9.char_str() );
-				ZVAL_STRING(return_value, temp_string9, 1);
-				free(temp_string9);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxFileSelectorEx)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxFileSelectorEx\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* message0;
-	long message_len0;
-	char* default_path0;
-	long default_path_len0;
-	char* default_filename0;
-	long default_filename_len0;
-	long* indexDefaultExtension0;
-	zval* indexDefaultExtension0_ref;
-	char* wildcard0;
-	long wildcard_len0;
-	long flags0;
-	zval* parent0 = 0;
-	void* object_pointer0_6 = 0;
-	long x0;
-	long y0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 0  && arguments_received <= 9)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '|ssslslzll' (&message0, &message_len0, &default_path0, &default_path_len0, &default_filename0, &default_filename_len0, indexDefaultExtension0, &wildcard0, &wildcard_len0, &flags0, &parent0, &x0, &y0)\n");
-		#endif
-		char parse_parameters_string[] = "|ssslslzll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &message0, &message_len0, &default_path0, &default_path_len0, &default_filename0, &default_filename_len0, indexDefaultExtension0, &wildcard0, &wildcard_len0, &flags0, &parent0, &x0, &y0 ) == SUCCESS)
-		{
-			if(arguments_received >= 7){
-				if(Z_TYPE_P(parent0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_6 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_6 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "|zzzzzzzzz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &dummy, &dummy, &dummy, &indexDefaultExtension0_ref, &dummy, &dummy, &dummy, &dummy, &dummy );
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxFileSelectorEx().fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return0;
-				value_to_return0 = wxFileSelectorEx();
-				char* temp_string0;
-				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
-				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
-				ZVAL_STRING(return_value, temp_string0, 1);
-				free(temp_string0);
-
-
-				return;
-				break;
-			}
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxFileSelectorEx(wxString(message0, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return1;
-				value_to_return1 = wxFileSelectorEx(wxString(message0, wxConvUTF8));
-				char* temp_string1;
-				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
-				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
-				ZVAL_STRING(return_value, temp_string1, 1);
-				free(temp_string1);
-
-
-				return;
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return2;
-				value_to_return2 = wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8));
-				char* temp_string2;
-				temp_string2 = (char*)malloc(sizeof(wxChar)*(value_to_return2.size()+1));
-				strcpy (temp_string2, (const char *) value_to_return2.char_str() );
-				ZVAL_STRING(return_value, temp_string2, 1);
-				free(temp_string2);
-
-
-				return;
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return3;
-				value_to_return3 = wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8));
-				char* temp_string3;
-				temp_string3 = (char*)malloc(sizeof(wxChar)*(value_to_return3.size()+1));
-				strcpy (temp_string3, (const char *) value_to_return3.char_str() );
-				ZVAL_STRING(return_value, temp_string3, 1);
-				free(temp_string3);
-
-
-				return;
-				break;
-			}
-			case 4:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), (int*) indexDefaultExtension0).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return4;
-				value_to_return4 = wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), (int*) indexDefaultExtension0);
-				char* temp_string4;
-				temp_string4 = (char*)malloc(sizeof(wxChar)*(value_to_return4.size()+1));
-				strcpy (temp_string4, (const char *) value_to_return4.char_str() );
-				ZVAL_STRING(return_value, temp_string4, 1);
-				free(temp_string4);
-
-				size_t elements_returned0_3 = sizeof(indexDefaultExtension0)/sizeof(*indexDefaultExtension0);
-				array_init(indexDefaultExtension0_ref);
-				for(size_t i=0; i<elements_returned0_3; i++)
-				{
-					add_next_index_long(indexDefaultExtension0_ref, indexDefaultExtension0[i]);
-				}
-
-				return;
-				break;
-			}
-			case 5:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), (int*) indexDefaultExtension0, wxString(wildcard0, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return5;
-				value_to_return5 = wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), (int*) indexDefaultExtension0, wxString(wildcard0, wxConvUTF8));
-				char* temp_string5;
-				temp_string5 = (char*)malloc(sizeof(wxChar)*(value_to_return5.size()+1));
-				strcpy (temp_string5, (const char *) value_to_return5.char_str() );
-				ZVAL_STRING(return_value, temp_string5, 1);
-				free(temp_string5);
-
-				size_t elements_returned0_3 = sizeof(indexDefaultExtension0)/sizeof(*indexDefaultExtension0);
-				array_init(indexDefaultExtension0_ref);
-				for(size_t i=0; i<elements_returned0_3; i++)
-				{
-					add_next_index_long(indexDefaultExtension0_ref, indexDefaultExtension0[i]);
-				}
-
-				return;
-				break;
-			}
-			case 6:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), (int*) indexDefaultExtension0, wxString(wildcard0, wxConvUTF8), (int) flags0).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return6;
-				value_to_return6 = wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), (int*) indexDefaultExtension0, wxString(wildcard0, wxConvUTF8), (int) flags0);
-				char* temp_string6;
-				temp_string6 = (char*)malloc(sizeof(wxChar)*(value_to_return6.size()+1));
-				strcpy (temp_string6, (const char *) value_to_return6.char_str() );
-				ZVAL_STRING(return_value, temp_string6, 1);
-				free(temp_string6);
-
-				size_t elements_returned0_3 = sizeof(indexDefaultExtension0)/sizeof(*indexDefaultExtension0);
-				array_init(indexDefaultExtension0_ref);
-				for(size_t i=0; i<elements_returned0_3; i++)
-				{
-					add_next_index_long(indexDefaultExtension0_ref, indexDefaultExtension0[i]);
-				}
-
-				return;
-				break;
-			}
-			case 7:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), (int*) indexDefaultExtension0, wxString(wildcard0, wxConvUTF8), (int) flags0, (wxWindow*) object_pointer0_6).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return7;
-				value_to_return7 = wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), (int*) indexDefaultExtension0, wxString(wildcard0, wxConvUTF8), (int) flags0, (wxWindow*) object_pointer0_6);
-				char* temp_string7;
-				temp_string7 = (char*)malloc(sizeof(wxChar)*(value_to_return7.size()+1));
-				strcpy (temp_string7, (const char *) value_to_return7.char_str() );
-				ZVAL_STRING(return_value, temp_string7, 1);
-				free(temp_string7);
-
-				size_t elements_returned0_3 = sizeof(indexDefaultExtension0)/sizeof(*indexDefaultExtension0);
-				array_init(indexDefaultExtension0_ref);
-				for(size_t i=0; i<elements_returned0_3; i++)
-				{
-					add_next_index_long(indexDefaultExtension0_ref, indexDefaultExtension0[i]);
-				}
-
-				return;
-				break;
-			}
-			case 8:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), (int*) indexDefaultExtension0, wxString(wildcard0, wxConvUTF8), (int) flags0, (wxWindow*) object_pointer0_6, (int) x0).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return8;
-				value_to_return8 = wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), (int*) indexDefaultExtension0, wxString(wildcard0, wxConvUTF8), (int) flags0, (wxWindow*) object_pointer0_6, (int) x0);
-				char* temp_string8;
-				temp_string8 = (char*)malloc(sizeof(wxChar)*(value_to_return8.size()+1));
-				strcpy (temp_string8, (const char *) value_to_return8.char_str() );
-				ZVAL_STRING(return_value, temp_string8, 1);
-				free(temp_string8);
-
-				size_t elements_returned0_3 = sizeof(indexDefaultExtension0)/sizeof(*indexDefaultExtension0);
-				array_init(indexDefaultExtension0_ref);
-				for(size_t i=0; i<elements_returned0_3; i++)
-				{
-					add_next_index_long(indexDefaultExtension0_ref, indexDefaultExtension0[i]);
-				}
-
-				return;
-				break;
-			}
-			case 9:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), (int*) indexDefaultExtension0, wxString(wildcard0, wxConvUTF8), (int) flags0, (wxWindow*) object_pointer0_6, (int) x0, (int) y0).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return9;
-				value_to_return9 = wxFileSelectorEx(wxString(message0, wxConvUTF8), wxString(default_path0, wxConvUTF8), wxString(default_filename0, wxConvUTF8), (int*) indexDefaultExtension0, wxString(wildcard0, wxConvUTF8), (int) flags0, (wxWindow*) object_pointer0_6, (int) x0, (int) y0);
-				char* temp_string9;
-				temp_string9 = (char*)malloc(sizeof(wxChar)*(value_to_return9.size()+1));
-				strcpy (temp_string9, (const char *) value_to_return9.char_str() );
-				ZVAL_STRING(return_value, temp_string9, 1);
-				free(temp_string9);
-
-				size_t elements_returned0_3 = sizeof(indexDefaultExtension0)/sizeof(*indexDefaultExtension0);
-				array_init(indexDefaultExtension0_ref);
-				for(size_t i=0; i<elements_returned0_3; i++)
-				{
-					add_next_index_long(indexDefaultExtension0_ref, indexDefaultExtension0[i]);
-				}
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxLoadFileSelector)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxLoadFileSelector\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* what0;
-	long what_len0;
-	char* extension0;
-	long extension_len0;
-	char* default_name0;
-	long default_name_len0;
-	zval* parent0 = 0;
-	void* object_pointer0_3 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 2  && arguments_received <= 4)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ss|sz' (&what0, &what_len0, &extension0, &extension_len0, &default_name0, &default_name_len0, &parent0)\n");
-		#endif
-		char parse_parameters_string[] = "ss|sz";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &what0, &what_len0, &extension0, &extension_len0, &default_name0, &default_name_len0, &parent0 ) == SUCCESS)
-		{
-			if(arguments_received >= 4){
-				if(Z_TYPE_P(parent0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_3 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_3 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxLoadFileSelector(wxString(what0, wxConvUTF8), wxString(extension0, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return2;
-				value_to_return2 = wxLoadFileSelector(wxString(what0, wxConvUTF8), wxString(extension0, wxConvUTF8));
-				char* temp_string2;
-				temp_string2 = (char*)malloc(sizeof(wxChar)*(value_to_return2.size()+1));
-				strcpy (temp_string2, (const char *) value_to_return2.char_str() );
-				ZVAL_STRING(return_value, temp_string2, 1);
-				free(temp_string2);
-
-
-				return;
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxLoadFileSelector(wxString(what0, wxConvUTF8), wxString(extension0, wxConvUTF8), wxString(default_name0, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return3;
-				value_to_return3 = wxLoadFileSelector(wxString(what0, wxConvUTF8), wxString(extension0, wxConvUTF8), wxString(default_name0, wxConvUTF8));
-				char* temp_string3;
-				temp_string3 = (char*)malloc(sizeof(wxChar)*(value_to_return3.size()+1));
-				strcpy (temp_string3, (const char *) value_to_return3.char_str() );
-				ZVAL_STRING(return_value, temp_string3, 1);
-				free(temp_string3);
-
-
-				return;
-				break;
-			}
-			case 4:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxLoadFileSelector(wxString(what0, wxConvUTF8), wxString(extension0, wxConvUTF8), wxString(default_name0, wxConvUTF8), (wxWindow*) object_pointer0_3).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return4;
-				value_to_return4 = wxLoadFileSelector(wxString(what0, wxConvUTF8), wxString(extension0, wxConvUTF8), wxString(default_name0, wxConvUTF8), (wxWindow*) object_pointer0_3);
-				char* temp_string4;
-				temp_string4 = (char*)malloc(sizeof(wxChar)*(value_to_return4.size()+1));
-				strcpy (temp_string4, (const char *) value_to_return4.char_str() );
-				ZVAL_STRING(return_value, temp_string4, 1);
-				free(temp_string4);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxSaveFileSelector)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxSaveFileSelector\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* what0;
-	long what_len0;
-	char* extension0;
-	long extension_len0;
-	char* default_name0;
-	long default_name_len0;
-	zval* parent0 = 0;
-	void* object_pointer0_3 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 2  && arguments_received <= 4)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ss|sz' (&what0, &what_len0, &extension0, &extension_len0, &default_name0, &default_name_len0, &parent0)\n");
-		#endif
-		char parse_parameters_string[] = "ss|sz";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &what0, &what_len0, &extension0, &extension_len0, &default_name0, &default_name_len0, &parent0 ) == SUCCESS)
-		{
-			if(arguments_received >= 4){
-				if(Z_TYPE_P(parent0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_3 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_3 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxSaveFileSelector(wxString(what0, wxConvUTF8), wxString(extension0, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return2;
-				value_to_return2 = wxSaveFileSelector(wxString(what0, wxConvUTF8), wxString(extension0, wxConvUTF8));
-				char* temp_string2;
-				temp_string2 = (char*)malloc(sizeof(wxChar)*(value_to_return2.size()+1));
-				strcpy (temp_string2, (const char *) value_to_return2.char_str() );
-				ZVAL_STRING(return_value, temp_string2, 1);
-				free(temp_string2);
-
-
-				return;
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxSaveFileSelector(wxString(what0, wxConvUTF8), wxString(extension0, wxConvUTF8), wxString(default_name0, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return3;
-				value_to_return3 = wxSaveFileSelector(wxString(what0, wxConvUTF8), wxString(extension0, wxConvUTF8), wxString(default_name0, wxConvUTF8));
-				char* temp_string3;
-				temp_string3 = (char*)malloc(sizeof(wxChar)*(value_to_return3.size()+1));
-				strcpy (temp_string3, (const char *) value_to_return3.char_str() );
-				ZVAL_STRING(return_value, temp_string3, 1);
-				free(temp_string3);
-
-
-				return;
-				break;
-			}
-			case 4:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxSaveFileSelector(wxString(what0, wxConvUTF8), wxString(extension0, wxConvUTF8), wxString(default_name0, wxConvUTF8), (wxWindow*) object_pointer0_3).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return4;
-				value_to_return4 = wxSaveFileSelector(wxString(what0, wxConvUTF8), wxString(extension0, wxConvUTF8), wxString(default_name0, wxConvUTF8), (wxWindow*) object_pointer0_3);
-				char* temp_string4;
-				temp_string4 = (char*)malloc(sizeof(wxChar)*(value_to_return4.size()+1));
-				strcpy (temp_string4, (const char *) value_to_return4.char_str() );
-				ZVAL_STRING(return_value, temp_string4, 1);
-				free(temp_string4);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetOSDirectory)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetOSDirectory\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetOSDirectory().fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return0;
-				value_to_return0 = wxGetOSDirectory();
-				char* temp_string0;
-				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
-				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
-				ZVAL_STRING(return_value, temp_string0, 1);
-				free(temp_string0);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxParseCommonDialogsFilter)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxParseCommonDialogsFilter\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* wildCard0;
-	long wildCard_len0;
-	zval* descriptions0 = 0;
-	zval* descriptions0_ref;
-	zval* filters0 = 0;
-	zval* filters0_ref;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 3)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'saa' (&wildCard0, &wildCard_len0, &descriptions0, &filters0)\n");
-		#endif
-		char parse_parameters_string[] = "saa";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &wildCard0, &wildCard_len0, &descriptions0, &filters0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		wxArrayString strings_array0_1;
-		bool strings_continue0_1 = true;
-
-		wxArrayString strings_array0_2;
-		bool strings_continue0_2 = true;
-
-		switch(arguments_received)
-		{
-			case 3:
-			{
-				int array_index0_1 = 0;
-				zval** temp_array_value0_1 = 0;
-				while(strings_continue0_1)
-				{
-					if(zend_hash_index_find(HASH_OF(descriptions0), array_index0_1, (void**)&temp_array_value0_1) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value0_1);
-						strings_array0_1.Add(wxString(Z_STRVAL_PP(temp_array_value0_1), wxConvUTF8));
-						array_index0_1++;
-					}
-					else
-					{
-						strings_continue0_1 = false;
-					}
-				}
-				int array_index0_2 = 0;
-				zval** temp_array_value0_2 = 0;
-				while(strings_continue0_2)
-				{
-					if(zend_hash_index_find(HASH_OF(filters0), array_index0_2, (void**)&temp_array_value0_2) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value0_2);
-						strings_array0_2.Add(wxString(Z_STRVAL_PP(temp_array_value0_2), wxConvUTF8));
-						array_index0_2++;
-					}
-					else
-					{
-						strings_continue0_2 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxParseCommonDialogsFilter(wxString(wildCard0, wxConvUTF8), strings_array0_1, strings_array0_2))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxParseCommonDialogsFilter(wxString(wildCard0, wxConvUTF8), strings_array0_1, strings_array0_2));
-
-				char* temp_string0_1;
-				array_init(descriptions0);
-				for(size_t i=0; i<strings_array0_1.GetCount(); i++)
-				{
-					temp_string0_1 = (char*)malloc(sizeof(wxChar)*(strings_array0_1[i].size()+1));
-					strcpy (temp_string0_1, (const char *) strings_array0_1[i].char_str() );
-					add_next_index_string(descriptions0, (char*) temp_string0_1, 1);
-					free(temp_string0_1);
-
-				}
-				char* temp_string0_2;
-				array_init(filters0);
-				for(size_t i=0; i<strings_array0_2.GetCount(); i++)
-				{
-					temp_string0_2 = (char*)malloc(sizeof(wxChar)*(strings_array0_2[i].size()+1));
-					strcpy (temp_string0_2, (const char *) strings_array0_2[i].char_str() );
-					add_next_index_string(filters0, (char*) temp_string0_2, 1);
-					free(temp_string0_2);
-
-				}
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxDirExists)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxDirExists\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* dirname0;
-	long dirname_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&dirname0, &dirname_len0)\n");
-		#endif
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dirname0, &dirname_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxDirExists(wxString(dirname0, wxConvUTF8)))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxDirExists(wxString(dirname0, wxConvUTF8)));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxSplitPath)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxSplitPath\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* fullname0;
-	long fullname_len0;
-	char* path0;
-	long path_len0;
-	zval* path0_ref;
-	char* name0;
-	long name_len0;
-	zval* name0_ref;
-	char* ext0;
-	long ext_len0;
-	zval* ext0_ref;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 4)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ssss' (&fullname0, &fullname_len0, &path0, &path_len0, &name0, &name_len0, &ext0, &ext_len0)\n");
-		#endif
-		char parse_parameters_string[] = "ssss";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fullname0, &fullname_len0, &path0, &path_len0, &name0, &name_len0, &ext0, &ext_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "zzzz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &dummy, &path0_ref, &name0_ref, &ext0_ref );
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 4:
-			{
-				wxString string_arg0_1 = wxString(path0, wxConvUTF8);
-				wxString string_arg0_2 = wxString(name0, wxConvUTF8);
-				wxString string_arg0_3 = wxString(ext0, wxConvUTF8);
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxSplitPath(wxString(fullname0, wxConvUTF8), &string_arg0_1, &string_arg0_2, &string_arg0_3)\n\n");
-				#endif
-				wxSplitPath(wxString(fullname0, wxConvUTF8), &string_arg0_1, &string_arg0_2, &string_arg0_3);
-
-				char* temp_string0_1;
-				temp_string0_1 = (char*)malloc(sizeof(wxChar)*(string_arg0_1.size()+1));
-				strcpy (temp_string0_1, (const char *) string_arg0_1.char_str() );
-				ZVAL_STRING(path0_ref, (char*) temp_string0_1, 1);
-				free(temp_string0_1);
-
-				char* temp_string0_2;
-				temp_string0_2 = (char*)malloc(sizeof(wxChar)*(string_arg0_2.size()+1));
-				strcpy (temp_string0_2, (const char *) string_arg0_2.char_str() );
-				ZVAL_STRING(name0_ref, (char*) temp_string0_2, 1);
-				free(temp_string0_2);
-
-				char* temp_string0_3;
-				temp_string0_3 = (char*)malloc(sizeof(wxChar)*(string_arg0_3.size()+1));
-				strcpy (temp_string0_3, (const char *) string_arg0_3.char_str() );
-				ZVAL_STRING(ext0_ref, (char*) temp_string0_3, 1);
-				free(temp_string0_3);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxRenameFile)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxRenameFile\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* file10;
-	long file1_len0;
-	char* file20;
-	long file2_len0;
-	bool overwrite0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 2  && arguments_received <= 3)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ss|b' (&file10, &file1_len0, &file20, &file2_len0, &overwrite0)\n");
-		#endif
-		char parse_parameters_string[] = "ss|b";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &file10, &file1_len0, &file20, &file2_len0, &overwrite0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxRenameFile(wxString(file10, wxConvUTF8), wxString(file20, wxConvUTF8)))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxRenameFile(wxString(file10, wxConvUTF8), wxString(file20, wxConvUTF8)));
-
-
-				return;
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxRenameFile(wxString(file10, wxConvUTF8), wxString(file20, wxConvUTF8), overwrite0))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxRenameFile(wxString(file10, wxConvUTF8), wxString(file20, wxConvUTF8), overwrite0));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxCopyFile)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxCopyFile\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* file10;
-	long file1_len0;
-	char* file20;
-	long file2_len0;
-	bool overwrite0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 2  && arguments_received <= 3)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ss|b' (&file10, &file1_len0, &file20, &file2_len0, &overwrite0)\n");
-		#endif
-		char parse_parameters_string[] = "ss|b";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &file10, &file1_len0, &file20, &file2_len0, &overwrite0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxCopyFile(wxString(file10, wxConvUTF8), wxString(file20, wxConvUTF8)))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxCopyFile(wxString(file10, wxConvUTF8), wxString(file20, wxConvUTF8)));
-
-
-				return;
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxCopyFile(wxString(file10, wxConvUTF8), wxString(file20, wxConvUTF8), overwrite0))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxCopyFile(wxString(file10, wxConvUTF8), wxString(file20, wxConvUTF8), overwrite0));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxFileExists)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxFileExists\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* filename0;
-	long filename_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&filename0, &filename_len0)\n");
-		#endif
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filename0, &filename_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxFileExists(wxString(filename0, wxConvUTF8)))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxFileExists(wxString(filename0, wxConvUTF8)));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxMatchWild)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxMatchWild\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* pattern0;
-	long pattern_len0;
-	char* text0;
-	long text_len0;
-	bool dot_special0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 3)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ssb' (&pattern0, &pattern_len0, &text0, &text_len0, &dot_special0)\n");
-		#endif
-		char parse_parameters_string[] = "ssb";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pattern0, &pattern_len0, &text0, &text_len0, &dot_special0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxMatchWild(wxString(pattern0, wxConvUTF8), wxString(text0, wxConvUTF8), dot_special0))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxMatchWild(wxString(pattern0, wxConvUTF8), wxString(text0, wxConvUTF8), dot_special0));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxPathOnly)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxPathOnly\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* path0;
-	long path_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&path0, &path_len0)\n");
-		#endif
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &path0, &path_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxPathOnly(wxString(path0, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return1;
-				value_to_return1 = wxPathOnly(wxString(path0, wxConvUTF8));
-				char* temp_string1;
-				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
-				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
-				ZVAL_STRING(return_value, temp_string1, 1);
-				free(temp_string1);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxIsWild)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxIsWild\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* pattern0;
-	long pattern_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&pattern0, &pattern_len0)\n");
-		#endif
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pattern0, &pattern_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxIsWild(wxString(pattern0, wxConvUTF8)))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxIsWild(wxString(pattern0, wxConvUTF8)));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxIsAbsolutePath)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxIsAbsolutePath\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* filename0;
-	long filename_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&filename0, &filename_len0)\n");
-		#endif
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &filename0, &filename_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxIsAbsolutePath(wxString(filename0, wxConvUTF8)))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxIsAbsolutePath(wxString(filename0, wxConvUTF8)));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetCwd)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetCwd\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetCwd().fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return0;
-				value_to_return0 = wxGetCwd();
-				char* temp_string0;
-				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
-				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
-				ZVAL_STRING(return_value, temp_string0, 1);
-				free(temp_string0);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxSetWorkingDirectory)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxSetWorkingDirectory\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* dir0;
-	long dir_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&dir0, &dir_len0)\n");
-		#endif
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dir0, &dir_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxSetWorkingDirectory(wxString(dir0, wxConvUTF8)))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxSetWorkingDirectory(wxString(dir0, wxConvUTF8)));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxConcatFiles)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxConcatFiles\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* file10;
-	long file1_len0;
-	char* file20;
-	long file2_len0;
-	char* file30;
-	long file3_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 3)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'sss' (&file10, &file1_len0, &file20, &file2_len0, &file30, &file3_len0)\n");
-		#endif
-		char parse_parameters_string[] = "sss";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &file10, &file1_len0, &file20, &file2_len0, &file30, &file3_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxConcatFiles(wxString(file10, wxConvUTF8), wxString(file20, wxConvUTF8), wxString(file30, wxConvUTF8)))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxConcatFiles(wxString(file10, wxConvUTF8), wxString(file20, wxConvUTF8), wxString(file30, wxConvUTF8)));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxRemoveFile)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxRemoveFile\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* file0;
-	long file_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&file0, &file_len0)\n");
-		#endif
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &file0, &file_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxRemoveFile(wxString(file0, wxConvUTF8)))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxRemoveFile(wxString(file0, wxConvUTF8)));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxMkdir)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxMkdir\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* dir0;
-	long dir_len0;
-	long perm0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 1  && arguments_received <= 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's|l' (&dir0, &dir_len0, &perm0)\n");
-		#endif
-		char parse_parameters_string[] = "s|l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dir0, &dir_len0, &perm0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxMkdir(wxString(dir0, wxConvUTF8)))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxMkdir(wxString(dir0, wxConvUTF8)));
-
-
-				return;
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxMkdir(wxString(dir0, wxConvUTF8), (int) perm0))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxMkdir(wxString(dir0, wxConvUTF8), (int) perm0));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxRmdir)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxRmdir\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* dir0;
-	long dir_len0;
-	long flags0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 1  && arguments_received <= 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's|l' (&dir0, &dir_len0, &flags0)\n");
-		#endif
-		char parse_parameters_string[] = "s|l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dir0, &dir_len0, &flags0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxRmdir(wxString(dir0, wxConvUTF8)))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxRmdir(wxString(dir0, wxConvUTF8)));
-
-
-				return;
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxRmdir(wxString(dir0, wxConvUTF8), (int) flags0))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxRmdir(wxString(dir0, wxConvUTF8), (int) flags0));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxFindNextFile)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxFindNextFile\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxFindNextFile().fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return0;
-				value_to_return0 = wxFindNextFile();
-				char* temp_string0;
-				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
-				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
-				ZVAL_STRING(return_value, temp_string0, 1);
-				free(temp_string0);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxFindFirstFile)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxFindFirstFile\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* spec0;
-	long spec_len0;
-	long flags0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 1  && arguments_received <= 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's|l' (&spec0, &spec_len0, &flags0)\n");
-		#endif
-		char parse_parameters_string[] = "s|l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &spec0, &spec_len0, &flags0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxFindFirstFile(wxString(spec0, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return1;
-				value_to_return1 = wxFindFirstFile(wxString(spec0, wxConvUTF8));
-				char* temp_string1;
-				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
-				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
-				ZVAL_STRING(return_value, temp_string1, 1);
-				free(temp_string1);
-
-
-				return;
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxFindFirstFile(wxString(spec0, wxConvUTF8), (int) flags0).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return2;
-				value_to_return2 = wxFindFirstFile(wxString(spec0, wxConvUTF8), (int) flags0);
-				char* temp_string2;
-				temp_string2 = (char*)malloc(sizeof(wxChar)*(value_to_return2.size()+1));
-				strcpy (temp_string2, (const char *) value_to_return2.char_str() );
-				ZVAL_STRING(return_value, temp_string2, 1);
-				free(temp_string2);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetFileKind)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetFileKind\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	long fd0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l' (&fd0)\n");
-		#endif
-		char parse_parameters_string[] = "l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &fd0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxGetFileKind((int) fd0))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxGetFileKind((int) fd0));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetFontFromUser)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetFontFromUser\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	zval* parent0 = 0;
-	void* object_pointer0_0 = 0;
-	zval* fontInit0 = 0;
-	void* object_pointer0_1 = 0;
-	char* caption0;
-	long caption_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 2  && arguments_received <= 3)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zO|s' (&parent0, &fontInit0, php_wxFont_entry, &caption0, &caption_len0)\n");
-		#endif
-		char parse_parameters_string[] = "zO|s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0, &fontInit0, php_wxFont_entry, &caption0, &caption_len0 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			if(arguments_received >= 2){
-				if(Z_TYPE_P(fontInit0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(fontInit0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_1 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_1 )
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(fontInit0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxGetFontFromUser((wxWindow*) object_pointer0_0, *(wxFont*) object_pointer0_1) to return new object\n\n");
-				#endif
-				wxFont value_to_return2;
-				value_to_return2 = wxGetFontFromUser((wxWindow*) object_pointer0_0, *(wxFont*) object_pointer0_1);
-				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
-				memcpy(ptr, &value_to_return2, sizeof(wxFont));
-				object_init_ex(return_value, php_wxFont_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxFont));
-
-
-				return;
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxGetFontFromUser((wxWindow*) object_pointer0_0, *(wxFont*) object_pointer0_1, wxString(caption0, wxConvUTF8)) to return new object\n\n");
-				#endif
-				wxFont value_to_return3;
-				value_to_return3 = wxGetFontFromUser((wxWindow*) object_pointer0_0, *(wxFont*) object_pointer0_1, wxString(caption0, wxConvUTF8));
-				void* ptr = safe_emalloc(1, sizeof(wxFont_php), 0);
-				memcpy(ptr, &value_to_return3, sizeof(wxFont));
-				object_init_ex(return_value, php_wxFont_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxFont));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxColourDisplay)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxColourDisplay\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxColourDisplay())\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxColourDisplay());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxDisplayDepth)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxDisplayDepth\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxDisplayDepth())\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxDisplayDepth());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxSetCursor)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxSetCursor\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	zval* cursor0 = 0;
-	void* object_pointer0_0 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&cursor0, php_wxCursor_entry)\n");
-		#endif
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &cursor0, php_wxCursor_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(cursor0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(cursor0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 )
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(cursor0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxSetCursor(*(wxCursor*) object_pointer0_0)\n\n");
-				#endif
-				wxSetCursor(*(wxCursor*) object_pointer0_0);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxClientDisplayRect)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxClientDisplayRect\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	long* x0;
-	zval* x0_ref;
-	long* y0;
-	zval* y0_ref;
-	long* width0;
-	zval* width0_ref;
-	long* height0;
-	zval* height0_ref;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 4)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'llll' (x0, y0, width0, height0)\n");
-		#endif
-		char parse_parameters_string[] = "llll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, x0, y0, width0, height0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "zzzz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &x0_ref, &y0_ref, &width0_ref, &height0_ref );
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 4:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxClientDisplayRect((int*) x0, (int*) y0, (int*) width0, (int*) height0)\n\n");
-				#endif
-				wxClientDisplayRect((int*) x0, (int*) y0, (int*) width0, (int*) height0);
-
-				size_t elements_returned0_0 = sizeof(x0)/sizeof(*x0);
-				array_init(x0_ref);
-				for(size_t i=0; i<elements_returned0_0; i++)
-				{
-					add_next_index_long(x0_ref, x0[i]);
-				}
-				size_t elements_returned0_1 = sizeof(y0)/sizeof(*y0);
-				array_init(y0_ref);
-				for(size_t i=0; i<elements_returned0_1; i++)
-				{
-					add_next_index_long(y0_ref, y0[i]);
-				}
-				size_t elements_returned0_2 = sizeof(width0)/sizeof(*width0);
-				array_init(width0_ref);
-				for(size_t i=0; i<elements_returned0_2; i++)
-				{
-					add_next_index_long(width0_ref, width0[i]);
-				}
-				size_t elements_returned0_3 = sizeof(height0)/sizeof(*height0);
-				array_init(height0_ref);
-				for(size_t i=0; i<elements_returned0_3; i++)
-				{
-					add_next_index_long(height0_ref, height0[i]);
-				}
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetClientDisplayRect)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetClientDisplayRect\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxGetClientDisplayRect() to return new object\n\n");
-				#endif
-				wxRect value_to_return0;
-				value_to_return0 = wxGetClientDisplayRect();
-				void* ptr = safe_emalloc(1, sizeof(wxRect_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxRect));
-				object_init_ex(return_value, php_wxRect_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxRect));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetDisplayPPI)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetDisplayPPI\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxGetDisplayPPI() to return new object\n\n");
-				#endif
-				wxSize value_to_return0;
-				value_to_return0 = wxGetDisplayPPI();
-				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxSize));
-				object_init_ex(return_value, php_wxSize_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxSize));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxDisplaySize)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxDisplaySize\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	long* width0;
-	zval* width0_ref;
-	long* height0;
-	zval* height0_ref;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'll' (width0, height0)\n");
-		#endif
-		char parse_parameters_string[] = "ll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, width0, height0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "zz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &width0_ref, &height0_ref );
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxDisplaySize((int*) width0, (int*) height0)\n\n");
-				#endif
-				wxDisplaySize((int*) width0, (int*) height0);
-
-				size_t elements_returned0_0 = sizeof(width0)/sizeof(*width0);
-				array_init(width0_ref);
-				for(size_t i=0; i<elements_returned0_0; i++)
-				{
-					add_next_index_long(width0_ref, width0[i]);
-				}
-				size_t elements_returned0_1 = sizeof(height0)/sizeof(*height0);
-				array_init(height0_ref);
-				for(size_t i=0; i<elements_returned0_1; i++)
-				{
-					add_next_index_long(height0_ref, height0[i]);
-				}
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetDisplaySize)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetDisplaySize\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxGetDisplaySize() to return new object\n\n");
-				#endif
-				wxSize value_to_return0;
-				value_to_return0 = wxGetDisplaySize();
-				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxSize));
-				object_init_ex(return_value, php_wxSize_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxSize));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxDisplaySizeMM)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxDisplaySizeMM\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	long* width0;
-	zval* width0_ref;
-	long* height0;
-	zval* height0_ref;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'll' (width0, height0)\n");
-		#endif
-		char parse_parameters_string[] = "ll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, width0, height0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "zz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &width0_ref, &height0_ref );
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxDisplaySizeMM((int*) width0, (int*) height0)\n\n");
-				#endif
-				wxDisplaySizeMM((int*) width0, (int*) height0);
-
-				size_t elements_returned0_0 = sizeof(width0)/sizeof(*width0);
-				array_init(width0_ref);
-				for(size_t i=0; i<elements_returned0_0; i++)
-				{
-					add_next_index_long(width0_ref, width0[i]);
-				}
-				size_t elements_returned0_1 = sizeof(height0)/sizeof(*height0);
-				array_init(height0_ref);
-				for(size_t i=0; i<elements_returned0_1; i++)
-				{
-					add_next_index_long(height0_ref, height0[i]);
-				}
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetDisplaySizeMM)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetDisplaySizeMM\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxGetDisplaySizeMM() to return new object\n\n");
-				#endif
-				wxSize value_to_return0;
-				value_to_return0 = wxGetDisplaySizeMM();
-				void* ptr = safe_emalloc(1, sizeof(wxSize_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxSize));
-				object_init_ex(return_value, php_wxSize_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxSize));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxEntryCleanup)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxEntryCleanup\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxEntryCleanup()\n\n");
-				#endif
-				wxEntryCleanup();
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxFinite)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxFinite\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	double x0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'd' (&x0)\n");
-		#endif
-		char parse_parameters_string[] = "d";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxFinite(x0))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxFinite(x0));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxIsNaN)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxIsNaN\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	double x0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'd' (&x0)\n");
-		#endif
-		char parse_parameters_string[] = "d";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxIsNaN(x0))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxIsNaN(x0));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxRound)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxRound\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	double x0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'd' (&x0)\n");
-		#endif
-		char parse_parameters_string[] = "d";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxRound(x0))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxRound(x0));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxIsSameDouble)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxIsSameDouble\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	double x0;
-	double y0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'dd' (&x0, &y0)\n");
-		#endif
-		char parse_parameters_string[] = "dd";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0, &y0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxIsSameDouble(x0, y0))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxIsSameDouble(x0, y0));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxIsNullDouble)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxIsNullDouble\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	double x0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'd' (&x0)\n");
-		#endif
-		char parse_parameters_string[] = "d";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &x0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxIsNullDouble(x0))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxIsNullDouble(x0));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxMessageBox)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxMessageBox\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* message0;
-	long message_len0;
-	char* caption0;
-	long caption_len0;
-	long style0;
-	zval* parent0 = 0;
-	void* object_pointer0_3 = 0;
-	long x0;
-	long y0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 1  && arguments_received <= 6)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's|slzll' (&message0, &message_len0, &caption0, &caption_len0, &style0, &parent0, &x0, &y0)\n");
-		#endif
-		char parse_parameters_string[] = "s|slzll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &message0, &message_len0, &caption0, &caption_len0, &style0, &parent0, &x0, &y0 ) == SUCCESS)
-		{
-			if(arguments_received >= 4){
-				if(Z_TYPE_P(parent0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_3 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_3 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxMessageBox(wxString(message0, wxConvUTF8)))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxMessageBox(wxString(message0, wxConvUTF8)));
-
-
-				return;
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxMessageBox(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8)))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxMessageBox(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8)));
-
-
-				return;
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxMessageBox(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), (int) style0))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxMessageBox(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), (int) style0));
-
-
-				return;
-				break;
-			}
-			case 4:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxMessageBox(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), (int) style0, (wxWindow*) object_pointer0_3))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxMessageBox(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), (int) style0, (wxWindow*) object_pointer0_3));
-
-
-				return;
-				break;
-			}
-			case 5:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxMessageBox(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), (int) style0, (wxWindow*) object_pointer0_3, (int) x0))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxMessageBox(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), (int) style0, (wxWindow*) object_pointer0_3, (int) x0));
-
-
-				return;
-				break;
-			}
-			case 6:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxMessageBox(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), (int) style0, (wxWindow*) object_pointer0_3, (int) x0, (int) y0))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxMessageBox(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), (int) style0, (wxWindow*) object_pointer0_3, (int) x0, (int) y0));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxCreateDynamicObject)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxCreateDynamicObject\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* className0;
-	long className_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&className0, &className_len0)\n");
-		#endif
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &className0, &className_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxCreateDynamicObject(wxString(className0, wxConvUTF8)) to return object pointer\n\n");
-				#endif
-				wxObject_php* value_to_return1;
-				value_to_return1 = (wxObject_php*) wxCreateDynamicObject(wxString(className0, wxConvUTF8));
-				if(value_to_return1 == NULL){
-					ZVAL_NULL(return_value);
-				}
-				else if(value_to_return1->references.IsUserInitialized()){
-					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
-						return_is_user_initialized = true;
-					}
-					else{
-						zend_error(E_ERROR, "Could not retreive original zval.");
-					}
-				}
-				else{
-					object_init_ex(return_value,php_wxObject_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxObject));
-				}
-
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxFindWindowAtPointer)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxFindWindowAtPointer\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	zval* pt0 = 0;
-	void* object_pointer0_0 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&pt0, php_wxPoint_entry)\n");
-		#endif
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt0, php_wxPoint_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(pt0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(pt0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 )
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(pt0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxFindWindowAtPointer(*(wxPoint*) object_pointer0_0) to return object pointer\n\n");
-				#endif
-				wxWindow_php* value_to_return1;
-				value_to_return1 = (wxWindow_php*) wxFindWindowAtPointer(*(wxPoint*) object_pointer0_0);
-				if(value_to_return1 == NULL){
-					ZVAL_NULL(return_value);
-				}
-				else if(value_to_return1->references.IsUserInitialized()){
-					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
-						return_is_user_initialized = true;
-					}
-					else{
-						zend_error(E_ERROR, "Could not retreive original zval.");
-					}
-				}
-				else{
-					object_init_ex(return_value,php_wxWindow_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxWindow));
-				}
-
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetActiveWindow)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetActiveWindow\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxGetActiveWindow() to return object pointer\n\n");
-				#endif
-				wxWindow_php* value_to_return0;
-				value_to_return0 = (wxWindow_php*) wxGetActiveWindow();
-				if(value_to_return0 == NULL){
-					ZVAL_NULL(return_value);
-				}
-				else if(value_to_return0->references.IsUserInitialized()){
-					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
-						return_is_user_initialized = true;
-					}
-					else{
-						zend_error(E_ERROR, "Could not retreive original zval.");
-					}
-				}
-				else{
-					object_init_ex(return_value,php_wxWindow_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return0, le_wxWindow));
-				}
-
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetTopLevelParent)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetTopLevelParent\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	zval* window0 = 0;
-	void* object_pointer0_0 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'z' (&window0)\n");
-		#endif
-		char parse_parameters_string[] = "z";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &window0 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(window0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(window0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(window0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxGetTopLevelParent((wxWindow*) object_pointer0_0) to return object pointer\n\n");
-				#endif
-				wxWindow_php* value_to_return1;
-				value_to_return1 = (wxWindow_php*) wxGetTopLevelParent((wxWindow*) object_pointer0_0);
-				if(value_to_return1 == NULL){
-					ZVAL_NULL(return_value);
-				}
-				else if(value_to_return1->references.IsUserInitialized()){
-					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
-						return_is_user_initialized = true;
-					}
-					else{
-						zend_error(E_ERROR, "Could not retreive original zval.");
-					}
-				}
-				else{
-					object_init_ex(return_value,php_wxWindow_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxWindow));
-				}
-
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxRichTextHasStyle)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxRichTextHasStyle\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	long flags0;
-	long style0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'll' (&flags0, &style0)\n");
-		#endif
-		char parse_parameters_string[] = "ll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flags0, &style0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxRichTextHasStyle((int) flags0, (int) style0))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxRichTextHasStyle((int) flags0, (int) style0));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetStockLabel)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetStockLabel\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	long id0;
-	long flags0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 1  && arguments_received <= 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l|l' (&id0, &flags0)\n");
-		#endif
-		char parse_parameters_string[] = "l|l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0, &flags0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetStockLabel((wxWindowID) id0).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return1;
-				value_to_return1 = wxGetStockLabel((wxWindowID) id0);
-				char* temp_string1;
-				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
-				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
-				ZVAL_STRING(return_value, temp_string1, 1);
-				free(temp_string1);
-
-
-				return;
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetStockLabel((wxWindowID) id0, (long) flags0).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return2;
-				value_to_return2 = wxGetStockLabel((wxWindowID) id0, (long) flags0);
-				char* temp_string2;
-				temp_string2 = (char*)malloc(sizeof(wxChar)*(value_to_return2.size()+1));
-				strcpy (temp_string2, (const char *) value_to_return2.char_str() );
-				ZVAL_STRING(return_value, temp_string2, 1);
-				free(temp_string2);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetTextFromUser)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetTextFromUser\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* message0;
-	long message_len0;
-	char* caption0;
-	long caption_len0;
-	char* default_value0;
-	long default_value_len0;
-	zval* parent0 = 0;
-	void* object_pointer0_3 = 0;
-	long x0;
-	long y0;
-	bool centre0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 1  && arguments_received <= 7)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's|sszllb' (&message0, &message_len0, &caption0, &caption_len0, &default_value0, &default_value_len0, &parent0, &x0, &y0, &centre0)\n");
-		#endif
-		char parse_parameters_string[] = "s|sszllb";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &message0, &message_len0, &caption0, &caption_len0, &default_value0, &default_value_len0, &parent0, &x0, &y0, &centre0 ) == SUCCESS)
-		{
-			if(arguments_received >= 4){
-				if(Z_TYPE_P(parent0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_3 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_3 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetTextFromUser(wxString(message0, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return1;
-				value_to_return1 = wxGetTextFromUser(wxString(message0, wxConvUTF8));
-				char* temp_string1;
-				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
-				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
-				ZVAL_STRING(return_value, temp_string1, 1);
-				free(temp_string1);
-
-
-				return;
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetTextFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return2;
-				value_to_return2 = wxGetTextFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8));
-				char* temp_string2;
-				temp_string2 = (char*)malloc(sizeof(wxChar)*(value_to_return2.size()+1));
-				strcpy (temp_string2, (const char *) value_to_return2.char_str() );
-				ZVAL_STRING(return_value, temp_string2, 1);
-				free(temp_string2);
-
-
-				return;
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetTextFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return3;
-				value_to_return3 = wxGetTextFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8));
-				char* temp_string3;
-				temp_string3 = (char*)malloc(sizeof(wxChar)*(value_to_return3.size()+1));
-				strcpy (temp_string3, (const char *) value_to_return3.char_str() );
-				ZVAL_STRING(return_value, temp_string3, 1);
-				free(temp_string3);
-
-
-				return;
-				break;
-			}
-			case 4:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetTextFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return4;
-				value_to_return4 = wxGetTextFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3);
-				char* temp_string4;
-				temp_string4 = (char*)malloc(sizeof(wxChar)*(value_to_return4.size()+1));
-				strcpy (temp_string4, (const char *) value_to_return4.char_str() );
-				ZVAL_STRING(return_value, temp_string4, 1);
-				free(temp_string4);
-
-
-				return;
-				break;
-			}
-			case 5:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetTextFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3, (int) x0).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return5;
-				value_to_return5 = wxGetTextFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3, (int) x0);
-				char* temp_string5;
-				temp_string5 = (char*)malloc(sizeof(wxChar)*(value_to_return5.size()+1));
-				strcpy (temp_string5, (const char *) value_to_return5.char_str() );
-				ZVAL_STRING(return_value, temp_string5, 1);
-				free(temp_string5);
-
-
-				return;
-				break;
-			}
-			case 6:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetTextFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3, (int) x0, (int) y0).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return6;
-				value_to_return6 = wxGetTextFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3, (int) x0, (int) y0);
-				char* temp_string6;
-				temp_string6 = (char*)malloc(sizeof(wxChar)*(value_to_return6.size()+1));
-				strcpy (temp_string6, (const char *) value_to_return6.char_str() );
-				ZVAL_STRING(return_value, temp_string6, 1);
-				free(temp_string6);
-
-
-				return;
-				break;
-			}
-			case 7:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetTextFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return7;
-				value_to_return7 = wxGetTextFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0);
-				char* temp_string7;
-				temp_string7 = (char*)malloc(sizeof(wxChar)*(value_to_return7.size()+1));
-				strcpy (temp_string7, (const char *) value_to_return7.char_str() );
-				ZVAL_STRING(return_value, temp_string7, 1);
-				free(temp_string7);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetPasswordFromUser)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetPasswordFromUser\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* message0;
-	long message_len0;
-	char* caption0;
-	long caption_len0;
-	char* default_value0;
-	long default_value_len0;
-	zval* parent0 = 0;
-	void* object_pointer0_3 = 0;
-	long x0;
-	long y0;
-	bool centre0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 1  && arguments_received <= 7)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's|sszllb' (&message0, &message_len0, &caption0, &caption_len0, &default_value0, &default_value_len0, &parent0, &x0, &y0, &centre0)\n");
-		#endif
-		char parse_parameters_string[] = "s|sszllb";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &message0, &message_len0, &caption0, &caption_len0, &default_value0, &default_value_len0, &parent0, &x0, &y0, &centre0 ) == SUCCESS)
-		{
-			if(arguments_received >= 4){
-				if(Z_TYPE_P(parent0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_3 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_3 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetPasswordFromUser(wxString(message0, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return1;
-				value_to_return1 = wxGetPasswordFromUser(wxString(message0, wxConvUTF8));
-				char* temp_string1;
-				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
-				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
-				ZVAL_STRING(return_value, temp_string1, 1);
-				free(temp_string1);
-
-
-				return;
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetPasswordFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return2;
-				value_to_return2 = wxGetPasswordFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8));
-				char* temp_string2;
-				temp_string2 = (char*)malloc(sizeof(wxChar)*(value_to_return2.size()+1));
-				strcpy (temp_string2, (const char *) value_to_return2.char_str() );
-				ZVAL_STRING(return_value, temp_string2, 1);
-				free(temp_string2);
-
-
-				return;
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetPasswordFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return3;
-				value_to_return3 = wxGetPasswordFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8));
-				char* temp_string3;
-				temp_string3 = (char*)malloc(sizeof(wxChar)*(value_to_return3.size()+1));
-				strcpy (temp_string3, (const char *) value_to_return3.char_str() );
-				ZVAL_STRING(return_value, temp_string3, 1);
-				free(temp_string3);
-
-
-				return;
-				break;
-			}
-			case 4:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetPasswordFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return4;
-				value_to_return4 = wxGetPasswordFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3);
-				char* temp_string4;
-				temp_string4 = (char*)malloc(sizeof(wxChar)*(value_to_return4.size()+1));
-				strcpy (temp_string4, (const char *) value_to_return4.char_str() );
-				ZVAL_STRING(return_value, temp_string4, 1);
-				free(temp_string4);
-
-
-				return;
-				break;
-			}
-			case 5:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetPasswordFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3, (int) x0).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return5;
-				value_to_return5 = wxGetPasswordFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3, (int) x0);
-				char* temp_string5;
-				temp_string5 = (char*)malloc(sizeof(wxChar)*(value_to_return5.size()+1));
-				strcpy (temp_string5, (const char *) value_to_return5.char_str() );
-				ZVAL_STRING(return_value, temp_string5, 1);
-				free(temp_string5);
-
-
-				return;
-				break;
-			}
-			case 6:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetPasswordFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3, (int) x0, (int) y0).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return6;
-				value_to_return6 = wxGetPasswordFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3, (int) x0, (int) y0);
-				char* temp_string6;
-				temp_string6 = (char*)malloc(sizeof(wxChar)*(value_to_return6.size()+1));
-				strcpy (temp_string6, (const char *) value_to_return6.char_str() );
-				ZVAL_STRING(return_value, temp_string6, 1);
-				free(temp_string6);
-
-
-				return;
-				break;
-			}
-			case 7:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetPasswordFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return7;
-				value_to_return7 = wxGetPasswordFromUser(wxString(message0, wxConvUTF8), wxString(caption0, wxConvUTF8), wxString(default_value0, wxConvUTF8), (wxWindow*) object_pointer0_3, (int) x0, (int) y0, centre0);
-				char* temp_string7;
-				temp_string7 = (char*)malloc(sizeof(wxChar)*(value_to_return7.size()+1));
-				strcpy (temp_string7, (const char *) value_to_return7.char_str() );
-				ZVAL_STRING(return_value, temp_string7, 1);
-				free(temp_string7);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetTimeZone)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetTimeZone\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxGetTimeZone())\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxGetTimeZone());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetLocalTime)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetLocalTime\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxGetLocalTime())\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxGetLocalTime());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetUTCTime)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetUTCTime\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxGetUTCTime())\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxGetUTCTime());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxStringTokenize)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxStringTokenize\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* str0;
-	long str_len0;
-	char* delims0;
-	long delims_len0;
-	long mode0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 1  && arguments_received <= 3)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's|sl' (&str0, &str_len0, &delims0, &delims_len0, &mode0)\n");
-		#endif
-		char parse_parameters_string[] = "s|sl";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &str0, &str_len0, &delims0, &delims_len0, &mode0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxStringTokenize(wxString(str0, wxConvUTF8)) to return strings array\n\n");
-				#endif
-				wxArrayString value_to_return1;
-				value_to_return1 = wxStringTokenize(wxString(str0, wxConvUTF8));
-				char* temp_string1;
-				array_init(return_value);
-				for(size_t i=0; i<value_to_return1.GetCount(); i++)
-				{
-					temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1[i].size()+1));
-					strcpy (temp_string1, (const char *) value_to_return1[i].char_str() );
-					add_next_index_string(return_value, (char*) temp_string1, 1);
-					free(temp_string1);
-				}
-
-
-				return;
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxStringTokenize(wxString(str0, wxConvUTF8), wxString(delims0, wxConvUTF8)) to return strings array\n\n");
-				#endif
-				wxArrayString value_to_return2;
-				value_to_return2 = wxStringTokenize(wxString(str0, wxConvUTF8), wxString(delims0, wxConvUTF8));
-				char* temp_string2;
-				array_init(return_value);
-				for(size_t i=0; i<value_to_return2.GetCount(); i++)
-				{
-					temp_string2 = (char*)malloc(sizeof(wxChar)*(value_to_return2[i].size()+1));
-					strcpy (temp_string2, (const char *) value_to_return2[i].char_str() );
-					add_next_index_string(return_value, (char*) temp_string2, 1);
-					free(temp_string2);
-				}
-
-
-				return;
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxStringTokenize(wxString(str0, wxConvUTF8), wxString(delims0, wxConvUTF8), (wxStringTokenizerMode) mode0) to return strings array\n\n");
-				#endif
-				wxArrayString value_to_return3;
-				value_to_return3 = wxStringTokenize(wxString(str0, wxConvUTF8), wxString(delims0, wxConvUTF8), (wxStringTokenizerMode) mode0);
-				char* temp_string3;
-				array_init(return_value);
-				for(size_t i=0; i<value_to_return3.GetCount(); i++)
-				{
-					temp_string3 = (char*)malloc(sizeof(wxChar)*(value_to_return3[i].size()+1));
-					strcpy (temp_string3, (const char *) value_to_return3[i].char_str() );
-					add_next_index_string(return_value, (char*) temp_string3, 1);
-					free(temp_string3);
-				}
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetTranslation)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetTranslation\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* string0;
-	long string_len0;
-	char* domain0;
-	long domain_len0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	char* string1;
-	long string_len1;
-	char* plural1;
-	long plural_len1;
-	long n1;
-	char* domain1;
-	long domain_len1;
-	bool overload1_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 1  && arguments_received <= 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's|s' (&string0, &string_len0, &domain0, &domain_len0)\n");
-		#endif
-		char parse_parameters_string[] = "s|s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &string0, &string_len0, &domain0, &domain_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received >= 3  && arguments_received <= 4)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ssl|s' (&string1, &string_len1, &plural1, &plural_len1, &n1, &domain1, &domain_len1)\n");
-		#endif
-		char parse_parameters_string[] = "ssl|s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &string1, &string_len1, &plural1, &plural_len1, &n1, &domain1, &domain_len1 ) == SUCCESS)
-		{
-			overload1_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetTranslation(wxString(string0, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return1;
-				value_to_return1 = wxGetTranslation(wxString(string0, wxConvUTF8));
-				char* temp_string1;
-				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
-				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
-				ZVAL_STRING(return_value, temp_string1, 1);
-				free(temp_string1);
-
-
-				return;
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetTranslation(wxString(string0, wxConvUTF8), wxString(domain0, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return2;
-				value_to_return2 = wxGetTranslation(wxString(string0, wxConvUTF8), wxString(domain0, wxConvUTF8));
-				char* temp_string2;
-				temp_string2 = (char*)malloc(sizeof(wxChar)*(value_to_return2.size()+1));
-				strcpy (temp_string2, (const char *) value_to_return2.char_str() );
-				ZVAL_STRING(return_value, temp_string2, 1);
-				free(temp_string2);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetTranslation(wxString(string1, wxConvUTF8), wxString(plural1, wxConvUTF8), (unsigned) n1).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return3;
-				value_to_return3 = wxGetTranslation(wxString(string1, wxConvUTF8), wxString(plural1, wxConvUTF8), (unsigned) n1);
-				char* temp_string3;
-				temp_string3 = (char*)malloc(sizeof(wxChar)*(value_to_return3.size()+1));
-				strcpy (temp_string3, (const char *) value_to_return3.char_str() );
-				ZVAL_STRING(return_value, temp_string3, 1);
-				free(temp_string3);
-
-
-				return;
-				break;
-			}
-			case 4:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetTranslation(wxString(string1, wxConvUTF8), wxString(plural1, wxConvUTF8), (unsigned) n1, wxString(domain1, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return4;
-				value_to_return4 = wxGetTranslation(wxString(string1, wxConvUTF8), wxString(plural1, wxConvUTF8), (unsigned) n1, wxString(domain1, wxConvUTF8));
-				char* temp_string4;
-				temp_string4 = (char*)malloc(sizeof(wxChar)*(value_to_return4.size()+1));
-				strcpy (temp_string4, (const char *) value_to_return4.char_str() );
-				ZVAL_STRING(return_value, temp_string4, 1);
-				free(temp_string4);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxBeginBusyCursor)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxBeginBusyCursor\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	zval* cursor0 = 0;
-	void* object_pointer0_0 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 0  && arguments_received <= 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '|z' (&cursor0)\n");
-		#endif
-		char parse_parameters_string[] = "|z";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &cursor0 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(cursor0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(cursor0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 )
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(cursor0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxBeginBusyCursor()\n\n");
-				#endif
-				wxBeginBusyCursor();
-
-
-				return;
-				break;
-			}
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxBeginBusyCursor((const wxCursor*) object_pointer0_0)\n\n");
-				#endif
-				wxBeginBusyCursor((const wxCursor*) object_pointer0_0);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxEndBusyCursor)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxEndBusyCursor\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxEndBusyCursor()\n\n");
-				#endif
-				wxEndBusyCursor();
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxIsBusy)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxIsBusy\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxIsBusy())\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxIsBusy());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxBell)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxBell\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxBell()\n\n");
-				#endif
-				wxBell();
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxInfoMessageBox)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxInfoMessageBox\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	zval* parent0 = 0;
-	void* object_pointer0_0 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'z' (&parent0)\n");
-		#endif
-		char parse_parameters_string[] = "z";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &parent0 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(parent0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxInfoMessageBox((wxWindow*) object_pointer0_0)\n\n");
-				#endif
-				wxInfoMessageBox((wxWindow*) object_pointer0_0);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetLibraryVersionInfo)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetLibraryVersionInfo\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxGetLibraryVersionInfo() to return new object\n\n");
-				#endif
-				wxVersionInfo value_to_return0;
-				value_to_return0 = wxGetLibraryVersionInfo();
-				void* ptr = safe_emalloc(1, sizeof(wxVersionInfo_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxVersionInfo));
-				object_init_ex(return_value, php_wxVersionInfo_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxVersionInfo));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetenv)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetenv\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* name0;
-	long name_len0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	char* name1;
-	long name_len1;
-	bool overload1_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&name0, &name_len0)\n");
-		#endif
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &name0, &name_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&name1, &name_len1)\n");
-		#endif
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &name1, &name_len1 ) == SUCCESS)
-		{
-			overload1_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetenv(name0).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return1;
-				value_to_return1 = wxGetenv(name0);
-				ZVAL_STRING(return_value, value_to_return1, 1);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetenv(wxString(name1, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return1;
-				value_to_return1 = wxGetenv(wxString(name1, wxConvUTF8));
-				ZVAL_STRING(return_value, value_to_return1, 1);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxSetEnv)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxSetEnv\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* var0;
-	long var_len0;
-	char* value0;
-	long value_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ss' (&var0, &var_len0, &value0, &value_len0)\n");
-		#endif
-		char parse_parameters_string[] = "ss";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &var0, &var_len0, &value0, &value_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxSetEnv(wxString(var0, wxConvUTF8), wxString(value0, wxConvUTF8)))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxSetEnv(wxString(var0, wxConvUTF8), wxString(value0, wxConvUTF8)));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxUnsetEnv)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxUnsetEnv\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* var0;
-	long var_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&var0, &var_len0)\n");
-		#endif
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &var0, &var_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxUnsetEnv(wxString(var0, wxConvUTF8)))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxUnsetEnv(wxString(var0, wxConvUTF8)));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetBatteryState)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetBatteryState\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxGetBatteryState())\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxGetBatteryState());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetPowerType)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetPowerType\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxGetPowerType())\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxGetPowerType());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetKeyState)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetKeyState\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	long key0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l' (&key0)\n");
-		#endif
-		char parse_parameters_string[] = "l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &key0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxGetKeyState((wxKeyCode) key0))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxGetKeyState((wxKeyCode) key0));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetMousePosition)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetMousePosition\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxGetMousePosition() to return new object\n\n");
-				#endif
-				wxPoint value_to_return0;
-				value_to_return0 = wxGetMousePosition();
-				void* ptr = safe_emalloc(1, sizeof(wxPoint_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxPoint));
-				object_init_ex(return_value, php_wxPoint_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxPoint));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetMouseState)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetMouseState\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxGetMouseState() to return new object\n\n");
-				#endif
-				wxMouseState value_to_return0;
-				value_to_return0 = wxGetMouseState();
-				void* ptr = safe_emalloc(1, sizeof(wxMouseState_php), 0);
-				memcpy(ptr, &value_to_return0, sizeof(wxMouseState));
-				object_init_ex(return_value, php_wxMouseState_entry);
-				add_property_resource(return_value, "wxResource", zend_list_insert(ptr, le_wxMouseState));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxEnableTopLevelWindows)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxEnableTopLevelWindows\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool enable0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 0  && arguments_received <= 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '|b' (&enable0)\n");
-		#endif
-		char parse_parameters_string[] = "|b";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &enable0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxEnableTopLevelWindows()\n\n");
-				#endif
-				wxEnableTopLevelWindows();
-
-
-				return;
-				break;
-			}
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxEnableTopLevelWindows(enable0)\n\n");
-				#endif
-				wxEnableTopLevelWindows(enable0);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxFindWindowAtPoint)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxFindWindowAtPoint\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	zval* pt0 = 0;
-	void* object_pointer0_0 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&pt0, php_wxPoint_entry)\n");
-		#endif
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pt0, php_wxPoint_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(pt0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(pt0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 )
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(pt0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxFindWindowAtPoint(*(wxPoint*) object_pointer0_0) to return object pointer\n\n");
-				#endif
-				wxWindow_php* value_to_return1;
-				value_to_return1 = (wxWindow_php*) wxFindWindowAtPoint(*(wxPoint*) object_pointer0_0);
-				if(value_to_return1 == NULL){
-					ZVAL_NULL(return_value);
-				}
-				else if(value_to_return1->references.IsUserInitialized()){
-					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
-						return_is_user_initialized = true;
-					}
-					else{
-						zend_error(E_ERROR, "Could not retreive original zval.");
-					}
-				}
-				else{
-					object_init_ex(return_value,php_wxWindow_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxWindow));
-				}
-
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxFindWindowByLabel)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxFindWindowByLabel\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* label0;
-	long label_len0;
-	zval* parent0 = 0;
-	void* object_pointer0_1 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 1  && arguments_received <= 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's|z' (&label0, &label_len0, &parent0)\n");
-		#endif
-		char parse_parameters_string[] = "s|z";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &label0, &label_len0, &parent0 ) == SUCCESS)
-		{
-			if(arguments_received >= 2){
-				if(Z_TYPE_P(parent0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_1 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_1 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxFindWindowByLabel(wxString(label0, wxConvUTF8)) to return object pointer\n\n");
-				#endif
-				wxWindow_php* value_to_return1;
-				value_to_return1 = (wxWindow_php*) wxFindWindowByLabel(wxString(label0, wxConvUTF8));
-				if(value_to_return1 == NULL){
-					ZVAL_NULL(return_value);
-				}
-				else if(value_to_return1->references.IsUserInitialized()){
-					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
-						return_is_user_initialized = true;
-					}
-					else{
-						zend_error(E_ERROR, "Could not retreive original zval.");
-					}
-				}
-				else{
-					object_init_ex(return_value,php_wxWindow_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxWindow));
-				}
-
-
-
-				return;
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxFindWindowByLabel(wxString(label0, wxConvUTF8), (wxWindow*) object_pointer0_1) to return object pointer\n\n");
-				#endif
-				wxWindow_php* value_to_return2;
-				value_to_return2 = (wxWindow_php*) wxFindWindowByLabel(wxString(label0, wxConvUTF8), (wxWindow*) object_pointer0_1);
-				if(value_to_return2 == NULL){
-					ZVAL_NULL(return_value);
-				}
-				else if(value_to_return2->references.IsUserInitialized()){
-					if(value_to_return2->phpObj != NULL){
-						return_value = value_to_return2->phpObj;
-						return_is_user_initialized = true;
-					}
-					else{
-						zend_error(E_ERROR, "Could not retreive original zval.");
-					}
-				}
-				else{
-					object_init_ex(return_value,php_wxWindow_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return2, le_wxWindow));
-				}
-
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxFindWindowByName)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxFindWindowByName\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* name0;
-	long name_len0;
-	zval* parent0 = 0;
-	void* object_pointer0_1 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 1  && arguments_received <= 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's|z' (&name0, &name_len0, &parent0)\n");
-		#endif
-		char parse_parameters_string[] = "s|z";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &name0, &name_len0, &parent0 ) == SUCCESS)
-		{
-			if(arguments_received >= 2){
-				if(Z_TYPE_P(parent0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(parent0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_1 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_1 || (rsrc_type != le_wxNonOwnedWindow && rsrc_type != le_wxTopLevelWindow && rsrc_type != le_wxFrame && rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame && rsrc_type != le_wxDialog && rsrc_type != le_wxTextEntryDialog && rsrc_type != le_wxPasswordEntryDialog && rsrc_type != le_wxMessageDialog && rsrc_type != le_wxFindReplaceDialog && rsrc_type != le_wxDirDialog && rsrc_type != le_wxSymbolPickerDialog && rsrc_type != le_wxPropertySheetDialog && rsrc_type != le_wxWizard && rsrc_type != le_wxProgressDialog && rsrc_type != le_wxColourDialog && rsrc_type != le_wxFileDialog && rsrc_type != le_wxFontDialog && rsrc_type != le_wxPageSetupDialog && rsrc_type != le_wxPrintDialog && rsrc_type != le_wxSingleChoiceDialog && rsrc_type != le_wxGenericProgressDialog && rsrc_type != le_wxPopupWindow && rsrc_type != le_wxPopupTransientWindow && rsrc_type != le_wxControl && rsrc_type != le_wxStatusBar && rsrc_type != le_wxAnyButton && rsrc_type != le_wxButton && rsrc_type != le_wxBitmapButton && rsrc_type != le_wxToggleButton && rsrc_type != le_wxBitmapToggleButton && rsrc_type != le_wxTreeCtrl && rsrc_type != le_wxControlWithItems && rsrc_type != le_wxListBox && rsrc_type != le_wxCheckListBox && rsrc_type != le_wxRearrangeList && rsrc_type != le_wxChoice && rsrc_type != le_wxBookCtrlBase && rsrc_type != le_wxAuiNotebook && rsrc_type != le_wxListbook && rsrc_type != le_wxChoicebook && rsrc_type != le_wxNotebook && rsrc_type != le_wxTreebook && rsrc_type != le_wxToolbook && rsrc_type != le_wxAnimationCtrl && rsrc_type != le_wxStyledTextCtrl && rsrc_type != le_wxScrollBar && rsrc_type != le_wxStaticText && rsrc_type != le_wxStaticLine && rsrc_type != le_wxStaticBox && rsrc_type != le_wxStaticBitmap && rsrc_type != le_wxCheckBox && rsrc_type != le_wxTextCtrl && rsrc_type != le_wxSearchCtrl && rsrc_type != le_wxComboBox && rsrc_type != le_wxBitmapComboBox && rsrc_type != le_wxAuiToolBar && rsrc_type != le_wxListCtrl && rsrc_type != le_wxListView && rsrc_type != le_wxRadioBox && rsrc_type != le_wxRadioButton && rsrc_type != le_wxSlider && rsrc_type != le_wxSpinCtrl && rsrc_type != le_wxSpinButton && rsrc_type != le_wxGauge && rsrc_type != le_wxHyperlinkCtrl && rsrc_type != le_wxSpinCtrlDouble && rsrc_type != le_wxGenericDirCtrl && rsrc_type != le_wxCalendarCtrl && rsrc_type != le_wxPickerBase && rsrc_type != le_wxColourPickerCtrl && rsrc_type != le_wxFontPickerCtrl && rsrc_type != le_wxFilePickerCtrl && rsrc_type != le_wxDirPickerCtrl && rsrc_type != le_wxTimePickerCtrl && rsrc_type != le_wxToolBar && rsrc_type != le_wxDatePickerCtrl && rsrc_type != le_wxCollapsiblePane && rsrc_type != le_wxComboCtrl && rsrc_type != le_wxDataViewCtrl && rsrc_type != le_wxDataViewListCtrl && rsrc_type != le_wxDataViewTreeCtrl && rsrc_type != le_wxHeaderCtrl && rsrc_type != le_wxHeaderCtrlSimple && rsrc_type != le_wxFileCtrl && rsrc_type != le_wxInfoBar && rsrc_type != le_wxRibbonControl && rsrc_type != le_wxRibbonBar && rsrc_type != le_wxRibbonButtonBar && rsrc_type != le_wxRibbonGallery && rsrc_type != le_wxRibbonPage && rsrc_type != le_wxRibbonPanel && rsrc_type != le_wxRibbonToolBar && rsrc_type != le_wxSplitterWindow && rsrc_type != le_wxPanel && rsrc_type != le_wxScrolledWindow && rsrc_type != le_wxHtmlWindow && rsrc_type != le_wxGrid && rsrc_type != le_wxPreviewCanvas && rsrc_type != le_wxWizardPage && rsrc_type != le_wxWizardPageSimple && rsrc_type != le_wxEditableListBox && rsrc_type != le_wxHScrolledWindow && rsrc_type != le_wxPreviewControlBar && rsrc_type != le_wxMenuBar && rsrc_type != le_wxBannerWindow && rsrc_type != le_wxMDIClientWindow && rsrc_type != le_wxTreeListCtrl && rsrc_type != le_wxSashWindow && rsrc_type != le_wxSashLayoutWindow && rsrc_type != le_wxHtmlHelpWindow))
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(parent0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxFindWindowByName(wxString(name0, wxConvUTF8)) to return object pointer\n\n");
-				#endif
-				wxWindow_php* value_to_return1;
-				value_to_return1 = (wxWindow_php*) wxFindWindowByName(wxString(name0, wxConvUTF8));
-				if(value_to_return1 == NULL){
-					ZVAL_NULL(return_value);
-				}
-				else if(value_to_return1->references.IsUserInitialized()){
-					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
-						return_is_user_initialized = true;
-					}
-					else{
-						zend_error(E_ERROR, "Could not retreive original zval.");
-					}
-				}
-				else{
-					object_init_ex(return_value,php_wxWindow_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return1, le_wxWindow));
-				}
-
-
-
-				return;
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxFindWindowByName(wxString(name0, wxConvUTF8), (wxWindow*) object_pointer0_1) to return object pointer\n\n");
-				#endif
-				wxWindow_php* value_to_return2;
-				value_to_return2 = (wxWindow_php*) wxFindWindowByName(wxString(name0, wxConvUTF8), (wxWindow*) object_pointer0_1);
-				if(value_to_return2 == NULL){
-					ZVAL_NULL(return_value);
-				}
-				else if(value_to_return2->references.IsUserInitialized()){
-					if(value_to_return2->phpObj != NULL){
-						return_value = value_to_return2->phpObj;
-						return_is_user_initialized = true;
-					}
-					else{
-						zend_error(E_ERROR, "Could not retreive original zval.");
-					}
-				}
-				else{
-					object_init_ex(return_value,php_wxWindow_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return2, le_wxWindow));
-				}
-
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxFindMenuItemId)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxFindMenuItemId\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	zval* frame0 = 0;
-	void* object_pointer0_0 = 0;
-	char* menuString0;
-	long menuString_len0;
-	char* itemString0;
-	long itemString_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 3)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'zss' (&frame0, &menuString0, &menuString_len0, &itemString0, &itemString_len0)\n");
-		#endif
-		char parse_parameters_string[] = "zss";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &frame0, &menuString0, &menuString_len0, &itemString0, &itemString_len0 ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(frame0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(frame0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 || (rsrc_type != le_wxSplashScreen && rsrc_type != le_wxMDIChildFrame && rsrc_type != le_wxMDIParentFrame && rsrc_type != le_wxMiniFrame && rsrc_type != le_wxPreviewFrame && rsrc_type != le_wxHtmlHelpDialog && rsrc_type != le_wxHtmlHelpFrame))
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(frame0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxFindMenuItemId((wxFrame*) object_pointer0_0, wxString(menuString0, wxConvUTF8), wxString(itemString0, wxConvUTF8)))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxFindMenuItemId((wxFrame*) object_pointer0_0, wxString(menuString0, wxConvUTF8), wxString(itemString0, wxConvUTF8)));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxNewId)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxNewId\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxNewId())\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxNewId());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxRegisterId)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxRegisterId\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	long id0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l' (&id0)\n");
-		#endif
-		char parse_parameters_string[] = "l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &id0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxRegisterId((long) id0)\n\n");
-				#endif
-				wxRegisterId((long) id0);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxLaunchDefaultApplication)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxLaunchDefaultApplication\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* document0;
-	long document_len0;
-	long flags0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 1  && arguments_received <= 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's|l' (&document0, &document_len0, &flags0)\n");
-		#endif
-		char parse_parameters_string[] = "s|l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &document0, &document_len0, &flags0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxLaunchDefaultApplication(wxString(document0, wxConvUTF8)))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxLaunchDefaultApplication(wxString(document0, wxConvUTF8)));
-
-
-				return;
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxLaunchDefaultApplication(wxString(document0, wxConvUTF8), (int) flags0))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxLaunchDefaultApplication(wxString(document0, wxConvUTF8), (int) flags0));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxLaunchDefaultBrowser)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxLaunchDefaultBrowser\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* url0;
-	long url_len0;
-	long flags0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 1  && arguments_received <= 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's|l' (&url0, &url_len0, &flags0)\n");
-		#endif
-		char parse_parameters_string[] = "s|l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &url0, &url_len0, &flags0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxLaunchDefaultBrowser(wxString(url0, wxConvUTF8)))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxLaunchDefaultBrowser(wxString(url0, wxConvUTF8)));
-
-
-				return;
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxLaunchDefaultBrowser(wxString(url0, wxConvUTF8), (int) flags0))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxLaunchDefaultBrowser(wxString(url0, wxConvUTF8), (int) flags0));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxStripMenuCodes)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxStripMenuCodes\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* str0;
-	long str_len0;
-	long flags0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 1  && arguments_received <= 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's|l' (&str0, &str_len0, &flags0)\n");
-		#endif
-		char parse_parameters_string[] = "s|l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &str0, &str_len0, &flags0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStripMenuCodes(wxString(str0, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return1;
-				value_to_return1 = wxStripMenuCodes(wxString(str0, wxConvUTF8));
-				char* temp_string1;
-				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
-				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
-				ZVAL_STRING(return_value, temp_string1, 1);
-				free(temp_string1);
-
-
-				return;
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStripMenuCodes(wxString(str0, wxConvUTF8), (int) flags0).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return2;
-				value_to_return2 = wxStripMenuCodes(wxString(str0, wxConvUTF8), (int) flags0);
-				char* temp_string2;
-				temp_string2 = (char*)malloc(sizeof(wxChar)*(value_to_return2.size()+1));
-				strcpy (temp_string2, (const char *) value_to_return2.char_str() );
-				ZVAL_STRING(return_value, temp_string2, 1);
-				free(temp_string2);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetHomeDir)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetHomeDir\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetHomeDir().fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return0;
-				value_to_return0 = wxGetHomeDir();
-				char* temp_string0;
-				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
-				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
-				ZVAL_STRING(return_value, temp_string0, 1);
-				free(temp_string0);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetFullHostName)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetFullHostName\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetFullHostName().fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return0;
-				value_to_return0 = wxGetFullHostName();
-				char* temp_string0;
-				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
-				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
-				ZVAL_STRING(return_value, temp_string0, 1);
-				free(temp_string0);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetUserHome)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetUserHome\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* user0;
-	long user_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 0  && arguments_received <= 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '|s' (&user0, &user_len0)\n");
-		#endif
-		char parse_parameters_string[] = "|s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &user0, &user_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetUserHome().fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return0;
-				value_to_return0 = wxGetUserHome();
-				char* temp_string0;
-				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
-				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
-				ZVAL_STRING(return_value, temp_string0, 1);
-				free(temp_string0);
-
-
-				return;
-				break;
-			}
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetUserHome(wxString(user0, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return1;
-				value_to_return1 = wxGetUserHome(wxString(user0, wxConvUTF8));
-				char* temp_string1;
-				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
-				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
-				ZVAL_STRING(return_value, temp_string1, 1);
-				free(temp_string1);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetOsDescription)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetOsDescription\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxGetOsDescription().fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return0;
-				value_to_return0 = wxGetOsDescription();
-				char* temp_string0;
-				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
-				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
-				ZVAL_STRING(return_value, temp_string0, 1);
-				free(temp_string0);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetOsVersion)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetOsVersion\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	long* major0;
-	zval* major0_ref;
-	long* minor0;
-	zval* minor0_ref;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 0  && arguments_received <= 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '|ll' (major0, minor0)\n");
-		#endif
-		char parse_parameters_string[] = "|ll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, major0, minor0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "|zz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &major0_ref, &minor0_ref );
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxGetOsVersion())\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxGetOsVersion());
-
-
-				return;
-				break;
-			}
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxGetOsVersion((int*) major0))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxGetOsVersion((int*) major0));
-
-				size_t elements_returned0_0 = sizeof(major0)/sizeof(*major0);
-				array_init(major0_ref);
-				for(size_t i=0; i<elements_returned0_0; i++)
-				{
-					add_next_index_long(major0_ref, major0[i]);
-				}
-
-				return;
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxGetOsVersion((int*) major0, (int*) minor0))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxGetOsVersion((int*) major0, (int*) minor0));
-
-				size_t elements_returned0_0 = sizeof(major0)/sizeof(*major0);
-				array_init(major0_ref);
-				for(size_t i=0; i<elements_returned0_0; i++)
-				{
-					add_next_index_long(major0_ref, major0[i]);
-				}
-				size_t elements_returned0_1 = sizeof(minor0)/sizeof(*minor0);
-				array_init(minor0_ref);
-				for(size_t i=0; i<elements_returned0_1; i++)
-				{
-					add_next_index_long(minor0_ref, minor0[i]);
-				}
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxIsPlatform64Bit)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxIsPlatform64Bit\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxIsPlatform64Bit())\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxIsPlatform64Bit());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxIsPlatformLittleEndian)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxIsPlatformLittleEndian\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxIsPlatformLittleEndian())\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxIsPlatformLittleEndian());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxGetProcessId)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxGetProcessId\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxGetProcessId())\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxGetProcessId());
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxKill)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxKill\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	long pid0;
-	long sig0;
-	long* rc0;
-	zval* rc0_ref;
-	long flags0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 1  && arguments_received <= 4)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l|lll' (&pid0, &sig0, rc0, &flags0)\n");
-		#endif
-		char parse_parameters_string[] = "l|lll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &pid0, &sig0, rc0, &flags0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "z|zzz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &dummy, &dummy, &rc0_ref, &dummy );
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxKill((long) pid0))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxKill((long) pid0));
-
-
-				return;
-				break;
-			}
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxKill((long) pid0, (wxSignal) sig0))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxKill((long) pid0, (wxSignal) sig0));
-
-
-				return;
-				break;
-			}
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxKill((long) pid0, (wxSignal) sig0, (wxKillError*) rc0))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxKill((long) pid0, (wxSignal) sig0, (wxKillError*) rc0));
-
-				size_t elements_returned0_2 = sizeof(rc0)/sizeof(*rc0);
-				array_init(rc0_ref);
-				for(size_t i=0; i<elements_returned0_2; i++)
-				{
-					add_next_index_long(rc0_ref, rc0[i]);
-				}
-
-				return;
-				break;
-			}
-			case 4:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxKill((long) pid0, (wxSignal) sig0, (wxKillError*) rc0, (int) flags0))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxKill((long) pid0, (wxSignal) sig0, (wxKillError*) rc0, (int) flags0));
-
-				size_t elements_returned0_2 = sizeof(rc0)/sizeof(*rc0);
-				array_init(rc0_ref);
-				for(size_t i=0; i<elements_returned0_2; i++)
-				{
-					add_next_index_long(rc0_ref, rc0[i]);
-				}
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxShell)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxShell\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* command0;
-	long command_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 0  && arguments_received <= 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '|s' (&command0, &command_len0)\n");
-		#endif
-		char parse_parameters_string[] = "|s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &command0, &command_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxShell())\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxShell());
-
-
-				return;
-				break;
-			}
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxShell(wxString(command0, wxConvUTF8)))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxShell(wxString(command0, wxConvUTF8)));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxShutdown)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxShutdown\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	long flags0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 0  && arguments_received <= 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '|l' (&flags0)\n");
-		#endif
-		char parse_parameters_string[] = "|l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &flags0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxShutdown())\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxShutdown());
-
-
-				return;
-				break;
-			}
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxShutdown((int) flags0))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxShutdown((int) flags0));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxMicroSleep)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxMicroSleep\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	long microseconds0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l' (&microseconds0)\n");
-		#endif
-		char parse_parameters_string[] = "l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &microseconds0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxMicroSleep((unsigned long) microseconds0)\n\n");
-				#endif
-				wxMicroSleep((unsigned long) microseconds0);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxMilliSleep)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxMilliSleep\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	long milliseconds0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l' (&milliseconds0)\n");
-		#endif
-		char parse_parameters_string[] = "l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &milliseconds0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxMilliSleep((unsigned long) milliseconds0)\n\n");
-				#endif
-				wxMilliSleep((unsigned long) milliseconds0);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxNow)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxNow\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxNow().fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return0;
-				value_to_return0 = wxNow();
-				char* temp_string0;
-				temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0.size()+1));
-				strcpy (temp_string0, (const char *) value_to_return0.char_str() );
-				ZVAL_STRING(return_value, temp_string0, 1);
-				free(temp_string0);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxSleep)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxSleep\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	long secs0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l' (&secs0)\n");
-		#endif
-		char parse_parameters_string[] = "l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &secs0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxSleep((int) secs0)\n\n");
-				#endif
-				wxSleep((int) secs0);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxUsleep)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxUsleep\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	long milliseconds0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l' (&milliseconds0)\n");
-		#endif
-		char parse_parameters_string[] = "l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &milliseconds0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing ::wxUsleep((unsigned long) milliseconds0)\n\n");
-				#endif
-				wxUsleep((unsigned long) milliseconds0);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxIsEmpty)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxIsEmpty\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* s0;
-	long s_len0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	char* s1;
-	long s_len1;
-	bool overload1_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&s0, &s_len0)\n");
-		#endif
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s0, &s_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&s1, &s_len1)\n");
-		#endif
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s1, &s_len1 ) == SUCCESS)
-		{
-			overload1_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxIsEmpty(s0))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxIsEmpty(s0));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_BOOL(::wxIsEmpty(wxString(s1, wxConvUTF8)))\n\n");
-				#endif
-				ZVAL_BOOL(return_value, wxIsEmpty(wxString(s1, wxConvUTF8)));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxTmemchr)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxTmemchr\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* s0;
-	long s_len0;
-	long c0;
-	long len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 3)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'sll' (&s0, &s_len0, &c0, &len0)\n");
-		#endif
-		char parse_parameters_string[] = "sll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s0, &s_len0, &c0, &len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxTmemchr(s0, (char) c0, (size_t) len0).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return3;
-				value_to_return3 = wxTmemchr(s0, (char) c0, (size_t) len0);
-				ZVAL_STRING(return_value, value_to_return3, 1);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxTmemcmp)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxTmemcmp\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* sz10;
-	long sz1_len0;
-	char* sz20;
-	long sz2_len0;
-	long len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 3)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ssl' (&sz10, &sz1_len0, &sz20, &sz2_len0, &len0)\n");
-		#endif
-		char parse_parameters_string[] = "ssl";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &sz10, &sz1_len0, &sz20, &sz2_len0, &len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxTmemcmp(sz10, sz20, (size_t) len0))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxTmemcmp(sz10, sz20, (size_t) len0));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxTmemcpy)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxTmemcpy\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* szOut0;
-	long szOut_len0;
-	zval* szOut0_ref;
-	char* szIn0;
-	long szIn_len0;
-	long len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 3)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ssl' (&szOut0, &szOut_len0, &szIn0, &szIn_len0, &len0)\n");
-		#endif
-		char parse_parameters_string[] = "ssl";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &szOut0, &szOut_len0, &szIn0, &szIn_len0, &len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "zzz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &szOut0_ref, &dummy, &dummy );
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxTmemcpy(szOut0, szIn0, (size_t) len0).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return3;
-				value_to_return3 = wxTmemcpy(szOut0, szIn0, (size_t) len0);
-				ZVAL_STRING(return_value, value_to_return3, 1);
-
-				ZVAL_STRING(szOut0_ref, szOut0, 1);
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxTmemmove)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxTmemmove\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* szOut0;
-	long szOut_len0;
-	zval* szOut0_ref;
-	char* szIn0;
-	long szIn_len0;
-	long len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 3)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ssl' (&szOut0, &szOut_len0, &szIn0, &szIn_len0, &len0)\n");
-		#endif
-		char parse_parameters_string[] = "ssl";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &szOut0, &szOut_len0, &szIn0, &szIn_len0, &len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "zzz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &szOut0_ref, &dummy, &dummy );
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxTmemmove(szOut0, szIn0, (size_t) len0).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return3;
-				value_to_return3 = wxTmemmove(szOut0, szIn0, (size_t) len0);
-				ZVAL_STRING(return_value, value_to_return3, 1);
-
-				ZVAL_STRING(szOut0_ref, szOut0, 1);
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxTmemset)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxTmemset\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* szOut0;
-	long szOut_len0;
-	zval* szOut0_ref;
-	long cIn0;
-	long len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 3)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'sll' (&szOut0, &szOut_len0, &cIn0, &len0)\n");
-		#endif
-		char parse_parameters_string[] = "sll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &szOut0, &szOut_len0, &cIn0, &len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "zzz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &szOut0_ref, &dummy, &dummy );
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxTmemset(szOut0, (const char) cIn0, (size_t) len0).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return3;
-				value_to_return3 = wxTmemset(szOut0, (const char) cIn0, (size_t) len0);
-				ZVAL_STRING(return_value, value_to_return3, 1);
-
-				ZVAL_STRING(szOut0_ref, szOut0, 1);
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxSetlocale)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxSetlocale\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	long category0;
-	char* locale0;
-	long locale_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ls' (&category0, &locale0, &locale_len0)\n");
-		#endif
-		char parse_parameters_string[] = "ls";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &category0, &locale0, &locale_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxSetlocale((int) category0, wxString(locale0, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return2;
-				value_to_return2 = wxSetlocale((int) category0, wxString(locale0, wxConvUTF8));
-				ZVAL_STRING(return_value, value_to_return2, 1);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxStrlen)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxStrlen\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* s0;
-	long s_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&s0, &s_len0)\n");
-		#endif
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s0, &s_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxStrlen(wxString(s0, wxConvUTF8)))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxStrlen(wxString(s0, wxConvUTF8)));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxStrnlen)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxStrnlen\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* str0;
-	long str_len0;
-	long maxlen0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'sl' (&str0, &str_len0, &maxlen0)\n");
-		#endif
-		char parse_parameters_string[] = "sl";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &str0, &str_len0, &maxlen0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxStrnlen(str0, (size_t) maxlen0))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxStrnlen(str0, (size_t) maxlen0));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxStrdup)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxStrdup\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* s0;
-	long s_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&s0, &s_len0)\n");
-		#endif
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s0, &s_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStrdup(wxString(s0, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return1;
-				value_to_return1 = wxStrdup(wxString(s0, wxConvUTF8));
-				ZVAL_STRING(return_value, value_to_return1, 1);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxStrcpy)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxStrcpy\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* dest0;
-	long dest_len0;
-	zval* dest0_ref;
-	char* src0;
-	long src_len0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	char* dest1;
-	long dest_len1;
-	zval* dest1_ref;
-	char* src1;
-	long src_len1;
-	bool overload1_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ss' (&dest0, &dest_len0, &src0, &src_len0)\n");
-		#endif
-		char parse_parameters_string[] = "ss";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dest0, &dest_len0, &src0, &src_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "zz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &dest0_ref, &dummy );
-		}
-	}
-
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ss' (&dest1, &dest_len1, &src1, &src_len1)\n");
-		#endif
-		char parse_parameters_string[] = "ss";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dest1, &dest_len1, &src1, &src_len1 ) == SUCCESS)
-		{
-			overload1_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "zz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &dest1_ref, &dummy );
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStrcpy(dest0, src0).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return2;
-				value_to_return2 = wxStrcpy(dest0, src0);
-				ZVAL_STRING(return_value, value_to_return2, 1);
-
-				ZVAL_STRING(dest0_ref, dest0, 1);
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStrcpy(dest1, wxString(src1, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return2;
-				value_to_return2 = wxStrcpy(dest1, wxString(src1, wxConvUTF8));
-				ZVAL_STRING(return_value, value_to_return2, 1);
-
-				ZVAL_STRING(dest1_ref, dest1, 1);
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxStrncpy)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxStrncpy\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* dest0;
-	long dest_len0;
-	zval* dest0_ref;
-	char* src0;
-	long src_len0;
-	long n0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	char* dest1;
-	long dest_len1;
-	zval* dest1_ref;
-	char* src1;
-	long src_len1;
-	long n1;
-	bool overload1_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 3)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ssl' (&dest0, &dest_len0, &src0, &src_len0, &n0)\n");
-		#endif
-		char parse_parameters_string[] = "ssl";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dest0, &dest_len0, &src0, &src_len0, &n0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "zzz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &dest0_ref, &dummy, &dummy );
-		}
-	}
-
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 3)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ssl' (&dest1, &dest_len1, &src1, &src_len1, &n1)\n");
-		#endif
-		char parse_parameters_string[] = "ssl";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dest1, &dest_len1, &src1, &src_len1, &n1 ) == SUCCESS)
-		{
-			overload1_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "zzz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &dest1_ref, &dummy, &dummy );
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStrncpy(dest0, src0, (size_t) n0).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return3;
-				value_to_return3 = wxStrncpy(dest0, src0, (size_t) n0);
-				ZVAL_STRING(return_value, value_to_return3, 1);
-
-				ZVAL_STRING(dest0_ref, dest0, 1);
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStrncpy(dest1, wxString(src1, wxConvUTF8), (size_t) n1).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return3;
-				value_to_return3 = wxStrncpy(dest1, wxString(src1, wxConvUTF8), (size_t) n1);
-				ZVAL_STRING(return_value, value_to_return3, 1);
-
-				ZVAL_STRING(dest1_ref, dest1, 1);
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxStrlcpy)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxStrlcpy\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* dest0;
-	long dest_len0;
-	zval* dest0_ref;
-	char* src0;
-	long src_len0;
-	long n0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 3)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ssl' (&dest0, &dest_len0, &src0, &src_len0, &n0)\n");
-		#endif
-		char parse_parameters_string[] = "ssl";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dest0, &dest_len0, &src0, &src_len0, &n0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "zzz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &dest0_ref, &dummy, &dummy );
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxStrlcpy(dest0, src0, (size_t) n0))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxStrlcpy(dest0, src0, (size_t) n0));
-
-				ZVAL_STRING(dest0_ref, dest0, 1);
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxStrcat)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxStrcat\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* dest0;
-	long dest_len0;
-	zval* dest0_ref;
-	char* src0;
-	long src_len0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	char* dest1;
-	long dest_len1;
-	zval* dest1_ref;
-	char* src1;
-	long src_len1;
-	bool overload1_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ss' (&dest0, &dest_len0, &src0, &src_len0)\n");
-		#endif
-		char parse_parameters_string[] = "ss";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dest0, &dest_len0, &src0, &src_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "zz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &dest0_ref, &dummy );
-		}
-	}
-
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ss' (&dest1, &dest_len1, &src1, &src_len1)\n");
-		#endif
-		char parse_parameters_string[] = "ss";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dest1, &dest_len1, &src1, &src_len1 ) == SUCCESS)
-		{
-			overload1_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "zz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &dest1_ref, &dummy );
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStrcat(dest0, src0).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return2;
-				value_to_return2 = wxStrcat(dest0, src0);
-				ZVAL_STRING(return_value, value_to_return2, 1);
-
-				ZVAL_STRING(dest0_ref, dest0, 1);
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStrcat(dest1, wxString(src1, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return2;
-				value_to_return2 = wxStrcat(dest1, wxString(src1, wxConvUTF8));
-				ZVAL_STRING(return_value, value_to_return2, 1);
-
-				ZVAL_STRING(dest1_ref, dest1, 1);
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxStrncat)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxStrncat\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* dest0;
-	long dest_len0;
-	zval* dest0_ref;
-	char* src0;
-	long src_len0;
-	long n0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	char* dest1;
-	long dest_len1;
-	zval* dest1_ref;
-	char* src1;
-	long src_len1;
-	long n1;
-	bool overload1_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 3)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ssl' (&dest0, &dest_len0, &src0, &src_len0, &n0)\n");
-		#endif
-		char parse_parameters_string[] = "ssl";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dest0, &dest_len0, &src0, &src_len0, &n0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "zzz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &dest0_ref, &dummy, &dummy );
-		}
-	}
-
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 3)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ssl' (&dest1, &dest_len1, &src1, &src_len1, &n1)\n");
-		#endif
-		char parse_parameters_string[] = "ssl";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dest1, &dest_len1, &src1, &src_len1, &n1 ) == SUCCESS)
-		{
-			overload1_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "zzz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &dest1_ref, &dummy, &dummy );
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStrncat(dest0, src0, (size_t) n0).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return3;
-				value_to_return3 = wxStrncat(dest0, src0, (size_t) n0);
-				ZVAL_STRING(return_value, value_to_return3, 1);
-
-				ZVAL_STRING(dest0_ref, dest0, 1);
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStrncat(dest1, wxString(src1, wxConvUTF8), (size_t) n1).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return3;
-				value_to_return3 = wxStrncat(dest1, wxString(src1, wxConvUTF8), (size_t) n1);
-				ZVAL_STRING(return_value, value_to_return3, 1);
-
-				ZVAL_STRING(dest1_ref, dest1, 1);
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxStrxfrm)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxStrxfrm\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* dest0;
-	long dest_len0;
-	zval* dest0_ref;
-	char* src0;
-	long src_len0;
-	long n0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	char* dest1;
-	long dest_len1;
-	zval* dest1_ref;
-	char* src1;
-	long src_len1;
-	long n1;
-	bool overload1_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 3)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ssl' (&dest0, &dest_len0, &src0, &src_len0, &n0)\n");
-		#endif
-		char parse_parameters_string[] = "ssl";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dest0, &dest_len0, &src0, &src_len0, &n0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "zzz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &dest0_ref, &dummy, &dummy );
-		}
-	}
-
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 3)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ssl' (&dest1, &dest_len1, &src1, &src_len1, &n1)\n");
-		#endif
-		char parse_parameters_string[] = "ssl";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &dest1, &dest_len1, &src1, &src_len1, &n1 ) == SUCCESS)
-		{
-			overload1_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "zzz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &dest1_ref, &dummy, &dummy );
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxStrxfrm(dest0, src0, (size_t) n0))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxStrxfrm(dest0, src0, (size_t) n0));
-
-				ZVAL_STRING(dest0_ref, dest0, 1);
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 3:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxStrxfrm(dest1, wxString(src1, wxConvUTF8), (size_t) n1))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxStrxfrm(dest1, wxString(src1, wxConvUTF8), (size_t) n1));
-
-				ZVAL_STRING(dest1_ref, dest1, 1);
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxStrstr)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxStrstr\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* haystack0;
-	long haystack_len0;
-	char* needle0;
-	long needle_len0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	char* haystack1;
-	long haystack_len1;
-	char* needle1;
-	long needle_len1;
-	bool overload1_called = false;
-	//Parameters for overload 2
-	char* haystack2;
-	long haystack_len2;
-	char* needle2;
-	long needle_len2;
-	bool overload2_called = false;
-	//Parameters for overload 3
-	char* haystack3;
-	long haystack_len3;
-	char* needle3;
-	long needle_len3;
-	bool overload3_called = false;
-	//Parameters for overload 4
-	char* haystack4;
-	long haystack_len4;
-	zval* haystack4_ref;
-	char* needle4;
-	long needle_len4;
-	bool overload4_called = false;
-	//Parameters for overload 5
-	char* haystack5;
-	long haystack_len5;
-	zval* haystack5_ref;
-	char* needle5;
-	long needle_len5;
-	bool overload5_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ss' (&haystack0, &haystack_len0, &needle0, &needle_len0)\n");
-		#endif
-		char parse_parameters_string[] = "ss";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &haystack0, &haystack_len0, &needle0, &needle_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ss' (&haystack1, &haystack_len1, &needle1, &needle_len1)\n");
-		#endif
-		char parse_parameters_string[] = "ss";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &haystack1, &haystack_len1, &needle1, &needle_len1 ) == SUCCESS)
-		{
-			overload1_called = true;
-			already_called = true;
-		}
-	}
-
-	//Overload 2
-	overload2:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ss' (&haystack2, &haystack_len2, &needle2, &needle_len2)\n");
-		#endif
-		char parse_parameters_string[] = "ss";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &haystack2, &haystack_len2, &needle2, &needle_len2 ) == SUCCESS)
-		{
-			overload2_called = true;
-			already_called = true;
-		}
-	}
-
-	//Overload 3
-	overload3:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ss' (&haystack3, &haystack_len3, &needle3, &needle_len3)\n");
-		#endif
-		char parse_parameters_string[] = "ss";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &haystack3, &haystack_len3, &needle3, &needle_len3 ) == SUCCESS)
-		{
-			overload3_called = true;
-			already_called = true;
-		}
-	}
-
-	//Overload 4
-	overload4:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ss' (&haystack4, &haystack_len4, &needle4, &needle_len4)\n");
-		#endif
-		char parse_parameters_string[] = "ss";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &haystack4, &haystack_len4, &needle4, &needle_len4 ) == SUCCESS)
-		{
-			overload4_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "zz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &haystack4_ref, &dummy );
-		}
-	}
-
-	//Overload 5
-	overload5:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ss' (&haystack5, &haystack_len5, &needle5, &needle_len5)\n");
-		#endif
-		char parse_parameters_string[] = "ss";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &haystack5, &haystack_len5, &needle5, &needle_len5 ) == SUCCESS)
-		{
-			overload5_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "zz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &haystack5_ref, &dummy );
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStrstr(haystack0, needle0).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return2;
-				value_to_return2 = const_cast<char*>(wxStrstr(haystack0, needle0));
-				ZVAL_STRING(return_value, value_to_return2, 1);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStrstr(haystack1, wxString(needle1, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return2;
-				value_to_return2 = const_cast<char*>(wxStrstr(haystack1, wxString(needle1, wxConvUTF8)));
-				ZVAL_STRING(return_value, value_to_return2, 1);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload2_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStrstr(wxString(haystack2, wxConvUTF8), wxString(needle2, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return2;
-				value_to_return2 = const_cast<char*>(wxStrstr(wxString(haystack2, wxConvUTF8), wxString(needle2, wxConvUTF8)));
-				ZVAL_STRING(return_value, value_to_return2, 1);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload3_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStrstr(wxString(haystack3, wxConvUTF8), needle3).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return2;
-				value_to_return2 = const_cast<char*>(wxStrstr(wxString(haystack3, wxConvUTF8), needle3));
-				ZVAL_STRING(return_value, value_to_return2, 1);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload4_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStrstr(haystack4, needle4).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return2;
-				value_to_return2 = wxStrstr(haystack4, needle4);
-				ZVAL_STRING(return_value, value_to_return2, 1);
-
-				ZVAL_STRING(haystack4_ref, haystack4, 1);
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload5_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStrstr(haystack5, wxString(needle5, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return2;
-				value_to_return2 = wxStrstr(haystack5, wxString(needle5, wxConvUTF8));
-				ZVAL_STRING(return_value, value_to_return2, 1);
-
-				ZVAL_STRING(haystack5_ref, haystack5, 1);
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxStrchr)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxStrchr\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* s0;
-	long s_len0;
-	long c0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	char* s1;
-	long s_len1;
-	long c1;
-	bool overload1_called = false;
-	//Parameters for overload 2
-	char* s2;
-	long s_len2;
-	long c2;
-	bool overload2_called = false;
-	//Parameters for overload 3
-	char* s3;
-	long s_len3;
-	zval* s3_ref;
-	long c3;
-	bool overload3_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'sl' (&s0, &s_len0, &c0)\n");
-		#endif
-		char parse_parameters_string[] = "sl";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s0, &s_len0, &c0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'sl' (&s1, &s_len1, &c1)\n");
-		#endif
-		char parse_parameters_string[] = "sl";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s1, &s_len1, &c1 ) == SUCCESS)
-		{
-			overload1_called = true;
-			already_called = true;
-		}
-	}
-
-	//Overload 2
-	overload2:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'sl' (&s2, &s_len2, &c2)\n");
-		#endif
-		char parse_parameters_string[] = "sl";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s2, &s_len2, &c2 ) == SUCCESS)
-		{
-			overload2_called = true;
-			already_called = true;
-		}
-	}
-
-	//Overload 3
-	overload3:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'sl' (&s3, &s_len3, &c3)\n");
-		#endif
-		char parse_parameters_string[] = "sl";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s3, &s_len3, &c3 ) == SUCCESS)
-		{
-			overload3_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "zz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &s3_ref, &dummy );
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStrchr(s0, (char) c0).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return2;
-				value_to_return2 = const_cast<char*>(wxStrchr(s0, (char) c0));
-				ZVAL_STRING(return_value, value_to_return2, 1);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStrchr(wxString(s1, wxConvUTF8), (char) c1).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return2;
-				value_to_return2 = const_cast<char*>(wxStrchr(wxString(s1, wxConvUTF8), (char) c1));
-				ZVAL_STRING(return_value, value_to_return2, 1);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload2_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStrchr(wxString(s2, wxConvUTF8), (int) c2).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return2;
-				value_to_return2 = const_cast<char*>(wxStrchr(wxString(s2, wxConvUTF8), (int) c2));
-				ZVAL_STRING(return_value, value_to_return2, 1);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload3_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStrchr(s3, (char) c3).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return2;
-				value_to_return2 = wxStrchr(s3, (char) c3);
-				ZVAL_STRING(return_value, value_to_return2, 1);
-
-				ZVAL_STRING(s3_ref, s3, 1);
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxStrrchr)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxStrrchr\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* s0;
-	long s_len0;
-	long c0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	char* s1;
-	long s_len1;
-	long c1;
-	bool overload1_called = false;
-	//Parameters for overload 2
-	char* s2;
-	long s_len2;
-	long c2;
-	bool overload2_called = false;
-	//Parameters for overload 3
-	char* s3;
-	long s_len3;
-	zval* s3_ref;
-	long c3;
-	bool overload3_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'sl' (&s0, &s_len0, &c0)\n");
-		#endif
-		char parse_parameters_string[] = "sl";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s0, &s_len0, &c0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'sl' (&s1, &s_len1, &c1)\n");
-		#endif
-		char parse_parameters_string[] = "sl";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s1, &s_len1, &c1 ) == SUCCESS)
-		{
-			overload1_called = true;
-			already_called = true;
-		}
-	}
-
-	//Overload 2
-	overload2:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'sl' (&s2, &s_len2, &c2)\n");
-		#endif
-		char parse_parameters_string[] = "sl";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s2, &s_len2, &c2 ) == SUCCESS)
-		{
-			overload2_called = true;
-			already_called = true;
-		}
-	}
-
-	//Overload 3
-	overload3:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'sl' (&s3, &s_len3, &c3)\n");
-		#endif
-		char parse_parameters_string[] = "sl";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s3, &s_len3, &c3 ) == SUCCESS)
-		{
-			overload3_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "zz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &s3_ref, &dummy );
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStrrchr(s0, (char) c0).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return2;
-				value_to_return2 = const_cast<char*>(wxStrrchr(s0, (char) c0));
-				ZVAL_STRING(return_value, value_to_return2, 1);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStrrchr(wxString(s1, wxConvUTF8), (char) c1).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return2;
-				value_to_return2 = const_cast<char*>(wxStrrchr(wxString(s1, wxConvUTF8), (char) c1));
-				ZVAL_STRING(return_value, value_to_return2, 1);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload2_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStrrchr(wxString(s2, wxConvUTF8), (int) c2).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return2;
-				value_to_return2 = const_cast<char*>(wxStrrchr(wxString(s2, wxConvUTF8), (int) c2));
-				ZVAL_STRING(return_value, value_to_return2, 1);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload3_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStrrchr(s3, (char) c3).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return2;
-				value_to_return2 = wxStrrchr(s3, (char) c3);
-				ZVAL_STRING(return_value, value_to_return2, 1);
-
-				ZVAL_STRING(s3_ref, s3, 1);
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxStrpbrk)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxStrpbrk\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* s0;
-	long s_len0;
-	char* accept0;
-	long accept_len0;
-	bool overload0_called = false;
-	//Parameters for overload 1
-	char* s1;
-	long s_len1;
-	char* accept1;
-	long accept_len1;
-	bool overload1_called = false;
-	//Parameters for overload 2
-	char* s2;
-	long s_len2;
-	char* accept2;
-	long accept_len2;
-	bool overload2_called = false;
-	//Parameters for overload 3
-	char* s3;
-	long s_len3;
-	char* accept3;
-	long accept_len3;
-	bool overload3_called = false;
-	//Parameters for overload 4
-	char* s4;
-	long s_len4;
-	zval* s4_ref;
-	char* accept4;
-	long accept_len4;
-	bool overload4_called = false;
-	//Parameters for overload 5
-	char* s5;
-	long s_len5;
-	zval* s5_ref;
-	char* accept5;
-	long accept_len5;
-	bool overload5_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ss' (&s0, &s_len0, &accept0, &accept_len0)\n");
-		#endif
-		char parse_parameters_string[] = "ss";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s0, &s_len0, &accept0, &accept_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-	//Overload 1
-	overload1:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ss' (&s1, &s_len1, &accept1, &accept_len1)\n");
-		#endif
-		char parse_parameters_string[] = "ss";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s1, &s_len1, &accept1, &accept_len1 ) == SUCCESS)
-		{
-			overload1_called = true;
-			already_called = true;
-		}
-	}
-
-	//Overload 2
-	overload2:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ss' (&s2, &s_len2, &accept2, &accept_len2)\n");
-		#endif
-		char parse_parameters_string[] = "ss";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s2, &s_len2, &accept2, &accept_len2 ) == SUCCESS)
-		{
-			overload2_called = true;
-			already_called = true;
-		}
-	}
-
-	//Overload 3
-	overload3:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ss' (&s3, &s_len3, &accept3, &accept_len3)\n");
-		#endif
-		char parse_parameters_string[] = "ss";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s3, &s_len3, &accept3, &accept_len3 ) == SUCCESS)
-		{
-			overload3_called = true;
-			already_called = true;
-		}
-	}
-
-	//Overload 4
-	overload4:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ss' (&s4, &s_len4, &accept4, &accept_len4)\n");
-		#endif
-		char parse_parameters_string[] = "ss";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s4, &s_len4, &accept4, &accept_len4 ) == SUCCESS)
-		{
-			overload4_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "zz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &s4_ref, &dummy );
-		}
-	}
-
-	//Overload 5
-	overload5:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ss' (&s5, &s_len5, &accept5, &accept_len5)\n");
-		#endif
-		char parse_parameters_string[] = "ss";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &s5, &s_len5, &accept5, &accept_len5 ) == SUCCESS)
-		{
-			overload5_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "zz";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &s5_ref, &dummy );
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStrpbrk(s0, accept0).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return2;
-				value_to_return2 = const_cast<char*>(wxStrpbrk(s0, accept0));
-				ZVAL_STRING(return_value, value_to_return2, 1);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload1_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStrpbrk(s1, wxString(accept1, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return2;
-				value_to_return2 = const_cast<char*>(wxStrpbrk(s1, wxString(accept1, wxConvUTF8)));
-				ZVAL_STRING(return_value, value_to_return2, 1);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload2_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStrpbrk(wxString(s2, wxConvUTF8), wxString(accept2, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return2;
-				value_to_return2 = const_cast<char*>(wxStrpbrk(wxString(s2, wxConvUTF8), wxString(accept2, wxConvUTF8)));
-				ZVAL_STRING(return_value, value_to_return2, 1);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload3_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStrpbrk(wxString(s3, wxConvUTF8), accept3).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return2;
-				value_to_return2 = const_cast<char*>(wxStrpbrk(wxString(s3, wxConvUTF8), accept3));
-				ZVAL_STRING(return_value, value_to_return2, 1);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload4_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStrpbrk(s4, accept4).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return2;
-				value_to_return2 = wxStrpbrk(s4, accept4);
-				ZVAL_STRING(return_value, value_to_return2, 1);
-
-				ZVAL_STRING(s4_ref, s4, 1);
-
-				return;
-				break;
-			}
-		}
-	}
-
-	if(overload5_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(::wxStrpbrk(s5, wxString(accept5, wxConvUTF8)).fn_str(), 1)\n\n");
-				#endif
-				char* value_to_return2;
-				value_to_return2 = wxStrpbrk(s5, wxString(accept5, wxConvUTF8));
-				ZVAL_STRING(return_value, value_to_return2, 1);
-
-				ZVAL_STRING(s5_ref, s5, 1);
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxRemove)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxRemove\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* path0;
-	long path_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&path0, &path_len0)\n");
-		#endif
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &path0, &path_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxRemove(wxString(path0, wxConvUTF8)))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxRemove(wxString(path0, wxConvUTF8)));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxRename)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxRename\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* oldpath0;
-	long oldpath_len0;
-	char* newpath0;
-	long newpath_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'ss' (&oldpath0, &oldpath_len0, &newpath0, &newpath_len0)\n");
-		#endif
-		char parse_parameters_string[] = "ss";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &oldpath0, &oldpath_len0, &newpath0, &newpath_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxRename(wxString(oldpath0, wxConvUTF8), wxString(newpath0, wxConvUTF8)))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxRename(wxString(oldpath0, wxConvUTF8), wxString(newpath0, wxConvUTF8)));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxAtoi)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxAtoi\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* str0;
-	long str_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&str0, &str_len0)\n");
-		#endif
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &str0, &str_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxAtoi(wxString(str0, wxConvUTF8)))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxAtoi(wxString(str0, wxConvUTF8)));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxAtol)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxAtol\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* str0;
-	long str_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&str0, &str_len0)\n");
-		#endif
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &str0, &str_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxAtol(wxString(str0, wxConvUTF8)))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxAtol(wxString(str0, wxConvUTF8)));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxAtof)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxAtof\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* str0;
-	long str_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&str0, &str_len0)\n");
-		#endif
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &str0, &str_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxAtof(wxString(str0, wxConvUTF8)))\n\n");
-				#endif
-				ZVAL_DOUBLE(return_value, wxAtof(wxString(str0, wxConvUTF8)));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxSystem)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking function wxSystem\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the function uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	zval* dummy;
-	bool already_called = false;
-	bool return_is_user_initialized = false;
-	
-	//Parameters for overload 0
-	char* str0;
-	long str_len0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&str0, &str_len0)\n");
-		#endif
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &str0, &str_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_LONG(::wxSystem(wxString(str0, wxConvUTF8)))\n\n");
-				#endif
-				ZVAL_LONG(return_value, wxSystem(wxString(str0, wxConvUTF8)));
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_FUNCTION(php_wxDynamicCast)
-{
-	zval **tmp;
-	int rsrc_type;
-	char _wxResource[] = "wxResource";
-	int valid = 1;
-
-	char* _argStr0;
-	int _argStr0_len;
-	void *_ptrObj0 = 0;
-	zval *_argObj0 = 0;
-	int id_to_find0;
-	
-	char parse_parameters[] = "z!s!";
-	
-	if (zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, ZEND_NUM_ARGS() TSRMLS_CC, parse_parameters, &_argObj0 , &_argStr0 , &_argStr0_len ) == SUCCESS){
-
-		if(_argObj0)
-		{
-			if(Z_TYPE_P(_argObj0)==IS_OBJECT && zend_hash_find(Z_OBJPROP_P(_argObj0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-			{
-				id_to_find0 = Z_RESVAL_P(*tmp);
-				_ptrObj0 = zend_list_find(id_to_find0, &rsrc_type);
-			}
-		}
-		
-		if(valid){
-			if(!strcmp(_argStr0, "wxScrolledWindow")){
-				object_init_ex(return_value, php_wxScrolledWindow_entry);
-				wxScrolledWindow* ret = wxDynamicCast(_ptrObj0, wxScrolledWindow_php);
-				long id_to_find = zend_list_insert(ret, le_wxScrolledWindow);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxFrame")){
-				object_init_ex(return_value, php_wxFrame_entry);
-				wxFrame* ret = wxDynamicCast(_ptrObj0, wxFrame_php);
-				long id_to_find = zend_list_insert(ret, le_wxFrame);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxTopLevelWindow")){
-				object_init_ex(return_value, php_wxTopLevelWindow_entry);
-				wxTopLevelWindow* ret = wxDynamicCast(_ptrObj0, wxTopLevelWindow_php);
-				long id_to_find = zend_list_insert(ret, le_wxTopLevelWindow);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxNonOwnedWindow")){
-				object_init_ex(return_value, php_wxNonOwnedWindow_entry);
-				wxNonOwnedWindow* ret = wxDynamicCast(_ptrObj0, wxNonOwnedWindow_php);
-				long id_to_find = zend_list_insert(ret, le_wxNonOwnedWindow);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxWindow")){
-				object_init_ex(return_value, php_wxWindow_entry);
-				wxWindow* ret = wxDynamicCast(_ptrObj0, wxWindow_php);
-				long id_to_find = zend_list_insert(ret, le_wxWindow);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxEvtHandler")){
-				object_init_ex(return_value, php_wxEvtHandler_entry);
-				wxEvtHandler* ret = wxDynamicCast(_ptrObj0, wxEvtHandler_php);
-				long id_to_find = zend_list_insert(ret, le_wxEvtHandler);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxStatusBar")){
-				object_init_ex(return_value, php_wxStatusBar_entry);
-				wxStatusBar* ret = wxDynamicCast(_ptrObj0, wxStatusBar_php);
-				long id_to_find = zend_list_insert(ret, le_wxStatusBar);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxButton")){
-				object_init_ex(return_value, php_wxButton_entry);
-				wxButton* ret = wxDynamicCast(_ptrObj0, wxButton_php);
-				long id_to_find = zend_list_insert(ret, le_wxButton);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxAnyButton")){
-				object_init_ex(return_value, php_wxAnyButton_entry);
-				wxAnyButton* ret = wxDynamicCast(_ptrObj0, wxAnyButton_php);
-				long id_to_find = zend_list_insert(ret, le_wxAnyButton);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxControl")){
-				object_init_ex(return_value, php_wxControl_entry);
-				wxControl* ret = wxDynamicCast(_ptrObj0, wxControl_php);
-				long id_to_find = zend_list_insert(ret, le_wxControl);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxValidator")){
-				object_init_ex(return_value, php_wxValidator_entry);
-				wxValidator* ret = wxDynamicCast(_ptrObj0, wxValidator_php);
-				long id_to_find = zend_list_insert(ret, le_wxValidator);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxBitmapHandler")){
-				object_init_ex(return_value, php_wxBitmapHandler_entry);
-				wxBitmapHandler* ret = wxDynamicCast(_ptrObj0, wxBitmapHandler_php);
-				long id_to_find = zend_list_insert(ret, le_wxBitmapHandler);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxBitmap")){
-				object_init_ex(return_value, php_wxBitmap_entry);
-				wxBitmap* ret = wxDynamicCast(_ptrObj0, wxBitmap_php);
-				long id_to_find = zend_list_insert(ret, le_wxBitmap);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxPalette")){
-				object_init_ex(return_value, php_wxPalette_entry);
-				wxPalette* ret = wxDynamicCast(_ptrObj0, wxPalette_php);
-				long id_to_find = zend_list_insert(ret, le_wxPalette);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxImage")){
-				object_init_ex(return_value, php_wxImage_entry);
-				wxImage* ret = wxDynamicCast(_ptrObj0, wxImage_php);
-				long id_to_find = zend_list_insert(ret, le_wxImage);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxIcon")){
-				object_init_ex(return_value, php_wxIcon_entry);
-				wxIcon* ret = wxDynamicCast(_ptrObj0, wxIcon_php);
-				long id_to_find = zend_list_insert(ret, le_wxIcon);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxSplitterWindow")){
-				object_init_ex(return_value, php_wxSplitterWindow_entry);
-				wxSplitterWindow* ret = wxDynamicCast(_ptrObj0, wxSplitterWindow_php);
-				long id_to_find = zend_list_insert(ret, le_wxSplitterWindow);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxBoxSizer")){
-				object_init_ex(return_value, php_wxBoxSizer_entry);
-				wxBoxSizer* ret = wxDynamicCast(_ptrObj0, wxBoxSizer_php);
-				long id_to_find = zend_list_insert(ret, le_wxBoxSizer);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxSizer")){
-				object_init_ex(return_value, php_wxSizer_entry);
-				wxSizer* ret = wxDynamicCast(_ptrObj0, wxSizer_php);
-				long id_to_find = zend_list_insert(ret, le_wxSizer);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxSizerItem")){
-				object_init_ex(return_value, php_wxSizerItem_entry);
-				wxSizerItem* ret = wxDynamicCast(_ptrObj0, wxSizerItem_php);
-				long id_to_find = zend_list_insert(ret, le_wxSizerItem);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxTreeCtrl")){
-				object_init_ex(return_value, php_wxTreeCtrl_entry);
-				wxTreeCtrl* ret = wxDynamicCast(_ptrObj0, wxTreeCtrl_php);
-				long id_to_find = zend_list_insert(ret, le_wxTreeCtrl);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxImageList")){
-				object_init_ex(return_value, php_wxImageList_entry);
-				wxImageList* ret = wxDynamicCast(_ptrObj0, wxImageList_php);
-				long id_to_find = zend_list_insert(ret, le_wxImageList);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxDC")){
-				object_init_ex(return_value, php_wxDC_entry);
-				wxDC* ret = wxDynamicCast(_ptrObj0, wxDC_php);
-				long id_to_find = zend_list_insert(ret, le_wxDC);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxColour")){
-				object_init_ex(return_value, php_wxColour_entry);
-				wxColour* ret = wxDynamicCast(_ptrObj0, wxColour_php);
-				long id_to_find = zend_list_insert(ret, le_wxColour);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxFont")){
-				object_init_ex(return_value, php_wxFont_entry);
-				wxFont* ret = wxDynamicCast(_ptrObj0, wxFont_php);
-				long id_to_find = zend_list_insert(ret, le_wxFont);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxPanel")){
-				object_init_ex(return_value, php_wxPanel_entry);
-				wxPanel* ret = wxDynamicCast(_ptrObj0, wxPanel_php);
-				long id_to_find = zend_list_insert(ret, le_wxPanel);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxCheckListBox")){
-				object_init_ex(return_value, php_wxCheckListBox_entry);
-				wxCheckListBox* ret = wxDynamicCast(_ptrObj0, wxCheckListBox_php);
-				long id_to_find = zend_list_insert(ret, le_wxCheckListBox);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxListBox")){
-				object_init_ex(return_value, php_wxListBox_entry);
-				wxListBox* ret = wxDynamicCast(_ptrObj0, wxListBox_php);
-				long id_to_find = zend_list_insert(ret, le_wxListBox);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxControlWithItems")){
-				object_init_ex(return_value, php_wxControlWithItems_entry);
-				wxControlWithItems* ret = wxDynamicCast(_ptrObj0, wxControlWithItems_php);
-				long id_to_find = zend_list_insert(ret, le_wxControlWithItems);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxMenuBar")){
-				object_init_ex(return_value, php_wxMenuBar_entry);
-				wxMenuBar* ret = wxDynamicCast(_ptrObj0, wxMenuBar_php);
-				long id_to_find = zend_list_insert(ret, le_wxMenuBar);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxMenuEvent")){
-				object_init_ex(return_value, php_wxMenuEvent_entry);
-				wxMenuEvent* ret = wxDynamicCast(_ptrObj0, wxMenuEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxMenuEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxMenuItem")){
-				object_init_ex(return_value, php_wxMenuItem_entry);
-				wxMenuItem* ret = wxDynamicCast(_ptrObj0, wxMenuItem_php);
-				long id_to_find = zend_list_insert(ret, le_wxMenuItem);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxMenu")){
-				object_init_ex(return_value, php_wxMenu_entry);
-				wxMenu* ret = wxDynamicCast(_ptrObj0, wxMenu_php);
-				long id_to_find = zend_list_insert(ret, le_wxMenu);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxEvent")){
-				object_init_ex(return_value, php_wxEvent_entry);
-				wxEvent* ret = wxDynamicCast(_ptrObj0, wxEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxTreeEvent")){
-				object_init_ex(return_value, php_wxTreeEvent_entry);
-				wxTreeEvent* ret = wxDynamicCast(_ptrObj0, wxTreeEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxTreeEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxKeyEvent")){
-				object_init_ex(return_value, php_wxKeyEvent_entry);
-				wxKeyEvent* ret = wxDynamicCast(_ptrObj0, wxKeyEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxKeyEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxNotifyEvent")){
-				object_init_ex(return_value, php_wxNotifyEvent_entry);
-				wxNotifyEvent* ret = wxDynamicCast(_ptrObj0, wxNotifyEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxNotifyEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxCommandEvent")){
-				object_init_ex(return_value, php_wxCommandEvent_entry);
-				wxCommandEvent* ret = wxDynamicCast(_ptrObj0, wxCommandEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxCommandEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxCloseEvent")){
-				object_init_ex(return_value, php_wxCloseEvent_entry);
-				wxCloseEvent* ret = wxDynamicCast(_ptrObj0, wxCloseEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxCloseEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxActivateEvent")){
-				object_init_ex(return_value, php_wxActivateEvent_entry);
-				wxActivateEvent* ret = wxDynamicCast(_ptrObj0, wxActivateEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxActivateEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxAuiManager")){
-				object_init_ex(return_value, php_wxAuiManager_entry);
-				wxAuiManager* ret = wxDynamicCast(_ptrObj0, wxAuiManager_php);
-				long id_to_find = zend_list_insert(ret, le_wxAuiManager);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxAuiManagerEvent")){
-				object_init_ex(return_value, php_wxAuiManagerEvent_entry);
-				wxAuiManagerEvent* ret = wxDynamicCast(_ptrObj0, wxAuiManagerEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxAuiManagerEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxAuiNotebook")){
-				object_init_ex(return_value, php_wxAuiNotebook_entry);
-				wxAuiNotebook* ret = wxDynamicCast(_ptrObj0, wxAuiNotebook_php);
-				long id_to_find = zend_list_insert(ret, le_wxAuiNotebook);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxAuiNotebookEvent")){
-				object_init_ex(return_value, php_wxAuiNotebookEvent_entry);
-				wxAuiNotebookEvent* ret = wxDynamicCast(_ptrObj0, wxAuiNotebookEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxAuiNotebookEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxBookCtrlEvent")){
-				object_init_ex(return_value, php_wxBookCtrlEvent_entry);
-				wxBookCtrlEvent* ret = wxDynamicCast(_ptrObj0, wxBookCtrlEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxBookCtrlEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxBookCtrlBase")){
-				object_init_ex(return_value, php_wxBookCtrlBase_entry);
-				wxBookCtrlBase* ret = wxDynamicCast(_ptrObj0, wxBookCtrlBase_php);
-				long id_to_find = zend_list_insert(ret, le_wxBookCtrlBase);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxAcceleratorTable")){
-				object_init_ex(return_value, php_wxAcceleratorTable_entry);
-				wxAcceleratorTable* ret = wxDynamicCast(_ptrObj0, wxAcceleratorTable_php);
-				long id_to_find = zend_list_insert(ret, le_wxAcceleratorTable);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxGDIObject")){
-				object_init_ex(return_value, php_wxGDIObject_entry);
-				wxGDIObject* ret = wxDynamicCast(_ptrObj0, wxGDIObject_php);
-				long id_to_find = zend_list_insert(ret, le_wxGDIObject);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxAnimation")){
-				object_init_ex(return_value, php_wxAnimation_entry);
-				wxAnimation* ret = wxDynamicCast(_ptrObj0, wxAnimation_php);
-				long id_to_find = zend_list_insert(ret, le_wxAnimation);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxAnimationCtrl")){
-				object_init_ex(return_value, php_wxAnimationCtrl_entry);
-				wxAnimationCtrl* ret = wxDynamicCast(_ptrObj0, wxAnimationCtrl_php);
-				long id_to_find = zend_list_insert(ret, le_wxAnimationCtrl);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxArtProvider")){
-				object_init_ex(return_value, php_wxArtProvider_entry);
-				wxArtProvider* ret = wxDynamicCast(_ptrObj0, wxArtProvider_php);
-				long id_to_find = zend_list_insert(ret, le_wxArtProvider);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxIconBundle")){
-				object_init_ex(return_value, php_wxIconBundle_entry);
-				wxIconBundle* ret = wxDynamicCast(_ptrObj0, wxIconBundle_php);
-				long id_to_find = zend_list_insert(ret, le_wxIconBundle);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxStyledTextCtrl")){
-				object_init_ex(return_value, php_wxStyledTextCtrl_entry);
-				wxStyledTextCtrl* ret = wxDynamicCast(_ptrObj0, wxStyledTextCtrl_php);
-				long id_to_find = zend_list_insert(ret, le_wxStyledTextCtrl);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxStyledTextEvent")){
-				object_init_ex(return_value, php_wxStyledTextEvent_entry);
-				wxStyledTextEvent* ret = wxDynamicCast(_ptrObj0, wxStyledTextEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxStyledTextEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxScrollBar")){
-				object_init_ex(return_value, php_wxScrollBar_entry);
-				wxScrollBar* ret = wxDynamicCast(_ptrObj0, wxScrollBar_php);
-				long id_to_find = zend_list_insert(ret, le_wxScrollBar);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxStaticText")){
-				object_init_ex(return_value, php_wxStaticText_entry);
-				wxStaticText* ret = wxDynamicCast(_ptrObj0, wxStaticText_php);
-				long id_to_find = zend_list_insert(ret, le_wxStaticText);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxStaticLine")){
-				object_init_ex(return_value, php_wxStaticLine_entry);
-				wxStaticLine* ret = wxDynamicCast(_ptrObj0, wxStaticLine_php);
-				long id_to_find = zend_list_insert(ret, le_wxStaticLine);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxStaticBoxSizer")){
-				object_init_ex(return_value, php_wxStaticBoxSizer_entry);
-				wxStaticBoxSizer* ret = wxDynamicCast(_ptrObj0, wxStaticBoxSizer_php);
-				long id_to_find = zend_list_insert(ret, le_wxStaticBoxSizer);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxStaticBox")){
-				object_init_ex(return_value, php_wxStaticBox_entry);
-				wxStaticBox* ret = wxDynamicCast(_ptrObj0, wxStaticBox_php);
-				long id_to_find = zend_list_insert(ret, le_wxStaticBox);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxStaticBitmap")){
-				object_init_ex(return_value, php_wxStaticBitmap_entry);
-				wxStaticBitmap* ret = wxDynamicCast(_ptrObj0, wxStaticBitmap_php);
-				long id_to_find = zend_list_insert(ret, le_wxStaticBitmap);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxCheckBox")){
-				object_init_ex(return_value, php_wxCheckBox_entry);
-				wxCheckBox* ret = wxDynamicCast(_ptrObj0, wxCheckBox_php);
-				long id_to_find = zend_list_insert(ret, le_wxCheckBox);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxWrapSizer")){
-				object_init_ex(return_value, php_wxWrapSizer_entry);
-				wxWrapSizer* ret = wxDynamicCast(_ptrObj0, wxWrapSizer_php);
-				long id_to_find = zend_list_insert(ret, le_wxWrapSizer);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxBitmapButton")){
-				object_init_ex(return_value, php_wxBitmapButton_entry);
-				wxBitmapButton* ret = wxDynamicCast(_ptrObj0, wxBitmapButton_php);
-				long id_to_find = zend_list_insert(ret, le_wxBitmapButton);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxTextCtrl")){
-				object_init_ex(return_value, php_wxTextCtrl_entry);
-				wxTextCtrl* ret = wxDynamicCast(_ptrObj0, wxTextCtrl_php);
-				long id_to_find = zend_list_insert(ret, le_wxTextCtrl);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxTextEntryDialog")){
-				object_init_ex(return_value, php_wxTextEntryDialog_entry);
-				wxTextEntryDialog* ret = wxDynamicCast(_ptrObj0, wxTextEntryDialog_php);
-				long id_to_find = zend_list_insert(ret, le_wxTextEntryDialog);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxComboBox")){
-				object_init_ex(return_value, php_wxComboBox_entry);
-				wxComboBox* ret = wxDynamicCast(_ptrObj0, wxComboBox_php);
-				long id_to_find = zend_list_insert(ret, le_wxComboBox);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxBitmapComboBox")){
-				object_init_ex(return_value, php_wxBitmapComboBox_entry);
-				wxBitmapComboBox* ret = wxDynamicCast(_ptrObj0, wxBitmapComboBox_php);
-				long id_to_find = zend_list_insert(ret, le_wxBitmapComboBox);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxAuiToolBarEvent")){
-				object_init_ex(return_value, php_wxAuiToolBarEvent_entry);
-				wxAuiToolBarEvent* ret = wxDynamicCast(_ptrObj0, wxAuiToolBarEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxAuiToolBarEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxAuiToolBar")){
-				object_init_ex(return_value, php_wxAuiToolBar_entry);
-				wxAuiToolBar* ret = wxDynamicCast(_ptrObj0, wxAuiToolBar_php);
-				long id_to_find = zend_list_insert(ret, le_wxAuiToolBar);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxBannerWindow")){
-				object_init_ex(return_value, php_wxBannerWindow_entry);
-				wxBannerWindow* ret = wxDynamicCast(_ptrObj0, wxBannerWindow_php);
-				long id_to_find = zend_list_insert(ret, le_wxBannerWindow);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxChoice")){
-				object_init_ex(return_value, php_wxChoice_entry);
-				wxChoice* ret = wxDynamicCast(_ptrObj0, wxChoice_php);
-				long id_to_find = zend_list_insert(ret, le_wxChoice);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxListEvent")){
-				object_init_ex(return_value, php_wxListEvent_entry);
-				wxListEvent* ret = wxDynamicCast(_ptrObj0, wxListEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxListEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxListCtrl")){
-				object_init_ex(return_value, php_wxListCtrl_entry);
-				wxListCtrl* ret = wxDynamicCast(_ptrObj0, wxListCtrl_php);
-				long id_to_find = zend_list_insert(ret, le_wxListCtrl);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxListbook")){
-				object_init_ex(return_value, php_wxListbook_entry);
-				wxListbook* ret = wxDynamicCast(_ptrObj0, wxListbook_php);
-				long id_to_find = zend_list_insert(ret, le_wxListbook);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxChildFocusEvent")){
-				object_init_ex(return_value, php_wxChildFocusEvent_entry);
-				wxChildFocusEvent* ret = wxDynamicCast(_ptrObj0, wxChildFocusEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxChildFocusEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxChoicebook")){
-				object_init_ex(return_value, php_wxChoicebook_entry);
-				wxChoicebook* ret = wxDynamicCast(_ptrObj0, wxChoicebook_php);
-				long id_to_find = zend_list_insert(ret, le_wxChoicebook);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxRadioBox")){
-				object_init_ex(return_value, php_wxRadioBox_entry);
-				wxRadioBox* ret = wxDynamicCast(_ptrObj0, wxRadioBox_php);
-				long id_to_find = zend_list_insert(ret, le_wxRadioBox);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxRadioButton")){
-				object_init_ex(return_value, php_wxRadioButton_entry);
-				wxRadioButton* ret = wxDynamicCast(_ptrObj0, wxRadioButton_php);
-				long id_to_find = zend_list_insert(ret, le_wxRadioButton);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxRearrangeList")){
-				object_init_ex(return_value, php_wxRearrangeList_entry);
-				wxRearrangeList* ret = wxDynamicCast(_ptrObj0, wxRearrangeList_php);
-				long id_to_find = zend_list_insert(ret, le_wxRearrangeList);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxSlider")){
-				object_init_ex(return_value, php_wxSlider_entry);
-				wxSlider* ret = wxDynamicCast(_ptrObj0, wxSlider_php);
-				long id_to_find = zend_list_insert(ret, le_wxSlider);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxSpinCtrl")){
-				object_init_ex(return_value, php_wxSpinCtrl_entry);
-				wxSpinCtrl* ret = wxDynamicCast(_ptrObj0, wxSpinCtrl_php);
-				long id_to_find = zend_list_insert(ret, le_wxSpinCtrl);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxSpinButton")){
-				object_init_ex(return_value, php_wxSpinButton_entry);
-				wxSpinButton* ret = wxDynamicCast(_ptrObj0, wxSpinButton_php);
-				long id_to_find = zend_list_insert(ret, le_wxSpinButton);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxSpinEvent")){
-				object_init_ex(return_value, php_wxSpinEvent_entry);
-				wxSpinEvent* ret = wxDynamicCast(_ptrObj0, wxSpinEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxSpinEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxSplitterEvent")){
-				object_init_ex(return_value, php_wxSplitterEvent_entry);
-				wxSplitterEvent* ret = wxDynamicCast(_ptrObj0, wxSplitterEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxSplitterEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxSplashScreen")){
-				object_init_ex(return_value, php_wxSplashScreen_entry);
-				wxSplashScreen* ret = wxDynamicCast(_ptrObj0, wxSplashScreen_php);
-				long id_to_find = zend_list_insert(ret, le_wxSplashScreen);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxSizeEvent")){
-				object_init_ex(return_value, php_wxSizeEvent_entry);
-				wxSizeEvent* ret = wxDynamicCast(_ptrObj0, wxSizeEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxSizeEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxGauge")){
-				object_init_ex(return_value, php_wxGauge_entry);
-				wxGauge* ret = wxDynamicCast(_ptrObj0, wxGauge_php);
-				long id_to_find = zend_list_insert(ret, le_wxGauge);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxHtmlWindow")){
-				object_init_ex(return_value, php_wxHtmlWindow_entry);
-				wxHtmlWindow* ret = wxDynamicCast(_ptrObj0, wxHtmlWindow_php);
-				long id_to_find = zend_list_insert(ret, le_wxHtmlWindow);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxHtmlContainerCell")){
-				object_init_ex(return_value, php_wxHtmlContainerCell_entry);
-				wxHtmlContainerCell* ret = wxDynamicCast(_ptrObj0, wxHtmlContainerCell_php);
-				long id_to_find = zend_list_insert(ret, le_wxHtmlContainerCell);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxHtmlCell")){
-				object_init_ex(return_value, php_wxHtmlCell_entry);
-				wxHtmlCell* ret = wxDynamicCast(_ptrObj0, wxHtmlCell_php);
-				long id_to_find = zend_list_insert(ret, le_wxHtmlCell);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxHtmlCellEvent")){
-				object_init_ex(return_value, php_wxHtmlCellEvent_entry);
-				wxHtmlCellEvent* ret = wxDynamicCast(_ptrObj0, wxHtmlCellEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxHtmlCellEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxHtmlColourCell")){
-				object_init_ex(return_value, php_wxHtmlColourCell_entry);
-				wxHtmlColourCell* ret = wxDynamicCast(_ptrObj0, wxHtmlColourCell_php);
-				long id_to_find = zend_list_insert(ret, le_wxHtmlColourCell);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxHtmlEasyPrinting")){
-				object_init_ex(return_value, php_wxHtmlEasyPrinting_entry);
-				wxHtmlEasyPrinting* ret = wxDynamicCast(_ptrObj0, wxHtmlEasyPrinting_php);
-				long id_to_find = zend_list_insert(ret, le_wxHtmlEasyPrinting);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxHtmlLinkEvent")){
-				object_init_ex(return_value, php_wxHtmlLinkEvent_entry);
-				wxHtmlLinkEvent* ret = wxDynamicCast(_ptrObj0, wxHtmlLinkEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxHtmlLinkEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxHtmlLinkInfo")){
-				object_init_ex(return_value, php_wxHtmlLinkInfo_entry);
-				wxHtmlLinkInfo* ret = wxDynamicCast(_ptrObj0, wxHtmlLinkInfo_php);
-				long id_to_find = zend_list_insert(ret, le_wxHtmlLinkInfo);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxMouseEvent")){
-				object_init_ex(return_value, php_wxMouseEvent_entry);
-				wxMouseEvent* ret = wxDynamicCast(_ptrObj0, wxMouseEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxMouseEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxMoveEvent")){
-				object_init_ex(return_value, php_wxMoveEvent_entry);
-				wxMoveEvent* ret = wxDynamicCast(_ptrObj0, wxMoveEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxMoveEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxMouseEventsManager")){
-				object_init_ex(return_value, php_wxMouseEventsManager_entry);
-				wxMouseEventsManager* ret = wxDynamicCast(_ptrObj0, wxMouseEventsManager_php);
-				long id_to_find = zend_list_insert(ret, le_wxMouseEventsManager);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxMessageDialog")){
-				object_init_ex(return_value, php_wxMessageDialog_entry);
-				wxMessageDialog* ret = wxDynamicCast(_ptrObj0, wxMessageDialog_php);
-				long id_to_find = zend_list_insert(ret, le_wxMessageDialog);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxHyperlinkCtrl")){
-				object_init_ex(return_value, php_wxHyperlinkCtrl_entry);
-				wxHyperlinkCtrl* ret = wxDynamicCast(_ptrObj0, wxHyperlinkCtrl_php);
-				long id_to_find = zend_list_insert(ret, le_wxHyperlinkCtrl);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxHyperlinkEvent")){
-				object_init_ex(return_value, php_wxHyperlinkEvent_entry);
-				wxHyperlinkEvent* ret = wxDynamicCast(_ptrObj0, wxHyperlinkEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxHyperlinkEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxCursor")){
-				object_init_ex(return_value, php_wxCursor_entry);
-				wxCursor* ret = wxDynamicCast(_ptrObj0, wxCursor_php);
-				long id_to_find = zend_list_insert(ret, le_wxCursor);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxToggleButton")){
-				object_init_ex(return_value, php_wxToggleButton_entry);
-				wxToggleButton* ret = wxDynamicCast(_ptrObj0, wxToggleButton_php);
-				long id_to_find = zend_list_insert(ret, le_wxToggleButton);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxTimer")){
-				object_init_ex(return_value, php_wxTimer_entry);
-				wxTimer* ret = wxDynamicCast(_ptrObj0, wxTimer_php);
-				long id_to_find = zend_list_insert(ret, le_wxTimer);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxTimerEvent")){
-				object_init_ex(return_value, php_wxTimerEvent_entry);
-				wxTimerEvent* ret = wxDynamicCast(_ptrObj0, wxTimerEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxTimerEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxThreadEvent")){
-				object_init_ex(return_value, php_wxThreadEvent_entry);
-				wxThreadEvent* ret = wxDynamicCast(_ptrObj0, wxThreadEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxThreadEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxSearchCtrl")){
-				object_init_ex(return_value, php_wxSearchCtrl_entry);
-				wxSearchCtrl* ret = wxDynamicCast(_ptrObj0, wxSearchCtrl_php);
-				long id_to_find = zend_list_insert(ret, le_wxSearchCtrl);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxColourPickerEvent")){
-				object_init_ex(return_value, php_wxColourPickerEvent_entry);
-				wxColourPickerEvent* ret = wxDynamicCast(_ptrObj0, wxColourPickerEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxColourPickerEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxColourPickerCtrl")){
-				object_init_ex(return_value, php_wxColourPickerCtrl_entry);
-				wxColourPickerCtrl* ret = wxDynamicCast(_ptrObj0, wxColourPickerCtrl_php);
-				long id_to_find = zend_list_insert(ret, le_wxColourPickerCtrl);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxFontPickerCtrl")){
-				object_init_ex(return_value, php_wxFontPickerCtrl_entry);
-				wxFontPickerCtrl* ret = wxDynamicCast(_ptrObj0, wxFontPickerCtrl_php);
-				long id_to_find = zend_list_insert(ret, le_wxFontPickerCtrl);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxFontPickerEvent")){
-				object_init_ex(return_value, php_wxFontPickerEvent_entry);
-				wxFontPickerEvent* ret = wxDynamicCast(_ptrObj0, wxFontPickerEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxFontPickerEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxFilePickerCtrl")){
-				object_init_ex(return_value, php_wxFilePickerCtrl_entry);
-				wxFilePickerCtrl* ret = wxDynamicCast(_ptrObj0, wxFilePickerCtrl_php);
-				long id_to_find = zend_list_insert(ret, le_wxFilePickerCtrl);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxFindReplaceDialog")){
-				object_init_ex(return_value, php_wxFindReplaceDialog_entry);
-				wxFindReplaceDialog* ret = wxDynamicCast(_ptrObj0, wxFindReplaceDialog_php);
-				long id_to_find = zend_list_insert(ret, le_wxFindReplaceDialog);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxFindReplaceData")){
-				object_init_ex(return_value, php_wxFindReplaceData_entry);
-				wxFindReplaceData* ret = wxDynamicCast(_ptrObj0, wxFindReplaceData_php);
-				long id_to_find = zend_list_insert(ret, le_wxFindReplaceData);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxDirPickerCtrl")){
-				object_init_ex(return_value, php_wxDirPickerCtrl_entry);
-				wxDirPickerCtrl* ret = wxDynamicCast(_ptrObj0, wxDirPickerCtrl_php);
-				long id_to_find = zend_list_insert(ret, le_wxDirPickerCtrl);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxDirDialog")){
-				object_init_ex(return_value, php_wxDirDialog_entry);
-				wxDirDialog* ret = wxDynamicCast(_ptrObj0, wxDirDialog_php);
-				long id_to_find = zend_list_insert(ret, le_wxDirDialog);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxSpinDoubleEvent")){
-				object_init_ex(return_value, php_wxSpinDoubleEvent_entry);
-				wxSpinDoubleEvent* ret = wxDynamicCast(_ptrObj0, wxSpinDoubleEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxSpinDoubleEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxSpinCtrlDouble")){
-				object_init_ex(return_value, php_wxSpinCtrlDouble_entry);
-				wxSpinCtrlDouble* ret = wxDynamicCast(_ptrObj0, wxSpinCtrlDouble_php);
-				long id_to_find = zend_list_insert(ret, le_wxSpinCtrlDouble);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxGenericDirCtrl")){
-				object_init_ex(return_value, php_wxGenericDirCtrl_entry);
-				wxGenericDirCtrl* ret = wxDynamicCast(_ptrObj0, wxGenericDirCtrl_php);
-				long id_to_find = zend_list_insert(ret, le_wxGenericDirCtrl);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxGridSizeEvent")){
-				object_init_ex(return_value, php_wxGridSizeEvent_entry);
-				wxGridSizeEvent* ret = wxDynamicCast(_ptrObj0, wxGridSizeEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxGridSizeEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxGridSizer")){
-				object_init_ex(return_value, php_wxGridSizer_entry);
-				wxGridSizer* ret = wxDynamicCast(_ptrObj0, wxGridSizer_php);
-				long id_to_find = zend_list_insert(ret, le_wxGridSizer);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxFlexGridSizer")){
-				object_init_ex(return_value, php_wxFlexGridSizer_entry);
-				wxFlexGridSizer* ret = wxDynamicCast(_ptrObj0, wxFlexGridSizer_php);
-				long id_to_find = zend_list_insert(ret, le_wxFlexGridSizer);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxGridBagSizer")){
-				object_init_ex(return_value, php_wxGridBagSizer_entry);
-				wxGridBagSizer* ret = wxDynamicCast(_ptrObj0, wxGridBagSizer_php);
-				long id_to_find = zend_list_insert(ret, le_wxGridBagSizer);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxStdDialogButtonSizer")){
-				object_init_ex(return_value, php_wxStdDialogButtonSizer_entry);
-				wxStdDialogButtonSizer* ret = wxDynamicCast(_ptrObj0, wxStdDialogButtonSizer_php);
-				long id_to_find = zend_list_insert(ret, le_wxStdDialogButtonSizer);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxScrollEvent")){
-				object_init_ex(return_value, php_wxScrollEvent_entry);
-				wxScrollEvent* ret = wxDynamicCast(_ptrObj0, wxScrollEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxScrollEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxScrollWinEvent")){
-				object_init_ex(return_value, php_wxScrollWinEvent_entry);
-				wxScrollWinEvent* ret = wxDynamicCast(_ptrObj0, wxScrollWinEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxScrollWinEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxNotebook")){
-				object_init_ex(return_value, php_wxNotebook_entry);
-				wxNotebook* ret = wxDynamicCast(_ptrObj0, wxNotebook_php);
-				long id_to_find = zend_list_insert(ret, le_wxNotebook);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxDialog")){
-				object_init_ex(return_value, php_wxDialog_entry);
-				wxDialog* ret = wxDynamicCast(_ptrObj0, wxDialog_php);
-				long id_to_find = zend_list_insert(ret, le_wxDialog);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxSysColourChangedEvent")){
-				object_init_ex(return_value, php_wxSysColourChangedEvent_entry);
-				wxSysColourChangedEvent* ret = wxDynamicCast(_ptrObj0, wxSysColourChangedEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxSysColourChangedEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxSymbolPickerDialog")){
-				object_init_ex(return_value, php_wxSymbolPickerDialog_entry);
-				wxSymbolPickerDialog* ret = wxDynamicCast(_ptrObj0, wxSymbolPickerDialog_php);
-				long id_to_find = zend_list_insert(ret, le_wxSymbolPickerDialog);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxGBSizerItem")){
-				object_init_ex(return_value, php_wxGBSizerItem_entry);
-				wxGBSizerItem* ret = wxDynamicCast(_ptrObj0, wxGBSizerItem_php);
-				long id_to_find = zend_list_insert(ret, le_wxGBSizerItem);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxPopupWindow")){
-				object_init_ex(return_value, php_wxPopupWindow_entry);
-				wxPopupWindow* ret = wxDynamicCast(_ptrObj0, wxPopupWindow_php);
-				long id_to_find = zend_list_insert(ret, le_wxPopupWindow);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxMDIChildFrame")){
-				object_init_ex(return_value, php_wxMDIChildFrame_entry);
-				wxMDIChildFrame* ret = wxDynamicCast(_ptrObj0, wxMDIChildFrame_php);
-				long id_to_find = zend_list_insert(ret, le_wxMDIChildFrame);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxMDIClientWindow")){
-				object_init_ex(return_value, php_wxMDIClientWindow_entry);
-				wxMDIClientWindow* ret = wxDynamicCast(_ptrObj0, wxMDIClientWindow_php);
-				long id_to_find = zend_list_insert(ret, le_wxMDIClientWindow);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxMDIParentFrame")){
-				object_init_ex(return_value, php_wxMDIParentFrame_entry);
-				wxMDIParentFrame* ret = wxDynamicCast(_ptrObj0, wxMDIParentFrame_php);
-				long id_to_find = zend_list_insert(ret, le_wxMDIParentFrame);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxMiniFrame")){
-				object_init_ex(return_value, php_wxMiniFrame_entry);
-				wxMiniFrame* ret = wxDynamicCast(_ptrObj0, wxMiniFrame_php);
-				long id_to_find = zend_list_insert(ret, le_wxMiniFrame);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxPropertySheetDialog")){
-				object_init_ex(return_value, php_wxPropertySheetDialog_entry);
-				wxPropertySheetDialog* ret = wxDynamicCast(_ptrObj0, wxPropertySheetDialog_php);
-				long id_to_find = zend_list_insert(ret, le_wxPropertySheetDialog);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxWizard")){
-				object_init_ex(return_value, php_wxWizard_entry);
-				wxWizard* ret = wxDynamicCast(_ptrObj0, wxWizard_php);
-				long id_to_find = zend_list_insert(ret, le_wxWizard);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxWizardEvent")){
-				object_init_ex(return_value, php_wxWizardEvent_entry);
-				wxWizardEvent* ret = wxDynamicCast(_ptrObj0, wxWizardEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxWizardEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxWizardPage")){
-				object_init_ex(return_value, php_wxWizardPage_entry);
-				wxWizardPage* ret = wxDynamicCast(_ptrObj0, wxWizardPage_php);
-				long id_to_find = zend_list_insert(ret, le_wxWizardPage);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxWizardPageSimple")){
-				object_init_ex(return_value, php_wxWizardPageSimple_entry);
-				wxWizardPageSimple* ret = wxDynamicCast(_ptrObj0, wxWizardPageSimple_php);
-				long id_to_find = zend_list_insert(ret, le_wxWizardPageSimple);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxWindowModalDialogEvent")){
-				object_init_ex(return_value, php_wxWindowModalDialogEvent_entry);
-				wxWindowModalDialogEvent* ret = wxDynamicCast(_ptrObj0, wxWindowModalDialogEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxWindowModalDialogEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxTreebook")){
-				object_init_ex(return_value, php_wxTreebook_entry);
-				wxTreebook* ret = wxDynamicCast(_ptrObj0, wxTreebook_php);
-				long id_to_find = zend_list_insert(ret, le_wxTreebook);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxTreeListCtrl")){
-				object_init_ex(return_value, php_wxTreeListCtrl_entry);
-				wxTreeListCtrl* ret = wxDynamicCast(_ptrObj0, wxTreeListCtrl_php);
-				long id_to_find = zend_list_insert(ret, le_wxTreeListCtrl);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxSound")){
-				object_init_ex(return_value, php_wxSound_entry);
-				wxSound* ret = wxDynamicCast(_ptrObj0, wxSound_php);
-				long id_to_find = zend_list_insert(ret, le_wxSound);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxFileSystem")){
-				object_init_ex(return_value, php_wxFileSystem_entry);
-				wxFileSystem* ret = wxDynamicCast(_ptrObj0, wxFileSystem_php);
-				long id_to_find = zend_list_insert(ret, le_wxFileSystem);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxFileSystemHandler")){
-				object_init_ex(return_value, php_wxFileSystemHandler_entry);
-				wxFileSystemHandler* ret = wxDynamicCast(_ptrObj0, wxFileSystemHandler_php);
-				long id_to_find = zend_list_insert(ret, le_wxFileSystemHandler);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxDateEvent")){
-				object_init_ex(return_value, php_wxDateEvent_entry);
-				wxDateEvent* ret = wxDynamicCast(_ptrObj0, wxDateEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxDateEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxBitmapToggleButton")){
-				object_init_ex(return_value, php_wxBitmapToggleButton_entry);
-				wxBitmapToggleButton* ret = wxDynamicCast(_ptrObj0, wxBitmapToggleButton_php);
-				long id_to_find = zend_list_insert(ret, le_wxBitmapToggleButton);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxCalendarCtrl")){
-				object_init_ex(return_value, php_wxCalendarCtrl_entry);
-				wxCalendarCtrl* ret = wxDynamicCast(_ptrObj0, wxCalendarCtrl_php);
-				long id_to_find = zend_list_insert(ret, le_wxCalendarCtrl);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxMask")){
-				object_init_ex(return_value, php_wxMask_entry);
-				wxMask* ret = wxDynamicCast(_ptrObj0, wxMask_php);
-				long id_to_find = zend_list_insert(ret, le_wxMask);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxToolTip")){
-				object_init_ex(return_value, php_wxToolTip_entry);
-				wxToolTip* ret = wxDynamicCast(_ptrObj0, wxToolTip_php);
-				long id_to_find = zend_list_insert(ret, le_wxToolTip);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxRegion")){
-				object_init_ex(return_value, php_wxRegion_entry);
-				wxRegion* ret = wxDynamicCast(_ptrObj0, wxRegion_php);
-				long id_to_find = zend_list_insert(ret, le_wxRegion);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxPopupTransientWindow")){
-				object_init_ex(return_value, php_wxPopupTransientWindow_entry);
-				wxPopupTransientWindow* ret = wxDynamicCast(_ptrObj0, wxPopupTransientWindow_php);
-				long id_to_find = zend_list_insert(ret, le_wxPopupTransientWindow);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxProcessEvent")){
-				object_init_ex(return_value, php_wxProcessEvent_entry);
-				wxProcessEvent* ret = wxDynamicCast(_ptrObj0, wxProcessEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxProcessEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxProgressDialog")){
-				object_init_ex(return_value, php_wxProgressDialog_entry);
-				wxProgressDialog* ret = wxDynamicCast(_ptrObj0, wxProgressDialog_php);
-				long id_to_find = zend_list_insert(ret, le_wxProgressDialog);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxGraphicsRenderer")){
-				object_init_ex(return_value, php_wxGraphicsRenderer_entry);
-				wxGraphicsRenderer* ret = wxDynamicCast(_ptrObj0, wxGraphicsRenderer_php);
-				long id_to_find = zend_list_insert(ret, le_wxGraphicsRenderer);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxWindowDC")){
-				object_init_ex(return_value, php_wxWindowDC_entry);
-				wxWindowDC* ret = wxDynamicCast(_ptrObj0, wxWindowDC_php);
-				long id_to_find = zend_list_insert(ret, le_wxWindowDC);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxWindowCreateEvent")){
-				object_init_ex(return_value, php_wxWindowCreateEvent_entry);
-				wxWindowCreateEvent* ret = wxDynamicCast(_ptrObj0, wxWindowCreateEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxWindowCreateEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxWindowDestroyEvent")){
-				object_init_ex(return_value, php_wxWindowDestroyEvent_entry);
-				wxWindowDestroyEvent* ret = wxDynamicCast(_ptrObj0, wxWindowDestroyEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxWindowDestroyEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxEventBlocker")){
-				object_init_ex(return_value, php_wxEventBlocker_entry);
-				wxEventBlocker* ret = wxDynamicCast(_ptrObj0, wxEventBlocker_php);
-				long id_to_find = zend_list_insert(ret, le_wxEventBlocker);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxEraseEvent")){
-				object_init_ex(return_value, php_wxEraseEvent_entry);
-				wxEraseEvent* ret = wxDynamicCast(_ptrObj0, wxEraseEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxEraseEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxPickerBase")){
-				object_init_ex(return_value, php_wxPickerBase_entry);
-				wxPickerBase* ret = wxDynamicCast(_ptrObj0, wxPickerBase_php);
-				long id_to_find = zend_list_insert(ret, le_wxPickerBase);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxGridEvent")){
-				object_init_ex(return_value, php_wxGridEvent_entry);
-				wxGridEvent* ret = wxDynamicCast(_ptrObj0, wxGridEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxGridEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxUpdateUIEvent")){
-				object_init_ex(return_value, php_wxUpdateUIEvent_entry);
-				wxUpdateUIEvent* ret = wxDynamicCast(_ptrObj0, wxUpdateUIEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxUpdateUIEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxHelpEvent")){
-				object_init_ex(return_value, php_wxHelpEvent_entry);
-				wxHelpEvent* ret = wxDynamicCast(_ptrObj0, wxHelpEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxHelpEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxLayoutConstraints")){
-				object_init_ex(return_value, php_wxLayoutConstraints_entry);
-				wxLayoutConstraints* ret = wxDynamicCast(_ptrObj0, wxLayoutConstraints_php);
-				long id_to_find = zend_list_insert(ret, le_wxLayoutConstraints);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxFSFile")){
-				object_init_ex(return_value, php_wxFSFile_entry);
-				wxFSFile* ret = wxDynamicCast(_ptrObj0, wxFSFile_php);
-				long id_to_find = zend_list_insert(ret, le_wxFSFile);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxTimePickerCtrl")){
-				object_init_ex(return_value, php_wxTimePickerCtrl_entry);
-				wxTimePickerCtrl* ret = wxDynamicCast(_ptrObj0, wxTimePickerCtrl_php);
-				long id_to_find = zend_list_insert(ret, le_wxTimePickerCtrl);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxColourDialog")){
-				object_init_ex(return_value, php_wxColourDialog_entry);
-				wxColourDialog* ret = wxDynamicCast(_ptrObj0, wxColourDialog_php);
-				long id_to_find = zend_list_insert(ret, le_wxColourDialog);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxColourData")){
-				object_init_ex(return_value, php_wxColourData_entry);
-				wxColourData* ret = wxDynamicCast(_ptrObj0, wxColourData_php);
-				long id_to_find = zend_list_insert(ret, le_wxColourData);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxFileDialog")){
-				object_init_ex(return_value, php_wxFileDialog_entry);
-				wxFileDialog* ret = wxDynamicCast(_ptrObj0, wxFileDialog_php);
-				long id_to_find = zend_list_insert(ret, le_wxFileDialog);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxFontData")){
-				object_init_ex(return_value, php_wxFontData_entry);
-				wxFontData* ret = wxDynamicCast(_ptrObj0, wxFontData_php);
-				long id_to_find = zend_list_insert(ret, le_wxFontData);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxFontDialog")){
-				object_init_ex(return_value, php_wxFontDialog_entry);
-				wxFontDialog* ret = wxDynamicCast(_ptrObj0, wxFontDialog_php);
-				long id_to_find = zend_list_insert(ret, le_wxFontDialog);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxToolBar")){
-				object_init_ex(return_value, php_wxToolBar_entry);
-				wxToolBar* ret = wxDynamicCast(_ptrObj0, wxToolBar_php);
-				long id_to_find = zend_list_insert(ret, le_wxToolBar);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxCalendarEvent")){
-				object_init_ex(return_value, php_wxCalendarEvent_entry);
-				wxCalendarEvent* ret = wxDynamicCast(_ptrObj0, wxCalendarEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxCalendarEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxGrid")){
-				object_init_ex(return_value, php_wxGrid_entry);
-				wxGrid* ret = wxDynamicCast(_ptrObj0, wxGrid_php);
-				long id_to_find = zend_list_insert(ret, le_wxGrid);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxGridEditorCreatedEvent")){
-				object_init_ex(return_value, php_wxGridEditorCreatedEvent_entry);
-				wxGridEditorCreatedEvent* ret = wxDynamicCast(_ptrObj0, wxGridEditorCreatedEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxGridEditorCreatedEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxGridRangeSelectEvent")){
-				object_init_ex(return_value, php_wxGridRangeSelectEvent_entry);
-				wxGridRangeSelectEvent* ret = wxDynamicCast(_ptrObj0, wxGridRangeSelectEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxGridRangeSelectEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxGridTableBase")){
-				object_init_ex(return_value, php_wxGridTableBase_entry);
-				wxGridTableBase* ret = wxDynamicCast(_ptrObj0, wxGridTableBase_php);
-				long id_to_find = zend_list_insert(ret, le_wxGridTableBase);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxDatePickerCtrl")){
-				object_init_ex(return_value, php_wxDatePickerCtrl_entry);
-				wxDatePickerCtrl* ret = wxDynamicCast(_ptrObj0, wxDatePickerCtrl_php);
-				long id_to_find = zend_list_insert(ret, le_wxDatePickerCtrl);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxPasswordEntryDialog")){
-				object_init_ex(return_value, php_wxPasswordEntryDialog_entry);
-				wxPasswordEntryDialog* ret = wxDynamicCast(_ptrObj0, wxPasswordEntryDialog_php);
-				long id_to_find = zend_list_insert(ret, le_wxPasswordEntryDialog);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxScreenDC")){
-				object_init_ex(return_value, php_wxScreenDC_entry);
-				wxScreenDC* ret = wxDynamicCast(_ptrObj0, wxScreenDC_php);
-				long id_to_find = zend_list_insert(ret, le_wxScreenDC);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxCollapsiblePane")){
-				object_init_ex(return_value, php_wxCollapsiblePane_entry);
-				wxCollapsiblePane* ret = wxDynamicCast(_ptrObj0, wxCollapsiblePane_php);
-				long id_to_find = zend_list_insert(ret, le_wxCollapsiblePane);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxCollapsiblePaneEvent")){
-				object_init_ex(return_value, php_wxCollapsiblePaneEvent_entry);
-				wxCollapsiblePaneEvent* ret = wxDynamicCast(_ptrObj0, wxCollapsiblePaneEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxCollapsiblePaneEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxComboCtrl")){
-				object_init_ex(return_value, php_wxComboCtrl_entry);
-				wxComboCtrl* ret = wxDynamicCast(_ptrObj0, wxComboCtrl_php);
-				long id_to_find = zend_list_insert(ret, le_wxComboCtrl);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxDataViewCtrl")){
-				object_init_ex(return_value, php_wxDataViewCtrl_entry);
-				wxDataViewCtrl* ret = wxDynamicCast(_ptrObj0, wxDataViewCtrl_php);
-				long id_to_find = zend_list_insert(ret, le_wxDataViewCtrl);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxDataViewRenderer")){
-				object_init_ex(return_value, php_wxDataViewRenderer_entry);
-				wxDataViewRenderer* ret = wxDynamicCast(_ptrObj0, wxDataViewRenderer_php);
-				long id_to_find = zend_list_insert(ret, le_wxDataViewRenderer);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxDataViewListCtrl")){
-				object_init_ex(return_value, php_wxDataViewListCtrl_entry);
-				wxDataViewListCtrl* ret = wxDynamicCast(_ptrObj0, wxDataViewListCtrl_php);
-				long id_to_find = zend_list_insert(ret, le_wxDataViewListCtrl);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxDataViewEvent")){
-				object_init_ex(return_value, php_wxDataViewEvent_entry);
-				wxDataViewEvent* ret = wxDynamicCast(_ptrObj0, wxDataViewEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxDataViewEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxDataViewBitmapRenderer")){
-				object_init_ex(return_value, php_wxDataViewBitmapRenderer_entry);
-				wxDataViewBitmapRenderer* ret = wxDynamicCast(_ptrObj0, wxDataViewBitmapRenderer_php);
-				long id_to_find = zend_list_insert(ret, le_wxDataViewBitmapRenderer);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxDataViewChoiceRenderer")){
-				object_init_ex(return_value, php_wxDataViewChoiceRenderer_entry);
-				wxDataViewChoiceRenderer* ret = wxDynamicCast(_ptrObj0, wxDataViewChoiceRenderer_php);
-				long id_to_find = zend_list_insert(ret, le_wxDataViewChoiceRenderer);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxDataViewCustomRenderer")){
-				object_init_ex(return_value, php_wxDataViewCustomRenderer_entry);
-				wxDataViewCustomRenderer* ret = wxDynamicCast(_ptrObj0, wxDataViewCustomRenderer_php);
-				long id_to_find = zend_list_insert(ret, le_wxDataViewCustomRenderer);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxDataViewDateRenderer")){
-				object_init_ex(return_value, php_wxDataViewDateRenderer_entry);
-				wxDataViewDateRenderer* ret = wxDynamicCast(_ptrObj0, wxDataViewDateRenderer_php);
-				long id_to_find = zend_list_insert(ret, le_wxDataViewDateRenderer);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxDataViewIconText")){
-				object_init_ex(return_value, php_wxDataViewIconText_entry);
-				wxDataViewIconText* ret = wxDynamicCast(_ptrObj0, wxDataViewIconText_php);
-				long id_to_find = zend_list_insert(ret, le_wxDataViewIconText);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxDataViewIconTextRenderer")){
-				object_init_ex(return_value, php_wxDataViewIconTextRenderer_entry);
-				wxDataViewIconTextRenderer* ret = wxDynamicCast(_ptrObj0, wxDataViewIconTextRenderer_php);
-				long id_to_find = zend_list_insert(ret, le_wxDataViewIconTextRenderer);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxDataViewProgressRenderer")){
-				object_init_ex(return_value, php_wxDataViewProgressRenderer_entry);
-				wxDataViewProgressRenderer* ret = wxDynamicCast(_ptrObj0, wxDataViewProgressRenderer_php);
-				long id_to_find = zend_list_insert(ret, le_wxDataViewProgressRenderer);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxDataViewSpinRenderer")){
-				object_init_ex(return_value, php_wxDataViewSpinRenderer_entry);
-				wxDataViewSpinRenderer* ret = wxDynamicCast(_ptrObj0, wxDataViewSpinRenderer_php);
-				long id_to_find = zend_list_insert(ret, le_wxDataViewSpinRenderer);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxDataViewTextRenderer")){
-				object_init_ex(return_value, php_wxDataViewTextRenderer_entry);
-				wxDataViewTextRenderer* ret = wxDynamicCast(_ptrObj0, wxDataViewTextRenderer_php);
-				long id_to_find = zend_list_insert(ret, le_wxDataViewTextRenderer);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxDataViewToggleRenderer")){
-				object_init_ex(return_value, php_wxDataViewToggleRenderer_entry);
-				wxDataViewToggleRenderer* ret = wxDynamicCast(_ptrObj0, wxDataViewToggleRenderer_php);
-				long id_to_find = zend_list_insert(ret, le_wxDataViewToggleRenderer);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxDataViewTreeCtrl")){
-				object_init_ex(return_value, php_wxDataViewTreeCtrl_entry);
-				wxDataViewTreeCtrl* ret = wxDynamicCast(_ptrObj0, wxDataViewTreeCtrl_php);
-				long id_to_find = zend_list_insert(ret, le_wxDataViewTreeCtrl);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxVariant")){
-				object_init_ex(return_value, php_wxVariant_entry);
-				wxVariant* ret = wxDynamicCast(_ptrObj0, wxVariant_php);
-				long id_to_find = zend_list_insert(ret, le_wxVariant);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxClipboard")){
-				object_init_ex(return_value, php_wxClipboard_entry);
-				wxClipboard* ret = wxDynamicCast(_ptrObj0, wxClipboard_php);
-				long id_to_find = zend_list_insert(ret, le_wxClipboard);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxClipboardTextEvent")){
-				object_init_ex(return_value, php_wxClipboardTextEvent_entry);
-				wxClipboardTextEvent* ret = wxDynamicCast(_ptrObj0, wxClipboardTextEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxClipboardTextEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxListView")){
-				object_init_ex(return_value, php_wxListView_entry);
-				wxListView* ret = wxDynamicCast(_ptrObj0, wxListView_php);
-				long id_to_find = zend_list_insert(ret, le_wxListView);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxConfigBase")){
-				object_init_ex(return_value, php_wxConfigBase_entry);
-				wxConfigBase* ret = wxDynamicCast(_ptrObj0, wxConfigBase_php);
-				long id_to_find = zend_list_insert(ret, le_wxConfigBase);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxHeaderCtrlEvent")){
-				object_init_ex(return_value, php_wxHeaderCtrlEvent_entry);
-				wxHeaderCtrlEvent* ret = wxDynamicCast(_ptrObj0, wxHeaderCtrlEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxHeaderCtrlEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxHeaderCtrl")){
-				object_init_ex(return_value, php_wxHeaderCtrl_entry);
-				wxHeaderCtrl* ret = wxDynamicCast(_ptrObj0, wxHeaderCtrl_php);
-				long id_to_find = zend_list_insert(ret, le_wxHeaderCtrl);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxHeaderCtrlSimple")){
-				object_init_ex(return_value, php_wxHeaderCtrlSimple_entry);
-				wxHeaderCtrlSimple* ret = wxDynamicCast(_ptrObj0, wxHeaderCtrlSimple_php);
-				long id_to_find = zend_list_insert(ret, le_wxHeaderCtrlSimple);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxSetCursorEvent")){
-				object_init_ex(return_value, php_wxSetCursorEvent_entry);
-				wxSetCursorEvent* ret = wxDynamicCast(_ptrObj0, wxSetCursorEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxSetCursorEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxIdleEvent")){
-				object_init_ex(return_value, php_wxIdleEvent_entry);
-				wxIdleEvent* ret = wxDynamicCast(_ptrObj0, wxIdleEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxIdleEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxPen")){
-				object_init_ex(return_value, php_wxPen_entry);
-				wxPen* ret = wxDynamicCast(_ptrObj0, wxPen_php);
-				long id_to_find = zend_list_insert(ret, le_wxPen);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxEditableListBox")){
-				object_init_ex(return_value, php_wxEditableListBox_entry);
-				wxEditableListBox* ret = wxDynamicCast(_ptrObj0, wxEditableListBox_php);
-				long id_to_find = zend_list_insert(ret, le_wxEditableListBox);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxFileCtrlEvent")){
-				object_init_ex(return_value, php_wxFileCtrlEvent_entry);
-				wxFileCtrlEvent* ret = wxDynamicCast(_ptrObj0, wxFileCtrlEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxFileCtrlEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxFileCtrl")){
-				object_init_ex(return_value, php_wxFileCtrl_entry);
-				wxFileCtrl* ret = wxDynamicCast(_ptrObj0, wxFileCtrl_php);
-				long id_to_find = zend_list_insert(ret, le_wxFileCtrl);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxProcess")){
-				object_init_ex(return_value, php_wxProcess_entry);
-				wxProcess* ret = wxDynamicCast(_ptrObj0, wxProcess_php);
-				long id_to_find = zend_list_insert(ret, le_wxProcess);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxTextValidator")){
-				object_init_ex(return_value, php_wxTextValidator_entry);
-				wxTextValidator* ret = wxDynamicCast(_ptrObj0, wxTextValidator_php);
-				long id_to_find = zend_list_insert(ret, le_wxTextValidator);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxHScrolledWindow")){
-				object_init_ex(return_value, php_wxHScrolledWindow_entry);
-				wxHScrolledWindow* ret = wxDynamicCast(_ptrObj0, wxHScrolledWindow_php);
-				long id_to_find = zend_list_insert(ret, le_wxHScrolledWindow);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxInfoBar")){
-				object_init_ex(return_value, php_wxInfoBar_entry);
-				wxInfoBar* ret = wxDynamicCast(_ptrObj0, wxInfoBar_php);
-				long id_to_find = zend_list_insert(ret, le_wxInfoBar);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxXmlResource")){
-				object_init_ex(return_value, php_wxXmlResource_entry);
-				wxXmlResource* ret = wxDynamicCast(_ptrObj0, wxXmlResource_php);
-				long id_to_find = zend_list_insert(ret, le_wxXmlResource);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxGenericValidator")){
-				object_init_ex(return_value, php_wxGenericValidator_entry);
-				wxGenericValidator* ret = wxDynamicCast(_ptrObj0, wxGenericValidator_php);
-				long id_to_find = zend_list_insert(ret, le_wxGenericValidator);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxSashWindow")){
-				object_init_ex(return_value, php_wxSashWindow_entry);
-				wxSashWindow* ret = wxDynamicCast(_ptrObj0, wxSashWindow_php);
-				long id_to_find = zend_list_insert(ret, le_wxSashWindow);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxSashEvent")){
-				object_init_ex(return_value, php_wxSashEvent_entry);
-				wxSashEvent* ret = wxDynamicCast(_ptrObj0, wxSashEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxSashEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxSashLayoutWindow")){
-				object_init_ex(return_value, php_wxSashLayoutWindow_entry);
-				wxSashLayoutWindow* ret = wxDynamicCast(_ptrObj0, wxSashLayoutWindow_php);
-				long id_to_find = zend_list_insert(ret, le_wxSashLayoutWindow);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxBrush")){
-				object_init_ex(return_value, php_wxBrush_entry);
-				wxBrush* ret = wxDynamicCast(_ptrObj0, wxBrush_php);
-				long id_to_find = zend_list_insert(ret, le_wxBrush);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxPageSetupDialog")){
-				object_init_ex(return_value, php_wxPageSetupDialog_entry);
-				wxPageSetupDialog* ret = wxDynamicCast(_ptrObj0, wxPageSetupDialog_php);
-				long id_to_find = zend_list_insert(ret, le_wxPageSetupDialog);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxPageSetupDialogData")){
-				object_init_ex(return_value, php_wxPageSetupDialogData_entry);
-				wxPageSetupDialogData* ret = wxDynamicCast(_ptrObj0, wxPageSetupDialogData_php);
-				long id_to_find = zend_list_insert(ret, le_wxPageSetupDialogData);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxPrintDialog")){
-				object_init_ex(return_value, php_wxPrintDialog_entry);
-				wxPrintDialog* ret = wxDynamicCast(_ptrObj0, wxPrintDialog_php);
-				long id_to_find = zend_list_insert(ret, le_wxPrintDialog);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxPrintDialogData")){
-				object_init_ex(return_value, php_wxPrintDialogData_entry);
-				wxPrintDialogData* ret = wxDynamicCast(_ptrObj0, wxPrintDialogData_php);
-				long id_to_find = zend_list_insert(ret, le_wxPrintDialogData);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxPrintData")){
-				object_init_ex(return_value, php_wxPrintData_entry);
-				wxPrintData* ret = wxDynamicCast(_ptrObj0, wxPrintData_php);
-				long id_to_find = zend_list_insert(ret, le_wxPrintData);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxPostScriptDC")){
-				object_init_ex(return_value, php_wxPostScriptDC_entry);
-				wxPostScriptDC* ret = wxDynamicCast(_ptrObj0, wxPostScriptDC_php);
-				long id_to_find = zend_list_insert(ret, le_wxPostScriptDC);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxPrintPreview")){
-				object_init_ex(return_value, php_wxPrintPreview_entry);
-				wxPrintPreview* ret = wxDynamicCast(_ptrObj0, wxPrintPreview_php);
-				long id_to_find = zend_list_insert(ret, le_wxPrintPreview);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxPrinter")){
-				object_init_ex(return_value, php_wxPrinter_entry);
-				wxPrinter* ret = wxDynamicCast(_ptrObj0, wxPrinter_php);
-				long id_to_find = zend_list_insert(ret, le_wxPrinter);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxPrinterDC")){
-				object_init_ex(return_value, php_wxPrinterDC_entry);
-				wxPrinterDC* ret = wxDynamicCast(_ptrObj0, wxPrinterDC_php);
-				long id_to_find = zend_list_insert(ret, le_wxPrinterDC);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxPrintout")){
-				object_init_ex(return_value, php_wxPrintout_entry);
-				wxPrintout* ret = wxDynamicCast(_ptrObj0, wxPrintout_php);
-				long id_to_find = zend_list_insert(ret, le_wxPrintout);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxPreviewFrame")){
-				object_init_ex(return_value, php_wxPreviewFrame_entry);
-				wxPreviewFrame* ret = wxDynamicCast(_ptrObj0, wxPreviewFrame_php);
-				long id_to_find = zend_list_insert(ret, le_wxPreviewFrame);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxPreviewControlBar")){
-				object_init_ex(return_value, php_wxPreviewControlBar_entry);
-				wxPreviewControlBar* ret = wxDynamicCast(_ptrObj0, wxPreviewControlBar_php);
-				long id_to_find = zend_list_insert(ret, le_wxPreviewControlBar);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxPreviewCanvas")){
-				object_init_ex(return_value, php_wxPreviewCanvas_entry);
-				wxPreviewCanvas* ret = wxDynamicCast(_ptrObj0, wxPreviewCanvas_php);
-				long id_to_find = zend_list_insert(ret, le_wxPreviewCanvas);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxSingleChoiceDialog")){
-				object_init_ex(return_value, php_wxSingleChoiceDialog_entry);
-				wxSingleChoiceDialog* ret = wxDynamicCast(_ptrObj0, wxSingleChoiceDialog_php);
-				long id_to_find = zend_list_insert(ret, le_wxSingleChoiceDialog);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxHtmlDCRenderer")){
-				object_init_ex(return_value, php_wxHtmlDCRenderer_entry);
-				wxHtmlDCRenderer* ret = wxDynamicCast(_ptrObj0, wxHtmlDCRenderer_php);
-				long id_to_find = zend_list_insert(ret, le_wxHtmlDCRenderer);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxHtmlFilter")){
-				object_init_ex(return_value, php_wxHtmlFilter_entry);
-				wxHtmlFilter* ret = wxDynamicCast(_ptrObj0, wxHtmlFilter_php);
-				long id_to_find = zend_list_insert(ret, le_wxHtmlFilter);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxHtmlHelpData")){
-				object_init_ex(return_value, php_wxHtmlHelpData_entry);
-				wxHtmlHelpData* ret = wxDynamicCast(_ptrObj0, wxHtmlHelpData_php);
-				long id_to_find = zend_list_insert(ret, le_wxHtmlHelpData);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxHtmlHelpDialog")){
-				object_init_ex(return_value, php_wxHtmlHelpDialog_entry);
-				wxHtmlHelpDialog* ret = wxDynamicCast(_ptrObj0, wxHtmlHelpDialog_php);
-				long id_to_find = zend_list_insert(ret, le_wxHtmlHelpDialog);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxHtmlHelpFrame")){
-				object_init_ex(return_value, php_wxHtmlHelpFrame_entry);
-				wxHtmlHelpFrame* ret = wxDynamicCast(_ptrObj0, wxHtmlHelpFrame_php);
-				long id_to_find = zend_list_insert(ret, le_wxHtmlHelpFrame);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxHtmlHelpWindow")){
-				object_init_ex(return_value, php_wxHtmlHelpWindow_entry);
-				wxHtmlHelpWindow* ret = wxDynamicCast(_ptrObj0, wxHtmlHelpWindow_php);
-				long id_to_find = zend_list_insert(ret, le_wxHtmlHelpWindow);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxHtmlPrintout")){
-				object_init_ex(return_value, php_wxHtmlPrintout_entry);
-				wxHtmlPrintout* ret = wxDynamicCast(_ptrObj0, wxHtmlPrintout_php);
-				long id_to_find = zend_list_insert(ret, le_wxHtmlPrintout);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxHtmlTagHandler")){
-				object_init_ex(return_value, php_wxHtmlTagHandler_entry);
-				wxHtmlTagHandler* ret = wxDynamicCast(_ptrObj0, wxHtmlTagHandler_php);
-				long id_to_find = zend_list_insert(ret, le_wxHtmlTagHandler);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxHtmlTagsModule")){
-				object_init_ex(return_value, php_wxHtmlTagsModule_entry);
-				wxHtmlTagsModule* ret = wxDynamicCast(_ptrObj0, wxHtmlTagsModule_php);
-				long id_to_find = zend_list_insert(ret, le_wxHtmlTagsModule);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxModule")){
-				object_init_ex(return_value, php_wxModule_entry);
-				wxModule* ret = wxDynamicCast(_ptrObj0, wxModule_php);
-				long id_to_find = zend_list_insert(ret, le_wxModule);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxHtmlWidgetCell")){
-				object_init_ex(return_value, php_wxHtmlWidgetCell_entry);
-				wxHtmlWidgetCell* ret = wxDynamicCast(_ptrObj0, wxHtmlWidgetCell_php);
-				long id_to_find = zend_list_insert(ret, le_wxHtmlWidgetCell);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxHtmlWinTagHandler")){
-				object_init_ex(return_value, php_wxHtmlWinTagHandler_entry);
-				wxHtmlWinTagHandler* ret = wxDynamicCast(_ptrObj0, wxHtmlWinTagHandler_php);
-				long id_to_find = zend_list_insert(ret, le_wxHtmlWinTagHandler);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxAutoBufferedPaintDC")){
-				object_init_ex(return_value, php_wxAutoBufferedPaintDC_entry);
-				wxAutoBufferedPaintDC* ret = wxDynamicCast(_ptrObj0, wxAutoBufferedPaintDC_php);
-				long id_to_find = zend_list_insert(ret, le_wxAutoBufferedPaintDC);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxBufferedDC")){
-				object_init_ex(return_value, php_wxBufferedDC_entry);
-				wxBufferedDC* ret = wxDynamicCast(_ptrObj0, wxBufferedDC_php);
-				long id_to_find = zend_list_insert(ret, le_wxBufferedDC);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxBufferedPaintDC")){
-				object_init_ex(return_value, php_wxBufferedPaintDC_entry);
-				wxBufferedPaintDC* ret = wxDynamicCast(_ptrObj0, wxBufferedPaintDC_php);
-				long id_to_find = zend_list_insert(ret, le_wxBufferedPaintDC);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxClientDC")){
-				object_init_ex(return_value, php_wxClientDC_entry);
-				wxClientDC* ret = wxDynamicCast(_ptrObj0, wxClientDC_php);
-				long id_to_find = zend_list_insert(ret, le_wxClientDC);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxPaintEvent")){
-				object_init_ex(return_value, php_wxPaintEvent_entry);
-				wxPaintEvent* ret = wxDynamicCast(_ptrObj0, wxPaintEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxPaintEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxPaintDC")){
-				object_init_ex(return_value, php_wxPaintDC_entry);
-				wxPaintDC* ret = wxDynamicCast(_ptrObj0, wxPaintDC_php);
-				long id_to_find = zend_list_insert(ret, le_wxPaintDC);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxMemoryDC")){
-				object_init_ex(return_value, php_wxMemoryDC_entry);
-				wxMemoryDC* ret = wxDynamicCast(_ptrObj0, wxMemoryDC_php);
-				long id_to_find = zend_list_insert(ret, le_wxMemoryDC);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxMirrorDC")){
-				object_init_ex(return_value, php_wxMirrorDC_entry);
-				wxMirrorDC* ret = wxDynamicCast(_ptrObj0, wxMirrorDC_php);
-				long id_to_find = zend_list_insert(ret, le_wxMirrorDC);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxPaletteChangedEvent")){
-				object_init_ex(return_value, php_wxPaletteChangedEvent_entry);
-				wxPaletteChangedEvent* ret = wxDynamicCast(_ptrObj0, wxPaletteChangedEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxPaletteChangedEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxImageHandler")){
-				object_init_ex(return_value, php_wxImageHandler_entry);
-				wxImageHandler* ret = wxDynamicCast(_ptrObj0, wxImageHandler_php);
-				long id_to_find = zend_list_insert(ret, le_wxImageHandler);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxInitDialogEvent")){
-				object_init_ex(return_value, php_wxInitDialogEvent_entry);
-				wxInitDialogEvent* ret = wxDynamicCast(_ptrObj0, wxInitDialogEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxInitDialogEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxMaximizeEvent")){
-				object_init_ex(return_value, php_wxMaximizeEvent_entry);
-				wxMaximizeEvent* ret = wxDynamicCast(_ptrObj0, wxMaximizeEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxMaximizeEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxNavigationKeyEvent")){
-				object_init_ex(return_value, php_wxNavigationKeyEvent_entry);
-				wxNavigationKeyEvent* ret = wxDynamicCast(_ptrObj0, wxNavigationKeyEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxNavigationKeyEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxXmlResourceHandler")){
-				object_init_ex(return_value, php_wxXmlResourceHandler_entry);
-				wxXmlResourceHandler* ret = wxDynamicCast(_ptrObj0, wxXmlResourceHandler_php);
-				long id_to_find = zend_list_insert(ret, le_wxXmlResourceHandler);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxXmlDocument")){
-				object_init_ex(return_value, php_wxXmlDocument_entry);
-				wxXmlDocument* ret = wxDynamicCast(_ptrObj0, wxXmlDocument_php);
-				long id_to_find = zend_list_insert(ret, le_wxXmlDocument);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxLayoutAlgorithm")){
-				object_init_ex(return_value, php_wxLayoutAlgorithm_entry);
-				wxLayoutAlgorithm* ret = wxDynamicCast(_ptrObj0, wxLayoutAlgorithm_php);
-				long id_to_find = zend_list_insert(ret, le_wxLayoutAlgorithm);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxFocusEvent")){
-				object_init_ex(return_value, php_wxFocusEvent_entry);
-				wxFocusEvent* ret = wxDynamicCast(_ptrObj0, wxFocusEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxFocusEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxFileConfig")){
-				object_init_ex(return_value, php_wxFileConfig_entry);
-				wxFileConfig* ret = wxDynamicCast(_ptrObj0, wxFileConfig_php);
-				long id_to_find = zend_list_insert(ret, le_wxFileConfig);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxFileDirPickerEvent")){
-				object_init_ex(return_value, php_wxFileDirPickerEvent_entry);
-				wxFileDirPickerEvent* ret = wxDynamicCast(_ptrObj0, wxFileDirPickerEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxFileDirPickerEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxFileHistory")){
-				object_init_ex(return_value, php_wxFileHistory_entry);
-				wxFileHistory* ret = wxDynamicCast(_ptrObj0, wxFileHistory_php);
-				long id_to_find = zend_list_insert(ret, le_wxFileHistory);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxFileSystemWatcher")){
-				object_init_ex(return_value, php_wxFileSystemWatcher_entry);
-				wxFileSystemWatcher* ret = wxDynamicCast(_ptrObj0, wxFileSystemWatcher_php);
-				long id_to_find = zend_list_insert(ret, le_wxFileSystemWatcher);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxFileSystemWatcherEvent")){
-				object_init_ex(return_value, php_wxFileSystemWatcherEvent_entry);
-				wxFileSystemWatcherEvent* ret = wxDynamicCast(_ptrObj0, wxFileSystemWatcherEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxFileSystemWatcherEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxDisplayChangedEvent")){
-				object_init_ex(return_value, php_wxDisplayChangedEvent_entry);
-				wxDisplayChangedEvent* ret = wxDynamicCast(_ptrObj0, wxDisplayChangedEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxDisplayChangedEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxCalculateLayoutEvent")){
-				object_init_ex(return_value, php_wxCalculateLayoutEvent_entry);
-				wxCalculateLayoutEvent* ret = wxDynamicCast(_ptrObj0, wxCalculateLayoutEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxCalculateLayoutEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxContextMenuEvent")){
-				object_init_ex(return_value, php_wxContextMenuEvent_entry);
-				wxContextMenuEvent* ret = wxDynamicCast(_ptrObj0, wxContextMenuEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxContextMenuEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxQueryLayoutInfoEvent")){
-				object_init_ex(return_value, php_wxQueryLayoutInfoEvent_entry);
-				wxQueryLayoutInfoEvent* ret = wxDynamicCast(_ptrObj0, wxQueryLayoutInfoEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxQueryLayoutInfoEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxToolbook")){
-				object_init_ex(return_value, php_wxToolbook_entry);
-				wxToolbook* ret = wxDynamicCast(_ptrObj0, wxToolbook_php);
-				long id_to_find = zend_list_insert(ret, le_wxToolbook);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxRibbonControl")){
-				object_init_ex(return_value, php_wxRibbonControl_entry);
-				wxRibbonControl* ret = wxDynamicCast(_ptrObj0, wxRibbonControl_php);
-				long id_to_find = zend_list_insert(ret, le_wxRibbonControl);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxRibbonBar")){
-				object_init_ex(return_value, php_wxRibbonBar_entry);
-				wxRibbonBar* ret = wxDynamicCast(_ptrObj0, wxRibbonBar_php);
-				long id_to_find = zend_list_insert(ret, le_wxRibbonBar);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxRibbonBarEvent")){
-				object_init_ex(return_value, php_wxRibbonBarEvent_entry);
-				wxRibbonBarEvent* ret = wxDynamicCast(_ptrObj0, wxRibbonBarEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxRibbonBarEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxRibbonButtonBar")){
-				object_init_ex(return_value, php_wxRibbonButtonBar_entry);
-				wxRibbonButtonBar* ret = wxDynamicCast(_ptrObj0, wxRibbonButtonBar_php);
-				long id_to_find = zend_list_insert(ret, le_wxRibbonButtonBar);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxRibbonButtonBarEvent")){
-				object_init_ex(return_value, php_wxRibbonButtonBarEvent_entry);
-				wxRibbonButtonBarEvent* ret = wxDynamicCast(_ptrObj0, wxRibbonButtonBarEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxRibbonButtonBarEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxRibbonGallery")){
-				object_init_ex(return_value, php_wxRibbonGallery_entry);
-				wxRibbonGallery* ret = wxDynamicCast(_ptrObj0, wxRibbonGallery_php);
-				long id_to_find = zend_list_insert(ret, le_wxRibbonGallery);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxRibbonGalleryEvent")){
-				object_init_ex(return_value, php_wxRibbonGalleryEvent_entry);
-				wxRibbonGalleryEvent* ret = wxDynamicCast(_ptrObj0, wxRibbonGalleryEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxRibbonGalleryEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxRibbonPage")){
-				object_init_ex(return_value, php_wxRibbonPage_entry);
-				wxRibbonPage* ret = wxDynamicCast(_ptrObj0, wxRibbonPage_php);
-				long id_to_find = zend_list_insert(ret, le_wxRibbonPage);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxRibbonPanel")){
-				object_init_ex(return_value, php_wxRibbonPanel_entry);
-				wxRibbonPanel* ret = wxDynamicCast(_ptrObj0, wxRibbonPanel_php);
-				long id_to_find = zend_list_insert(ret, le_wxRibbonPanel);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxRibbonToolBar")){
-				object_init_ex(return_value, php_wxRibbonToolBar_entry);
-				wxRibbonToolBar* ret = wxDynamicCast(_ptrObj0, wxRibbonToolBar_php);
-				long id_to_find = zend_list_insert(ret, le_wxRibbonToolBar);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxTaskBarIcon")){
-				object_init_ex(return_value, php_wxTaskBarIcon_entry);
-				wxTaskBarIcon* ret = wxDynamicCast(_ptrObj0, wxTaskBarIcon_php);
-				long id_to_find = zend_list_insert(ret, le_wxTaskBarIcon);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxTaskBarIconEvent")){
-				object_init_ex(return_value, php_wxTaskBarIconEvent_entry);
-				wxTaskBarIconEvent* ret = wxDynamicCast(_ptrObj0, wxTaskBarIconEvent_php);
-				long id_to_find = zend_list_insert(ret, le_wxTaskBarIconEvent);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxNotificationMessage")){
-				object_init_ex(return_value, php_wxNotificationMessage_entry);
-				wxNotificationMessage* ret = wxDynamicCast(_ptrObj0, wxNotificationMessage_php);
-				long id_to_find = zend_list_insert(ret, le_wxNotificationMessage);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxGenericProgressDialog")){
-				object_init_ex(return_value, php_wxGenericProgressDialog_entry);
-				wxGenericProgressDialog* ret = wxDynamicCast(_ptrObj0, wxGenericProgressDialog_php);
-				long id_to_find = zend_list_insert(ret, le_wxGenericProgressDialog);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-			if(!strcmp(_argStr0, "wxToolBarToolBase")){
-				object_init_ex(return_value, php_wxToolBarToolBase_entry);
-				wxToolBarToolBase* ret = wxDynamicCast(_ptrObj0, wxToolBarToolBase_php);
-				long id_to_find = zend_list_insert(ret, le_wxToolBarToolBase);
-				add_property_resource(return_value, _wxResource, id_to_find);
-				return;
-			}
-		}
-	}
-}
-
-
 static zend_function_entry php_wxWidgets_functions[] = {
 	PHP_FALIAS(wxInitAllImageHandlers, php_wxInitAllImageHandlers, NULL)
 	PHP_FALIAS(wxExecute, php_wxExecute, NULL)
@@ -19043,1861 +1740,2786 @@ PHP_MINIT_FUNCTION(php_wxWidgets)
 	/**
 	 * Predefined Initialization of wxApp class
 	 */
-	INIT_CLASS_ENTRY(ce, PHP_wxApp_NAME , php_wxApp_functions);
+	char PHP_wxApp_name[] = "wxApp";
+	char le_wxApp_name[] = "native wxApp";
+	INIT_CLASS_ENTRY(ce, PHP_wxApp_name, php_wxApp_functions);
 	php_wxApp_entry = zend_register_internal_class(&ce TSRMLS_CC);
-	le_wxApp = zend_register_list_destructors_ex(NULL,NULL, le_wxApp_name ,module_number);	
-	
+	le_wxApp = zend_register_list_destructors_ex(NULL,NULL, le_wxApp_name, module_number);
 	
 	/**
 	 * Space reserved for the initialization of autogenerated classes,
 	 * class enumerations and global constants
 	 */
 	  
-	INIT_CLASS_ENTRY(ce, PHP_wxScrolledWindow_NAME , php_wxScrolledWindow_functions);
+	char PHP_wxScrolledWindow_name[] = "wxScrolledWindow";
+	char le_wxScrolledWindow_name[] = "native wxScrolledWindow";
+	INIT_CLASS_ENTRY(ce, PHP_wxScrolledWindow_name, php_wxScrolledWindow_functions);
 	php_wxScrolledWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxScrolledWindow = zend_register_list_destructors_ex(php_wxScrolledWindow_destruction_handler, NULL, le_wxScrolledWindow_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxRibbonButtonBarButtonBase_NAME , php_wxRibbonButtonBarButtonBase_functions);
+	char PHP_wxRibbonButtonBarButtonBase_name[] = "wxRibbonButtonBarButtonBase";
+	char le_wxRibbonButtonBarButtonBase_name[] = "native wxRibbonButtonBarButtonBase";
+	INIT_CLASS_ENTRY(ce, PHP_wxRibbonButtonBarButtonBase_name, php_wxRibbonButtonBarButtonBase_functions);
 	php_wxRibbonButtonBarButtonBase_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxRibbonButtonBarButtonBase = zend_register_list_destructors_ex(php_wxRibbonButtonBarButtonBase_destruction_handler, NULL, le_wxRibbonButtonBarButtonBase_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxRibbonGalleryItem_NAME , php_wxRibbonGalleryItem_functions);
+	char PHP_wxRibbonGalleryItem_name[] = "wxRibbonGalleryItem";
+	char le_wxRibbonGalleryItem_name[] = "native wxRibbonGalleryItem";
+	INIT_CLASS_ENTRY(ce, PHP_wxRibbonGalleryItem_name, php_wxRibbonGalleryItem_functions);
 	php_wxRibbonGalleryItem_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxRibbonGalleryItem = zend_register_list_destructors_ex(php_wxRibbonGalleryItem_destruction_handler, NULL, le_wxRibbonGalleryItem_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxRibbonToolBarToolBase_NAME , php_wxRibbonToolBarToolBase_functions);
+	char PHP_wxRibbonToolBarToolBase_name[] = "wxRibbonToolBarToolBase";
+	char le_wxRibbonToolBarToolBase_name[] = "native wxRibbonToolBarToolBase";
+	INIT_CLASS_ENTRY(ce, PHP_wxRibbonToolBarToolBase_name, php_wxRibbonToolBarToolBase_functions);
 	php_wxRibbonToolBarToolBase_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxRibbonToolBarToolBase = zend_register_list_destructors_ex(php_wxRibbonToolBarToolBase_destruction_handler, NULL, le_wxRibbonToolBarToolBase_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxAboutDialogInfo_NAME , php_wxAboutDialogInfo_functions);
+	char PHP_wxAboutDialogInfo_name[] = "wxAboutDialogInfo";
+	char le_wxAboutDialogInfo_name[] = "native wxAboutDialogInfo";
+	INIT_CLASS_ENTRY(ce, PHP_wxAboutDialogInfo_name, php_wxAboutDialogInfo_functions);
 	php_wxAboutDialogInfo_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxAboutDialogInfo = zend_register_list_destructors_ex(php_wxAboutDialogInfo_destruction_handler, NULL, le_wxAboutDialogInfo_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFrame_NAME , php_wxFrame_functions);
+	char PHP_wxFrame_name[] = "wxFrame";
+	char le_wxFrame_name[] = "native wxFrame";
+	INIT_CLASS_ENTRY(ce, PHP_wxFrame_name, php_wxFrame_functions);
 	php_wxFrame_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFrame = zend_register_list_destructors_ex(php_wxFrame_destruction_handler, NULL, le_wxFrame_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxTopLevelWindow_NAME , php_wxTopLevelWindow_functions);
+	char PHP_wxTopLevelWindow_name[] = "wxTopLevelWindow";
+	char le_wxTopLevelWindow_name[] = "native wxTopLevelWindow";
+	INIT_CLASS_ENTRY(ce, PHP_wxTopLevelWindow_name, php_wxTopLevelWindow_functions);
 	php_wxTopLevelWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxTopLevelWindow = zend_register_list_destructors_ex(php_wxTopLevelWindow_destruction_handler, NULL, le_wxTopLevelWindow_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxNonOwnedWindow_NAME , php_wxNonOwnedWindow_functions);
+	char PHP_wxNonOwnedWindow_name[] = "wxNonOwnedWindow";
+	char le_wxNonOwnedWindow_name[] = "native wxNonOwnedWindow";
+	INIT_CLASS_ENTRY(ce, PHP_wxNonOwnedWindow_name, php_wxNonOwnedWindow_functions);
 	php_wxNonOwnedWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxNonOwnedWindow = zend_register_list_destructors_ex(php_wxNonOwnedWindow_destruction_handler, NULL, le_wxNonOwnedWindow_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxWindow_NAME , php_wxWindow_functions);
+	char PHP_wxWindow_name[] = "wxWindow";
+	char le_wxWindow_name[] = "native wxWindow";
+	INIT_CLASS_ENTRY(ce, PHP_wxWindow_name, php_wxWindow_functions);
 	php_wxWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxWindow = zend_register_list_destructors_ex(php_wxWindow_destruction_handler, NULL, le_wxWindow_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxSize_NAME , php_wxSize_functions);
+	char PHP_wxSize_name[] = "wxSize";
+	char le_wxSize_name[] = "native wxSize";
+	INIT_CLASS_ENTRY(ce, PHP_wxSize_name, php_wxSize_functions);
 	php_wxSize_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxSize = zend_register_list_destructors_ex(php_wxSize_destruction_handler, NULL, le_wxSize_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPoint_NAME , php_wxPoint_functions);
+	char PHP_wxPoint_name[] = "wxPoint";
+	char le_wxPoint_name[] = "native wxPoint";
+	INIT_CLASS_ENTRY(ce, PHP_wxPoint_name, php_wxPoint_functions);
 	php_wxPoint_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPoint = zend_register_list_destructors_ex(php_wxPoint_destruction_handler, NULL, le_wxPoint_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxRealPoint_NAME , php_wxRealPoint_functions);
+	char PHP_wxRealPoint_name[] = "wxRealPoint";
+	char le_wxRealPoint_name[] = "native wxRealPoint";
+	INIT_CLASS_ENTRY(ce, PHP_wxRealPoint_name, php_wxRealPoint_functions);
 	php_wxRealPoint_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxRealPoint = zend_register_list_destructors_ex(php_wxRealPoint_destruction_handler, NULL, le_wxRealPoint_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxEvtHandler_NAME , php_wxEvtHandler_functions);
+	char PHP_wxEvtHandler_name[] = "wxEvtHandler";
+	char le_wxEvtHandler_name[] = "native wxEvtHandler";
+	INIT_CLASS_ENTRY(ce, PHP_wxEvtHandler_name, php_wxEvtHandler_functions);
 	php_wxEvtHandler_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxEvtHandler = zend_register_list_destructors_ex(php_wxEvtHandler_destruction_handler, NULL, le_wxEvtHandler_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxStatusBar_NAME , php_wxStatusBar_functions);
+	char PHP_wxStatusBar_name[] = "wxStatusBar";
+	char le_wxStatusBar_name[] = "native wxStatusBar";
+	INIT_CLASS_ENTRY(ce, PHP_wxStatusBar_name, php_wxStatusBar_functions);
 	php_wxStatusBar_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxStatusBar = zend_register_list_destructors_ex(php_wxStatusBar_destruction_handler, NULL, le_wxStatusBar_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxButton_NAME , php_wxButton_functions);
+	char PHP_wxButton_name[] = "wxButton";
+	char le_wxButton_name[] = "native wxButton";
+	INIT_CLASS_ENTRY(ce, PHP_wxButton_name, php_wxButton_functions);
 	php_wxButton_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxButton = zend_register_list_destructors_ex(php_wxButton_destruction_handler, NULL, le_wxButton_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxAnyButton_NAME , php_wxAnyButton_functions);
+	char PHP_wxAnyButton_name[] = "wxAnyButton";
+	char le_wxAnyButton_name[] = "native wxAnyButton";
+	INIT_CLASS_ENTRY(ce, PHP_wxAnyButton_name, php_wxAnyButton_functions);
 	php_wxAnyButton_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxAnyButton = zend_register_list_destructors_ex(php_wxAnyButton_destruction_handler, NULL, le_wxAnyButton_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxControl_NAME , php_wxControl_functions);
+	char PHP_wxControl_name[] = "wxControl";
+	char le_wxControl_name[] = "native wxControl";
+	INIT_CLASS_ENTRY(ce, PHP_wxControl_name, php_wxControl_functions);
 	php_wxControl_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxControl = zend_register_list_destructors_ex(php_wxControl_destruction_handler, NULL, le_wxControl_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxValidator_NAME , php_wxValidator_functions);
+	char PHP_wxValidator_name[] = "wxValidator";
+	char le_wxValidator_name[] = "native wxValidator";
+	INIT_CLASS_ENTRY(ce, PHP_wxValidator_name, php_wxValidator_functions);
 	php_wxValidator_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxValidator = zend_register_list_destructors_ex(php_wxValidator_destruction_handler, NULL, le_wxValidator_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxBitmapHandler_NAME , php_wxBitmapHandler_functions);
+	char PHP_wxBitmapHandler_name[] = "wxBitmapHandler";
+	char le_wxBitmapHandler_name[] = "native wxBitmapHandler";
+	INIT_CLASS_ENTRY(ce, PHP_wxBitmapHandler_name, php_wxBitmapHandler_functions);
 	php_wxBitmapHandler_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxBitmapHandler = zend_register_list_destructors_ex(php_wxBitmapHandler_destruction_handler, NULL, le_wxBitmapHandler_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxBitmap_NAME , php_wxBitmap_functions);
+	char PHP_wxBitmap_name[] = "wxBitmap";
+	char le_wxBitmap_name[] = "native wxBitmap";
+	INIT_CLASS_ENTRY(ce, PHP_wxBitmap_name, php_wxBitmap_functions);
 	php_wxBitmap_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxBitmap = zend_register_list_destructors_ex(php_wxBitmap_destruction_handler, NULL, le_wxBitmap_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPalette_NAME , php_wxPalette_functions);
+	char PHP_wxPalette_name[] = "wxPalette";
+	char le_wxPalette_name[] = "native wxPalette";
+	INIT_CLASS_ENTRY(ce, PHP_wxPalette_name, php_wxPalette_functions);
 	php_wxPalette_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPalette = zend_register_list_destructors_ex(php_wxPalette_destruction_handler, NULL, le_wxPalette_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxImage_NAME , php_wxImage_functions);
+	char PHP_wxImage_name[] = "wxImage";
+	char le_wxImage_name[] = "native wxImage";
+	INIT_CLASS_ENTRY(ce, PHP_wxImage_name, php_wxImage_functions);
 	php_wxImage_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxImage = zend_register_list_destructors_ex(php_wxImage_destruction_handler, NULL, le_wxImage_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxIcon_NAME , php_wxIcon_functions);
+	char PHP_wxIcon_name[] = "wxIcon";
+	char le_wxIcon_name[] = "native wxIcon";
+	INIT_CLASS_ENTRY(ce, PHP_wxIcon_name, php_wxIcon_functions);
 	php_wxIcon_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxIcon = zend_register_list_destructors_ex(php_wxIcon_destruction_handler, NULL, le_wxIcon_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxSplitterWindow_NAME , php_wxSplitterWindow_functions);
+	char PHP_wxSplitterWindow_name[] = "wxSplitterWindow";
+	char le_wxSplitterWindow_name[] = "native wxSplitterWindow";
+	INIT_CLASS_ENTRY(ce, PHP_wxSplitterWindow_name, php_wxSplitterWindow_functions);
 	php_wxSplitterWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxSplitterWindow = zend_register_list_destructors_ex(php_wxSplitterWindow_destruction_handler, NULL, le_wxSplitterWindow_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxBoxSizer_NAME , php_wxBoxSizer_functions);
+	char PHP_wxBoxSizer_name[] = "wxBoxSizer";
+	char le_wxBoxSizer_name[] = "native wxBoxSizer";
+	INIT_CLASS_ENTRY(ce, PHP_wxBoxSizer_name, php_wxBoxSizer_functions);
 	php_wxBoxSizer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxBoxSizer = zend_register_list_destructors_ex(php_wxBoxSizer_destruction_handler, NULL, le_wxBoxSizer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxSizer_NAME , php_wxSizer_functions);
+	char PHP_wxSizer_name[] = "wxSizer";
+	char le_wxSizer_name[] = "native wxSizer";
+	INIT_CLASS_ENTRY(ce, PHP_wxSizer_name, php_wxSizer_functions);
 	php_wxSizer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxSizer = zend_register_list_destructors_ex(php_wxSizer_destruction_handler, NULL, le_wxSizer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxSizerItem_NAME , php_wxSizerItem_functions);
+	char PHP_wxSizerItem_name[] = "wxSizerItem";
+	char le_wxSizerItem_name[] = "native wxSizerItem";
+	INIT_CLASS_ENTRY(ce, PHP_wxSizerItem_name, php_wxSizerItem_functions);
 	php_wxSizerItem_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxSizerItem = zend_register_list_destructors_ex(php_wxSizerItem_destruction_handler, NULL, le_wxSizerItem_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxSizerFlags_NAME , php_wxSizerFlags_functions);
+	char PHP_wxSizerFlags_name[] = "wxSizerFlags";
+	char le_wxSizerFlags_name[] = "native wxSizerFlags";
+	INIT_CLASS_ENTRY(ce, PHP_wxSizerFlags_name, php_wxSizerFlags_functions);
 	php_wxSizerFlags_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxSizerFlags = zend_register_list_destructors_ex(php_wxSizerFlags_destruction_handler, NULL, le_wxSizerFlags_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxRect_NAME , php_wxRect_functions);
+	char PHP_wxRect_name[] = "wxRect";
+	char le_wxRect_name[] = "native wxRect";
+	INIT_CLASS_ENTRY(ce, PHP_wxRect_name, php_wxRect_functions);
 	php_wxRect_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxRect = zend_register_list_destructors_ex(php_wxRect_destruction_handler, NULL, le_wxRect_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxTreeCtrl_NAME , php_wxTreeCtrl_functions);
+	char PHP_wxTreeCtrl_name[] = "wxTreeCtrl";
+	char le_wxTreeCtrl_name[] = "native wxTreeCtrl";
+	INIT_CLASS_ENTRY(ce, PHP_wxTreeCtrl_name, php_wxTreeCtrl_functions);
 	php_wxTreeCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxTreeCtrl = zend_register_list_destructors_ex(php_wxTreeCtrl_destruction_handler, NULL, le_wxTreeCtrl_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxTreeItemId_NAME , php_wxTreeItemId_functions);
+	char PHP_wxTreeItemId_name[] = "wxTreeItemId";
+	char le_wxTreeItemId_name[] = "native wxTreeItemId";
+	INIT_CLASS_ENTRY(ce, PHP_wxTreeItemId_name, php_wxTreeItemId_functions);
 	php_wxTreeItemId_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxTreeItemId = zend_register_list_destructors_ex(php_wxTreeItemId_destruction_handler, NULL, le_wxTreeItemId_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxTreeItemData_NAME , php_wxTreeItemData_functions);
+	char PHP_wxTreeItemData_name[] = "wxTreeItemData";
+	char le_wxTreeItemData_name[] = "native wxTreeItemData";
+	INIT_CLASS_ENTRY(ce, PHP_wxTreeItemData_name, php_wxTreeItemData_functions);
 	php_wxTreeItemData_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxTreeItemData = zend_register_list_destructors_ex(php_wxTreeItemData_destruction_handler, NULL, le_wxTreeItemData_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxClientData_NAME , php_wxClientData_functions);
+	char PHP_wxClientData_name[] = "wxClientData";
+	char le_wxClientData_name[] = "native wxClientData";
+	INIT_CLASS_ENTRY(ce, PHP_wxClientData_name, php_wxClientData_functions);
 	php_wxClientData_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxClientData = zend_register_list_destructors_ex(php_wxClientData_destruction_handler, NULL, le_wxClientData_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxImageList_NAME , php_wxImageList_functions);
+	char PHP_wxImageList_name[] = "wxImageList";
+	char le_wxImageList_name[] = "native wxImageList";
+	INIT_CLASS_ENTRY(ce, PHP_wxImageList_name, php_wxImageList_functions);
 	php_wxImageList_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxImageList = zend_register_list_destructors_ex(php_wxImageList_destruction_handler, NULL, le_wxImageList_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDC_NAME , php_wxDC_functions);
+	char PHP_wxDC_name[] = "wxDC";
+	char le_wxDC_name[] = "native wxDC";
+	INIT_CLASS_ENTRY(ce, PHP_wxDC_name, php_wxDC_functions);
 	php_wxDC_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDC = zend_register_list_destructors_ex(php_wxDC_destruction_handler, NULL, le_wxDC_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxColour_NAME , php_wxColour_functions);
+	char PHP_wxColour_name[] = "wxColour";
+	char le_wxColour_name[] = "native wxColour";
+	INIT_CLASS_ENTRY(ce, PHP_wxColour_name, php_wxColour_functions);
 	php_wxColour_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxColour = zend_register_list_destructors_ex(php_wxColour_destruction_handler, NULL, le_wxColour_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFont_NAME , php_wxFont_functions);
+	char PHP_wxFont_name[] = "wxFont";
+	char le_wxFont_name[] = "native wxFont";
+	INIT_CLASS_ENTRY(ce, PHP_wxFont_name, php_wxFont_functions);
 	php_wxFont_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFont = zend_register_list_destructors_ex(php_wxFont_destruction_handler, NULL, le_wxFont_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPanel_NAME , php_wxPanel_functions);
+	char PHP_wxPanel_name[] = "wxPanel";
+	char le_wxPanel_name[] = "native wxPanel";
+	INIT_CLASS_ENTRY(ce, PHP_wxPanel_name, php_wxPanel_functions);
 	php_wxPanel_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPanel = zend_register_list_destructors_ex(php_wxPanel_destruction_handler, NULL, le_wxPanel_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxCheckListBox_NAME , php_wxCheckListBox_functions);
+	char PHP_wxCheckListBox_name[] = "wxCheckListBox";
+	char le_wxCheckListBox_name[] = "native wxCheckListBox";
+	INIT_CLASS_ENTRY(ce, PHP_wxCheckListBox_name, php_wxCheckListBox_functions);
 	php_wxCheckListBox_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxCheckListBox = zend_register_list_destructors_ex(php_wxCheckListBox_destruction_handler, NULL, le_wxCheckListBox_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxListBox_NAME , php_wxListBox_functions);
+	char PHP_wxListBox_name[] = "wxListBox";
+	char le_wxListBox_name[] = "native wxListBox";
+	INIT_CLASS_ENTRY(ce, PHP_wxListBox_name, php_wxListBox_functions);
 	php_wxListBox_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxListBox = zend_register_list_destructors_ex(php_wxListBox_destruction_handler, NULL, le_wxListBox_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxControlWithItems_NAME , php_wxControlWithItems_functions);
+	char PHP_wxControlWithItems_name[] = "wxControlWithItems";
+	char le_wxControlWithItems_name[] = "native wxControlWithItems";
+	INIT_CLASS_ENTRY(ce, PHP_wxControlWithItems_name, php_wxControlWithItems_functions);
 	php_wxControlWithItems_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxControlWithItems = zend_register_list_destructors_ex(php_wxControlWithItems_destruction_handler, NULL, le_wxControlWithItems_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxMenuBar_NAME , php_wxMenuBar_functions);
+	char PHP_wxMenuBar_name[] = "wxMenuBar";
+	char le_wxMenuBar_name[] = "native wxMenuBar";
+	INIT_CLASS_ENTRY(ce, PHP_wxMenuBar_name, php_wxMenuBar_functions);
 	php_wxMenuBar_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxMenuBar = zend_register_list_destructors_ex(php_wxMenuBar_destruction_handler, NULL, le_wxMenuBar_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxMenuEvent_NAME , php_wxMenuEvent_functions);
+	char PHP_wxMenuEvent_name[] = "wxMenuEvent";
+	char le_wxMenuEvent_name[] = "native wxMenuEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxMenuEvent_name, php_wxMenuEvent_functions);
 	php_wxMenuEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxMenuEvent = zend_register_list_destructors_ex(php_wxMenuEvent_destruction_handler, NULL, le_wxMenuEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxMenuItem_NAME , php_wxMenuItem_functions);
+	char PHP_wxMenuItem_name[] = "wxMenuItem";
+	char le_wxMenuItem_name[] = "native wxMenuItem";
+	INIT_CLASS_ENTRY(ce, PHP_wxMenuItem_name, php_wxMenuItem_functions);
 	php_wxMenuItem_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxMenuItem = zend_register_list_destructors_ex(php_wxMenuItem_destruction_handler, NULL, le_wxMenuItem_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxMenu_NAME , php_wxMenu_functions);
+	char PHP_wxMenu_name[] = "wxMenu";
+	char le_wxMenu_name[] = "native wxMenu";
+	INIT_CLASS_ENTRY(ce, PHP_wxMenu_name, php_wxMenu_functions);
 	php_wxMenu_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxMenu = zend_register_list_destructors_ex(php_wxMenu_destruction_handler, NULL, le_wxMenu_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxEvent_NAME , php_wxEvent_functions);
+	char PHP_wxEvent_name[] = "wxEvent";
+	char le_wxEvent_name[] = "native wxEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxEvent_name, php_wxEvent_functions);
 	php_wxEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxEvent = zend_register_list_destructors_ex(php_wxEvent_destruction_handler, NULL, le_wxEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxTreeEvent_NAME , php_wxTreeEvent_functions);
+	char PHP_wxTreeEvent_name[] = "wxTreeEvent";
+	char le_wxTreeEvent_name[] = "native wxTreeEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxTreeEvent_name, php_wxTreeEvent_functions);
 	php_wxTreeEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxTreeEvent = zend_register_list_destructors_ex(php_wxTreeEvent_destruction_handler, NULL, le_wxTreeEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxKeyEvent_NAME , php_wxKeyEvent_functions);
+	char PHP_wxKeyEvent_name[] = "wxKeyEvent";
+	char le_wxKeyEvent_name[] = "native wxKeyEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxKeyEvent_name, php_wxKeyEvent_functions);
 	php_wxKeyEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxKeyEvent = zend_register_list_destructors_ex(php_wxKeyEvent_destruction_handler, NULL, le_wxKeyEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxKeyboardState_NAME , php_wxKeyboardState_functions);
+	char PHP_wxKeyboardState_name[] = "wxKeyboardState";
+	char le_wxKeyboardState_name[] = "native wxKeyboardState";
+	INIT_CLASS_ENTRY(ce, PHP_wxKeyboardState_name, php_wxKeyboardState_functions);
 	php_wxKeyboardState_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxKeyboardState = zend_register_list_destructors_ex(php_wxKeyboardState_destruction_handler, NULL, le_wxKeyboardState_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxNotifyEvent_NAME , php_wxNotifyEvent_functions);
+	char PHP_wxNotifyEvent_name[] = "wxNotifyEvent";
+	char le_wxNotifyEvent_name[] = "native wxNotifyEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxNotifyEvent_name, php_wxNotifyEvent_functions);
 	php_wxNotifyEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxNotifyEvent = zend_register_list_destructors_ex(php_wxNotifyEvent_destruction_handler, NULL, le_wxNotifyEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxCommandEvent_NAME , php_wxCommandEvent_functions);
+	char PHP_wxCommandEvent_name[] = "wxCommandEvent";
+	char le_wxCommandEvent_name[] = "native wxCommandEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxCommandEvent_name, php_wxCommandEvent_functions);
 	php_wxCommandEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxCommandEvent = zend_register_list_destructors_ex(php_wxCommandEvent_destruction_handler, NULL, le_wxCommandEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxCloseEvent_NAME , php_wxCloseEvent_functions);
+	char PHP_wxCloseEvent_name[] = "wxCloseEvent";
+	char le_wxCloseEvent_name[] = "native wxCloseEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxCloseEvent_name, php_wxCloseEvent_functions);
 	php_wxCloseEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxCloseEvent = zend_register_list_destructors_ex(php_wxCloseEvent_destruction_handler, NULL, le_wxCloseEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxActivateEvent_NAME , php_wxActivateEvent_functions);
+	char PHP_wxActivateEvent_name[] = "wxActivateEvent";
+	char le_wxActivateEvent_name[] = "native wxActivateEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxActivateEvent_name, php_wxActivateEvent_functions);
 	php_wxActivateEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxActivateEvent = zend_register_list_destructors_ex(php_wxActivateEvent_destruction_handler, NULL, le_wxActivateEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxAuiManager_NAME , php_wxAuiManager_functions);
+	char PHP_wxAuiManager_name[] = "wxAuiManager";
+	char le_wxAuiManager_name[] = "native wxAuiManager";
+	INIT_CLASS_ENTRY(ce, PHP_wxAuiManager_name, php_wxAuiManager_functions);
 	php_wxAuiManager_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxAuiManager = zend_register_list_destructors_ex(php_wxAuiManager_destruction_handler, NULL, le_wxAuiManager_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxAuiDockArt_NAME , php_wxAuiDockArt_functions);
+	char PHP_wxAuiDockArt_name[] = "wxAuiDockArt";
+	char le_wxAuiDockArt_name[] = "native wxAuiDockArt";
+	INIT_CLASS_ENTRY(ce, PHP_wxAuiDockArt_name, php_wxAuiDockArt_functions);
 	php_wxAuiDockArt_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxAuiDockArt = zend_register_list_destructors_ex(php_wxAuiDockArt_destruction_handler, NULL, le_wxAuiDockArt_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxAuiPaneInfo_NAME , php_wxAuiPaneInfo_functions);
+	char PHP_wxAuiPaneInfo_name[] = "wxAuiPaneInfo";
+	char le_wxAuiPaneInfo_name[] = "native wxAuiPaneInfo";
+	INIT_CLASS_ENTRY(ce, PHP_wxAuiPaneInfo_name, php_wxAuiPaneInfo_functions);
 	php_wxAuiPaneInfo_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxAuiPaneInfo = zend_register_list_destructors_ex(php_wxAuiPaneInfo_destruction_handler, NULL, le_wxAuiPaneInfo_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxAuiManagerEvent_NAME , php_wxAuiManagerEvent_functions);
+	char PHP_wxAuiManagerEvent_name[] = "wxAuiManagerEvent";
+	char le_wxAuiManagerEvent_name[] = "native wxAuiManagerEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxAuiManagerEvent_name, php_wxAuiManagerEvent_functions);
 	php_wxAuiManagerEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxAuiManagerEvent = zend_register_list_destructors_ex(php_wxAuiManagerEvent_destruction_handler, NULL, le_wxAuiManagerEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxAuiNotebook_NAME , php_wxAuiNotebook_functions);
+	char PHP_wxAuiNotebook_name[] = "wxAuiNotebook";
+	char le_wxAuiNotebook_name[] = "native wxAuiNotebook";
+	INIT_CLASS_ENTRY(ce, PHP_wxAuiNotebook_name, php_wxAuiNotebook_functions);
 	php_wxAuiNotebook_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxAuiNotebook = zend_register_list_destructors_ex(php_wxAuiNotebook_destruction_handler, NULL, le_wxAuiNotebook_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxAuiNotebookEvent_NAME , php_wxAuiNotebookEvent_functions);
+	char PHP_wxAuiNotebookEvent_name[] = "wxAuiNotebookEvent";
+	char le_wxAuiNotebookEvent_name[] = "native wxAuiNotebookEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxAuiNotebookEvent_name, php_wxAuiNotebookEvent_functions);
 	php_wxAuiNotebookEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxAuiNotebookEvent = zend_register_list_destructors_ex(php_wxAuiNotebookEvent_destruction_handler, NULL, le_wxAuiNotebookEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxBookCtrlEvent_NAME , php_wxBookCtrlEvent_functions);
+	char PHP_wxBookCtrlEvent_name[] = "wxBookCtrlEvent";
+	char le_wxBookCtrlEvent_name[] = "native wxBookCtrlEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxBookCtrlEvent_name, php_wxBookCtrlEvent_functions);
 	php_wxBookCtrlEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxBookCtrlEvent = zend_register_list_destructors_ex(php_wxBookCtrlEvent_destruction_handler, NULL, le_wxBookCtrlEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxAuiDefaultToolBarArt_NAME , php_wxAuiDefaultToolBarArt_functions);
+	char PHP_wxAuiDefaultToolBarArt_name[] = "wxAuiDefaultToolBarArt";
+	char le_wxAuiDefaultToolBarArt_name[] = "native wxAuiDefaultToolBarArt";
+	INIT_CLASS_ENTRY(ce, PHP_wxAuiDefaultToolBarArt_name, php_wxAuiDefaultToolBarArt_functions);
 	php_wxAuiDefaultToolBarArt_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxAuiDefaultToolBarArt = zend_register_list_destructors_ex(php_wxAuiDefaultToolBarArt_destruction_handler, NULL, le_wxAuiDefaultToolBarArt_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxBookCtrlBase_NAME , php_wxBookCtrlBase_functions);
+	char PHP_wxBookCtrlBase_name[] = "wxBookCtrlBase";
+	char le_wxBookCtrlBase_name[] = "native wxBookCtrlBase";
+	INIT_CLASS_ENTRY(ce, PHP_wxBookCtrlBase_name, php_wxBookCtrlBase_functions);
 	php_wxBookCtrlBase_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxBookCtrlBase = zend_register_list_destructors_ex(php_wxBookCtrlBase_destruction_handler, NULL, le_wxBookCtrlBase_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxWithImages_NAME , php_wxWithImages_functions);
+	char PHP_wxWithImages_name[] = "wxWithImages";
+	char le_wxWithImages_name[] = "native wxWithImages";
+	INIT_CLASS_ENTRY(ce, PHP_wxWithImages_name, php_wxWithImages_functions);
 	php_wxWithImages_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxWithImages = zend_register_list_destructors_ex(php_wxWithImages_destruction_handler, NULL, le_wxWithImages_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxAcceleratorEntry_NAME , php_wxAcceleratorEntry_functions);
+	char PHP_wxAcceleratorEntry_name[] = "wxAcceleratorEntry";
+	char le_wxAcceleratorEntry_name[] = "native wxAcceleratorEntry";
+	INIT_CLASS_ENTRY(ce, PHP_wxAcceleratorEntry_name, php_wxAcceleratorEntry_functions);
 	php_wxAcceleratorEntry_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxAcceleratorEntry = zend_register_list_destructors_ex(php_wxAcceleratorEntry_destruction_handler, NULL, le_wxAcceleratorEntry_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxAcceleratorTable_NAME , php_wxAcceleratorTable_functions);
+	char PHP_wxAcceleratorTable_name[] = "wxAcceleratorTable";
+	char le_wxAcceleratorTable_name[] = "native wxAcceleratorTable";
+	INIT_CLASS_ENTRY(ce, PHP_wxAcceleratorTable_name, php_wxAcceleratorTable_functions);
 	php_wxAcceleratorTable_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxAcceleratorTable = zend_register_list_destructors_ex(php_wxAcceleratorTable_destruction_handler, NULL, le_wxAcceleratorTable_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGDIObject_NAME , php_wxGDIObject_functions);
+	char PHP_wxGDIObject_name[] = "wxGDIObject";
+	char le_wxGDIObject_name[] = "native wxGDIObject";
+	INIT_CLASS_ENTRY(ce, PHP_wxGDIObject_name, php_wxGDIObject_functions);
 	php_wxGDIObject_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGDIObject = zend_register_list_destructors_ex(php_wxGDIObject_destruction_handler, NULL, le_wxGDIObject_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxAnimation_NAME , php_wxAnimation_functions);
+	char PHP_wxAnimation_name[] = "wxAnimation";
+	char le_wxAnimation_name[] = "native wxAnimation";
+	INIT_CLASS_ENTRY(ce, PHP_wxAnimation_name, php_wxAnimation_functions);
 	php_wxAnimation_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxAnimation = zend_register_list_destructors_ex(php_wxAnimation_destruction_handler, NULL, le_wxAnimation_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxAnimationCtrl_NAME , php_wxAnimationCtrl_functions);
+	char PHP_wxAnimationCtrl_name[] = "wxAnimationCtrl";
+	char le_wxAnimationCtrl_name[] = "native wxAnimationCtrl";
+	INIT_CLASS_ENTRY(ce, PHP_wxAnimationCtrl_name, php_wxAnimationCtrl_functions);
 	php_wxAnimationCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxAnimationCtrl = zend_register_list_destructors_ex(php_wxAnimationCtrl_destruction_handler, NULL, le_wxAnimationCtrl_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxArtProvider_NAME , php_wxArtProvider_functions);
+	char PHP_wxArtProvider_name[] = "wxArtProvider";
+	char le_wxArtProvider_name[] = "native wxArtProvider";
+	INIT_CLASS_ENTRY(ce, PHP_wxArtProvider_name, php_wxArtProvider_functions);
 	php_wxArtProvider_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxArtProvider = zend_register_list_destructors_ex(php_wxArtProvider_destruction_handler, NULL, le_wxArtProvider_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxIconBundle_NAME , php_wxIconBundle_functions);
+	char PHP_wxIconBundle_name[] = "wxIconBundle";
+	char le_wxIconBundle_name[] = "native wxIconBundle";
+	INIT_CLASS_ENTRY(ce, PHP_wxIconBundle_name, php_wxIconBundle_functions);
 	php_wxIconBundle_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxIconBundle = zend_register_list_destructors_ex(php_wxIconBundle_destruction_handler, NULL, le_wxIconBundle_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxStyledTextCtrl_NAME , php_wxStyledTextCtrl_functions);
+	char PHP_wxStyledTextCtrl_name[] = "wxStyledTextCtrl";
+	char le_wxStyledTextCtrl_name[] = "native wxStyledTextCtrl";
+	INIT_CLASS_ENTRY(ce, PHP_wxStyledTextCtrl_name, php_wxStyledTextCtrl_functions);
 	php_wxStyledTextCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxStyledTextCtrl = zend_register_list_destructors_ex(php_wxStyledTextCtrl_destruction_handler, NULL, le_wxStyledTextCtrl_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxStyledTextEvent_NAME , php_wxStyledTextEvent_functions);
+	char PHP_wxStyledTextEvent_name[] = "wxStyledTextEvent";
+	char le_wxStyledTextEvent_name[] = "native wxStyledTextEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxStyledTextEvent_name, php_wxStyledTextEvent_functions);
 	php_wxStyledTextEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxStyledTextEvent = zend_register_list_destructors_ex(php_wxStyledTextEvent_destruction_handler, NULL, le_wxStyledTextEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxVersionInfo_NAME , php_wxVersionInfo_functions);
+	char PHP_wxVersionInfo_name[] = "wxVersionInfo";
+	char le_wxVersionInfo_name[] = "native wxVersionInfo";
+	INIT_CLASS_ENTRY(ce, PHP_wxVersionInfo_name, php_wxVersionInfo_functions);
 	php_wxVersionInfo_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxVersionInfo = zend_register_list_destructors_ex(php_wxVersionInfo_destruction_handler, NULL, le_wxVersionInfo_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxScrollBar_NAME , php_wxScrollBar_functions);
+	char PHP_wxScrollBar_name[] = "wxScrollBar";
+	char le_wxScrollBar_name[] = "native wxScrollBar";
+	INIT_CLASS_ENTRY(ce, PHP_wxScrollBar_name, php_wxScrollBar_functions);
 	php_wxScrollBar_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxScrollBar = zend_register_list_destructors_ex(php_wxScrollBar_destruction_handler, NULL, le_wxScrollBar_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxStaticText_NAME , php_wxStaticText_functions);
+	char PHP_wxStaticText_name[] = "wxStaticText";
+	char le_wxStaticText_name[] = "native wxStaticText";
+	INIT_CLASS_ENTRY(ce, PHP_wxStaticText_name, php_wxStaticText_functions);
 	php_wxStaticText_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxStaticText = zend_register_list_destructors_ex(php_wxStaticText_destruction_handler, NULL, le_wxStaticText_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxStatusBarPane_NAME , php_wxStatusBarPane_functions);
+	char PHP_wxStatusBarPane_name[] = "wxStatusBarPane";
+	char le_wxStatusBarPane_name[] = "native wxStatusBarPane";
+	INIT_CLASS_ENTRY(ce, PHP_wxStatusBarPane_name, php_wxStatusBarPane_functions);
 	php_wxStatusBarPane_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxStatusBarPane = zend_register_list_destructors_ex(php_wxStatusBarPane_destruction_handler, NULL, le_wxStatusBarPane_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxStaticLine_NAME , php_wxStaticLine_functions);
+	char PHP_wxStaticLine_name[] = "wxStaticLine";
+	char le_wxStaticLine_name[] = "native wxStaticLine";
+	INIT_CLASS_ENTRY(ce, PHP_wxStaticLine_name, php_wxStaticLine_functions);
 	php_wxStaticLine_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxStaticLine = zend_register_list_destructors_ex(php_wxStaticLine_destruction_handler, NULL, le_wxStaticLine_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxStaticBoxSizer_NAME , php_wxStaticBoxSizer_functions);
+	char PHP_wxStaticBoxSizer_name[] = "wxStaticBoxSizer";
+	char le_wxStaticBoxSizer_name[] = "native wxStaticBoxSizer";
+	INIT_CLASS_ENTRY(ce, PHP_wxStaticBoxSizer_name, php_wxStaticBoxSizer_functions);
 	php_wxStaticBoxSizer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxStaticBoxSizer = zend_register_list_destructors_ex(php_wxStaticBoxSizer_destruction_handler, NULL, le_wxStaticBoxSizer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxStaticBox_NAME , php_wxStaticBox_functions);
+	char PHP_wxStaticBox_name[] = "wxStaticBox";
+	char le_wxStaticBox_name[] = "native wxStaticBox";
+	INIT_CLASS_ENTRY(ce, PHP_wxStaticBox_name, php_wxStaticBox_functions);
 	php_wxStaticBox_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxStaticBox = zend_register_list_destructors_ex(php_wxStaticBox_destruction_handler, NULL, le_wxStaticBox_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxStaticBitmap_NAME , php_wxStaticBitmap_functions);
+	char PHP_wxStaticBitmap_name[] = "wxStaticBitmap";
+	char le_wxStaticBitmap_name[] = "native wxStaticBitmap";
+	INIT_CLASS_ENTRY(ce, PHP_wxStaticBitmap_name, php_wxStaticBitmap_functions);
 	php_wxStaticBitmap_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxStaticBitmap = zend_register_list_destructors_ex(php_wxStaticBitmap_destruction_handler, NULL, le_wxStaticBitmap_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxAuiToolBarItem_NAME , php_wxAuiToolBarItem_functions);
+	char PHP_wxAuiToolBarItem_name[] = "wxAuiToolBarItem";
+	char le_wxAuiToolBarItem_name[] = "native wxAuiToolBarItem";
+	INIT_CLASS_ENTRY(ce, PHP_wxAuiToolBarItem_name, php_wxAuiToolBarItem_functions);
 	php_wxAuiToolBarItem_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxAuiToolBarItem = zend_register_list_destructors_ex(php_wxAuiToolBarItem_destruction_handler, NULL, le_wxAuiToolBarItem_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxCheckBox_NAME , php_wxCheckBox_functions);
+	char PHP_wxCheckBox_name[] = "wxCheckBox";
+	char le_wxCheckBox_name[] = "native wxCheckBox";
+	INIT_CLASS_ENTRY(ce, PHP_wxCheckBox_name, php_wxCheckBox_functions);
 	php_wxCheckBox_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxCheckBox = zend_register_list_destructors_ex(php_wxCheckBox_destruction_handler, NULL, le_wxCheckBox_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxWrapSizer_NAME , php_wxWrapSizer_functions);
+	char PHP_wxWrapSizer_name[] = "wxWrapSizer";
+	char le_wxWrapSizer_name[] = "native wxWrapSizer";
+	INIT_CLASS_ENTRY(ce, PHP_wxWrapSizer_name, php_wxWrapSizer_functions);
 	php_wxWrapSizer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxWrapSizer = zend_register_list_destructors_ex(php_wxWrapSizer_destruction_handler, NULL, le_wxWrapSizer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxBitmapButton_NAME , php_wxBitmapButton_functions);
+	char PHP_wxBitmapButton_name[] = "wxBitmapButton";
+	char le_wxBitmapButton_name[] = "native wxBitmapButton";
+	INIT_CLASS_ENTRY(ce, PHP_wxBitmapButton_name, php_wxBitmapButton_functions);
 	php_wxBitmapButton_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxBitmapButton = zend_register_list_destructors_ex(php_wxBitmapButton_destruction_handler, NULL, le_wxBitmapButton_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxTextEntry_NAME , php_wxTextEntry_functions);
+	char PHP_wxTextEntry_name[] = "wxTextEntry";
+	char le_wxTextEntry_name[] = "native wxTextEntry";
+	INIT_CLASS_ENTRY(ce, PHP_wxTextEntry_name, php_wxTextEntry_functions);
 	php_wxTextEntry_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxTextEntry = zend_register_list_destructors_ex(php_wxTextEntry_destruction_handler, NULL, le_wxTextEntry_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxTextCompleter_NAME , php_wxTextCompleter_functions);
+	char PHP_wxTextCompleter_name[] = "wxTextCompleter";
+	char le_wxTextCompleter_name[] = "native wxTextCompleter";
+	INIT_CLASS_ENTRY(ce, PHP_wxTextCompleter_name, php_wxTextCompleter_functions);
 	php_wxTextCompleter_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxTextCompleter = zend_register_list_destructors_ex(php_wxTextCompleter_destruction_handler, NULL, le_wxTextCompleter_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxTextCtrl_NAME , php_wxTextCtrl_functions);
+	char PHP_wxTextCtrl_name[] = "wxTextCtrl";
+	char le_wxTextCtrl_name[] = "native wxTextCtrl";
+	INIT_CLASS_ENTRY(ce, PHP_wxTextCtrl_name, php_wxTextCtrl_functions);
 	php_wxTextCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxTextCtrl = zend_register_list_destructors_ex(php_wxTextCtrl_destruction_handler, NULL, le_wxTextCtrl_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxTextAttr_NAME , php_wxTextAttr_functions);
+	char PHP_wxTextAttr_name[] = "wxTextAttr";
+	char le_wxTextAttr_name[] = "native wxTextAttr";
+	INIT_CLASS_ENTRY(ce, PHP_wxTextAttr_name, php_wxTextAttr_functions);
 	php_wxTextAttr_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxTextAttr = zend_register_list_destructors_ex(php_wxTextAttr_destruction_handler, NULL, le_wxTextAttr_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxTextEntryDialog_NAME , php_wxTextEntryDialog_functions);
+	char PHP_wxTextEntryDialog_name[] = "wxTextEntryDialog";
+	char le_wxTextEntryDialog_name[] = "native wxTextEntryDialog";
+	INIT_CLASS_ENTRY(ce, PHP_wxTextEntryDialog_name, php_wxTextEntryDialog_functions);
 	php_wxTextEntryDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxTextEntryDialog = zend_register_list_destructors_ex(php_wxTextEntryDialog_destruction_handler, NULL, le_wxTextEntryDialog_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxComboBox_NAME , php_wxComboBox_functions);
+	char PHP_wxComboBox_name[] = "wxComboBox";
+	char le_wxComboBox_name[] = "native wxComboBox";
+	INIT_CLASS_ENTRY(ce, PHP_wxComboBox_name, php_wxComboBox_functions);
 	php_wxComboBox_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxComboBox = zend_register_list_destructors_ex(php_wxComboBox_destruction_handler, NULL, le_wxComboBox_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxItemContainer_NAME , php_wxItemContainer_functions);
+	char PHP_wxItemContainer_name[] = "wxItemContainer";
+	char le_wxItemContainer_name[] = "native wxItemContainer";
+	INIT_CLASS_ENTRY(ce, PHP_wxItemContainer_name, php_wxItemContainer_functions);
 	php_wxItemContainer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxItemContainer = zend_register_list_destructors_ex(php_wxItemContainer_destruction_handler, NULL, le_wxItemContainer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxItemContainerImmutable_NAME , php_wxItemContainerImmutable_functions);
+	char PHP_wxItemContainerImmutable_name[] = "wxItemContainerImmutable";
+	char le_wxItemContainerImmutable_name[] = "native wxItemContainerImmutable";
+	INIT_CLASS_ENTRY(ce, PHP_wxItemContainerImmutable_name, php_wxItemContainerImmutable_functions);
 	php_wxItemContainerImmutable_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxItemContainerImmutable = zend_register_list_destructors_ex(php_wxItemContainerImmutable_destruction_handler, NULL, le_wxItemContainerImmutable_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxBitmapComboBox_NAME , php_wxBitmapComboBox_functions);
+	char PHP_wxBitmapComboBox_name[] = "wxBitmapComboBox";
+	char le_wxBitmapComboBox_name[] = "native wxBitmapComboBox";
+	INIT_CLASS_ENTRY(ce, PHP_wxBitmapComboBox_name, php_wxBitmapComboBox_functions);
 	php_wxBitmapComboBox_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxBitmapComboBox = zend_register_list_destructors_ex(php_wxBitmapComboBox_destruction_handler, NULL, le_wxBitmapComboBox_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxAuiToolBarEvent_NAME , php_wxAuiToolBarEvent_functions);
+	char PHP_wxAuiToolBarEvent_name[] = "wxAuiToolBarEvent";
+	char le_wxAuiToolBarEvent_name[] = "native wxAuiToolBarEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxAuiToolBarEvent_name, php_wxAuiToolBarEvent_functions);
 	php_wxAuiToolBarEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxAuiToolBarEvent = zend_register_list_destructors_ex(php_wxAuiToolBarEvent_destruction_handler, NULL, le_wxAuiToolBarEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxAuiToolBar_NAME , php_wxAuiToolBar_functions);
+	char PHP_wxAuiToolBar_name[] = "wxAuiToolBar";
+	char le_wxAuiToolBar_name[] = "native wxAuiToolBar";
+	INIT_CLASS_ENTRY(ce, PHP_wxAuiToolBar_name, php_wxAuiToolBar_functions);
 	php_wxAuiToolBar_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxAuiToolBar = zend_register_list_destructors_ex(php_wxAuiToolBar_destruction_handler, NULL, le_wxAuiToolBar_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxBannerWindow_NAME , php_wxBannerWindow_functions);
+	char PHP_wxBannerWindow_name[] = "wxBannerWindow";
+	char le_wxBannerWindow_name[] = "native wxBannerWindow";
+	INIT_CLASS_ENTRY(ce, PHP_wxBannerWindow_name, php_wxBannerWindow_functions);
 	php_wxBannerWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxBannerWindow = zend_register_list_destructors_ex(php_wxBannerWindow_destruction_handler, NULL, le_wxBannerWindow_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxChoice_NAME , php_wxChoice_functions);
+	char PHP_wxChoice_name[] = "wxChoice";
+	char le_wxChoice_name[] = "native wxChoice";
+	INIT_CLASS_ENTRY(ce, PHP_wxChoice_name, php_wxChoice_functions);
 	php_wxChoice_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxChoice = zend_register_list_destructors_ex(php_wxChoice_destruction_handler, NULL, le_wxChoice_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxListEvent_NAME , php_wxListEvent_functions);
+	char PHP_wxListEvent_name[] = "wxListEvent";
+	char le_wxListEvent_name[] = "native wxListEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxListEvent_name, php_wxListEvent_functions);
 	php_wxListEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxListEvent = zend_register_list_destructors_ex(php_wxListEvent_destruction_handler, NULL, le_wxListEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxListCtrl_NAME , php_wxListCtrl_functions);
+	char PHP_wxListCtrl_name[] = "wxListCtrl";
+	char le_wxListCtrl_name[] = "native wxListCtrl";
+	INIT_CLASS_ENTRY(ce, PHP_wxListCtrl_name, php_wxListCtrl_functions);
 	php_wxListCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxListCtrl = zend_register_list_destructors_ex(php_wxListCtrl_destruction_handler, NULL, le_wxListCtrl_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxListItemAttr_NAME , php_wxListItemAttr_functions);
+	char PHP_wxListItemAttr_name[] = "wxListItemAttr";
+	char le_wxListItemAttr_name[] = "native wxListItemAttr";
+	INIT_CLASS_ENTRY(ce, PHP_wxListItemAttr_name, php_wxListItemAttr_functions);
 	php_wxListItemAttr_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxListItemAttr = zend_register_list_destructors_ex(php_wxListItemAttr_destruction_handler, NULL, le_wxListItemAttr_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxListItem_NAME , php_wxListItem_functions);
+	char PHP_wxListItem_name[] = "wxListItem";
+	char le_wxListItem_name[] = "native wxListItem";
+	INIT_CLASS_ENTRY(ce, PHP_wxListItem_name, php_wxListItem_functions);
 	php_wxListItem_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxListItem = zend_register_list_destructors_ex(php_wxListItem_destruction_handler, NULL, le_wxListItem_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxListbook_NAME , php_wxListbook_functions);
+	char PHP_wxListbook_name[] = "wxListbook";
+	char le_wxListbook_name[] = "native wxListbook";
+	INIT_CLASS_ENTRY(ce, PHP_wxListbook_name, php_wxListbook_functions);
 	php_wxListbook_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxListbook = zend_register_list_destructors_ex(php_wxListbook_destruction_handler, NULL, le_wxListbook_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxChildFocusEvent_NAME , php_wxChildFocusEvent_functions);
+	char PHP_wxChildFocusEvent_name[] = "wxChildFocusEvent";
+	char le_wxChildFocusEvent_name[] = "native wxChildFocusEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxChildFocusEvent_name, php_wxChildFocusEvent_functions);
 	php_wxChildFocusEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxChildFocusEvent = zend_register_list_destructors_ex(php_wxChildFocusEvent_destruction_handler, NULL, le_wxChildFocusEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxChoicebook_NAME , php_wxChoicebook_functions);
+	char PHP_wxChoicebook_name[] = "wxChoicebook";
+	char le_wxChoicebook_name[] = "native wxChoicebook";
+	INIT_CLASS_ENTRY(ce, PHP_wxChoicebook_name, php_wxChoicebook_functions);
 	php_wxChoicebook_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxChoicebook = zend_register_list_destructors_ex(php_wxChoicebook_destruction_handler, NULL, le_wxChoicebook_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxRadioBox_NAME , php_wxRadioBox_functions);
+	char PHP_wxRadioBox_name[] = "wxRadioBox";
+	char le_wxRadioBox_name[] = "native wxRadioBox";
+	INIT_CLASS_ENTRY(ce, PHP_wxRadioBox_name, php_wxRadioBox_functions);
 	php_wxRadioBox_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxRadioBox = zend_register_list_destructors_ex(php_wxRadioBox_destruction_handler, NULL, le_wxRadioBox_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxRadioButton_NAME , php_wxRadioButton_functions);
+	char PHP_wxRadioButton_name[] = "wxRadioButton";
+	char le_wxRadioButton_name[] = "native wxRadioButton";
+	INIT_CLASS_ENTRY(ce, PHP_wxRadioButton_name, php_wxRadioButton_functions);
 	php_wxRadioButton_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxRadioButton = zend_register_list_destructors_ex(php_wxRadioButton_destruction_handler, NULL, le_wxRadioButton_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxRearrangeCtrl_NAME , php_wxRearrangeCtrl_functions);
+	char PHP_wxRearrangeCtrl_name[] = "wxRearrangeCtrl";
+	char le_wxRearrangeCtrl_name[] = "native wxRearrangeCtrl";
+	INIT_CLASS_ENTRY(ce, PHP_wxRearrangeCtrl_name, php_wxRearrangeCtrl_functions);
 	php_wxRearrangeCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxRearrangeCtrl = zend_register_list_destructors_ex(php_wxRearrangeCtrl_destruction_handler, NULL, le_wxRearrangeCtrl_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxRearrangeDialog_NAME , php_wxRearrangeDialog_functions);
+	char PHP_wxRearrangeDialog_name[] = "wxRearrangeDialog";
+	char le_wxRearrangeDialog_name[] = "native wxRearrangeDialog";
+	INIT_CLASS_ENTRY(ce, PHP_wxRearrangeDialog_name, php_wxRearrangeDialog_functions);
 	php_wxRearrangeDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxRearrangeDialog = zend_register_list_destructors_ex(php_wxRearrangeDialog_destruction_handler, NULL, le_wxRearrangeDialog_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxRearrangeList_NAME , php_wxRearrangeList_functions);
+	char PHP_wxRearrangeList_name[] = "wxRearrangeList";
+	char le_wxRearrangeList_name[] = "native wxRearrangeList";
+	INIT_CLASS_ENTRY(ce, PHP_wxRearrangeList_name, php_wxRearrangeList_functions);
 	php_wxRearrangeList_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxRearrangeList = zend_register_list_destructors_ex(php_wxRearrangeList_destruction_handler, NULL, le_wxRearrangeList_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxSlider_NAME , php_wxSlider_functions);
+	char PHP_wxSlider_name[] = "wxSlider";
+	char le_wxSlider_name[] = "native wxSlider";
+	INIT_CLASS_ENTRY(ce, PHP_wxSlider_name, php_wxSlider_functions);
 	php_wxSlider_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxSlider = zend_register_list_destructors_ex(php_wxSlider_destruction_handler, NULL, le_wxSlider_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxSpinCtrl_NAME , php_wxSpinCtrl_functions);
+	char PHP_wxSpinCtrl_name[] = "wxSpinCtrl";
+	char le_wxSpinCtrl_name[] = "native wxSpinCtrl";
+	INIT_CLASS_ENTRY(ce, PHP_wxSpinCtrl_name, php_wxSpinCtrl_functions);
 	php_wxSpinCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxSpinCtrl = zend_register_list_destructors_ex(php_wxSpinCtrl_destruction_handler, NULL, le_wxSpinCtrl_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxSpinButton_NAME , php_wxSpinButton_functions);
+	char PHP_wxSpinButton_name[] = "wxSpinButton";
+	char le_wxSpinButton_name[] = "native wxSpinButton";
+	INIT_CLASS_ENTRY(ce, PHP_wxSpinButton_name, php_wxSpinButton_functions);
 	php_wxSpinButton_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxSpinButton = zend_register_list_destructors_ex(php_wxSpinButton_destruction_handler, NULL, le_wxSpinButton_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxSpinEvent_NAME , php_wxSpinEvent_functions);
+	char PHP_wxSpinEvent_name[] = "wxSpinEvent";
+	char le_wxSpinEvent_name[] = "native wxSpinEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxSpinEvent_name, php_wxSpinEvent_functions);
 	php_wxSpinEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxSpinEvent = zend_register_list_destructors_ex(php_wxSpinEvent_destruction_handler, NULL, le_wxSpinEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxSplitterEvent_NAME , php_wxSplitterEvent_functions);
+	char PHP_wxSplitterEvent_name[] = "wxSplitterEvent";
+	char le_wxSplitterEvent_name[] = "native wxSplitterEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxSplitterEvent_name, php_wxSplitterEvent_functions);
 	php_wxSplitterEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxSplitterEvent = zend_register_list_destructors_ex(php_wxSplitterEvent_destruction_handler, NULL, le_wxSplitterEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxSplashScreen_NAME , php_wxSplashScreen_functions);
+	char PHP_wxSplashScreen_name[] = "wxSplashScreen";
+	char le_wxSplashScreen_name[] = "native wxSplashScreen";
+	INIT_CLASS_ENTRY(ce, PHP_wxSplashScreen_name, php_wxSplashScreen_functions);
 	php_wxSplashScreen_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxSplashScreen = zend_register_list_destructors_ex(php_wxSplashScreen_destruction_handler, NULL, le_wxSplashScreen_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxSizeEvent_NAME , php_wxSizeEvent_functions);
+	char PHP_wxSizeEvent_name[] = "wxSizeEvent";
+	char le_wxSizeEvent_name[] = "native wxSizeEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxSizeEvent_name, php_wxSizeEvent_functions);
 	php_wxSizeEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxSizeEvent = zend_register_list_destructors_ex(php_wxSizeEvent_destruction_handler, NULL, le_wxSizeEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGauge_NAME , php_wxGauge_functions);
+	char PHP_wxGauge_name[] = "wxGauge";
+	char le_wxGauge_name[] = "native wxGauge";
+	INIT_CLASS_ENTRY(ce, PHP_wxGauge_name, php_wxGauge_functions);
 	php_wxGauge_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGauge = zend_register_list_destructors_ex(php_wxGauge_destruction_handler, NULL, le_wxGauge_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHtmlWindow_NAME , php_wxHtmlWindow_functions);
+	char PHP_wxHtmlWindow_name[] = "wxHtmlWindow";
+	char le_wxHtmlWindow_name[] = "native wxHtmlWindow";
+	INIT_CLASS_ENTRY(ce, PHP_wxHtmlWindow_name, php_wxHtmlWindow_functions);
 	php_wxHtmlWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHtmlWindow = zend_register_list_destructors_ex(php_wxHtmlWindow_destruction_handler, NULL, le_wxHtmlWindow_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHtmlContainerCell_NAME , php_wxHtmlContainerCell_functions);
+	char PHP_wxHtmlContainerCell_name[] = "wxHtmlContainerCell";
+	char le_wxHtmlContainerCell_name[] = "native wxHtmlContainerCell";
+	INIT_CLASS_ENTRY(ce, PHP_wxHtmlContainerCell_name, php_wxHtmlContainerCell_functions);
 	php_wxHtmlContainerCell_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHtmlContainerCell = zend_register_list_destructors_ex(php_wxHtmlContainerCell_destruction_handler, NULL, le_wxHtmlContainerCell_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHtmlCell_NAME , php_wxHtmlCell_functions);
+	char PHP_wxHtmlCell_name[] = "wxHtmlCell";
+	char le_wxHtmlCell_name[] = "native wxHtmlCell";
+	INIT_CLASS_ENTRY(ce, PHP_wxHtmlCell_name, php_wxHtmlCell_functions);
 	php_wxHtmlCell_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHtmlCell = zend_register_list_destructors_ex(php_wxHtmlCell_destruction_handler, NULL, le_wxHtmlCell_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHtmlCellEvent_NAME , php_wxHtmlCellEvent_functions);
+	char PHP_wxHtmlCellEvent_name[] = "wxHtmlCellEvent";
+	char le_wxHtmlCellEvent_name[] = "native wxHtmlCellEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxHtmlCellEvent_name, php_wxHtmlCellEvent_functions);
 	php_wxHtmlCellEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHtmlCellEvent = zend_register_list_destructors_ex(php_wxHtmlCellEvent_destruction_handler, NULL, le_wxHtmlCellEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHtmlColourCell_NAME , php_wxHtmlColourCell_functions);
+	char PHP_wxHtmlColourCell_name[] = "wxHtmlColourCell";
+	char le_wxHtmlColourCell_name[] = "native wxHtmlColourCell";
+	INIT_CLASS_ENTRY(ce, PHP_wxHtmlColourCell_name, php_wxHtmlColourCell_functions);
 	php_wxHtmlColourCell_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHtmlColourCell = zend_register_list_destructors_ex(php_wxHtmlColourCell_destruction_handler, NULL, le_wxHtmlColourCell_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHtmlEasyPrinting_NAME , php_wxHtmlEasyPrinting_functions);
+	char PHP_wxHtmlEasyPrinting_name[] = "wxHtmlEasyPrinting";
+	char le_wxHtmlEasyPrinting_name[] = "native wxHtmlEasyPrinting";
+	INIT_CLASS_ENTRY(ce, PHP_wxHtmlEasyPrinting_name, php_wxHtmlEasyPrinting_functions);
 	php_wxHtmlEasyPrinting_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHtmlEasyPrinting = zend_register_list_destructors_ex(php_wxHtmlEasyPrinting_destruction_handler, NULL, le_wxHtmlEasyPrinting_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHtmlLinkEvent_NAME , php_wxHtmlLinkEvent_functions);
+	char PHP_wxHtmlLinkEvent_name[] = "wxHtmlLinkEvent";
+	char le_wxHtmlLinkEvent_name[] = "native wxHtmlLinkEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxHtmlLinkEvent_name, php_wxHtmlLinkEvent_functions);
 	php_wxHtmlLinkEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHtmlLinkEvent = zend_register_list_destructors_ex(php_wxHtmlLinkEvent_destruction_handler, NULL, le_wxHtmlLinkEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHtmlLinkInfo_NAME , php_wxHtmlLinkInfo_functions);
+	char PHP_wxHtmlLinkInfo_name[] = "wxHtmlLinkInfo";
+	char le_wxHtmlLinkInfo_name[] = "native wxHtmlLinkInfo";
+	INIT_CLASS_ENTRY(ce, PHP_wxHtmlLinkInfo_name, php_wxHtmlLinkInfo_functions);
 	php_wxHtmlLinkInfo_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHtmlLinkInfo = zend_register_list_destructors_ex(php_wxHtmlLinkInfo_destruction_handler, NULL, le_wxHtmlLinkInfo_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxMouseEvent_NAME , php_wxMouseEvent_functions);
+	char PHP_wxMouseEvent_name[] = "wxMouseEvent";
+	char le_wxMouseEvent_name[] = "native wxMouseEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxMouseEvent_name, php_wxMouseEvent_functions);
 	php_wxMouseEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxMouseEvent = zend_register_list_destructors_ex(php_wxMouseEvent_destruction_handler, NULL, le_wxMouseEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxMouseState_NAME , php_wxMouseState_functions);
+	char PHP_wxMouseState_name[] = "wxMouseState";
+	char le_wxMouseState_name[] = "native wxMouseState";
+	INIT_CLASS_ENTRY(ce, PHP_wxMouseState_name, php_wxMouseState_functions);
 	php_wxMouseState_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxMouseState = zend_register_list_destructors_ex(php_wxMouseState_destruction_handler, NULL, le_wxMouseState_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxMoveEvent_NAME , php_wxMoveEvent_functions);
+	char PHP_wxMoveEvent_name[] = "wxMoveEvent";
+	char le_wxMoveEvent_name[] = "native wxMoveEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxMoveEvent_name, php_wxMoveEvent_functions);
 	php_wxMoveEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxMoveEvent = zend_register_list_destructors_ex(php_wxMoveEvent_destruction_handler, NULL, le_wxMoveEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxMouseEventsManager_NAME , php_wxMouseEventsManager_functions);
+	char PHP_wxMouseEventsManager_name[] = "wxMouseEventsManager";
+	char le_wxMouseEventsManager_name[] = "native wxMouseEventsManager";
+	INIT_CLASS_ENTRY(ce, PHP_wxMouseEventsManager_name, php_wxMouseEventsManager_functions);
 	php_wxMouseEventsManager_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxMouseEventsManager = zend_register_list_destructors_ex(php_wxMouseEventsManager_destruction_handler, NULL, le_wxMouseEventsManager_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxMessageDialog_NAME , php_wxMessageDialog_functions);
+	char PHP_wxMessageDialog_name[] = "wxMessageDialog";
+	char le_wxMessageDialog_name[] = "native wxMessageDialog";
+	INIT_CLASS_ENTRY(ce, PHP_wxMessageDialog_name, php_wxMessageDialog_functions);
 	php_wxMessageDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxMessageDialog = zend_register_list_destructors_ex(php_wxMessageDialog_destruction_handler, NULL, le_wxMessageDialog_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHtmlListBox_NAME , php_wxHtmlListBox_functions);
+	char PHP_wxHtmlListBox_name[] = "wxHtmlListBox";
+	char le_wxHtmlListBox_name[] = "native wxHtmlListBox";
+	INIT_CLASS_ENTRY(ce, PHP_wxHtmlListBox_name, php_wxHtmlListBox_functions);
 	php_wxHtmlListBox_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHtmlListBox = zend_register_list_destructors_ex(php_wxHtmlListBox_destruction_handler, NULL, le_wxHtmlListBox_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxVListBox_NAME , php_wxVListBox_functions);
+	char PHP_wxVListBox_name[] = "wxVListBox";
+	char le_wxVListBox_name[] = "native wxVListBox";
+	INIT_CLASS_ENTRY(ce, PHP_wxVListBox_name, php_wxVListBox_functions);
 	php_wxVListBox_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxVListBox = zend_register_list_destructors_ex(php_wxVListBox_destruction_handler, NULL, le_wxVListBox_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHtmlTag_NAME , php_wxHtmlTag_functions);
+	char PHP_wxHtmlTag_name[] = "wxHtmlTag";
+	char le_wxHtmlTag_name[] = "native wxHtmlTag";
+	INIT_CLASS_ENTRY(ce, PHP_wxHtmlTag_name, php_wxHtmlTag_functions);
 	php_wxHtmlTag_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHtmlTag = zend_register_list_destructors_ex(php_wxHtmlTag_destruction_handler, NULL, le_wxHtmlTag_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHyperlinkCtrl_NAME , php_wxHyperlinkCtrl_functions);
+	char PHP_wxHyperlinkCtrl_name[] = "wxHyperlinkCtrl";
+	char le_wxHyperlinkCtrl_name[] = "native wxHyperlinkCtrl";
+	INIT_CLASS_ENTRY(ce, PHP_wxHyperlinkCtrl_name, php_wxHyperlinkCtrl_functions);
 	php_wxHyperlinkCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHyperlinkCtrl = zend_register_list_destructors_ex(php_wxHyperlinkCtrl_destruction_handler, NULL, le_wxHyperlinkCtrl_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHyperlinkEvent_NAME , php_wxHyperlinkEvent_functions);
+	char PHP_wxHyperlinkEvent_name[] = "wxHyperlinkEvent";
+	char le_wxHyperlinkEvent_name[] = "native wxHyperlinkEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxHyperlinkEvent_name, php_wxHyperlinkEvent_functions);
 	php_wxHyperlinkEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHyperlinkEvent = zend_register_list_destructors_ex(php_wxHyperlinkEvent_destruction_handler, NULL, le_wxHyperlinkEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxCursor_NAME , php_wxCursor_functions);
+	char PHP_wxCursor_name[] = "wxCursor";
+	char le_wxCursor_name[] = "native wxCursor";
+	INIT_CLASS_ENTRY(ce, PHP_wxCursor_name, php_wxCursor_functions);
 	php_wxCursor_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxCursor = zend_register_list_destructors_ex(php_wxCursor_destruction_handler, NULL, le_wxCursor_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxToggleButton_NAME , php_wxToggleButton_functions);
+	char PHP_wxToggleButton_name[] = "wxToggleButton";
+	char le_wxToggleButton_name[] = "native wxToggleButton";
+	INIT_CLASS_ENTRY(ce, PHP_wxToggleButton_name, php_wxToggleButton_functions);
 	php_wxToggleButton_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxToggleButton = zend_register_list_destructors_ex(php_wxToggleButton_destruction_handler, NULL, le_wxToggleButton_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxTimer_NAME , php_wxTimer_functions);
+	char PHP_wxTimer_name[] = "wxTimer";
+	char le_wxTimer_name[] = "native wxTimer";
+	INIT_CLASS_ENTRY(ce, PHP_wxTimer_name, php_wxTimer_functions);
 	php_wxTimer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxTimer = zend_register_list_destructors_ex(php_wxTimer_destruction_handler, NULL, le_wxTimer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxTimerEvent_NAME , php_wxTimerEvent_functions);
+	char PHP_wxTimerEvent_name[] = "wxTimerEvent";
+	char le_wxTimerEvent_name[] = "native wxTimerEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxTimerEvent_name, php_wxTimerEvent_functions);
 	php_wxTimerEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxTimerEvent = zend_register_list_destructors_ex(php_wxTimerEvent_destruction_handler, NULL, le_wxTimerEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxThreadEvent_NAME , php_wxThreadEvent_functions);
+	char PHP_wxThreadEvent_name[] = "wxThreadEvent";
+	char le_wxThreadEvent_name[] = "native wxThreadEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxThreadEvent_name, php_wxThreadEvent_functions);
 	php_wxThreadEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxThreadEvent = zend_register_list_destructors_ex(php_wxThreadEvent_destruction_handler, NULL, le_wxThreadEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxSearchCtrl_NAME , php_wxSearchCtrl_functions);
+	char PHP_wxSearchCtrl_name[] = "wxSearchCtrl";
+	char le_wxSearchCtrl_name[] = "native wxSearchCtrl";
+	INIT_CLASS_ENTRY(ce, PHP_wxSearchCtrl_name, php_wxSearchCtrl_functions);
 	php_wxSearchCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxSearchCtrl = zend_register_list_destructors_ex(php_wxSearchCtrl_destruction_handler, NULL, le_wxSearchCtrl_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxColourPickerEvent_NAME , php_wxColourPickerEvent_functions);
+	char PHP_wxColourPickerEvent_name[] = "wxColourPickerEvent";
+	char le_wxColourPickerEvent_name[] = "native wxColourPickerEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxColourPickerEvent_name, php_wxColourPickerEvent_functions);
 	php_wxColourPickerEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxColourPickerEvent = zend_register_list_destructors_ex(php_wxColourPickerEvent_destruction_handler, NULL, le_wxColourPickerEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxColourPickerCtrl_NAME , php_wxColourPickerCtrl_functions);
+	char PHP_wxColourPickerCtrl_name[] = "wxColourPickerCtrl";
+	char le_wxColourPickerCtrl_name[] = "native wxColourPickerCtrl";
+	INIT_CLASS_ENTRY(ce, PHP_wxColourPickerCtrl_name, php_wxColourPickerCtrl_functions);
 	php_wxColourPickerCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxColourPickerCtrl = zend_register_list_destructors_ex(php_wxColourPickerCtrl_destruction_handler, NULL, le_wxColourPickerCtrl_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFontPickerCtrl_NAME , php_wxFontPickerCtrl_functions);
+	char PHP_wxFontPickerCtrl_name[] = "wxFontPickerCtrl";
+	char le_wxFontPickerCtrl_name[] = "native wxFontPickerCtrl";
+	INIT_CLASS_ENTRY(ce, PHP_wxFontPickerCtrl_name, php_wxFontPickerCtrl_functions);
 	php_wxFontPickerCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFontPickerCtrl = zend_register_list_destructors_ex(php_wxFontPickerCtrl_destruction_handler, NULL, le_wxFontPickerCtrl_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFontPickerEvent_NAME , php_wxFontPickerEvent_functions);
+	char PHP_wxFontPickerEvent_name[] = "wxFontPickerEvent";
+	char le_wxFontPickerEvent_name[] = "native wxFontPickerEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxFontPickerEvent_name, php_wxFontPickerEvent_functions);
 	php_wxFontPickerEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFontPickerEvent = zend_register_list_destructors_ex(php_wxFontPickerEvent_destruction_handler, NULL, le_wxFontPickerEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFilePickerCtrl_NAME , php_wxFilePickerCtrl_functions);
+	char PHP_wxFilePickerCtrl_name[] = "wxFilePickerCtrl";
+	char le_wxFilePickerCtrl_name[] = "native wxFilePickerCtrl";
+	INIT_CLASS_ENTRY(ce, PHP_wxFilePickerCtrl_name, php_wxFilePickerCtrl_functions);
 	php_wxFilePickerCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFilePickerCtrl = zend_register_list_destructors_ex(php_wxFilePickerCtrl_destruction_handler, NULL, le_wxFilePickerCtrl_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFindReplaceDialog_NAME , php_wxFindReplaceDialog_functions);
+	char PHP_wxFindReplaceDialog_name[] = "wxFindReplaceDialog";
+	char le_wxFindReplaceDialog_name[] = "native wxFindReplaceDialog";
+	INIT_CLASS_ENTRY(ce, PHP_wxFindReplaceDialog_name, php_wxFindReplaceDialog_functions);
 	php_wxFindReplaceDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFindReplaceDialog = zend_register_list_destructors_ex(php_wxFindReplaceDialog_destruction_handler, NULL, le_wxFindReplaceDialog_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFindReplaceData_NAME , php_wxFindReplaceData_functions);
+	char PHP_wxFindReplaceData_name[] = "wxFindReplaceData";
+	char le_wxFindReplaceData_name[] = "native wxFindReplaceData";
+	INIT_CLASS_ENTRY(ce, PHP_wxFindReplaceData_name, php_wxFindReplaceData_functions);
 	php_wxFindReplaceData_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFindReplaceData = zend_register_list_destructors_ex(php_wxFindReplaceData_destruction_handler, NULL, le_wxFindReplaceData_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDirPickerCtrl_NAME , php_wxDirPickerCtrl_functions);
+	char PHP_wxDirPickerCtrl_name[] = "wxDirPickerCtrl";
+	char le_wxDirPickerCtrl_name[] = "native wxDirPickerCtrl";
+	INIT_CLASS_ENTRY(ce, PHP_wxDirPickerCtrl_name, php_wxDirPickerCtrl_functions);
 	php_wxDirPickerCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDirPickerCtrl = zend_register_list_destructors_ex(php_wxDirPickerCtrl_destruction_handler, NULL, le_wxDirPickerCtrl_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDirDialog_NAME , php_wxDirDialog_functions);
+	char PHP_wxDirDialog_name[] = "wxDirDialog";
+	char le_wxDirDialog_name[] = "native wxDirDialog";
+	INIT_CLASS_ENTRY(ce, PHP_wxDirDialog_name, php_wxDirDialog_functions);
 	php_wxDirDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDirDialog = zend_register_list_destructors_ex(php_wxDirDialog_destruction_handler, NULL, le_wxDirDialog_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxSpinDoubleEvent_NAME , php_wxSpinDoubleEvent_functions);
+	char PHP_wxSpinDoubleEvent_name[] = "wxSpinDoubleEvent";
+	char le_wxSpinDoubleEvent_name[] = "native wxSpinDoubleEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxSpinDoubleEvent_name, php_wxSpinDoubleEvent_functions);
 	php_wxSpinDoubleEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxSpinDoubleEvent = zend_register_list_destructors_ex(php_wxSpinDoubleEvent_destruction_handler, NULL, le_wxSpinDoubleEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxSpinCtrlDouble_NAME , php_wxSpinCtrlDouble_functions);
+	char PHP_wxSpinCtrlDouble_name[] = "wxSpinCtrlDouble";
+	char le_wxSpinCtrlDouble_name[] = "native wxSpinCtrlDouble";
+	INIT_CLASS_ENTRY(ce, PHP_wxSpinCtrlDouble_name, php_wxSpinCtrlDouble_functions);
 	php_wxSpinCtrlDouble_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxSpinCtrlDouble = zend_register_list_destructors_ex(php_wxSpinCtrlDouble_destruction_handler, NULL, le_wxSpinCtrlDouble_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGenericDirCtrl_NAME , php_wxGenericDirCtrl_functions);
+	char PHP_wxGenericDirCtrl_name[] = "wxGenericDirCtrl";
+	char le_wxGenericDirCtrl_name[] = "native wxGenericDirCtrl";
+	INIT_CLASS_ENTRY(ce, PHP_wxGenericDirCtrl_name, php_wxGenericDirCtrl_functions);
 	php_wxGenericDirCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGenericDirCtrl = zend_register_list_destructors_ex(php_wxGenericDirCtrl_destruction_handler, NULL, le_wxGenericDirCtrl_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFileName_NAME , php_wxFileName_functions);
+	char PHP_wxFileName_name[] = "wxFileName";
+	char le_wxFileName_name[] = "native wxFileName";
+	INIT_CLASS_ENTRY(ce, PHP_wxFileName_name, php_wxFileName_functions);
 	php_wxFileName_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFileName = zend_register_list_destructors_ex(php_wxFileName_destruction_handler, NULL, le_wxFileName_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridSizeEvent_NAME , php_wxGridSizeEvent_functions);
+	char PHP_wxGridSizeEvent_name[] = "wxGridSizeEvent";
+	char le_wxGridSizeEvent_name[] = "native wxGridSizeEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridSizeEvent_name, php_wxGridSizeEvent_functions);
 	php_wxGridSizeEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridSizeEvent = zend_register_list_destructors_ex(php_wxGridSizeEvent_destruction_handler, NULL, le_wxGridSizeEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridSizer_NAME , php_wxGridSizer_functions);
+	char PHP_wxGridSizer_name[] = "wxGridSizer";
+	char le_wxGridSizer_name[] = "native wxGridSizer";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridSizer_name, php_wxGridSizer_functions);
 	php_wxGridSizer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridSizer = zend_register_list_destructors_ex(php_wxGridSizer_destruction_handler, NULL, le_wxGridSizer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFlexGridSizer_NAME , php_wxFlexGridSizer_functions);
+	char PHP_wxFlexGridSizer_name[] = "wxFlexGridSizer";
+	char le_wxFlexGridSizer_name[] = "native wxFlexGridSizer";
+	INIT_CLASS_ENTRY(ce, PHP_wxFlexGridSizer_name, php_wxFlexGridSizer_functions);
 	php_wxFlexGridSizer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFlexGridSizer = zend_register_list_destructors_ex(php_wxFlexGridSizer_destruction_handler, NULL, le_wxFlexGridSizer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridBagSizer_NAME , php_wxGridBagSizer_functions);
+	char PHP_wxGridBagSizer_name[] = "wxGridBagSizer";
+	char le_wxGridBagSizer_name[] = "native wxGridBagSizer";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridBagSizer_name, php_wxGridBagSizer_functions);
 	php_wxGridBagSizer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridBagSizer = zend_register_list_destructors_ex(php_wxGridBagSizer_destruction_handler, NULL, le_wxGridBagSizer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxStdDialogButtonSizer_NAME , php_wxStdDialogButtonSizer_functions);
+	char PHP_wxStdDialogButtonSizer_name[] = "wxStdDialogButtonSizer";
+	char le_wxStdDialogButtonSizer_name[] = "native wxStdDialogButtonSizer";
+	INIT_CLASS_ENTRY(ce, PHP_wxStdDialogButtonSizer_name, php_wxStdDialogButtonSizer_functions);
 	php_wxStdDialogButtonSizer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxStdDialogButtonSizer = zend_register_list_destructors_ex(php_wxStdDialogButtonSizer_destruction_handler, NULL, le_wxStdDialogButtonSizer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxScrollEvent_NAME , php_wxScrollEvent_functions);
+	char PHP_wxScrollEvent_name[] = "wxScrollEvent";
+	char le_wxScrollEvent_name[] = "native wxScrollEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxScrollEvent_name, php_wxScrollEvent_functions);
 	php_wxScrollEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxScrollEvent = zend_register_list_destructors_ex(php_wxScrollEvent_destruction_handler, NULL, le_wxScrollEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxScrollWinEvent_NAME , php_wxScrollWinEvent_functions);
+	char PHP_wxScrollWinEvent_name[] = "wxScrollWinEvent";
+	char le_wxScrollWinEvent_name[] = "native wxScrollWinEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxScrollWinEvent_name, php_wxScrollWinEvent_functions);
 	php_wxScrollWinEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxScrollWinEvent = zend_register_list_destructors_ex(php_wxScrollWinEvent_destruction_handler, NULL, le_wxScrollWinEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxNotebook_NAME , php_wxNotebook_functions);
+	char PHP_wxNotebook_name[] = "wxNotebook";
+	char le_wxNotebook_name[] = "native wxNotebook";
+	INIT_CLASS_ENTRY(ce, PHP_wxNotebook_name, php_wxNotebook_functions);
 	php_wxNotebook_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxNotebook = zend_register_list_destructors_ex(php_wxNotebook_destruction_handler, NULL, le_wxNotebook_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDialog_NAME , php_wxDialog_functions);
+	char PHP_wxDialog_name[] = "wxDialog";
+	char le_wxDialog_name[] = "native wxDialog";
+	INIT_CLASS_ENTRY(ce, PHP_wxDialog_name, php_wxDialog_functions);
 	php_wxDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDialog = zend_register_list_destructors_ex(php_wxDialog_destruction_handler, NULL, le_wxDialog_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxSysColourChangedEvent_NAME , php_wxSysColourChangedEvent_functions);
+	char PHP_wxSysColourChangedEvent_name[] = "wxSysColourChangedEvent";
+	char le_wxSysColourChangedEvent_name[] = "native wxSysColourChangedEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxSysColourChangedEvent_name, php_wxSysColourChangedEvent_functions);
 	php_wxSysColourChangedEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxSysColourChangedEvent = zend_register_list_destructors_ex(php_wxSysColourChangedEvent_destruction_handler, NULL, le_wxSysColourChangedEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxSymbolPickerDialog_NAME , php_wxSymbolPickerDialog_functions);
+	char PHP_wxSymbolPickerDialog_name[] = "wxSymbolPickerDialog";
+	char le_wxSymbolPickerDialog_name[] = "native wxSymbolPickerDialog";
+	INIT_CLASS_ENTRY(ce, PHP_wxSymbolPickerDialog_name, php_wxSymbolPickerDialog_functions);
 	php_wxSymbolPickerDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxSymbolPickerDialog = zend_register_list_destructors_ex(php_wxSymbolPickerDialog_destruction_handler, NULL, le_wxSymbolPickerDialog_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGBPosition_NAME , php_wxGBPosition_functions);
+	char PHP_wxGBPosition_name[] = "wxGBPosition";
+	char le_wxGBPosition_name[] = "native wxGBPosition";
+	INIT_CLASS_ENTRY(ce, PHP_wxGBPosition_name, php_wxGBPosition_functions);
 	php_wxGBPosition_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGBPosition = zend_register_list_destructors_ex(php_wxGBPosition_destruction_handler, NULL, le_wxGBPosition_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGBSpan_NAME , php_wxGBSpan_functions);
+	char PHP_wxGBSpan_name[] = "wxGBSpan";
+	char le_wxGBSpan_name[] = "native wxGBSpan";
+	INIT_CLASS_ENTRY(ce, PHP_wxGBSpan_name, php_wxGBSpan_functions);
 	php_wxGBSpan_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGBSpan = zend_register_list_destructors_ex(php_wxGBSpan_destruction_handler, NULL, le_wxGBSpan_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGBSizerItem_NAME , php_wxGBSizerItem_functions);
+	char PHP_wxGBSizerItem_name[] = "wxGBSizerItem";
+	char le_wxGBSizerItem_name[] = "native wxGBSizerItem";
+	INIT_CLASS_ENTRY(ce, PHP_wxGBSizerItem_name, php_wxGBSizerItem_functions);
 	php_wxGBSizerItem_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGBSizerItem = zend_register_list_destructors_ex(php_wxGBSizerItem_destruction_handler, NULL, le_wxGBSizerItem_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPopupWindow_NAME , php_wxPopupWindow_functions);
+	char PHP_wxPopupWindow_name[] = "wxPopupWindow";
+	char le_wxPopupWindow_name[] = "native wxPopupWindow";
+	INIT_CLASS_ENTRY(ce, PHP_wxPopupWindow_name, php_wxPopupWindow_functions);
 	php_wxPopupWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPopupWindow = zend_register_list_destructors_ex(php_wxPopupWindow_destruction_handler, NULL, le_wxPopupWindow_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxMDIChildFrame_NAME , php_wxMDIChildFrame_functions);
+	char PHP_wxMDIChildFrame_name[] = "wxMDIChildFrame";
+	char le_wxMDIChildFrame_name[] = "native wxMDIChildFrame";
+	INIT_CLASS_ENTRY(ce, PHP_wxMDIChildFrame_name, php_wxMDIChildFrame_functions);
 	php_wxMDIChildFrame_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxMDIChildFrame = zend_register_list_destructors_ex(php_wxMDIChildFrame_destruction_handler, NULL, le_wxMDIChildFrame_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxMDIClientWindow_NAME , php_wxMDIClientWindow_functions);
+	char PHP_wxMDIClientWindow_name[] = "wxMDIClientWindow";
+	char le_wxMDIClientWindow_name[] = "native wxMDIClientWindow";
+	INIT_CLASS_ENTRY(ce, PHP_wxMDIClientWindow_name, php_wxMDIClientWindow_functions);
 	php_wxMDIClientWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxMDIClientWindow = zend_register_list_destructors_ex(php_wxMDIClientWindow_destruction_handler, NULL, le_wxMDIClientWindow_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxMDIParentFrame_NAME , php_wxMDIParentFrame_functions);
+	char PHP_wxMDIParentFrame_name[] = "wxMDIParentFrame";
+	char le_wxMDIParentFrame_name[] = "native wxMDIParentFrame";
+	INIT_CLASS_ENTRY(ce, PHP_wxMDIParentFrame_name, php_wxMDIParentFrame_functions);
 	php_wxMDIParentFrame_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxMDIParentFrame = zend_register_list_destructors_ex(php_wxMDIParentFrame_destruction_handler, NULL, le_wxMDIParentFrame_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxMiniFrame_NAME , php_wxMiniFrame_functions);
+	char PHP_wxMiniFrame_name[] = "wxMiniFrame";
+	char le_wxMiniFrame_name[] = "native wxMiniFrame";
+	INIT_CLASS_ENTRY(ce, PHP_wxMiniFrame_name, php_wxMiniFrame_functions);
 	php_wxMiniFrame_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxMiniFrame = zend_register_list_destructors_ex(php_wxMiniFrame_destruction_handler, NULL, le_wxMiniFrame_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPropertySheetDialog_NAME , php_wxPropertySheetDialog_functions);
+	char PHP_wxPropertySheetDialog_name[] = "wxPropertySheetDialog";
+	char le_wxPropertySheetDialog_name[] = "native wxPropertySheetDialog";
+	INIT_CLASS_ENTRY(ce, PHP_wxPropertySheetDialog_name, php_wxPropertySheetDialog_functions);
 	php_wxPropertySheetDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPropertySheetDialog = zend_register_list_destructors_ex(php_wxPropertySheetDialog_destruction_handler, NULL, le_wxPropertySheetDialog_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxWizard_NAME , php_wxWizard_functions);
+	char PHP_wxWizard_name[] = "wxWizard";
+	char le_wxWizard_name[] = "native wxWizard";
+	INIT_CLASS_ENTRY(ce, PHP_wxWizard_name, php_wxWizard_functions);
 	php_wxWizard_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxWizard = zend_register_list_destructors_ex(php_wxWizard_destruction_handler, NULL, le_wxWizard_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxWizardEvent_NAME , php_wxWizardEvent_functions);
+	char PHP_wxWizardEvent_name[] = "wxWizardEvent";
+	char le_wxWizardEvent_name[] = "native wxWizardEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxWizardEvent_name, php_wxWizardEvent_functions);
 	php_wxWizardEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxWizardEvent = zend_register_list_destructors_ex(php_wxWizardEvent_destruction_handler, NULL, le_wxWizardEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxWizardPage_NAME , php_wxWizardPage_functions);
+	char PHP_wxWizardPage_name[] = "wxWizardPage";
+	char le_wxWizardPage_name[] = "native wxWizardPage";
+	INIT_CLASS_ENTRY(ce, PHP_wxWizardPage_name, php_wxWizardPage_functions);
 	php_wxWizardPage_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxWizardPage = zend_register_list_destructors_ex(php_wxWizardPage_destruction_handler, NULL, le_wxWizardPage_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxWizardPageSimple_NAME , php_wxWizardPageSimple_functions);
+	char PHP_wxWizardPageSimple_name[] = "wxWizardPageSimple";
+	char le_wxWizardPageSimple_name[] = "native wxWizardPageSimple";
+	INIT_CLASS_ENTRY(ce, PHP_wxWizardPageSimple_name, php_wxWizardPageSimple_functions);
 	php_wxWizardPageSimple_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxWizardPageSimple = zend_register_list_destructors_ex(php_wxWizardPageSimple_destruction_handler, NULL, le_wxWizardPageSimple_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxWindowModalDialogEvent_NAME , php_wxWindowModalDialogEvent_functions);
+	char PHP_wxWindowModalDialogEvent_name[] = "wxWindowModalDialogEvent";
+	char le_wxWindowModalDialogEvent_name[] = "native wxWindowModalDialogEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxWindowModalDialogEvent_name, php_wxWindowModalDialogEvent_functions);
 	php_wxWindowModalDialogEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxWindowModalDialogEvent = zend_register_list_destructors_ex(php_wxWindowModalDialogEvent_destruction_handler, NULL, le_wxWindowModalDialogEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxTreeListItem_NAME , php_wxTreeListItem_functions);
+	char PHP_wxTreeListItem_name[] = "wxTreeListItem";
+	char le_wxTreeListItem_name[] = "native wxTreeListItem";
+	INIT_CLASS_ENTRY(ce, PHP_wxTreeListItem_name, php_wxTreeListItem_functions);
 	php_wxTreeListItem_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxTreeListItem = zend_register_list_destructors_ex(php_wxTreeListItem_destruction_handler, NULL, le_wxTreeListItem_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxTreebook_NAME , php_wxTreebook_functions);
+	char PHP_wxTreebook_name[] = "wxTreebook";
+	char le_wxTreebook_name[] = "native wxTreebook";
+	INIT_CLASS_ENTRY(ce, PHP_wxTreebook_name, php_wxTreebook_functions);
 	php_wxTreebook_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxTreebook = zend_register_list_destructors_ex(php_wxTreebook_destruction_handler, NULL, le_wxTreebook_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxTreeListCtrl_NAME , php_wxTreeListCtrl_functions);
+	char PHP_wxTreeListCtrl_name[] = "wxTreeListCtrl";
+	char le_wxTreeListCtrl_name[] = "native wxTreeListCtrl";
+	INIT_CLASS_ENTRY(ce, PHP_wxTreeListCtrl_name, php_wxTreeListCtrl_functions);
 	php_wxTreeListCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxTreeListCtrl = zend_register_list_destructors_ex(php_wxTreeListCtrl_destruction_handler, NULL, le_wxTreeListCtrl_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxSound_NAME , php_wxSound_functions);
+	char PHP_wxSound_name[] = "wxSound";
+	char le_wxSound_name[] = "native wxSound";
+	INIT_CLASS_ENTRY(ce, PHP_wxSound_name, php_wxSound_functions);
 	php_wxSound_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxSound = zend_register_list_destructors_ex(php_wxSound_destruction_handler, NULL, le_wxSound_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxSimpleHtmlListBox_NAME , php_wxSimpleHtmlListBox_functions);
+	char PHP_wxSimpleHtmlListBox_name[] = "wxSimpleHtmlListBox";
+	char le_wxSimpleHtmlListBox_name[] = "native wxSimpleHtmlListBox";
+	INIT_CLASS_ENTRY(ce, PHP_wxSimpleHtmlListBox_name, php_wxSimpleHtmlListBox_functions);
 	php_wxSimpleHtmlListBox_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxSimpleHtmlListBox = zend_register_list_destructors_ex(php_wxSimpleHtmlListBox_destruction_handler, NULL, le_wxSimpleHtmlListBox_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFileSystem_NAME , php_wxFileSystem_functions);
+	char PHP_wxFileSystem_name[] = "wxFileSystem";
+	char le_wxFileSystem_name[] = "native wxFileSystem";
+	INIT_CLASS_ENTRY(ce, PHP_wxFileSystem_name, php_wxFileSystem_functions);
 	php_wxFileSystem_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFileSystem = zend_register_list_destructors_ex(php_wxFileSystem_destruction_handler, NULL, le_wxFileSystem_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFileSystemHandler_NAME , php_wxFileSystemHandler_functions);
+	char PHP_wxFileSystemHandler_name[] = "wxFileSystemHandler";
+	char le_wxFileSystemHandler_name[] = "native wxFileSystemHandler";
+	INIT_CLASS_ENTRY(ce, PHP_wxFileSystemHandler_name, php_wxFileSystemHandler_functions);
 	php_wxFileSystemHandler_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFileSystemHandler = zend_register_list_destructors_ex(php_wxFileSystemHandler_destruction_handler, NULL, le_wxFileSystemHandler_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxNativeFontInfo_NAME , php_wxNativeFontInfo_functions);
+	char PHP_wxNativeFontInfo_name[] = "wxNativeFontInfo";
+	char le_wxNativeFontInfo_name[] = "native wxNativeFontInfo";
+	INIT_CLASS_ENTRY(ce, PHP_wxNativeFontInfo_name, php_wxNativeFontInfo_functions);
 	php_wxNativeFontInfo_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxNativeFontInfo = zend_register_list_destructors_ex(php_wxNativeFontInfo_destruction_handler, NULL, le_wxNativeFontInfo_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDateEvent_NAME , php_wxDateEvent_functions);
+	char PHP_wxDateEvent_name[] = "wxDateEvent";
+	char le_wxDateEvent_name[] = "native wxDateEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxDateEvent_name, php_wxDateEvent_functions);
 	php_wxDateEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDateEvent = zend_register_list_destructors_ex(php_wxDateEvent_destruction_handler, NULL, le_wxDateEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxBitmapToggleButton_NAME , php_wxBitmapToggleButton_functions);
+	char PHP_wxBitmapToggleButton_name[] = "wxBitmapToggleButton";
+	char le_wxBitmapToggleButton_name[] = "native wxBitmapToggleButton";
+	INIT_CLASS_ENTRY(ce, PHP_wxBitmapToggleButton_name, php_wxBitmapToggleButton_functions);
 	php_wxBitmapToggleButton_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxBitmapToggleButton = zend_register_list_destructors_ex(php_wxBitmapToggleButton_destruction_handler, NULL, le_wxBitmapToggleButton_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxCalendarDateAttr_NAME , php_wxCalendarDateAttr_functions);
+	char PHP_wxCalendarDateAttr_name[] = "wxCalendarDateAttr";
+	char le_wxCalendarDateAttr_name[] = "native wxCalendarDateAttr";
+	INIT_CLASS_ENTRY(ce, PHP_wxCalendarDateAttr_name, php_wxCalendarDateAttr_functions);
 	php_wxCalendarDateAttr_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxCalendarDateAttr = zend_register_list_destructors_ex(php_wxCalendarDateAttr_destruction_handler, NULL, le_wxCalendarDateAttr_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxCalendarCtrl_NAME , php_wxCalendarCtrl_functions);
+	char PHP_wxCalendarCtrl_name[] = "wxCalendarCtrl";
+	char le_wxCalendarCtrl_name[] = "native wxCalendarCtrl";
+	INIT_CLASS_ENTRY(ce, PHP_wxCalendarCtrl_name, php_wxCalendarCtrl_functions);
 	php_wxCalendarCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxCalendarCtrl = zend_register_list_destructors_ex(php_wxCalendarCtrl_destruction_handler, NULL, le_wxCalendarCtrl_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxMask_NAME , php_wxMask_functions);
+	char PHP_wxMask_name[] = "wxMask";
+	char le_wxMask_name[] = "native wxMask";
+	INIT_CLASS_ENTRY(ce, PHP_wxMask_name, php_wxMask_functions);
 	php_wxMask_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxMask = zend_register_list_destructors_ex(php_wxMask_destruction_handler, NULL, le_wxMask_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxToolTip_NAME , php_wxToolTip_functions);
+	char PHP_wxToolTip_name[] = "wxToolTip";
+	char le_wxToolTip_name[] = "native wxToolTip";
+	INIT_CLASS_ENTRY(ce, PHP_wxToolTip_name, php_wxToolTip_functions);
 	php_wxToolTip_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxToolTip = zend_register_list_destructors_ex(php_wxToolTip_destruction_handler, NULL, le_wxToolTip_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxCaret_NAME , php_wxCaret_functions);
+	char PHP_wxCaret_name[] = "wxCaret";
+	char le_wxCaret_name[] = "native wxCaret";
+	INIT_CLASS_ENTRY(ce, PHP_wxCaret_name, php_wxCaret_functions);
 	php_wxCaret_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxCaret = zend_register_list_destructors_ex(php_wxCaret_destruction_handler, NULL, le_wxCaret_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxRegion_NAME , php_wxRegion_functions);
+	char PHP_wxRegion_name[] = "wxRegion";
+	char le_wxRegion_name[] = "native wxRegion";
+	INIT_CLASS_ENTRY(ce, PHP_wxRegion_name, php_wxRegion_functions);
 	php_wxRegion_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxRegion = zend_register_list_destructors_ex(php_wxRegion_destruction_handler, NULL, le_wxRegion_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPoint2DDouble_NAME , php_wxPoint2DDouble_functions);
+	char PHP_wxPoint2DDouble_name[] = "wxPoint2DDouble";
+	char le_wxPoint2DDouble_name[] = "native wxPoint2DDouble";
+	INIT_CLASS_ENTRY(ce, PHP_wxPoint2DDouble_name, php_wxPoint2DDouble_functions);
 	php_wxPoint2DDouble_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPoint2DDouble = zend_register_list_destructors_ex(php_wxPoint2DDouble_destruction_handler, NULL, le_wxPoint2DDouble_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPoint2DInt_NAME , php_wxPoint2DInt_functions);
+	char PHP_wxPoint2DInt_name[] = "wxPoint2DInt";
+	char le_wxPoint2DInt_name[] = "native wxPoint2DInt";
+	INIT_CLASS_ENTRY(ce, PHP_wxPoint2DInt_name, php_wxPoint2DInt_functions);
 	php_wxPoint2DInt_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPoint2DInt = zend_register_list_destructors_ex(php_wxPoint2DInt_destruction_handler, NULL, le_wxPoint2DInt_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPopupTransientWindow_NAME , php_wxPopupTransientWindow_functions);
+	char PHP_wxPopupTransientWindow_name[] = "wxPopupTransientWindow";
+	char le_wxPopupTransientWindow_name[] = "native wxPopupTransientWindow";
+	INIT_CLASS_ENTRY(ce, PHP_wxPopupTransientWindow_name, php_wxPopupTransientWindow_functions);
 	php_wxPopupTransientWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPopupTransientWindow = zend_register_list_destructors_ex(php_wxPopupTransientWindow_destruction_handler, NULL, le_wxPopupTransientWindow_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxProcessEvent_NAME , php_wxProcessEvent_functions);
+	char PHP_wxProcessEvent_name[] = "wxProcessEvent";
+	char le_wxProcessEvent_name[] = "native wxProcessEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxProcessEvent_name, php_wxProcessEvent_functions);
 	php_wxProcessEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxProcessEvent = zend_register_list_destructors_ex(php_wxProcessEvent_destruction_handler, NULL, le_wxProcessEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxProgressDialog_NAME , php_wxProgressDialog_functions);
+	char PHP_wxProgressDialog_name[] = "wxProgressDialog";
+	char le_wxProgressDialog_name[] = "native wxProgressDialog";
+	INIT_CLASS_ENTRY(ce, PHP_wxProgressDialog_name, php_wxProgressDialog_functions);
 	php_wxProgressDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxProgressDialog = zend_register_list_destructors_ex(php_wxProgressDialog_destruction_handler, NULL, le_wxProgressDialog_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGraphicsMatrix_NAME , php_wxGraphicsMatrix_functions);
+	char PHP_wxGraphicsMatrix_name[] = "wxGraphicsMatrix";
+	char le_wxGraphicsMatrix_name[] = "native wxGraphicsMatrix";
+	INIT_CLASS_ENTRY(ce, PHP_wxGraphicsMatrix_name, php_wxGraphicsMatrix_functions);
 	php_wxGraphicsMatrix_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGraphicsMatrix = zend_register_list_destructors_ex(php_wxGraphicsMatrix_destruction_handler, NULL, le_wxGraphicsMatrix_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGraphicsRenderer_NAME , php_wxGraphicsRenderer_functions);
+	char PHP_wxGraphicsRenderer_name[] = "wxGraphicsRenderer";
+	char le_wxGraphicsRenderer_name[] = "native wxGraphicsRenderer";
+	INIT_CLASS_ENTRY(ce, PHP_wxGraphicsRenderer_name, php_wxGraphicsRenderer_functions);
 	php_wxGraphicsRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGraphicsRenderer = zend_register_list_destructors_ex(php_wxGraphicsRenderer_destruction_handler, NULL, le_wxGraphicsRenderer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxWindowDC_NAME , php_wxWindowDC_functions);
+	char PHP_wxWindowDC_name[] = "wxWindowDC";
+	char le_wxWindowDC_name[] = "native wxWindowDC";
+	INIT_CLASS_ENTRY(ce, PHP_wxWindowDC_name, php_wxWindowDC_functions);
 	php_wxWindowDC_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxWindowDC = zend_register_list_destructors_ex(php_wxWindowDC_destruction_handler, NULL, le_wxWindowDC_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxWindowCreateEvent_NAME , php_wxWindowCreateEvent_functions);
+	char PHP_wxWindowCreateEvent_name[] = "wxWindowCreateEvent";
+	char le_wxWindowCreateEvent_name[] = "native wxWindowCreateEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxWindowCreateEvent_name, php_wxWindowCreateEvent_functions);
 	php_wxWindowCreateEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxWindowCreateEvent = zend_register_list_destructors_ex(php_wxWindowCreateEvent_destruction_handler, NULL, le_wxWindowCreateEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxWindowDestroyEvent_NAME , php_wxWindowDestroyEvent_functions);
+	char PHP_wxWindowDestroyEvent_name[] = "wxWindowDestroyEvent";
+	char le_wxWindowDestroyEvent_name[] = "native wxWindowDestroyEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxWindowDestroyEvent_name, php_wxWindowDestroyEvent_functions);
 	php_wxWindowDestroyEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxWindowDestroyEvent = zend_register_list_destructors_ex(php_wxWindowDestroyEvent_destruction_handler, NULL, le_wxWindowDestroyEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGraphicsGradientStop_NAME , php_wxGraphicsGradientStop_functions);
+	char PHP_wxGraphicsGradientStop_name[] = "wxGraphicsGradientStop";
+	char le_wxGraphicsGradientStop_name[] = "native wxGraphicsGradientStop";
+	INIT_CLASS_ENTRY(ce, PHP_wxGraphicsGradientStop_name, php_wxGraphicsGradientStop_functions);
 	php_wxGraphicsGradientStop_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGraphicsGradientStop = zend_register_list_destructors_ex(php_wxGraphicsGradientStop_destruction_handler, NULL, le_wxGraphicsGradientStop_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGraphicsGradientStops_NAME , php_wxGraphicsGradientStops_functions);
+	char PHP_wxGraphicsGradientStops_name[] = "wxGraphicsGradientStops";
+	char le_wxGraphicsGradientStops_name[] = "native wxGraphicsGradientStops";
+	INIT_CLASS_ENTRY(ce, PHP_wxGraphicsGradientStops_name, php_wxGraphicsGradientStops_functions);
 	php_wxGraphicsGradientStops_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGraphicsGradientStops = zend_register_list_destructors_ex(php_wxGraphicsGradientStops_destruction_handler, NULL, le_wxGraphicsGradientStops_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxEventFilter_NAME , php_wxEventFilter_functions);
+	char PHP_wxEventFilter_name[] = "wxEventFilter";
+	char le_wxEventFilter_name[] = "native wxEventFilter";
+	INIT_CLASS_ENTRY(ce, PHP_wxEventFilter_name, php_wxEventFilter_functions);
 	php_wxEventFilter_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxEventFilter = zend_register_list_destructors_ex(php_wxEventFilter_destruction_handler, NULL, le_wxEventFilter_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxEventBlocker_NAME , php_wxEventBlocker_functions);
+	char PHP_wxEventBlocker_name[] = "wxEventBlocker";
+	char le_wxEventBlocker_name[] = "native wxEventBlocker";
+	INIT_CLASS_ENTRY(ce, PHP_wxEventBlocker_name, php_wxEventBlocker_functions);
 	php_wxEventBlocker_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxEventBlocker = zend_register_list_destructors_ex(php_wxEventBlocker_destruction_handler, NULL, le_wxEventBlocker_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxEraseEvent_NAME , php_wxEraseEvent_functions);
+	char PHP_wxEraseEvent_name[] = "wxEraseEvent";
+	char le_wxEraseEvent_name[] = "native wxEraseEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxEraseEvent_name, php_wxEraseEvent_functions);
 	php_wxEraseEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxEraseEvent = zend_register_list_destructors_ex(php_wxEraseEvent_destruction_handler, NULL, le_wxEraseEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxEventLoopActivator_NAME , php_wxEventLoopActivator_functions);
+	char PHP_wxEventLoopActivator_name[] = "wxEventLoopActivator";
+	char le_wxEventLoopActivator_name[] = "native wxEventLoopActivator";
+	INIT_CLASS_ENTRY(ce, PHP_wxEventLoopActivator_name, php_wxEventLoopActivator_functions);
 	php_wxEventLoopActivator_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxEventLoopActivator = zend_register_list_destructors_ex(php_wxEventLoopActivator_destruction_handler, NULL, le_wxEventLoopActivator_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxEventLoopBase_NAME , php_wxEventLoopBase_functions);
+	char PHP_wxEventLoopBase_name[] = "wxEventLoopBase";
+	char le_wxEventLoopBase_name[] = "native wxEventLoopBase";
+	INIT_CLASS_ENTRY(ce, PHP_wxEventLoopBase_name, php_wxEventLoopBase_functions);
 	php_wxEventLoopBase_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxEventLoopBase = zend_register_list_destructors_ex(php_wxEventLoopBase_destruction_handler, NULL, le_wxEventLoopBase_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPickerBase_NAME , php_wxPickerBase_functions);
+	char PHP_wxPickerBase_name[] = "wxPickerBase";
+	char le_wxPickerBase_name[] = "native wxPickerBase";
+	INIT_CLASS_ENTRY(ce, PHP_wxPickerBase_name, php_wxPickerBase_functions);
 	php_wxPickerBase_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPickerBase = zend_register_list_destructors_ex(php_wxPickerBase_destruction_handler, NULL, le_wxPickerBase_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridEvent_NAME , php_wxGridEvent_functions);
+	char PHP_wxGridEvent_name[] = "wxGridEvent";
+	char le_wxGridEvent_name[] = "native wxGridEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridEvent_name, php_wxGridEvent_functions);
 	php_wxGridEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridEvent = zend_register_list_destructors_ex(php_wxGridEvent_destruction_handler, NULL, le_wxGridEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxUpdateUIEvent_NAME , php_wxUpdateUIEvent_functions);
+	char PHP_wxUpdateUIEvent_name[] = "wxUpdateUIEvent";
+	char le_wxUpdateUIEvent_name[] = "native wxUpdateUIEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxUpdateUIEvent_name, php_wxUpdateUIEvent_functions);
 	php_wxUpdateUIEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxUpdateUIEvent = zend_register_list_destructors_ex(php_wxUpdateUIEvent_destruction_handler, NULL, le_wxUpdateUIEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHelpEvent_NAME , php_wxHelpEvent_functions);
+	char PHP_wxHelpEvent_name[] = "wxHelpEvent";
+	char le_wxHelpEvent_name[] = "native wxHelpEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxHelpEvent_name, php_wxHelpEvent_functions);
 	php_wxHelpEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHelpEvent = zend_register_list_destructors_ex(php_wxHelpEvent_destruction_handler, NULL, le_wxHelpEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxLayoutConstraints_NAME , php_wxLayoutConstraints_functions);
+	char PHP_wxLayoutConstraints_name[] = "wxLayoutConstraints";
+	char le_wxLayoutConstraints_name[] = "native wxLayoutConstraints";
+	INIT_CLASS_ENTRY(ce, PHP_wxLayoutConstraints_name, php_wxLayoutConstraints_functions);
 	php_wxLayoutConstraints_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxLayoutConstraints = zend_register_list_destructors_ex(php_wxLayoutConstraints_destruction_handler, NULL, le_wxLayoutConstraints_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDropTarget_NAME , php_wxDropTarget_functions);
+	char PHP_wxDropTarget_name[] = "wxDropTarget";
+	char le_wxDropTarget_name[] = "native wxDropTarget";
+	INIT_CLASS_ENTRY(ce, PHP_wxDropTarget_name, php_wxDropTarget_functions);
 	php_wxDropTarget_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDropTarget = zend_register_list_destructors_ex(php_wxDropTarget_destruction_handler, NULL, le_wxDropTarget_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxObject_NAME , php_wxObject_functions);
+	char PHP_wxObject_name[] = "wxObject";
+	char le_wxObject_name[] = "native wxObject";
+	INIT_CLASS_ENTRY(ce, PHP_wxObject_name, php_wxObject_functions);
 	php_wxObject_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxObject = zend_register_list_destructors_ex(php_wxObject_destruction_handler, NULL, le_wxObject_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFFile_NAME , php_wxFFile_functions);
+	char PHP_wxFFile_name[] = "wxFFile";
+	char le_wxFFile_name[] = "native wxFFile";
+	INIT_CLASS_ENTRY(ce, PHP_wxFFile_name, php_wxFFile_functions);
 	php_wxFFile_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFFile = zend_register_list_destructors_ex(php_wxFFile_destruction_handler, NULL, le_wxFFile_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFSFile_NAME , php_wxFSFile_functions);
+	char PHP_wxFSFile_name[] = "wxFSFile";
+	char le_wxFSFile_name[] = "native wxFSFile";
+	INIT_CLASS_ENTRY(ce, PHP_wxFSFile_name, php_wxFSFile_functions);
 	php_wxFSFile_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFSFile = zend_register_list_destructors_ex(php_wxFSFile_destruction_handler, NULL, le_wxFSFile_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxInputStream_NAME , php_wxInputStream_functions);
+	char PHP_wxInputStream_name[] = "wxInputStream";
+	char le_wxInputStream_name[] = "native wxInputStream";
+	INIT_CLASS_ENTRY(ce, PHP_wxInputStream_name, php_wxInputStream_functions);
 	php_wxInputStream_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxInputStream = zend_register_list_destructors_ex(php_wxInputStream_destruction_handler, NULL, le_wxInputStream_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxStreamBase_NAME , php_wxStreamBase_functions);
+	char PHP_wxStreamBase_name[] = "wxStreamBase";
+	char le_wxStreamBase_name[] = "native wxStreamBase";
+	INIT_CLASS_ENTRY(ce, PHP_wxStreamBase_name, php_wxStreamBase_functions);
 	php_wxStreamBase_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxStreamBase = zend_register_list_destructors_ex(php_wxStreamBase_destruction_handler, NULL, le_wxStreamBase_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxThread_NAME , php_wxThread_functions);
+	char PHP_wxThread_name[] = "wxThread";
+	char le_wxThread_name[] = "native wxThread";
+	INIT_CLASS_ENTRY(ce, PHP_wxThread_name, php_wxThread_functions);
 	php_wxThread_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxThread = zend_register_list_destructors_ex(php_wxThread_destruction_handler, NULL, le_wxThread_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxTimePickerCtrl_NAME , php_wxTimePickerCtrl_functions);
+	char PHP_wxTimePickerCtrl_name[] = "wxTimePickerCtrl";
+	char le_wxTimePickerCtrl_name[] = "native wxTimePickerCtrl";
+	INIT_CLASS_ENTRY(ce, PHP_wxTimePickerCtrl_name, php_wxTimePickerCtrl_functions);
 	php_wxTimePickerCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxTimePickerCtrl = zend_register_list_destructors_ex(php_wxTimePickerCtrl_destruction_handler, NULL, le_wxTimePickerCtrl_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxOutputStream_NAME , php_wxOutputStream_functions);
+	char PHP_wxOutputStream_name[] = "wxOutputStream";
+	char le_wxOutputStream_name[] = "native wxOutputStream";
+	INIT_CLASS_ENTRY(ce, PHP_wxOutputStream_name, php_wxOutputStream_functions);
 	php_wxOutputStream_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxOutputStream = zend_register_list_destructors_ex(php_wxOutputStream_destruction_handler, NULL, le_wxOutputStream_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxColourDialog_NAME , php_wxColourDialog_functions);
+	char PHP_wxColourDialog_name[] = "wxColourDialog";
+	char le_wxColourDialog_name[] = "native wxColourDialog";
+	INIT_CLASS_ENTRY(ce, PHP_wxColourDialog_name, php_wxColourDialog_functions);
 	php_wxColourDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxColourDialog = zend_register_list_destructors_ex(php_wxColourDialog_destruction_handler, NULL, le_wxColourDialog_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxColourData_NAME , php_wxColourData_functions);
+	char PHP_wxColourData_name[] = "wxColourData";
+	char le_wxColourData_name[] = "native wxColourData";
+	INIT_CLASS_ENTRY(ce, PHP_wxColourData_name, php_wxColourData_functions);
 	php_wxColourData_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxColourData = zend_register_list_destructors_ex(php_wxColourData_destruction_handler, NULL, le_wxColourData_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFileDialog_NAME , php_wxFileDialog_functions);
+	char PHP_wxFileDialog_name[] = "wxFileDialog";
+	char le_wxFileDialog_name[] = "native wxFileDialog";
+	INIT_CLASS_ENTRY(ce, PHP_wxFileDialog_name, php_wxFileDialog_functions);
 	php_wxFileDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFileDialog = zend_register_list_destructors_ex(php_wxFileDialog_destruction_handler, NULL, le_wxFileDialog_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFontData_NAME , php_wxFontData_functions);
+	char PHP_wxFontData_name[] = "wxFontData";
+	char le_wxFontData_name[] = "native wxFontData";
+	INIT_CLASS_ENTRY(ce, PHP_wxFontData_name, php_wxFontData_functions);
 	php_wxFontData_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFontData = zend_register_list_destructors_ex(php_wxFontData_destruction_handler, NULL, le_wxFontData_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFontDialog_NAME , php_wxFontDialog_functions);
+	char PHP_wxFontDialog_name[] = "wxFontDialog";
+	char le_wxFontDialog_name[] = "native wxFontDialog";
+	INIT_CLASS_ENTRY(ce, PHP_wxFontDialog_name, php_wxFontDialog_functions);
 	php_wxFontDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFontDialog = zend_register_list_destructors_ex(php_wxFontDialog_destruction_handler, NULL, le_wxFontDialog_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxThreadHelper_NAME , php_wxThreadHelper_functions);
+	char PHP_wxThreadHelper_name[] = "wxThreadHelper";
+	char le_wxThreadHelper_name[] = "native wxThreadHelper";
+	INIT_CLASS_ENTRY(ce, PHP_wxThreadHelper_name, php_wxThreadHelper_functions);
 	php_wxThreadHelper_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxThreadHelper = zend_register_list_destructors_ex(php_wxThreadHelper_destruction_handler, NULL, le_wxThreadHelper_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxToolBar_NAME , php_wxToolBar_functions);
+	char PHP_wxToolBar_name[] = "wxToolBar";
+	char le_wxToolBar_name[] = "native wxToolBar";
+	INIT_CLASS_ENTRY(ce, PHP_wxToolBar_name, php_wxToolBar_functions);
 	php_wxToolBar_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxToolBar = zend_register_list_destructors_ex(php_wxToolBar_destruction_handler, NULL, le_wxToolBar_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxAuiTabArt_NAME , php_wxAuiTabArt_functions);
+	char PHP_wxAuiTabArt_name[] = "wxAuiTabArt";
+	char le_wxAuiTabArt_name[] = "native wxAuiTabArt";
+	INIT_CLASS_ENTRY(ce, PHP_wxAuiTabArt_name, php_wxAuiTabArt_functions);
 	php_wxAuiTabArt_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxAuiTabArt = zend_register_list_destructors_ex(php_wxAuiTabArt_destruction_handler, NULL, le_wxAuiTabArt_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxCalendarEvent_NAME , php_wxCalendarEvent_functions);
+	char PHP_wxCalendarEvent_name[] = "wxCalendarEvent";
+	char le_wxCalendarEvent_name[] = "native wxCalendarEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxCalendarEvent_name, php_wxCalendarEvent_functions);
 	php_wxCalendarEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxCalendarEvent = zend_register_list_destructors_ex(php_wxCalendarEvent_destruction_handler, NULL, le_wxCalendarEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGrid_NAME , php_wxGrid_functions);
+	char PHP_wxGrid_name[] = "wxGrid";
+	char le_wxGrid_name[] = "native wxGrid";
+	INIT_CLASS_ENTRY(ce, PHP_wxGrid_name, php_wxGrid_functions);
 	php_wxGrid_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGrid = zend_register_list_destructors_ex(php_wxGrid_destruction_handler, NULL, le_wxGrid_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridCellAttr_NAME , php_wxGridCellAttr_functions);
+	char PHP_wxGridCellAttr_name[] = "wxGridCellAttr";
+	char le_wxGridCellAttr_name[] = "native wxGridCellAttr";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridCellAttr_name, php_wxGridCellAttr_functions);
 	php_wxGridCellAttr_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridCellAttr = zend_register_list_destructors_ex(php_wxGridCellAttr_destruction_handler, NULL, le_wxGridCellAttr_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridCellAttrProvider_NAME , php_wxGridCellAttrProvider_functions);
+	char PHP_wxGridCellAttrProvider_name[] = "wxGridCellAttrProvider";
+	char le_wxGridCellAttrProvider_name[] = "native wxGridCellAttrProvider";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridCellAttrProvider_name, php_wxGridCellAttrProvider_functions);
 	php_wxGridCellAttrProvider_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridCellAttrProvider = zend_register_list_destructors_ex(php_wxGridCellAttrProvider_destruction_handler, NULL, le_wxGridCellAttrProvider_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridCellBoolEditor_NAME , php_wxGridCellBoolEditor_functions);
+	char PHP_wxGridCellBoolEditor_name[] = "wxGridCellBoolEditor";
+	char le_wxGridCellBoolEditor_name[] = "native wxGridCellBoolEditor";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridCellBoolEditor_name, php_wxGridCellBoolEditor_functions);
 	php_wxGridCellBoolEditor_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridCellBoolEditor = zend_register_list_destructors_ex(php_wxGridCellBoolEditor_destruction_handler, NULL, le_wxGridCellBoolEditor_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridCellChoiceEditor_NAME , php_wxGridCellChoiceEditor_functions);
+	char PHP_wxGridCellChoiceEditor_name[] = "wxGridCellChoiceEditor";
+	char le_wxGridCellChoiceEditor_name[] = "native wxGridCellChoiceEditor";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridCellChoiceEditor_name, php_wxGridCellChoiceEditor_functions);
 	php_wxGridCellChoiceEditor_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridCellChoiceEditor = zend_register_list_destructors_ex(php_wxGridCellChoiceEditor_destruction_handler, NULL, le_wxGridCellChoiceEditor_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridCellDateTimeRenderer_NAME , php_wxGridCellDateTimeRenderer_functions);
+	char PHP_wxGridCellDateTimeRenderer_name[] = "wxGridCellDateTimeRenderer";
+	char le_wxGridCellDateTimeRenderer_name[] = "native wxGridCellDateTimeRenderer";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridCellDateTimeRenderer_name, php_wxGridCellDateTimeRenderer_functions);
 	php_wxGridCellDateTimeRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridCellDateTimeRenderer = zend_register_list_destructors_ex(php_wxGridCellDateTimeRenderer_destruction_handler, NULL, le_wxGridCellDateTimeRenderer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridCellBoolRenderer_NAME , php_wxGridCellBoolRenderer_functions);
+	char PHP_wxGridCellBoolRenderer_name[] = "wxGridCellBoolRenderer";
+	char le_wxGridCellBoolRenderer_name[] = "native wxGridCellBoolRenderer";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridCellBoolRenderer_name, php_wxGridCellBoolRenderer_functions);
 	php_wxGridCellBoolRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridCellBoolRenderer = zend_register_list_destructors_ex(php_wxGridCellBoolRenderer_destruction_handler, NULL, le_wxGridCellBoolRenderer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridCellAutoWrapStringRenderer_NAME , php_wxGridCellAutoWrapStringRenderer_functions);
+	char PHP_wxGridCellAutoWrapStringRenderer_name[] = "wxGridCellAutoWrapStringRenderer";
+	char le_wxGridCellAutoWrapStringRenderer_name[] = "native wxGridCellAutoWrapStringRenderer";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridCellAutoWrapStringRenderer_name, php_wxGridCellAutoWrapStringRenderer_functions);
 	php_wxGridCellAutoWrapStringRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridCellAutoWrapStringRenderer = zend_register_list_destructors_ex(php_wxGridCellAutoWrapStringRenderer_destruction_handler, NULL, le_wxGridCellAutoWrapStringRenderer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridCellAutoWrapStringEditor_NAME , php_wxGridCellAutoWrapStringEditor_functions);
+	char PHP_wxGridCellAutoWrapStringEditor_name[] = "wxGridCellAutoWrapStringEditor";
+	char le_wxGridCellAutoWrapStringEditor_name[] = "native wxGridCellAutoWrapStringEditor";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridCellAutoWrapStringEditor_name, php_wxGridCellAutoWrapStringEditor_functions);
 	php_wxGridCellAutoWrapStringEditor_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridCellAutoWrapStringEditor = zend_register_list_destructors_ex(php_wxGridCellAutoWrapStringEditor_destruction_handler, NULL, le_wxGridCellAutoWrapStringEditor_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridCellEditor_NAME , php_wxGridCellEditor_functions);
+	char PHP_wxGridCellEditor_name[] = "wxGridCellEditor";
+	char le_wxGridCellEditor_name[] = "native wxGridCellEditor";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridCellEditor_name, php_wxGridCellEditor_functions);
 	php_wxGridCellEditor_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridCellEditor = zend_register_list_destructors_ex(php_wxGridCellEditor_destruction_handler, NULL, le_wxGridCellEditor_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridCellEnumEditor_NAME , php_wxGridCellEnumEditor_functions);
+	char PHP_wxGridCellEnumEditor_name[] = "wxGridCellEnumEditor";
+	char le_wxGridCellEnumEditor_name[] = "native wxGridCellEnumEditor";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridCellEnumEditor_name, php_wxGridCellEnumEditor_functions);
 	php_wxGridCellEnumEditor_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridCellEnumEditor = zend_register_list_destructors_ex(php_wxGridCellEnumEditor_destruction_handler, NULL, le_wxGridCellEnumEditor_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridCellEnumRenderer_NAME , php_wxGridCellEnumRenderer_functions);
+	char PHP_wxGridCellEnumRenderer_name[] = "wxGridCellEnumRenderer";
+	char le_wxGridCellEnumRenderer_name[] = "native wxGridCellEnumRenderer";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridCellEnumRenderer_name, php_wxGridCellEnumRenderer_functions);
 	php_wxGridCellEnumRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridCellEnumRenderer = zend_register_list_destructors_ex(php_wxGridCellEnumRenderer_destruction_handler, NULL, le_wxGridCellEnumRenderer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridCellFloatEditor_NAME , php_wxGridCellFloatEditor_functions);
+	char PHP_wxGridCellFloatEditor_name[] = "wxGridCellFloatEditor";
+	char le_wxGridCellFloatEditor_name[] = "native wxGridCellFloatEditor";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridCellFloatEditor_name, php_wxGridCellFloatEditor_functions);
 	php_wxGridCellFloatEditor_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridCellFloatEditor = zend_register_list_destructors_ex(php_wxGridCellFloatEditor_destruction_handler, NULL, le_wxGridCellFloatEditor_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridCellFloatRenderer_NAME , php_wxGridCellFloatRenderer_functions);
+	char PHP_wxGridCellFloatRenderer_name[] = "wxGridCellFloatRenderer";
+	char le_wxGridCellFloatRenderer_name[] = "native wxGridCellFloatRenderer";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridCellFloatRenderer_name, php_wxGridCellFloatRenderer_functions);
 	php_wxGridCellFloatRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridCellFloatRenderer = zend_register_list_destructors_ex(php_wxGridCellFloatRenderer_destruction_handler, NULL, le_wxGridCellFloatRenderer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridCellNumberEditor_NAME , php_wxGridCellNumberEditor_functions);
+	char PHP_wxGridCellNumberEditor_name[] = "wxGridCellNumberEditor";
+	char le_wxGridCellNumberEditor_name[] = "native wxGridCellNumberEditor";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridCellNumberEditor_name, php_wxGridCellNumberEditor_functions);
 	php_wxGridCellNumberEditor_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridCellNumberEditor = zend_register_list_destructors_ex(php_wxGridCellNumberEditor_destruction_handler, NULL, le_wxGridCellNumberEditor_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridCellNumberRenderer_NAME , php_wxGridCellNumberRenderer_functions);
+	char PHP_wxGridCellNumberRenderer_name[] = "wxGridCellNumberRenderer";
+	char le_wxGridCellNumberRenderer_name[] = "native wxGridCellNumberRenderer";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridCellNumberRenderer_name, php_wxGridCellNumberRenderer_functions);
 	php_wxGridCellNumberRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridCellNumberRenderer = zend_register_list_destructors_ex(php_wxGridCellNumberRenderer_destruction_handler, NULL, le_wxGridCellNumberRenderer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridCellRenderer_NAME , php_wxGridCellRenderer_functions);
+	char PHP_wxGridCellRenderer_name[] = "wxGridCellRenderer";
+	char le_wxGridCellRenderer_name[] = "native wxGridCellRenderer";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridCellRenderer_name, php_wxGridCellRenderer_functions);
 	php_wxGridCellRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridCellRenderer = zend_register_list_destructors_ex(php_wxGridCellRenderer_destruction_handler, NULL, le_wxGridCellRenderer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridCellStringRenderer_NAME , php_wxGridCellStringRenderer_functions);
+	char PHP_wxGridCellStringRenderer_name[] = "wxGridCellStringRenderer";
+	char le_wxGridCellStringRenderer_name[] = "native wxGridCellStringRenderer";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridCellStringRenderer_name, php_wxGridCellStringRenderer_functions);
 	php_wxGridCellStringRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridCellStringRenderer = zend_register_list_destructors_ex(php_wxGridCellStringRenderer_destruction_handler, NULL, le_wxGridCellStringRenderer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridCellTextEditor_NAME , php_wxGridCellTextEditor_functions);
+	char PHP_wxGridCellTextEditor_name[] = "wxGridCellTextEditor";
+	char le_wxGridCellTextEditor_name[] = "native wxGridCellTextEditor";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridCellTextEditor_name, php_wxGridCellTextEditor_functions);
 	php_wxGridCellTextEditor_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridCellTextEditor = zend_register_list_destructors_ex(php_wxGridCellTextEditor_destruction_handler, NULL, le_wxGridCellTextEditor_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridColumnHeaderRenderer_NAME , php_wxGridColumnHeaderRenderer_functions);
+	char PHP_wxGridColumnHeaderRenderer_name[] = "wxGridColumnHeaderRenderer";
+	char le_wxGridColumnHeaderRenderer_name[] = "native wxGridColumnHeaderRenderer";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridColumnHeaderRenderer_name, php_wxGridColumnHeaderRenderer_functions);
 	php_wxGridColumnHeaderRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridColumnHeaderRenderer = zend_register_list_destructors_ex(php_wxGridColumnHeaderRenderer_destruction_handler, NULL, le_wxGridColumnHeaderRenderer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridColumnHeaderRendererDefault_NAME , php_wxGridColumnHeaderRendererDefault_functions);
+	char PHP_wxGridColumnHeaderRendererDefault_name[] = "wxGridColumnHeaderRendererDefault";
+	char le_wxGridColumnHeaderRendererDefault_name[] = "native wxGridColumnHeaderRendererDefault";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridColumnHeaderRendererDefault_name, php_wxGridColumnHeaderRendererDefault_functions);
 	php_wxGridColumnHeaderRendererDefault_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridColumnHeaderRendererDefault = zend_register_list_destructors_ex(php_wxGridColumnHeaderRendererDefault_destruction_handler, NULL, le_wxGridColumnHeaderRendererDefault_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridCornerHeaderRenderer_NAME , php_wxGridCornerHeaderRenderer_functions);
+	char PHP_wxGridCornerHeaderRenderer_name[] = "wxGridCornerHeaderRenderer";
+	char le_wxGridCornerHeaderRenderer_name[] = "native wxGridCornerHeaderRenderer";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridCornerHeaderRenderer_name, php_wxGridCornerHeaderRenderer_functions);
 	php_wxGridCornerHeaderRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridCornerHeaderRenderer = zend_register_list_destructors_ex(php_wxGridCornerHeaderRenderer_destruction_handler, NULL, le_wxGridCornerHeaderRenderer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridCornerHeaderRendererDefault_NAME , php_wxGridCornerHeaderRendererDefault_functions);
+	char PHP_wxGridCornerHeaderRendererDefault_name[] = "wxGridCornerHeaderRendererDefault";
+	char le_wxGridCornerHeaderRendererDefault_name[] = "native wxGridCornerHeaderRendererDefault";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridCornerHeaderRendererDefault_name, php_wxGridCornerHeaderRendererDefault_functions);
 	php_wxGridCornerHeaderRendererDefault_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridCornerHeaderRendererDefault = zend_register_list_destructors_ex(php_wxGridCornerHeaderRendererDefault_destruction_handler, NULL, le_wxGridCornerHeaderRendererDefault_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridEditorCreatedEvent_NAME , php_wxGridEditorCreatedEvent_functions);
+	char PHP_wxGridEditorCreatedEvent_name[] = "wxGridEditorCreatedEvent";
+	char le_wxGridEditorCreatedEvent_name[] = "native wxGridEditorCreatedEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridEditorCreatedEvent_name, php_wxGridEditorCreatedEvent_functions);
 	php_wxGridEditorCreatedEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridEditorCreatedEvent = zend_register_list_destructors_ex(php_wxGridEditorCreatedEvent_destruction_handler, NULL, le_wxGridEditorCreatedEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridHeaderLabelsRenderer_NAME , php_wxGridHeaderLabelsRenderer_functions);
+	char PHP_wxGridHeaderLabelsRenderer_name[] = "wxGridHeaderLabelsRenderer";
+	char le_wxGridHeaderLabelsRenderer_name[] = "native wxGridHeaderLabelsRenderer";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridHeaderLabelsRenderer_name, php_wxGridHeaderLabelsRenderer_functions);
 	php_wxGridHeaderLabelsRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridHeaderLabelsRenderer = zend_register_list_destructors_ex(php_wxGridHeaderLabelsRenderer_destruction_handler, NULL, le_wxGridHeaderLabelsRenderer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridRangeSelectEvent_NAME , php_wxGridRangeSelectEvent_functions);
+	char PHP_wxGridRangeSelectEvent_name[] = "wxGridRangeSelectEvent";
+	char le_wxGridRangeSelectEvent_name[] = "native wxGridRangeSelectEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridRangeSelectEvent_name, php_wxGridRangeSelectEvent_functions);
 	php_wxGridRangeSelectEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridRangeSelectEvent = zend_register_list_destructors_ex(php_wxGridRangeSelectEvent_destruction_handler, NULL, le_wxGridRangeSelectEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridRowHeaderRenderer_NAME , php_wxGridRowHeaderRenderer_functions);
+	char PHP_wxGridRowHeaderRenderer_name[] = "wxGridRowHeaderRenderer";
+	char le_wxGridRowHeaderRenderer_name[] = "native wxGridRowHeaderRenderer";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridRowHeaderRenderer_name, php_wxGridRowHeaderRenderer_functions);
 	php_wxGridRowHeaderRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridRowHeaderRenderer = zend_register_list_destructors_ex(php_wxGridRowHeaderRenderer_destruction_handler, NULL, le_wxGridRowHeaderRenderer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridRowHeaderRendererDefault_NAME , php_wxGridRowHeaderRendererDefault_functions);
+	char PHP_wxGridRowHeaderRendererDefault_name[] = "wxGridRowHeaderRendererDefault";
+	char le_wxGridRowHeaderRendererDefault_name[] = "native wxGridRowHeaderRendererDefault";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridRowHeaderRendererDefault_name, php_wxGridRowHeaderRendererDefault_functions);
 	php_wxGridRowHeaderRendererDefault_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridRowHeaderRendererDefault = zend_register_list_destructors_ex(php_wxGridRowHeaderRendererDefault_destruction_handler, NULL, le_wxGridRowHeaderRendererDefault_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridSizesInfo_NAME , php_wxGridSizesInfo_functions);
+	char PHP_wxGridSizesInfo_name[] = "wxGridSizesInfo";
+	char le_wxGridSizesInfo_name[] = "native wxGridSizesInfo";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridSizesInfo_name, php_wxGridSizesInfo_functions);
 	php_wxGridSizesInfo_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridSizesInfo = zend_register_list_destructors_ex(php_wxGridSizesInfo_destruction_handler, NULL, le_wxGridSizesInfo_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridTableBase_NAME , php_wxGridTableBase_functions);
+	char PHP_wxGridTableBase_name[] = "wxGridTableBase";
+	char le_wxGridTableBase_name[] = "native wxGridTableBase";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridTableBase_name, php_wxGridTableBase_functions);
 	php_wxGridTableBase_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridTableBase = zend_register_list_destructors_ex(php_wxGridTableBase_destruction_handler, NULL, le_wxGridTableBase_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGridUpdateLocker_NAME , php_wxGridUpdateLocker_functions);
+	char PHP_wxGridUpdateLocker_name[] = "wxGridUpdateLocker";
+	char le_wxGridUpdateLocker_name[] = "native wxGridUpdateLocker";
+	INIT_CLASS_ENTRY(ce, PHP_wxGridUpdateLocker_name, php_wxGridUpdateLocker_functions);
 	php_wxGridUpdateLocker_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGridUpdateLocker = zend_register_list_destructors_ex(php_wxGridUpdateLocker_destruction_handler, NULL, le_wxGridUpdateLocker_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDatePickerCtrl_NAME , php_wxDatePickerCtrl_functions);
+	char PHP_wxDatePickerCtrl_name[] = "wxDatePickerCtrl";
+	char le_wxDatePickerCtrl_name[] = "native wxDatePickerCtrl";
+	INIT_CLASS_ENTRY(ce, PHP_wxDatePickerCtrl_name, php_wxDatePickerCtrl_functions);
 	php_wxDatePickerCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDatePickerCtrl = zend_register_list_destructors_ex(php_wxDatePickerCtrl_destruction_handler, NULL, le_wxDatePickerCtrl_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPasswordEntryDialog_NAME , php_wxPasswordEntryDialog_functions);
+	char PHP_wxPasswordEntryDialog_name[] = "wxPasswordEntryDialog";
+	char le_wxPasswordEntryDialog_name[] = "native wxPasswordEntryDialog";
+	INIT_CLASS_ENTRY(ce, PHP_wxPasswordEntryDialog_name, php_wxPasswordEntryDialog_functions);
 	php_wxPasswordEntryDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPasswordEntryDialog = zend_register_list_destructors_ex(php_wxPasswordEntryDialog_destruction_handler, NULL, le_wxPasswordEntryDialog_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxScreenDC_NAME , php_wxScreenDC_functions);
+	char PHP_wxScreenDC_name[] = "wxScreenDC";
+	char le_wxScreenDC_name[] = "native wxScreenDC";
+	INIT_CLASS_ENTRY(ce, PHP_wxScreenDC_name, php_wxScreenDC_functions);
 	php_wxScreenDC_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxScreenDC = zend_register_list_destructors_ex(php_wxScreenDC_destruction_handler, NULL, le_wxScreenDC_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxCollapsiblePane_NAME , php_wxCollapsiblePane_functions);
+	char PHP_wxCollapsiblePane_name[] = "wxCollapsiblePane";
+	char le_wxCollapsiblePane_name[] = "native wxCollapsiblePane";
+	INIT_CLASS_ENTRY(ce, PHP_wxCollapsiblePane_name, php_wxCollapsiblePane_functions);
 	php_wxCollapsiblePane_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxCollapsiblePane = zend_register_list_destructors_ex(php_wxCollapsiblePane_destruction_handler, NULL, le_wxCollapsiblePane_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxCollapsiblePaneEvent_NAME , php_wxCollapsiblePaneEvent_functions);
+	char PHP_wxCollapsiblePaneEvent_name[] = "wxCollapsiblePaneEvent";
+	char le_wxCollapsiblePaneEvent_name[] = "native wxCollapsiblePaneEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxCollapsiblePaneEvent_name, php_wxCollapsiblePaneEvent_functions);
 	php_wxCollapsiblePaneEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxCollapsiblePaneEvent = zend_register_list_destructors_ex(php_wxCollapsiblePaneEvent_destruction_handler, NULL, le_wxCollapsiblePaneEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxComboCtrl_NAME , php_wxComboCtrl_functions);
+	char PHP_wxComboCtrl_name[] = "wxComboCtrl";
+	char le_wxComboCtrl_name[] = "native wxComboCtrl";
+	INIT_CLASS_ENTRY(ce, PHP_wxComboCtrl_name, php_wxComboCtrl_functions);
 	php_wxComboCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxComboCtrl = zend_register_list_destructors_ex(php_wxComboCtrl_destruction_handler, NULL, le_wxComboCtrl_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxComboPopup_NAME , php_wxComboPopup_functions);
+	char PHP_wxComboPopup_name[] = "wxComboPopup";
+	char le_wxComboPopup_name[] = "native wxComboPopup";
+	INIT_CLASS_ENTRY(ce, PHP_wxComboPopup_name, php_wxComboPopup_functions);
 	php_wxComboPopup_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxComboPopup = zend_register_list_destructors_ex(php_wxComboPopup_destruction_handler, NULL, le_wxComboPopup_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataViewCtrl_NAME , php_wxDataViewCtrl_functions);
+	char PHP_wxDataViewCtrl_name[] = "wxDataViewCtrl";
+	char le_wxDataViewCtrl_name[] = "native wxDataViewCtrl";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataViewCtrl_name, php_wxDataViewCtrl_functions);
 	php_wxDataViewCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataViewCtrl = zend_register_list_destructors_ex(php_wxDataViewCtrl_destruction_handler, NULL, le_wxDataViewCtrl_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataViewItem_NAME , php_wxDataViewItem_functions);
+	char PHP_wxDataViewItem_name[] = "wxDataViewItem";
+	char le_wxDataViewItem_name[] = "native wxDataViewItem";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataViewItem_name, php_wxDataViewItem_functions);
 	php_wxDataViewItem_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataViewItem = zend_register_list_destructors_ex(php_wxDataViewItem_destruction_handler, NULL, le_wxDataViewItem_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataViewColumn_NAME , php_wxDataViewColumn_functions);
+	char PHP_wxDataViewColumn_name[] = "wxDataViewColumn";
+	char le_wxDataViewColumn_name[] = "native wxDataViewColumn";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataViewColumn_name, php_wxDataViewColumn_functions);
 	php_wxDataViewColumn_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataViewColumn = zend_register_list_destructors_ex(php_wxDataViewColumn_destruction_handler, NULL, le_wxDataViewColumn_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataViewRenderer_NAME , php_wxDataViewRenderer_functions);
+	char PHP_wxDataViewRenderer_name[] = "wxDataViewRenderer";
+	char le_wxDataViewRenderer_name[] = "native wxDataViewRenderer";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataViewRenderer_name, php_wxDataViewRenderer_functions);
 	php_wxDataViewRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataViewRenderer = zend_register_list_destructors_ex(php_wxDataViewRenderer_destruction_handler, NULL, le_wxDataViewRenderer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataViewModel_NAME , php_wxDataViewModel_functions);
+	char PHP_wxDataViewModel_name[] = "wxDataViewModel";
+	char le_wxDataViewModel_name[] = "native wxDataViewModel";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataViewModel_name, php_wxDataViewModel_functions);
 	php_wxDataViewModel_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataViewModel = zend_register_list_destructors_ex(php_wxDataViewModel_destruction_handler, NULL, le_wxDataViewModel_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataViewModelNotifier_NAME , php_wxDataViewModelNotifier_functions);
+	char PHP_wxDataViewModelNotifier_name[] = "wxDataViewModelNotifier";
+	char le_wxDataViewModelNotifier_name[] = "native wxDataViewModelNotifier";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataViewModelNotifier_name, php_wxDataViewModelNotifier_functions);
 	php_wxDataViewModelNotifier_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataViewModelNotifier = zend_register_list_destructors_ex(php_wxDataViewModelNotifier_destruction_handler, NULL, le_wxDataViewModelNotifier_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxRefCounter_NAME , php_wxRefCounter_functions);
+	char PHP_wxRefCounter_name[] = "wxRefCounter";
+	char le_wxRefCounter_name[] = "native wxRefCounter";
+	INIT_CLASS_ENTRY(ce, PHP_wxRefCounter_name, php_wxRefCounter_functions);
 	php_wxRefCounter_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxRefCounter = zend_register_list_destructors_ex(php_wxRefCounter_destruction_handler, NULL, le_wxRefCounter_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataViewListCtrl_NAME , php_wxDataViewListCtrl_functions);
+	char PHP_wxDataViewListCtrl_name[] = "wxDataViewListCtrl";
+	char le_wxDataViewListCtrl_name[] = "native wxDataViewListCtrl";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataViewListCtrl_name, php_wxDataViewListCtrl_functions);
 	php_wxDataViewListCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataViewListCtrl = zend_register_list_destructors_ex(php_wxDataViewListCtrl_destruction_handler, NULL, le_wxDataViewListCtrl_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataViewListStore_NAME , php_wxDataViewListStore_functions);
+	char PHP_wxDataViewListStore_name[] = "wxDataViewListStore";
+	char le_wxDataViewListStore_name[] = "native wxDataViewListStore";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataViewListStore_name, php_wxDataViewListStore_functions);
 	php_wxDataViewListStore_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataViewListStore = zend_register_list_destructors_ex(php_wxDataViewListStore_destruction_handler, NULL, le_wxDataViewListStore_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataViewListModel_NAME , php_wxDataViewListModel_functions);
+	char PHP_wxDataViewListModel_name[] = "wxDataViewListModel";
+	char le_wxDataViewListModel_name[] = "native wxDataViewListModel";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataViewListModel_name, php_wxDataViewListModel_functions);
 	php_wxDataViewListModel_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataViewListModel = zend_register_list_destructors_ex(php_wxDataViewListModel_destruction_handler, NULL, le_wxDataViewListModel_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataViewEvent_NAME , php_wxDataViewEvent_functions);
+	char PHP_wxDataViewEvent_name[] = "wxDataViewEvent";
+	char le_wxDataViewEvent_name[] = "native wxDataViewEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataViewEvent_name, php_wxDataViewEvent_functions);
 	php_wxDataViewEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataViewEvent = zend_register_list_destructors_ex(php_wxDataViewEvent_destruction_handler, NULL, le_wxDataViewEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataFormat_NAME , php_wxDataFormat_functions);
+	char PHP_wxDataFormat_name[] = "wxDataFormat";
+	char le_wxDataFormat_name[] = "native wxDataFormat";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataFormat_name, php_wxDataFormat_functions);
 	php_wxDataFormat_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataFormat = zend_register_list_destructors_ex(php_wxDataFormat_destruction_handler, NULL, le_wxDataFormat_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataInputStream_NAME , php_wxDataInputStream_functions);
+	char PHP_wxDataInputStream_name[] = "wxDataInputStream";
+	char le_wxDataInputStream_name[] = "native wxDataInputStream";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataInputStream_name, php_wxDataInputStream_functions);
 	php_wxDataInputStream_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataInputStream = zend_register_list_destructors_ex(php_wxDataInputStream_destruction_handler, NULL, le_wxDataInputStream_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataObject_NAME , php_wxDataObject_functions);
+	char PHP_wxDataObject_name[] = "wxDataObject";
+	char le_wxDataObject_name[] = "native wxDataObject";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataObject_name, php_wxDataObject_functions);
 	php_wxDataObject_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataObject = zend_register_list_destructors_ex(php_wxDataObject_destruction_handler, NULL, le_wxDataObject_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataObjectComposite_NAME , php_wxDataObjectComposite_functions);
+	char PHP_wxDataObjectComposite_name[] = "wxDataObjectComposite";
+	char le_wxDataObjectComposite_name[] = "native wxDataObjectComposite";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataObjectComposite_name, php_wxDataObjectComposite_functions);
 	php_wxDataObjectComposite_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataObjectComposite = zend_register_list_destructors_ex(php_wxDataObjectComposite_destruction_handler, NULL, le_wxDataObjectComposite_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataObjectSimple_NAME , php_wxDataObjectSimple_functions);
+	char PHP_wxDataObjectSimple_name[] = "wxDataObjectSimple";
+	char le_wxDataObjectSimple_name[] = "native wxDataObjectSimple";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataObjectSimple_name, php_wxDataObjectSimple_functions);
 	php_wxDataObjectSimple_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataObjectSimple = zend_register_list_destructors_ex(php_wxDataObjectSimple_destruction_handler, NULL, le_wxDataObjectSimple_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataOutputStream_NAME , php_wxDataOutputStream_functions);
+	char PHP_wxDataOutputStream_name[] = "wxDataOutputStream";
+	char le_wxDataOutputStream_name[] = "native wxDataOutputStream";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataOutputStream_name, php_wxDataOutputStream_functions);
 	php_wxDataOutputStream_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataOutputStream = zend_register_list_destructors_ex(php_wxDataOutputStream_destruction_handler, NULL, le_wxDataOutputStream_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataViewBitmapRenderer_NAME , php_wxDataViewBitmapRenderer_functions);
+	char PHP_wxDataViewBitmapRenderer_name[] = "wxDataViewBitmapRenderer";
+	char le_wxDataViewBitmapRenderer_name[] = "native wxDataViewBitmapRenderer";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataViewBitmapRenderer_name, php_wxDataViewBitmapRenderer_functions);
 	php_wxDataViewBitmapRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataViewBitmapRenderer = zend_register_list_destructors_ex(php_wxDataViewBitmapRenderer_destruction_handler, NULL, le_wxDataViewBitmapRenderer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataViewChoiceRenderer_NAME , php_wxDataViewChoiceRenderer_functions);
+	char PHP_wxDataViewChoiceRenderer_name[] = "wxDataViewChoiceRenderer";
+	char le_wxDataViewChoiceRenderer_name[] = "native wxDataViewChoiceRenderer";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataViewChoiceRenderer_name, php_wxDataViewChoiceRenderer_functions);
 	php_wxDataViewChoiceRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataViewChoiceRenderer = zend_register_list_destructors_ex(php_wxDataViewChoiceRenderer_destruction_handler, NULL, le_wxDataViewChoiceRenderer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataViewCustomRenderer_NAME , php_wxDataViewCustomRenderer_functions);
+	char PHP_wxDataViewCustomRenderer_name[] = "wxDataViewCustomRenderer";
+	char le_wxDataViewCustomRenderer_name[] = "native wxDataViewCustomRenderer";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataViewCustomRenderer_name, php_wxDataViewCustomRenderer_functions);
 	php_wxDataViewCustomRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataViewCustomRenderer = zend_register_list_destructors_ex(php_wxDataViewCustomRenderer_destruction_handler, NULL, le_wxDataViewCustomRenderer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataViewDateRenderer_NAME , php_wxDataViewDateRenderer_functions);
+	char PHP_wxDataViewDateRenderer_name[] = "wxDataViewDateRenderer";
+	char le_wxDataViewDateRenderer_name[] = "native wxDataViewDateRenderer";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataViewDateRenderer_name, php_wxDataViewDateRenderer_functions);
 	php_wxDataViewDateRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataViewDateRenderer = zend_register_list_destructors_ex(php_wxDataViewDateRenderer_destruction_handler, NULL, le_wxDataViewDateRenderer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataViewIconText_NAME , php_wxDataViewIconText_functions);
+	char PHP_wxDataViewIconText_name[] = "wxDataViewIconText";
+	char le_wxDataViewIconText_name[] = "native wxDataViewIconText";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataViewIconText_name, php_wxDataViewIconText_functions);
 	php_wxDataViewIconText_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataViewIconText = zend_register_list_destructors_ex(php_wxDataViewIconText_destruction_handler, NULL, le_wxDataViewIconText_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataViewIconTextRenderer_NAME , php_wxDataViewIconTextRenderer_functions);
+	char PHP_wxDataViewIconTextRenderer_name[] = "wxDataViewIconTextRenderer";
+	char le_wxDataViewIconTextRenderer_name[] = "native wxDataViewIconTextRenderer";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataViewIconTextRenderer_name, php_wxDataViewIconTextRenderer_functions);
 	php_wxDataViewIconTextRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataViewIconTextRenderer = zend_register_list_destructors_ex(php_wxDataViewIconTextRenderer_destruction_handler, NULL, le_wxDataViewIconTextRenderer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataViewIndexListModel_NAME , php_wxDataViewIndexListModel_functions);
+	char PHP_wxDataViewIndexListModel_name[] = "wxDataViewIndexListModel";
+	char le_wxDataViewIndexListModel_name[] = "native wxDataViewIndexListModel";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataViewIndexListModel_name, php_wxDataViewIndexListModel_functions);
 	php_wxDataViewIndexListModel_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataViewIndexListModel = zend_register_list_destructors_ex(php_wxDataViewIndexListModel_destruction_handler, NULL, le_wxDataViewIndexListModel_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataViewItemAttr_NAME , php_wxDataViewItemAttr_functions);
+	char PHP_wxDataViewItemAttr_name[] = "wxDataViewItemAttr";
+	char le_wxDataViewItemAttr_name[] = "native wxDataViewItemAttr";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataViewItemAttr_name, php_wxDataViewItemAttr_functions);
 	php_wxDataViewItemAttr_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataViewItemAttr = zend_register_list_destructors_ex(php_wxDataViewItemAttr_destruction_handler, NULL, le_wxDataViewItemAttr_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataViewProgressRenderer_NAME , php_wxDataViewProgressRenderer_functions);
+	char PHP_wxDataViewProgressRenderer_name[] = "wxDataViewProgressRenderer";
+	char le_wxDataViewProgressRenderer_name[] = "native wxDataViewProgressRenderer";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataViewProgressRenderer_name, php_wxDataViewProgressRenderer_functions);
 	php_wxDataViewProgressRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataViewProgressRenderer = zend_register_list_destructors_ex(php_wxDataViewProgressRenderer_destruction_handler, NULL, le_wxDataViewProgressRenderer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataViewSpinRenderer_NAME , php_wxDataViewSpinRenderer_functions);
+	char PHP_wxDataViewSpinRenderer_name[] = "wxDataViewSpinRenderer";
+	char le_wxDataViewSpinRenderer_name[] = "native wxDataViewSpinRenderer";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataViewSpinRenderer_name, php_wxDataViewSpinRenderer_functions);
 	php_wxDataViewSpinRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataViewSpinRenderer = zend_register_list_destructors_ex(php_wxDataViewSpinRenderer_destruction_handler, NULL, le_wxDataViewSpinRenderer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataViewTextRenderer_NAME , php_wxDataViewTextRenderer_functions);
+	char PHP_wxDataViewTextRenderer_name[] = "wxDataViewTextRenderer";
+	char le_wxDataViewTextRenderer_name[] = "native wxDataViewTextRenderer";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataViewTextRenderer_name, php_wxDataViewTextRenderer_functions);
 	php_wxDataViewTextRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataViewTextRenderer = zend_register_list_destructors_ex(php_wxDataViewTextRenderer_destruction_handler, NULL, le_wxDataViewTextRenderer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataViewToggleRenderer_NAME , php_wxDataViewToggleRenderer_functions);
+	char PHP_wxDataViewToggleRenderer_name[] = "wxDataViewToggleRenderer";
+	char le_wxDataViewToggleRenderer_name[] = "native wxDataViewToggleRenderer";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataViewToggleRenderer_name, php_wxDataViewToggleRenderer_functions);
 	php_wxDataViewToggleRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataViewToggleRenderer = zend_register_list_destructors_ex(php_wxDataViewToggleRenderer_destruction_handler, NULL, le_wxDataViewToggleRenderer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataViewTreeCtrl_NAME , php_wxDataViewTreeCtrl_functions);
+	char PHP_wxDataViewTreeCtrl_name[] = "wxDataViewTreeCtrl";
+	char le_wxDataViewTreeCtrl_name[] = "native wxDataViewTreeCtrl";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataViewTreeCtrl_name, php_wxDataViewTreeCtrl_functions);
 	php_wxDataViewTreeCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataViewTreeCtrl = zend_register_list_destructors_ex(php_wxDataViewTreeCtrl_destruction_handler, NULL, le_wxDataViewTreeCtrl_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataViewTreeStore_NAME , php_wxDataViewTreeStore_functions);
+	char PHP_wxDataViewTreeStore_name[] = "wxDataViewTreeStore";
+	char le_wxDataViewTreeStore_name[] = "native wxDataViewTreeStore";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataViewTreeStore_name, php_wxDataViewTreeStore_functions);
 	php_wxDataViewTreeStore_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataViewTreeStore = zend_register_list_destructors_ex(php_wxDataViewTreeStore_destruction_handler, NULL, le_wxDataViewTreeStore_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDataViewVirtualListModel_NAME , php_wxDataViewVirtualListModel_functions);
+	char PHP_wxDataViewVirtualListModel_name[] = "wxDataViewVirtualListModel";
+	char le_wxDataViewVirtualListModel_name[] = "native wxDataViewVirtualListModel";
+	INIT_CLASS_ENTRY(ce, PHP_wxDataViewVirtualListModel_name, php_wxDataViewVirtualListModel_functions);
 	php_wxDataViewVirtualListModel_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDataViewVirtualListModel = zend_register_list_destructors_ex(php_wxDataViewVirtualListModel_destruction_handler, NULL, le_wxDataViewVirtualListModel_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxVariant_NAME , php_wxVariant_functions);
+	char PHP_wxVariant_name[] = "wxVariant";
+	char le_wxVariant_name[] = "native wxVariant";
+	INIT_CLASS_ENTRY(ce, PHP_wxVariant_name, php_wxVariant_functions);
 	php_wxVariant_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxVariant = zend_register_list_destructors_ex(php_wxVariant_destruction_handler, NULL, le_wxVariant_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxVariantData_NAME , php_wxVariantData_functions);
+	char PHP_wxVariantData_name[] = "wxVariantData";
+	char le_wxVariantData_name[] = "native wxVariantData";
+	INIT_CLASS_ENTRY(ce, PHP_wxVariantData_name, php_wxVariantData_functions);
 	php_wxVariantData_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxVariantData = zend_register_list_destructors_ex(php_wxVariantData_destruction_handler, NULL, le_wxVariantData_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxClassInfo_NAME , php_wxClassInfo_functions);
+	char PHP_wxClassInfo_name[] = "wxClassInfo";
+	char le_wxClassInfo_name[] = "native wxClassInfo";
+	INIT_CLASS_ENTRY(ce, PHP_wxClassInfo_name, php_wxClassInfo_functions);
 	php_wxClassInfo_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxClassInfo = zend_register_list_destructors_ex(php_wxClassInfo_destruction_handler, NULL, le_wxClassInfo_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxColourDatabase_NAME , php_wxColourDatabase_functions);
+	char PHP_wxColourDatabase_name[] = "wxColourDatabase";
+	char le_wxColourDatabase_name[] = "native wxColourDatabase";
+	INIT_CLASS_ENTRY(ce, PHP_wxColourDatabase_name, php_wxColourDatabase_functions);
 	php_wxColourDatabase_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxColourDatabase = zend_register_list_destructors_ex(php_wxColourDatabase_destruction_handler, NULL, le_wxColourDatabase_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxClipboard_NAME , php_wxClipboard_functions);
+	char PHP_wxClipboard_name[] = "wxClipboard";
+	char le_wxClipboard_name[] = "native wxClipboard";
+	INIT_CLASS_ENTRY(ce, PHP_wxClipboard_name, php_wxClipboard_functions);
 	php_wxClipboard_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxClipboard = zend_register_list_destructors_ex(php_wxClipboard_destruction_handler, NULL, le_wxClipboard_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxClipboardTextEvent_NAME , php_wxClipboardTextEvent_functions);
+	char PHP_wxClipboardTextEvent_name[] = "wxClipboardTextEvent";
+	char le_wxClipboardTextEvent_name[] = "native wxClipboardTextEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxClipboardTextEvent_name, php_wxClipboardTextEvent_functions);
 	php_wxClipboardTextEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxClipboardTextEvent = zend_register_list_destructors_ex(php_wxClipboardTextEvent_destruction_handler, NULL, le_wxClipboardTextEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxListView_NAME , php_wxListView_functions);
+	char PHP_wxListView_name[] = "wxListView";
+	char le_wxListView_name[] = "native wxListView";
+	INIT_CLASS_ENTRY(ce, PHP_wxListView_name, php_wxListView_functions);
 	php_wxListView_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxListView = zend_register_list_destructors_ex(php_wxListView_destruction_handler, NULL, le_wxListView_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxConfigBase_NAME , php_wxConfigBase_functions);
+	char PHP_wxConfigBase_name[] = "wxConfigBase";
+	char le_wxConfigBase_name[] = "native wxConfigBase";
+	INIT_CLASS_ENTRY(ce, PHP_wxConfigBase_name, php_wxConfigBase_functions);
 	php_wxConfigBase_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxConfigBase = zend_register_list_destructors_ex(php_wxConfigBase_destruction_handler, NULL, le_wxConfigBase_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHeaderCtrlEvent_NAME , php_wxHeaderCtrlEvent_functions);
+	char PHP_wxHeaderCtrlEvent_name[] = "wxHeaderCtrlEvent";
+	char le_wxHeaderCtrlEvent_name[] = "native wxHeaderCtrlEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxHeaderCtrlEvent_name, php_wxHeaderCtrlEvent_functions);
 	php_wxHeaderCtrlEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHeaderCtrlEvent = zend_register_list_destructors_ex(php_wxHeaderCtrlEvent_destruction_handler, NULL, le_wxHeaderCtrlEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHeaderCtrl_NAME , php_wxHeaderCtrl_functions);
+	char PHP_wxHeaderCtrl_name[] = "wxHeaderCtrl";
+	char le_wxHeaderCtrl_name[] = "native wxHeaderCtrl";
+	INIT_CLASS_ENTRY(ce, PHP_wxHeaderCtrl_name, php_wxHeaderCtrl_functions);
 	php_wxHeaderCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHeaderCtrl = zend_register_list_destructors_ex(php_wxHeaderCtrl_destruction_handler, NULL, le_wxHeaderCtrl_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHeaderColumn_NAME , php_wxHeaderColumn_functions);
+	char PHP_wxHeaderColumn_name[] = "wxHeaderColumn";
+	char le_wxHeaderColumn_name[] = "native wxHeaderColumn";
+	INIT_CLASS_ENTRY(ce, PHP_wxHeaderColumn_name, php_wxHeaderColumn_functions);
 	php_wxHeaderColumn_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHeaderColumn = zend_register_list_destructors_ex(php_wxHeaderColumn_destruction_handler, NULL, le_wxHeaderColumn_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHeaderCtrlSimple_NAME , php_wxHeaderCtrlSimple_functions);
+	char PHP_wxHeaderCtrlSimple_name[] = "wxHeaderCtrlSimple";
+	char le_wxHeaderCtrlSimple_name[] = "native wxHeaderCtrlSimple";
+	INIT_CLASS_ENTRY(ce, PHP_wxHeaderCtrlSimple_name, php_wxHeaderCtrlSimple_functions);
 	php_wxHeaderCtrlSimple_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHeaderCtrlSimple = zend_register_list_destructors_ex(php_wxHeaderCtrlSimple_destruction_handler, NULL, le_wxHeaderCtrlSimple_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHeaderColumnSimple_NAME , php_wxHeaderColumnSimple_functions);
+	char PHP_wxHeaderColumnSimple_name[] = "wxHeaderColumnSimple";
+	char le_wxHeaderColumnSimple_name[] = "native wxHeaderColumnSimple";
+	INIT_CLASS_ENTRY(ce, PHP_wxHeaderColumnSimple_name, php_wxHeaderColumnSimple_functions);
 	php_wxHeaderColumnSimple_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHeaderColumnSimple = zend_register_list_destructors_ex(php_wxHeaderColumnSimple_destruction_handler, NULL, le_wxHeaderColumnSimple_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxSettableHeaderColumn_NAME , php_wxSettableHeaderColumn_functions);
+	char PHP_wxSettableHeaderColumn_name[] = "wxSettableHeaderColumn";
+	char le_wxSettableHeaderColumn_name[] = "native wxSettableHeaderColumn";
+	INIT_CLASS_ENTRY(ce, PHP_wxSettableHeaderColumn_name, php_wxSettableHeaderColumn_functions);
 	php_wxSettableHeaderColumn_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxSettableHeaderColumn = zend_register_list_destructors_ex(php_wxSettableHeaderColumn_destruction_handler, NULL, le_wxSettableHeaderColumn_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxSetCursorEvent_NAME , php_wxSetCursorEvent_functions);
+	char PHP_wxSetCursorEvent_name[] = "wxSetCursorEvent";
+	char le_wxSetCursorEvent_name[] = "native wxSetCursorEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxSetCursorEvent_name, php_wxSetCursorEvent_functions);
 	php_wxSetCursorEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxSetCursorEvent = zend_register_list_destructors_ex(php_wxSetCursorEvent_destruction_handler, NULL, le_wxSetCursorEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxIdleEvent_NAME , php_wxIdleEvent_functions);
+	char PHP_wxIdleEvent_name[] = "wxIdleEvent";
+	char le_wxIdleEvent_name[] = "native wxIdleEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxIdleEvent_name, php_wxIdleEvent_functions);
 	php_wxIdleEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxIdleEvent = zend_register_list_destructors_ex(php_wxIdleEvent_destruction_handler, NULL, le_wxIdleEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPen_NAME , php_wxPen_functions);
+	char PHP_wxPen_name[] = "wxPen";
+	char le_wxPen_name[] = "native wxPen";
+	INIT_CLASS_ENTRY(ce, PHP_wxPen_name, php_wxPen_functions);
 	php_wxPen_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPen = zend_register_list_destructors_ex(php_wxPen_destruction_handler, NULL, le_wxPen_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxEditableListBox_NAME , php_wxEditableListBox_functions);
+	char PHP_wxEditableListBox_name[] = "wxEditableListBox";
+	char le_wxEditableListBox_name[] = "native wxEditableListBox";
+	INIT_CLASS_ENTRY(ce, PHP_wxEditableListBox_name, php_wxEditableListBox_functions);
 	php_wxEditableListBox_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxEditableListBox = zend_register_list_destructors_ex(php_wxEditableListBox_destruction_handler, NULL, le_wxEditableListBox_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFileCtrlEvent_NAME , php_wxFileCtrlEvent_functions);
+	char PHP_wxFileCtrlEvent_name[] = "wxFileCtrlEvent";
+	char le_wxFileCtrlEvent_name[] = "native wxFileCtrlEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxFileCtrlEvent_name, php_wxFileCtrlEvent_functions);
 	php_wxFileCtrlEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFileCtrlEvent = zend_register_list_destructors_ex(php_wxFileCtrlEvent_destruction_handler, NULL, le_wxFileCtrlEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFileCtrl_NAME , php_wxFileCtrl_functions);
+	char PHP_wxFileCtrl_name[] = "wxFileCtrl";
+	char le_wxFileCtrl_name[] = "native wxFileCtrl";
+	INIT_CLASS_ENTRY(ce, PHP_wxFileCtrl_name, php_wxFileCtrl_functions);
 	php_wxFileCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFileCtrl = zend_register_list_destructors_ex(php_wxFileCtrl_destruction_handler, NULL, le_wxFileCtrl_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxProcess_NAME , php_wxProcess_functions);
+	char PHP_wxProcess_name[] = "wxProcess";
+	char le_wxProcess_name[] = "native wxProcess";
+	INIT_CLASS_ENTRY(ce, PHP_wxProcess_name, php_wxProcess_functions);
 	php_wxProcess_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxProcess = zend_register_list_destructors_ex(php_wxProcess_destruction_handler, NULL, le_wxProcess_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxTextValidator_NAME , php_wxTextValidator_functions);
+	char PHP_wxTextValidator_name[] = "wxTextValidator";
+	char le_wxTextValidator_name[] = "native wxTextValidator";
+	INIT_CLASS_ENTRY(ce, PHP_wxTextValidator_name, php_wxTextValidator_functions);
 	php_wxTextValidator_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxTextValidator = zend_register_list_destructors_ex(php_wxTextValidator_destruction_handler, NULL, le_wxTextValidator_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHScrolledWindow_NAME , php_wxHScrolledWindow_functions);
+	char PHP_wxHScrolledWindow_name[] = "wxHScrolledWindow";
+	char le_wxHScrolledWindow_name[] = "native wxHScrolledWindow";
+	INIT_CLASS_ENTRY(ce, PHP_wxHScrolledWindow_name, php_wxHScrolledWindow_functions);
 	php_wxHScrolledWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHScrolledWindow = zend_register_list_destructors_ex(php_wxHScrolledWindow_destruction_handler, NULL, le_wxHScrolledWindow_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxInfoBar_NAME , php_wxInfoBar_functions);
+	char PHP_wxInfoBar_name[] = "wxInfoBar";
+	char le_wxInfoBar_name[] = "native wxInfoBar";
+	INIT_CLASS_ENTRY(ce, PHP_wxInfoBar_name, php_wxInfoBar_functions);
 	php_wxInfoBar_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxInfoBar = zend_register_list_destructors_ex(php_wxInfoBar_destruction_handler, NULL, le_wxInfoBar_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxRichToolTip_NAME , php_wxRichToolTip_functions);
+	char PHP_wxRichToolTip_name[] = "wxRichToolTip";
+	char le_wxRichToolTip_name[] = "native wxRichToolTip";
+	INIT_CLASS_ENTRY(ce, PHP_wxRichToolTip_name, php_wxRichToolTip_functions);
 	php_wxRichToolTip_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxRichToolTip = zend_register_list_destructors_ex(php_wxRichToolTip_destruction_handler, NULL, le_wxRichToolTip_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPosition_NAME , php_wxPosition_functions);
+	char PHP_wxPosition_name[] = "wxPosition";
+	char le_wxPosition_name[] = "native wxPosition";
+	INIT_CLASS_ENTRY(ce, PHP_wxPosition_name, php_wxPosition_functions);
 	php_wxPosition_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPosition = zend_register_list_destructors_ex(php_wxPosition_destruction_handler, NULL, le_wxPosition_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxMutex_NAME , php_wxMutex_functions);
+	char PHP_wxMutex_name[] = "wxMutex";
+	char le_wxMutex_name[] = "native wxMutex";
+	INIT_CLASS_ENTRY(ce, PHP_wxMutex_name, php_wxMutex_functions);
 	php_wxMutex_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxMutex = zend_register_list_destructors_ex(php_wxMutex_destruction_handler, NULL, le_wxMutex_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxMutexLocker_NAME , php_wxMutexLocker_functions);
+	char PHP_wxMutexLocker_name[] = "wxMutexLocker";
+	char le_wxMutexLocker_name[] = "native wxMutexLocker";
+	INIT_CLASS_ENTRY(ce, PHP_wxMutexLocker_name, php_wxMutexLocker_functions);
 	php_wxMutexLocker_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxMutexLocker = zend_register_list_destructors_ex(php_wxMutexLocker_destruction_handler, NULL, le_wxMutexLocker_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxXmlResource_NAME , php_wxXmlResource_functions);
+	char PHP_wxXmlResource_name[] = "wxXmlResource";
+	char le_wxXmlResource_name[] = "native wxXmlResource";
+	INIT_CLASS_ENTRY(ce, PHP_wxXmlResource_name, php_wxXmlResource_functions);
 	php_wxXmlResource_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxXmlResource = zend_register_list_destructors_ex(php_wxXmlResource_destruction_handler, NULL, le_wxXmlResource_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGenericValidator_NAME , php_wxGenericValidator_functions);
+	char PHP_wxGenericValidator_name[] = "wxGenericValidator";
+	char le_wxGenericValidator_name[] = "native wxGenericValidator";
+	INIT_CLASS_ENTRY(ce, PHP_wxGenericValidator_name, php_wxGenericValidator_functions);
 	php_wxGenericValidator_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGenericValidator = zend_register_list_destructors_ex(php_wxGenericValidator_destruction_handler, NULL, le_wxGenericValidator_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxSashWindow_NAME , php_wxSashWindow_functions);
+	char PHP_wxSashWindow_name[] = "wxSashWindow";
+	char le_wxSashWindow_name[] = "native wxSashWindow";
+	INIT_CLASS_ENTRY(ce, PHP_wxSashWindow_name, php_wxSashWindow_functions);
 	php_wxSashWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxSashWindow = zend_register_list_destructors_ex(php_wxSashWindow_destruction_handler, NULL, le_wxSashWindow_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxSashEvent_NAME , php_wxSashEvent_functions);
+	char PHP_wxSashEvent_name[] = "wxSashEvent";
+	char le_wxSashEvent_name[] = "native wxSashEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxSashEvent_name, php_wxSashEvent_functions);
 	php_wxSashEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxSashEvent = zend_register_list_destructors_ex(php_wxSashEvent_destruction_handler, NULL, le_wxSashEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxSashLayoutWindow_NAME , php_wxSashLayoutWindow_functions);
+	char PHP_wxSashLayoutWindow_name[] = "wxSashLayoutWindow";
+	char le_wxSashLayoutWindow_name[] = "native wxSashLayoutWindow";
+	INIT_CLASS_ENTRY(ce, PHP_wxSashLayoutWindow_name, php_wxSashLayoutWindow_functions);
 	php_wxSashLayoutWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxSashLayoutWindow = zend_register_list_destructors_ex(php_wxSashLayoutWindow_destruction_handler, NULL, le_wxSashLayoutWindow_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxSemaphore_NAME , php_wxSemaphore_functions);
+	char PHP_wxSemaphore_name[] = "wxSemaphore";
+	char le_wxSemaphore_name[] = "native wxSemaphore";
+	INIT_CLASS_ENTRY(ce, PHP_wxSemaphore_name, php_wxSemaphore_functions);
 	php_wxSemaphore_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxSemaphore = zend_register_list_destructors_ex(php_wxSemaphore_destruction_handler, NULL, le_wxSemaphore_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxAuiToolBarArt_NAME , php_wxAuiToolBarArt_functions);
+	char PHP_wxAuiToolBarArt_name[] = "wxAuiToolBarArt";
+	char le_wxAuiToolBarArt_name[] = "native wxAuiToolBarArt";
+	INIT_CLASS_ENTRY(ce, PHP_wxAuiToolBarArt_name, php_wxAuiToolBarArt_functions);
 	php_wxAuiToolBarArt_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxAuiToolBarArt = zend_register_list_destructors_ex(php_wxAuiToolBarArt_destruction_handler, NULL, le_wxAuiToolBarArt_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxBrush_NAME , php_wxBrush_functions);
+	char PHP_wxBrush_name[] = "wxBrush";
+	char le_wxBrush_name[] = "native wxBrush";
+	INIT_CLASS_ENTRY(ce, PHP_wxBrush_name, php_wxBrush_functions);
 	php_wxBrush_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxBrush = zend_register_list_destructors_ex(php_wxBrush_destruction_handler, NULL, le_wxBrush_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPlatformInfo_NAME , php_wxPlatformInfo_functions);
+	char PHP_wxPlatformInfo_name[] = "wxPlatformInfo";
+	char le_wxPlatformInfo_name[] = "native wxPlatformInfo";
+	INIT_CLASS_ENTRY(ce, PHP_wxPlatformInfo_name, php_wxPlatformInfo_functions);
 	php_wxPlatformInfo_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPlatformInfo = zend_register_list_destructors_ex(php_wxPlatformInfo_destruction_handler, NULL, le_wxPlatformInfo_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPageSetupDialog_NAME , php_wxPageSetupDialog_functions);
+	char PHP_wxPageSetupDialog_name[] = "wxPageSetupDialog";
+	char le_wxPageSetupDialog_name[] = "native wxPageSetupDialog";
+	INIT_CLASS_ENTRY(ce, PHP_wxPageSetupDialog_name, php_wxPageSetupDialog_functions);
 	php_wxPageSetupDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPageSetupDialog = zend_register_list_destructors_ex(php_wxPageSetupDialog_destruction_handler, NULL, le_wxPageSetupDialog_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPageSetupDialogData_NAME , php_wxPageSetupDialogData_functions);
+	char PHP_wxPageSetupDialogData_name[] = "wxPageSetupDialogData";
+	char le_wxPageSetupDialogData_name[] = "native wxPageSetupDialogData";
+	INIT_CLASS_ENTRY(ce, PHP_wxPageSetupDialogData_name, php_wxPageSetupDialogData_functions);
 	php_wxPageSetupDialogData_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPageSetupDialogData = zend_register_list_destructors_ex(php_wxPageSetupDialogData_destruction_handler, NULL, le_wxPageSetupDialogData_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPrintDialog_NAME , php_wxPrintDialog_functions);
+	char PHP_wxPrintDialog_name[] = "wxPrintDialog";
+	char le_wxPrintDialog_name[] = "native wxPrintDialog";
+	INIT_CLASS_ENTRY(ce, PHP_wxPrintDialog_name, php_wxPrintDialog_functions);
 	php_wxPrintDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPrintDialog = zend_register_list_destructors_ex(php_wxPrintDialog_destruction_handler, NULL, le_wxPrintDialog_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPrintDialogData_NAME , php_wxPrintDialogData_functions);
+	char PHP_wxPrintDialogData_name[] = "wxPrintDialogData";
+	char le_wxPrintDialogData_name[] = "native wxPrintDialogData";
+	INIT_CLASS_ENTRY(ce, PHP_wxPrintDialogData_name, php_wxPrintDialogData_functions);
 	php_wxPrintDialogData_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPrintDialogData = zend_register_list_destructors_ex(php_wxPrintDialogData_destruction_handler, NULL, le_wxPrintDialogData_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPrintData_NAME , php_wxPrintData_functions);
+	char PHP_wxPrintData_name[] = "wxPrintData";
+	char le_wxPrintData_name[] = "native wxPrintData";
+	INIT_CLASS_ENTRY(ce, PHP_wxPrintData_name, php_wxPrintData_functions);
 	php_wxPrintData_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPrintData = zend_register_list_destructors_ex(php_wxPrintData_destruction_handler, NULL, le_wxPrintData_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPostScriptDC_NAME , php_wxPostScriptDC_functions);
+	char PHP_wxPostScriptDC_name[] = "wxPostScriptDC";
+	char le_wxPostScriptDC_name[] = "native wxPostScriptDC";
+	INIT_CLASS_ENTRY(ce, PHP_wxPostScriptDC_name, php_wxPostScriptDC_functions);
 	php_wxPostScriptDC_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPostScriptDC = zend_register_list_destructors_ex(php_wxPostScriptDC_destruction_handler, NULL, le_wxPostScriptDC_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPrintPreview_NAME , php_wxPrintPreview_functions);
+	char PHP_wxPrintPreview_name[] = "wxPrintPreview";
+	char le_wxPrintPreview_name[] = "native wxPrintPreview";
+	INIT_CLASS_ENTRY(ce, PHP_wxPrintPreview_name, php_wxPrintPreview_functions);
 	php_wxPrintPreview_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPrintPreview = zend_register_list_destructors_ex(php_wxPrintPreview_destruction_handler, NULL, le_wxPrintPreview_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPrinter_NAME , php_wxPrinter_functions);
+	char PHP_wxPrinter_name[] = "wxPrinter";
+	char le_wxPrinter_name[] = "native wxPrinter";
+	INIT_CLASS_ENTRY(ce, PHP_wxPrinter_name, php_wxPrinter_functions);
 	php_wxPrinter_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPrinter = zend_register_list_destructors_ex(php_wxPrinter_destruction_handler, NULL, le_wxPrinter_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPrinterDC_NAME , php_wxPrinterDC_functions);
+	char PHP_wxPrinterDC_name[] = "wxPrinterDC";
+	char le_wxPrinterDC_name[] = "native wxPrinterDC";
+	INIT_CLASS_ENTRY(ce, PHP_wxPrinterDC_name, php_wxPrinterDC_functions);
 	php_wxPrinterDC_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPrinterDC = zend_register_list_destructors_ex(php_wxPrinterDC_destruction_handler, NULL, le_wxPrinterDC_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPrintout_NAME , php_wxPrintout_functions);
+	char PHP_wxPrintout_name[] = "wxPrintout";
+	char le_wxPrintout_name[] = "native wxPrintout";
+	INIT_CLASS_ENTRY(ce, PHP_wxPrintout_name, php_wxPrintout_functions);
 	php_wxPrintout_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPrintout = zend_register_list_destructors_ex(php_wxPrintout_destruction_handler, NULL, le_wxPrintout_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPreviewFrame_NAME , php_wxPreviewFrame_functions);
+	char PHP_wxPreviewFrame_name[] = "wxPreviewFrame";
+	char le_wxPreviewFrame_name[] = "native wxPreviewFrame";
+	INIT_CLASS_ENTRY(ce, PHP_wxPreviewFrame_name, php_wxPreviewFrame_functions);
 	php_wxPreviewFrame_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPreviewFrame = zend_register_list_destructors_ex(php_wxPreviewFrame_destruction_handler, NULL, le_wxPreviewFrame_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPreviewControlBar_NAME , php_wxPreviewControlBar_functions);
+	char PHP_wxPreviewControlBar_name[] = "wxPreviewControlBar";
+	char le_wxPreviewControlBar_name[] = "native wxPreviewControlBar";
+	INIT_CLASS_ENTRY(ce, PHP_wxPreviewControlBar_name, php_wxPreviewControlBar_functions);
 	php_wxPreviewControlBar_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPreviewControlBar = zend_register_list_destructors_ex(php_wxPreviewControlBar_destruction_handler, NULL, le_wxPreviewControlBar_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPreviewCanvas_NAME , php_wxPreviewCanvas_functions);
+	char PHP_wxPreviewCanvas_name[] = "wxPreviewCanvas";
+	char le_wxPreviewCanvas_name[] = "native wxPreviewCanvas";
+	INIT_CLASS_ENTRY(ce, PHP_wxPreviewCanvas_name, php_wxPreviewCanvas_functions);
 	php_wxPreviewCanvas_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPreviewCanvas = zend_register_list_destructors_ex(php_wxPreviewCanvas_destruction_handler, NULL, le_wxPreviewCanvas_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxSingleChoiceDialog_NAME , php_wxSingleChoiceDialog_functions);
+	char PHP_wxSingleChoiceDialog_name[] = "wxSingleChoiceDialog";
+	char le_wxSingleChoiceDialog_name[] = "native wxSingleChoiceDialog";
+	INIT_CLASS_ENTRY(ce, PHP_wxSingleChoiceDialog_name, php_wxSingleChoiceDialog_functions);
 	php_wxSingleChoiceDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxSingleChoiceDialog = zend_register_list_destructors_ex(php_wxSingleChoiceDialog_destruction_handler, NULL, le_wxSingleChoiceDialog_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHtmlDCRenderer_NAME , php_wxHtmlDCRenderer_functions);
+	char PHP_wxHtmlDCRenderer_name[] = "wxHtmlDCRenderer";
+	char le_wxHtmlDCRenderer_name[] = "native wxHtmlDCRenderer";
+	INIT_CLASS_ENTRY(ce, PHP_wxHtmlDCRenderer_name, php_wxHtmlDCRenderer_functions);
 	php_wxHtmlDCRenderer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHtmlDCRenderer = zend_register_list_destructors_ex(php_wxHtmlDCRenderer_destruction_handler, NULL, le_wxHtmlDCRenderer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHtmlFilter_NAME , php_wxHtmlFilter_functions);
+	char PHP_wxHtmlFilter_name[] = "wxHtmlFilter";
+	char le_wxHtmlFilter_name[] = "native wxHtmlFilter";
+	INIT_CLASS_ENTRY(ce, PHP_wxHtmlFilter_name, php_wxHtmlFilter_functions);
 	php_wxHtmlFilter_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHtmlFilter = zend_register_list_destructors_ex(php_wxHtmlFilter_destruction_handler, NULL, le_wxHtmlFilter_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHtmlHelpController_NAME , php_wxHtmlHelpController_functions);
+	char PHP_wxHtmlHelpController_name[] = "wxHtmlHelpController";
+	char le_wxHtmlHelpController_name[] = "native wxHtmlHelpController";
+	INIT_CLASS_ENTRY(ce, PHP_wxHtmlHelpController_name, php_wxHtmlHelpController_functions);
 	php_wxHtmlHelpController_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHtmlHelpController = zend_register_list_destructors_ex(php_wxHtmlHelpController_destruction_handler, NULL, le_wxHtmlHelpController_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHtmlHelpData_NAME , php_wxHtmlHelpData_functions);
+	char PHP_wxHtmlHelpData_name[] = "wxHtmlHelpData";
+	char le_wxHtmlHelpData_name[] = "native wxHtmlHelpData";
+	INIT_CLASS_ENTRY(ce, PHP_wxHtmlHelpData_name, php_wxHtmlHelpData_functions);
 	php_wxHtmlHelpData_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHtmlHelpData = zend_register_list_destructors_ex(php_wxHtmlHelpData_destruction_handler, NULL, le_wxHtmlHelpData_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHtmlHelpDialog_NAME , php_wxHtmlHelpDialog_functions);
+	char PHP_wxHtmlHelpDialog_name[] = "wxHtmlHelpDialog";
+	char le_wxHtmlHelpDialog_name[] = "native wxHtmlHelpDialog";
+	INIT_CLASS_ENTRY(ce, PHP_wxHtmlHelpDialog_name, php_wxHtmlHelpDialog_functions);
 	php_wxHtmlHelpDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHtmlHelpDialog = zend_register_list_destructors_ex(php_wxHtmlHelpDialog_destruction_handler, NULL, le_wxHtmlHelpDialog_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHtmlHelpFrame_NAME , php_wxHtmlHelpFrame_functions);
+	char PHP_wxHtmlHelpFrame_name[] = "wxHtmlHelpFrame";
+	char le_wxHtmlHelpFrame_name[] = "native wxHtmlHelpFrame";
+	INIT_CLASS_ENTRY(ce, PHP_wxHtmlHelpFrame_name, php_wxHtmlHelpFrame_functions);
 	php_wxHtmlHelpFrame_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHtmlHelpFrame = zend_register_list_destructors_ex(php_wxHtmlHelpFrame_destruction_handler, NULL, le_wxHtmlHelpFrame_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHtmlHelpWindow_NAME , php_wxHtmlHelpWindow_functions);
+	char PHP_wxHtmlHelpWindow_name[] = "wxHtmlHelpWindow";
+	char le_wxHtmlHelpWindow_name[] = "native wxHtmlHelpWindow";
+	INIT_CLASS_ENTRY(ce, PHP_wxHtmlHelpWindow_name, php_wxHtmlHelpWindow_functions);
 	php_wxHtmlHelpWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHtmlHelpWindow = zend_register_list_destructors_ex(php_wxHtmlHelpWindow_destruction_handler, NULL, le_wxHtmlHelpWindow_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHtmlModalHelp_NAME , php_wxHtmlModalHelp_functions);
+	char PHP_wxHtmlModalHelp_name[] = "wxHtmlModalHelp";
+	char le_wxHtmlModalHelp_name[] = "native wxHtmlModalHelp";
+	INIT_CLASS_ENTRY(ce, PHP_wxHtmlModalHelp_name, php_wxHtmlModalHelp_functions);
 	php_wxHtmlModalHelp_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHtmlModalHelp = zend_register_list_destructors_ex(php_wxHtmlModalHelp_destruction_handler, NULL, le_wxHtmlModalHelp_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHtmlPrintout_NAME , php_wxHtmlPrintout_functions);
+	char PHP_wxHtmlPrintout_name[] = "wxHtmlPrintout";
+	char le_wxHtmlPrintout_name[] = "native wxHtmlPrintout";
+	INIT_CLASS_ENTRY(ce, PHP_wxHtmlPrintout_name, php_wxHtmlPrintout_functions);
 	php_wxHtmlPrintout_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHtmlPrintout = zend_register_list_destructors_ex(php_wxHtmlPrintout_destruction_handler, NULL, le_wxHtmlPrintout_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHtmlRenderingInfo_NAME , php_wxHtmlRenderingInfo_functions);
+	char PHP_wxHtmlRenderingInfo_name[] = "wxHtmlRenderingInfo";
+	char le_wxHtmlRenderingInfo_name[] = "native wxHtmlRenderingInfo";
+	INIT_CLASS_ENTRY(ce, PHP_wxHtmlRenderingInfo_name, php_wxHtmlRenderingInfo_functions);
 	php_wxHtmlRenderingInfo_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHtmlRenderingInfo = zend_register_list_destructors_ex(php_wxHtmlRenderingInfo_destruction_handler, NULL, le_wxHtmlRenderingInfo_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHtmlRenderingStyle_NAME , php_wxHtmlRenderingStyle_functions);
+	char PHP_wxHtmlRenderingStyle_name[] = "wxHtmlRenderingStyle";
+	char le_wxHtmlRenderingStyle_name[] = "native wxHtmlRenderingStyle";
+	INIT_CLASS_ENTRY(ce, PHP_wxHtmlRenderingStyle_name, php_wxHtmlRenderingStyle_functions);
 	php_wxHtmlRenderingStyle_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHtmlRenderingStyle = zend_register_list_destructors_ex(php_wxHtmlRenderingStyle_destruction_handler, NULL, le_wxHtmlRenderingStyle_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHtmlTagHandler_NAME , php_wxHtmlTagHandler_functions);
+	char PHP_wxHtmlTagHandler_name[] = "wxHtmlTagHandler";
+	char le_wxHtmlTagHandler_name[] = "native wxHtmlTagHandler";
+	INIT_CLASS_ENTRY(ce, PHP_wxHtmlTagHandler_name, php_wxHtmlTagHandler_functions);
 	php_wxHtmlTagHandler_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHtmlTagHandler = zend_register_list_destructors_ex(php_wxHtmlTagHandler_destruction_handler, NULL, le_wxHtmlTagHandler_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHtmlTagsModule_NAME , php_wxHtmlTagsModule_functions);
+	char PHP_wxHtmlTagsModule_name[] = "wxHtmlTagsModule";
+	char le_wxHtmlTagsModule_name[] = "native wxHtmlTagsModule";
+	INIT_CLASS_ENTRY(ce, PHP_wxHtmlTagsModule_name, php_wxHtmlTagsModule_functions);
 	php_wxHtmlTagsModule_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHtmlTagsModule = zend_register_list_destructors_ex(php_wxHtmlTagsModule_destruction_handler, NULL, le_wxHtmlTagsModule_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxModule_NAME , php_wxModule_functions);
+	char PHP_wxModule_name[] = "wxModule";
+	char le_wxModule_name[] = "native wxModule";
+	INIT_CLASS_ENTRY(ce, PHP_wxModule_name, php_wxModule_functions);
 	php_wxModule_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxModule = zend_register_list_destructors_ex(php_wxModule_destruction_handler, NULL, le_wxModule_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHtmlWidgetCell_NAME , php_wxHtmlWidgetCell_functions);
+	char PHP_wxHtmlWidgetCell_name[] = "wxHtmlWidgetCell";
+	char le_wxHtmlWidgetCell_name[] = "native wxHtmlWidgetCell";
+	INIT_CLASS_ENTRY(ce, PHP_wxHtmlWidgetCell_name, php_wxHtmlWidgetCell_functions);
 	php_wxHtmlWidgetCell_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHtmlWidgetCell = zend_register_list_destructors_ex(php_wxHtmlWidgetCell_destruction_handler, NULL, le_wxHtmlWidgetCell_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHtmlWinParser_NAME , php_wxHtmlWinParser_functions);
+	char PHP_wxHtmlWinParser_name[] = "wxHtmlWinParser";
+	char le_wxHtmlWinParser_name[] = "native wxHtmlWinParser";
+	INIT_CLASS_ENTRY(ce, PHP_wxHtmlWinParser_name, php_wxHtmlWinParser_functions);
 	php_wxHtmlWinParser_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHtmlWinParser = zend_register_list_destructors_ex(php_wxHtmlWinParser_destruction_handler, NULL, le_wxHtmlWinParser_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxHtmlWinTagHandler_NAME , php_wxHtmlWinTagHandler_functions);
+	char PHP_wxHtmlWinTagHandler_name[] = "wxHtmlWinTagHandler";
+	char le_wxHtmlWinTagHandler_name[] = "native wxHtmlWinTagHandler";
+	INIT_CLASS_ENTRY(ce, PHP_wxHtmlWinTagHandler_name, php_wxHtmlWinTagHandler_functions);
 	php_wxHtmlWinTagHandler_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxHtmlWinTagHandler = zend_register_list_destructors_ex(php_wxHtmlWinTagHandler_destruction_handler, NULL, le_wxHtmlWinTagHandler_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxAutoBufferedPaintDC_NAME , php_wxAutoBufferedPaintDC_functions);
+	char PHP_wxAutoBufferedPaintDC_name[] = "wxAutoBufferedPaintDC";
+	char le_wxAutoBufferedPaintDC_name[] = "native wxAutoBufferedPaintDC";
+	INIT_CLASS_ENTRY(ce, PHP_wxAutoBufferedPaintDC_name, php_wxAutoBufferedPaintDC_functions);
 	php_wxAutoBufferedPaintDC_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxAutoBufferedPaintDC = zend_register_list_destructors_ex(php_wxAutoBufferedPaintDC_destruction_handler, NULL, le_wxAutoBufferedPaintDC_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxBufferedDC_NAME , php_wxBufferedDC_functions);
+	char PHP_wxBufferedDC_name[] = "wxBufferedDC";
+	char le_wxBufferedDC_name[] = "native wxBufferedDC";
+	INIT_CLASS_ENTRY(ce, PHP_wxBufferedDC_name, php_wxBufferedDC_functions);
 	php_wxBufferedDC_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxBufferedDC = zend_register_list_destructors_ex(php_wxBufferedDC_destruction_handler, NULL, le_wxBufferedDC_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxBufferedPaintDC_NAME , php_wxBufferedPaintDC_functions);
+	char PHP_wxBufferedPaintDC_name[] = "wxBufferedPaintDC";
+	char le_wxBufferedPaintDC_name[] = "native wxBufferedPaintDC";
+	INIT_CLASS_ENTRY(ce, PHP_wxBufferedPaintDC_name, php_wxBufferedPaintDC_functions);
 	php_wxBufferedPaintDC_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxBufferedPaintDC = zend_register_list_destructors_ex(php_wxBufferedPaintDC_destruction_handler, NULL, le_wxBufferedPaintDC_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxClientDC_NAME , php_wxClientDC_functions);
+	char PHP_wxClientDC_name[] = "wxClientDC";
+	char le_wxClientDC_name[] = "native wxClientDC";
+	INIT_CLASS_ENTRY(ce, PHP_wxClientDC_name, php_wxClientDC_functions);
 	php_wxClientDC_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxClientDC = zend_register_list_destructors_ex(php_wxClientDC_destruction_handler, NULL, le_wxClientDC_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPaintEvent_NAME , php_wxPaintEvent_functions);
+	char PHP_wxPaintEvent_name[] = "wxPaintEvent";
+	char le_wxPaintEvent_name[] = "native wxPaintEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxPaintEvent_name, php_wxPaintEvent_functions);
 	php_wxPaintEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPaintEvent = zend_register_list_destructors_ex(php_wxPaintEvent_destruction_handler, NULL, le_wxPaintEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPaintDC_NAME , php_wxPaintDC_functions);
+	char PHP_wxPaintDC_name[] = "wxPaintDC";
+	char le_wxPaintDC_name[] = "native wxPaintDC";
+	INIT_CLASS_ENTRY(ce, PHP_wxPaintDC_name, php_wxPaintDC_functions);
 	php_wxPaintDC_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPaintDC = zend_register_list_destructors_ex(php_wxPaintDC_destruction_handler, NULL, le_wxPaintDC_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxMemoryDC_NAME , php_wxMemoryDC_functions);
+	char PHP_wxMemoryDC_name[] = "wxMemoryDC";
+	char le_wxMemoryDC_name[] = "native wxMemoryDC";
+	INIT_CLASS_ENTRY(ce, PHP_wxMemoryDC_name, php_wxMemoryDC_functions);
 	php_wxMemoryDC_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxMemoryDC = zend_register_list_destructors_ex(php_wxMemoryDC_destruction_handler, NULL, le_wxMemoryDC_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxMirrorDC_NAME , php_wxMirrorDC_functions);
+	char PHP_wxMirrorDC_name[] = "wxMirrorDC";
+	char le_wxMirrorDC_name[] = "native wxMirrorDC";
+	INIT_CLASS_ENTRY(ce, PHP_wxMirrorDC_name, php_wxMirrorDC_functions);
 	php_wxMirrorDC_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxMirrorDC = zend_register_list_destructors_ex(php_wxMirrorDC_destruction_handler, NULL, le_wxMirrorDC_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDCClipper_NAME , php_wxDCClipper_functions);
+	char PHP_wxDCClipper_name[] = "wxDCClipper";
+	char le_wxDCClipper_name[] = "native wxDCClipper";
+	INIT_CLASS_ENTRY(ce, PHP_wxDCClipper_name, php_wxDCClipper_functions);
 	php_wxDCClipper_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDCClipper = zend_register_list_destructors_ex(php_wxDCClipper_destruction_handler, NULL, le_wxDCClipper_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFontList_NAME , php_wxFontList_functions);
+	char PHP_wxFontList_name[] = "wxFontList";
+	char le_wxFontList_name[] = "native wxFontList";
+	INIT_CLASS_ENTRY(ce, PHP_wxFontList_name, php_wxFontList_functions);
 	php_wxFontList_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFontList = zend_register_list_destructors_ex(php_wxFontList_destruction_handler, NULL, le_wxFontList_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPenList_NAME , php_wxPenList_functions);
+	char PHP_wxPenList_name[] = "wxPenList";
+	char le_wxPenList_name[] = "native wxPenList";
+	INIT_CLASS_ENTRY(ce, PHP_wxPenList_name, php_wxPenList_functions);
 	php_wxPenList_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPenList = zend_register_list_destructors_ex(php_wxPenList_destruction_handler, NULL, le_wxPenList_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPaletteChangedEvent_NAME , php_wxPaletteChangedEvent_functions);
+	char PHP_wxPaletteChangedEvent_name[] = "wxPaletteChangedEvent";
+	char le_wxPaletteChangedEvent_name[] = "native wxPaletteChangedEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxPaletteChangedEvent_name, php_wxPaletteChangedEvent_functions);
 	php_wxPaletteChangedEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPaletteChangedEvent = zend_register_list_destructors_ex(php_wxPaletteChangedEvent_destruction_handler, NULL, le_wxPaletteChangedEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxRendererNative_NAME , php_wxRendererNative_functions);
+	char PHP_wxRendererNative_name[] = "wxRendererNative";
+	char le_wxRendererNative_name[] = "native wxRendererNative";
+	INIT_CLASS_ENTRY(ce, PHP_wxRendererNative_name, php_wxRendererNative_functions);
 	php_wxRendererNative_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxRendererNative = zend_register_list_destructors_ex(php_wxRendererNative_destruction_handler, NULL, le_wxRendererNative_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxImageHandler_NAME , php_wxImageHandler_functions);
+	char PHP_wxImageHandler_name[] = "wxImageHandler";
+	char le_wxImageHandler_name[] = "native wxImageHandler";
+	INIT_CLASS_ENTRY(ce, PHP_wxImageHandler_name, php_wxImageHandler_functions);
 	php_wxImageHandler_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxImageHandler = zend_register_list_destructors_ex(php_wxImageHandler_destruction_handler, NULL, le_wxImageHandler_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxInitDialogEvent_NAME , php_wxInitDialogEvent_functions);
+	char PHP_wxInitDialogEvent_name[] = "wxInitDialogEvent";
+	char le_wxInitDialogEvent_name[] = "native wxInitDialogEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxInitDialogEvent_name, php_wxInitDialogEvent_functions);
 	php_wxInitDialogEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxInitDialogEvent = zend_register_list_destructors_ex(php_wxInitDialogEvent_destruction_handler, NULL, le_wxInitDialogEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxMaximizeEvent_NAME , php_wxMaximizeEvent_functions);
+	char PHP_wxMaximizeEvent_name[] = "wxMaximizeEvent";
+	char le_wxMaximizeEvent_name[] = "native wxMaximizeEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxMaximizeEvent_name, php_wxMaximizeEvent_functions);
 	php_wxMaximizeEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxMaximizeEvent = zend_register_list_destructors_ex(php_wxMaximizeEvent_destruction_handler, NULL, le_wxMaximizeEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxNavigationKeyEvent_NAME , php_wxNavigationKeyEvent_functions);
+	char PHP_wxNavigationKeyEvent_name[] = "wxNavigationKeyEvent";
+	char le_wxNavigationKeyEvent_name[] = "native wxNavigationKeyEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxNavigationKeyEvent_name, php_wxNavigationKeyEvent_functions);
 	php_wxNavigationKeyEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxNavigationKeyEvent = zend_register_list_destructors_ex(php_wxNavigationKeyEvent_destruction_handler, NULL, le_wxNavigationKeyEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxPathList_NAME , php_wxPathList_functions);
+	char PHP_wxPathList_name[] = "wxPathList";
+	char le_wxPathList_name[] = "native wxPathList";
+	INIT_CLASS_ENTRY(ce, PHP_wxPathList_name, php_wxPathList_functions);
 	php_wxPathList_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxPathList = zend_register_list_destructors_ex(php_wxPathList_destruction_handler, NULL, le_wxPathList_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxCriticalSection_NAME , php_wxCriticalSection_functions);
+	char PHP_wxCriticalSection_name[] = "wxCriticalSection";
+	char le_wxCriticalSection_name[] = "native wxCriticalSection";
+	INIT_CLASS_ENTRY(ce, PHP_wxCriticalSection_name, php_wxCriticalSection_functions);
 	php_wxCriticalSection_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxCriticalSection = zend_register_list_destructors_ex(php_wxCriticalSection_destruction_handler, NULL, le_wxCriticalSection_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxCriticalSectionLocker_NAME , php_wxCriticalSectionLocker_functions);
+	char PHP_wxCriticalSectionLocker_name[] = "wxCriticalSectionLocker";
+	char le_wxCriticalSectionLocker_name[] = "native wxCriticalSectionLocker";
+	INIT_CLASS_ENTRY(ce, PHP_wxCriticalSectionLocker_name, php_wxCriticalSectionLocker_functions);
 	php_wxCriticalSectionLocker_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxCriticalSectionLocker = zend_register_list_destructors_ex(php_wxCriticalSectionLocker_destruction_handler, NULL, le_wxCriticalSectionLocker_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxCondition_NAME , php_wxCondition_functions);
+	char PHP_wxCondition_name[] = "wxCondition";
+	char le_wxCondition_name[] = "native wxCondition";
+	INIT_CLASS_ENTRY(ce, PHP_wxCondition_name, php_wxCondition_functions);
 	php_wxCondition_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxCondition = zend_register_list_destructors_ex(php_wxCondition_destruction_handler, NULL, le_wxCondition_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxBusyCursor_NAME , php_wxBusyCursor_functions);
+	char PHP_wxBusyCursor_name[] = "wxBusyCursor";
+	char le_wxBusyCursor_name[] = "native wxBusyCursor";
+	INIT_CLASS_ENTRY(ce, PHP_wxBusyCursor_name, php_wxBusyCursor_functions);
 	php_wxBusyCursor_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxBusyCursor = zend_register_list_destructors_ex(php_wxBusyCursor_destruction_handler, NULL, le_wxBusyCursor_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxBusyInfo_NAME , php_wxBusyInfo_functions);
+	char PHP_wxBusyInfo_name[] = "wxBusyInfo";
+	char le_wxBusyInfo_name[] = "native wxBusyInfo";
+	INIT_CLASS_ENTRY(ce, PHP_wxBusyInfo_name, php_wxBusyInfo_functions);
 	php_wxBusyInfo_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxBusyInfo = zend_register_list_destructors_ex(php_wxBusyInfo_destruction_handler, NULL, le_wxBusyInfo_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxXmlResourceHandler_NAME , php_wxXmlResourceHandler_functions);
+	char PHP_wxXmlResourceHandler_name[] = "wxXmlResourceHandler";
+	char le_wxXmlResourceHandler_name[] = "native wxXmlResourceHandler";
+	INIT_CLASS_ENTRY(ce, PHP_wxXmlResourceHandler_name, php_wxXmlResourceHandler_functions);
 	php_wxXmlResourceHandler_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxXmlResourceHandler = zend_register_list_destructors_ex(php_wxXmlResourceHandler_destruction_handler, NULL, le_wxXmlResourceHandler_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxXmlNode_NAME , php_wxXmlNode_functions);
+	char PHP_wxXmlNode_name[] = "wxXmlNode";
+	char le_wxXmlNode_name[] = "native wxXmlNode";
+	INIT_CLASS_ENTRY(ce, PHP_wxXmlNode_name, php_wxXmlNode_functions);
 	php_wxXmlNode_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxXmlNode = zend_register_list_destructors_ex(php_wxXmlNode_destruction_handler, NULL, le_wxXmlNode_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxXmlDocument_NAME , php_wxXmlDocument_functions);
+	char PHP_wxXmlDocument_name[] = "wxXmlDocument";
+	char le_wxXmlDocument_name[] = "native wxXmlDocument";
+	INIT_CLASS_ENTRY(ce, PHP_wxXmlDocument_name, php_wxXmlDocument_functions);
 	php_wxXmlDocument_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxXmlDocument = zend_register_list_destructors_ex(php_wxXmlDocument_destruction_handler, NULL, le_wxXmlDocument_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxXmlAttribute_NAME , php_wxXmlAttribute_functions);
+	char PHP_wxXmlAttribute_name[] = "wxXmlAttribute";
+	char le_wxXmlAttribute_name[] = "native wxXmlAttribute";
+	INIT_CLASS_ENTRY(ce, PHP_wxXmlAttribute_name, php_wxXmlAttribute_functions);
 	php_wxXmlAttribute_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxXmlAttribute = zend_register_list_destructors_ex(php_wxXmlAttribute_destruction_handler, NULL, le_wxXmlAttribute_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxLayoutAlgorithm_NAME , php_wxLayoutAlgorithm_functions);
+	char PHP_wxLayoutAlgorithm_name[] = "wxLayoutAlgorithm";
+	char le_wxLayoutAlgorithm_name[] = "native wxLayoutAlgorithm";
+	INIT_CLASS_ENTRY(ce, PHP_wxLayoutAlgorithm_name, php_wxLayoutAlgorithm_functions);
 	php_wxLayoutAlgorithm_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxLayoutAlgorithm = zend_register_list_destructors_ex(php_wxLayoutAlgorithm_destruction_handler, NULL, le_wxLayoutAlgorithm_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFocusEvent_NAME , php_wxFocusEvent_functions);
+	char PHP_wxFocusEvent_name[] = "wxFocusEvent";
+	char le_wxFocusEvent_name[] = "native wxFocusEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxFocusEvent_name, php_wxFocusEvent_functions);
 	php_wxFocusEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFocusEvent = zend_register_list_destructors_ex(php_wxFocusEvent_destruction_handler, NULL, le_wxFocusEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFontMapper_NAME , php_wxFontMapper_functions);
+	char PHP_wxFontMapper_name[] = "wxFontMapper";
+	char le_wxFontMapper_name[] = "native wxFontMapper";
+	INIT_CLASS_ENTRY(ce, PHP_wxFontMapper_name, php_wxFontMapper_functions);
 	php_wxFontMapper_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFontMapper = zend_register_list_destructors_ex(php_wxFontMapper_destruction_handler, NULL, le_wxFontMapper_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFontEnumerator_NAME , php_wxFontEnumerator_functions);
+	char PHP_wxFontEnumerator_name[] = "wxFontEnumerator";
+	char le_wxFontEnumerator_name[] = "native wxFontEnumerator";
+	INIT_CLASS_ENTRY(ce, PHP_wxFontEnumerator_name, php_wxFontEnumerator_functions);
 	php_wxFontEnumerator_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFontEnumerator = zend_register_list_destructors_ex(php_wxFontEnumerator_destruction_handler, NULL, le_wxFontEnumerator_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFFileInputStream_NAME , php_wxFFileInputStream_functions);
+	char PHP_wxFFileInputStream_name[] = "wxFFileInputStream";
+	char le_wxFFileInputStream_name[] = "native wxFFileInputStream";
+	INIT_CLASS_ENTRY(ce, PHP_wxFFileInputStream_name, php_wxFFileInputStream_functions);
 	php_wxFFileInputStream_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFFileInputStream = zend_register_list_destructors_ex(php_wxFFileInputStream_destruction_handler, NULL, le_wxFFileInputStream_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFFileOutputStream_NAME , php_wxFFileOutputStream_functions);
+	char PHP_wxFFileOutputStream_name[] = "wxFFileOutputStream";
+	char le_wxFFileOutputStream_name[] = "native wxFFileOutputStream";
+	INIT_CLASS_ENTRY(ce, PHP_wxFFileOutputStream_name, php_wxFFileOutputStream_functions);
 	php_wxFFileOutputStream_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFFileOutputStream = zend_register_list_destructors_ex(php_wxFFileOutputStream_destruction_handler, NULL, le_wxFFileOutputStream_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFFileStream_NAME , php_wxFFileStream_functions);
+	char PHP_wxFFileStream_name[] = "wxFFileStream";
+	char le_wxFFileStream_name[] = "native wxFFileStream";
+	INIT_CLASS_ENTRY(ce, PHP_wxFFileStream_name, php_wxFFileStream_functions);
 	php_wxFFileStream_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFFileStream = zend_register_list_destructors_ex(php_wxFFileStream_destruction_handler, NULL, le_wxFFileStream_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFile_NAME , php_wxFile_functions);
+	char PHP_wxFile_name[] = "wxFile";
+	char le_wxFile_name[] = "native wxFile";
+	INIT_CLASS_ENTRY(ce, PHP_wxFile_name, php_wxFile_functions);
 	php_wxFile_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFile = zend_register_list_destructors_ex(php_wxFile_destruction_handler, NULL, le_wxFile_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFileConfig_NAME , php_wxFileConfig_functions);
+	char PHP_wxFileConfig_name[] = "wxFileConfig";
+	char le_wxFileConfig_name[] = "native wxFileConfig";
+	INIT_CLASS_ENTRY(ce, PHP_wxFileConfig_name, php_wxFileConfig_functions);
 	php_wxFileConfig_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFileConfig = zend_register_list_destructors_ex(php_wxFileConfig_destruction_handler, NULL, le_wxFileConfig_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFileDirPickerEvent_NAME , php_wxFileDirPickerEvent_functions);
+	char PHP_wxFileDirPickerEvent_name[] = "wxFileDirPickerEvent";
+	char le_wxFileDirPickerEvent_name[] = "native wxFileDirPickerEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxFileDirPickerEvent_name, php_wxFileDirPickerEvent_functions);
 	php_wxFileDirPickerEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFileDirPickerEvent = zend_register_list_destructors_ex(php_wxFileDirPickerEvent_destruction_handler, NULL, le_wxFileDirPickerEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFileHistory_NAME , php_wxFileHistory_functions);
+	char PHP_wxFileHistory_name[] = "wxFileHistory";
+	char le_wxFileHistory_name[] = "native wxFileHistory";
+	INIT_CLASS_ENTRY(ce, PHP_wxFileHistory_name, php_wxFileHistory_functions);
 	php_wxFileHistory_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFileHistory = zend_register_list_destructors_ex(php_wxFileHistory_destruction_handler, NULL, le_wxFileHistory_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFileInputStream_NAME , php_wxFileInputStream_functions);
+	char PHP_wxFileInputStream_name[] = "wxFileInputStream";
+	char le_wxFileInputStream_name[] = "native wxFileInputStream";
+	INIT_CLASS_ENTRY(ce, PHP_wxFileInputStream_name, php_wxFileInputStream_functions);
 	php_wxFileInputStream_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFileInputStream = zend_register_list_destructors_ex(php_wxFileInputStream_destruction_handler, NULL, le_wxFileInputStream_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFileDropTarget_NAME , php_wxFileDropTarget_functions);
+	char PHP_wxFileDropTarget_name[] = "wxFileDropTarget";
+	char le_wxFileDropTarget_name[] = "native wxFileDropTarget";
+	INIT_CLASS_ENTRY(ce, PHP_wxFileDropTarget_name, php_wxFileDropTarget_functions);
 	php_wxFileDropTarget_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFileDropTarget = zend_register_list_destructors_ex(php_wxFileDropTarget_destruction_handler, NULL, le_wxFileDropTarget_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFileOutputStream_NAME , php_wxFileOutputStream_functions);
+	char PHP_wxFileOutputStream_name[] = "wxFileOutputStream";
+	char le_wxFileOutputStream_name[] = "native wxFileOutputStream";
+	INIT_CLASS_ENTRY(ce, PHP_wxFileOutputStream_name, php_wxFileOutputStream_functions);
 	php_wxFileOutputStream_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFileOutputStream = zend_register_list_destructors_ex(php_wxFileOutputStream_destruction_handler, NULL, le_wxFileOutputStream_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFileStream_NAME , php_wxFileStream_functions);
+	char PHP_wxFileStream_name[] = "wxFileStream";
+	char le_wxFileStream_name[] = "native wxFileStream";
+	INIT_CLASS_ENTRY(ce, PHP_wxFileStream_name, php_wxFileStream_functions);
 	php_wxFileStream_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFileStream = zend_register_list_destructors_ex(php_wxFileStream_destruction_handler, NULL, le_wxFileStream_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFileSystemWatcher_NAME , php_wxFileSystemWatcher_functions);
+	char PHP_wxFileSystemWatcher_name[] = "wxFileSystemWatcher";
+	char le_wxFileSystemWatcher_name[] = "native wxFileSystemWatcher";
+	INIT_CLASS_ENTRY(ce, PHP_wxFileSystemWatcher_name, php_wxFileSystemWatcher_functions);
 	php_wxFileSystemWatcher_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFileSystemWatcher = zend_register_list_destructors_ex(php_wxFileSystemWatcher_destruction_handler, NULL, le_wxFileSystemWatcher_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFileSystemWatcherEvent_NAME , php_wxFileSystemWatcherEvent_functions);
+	char PHP_wxFileSystemWatcherEvent_name[] = "wxFileSystemWatcherEvent";
+	char le_wxFileSystemWatcherEvent_name[] = "native wxFileSystemWatcherEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxFileSystemWatcherEvent_name, php_wxFileSystemWatcherEvent_functions);
 	php_wxFileSystemWatcherEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFileSystemWatcherEvent = zend_register_list_destructors_ex(php_wxFileSystemWatcherEvent_destruction_handler, NULL, le_wxFileSystemWatcherEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFileType_NAME , php_wxFileType_functions);
+	char PHP_wxFileType_name[] = "wxFileType";
+	char le_wxFileType_name[] = "native wxFileType";
+	INIT_CLASS_ENTRY(ce, PHP_wxFileType_name, php_wxFileType_functions);
 	php_wxFileType_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFileType = zend_register_list_destructors_ex(php_wxFileType_destruction_handler, NULL, le_wxFileType_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFileTypeInfo_NAME , php_wxFileTypeInfo_functions);
+	char PHP_wxFileTypeInfo_name[] = "wxFileTypeInfo";
+	char le_wxFileTypeInfo_name[] = "native wxFileTypeInfo";
+	INIT_CLASS_ENTRY(ce, PHP_wxFileTypeInfo_name, php_wxFileTypeInfo_functions);
 	php_wxFileTypeInfo_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFileTypeInfo = zend_register_list_destructors_ex(php_wxFileTypeInfo_destruction_handler, NULL, le_wxFileTypeInfo_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxStopWatch_NAME , php_wxStopWatch_functions);
+	char PHP_wxStopWatch_name[] = "wxStopWatch";
+	char le_wxStopWatch_name[] = "native wxStopWatch";
+	INIT_CLASS_ENTRY(ce, PHP_wxStopWatch_name, php_wxStopWatch_functions);
 	php_wxStopWatch_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxStopWatch = zend_register_list_destructors_ex(php_wxStopWatch_destruction_handler, NULL, le_wxStopWatch_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxSingleInstanceChecker_NAME , php_wxSingleInstanceChecker_functions);
+	char PHP_wxSingleInstanceChecker_name[] = "wxSingleInstanceChecker";
+	char le_wxSingleInstanceChecker_name[] = "native wxSingleInstanceChecker";
+	INIT_CLASS_ENTRY(ce, PHP_wxSingleInstanceChecker_name, php_wxSingleInstanceChecker_functions);
 	php_wxSingleInstanceChecker_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxSingleInstanceChecker = zend_register_list_destructors_ex(php_wxSingleInstanceChecker_destruction_handler, NULL, le_wxSingleInstanceChecker_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxStandardPaths_NAME , php_wxStandardPaths_functions);
+	char PHP_wxStandardPaths_name[] = "wxStandardPaths";
+	char le_wxStandardPaths_name[] = "native wxStandardPaths";
+	INIT_CLASS_ENTRY(ce, PHP_wxStandardPaths_name, php_wxStandardPaths_functions);
 	php_wxStandardPaths_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxStandardPaths = zend_register_list_destructors_ex(php_wxStandardPaths_destruction_handler, NULL, le_wxStandardPaths_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxLog_NAME , php_wxLog_functions);
+	char PHP_wxLog_name[] = "wxLog";
+	char le_wxLog_name[] = "native wxLog";
+	INIT_CLASS_ENTRY(ce, PHP_wxLog_name, php_wxLog_functions);
 	php_wxLog_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxLog = zend_register_list_destructors_ex(php_wxLog_destruction_handler, NULL, le_wxLog_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxLogBuffer_NAME , php_wxLogBuffer_functions);
+	char PHP_wxLogBuffer_name[] = "wxLogBuffer";
+	char le_wxLogBuffer_name[] = "native wxLogBuffer";
+	INIT_CLASS_ENTRY(ce, PHP_wxLogBuffer_name, php_wxLogBuffer_functions);
 	php_wxLogBuffer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxLogBuffer = zend_register_list_destructors_ex(php_wxLogBuffer_destruction_handler, NULL, le_wxLogBuffer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxLogChain_NAME , php_wxLogChain_functions);
+	char PHP_wxLogChain_name[] = "wxLogChain";
+	char le_wxLogChain_name[] = "native wxLogChain";
+	INIT_CLASS_ENTRY(ce, PHP_wxLogChain_name, php_wxLogChain_functions);
 	php_wxLogChain_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxLogChain = zend_register_list_destructors_ex(php_wxLogChain_destruction_handler, NULL, le_wxLogChain_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxLogGui_NAME , php_wxLogGui_functions);
+	char PHP_wxLogGui_name[] = "wxLogGui";
+	char le_wxLogGui_name[] = "native wxLogGui";
+	INIT_CLASS_ENTRY(ce, PHP_wxLogGui_name, php_wxLogGui_functions);
 	php_wxLogGui_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxLogGui = zend_register_list_destructors_ex(php_wxLogGui_destruction_handler, NULL, le_wxLogGui_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxLogInterposer_NAME , php_wxLogInterposer_functions);
+	char PHP_wxLogInterposer_name[] = "wxLogInterposer";
+	char le_wxLogInterposer_name[] = "native wxLogInterposer";
+	INIT_CLASS_ENTRY(ce, PHP_wxLogInterposer_name, php_wxLogInterposer_functions);
 	php_wxLogInterposer_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxLogInterposer = zend_register_list_destructors_ex(php_wxLogInterposer_destruction_handler, NULL, le_wxLogInterposer_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxLogWindow_NAME , php_wxLogWindow_functions);
+	char PHP_wxLogWindow_name[] = "wxLogWindow";
+	char le_wxLogWindow_name[] = "native wxLogWindow";
+	INIT_CLASS_ENTRY(ce, PHP_wxLogWindow_name, php_wxLogWindow_functions);
 	php_wxLogWindow_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxLogWindow = zend_register_list_destructors_ex(php_wxLogWindow_destruction_handler, NULL, le_wxLogWindow_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxLogTextCtrl_NAME , php_wxLogTextCtrl_functions);
+	char PHP_wxLogTextCtrl_name[] = "wxLogTextCtrl";
+	char le_wxLogTextCtrl_name[] = "native wxLogTextCtrl";
+	INIT_CLASS_ENTRY(ce, PHP_wxLogTextCtrl_name, php_wxLogTextCtrl_functions);
 	php_wxLogTextCtrl_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxLogTextCtrl = zend_register_list_destructors_ex(php_wxLogTextCtrl_destruction_handler, NULL, le_wxLogTextCtrl_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxTextDataObject_NAME , php_wxTextDataObject_functions);
+	char PHP_wxTextDataObject_name[] = "wxTextDataObject";
+	char le_wxTextDataObject_name[] = "native wxTextDataObject";
+	INIT_CLASS_ENTRY(ce, PHP_wxTextDataObject_name, php_wxTextDataObject_functions);
 	php_wxTextDataObject_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxTextDataObject = zend_register_list_destructors_ex(php_wxTextDataObject_destruction_handler, NULL, le_wxTextDataObject_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxFileDataObject_NAME , php_wxFileDataObject_functions);
+	char PHP_wxFileDataObject_name[] = "wxFileDataObject";
+	char le_wxFileDataObject_name[] = "native wxFileDataObject";
+	INIT_CLASS_ENTRY(ce, PHP_wxFileDataObject_name, php_wxFileDataObject_functions);
 	php_wxFileDataObject_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxFileDataObject = zend_register_list_destructors_ex(php_wxFileDataObject_destruction_handler, NULL, le_wxFileDataObject_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxBitmapDataObject_NAME , php_wxBitmapDataObject_functions);
+	char PHP_wxBitmapDataObject_name[] = "wxBitmapDataObject";
+	char le_wxBitmapDataObject_name[] = "native wxBitmapDataObject";
+	INIT_CLASS_ENTRY(ce, PHP_wxBitmapDataObject_name, php_wxBitmapDataObject_functions);
 	php_wxBitmapDataObject_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxBitmapDataObject = zend_register_list_destructors_ex(php_wxBitmapDataObject_destruction_handler, NULL, le_wxBitmapDataObject_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxURLDataObject_NAME , php_wxURLDataObject_functions);
+	char PHP_wxURLDataObject_name[] = "wxURLDataObject";
+	char le_wxURLDataObject_name[] = "native wxURLDataObject";
+	INIT_CLASS_ENTRY(ce, PHP_wxURLDataObject_name, php_wxURLDataObject_functions);
 	php_wxURLDataObject_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxURLDataObject = zend_register_list_destructors_ex(php_wxURLDataObject_destruction_handler, NULL, le_wxURLDataObject_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxCustomDataObject_NAME , php_wxCustomDataObject_functions);
+	char PHP_wxCustomDataObject_name[] = "wxCustomDataObject";
+	char le_wxCustomDataObject_name[] = "native wxCustomDataObject";
+	INIT_CLASS_ENTRY(ce, PHP_wxCustomDataObject_name, php_wxCustomDataObject_functions);
 	php_wxCustomDataObject_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxCustomDataObject = zend_register_list_destructors_ex(php_wxCustomDataObject_destruction_handler, NULL, le_wxCustomDataObject_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxTextDropTarget_NAME , php_wxTextDropTarget_functions);
+	char PHP_wxTextDropTarget_name[] = "wxTextDropTarget";
+	char le_wxTextDropTarget_name[] = "native wxTextDropTarget";
+	INIT_CLASS_ENTRY(ce, PHP_wxTextDropTarget_name, php_wxTextDropTarget_functions);
 	php_wxTextDropTarget_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxTextDropTarget = zend_register_list_destructors_ex(php_wxTextDropTarget_destruction_handler, NULL, le_wxTextDropTarget_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDisplay_NAME , php_wxDisplay_functions);
+	char PHP_wxDisplay_name[] = "wxDisplay";
+	char le_wxDisplay_name[] = "native wxDisplay";
+	INIT_CLASS_ENTRY(ce, PHP_wxDisplay_name, php_wxDisplay_functions);
 	php_wxDisplay_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDisplay = zend_register_list_destructors_ex(php_wxDisplay_destruction_handler, NULL, le_wxDisplay_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxDisplayChangedEvent_NAME , php_wxDisplayChangedEvent_functions);
+	char PHP_wxDisplayChangedEvent_name[] = "wxDisplayChangedEvent";
+	char le_wxDisplayChangedEvent_name[] = "native wxDisplayChangedEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxDisplayChangedEvent_name, php_wxDisplayChangedEvent_functions);
 	php_wxDisplayChangedEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxDisplayChangedEvent = zend_register_list_destructors_ex(php_wxDisplayChangedEvent_destruction_handler, NULL, le_wxDisplayChangedEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxCalculateLayoutEvent_NAME , php_wxCalculateLayoutEvent_functions);
+	char PHP_wxCalculateLayoutEvent_name[] = "wxCalculateLayoutEvent";
+	char le_wxCalculateLayoutEvent_name[] = "native wxCalculateLayoutEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxCalculateLayoutEvent_name, php_wxCalculateLayoutEvent_functions);
 	php_wxCalculateLayoutEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxCalculateLayoutEvent = zend_register_list_destructors_ex(php_wxCalculateLayoutEvent_destruction_handler, NULL, le_wxCalculateLayoutEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxContextMenuEvent_NAME , php_wxContextMenuEvent_functions);
+	char PHP_wxContextMenuEvent_name[] = "wxContextMenuEvent";
+	char le_wxContextMenuEvent_name[] = "native wxContextMenuEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxContextMenuEvent_name, php_wxContextMenuEvent_functions);
 	php_wxContextMenuEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxContextMenuEvent = zend_register_list_destructors_ex(php_wxContextMenuEvent_destruction_handler, NULL, le_wxContextMenuEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxQueryLayoutInfoEvent_NAME , php_wxQueryLayoutInfoEvent_functions);
+	char PHP_wxQueryLayoutInfoEvent_name[] = "wxQueryLayoutInfoEvent";
+	char le_wxQueryLayoutInfoEvent_name[] = "native wxQueryLayoutInfoEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxQueryLayoutInfoEvent_name, php_wxQueryLayoutInfoEvent_functions);
 	php_wxQueryLayoutInfoEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxQueryLayoutInfoEvent = zend_register_list_destructors_ex(php_wxQueryLayoutInfoEvent_destruction_handler, NULL, le_wxQueryLayoutInfoEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxToolbook_NAME , php_wxToolbook_functions);
+	char PHP_wxToolbook_name[] = "wxToolbook";
+	char le_wxToolbook_name[] = "native wxToolbook";
+	INIT_CLASS_ENTRY(ce, PHP_wxToolbook_name, php_wxToolbook_functions);
 	php_wxToolbook_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxToolbook = zend_register_list_destructors_ex(php_wxToolbook_destruction_handler, NULL, le_wxToolbook_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxVideoMode_NAME , php_wxVideoMode_functions);
+	char PHP_wxVideoMode_name[] = "wxVideoMode";
+	char le_wxVideoMode_name[] = "native wxVideoMode";
+	INIT_CLASS_ENTRY(ce, PHP_wxVideoMode_name, php_wxVideoMode_functions);
 	php_wxVideoMode_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxVideoMode = zend_register_list_destructors_ex(php_wxVideoMode_destruction_handler, NULL, le_wxVideoMode_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxRibbonControl_NAME , php_wxRibbonControl_functions);
+	char PHP_wxRibbonControl_name[] = "wxRibbonControl";
+	char le_wxRibbonControl_name[] = "native wxRibbonControl";
+	INIT_CLASS_ENTRY(ce, PHP_wxRibbonControl_name, php_wxRibbonControl_functions);
 	php_wxRibbonControl_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxRibbonControl = zend_register_list_destructors_ex(php_wxRibbonControl_destruction_handler, NULL, le_wxRibbonControl_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxRibbonBar_NAME , php_wxRibbonBar_functions);
+	char PHP_wxRibbonBar_name[] = "wxRibbonBar";
+	char le_wxRibbonBar_name[] = "native wxRibbonBar";
+	INIT_CLASS_ENTRY(ce, PHP_wxRibbonBar_name, php_wxRibbonBar_functions);
 	php_wxRibbonBar_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxRibbonBar = zend_register_list_destructors_ex(php_wxRibbonBar_destruction_handler, NULL, le_wxRibbonBar_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxRibbonBarEvent_NAME , php_wxRibbonBarEvent_functions);
+	char PHP_wxRibbonBarEvent_name[] = "wxRibbonBarEvent";
+	char le_wxRibbonBarEvent_name[] = "native wxRibbonBarEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxRibbonBarEvent_name, php_wxRibbonBarEvent_functions);
 	php_wxRibbonBarEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxRibbonBarEvent = zend_register_list_destructors_ex(php_wxRibbonBarEvent_destruction_handler, NULL, le_wxRibbonBarEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxRibbonButtonBar_NAME , php_wxRibbonButtonBar_functions);
+	char PHP_wxRibbonButtonBar_name[] = "wxRibbonButtonBar";
+	char le_wxRibbonButtonBar_name[] = "native wxRibbonButtonBar";
+	INIT_CLASS_ENTRY(ce, PHP_wxRibbonButtonBar_name, php_wxRibbonButtonBar_functions);
 	php_wxRibbonButtonBar_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxRibbonButtonBar = zend_register_list_destructors_ex(php_wxRibbonButtonBar_destruction_handler, NULL, le_wxRibbonButtonBar_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxRibbonButtonBarEvent_NAME , php_wxRibbonButtonBarEvent_functions);
+	char PHP_wxRibbonButtonBarEvent_name[] = "wxRibbonButtonBarEvent";
+	char le_wxRibbonButtonBarEvent_name[] = "native wxRibbonButtonBarEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxRibbonButtonBarEvent_name, php_wxRibbonButtonBarEvent_functions);
 	php_wxRibbonButtonBarEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxRibbonButtonBarEvent = zend_register_list_destructors_ex(php_wxRibbonButtonBarEvent_destruction_handler, NULL, le_wxRibbonButtonBarEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxRibbonArtProvider_NAME , php_wxRibbonArtProvider_functions);
+	char PHP_wxRibbonArtProvider_name[] = "wxRibbonArtProvider";
+	char le_wxRibbonArtProvider_name[] = "native wxRibbonArtProvider";
+	INIT_CLASS_ENTRY(ce, PHP_wxRibbonArtProvider_name, php_wxRibbonArtProvider_functions);
 	php_wxRibbonArtProvider_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxRibbonArtProvider = zend_register_list_destructors_ex(php_wxRibbonArtProvider_destruction_handler, NULL, le_wxRibbonArtProvider_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxRibbonGallery_NAME , php_wxRibbonGallery_functions);
+	char PHP_wxRibbonGallery_name[] = "wxRibbonGallery";
+	char le_wxRibbonGallery_name[] = "native wxRibbonGallery";
+	INIT_CLASS_ENTRY(ce, PHP_wxRibbonGallery_name, php_wxRibbonGallery_functions);
 	php_wxRibbonGallery_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxRibbonGallery = zend_register_list_destructors_ex(php_wxRibbonGallery_destruction_handler, NULL, le_wxRibbonGallery_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxRibbonGalleryEvent_NAME , php_wxRibbonGalleryEvent_functions);
+	char PHP_wxRibbonGalleryEvent_name[] = "wxRibbonGalleryEvent";
+	char le_wxRibbonGalleryEvent_name[] = "native wxRibbonGalleryEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxRibbonGalleryEvent_name, php_wxRibbonGalleryEvent_functions);
 	php_wxRibbonGalleryEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxRibbonGalleryEvent = zend_register_list_destructors_ex(php_wxRibbonGalleryEvent_destruction_handler, NULL, le_wxRibbonGalleryEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxRibbonPage_NAME , php_wxRibbonPage_functions);
+	char PHP_wxRibbonPage_name[] = "wxRibbonPage";
+	char le_wxRibbonPage_name[] = "native wxRibbonPage";
+	INIT_CLASS_ENTRY(ce, PHP_wxRibbonPage_name, php_wxRibbonPage_functions);
 	php_wxRibbonPage_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxRibbonPage = zend_register_list_destructors_ex(php_wxRibbonPage_destruction_handler, NULL, le_wxRibbonPage_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxRibbonPanel_NAME , php_wxRibbonPanel_functions);
+	char PHP_wxRibbonPanel_name[] = "wxRibbonPanel";
+	char le_wxRibbonPanel_name[] = "native wxRibbonPanel";
+	INIT_CLASS_ENTRY(ce, PHP_wxRibbonPanel_name, php_wxRibbonPanel_functions);
 	php_wxRibbonPanel_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxRibbonPanel = zend_register_list_destructors_ex(php_wxRibbonPanel_destruction_handler, NULL, le_wxRibbonPanel_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxRibbonToolBar_NAME , php_wxRibbonToolBar_functions);
+	char PHP_wxRibbonToolBar_name[] = "wxRibbonToolBar";
+	char le_wxRibbonToolBar_name[] = "native wxRibbonToolBar";
+	INIT_CLASS_ENTRY(ce, PHP_wxRibbonToolBar_name, php_wxRibbonToolBar_functions);
 	php_wxRibbonToolBar_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxRibbonToolBar = zend_register_list_destructors_ex(php_wxRibbonToolBar_destruction_handler, NULL, le_wxRibbonToolBar_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxTaskBarIcon_NAME , php_wxTaskBarIcon_functions);
+	char PHP_wxTaskBarIcon_name[] = "wxTaskBarIcon";
+	char le_wxTaskBarIcon_name[] = "native wxTaskBarIcon";
+	INIT_CLASS_ENTRY(ce, PHP_wxTaskBarIcon_name, php_wxTaskBarIcon_functions);
 	php_wxTaskBarIcon_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxTaskBarIcon = zend_register_list_destructors_ex(php_wxTaskBarIcon_destruction_handler, NULL, le_wxTaskBarIcon_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxTaskBarIconEvent_NAME , php_wxTaskBarIconEvent_functions);
+	char PHP_wxTaskBarIconEvent_name[] = "wxTaskBarIconEvent";
+	char le_wxTaskBarIconEvent_name[] = "native wxTaskBarIconEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxTaskBarIconEvent_name, php_wxTaskBarIconEvent_functions);
 	php_wxTaskBarIconEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxTaskBarIconEvent = zend_register_list_destructors_ex(php_wxTaskBarIconEvent_destruction_handler, NULL, le_wxTaskBarIconEvent_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxTimerRunner_NAME , php_wxTimerRunner_functions);
+	char PHP_wxTimerRunner_name[] = "wxTimerRunner";
+	char le_wxTimerRunner_name[] = "native wxTimerRunner";
+	INIT_CLASS_ENTRY(ce, PHP_wxTimerRunner_name, php_wxTimerRunner_functions);
 	php_wxTimerRunner_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxTimerRunner = zend_register_list_destructors_ex(php_wxTimerRunner_destruction_handler, NULL, le_wxTimerRunner_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxNotificationMessage_NAME , php_wxNotificationMessage_functions);
+	char PHP_wxNotificationMessage_name[] = "wxNotificationMessage";
+	char le_wxNotificationMessage_name[] = "native wxNotificationMessage";
+	INIT_CLASS_ENTRY(ce, PHP_wxNotificationMessage_name, php_wxNotificationMessage_functions);
 	php_wxNotificationMessage_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxNotificationMessage = zend_register_list_destructors_ex(php_wxNotificationMessage_destruction_handler, NULL, le_wxNotificationMessage_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxSystemOptions_NAME , php_wxSystemOptions_functions);
+	char PHP_wxSystemOptions_name[] = "wxSystemOptions";
+	char le_wxSystemOptions_name[] = "native wxSystemOptions";
+	INIT_CLASS_ENTRY(ce, PHP_wxSystemOptions_name, php_wxSystemOptions_functions);
 	php_wxSystemOptions_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxSystemOptions = zend_register_list_destructors_ex(php_wxSystemOptions_destruction_handler, NULL, le_wxSystemOptions_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxSystemSettings_NAME , php_wxSystemSettings_functions);
+	char PHP_wxSystemSettings_name[] = "wxSystemSettings";
+	char le_wxSystemSettings_name[] = "native wxSystemSettings";
+	INIT_CLASS_ENTRY(ce, PHP_wxSystemSettings_name, php_wxSystemSettings_functions);
 	php_wxSystemSettings_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxSystemSettings = zend_register_list_destructors_ex(php_wxSystemSettings_destruction_handler, NULL, le_wxSystemSettings_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxWindowDisabler_NAME , php_wxWindowDisabler_functions);
+	char PHP_wxWindowDisabler_name[] = "wxWindowDisabler";
+	char le_wxWindowDisabler_name[] = "native wxWindowDisabler";
+	INIT_CLASS_ENTRY(ce, PHP_wxWindowDisabler_name, php_wxWindowDisabler_functions);
 	php_wxWindowDisabler_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxWindowDisabler = zend_register_list_destructors_ex(php_wxWindowDisabler_destruction_handler, NULL, le_wxWindowDisabler_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxGenericProgressDialog_NAME , php_wxGenericProgressDialog_functions);
+	char PHP_wxGenericProgressDialog_name[] = "wxGenericProgressDialog";
+	char le_wxGenericProgressDialog_name[] = "native wxGenericProgressDialog";
+	INIT_CLASS_ENTRY(ce, PHP_wxGenericProgressDialog_name, php_wxGenericProgressDialog_functions);
 	php_wxGenericProgressDialog_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxGenericProgressDialog = zend_register_list_destructors_ex(php_wxGenericProgressDialog_destruction_handler, NULL, le_wxGenericProgressDialog_name, module_number);
 
-	INIT_CLASS_ENTRY(ce, PHP_wxToolBarToolBase_NAME , php_wxToolBarToolBase_functions);
+	char PHP_wxToolBarToolBase_name[] = "wxToolBarToolBase";
+	char le_wxToolBarToolBase_name[] = "native wxToolBarToolBase";
+	INIT_CLASS_ENTRY(ce, PHP_wxToolBarToolBase_name, php_wxToolBarToolBase_functions);
 	php_wxToolBarToolBase_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxToolBarToolBase = zend_register_list_destructors_ex(php_wxToolBarToolBase_destruction_handler, NULL, le_wxToolBarToolBase_name, module_number);
 
@@ -23736,8 +7358,8 @@ PHP_MINIT_FUNCTION(php_wxWidgets)
 	//Variables found on global_variables.json
 
 	REGISTER_LONG_CONSTANT("wxDefaultDateTime", time(NULL), CONST_CS | CONST_PERSISTENT);
-	char _wx_empty_string[] = "";
-	REGISTER_STRING_CONSTANT("wxEmptyString", _wx_empty_string, CONST_CS | CONST_PERSISTENT);
+	char wxphp_empty_string[] = "";
+	REGISTER_STRING_CONSTANT("wxEmptyString", wxphp_empty_string, CONST_CS | CONST_PERSISTENT);
 	char _wxchar_wxART_TOOLBAR[] = wxART_TOOLBAR;
 	REGISTER_STRING_CONSTANT("wxART_TOOLBAR", _wxchar_wxART_TOOLBAR, CONST_CS | CONST_PERSISTENT);
 	char _wxchar_wxART_MENU[] = wxART_MENU;

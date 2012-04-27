@@ -50,7 +50,6 @@
 #include "others.h"
 
 
-
 void php_wxFrame_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");
@@ -1289,7 +1288,8 @@ PHP_METHOD(php_wxFrame, GetMenuBar)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -1495,7 +1495,8 @@ PHP_METHOD(php_wxFrame, GetStatusBar)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -2405,7 +2406,8 @@ PHP_METHOD(php_wxFrame, CreateToolBar)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -2438,7 +2440,8 @@ PHP_METHOD(php_wxFrame, CreateToolBar)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -2471,7 +2474,8 @@ PHP_METHOD(php_wxFrame, CreateToolBar)
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
 					if(value_to_return2->phpObj != NULL){
-						return_value = value_to_return2->phpObj;
+						*return_value = *value_to_return2->phpObj;
+						zval_add_ref(&value_to_return2->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -2504,7 +2508,8 @@ PHP_METHOD(php_wxFrame, CreateToolBar)
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
 					if(value_to_return3->phpObj != NULL){
-						return_value = value_to_return3->phpObj;
+						*return_value = *value_to_return3->phpObj;
+						zval_add_ref(&value_to_return3->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -2641,7 +2646,8 @@ PHP_METHOD(php_wxFrame, GetToolBar)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -2993,7 +2999,8 @@ PHP_METHOD(php_wxFrame, CreateStatusBar)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3026,7 +3033,8 @@ PHP_METHOD(php_wxFrame, CreateStatusBar)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3059,7 +3067,8 @@ PHP_METHOD(php_wxFrame, CreateStatusBar)
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
 					if(value_to_return2->phpObj != NULL){
-						return_value = value_to_return2->phpObj;
+						*return_value = *value_to_return2->phpObj;
+						zval_add_ref(&value_to_return2->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3092,7 +3101,8 @@ PHP_METHOD(php_wxFrame, CreateStatusBar)
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
 					if(value_to_return3->phpObj != NULL){
-						return_value = value_to_return3->phpObj;
+						*return_value = *value_to_return3->phpObj;
+						zval_add_ref(&value_to_return3->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3125,7 +3135,8 @@ PHP_METHOD(php_wxFrame, CreateStatusBar)
 				}
 				else if(value_to_return4->references.IsUserInitialized()){
 					if(value_to_return4->phpObj != NULL){
-						return_value = value_to_return4->phpObj;
+						*return_value = *value_to_return4->phpObj;
+						zval_add_ref(&value_to_return4->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3150,7 +3161,6 @@ PHP_METHOD(php_wxFrame, CreateStatusBar)
 
 		
 }
-
 void php_wxMDIClientWindow_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3395,7 +3405,6 @@ PHP_METHOD(php_wxMDIClientWindow, CreateClient)
 
 		
 }
-
 void php_wxMDIParentFrame_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxMDIParentFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");
@@ -4039,7 +4048,8 @@ PHP_METHOD(php_wxMDIParentFrame, GetActiveChild)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4148,7 +4158,8 @@ PHP_METHOD(php_wxMDIParentFrame, GetWindowMenu)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4758,7 +4769,6 @@ PHP_METHOD(php_wxMDIParentFrame, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxMDIChildFrame_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxMDIChildFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");
@@ -5351,7 +5361,8 @@ PHP_METHOD(php_wxMDIChildFrame, GetMDIParent)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5670,7 +5681,6 @@ PHP_METHOD(php_wxMDIChildFrame, Activate)
 
 		
 }
-
 void php_wxMiniFrame_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxMiniFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");
@@ -6109,7 +6119,6 @@ PHP_METHOD(php_wxMiniFrame, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxPopupWindow_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6526,7 +6535,6 @@ PHP_METHOD(php_wxPopupWindow, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxPopupTransientWindow_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7001,7 +7009,6 @@ PHP_METHOD(php_wxPopupTransientWindow, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxPropertySheetDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxPropertySheetDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
@@ -7407,7 +7414,8 @@ PHP_METHOD(php_wxPropertySheetDialog, CreateBookCtrl)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -7619,7 +7627,8 @@ PHP_METHOD(php_wxPropertySheetDialog, GetBookCtrl)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -7728,7 +7737,8 @@ PHP_METHOD(php_wxPropertySheetDialog, GetInnerSizer)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -8341,7 +8351,6 @@ PHP_METHOD(php_wxPropertySheetDialog, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxSplashScreen_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxSplashScreen went out of scope. Remember to always call Destroy() to prevent memory leaks.");
@@ -8723,7 +8732,6 @@ PHP_METHOD(php_wxSplashScreen, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxTopLevelWindow_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11255,7 +11263,8 @@ PHP_METHOD(php_wxTopLevelWindow, GetDefaultItem)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -11850,7 +11859,8 @@ PHP_METHOD(php_wxTopLevelWindow, GetIcons)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -12059,7 +12069,8 @@ PHP_METHOD(php_wxTopLevelWindow, GetTmpDefaultItem)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13631,7 +13642,8 @@ PHP_METHOD(php_wxTopLevelWindow, SetDefaultItem)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -14852,7 +14864,8 @@ PHP_METHOD(php_wxTopLevelWindow, SetTmpDefaultItem)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{

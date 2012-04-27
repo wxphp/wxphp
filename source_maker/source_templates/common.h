@@ -1,4 +1,4 @@
-/**
+/*
  * @author Mário Soares
  * @contributors Jefferson González
  * 
@@ -8,6 +8,9 @@
  * @note
  * Some parts of this file are auto-generated.
 */
+
+#ifndef WXPHP_COMMON_H_GUARD
+#define WXPHP_COMMON_H_GUARD
 
 #ifdef __BORLANDC__
 	#pragma hdrstop
@@ -96,3 +99,5 @@ extern "C" {
 	#define PHP_FE_END {NULL, NULL, NULL}
 #endif
 }
+
+#endif //WXPHP_COMMON_H_GUARD

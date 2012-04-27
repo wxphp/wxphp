@@ -50,7 +50,6 @@
 #include "others.h"
 
 
-
 void php_wxDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9184,7 +9183,8 @@ PHP_METHOD(php_wxDC, GetBackground)
 				}
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -9570,7 +9570,8 @@ PHP_METHOD(php_wxDC, GetBrush)
 				}
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -10725,7 +10726,8 @@ PHP_METHOD(php_wxDC, GetFont)
 				}
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -12663,7 +12665,8 @@ PHP_METHOD(php_wxDC, GetPen)
 				}
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13698,7 +13701,8 @@ PHP_METHOD(php_wxDC, GetTextBackground)
 				}
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -14421,7 +14425,8 @@ PHP_METHOD(php_wxDC, GetTextForeground)
 				}
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -21303,7 +21308,6 @@ PHP_METHOD(php_wxDC, Blit)
 
 		
 }
-
 void php_wxBufferedDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21858,7 +21862,6 @@ PHP_METHOD(php_wxBufferedDC, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxAutoBufferedPaintDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22002,7 +22005,6 @@ PHP_METHOD(php_wxAutoBufferedPaintDC, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxBufferedPaintDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22244,7 +22246,6 @@ PHP_METHOD(php_wxBufferedPaintDC, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxPaintDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22388,7 +22389,6 @@ PHP_METHOD(php_wxPaintDC, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxClientDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22532,7 +22532,6 @@ PHP_METHOD(php_wxClientDC, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxWindowDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22676,7 +22675,6 @@ PHP_METHOD(php_wxWindowDC, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxMemoryDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23149,7 +23147,6 @@ PHP_METHOD(php_wxMemoryDC, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxMirrorDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23294,7 +23291,6 @@ PHP_METHOD(php_wxMirrorDC, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxPostScriptDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23469,7 +23465,6 @@ PHP_METHOD(php_wxPostScriptDC, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxScreenDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG

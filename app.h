@@ -9,14 +9,10 @@
  * 
 */
 
-#ifndef wxphp_app_h_guard
-#define wxphp_app_h_guard
+#ifndef WXPHP_APP_H_GUARD
+#define WXPHP_APP_H_GUARD
 
 extern zend_class_entry *php_wxApp_entry;
-
-extern char PHP_wxApp_NAME[];
-extern char le_wxApp_name[];
-
 extern int le_wxApp;
 
 class wxAppWrapper : public wxApp
@@ -36,4 +32,4 @@ static function_entry php_wxApp_functions[] = {
 	{ NULL, NULL, NULL }
 };
 
-#endif //wxphp_app_h_guard
+#endif //WXPHP_APP_H_GUARD

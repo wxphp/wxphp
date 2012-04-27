@@ -54,5 +54,5 @@ if test "$PHP_WXWIDGETS" != "no"; then
 	PHP_ADD_LIBRARY(stdc++, 1 , WXWIDGETS_SHARED_LIBADD)
 
 	dnl PHP_NEW_EXTENSION(extname, sources [, shared [, sapi_class [, extra-cflags [, cxx [, zend_ext]]]]])
-	PHP_NEW_EXTENSION(wxwidgets, app.cpp references.cpp <?=$source_files?> wxwidgets.cpp, $ext_shared,,,1)
+	PHP_NEW_EXTENSION(wxwidgets, app.cpp references.cpp <?=$source_files?> functions.cpp wxwidgets.cpp, $ext_shared,,,1)
 fi

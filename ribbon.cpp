@@ -50,7 +50,6 @@
 #include "others.h"
 
 
-
 void php_wxRibbonArtProvider_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2484,7 +2483,6 @@ bool wxRibbonArtProvider_php::GetButtonBarButtonSize(wxDC& dc, wxWindow* wnd, wx
 	return wxRibbonArtProvider::GetButtonBarButtonSize(dc, wnd, kind, size, label, bitmap_size_large, bitmap_size_small, button_size, normal_region, dropdown_region);
 
 }
-
 void php_wxRibbonBar_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3043,7 +3041,8 @@ PHP_METHOD(php_wxRibbonBar, GetPage)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3916,7 +3915,6 @@ PHP_METHOD(php_wxRibbonBar, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxRibbonButtonBar_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4035,7 +4033,8 @@ PHP_METHOD(php_wxRibbonButtonBar, AddDropdownButton)
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
 					if(value_to_return3->phpObj != NULL){
-						return_value = value_to_return3->phpObj;
+						*return_value = *value_to_return3->phpObj;
+						zval_add_ref(&value_to_return3->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4069,7 +4068,8 @@ PHP_METHOD(php_wxRibbonButtonBar, AddDropdownButton)
 				}
 				else if(value_to_return4->references.IsUserInitialized()){
 					if(value_to_return4->phpObj != NULL){
-						return_value = value_to_return4->phpObj;
+						*return_value = *value_to_return4->phpObj;
+						zval_add_ref(&value_to_return4->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4206,7 +4206,8 @@ PHP_METHOD(php_wxRibbonButtonBar, AddHybridButton)
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
 					if(value_to_return3->phpObj != NULL){
-						return_value = value_to_return3->phpObj;
+						*return_value = *value_to_return3->phpObj;
+						zval_add_ref(&value_to_return3->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4240,7 +4241,8 @@ PHP_METHOD(php_wxRibbonButtonBar, AddHybridButton)
 				}
 				else if(value_to_return4->references.IsUserInitialized()){
 					if(value_to_return4->phpObj != NULL){
-						return_value = value_to_return4->phpObj;
+						*return_value = *value_to_return4->phpObj;
+						zval_add_ref(&value_to_return4->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4377,7 +4379,8 @@ PHP_METHOD(php_wxRibbonButtonBar, AddToggleButton)
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
 					if(value_to_return3->phpObj != NULL){
-						return_value = value_to_return3->phpObj;
+						*return_value = *value_to_return3->phpObj;
+						zval_add_ref(&value_to_return3->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4411,7 +4414,8 @@ PHP_METHOD(php_wxRibbonButtonBar, AddToggleButton)
 				}
 				else if(value_to_return4->references.IsUserInitialized()){
 					if(value_to_return4->phpObj != NULL){
-						return_value = value_to_return4->phpObj;
+						*return_value = *value_to_return4->phpObj;
+						zval_add_ref(&value_to_return4->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5548,7 +5552,8 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 				}
 				else if(value_to_return4->references.IsUserInitialized()){
 					if(value_to_return4->phpObj != NULL){
-						return_value = value_to_return4->phpObj;
+						*return_value = *value_to_return4->phpObj;
+						zval_add_ref(&value_to_return4->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5582,7 +5587,8 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 				}
 				else if(value_to_return5->references.IsUserInitialized()){
 					if(value_to_return5->phpObj != NULL){
-						return_value = value_to_return5->phpObj;
+						*return_value = *value_to_return5->phpObj;
+						zval_add_ref(&value_to_return5->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5623,7 +5629,8 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
 					if(value_to_return3->phpObj != NULL){
-						return_value = value_to_return3->phpObj;
+						*return_value = *value_to_return3->phpObj;
+						zval_add_ref(&value_to_return3->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5657,7 +5664,8 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 				}
 				else if(value_to_return4->references.IsUserInitialized()){
 					if(value_to_return4->phpObj != NULL){
-						return_value = value_to_return4->phpObj;
+						*return_value = *value_to_return4->phpObj;
+						zval_add_ref(&value_to_return4->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5692,7 +5700,8 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 				}
 				else if(value_to_return5->references.IsUserInitialized()){
 					if(value_to_return5->phpObj != NULL){
-						return_value = value_to_return5->phpObj;
+						*return_value = *value_to_return5->phpObj;
+						zval_add_ref(&value_to_return5->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5728,7 +5737,8 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 				}
 				else if(value_to_return6->references.IsUserInitialized()){
 					if(value_to_return6->phpObj != NULL){
-						return_value = value_to_return6->phpObj;
+						*return_value = *value_to_return6->phpObj;
+						zval_add_ref(&value_to_return6->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5765,7 +5775,8 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 				}
 				else if(value_to_return7->references.IsUserInitialized()){
 					if(value_to_return7->phpObj != NULL){
-						return_value = value_to_return7->phpObj;
+						*return_value = *value_to_return7->phpObj;
+						zval_add_ref(&value_to_return7->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5802,7 +5813,8 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 				}
 				else if(value_to_return8->references.IsUserInitialized()){
 					if(value_to_return8->phpObj != NULL){
-						return_value = value_to_return8->phpObj;
+						*return_value = *value_to_return8->phpObj;
+						zval_add_ref(&value_to_return8->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5839,7 +5851,8 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 				}
 				else if(value_to_return9->references.IsUserInitialized()){
 					if(value_to_return9->phpObj != NULL){
-						return_value = value_to_return9->phpObj;
+						*return_value = *value_to_return9->phpObj;
+						zval_add_ref(&value_to_return9->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5869,7 +5882,6 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 
 		
 }
-
 void php_wxRibbonControl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6115,7 +6127,8 @@ PHP_METHOD(php_wxRibbonControl, GetArtProvider)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -7227,7 +7240,6 @@ PHP_METHOD(php_wxRibbonControl, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxRibbonGallery_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7440,7 +7452,8 @@ PHP_METHOD(php_wxRibbonGallery, Append)
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
 					if(value_to_return2->phpObj != NULL){
-						return_value = value_to_return2->phpObj;
+						*return_value = *value_to_return2->phpObj;
+						zval_add_ref(&value_to_return2->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -7481,7 +7494,8 @@ PHP_METHOD(php_wxRibbonGallery, Append)
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
 					if(value_to_return3->phpObj != NULL){
-						return_value = value_to_return3->phpObj;
+						*return_value = *value_to_return3->phpObj;
+						zval_add_ref(&value_to_return3->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -7523,7 +7537,8 @@ PHP_METHOD(php_wxRibbonGallery, Append)
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
 					if(value_to_return3->phpObj != NULL){
-						return_value = value_to_return3->phpObj;
+						*return_value = *value_to_return3->phpObj;
+						zval_add_ref(&value_to_return3->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -8032,7 +8047,8 @@ PHP_METHOD(php_wxRibbonGallery, GetActiveItem)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -8402,7 +8418,8 @@ PHP_METHOD(php_wxRibbonGallery, GetHoveredItem)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -8516,7 +8533,8 @@ PHP_METHOD(php_wxRibbonGallery, GetItem)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -8757,7 +8775,8 @@ PHP_METHOD(php_wxRibbonGallery, GetItemClientObject)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -8867,7 +8886,8 @@ PHP_METHOD(php_wxRibbonGallery, GetSelection)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -9914,7 +9934,6 @@ PHP_METHOD(php_wxRibbonGallery, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxRibbonPage_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10382,7 +10401,8 @@ PHP_METHOD(php_wxRibbonPage, GetIcon)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -11172,7 +11192,6 @@ PHP_METHOD(php_wxRibbonPage, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxRibbonPanel_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11600,7 +11619,8 @@ PHP_METHOD(php_wxRibbonPanel, GetExpandedDummy)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -11709,7 +11729,8 @@ PHP_METHOD(php_wxRibbonPanel, GetExpandedPanel)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -11829,7 +11850,8 @@ PHP_METHOD(php_wxRibbonPanel, GetMinimisedIcon)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -11866,7 +11888,8 @@ PHP_METHOD(php_wxRibbonPanel, GetMinimisedIcon)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -12757,7 +12780,6 @@ PHP_METHOD(php_wxRibbonPanel, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxRibbonToolBar_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12874,7 +12896,8 @@ PHP_METHOD(php_wxRibbonToolBar, AddDropdownTool)
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
 					if(value_to_return2->phpObj != NULL){
-						return_value = value_to_return2->phpObj;
+						*return_value = *value_to_return2->phpObj;
+						zval_add_ref(&value_to_return2->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -12908,7 +12931,8 @@ PHP_METHOD(php_wxRibbonToolBar, AddDropdownTool)
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
 					if(value_to_return3->phpObj != NULL){
-						return_value = value_to_return3->phpObj;
+						*return_value = *value_to_return3->phpObj;
+						zval_add_ref(&value_to_return3->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13043,7 +13067,8 @@ PHP_METHOD(php_wxRibbonToolBar, AddHybridTool)
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
 					if(value_to_return2->phpObj != NULL){
-						return_value = value_to_return2->phpObj;
+						*return_value = *value_to_return2->phpObj;
+						zval_add_ref(&value_to_return2->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13077,7 +13102,8 @@ PHP_METHOD(php_wxRibbonToolBar, AddHybridTool)
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
 					if(value_to_return3->phpObj != NULL){
-						return_value = value_to_return3->phpObj;
+						*return_value = *value_to_return3->phpObj;
+						zval_add_ref(&value_to_return3->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13187,7 +13213,8 @@ PHP_METHOD(php_wxRibbonToolBar, AddSeparator)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13398,7 +13425,8 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
 					if(value_to_return3->phpObj != NULL){
-						return_value = value_to_return3->phpObj;
+						*return_value = *value_to_return3->phpObj;
+						zval_add_ref(&value_to_return3->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13432,7 +13460,8 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
 				}
 				else if(value_to_return4->references.IsUserInitialized()){
 					if(value_to_return4->phpObj != NULL){
-						return_value = value_to_return4->phpObj;
+						*return_value = *value_to_return4->phpObj;
+						zval_add_ref(&value_to_return4->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13473,7 +13502,8 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
 					if(value_to_return2->phpObj != NULL){
-						return_value = value_to_return2->phpObj;
+						*return_value = *value_to_return2->phpObj;
+						zval_add_ref(&value_to_return2->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13507,7 +13537,8 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
 					if(value_to_return3->phpObj != NULL){
-						return_value = value_to_return3->phpObj;
+						*return_value = *value_to_return3->phpObj;
+						zval_add_ref(&value_to_return3->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13542,7 +13573,8 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
 				}
 				else if(value_to_return4->references.IsUserInitialized()){
 					if(value_to_return4->phpObj != NULL){
-						return_value = value_to_return4->phpObj;
+						*return_value = *value_to_return4->phpObj;
+						zval_add_ref(&value_to_return4->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13577,7 +13609,8 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
 				}
 				else if(value_to_return5->references.IsUserInitialized()){
 					if(value_to_return5->phpObj != NULL){
-						return_value = value_to_return5->phpObj;
+						*return_value = *value_to_return5->phpObj;
+						zval_add_ref(&value_to_return5->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13612,7 +13645,8 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
 				}
 				else if(value_to_return6->references.IsUserInitialized()){
 					if(value_to_return6->phpObj != NULL){
-						return_value = value_to_return6->phpObj;
+						*return_value = *value_to_return6->phpObj;
+						zval_add_ref(&value_to_return6->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{

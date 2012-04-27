@@ -50,7 +50,6 @@
 #include "others.h"
 
 
-
 void php_wxGraphicsGradientStop_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -172,7 +171,8 @@ PHP_METHOD(php_wxGraphicsGradientStop, GetColour)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -609,7 +609,6 @@ PHP_METHOD(php_wxGraphicsGradientStop, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxGraphicsGradientStops_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1541,7 +1540,6 @@ PHP_METHOD(php_wxGraphicsGradientStops, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxAnimation_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2416,7 +2414,6 @@ PHP_METHOD(php_wxAnimation, Load)
 
 		
 }
-
 void php_wxBitmapHandler_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3475,7 +3472,6 @@ PHP_METHOD(php_wxBitmapHandler, Create)
 
 		
 }
-
 void php_wxBitmap_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5293,7 +5289,8 @@ PHP_METHOD(php_wxBitmap, FindHandler)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5330,7 +5327,8 @@ PHP_METHOD(php_wxBitmap, FindHandler)
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
 					if(value_to_return2->phpObj != NULL){
-						return_value = value_to_return2->phpObj;
+						*return_value = *value_to_return2->phpObj;
+						zval_add_ref(&value_to_return2->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5367,7 +5365,8 @@ PHP_METHOD(php_wxBitmap, FindHandler)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5647,7 +5646,8 @@ PHP_METHOD(php_wxBitmap, GetMask)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5756,7 +5756,8 @@ PHP_METHOD(php_wxBitmap, GetPalette)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -6580,7 +6581,6 @@ PHP_METHOD(php_wxBitmap, SetPalette)
 
 		
 }
-
 void php_wxMask_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7123,7 +7123,6 @@ PHP_METHOD(php_wxMask, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxBrush_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7340,7 +7339,8 @@ PHP_METHOD(php_wxBrush, GetStipple)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -8351,7 +8351,6 @@ PHP_METHOD(php_wxBrush, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxColour_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9535,7 +9534,6 @@ PHP_METHOD(php_wxColour, Alpha)
 
 		
 }
-
 void php_wxCursor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9921,7 +9919,6 @@ PHP_METHOD(php_wxCursor, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxDCClipper_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10215,7 +10212,6 @@ PHP_METHOD(php_wxDCClipper, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxFont_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12160,7 +12156,8 @@ PHP_METHOD(php_wxFont, MakeBold)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -12266,7 +12263,8 @@ PHP_METHOD(php_wxFont, MakeItalic)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -12372,7 +12370,8 @@ PHP_METHOD(php_wxFont, MakeLarger)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -12478,7 +12477,8 @@ PHP_METHOD(php_wxFont, MakeSmaller)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -12584,7 +12584,8 @@ PHP_METHOD(php_wxFont, MakeUnderlined)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -12869,7 +12870,8 @@ PHP_METHOD(php_wxFont, New)
 				}
 				else if(value_to_return4->references.IsUserInitialized()){
 					if(value_to_return4->phpObj != NULL){
-						return_value = value_to_return4->phpObj;
+						*return_value = *value_to_return4->phpObj;
+						zval_add_ref(&value_to_return4->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -12899,7 +12901,8 @@ PHP_METHOD(php_wxFont, New)
 				}
 				else if(value_to_return5->references.IsUserInitialized()){
 					if(value_to_return5->phpObj != NULL){
-						return_value = value_to_return5->phpObj;
+						*return_value = *value_to_return5->phpObj;
+						zval_add_ref(&value_to_return5->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -12929,7 +12932,8 @@ PHP_METHOD(php_wxFont, New)
 				}
 				else if(value_to_return6->references.IsUserInitialized()){
 					if(value_to_return6->phpObj != NULL){
-						return_value = value_to_return6->phpObj;
+						*return_value = *value_to_return6->phpObj;
+						zval_add_ref(&value_to_return6->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -12959,7 +12963,8 @@ PHP_METHOD(php_wxFont, New)
 				}
 				else if(value_to_return7->references.IsUserInitialized()){
 					if(value_to_return7->phpObj != NULL){
-						return_value = value_to_return7->phpObj;
+						*return_value = *value_to_return7->phpObj;
+						zval_add_ref(&value_to_return7->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -12996,7 +13001,8 @@ PHP_METHOD(php_wxFont, New)
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
 					if(value_to_return2->phpObj != NULL){
-						return_value = value_to_return2->phpObj;
+						*return_value = *value_to_return2->phpObj;
+						zval_add_ref(&value_to_return2->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13026,7 +13032,8 @@ PHP_METHOD(php_wxFont, New)
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
 					if(value_to_return3->phpObj != NULL){
-						return_value = value_to_return3->phpObj;
+						*return_value = *value_to_return3->phpObj;
+						zval_add_ref(&value_to_return3->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13056,7 +13063,8 @@ PHP_METHOD(php_wxFont, New)
 				}
 				else if(value_to_return4->references.IsUserInitialized()){
 					if(value_to_return4->phpObj != NULL){
-						return_value = value_to_return4->phpObj;
+						*return_value = *value_to_return4->phpObj;
+						zval_add_ref(&value_to_return4->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13086,7 +13094,8 @@ PHP_METHOD(php_wxFont, New)
 				}
 				else if(value_to_return5->references.IsUserInitialized()){
 					if(value_to_return5->phpObj != NULL){
-						return_value = value_to_return5->phpObj;
+						*return_value = *value_to_return5->phpObj;
+						zval_add_ref(&value_to_return5->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13123,7 +13132,8 @@ PHP_METHOD(php_wxFont, New)
 				}
 				else if(value_to_return4->references.IsUserInitialized()){
 					if(value_to_return4->phpObj != NULL){
-						return_value = value_to_return4->phpObj;
+						*return_value = *value_to_return4->phpObj;
+						zval_add_ref(&value_to_return4->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13153,7 +13163,8 @@ PHP_METHOD(php_wxFont, New)
 				}
 				else if(value_to_return5->references.IsUserInitialized()){
 					if(value_to_return5->phpObj != NULL){
-						return_value = value_to_return5->phpObj;
+						*return_value = *value_to_return5->phpObj;
+						zval_add_ref(&value_to_return5->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13183,7 +13194,8 @@ PHP_METHOD(php_wxFont, New)
 				}
 				else if(value_to_return6->references.IsUserInitialized()){
 					if(value_to_return6->phpObj != NULL){
-						return_value = value_to_return6->phpObj;
+						*return_value = *value_to_return6->phpObj;
+						zval_add_ref(&value_to_return6->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13213,7 +13225,8 @@ PHP_METHOD(php_wxFont, New)
 				}
 				else if(value_to_return7->references.IsUserInitialized()){
 					if(value_to_return7->phpObj != NULL){
-						return_value = value_to_return7->phpObj;
+						*return_value = *value_to_return7->phpObj;
+						zval_add_ref(&value_to_return7->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13250,7 +13263,8 @@ PHP_METHOD(php_wxFont, New)
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
 					if(value_to_return2->phpObj != NULL){
-						return_value = value_to_return2->phpObj;
+						*return_value = *value_to_return2->phpObj;
+						zval_add_ref(&value_to_return2->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13280,7 +13294,8 @@ PHP_METHOD(php_wxFont, New)
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
 					if(value_to_return3->phpObj != NULL){
-						return_value = value_to_return3->phpObj;
+						*return_value = *value_to_return3->phpObj;
+						zval_add_ref(&value_to_return3->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13310,7 +13325,8 @@ PHP_METHOD(php_wxFont, New)
 				}
 				else if(value_to_return4->references.IsUserInitialized()){
 					if(value_to_return4->phpObj != NULL){
-						return_value = value_to_return4->phpObj;
+						*return_value = *value_to_return4->phpObj;
+						zval_add_ref(&value_to_return4->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13340,7 +13356,8 @@ PHP_METHOD(php_wxFont, New)
 				}
 				else if(value_to_return5->references.IsUserInitialized()){
 					if(value_to_return5->phpObj != NULL){
-						return_value = value_to_return5->phpObj;
+						*return_value = *value_to_return5->phpObj;
+						zval_add_ref(&value_to_return5->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13377,7 +13394,8 @@ PHP_METHOD(php_wxFont, New)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13414,7 +13432,8 @@ PHP_METHOD(php_wxFont, New)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13522,7 +13541,8 @@ PHP_METHOD(php_wxFont, Scale)
 
 				if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -15186,7 +15206,8 @@ PHP_METHOD(php_wxFont, GetNativeFontInfo)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -15211,7 +15232,6 @@ PHP_METHOD(php_wxFont, GetNativeFontInfo)
 
 		
 }
-
 void php_wxFontList_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15428,7 +15448,8 @@ PHP_METHOD(php_wxFontList, FindOrCreateFont)
 				}
 				else if(value_to_return4->references.IsUserInitialized()){
 					if(value_to_return4->phpObj != NULL){
-						return_value = value_to_return4->phpObj;
+						*return_value = *value_to_return4->phpObj;
+						zval_add_ref(&value_to_return4->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -15461,7 +15482,8 @@ PHP_METHOD(php_wxFontList, FindOrCreateFont)
 				}
 				else if(value_to_return5->references.IsUserInitialized()){
 					if(value_to_return5->phpObj != NULL){
-						return_value = value_to_return5->phpObj;
+						*return_value = *value_to_return5->phpObj;
+						zval_add_ref(&value_to_return5->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -15494,7 +15516,8 @@ PHP_METHOD(php_wxFontList, FindOrCreateFont)
 				}
 				else if(value_to_return6->references.IsUserInitialized()){
 					if(value_to_return6->phpObj != NULL){
-						return_value = value_to_return6->phpObj;
+						*return_value = *value_to_return6->phpObj;
+						zval_add_ref(&value_to_return6->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -15527,7 +15550,8 @@ PHP_METHOD(php_wxFontList, FindOrCreateFont)
 				}
 				else if(value_to_return7->references.IsUserInitialized()){
 					if(value_to_return7->phpObj != NULL){
-						return_value = value_to_return7->phpObj;
+						*return_value = *value_to_return7->phpObj;
+						zval_add_ref(&value_to_return7->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -15552,7 +15576,6 @@ PHP_METHOD(php_wxFontList, FindOrCreateFont)
 
 		
 }
-
 void php_wxFontEnumerator_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16321,7 +16344,6 @@ PHP_METHOD(php_wxFontEnumerator, EnumerateEncodings)
 
 		
 }
-
 void php_wxNativeFontInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18582,7 +18604,6 @@ PHP_METHOD(php_wxNativeFontInfo, ToUserString)
 
 		
 }
-
 void php_wxColourDatabase_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19029,7 +19050,6 @@ PHP_METHOD(php_wxColourDatabase, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxGDIObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19070,7 +19090,6 @@ void php_wxGDIObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
-
 void php_wxGraphicsRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19111,7 +19130,6 @@ void php_wxGraphicsRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 		#endif
 	}
 }
-
 void php_wxGraphicsMatrix_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19152,7 +19170,6 @@ void php_wxGraphicsMatrix_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		#endif
 	}
 }
-
 void php_wxIcon_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20277,7 +20294,6 @@ PHP_METHOD(php_wxIcon, CopyFromBitmap)
 
 		
 }
-
 void php_wxIconBundle_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21442,7 +21458,6 @@ PHP_METHOD(php_wxIconBundle, GetIcon)
 
 		
 }
-
 void php_wxImageHandler_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22944,7 +22959,6 @@ PHP_METHOD(php_wxImageHandler, SetName)
 
 		
 }
-
 void php_wxImage_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25793,7 +25807,8 @@ PHP_METHOD(php_wxImage, Resize)
 
 				if(value_to_return2->references.IsUserInitialized()){
 					if(value_to_return2->phpObj != NULL){
-						return_value = value_to_return2->phpObj;
+						*return_value = *value_to_return2->phpObj;
+						zval_add_ref(&value_to_return2->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -25825,7 +25840,8 @@ PHP_METHOD(php_wxImage, Resize)
 
 				if(value_to_return3->references.IsUserInitialized()){
 					if(value_to_return3->phpObj != NULL){
-						return_value = value_to_return3->phpObj;
+						*return_value = *value_to_return3->phpObj;
+						zval_add_ref(&value_to_return3->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -25857,7 +25873,8 @@ PHP_METHOD(php_wxImage, Resize)
 
 				if(value_to_return4->references.IsUserInitialized()){
 					if(value_to_return4->phpObj != NULL){
-						return_value = value_to_return4->phpObj;
+						*return_value = *value_to_return4->phpObj;
+						zval_add_ref(&value_to_return4->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -25889,7 +25906,8 @@ PHP_METHOD(php_wxImage, Resize)
 
 				if(value_to_return5->references.IsUserInitialized()){
 					if(value_to_return5->phpObj != NULL){
-						return_value = value_to_return5->phpObj;
+						*return_value = *value_to_return5->phpObj;
+						zval_add_ref(&value_to_return5->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -26004,7 +26022,8 @@ PHP_METHOD(php_wxImage, Rescale)
 
 				if(value_to_return2->references.IsUserInitialized()){
 					if(value_to_return2->phpObj != NULL){
-						return_value = value_to_return2->phpObj;
+						*return_value = *value_to_return2->phpObj;
+						zval_add_ref(&value_to_return2->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -26034,7 +26053,8 @@ PHP_METHOD(php_wxImage, Rescale)
 
 				if(value_to_return3->references.IsUserInitialized()){
 					if(value_to_return3->phpObj != NULL){
-						return_value = value_to_return3->phpObj;
+						*return_value = *value_to_return3->phpObj;
+						zval_add_ref(&value_to_return3->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -28094,7 +28114,8 @@ PHP_METHOD(php_wxImage, GetPalette)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -29534,7 +29555,8 @@ PHP_METHOD(php_wxImage, FindHandlerMime)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -29686,7 +29708,8 @@ PHP_METHOD(php_wxImage, FindHandler)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -29723,7 +29746,8 @@ PHP_METHOD(php_wxImage, FindHandler)
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
 					if(value_to_return2->phpObj != NULL){
-						return_value = value_to_return2->phpObj;
+						*return_value = *value_to_return2->phpObj;
+						zval_add_ref(&value_to_return2->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -29760,7 +29784,8 @@ PHP_METHOD(php_wxImage, FindHandler)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -32195,7 +32220,6 @@ PHP_METHOD(php_wxImage, Size)
 
 		
 }
-
 void php_wxImageList_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -33549,7 +33573,6 @@ PHP_METHOD(php_wxImageList, Draw)
 
 		
 }
-
 void php_wxPalette_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -34395,7 +34418,6 @@ PHP_METHOD(php_wxPalette, GetRGB)
 
 		
 }
-
 void php_wxPen_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -35113,7 +35135,8 @@ PHP_METHOD(php_wxPen, GetStipple)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -36031,7 +36054,6 @@ PHP_METHOD(php_wxPen, SetCap)
 
 		
 }
-
 void php_wxPenList_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -36180,7 +36202,8 @@ PHP_METHOD(php_wxPenList, FindOrCreatePen)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -36214,7 +36237,8 @@ PHP_METHOD(php_wxPenList, FindOrCreatePen)
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
 					if(value_to_return2->phpObj != NULL){
-						return_value = value_to_return2->phpObj;
+						*return_value = *value_to_return2->phpObj;
+						zval_add_ref(&value_to_return2->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -36248,7 +36272,8 @@ PHP_METHOD(php_wxPenList, FindOrCreatePen)
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
 					if(value_to_return3->phpObj != NULL){
-						return_value = value_to_return3->phpObj;
+						*return_value = *value_to_return3->phpObj;
+						zval_add_ref(&value_to_return3->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -36354,7 +36379,6 @@ PHP_METHOD(php_wxPenList, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxRendererNative_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -37323,7 +37347,8 @@ PHP_METHOD(php_wxRendererNative, Get)
 				value_to_return0 = (wxRendererNative_php*) &wxRendererNative::Get();
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -37491,7 +37516,8 @@ PHP_METHOD(php_wxRendererNative, GetDefault)
 				value_to_return0 = (wxRendererNative_php*) &wxRendererNative::GetDefault();
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -37594,7 +37620,8 @@ PHP_METHOD(php_wxRendererNative, GetGeneric)
 				value_to_return0 = (wxRendererNative_php*) &wxRendererNative::GetGeneric();
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -37826,7 +37853,8 @@ PHP_METHOD(php_wxRendererNative, Load)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -37954,7 +37982,8 @@ PHP_METHOD(php_wxRendererNative, Set)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{

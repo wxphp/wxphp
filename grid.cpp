@@ -50,7 +50,6 @@
 #include "others.h"
 
 
-
 void php_wxGridCellRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -289,7 +288,6 @@ wxGridCellRenderer* wxGridCellRenderer_php::Clone()const
 	return wxGridCellRenderer::Clone();
 
 }
-
 void php_wxGridCellAutoWrapStringRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -410,7 +408,6 @@ PHP_METHOD(php_wxGridCellAutoWrapStringRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxGridCellBoolRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -531,7 +528,6 @@ PHP_METHOD(php_wxGridCellBoolRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxGridCellDateTimeRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -773,7 +769,6 @@ PHP_METHOD(php_wxGridCellDateTimeRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxGridCellEnumRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1003,7 +998,6 @@ PHP_METHOD(php_wxGridCellEnumRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxGridCellFloatRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1791,7 +1785,6 @@ PHP_METHOD(php_wxGridCellFloatRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxGridCellNumberRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1912,7 +1905,6 @@ PHP_METHOD(php_wxGridCellNumberRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxGridCellStringRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2033,7 +2025,6 @@ PHP_METHOD(php_wxGridCellStringRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxGridCellEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3687,7 +3678,6 @@ PHP_METHOD(php_wxGridCellEditor, StartingKey)
 
 		
 }
-
 void php_wxGridCellAutoWrapStringEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3808,7 +3798,6 @@ PHP_METHOD(php_wxGridCellAutoWrapStringEditor, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxGridCellBoolEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4143,7 +4132,6 @@ PHP_METHOD(php_wxGridCellBoolEditor, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxGridCellChoiceEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4410,7 +4398,6 @@ PHP_METHOD(php_wxGridCellChoiceEditor, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxGridCellEnumEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4547,7 +4534,6 @@ PHP_METHOD(php_wxGridCellEnumEditor, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxGridCellTextEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4769,7 +4755,6 @@ PHP_METHOD(php_wxGridCellTextEditor, SetParameters)
 
 		
 }
-
 void php_wxGridCellFloatEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5020,7 +5005,6 @@ PHP_METHOD(php_wxGridCellFloatEditor, SetParameters)
 
 		
 }
-
 void php_wxGridCellNumberEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5260,7 +5244,6 @@ PHP_METHOD(php_wxGridCellNumberEditor, SetParameters)
 
 		
 }
-
 void php_wxGridCellAttr_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5353,7 +5336,8 @@ PHP_METHOD(php_wxGridCellAttr, Clone)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5656,7 +5640,8 @@ PHP_METHOD(php_wxGridCellAttr, GetBackgroundColour)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5789,7 +5774,8 @@ PHP_METHOD(php_wxGridCellAttr, GetEditor)
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
 					if(value_to_return3->phpObj != NULL){
-						return_value = value_to_return3->phpObj;
+						*return_value = *value_to_return3->phpObj;
+						zval_add_ref(&value_to_return3->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5896,7 +5882,8 @@ PHP_METHOD(php_wxGridCellAttr, GetFont)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -6139,7 +6126,8 @@ PHP_METHOD(php_wxGridCellAttr, GetRenderer)
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
 					if(value_to_return3->phpObj != NULL){
-						return_value = value_to_return3->phpObj;
+						*return_value = *value_to_return3->phpObj;
+						zval_add_ref(&value_to_return3->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -6246,7 +6234,8 @@ PHP_METHOD(php_wxGridCellAttr, GetTextColour)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -8030,7 +8019,6 @@ PHP_METHOD(php_wxGridCellAttr, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxGridTableBase_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8962,7 +8950,8 @@ PHP_METHOD(php_wxGridTableBase, GetAttr)
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
 					if(value_to_return3->phpObj != NULL){
-						return_value = value_to_return3->phpObj;
+						*return_value = *value_to_return3->phpObj;
+						zval_add_ref(&value_to_return3->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -9071,7 +9060,8 @@ PHP_METHOD(php_wxGridTableBase, GetAttrProvider)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -10189,7 +10179,8 @@ PHP_METHOD(php_wxGridTableBase, GetView)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -11807,7 +11798,6 @@ PHP_METHOD(php_wxGridTableBase, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxGridSizesInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12085,7 +12075,6 @@ PHP_METHOD(php_wxGridSizesInfo, GetSize)
 
 		
 }
-
 void php_wxGrid_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16901,7 +16890,8 @@ PHP_METHOD(php_wxGrid, GetCellEditor)
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
 					if(value_to_return2->phpObj != NULL){
-						return_value = value_to_return2->phpObj;
+						*return_value = *value_to_return2->phpObj;
+						zval_add_ref(&value_to_return2->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -17114,7 +17104,8 @@ PHP_METHOD(php_wxGrid, GetCellRenderer)
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
 					if(value_to_return2->phpObj != NULL){
-						return_value = value_to_return2->phpObj;
+						*return_value = *value_to_return2->phpObj;
+						zval_add_ref(&value_to_return2->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -19026,7 +19017,8 @@ PHP_METHOD(php_wxGrid, GetDefaultEditor)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -19141,7 +19133,8 @@ PHP_METHOD(php_wxGrid, GetDefaultEditorForType)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -19342,7 +19335,8 @@ PHP_METHOD(php_wxGrid, GetDefaultRenderer)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -19457,7 +19451,8 @@ PHP_METHOD(php_wxGrid, GetDefaultRendererForCell)
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
 					if(value_to_return2->phpObj != NULL){
-						return_value = value_to_return2->phpObj;
+						*return_value = *value_to_return2->phpObj;
+						zval_add_ref(&value_to_return2->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -19572,7 +19567,8 @@ PHP_METHOD(php_wxGrid, GetDefaultRendererForType)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -19855,7 +19851,8 @@ PHP_METHOD(php_wxGrid, GetGridColHeader)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -19964,7 +19961,8 @@ PHP_METHOD(php_wxGrid, GetGridColLabelWindow)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -20073,7 +20071,8 @@ PHP_METHOD(php_wxGrid, GetGridCornerLabelWindow)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -20448,7 +20447,8 @@ PHP_METHOD(php_wxGrid, GetGridRowLabelWindow)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -20557,7 +20557,8 @@ PHP_METHOD(php_wxGrid, GetGridWindow)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -21122,7 +21123,8 @@ PHP_METHOD(php_wxGrid, GetOrCreateCellAttr)
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
 					if(value_to_return2->phpObj != NULL){
-						return_value = value_to_return2->phpObj;
+						*return_value = *value_to_return2->phpObj;
+						zval_add_ref(&value_to_return2->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -22426,7 +22428,8 @@ PHP_METHOD(php_wxGrid, GetTable)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -32805,7 +32808,6 @@ PHP_METHOD(php_wxGrid, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxGridUpdateLocker_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG

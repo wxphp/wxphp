@@ -50,7 +50,6 @@
 #include "others.h"
 
 
-
 void php_wxDataViewModel_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2750,7 +2749,6 @@ PHP_METHOD(php_wxDataViewModel, ValueChanged)
 
 		
 }
-
 void php_wxDataViewListModel_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3425,7 +3423,6 @@ bool wxDataViewListModel_php::SetValueByRow(const wxVariant& variant, unsigned i
 	return wxDataViewListModel::SetValueByRow(variant, row, col);
 
 }
-
 void php_wxDataViewIndexListModel_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3466,7 +3463,6 @@ void php_wxDataViewIndexListModel_destruction_handler(zend_rsrc_list_entry *rsrc
 		#endif
 	}
 }
-
 void php_wxDataViewVirtualListModel_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3507,7 +3503,6 @@ void php_wxDataViewVirtualListModel_destruction_handler(zend_rsrc_list_entry *rs
 		#endif
 	}
 }
-
 void php_wxDataViewItemAttr_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3922,7 +3917,6 @@ PHP_METHOD(php_wxDataViewItemAttr, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxDataViewItem_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4312,7 +4306,6 @@ PHP_METHOD(php_wxDataViewItem, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxDataViewModelNotifier_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4490,7 +4483,8 @@ PHP_METHOD(php_wxDataViewModelNotifier, GetOwner)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5003,7 +4997,6 @@ PHP_METHOD(php_wxDataViewModelNotifier, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxDataViewRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6077,7 +6070,8 @@ PHP_METHOD(php_wxDataViewRenderer, GetOwner)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -6927,7 +6921,6 @@ PHP_METHOD(php_wxDataViewRenderer, Validate)
 
 		
 }
-
 void php_wxDataViewTextRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7086,7 +7079,6 @@ PHP_METHOD(php_wxDataViewTextRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxDataViewIconTextRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7245,7 +7237,6 @@ PHP_METHOD(php_wxDataViewIconTextRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxDataViewProgressRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7416,7 +7407,6 @@ PHP_METHOD(php_wxDataViewProgressRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxDataViewSpinRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7565,7 +7555,6 @@ PHP_METHOD(php_wxDataViewSpinRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxDataViewToggleRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7724,7 +7713,6 @@ PHP_METHOD(php_wxDataViewToggleRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxDataViewChoiceRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8115,7 +8103,6 @@ PHP_METHOD(php_wxDataViewChoiceRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxDataViewDateRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8274,7 +8261,6 @@ PHP_METHOD(php_wxDataViewDateRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxDataViewCustomRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8648,7 +8634,8 @@ PHP_METHOD(php_wxDataViewCustomRenderer, CreateEditorCtrl)
 				}
 				else if(value_to_return3->references.IsUserInitialized()){
 					if(value_to_return3->phpObj != NULL){
-						return_value = value_to_return3->phpObj;
+						*return_value = *value_to_return3->phpObj;
+						zval_add_ref(&value_to_return3->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -8768,7 +8755,8 @@ PHP_METHOD(php_wxDataViewCustomRenderer, GetAttr)
 				}
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -9653,7 +9641,6 @@ PHP_METHOD(php_wxDataViewCustomRenderer, StartDrag)
 
 		
 }
-
 void php_wxDataViewBitmapRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9812,7 +9799,6 @@ PHP_METHOD(php_wxDataViewBitmapRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxDataViewColumn_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10024,7 +10010,8 @@ PHP_METHOD(php_wxDataViewColumn, GetOwner)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -10388,7 +10375,8 @@ PHP_METHOD(php_wxDataViewColumn, GetRenderer)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -10413,7 +10401,6 @@ PHP_METHOD(php_wxDataViewColumn, GetRenderer)
 
 		
 }
-
 void php_wxDataViewListStore_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11402,7 +11389,6 @@ PHP_METHOD(php_wxDataViewListStore, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxDataViewTreeStore_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12384,7 +12370,8 @@ PHP_METHOD(php_wxDataViewTreeStore, GetItemData)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -12513,7 +12500,8 @@ PHP_METHOD(php_wxDataViewTreeStore, GetItemExpandedIcon)
 
 				if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -12642,7 +12630,8 @@ PHP_METHOD(php_wxDataViewTreeStore, GetItemIcon)
 
 				if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -14246,7 +14235,6 @@ PHP_METHOD(php_wxDataViewTreeStore, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxDataViewIconText_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14368,7 +14356,8 @@ PHP_METHOD(php_wxDataViewIconText, GetIcon)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{

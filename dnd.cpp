@@ -50,7 +50,6 @@
 #include "others.h"
 
 
-
 void php_wxClipboard_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1236,7 +1235,6 @@ PHP_METHOD(php_wxClipboard, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxDataFormat_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1774,7 +1772,6 @@ PHP_METHOD(php_wxDataFormat, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2492,7 +2489,6 @@ PHP_METHOD(php_wxDataObject, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxCustomDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3192,7 +3188,6 @@ PHP_METHOD(php_wxCustomDataObject, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxDataObjectComposite_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3528,7 +3523,6 @@ PHP_METHOD(php_wxDataObjectComposite, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxDataObjectSimple_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3895,7 +3889,8 @@ PHP_METHOD(php_wxDataObjectSimple, GetFormat)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4277,7 +4272,6 @@ PHP_METHOD(php_wxDataObjectSimple, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxBitmapDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4633,7 +4627,6 @@ PHP_METHOD(php_wxBitmapDataObject, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxURLDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4956,7 +4949,6 @@ PHP_METHOD(php_wxURLDataObject, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxTextDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5143,7 +5135,8 @@ PHP_METHOD(php_wxTextDataObject, GetFormat)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5656,7 +5649,6 @@ PHP_METHOD(php_wxTextDataObject, GetFormatCount)
 
 		
 }
-
 void php_wxFileDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5967,7 +5959,6 @@ PHP_METHOD(php_wxFileDataObject, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxTextDropTarget_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6211,7 +6202,6 @@ bool wxTextDropTarget_php::OnDrop(wxCoord x, wxCoord y)
 	return wxTextDropTarget::OnDrop(x, y);
 
 }
-
 void php_wxDropTarget_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6829,7 +6819,6 @@ bool wxDropTarget_php::OnDrop(wxCoord x, wxCoord y)
 	return wxDropTarget::OnDrop(x, y);
 
 }
-
 void php_wxFileDropTarget_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG

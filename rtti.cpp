@@ -50,7 +50,6 @@
 #include "others.h"
 
 
-
 void php_wxRefCounter_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -472,7 +471,6 @@ PHP_METHOD(php_wxRefCounter, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7046,7 +7044,8 @@ PHP_METHOD(php_wxObject, GetClassInfo)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -8353,7 +8352,6 @@ PHP_METHOD(php_wxObject, IsKindOf)
 
 		
 }
-
 void php_wxClassInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8481,7 +8479,8 @@ PHP_METHOD(php_wxClassInfo, CreateObject)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -8596,7 +8595,8 @@ PHP_METHOD(php_wxClassInfo, FindClass)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{

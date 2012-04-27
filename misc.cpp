@@ -50,7 +50,6 @@
 #include "others.h"
 
 
-
 void php_wxArtProvider_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1501,7 +1500,6 @@ PHP_METHOD(php_wxArtProvider, Delete)
 
 		
 }
-
 void php_wxCaret_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2515,7 +2513,8 @@ PHP_METHOD(php_wxCaret, GetWindow)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -2922,7 +2921,6 @@ PHP_METHOD(php_wxCaret, GetPosition)
 
 		
 }
-
 void php_wxNotificationMessage_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3711,7 +3709,6 @@ PHP_METHOD(php_wxNotificationMessage, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxStopWatch_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4196,7 +4193,6 @@ PHP_METHOD(php_wxStopWatch, Pause)
 
 		
 }
-
 void php_wxTaskBarIcon_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5059,7 +5055,6 @@ PHP_METHOD(php_wxTaskBarIcon, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxTimer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5358,7 +5353,8 @@ PHP_METHOD(php_wxTimer, GetOwner)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -6115,7 +6111,6 @@ PHP_METHOD(php_wxTimer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxWindowDisabler_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6305,7 +6300,6 @@ PHP_METHOD(php_wxWindowDisabler, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxBusyCursor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
