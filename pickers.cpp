@@ -50,7 +50,6 @@
 #include "others.h"
 
 
-
 void php_wxColourPickerCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -835,7 +834,6 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxDatePickerCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1710,7 +1708,6 @@ PHP_METHOD(php_wxDatePickerCtrl, GetRange)
 
 		
 }
-
 void php_wxFilePickerCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2653,7 +2650,6 @@ PHP_METHOD(php_wxFilePickerCtrl, GetFileName)
 
 		
 }
-
 void php_wxDirPickerCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3569,7 +3565,6 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxFontPickerCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4495,7 +4490,6 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxPickerBase_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4748,7 +4742,8 @@ PHP_METHOD(php_wxPickerBase, GetPickerCtrl)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5018,7 +5013,8 @@ PHP_METHOD(php_wxPickerBase, GetTextCtrl)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -6226,7 +6222,6 @@ PHP_METHOD(php_wxPickerBase, SetTextCtrlProportion)
 
 		
 }
-
 void php_wxTimePickerCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG

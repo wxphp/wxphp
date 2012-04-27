@@ -50,7 +50,6 @@
 #include "others.h"
 
 
-
 void php_wxAboutDialogInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2223,7 +2222,6 @@ PHP_METHOD(php_wxAboutDialogInfo, GetName)
 
 		
 }
-
 void php_wxBusyInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2379,7 +2377,6 @@ PHP_METHOD(php_wxBusyInfo, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxSingleChoiceDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxSingleChoiceDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
@@ -3249,7 +3246,6 @@ PHP_METHOD(php_wxSingleChoiceDialog, GetSelectionData)
 
 		
 }
-
 void php_wxPrintDialogData_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4261,7 +4257,8 @@ PHP_METHOD(php_wxPrintDialogData, GetPrintData)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5614,7 +5611,6 @@ PHP_METHOD(php_wxPrintDialogData, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxColourDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxColourDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
@@ -5920,7 +5916,8 @@ PHP_METHOD(php_wxColourDialog, GetColourData)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -6086,7 +6083,6 @@ PHP_METHOD(php_wxColourDialog, Create)
 
 		
 }
-
 void php_wxColourData_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6791,7 +6787,8 @@ PHP_METHOD(php_wxColourData, GetColour)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -6996,7 +6993,6 @@ PHP_METHOD(php_wxColourData, FromString)
 
 		
 }
-
 void php_wxDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
@@ -7748,7 +7744,8 @@ PHP_METHOD(php_wxDialog, CreateButtonSizer)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -7926,7 +7923,8 @@ PHP_METHOD(php_wxDialog, CreateSeparatedButtonSizer)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -8121,7 +8119,8 @@ PHP_METHOD(php_wxDialog, CreateSeparatedSizer)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -8300,7 +8299,8 @@ PHP_METHOD(php_wxDialog, CreateStdDialogButtonSizer)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -8780,7 +8780,8 @@ PHP_METHOD(php_wxDialog, GetContentWindow)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -12469,7 +12470,6 @@ PHP_METHOD(php_wxDialog, IsLayoutAdaptationEnabled)
 
 		
 }
-
 void php_wxDirDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxDirDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
@@ -13150,7 +13150,6 @@ PHP_METHOD(php_wxDirDialog, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxFindReplaceData_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13837,7 +13836,6 @@ PHP_METHOD(php_wxFindReplaceData, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxFindReplaceDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxFindReplaceDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
@@ -14071,7 +14069,8 @@ PHP_METHOD(php_wxFindReplaceDialog, GetData)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -14264,7 +14263,6 @@ PHP_METHOD(php_wxFindReplaceDialog, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxFileDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxFileDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
@@ -15941,7 +15939,8 @@ PHP_METHOD(php_wxFileDialog, GetExtraControl)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -16059,7 +16058,6 @@ PHP_METHOD(php_wxFileDialog, GetDirectory)
 
 		
 }
-
 void php_wxFontData_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17134,7 +17132,8 @@ PHP_METHOD(php_wxFontData, GetColour)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -17430,7 +17429,6 @@ PHP_METHOD(php_wxFontData, EnableEffects)
 
 		
 }
-
 void php_wxFontDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxFontDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
@@ -17714,7 +17712,8 @@ PHP_METHOD(php_wxFontDialog, GetFontData)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -17751,7 +17750,8 @@ PHP_METHOD(php_wxFontDialog, GetFontData)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -18070,7 +18070,6 @@ PHP_METHOD(php_wxFontDialog, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxMessageDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxMessageDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
@@ -19986,7 +19985,6 @@ PHP_METHOD(php_wxMessageDialog, SetHelpLabel)
 
 		
 }
-
 void php_wxGenericProgressDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxGenericProgressDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
@@ -21040,7 +21038,6 @@ PHP_METHOD(php_wxGenericProgressDialog, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxRearrangeDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21275,7 +21272,8 @@ PHP_METHOD(php_wxRearrangeDialog, GetList)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -21380,7 +21378,6 @@ PHP_METHOD(php_wxRearrangeDialog, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxSymbolPickerDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxSymbolPickerDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
@@ -22936,7 +22933,6 @@ PHP_METHOD(php_wxSymbolPickerDialog, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxPasswordEntryDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxPasswordEntryDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
@@ -23114,7 +23110,6 @@ PHP_METHOD(php_wxPasswordEntryDialog, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxTextEntryDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxTextEntryDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
@@ -23577,7 +23572,6 @@ PHP_METHOD(php_wxTextEntryDialog, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxWizard_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxWizard went out of scope. Remember to always call Destroy() to prevent memory leaks.");
@@ -23988,7 +23982,8 @@ PHP_METHOD(php_wxWizard, GetBitmap)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -24094,7 +24089,8 @@ PHP_METHOD(php_wxWizard, GetBitmapBackgroundColour)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -24290,7 +24286,8 @@ PHP_METHOD(php_wxWizard, GetCurrentPage)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -25748,7 +25745,8 @@ PHP_METHOD(php_wxWizard, GetPageAreaSizer)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{

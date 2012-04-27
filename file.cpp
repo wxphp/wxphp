@@ -50,7 +50,6 @@
 #include "others.h"
 
 
-
 void php_wxFFile_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1509,7 +1508,6 @@ PHP_METHOD(php_wxFFile, Close)
 
 		
 }
-
 void php_wxFile_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3487,7 +3485,6 @@ PHP_METHOD(php_wxFile, Access)
 
 		
 }
-
 void php_wxPathList_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4194,7 +4191,6 @@ PHP_METHOD(php_wxPathList, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxFileName_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13165,7 +13161,6 @@ PHP_METHOD(php_wxFileName, Normalize)
 
 		
 }
-
 void php_wxFSFile_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13400,7 +13395,8 @@ PHP_METHOD(php_wxFSFile, GetStream)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13877,7 +13873,8 @@ PHP_METHOD(php_wxFSFile, DetachStream)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -13902,7 +13899,6 @@ PHP_METHOD(php_wxFSFile, DetachStream)
 
 		
 }
-
 void php_wxFileSystemWatcher_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14787,7 +14783,6 @@ PHP_METHOD(php_wxFileSystemWatcher, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxStandardPaths_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14909,7 +14904,8 @@ PHP_METHOD(php_wxStandardPaths, Get)
 				value_to_return0 = (wxStandardPaths_php*) &wxStandardPaths::Get();
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{

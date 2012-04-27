@@ -50,7 +50,6 @@
 #include "others.h"
 
 
-
 void php_wxFileSystem_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -365,7 +364,8 @@ PHP_METHOD(php_wxFileSystem, OpenFile)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -398,7 +398,8 @@ PHP_METHOD(php_wxFileSystem, OpenFile)
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
 					if(value_to_return2->phpObj != NULL){
-						return_value = value_to_return2->phpObj;
+						*return_value = *value_to_return2->phpObj;
+						zval_add_ref(&value_to_return2->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -1259,7 +1260,6 @@ PHP_METHOD(php_wxFileSystem, AddHandler)
 
 		
 }
-
 void php_wxFileSystemHandler_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG

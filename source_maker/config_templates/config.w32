@@ -44,7 +44,7 @@ if (PHP_WXWIDGETS != "no") {
 			AC_DEFINE('USE_WXPHP_DEBUG', 1, 'Print debugging messages');
 		}
 		
-		EXTENSION("wxwidgets", "app.cpp references.cpp <?=$source_files?> wxwidgets.cpp");
+		EXTENSION("wxwidgets", "app.cpp references.cpp <?=$source_files?> functions.cpp wxwidgets.cpp");
 		ADD_FLAG("CFLAGS_WXWIDGETS", "/TP /EHsc /D_UNICODE");
 		AC_DEFINE('WX_DEBUG', 0, 'Have WX_DEBug library');
 		

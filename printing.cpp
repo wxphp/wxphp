@@ -50,7 +50,6 @@
 #include "others.h"
 
 
-
 void php_wxPrinterDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -286,7 +285,6 @@ PHP_METHOD(php_wxPrinterDC, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxPreviewControlBar_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -777,7 +775,6 @@ PHP_METHOD(php_wxPreviewControlBar, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxPreviewCanvas_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1001,7 +998,6 @@ PHP_METHOD(php_wxPreviewCanvas, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxPreviewFrame_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxPreviewFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");
@@ -1371,7 +1367,6 @@ PHP_METHOD(php_wxPreviewFrame, InitializeWithModality)
 
 		
 }
-
 void php_wxPrintPreview_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1496,7 +1491,8 @@ PHP_METHOD(php_wxPrintPreview, GetCanvas)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -1692,7 +1688,8 @@ PHP_METHOD(php_wxPrintPreview, GetFrame)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -1975,7 +1972,8 @@ PHP_METHOD(php_wxPrintPreview, GetPrintout)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -2084,7 +2082,8 @@ PHP_METHOD(php_wxPrintPreview, GetPrintoutForPrinting)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3187,7 +3186,6 @@ PHP_METHOD(php_wxPrintPreview, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxPrinter_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3352,7 +3350,8 @@ PHP_METHOD(php_wxPrinter, CreateAbortWindow)
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
 					if(value_to_return2->phpObj != NULL){
-						return_value = value_to_return2->phpObj;
+						*return_value = *value_to_return2->phpObj;
+						zval_add_ref(&value_to_return2->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3635,7 +3634,8 @@ PHP_METHOD(php_wxPrinter, GetPrintDialogData)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3909,7 +3909,8 @@ PHP_METHOD(php_wxPrinter, PrintDialog)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4289,7 +4290,6 @@ PHP_METHOD(php_wxPrinter, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxPrintout_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4779,7 +4779,8 @@ PHP_METHOD(php_wxPrintout, GetDC)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5885,7 +5886,8 @@ PHP_METHOD(php_wxPrintout, GetPreview)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -7197,7 +7199,6 @@ PHP_METHOD(php_wxPrintout, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxPrintDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxPrintDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
@@ -7286,7 +7287,8 @@ PHP_METHOD(php_wxPrintDialog, GetPrintDC)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -7392,7 +7394,8 @@ PHP_METHOD(php_wxPrintDialog, GetPrintDialogData)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -7637,7 +7640,6 @@ PHP_METHOD(php_wxPrintDialog, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxPageSetupDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxPageSetupDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
@@ -7723,7 +7725,8 @@ PHP_METHOD(php_wxPageSetupDialog, GetPageSetupData)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{

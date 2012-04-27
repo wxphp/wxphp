@@ -50,7 +50,6 @@
 #include "others.h"
 
 
-
 void php_wxAuiNotebookEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -175,7 +174,8 @@ PHP_METHOD(php_wxAuiNotebookEvent, Clone)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -306,7 +306,6 @@ PHP_METHOD(php_wxAuiNotebookEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxBookCtrlBase_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1415,7 +1414,8 @@ PHP_METHOD(php_wxBookCtrlBase, GetCurrentPage)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -1581,7 +1581,8 @@ PHP_METHOD(php_wxBookCtrlBase, GetPage)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -2730,7 +2731,6 @@ int wxBookCtrlBase_php::ChangeSelection(size_t page)
 	return wxBookCtrlBase::ChangeSelection(page);
 
 }
-
 void php_wxBookCtrlEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3273,7 +3273,6 @@ PHP_METHOD(php_wxBookCtrlEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxChoicebook_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3365,7 +3364,8 @@ PHP_METHOD(php_wxChoicebook, GetChoiceCtrl)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3615,7 +3615,6 @@ PHP_METHOD(php_wxChoicebook, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxListbook_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3932,7 +3931,8 @@ PHP_METHOD(php_wxListbook, GetListView)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3957,7 +3957,6 @@ PHP_METHOD(php_wxListbook, GetListView)
 
 		
 }
-
 void php_wxNotebook_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5471,7 +5470,6 @@ PHP_METHOD(php_wxNotebook, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxToolbook_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5788,7 +5786,8 @@ PHP_METHOD(php_wxToolbook, GetToolBar)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5813,7 +5812,6 @@ PHP_METHOD(php_wxToolbook, GetToolBar)
 
 		
 }
-
 void php_wxTreebook_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG

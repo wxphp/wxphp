@@ -50,7 +50,6 @@
 #include "others.h"
 
 
-
 void php_wxCondition_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -634,7 +633,6 @@ PHP_METHOD(php_wxCondition, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxCriticalSectionLocker_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -778,7 +776,6 @@ PHP_METHOD(php_wxCriticalSectionLocker, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxThreadHelper_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -906,7 +903,8 @@ PHP_METHOD(php_wxThreadHelper, GetThread)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -1164,7 +1162,6 @@ PHP_METHOD(php_wxThreadHelper, Create)
 
 		
 }
-
 void php_wxCriticalSection_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1561,7 +1558,6 @@ PHP_METHOD(php_wxCriticalSection, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxThread_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1869,7 +1865,8 @@ PHP_METHOD(php_wxThread, This)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3944,7 +3941,6 @@ PHP_METHOD(php_wxThread, Wait)
 
 		
 }
-
 void php_wxSemaphore_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4444,7 +4440,6 @@ PHP_METHOD(php_wxSemaphore, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxMutexLocker_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4675,7 +4670,6 @@ PHP_METHOD(php_wxMutexLocker, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxMutex_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG

@@ -221,6 +221,14 @@ remove_methods_implementing_unhandled_arguments($defIni);
 
 //Merges method overloads from parents to child classes
 //classes_method_merger($defIni); //This is provoking compilation errors on some classes
+
+//Generate header files of class groups
+$header_files = "";
+foreach($defClassGroups as $header_name => $v)
+{
+	$header_name = str_replace("group_class_", "", $header_name);
+	$header_files .= "#include \"$header_name.h\"\n";
+}
 	
 //Generate classes source and header files
 foreach($defClassGroups as $file_name => $class_list)
@@ -228,15 +236,7 @@ foreach($defClassGroups as $file_name => $class_list)
 	//Strip group_class_
 	$file_name = str_replace("group_class_", "", $file_name);
 	
-	//Generate header file that holds class declarations
 	echo "Generating $file_name.cpp ...\n";
-	
-	$header_files = "";
-	foreach($defClassGroups as $header_file => $header_class_list)
-	{
-		//Strip group_class_
-		$header_files .= "#include \"" . str_replace("group_class_", "", $header_file) . ".h\"\n";
-	}
 	
 	//Add neccesary headers to classes implementation file
 	$classes_source_code = classes_author_header();
@@ -334,8 +334,8 @@ foreach($defClassGroups as $file_name => $class_list)
 	
 	$classes_header_code = classes_author_header();
 	
-	$classes_header_code .= "#ifndef wxphp_{$file_name}_guard\n";
-	$classes_header_code .= "#define wxphp_{$file_name}_guard\n\n";
+	$classes_header_code .= "#ifndef WXPHP_".strtoupper($file_name)."_H_GUARD\n";
+	$classes_header_code .= "#define WXPHP_".strtoupper($file_name)."_H_GUARD\n\n";
 	
 	$classes_header_code .= "#include \"references.h\"\n\n";
 	
@@ -356,11 +356,52 @@ foreach($defClassGroups as $file_name => $class_list)
 		ob_end_clean();
 	}
 	
-	$classes_header_code .= "#endif //wxphp_{$file_name}_guard\n\n";
+	$classes_header_code .= "#endif //WXPHP_".strtoupper($file_name)."_H_GUARD\n";
 
 	file_put_contents($file_name.".h", $classes_header_code);
 
 } //Ends foreach($defClassGroups as $file_name => $class_list)
+
+
+//Generate functions.h prototypes and functions.cpp code
+$function_prototypes = "";
+$functions = "";
+foreach($defFunctions as $function_name=>$function_data)
+{
+	//Generate function protytpes code
+	$function_prototypes .= "PHP_FUNCTION(php_{$function_name});\n\n";
+	
+	//Generate functions code
+	$function_template = "templates/functions/".strtolower($function_name).".php";
+	
+	ob_start();
+	if(file_exists($function_template))
+	{
+		include($function_template);
+	}
+	else
+	{
+		include("templates/function.php");
+	}
+	$functions .= ob_get_contents();
+	ob_end_clean();
+}
+
+echo "Generating functions.h\n";
+ob_start();
+	include("source_templates/functions.h");
+	$functions_h_source .= ob_get_contents();
+ob_end_clean();
+
+file_put_contents("functions.h", $functions_h_source);
+
+echo "Generating functions.cpp\n";
+ob_start();
+	include("source_templates/functions.cpp");
+	$functions_cpp_source .= ob_get_contents();
+ob_end_clean();
+
+file_put_contents("functions.cpp", $functions_cpp_source);
 
 
 //Update wxwidgets.cpp by just upgrading the code betewen 
@@ -368,20 +409,12 @@ foreach($defClassGroups as $file_name => $class_list)
 echo "Generating wxwidgets.cpp...\n";
 
 //Generate zend_class_entry declaration of each class
-$entries = "";
-foreach($defClassGroups as $header_name => $v)
-{
-	$header_name = str_replace("group_class_", "", $header_name);
-	$entries .= "#include \"$header_name.h\"\n";
-}
-
+$entries = $header_files;
 $entries .= "\n";
 
 foreach($defIni as $class_name => $class_methods)
 {
-	$entries .= "char PHP_{$class_name}_NAME[] = \"$class_name\";\n";
-	$entries .= "char le_{$class_name}_name[] = \"native $class_name\";\n";
-	$entries .= "zend_class_entry *php_{$class_name}_entry;\n";
+	$entries .= "zend_class_entry* php_{$class_name}_entry;\n";
 	$entries .= "int le_{$class_name};\n\n";
 }
 
@@ -389,7 +422,9 @@ foreach($defIni as $class_name => $class_methods)
 $classes = "";
 foreach($defIni as $class_name => $class_methods)
 {
-	$classes .= "\tINIT_CLASS_ENTRY(ce, PHP_{$class_name}_NAME , php_{$class_name}_functions);\n";
+	$classes .= "\tchar PHP_{$class_name}_name[] = \"$class_name\";\n";
+	$classes .= "\tchar le_{$class_name}_name[] = \"native $class_name\";\n";
+	$classes .= "\tINIT_CLASS_ENTRY(ce, PHP_{$class_name}_name, php_{$class_name}_functions);\n";
 	$classes .= "\tphp_{$class_name}_entry = zend_register_internal_class(&ce TSRMLS_CC);\n";
 	$classes .= "\tle_{$class_name} = zend_register_list_destructors_ex(php_{$class_name}_destruction_handler, NULL, le_{$class_name}_name, module_number);\n";
 	$classes .= "\n";
@@ -432,8 +467,8 @@ foreach($defGlobals as $variable_name => $variable_type)
 	//Manually define wxEmptyString
 	if($variable_name == "wxEmptyString")
 	{
-		$classes .= "\tchar _wx_empty_string[] = \"\";\n";
-		$classes .= "\tREGISTER_STRING_CONSTANT(\"$variable_name\", _wx_empty_string, CONST_CS | CONST_PERSISTENT);\n";
+		$classes .= "\tchar wxphp_empty_string[] = \"\";\n";
+		$classes .= "\tREGISTER_STRING_CONSTANT(\"$variable_name\", wxphp_empty_string, CONST_CS | CONST_PERSISTENT);\n";
 		continue;
 	}
 	
@@ -618,11 +653,7 @@ foreach($defEnums[0] as $enumClassName=>$classEnums)
 	}
 }
 
-//Generating wxwidgets.cpp functions
-
-//For testing the generation of only wxMessageBox
-$function_name = "wxMessageBox";
-$function_data = $defFunctions["wxMessageBox"];
+//Generating wxwidgets.cpp function table entries
 
 $functions = "";
 $functions_table = "";

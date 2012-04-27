@@ -50,7 +50,6 @@
 #include "others.h"
 
 
-
 void php_wxFileHistory_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG

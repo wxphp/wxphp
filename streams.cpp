@@ -50,7 +50,6 @@
 #include "others.h"
 
 
-
 void php_wxDataOutputStream_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -851,7 +850,6 @@ PHP_METHOD(php_wxDataOutputStream, WriteString)
 
 		
 }
-
 void php_wxDataInputStream_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1617,7 +1615,6 @@ PHP_METHOD(php_wxDataInputStream, BigEndianOrdered)
 
 		
 }
-
 void php_wxStreamBase_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2579,7 +2576,6 @@ wxFileOffset wxStreamBase_php::OnSysTell()const
 	return wxStreamBase::OnSysTell();
 
 }
-
 void php_wxOutputStream_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2819,7 +2815,8 @@ PHP_METHOD(php_wxOutputStream, Write)
 
 				if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3382,7 +3379,6 @@ PHP_METHOD(php_wxOutputStream, LastWrite)
 
 		
 }
-
 void php_wxInputStream_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3992,7 +3988,8 @@ PHP_METHOD(php_wxInputStream, Read)
 
 				if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -4596,7 +4593,6 @@ PHP_METHOD(php_wxInputStream, CanRead)
 
 		
 }
-
 void php_wxFFileOutputStream_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4880,7 +4876,6 @@ PHP_METHOD(php_wxFFileOutputStream, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxFileOutputStream_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5188,7 +5183,6 @@ PHP_METHOD(php_wxFileOutputStream, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxFileInputStream_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5496,7 +5490,6 @@ PHP_METHOD(php_wxFileInputStream, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxFFileInputStream_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5780,7 +5773,6 @@ PHP_METHOD(php_wxFFileInputStream, IsOk)
 
 		
 }
-
 void php_wxFFileStream_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6006,7 +5998,6 @@ PHP_METHOD(php_wxFFileStream, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxFileStream_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG

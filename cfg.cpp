@@ -50,7 +50,6 @@
 #include "others.h"
 
 
-
 void php_wxConfigBase_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -179,7 +178,8 @@ PHP_METHOD(php_wxConfigBase, Create)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -727,7 +727,8 @@ PHP_METHOD(php_wxConfigBase, Get)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -757,7 +758,8 @@ PHP_METHOD(php_wxConfigBase, Get)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3073,7 +3075,8 @@ PHP_METHOD(php_wxConfigBase, Set)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3643,7 +3646,6 @@ PHP_METHOD(php_wxConfigBase, Write)
 
 		
 }
-
 void php_wxDisplay_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4664,7 +4666,6 @@ PHP_METHOD(php_wxDisplay, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxFileConfig_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6891,7 +6892,6 @@ PHP_METHOD(php_wxFileConfig, SetUmask)
 
 		
 }
-
 void php_wxFontMapper_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7121,7 +7121,8 @@ PHP_METHOD(php_wxFontMapper, Get)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -7967,7 +7968,8 @@ PHP_METHOD(php_wxFontMapper, Set)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -8365,7 +8367,6 @@ PHP_METHOD(php_wxFontMapper, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxPlatformInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8866,7 +8867,8 @@ PHP_METHOD(php_wxPlatformInfo, Get)
 				value_to_return0 = (wxPlatformInfo_php*) &wxPlatformInfo::Get();
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -11813,7 +11815,6 @@ PHP_METHOD(php_wxPlatformInfo, SetToolkitVersion)
 
 		
 }
-
 void php_wxSystemSettings_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12362,7 +12363,6 @@ PHP_METHOD(php_wxSystemSettings, HasFeature)
 
 		
 }
-
 void php_wxSystemOptions_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12921,7 +12921,6 @@ PHP_METHOD(php_wxSystemOptions, SetOption)
 
 		
 }
-
 void php_wxVideoMode_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG

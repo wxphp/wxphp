@@ -50,7 +50,6 @@
 #include "others.h"
 
 
-
 void php_wxHtmlHelpController_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1575,7 +1574,6 @@ PHP_METHOD(php_wxHtmlHelpController, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxHtmlModalHelp_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1746,7 +1744,6 @@ PHP_METHOD(php_wxHtmlModalHelp, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxHtmlHelpData_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2250,7 +2247,6 @@ PHP_METHOD(php_wxHtmlHelpData, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxHtmlHelpDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxHtmlHelpDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
@@ -2588,7 +2584,8 @@ PHP_METHOD(php_wxHtmlHelpDialog, GetController)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3039,7 +3036,6 @@ PHP_METHOD(php_wxHtmlHelpDialog, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxHtmlHelpFrame_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxHtmlHelpFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");
@@ -3423,7 +3419,8 @@ PHP_METHOD(php_wxHtmlHelpFrame, GetController)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -3920,7 +3917,6 @@ PHP_METHOD(php_wxHtmlHelpFrame, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxHtmlHelpWindow_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4527,7 +4523,8 @@ PHP_METHOD(php_wxHtmlHelpWindow, GetData)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -5492,7 +5489,6 @@ PHP_METHOD(php_wxHtmlHelpWindow, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxHtmlRenderingStyle_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5663,7 +5659,6 @@ wxColour wxHtmlRenderingStyle_php::GetSelectedTextColour(const wxColour& clr)
 	return wxHtmlRenderingStyle::GetSelectedTextColour(clr);
 
 }
-
 void php_wxHtmlRenderingInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5785,7 +5780,8 @@ PHP_METHOD(php_wxHtmlRenderingInfo, GetStyle)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -6000,7 +5996,6 @@ PHP_METHOD(php_wxHtmlRenderingInfo, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxHtmlCell_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6236,7 +6231,8 @@ PHP_METHOD(php_wxHtmlCell, GetFirstChild)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -6567,7 +6563,8 @@ PHP_METHOD(php_wxHtmlCell, GetLink)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -6600,7 +6597,8 @@ PHP_METHOD(php_wxHtmlCell, GetLink)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -6633,7 +6631,8 @@ PHP_METHOD(php_wxHtmlCell, GetLink)
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
 					if(value_to_return2->phpObj != NULL){
-						return_value = value_to_return2->phpObj;
+						*return_value = *value_to_return2->phpObj;
+						zval_add_ref(&value_to_return2->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -6754,7 +6753,8 @@ PHP_METHOD(php_wxHtmlCell, GetNext)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -6875,7 +6875,8 @@ PHP_METHOD(php_wxHtmlCell, GetParent)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -8060,7 +8061,8 @@ PHP_METHOD(php_wxHtmlCell, Find)
 				}
 				else if(value_to_return2->references.IsUserInitialized()){
 					if(value_to_return2->phpObj != NULL){
-						return_value = value_to_return2->phpObj;
+						*return_value = *value_to_return2->phpObj;
+						zval_add_ref(&value_to_return2->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -8085,7 +8087,6 @@ PHP_METHOD(php_wxHtmlCell, Find)
 
 		
 }
-
 void php_wxHtmlContainerCell_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9706,7 +9707,6 @@ PHP_METHOD(php_wxHtmlContainerCell, GetAlignHor)
 
 		
 }
-
 void php_wxHtmlLinkInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9831,7 +9831,8 @@ PHP_METHOD(php_wxHtmlLinkInfo, GetEvent)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -10033,7 +10034,8 @@ PHP_METHOD(php_wxHtmlLinkInfo, GetHtmlCell)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -10280,7 +10282,6 @@ PHP_METHOD(php_wxHtmlLinkInfo, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxHtmlColourCell_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10436,7 +10437,6 @@ PHP_METHOD(php_wxHtmlColourCell, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxHtmlWidgetCell_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10592,7 +10592,6 @@ PHP_METHOD(php_wxHtmlWidgetCell, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxHtmlFilter_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10833,7 +10832,6 @@ PHP_METHOD(php_wxHtmlFilter, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxHtmlTagHandler_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11128,7 +11126,6 @@ PHP_METHOD(php_wxHtmlTagHandler, __get)
 	}
 	
 }
-
 void php_wxHtmlTag_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12379,7 +12376,6 @@ PHP_METHOD(php_wxHtmlTag, GetParamAsInt)
 
 		
 }
-
 void php_wxHtmlWindow_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12843,7 +12839,8 @@ PHP_METHOD(php_wxHtmlWindow, GetRelatedFrame)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -15273,7 +15270,8 @@ PHP_METHOD(php_wxHtmlWindow, GetInternalRepresentation)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -15540,7 +15538,6 @@ PHP_METHOD(php_wxHtmlWindow, SetFonts)
 
 		
 }
-
 void php_wxHtmlLinkEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15662,7 +15659,8 @@ PHP_METHOD(php_wxHtmlLinkEvent, GetLinkInfo)
 
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -15791,7 +15789,6 @@ PHP_METHOD(php_wxHtmlLinkEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxHtmlCellEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15916,7 +15913,8 @@ PHP_METHOD(php_wxHtmlCellEvent, GetCell)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -16355,7 +16353,6 @@ PHP_METHOD(php_wxHtmlCellEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-
 void php_wxHtmlDCRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17245,7 +17242,6 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetDC)
 
 		
 }
-
 void php_wxHtmlEasyPrinting_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17463,7 +17459,8 @@ PHP_METHOD(php_wxHtmlEasyPrinting, GetPageSetupData)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -17572,7 +17569,8 @@ PHP_METHOD(php_wxHtmlEasyPrinting, GetParentWindow)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -17681,7 +17679,8 @@ PHP_METHOD(php_wxHtmlEasyPrinting, GetPrintData)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -18990,7 +18989,6 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetFonts)
 
 		
 }
-
 void php_wxHtmlPrintout_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19941,7 +19939,6 @@ PHP_METHOD(php_wxHtmlPrintout, AddFilter)
 
 		
 }
-
 void php_wxHtmlTagsModule_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20095,7 +20092,6 @@ PHP_METHOD(php_wxHtmlTagsModule, FillHandlersTable)
 
 		
 }
-
 void php_wxHtmlWinTagHandler_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20136,7 +20132,6 @@ void php_wxHtmlWinTagHandler_destruction_handler(zend_rsrc_list_entry *rsrc TSRM
 		#endif
 	}
 }
-
 void php_wxHtmlWinParser_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20374,7 +20369,8 @@ PHP_METHOD(php_wxHtmlWinParser, CloseContainer)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -20486,7 +20482,8 @@ PHP_METHOD(php_wxHtmlWinParser, CreateCurrentFont)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -20595,7 +20592,8 @@ PHP_METHOD(php_wxHtmlWinParser, GetActualColor)
 				}
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -20977,7 +20975,8 @@ PHP_METHOD(php_wxHtmlWinParser, GetContainer)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -21089,7 +21088,8 @@ PHP_METHOD(php_wxHtmlWinParser, GetDC)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -21744,7 +21744,8 @@ PHP_METHOD(php_wxHtmlWinParser, GetLink)
 				}
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -21853,7 +21854,8 @@ PHP_METHOD(php_wxHtmlWinParser, GetLinkColor)
 				}
 				if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -22195,7 +22197,8 @@ PHP_METHOD(php_wxHtmlWinParser, SetContainer)
 				}
 				else if(value_to_return1->references.IsUserInitialized()){
 					if(value_to_return1->phpObj != NULL){
-						return_value = value_to_return1->phpObj;
+						*return_value = *value_to_return1->phpObj;
+						zval_add_ref(&value_to_return1->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
@@ -22437,7 +22440,8 @@ PHP_METHOD(php_wxHtmlWinParser, OpenContainer)
 				}
 				else if(value_to_return0->references.IsUserInitialized()){
 					if(value_to_return0->phpObj != NULL){
-						return_value = value_to_return0->phpObj;
+						*return_value = *value_to_return0->phpObj;
+						zval_add_ref(&value_to_return0->phpObj);
 						return_is_user_initialized = true;
 					}
 					else{
