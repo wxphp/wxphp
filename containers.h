@@ -39,10 +39,12 @@ class wxClientData_php: public wxClientData{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxClientData_functions[] = {
 	PHP_ME(php_wxClientData, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxTreeItemData;
 extern zend_class_entry *php_wxTreeItemData_entry;
@@ -65,11 +67,13 @@ class wxTreeItemData_php: public wxTreeItemData{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxTreeItemData_functions[] = {
 	PHP_ME(php_wxTreeItemData, GetId, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTreeItemData, SetId, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTreeItemData, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_CONTAINERS_H_GUARD

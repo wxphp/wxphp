@@ -39,6 +39,7 @@ class wxToolTip_php: public wxToolTip{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxToolTip_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -56,5 +57,6 @@ static zend_function_entry php_wxToolTip_functions[] = {
 	PHP_ME(php_wxToolTip, Enable, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_HELP_H_GUARD

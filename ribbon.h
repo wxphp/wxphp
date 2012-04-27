@@ -71,11 +71,13 @@ class wxRibbonArtProvider_php: public wxRibbonArtProvider{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRibbonArtProvider_functions[] = {
 	PHP_ME(php_wxRibbonArtProvider, GetColor, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxRibbonArtProvider, SetColor, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxRibbonBar;
 extern zend_class_entry *php_wxRibbonBar_entry;
@@ -99,6 +101,7 @@ class wxRibbonBar_php: public wxRibbonBar{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRibbonBar_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -355,6 +358,7 @@ static zend_function_entry php_wxRibbonBar_functions[] = {
 	PHP_ME(php_wxRibbonBar, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxRibbonButtonBar;
 extern zend_class_entry *php_wxRibbonButtonBar_entry;
@@ -378,6 +382,7 @@ class wxRibbonButtonBar_php: public wxRibbonButtonBar{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRibbonButtonBar_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -634,6 +639,7 @@ static zend_function_entry php_wxRibbonButtonBar_functions[] = {
 	PHP_ME(php_wxRibbonButtonBar, AddButton, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxRibbonControl;
 extern zend_class_entry *php_wxRibbonControl_entry;
@@ -659,6 +665,7 @@ class wxRibbonControl_php: public wxRibbonControl{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRibbonControl_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -907,6 +914,7 @@ static zend_function_entry php_wxRibbonControl_functions[] = {
 	PHP_ME(php_wxRibbonControl, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxRibbonGallery;
 extern zend_class_entry *php_wxRibbonGallery_entry;
@@ -930,6 +938,7 @@ class wxRibbonGallery_php: public wxRibbonGallery{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRibbonGallery_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1197,6 +1206,7 @@ static zend_function_entry php_wxRibbonGallery_functions[] = {
 	PHP_ME(php_wxRibbonGallery, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxRibbonPage;
 extern zend_class_entry *php_wxRibbonPage_entry;
@@ -1220,6 +1230,7 @@ class wxRibbonPage_php: public wxRibbonPage{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRibbonPage_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1474,6 +1485,7 @@ static zend_function_entry php_wxRibbonPage_functions[] = {
 	PHP_ME(php_wxRibbonPage, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxRibbonPanel;
 extern zend_class_entry *php_wxRibbonPanel_entry;
@@ -1497,6 +1509,7 @@ class wxRibbonPanel_php: public wxRibbonPanel{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRibbonPanel_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1753,6 +1766,7 @@ static zend_function_entry php_wxRibbonPanel_functions[] = {
 	PHP_ME(php_wxRibbonPanel, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxRibbonToolBar;
 extern zend_class_entry *php_wxRibbonToolBar_entry;
@@ -1776,6 +1790,7 @@ class wxRibbonToolBar_php: public wxRibbonToolBar{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRibbonToolBar_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -2029,5 +2044,6 @@ static zend_function_entry php_wxRibbonToolBar_functions[] = {
 	PHP_ME(php_wxRibbonToolBar, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_RIBBON_H_GUARD

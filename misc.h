@@ -38,6 +38,7 @@ class wxArtProvider_php: public wxArtProvider{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxArtProvider_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -59,6 +60,7 @@ static zend_function_entry php_wxArtProvider_functions[] = {
 	PHP_ME(php_wxArtProvider, Delete, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxCaret;
 extern zend_class_entry *php_wxCaret_entry;
@@ -82,6 +84,7 @@ class wxCaret_php: public wxCaret{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxCaret_functions[] = {
 	PHP_ME(php_wxCaret, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxCaret, Show, NULL, ZEND_ACC_PUBLIC)
@@ -97,6 +100,7 @@ static zend_function_entry php_wxCaret_functions[] = {
 	PHP_ME(php_wxCaret, GetPosition, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxNotificationMessage;
 extern zend_class_entry *php_wxNotificationMessage_entry;
@@ -120,6 +124,7 @@ class wxNotificationMessage_php: public wxNotificationMessage{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxNotificationMessage_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -154,6 +159,7 @@ static zend_function_entry php_wxNotificationMessage_functions[] = {
 	PHP_ME(php_wxNotificationMessage, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxStopWatch;
 extern zend_class_entry *php_wxStopWatch_entry;
@@ -176,6 +182,7 @@ class wxStopWatch_php: public wxStopWatch{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxStopWatch_functions[] = {
 	PHP_ME(php_wxStopWatch, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxStopWatch, Time, NULL, ZEND_ACC_PUBLIC)
@@ -184,6 +191,7 @@ static zend_function_entry php_wxStopWatch_functions[] = {
 	PHP_ME(php_wxStopWatch, Pause, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxTaskBarIcon;
 extern zend_class_entry *php_wxTaskBarIcon_entry;
@@ -207,6 +215,7 @@ class wxTaskBarIcon_php: public wxTaskBarIcon{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxTaskBarIcon_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -242,6 +251,7 @@ static zend_function_entry php_wxTaskBarIcon_functions[] = {
 	PHP_ME(php_wxTaskBarIcon, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxTimer;
 extern zend_class_entry *php_wxTimer_entry;
@@ -265,6 +275,7 @@ class wxTimer_php: public wxTimer{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxTimer_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -302,6 +313,7 @@ static zend_function_entry php_wxTimer_functions[] = {
 	PHP_ME(php_wxTimer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxWindowDisabler;
 extern zend_class_entry *php_wxWindowDisabler_entry;
@@ -325,10 +337,12 @@ class wxWindowDisabler_php: public wxWindowDisabler{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxWindowDisabler_functions[] = {
 	PHP_ME(php_wxWindowDisabler, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxBusyCursor;
 extern zend_class_entry *php_wxBusyCursor_entry;
@@ -351,9 +365,11 @@ class wxBusyCursor_php: public wxBusyCursor{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxBusyCursor_functions[] = {
 	PHP_ME(php_wxBusyCursor, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_MISC_H_GUARD

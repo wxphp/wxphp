@@ -34290,6 +34290,9 @@ PHP_METHOD(php_wxPalette, Create)
 				#endif
 				ZVAL_BOOL(return_value, ((wxPalette_php*)_this)->Create((int) n0, (const unsigned char*) integers_array0_1, (const unsigned char*) integers_array0_2, (const unsigned char*) integers_array0_3));
 
+				delete[] integers_array0_1;
+				delete[] integers_array0_2;
+				delete[] integers_array0_3;
 
 				return;
 				break;

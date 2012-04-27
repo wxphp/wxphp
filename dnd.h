@@ -39,6 +39,7 @@ class wxClipboard_php: public wxClipboard{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxClipboard_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -60,6 +61,7 @@ static zend_function_entry php_wxClipboard_functions[] = {
 	PHP_ME(php_wxClipboard, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxDataFormat;
 extern zend_class_entry *php_wxDataFormat_entry;
@@ -83,6 +85,7 @@ class wxDataFormat_php: public wxDataFormat{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataFormat_functions[] = {
 	PHP_ME(php_wxDataFormat, GetId, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataFormat, GetType, NULL, ZEND_ACC_PUBLIC)
@@ -91,6 +94,7 @@ static zend_function_entry php_wxDataFormat_functions[] = {
 	PHP_ME(php_wxDataFormat, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxDataObject;
 extern zend_class_entry *php_wxDataObject_entry;
@@ -118,12 +122,14 @@ class wxDataObject_php: public wxDataObject{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataObject_functions[] = {
 	PHP_ME(php_wxDataObject, IsSupported, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataObject, SetData, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataObject, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxCustomDataObject;
 extern zend_class_entry *php_wxCustomDataObject_entry;
@@ -146,6 +152,7 @@ class wxCustomDataObject_php: public wxCustomDataObject{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxCustomDataObject_functions[] = {
 	PHP_ME(php_wxDataObject, IsSupported, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataObjectSimple, GetDataHere, NULL, ZEND_ACC_PUBLIC)
@@ -161,6 +168,7 @@ static zend_function_entry php_wxCustomDataObject_functions[] = {
 	PHP_ME(php_wxCustomDataObject, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxDataObjectComposite;
 extern zend_class_entry *php_wxDataObjectComposite_entry;
@@ -183,6 +191,7 @@ class wxDataObjectComposite_php: public wxDataObjectComposite{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataObjectComposite_functions[] = {
 	PHP_ME(php_wxDataObject, IsSupported, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataObject, SetData, NULL, ZEND_ACC_PUBLIC)
@@ -191,6 +200,7 @@ static zend_function_entry php_wxDataObjectComposite_functions[] = {
 	PHP_ME(php_wxDataObjectComposite, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxDataObjectSimple;
 extern zend_class_entry *php_wxDataObjectSimple_entry;
@@ -213,6 +223,7 @@ class wxDataObjectSimple_php: public wxDataObjectSimple{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataObjectSimple_functions[] = {
 	PHP_ME(php_wxDataObject, IsSupported, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataObjectSimple, GetDataHere, NULL, ZEND_ACC_PUBLIC)
@@ -223,6 +234,7 @@ static zend_function_entry php_wxDataObjectSimple_functions[] = {
 	PHP_ME(php_wxDataObjectSimple, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxBitmapDataObject;
 extern zend_class_entry *php_wxBitmapDataObject_entry;
@@ -245,6 +257,7 @@ class wxBitmapDataObject_php: public wxBitmapDataObject{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxBitmapDataObject_functions[] = {
 	PHP_ME(php_wxDataObject, IsSupported, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataObjectSimple, GetDataHere, NULL, ZEND_ACC_PUBLIC)
@@ -257,6 +270,7 @@ static zend_function_entry php_wxBitmapDataObject_functions[] = {
 	PHP_ME(php_wxBitmapDataObject, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxURLDataObject;
 extern zend_class_entry *php_wxURLDataObject_entry;
@@ -279,6 +293,7 @@ class wxURLDataObject_php: public wxURLDataObject{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxURLDataObject_functions[] = {
 	PHP_ME(php_wxDataObject, IsSupported, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataObjectSimple, GetDataHere, NULL, ZEND_ACC_PUBLIC)
@@ -295,6 +310,7 @@ static zend_function_entry php_wxURLDataObject_functions[] = {
 	PHP_ME(php_wxURLDataObject, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxTextDataObject;
 extern zend_class_entry *php_wxTextDataObject_entry;
@@ -318,6 +334,7 @@ class wxTextDataObject_php: public wxTextDataObject{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxTextDataObject_functions[] = {
 	PHP_ME(php_wxDataObject, IsSupported, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataObjectSimple, GetDataHere, NULL, ZEND_ACC_PUBLIC)
@@ -332,6 +349,7 @@ static zend_function_entry php_wxTextDataObject_functions[] = {
 	PHP_ME(php_wxTextDataObject, GetFormatCount, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxFileDataObject;
 extern zend_class_entry *php_wxFileDataObject_entry;
@@ -354,6 +372,7 @@ class wxFileDataObject_php: public wxFileDataObject{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileDataObject_functions[] = {
 	PHP_ME(php_wxDataObject, IsSupported, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataObjectSimple, GetDataHere, NULL, ZEND_ACC_PUBLIC)
@@ -366,6 +385,7 @@ static zend_function_entry php_wxFileDataObject_functions[] = {
 	PHP_ME(php_wxFileDataObject, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxTextDropTarget;
 extern zend_class_entry *php_wxTextDropTarget_entry;
@@ -390,11 +410,13 @@ class wxTextDropTarget_php: public wxTextDropTarget{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxTextDropTarget_functions[] = {
 	PHP_ME(php_wxDropTarget, SetDataObject, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTextDropTarget, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxDropTarget;
 extern zend_class_entry *php_wxDropTarget_entry;
@@ -423,11 +445,13 @@ class wxDropTarget_php: public wxDropTarget{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDropTarget_functions[] = {
 	PHP_ME(php_wxDropTarget, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxDropTarget, SetDataObject, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxFileDropTarget;
 extern zend_class_entry *php_wxFileDropTarget_entry;
@@ -452,10 +476,12 @@ class wxFileDropTarget_php: public wxFileDropTarget{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileDropTarget_functions[] = {
 	PHP_ME(php_wxDropTarget, SetDataObject, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFileDropTarget, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_DND_H_GUARD

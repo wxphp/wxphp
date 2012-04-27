@@ -41,6 +41,7 @@ class wxBannerWindow_php: public wxBannerWindow{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxBannerWindow_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -279,6 +280,7 @@ static zend_function_entry php_wxBannerWindow_functions[] = {
 	PHP_ME(php_wxBannerWindow, Create, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxInfoBar;
 extern zend_class_entry *php_wxInfoBar_entry;
@@ -302,6 +304,7 @@ class wxInfoBar_php: public wxInfoBar{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxInfoBar_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -552,6 +555,7 @@ static zend_function_entry php_wxInfoBar_functions[] = {
 	PHP_ME(php_wxInfoBar, Dismiss, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxRichToolTip;
 extern zend_class_entry *php_wxRichToolTip_entry;
@@ -574,6 +578,7 @@ class wxRichToolTip_php: public wxRichToolTip{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRichToolTip_functions[] = {
 	PHP_ME(php_wxRichToolTip, SetBackgroundColour, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxRichToolTip, SetIcon, NULL, ZEND_ACC_PUBLIC)
@@ -584,6 +589,7 @@ static zend_function_entry php_wxRichToolTip_functions[] = {
 	PHP_ME(php_wxRichToolTip, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxSashLayoutWindow;
 extern zend_class_entry *php_wxSashLayoutWindow_entry;
@@ -607,6 +613,7 @@ class wxSashLayoutWindow_php: public wxSashLayoutWindow{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxSashLayoutWindow_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -857,6 +864,7 @@ static zend_function_entry php_wxSashLayoutWindow_functions[] = {
 	PHP_ME(php_wxSashLayoutWindow, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxPanel;
 extern zend_class_entry *php_wxPanel_entry;
@@ -880,6 +888,7 @@ class wxPanel_php: public wxPanel{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPanel_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1116,6 +1125,7 @@ static zend_function_entry php_wxPanel_functions[] = {
 	PHP_ME(php_wxPanel, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxSashWindow;
 extern zend_class_entry *php_wxSashWindow_entry;
@@ -1139,6 +1149,7 @@ class wxSashWindow_php: public wxSashWindow{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxSashWindow_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1384,6 +1395,7 @@ static zend_function_entry php_wxSashWindow_functions[] = {
 	PHP_ME(php_wxSashWindow, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxSplitterWindow;
 extern zend_class_entry *php_wxSplitterWindow_entry;
@@ -1410,6 +1422,7 @@ class wxSplitterWindow_php: public wxSplitterWindow{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxSplitterWindow_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1663,6 +1676,7 @@ static zend_function_entry php_wxSplitterWindow_functions[] = {
 	PHP_ME(php_wxSplitterWindow, Create, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxStatusBar;
 extern zend_class_entry *php_wxStatusBar_entry;
@@ -1686,6 +1700,7 @@ class wxStatusBar_php: public wxStatusBar{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxStatusBar_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1938,6 +1953,7 @@ static zend_function_entry php_wxStatusBar_functions[] = {
 	PHP_ME(php_wxStatusBar, PushStatusText, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxToolBar;
 extern zend_class_entry *php_wxToolBar_entry;
@@ -1964,6 +1980,7 @@ class wxToolBar_php: public wxToolBar{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxToolBar_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -2248,6 +2265,7 @@ static zend_function_entry php_wxToolBar_functions[] = {
 	PHP_ME(php_wxToolBar, RemoveTool, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxHScrolledWindow;
 extern zend_class_entry *php_wxHScrolledWindow_entry;
@@ -2269,6 +2287,7 @@ class wxHScrolledWindow_php: public wxHScrolledWindow{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxHScrolledWindow_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -2504,6 +2523,7 @@ static zend_function_entry php_wxHScrolledWindow_functions[] = {
 	PHP_ME(php_wxHScrolledWindow, Create, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxWindow;
 extern zend_class_entry *php_wxWindow_entry;
@@ -2532,6 +2552,7 @@ class wxWindow_php: public wxWindow{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxWindow_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -2767,6 +2788,7 @@ static zend_function_entry php_wxWindow_functions[] = {
 	PHP_ME(php_wxWindow, SetWindowVariant, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxWizardPage;
 extern zend_class_entry *php_wxWizardPage_entry;
@@ -2791,6 +2813,7 @@ class wxWizardPage_php: public wxWizardPage{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxWizardPage_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -3028,6 +3051,7 @@ static zend_function_entry php_wxWizardPage_functions[] = {
 	PHP_ME(php_wxWizardPage, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxWizardPageSimple;
 extern zend_class_entry *php_wxWizardPageSimple_entry;
@@ -3050,6 +3074,7 @@ class wxWizardPageSimple_php: public wxWizardPageSimple{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxWizardPageSimple_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -3290,5 +3315,6 @@ static zend_function_entry php_wxWizardPageSimple_functions[] = {
 	PHP_ME(php_wxWizardPageSimple, SetNext, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_MISCWND_H_GUARD

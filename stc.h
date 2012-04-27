@@ -39,6 +39,7 @@ class wxStyledTextCtrl_php: public wxStyledTextCtrl{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxStyledTextCtrl_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -806,5 +807,6 @@ static zend_function_entry php_wxStyledTextCtrl_functions[] = {
 	PHP_ME(php_wxStyledTextCtrl, AddTextRaw, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_STC_H_GUARD

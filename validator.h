@@ -45,6 +45,7 @@ class wxGenericValidator_php: public wxGenericValidator{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGenericValidator_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -80,6 +81,7 @@ static zend_function_entry php_wxGenericValidator_functions[] = {
 	PHP_ME(php_wxGenericValidator, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxValidator;
 extern zend_class_entry *php_wxValidator_entry;
@@ -102,6 +104,7 @@ class wxValidator_php: public wxValidator{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxValidator_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -137,6 +140,7 @@ static zend_function_entry php_wxValidator_functions[] = {
 	PHP_ME(php_wxValidator, Clone, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxTextValidator;
 extern zend_class_entry *php_wxTextValidator_entry;
@@ -160,6 +164,7 @@ class wxTextValidator_php: public wxTextValidator{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxTextValidator_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -204,5 +209,6 @@ static zend_function_entry php_wxTextValidator_functions[] = {
 	PHP_ME(php_wxTextValidator, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_VALIDATOR_H_GUARD

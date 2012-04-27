@@ -41,6 +41,7 @@ class wxXmlResourceHandler_php: public wxXmlResourceHandler{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxXmlResourceHandler_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -53,6 +54,7 @@ static zend_function_entry php_wxXmlResourceHandler_functions[] = {
 	PHP_ME(php_wxXmlResourceHandler, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxXmlResource;
 extern zend_class_entry *php_wxXmlResource_entry;
@@ -77,6 +79,7 @@ class wxXmlResource_php: public wxXmlResource{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxXmlResource_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -116,5 +119,6 @@ static zend_function_entry php_wxXmlResource_functions[] = {
 	PHP_ME(php_wxXmlResource, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_XRC_H_GUARD

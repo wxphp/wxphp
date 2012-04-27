@@ -888,6 +888,8 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								$return_called_overload .= tabs(4) . "}\n";
 								
 								$parameters_string .= "bools_array{$declaration_index}_{$parameter_index}, ";
+								
+								$after_return_called_overload .= "\t\t\t\tdelete[] bools_array{$declaration_index}_{$parameter_index};\n";
 								break;
 								
 							case "reference": //bool&	
@@ -955,6 +957,8 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								$return_called_overload .= tabs(4) . "}\n";
 								
 								$parameters_string .= "(".$integer_type.") " . "integers_array{$declaration_index}_{$parameter_index}, ";
+								
+								$after_return_called_overload .= "\t\t\t\tdelete[] integers_array{$declaration_index}_{$parameter_index};\n";
 								break;
 								
 							case "reference": //integer&	
@@ -1012,6 +1016,8 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								$return_called_overload .= tabs(4) . "}\n";
 								
 								$parameters_string .= "(".$declaration[$parameter_types][$parameter_index].") " . "floats_array{$declaration_index}_{$parameter_index}, ";
+								
+								$after_return_called_overload .= "\t\t\t\tdelete[] floats_array{$declaration_index}_{$parameter_index};\n";
 								break;
 								
 							case "reference": //double&	
@@ -1128,6 +1134,8 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								$return_called_overload .= tabs(4) . "}\n";
 								
 								$parameters_string .= "dates_array{$declaration_index}_{$parameter_index}, ";
+								
+								$after_return_called_overload .= "\t\t\t\tdelete[] dates_array{$declaration_index}_{$parameter_index};\n";
 								break;
 								
 							case "reference": //date&	
@@ -1182,6 +1190,8 @@ function function_return($method_definitions, $method_name, $class_name=null, $i
 								$return_called_overload .= tabs(4) . "}\n";
 								
 								$parameters_string .= "strings_array{$declaration_index}_{$parameter_index}, ";
+								
+								$after_return_called_overload .= "\t\t\t\tdelete[] strings_array{$declaration_index}_{$parameter_index};\n";
 								break;
 								
 							case "reference": //wxString&	

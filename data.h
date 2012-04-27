@@ -40,6 +40,7 @@ class wxAcceleratorEntry_php: public wxAcceleratorEntry{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxAcceleratorEntry_functions[] = {
 	PHP_ME(php_wxAcceleratorEntry, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxAcceleratorEntry, ToString, NULL, ZEND_ACC_PUBLIC)
@@ -52,6 +53,7 @@ static zend_function_entry php_wxAcceleratorEntry_functions[] = {
 	PHP_ME(php_wxAcceleratorEntry, FromString, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxAcceleratorTable;
 extern zend_class_entry *php_wxAcceleratorTable_entry;
@@ -74,6 +76,7 @@ class wxAcceleratorTable_php: public wxAcceleratorTable{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxAcceleratorTable_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -85,6 +88,7 @@ static zend_function_entry php_wxAcceleratorTable_functions[] = {
 	PHP_ME(php_wxAcceleratorTable, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxCalendarDateAttr;
 extern zend_class_entry *php_wxCalendarDateAttr_entry;
@@ -108,6 +112,7 @@ class wxCalendarDateAttr_php: public wxCalendarDateAttr{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxCalendarDateAttr_functions[] = {
 	PHP_ME(php_wxCalendarDateAttr, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxCalendarDateAttr, SetTextColour, NULL, ZEND_ACC_PUBLIC)
@@ -131,6 +136,7 @@ static zend_function_entry php_wxCalendarDateAttr_functions[] = {
 	PHP_ME(php_wxCalendarDateAttr, SetMark, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxPageSetupDialogData;
 extern zend_class_entry *php_wxPageSetupDialogData_entry;
@@ -154,6 +160,7 @@ class wxPageSetupDialogData_php: public wxPageSetupDialogData{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPageSetupDialogData_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -193,6 +200,7 @@ static zend_function_entry php_wxPageSetupDialogData_functions[] = {
 	PHP_ME(php_wxPageSetupDialogData, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxPrintData;
 extern zend_class_entry *php_wxPrintData_entry;
@@ -215,6 +223,7 @@ class wxPrintData_php: public wxPrintData{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPrintData_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -248,6 +257,7 @@ static zend_function_entry php_wxPrintData_functions[] = {
 	PHP_ME(php_wxPrintData, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxRealPoint;
 extern zend_class_entry *php_wxRealPoint_entry;
@@ -277,11 +287,13 @@ class wxRealPoint_php: public wxRealPoint{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRealPoint_functions[] = {
 	PHP_ME(php_wxRealPoint, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxRealPoint, __get, wxphp_data_get_args, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxRect;
 extern zend_class_entry *php_wxRect_entry;
@@ -315,6 +327,7 @@ class wxRect_php: public wxRect{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRect_functions[] = {
 	PHP_ME(php_wxRect, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxRect, SetX, NULL, ZEND_ACC_PUBLIC)
@@ -349,6 +362,7 @@ static zend_function_entry php_wxRect_functions[] = {
 	PHP_ME(php_wxRect, __get, wxphp_data_get_args, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxPoint;
 extern zend_class_entry *php_wxPoint_entry;
@@ -378,12 +392,14 @@ class wxPoint_php: public wxPoint{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPoint_functions[] = {
 	PHP_ME(php_wxPoint, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxPoint, IsFullySpecified, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxPoint, __get, wxphp_data_get_args, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxSize;
 extern zend_class_entry *php_wxSize_entry;
@@ -407,6 +423,7 @@ class wxSize_php: public wxSize{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxSize_functions[] = {
 	PHP_ME(php_wxSize, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxSize, SetWidth, NULL, ZEND_ACC_PUBLIC)
@@ -421,6 +438,7 @@ static zend_function_entry php_wxSize_functions[] = {
 	PHP_ME(php_wxSize, IncTo, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxListItemAttr;
 extern zend_class_entry *php_wxListItemAttr_entry;
@@ -444,6 +462,7 @@ class wxListItemAttr_php: public wxListItemAttr{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxListItemAttr_functions[] = {
 	PHP_ME(php_wxListItemAttr, GetBackgroundColour, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxListItemAttr, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
@@ -457,6 +476,7 @@ static zend_function_entry php_wxListItemAttr_functions[] = {
 	PHP_ME(php_wxListItemAttr, GetFont, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxListItem;
 extern zend_class_entry *php_wxListItem_entry;
@@ -479,6 +499,7 @@ class wxListItem_php: public wxListItem{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxListItem_functions[] = {
 	PHP_ME(php_wxListItem, Clear, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxListItem, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
@@ -508,6 +529,7 @@ static zend_function_entry php_wxListItem_functions[] = {
 	PHP_ME(php_wxListItem, GetFont, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxFileType;
 extern zend_class_entry *php_wxFileType_entry;
@@ -530,6 +552,7 @@ class wxFileType_php: public wxFileType{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileType_functions[] = {
 	PHP_ME(php_wxFileType, GetDescription, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFileType, GetExtensions, NULL, ZEND_ACC_PUBLIC)
@@ -539,6 +562,7 @@ static zend_function_entry php_wxFileType_functions[] = {
 	PHP_ME(php_wxFileType, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxPosition;
 extern zend_class_entry *php_wxPosition_entry;
@@ -562,6 +586,7 @@ class wxPosition_php: public wxPosition{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPosition_functions[] = {
 	PHP_ME(php_wxPosition, GetCol, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxPosition, GetColumn, NULL, ZEND_ACC_PUBLIC)
@@ -572,6 +597,7 @@ static zend_function_entry php_wxPosition_functions[] = {
 	PHP_ME(php_wxPosition, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxRegion;
 extern zend_class_entry *php_wxRegion_entry;
@@ -601,6 +627,7 @@ class wxRegion_php: public wxRegion{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRegion_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -622,6 +649,7 @@ static zend_function_entry php_wxRegion_functions[] = {
 	PHP_ME(php_wxRegion, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxStatusBarPane;
 extern zend_class_entry *php_wxStatusBarPane_entry;
@@ -644,6 +672,7 @@ class wxStatusBarPane_php: public wxStatusBarPane{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxStatusBarPane_functions[] = {
 	PHP_ME(php_wxStatusBarPane, GetText, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxStatusBarPane, GetStyle, NULL, ZEND_ACC_PUBLIC)
@@ -651,6 +680,7 @@ static zend_function_entry php_wxStatusBarPane_functions[] = {
 	PHP_ME(php_wxStatusBarPane, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxTreeItemId;
 extern zend_class_entry *php_wxTreeItemId_entry;
@@ -673,11 +703,13 @@ class wxTreeItemId_php: public wxTreeItemId{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxTreeItemId_functions[] = {
 	PHP_ME(php_wxTreeItemId, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxTreeItemId, IsOk, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxVariant;
 extern zend_class_entry *php_wxVariant_entry;
@@ -708,6 +740,7 @@ class wxVariant_php: public wxVariant{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxVariant_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -744,6 +777,7 @@ static zend_function_entry php_wxVariant_functions[] = {
 	PHP_ME(php_wxVariant, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxVariantData;
 extern zend_class_entry *php_wxVariantData_entry;
@@ -768,6 +802,7 @@ class wxVariantData_php: public wxVariantData{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxVariantData_functions[] = {
 	PHP_ME(php_wxVariantData, Clone, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxVariantData, DecRef, NULL, ZEND_ACC_PUBLIC)
@@ -778,6 +813,7 @@ static zend_function_entry php_wxVariantData_functions[] = {
 	PHP_ME(php_wxVariantData, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxVersionInfo;
 extern zend_class_entry *php_wxVersionInfo_entry;
@@ -800,6 +836,7 @@ class wxVersionInfo_php: public wxVersionInfo{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxVersionInfo_functions[] = {
 	PHP_ME(php_wxVersionInfo, ToString, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxVersionInfo, HasCopyright, NULL, ZEND_ACC_PUBLIC)
@@ -814,5 +851,6 @@ static zend_function_entry php_wxVersionInfo_functions[] = {
 	PHP_ME(php_wxVersionInfo, HasDescription, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_DATA_H_GUARD

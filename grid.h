@@ -41,9 +41,11 @@ class wxGridCellRenderer_php: public wxGridCellRenderer{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellRenderer_functions[] = {
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGridCellAutoWrapStringRenderer;
 extern zend_class_entry *php_wxGridCellAutoWrapStringRenderer_entry;
@@ -66,10 +68,12 @@ class wxGridCellAutoWrapStringRenderer_php: public wxGridCellAutoWrapStringRende
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellAutoWrapStringRenderer_functions[] = {
 	PHP_ME(php_wxGridCellAutoWrapStringRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGridCellBoolRenderer;
 extern zend_class_entry *php_wxGridCellBoolRenderer_entry;
@@ -92,10 +96,12 @@ class wxGridCellBoolRenderer_php: public wxGridCellBoolRenderer{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellBoolRenderer_functions[] = {
 	PHP_ME(php_wxGridCellBoolRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGridCellDateTimeRenderer;
 extern zend_class_entry *php_wxGridCellDateTimeRenderer_entry;
@@ -118,11 +124,13 @@ class wxGridCellDateTimeRenderer_php: public wxGridCellDateTimeRenderer{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellDateTimeRenderer_functions[] = {
 	PHP_ME(php_wxGridCellDateTimeRenderer, SetParameters, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellDateTimeRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGridCellEnumRenderer;
 extern zend_class_entry *php_wxGridCellEnumRenderer_entry;
@@ -145,11 +153,13 @@ class wxGridCellEnumRenderer_php: public wxGridCellEnumRenderer{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellEnumRenderer_functions[] = {
 	PHP_ME(php_wxGridCellEnumRenderer, SetParameters, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEnumRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGridCellFloatRenderer;
 extern zend_class_entry *php_wxGridCellFloatRenderer_entry;
@@ -172,6 +182,7 @@ class wxGridCellFloatRenderer_php: public wxGridCellFloatRenderer{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellFloatRenderer_functions[] = {
 	PHP_ME(php_wxGridCellFloatRenderer, GetFormat, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellFloatRenderer, GetPrecision, NULL, ZEND_ACC_PUBLIC)
@@ -183,6 +194,7 @@ static zend_function_entry php_wxGridCellFloatRenderer_functions[] = {
 	PHP_ME(php_wxGridCellFloatRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGridCellNumberRenderer;
 extern zend_class_entry *php_wxGridCellNumberRenderer_entry;
@@ -205,10 +217,12 @@ class wxGridCellNumberRenderer_php: public wxGridCellNumberRenderer{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellNumberRenderer_functions[] = {
 	PHP_ME(php_wxGridCellNumberRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGridCellStringRenderer;
 extern zend_class_entry *php_wxGridCellStringRenderer_entry;
@@ -231,10 +245,12 @@ class wxGridCellStringRenderer_php: public wxGridCellStringRenderer{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellStringRenderer_functions[] = {
 	PHP_ME(php_wxGridCellStringRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGridCellEditor;
 extern zend_class_entry *php_wxGridCellEditor_entry;
@@ -262,6 +278,7 @@ class wxGridCellEditor_php: public wxGridCellEditor{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellEditor_functions[] = {
 	PHP_ME(php_wxGridCellEditor, Destroy, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, HandleReturn, NULL, ZEND_ACC_PUBLIC)
@@ -273,6 +290,7 @@ static zend_function_entry php_wxGridCellEditor_functions[] = {
 	PHP_ME(php_wxGridCellEditor, StartingKey, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGridCellAutoWrapStringEditor;
 extern zend_class_entry *php_wxGridCellAutoWrapStringEditor_entry;
@@ -295,6 +313,7 @@ class wxGridCellAutoWrapStringEditor_php: public wxGridCellAutoWrapStringEditor{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellAutoWrapStringEditor_functions[] = {
 	PHP_ME(php_wxGridCellEditor, Destroy, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, HandleReturn, NULL, ZEND_ACC_PUBLIC)
@@ -308,6 +327,7 @@ static zend_function_entry php_wxGridCellAutoWrapStringEditor_functions[] = {
 	PHP_ME(php_wxGridCellAutoWrapStringEditor, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGridCellBoolEditor;
 extern zend_class_entry *php_wxGridCellBoolEditor_entry;
@@ -330,6 +350,7 @@ class wxGridCellBoolEditor_php: public wxGridCellBoolEditor{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellBoolEditor_functions[] = {
 	PHP_ME(php_wxGridCellEditor, Destroy, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, HandleReturn, NULL, ZEND_ACC_PUBLIC)
@@ -344,6 +365,7 @@ static zend_function_entry php_wxGridCellBoolEditor_functions[] = {
 	PHP_ME(php_wxGridCellBoolEditor, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGridCellChoiceEditor;
 extern zend_class_entry *php_wxGridCellChoiceEditor_entry;
@@ -366,6 +388,7 @@ class wxGridCellChoiceEditor_php: public wxGridCellChoiceEditor{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellChoiceEditor_functions[] = {
 	PHP_ME(php_wxGridCellEditor, Destroy, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, HandleReturn, NULL, ZEND_ACC_PUBLIC)
@@ -379,6 +402,7 @@ static zend_function_entry php_wxGridCellChoiceEditor_functions[] = {
 	PHP_ME(php_wxGridCellChoiceEditor, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGridCellEnumEditor;
 extern zend_class_entry *php_wxGridCellEnumEditor_entry;
@@ -401,6 +425,7 @@ class wxGridCellEnumEditor_php: public wxGridCellEnumEditor{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellEnumEditor_functions[] = {
 	PHP_ME(php_wxGridCellEditor, Destroy, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, HandleReturn, NULL, ZEND_ACC_PUBLIC)
@@ -414,6 +439,7 @@ static zend_function_entry php_wxGridCellEnumEditor_functions[] = {
 	PHP_ME(php_wxGridCellEnumEditor, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGridCellTextEditor;
 extern zend_class_entry *php_wxGridCellTextEditor_entry;
@@ -436,6 +462,7 @@ class wxGridCellTextEditor_php: public wxGridCellTextEditor{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellTextEditor_functions[] = {
 	PHP_ME(php_wxGridCellEditor, Destroy, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, HandleReturn, NULL, ZEND_ACC_PUBLIC)
@@ -449,6 +476,7 @@ static zend_function_entry php_wxGridCellTextEditor_functions[] = {
 	PHP_ME(php_wxGridCellTextEditor, SetParameters, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGridCellFloatEditor;
 extern zend_class_entry *php_wxGridCellFloatEditor_entry;
@@ -471,11 +499,13 @@ class wxGridCellFloatEditor_php: public wxGridCellFloatEditor{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellFloatEditor_functions[] = {
 	PHP_ME(php_wxGridCellFloatEditor, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxGridCellFloatEditor, SetParameters, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGridCellNumberEditor;
 extern zend_class_entry *php_wxGridCellNumberEditor_entry;
@@ -498,6 +528,7 @@ class wxGridCellNumberEditor_php: public wxGridCellNumberEditor{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellNumberEditor_functions[] = {
 	PHP_ME(php_wxGridCellEditor, Destroy, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellEditor, HandleReturn, NULL, ZEND_ACC_PUBLIC)
@@ -511,6 +542,7 @@ static zend_function_entry php_wxGridCellNumberEditor_functions[] = {
 	PHP_ME(php_wxGridCellNumberEditor, SetParameters, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGridCellAttr;
 extern zend_class_entry *php_wxGridCellAttr_entry;
@@ -534,6 +566,7 @@ class wxGridCellAttr_php: public wxGridCellAttr{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellAttr_functions[] = {
 	PHP_ME(php_wxGridCellAttr, Clone, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellAttr, DecRef, NULL, ZEND_ACC_PUBLIC)
@@ -563,6 +596,7 @@ static zend_function_entry php_wxGridCellAttr_functions[] = {
 	PHP_ME(php_wxGridCellAttr, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGridTableBase;
 extern zend_class_entry *php_wxGridTableBase_entry;
@@ -589,6 +623,7 @@ class wxGridTableBase_php: public wxGridTableBase{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridTableBase_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -633,6 +668,7 @@ static zend_function_entry php_wxGridTableBase_functions[] = {
 	PHP_ME(php_wxGridTableBase, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGridSizesInfo;
 extern zend_class_entry *php_wxGridSizesInfo_entry;
@@ -660,12 +696,14 @@ class wxGridSizesInfo_php: public wxGridSizesInfo{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridSizesInfo_functions[] = {
 	PHP_ME(php_wxGridSizesInfo, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxGridSizesInfo, GetSize, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridSizesInfo, __get, wxphp_grid_get_args, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGrid;
 extern zend_class_entry *php_wxGrid_entry;
@@ -689,6 +727,7 @@ class wxGrid_php: public wxGrid{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGrid_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1130,6 +1169,7 @@ static zend_function_entry php_wxGrid_functions[] = {
 	PHP_ME(php_wxGrid, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGridUpdateLocker;
 extern zend_class_entry *php_wxGridUpdateLocker_entry;
@@ -1152,10 +1192,12 @@ class wxGridUpdateLocker_php: public wxGridUpdateLocker{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridUpdateLocker_functions[] = {
 	PHP_ME(php_wxGridUpdateLocker, Create, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridUpdateLocker, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_GRID_H_GUARD

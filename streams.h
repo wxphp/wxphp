@@ -38,6 +38,7 @@ class wxDataOutputStream_php: public wxDataOutputStream{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataOutputStream_functions[] = {
 	PHP_ME(php_wxDataOutputStream, BigEndianOrdered, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataOutputStream, Write16, NULL, ZEND_ACC_PUBLIC)
@@ -47,6 +48,7 @@ static zend_function_entry php_wxDataOutputStream_functions[] = {
 	PHP_ME(php_wxDataOutputStream, WriteString, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxDataInputStream;
 extern zend_class_entry *php_wxDataInputStream_entry;
@@ -68,6 +70,7 @@ class wxDataInputStream_php: public wxDataInputStream{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDataInputStream_functions[] = {
 	PHP_ME(php_wxDataInputStream, ReadString, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataInputStream, ReadDouble, NULL, ZEND_ACC_PUBLIC)
@@ -77,6 +80,7 @@ static zend_function_entry php_wxDataInputStream_functions[] = {
 	PHP_ME(php_wxDataInputStream, BigEndianOrdered, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxStreamBase;
 extern zend_class_entry *php_wxStreamBase_entry;
@@ -101,6 +105,7 @@ class wxStreamBase_php: public wxStreamBase{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxStreamBase_functions[] = {
 	PHP_ME(php_wxStreamBase, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxStreamBase, Reset, NULL, ZEND_ACC_PUBLIC)
@@ -111,6 +116,7 @@ static zend_function_entry php_wxStreamBase_functions[] = {
 	PHP_ME(php_wxStreamBase, GetLastError, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxOutputStream;
 extern zend_class_entry *php_wxOutputStream_entry;
@@ -133,6 +139,7 @@ class wxOutputStream_php: public wxOutputStream{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxOutputStream_functions[] = {
 	PHP_ME(php_wxStreamBase, Reset, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxStreamBase, IsSeekable, NULL, ZEND_ACC_PUBLIC)
@@ -149,6 +156,7 @@ static zend_function_entry php_wxOutputStream_functions[] = {
 	PHP_ME(php_wxOutputStream, LastWrite, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxInputStream;
 extern zend_class_entry *php_wxInputStream_entry;
@@ -172,6 +180,7 @@ class wxInputStream_php: public wxInputStream{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxInputStream_functions[] = {
 	PHP_ME(php_wxStreamBase, Reset, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxStreamBase, IsSeekable, NULL, ZEND_ACC_PUBLIC)
@@ -191,6 +200,7 @@ static zend_function_entry php_wxInputStream_functions[] = {
 	PHP_ME(php_wxInputStream, CanRead, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxFFileOutputStream;
 extern zend_class_entry *php_wxFFileOutputStream_entry;
@@ -214,6 +224,7 @@ class wxFFileOutputStream_php: public wxFFileOutputStream{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFFileOutputStream_functions[] = {
 	PHP_ME(php_wxStreamBase, Reset, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxStreamBase, IsSeekable, NULL, ZEND_ACC_PUBLIC)
@@ -230,6 +241,7 @@ static zend_function_entry php_wxFFileOutputStream_functions[] = {
 	PHP_ME(php_wxFFileOutputStream, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxFileOutputStream;
 extern zend_class_entry *php_wxFileOutputStream_entry;
@@ -254,6 +266,7 @@ class wxFileOutputStream_php: public wxFileOutputStream{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileOutputStream_functions[] = {
 	PHP_ME(php_wxStreamBase, Reset, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxStreamBase, IsSeekable, NULL, ZEND_ACC_PUBLIC)
@@ -270,6 +283,7 @@ static zend_function_entry php_wxFileOutputStream_functions[] = {
 	PHP_ME(php_wxFileOutputStream, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxFileInputStream;
 extern zend_class_entry *php_wxFileInputStream_entry;
@@ -294,6 +308,7 @@ class wxFileInputStream_php: public wxFileInputStream{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileInputStream_functions[] = {
 	PHP_ME(php_wxStreamBase, Reset, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxStreamBase, IsSeekable, NULL, ZEND_ACC_PUBLIC)
@@ -313,6 +328,7 @@ static zend_function_entry php_wxFileInputStream_functions[] = {
 	PHP_ME(php_wxFileInputStream, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxFFileInputStream;
 extern zend_class_entry *php_wxFFileInputStream_entry;
@@ -336,6 +352,7 @@ class wxFFileInputStream_php: public wxFFileInputStream{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFFileInputStream_functions[] = {
 	PHP_ME(php_wxStreamBase, Reset, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxStreamBase, IsSeekable, NULL, ZEND_ACC_PUBLIC)
@@ -355,6 +372,7 @@ static zend_function_entry php_wxFFileInputStream_functions[] = {
 	PHP_ME(php_wxFFileInputStream, IsOk, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxFFileStream;
 extern zend_class_entry *php_wxFFileStream_entry;
@@ -377,6 +395,7 @@ class wxFFileStream_php: public wxFFileStream{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFFileStream_functions[] = {
 	PHP_ME(php_wxStreamBase, Reset, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxStreamBase, IsSeekable, NULL, ZEND_ACC_PUBLIC)
@@ -402,6 +421,7 @@ static zend_function_entry php_wxFFileStream_functions[] = {
 	PHP_ME(php_wxFFileStream, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxFileStream;
 extern zend_class_entry *php_wxFileStream_entry;
@@ -424,6 +444,7 @@ class wxFileStream_php: public wxFileStream{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileStream_functions[] = {
 	PHP_ME(php_wxStreamBase, Reset, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxStreamBase, IsSeekable, NULL, ZEND_ACC_PUBLIC)
@@ -449,5 +470,6 @@ static zend_function_entry php_wxFileStream_functions[] = {
 	PHP_ME(php_wxFileStream, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_STREAMS_H_GUARD

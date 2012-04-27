@@ -45,6 +45,7 @@ class wxEventLoopBase_php: public wxEventLoopBase{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxEventLoopBase_functions[] = {
 	PHP_ME(php_wxEventLoopBase, GetActive, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxEventLoopBase, IsEventAllowedInsideYield, NULL, ZEND_ACC_PUBLIC)
@@ -59,6 +60,7 @@ static zend_function_entry php_wxEventLoopBase_functions[] = {
 	PHP_ME(php_wxEventLoopBase, YieldFor, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxEventLoopActivator;
 extern zend_class_entry *php_wxEventLoopActivator_entry;
@@ -81,10 +83,12 @@ class wxEventLoopActivator_php: public wxEventLoopActivator{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxEventLoopActivator_functions[] = {
 	PHP_ME(php_wxEventLoopActivator, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxModule;
 extern zend_class_entry *php_wxModule_entry;
@@ -109,6 +113,7 @@ class wxModule_php: public wxModule{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxModule_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -119,6 +124,7 @@ static zend_function_entry php_wxModule_functions[] = {
 	PHP_ME(php_wxModule, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxProcess;
 extern zend_class_entry *php_wxProcess_entry;
@@ -143,6 +149,7 @@ class wxProcess_php: public wxProcess{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxProcess_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -184,6 +191,7 @@ static zend_function_entry php_wxProcess_functions[] = {
 	PHP_ME(php_wxProcess, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxSingleInstanceChecker;
 extern zend_class_entry *php_wxSingleInstanceChecker_entry;
@@ -207,6 +215,7 @@ class wxSingleInstanceChecker_php: public wxSingleInstanceChecker{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxSingleInstanceChecker_functions[] = {
 	PHP_ME(php_wxSingleInstanceChecker, Create, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxSingleInstanceChecker, CreateDefault, NULL, ZEND_ACC_PUBLIC)
@@ -214,5 +223,6 @@ static zend_function_entry php_wxSingleInstanceChecker_functions[] = {
 	PHP_ME(php_wxSingleInstanceChecker, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_APPMANAGEMENT_H_GUARD

@@ -38,6 +38,7 @@ class wxDC_php: public wxDC{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDC_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -134,6 +135,7 @@ static zend_function_entry php_wxDC_functions[] = {
 	PHP_ME(php_wxDC, Blit, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxBufferedDC;
 extern zend_class_entry *php_wxBufferedDC_entry;
@@ -158,6 +160,7 @@ class wxBufferedDC_php: public wxBufferedDC{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxBufferedDC_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -258,6 +261,7 @@ static zend_function_entry php_wxBufferedDC_functions[] = {
 	PHP_ME(php_wxBufferedDC, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxAutoBufferedPaintDC;
 extern zend_class_entry *php_wxAutoBufferedPaintDC_entry;
@@ -280,6 +284,7 @@ class wxAutoBufferedPaintDC_php: public wxAutoBufferedPaintDC{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxAutoBufferedPaintDC_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -380,6 +385,7 @@ static zend_function_entry php_wxAutoBufferedPaintDC_functions[] = {
 	PHP_ME(php_wxAutoBufferedPaintDC, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxBufferedPaintDC;
 extern zend_class_entry *php_wxBufferedPaintDC_entry;
@@ -403,6 +409,7 @@ class wxBufferedPaintDC_php: public wxBufferedPaintDC{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxBufferedPaintDC_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -503,6 +510,7 @@ static zend_function_entry php_wxBufferedPaintDC_functions[] = {
 	PHP_ME(php_wxBufferedPaintDC, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxPaintDC;
 extern zend_class_entry *php_wxPaintDC_entry;
@@ -525,6 +533,7 @@ class wxPaintDC_php: public wxPaintDC{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPaintDC_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -622,6 +631,7 @@ static zend_function_entry php_wxPaintDC_functions[] = {
 	PHP_ME(php_wxPaintDC, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxClientDC;
 extern zend_class_entry *php_wxClientDC_entry;
@@ -644,6 +654,7 @@ class wxClientDC_php: public wxClientDC{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxClientDC_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -741,6 +752,7 @@ static zend_function_entry php_wxClientDC_functions[] = {
 	PHP_ME(php_wxClientDC, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxWindowDC;
 extern zend_class_entry *php_wxWindowDC_entry;
@@ -763,6 +775,7 @@ class wxWindowDC_php: public wxWindowDC{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxWindowDC_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -860,6 +873,7 @@ static zend_function_entry php_wxWindowDC_functions[] = {
 	PHP_ME(php_wxWindowDC, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxMemoryDC;
 extern zend_class_entry *php_wxMemoryDC_entry;
@@ -884,6 +898,7 @@ class wxMemoryDC_php: public wxMemoryDC{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxMemoryDC_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -983,6 +998,7 @@ static zend_function_entry php_wxMemoryDC_functions[] = {
 	PHP_ME(php_wxMemoryDC, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxMirrorDC;
 extern zend_class_entry *php_wxMirrorDC_entry;
@@ -1005,6 +1021,7 @@ class wxMirrorDC_php: public wxMirrorDC{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxMirrorDC_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1102,6 +1119,7 @@ static zend_function_entry php_wxMirrorDC_functions[] = {
 	PHP_ME(php_wxMirrorDC, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxPostScriptDC;
 extern zend_class_entry *php_wxPostScriptDC_entry;
@@ -1125,6 +1143,7 @@ class wxPostScriptDC_php: public wxPostScriptDC{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPostScriptDC_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1222,6 +1241,7 @@ static zend_function_entry php_wxPostScriptDC_functions[] = {
 	PHP_ME(php_wxPostScriptDC, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxScreenDC;
 extern zend_class_entry *php_wxScreenDC_entry;
@@ -1244,6 +1264,7 @@ class wxScreenDC_php: public wxScreenDC{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxScreenDC_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1343,5 +1364,6 @@ static zend_function_entry php_wxScreenDC_functions[] = {
 	PHP_ME(php_wxScreenDC, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_DC_H_GUARD

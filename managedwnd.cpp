@@ -2277,6 +2277,7 @@ PHP_METHOD(php_wxFrame, SetStatusWidths)
 				#endif
 				((wxFrame_php*)_this)->SetStatusWidths((int) n0, (const int*) integers_array0_1);
 
+				delete[] integers_array0_1;
 
 				return;
 				break;

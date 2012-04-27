@@ -39,6 +39,7 @@ class wxColourPickerCtrl_php: public wxColourPickerCtrl{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxColourPickerCtrl_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -295,6 +296,7 @@ static zend_function_entry php_wxColourPickerCtrl_functions[] = {
 	PHP_ME(php_wxColourPickerCtrl, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxDatePickerCtrl;
 extern zend_class_entry *php_wxDatePickerCtrl_entry;
@@ -317,6 +319,7 @@ class wxDatePickerCtrl_php: public wxDatePickerCtrl{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDatePickerCtrl_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -562,6 +565,7 @@ static zend_function_entry php_wxDatePickerCtrl_functions[] = {
 	PHP_ME(php_wxDatePickerCtrl, GetRange, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxFilePickerCtrl;
 extern zend_class_entry *php_wxFilePickerCtrl_entry;
@@ -584,6 +588,7 @@ class wxFilePickerCtrl_php: public wxFilePickerCtrl{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFilePickerCtrl_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -842,6 +847,7 @@ static zend_function_entry php_wxFilePickerCtrl_functions[] = {
 	PHP_ME(php_wxFilePickerCtrl, GetFileName, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxDirPickerCtrl;
 extern zend_class_entry *php_wxDirPickerCtrl_entry;
@@ -864,6 +870,7 @@ class wxDirPickerCtrl_php: public wxDirPickerCtrl{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDirPickerCtrl_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1122,6 +1129,7 @@ static zend_function_entry php_wxDirPickerCtrl_functions[] = {
 	PHP_ME(php_wxDirPickerCtrl, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxFontPickerCtrl;
 extern zend_class_entry *php_wxFontPickerCtrl_entry;
@@ -1144,6 +1152,7 @@ class wxFontPickerCtrl_php: public wxFontPickerCtrl{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFontPickerCtrl_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1402,6 +1411,7 @@ static zend_function_entry php_wxFontPickerCtrl_functions[] = {
 	PHP_ME(php_wxFontPickerCtrl, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxPickerBase;
 extern zend_class_entry *php_wxPickerBase_entry;
@@ -1423,6 +1433,7 @@ class wxPickerBase_php: public wxPickerBase{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPickerBase_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1676,6 +1687,7 @@ static zend_function_entry php_wxPickerBase_functions[] = {
 	PHP_ME(php_wxPickerBase, SetTextCtrlProportion, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxTimePickerCtrl;
 extern zend_class_entry *php_wxTimePickerCtrl_entry;
@@ -1700,6 +1712,7 @@ class wxTimePickerCtrl_php: public wxTimePickerCtrl{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxTimePickerCtrl_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1941,5 +1954,6 @@ static zend_function_entry php_wxTimePickerCtrl_functions[] = {
 	PHP_ME(php_wxTimePickerCtrl, Create, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_PICKERS_H_GUARD

@@ -41,6 +41,7 @@ class wxTextAttr_php: public wxTextAttr{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxTextAttr_functions[] = {
 	PHP_ME(php_wxTextAttr, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxTextAttr, SetURL, NULL, ZEND_ACC_PUBLIC)
@@ -140,5 +141,6 @@ static zend_function_entry php_wxTextAttr_functions[] = {
 	PHP_ME(php_wxTextAttr, SetPageBreak, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_RICHTEXT_H_GUARD

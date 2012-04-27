@@ -745,6 +745,7 @@ PHP_METHOD(php_wxDataOutputStream, WriteDouble)
 					((wxDataOutputStream_php*)_this)->WriteDouble((const double*) floats_array1_0, (size_t) size1);
 				}
 
+				delete[] floats_array1_0;
 
 				return;
 				break;

@@ -39,6 +39,7 @@ class wxCondition_php: public wxCondition{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxCondition_functions[] = {
 	PHP_ME(php_wxCondition, Broadcast, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxCondition, IsOk, NULL, ZEND_ACC_PUBLIC)
@@ -48,6 +49,7 @@ static zend_function_entry php_wxCondition_functions[] = {
 	PHP_ME(php_wxCondition, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxCriticalSectionLocker;
 extern zend_class_entry *php_wxCriticalSectionLocker_entry;
@@ -70,10 +72,12 @@ class wxCriticalSectionLocker_php: public wxCriticalSectionLocker{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxCriticalSectionLocker_functions[] = {
 	PHP_ME(php_wxCriticalSectionLocker, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxThreadHelper;
 extern zend_class_entry *php_wxThreadHelper_entry;
@@ -95,12 +99,14 @@ class wxThreadHelper_php: public wxThreadHelper{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxThreadHelper_functions[] = {
 	PHP_ME(php_wxThreadHelper, GetThread, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxThreadHelper, CreateThread, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxThreadHelper, Create, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxCriticalSection;
 extern zend_class_entry *php_wxCriticalSection_entry;
@@ -123,6 +129,7 @@ class wxCriticalSection_php: public wxCriticalSection{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxCriticalSection_functions[] = {
 	PHP_ME(php_wxCriticalSection, Enter, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxCriticalSection, Leave, NULL, ZEND_ACC_PUBLIC)
@@ -130,6 +137,7 @@ static zend_function_entry php_wxCriticalSection_functions[] = {
 	PHP_ME(php_wxCriticalSection, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxThread;
 extern zend_class_entry *php_wxThread_entry;
@@ -153,6 +161,7 @@ class wxThread_php: public wxThread{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxThread_functions[] = {
 	PHP_ME(php_wxThread, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxThread, Yield, NULL, ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
@@ -181,6 +190,7 @@ static zend_function_entry php_wxThread_functions[] = {
 	PHP_ME(php_wxThread, Wait, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxSemaphore;
 extern zend_class_entry *php_wxSemaphore_entry;
@@ -203,6 +213,7 @@ class wxSemaphore_php: public wxSemaphore{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxSemaphore_functions[] = {
 	PHP_ME(php_wxSemaphore, Post, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxSemaphore, TryWait, NULL, ZEND_ACC_PUBLIC)
@@ -211,6 +222,7 @@ static zend_function_entry php_wxSemaphore_functions[] = {
 	PHP_ME(php_wxSemaphore, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxMutexLocker;
 extern zend_class_entry *php_wxMutexLocker_entry;
@@ -233,11 +245,13 @@ class wxMutexLocker_php: public wxMutexLocker{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxMutexLocker_functions[] = {
 	PHP_ME(php_wxMutexLocker, IsOk, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxMutexLocker, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxMutex;
 extern zend_class_entry *php_wxMutex_entry;
@@ -260,6 +274,7 @@ class wxMutex_php: public wxMutex{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxMutex_functions[] = {
 	PHP_ME(php_wxMutex, Lock, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxMutex, LockTimeout, NULL, ZEND_ACC_PUBLIC)
@@ -268,5 +283,6 @@ static zend_function_entry php_wxMutex_functions[] = {
 	PHP_ME(php_wxMutex, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_THREADING_H_GUARD

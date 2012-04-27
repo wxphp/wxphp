@@ -38,6 +38,7 @@ class wxScrolledWindow_php: public wxScrolledWindow{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxScrolledWindow_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -273,6 +274,7 @@ static zend_function_entry php_wxScrolledWindow_functions[] = {
 	PHP_ME(php_wxPanel, SetFocusIgnoringChildren, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxRibbonButtonBarButtonBase;
 extern zend_class_entry *php_wxRibbonButtonBarButtonBase_entry;
@@ -294,9 +296,11 @@ class wxRibbonButtonBarButtonBase_php{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRibbonButtonBarButtonBase_functions[] = {
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxRibbonGalleryItem;
 extern zend_class_entry *php_wxRibbonGalleryItem_entry;
@@ -318,9 +322,11 @@ class wxRibbonGalleryItem_php{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRibbonGalleryItem_functions[] = {
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxRibbonToolBarToolBase;
 extern zend_class_entry *php_wxRibbonToolBarToolBase_entry;
@@ -342,9 +348,11 @@ class wxRibbonToolBarToolBase_php{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxRibbonToolBarToolBase_functions[] = {
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxNonOwnedWindow;
 extern zend_class_entry *php_wxNonOwnedWindow_entry;
@@ -366,6 +374,7 @@ class wxNonOwnedWindow_php: public wxNonOwnedWindow{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxNonOwnedWindow_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -600,6 +609,7 @@ static zend_function_entry php_wxNonOwnedWindow_functions[] = {
 	PHP_ME(php_wxWindow, SetWindowVariant, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxAnyButton;
 extern zend_class_entry *php_wxAnyButton_entry;
@@ -622,6 +632,7 @@ class wxAnyButton_php: public wxAnyButton{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxAnyButton_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -878,6 +889,7 @@ static zend_function_entry php_wxAnyButton_functions[] = {
 	PHP_ME(php_wxAnyButton, SetBitmapPressed, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxWithImages;
 extern zend_class_entry *php_wxWithImages_entry;
@@ -900,6 +912,7 @@ class wxWithImages_php: public wxWithImages{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxWithImages_functions[] = {
 	PHP_ME(php_wxWithImages, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxWithImages, SetImageList, NULL, ZEND_ACC_PUBLIC)
@@ -907,6 +920,7 @@ static zend_function_entry php_wxWithImages_functions[] = {
 	PHP_ME(php_wxWithImages, AssignImageList, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxTextCompleter;
 extern zend_class_entry *php_wxTextCompleter_entry;
@@ -930,9 +944,11 @@ class wxTextCompleter_php: public wxTextCompleter{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxTextCompleter_functions[] = {
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxWindowModalDialogEvent;
 extern zend_class_entry *php_wxWindowModalDialogEvent_entry;
@@ -955,6 +971,7 @@ class wxWindowModalDialogEvent_php: public wxWindowModalDialogEvent{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxWindowModalDialogEvent_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -992,6 +1009,7 @@ static zend_function_entry php_wxWindowModalDialogEvent_functions[] = {
 	PHP_ME(php_wxWindowModalDialogEvent, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxPoint2DDouble;
 extern zend_class_entry *php_wxPoint2DDouble_entry;
@@ -1023,6 +1041,7 @@ class wxPoint2DDouble_php: public wxPoint2DDouble{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPoint2DDouble_functions[] = {
 	PHP_ME(php_wxPoint2DDouble, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_ME(php_wxPoint2DDouble, SetVectorLength, NULL, ZEND_ACC_PUBLIC)
@@ -1040,6 +1059,7 @@ static zend_function_entry php_wxPoint2DDouble_functions[] = {
 	PHP_ME(php_wxPoint2DDouble, __get, wxphp_others_get_args, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxPoint2DInt;
 extern zend_class_entry *php_wxPoint2DInt_entry;
@@ -1070,6 +1090,7 @@ class wxPoint2DInt_php: public wxPoint2DInt{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPoint2DInt_functions[] = {
 	PHP_ME(php_wxPoint2DInt, GetCrossProduct, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxPoint2DInt, GetDistance, NULL, ZEND_ACC_PUBLIC)
@@ -1087,6 +1108,7 @@ static zend_function_entry php_wxPoint2DInt_functions[] = {
 	PHP_ME(php_wxPoint2DInt, __get, wxphp_others_get_args, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxProgressDialog;
 extern zend_class_entry *php_wxProgressDialog_entry;
@@ -1109,6 +1131,7 @@ class wxProgressDialog_php: public wxProgressDialog{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxProgressDialog_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1400,6 +1423,7 @@ static zend_function_entry php_wxProgressDialog_functions[] = {
 	PHP_ME(php_wxProgressDialog, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxLayoutConstraints;
 extern zend_class_entry *php_wxLayoutConstraints_entry;
@@ -1433,6 +1457,7 @@ class wxLayoutConstraints_php: public wxLayoutConstraints{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxLayoutConstraints_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1446,6 +1471,7 @@ static zend_function_entry php_wxLayoutConstraints_functions[] = {
 	PHP_ME(php_wxLayoutConstraints, __get, wxphp_others_get_args, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGridCellAttrProvider;
 extern zend_class_entry *php_wxGridCellAttrProvider_entry;
@@ -1468,6 +1494,7 @@ class wxGridCellAttrProvider_php: public wxGridCellAttrProvider{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCellAttrProvider_functions[] = {
 	PHP_ME(php_wxGridCellAttrProvider, GetAttr, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridCellAttrProvider, GetColumnHeaderRenderer, NULL, ZEND_ACC_PUBLIC)
@@ -1479,6 +1506,7 @@ static zend_function_entry php_wxGridCellAttrProvider_functions[] = {
 	PHP_ME(php_wxGridCellAttrProvider, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGridColumnHeaderRenderer;
 extern zend_class_entry *php_wxGridColumnHeaderRenderer_entry;
@@ -1500,10 +1528,12 @@ class wxGridColumnHeaderRenderer_php: public wxGridColumnHeaderRenderer{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridColumnHeaderRenderer_functions[] = {
 	PHP_ME(php_wxGridHeaderLabelsRenderer, DrawLabel, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGridColumnHeaderRendererDefault;
 extern zend_class_entry *php_wxGridColumnHeaderRendererDefault_entry;
@@ -1525,11 +1555,13 @@ class wxGridColumnHeaderRendererDefault_php: public wxGridColumnHeaderRendererDe
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridColumnHeaderRendererDefault_functions[] = {
 	PHP_ME(php_wxGridHeaderLabelsRenderer, DrawLabel, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridColumnHeaderRendererDefault, DrawBorder, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGridCornerHeaderRenderer;
 extern zend_class_entry *php_wxGridCornerHeaderRenderer_entry;
@@ -1552,9 +1584,11 @@ class wxGridCornerHeaderRenderer_php: public wxGridCornerHeaderRenderer{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCornerHeaderRenderer_functions[] = {
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGridCornerHeaderRendererDefault;
 extern zend_class_entry *php_wxGridCornerHeaderRendererDefault_entry;
@@ -1576,10 +1610,12 @@ class wxGridCornerHeaderRendererDefault_php: public wxGridCornerHeaderRendererDe
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridCornerHeaderRendererDefault_functions[] = {
 	PHP_ME(php_wxGridCornerHeaderRendererDefault, DrawBorder, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGridHeaderLabelsRenderer;
 extern zend_class_entry *php_wxGridHeaderLabelsRenderer_entry;
@@ -1601,10 +1637,12 @@ class wxGridHeaderLabelsRenderer_php: public wxGridHeaderLabelsRenderer{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridHeaderLabelsRenderer_functions[] = {
 	PHP_ME(php_wxGridHeaderLabelsRenderer, DrawLabel, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGridRowHeaderRenderer;
 extern zend_class_entry *php_wxGridRowHeaderRenderer_entry;
@@ -1626,10 +1664,12 @@ class wxGridRowHeaderRenderer_php: public wxGridRowHeaderRenderer{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridRowHeaderRenderer_functions[] = {
 	PHP_ME(php_wxGridHeaderLabelsRenderer, DrawLabel, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxGridRowHeaderRendererDefault;
 extern zend_class_entry *php_wxGridRowHeaderRendererDefault_entry;
@@ -1651,11 +1691,13 @@ class wxGridRowHeaderRendererDefault_php: public wxGridRowHeaderRendererDefault{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxGridRowHeaderRendererDefault_functions[] = {
 	PHP_ME(php_wxGridHeaderLabelsRenderer, DrawLabel, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxGridRowHeaderRendererDefault, DrawBorder, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxPaletteChangedEvent;
 extern zend_class_entry *php_wxPaletteChangedEvent_entry;
@@ -1678,6 +1720,7 @@ class wxPaletteChangedEvent_php: public wxPaletteChangedEvent{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPaletteChangedEvent_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1705,6 +1748,7 @@ static zend_function_entry php_wxPaletteChangedEvent_functions[] = {
 	PHP_ME(php_wxPaletteChangedEvent, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxFileTypeInfo;
 extern zend_class_entry *php_wxFileTypeInfo_entry;
@@ -1728,6 +1772,7 @@ class wxFileTypeInfo_php: public wxFileTypeInfo{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileTypeInfo_functions[] = {
 	PHP_ME(php_wxFileTypeInfo, AddExtension, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFileTypeInfo, SetDescription, NULL, ZEND_ACC_PUBLIC)
@@ -1737,6 +1782,7 @@ static zend_function_entry php_wxFileTypeInfo_functions[] = {
 	PHP_ME(php_wxFileTypeInfo, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxDisplayChangedEvent;
 extern zend_class_entry *php_wxDisplayChangedEvent_entry;
@@ -1759,6 +1805,7 @@ class wxDisplayChangedEvent_php: public wxDisplayChangedEvent{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxDisplayChangedEvent_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1784,6 +1831,7 @@ static zend_function_entry php_wxDisplayChangedEvent_functions[] = {
 	PHP_ME(php_wxDisplayChangedEvent, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxTimerRunner;
 extern zend_class_entry *php_wxTimerRunner_entry;
@@ -1807,11 +1855,13 @@ class wxTimerRunner_php: public wxTimerRunner{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxTimerRunner_functions[] = {
 	PHP_ME(php_wxTimerRunner, Start, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTimerRunner, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxToolBarToolBase;
 extern zend_class_entry *php_wxToolBarToolBase_entry;
@@ -1833,6 +1883,7 @@ class wxToolBarToolBase_php: public wxToolBarToolBase{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxToolBarToolBase_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1874,5 +1925,6 @@ static zend_function_entry php_wxToolBarToolBase_functions[] = {
 	PHP_ME(php_wxToolBarToolBase, SetClientData, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_OTHERS_H_GUARD

@@ -39,6 +39,7 @@ class wxMenuBar_php: public wxMenuBar{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxMenuBar_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -296,6 +297,7 @@ static zend_function_entry php_wxMenuBar_functions[] = {
 	PHP_ME(php_wxMenuBar, SetMenuLabel, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxMenu;
 extern zend_class_entry *php_wxMenu_entry;
@@ -320,6 +322,7 @@ class wxMenu_php: public wxMenu{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxMenu_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -389,6 +392,7 @@ static zend_function_entry php_wxMenu_functions[] = {
 	PHP_ME(php_wxMenu, FindChildItem, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxMenuItem;
 extern zend_class_entry *php_wxMenuItem_entry;
@@ -411,6 +415,7 @@ class wxMenuItem_php: public wxMenuItem{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxMenuItem_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -446,5 +451,6 @@ static zend_function_entry php_wxMenuItem_functions[] = {
 	PHP_ME(php_wxMenuItem, SetBitmap, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_MENUS_H_GUARD

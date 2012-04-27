@@ -39,6 +39,7 @@ class wxPrinterDC_php: public wxPrinterDC{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPrinterDC_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -137,6 +138,7 @@ static zend_function_entry php_wxPrinterDC_functions[] = {
 	PHP_ME(php_wxPrinterDC, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxPreviewControlBar;
 extern zend_class_entry *php_wxPreviewControlBar_entry;
@@ -159,6 +161,7 @@ class wxPreviewControlBar_php: public wxPreviewControlBar{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPreviewControlBar_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -398,6 +401,7 @@ static zend_function_entry php_wxPreviewControlBar_functions[] = {
 	PHP_ME(php_wxPreviewControlBar, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxPreviewCanvas;
 extern zend_class_entry *php_wxPreviewCanvas_entry;
@@ -420,6 +424,7 @@ class wxPreviewCanvas_php: public wxPreviewCanvas{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPreviewCanvas_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -656,6 +661,7 @@ static zend_function_entry php_wxPreviewCanvas_functions[] = {
 	PHP_ME(php_wxPreviewCanvas, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxPreviewFrame;
 extern zend_class_entry *php_wxPreviewFrame_entry;
@@ -677,6 +683,7 @@ class wxPreviewFrame_php: public wxPreviewFrame{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPreviewFrame_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -953,6 +960,7 @@ static zend_function_entry php_wxPreviewFrame_functions[] = {
 	PHP_ME(php_wxPreviewFrame, InitializeWithModality, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxPrintPreview;
 extern zend_class_entry *php_wxPrintPreview_entry;
@@ -975,6 +983,7 @@ class wxPrintPreview_php: public wxPrintPreview{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPrintPreview_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1001,6 +1010,7 @@ static zend_function_entry php_wxPrintPreview_functions[] = {
 	PHP_ME(php_wxPrintPreview, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxPrinter;
 extern zend_class_entry *php_wxPrinter_entry;
@@ -1023,6 +1033,7 @@ class wxPrinter_php: public wxPrinter{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPrinter_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1041,6 +1052,7 @@ static zend_function_entry php_wxPrinter_functions[] = {
 	PHP_ME(php_wxPrinter, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxPrintout;
 extern zend_class_entry *php_wxPrintout_entry;
@@ -1069,6 +1081,7 @@ class wxPrintout_php: public wxPrintout{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPrintout_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1102,6 +1115,7 @@ static zend_function_entry php_wxPrintout_functions[] = {
 	PHP_ME(php_wxPrintout, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxPrintDialog;
 extern zend_class_entry *php_wxPrintDialog_entry;
@@ -1124,6 +1138,7 @@ class wxPrintDialog_php: public wxPrintDialog{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPrintDialog_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1409,6 +1424,7 @@ static zend_function_entry php_wxPrintDialog_functions[] = {
 	PHP_ME(php_wxPrintDialog, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
+#endif
 
 extern int le_wxPageSetupDialog;
 extern zend_class_entry *php_wxPageSetupDialog_entry;
@@ -1431,6 +1447,7 @@ class wxPageSetupDialog_php: public wxPageSetupDialog{
 	wxPHPObjectReferences references;
 };
 
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxPageSetupDialog_functions[] = {
 	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
@@ -1715,5 +1732,6 @@ static zend_function_entry php_wxPageSetupDialog_functions[] = {
 	PHP_ME(php_wxPageSetupDialog, ShowModal, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
+#endif
 
 #endif //WXPHP_PRINTING_H_GUARD
