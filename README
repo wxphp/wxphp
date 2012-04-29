@@ -9,28 +9,133 @@ of bringing all the rapid application development tools available on PHP
 to assist on the development of desktop applications. The syntax used is 
 very similar to the one used on original implementation of wxWidgets C++.
 	
-	
+
+
 
 Building in Windows
 ========================================================================
 
-. Download and install wxWidgets Latest SVN Trunk
-	make sure to have your enviroment variables configured.
-	set LIB=%LIB%;%WXWIN%\lib\vc_lib
-	set INCLUDE=%INCLUDE%;%WXWIN%\include
-	set INCLUDE=%INCLUDE%;%WXWIN%\include\msvc
+. Requirements
+	
+	* Windows SDK 6.1
+	* Visual C++ 2010 Express Edition
+	* wxWidgets 2.8.12
+	* PHP5 Sources
+	* wxPHP source code
+	* Read the README_MSW
+	
+. Install Windows SDK 6.1 and Visual C++ 2008 Express Edition
 
-. Put the source code in the ext folder of your php build folder, ext/wxWidgets
+	Windows SDK 6.1 download links:
+		
+		Web Setup - http://www.microsoft.com/download/en/details.aspx?displaylang=en&id=11310
+		
+		or
+		
+		DVD ISO - http://www.microsoft.com/downloads/details.aspx?FamilyId=F26B1AA4-741A-433A-9BE5-FA919850BDBF&displaylang=en
+		
+	Visual Studio 2008 Express Edition download links:
+	
+		http://www.microsoft.com/visualstudio/en-us/products/2008-editions/express
+	
+. Download and install wxWidgets Latest SVN 
 
-. Configure your php:
-	cscript /nologo configure.js  "--enable-wxWidgets=shared"
+	Checkout svn sources:
+	
+		svn checkout http://svn.wxwidgets.org/svn/wx/wxWidgets/trunk wxWidgets
+	
+	Open Windows SDK 6.1 CMD Shell:
+		
+		setenv /release /x86 /xp
+		cd wxWidgets_Installation_Path
+		cd build\msw
+		nmake -f makefile.vc BUILD=release
 
-. Build it:
-	nmake php_wxwidgets.dll
+. Download and Install PHP sources
+
+	NOTE: At time of writing compilation was tested against 
+		  PHP 5.3.11 but it should work with almost any prior 
+		  5.3.x version
+
+	Download PHP 5:
+	
+		To check available versions for download:
+		
+			http://windows.php.net/download/ 
+			
+		Direct download link for 5.3.11:
+		
+			http://windows.php.net/downloads/releases/php-5.3.11-src.zip
+			
+	Create the directory:
+		
+		c:\php-sdk
+	
+	Download PHP 5 binary tools:
+		
+		http://windows.php.net/downloads/php-sdk/
+	
+	Extract the binary tools inside the directory c:\php-sdk leaving 
+	you with:
+	
+		c:\php-sdk\bin
+		c:\php-sdk\script
+		
+	Open the Windows SDK 6.1 CMD Shell and do the following:
+		
+		setenv /release /x86 /xp
+		cd c:\php-sdk\
+		bin\phpsdk_setvars.bat
+		bin\phpsdk_buildtree.bat php53dev
+		
+	Extract the php source files and place them on:
+	
+		c:\php-sdk\php53dev\vc9\x86\php5.3.x
+		
+	Then compile the sources to see if everything is working:
+	
+		cd c:\php-sdk\php53dev\vc9\x86\php5.3.x
+		buildconf
+		configure --disable-all --disable-zts --enable-cli
+		nmake
+
+. Compile wxPHP
+
+	Get wxPHP sources:
+		
+		svn co http://wxphp.svn.sourceforge.net/svnroot/wxphp/trunk wxphp
+	
+	Put the source code in the ext folder of your php build folder:
+	
+		c:\php-sdk\php53dev\vc9\x86\php5.3.x\ext\wxphp
+		
+	Make sure to read the README_MSW for some compilation
+	and linking fixes
+		
+	Open the Windows SDK 6.1 CMD Shell and do the following:
+	
+		setenv /release /x86 /xp
+		cd c:\php-sdk\
+		bin\phpsdk_setvars.bat
+		cd c:\php-sdk\php53dev\vc9\x86\php5.3.x
+		buildconf
+		configure --disable-all --disable-zts --enable-cli --with-wxwidgets=C:\wxWidgets_installation_path,shared
+		nmake
+		
+	Copy the resulting php_wxwidgets.dll file on the Release directory 
+	to the php extensions directory of your current PHP 5 VC9 X86 Non 
+	Thread Safety setup.
+
+	If you want the wxWidget extension to be automatically loaded, 
+	add the  following lines to the end of your php.ini:
+	
+		[PHP_WXWIDGETS]
+		extension=php_wxWidgets.dll
+
 	
 	
-	
-Building and Installing on Linux
+
+Building and Installing on Linux/Unix Environments
 ========================================================================
 
 . Compile wxWidgets library and development packages, currently we have
@@ -39,14 +144,17 @@ Building and Installing on Linux
 	Download wxWidgets tar file and uncompress it on your
 	directory of choice on the console change to that directory
 	and:
+	
 		./configure --prefix=/opt/wxWidgets-svn --enable-monolithic
 	
 . Install php5 development packages 
 
-	Ubuntu 10.04:
+	Ubuntu 10.04 (and most debian based distros):
+		
 		apt-get install php5-dev
 	
 . Configure and build the extension
+	
 	cd wxPHP
 	phpize
 	./configure --with-wxwidgets=/opt/wxWidgets-svn
@@ -64,9 +172,14 @@ Building and Installing on Linux
 		; load php wxwidgets module
 		extension=wxwidgets.so
 		
-	If not, then enable dynamic loading on your php.ini usually on
-	/etc/php5/cli/php.ini > enable_dl = On
+	If not, then enable dynamic loading on your php.ini usually on:
+		
+		/etc/php5/cli/php.ini
+		
+		modify enable_dl = off to enable_dl = on
 	
+
+
 
 Running the examples
 ========================================================================
@@ -84,8 +197,9 @@ and run the php interpreter on each file:
 on windows you can also do
 	
 	php-win thread.php
+
 	
-	
+
 
 Support
 ========================================================================
@@ -93,6 +207,7 @@ Support
 Any problems, please refer to the official website:
 	
 	http://wxphp.org/
+	http://wxphp.org/docs
 	http://forums.wxphp.org/
 	
 or visit the sourceforge.net project page at:
