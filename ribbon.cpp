@@ -125,8 +125,6 @@ wxRibbonArtProvider* wxRibbonArtProvider_php::Clone()const
 		
 		wxMessageBox("Failed to call virtual method 'Clone'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -137,15 +135,7 @@ wxRibbonArtProvider* wxRibbonArtProvider_php::Clone()const
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return (wxRibbonArtProvider*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxRibbonArtProvider::Clone();
 
 }
 void wxRibbonArtProvider_php::DrawButtonBarBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect)
@@ -194,22 +184,12 @@ void wxRibbonArtProvider_php::DrawButtonBarBackground(wxDC& dc, wxWindow* wnd, c
 		
 		wxMessageBox("Failed to call virtual method 'DrawButtonBarBackground'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRibbonArtProvider::DrawButtonBarBackground(dc, wnd, rect);
 
 }
 void wxRibbonArtProvider_php::DrawGalleryBackground(wxDC& dc, wxRibbonGallery* wnd, const wxRect& rect)
@@ -258,22 +238,12 @@ void wxRibbonArtProvider_php::DrawGalleryBackground(wxDC& dc, wxRibbonGallery* w
 		
 		wxMessageBox("Failed to call virtual method 'DrawGalleryBackground'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRibbonArtProvider::DrawGalleryBackground(dc, wnd, rect);
 
 }
 void wxRibbonArtProvider_php::DrawGalleryItemBackground(wxDC& dc, wxRibbonGallery* wnd, const wxRect& rect, wxRibbonGalleryItem* item)
@@ -324,22 +294,12 @@ void wxRibbonArtProvider_php::DrawGalleryItemBackground(wxDC& dc, wxRibbonGaller
 		
 		wxMessageBox("Failed to call virtual method 'DrawGalleryItemBackground'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRibbonArtProvider::DrawGalleryItemBackground(dc, wnd, rect, item);
 
 }
 void wxRibbonArtProvider_php::DrawMinimisedPanel(wxDC& dc, wxRibbonPanel* wnd, const wxRect& rect, wxBitmap& bitmap)
@@ -390,22 +350,12 @@ void wxRibbonArtProvider_php::DrawMinimisedPanel(wxDC& dc, wxRibbonPanel* wnd, c
 		
 		wxMessageBox("Failed to call virtual method 'DrawMinimisedPanel'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRibbonArtProvider::DrawMinimisedPanel(dc, wnd, rect, bitmap);
 
 }
 void wxRibbonArtProvider_php::DrawPageBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect)
@@ -454,22 +404,12 @@ void wxRibbonArtProvider_php::DrawPageBackground(wxDC& dc, wxWindow* wnd, const 
 		
 		wxMessageBox("Failed to call virtual method 'DrawPageBackground'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRibbonArtProvider::DrawPageBackground(dc, wnd, rect);
 
 }
 void wxRibbonArtProvider_php::DrawPanelBackground(wxDC& dc, wxRibbonPanel* wnd, const wxRect& rect)
@@ -518,22 +458,12 @@ void wxRibbonArtProvider_php::DrawPanelBackground(wxDC& dc, wxRibbonPanel* wnd, 
 		
 		wxMessageBox("Failed to call virtual method 'DrawPanelBackground'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRibbonArtProvider::DrawPanelBackground(dc, wnd, rect);
 
 }
 void wxRibbonArtProvider_php::DrawScrollButton(wxDC& dc, wxWindow* wnd, const wxRect& rect, long style)
@@ -583,22 +513,12 @@ void wxRibbonArtProvider_php::DrawScrollButton(wxDC& dc, wxWindow* wnd, const wx
 		
 		wxMessageBox("Failed to call virtual method 'DrawScrollButton'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRibbonArtProvider::DrawScrollButton(dc, wnd, rect, style);
 
 }
 void wxRibbonArtProvider_php::DrawTabCtrlBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect)
@@ -647,22 +567,12 @@ void wxRibbonArtProvider_php::DrawTabCtrlBackground(wxDC& dc, wxWindow* wnd, con
 		
 		wxMessageBox("Failed to call virtual method 'DrawTabCtrlBackground'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRibbonArtProvider::DrawTabCtrlBackground(dc, wnd, rect);
 
 }
 void wxRibbonArtProvider_php::DrawTabSeparator(wxDC& dc, wxWindow* wnd, const wxRect& rect, double visibility)
@@ -712,22 +622,12 @@ void wxRibbonArtProvider_php::DrawTabSeparator(wxDC& dc, wxWindow* wnd, const wx
 		
 		wxMessageBox("Failed to call virtual method 'DrawTabSeparator'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRibbonArtProvider::DrawTabSeparator(dc, wnd, rect, visibility);
 
 }
 void wxRibbonArtProvider_php::DrawTool(wxDC& dc, wxWindow* wnd, const wxRect& rect, const wxBitmap& bitmap, wxRibbonButtonKind kind, long state)
@@ -780,22 +680,12 @@ void wxRibbonArtProvider_php::DrawTool(wxDC& dc, wxWindow* wnd, const wxRect& re
 		
 		wxMessageBox("Failed to call virtual method 'DrawTool'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRibbonArtProvider::DrawTool(dc, wnd, rect, bitmap, kind, state);
 
 }
 void wxRibbonArtProvider_php::DrawToolBarBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect)
@@ -844,22 +734,12 @@ void wxRibbonArtProvider_php::DrawToolBarBackground(wxDC& dc, wxWindow* wnd, con
 		
 		wxMessageBox("Failed to call virtual method 'DrawToolBarBackground'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRibbonArtProvider::DrawToolBarBackground(dc, wnd, rect);
 
 }
 void wxRibbonArtProvider_php::DrawToolGroupBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect)
@@ -908,22 +788,12 @@ void wxRibbonArtProvider_php::DrawToolGroupBackground(wxDC& dc, wxWindow* wnd, c
 		
 		wxMessageBox("Failed to call virtual method 'DrawToolGroupBackground'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRibbonArtProvider::DrawToolGroupBackground(dc, wnd, rect);
 
 }
 void wxRibbonArtProvider_php::GetBarTabWidth(wxDC& dc, wxWindow* wnd, const wxString& label, const wxBitmap& bitmap, int* ideal, int* small_begin_need_separator, int* small_must_have_separator, int* minimum)
@@ -980,22 +850,12 @@ void wxRibbonArtProvider_php::GetBarTabWidth(wxDC& dc, wxWindow* wnd, const wxSt
 		
 		wxMessageBox("Failed to call virtual method 'GetBarTabWidth'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRibbonArtProvider::GetBarTabWidth(dc, wnd, label, bitmap, ideal, small_begin_need_separator, small_must_have_separator, minimum);
 
 }
 PHP_METHOD(php_wxRibbonArtProvider, GetColor)
@@ -1139,8 +999,6 @@ wxColour wxRibbonArtProvider_php::GetColour(int id)const
 		
 		wxMessageBox("Failed to call virtual method 'GetColour'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -1151,15 +1009,7 @@ wxColour wxRibbonArtProvider_php::GetColour(int id)const
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return *(wxColour*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxRibbonArtProvider::GetColour(id);
 
 }
 void wxRibbonArtProvider_php::GetColourScheme(wxColour* primary, wxColour* secondary, wxColour* tertiary)const
@@ -1208,22 +1058,12 @@ void wxRibbonArtProvider_php::GetColourScheme(wxColour* primary, wxColour* secon
 		
 		wxMessageBox("Failed to call virtual method 'GetColourScheme'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRibbonArtProvider::GetColourScheme(primary, secondary, tertiary);
 
 }
 long wxRibbonArtProvider_php::GetFlags()const
@@ -1261,22 +1101,12 @@ long wxRibbonArtProvider_php::GetFlags()const
 		
 		wxMessageBox("Failed to call virtual method 'GetFlags'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (long) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxRibbonArtProvider::GetFlags();
 
 }
 wxFont wxRibbonArtProvider_php::GetFont(int id)const
@@ -1320,8 +1150,6 @@ wxFont wxRibbonArtProvider_php::GetFont(int id)const
 		
 		wxMessageBox("Failed to call virtual method 'GetFont'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -1332,15 +1160,7 @@ wxFont wxRibbonArtProvider_php::GetFont(int id)const
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return *(wxFont*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxRibbonArtProvider::GetFont(id);
 
 }
 wxSize wxRibbonArtProvider_php::GetGalleryClientSize(wxDC& dc, const wxRibbonGallery* wnd, wxSize size, wxPoint* client_offset, wxRect* scroll_up_button, wxRect* scroll_down_button, wxRect* extension_button)
@@ -1397,8 +1217,6 @@ wxSize wxRibbonArtProvider_php::GetGalleryClientSize(wxDC& dc, const wxRibbonGal
 		
 		wxMessageBox("Failed to call virtual method 'GetGalleryClientSize'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -1409,15 +1227,7 @@ wxSize wxRibbonArtProvider_php::GetGalleryClientSize(wxDC& dc, const wxRibbonGal
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return *(wxSize*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxRibbonArtProvider::GetGalleryClientSize(dc, wnd, size, client_offset, scroll_up_button, scroll_down_button, extension_button);
 
 }
 wxSize wxRibbonArtProvider_php::GetGallerySize(wxDC& dc, const wxRibbonGallery* wnd, wxSize client_size)
@@ -1466,8 +1276,6 @@ wxSize wxRibbonArtProvider_php::GetGallerySize(wxDC& dc, const wxRibbonGallery* 
 		
 		wxMessageBox("Failed to call virtual method 'GetGallerySize'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -1478,15 +1286,7 @@ wxSize wxRibbonArtProvider_php::GetGallerySize(wxDC& dc, const wxRibbonGallery* 
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return *(wxSize*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxRibbonArtProvider::GetGallerySize(dc, wnd, client_size);
 
 }
 int wxRibbonArtProvider_php::GetMetric(int id)const
@@ -1530,22 +1330,12 @@ int wxRibbonArtProvider_php::GetMetric(int id)const
 		
 		wxMessageBox("Failed to call virtual method 'GetMetric'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (int) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxRibbonArtProvider::GetMetric(id);
 
 }
 wxSize wxRibbonArtProvider_php::GetMinimisedPanelMinimumSize(wxDC& dc, const wxRibbonPanel* wnd, wxSize* desired_bitmap_size, wxDirection* expanded_panel_direction)
@@ -1595,8 +1385,6 @@ wxSize wxRibbonArtProvider_php::GetMinimisedPanelMinimumSize(wxDC& dc, const wxR
 		
 		wxMessageBox("Failed to call virtual method 'GetMinimisedPanelMinimumSize'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -1607,15 +1395,7 @@ wxSize wxRibbonArtProvider_php::GetMinimisedPanelMinimumSize(wxDC& dc, const wxR
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return *(wxSize*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxRibbonArtProvider::GetMinimisedPanelMinimumSize(dc, wnd, desired_bitmap_size, expanded_panel_direction);
 
 }
 wxRect wxRibbonArtProvider_php::GetPageBackgroundRedrawArea(wxDC& dc, const wxRibbonPage* wnd, wxSize page_old_size, wxSize page_new_size)
@@ -1666,8 +1446,6 @@ wxRect wxRibbonArtProvider_php::GetPageBackgroundRedrawArea(wxDC& dc, const wxRi
 		
 		wxMessageBox("Failed to call virtual method 'GetPageBackgroundRedrawArea'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -1678,15 +1456,7 @@ wxRect wxRibbonArtProvider_php::GetPageBackgroundRedrawArea(wxDC& dc, const wxRi
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return *(wxRect*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxRibbonArtProvider::GetPageBackgroundRedrawArea(dc, wnd, page_old_size, page_new_size);
 
 }
 wxSize wxRibbonArtProvider_php::GetPanelClientSize(wxDC& dc, const wxRibbonPanel* wnd, wxSize size, wxPoint* client_offset)
@@ -1737,8 +1507,6 @@ wxSize wxRibbonArtProvider_php::GetPanelClientSize(wxDC& dc, const wxRibbonPanel
 		
 		wxMessageBox("Failed to call virtual method 'GetPanelClientSize'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -1749,15 +1517,7 @@ wxSize wxRibbonArtProvider_php::GetPanelClientSize(wxDC& dc, const wxRibbonPanel
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return *(wxSize*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxRibbonArtProvider::GetPanelClientSize(dc, wnd, size, client_offset);
 
 }
 wxSize wxRibbonArtProvider_php::GetPanelSize(wxDC& dc, const wxRibbonPanel* wnd, wxSize client_size, wxPoint* client_offset)
@@ -1808,8 +1568,6 @@ wxSize wxRibbonArtProvider_php::GetPanelSize(wxDC& dc, const wxRibbonPanel* wnd,
 		
 		wxMessageBox("Failed to call virtual method 'GetPanelSize'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -1820,15 +1578,7 @@ wxSize wxRibbonArtProvider_php::GetPanelSize(wxDC& dc, const wxRibbonPanel* wnd,
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return *(wxSize*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxRibbonArtProvider::GetPanelSize(dc, wnd, client_size, client_offset);
 
 }
 wxSize wxRibbonArtProvider_php::GetScrollButtonMinimumSize(wxDC& dc, wxWindow* wnd, long style)
@@ -1876,8 +1626,6 @@ wxSize wxRibbonArtProvider_php::GetScrollButtonMinimumSize(wxDC& dc, wxWindow* w
 		
 		wxMessageBox("Failed to call virtual method 'GetScrollButtonMinimumSize'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -1888,15 +1636,7 @@ wxSize wxRibbonArtProvider_php::GetScrollButtonMinimumSize(wxDC& dc, wxWindow* w
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return *(wxSize*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxRibbonArtProvider::GetScrollButtonMinimumSize(dc, wnd, style);
 
 }
 wxSize wxRibbonArtProvider_php::GetToolSize(wxDC& dc, wxWindow* wnd, wxSize bitmap_size, wxRibbonButtonKind kind, bool is_first, bool is_last, wxRect* dropdown_region)
@@ -1950,8 +1690,6 @@ wxSize wxRibbonArtProvider_php::GetToolSize(wxDC& dc, wxWindow* wnd, wxSize bitm
 		
 		wxMessageBox("Failed to call virtual method 'GetToolSize'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -1962,15 +1700,7 @@ wxSize wxRibbonArtProvider_php::GetToolSize(wxDC& dc, wxWindow* wnd, wxSize bitm
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return *(wxSize*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxRibbonArtProvider::GetToolSize(dc, wnd, bitmap_size, kind, is_first, is_last, dropdown_region);
 
 }
 PHP_METHOD(php_wxRibbonArtProvider, SetColor)
@@ -2133,22 +1863,12 @@ void wxRibbonArtProvider_php::SetColourScheme(const wxColour& primary, const wxC
 		
 		wxMessageBox("Failed to call virtual method 'SetColourScheme'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRibbonArtProvider::SetColourScheme(primary, secondary, tertiary);
 
 }
 void wxRibbonArtProvider_php::SetFlags(long flags)
@@ -2192,22 +1912,12 @@ void wxRibbonArtProvider_php::SetFlags(long flags)
 		
 		wxMessageBox("Failed to call virtual method 'SetFlags'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRibbonArtProvider::SetFlags(flags);
 
 }
 void wxRibbonArtProvider_php::SetFont(int id, const wxFont& font)
@@ -2253,22 +1963,12 @@ void wxRibbonArtProvider_php::SetFont(int id, const wxFont& font)
 		
 		wxMessageBox("Failed to call virtual method 'SetFont'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRibbonArtProvider::SetFont(id, font);
 
 }
 void wxRibbonArtProvider_php::SetMetric(int id, int new_val)
@@ -2313,22 +2013,12 @@ void wxRibbonArtProvider_php::SetMetric(int id, int new_val)
 		
 		wxMessageBox("Failed to call virtual method 'SetMetric'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRibbonArtProvider::SetMetric(id, new_val);
 
 }
 void wxRibbonArtProvider_php::DrawButtonBarButton(wxDC& dc, wxWindow* wnd, const wxRect& rect, wxRibbonButtonKind kind, long state, const wxString& label, const wxBitmap& bitmap_large, const wxBitmap& bitmap_small)
@@ -2387,22 +2077,12 @@ void wxRibbonArtProvider_php::DrawButtonBarButton(wxDC& dc, wxWindow* wnd, const
 		
 		wxMessageBox("Failed to call virtual method 'DrawButtonBarButton'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRibbonArtProvider::DrawButtonBarButton(dc, wnd, rect, kind, state, label, bitmap_large, bitmap_small);
 
 }
 bool wxRibbonArtProvider_php::GetButtonBarButtonSize(wxDC& dc, wxWindow* wnd, wxRibbonButtonKind kind, wxRibbonButtonBarButtonState size, const wxString& label, wxSize bitmap_size_large, wxSize bitmap_size_small, wxSize* button_size, wxRect* normal_region, wxRect* dropdown_region)
@@ -2465,22 +2145,12 @@ bool wxRibbonArtProvider_php::GetButtonBarButtonSize(wxDC& dc, wxWindow* wnd, wx
 		
 		wxMessageBox("Failed to call virtual method 'GetButtonBarButtonSize'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxRibbonArtProvider::GetButtonBarButtonSize(dc, wnd, kind, size, label, bitmap_size_large, bitmap_size_small, button_size, normal_region, dropdown_region);
 
 }
 void php_wxRibbonBar_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 

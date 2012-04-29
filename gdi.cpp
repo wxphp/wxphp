@@ -36469,22 +36469,12 @@ void wxRendererNative_php::DrawCheckBox(wxWindow* win, wxDC& dc, const wxRect& r
 		
 		wxMessageBox("Failed to call virtual method 'DrawCheckBox'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRendererNative::DrawCheckBox(win, dc, rect, flags);
 
 }
 void wxRendererNative_php::DrawChoice(wxWindow* win, wxDC& dc, const wxRect& rect, int flags)
@@ -36534,22 +36524,12 @@ void wxRendererNative_php::DrawChoice(wxWindow* win, wxDC& dc, const wxRect& rec
 		
 		wxMessageBox("Failed to call virtual method 'DrawChoice'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRendererNative::DrawChoice(win, dc, rect, flags);
 
 }
 void wxRendererNative_php::DrawComboBox(wxWindow* win, wxDC& dc, const wxRect& rect, int flags)
@@ -36599,22 +36579,12 @@ void wxRendererNative_php::DrawComboBox(wxWindow* win, wxDC& dc, const wxRect& r
 		
 		wxMessageBox("Failed to call virtual method 'DrawComboBox'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRendererNative::DrawComboBox(win, dc, rect, flags);
 
 }
 void wxRendererNative_php::DrawComboBoxDropButton(wxWindow* win, wxDC& dc, const wxRect& rect, int flags)
@@ -36664,22 +36634,12 @@ void wxRendererNative_php::DrawComboBoxDropButton(wxWindow* win, wxDC& dc, const
 		
 		wxMessageBox("Failed to call virtual method 'DrawComboBoxDropButton'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRendererNative::DrawComboBoxDropButton(win, dc, rect, flags);
 
 }
 void wxRendererNative_php::DrawDropArrow(wxWindow* win, wxDC& dc, const wxRect& rect, int flags)
@@ -36729,22 +36689,12 @@ void wxRendererNative_php::DrawDropArrow(wxWindow* win, wxDC& dc, const wxRect& 
 		
 		wxMessageBox("Failed to call virtual method 'DrawDropArrow'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRendererNative::DrawDropArrow(win, dc, rect, flags);
 
 }
 void wxRendererNative_php::DrawFocusRect(wxWindow* win, wxDC& dc, const wxRect& rect, int flags)
@@ -36794,22 +36744,12 @@ void wxRendererNative_php::DrawFocusRect(wxWindow* win, wxDC& dc, const wxRect& 
 		
 		wxMessageBox("Failed to call virtual method 'DrawFocusRect'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRendererNative::DrawFocusRect(win, dc, rect, flags);
 
 }
 void wxRendererNative_php::DrawPushButton(wxWindow* win, wxDC& dc, const wxRect& rect, int flags)
@@ -36859,22 +36799,12 @@ void wxRendererNative_php::DrawPushButton(wxWindow* win, wxDC& dc, const wxRect&
 		
 		wxMessageBox("Failed to call virtual method 'DrawPushButton'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRendererNative::DrawPushButton(win, dc, rect, flags);
 
 }
 void wxRendererNative_php::DrawItemSelectionRect(wxWindow* win, wxDC& dc, const wxRect& rect, int flags)
@@ -36924,22 +36854,12 @@ void wxRendererNative_php::DrawItemSelectionRect(wxWindow* win, wxDC& dc, const 
 		
 		wxMessageBox("Failed to call virtual method 'DrawItemSelectionRect'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRendererNative::DrawItemSelectionRect(win, dc, rect, flags);
 
 }
 void wxRendererNative_php::DrawRadioBitmap(wxWindow* win, wxDC& dc, const wxRect& rect, int flags)
@@ -36989,22 +36909,12 @@ void wxRendererNative_php::DrawRadioBitmap(wxWindow* win, wxDC& dc, const wxRect
 		
 		wxMessageBox("Failed to call virtual method 'DrawRadioBitmap'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRendererNative::DrawRadioBitmap(win, dc, rect, flags);
 
 }
 void wxRendererNative_php::DrawSplitterBorder(wxWindow* win, wxDC& dc, const wxRect& rect, int flags)
@@ -37054,22 +36964,12 @@ void wxRendererNative_php::DrawSplitterBorder(wxWindow* win, wxDC& dc, const wxR
 		
 		wxMessageBox("Failed to call virtual method 'DrawSplitterBorder'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRendererNative::DrawSplitterBorder(win, dc, rect, flags);
 
 }
 void wxRendererNative_php::DrawSplitterSash(wxWindow* win, wxDC& dc, const wxSize& size, wxCoord position, wxOrientation orient, int flags)
@@ -37121,22 +37021,12 @@ void wxRendererNative_php::DrawSplitterSash(wxWindow* win, wxDC& dc, const wxSiz
 		
 		wxMessageBox("Failed to call virtual method 'DrawSplitterSash'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRendererNative::DrawSplitterSash(win, dc, size, position, orient, flags);
 
 }
 void wxRendererNative_php::DrawTextCtrl(wxWindow* win, wxDC& dc, const wxRect& rect, int flags)
@@ -37186,22 +37076,12 @@ void wxRendererNative_php::DrawTextCtrl(wxWindow* win, wxDC& dc, const wxRect& r
 		
 		wxMessageBox("Failed to call virtual method 'DrawTextCtrl'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRendererNative::DrawTextCtrl(win, dc, rect, flags);
 
 }
 void wxRendererNative_php::DrawTreeItemButton(wxWindow* win, wxDC& dc, const wxRect& rect, int flags)
@@ -37251,22 +37131,12 @@ void wxRendererNative_php::DrawTreeItemButton(wxWindow* win, wxDC& dc, const wxR
 		
 		wxMessageBox("Failed to call virtual method 'DrawTreeItemButton'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxRendererNative::DrawTreeItemButton(win, dc, rect, flags);
 
 }
 PHP_METHOD(php_wxRendererNative, Get)
@@ -37415,8 +37285,6 @@ wxSize wxRendererNative_php::GetCheckBoxSize(wxWindow* win)
 		
 		wxMessageBox("Failed to call virtual method 'GetCheckBoxSize'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -37427,15 +37295,7 @@ wxSize wxRendererNative_php::GetCheckBoxSize(wxWindow* win)
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return *(wxSize*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxRendererNative::GetCheckBoxSize(win);
 
 }
 PHP_METHOD(php_wxRendererNative, GetDefault)
@@ -37688,22 +37548,12 @@ int wxRendererNative_php::GetHeaderButtonHeight(wxWindow* win)
 		
 		wxMessageBox("Failed to call virtual method 'GetHeaderButtonHeight'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (int) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxRendererNative::GetHeaderButtonHeight(win);
 
 }
 int wxRendererNative_php::GetHeaderButtonMargin(wxWindow* win)
@@ -37748,22 +37598,12 @@ int wxRendererNative_php::GetHeaderButtonMargin(wxWindow* win)
 		
 		wxMessageBox("Failed to call virtual method 'GetHeaderButtonMargin'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (int) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxRendererNative::GetHeaderButtonMargin(win);
 
 }
 PHP_METHOD(php_wxRendererNative, Load)

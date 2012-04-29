@@ -3499,22 +3499,12 @@ void wxAuiTabArt_php::SetSizingInfo(const wxSize& tab_ctrl_size, size_t tab_coun
 		
 		wxMessageBox("Failed to call virtual method 'SetSizingInfo'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxAuiTabArt::SetSizingInfo(tab_ctrl_size, tab_count);
 
 }
 void wxAuiTabArt_php::SetSelectedFont(const wxFont& font)
@@ -3559,22 +3549,12 @@ void wxAuiTabArt_php::SetSelectedFont(const wxFont& font)
 		
 		wxMessageBox("Failed to call virtual method 'SetSelectedFont'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxAuiTabArt::SetSelectedFont(font);
 
 }
 void wxAuiTabArt_php::SetNormalFont(const wxFont& font)
@@ -3619,22 +3599,12 @@ void wxAuiTabArt_php::SetNormalFont(const wxFont& font)
 		
 		wxMessageBox("Failed to call virtual method 'SetNormalFont'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxAuiTabArt::SetNormalFont(font);
 
 }
 void wxAuiTabArt_php::SetMeasuringFont(const wxFont& font)
@@ -3679,22 +3649,12 @@ void wxAuiTabArt_php::SetMeasuringFont(const wxFont& font)
 		
 		wxMessageBox("Failed to call virtual method 'SetMeasuringFont'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxAuiTabArt::SetMeasuringFont(font);
 
 }
 void wxAuiTabArt_php::SetFlags(unsigned int flags)
@@ -3738,22 +3698,12 @@ void wxAuiTabArt_php::SetFlags(unsigned int flags)
 		
 		wxMessageBox("Failed to call virtual method 'SetFlags'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxAuiTabArt::SetFlags(flags);
 
 }
 void wxAuiTabArt_php::SetColour(const wxColour& colour)
@@ -3798,22 +3748,12 @@ void wxAuiTabArt_php::SetColour(const wxColour& colour)
 		
 		wxMessageBox("Failed to call virtual method 'SetColour'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxAuiTabArt::SetColour(colour);
 
 }
 void wxAuiTabArt_php::SetActiveColour(const wxColour& colour)
@@ -3858,22 +3798,12 @@ void wxAuiTabArt_php::SetActiveColour(const wxColour& colour)
 		
 		wxMessageBox("Failed to call virtual method 'SetActiveColour'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxAuiTabArt::SetActiveColour(colour);
 
 }
 wxSize wxAuiTabArt_php::GetTabSize(wxDC& dc, wxWindow* wnd, const wxString& caption, const wxBitmap& bitmap, bool active, int close_button_state, int* x_extent)
@@ -3929,8 +3859,6 @@ wxSize wxAuiTabArt_php::GetTabSize(wxDC& dc, wxWindow* wnd, const wxString& capt
 		
 		wxMessageBox("Failed to call virtual method 'GetTabSize'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -3941,15 +3869,7 @@ wxSize wxAuiTabArt_php::GetTabSize(wxDC& dc, wxWindow* wnd, const wxString& capt
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return *(wxSize*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxAuiTabArt::GetTabSize(dc, wnd, caption, bitmap, active, close_button_state, x_extent);
 
 }
 int wxAuiTabArt_php::GetIndentSize()
@@ -3987,22 +3907,12 @@ int wxAuiTabArt_php::GetIndentSize()
 		
 		wxMessageBox("Failed to call virtual method 'GetIndentSize'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (int) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxAuiTabArt::GetIndentSize();
 
 }
 void wxAuiTabArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxRect& in_rect, int bitmap_id, int button_state, int orientation, wxRect* out_rect)
@@ -4056,22 +3966,12 @@ void wxAuiTabArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxRect& in_rect,
 		
 		wxMessageBox("Failed to call virtual method 'DrawButton'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxAuiTabArt::DrawButton(dc, wnd, in_rect, bitmap_id, button_state, orientation, out_rect);
 
 }
 void wxAuiTabArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect)
@@ -4120,22 +4020,12 @@ void wxAuiTabArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect
 		
 		wxMessageBox("Failed to call virtual method 'DrawBackground'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxAuiTabArt::DrawBackground(dc, wnd, rect);
 
 }
 wxAuiTabArt* wxAuiTabArt_php::Clone()
@@ -4173,8 +4063,6 @@ wxAuiTabArt* wxAuiTabArt_php::Clone()
 		
 		wxMessageBox("Failed to call virtual method 'Clone'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -4185,15 +4073,7 @@ wxAuiTabArt* wxAuiTabArt_php::Clone()
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return (wxAuiTabArt*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxAuiTabArt::Clone();
 
 }
 void php_wxAuiDockArt_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
@@ -4358,22 +4238,12 @@ void wxAuiDockArt_php::SetMetric(int id, int new_val)
 		
 		wxMessageBox("Failed to call virtual method 'SetMetric'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxAuiDockArt::SetMetric(id, new_val);
 
 }
 void wxAuiDockArt_php::SetFont(int id, const wxFont& font)
@@ -4419,22 +4289,12 @@ void wxAuiDockArt_php::SetFont(int id, const wxFont& font)
 		
 		wxMessageBox("Failed to call virtual method 'SetFont'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxAuiDockArt::SetFont(id, font);
 
 }
 int wxAuiDockArt_php::GetMetric(int id)
@@ -4478,22 +4338,12 @@ int wxAuiDockArt_php::GetMetric(int id)
 		
 		wxMessageBox("Failed to call virtual method 'GetMetric'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (int) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxAuiDockArt::GetMetric(id);
 
 }
 void wxAuiDockArt_php::SetColour(int id, const wxColour& colour)
@@ -4539,22 +4389,12 @@ void wxAuiDockArt_php::SetColour(int id, const wxColour& colour)
 		
 		wxMessageBox("Failed to call virtual method 'SetColour'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxAuiDockArt::SetColour(id, colour);
 
 }
 wxFont wxAuiDockArt_php::GetFont(int id)
@@ -4598,8 +4438,6 @@ wxFont wxAuiDockArt_php::GetFont(int id)
 		
 		wxMessageBox("Failed to call virtual method 'GetFont'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -4610,15 +4448,7 @@ wxFont wxAuiDockArt_php::GetFont(int id)
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return *(wxFont*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxAuiDockArt::GetFont(id);
 
 }
 wxColour wxAuiDockArt_php::GetColour(int id)
@@ -4662,8 +4492,6 @@ wxColour wxAuiDockArt_php::GetColour(int id)
 		
 		wxMessageBox("Failed to call virtual method 'GetColour'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -4674,15 +4502,7 @@ wxColour wxAuiDockArt_php::GetColour(int id)
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return *(wxColour*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxAuiDockArt::GetColour(id);
 
 }
 void wxAuiDockArt_php::DrawSash(wxDC& dc, wxWindow* window, int orientation, const wxRect& rect)
@@ -4732,22 +4552,12 @@ void wxAuiDockArt_php::DrawSash(wxDC& dc, wxWindow* window, int orientation, con
 		
 		wxMessageBox("Failed to call virtual method 'DrawSash'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxAuiDockArt::DrawSash(dc, window, orientation, rect);
 
 }
 void wxAuiDockArt_php::DrawPaneButton(wxDC& dc, wxWindow* window, int button, int button_state, const wxRect& rect, wxAuiPaneInfo& pane)
@@ -4800,22 +4610,12 @@ void wxAuiDockArt_php::DrawPaneButton(wxDC& dc, wxWindow* window, int button, in
 		
 		wxMessageBox("Failed to call virtual method 'DrawPaneButton'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxAuiDockArt::DrawPaneButton(dc, window, button, button_state, rect, pane);
 
 }
 void wxAuiDockArt_php::DrawGripper(wxDC& dc, wxWindow* window, const wxRect& rect, wxAuiPaneInfo& pane)
@@ -4866,22 +4666,12 @@ void wxAuiDockArt_php::DrawGripper(wxDC& dc, wxWindow* window, const wxRect& rec
 		
 		wxMessageBox("Failed to call virtual method 'DrawGripper'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxAuiDockArt::DrawGripper(dc, window, rect, pane);
 
 }
 void wxAuiDockArt_php::DrawCaption(wxDC& dc, wxWindow* window, const wxString& text, const wxRect& rect, wxAuiPaneInfo& pane)
@@ -4936,22 +4726,12 @@ void wxAuiDockArt_php::DrawCaption(wxDC& dc, wxWindow* window, const wxString& t
 		
 		wxMessageBox("Failed to call virtual method 'DrawCaption'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxAuiDockArt::DrawCaption(dc, window, text, rect, pane);
 
 }
 void wxAuiDockArt_php::DrawBorder(wxDC& dc, wxWindow* window, const wxRect& rect, wxAuiPaneInfo& pane)
@@ -5002,22 +4782,12 @@ void wxAuiDockArt_php::DrawBorder(wxDC& dc, wxWindow* window, const wxRect& rect
 		
 		wxMessageBox("Failed to call virtual method 'DrawBorder'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxAuiDockArt::DrawBorder(dc, window, rect, pane);
 
 }
 void wxAuiDockArt_php::DrawBackground(wxDC& dc, wxWindow* window, int orientation, const wxRect& rect)
@@ -5067,22 +4837,12 @@ void wxAuiDockArt_php::DrawBackground(wxDC& dc, wxWindow* window, int orientatio
 		
 		wxMessageBox("Failed to call virtual method 'DrawBackground'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxAuiDockArt::DrawBackground(dc, window, orientation, rect);
 
 }
 void php_wxAuiManager_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
@@ -20687,8 +20447,6 @@ wxAuiToolBarArt* wxAuiToolBarArt_php::Clone()
 		
 		wxMessageBox("Failed to call virtual method 'Clone'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -20699,15 +20457,7 @@ wxAuiToolBarArt* wxAuiToolBarArt_php::Clone()
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return (wxAuiToolBarArt*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxAuiToolBarArt::Clone();
 
 }
 void wxAuiToolBarArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect)
@@ -20756,22 +20506,12 @@ void wxAuiToolBarArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& 
 		
 		wxMessageBox("Failed to call virtual method 'DrawBackground'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxAuiToolBarArt::DrawBackground(dc, wnd, rect);
 
 }
 void wxAuiToolBarArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxAuiToolBarItem& item, const wxRect& rect)
@@ -20822,22 +20562,12 @@ void wxAuiToolBarArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxAuiToolBar
 		
 		wxMessageBox("Failed to call virtual method 'DrawButton'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxAuiToolBarArt::DrawButton(dc, wnd, item, rect);
 
 }
 void wxAuiToolBarArt_php::DrawControlLabel(wxDC& dc, wxWindow* wnd, const wxAuiToolBarItem& item, const wxRect& rect)
@@ -20888,22 +20618,12 @@ void wxAuiToolBarArt_php::DrawControlLabel(wxDC& dc, wxWindow* wnd, const wxAuiT
 		
 		wxMessageBox("Failed to call virtual method 'DrawControlLabel'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxAuiToolBarArt::DrawControlLabel(dc, wnd, item, rect);
 
 }
 void wxAuiToolBarArt_php::DrawDropDownButton(wxDC& dc, wxWindow* wnd, const wxAuiToolBarItem& item, const wxRect& rect)
@@ -20954,22 +20674,12 @@ void wxAuiToolBarArt_php::DrawDropDownButton(wxDC& dc, wxWindow* wnd, const wxAu
 		
 		wxMessageBox("Failed to call virtual method 'DrawDropDownButton'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxAuiToolBarArt::DrawDropDownButton(dc, wnd, item, rect);
 
 }
 void wxAuiToolBarArt_php::DrawGripper(wxDC& dc, wxWindow* wnd, const wxRect& rect)
@@ -21018,22 +20728,12 @@ void wxAuiToolBarArt_php::DrawGripper(wxDC& dc, wxWindow* wnd, const wxRect& rec
 		
 		wxMessageBox("Failed to call virtual method 'DrawGripper'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxAuiToolBarArt::DrawGripper(dc, wnd, rect);
 
 }
 void wxAuiToolBarArt_php::DrawLabel(wxDC& dc, wxWindow* wnd, const wxAuiToolBarItem& item, const wxRect& rect)
@@ -21084,22 +20784,12 @@ void wxAuiToolBarArt_php::DrawLabel(wxDC& dc, wxWindow* wnd, const wxAuiToolBarI
 		
 		wxMessageBox("Failed to call virtual method 'DrawLabel'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxAuiToolBarArt::DrawLabel(dc, wnd, item, rect);
 
 }
 void wxAuiToolBarArt_php::DrawOverflowButton(wxDC& dc, wxWindow* wnd, const wxRect& rect, int state)
@@ -21149,22 +20839,12 @@ void wxAuiToolBarArt_php::DrawOverflowButton(wxDC& dc, wxWindow* wnd, const wxRe
 		
 		wxMessageBox("Failed to call virtual method 'DrawOverflowButton'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxAuiToolBarArt::DrawOverflowButton(dc, wnd, rect, state);
 
 }
 void wxAuiToolBarArt_php::DrawSeparator(wxDC& dc, wxWindow* wnd, const wxRect& rect)
@@ -21213,22 +20893,12 @@ void wxAuiToolBarArt_php::DrawSeparator(wxDC& dc, wxWindow* wnd, const wxRect& r
 		
 		wxMessageBox("Failed to call virtual method 'DrawSeparator'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxAuiToolBarArt::DrawSeparator(dc, wnd, rect);
 
 }
 int wxAuiToolBarArt_php::GetElementSize(int element_id)
@@ -21272,22 +20942,12 @@ int wxAuiToolBarArt_php::GetElementSize(int element_id)
 		
 		wxMessageBox("Failed to call virtual method 'GetElementSize'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (int) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxAuiToolBarArt::GetElementSize(element_id);
 
 }
 unsigned int wxAuiToolBarArt_php::GetFlags()
@@ -21325,22 +20985,12 @@ unsigned int wxAuiToolBarArt_php::GetFlags()
 		
 		wxMessageBox("Failed to call virtual method 'GetFlags'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (unsigned int) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxAuiToolBarArt::GetFlags();
 
 }
 wxFont wxAuiToolBarArt_php::GetFont()
@@ -21378,8 +21028,6 @@ wxFont wxAuiToolBarArt_php::GetFont()
 		
 		wxMessageBox("Failed to call virtual method 'GetFont'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -21390,15 +21038,7 @@ wxFont wxAuiToolBarArt_php::GetFont()
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return *(wxFont*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxAuiToolBarArt::GetFont();
 
 }
 wxSize wxAuiToolBarArt_php::GetLabelSize(wxDC& dc, wxWindow* wnd, const wxAuiToolBarItem& item)
@@ -21447,8 +21087,6 @@ wxSize wxAuiToolBarArt_php::GetLabelSize(wxDC& dc, wxWindow* wnd, const wxAuiToo
 		
 		wxMessageBox("Failed to call virtual method 'GetLabelSize'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -21459,15 +21097,7 @@ wxSize wxAuiToolBarArt_php::GetLabelSize(wxDC& dc, wxWindow* wnd, const wxAuiToo
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return *(wxSize*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxAuiToolBarArt::GetLabelSize(dc, wnd, item);
 
 }
 int wxAuiToolBarArt_php::GetTextOrientation()
@@ -21505,22 +21135,12 @@ int wxAuiToolBarArt_php::GetTextOrientation()
 		
 		wxMessageBox("Failed to call virtual method 'GetTextOrientation'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (int) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxAuiToolBarArt::GetTextOrientation();
 
 }
 wxSize wxAuiToolBarArt_php::GetToolSize(wxDC& dc, wxWindow* wnd, const wxAuiToolBarItem& item)
@@ -21569,8 +21189,6 @@ wxSize wxAuiToolBarArt_php::GetToolSize(wxDC& dc, wxWindow* wnd, const wxAuiTool
 		
 		wxMessageBox("Failed to call virtual method 'GetToolSize'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -21581,15 +21199,7 @@ wxSize wxAuiToolBarArt_php::GetToolSize(wxDC& dc, wxWindow* wnd, const wxAuiTool
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return *(wxSize*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxAuiToolBarArt::GetToolSize(dc, wnd, item);
 
 }
 void wxAuiToolBarArt_php::SetElementSize(int element_id, int size)
@@ -21634,22 +21244,12 @@ void wxAuiToolBarArt_php::SetElementSize(int element_id, int size)
 		
 		wxMessageBox("Failed to call virtual method 'SetElementSize'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxAuiToolBarArt::SetElementSize(element_id, size);
 
 }
 void wxAuiToolBarArt_php::SetFlags(unsigned int flags)
@@ -21693,22 +21293,12 @@ void wxAuiToolBarArt_php::SetFlags(unsigned int flags)
 		
 		wxMessageBox("Failed to call virtual method 'SetFlags'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxAuiToolBarArt::SetFlags(flags);
 
 }
 void wxAuiToolBarArt_php::SetFont(const wxFont& font)
@@ -21753,22 +21343,12 @@ void wxAuiToolBarArt_php::SetFont(const wxFont& font)
 		
 		wxMessageBox("Failed to call virtual method 'SetFont'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxAuiToolBarArt::SetFont(font);
 
 }
 void wxAuiToolBarArt_php::SetTextOrientation(int orientation)
@@ -21812,22 +21392,12 @@ void wxAuiToolBarArt_php::SetTextOrientation(int orientation)
 		
 		wxMessageBox("Failed to call virtual method 'SetTextOrientation'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxAuiToolBarArt::SetTextOrientation(orientation);
 
 }
 void php_wxAuiDefaultToolBarArt_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 

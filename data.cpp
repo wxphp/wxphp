@@ -25714,22 +25714,12 @@ bool wxVariantData_php::Eq(wxVariantData& data)const
 		
 		wxMessageBox("Failed to call virtual method 'Eq'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxVariantData::Eq(data);
 
 }
 wxString wxVariantData_php::GetType()const
@@ -25767,22 +25757,12 @@ wxString wxVariantData_php::GetType()const
 		
 		wxMessageBox("Failed to call virtual method 'GetType'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxVariantData::GetType();
 
 }
 PHP_METHOD(php_wxVariantData, GetValueClassInfo)

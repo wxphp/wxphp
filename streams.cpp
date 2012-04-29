@@ -4164,22 +4164,12 @@ size_t wxInputStream_php::OnSysRead(void* buffer, size_t bufsize)
 		
 		wxMessageBox("Failed to call virtual method 'OnSysRead'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (size_t) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxInputStream::OnSysRead(buffer, bufsize);
 
 }
 PHP_METHOD(php_wxInputStream, LastRead)

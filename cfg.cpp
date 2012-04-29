@@ -236,22 +236,12 @@ bool wxConfigBase_php::DeleteAll()
 		
 		wxMessageBox("Failed to call virtual method 'DeleteAll'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxConfigBase::DeleteAll();
 
 }
 bool wxConfigBase_php::DeleteEntry(const wxString& key, bool bDeleteGroupIfEmpty)
@@ -299,22 +289,12 @@ bool wxConfigBase_php::DeleteEntry(const wxString& key, bool bDeleteGroupIfEmpty
 		
 		wxMessageBox("Failed to call virtual method 'DeleteEntry'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxConfigBase::DeleteEntry(key, bDeleteGroupIfEmpty);
 
 }
 bool wxConfigBase_php::DeleteGroup(const wxString& key)
@@ -361,22 +341,12 @@ bool wxConfigBase_php::DeleteGroup(const wxString& key)
 		
 		wxMessageBox("Failed to call virtual method 'DeleteGroup'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxConfigBase::DeleteGroup(key);
 
 }
 PHP_METHOD(php_wxConfigBase, DontCreateOnDemand)
@@ -616,22 +586,12 @@ bool wxConfigBase_php::Flush(bool bCurrentOnly)
 		
 		wxMessageBox("Failed to call virtual method 'Flush'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxConfigBase::Flush(bCurrentOnly);
 
 }
 PHP_METHOD(php_wxConfigBase, Get)
@@ -1034,22 +994,12 @@ bool wxConfigBase_php::GetFirstEntry(wxString& str, long& index)const
 		
 		wxMessageBox("Failed to call virtual method 'GetFirstEntry'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxConfigBase::GetFirstEntry(str, index);
 
 }
 bool wxConfigBase_php::GetFirstGroup(wxString& str, long& index)const
@@ -1097,22 +1047,12 @@ bool wxConfigBase_php::GetFirstGroup(wxString& str, long& index)const
 		
 		wxMessageBox("Failed to call virtual method 'GetFirstGroup'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxConfigBase::GetFirstGroup(str, index);
 
 }
 bool wxConfigBase_php::GetNextEntry(wxString& str, long& index)const
@@ -1160,22 +1100,12 @@ bool wxConfigBase_php::GetNextEntry(wxString& str, long& index)const
 		
 		wxMessageBox("Failed to call virtual method 'GetNextEntry'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxConfigBase::GetNextEntry(str, index);
 
 }
 bool wxConfigBase_php::GetNextGroup(wxString& str, long& index)const
@@ -1223,22 +1153,12 @@ bool wxConfigBase_php::GetNextGroup(wxString& str, long& index)const
 		
 		wxMessageBox("Failed to call virtual method 'GetNextGroup'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxConfigBase::GetNextGroup(str, index);
 
 }
 size_t wxConfigBase_php::GetNumberOfEntries(bool bRecursive)const
@@ -1282,22 +1202,12 @@ size_t wxConfigBase_php::GetNumberOfEntries(bool bRecursive)const
 		
 		wxMessageBox("Failed to call virtual method 'GetNumberOfEntries'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (size_t) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxConfigBase::GetNumberOfEntries(bRecursive);
 
 }
 size_t wxConfigBase_php::GetNumberOfGroups(bool bRecursive)const
@@ -1341,22 +1251,12 @@ size_t wxConfigBase_php::GetNumberOfGroups(bool bRecursive)const
 		
 		wxMessageBox("Failed to call virtual method 'GetNumberOfGroups'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (size_t) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxConfigBase::GetNumberOfGroups(bRecursive);
 
 }
 const wxString& wxConfigBase_php::GetPath()const
@@ -1394,22 +1294,12 @@ const wxString& wxConfigBase_php::GetPath()const
 		
 		wxMessageBox("Failed to call virtual method 'GetPath'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxConfigBase::GetPath();
 
 }
 PHP_METHOD(php_wxConfigBase, GetVendorName)
@@ -1560,22 +1450,12 @@ bool wxConfigBase_php::HasEntry(const wxString& strName)const
 		
 		wxMessageBox("Failed to call virtual method 'HasEntry'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxConfigBase::HasEntry(strName);
 
 }
 bool wxConfigBase_php::HasGroup(const wxString& strName)const
@@ -1622,22 +1502,12 @@ bool wxConfigBase_php::HasGroup(const wxString& strName)const
 		
 		wxMessageBox("Failed to call virtual method 'HasGroup'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxConfigBase::HasGroup(strName);
 
 }
 PHP_METHOD(php_wxConfigBase, IsExpandingEnvVars)
@@ -2881,22 +2751,12 @@ bool wxConfigBase_php::RenameEntry(const wxString& oldName, const wxString& newN
 		
 		wxMessageBox("Failed to call virtual method 'RenameEntry'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxConfigBase::RenameEntry(oldName, newName);
 
 }
 bool wxConfigBase_php::RenameGroup(const wxString& oldName, const wxString& newName)
@@ -2947,22 +2807,12 @@ bool wxConfigBase_php::RenameGroup(const wxString& oldName, const wxString& newN
 		
 		wxMessageBox("Failed to call virtual method 'RenameGroup'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxConfigBase::RenameGroup(oldName, newName);
 
 }
 PHP_METHOD(php_wxConfigBase, Set)
@@ -3263,22 +3113,12 @@ void wxConfigBase_php::SetPath(const wxString& strPath)
 		
 		wxMessageBox("Failed to call virtual method 'SetPath'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxConfigBase::SetPath(strPath);
 
 }
 PHP_METHOD(php_wxConfigBase, SetRecordDefaults)

@@ -2001,22 +2001,12 @@ bool wxBookCtrlBase_php::InsertPage(size_t index, wxWindow* page, const wxString
 		
 		wxMessageBox("Failed to call virtual method 'InsertPage'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxBookCtrlBase::InsertPage(index, page, text, select, imageId);
 
 }
 PHP_METHOD(php_wxBookCtrlBase, RemovePage)
@@ -2200,22 +2190,12 @@ bool wxBookCtrlBase_php::SetPageImage(size_t page, int image)
 		
 		wxMessageBox("Failed to call virtual method 'SetPageImage'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxBookCtrlBase::SetPageImage(page, image);
 
 }
 PHP_METHOD(php_wxBookCtrlBase, SetPageSize)
@@ -2424,22 +2404,12 @@ bool wxBookCtrlBase_php::SetPageText(size_t page, const wxString& text)
 		
 		wxMessageBox("Failed to call virtual method 'SetPageText'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxBookCtrlBase::SetPageText(page, text);
 
 }
 int wxBookCtrlBase_php::SetSelection(size_t page)
@@ -2483,22 +2453,12 @@ int wxBookCtrlBase_php::SetSelection(size_t page)
 		
 		wxMessageBox("Failed to call virtual method 'SetSelection'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (int) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxBookCtrlBase::SetSelection(page);
 
 }
 int wxBookCtrlBase_php::GetSelection()const
@@ -2536,22 +2496,12 @@ int wxBookCtrlBase_php::GetSelection()const
 		
 		wxMessageBox("Failed to call virtual method 'GetSelection'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (int) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxBookCtrlBase::GetSelection();
 
 }
 wxString wxBookCtrlBase_php::GetPageText(size_t nPage)const
@@ -2595,22 +2545,12 @@ wxString wxBookCtrlBase_php::GetPageText(size_t nPage)const
 		
 		wxMessageBox("Failed to call virtual method 'GetPageText'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxBookCtrlBase::GetPageText(nPage);
 
 }
 int wxBookCtrlBase_php::GetPageImage(size_t nPage)const
@@ -2654,22 +2594,12 @@ int wxBookCtrlBase_php::GetPageImage(size_t nPage)const
 		
 		wxMessageBox("Failed to call virtual method 'GetPageImage'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (int) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxBookCtrlBase::GetPageImage(nPage);
 
 }
 int wxBookCtrlBase_php::ChangeSelection(size_t page)
@@ -2713,22 +2643,12 @@ int wxBookCtrlBase_php::ChangeSelection(size_t page)
 		
 		wxMessageBox("Failed to call virtual method 'ChangeSelection'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (int) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxBookCtrlBase::ChangeSelection(page);
 
 }
 void php_wxBookCtrlEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 

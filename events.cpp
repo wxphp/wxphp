@@ -132,22 +132,12 @@ int wxEventFilter_php::FilterEvent(wxEvent& event)
 		
 		wxMessageBox("Failed to call virtual method 'FilterEvent'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (int) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxEventFilter::FilterEvent(event);
 
 }
 PHP_METHOD(php_wxEventFilter, __construct)
@@ -12052,8 +12042,6 @@ wxEvent* wxEvent_php::Clone()const
 		
 		wxMessageBox("Failed to call virtual method 'Clone'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -12064,15 +12052,7 @@ wxEvent* wxEvent_php::Clone()const
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return (wxEvent*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxEvent::Clone();
 
 }
 void php_wxEventBlocker_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
@@ -51647,22 +51627,12 @@ bool wxMouseEventsManager_php::MouseClicked(int item)
 		
 		wxMessageBox("Failed to call virtual method 'MouseClicked'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxMouseEventsManager::MouseClicked(item);
 
 }
 bool wxMouseEventsManager_php::MouseDragBegin(int item, const wxPoint& pos)
@@ -51708,22 +51678,12 @@ bool wxMouseEventsManager_php::MouseDragBegin(int item, const wxPoint& pos)
 		
 		wxMessageBox("Failed to call virtual method 'MouseDragBegin'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxMouseEventsManager::MouseDragBegin(item, pos);
 
 }
 void wxMouseEventsManager_php::MouseDragCancelled(int item)
@@ -51767,22 +51727,12 @@ void wxMouseEventsManager_php::MouseDragCancelled(int item)
 		
 		wxMessageBox("Failed to call virtual method 'MouseDragCancelled'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxMouseEventsManager::MouseDragCancelled(item);
 
 }
 void wxMouseEventsManager_php::MouseDragEnd(int item, const wxPoint& pos)
@@ -51828,22 +51778,12 @@ void wxMouseEventsManager_php::MouseDragEnd(int item, const wxPoint& pos)
 		
 		wxMessageBox("Failed to call virtual method 'MouseDragEnd'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxMouseEventsManager::MouseDragEnd(item, pos);
 
 }
 void wxMouseEventsManager_php::MouseDragging(int item, const wxPoint& pos)
@@ -51889,22 +51829,12 @@ void wxMouseEventsManager_php::MouseDragging(int item, const wxPoint& pos)
 		
 		wxMessageBox("Failed to call virtual method 'MouseDragging'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxMouseEventsManager::MouseDragging(item, pos);
 
 }
 int wxMouseEventsManager_php::MouseHitTest(const wxPoint& pos)
@@ -51949,22 +51879,12 @@ int wxMouseEventsManager_php::MouseHitTest(const wxPoint& pos)
 		
 		wxMessageBox("Failed to call virtual method 'MouseHitTest'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (int) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxMouseEventsManager::MouseHitTest(pos);
 
 }
 PHP_METHOD(php_wxMouseEventsManager, __construct)

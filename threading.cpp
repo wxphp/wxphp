@@ -3820,22 +3820,12 @@ void* wxThread_php::Entry()
 		
 		wxMessageBox("Failed to call virtual method 'Entry'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (void*) Z_STRVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxThread::Entry();
 
 }
 PHP_METHOD(php_wxThread, Wait)

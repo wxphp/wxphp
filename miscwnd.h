@@ -584,7 +584,6 @@ static zend_function_entry php_wxRichToolTip_functions[] = {
 	PHP_ME(php_wxRichToolTip, SetIcon, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxRichToolTip, SetTimeout, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxRichToolTip, SetTipKind, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxRichToolTip, SetTitleFont, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxRichToolTip, ShowFor, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxRichToolTip, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END

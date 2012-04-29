@@ -125,22 +125,12 @@ bool wxEventLoopBase_php::Dispatch()
 		
 		wxMessageBox("Failed to call virtual method 'Dispatch'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxEventLoopBase::Dispatch();
 
 }
 int wxEventLoopBase_php::DispatchTimeout(unsigned long timeout)
@@ -184,22 +174,12 @@ int wxEventLoopBase_php::DispatchTimeout(unsigned long timeout)
 		
 		wxMessageBox("Failed to call virtual method 'DispatchTimeout'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (int) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxEventLoopBase::DispatchTimeout(timeout);
 
 }
 void wxEventLoopBase_php::Exit(int rc)
@@ -243,22 +223,12 @@ void wxEventLoopBase_php::Exit(int rc)
 		
 		wxMessageBox("Failed to call virtual method 'Exit'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxEventLoopBase::Exit(rc);
 
 }
 PHP_METHOD(php_wxEventLoopBase, GetActive)
@@ -910,22 +880,12 @@ bool wxEventLoopBase_php::Pending()const
 		
 		wxMessageBox("Failed to call virtual method 'Pending'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxEventLoopBase::Pending();
 
 }
 PHP_METHOD(php_wxEventLoopBase, ProcessIdle)
@@ -1053,22 +1013,12 @@ int wxEventLoopBase_php::Run()
 		
 		wxMessageBox("Failed to call virtual method 'Run'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (int) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxEventLoopBase::Run();
 
 }
 PHP_METHOD(php_wxEventLoopBase, SetActive)
@@ -1216,22 +1166,12 @@ void wxEventLoopBase_php::WakeUp()
 		
 		wxMessageBox("Failed to call virtual method 'WakeUp'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxEventLoopBase::WakeUp();
 
 }
 PHP_METHOD(php_wxEventLoopBase, WakeUpIdle)
@@ -1746,22 +1686,12 @@ void wxModule_php::OnExit()
 		
 		wxMessageBox("Failed to call virtual method 'OnExit'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxModule::OnExit();
 
 }
 bool wxModule_php::OnInit()
@@ -1799,22 +1729,12 @@ bool wxModule_php::OnInit()
 		
 		wxMessageBox("Failed to call virtual method 'OnInit'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxModule::OnInit();
 
 }
 PHP_METHOD(php_wxModule, __construct)

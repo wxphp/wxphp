@@ -119249,40 +119249,6 @@
 				]
 			}
 		],
-		"SetPolarCoordinates":[
-			{
-				"return_type":"void",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"wxDouble",
-					"wxDouble"
-				],
-				"parameters_is_array":[
-					false,
-					false
-				],
-				"parameters_extra":[
-					false,
-					false
-				],
-				"parameters_name":[
-					"angle",
-					"length"
-				],
-				"parameters_required":[
-					true,
-					true
-				],
-				"parameters_default_value":[
-					null,
-					null
-				]
-			}
-		],
 		"Normalize":[
 			{
 				"return_type":"void",
@@ -119742,40 +119708,6 @@
 				],
 				"parameters_default_value":[
 					
-				]
-			}
-		],
-		"SetPolarCoordinates":[
-			{
-				"return_type":"void",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"wxInt32",
-					"wxInt32"
-				],
-				"parameters_is_array":[
-					false,
-					false
-				],
-				"parameters_extra":[
-					false,
-					false
-				],
-				"parameters_name":[
-					"angle",
-					"length"
-				],
-				"parameters_required":[
-					true,
-					true
-				],
-				"parameters_default_value":[
-					null,
-					null
 				]
 			}
 		],
@@ -166459,34 +166391,6 @@
 				],
 				"parameters_name":[
 					"tipKind"
-				],
-				"parameters_required":[
-					true
-				],
-				"parameters_default_value":[
-					null
-				]
-			}
-		],
-		"SetTitleFont":[
-			{
-				"return_type":"void",
-				"constant":false,
-				"virtual":false,
-				"pure_virtual":false,
-				"static":false,
-				"protected":false,
-				"parameters_type":[
-					"const wxFont&"
-				],
-				"parameters_is_array":[
-					false
-				],
-				"parameters_extra":[
-					false
-				],
-				"parameters_name":[
-					"font"
 				],
 				"parameters_required":[
 					true

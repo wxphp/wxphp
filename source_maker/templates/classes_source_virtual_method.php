@@ -45,15 +45,20 @@
 		wxMessageBox("Failed to call virtual method '<?=$method_name?>'!", "Error");
 <? } ?>
 	}
+<? if(!$method_definition["pure_virtual"]){ ?>
 	else
 	{
+<? } ?>
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		<?=class_virtual_method_return($method_definition, $method_name, $class_name)?>
+<? if(!$method_definition["pure_virtual"]){ ?>
 	}
+<? } ?>
 	
+<? if(!$method_definition["pure_virtual"]){ ?>
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Calling original method\n");
 	php_printf("===========================================\n\n");
@@ -64,6 +69,7 @@
 	return <?=$class_name?>::<?=$method_name?>(<?=function_arguments_call_string($method_definition)?>);
 <? }else{ ?>
 	<?=$class_name?>::<?=$method_name?>(<?=function_arguments_call_string($method_definition)?>);
+<? } ?>
 <? } ?>
 
 }

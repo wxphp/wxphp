@@ -138,8 +138,6 @@ wxSize wxGridCellRenderer_php::GetBestSize(wxGrid& grid, wxGridCellAttr& attr, w
 		
 		wxMessageBox("Failed to call virtual method 'GetBestSize'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -150,15 +148,7 @@ wxSize wxGridCellRenderer_php::GetBestSize(wxGrid& grid, wxGridCellAttr& attr, w
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return *(wxSize*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxGridCellRenderer::GetBestSize(grid, attr, dc, row, col);
 
 }
 void wxGridCellRenderer_php::Draw(wxGrid& grid, wxGridCellAttr& attr, wxDC& dc, const wxRect& rect, int row, int col, bool isSelected)
@@ -212,22 +202,12 @@ void wxGridCellRenderer_php::Draw(wxGrid& grid, wxGridCellAttr& attr, wxDC& dc, 
 		
 		wxMessageBox("Failed to call virtual method 'Draw'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxGridCellRenderer::Draw(grid, attr, dc, rect, row, col, isSelected);
 
 }
 wxGridCellRenderer* wxGridCellRenderer_php::Clone()const
@@ -265,8 +245,6 @@ wxGridCellRenderer* wxGridCellRenderer_php::Clone()const
 		
 		wxMessageBox("Failed to call virtual method 'Clone'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -277,15 +255,7 @@ wxGridCellRenderer* wxGridCellRenderer_php::Clone()const
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return (wxGridCellRenderer*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxGridCellRenderer::Clone();
 
 }
 void php_wxGridCellAutoWrapStringRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
@@ -2077,22 +2047,12 @@ void wxGridCellEditor_php::ApplyEdit(int row, int col, wxGrid* grid)
 		
 		wxMessageBox("Failed to call virtual method 'ApplyEdit'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxGridCellEditor::ApplyEdit(row, col, grid);
 
 }
 void wxGridCellEditor_php::BeginEdit(int row, int col, wxGrid* grid)
@@ -2139,22 +2099,12 @@ void wxGridCellEditor_php::BeginEdit(int row, int col, wxGrid* grid)
 		
 		wxMessageBox("Failed to call virtual method 'BeginEdit'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxGridCellEditor::BeginEdit(row, col, grid);
 
 }
 wxGridCellEditor* wxGridCellEditor_php::Clone()const
@@ -2192,8 +2142,6 @@ wxGridCellEditor* wxGridCellEditor_php::Clone()const
 		
 		wxMessageBox("Failed to call virtual method 'Clone'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -2204,15 +2152,7 @@ wxGridCellEditor* wxGridCellEditor_php::Clone()const
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return (wxGridCellEditor*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxGridCellEditor::Clone();
 
 }
 void wxGridCellEditor_php::Create(wxWindow* parent, wxWindowID id, wxEvtHandler* evtHandler)
@@ -2260,22 +2200,12 @@ void wxGridCellEditor_php::Create(wxWindow* parent, wxWindowID id, wxEvtHandler*
 		
 		wxMessageBox("Failed to call virtual method 'Create'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxGridCellEditor::Create(parent, id, evtHandler);
 
 }
 PHP_METHOD(php_wxGridCellEditor, Destroy)
@@ -2468,22 +2398,12 @@ bool wxGridCellEditor_php::EndEdit(int row, int col, const wxGrid* grid, const w
 		
 		wxMessageBox("Failed to call virtual method 'EndEdit'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxGridCellEditor::EndEdit(row, col, grid, oldval, newval);
 
 }
 PHP_METHOD(php_wxGridCellEditor, HandleReturn)
@@ -3161,22 +3081,12 @@ void wxGridCellEditor_php::Reset()
 		
 		wxMessageBox("Failed to call virtual method 'Reset'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxGridCellEditor::Reset();
 
 }
 PHP_METHOD(php_wxGridCellEditor, Show)
@@ -9306,22 +9216,12 @@ int wxGridTableBase_php::GetNumberCols()
 		
 		wxMessageBox("Failed to call virtual method 'GetNumberCols'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (int) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxGridTableBase::GetNumberCols();
 
 }
 int wxGridTableBase_php::GetNumberRows()
@@ -9359,22 +9259,12 @@ int wxGridTableBase_php::GetNumberRows()
 		
 		wxMessageBox("Failed to call virtual method 'GetNumberRows'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (int) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxGridTableBase::GetNumberRows();
 
 }
 PHP_METHOD(php_wxGridTableBase, GetRowLabelValue)
@@ -9703,22 +9593,12 @@ wxString wxGridTableBase_php::GetValue(int row, int col)
 		
 		wxMessageBox("Failed to call virtual method 'GetValue'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxGridTableBase::GetValue(row, col);
 
 }
 PHP_METHOD(php_wxGridTableBase, GetValueAsBool)
@@ -11206,22 +11086,12 @@ void wxGridTableBase_php::SetValue(int row, int col, const wxString& value)
 		
 		wxMessageBox("Failed to call virtual method 'SetValue'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxGridTableBase::SetValue(row, col, value);
 
 }
 PHP_METHOD(php_wxGridTableBase, SetValueAsBool)

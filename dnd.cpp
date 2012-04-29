@@ -1855,22 +1855,12 @@ void wxDataObject_php::GetAllFormats(wxDataFormat* formats, Direction dir)const
 		
 		wxMessageBox("Failed to call virtual method 'GetAllFormats'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxDataObject::GetAllFormats(formats, dir);
 
 }
 bool wxDataObject_php::GetDataHere(const wxDataFormat& format, void* buf)const
@@ -1916,22 +1906,12 @@ bool wxDataObject_php::GetDataHere(const wxDataFormat& format, void* buf)const
 		
 		wxMessageBox("Failed to call virtual method 'GetDataHere'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxDataObject::GetDataHere(format, buf);
 
 }
 size_t wxDataObject_php::GetDataSize(const wxDataFormat& format)const
@@ -1976,22 +1956,12 @@ size_t wxDataObject_php::GetDataSize(const wxDataFormat& format)const
 		
 		wxMessageBox("Failed to call virtual method 'GetDataSize'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (size_t) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxDataObject::GetDataSize(format);
 
 }
 size_t wxDataObject_php::GetFormatCount(Direction dir)const
@@ -2035,22 +2005,12 @@ size_t wxDataObject_php::GetFormatCount(Direction dir)const
 		
 		wxMessageBox("Failed to call virtual method 'GetFormatCount'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (size_t) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxDataObject::GetFormatCount(dir);
 
 }
 wxDataFormat wxDataObject_php::GetPreferredFormat(Direction dir)const
@@ -2094,8 +2054,6 @@ wxDataFormat wxDataObject_php::GetPreferredFormat(Direction dir)const
 		
 		wxMessageBox("Failed to call virtual method 'GetPreferredFormat'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -2106,15 +2064,7 @@ wxDataFormat wxDataObject_php::GetPreferredFormat(Direction dir)const
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return *(wxDataFormat*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxDataObject::GetPreferredFormat(dir);
 
 }
 PHP_METHOD(php_wxDataObject, IsSupported)
@@ -5032,22 +4982,12 @@ void wxTextDataObject_php::GetAllFormats(wxDataFormat* formats, Direction dir)co
 		
 		wxMessageBox("Failed to call virtual method 'GetAllFormats'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxTextDataObject::GetAllFormats(formats, dir);
 
 }
 PHP_METHOD(php_wxTextDataObject, GetFormat)
@@ -6125,22 +6065,12 @@ bool wxTextDropTarget_php::OnDropText(wxCoord x, wxCoord y, const wxString& data
 		
 		wxMessageBox("Failed to call virtual method 'OnDropText'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxTextDropTarget::OnDropText(x, y, data);
 
 }
 bool wxTextDropTarget_php::OnDrop(wxCoord x, wxCoord y)
@@ -6680,22 +6610,12 @@ bool wxDropTarget_php::GetData()
 		
 		wxMessageBox("Failed to call virtual method 'GetData'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxDropTarget::GetData();
 
 }
 wxDragResult wxDropTarget_php::OnData(wxCoord x, wxCoord y, wxDragResult def)
@@ -6741,22 +6661,12 @@ wxDragResult wxDropTarget_php::OnData(wxCoord x, wxCoord y, wxDragResult def)
 		
 		wxMessageBox("Failed to call virtual method 'OnData'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (wxDragResult) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxDropTarget::OnData(x, y, def);
 
 }
 bool wxDropTarget_php::OnDrop(wxCoord x, wxCoord y)
@@ -6801,22 +6711,12 @@ bool wxDropTarget_php::OnDrop(wxCoord x, wxCoord y)
 		
 		wxMessageBox("Failed to call virtual method 'OnDrop'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxDropTarget::OnDrop(x, y);
 
 }
 void php_wxFileDropTarget_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
@@ -6989,22 +6889,12 @@ bool wxFileDropTarget_php::OnDropFiles(wxCoord x, wxCoord y, const wxArrayString
 		
 		wxMessageBox("Failed to call virtual method 'OnDropFiles'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxFileDropTarget::OnDropFiles(x, y, filenames);
 
 }
 bool wxFileDropTarget_php::OnDrop(wxCoord x, wxCoord y)
