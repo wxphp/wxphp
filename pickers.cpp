@@ -6509,22 +6509,12 @@ void wxTimePickerCtrl_php::SetValue(const wxDateTime& dt)
 		
 		wxMessageBox("Failed to call virtual method 'SetValue'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxTimePickerCtrl::SetValue(dt);
 
 }
 wxDateTime wxTimePickerCtrl_php::GetValue()const
@@ -6562,22 +6552,12 @@ wxDateTime wxTimePickerCtrl_php::GetValue()const
 		
 		wxMessageBox("Failed to call virtual method 'GetValue'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return wxDateTime(Z_LVAL_P(return_value));
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxTimePickerCtrl::GetValue();
 
 }
 PHP_METHOD(php_wxTimePickerCtrl, Create)

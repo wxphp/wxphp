@@ -18677,22 +18677,12 @@ wxString wxComboPopup_php::GetStringValue()const
 		
 		wxMessageBox("Failed to call virtual method 'GetStringValue'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxComboPopup::GetStringValue();
 
 }
 wxWindow* wxComboPopup_php::GetControl()
@@ -18730,8 +18720,6 @@ wxWindow* wxComboPopup_php::GetControl()
 		
 		wxMessageBox("Failed to call virtual method 'GetControl'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -18742,15 +18730,7 @@ wxWindow* wxComboPopup_php::GetControl()
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return (wxWindow*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxComboPopup::GetControl();
 
 }
 PHP_METHOD(php_wxComboPopup, GetComboCtrl)
@@ -19295,22 +19275,12 @@ bool wxComboPopup_php::Create(wxWindow* parent)
 		
 		wxMessageBox("Failed to call virtual method 'Create'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxComboPopup::Create(parent);
 
 }
 void php_wxComboCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
@@ -31253,22 +31223,12 @@ wxString wxItemContainerImmutable_php::GetString(unsigned int n)const
 		
 		wxMessageBox("Failed to call virtual method 'GetString'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxItemContainerImmutable::GetString(n);
 
 }
 unsigned int wxItemContainerImmutable_php::GetCount()const
@@ -31306,22 +31266,12 @@ unsigned int wxItemContainerImmutable_php::GetCount()const
 		
 		wxMessageBox("Failed to call virtual method 'GetCount'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (unsigned int) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxItemContainerImmutable::GetCount();
 
 }
 int wxItemContainerImmutable_php::GetSelection()const
@@ -31359,22 +31309,12 @@ int wxItemContainerImmutable_php::GetSelection()const
 		
 		wxMessageBox("Failed to call virtual method 'GetSelection'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (int) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxItemContainerImmutable::GetSelection();
 
 }
 PHP_METHOD(php_wxItemContainerImmutable, GetStringSelection)
@@ -31766,22 +31706,12 @@ void wxItemContainerImmutable_php::SetSelection(int n)
 		
 		wxMessageBox("Failed to call virtual method 'SetSelection'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxItemContainerImmutable::SetSelection(n);
 
 }
 void wxItemContainerImmutable_php::SetString(unsigned int n, const wxString& string)
@@ -31829,22 +31759,12 @@ void wxItemContainerImmutable_php::SetString(unsigned int n, const wxString& str
 		
 		wxMessageBox("Failed to call virtual method 'SetString'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxItemContainerImmutable::SetString(n, string);
 
 }
 PHP_METHOD(php_wxItemContainerImmutable, SetStringSelection)
@@ -53767,22 +53687,12 @@ wxAlignment wxHeaderColumn_php::GetAlignment()const
 		
 		wxMessageBox("Failed to call virtual method 'GetAlignment'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (wxAlignment) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxHeaderColumn::GetAlignment();
 
 }
 wxBitmap wxHeaderColumn_php::GetBitmap()const
@@ -53820,8 +53730,6 @@ wxBitmap wxHeaderColumn_php::GetBitmap()const
 		
 		wxMessageBox("Failed to call virtual method 'GetBitmap'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -53832,15 +53740,7 @@ wxBitmap wxHeaderColumn_php::GetBitmap()const
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return *(wxBitmap*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxHeaderColumn::GetBitmap();
 
 }
 int wxHeaderColumn_php::GetFlags()const
@@ -53878,22 +53778,12 @@ int wxHeaderColumn_php::GetFlags()const
 		
 		wxMessageBox("Failed to call virtual method 'GetFlags'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (int) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxHeaderColumn::GetFlags();
 
 }
 int wxHeaderColumn_php::GetMinWidth()const
@@ -53931,22 +53821,12 @@ int wxHeaderColumn_php::GetMinWidth()const
 		
 		wxMessageBox("Failed to call virtual method 'GetMinWidth'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (int) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxHeaderColumn::GetMinWidth();
 
 }
 wxString wxHeaderColumn_php::GetTitle()const
@@ -53984,22 +53864,12 @@ wxString wxHeaderColumn_php::GetTitle()const
 		
 		wxMessageBox("Failed to call virtual method 'GetTitle'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxHeaderColumn::GetTitle();
 
 }
 int wxHeaderColumn_php::GetWidth()const
@@ -54037,22 +53907,12 @@ int wxHeaderColumn_php::GetWidth()const
 		
 		wxMessageBox("Failed to call virtual method 'GetWidth'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (int) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxHeaderColumn::GetWidth();
 
 }
 PHP_METHOD(php_wxHeaderColumn, HasFlag)
@@ -54665,22 +54525,12 @@ bool wxHeaderColumn_php::IsSortKey()const
 		
 		wxMessageBox("Failed to call virtual method 'IsSortKey'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxHeaderColumn::IsSortKey();
 
 }
 bool wxHeaderColumn_php::IsSortOrderAscending()const
@@ -54718,22 +54568,12 @@ bool wxHeaderColumn_php::IsSortOrderAscending()const
 		
 		wxMessageBox("Failed to call virtual method 'IsSortOrderAscending'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxHeaderColumn::IsSortOrderAscending();
 
 }
 PHP_METHOD(php_wxHeaderColumn, IsSortable)
@@ -55254,22 +55094,12 @@ void wxSettableHeaderColumn_php::SetWidth(int width)
 		
 		wxMessageBox("Failed to call virtual method 'SetWidth'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxSettableHeaderColumn::SetWidth(width);
 
 }
 void wxSettableHeaderColumn_php::SetTitle(const wxString& title)
@@ -55316,22 +55146,12 @@ void wxSettableHeaderColumn_php::SetTitle(const wxString& title)
 		
 		wxMessageBox("Failed to call virtual method 'SetTitle'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxSettableHeaderColumn::SetTitle(title);
 
 }
 PHP_METHOD(php_wxSettableHeaderColumn, SetSortable)
@@ -55486,22 +55306,12 @@ void wxSettableHeaderColumn_php::SetSortOrder(bool ascending)
 		
 		wxMessageBox("Failed to call virtual method 'SetSortOrder'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxSettableHeaderColumn::SetSortOrder(ascending);
 
 }
 PHP_METHOD(php_wxSettableHeaderColumn, SetResizeable)
@@ -55767,22 +55577,12 @@ void wxSettableHeaderColumn_php::SetMinWidth(int minWidth)
 		
 		wxMessageBox("Failed to call virtual method 'SetMinWidth'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxSettableHeaderColumn::SetMinWidth(minWidth);
 
 }
 PHP_METHOD(php_wxSettableHeaderColumn, SetHidden)
@@ -55937,22 +55737,12 @@ void wxSettableHeaderColumn_php::SetFlags(int flags)
 		
 		wxMessageBox("Failed to call virtual method 'SetFlags'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxSettableHeaderColumn::SetFlags(flags);
 
 }
 PHP_METHOD(php_wxSettableHeaderColumn, SetFlag)
@@ -56108,22 +55898,12 @@ void wxSettableHeaderColumn_php::SetBitmap(const wxBitmap& bitmap)
 		
 		wxMessageBox("Failed to call virtual method 'SetBitmap'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxSettableHeaderColumn::SetBitmap(bitmap);
 
 }
 void wxSettableHeaderColumn_php::SetAlignment(wxAlignment align)
@@ -56167,22 +55947,12 @@ void wxSettableHeaderColumn_php::SetAlignment(wxAlignment align)
 		
 		wxMessageBox("Failed to call virtual method 'SetAlignment'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxSettableHeaderColumn::SetAlignment(align);
 
 }
 PHP_METHOD(php_wxSettableHeaderColumn, ClearFlag)
@@ -58423,8 +58193,6 @@ const wxHeaderColumn& wxHeaderCtrl_php::GetColumn(unsigned int idx)const
 		
 		wxMessageBox("Failed to call virtual method 'GetColumn'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -58435,15 +58203,7 @@ const wxHeaderColumn& wxHeaderCtrl_php::GetColumn(unsigned int idx)const
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return *(wxHeaderColumn*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxHeaderCtrl::GetColumn(idx);
 
 }
 PHP_METHOD(php_wxHeaderCtrl, GetColumnAt)
@@ -61298,22 +61058,12 @@ wxString wxHtmlListBox_php::OnGetItem(size_t n)const
 		
 		wxMessageBox("Failed to call virtual method 'OnGetItem'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxHtmlListBox::OnGetItem(n);
 
 }
 PHP_METHOD(php_wxHtmlListBox, Create)
@@ -62970,22 +62720,12 @@ bool wxHyperlinkCtrl_php::GetVisited()const
 		
 		wxMessageBox("Failed to call virtual method 'GetVisited'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxHyperlinkCtrl::GetVisited();
 
 }
 PHP_METHOD(php_wxHyperlinkCtrl, GetVisitedColour)
@@ -63434,22 +63174,12 @@ void wxHyperlinkCtrl_php::SetVisited(bool visited)
 		
 		wxMessageBox("Failed to call virtual method 'SetVisited'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxHyperlinkCtrl::SetVisited(visited);
 
 }
 PHP_METHOD(php_wxHyperlinkCtrl, SetVisitedColour)
@@ -106753,22 +106483,12 @@ wxCoord wxVListBox_php::OnMeasureItem(size_t n)const
 		
 		wxMessageBox("Failed to call virtual method 'OnMeasureItem'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (wxCoord) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxVListBox::OnMeasureItem(n);
 
 }
 void wxVListBox_php::OnDrawSeparator(wxDC& dc, wxRect& rect, size_t n)const
@@ -106878,22 +106598,12 @@ void wxVListBox_php::OnDrawItem(wxDC& dc, const wxRect& rect, size_t n)const
 		
 		wxMessageBox("Failed to call virtual method 'OnDrawItem'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxVListBox::OnDrawItem(dc, rect, n);
 
 }
 void wxVListBox_php::OnDrawBackground(wxDC& dc, const wxRect& rect, size_t n)const

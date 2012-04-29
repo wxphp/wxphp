@@ -1344,22 +1344,12 @@ bool wxFileSystemHandler_php::CanOpen(const wxString& location)
 		
 		wxMessageBox("Failed to call virtual method 'CanOpen'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxFileSystemHandler::CanOpen(location);
 
 }
 PHP_METHOD(php_wxFileSystemHandler, FindFirst)
@@ -1718,8 +1708,6 @@ wxFSFile* wxFileSystemHandler_php::OpenFile(wxFileSystem& fs, const wxString& lo
 		
 		wxMessageBox("Failed to call virtual method 'OpenFile'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -1730,15 +1718,7 @@ wxFSFile* wxFileSystemHandler_php::OpenFile(wxFileSystem& fs, const wxString& lo
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return (wxFSFile*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxFileSystemHandler::OpenFile(fs, location);
 
 }
 PHP_METHOD(php_wxFileSystemHandler, __construct)

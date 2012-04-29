@@ -896,22 +896,12 @@ unsigned int wxDataViewModel_php::GetColumnCount()const
 		
 		wxMessageBox("Failed to call virtual method 'GetColumnCount'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return (unsigned int) Z_LVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxDataViewModel::GetColumnCount();
 
 }
 wxString wxDataViewModel_php::GetColumnType(unsigned int col)const
@@ -955,22 +945,12 @@ wxString wxDataViewModel_php::GetColumnType(unsigned int col)const
 		
 		wxMessageBox("Failed to call virtual method 'GetColumnType'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxDataViewModel::GetColumnType(col);
 
 }
 wxDataViewItem wxDataViewModel_php::GetParent(const wxDataViewItem& item)const
@@ -1015,8 +995,6 @@ wxDataViewItem wxDataViewModel_php::GetParent(const wxDataViewItem& item)const
 		
 		wxMessageBox("Failed to call virtual method 'GetParent'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -1027,15 +1005,7 @@ wxDataViewItem wxDataViewModel_php::GetParent(const wxDataViewItem& item)const
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return *(wxDataViewItem*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxDataViewModel::GetParent(item);
 
 }
 void wxDataViewModel_php::GetValue(wxVariant& variant, const wxDataViewItem& item, unsigned int col)const
@@ -1083,22 +1053,12 @@ void wxDataViewModel_php::GetValue(wxVariant& variant, const wxDataViewItem& ite
 		
 		wxMessageBox("Failed to call virtual method 'GetValue'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxDataViewModel::GetValue(variant, item, col);
 
 }
 PHP_METHOD(php_wxDataViewModel, HasContainerColumns)
@@ -1580,22 +1540,12 @@ bool wxDataViewModel_php::IsContainer(const wxDataViewItem& item)const
 		
 		wxMessageBox("Failed to call virtual method 'IsContainer'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxDataViewModel::IsContainer(item);
 
 }
 PHP_METHOD(php_wxDataViewModel, IsEnabled)
@@ -2577,22 +2527,12 @@ bool wxDataViewModel_php::SetValue(const wxVariant& variant, const wxDataViewIte
 		
 		wxMessageBox("Failed to call virtual method 'SetValue'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxDataViewModel::SetValue(variant, item, col);
 
 }
 PHP_METHOD(php_wxDataViewModel, ValueChanged)
@@ -3223,22 +3163,12 @@ void wxDataViewListModel_php::GetValueByRow(wxVariant& variant, unsigned int row
 		
 		wxMessageBox("Failed to call virtual method 'GetValueByRow'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxDataViewListModel::GetValueByRow(variant, row, col);
 
 }
 PHP_METHOD(php_wxDataViewListModel, IsEnabledByRow)
@@ -3405,22 +3335,12 @@ bool wxDataViewListModel_php::SetValueByRow(const wxVariant& variant, unsigned i
 		
 		wxMessageBox("Failed to call virtual method 'SetValueByRow'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxDataViewListModel::SetValueByRow(variant, row, col);
 
 }
 void php_wxDataViewIndexListModel_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
@@ -4381,22 +4301,12 @@ bool wxDataViewModelNotifier_php::Cleared()
 		
 		wxMessageBox("Failed to call virtual method 'Cleared'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxDataViewModelNotifier::Cleared();
 
 }
 PHP_METHOD(php_wxDataViewModelNotifier, GetOwner)
@@ -4553,22 +4463,12 @@ bool wxDataViewModelNotifier_php::ItemAdded(const wxDataViewItem& parent, const 
 		
 		wxMessageBox("Failed to call virtual method 'ItemAdded'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxDataViewModelNotifier::ItemAdded(parent, item);
 
 }
 bool wxDataViewModelNotifier_php::ItemChanged(const wxDataViewItem& item)
@@ -4613,22 +4513,12 @@ bool wxDataViewModelNotifier_php::ItemChanged(const wxDataViewItem& item)
 		
 		wxMessageBox("Failed to call virtual method 'ItemChanged'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxDataViewModelNotifier::ItemChanged(item);
 
 }
 bool wxDataViewModelNotifier_php::ItemDeleted(const wxDataViewItem& parent, const wxDataViewItem& item)
@@ -4675,22 +4565,12 @@ bool wxDataViewModelNotifier_php::ItemDeleted(const wxDataViewItem& parent, cons
 		
 		wxMessageBox("Failed to call virtual method 'ItemDeleted'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxDataViewModelNotifier::ItemDeleted(parent, item);
 
 }
 void wxDataViewModelNotifier_php::Resort()
@@ -4728,22 +4608,12 @@ void wxDataViewModelNotifier_php::Resort()
 		
 		wxMessageBox("Failed to call virtual method 'Resort'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxDataViewModelNotifier::Resort();
 
 }
 PHP_METHOD(php_wxDataViewModelNotifier, SetOwner)
@@ -4899,22 +4769,12 @@ bool wxDataViewModelNotifier_php::ValueChanged(const wxDataViewItem& item, unsig
 		
 		wxMessageBox("Failed to call virtual method 'ValueChanged'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxDataViewModelNotifier::ValueChanged(item, col);
 
 }
 PHP_METHOD(php_wxDataViewModelNotifier, __construct)
@@ -6138,22 +5998,12 @@ bool wxDataViewRenderer_php::GetValue(wxVariant& value)const
 		
 		wxMessageBox("Failed to call virtual method 'GetValue'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxDataViewRenderer::GetValue(value);
 
 }
 PHP_METHOD(php_wxDataViewRenderer, GetVariantType)
@@ -6718,22 +6568,12 @@ bool wxDataViewRenderer_php::SetValue(const wxVariant& value)
 		
 		wxMessageBox("Failed to call virtual method 'SetValue'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxDataViewRenderer::SetValue(value);
 
 }
 PHP_METHOD(php_wxDataViewRenderer, Validate)
@@ -8816,8 +8656,6 @@ wxSize wxDataViewCustomRenderer_php::GetSize()const
 		
 		wxMessageBox("Failed to call virtual method 'GetSize'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -8828,15 +8666,7 @@ wxSize wxDataViewCustomRenderer_php::GetSize()const
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return *(wxSize*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxDataViewCustomRenderer::GetSize();
 
 }
 PHP_METHOD(php_wxDataViewCustomRenderer, GetValueFromEditorCtrl)
@@ -9301,22 +9131,12 @@ bool wxDataViewCustomRenderer_php::Render(wxRect cell, wxDC* dc, int state)
 		
 		wxMessageBox("Failed to call virtual method 'Render'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxDataViewCustomRenderer::Render(cell, dc, state);
 
 }
 PHP_METHOD(php_wxDataViewCustomRenderer, RenderText)

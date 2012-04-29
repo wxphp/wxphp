@@ -8574,22 +8574,12 @@ void wxSizer_php::RecalcSizes()
 		
 		wxMessageBox("Failed to call virtual method 'RecalcSizes'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxSizer::RecalcSizes();
 
 }
 PHP_METHOD(php_wxSizer, PrependStretchSpacer)
@@ -14867,8 +14857,6 @@ wxSize wxSizer_php::CalcMin()
 		
 		wxMessageBox("Failed to call virtual method 'CalcMin'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -14879,15 +14867,7 @@ wxSize wxSizer_php::CalcMin()
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return *(wxSize*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxSizer::CalcMin();
 
 }
 PHP_METHOD(php_wxSizer, Clear)

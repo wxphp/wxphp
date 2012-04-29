@@ -5571,8 +5571,6 @@ wxColour wxHtmlRenderingStyle_php::GetSelectedTextBgColour(const wxColour& clr)
 		
 		wxMessageBox("Failed to call virtual method 'GetSelectedTextBgColour'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -5583,15 +5581,7 @@ wxColour wxHtmlRenderingStyle_php::GetSelectedTextBgColour(const wxColour& clr)
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return *(wxColour*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxHtmlRenderingStyle::GetSelectedTextBgColour(clr);
 
 }
 wxColour wxHtmlRenderingStyle_php::GetSelectedTextColour(const wxColour& clr)
@@ -5636,8 +5626,6 @@ wxColour wxHtmlRenderingStyle_php::GetSelectedTextColour(const wxColour& clr)
 		
 		wxMessageBox("Failed to call virtual method 'GetSelectedTextColour'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -5648,15 +5636,7 @@ wxColour wxHtmlRenderingStyle_php::GetSelectedTextColour(const wxColour& clr)
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return *(wxColour*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxHtmlRenderingStyle::GetSelectedTextColour(clr);
 
 }
 void php_wxHtmlRenderingInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
@@ -10674,22 +10654,12 @@ bool wxHtmlFilter_php::CanRead(const wxFSFile& file)const
 		
 		wxMessageBox("Failed to call virtual method 'CanRead'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxHtmlFilter::CanRead(file);
 
 }
 wxString wxHtmlFilter_php::ReadFile(const wxFSFile& file)const
@@ -10734,22 +10704,12 @@ wxString wxHtmlFilter_php::ReadFile(const wxFSFile& file)const
 		
 		wxMessageBox("Failed to call virtual method 'ReadFile'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxHtmlFilter::ReadFile(file);
 
 }
 PHP_METHOD(php_wxHtmlFilter, __construct)
@@ -10907,22 +10867,12 @@ wxString wxHtmlTagHandler_php::GetSupportedTags()
 		
 		wxMessageBox("Failed to call virtual method 'GetSupportedTags'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxHtmlTagHandler::GetSupportedTags();
 
 }
 bool wxHtmlTagHandler_php::HandleTag(const wxHtmlTag& tag)
@@ -10967,22 +10917,12 @@ bool wxHtmlTagHandler_php::HandleTag(const wxHtmlTag& tag)
 		
 		wxMessageBox("Failed to call virtual method 'HandleTag'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxHtmlTagHandler::HandleTag(tag);
 
 }
 PHP_METHOD(php_wxHtmlTagHandler, __construct)

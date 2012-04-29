@@ -6988,22 +6988,12 @@ bool wxPrintout_php::OnPrintPage(int pageNum)
 		
 		wxMessageBox("Failed to call virtual method 'OnPrintPage'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxPrintout::OnPrintPage(pageNum);
 
 }
 PHP_METHOD(php_wxPrintout, SetLogicalOrigin)

@@ -3,13 +3,40 @@ Windows Compilation Issues:
 
 mode_t is defined on wxWidgets and PHP at the same time
 
-	Fix: Comment out on PHP source TSRM/tsrm_virtual_cwd.h the following:
+	Fix: On TSRM/tsrm_virtual_cwd.h substitute:
+		
 		typedef unsigned short mode_t;
 		
-	Then when the zend engine files are compiling you are going to receive
-	a compilation error, so uncomment the line again and nmake to continue compiling
+		with
+		
+		#ifndef __WXMSW__
+		typedef unsigned short mode_t;
+		#endif
 		
 wxPosScriptDC Not enabled by default on wxMSW
 
 	Fix: On wxWidgets lib\vc_lib\mswu\wx\setup.h set:
 		wxUSE_POSTSCRIPT 1 
+		
+Linking errors where produced from some deprecated 
+methods that seemed to be implemented on log.cpp but 
+strangely enough are producing linking errors 
+
+	Fix: removed the following declarations/prototypes from the wxwidgets 
+		 include/wx/log.h
+
+		wxLogFormatter::FormatTime(long)const
+		wxLog::DoLog(unsigned long,wchar_t const *,long)
+		wxLog::DoLog(unsigned long,char const *,long)
+
+		
+Notes:
+=====================================
+
+Here I write some methods I needed to disable since
+they aren't implemented, what produces linking errors.
+Should be reported to wxWidgets as a bug.
+
+	wxRichToolTip::SetTitleFont(class wxFont const &)
+	wxPoint2DDouble::SetPolarCoordinates(double,double)
+	wxPoint2DInt::SetPolarCoordinates(int,int)

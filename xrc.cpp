@@ -132,22 +132,12 @@ bool wxXmlResourceHandler_php::CanHandle(wxXmlNode* node)
 		
 		wxMessageBox("Failed to call virtual method 'CanHandle'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxXmlResourceHandler::CanHandle(node);
 
 }
 PHP_METHOD(php_wxXmlResourceHandler, CreateResource)
@@ -356,8 +346,6 @@ wxObject* wxXmlResourceHandler_php::DoCreateResource()
 		
 		wxMessageBox("Failed to call virtual method 'DoCreateResource'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
@@ -368,15 +356,7 @@ wxObject* wxXmlResourceHandler_php::DoCreateResource()
 			return_object = zend_list_find(id_to_find, &rsrc_type);
 		}
 		return (wxObject*) return_object;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxXmlResourceHandler::DoCreateResource();
 
 }
 PHP_METHOD(php_wxXmlResourceHandler, SetParentResource)

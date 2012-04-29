@@ -2711,22 +2711,12 @@ wxString wxTextCompleter_php::GetNext()
 		
 		wxMessageBox("Failed to call virtual method 'GetNext'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxTextCompleter::GetNext();
 
 }
 bool wxTextCompleter_php::Start(const wxString& prefix)
@@ -2773,22 +2763,12 @@ bool wxTextCompleter_php::Start(const wxString& prefix)
 		
 		wxMessageBox("Failed to call virtual method 'Start'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return Z_BVAL_P(return_value);
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxTextCompleter::Start(prefix);
 
 }
 void php_wxWindowModalDialogEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
@@ -3803,99 +3783,6 @@ PHP_METHOD(php_wxPoint2DDouble, SetVectorAngle)
 				php_printf("Executing wxPoint2DDouble::SetVectorAngle(degrees0)\n\n");
 				#endif
 				((wxPoint2DDouble_php*)_this)->SetVectorAngle(degrees0);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_METHOD(php_wxPoint2DDouble, SetPolarCoordinates)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxPoint2DDouble::SetPolarCoordinates\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	bool return_is_user_initialized = false;
-	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
-	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
-		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPoint2DDouble::SetPolarCoordinates\n");
-			
-			return;
-		}
-		else
-		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
-			
-			bool reference_type_found = false;
-
-			if(parent_rsrc_type == le_wxPoint2DDouble){
-				references = &((wxPoint2DDouble_php*)_this)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Processing the method call as static\n");
-		#endif
-	}
-	
-	//Parameters for overload 0
-	double angle0;
-	double length0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'dd' (&angle0, &length0)\n");
-		#endif
-		char parse_parameters_string[] = "dd";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &angle0, &length0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxPoint2DDouble::SetPolarCoordinates(angle0, length0)\n\n");
-				#endif
-				((wxPoint2DDouble_php*)_this)->SetPolarCoordinates(angle0, length0);
 
 
 				return;
@@ -5524,99 +5411,6 @@ PHP_METHOD(php_wxPoint2DInt, Normalize)
 				php_printf("Executing wxPoint2DInt::Normalize()\n\n");
 				#endif
 				((wxPoint2DInt_php*)_this)->Normalize();
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-}
-PHP_METHOD(php_wxPoint2DInt, SetPolarCoordinates)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxPoint2DInt::SetPolarCoordinates\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	bool return_is_user_initialized = false;
-	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
-	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
-		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxPoint2DInt::SetPolarCoordinates\n");
-			
-			return;
-		}
-		else
-		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
-			
-			bool reference_type_found = false;
-
-			if(parent_rsrc_type == le_wxPoint2DInt){
-				references = &((wxPoint2DInt_php*)_this)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Processing the method call as static\n");
-		#endif
-	}
-	
-	//Parameters for overload 0
-	long angle0;
-	long length0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 2)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'll' (&angle0, &length0)\n");
-		#endif
-		char parse_parameters_string[] = "ll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &angle0, &length0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 2:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxPoint2DInt::SetPolarCoordinates((wxInt32) angle0, (wxInt32) length0)\n\n");
-				#endif
-				((wxPoint2DInt_php*)_this)->SetPolarCoordinates((wxInt32) angle0, (wxInt32) length0);
 
 
 				return;
@@ -8061,22 +7855,12 @@ void wxGridCornerHeaderRenderer_php::DrawBorder(const wxGrid& grid, wxDC& dc, wx
 		
 		wxMessageBox("Failed to call virtual method 'DrawBorder'!", "Error");
 	}
-	else
-	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
 		return;
-	}
 	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	wxGridCornerHeaderRenderer::DrawBorder(grid, dc, rect);
 
 }
 void php_wxGridCornerHeaderRendererDefault_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
