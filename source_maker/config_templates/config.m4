@@ -13,17 +13,24 @@ if test "$PHP_WXWIDGETS" != "no"; then
 	dnl Default wx-config command
 	WXCONFIG_PATH=wx-config
 	
-	dnl Check if user passed the optional wxWidgets installation path
-	if test "$PHP_WXWIDGETS" != "yes"; then
-		if test -n "$PHP_WXWIDGETS"; then
-			if test -f "$PHP_WXWIDGETS/bin/wx-config"; then
-				WXCONFIG_PATH="$PHP_WXWIDGETS/bin/wx-config"
-			elif test -f "$PHP_WXWIDGETS/wx-config"; then
-				WXCONFIG_PATH="$PHP_WXWIDGETS/wx-config"
-			else
-				AC_MSG_ERROR([wx-config not found on the provided wxWidgets path])
+	dnl Check for the installation path of wx-config
+	AC_MSG_CHECKING([for wx-config existance and wxWidgets version >= 2.9.x])
+	for directory in "$PHP_WXWIDGETS" "$PHP_WXWIDGETS/bin" /usr /usr/bin /usr/local /usr/local/bin; do
+		if test -e "$directory/wx-config"; then
+			wxwidgets_version=`$directory/wx-config --version`
+			version_check=`echo $wxwidgets_version | grep "2.9" && echo $wxwidgets_version | grep "3.[0-9]"`
+			if "$version_check" != ""; then
+				WXCONFIG_PATH="$directory/wx-config"
+				AC_MSG_RESULT([version $wxwidgets_version found])
+				break
 			fi
 		fi
+	done
+	
+	dnl Show error if wxWidgets was not found
+	if test ! -e $WXCONFIG_PATH; then
+		AC_MSG_RESULT([not found])
+		AC_MSG_ERROR([A matching wxWidgets installation was not found])
 	fi
 	
 	dnl Check whether to enable debugging messages

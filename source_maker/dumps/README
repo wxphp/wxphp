@@ -20,7 +20,7 @@ typedef.json
 1. Added: "wxThreadIdType":"unsigned long",
 
 
-global_variables.json
+global_variables.json (Fixed on wxWidgets SVN)
 ======================
 1. EDIT: "wxNORMAL_FONT":"wxFont", > "wxNORMAL_FONT":"wxFont*"
 2. EDIT: "wxSMALL_FONT":"wxFont", > "wxSMALL_FONT":"wxFont*"
