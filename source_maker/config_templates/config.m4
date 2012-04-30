@@ -19,7 +19,7 @@ if test "$PHP_WXWIDGETS" != "no"; then
 		if test -e "$directory/wx-config"; then
 			wxwidgets_version=`$directory/wx-config --version`
 			version_check=`echo $wxwidgets_version | grep "2.9" && echo $wxwidgets_version | grep "3.[0-9]"`
-			if "$version_check" != ""; then
+			if test -n "$version_check"; then
 				WXCONFIG_PATH="$directory/wx-config"
 				AC_MSG_RESULT([version $wxwidgets_version found])
 				break
