@@ -41,7 +41,9 @@ The generated source files are meant to replace the ones in the module
 source root.
 
 To make the process simpler you can use the utility go.sh/go.bat 
-to automatically update the source files.
+to automatically update the source files. You can even use the
+build script (only for linux at this time) on the root directory to
+automate the process of generating new source files and compiling.
 
 
 Dumps
