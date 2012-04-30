@@ -147,6 +147,13 @@ remove_methods_implementing_unknown_types($defIni);
 //Removes functions implementing unknown parameter types or return types
 remove_functions_implementing_unknown_types($defFunctions);
 
+//Remove classes and methods not implemented on all 3 target platforms (windows, linux, mac)
+remove_classes_and_methods_not_crossplatform($defIni);
+
+//Remove methods implementing unhandled argument declaration like 
+//wxRichTextCtrl::PrepareContent(wxRichTextParagraphLayoutBox &WXUNUSED(container))
+remove_methods_implementing_unhandled_arguments($defIni);
+
 
 //Set the home page
 $home_page = "http://wxphp.org/";
@@ -632,7 +639,7 @@ file_put_contents("../doc/intro.html", $intro_content);
 function get_method_type_link($type, $type_name, $function_name, $class_name=null)
 {
 	$declaration_modifier = "";
-	$standard_type = parameter_type($type, $function_name, $class_name, $declaration_modifier, true);
+	$standard_type = parameter_type($type, false, $function_name, $class_name, $declaration_modifier, true);
 	
 	$cleaned_type = str_replace(array("const ", "*", "&"), "", $type);
 	$type_name = "<span class=\"parameter-name\">\$$type_name</span>";
