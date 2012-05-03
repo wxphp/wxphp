@@ -1,0 +1,71 @@
+Json Files
+......................................
+This directory holds the json text files, result of parsing the 
+wxWidgets documentation with the xml_parser script. The files are pretty 
+printed to make manual edition possible as easier integration of patches.
+Previously standard php serialize functions were used making impossible 
+to edit them. We thought about using the xml format but the most easier 
+format to convert php arrays to human editable files was json.
+
+Files on this directory:
+
+	classes.json:
+		Classes and it's methods with detailed information.
+		
+	class_groups.json:
+		Defines to which group a class belongs in order to generate
+		multiple source files instead of generating a single huge one.
+		
+	classes_variables.json
+		Store the member variables of classes to be able to implement
+		__get and __set
+		
+	consts.json 
+		#define macro names and the values.
+		
+	enums.json
+		Class enumerations and global enumerations.
+		
+	functions.json
+		wxWidgets global functions with detailed information.
+		
+	global_variables.json
+		Various global variables found while parsing like wx_NORMAL_FONT
+		
+	includes.json
+		The include files of the parsed files (this include files are
+		added to common.h for correct compilation)
+		
+	typedef.json
+		Name of variables declared as typedef with 
+		the original type value.
+		
+		
+Things manually added/changed to files
+......................................
+
+This file serves as a registry of manual changes made to the generated
+files by xml_parser.php. So if we need to regenarate again these files
+we dont have to go to the whole process of inspecting everything
+and just focus on the changes stored here.
+
+These changes are done in order to generate the correct code
+to successfully compile.
+
+Note:
+========================================================================
+If you need to make changes to the classes.json please do it to the
+file available on the class_selector directory on tools/source_maker
+
+
+typedef.json
+======================
+1. Added: "wxThreadIdType":"unsigned long",
+
+
+global_variables.json (Fixed on wxWidgets SVN)
+======================
+1. EDIT: "wxNORMAL_FONT":"wxFont", > "wxNORMAL_FONT":"wxFont*"
+2. EDIT: "wxSMALL_FONT":"wxFont", > "wxSMALL_FONT":"wxFont*"
+3. EDIT: "wxITALIC_FONT":"wxFont", > "wxITALIC_FONT":"wxFont*"
+4. EDIT: "wxSWISS_FONT":"wxFont", > "wxSWISS_FONT":"wxFont*"

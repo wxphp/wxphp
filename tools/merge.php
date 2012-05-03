@@ -30,16 +30,16 @@ else
 	chdir(getcwd() . "/" . str_replace($_SERVER["SCRIPT_NAME"] , "", $_SERVER["PHP_SELF"]));
 }
 
-include("../source_maker/include/functions.php");
+include("source_maker/include/functions.php");
 
-if(!file_exists("../xml_parser/output/classes.json"))
+if(!file_exists("../json/classes.json"))
 {
-	die("classes.json not found on xml_parser/output");
+	die("classes.json not found on json/");
 }
 
-$full_classes = unserialize_json(file_get_contents("../xml_parser/output/classes.json"));
+$full_classes = unserialize_json(file_get_contents("../json/classes.json"));
 
-$binded_classes = unserialize_json(file_get_contents("../source_maker/class_selector/classes.json"));
+$binded_classes = unserialize_json(file_get_contents("source_maker/class_selector/classes.json"));
 
 $output_classes = array();
 

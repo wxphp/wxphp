@@ -1,0 +1,13444 @@
+{
+	"wxGetApp":[
+		{
+			"return_type":"wxAppDerivedClass&",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxHandleFatalExceptions":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"bool"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"doIt"
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxInitialize":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"int",
+				"wxChar**"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"argc",
+				"argv"
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxUninitialize":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"void",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxWakeUpIdle":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxYield":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxSafeYield":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"wxWindow*",
+				"bool"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"win",
+				"onlyIfNeeded"
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxEntry":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"int&",
+				"wxChar**"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"argc",
+				"argv"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"HINSTANCE",
+				"HINSTANCE",
+				"char*",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"hInstance",
+				"hPrevInstance",
+				"pCmdLine",
+				"nCmdShow"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxExit":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxCreatePersistentObject":[
+		{
+			"return_type":"wxPersistentObject*",
+			"parameters_type":[
+				"wxBookCtrlBase*"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"book"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wxPersistentObject*",
+			"parameters_type":[
+				"T*"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"obj"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wxPersistentObject*",
+			"parameters_type":[
+				"wxTopLevelWindow*"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"book"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wxPersistentObject*",
+			"parameters_type":[
+				"wxTreebook*"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"book"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxTransferFileToStream":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxString&",
+				"ostream&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"filename",
+				"stream"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxTransferStreamToFile":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"istream&",
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"stream",
+				"filename"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxFromString":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxString&",
+				"wxFont*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"string",
+				"font"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxString&",
+				"wxColour*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"string",
+				"colour"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxToString":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				"const wxFont&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"font"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				"const wxColour&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"colour"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxSafeShowMessage":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"title",
+				"text"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxSysErrorCode":[
+		{
+			"return_type":"unsigned long",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxSysErrorMsg":[
+		{
+			"return_type":"const wxChar*",
+			"parameters_type":[
+				"unsigned long"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"errCode"
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxLogGeneric":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"wxLogLevel",
+				"const char*",
+				"..."
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"level",
+				"formatString",
+				null
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxVLogGeneric":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"wxLogLevel",
+				"const char*",
+				"va_list"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"level",
+				"formatString",
+				"argPtr"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxLogMessage":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"const char*",
+				"..."
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"formatString",
+				null
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxVLogMessage":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"const char*",
+				"va_list"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"formatString",
+				"argPtr"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxLogVerbose":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"const char*",
+				"..."
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"formatString",
+				null
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxVLogVerbose":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"const char*",
+				"va_list"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"formatString",
+				"argPtr"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxLogWarning":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"const char*",
+				"..."
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"formatString",
+				null
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxVLogWarning":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"const char*",
+				"va_list"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"formatString",
+				"argPtr"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxLogFatalError":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"const char*",
+				"..."
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"formatString",
+				null
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxVLogFatalError":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"const char*",
+				"va_list"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"formatString",
+				"argPtr"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxLogError":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"const char*",
+				"..."
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"formatString",
+				null
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxVLogError":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"const char*",
+				"va_list"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"formatString",
+				"argPtr"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxLogTrace":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"const char*",
+				"const char*",
+				"..."
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"mask",
+				"formatString",
+				null
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"wxTraceMask",
+				"const char*",
+				"..."
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"mask",
+				"formatString",
+				null
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxVLogTrace":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"const char*",
+				"const char*",
+				"va_list"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"mask",
+				"formatString",
+				"argPtr"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"wxTraceMask",
+				"const char*",
+				"va_list"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"mask",
+				"formatString",
+				"argPtr"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxLogDebug":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"const char*",
+				"..."
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"formatString",
+				null
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxVLogDebug":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"const char*",
+				"va_list"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"formatString",
+				"argPtr"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxLogStatus":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"wxFrame*",
+				"const char*",
+				"..."
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"frame",
+				"formatString",
+				null
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"const char*",
+				"..."
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"formatString",
+				null
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxVLogStatus":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"wxFrame*",
+				"const char*",
+				"va_list"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"frame",
+				"formatString",
+				"argPtr"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"const char*",
+				"va_list"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"formatString",
+				"argPtr"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxLogSysError":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"const char*",
+				"..."
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"formatString",
+				null
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxVLogSysError":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"const char*",
+				"va_list"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"formatString",
+				"argPtr"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxStringCheck":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"val"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIsMainThread":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxMutexGuiEnter":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxMutexGuiLeave":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxAboutBox":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"const wxAboutDialogInfo&",
+				"wxWindow*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"info",
+				"parent"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGenericAboutBox":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"const wxAboutDialogInfo&",
+				"wxWindow*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"info",
+				"parent"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxSplit":[
+		{
+			"return_type":"wxArrayString",
+			"parameters_type":[
+				"const wxString&",
+				"const wxChar",
+				"const wxChar"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"str",
+				"sep",
+				"escape"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxJoin":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				"const wxArrayString&",
+				"const wxChar",
+				"const wxChar"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"arr",
+				"sep",
+				"escape"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxAtomicInc":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"wxAtomicInt&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"value"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxAtomicDec":[
+		{
+			"return_type":"wxInt32",
+			"parameters_type":[
+				"wxAtomicInt&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"value"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxBase64Encode":[
+		{
+			"return_type":"size_t",
+			"parameters_type":[
+				"char*",
+				"size_t",
+				"const void*",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dst",
+				"dstLen",
+				"src",
+				"srcLen"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				"const void*",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"src",
+				"srcLen"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				"const wxMemoryBuffer&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"buf"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxBase64DecodedSize":[
+		{
+			"return_type":"size_t",
+			"parameters_type":[
+				"size_t"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"srcLen"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxBase64EncodedSize":[
+		{
+			"return_type":"size_t",
+			"parameters_type":[
+				"size_t"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"len"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxBase64Decode":[
+		{
+			"return_type":"size_t",
+			"parameters_type":[
+				"void*",
+				"size_t",
+				"const char*",
+				"size_t",
+				"wxBase64DecodeMode",
+				"size_t*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dst",
+				"dstLen",
+				"src",
+				"srcLen",
+				"mode",
+				"posErr"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"size_t",
+			"parameters_type":[
+				"void*",
+				"size_t",
+				"const wxString&",
+				"wxBase64DecodeMode",
+				"size_t*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dst",
+				"dstLen",
+				"str",
+				"mode",
+				"posErr"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wxMemoryBuffer",
+			"parameters_type":[
+				"const char*",
+				"size_t",
+				"wxBase64DecodeMode",
+				"size_t*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"src",
+				"srcLen",
+				"mode",
+				"posErr"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wxMemoryBuffer",
+			"parameters_type":[
+				"const wxString&",
+				"wxBase64DecodeMode",
+				"size_t*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"src",
+				"mode",
+				"posErr"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetSingleChoiceIndex":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"const wxArrayString&",
+				"wxWindow*",
+				"int",
+				"int",
+				"bool",
+				"int",
+				"int",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"message",
+				"caption",
+				"aChoices",
+				"parent",
+				"x",
+				"y",
+				"centre",
+				"width",
+				"height",
+				"initialSelection"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"int",
+				"const wxString&",
+				"wxWindow*",
+				"int",
+				"int",
+				"bool",
+				"int",
+				"int",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				true,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"message",
+				"caption",
+				"n",
+				"choices",
+				"parent",
+				"x",
+				"y",
+				"centre",
+				"width",
+				"height",
+				"initialSelection"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"const wxArrayString&",
+				"int",
+				"wxWindow*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"message",
+				"caption",
+				"choices",
+				"initialSelection",
+				"parent"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"int",
+				"const wxString*",
+				"int",
+				"wxWindow*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"message",
+				"caption",
+				"n",
+				"choices",
+				"initialSelection",
+				"parent"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetSingleChoice":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"const wxArrayString&",
+				"wxWindow*",
+				"int",
+				"int",
+				"bool",
+				"int",
+				"int",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"message",
+				"caption",
+				"aChoices",
+				"parent",
+				"x",
+				"y",
+				"centre",
+				"width",
+				"height",
+				"initialSelection"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"int",
+				"const wxString&",
+				"wxWindow*",
+				"int",
+				"int",
+				"bool",
+				"int",
+				"int",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				true,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"message",
+				"caption",
+				"n",
+				"choices",
+				"parent",
+				"x",
+				"y",
+				"centre",
+				"width",
+				"height",
+				"initialSelection"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"const wxArrayString&",
+				"int",
+				"wxWindow*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"message",
+				"caption",
+				"choices",
+				"initialSelection",
+				"parent"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"int",
+				"const wxString*",
+				"int",
+				"wxWindow*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"message",
+				"caption",
+				"n",
+				"choices",
+				"initialSelection",
+				"parent"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetSingleChoiceData":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"const wxArrayString&",
+				"const wxString&",
+				"wxWindow*",
+				"int",
+				"int",
+				"bool",
+				"int",
+				"int",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				true,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"message",
+				"caption",
+				"aChoices",
+				"client_data",
+				"parent",
+				"x",
+				"y",
+				"centre",
+				"width",
+				"height",
+				"initialSelection"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"int",
+				"const wxString&",
+				"const wxString&",
+				"wxWindow*",
+				"int",
+				"int",
+				"bool",
+				"int",
+				"int",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				true,
+				true,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"message",
+				"caption",
+				"n",
+				"choices",
+				"client_data",
+				"parent",
+				"x",
+				"y",
+				"centre",
+				"width",
+				"height",
+				"initialSelection"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"void*",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"const wxArrayString&",
+				"void**",
+				"int",
+				"wxWindow*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"message",
+				"caption",
+				"choices",
+				"client_data",
+				"initialSelection",
+				"parent"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"void*",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"int",
+				"const wxString*",
+				"void**",
+				"int",
+				"wxWindow*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"message",
+				"caption",
+				"n",
+				"choices",
+				"client_data",
+				"initialSelection",
+				"parent"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true,
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetSelectedChoices":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"wxArrayInt&",
+				"const wxString&",
+				"const wxString&",
+				"const wxArrayString&",
+				"wxWindow*",
+				"int",
+				"int",
+				"bool",
+				"int",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"selections",
+				"message",
+				"caption",
+				"aChoices",
+				"parent",
+				"x",
+				"y",
+				"centre",
+				"width",
+				"height"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"wxArrayInt&",
+				"const wxString&",
+				"const wxString&",
+				"int",
+				"const wxString&",
+				"wxWindow*",
+				"int",
+				"int",
+				"bool",
+				"int",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				true,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"selections",
+				"message",
+				"caption",
+				"n",
+				"choices",
+				"parent",
+				"x",
+				"y",
+				"centre",
+				"width",
+				"height"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetColourFromUser":[
+		{
+			"return_type":"wxColour",
+			"parameters_type":[
+				"wxWindow*",
+				"const wxColour&",
+				"const wxString&",
+				"wxColourData*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"parent",
+				"colInit",
+				"caption",
+				"data"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxDDECleanUp":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxDDEInitialize":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxAbort":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxDisableAsserts":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIsDebuggerRunning":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxSetAssertHandler":[
+		{
+			"return_type":"wxAssertHandler_t",
+			"parameters_type":[
+				"wxAssertHandler_t"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"handler"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxSetDefaultAssertHandler":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxTrap":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxDELETE":[
+		{
+			"return_type":"",
+			"parameters_type":[
+				"T*&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"ptr"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxDELETEA":[
+		{
+			"return_type":"",
+			"parameters_type":[
+				"T*&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"array"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxSwap":[
+		{
+			"return_type":"",
+			"parameters_type":[
+				"T&",
+				"T&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"first",
+				"second"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxVaCopy":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"va_list",
+				"va_list"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"argptrDst",
+				"argptrSrc"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxDirSelector":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"long",
+				"const wxPoint&",
+				"wxWindow*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"message",
+				"default_path",
+				"style",
+				"pos",
+				"parent"
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxNewEventType":[
+		{
+			"return_type":"wxEventType",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxPostEvent":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"wxEvtHandler*",
+				"const wxEvent&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"event"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxQueueEvent":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"wxEvtHandler*",
+				"wxEvent*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"event"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxFileSelector":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"const wxString&",
+				"const wxString&",
+				"const wxString&",
+				"int",
+				"wxWindow*",
+				"int",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"message",
+				"default_path",
+				"default_filename",
+				"default_extension",
+				"wildcard",
+				"flags",
+				"parent",
+				"x",
+				"y"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxFileSelectorEx":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"const wxString&",
+				"int*",
+				"const wxString&",
+				"int",
+				"wxWindow*",
+				"int",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"message",
+				"default_path",
+				"default_filename",
+				"indexDefaultExtension",
+				"wildcard",
+				"flags",
+				"parent",
+				"x",
+				"y"
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxLoadFileSelector":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"const wxString&",
+				"wxWindow*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"what",
+				"extension",
+				"default_name",
+				"parent"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxSaveFileSelector":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"const wxString&",
+				"wxWindow*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"what",
+				"extension",
+				"default_name",
+				"parent"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetDiskSpace":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxString&",
+				"wxLongLong",
+				"wxLongLong"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"path",
+				"total",
+				"free"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetOSDirectory":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxParseCommonDialogsFilter":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"const wxString&",
+				"wxArrayString&",
+				"wxArrayString&"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"wildCard",
+				"descriptions",
+				"filters"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxDos2UnixFilename":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"wxChar*"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"s"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxUnix2DosFilename":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"wxChar*"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"s"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxDirExists":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"dirname"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxSplitPath":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"const wxString&",
+				"wxString*",
+				"wxString*",
+				"wxString*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"fullname",
+				"path",
+				"name",
+				"ext"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxFileModificationTime":[
+		{
+			"return_type":"time_t",
+			"parameters_type":[
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"filename"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxRenameFile":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"bool"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"file1",
+				"file2",
+				"overwrite"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxCopyFile":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"bool"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"file1",
+				"file2",
+				"overwrite"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxFileExists":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"filename"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxMatchWild":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"bool"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"pattern",
+				"text",
+				"dot_special"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetWorkingDirectory":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				"char*",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"buf",
+				"sz"
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxPathOnly":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"path"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIsWild":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"pattern"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIsAbsolutePath":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"filename"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetCwd":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxSetWorkingDirectory":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"dir"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxConcatFiles":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"file1",
+				"file2",
+				"file3"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxRemoveFile":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"file"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxMkdir":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxString&",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"dir",
+				"perm"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxRmdir":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxString&",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"dir",
+				"flags"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxFindNextFile":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxFindFirstFile":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				"const wxString&",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"spec",
+				"flags"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetFileKind":[
+		{
+			"return_type":"wxFileKind",
+			"parameters_type":[
+				"int"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"fd"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wxFileKind",
+			"parameters_type":[
+				"FILE*"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"fp"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxFileNameFromPath":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"path"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"path"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetTempFileName":[
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"const wxString&",
+				"char*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"prefix",
+				"buf"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxString&",
+				"wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"prefix",
+				"buf"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetFontFromUser":[
+		{
+			"return_type":"wxFont",
+			"parameters_type":[
+				"wxWindow*",
+				"const wxFont&",
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"parent",
+				"fontInit",
+				"caption"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxColourDisplay":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxDisplayDepth":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxSetCursor":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"const wxCursor&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"cursor"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxClientDisplayRect":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"int*",
+				"int*",
+				"int*",
+				"int*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"x",
+				"y",
+				"width",
+				"height"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetClientDisplayRect":[
+		{
+			"return_type":"wxRect",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetDisplayPPI":[
+		{
+			"return_type":"wxSize",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxDisplaySize":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"int*",
+				"int*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"width",
+				"height"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetDisplaySize":[
+		{
+			"return_type":"wxSize",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxDisplaySizeMM":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"int*",
+				"int*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"width",
+				"height"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetDisplaySizeMM":[
+		{
+			"return_type":"wxSize",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxInitAllImageHandlers":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxEntryStart":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"int&",
+				"wxChar**"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"argc",
+				"argv"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"HINSTANCE",
+				"HINSTANCE",
+				"char*",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"hInstance",
+				"hPrevInstance",
+				"pCmdLine",
+				"nCmdShow"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxEntryCleanup":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxLL":[
+		{
+			"return_type":"wxLongLong_t",
+			"parameters_type":[
+				"number"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				null
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxULL":[
+		{
+			"return_type":"wxLongLong_t",
+			"parameters_type":[
+				"number"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				null
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxFinite":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"double"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"x"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIsNaN":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"double"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"x"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxConvertFromIeeeExtended":[
+		{
+			"return_type":"wxFloat64",
+			"parameters_type":[
+				"const wxInt8*"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"bytes"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxConvertToIeeeExtended":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"wxFloat64",
+				"wxInt8*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"num",
+				"bytes"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxRound":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"double"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"x"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIsSameDouble":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"double",
+				"double"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"x",
+				"y"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIsNullDouble":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"double"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"x"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxTrace":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"const wxString&",
+				"..."
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"format",
+				null
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxTraceLevel":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"int",
+				"const wxString&",
+				"..."
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"level",
+				"format",
+				null
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxMakeMetafilePlaceable":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxString&",
+				"int",
+				"int",
+				"int",
+				"int",
+				"float"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"filename",
+				"minX",
+				"minY",
+				"maxX",
+				"maxY",
+				"scale"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxMessageBox":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"int",
+				"wxWindow*",
+				"int",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"message",
+				"caption",
+				"style",
+				"parent",
+				"x",
+				"y"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetNumberFromUser":[
+		{
+			"return_type":"long",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"const wxString&",
+				"long",
+				"long",
+				"long",
+				"wxWindow*",
+				"const wxPoint&"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"message",
+				"prompt",
+				"caption",
+				"value",
+				"min",
+				"max",
+				"parent",
+				"pos"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxCreateDynamicObject":[
+		{
+			"return_type":"wxObject*",
+			"parameters_type":[
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"className"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxPersistentRegisterAndRestore":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"T*",
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"obj",
+				"name"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxFindWindowAtPointer":[
+		{
+			"return_type":"wxWindow*",
+			"parameters_type":[
+				"wxPoint&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"pt"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetActiveWindow":[
+		{
+			"return_type":"wxWindow*",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetTopLevelParent":[
+		{
+			"return_type":"wxWindow*",
+			"parameters_type":[
+				"wxWindow*"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"window"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxRichTextHasStyle":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"int",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"flags",
+				"style"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxTextAttrEq":[
+		{
+			"return_type":"WXDLLIMPEXP_RICHTEXT bool",
+			"parameters_type":[
+				"const wxRichTextAttr&",
+				"const wxRichTextAttr&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"attr1",
+				"attr2"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxTextAttrEqPartial":[
+		{
+			"return_type":"WXDLLIMPEXP_RICHTEXT bool",
+			"parameters_type":[
+				"const wxRichTextAttr&",
+				"const wxRichTextAttr&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"attr1",
+				"attr2"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxRichTextApplyStyle":[
+		{
+			"return_type":"WXDLLIMPEXP_RICHTEXT bool",
+			"parameters_type":[
+				"wxRichTextAttr&",
+				"const wxRichTextAttr&",
+				"wxRichTextAttr*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"destStyle",
+				"style",
+				"compareWith"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxRichTextRemoveStyle":[
+		{
+			"return_type":"WXDLLIMPEXP_RICHTEXT bool",
+			"parameters_type":[
+				"wxRichTextAttr&",
+				"const wxRichTextAttr&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"destStyle",
+				"style"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxRichTextCombineBitlists":[
+		{
+			"return_type":"WXDLLIMPEXP_RICHTEXT bool",
+			"parameters_type":[
+				"int&",
+				"int",
+				"int&",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"valueA",
+				"valueB",
+				"flagsA",
+				"flagsB"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxRichTextBitlistsEqPartial":[
+		{
+			"return_type":"WXDLLIMPEXP_RICHTEXT bool",
+			"parameters_type":[
+				"int",
+				"int",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"valueA",
+				"valueB",
+				"flags"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxRichTextSplitParaCharStyles":[
+		{
+			"return_type":"WXDLLIMPEXP_RICHTEXT bool",
+			"parameters_type":[
+				"const wxRichTextAttr&",
+				"wxRichTextAttr&",
+				"wxRichTextAttr&"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"style",
+				"parStyle",
+				"charStyle"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxRichTextTabsEq":[
+		{
+			"return_type":"WXDLLIMPEXP_RICHTEXT bool",
+			"parameters_type":[
+				"const wxArrayInt&",
+				"const wxArrayInt&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"tabs1",
+				"tabs2"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxRichTextDecimalToRoman":[
+		{
+			"return_type":"WXDLLIMPEXP_RICHTEXT wxString",
+			"parameters_type":[
+				"long"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"n"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxTextAttrCollectCommonAttributes":[
+		{
+			"return_type":"WXDLLIMPEXP_RICHTEXT void",
+			"parameters_type":[
+				"wxTextAttr&",
+				"const wxTextAttr&",
+				"wxTextAttr&",
+				"wxTextAttr&"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"currentStyle",
+				"attr",
+				"clashingAttr",
+				"absentAttr"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxRichTextModuleInit":[
+		{
+			"return_type":"WXDLLIMPEXP_RICHTEXT void",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxMakeGuard":[
+		{
+			"return_type":"wxScopeGuard",
+			"parameters_type":[
+				"F",
+				"P1",
+				"...",
+				"PN"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"func",
+				"p1",
+				null,
+				"pN"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetStockLabel":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				"wxWindowID",
+				"long"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"id",
+				"flags"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetTextFromUser":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"const wxString&",
+				"wxWindow*",
+				"int",
+				"int",
+				"bool"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"message",
+				"caption",
+				"default_value",
+				"parent",
+				"x",
+				"y",
+				"centre"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetPasswordFromUser":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"const wxString&",
+				"wxWindow*",
+				"int",
+				"int",
+				"bool"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"message",
+				"caption",
+				"default_value",
+				"parent",
+				"x",
+				"y",
+				"centre"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetTimeZone":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetLocalTime":[
+		{
+			"return_type":"long",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetLocalTimeMillis":[
+		{
+			"return_type":"wxLongLong",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetUTCTime":[
+		{
+			"return_type":"long",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetUTCTimeMillis":[
+		{
+			"return_type":"wxLongLong",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetUTCTimeUSec":[
+		{
+			"return_type":"wxLongLong",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxCreateFileTipProvider":[
+		{
+			"return_type":"wxTipProvider*",
+			"parameters_type":[
+				"const wxString&",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"filename",
+				"currentTip"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxShowTip":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"wxWindow*",
+				"wxTipProvider*",
+				"bool"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"parent",
+				"tipProvider",
+				"showAtStartup"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxStringTokenize":[
+		{
+			"return_type":"wxArrayString",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"wxStringTokenizerMode"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"str",
+				"delims",
+				"mode"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetTranslation":[
+		{
+			"return_type":"const wxString&",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"string",
+				"domain"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const wxString&",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"unsigned",
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"string",
+				"plural",
+				"n",
+				"domain"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxBeginBusyCursor":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"const wxCursor*"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"cursor"
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxEndBusyCursor":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIsBusy":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxBell":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxInfoMessageBox":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"wxWindow*"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"parent"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetLibraryVersionInfo":[
+		{
+			"return_type":"wxVersionInfo",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetenv":[
+		{
+			"return_type":"wxChar*",
+			"parameters_type":[
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"var"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"const char*"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"name"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"const wchar_t*"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"name"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"name"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"const wxCStrData&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"name"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"const wxCharBuffer&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"name"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"const wxWCharBuffer&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"name"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetEnv":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxString&",
+				"wxString*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"var",
+				"value"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxSetEnv":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"var",
+				"value"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxUnsetEnv":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"var"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetEnvMap":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"wxEnvVariableHashMap*"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"map"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetBatteryState":[
+		{
+			"return_type":"wxBatteryState",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetPowerType":[
+		{
+			"return_type":"wxPowerType",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetDisplayName":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetKeyState":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"wxKeyCode"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"key"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetMousePosition":[
+		{
+			"return_type":"wxPoint",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetMouseState":[
+		{
+			"return_type":"wxMouseState",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxEnableTopLevelWindows":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"bool"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"enable"
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxFindWindowAtPoint":[
+		{
+			"return_type":"wxWindow*",
+			"parameters_type":[
+				"const wxPoint&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"pt"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxFindWindowByLabel":[
+		{
+			"return_type":"wxWindow*",
+			"parameters_type":[
+				"const wxString&",
+				"wxWindow*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"label",
+				"parent"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxFindWindowByName":[
+		{
+			"return_type":"wxWindow*",
+			"parameters_type":[
+				"const wxString&",
+				"wxWindow*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"name",
+				"parent"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxFindMenuItemId":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"wxFrame*",
+				"const wxString&",
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"frame",
+				"menuString",
+				"itemString"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxNewId":[
+		{
+			"return_type":"long",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxRegisterId":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"long"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"id"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxLaunchDefaultApplication":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxString&",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"document",
+				"flags"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxLaunchDefaultBrowser":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxString&",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"url",
+				"flags"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxLoadUserResource":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"resourceName",
+				"resourceType"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxPostDelete":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"wxObject*"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"object"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxQsort":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"void*",
+				"size_t",
+				"size_t",
+				"wxSortCallback",
+				"const void*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"pbase",
+				"total_elems",
+				"size",
+				"cmp",
+				"user_data"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxSetDisplayName":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"displayName"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxStripMenuCodes":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				"const wxString&",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"str",
+				"flags"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetEmailAddress":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"char*",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"buf",
+				"sz"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetFreeMemory":[
+		{
+			"return_type":"wxMemorySize",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetHomeDir":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetHostName":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"char*",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"buf",
+				"sz"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetFullHostName":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetUserHome":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"user"
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetUserId":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"char*",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"buf",
+				"sz"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetUserName":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"char*",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"buf",
+				"sz"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetOsDescription":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetOsVersion":[
+		{
+			"return_type":"wxOperatingSystemId",
+			"parameters_type":[
+				"int*",
+				"int*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"major",
+				"minor"
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIsPlatform64Bit":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIsPlatformLittleEndian":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetLinuxDistributionInfo":[
+		{
+			"return_type":"wxLinuxDistributionInfo",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxExecute":[
+		{
+			"return_type":"long",
+			"parameters_type":[
+				"const wxString&",
+				"int",
+				"wxProcess*",
+				"const wxExecuteEnv*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"command",
+				"flags",
+				"callback",
+				"env"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"long",
+			"parameters_type":[
+				"char**",
+				"int",
+				"wxProcess*",
+				"const wxExecuteEnv*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"argv",
+				"flags",
+				"callback",
+				"env"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"long",
+			"parameters_type":[
+				"wchar_t**",
+				"int",
+				"wxProcess*",
+				"const wxExecuteEnv*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"argv",
+				"flags",
+				"callback",
+				"env"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"long",
+			"parameters_type":[
+				"const wxString&",
+				"wxArrayString&",
+				"int",
+				"const wxExecuteEnv*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"command",
+				"output",
+				"flags",
+				"env"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"long",
+			"parameters_type":[
+				"const wxString&",
+				"wxArrayString&",
+				"wxArrayString&",
+				"int",
+				"const wxExecuteEnv*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"command",
+				"output",
+				"errors",
+				"flags",
+				"env"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxGetProcessId":[
+		{
+			"return_type":"unsigned long",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxKill":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"long",
+				"wxSignal",
+				"wxKillError*",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"pid",
+				"sig",
+				"rc",
+				"flags"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxShell":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"command"
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxShutdown":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"int"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"flags"
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxMicroSleep":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"unsigned long"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"microseconds"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxMilliSleep":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"unsigned long"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"milliseconds"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxNow":[
+		{
+			"return_type":"wxString",
+			"parameters_type":[
+				
+			],
+			"parameters_is_array":[
+				
+			],
+			"parameters_extra":[
+				
+			],
+			"parameters_name":[
+				
+			],
+			"parameters_required":[
+				
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxSleep":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"int"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"secs"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxUsleep":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"unsigned long"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"milliseconds"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxMakeFloatingPointValidator":[
+		{
+			"return_type":"wxFloatingPointValidator< T >",
+			"parameters_type":[
+				"T*",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"value",
+				"style"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wxFloatingPointValidator< T >",
+			"parameters_type":[
+				"int",
+				"T*",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"precision",
+				"value",
+				"style"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxMakeIntegerValidator":[
+		{
+			"return_type":"wxIntegerValidator< T >",
+			"parameters_type":[
+				"T*",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"value",
+				"style"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxVectorSort":[
+		{
+			"return_type":"void",
+			"parameters_type":[
+				"wxVector< T >&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"v"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIsEmpty":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const char*"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"s"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wchar_t*"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"s"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxCharBuffer&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"s"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxWCharBuffer&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"s"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"s"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxCStrData&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"s"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxTmemchr":[
+		{
+			"return_type":"wxChar*",
+			"parameters_type":[
+				"const wxChar*",
+				"wxChar",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c",
+				"l"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"const char*",
+				"char",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c",
+				"len"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxTmemcmp":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"const wxChar*",
+				"const wxChar*",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"sz1",
+				"sz2",
+				"len"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"const char*",
+				"const char*",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"sz1",
+				"sz2",
+				"len"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxTmemcpy":[
+		{
+			"return_type":"wxChar*",
+			"parameters_type":[
+				"wxChar*",
+				"const wxChar*",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"szOut",
+				"szIn",
+				"len"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"const char*",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"szOut",
+				"szIn",
+				"len"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxTmemmove":[
+		{
+			"return_type":"wxChar*",
+			"parameters_type":[
+				"wxChar*",
+				"const wxChar*",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"szOut",
+				"szIn",
+				"len"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"const char*",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"szOut",
+				"szIn",
+				"len"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxTmemset":[
+		{
+			"return_type":"wxChar*",
+			"parameters_type":[
+				"wxChar*",
+				"const wxChar",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"szOut",
+				"cIn",
+				"len"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"const char",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"szOut",
+				"cIn",
+				"len"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxSetlocale":[
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"int",
+				"const wxCharBuffer&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"category",
+				"locale"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"int",
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"category",
+				"locale"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"int",
+				"const wxCStrData&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"category",
+				"locale"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxStrlen":[
+		{
+			"return_type":"size_t",
+			"parameters_type":[
+				"const wxCharBuffer&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"s"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"size_t",
+			"parameters_type":[
+				"const wxWCharBuffer&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"s"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"size_t",
+			"parameters_type":[
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"s"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"size_t",
+			"parameters_type":[
+				"const wxCStrData&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"s"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxStrnlen":[
+		{
+			"return_type":"size_t",
+			"parameters_type":[
+				"const char*",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"str",
+				"maxlen"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"size_t",
+			"parameters_type":[
+				"const wchar_t*",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"str",
+				"maxlen"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxStrdup":[
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"const wxCharBuffer&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"s"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"const wxWCharBuffer&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"s"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"s"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"const wxCStrData&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"s"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxStrcpy":[
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"const char*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"wchar_t*",
+				"const wchar_t*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"const wxCStrData&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"const wxCharBuffer&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"wchar_t*",
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"wchar_t*",
+				"const wxCStrData&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"wchar_t*",
+				"const wxWCharBuffer&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"const wchar_t*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"wchar_t*",
+				"const char*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxStrncpy":[
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"const char*",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"wchar_t*",
+				"const wchar_t*",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"const wxString&",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"const wxCStrData&",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"const wxCharBuffer&",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"wchar_t*",
+				"const wxString&",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"wchar_t*",
+				"const wxCStrData&",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"wchar_t*",
+				"const wxWCharBuffer&",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"const wchar_t*",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"wchar_t*",
+				"const char*",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxStrlcpy":[
+		{
+			"return_type":"size_t",
+			"parameters_type":[
+				"char*",
+				"const char*",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"size_t",
+			"parameters_type":[
+				"wchar_t*",
+				"const wchar_t*",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxStrcat":[
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"const char*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"wchar_t*",
+				"const wchar_t*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"const wxCStrData&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"const wxCharBuffer&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"wchar_t*",
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"wchar_t*",
+				"const wxCStrData&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"wchar_t*",
+				"const wxWCharBuffer&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"const wchar_t*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"wchar_t*",
+				"const char*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxStrncat":[
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"const char*",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"wchar_t*",
+				"const wchar_t*",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"const wxString&",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"const wxCStrData&",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"const wxCharBuffer&",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"wchar_t*",
+				"const wxString&",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"wchar_t*",
+				"const wxCStrData&",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"wchar_t*",
+				"const wxWCharBuffer&",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"const wchar_t*",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"wchar_t*",
+				"const char*",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxStrcmp_String":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"const wxString&",
+				"const T&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s1",
+				"s2"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxStricmp_String":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"const wxString&",
+				"const T&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s1",
+				"s2"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxStrcoll_String":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"const wxString&",
+				"const T&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s1",
+				"s2"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxStrspn_String":[
+		{
+			"return_type":"size_t",
+			"parameters_type":[
+				"const wxString&",
+				"const T&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s1",
+				"s2"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxStrcspn_String":[
+		{
+			"return_type":"size_t",
+			"parameters_type":[
+				"const wxString&",
+				"const T&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s1",
+				"s2"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxStrncmp_String":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"const wxString&",
+				"const T&",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"s1",
+				"s2",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxStrnicmp_String":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"const wxString&",
+				"const T&",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"s1",
+				"s2",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxStrxfrm":[
+		{
+			"return_type":"size_t",
+			"parameters_type":[
+				"char*",
+				"const char*",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"size_t",
+			"parameters_type":[
+				"wchar_t*",
+				"const wchar_t*",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"size_t",
+			"parameters_type":[
+				"T*",
+				"const wxCharTypeBuffer< T >&",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"size_t",
+			"parameters_type":[
+				"char*",
+				"const wxString&",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"size_t",
+			"parameters_type":[
+				"wchar_t*",
+				"const wxString&",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"size_t",
+			"parameters_type":[
+				"char*",
+				"const wxCStrData&",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"size_t",
+			"parameters_type":[
+				"wchar_t*",
+				"const wxCStrData&",
+				"size_t"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"dest",
+				"src",
+				"n"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxStrtok":[
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"const char*",
+				"char**"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"str",
+				"delim",
+				"saveptr"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"wchar_t*",
+				"const wchar_t*",
+				"wchar_t**"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"str",
+				"delim",
+				"saveptr"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"const wxCStrData&",
+				"char**"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"str",
+				"delim",
+				"saveptr"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"wchar_t*",
+				"const wxCStrData&",
+				"wchar_t**"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"str",
+				"delim",
+				"saveptr"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"const wxString&",
+				"char**"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"str",
+				"delim",
+				"saveptr"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"wchar_t*",
+				"const wxString&",
+				"wchar_t**"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"str",
+				"delim",
+				"saveptr"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxStrstr":[
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const char*",
+				"const char*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"haystack",
+				"needle"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const wchar_t*",
+			"parameters_type":[
+				"const wchar_t*",
+				"const wchar_t*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"haystack",
+				"needle"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const char*",
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"haystack",
+				"needle"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const wchar_t*",
+			"parameters_type":[
+				"const wchar_t*",
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"haystack",
+				"needle"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"haystack",
+				"needle"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const wxCStrData&",
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"haystack",
+				"needle"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const wxCStrData&",
+				"const wxCStrData&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"haystack",
+				"needle"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const wxString&",
+				"const char*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"haystack",
+				"needle"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const wxCStrData&",
+				"const char*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"haystack",
+				"needle"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const wchar_t*",
+			"parameters_type":[
+				"const wxString&",
+				"const wchar_t*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"haystack",
+				"needle"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const wchar_t*",
+			"parameters_type":[
+				"const wxCStrData&",
+				"const wchar_t*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"haystack",
+				"needle"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"const char*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"haystack",
+				"needle"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"wchar_t*",
+				"const wchar_t*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"haystack",
+				"needle"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"haystack",
+				"needle"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"wchar_t*",
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"haystack",
+				"needle"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxStrchr":[
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const char*",
+				"char"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const wchar_t*",
+			"parameters_type":[
+				"const wchar_t*",
+				"wchar_t"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const char*",
+				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const wchar_t*",
+			"parameters_type":[
+				"const wchar_t*",
+				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const char*",
+				"const wxUniCharRef&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const wchar_t*",
+			"parameters_type":[
+				"const wchar_t*",
+				"const wxUniCharRef&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const T*",
+			"parameters_type":[
+				"const wxCharTypeBuffer< T >&",
+				"T"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const T*",
+			"parameters_type":[
+				"const wxCharTypeBuffer< T >&",
+				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const T*",
+			"parameters_type":[
+				"const wxCharTypeBuffer< T >&",
+				"const wxUniCharRef&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const wxString&",
+				"char"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const wxString&",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const wxString&",
+				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const wxString&",
+				"const wxUniCharRef&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const wchar_t*",
+			"parameters_type":[
+				"const wxString&",
+				"wchar_t"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const wxCStrData&",
+				"char"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const wxCStrData&",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const wxCStrData&",
+				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const wxCStrData&",
+				"const wxUniCharRef&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const wchar_t*",
+			"parameters_type":[
+				"const wxCStrData&",
+				"wchar_t"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"char"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"wchar_t*",
+				"wchar_t"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxStrrchr":[
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const char*",
+				"char"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const wchar_t*",
+			"parameters_type":[
+				"const wchar_t*",
+				"wchar_t"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const char*",
+				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const wchar_t*",
+			"parameters_type":[
+				"const wchar_t*",
+				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const char*",
+				"const wxUniCharRef&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const wchar_t*",
+			"parameters_type":[
+				"const wchar_t*",
+				"const wxUniCharRef&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const T*",
+			"parameters_type":[
+				"const wxCharTypeBuffer< T >&",
+				"T"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const T*",
+			"parameters_type":[
+				"const wxCharTypeBuffer< T >&",
+				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const T*",
+			"parameters_type":[
+				"const wxCharTypeBuffer< T >&",
+				"const wxUniCharRef&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const wxString&",
+				"char"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const wxString&",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const wxString&",
+				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const wxString&",
+				"const wxUniCharRef&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const wchar_t*",
+			"parameters_type":[
+				"const wxString&",
+				"wchar_t"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const wxCStrData&",
+				"char"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const wxCStrData&",
+				"int"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const wxCStrData&",
+				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const wxCStrData&",
+				"const wxUniCharRef&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const wchar_t*",
+			"parameters_type":[
+				"const wxCStrData&",
+				"wchar_t"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"char"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"wchar_t*",
+				"wchar_t"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"c"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxStrpbrk":[
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const char*",
+				"const char*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"accept"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const wchar_t*",
+			"parameters_type":[
+				"const wchar_t*",
+				"const wchar_t*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"accept"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const char*",
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"accept"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const char*",
+				"const wxCStrData&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"accept"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const wchar_t*",
+			"parameters_type":[
+				"const wchar_t*",
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"accept"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const wchar_t*",
+			"parameters_type":[
+				"const wchar_t*",
+				"const wxCStrData&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"accept"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"accept"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const wxString&",
+				"const char*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"accept"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const wchar_t*",
+			"parameters_type":[
+				"const wxString&",
+				"const wchar_t*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"accept"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const wxString&",
+				"const wxCStrData&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"accept"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const wxCStrData&",
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"accept"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const wxCStrData&",
+				"const char*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"accept"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const wchar_t*",
+			"parameters_type":[
+				"const wxCStrData&",
+				"const wchar_t*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"accept"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const char*",
+			"parameters_type":[
+				"const wxCStrData&",
+				"const wxCStrData&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"accept"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"const T*",
+			"parameters_type":[
+				"const S&",
+				"const wxCharTypeBuffer< T >&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"accept"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"const char*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"accept"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"wchar_t*",
+				"const wchar_t*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"accept"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"accept"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"wchar_t*",
+			"parameters_type":[
+				"wchar_t*",
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"accept"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxFopen":[
+		{
+			"return_type":"FILE*",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"path",
+				"mode"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxFreopen":[
+		{
+			"return_type":"FILE*",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&",
+				"FILE*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"path",
+				"mode",
+				"stream"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxRemove":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"path"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxRename":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"const wxString&",
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"oldpath",
+				"newpath"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxFgets":[
+		{
+			"return_type":"char*",
+			"parameters_type":[
+				"char*",
+				"int",
+				"FILE*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"size",
+				"stream"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxFgetc":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"FILE*"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"stream"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxUngetc":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"int",
+				"FILE*"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"c",
+				"stream"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxAtoi":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"str"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxAtol":[
+		{
+			"return_type":"long",
+			"parameters_type":[
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"str"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxAtof":[
+		{
+			"return_type":"double",
+			"parameters_type":[
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"str"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxStrtod":[
+		{
+			"return_type":"double",
+			"parameters_type":[
+				"const char*",
+				"char**"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"nptr",
+				"endptr"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"double",
+			"parameters_type":[
+				"const wchar_t*",
+				"wchar_t**"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"nptr",
+				"endptr"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"double",
+			"parameters_type":[
+				"const wxCharTypeBuffer< T >&",
+				"T**"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"nptr",
+				"endptr"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"double",
+			"parameters_type":[
+				"const wxString&",
+				"T"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"nptr",
+				"endptr"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"double",
+			"parameters_type":[
+				"const wxCStrData&",
+				"T"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"nptr",
+				"endptr"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxSystem":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"const wxString&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"str"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxStrftime":[
+		{
+			"return_type":"size_t",
+			"parameters_type":[
+				"char*",
+				"size_t",
+				"size_t",
+				"const wxString&",
+				"const struct tm*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"max",
+				"max",
+				"format",
+				"tm"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		},
+		{
+			"return_type":"size_t",
+			"parameters_type":[
+				"wchar_t*",
+				"size_t",
+				"size_t",
+				"const wxString&",
+				"const struct tm*"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"s",
+				"max",
+				"max",
+				"format",
+				"tm"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIsalnum":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"c"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIsalpha":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"c"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIscntrl":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"c"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIsdigit":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"c"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIsgraph":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"c"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIslower":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"c"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIsprint":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"c"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIspunct":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"c"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIsspace":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"c"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIsupper":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"c"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIsxdigit":[
+		{
+			"return_type":"bool",
+			"parameters_type":[
+				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"c"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxTolower":[
+		{
+			"return_type":"wxUniChar",
+			"parameters_type":[
+				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"c"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxToupper":[
+		{
+			"return_type":"wxUniChar",
+			"parameters_type":[
+				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"c"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIsctrl":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"const wxUniChar&"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"c"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIsalnum_l":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"wchar_t",
+				"const wxXLocale&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"c",
+				"loc"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIsalpha_l":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"wchar_t",
+				"const wxXLocale&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"c",
+				"loc"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIscntrl_l":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"wchar_t",
+				"const wxXLocale&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"c",
+				"loc"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIsdigit_l":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"wchar_t",
+				"const wxXLocale&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"c",
+				"loc"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIsgraph_l":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"wchar_t",
+				"const wxXLocale&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"c",
+				"loc"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIslower_l":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"wchar_t",
+				"const wxXLocale&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"c",
+				"loc"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIsprint_l":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"wchar_t",
+				"const wxXLocale&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"c",
+				"loc"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIspunct_l":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"wchar_t",
+				"const wxXLocale&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"c",
+				"loc"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIsspace_l":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"wchar_t",
+				"const wxXLocale&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"c",
+				"loc"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIsupper_l":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"wchar_t",
+				"const wxXLocale&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"c",
+				"loc"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxIsxdigit_l":[
+		{
+			"return_type":"int",
+			"parameters_type":[
+				"wchar_t",
+				"const wxXLocale&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"c",
+				"loc"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxTolower_l":[
+		{
+			"return_type":"wchar_t",
+			"parameters_type":[
+				"wchar_t",
+				"const wxXLocale&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"c",
+				"loc"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxToupper_l":[
+		{
+			"return_type":"wchar_t",
+			"parameters_type":[
+				"wchar_t",
+				"const wxXLocale&"
+			],
+			"parameters_is_array":[
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false
+			],
+			"parameters_name":[
+				"c",
+				"loc"
+			],
+			"parameters_required":[
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxStrtod_l":[
+		{
+			"return_type":"double",
+			"parameters_type":[
+				"const wchar_t*",
+				"wchar_t**",
+				"const wxXLocale&"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"c",
+				"endptr",
+				"loc"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxStrtol_l":[
+		{
+			"return_type":"long",
+			"parameters_type":[
+				"const wchar_t*",
+				"wchar_t**",
+				"int",
+				"const wxXLocale&"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"c",
+				"endptr",
+				"base",
+				"loc"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
+	"wxStrtoul_l":[
+		{
+			"return_type":"unsigned long",
+			"parameters_type":[
+				"const wchar_t*",
+				"wchar_t**",
+				"int",
+				"const wxXLocale&"
+			],
+			"parameters_is_array":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_extra":[
+				false,
+				false,
+				false,
+				false
+			],
+			"parameters_name":[
+				"c",
+				"endptr",
+				"base",
+				"loc"
+			],
+			"parameters_required":[
+				true,
+				true,
+				true,
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	]
+}

@@ -1,0 +1,8 @@
+This directory is scanned by the xml_parser.php script on the tools
+directory for the wxWidgets doxygen xml files. To generate new json
+files whose are used by the code generator.
+
+In order to generate these files you would need a trunk copy of 
+wxWidgets cd into docs\doxygen and execute ./regen.sh xml, then
+you would need to copy all the xml files on the out\xml directory
+into this directory.
