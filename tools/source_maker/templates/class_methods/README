@@ -1,0 +1,6 @@
+On this directory you can place custom templates for class methods.
+The template filename should be all lowercase and the format is:
+
+	classname_methodname.php
+
+Take a look on wxevthandler_connect.php as an example

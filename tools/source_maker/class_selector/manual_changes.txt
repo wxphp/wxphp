@@ -1,0 +1,848 @@
+Things manually added/changed to files
+......................................
+
+This file serves as a registry of manual changes made to the generated
+files of the xml_parser. So if we need to regenarate again these files
+we dont have to go to the whole process of inspecting everything
+and just focus on the changes stored here.
+
+These changes are done in order to generate the correct code
+to successfully compile.
+
+
+full_classes_set.json
+=====================
+
+1. Changed "ExitCode" to original type "void*"
+
+
+2. Changed typo wxEmptyStr to wxEmptyString on wxChoicebook (fixed on latest wxWidgets svn)
+
+
+3. Changed on wxDatePickerCtrl GetValue, GetRange, SetRange, from pure virtual
+to virtual (seems to be fixed on latest wxWidgets svn)
+
+
+4. Fixed on wxHtmlHelpWindow constructor duplicated parameters names
+for wxPoint pos and wxSize pos
+
+
+5. Changed parameters with non exsistant type 
+wxRibbonButtonBarButtonKind to wxRibbonButtonKind
+
+
+6. Changed wxToolBarBase to wxToolBar on wxToolbook::GetToolBar and
+wxEmptyStr typo (seems to be fixed on latest trunk) on constructor default parameters
+
+
+7. Added wxScrolledWindow
+
+	"wxScrolledWindow":{
+		"_implements":[
+			"wxPanel"
+		]
+	},
+	
+
+8. Added wxGridCellCoords (seems to be already added on wxWidgets svn trunk)
+
+	"wxGridCellCoords":{
+		"wxGridCellCoords":[
+			{
+				"return_type":"",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+				
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			},
+			{
+				"return_type":"",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int",
+					"int"
+				],
+				"parameters_name":[
+					"r",
+					"c"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		],
+		"GetRow":[
+			{
+				"return_type":"int",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+				
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"SetRow":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_name":[
+					"n"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"GetCol":[
+			{
+				"return_type":"int",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+				
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"SetCol":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int"
+				],
+				"parameters_name":[
+					"n"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"Set":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"int",
+					"int"
+				],
+				"parameters_name":[
+					"row",
+					"col"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		]
+	},
+	
+
+9. Added wxToolBarToolBase by hand since the documentation doesnt 
+provides it as follows: (seems to be already added on wxWidgets svn trunk)
+
+	"wxToolBarToolBase":{
+		"_implements":[
+			"wxObject"
+		],
+		"Attach":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"wxToolBar*"
+				],
+				"parameters_name":[
+					"tbar"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"CanBeToggled":[
+			{
+				"return_type":"bool",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"Detach":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"Enable":[
+			{
+				"return_type":"bool",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"bool"
+				],
+				"parameters_name":[
+					"enable"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"GetBitmap":[
+			{
+				"return_type":"wxBitmap",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetControl":[
+			{
+				"return_type":"wxControl*",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetDisabledBitmap":[
+			{
+				"return_type":"const wxBitmap&",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetId":[
+			{
+				"return_type":"int",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetKind":[
+			{
+				"return_type":"wxItemKind",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetLabel":[
+			{
+				"return_type":"wxString",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetLongHelp":[
+			{
+				"return_type":"wxString",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetNormalBitmap":[
+			{
+				"return_type":"const wxBitmap&",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetShortHelp":[
+			{
+				"return_type":"wxString",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetStyle":[
+			{
+				"return_type":"int",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetToolBar":[
+			{
+				"return_type":"wxToolBar*",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"IsButton":[
+			{
+				"return_type":"int",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"IsControl":[
+			{
+				"return_type":"int",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"IsEnabled":[
+			{
+				"return_type":"bool",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"IsSeparator":[
+			{
+				"return_type":"int",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"IsToggled":[
+			{
+				"return_type":"bool",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"SetDisabledBitmap":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxBitmap&"
+				],
+				"parameters_name":[
+					"bmp"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"SetLabel":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxString&"
+				],
+				"parameters_name":[
+					"label"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"SetLongHelp":[
+			{
+				"return_type":"bool",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxString&"
+				],
+				"parameters_name":[
+					"help"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"SetNormalBitmap":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxBitmap&"
+				],
+				"parameters_name":[
+					"bmp"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"SetShortHelp":[
+			{
+				"return_type":"bool",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxString&"
+				],
+				"parameters_name":[
+					"help"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"SetToggle":[
+			{
+				"return_type":"bool",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"bool"
+				],
+				"parameters_name":[
+					"toggle"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"Toggle":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		]
+	},
+
+
+10. Added wxRibbonButtonBarButtonBase as forward declaration
+
+	"wxRibbonButtonBarButtonBase":{
+		"_implements":[
+			"dummy"
+		],
+		"_forward_declaration":true
+	},
+	
+	
+11. Added wxRibbonGalleryItem as forward declaration
+
+	"wxRibbonGalleryItem":{
+		"_implements":[
+			"dummy"
+		],
+		"_forward_declaration":true
+	},
+
+
+12. Added wxRibbonToolBarToolBase as forward declaration
+
+	"wxRibbonToolBarToolBase":{
+		"_implements":[
+			"dummy"
+		],
+		"_forward_declaration":true
+	},
+	
+
+13. Modified SetBitmap on wxMenuItem removed bool parameter
+

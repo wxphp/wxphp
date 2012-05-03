@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script to facilitate the development process
+# Script to facilitate the development process on unix environments 
 #
 # This script should only be used after initializing for build
 # by calling phpize and ./configure [options]
@@ -31,27 +31,22 @@ if [ ! -e "config.h" ]; then
 fi
 
 # Check if running script from wxphp root
-if [ ! -e "app.h" ]; then
+if [ ! -e "includes/app.h" ]; then
 	echo "app.h not found: Please run this script from the wxphp root directory"
 	exit 1
 fi
 
 # Copy the most recent classes binding file
-cp source_maker/class_selector/classes.json source_maker/dumps
+cp tools/source_maker/class_selector/classes.json json
 
 # Enter code generator directory
-cd source_maker/
+cd tools/source_maker/
 
 # Start the code generator
 ./go.sh
 
-# Clean up source_maker dir and leave the discarded.log
-rm *.h
-rm *.cpp
-rm config.*
-
 # Return to main source directory
-cd ..
+cd ../../
 
 # Get cpu cores for parallel faster build
 CPU_CORES=`grep -i processor /proc/cpuinfo | wc -l`

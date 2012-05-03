@@ -1,0 +1,6 @@
+On this directory you can place custom templates for functions.
+The template filename should be all lowercase and the format is:
+
+	function_name.php
+
+Take a look on wxdynamiccast.php as an example
