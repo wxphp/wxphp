@@ -12,11 +12,11 @@ Short term TODO
   this was fixed before, but after introducing wxPHPObjectReferences
   it break up.
 
-* (ALMOST) Update config.w32 and configd.w32 to use new wxWidgets 2.9.x
+* (DONE) Update config.m4 and configd.w32 to use new wxWidgets 2.9.x
 
-* Compilation testing and troubleshooting on windows
+* (PARTIALLY) Compilation testing and troubleshooting on windows
 
-* Compilation testing and troubleshooting on mac
+* (PARTIALLY) Compilation testing and troubleshooting on mac
 
 * Implement __set to write to internal wxWidgets class properties.
 
