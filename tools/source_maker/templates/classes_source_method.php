@@ -1,4 +1,4 @@
-PHP_METHOD(php_<?=$class_name?>, <?=$method_name?>)
+PHP_METHOD(php_<?=$class_name?>, <?=$method_name=="New"?"NewObject":$method_name?>)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking <?=$class_name?>::<?=$method_name?>\n");

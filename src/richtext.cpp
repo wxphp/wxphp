@@ -42,6 +42,7 @@
 #include "threading.h"
 #include "validator.h"
 #include "vfs.h"
+#include "webview.h"
 #include "aui.h"
 #include "winlayout.h"
 #include "xml.h"

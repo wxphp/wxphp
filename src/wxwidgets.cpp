@@ -58,6 +58,7 @@
 #include "threading.h"
 #include "validator.h"
 #include "vfs.h"
+#include "webview.h"
 #include "aui.h"
 #include "winlayout.h"
 #include "xml.h"
@@ -1450,6 +1451,21 @@ int le_wxGenericProgressDialog;
 
 zend_class_entry* php_wxToolBarToolBase_entry;
 int le_wxToolBarToolBase;
+
+zend_class_entry* php_wxWebViewHistoryItem_entry;
+int le_wxWebViewHistoryItem;
+
+zend_class_entry* php_wxWebViewHandler_entry;
+int le_wxWebViewHandler;
+
+zend_class_entry* php_wxWebViewEvent_entry;
+int le_wxWebViewEvent;
+
+zend_class_entry* php_wxWebViewArchiveHandler_entry;
+int le_wxWebViewArchiveHandler;
+
+zend_class_entry* php_wxWebView_entry;
+int le_wxWebView;
 
 
 /**
@@ -4529,6 +4545,36 @@ PHP_MINIT_FUNCTION(php_wxWidgets)
 	php_wxToolBarToolBase_entry = zend_register_internal_class(&ce TSRMLS_CC);
 	le_wxToolBarToolBase = zend_register_list_destructors_ex(php_wxToolBarToolBase_destruction_handler, NULL, le_wxToolBarToolBase_name, module_number);
 
+	char PHP_wxWebViewHistoryItem_name[] = "wxWebViewHistoryItem";
+	char le_wxWebViewHistoryItem_name[] = "native wxWebViewHistoryItem";
+	INIT_CLASS_ENTRY(ce, PHP_wxWebViewHistoryItem_name, php_wxWebViewHistoryItem_functions);
+	php_wxWebViewHistoryItem_entry = zend_register_internal_class(&ce TSRMLS_CC);
+	le_wxWebViewHistoryItem = zend_register_list_destructors_ex(php_wxWebViewHistoryItem_destruction_handler, NULL, le_wxWebViewHistoryItem_name, module_number);
+
+	char PHP_wxWebViewHandler_name[] = "wxWebViewHandler";
+	char le_wxWebViewHandler_name[] = "native wxWebViewHandler";
+	INIT_CLASS_ENTRY(ce, PHP_wxWebViewHandler_name, php_wxWebViewHandler_functions);
+	php_wxWebViewHandler_entry = zend_register_internal_class(&ce TSRMLS_CC);
+	le_wxWebViewHandler = zend_register_list_destructors_ex(php_wxWebViewHandler_destruction_handler, NULL, le_wxWebViewHandler_name, module_number);
+
+	char PHP_wxWebViewEvent_name[] = "wxWebViewEvent";
+	char le_wxWebViewEvent_name[] = "native wxWebViewEvent";
+	INIT_CLASS_ENTRY(ce, PHP_wxWebViewEvent_name, php_wxWebViewEvent_functions);
+	php_wxWebViewEvent_entry = zend_register_internal_class(&ce TSRMLS_CC);
+	le_wxWebViewEvent = zend_register_list_destructors_ex(php_wxWebViewEvent_destruction_handler, NULL, le_wxWebViewEvent_name, module_number);
+
+	char PHP_wxWebViewArchiveHandler_name[] = "wxWebViewArchiveHandler";
+	char le_wxWebViewArchiveHandler_name[] = "native wxWebViewArchiveHandler";
+	INIT_CLASS_ENTRY(ce, PHP_wxWebViewArchiveHandler_name, php_wxWebViewArchiveHandler_functions);
+	php_wxWebViewArchiveHandler_entry = zend_register_internal_class(&ce TSRMLS_CC);
+	le_wxWebViewArchiveHandler = zend_register_list_destructors_ex(php_wxWebViewArchiveHandler_destruction_handler, NULL, le_wxWebViewArchiveHandler_name, module_number);
+
+	char PHP_wxWebView_name[] = "wxWebView";
+	char le_wxWebView_name[] = "native wxWebView";
+	INIT_CLASS_ENTRY(ce, PHP_wxWebView_name, php_wxWebView_functions);
+	php_wxWebView_entry = zend_register_internal_class(&ce TSRMLS_CC);
+	le_wxWebView = zend_register_list_destructors_ex(php_wxWebView_destruction_handler, NULL, le_wxWebView_name, module_number);
+
 
 	//Variables found on consts.json
 
@@ -7268,6 +7314,26 @@ PHP_MINIT_FUNCTION(php_wxWidgets)
 	REGISTER_LONG_CONSTANT("wxVERTICAL", wxVERTICAL, CONST_CS | CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxVSCROLL", wxVSCROLL, CONST_CS | CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxWANTS_CHARS", wxWANTS_CHARS, CONST_CS | CONST_PERSISTENT);
+	REGISTER_LONG_CONSTANT("wxWEB_NAV_ERR_AUTH", wxWEB_NAV_ERR_AUTH, CONST_CS | CONST_PERSISTENT);
+	REGISTER_LONG_CONSTANT("wxWEB_NAV_ERR_CERTIFICATE", wxWEB_NAV_ERR_CERTIFICATE, CONST_CS | CONST_PERSISTENT);
+	REGISTER_LONG_CONSTANT("wxWEB_NAV_ERR_CONNECTION", wxWEB_NAV_ERR_CONNECTION, CONST_CS | CONST_PERSISTENT);
+	REGISTER_LONG_CONSTANT("wxWEB_NAV_ERR_NOT_FOUND", wxWEB_NAV_ERR_NOT_FOUND, CONST_CS | CONST_PERSISTENT);
+	REGISTER_LONG_CONSTANT("wxWEB_NAV_ERR_OTHER", wxWEB_NAV_ERR_OTHER, CONST_CS | CONST_PERSISTENT);
+	REGISTER_LONG_CONSTANT("wxWEB_NAV_ERR_REQUEST", wxWEB_NAV_ERR_REQUEST, CONST_CS | CONST_PERSISTENT);
+	REGISTER_LONG_CONSTANT("wxWEB_NAV_ERR_SECURITY", wxWEB_NAV_ERR_SECURITY, CONST_CS | CONST_PERSISTENT);
+	REGISTER_LONG_CONSTANT("wxWEB_NAV_ERR_USER_CANCELLED", wxWEB_NAV_ERR_USER_CANCELLED, CONST_CS | CONST_PERSISTENT);
+	REGISTER_LONG_CONSTANT("wxWEB_VIEW_BACKEND_DEFAULT", wxWEB_VIEW_BACKEND_DEFAULT, CONST_CS | CONST_PERSISTENT);
+	REGISTER_LONG_CONSTANT("wxWEB_VIEW_BACKEND_IE", wxWEB_VIEW_BACKEND_IE, CONST_CS | CONST_PERSISTENT);
+	REGISTER_LONG_CONSTANT("wxWEB_VIEW_BACKEND_WEBKIT", wxWEB_VIEW_BACKEND_WEBKIT, CONST_CS | CONST_PERSISTENT);
+	REGISTER_LONG_CONSTANT("wxWEB_VIEW_RELOAD_DEFAULT", wxWEB_VIEW_RELOAD_DEFAULT, CONST_CS | CONST_PERSISTENT);
+	REGISTER_LONG_CONSTANT("wxWEB_VIEW_RELOAD_NO_CACHE", wxWEB_VIEW_RELOAD_NO_CACHE, CONST_CS | CONST_PERSISTENT);
+	REGISTER_LONG_CONSTANT("wxWEB_VIEW_ZOOM_LARGE", wxWEB_VIEW_ZOOM_LARGE, CONST_CS | CONST_PERSISTENT);
+	REGISTER_LONG_CONSTANT("wxWEB_VIEW_ZOOM_LARGEST", wxWEB_VIEW_ZOOM_LARGEST, CONST_CS | CONST_PERSISTENT);
+	REGISTER_LONG_CONSTANT("wxWEB_VIEW_ZOOM_MEDIUM", wxWEB_VIEW_ZOOM_MEDIUM, CONST_CS | CONST_PERSISTENT);
+	REGISTER_LONG_CONSTANT("wxWEB_VIEW_ZOOM_SMALL", wxWEB_VIEW_ZOOM_SMALL, CONST_CS | CONST_PERSISTENT);
+	REGISTER_LONG_CONSTANT("wxWEB_VIEW_ZOOM_TINY", wxWEB_VIEW_ZOOM_TINY, CONST_CS | CONST_PERSISTENT);
+	REGISTER_LONG_CONSTANT("wxWEB_VIEW_ZOOM_TYPE_LAYOUT", wxWEB_VIEW_ZOOM_TYPE_LAYOUT, CONST_CS | CONST_PERSISTENT);
+	REGISTER_LONG_CONSTANT("wxWEB_VIEW_ZOOM_TYPE_TEXT", wxWEB_VIEW_ZOOM_TYPE_TEXT, CONST_CS | CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxWEST", wxWEST, CONST_CS | CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxWINDING_RULE", wxWINDING_RULE, CONST_CS | CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxWINDOW_VARIANT_LARGE", wxWINDOW_VARIANT_LARGE, CONST_CS | CONST_PERSISTENT);
@@ -7571,6 +7637,12 @@ PHP_MINIT_FUNCTION(php_wxWidgets)
 	REGISTER_LONG_CONSTANT("wxTREE_HITTEST_ONITEMUPPERPART", wxTREE_HITTEST_ONITEMUPPERPART, CONST_CS | CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxTREE_HITTEST_ONITEMLOWERPART", wxTREE_HITTEST_ONITEMLOWERPART, CONST_CS | CONST_PERSISTENT);
 	REGISTER_LONG_CONSTANT("wxTREE_HITTEST_ONITEM", wxTREE_HITTEST_ONITEM, CONST_CS | CONST_PERSISTENT);
+	REGISTER_LONG_CONSTANT("wxEVT_COMMAND_WEB_VIEW_NAVIGATING", wxEVT_COMMAND_WEB_VIEW_NAVIGATING, CONST_CS | CONST_PERSISTENT);
+	REGISTER_LONG_CONSTANT("wxEVT_COMMAND_WEB_VIEW_NAVIGATED", wxEVT_COMMAND_WEB_VIEW_NAVIGATED, CONST_CS | CONST_PERSISTENT);
+	REGISTER_LONG_CONSTANT("wxEVT_COMMAND_WEB_VIEW_LOADED", wxEVT_COMMAND_WEB_VIEW_LOADED, CONST_CS | CONST_PERSISTENT);
+	REGISTER_LONG_CONSTANT("wxEVT_COMMAND_WEB_VIEW_ERROR", wxEVT_COMMAND_WEB_VIEW_ERROR, CONST_CS | CONST_PERSISTENT);
+	REGISTER_LONG_CONSTANT("wxEVT_COMMAND_WEB_VIEW_NEWWINDOW", wxEVT_COMMAND_WEB_VIEW_NEWWINDOW, CONST_CS | CONST_PERSISTENT);
+	REGISTER_LONG_CONSTANT("wxEVT_COMMAND_WEB_VIEW_TITLE_CHANGED", wxEVT_COMMAND_WEB_VIEW_TITLE_CHANGED, CONST_CS | CONST_PERSISTENT);
 
 	//Class enumerations
 
