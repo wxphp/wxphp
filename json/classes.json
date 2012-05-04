@@ -204383,5 +204383,1801 @@
 				]
 			}
 		]
+	},
+	"wxWebViewHistoryItem":{
+		"wxWebViewHistoryItem":[
+			{
+				"return_type":"",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxString&",
+					"const wxString&"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"url",
+					"title"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		],
+		"GetUrl":[
+			{
+				"return_type":"wxString",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetTitle":[
+			{
+				"return_type":"wxString",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		]
+	},
+	"wxWebViewHandler":{
+		"wxWebViewHandler":[
+			{
+				"return_type":"",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxString&"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"scheme"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"GetName":[
+			{
+				"return_type":"wxString",
+				"constant":true,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetFile":[
+			{
+				"return_type":"wxFSFile*",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxString&"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"uri"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		]
+	},
+	"wxWebViewEvent":{
+		"_implements":[
+			"wxNotifyEvent"
+		],
+		"GetTarget":[
+			{
+				"return_type":"const wxString&",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetURL":[
+			{
+				"return_type":"const wxString&",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"wxWebViewEvent":[
+			{
+				"return_type":"",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			},
+			{
+				"return_type":"",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"wxEventType",
+					"int",
+					"const wxString",
+					"const wxString"
+				],
+				"parameters_is_array":[
+					false,
+					false,
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false,
+					false,
+					false
+				],
+				"parameters_name":[
+					"type",
+					"id",
+					"href",
+					"target"
+				],
+				"parameters_required":[
+					true,
+					true,
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null,
+					null,
+					null
+				]
+			}
+		]
+	},
+	"wxWebViewArchiveHandler":{
+		"_implements":[
+			"wxWebViewHandler"
+		],
+		"wxWebViewArchiveHandler":[
+			{
+				"return_type":"",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxString&"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"scheme"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"GetFile":[
+			{
+				"return_type":"wxFSFile*",
+				"constant":false,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxString&"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"uri"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		]
+	},
+	"wxWebView":{
+		"_implements":[
+			"wxControl"
+		],
+		"CanCopy":[
+			{
+				"return_type":"bool",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"CanCut":[
+			{
+				"return_type":"bool",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"CanGoBack":[
+			{
+				"return_type":"bool",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"CanGoForward":[
+			{
+				"return_type":"bool",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"CanPaste":[
+			{
+				"return_type":"bool",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"CanRedo":[
+			{
+				"return_type":"bool",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"CanSetZoomType":[
+			{
+				"return_type":"bool",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"wxWebViewZoomType"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"type"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"CanUndo":[
+			{
+				"return_type":"bool",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"ClearHistory":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"ClearSelection":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"Copy":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"Create":[
+			{
+				"return_type":"bool",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"wxWindow*",
+					"wxWindowID",
+					"const wxString&",
+					"const wxPoint&",
+					"const wxSize&",
+					"long",
+					"const wxString&"
+				],
+				"parameters_is_array":[
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false
+				],
+				"parameters_name":[
+					"parent",
+					"id",
+					"url",
+					"pos",
+					"size",
+					"style",
+					"name"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null,
+					"wxWebViewDefaultURLStr",
+					"wxDefaultPosition",
+					"wxDefaultSize",
+					"0",
+					"wxWebViewNameStr"
+				]
+			}
+		],
+		"Cut":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"DeleteSelection":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"EnableHistory":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"bool"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"enable"
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					"true"
+				]
+			}
+		],
+		"GetBackwardHistory":[
+			{
+				"return_type":"wxVector< wxSharedPtr< wxWebViewHistoryItem > >",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"Undo":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"Stop":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"SetZoomType":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"wxWebViewZoomType"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"zoomType"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"SetZoom":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"wxWebViewZoom"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"zoom"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"SetPage":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":true,
+				"pure_virtual":false,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"wxInputStream&",
+					"wxString"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"html",
+					"baseUrl"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			},
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxString&",
+					"const wxString&"
+				],
+				"parameters_is_array":[
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false
+				],
+				"parameters_name":[
+					"html",
+					"baseUrl"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null
+				]
+			}
+		],
+		"SetEditable":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"bool"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"enable"
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					"true"
+				]
+			}
+		],
+		"SelectAll":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"RunScript":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxString&"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"javascript"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"Reload":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"wxWebViewReloadFlags"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"flags"
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					"wxWEB_VIEW_RELOAD_DEFAULT"
+				]
+			}
+		],
+		"RegisterHandler":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"wxSharedPtr< wxWebViewHandler >"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"handler"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"Redo":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"Print":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"Paste":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"New":[
+			{
+				"return_type":"wxWebView*",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":true,
+				"protected":false,
+				"parameters_type":[
+					"wxWindow*",
+					"wxWindowID",
+					"const wxString&",
+					"const wxPoint&",
+					"const wxSize&",
+					"wxWebViewBackend",
+					"long",
+					"const wxString&"
+				],
+				"parameters_is_array":[
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false
+				],
+				"parameters_extra":[
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false,
+					false
+				],
+				"parameters_name":[
+					"parent",
+					"id",
+					"url",
+					"pos",
+					"size",
+					"backend",
+					"style",
+					"name"
+				],
+				"parameters_required":[
+					true,
+					true
+				],
+				"parameters_default_value":[
+					null,
+					null,
+					"wxWebViewDefaultURLStr",
+					"wxDefaultPosition",
+					"wxDefaultSize",
+					"wxWEB_VIEW_BACKEND_DEFAULT",
+					"0",
+					"wxWebViewNameStr"
+				]
+			},
+			{
+				"return_type":"wxWebView*",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":false,
+				"static":true,
+				"protected":false,
+				"parameters_type":[
+					"wxWebViewBackend"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"backend"
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					"wxWEB_VIEW_BACKEND_DEFAULT"
+				]
+			}
+		],
+		"LoadURL":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"const wxString&"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"url"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"LoadHistoryItem":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					"wxSharedPtr< wxWebViewHistoryItem >"
+				],
+				"parameters_is_array":[
+					false
+				],
+				"parameters_extra":[
+					false
+				],
+				"parameters_name":[
+					"item"
+				],
+				"parameters_required":[
+					true
+				],
+				"parameters_default_value":[
+					null
+				]
+			}
+		],
+		"IsEditable":[
+			{
+				"return_type":"bool",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"IsBusy":[
+			{
+				"return_type":"bool",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"HasSelection":[
+			{
+				"return_type":"bool",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GoForward":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GoBack":[
+			{
+				"return_type":"void",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetCurrentTitle":[
+			{
+				"return_type":"wxString",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetCurrentURL":[
+			{
+				"return_type":"wxString",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetForwardHistory":[
+			{
+				"return_type":"wxVector< wxSharedPtr< wxWebViewHistoryItem > >",
+				"constant":false,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetPageSource":[
+			{
+				"return_type":"wxString",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetPageText":[
+			{
+				"return_type":"wxString",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetSelectedSource":[
+			{
+				"return_type":"wxString",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetSelectedText":[
+			{
+				"return_type":"wxString",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetZoom":[
+			{
+				"return_type":"wxWebViewZoom",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		],
+		"GetZoomType":[
+			{
+				"return_type":"wxWebViewZoomType",
+				"constant":true,
+				"virtual":false,
+				"pure_virtual":true,
+				"static":false,
+				"protected":false,
+				"parameters_type":[
+					
+				],
+				"parameters_is_array":[
+					
+				],
+				"parameters_extra":[
+					
+				],
+				"parameters_name":[
+					
+				],
+				"parameters_required":[
+					
+				],
+				"parameters_default_value":[
+					
+				]
+			}
+		]
 	}
 }

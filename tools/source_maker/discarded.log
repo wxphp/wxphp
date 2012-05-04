@@ -85,6 +85,7 @@ wxDataViewListCtrl::AppendColumn
 wxDataViewListCtrl::InsertColumn
 wxDataViewListCtrl::PrependColumn
 wxToolBarToolBase::Toggle
+wxWebView::SetPage
 
 
 
@@ -271,6 +272,10 @@ wxToolBarBase*	void wxToolBarToolBase::Attach(wxToolBarBase* tbar)
 wxToolBarBase*	wxToolBarBase* wxToolBarToolBase::GetToolBar()
 wxToolBarBase*	 wxToolBarToolBase::wxToolBarToolBase(wxToolBarBase* tbar=NULL, int toolid=wxID_SEPARATOR, const wxString& label=wxEmptyString, const wxBitmap& bmpNormal=wxNullBitmap, const wxBitmap& bmpDisabled=wxNullBitmap, wxItemKind kind=wxITEM_NORMAL, wxObject* clientData=NULL, const wxString& shortHelpString=wxEmptyString, const wxString& longHelpString=wxEmptyString)
 wxToolBarBase*	 wxToolBarToolBase::wxToolBarToolBase(wxToolBarBase* tbar, wxControl* control, const wxString& label)
+wxVector< wxSharedPtr< wxWebViewHistoryItem > >	wxVector< wxSharedPtr< wxWebViewHistoryItem > > wxWebView::GetBackwardHistory()
+wxSharedPtr< wxWebViewHandler >	void wxWebView::RegisterHandler(wxSharedPtr< wxWebViewHandler > handler)
+wxSharedPtr< wxWebViewHistoryItem >	void wxWebView::LoadHistoryItem(wxSharedPtr< wxWebViewHistoryItem > item)
+wxVector< wxSharedPtr< wxWebViewHistoryItem > >	wxVector< wxSharedPtr< wxWebViewHistoryItem > > wxWebView::GetForwardHistory()
 
 
 

@@ -42,6 +42,7 @@
 #include "threading.h"
 #include "validator.h"
 #include "vfs.h"
+#include "webview.h"
 #include "aui.h"
 #include "winlayout.h"
 #include "xml.h"
@@ -1162,6 +1163,10 @@ PHP_METHOD(php_wxObject, UnShare)
 				references = &((wxRibbonToolBar_php*)_this)->references;
 				reference_type_found = true;
 			}
+			if((parent_rsrc_type == le_wxWebView) && (!reference_type_found)){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
 			if((parent_rsrc_type == le_wxSplitterWindow) && (!reference_type_found)){
 				references = &((wxSplitterWindow_php*)_this)->references;
 				reference_type_found = true;
@@ -1468,6 +1473,10 @@ PHP_METHOD(php_wxObject, UnShare)
 			}
 			if((parent_rsrc_type == le_wxRibbonBarEvent) && (!reference_type_found)){
 				references = &((wxRibbonBarEvent_php*)_this)->references;
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWebViewEvent) && (!reference_type_found)){
+				references = &((wxWebViewEvent_php*)_this)->references;
 				reference_type_found = true;
 			}
 			if((parent_rsrc_type == le_wxStyledTextEvent) && (!reference_type_found)){
@@ -2426,6 +2435,10 @@ PHP_METHOD(php_wxObject, UnRef)
 				references = &((wxRibbonToolBar_php*)_this)->references;
 				reference_type_found = true;
 			}
+			if((parent_rsrc_type == le_wxWebView) && (!reference_type_found)){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
 			if((parent_rsrc_type == le_wxSplitterWindow) && (!reference_type_found)){
 				references = &((wxSplitterWindow_php*)_this)->references;
 				reference_type_found = true;
@@ -2732,6 +2745,10 @@ PHP_METHOD(php_wxObject, UnRef)
 			}
 			if((parent_rsrc_type == le_wxRibbonBarEvent) && (!reference_type_found)){
 				references = &((wxRibbonBarEvent_php*)_this)->references;
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWebViewEvent) && (!reference_type_found)){
+				references = &((wxWebViewEvent_php*)_this)->references;
 				reference_type_found = true;
 			}
 			if((parent_rsrc_type == le_wxStyledTextEvent) && (!reference_type_found)){
@@ -3690,6 +3707,10 @@ PHP_METHOD(php_wxObject, IsSameAs)
 				references = &((wxRibbonToolBar_php*)_this)->references;
 				reference_type_found = true;
 			}
+			if((parent_rsrc_type == le_wxWebView) && (!reference_type_found)){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
 			if((parent_rsrc_type == le_wxSplitterWindow) && (!reference_type_found)){
 				references = &((wxSplitterWindow_php*)_this)->references;
 				reference_type_found = true;
@@ -3996,6 +4017,10 @@ PHP_METHOD(php_wxObject, IsSameAs)
 			}
 			if((parent_rsrc_type == le_wxRibbonBarEvent) && (!reference_type_found)){
 				references = &((wxRibbonBarEvent_php*)_this)->references;
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWebViewEvent) && (!reference_type_found)){
+				references = &((wxWebViewEvent_php*)_this)->references;
 				reference_type_found = true;
 			}
 			if((parent_rsrc_type == le_wxStyledTextEvent) && (!reference_type_found)){
@@ -4977,6 +5002,10 @@ PHP_METHOD(php_wxObject, Ref)
 				references = &((wxRibbonToolBar_php*)_this)->references;
 				reference_type_found = true;
 			}
+			if((parent_rsrc_type == le_wxWebView) && (!reference_type_found)){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
 			if((parent_rsrc_type == le_wxSplitterWindow) && (!reference_type_found)){
 				references = &((wxSplitterWindow_php*)_this)->references;
 				reference_type_found = true;
@@ -5283,6 +5312,10 @@ PHP_METHOD(php_wxObject, Ref)
 			}
 			if((parent_rsrc_type == le_wxRibbonBarEvent) && (!reference_type_found)){
 				references = &((wxRibbonBarEvent_php*)_this)->references;
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWebViewEvent) && (!reference_type_found)){
+				references = &((wxWebViewEvent_php*)_this)->references;
 				reference_type_found = true;
 			}
 			if((parent_rsrc_type == le_wxStyledTextEvent) && (!reference_type_found)){
@@ -6264,6 +6297,10 @@ PHP_METHOD(php_wxObject, GetClassInfo)
 				references = &((wxRibbonToolBar_php*)_this)->references;
 				reference_type_found = true;
 			}
+			if((parent_rsrc_type == le_wxWebView) && (!reference_type_found)){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
 			if((parent_rsrc_type == le_wxSplitterWindow) && (!reference_type_found)){
 				references = &((wxSplitterWindow_php*)_this)->references;
 				reference_type_found = true;
@@ -6570,6 +6607,10 @@ PHP_METHOD(php_wxObject, GetClassInfo)
 			}
 			if((parent_rsrc_type == le_wxRibbonBarEvent) && (!reference_type_found)){
 				references = &((wxRibbonBarEvent_php*)_this)->references;
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWebViewEvent) && (!reference_type_found)){
+				references = &((wxWebViewEvent_php*)_this)->references;
 				reference_type_found = true;
 			}
 			if((parent_rsrc_type == le_wxStyledTextEvent) && (!reference_type_found)){
@@ -7551,6 +7592,10 @@ PHP_METHOD(php_wxObject, IsKindOf)
 				references = &((wxRibbonToolBar_php*)_this)->references;
 				reference_type_found = true;
 			}
+			if((parent_rsrc_type == le_wxWebView) && (!reference_type_found)){
+				references = &((wxWebView_php*)_this)->references;
+				reference_type_found = true;
+			}
 			if((parent_rsrc_type == le_wxSplitterWindow) && (!reference_type_found)){
 				references = &((wxSplitterWindow_php*)_this)->references;
 				reference_type_found = true;
@@ -7857,6 +7902,10 @@ PHP_METHOD(php_wxObject, IsKindOf)
 			}
 			if((parent_rsrc_type == le_wxRibbonBarEvent) && (!reference_type_found)){
 				references = &((wxRibbonBarEvent_php*)_this)->references;
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxWebViewEvent) && (!reference_type_found)){
+				references = &((wxWebViewEvent_php*)_this)->references;
 				reference_type_found = true;
 			}
 			if((parent_rsrc_type == le_wxStyledTextEvent) && (!reference_type_found)){

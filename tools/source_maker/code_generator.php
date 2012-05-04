@@ -135,8 +135,7 @@ if(file_exists("./../../json/consts.json"))
 				"".stripos($enumValue, "wxMEDIACTRLPLAYER")."" != "" ||
 				"".stripos($enumValue, "wxNAVDIR_")."" != "" ||
 				"".stripos($enumValue, "wxOBJID_")."" != "" ||
-				"".stripos($enumValue, "wxROLE_")."" != "" ||
-				"".stripos($enumValue, "wxWEB_")."" != ""
+				"".stripos($enumValue, "wxROLE_")."" != ""
 			)
 				continue;
 				
@@ -156,14 +155,6 @@ if(file_exists("./../../json/global_variables.json"))
 	//Temporary black list
 	unset($defGlobals['wxEVT_HOTKEY']);
 	unset($defGlobals['wxNullRegion']);
-	
-	//(we need to compile with wxWebView support)
-	unset($defGlobals['wxEVT_COMMAND_WEB_VIEW_NAVIGATING']);
-	unset($defGlobals['wxEVT_COMMAND_WEB_VIEW_NAVIGATED']);
-	unset($defGlobals['wxEVT_COMMAND_WEB_VIEW_LOADED']);
-	unset($defGlobals['wxEVT_COMMAND_WEB_VIEW_ERROR']);
-	unset($defGlobals['wxEVT_COMMAND_WEB_VIEW_NEWWINDOW']);
-	unset($defGlobals['wxEVT_COMMAND_WEB_VIEW_TITLE_CHANGED']);
 }
 
 //Load typedef parsed by the xml_parser
@@ -694,6 +685,10 @@ foreach($defIni as $className => $classDef)
 			}
 		}
 
+		//Cant use New as a Method name since it seems it is reserved by php even when used as a static method
+		if($fcName == "New")
+			$fcName = "NewObject";
+			
 		$output .= "PHP_METHOD(php_$className, $fcName);\n";
 	}
 	

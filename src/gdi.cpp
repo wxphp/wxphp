@@ -42,6 +42,7 @@
 #include "threading.h"
 #include "validator.h"
 #include "vfs.h"
+#include "webview.h"
 #include "aui.h"
 #include "winlayout.h"
 #include "xml.h"
@@ -13080,7 +13081,7 @@ PHP_METHOD(php_wxFont, MakeUnderlined)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFont::MakeUnderlined\n");
 	}
 }
-PHP_METHOD(php_wxFont, New)
+PHP_METHOD(php_wxFont, NewObject)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking wxFont::New\n");

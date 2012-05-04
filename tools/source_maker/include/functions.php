@@ -180,6 +180,10 @@ function funcsOfClass($classN, $ctor=0, &$output, $ar = array())
 			$funcName2 = "__construct";
 		}
 		
+		//Cant use New as a Method name since it seems it is reserved by php even when used as a static method
+		if($funcName2 == "New")
+			$funcName2 = "NewObject";
+		
 		if(in_array($funcName2,$ar))
 			continue;
 			
