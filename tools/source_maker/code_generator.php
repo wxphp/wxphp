@@ -414,10 +414,9 @@ $classes = "";
 foreach($defIni as $class_name => $class_methods)
 {
 	$classes .= "\tchar PHP_{$class_name}_name[] = \"$class_name\";\n";
-	$classes .= "\tchar le_{$class_name}_name[] = \"native $class_name\";\n";
 	$classes .= "\tINIT_CLASS_ENTRY(ce, PHP_{$class_name}_name, php_{$class_name}_functions);\n";
 	$classes .= "\tphp_{$class_name}_entry = zend_register_internal_class(&ce TSRMLS_CC);\n";
-	$classes .= "\tle_{$class_name} = zend_register_list_destructors_ex(php_{$class_name}_destruction_handler, NULL, le_{$class_name}_name, module_number);\n";
+	$classes .= "\tle_{$class_name} = zend_register_list_destructors_ex(php_{$class_name}_destruction_handler, NULL, (char*) \"native $class_name\", module_number);\n";
 	$classes .= "\n";
 }
 
