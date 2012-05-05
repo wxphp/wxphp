@@ -4,6 +4,10 @@ PHP_ARG_WITH(wxwidgets,for wxWidgets support,
 PHP_ARG_ENABLE(wxwidgets-debug, whether to enable debugging support in wxPHP,
 [  --enable-wxwidgets-debug
                           Enable debugging messages support in wxPHP], no, no)
+                          
+PHP_ARG_ENABLE(wxwidgets-monolithic, whether to link to monolithic build of wxWidgets,
+[  --enable-wxwidgets-monolithic
+                          Link to monolithic build of wxWidgets], no, no)
 
 if test "$PHP_WXWIDGETS" != "no"; then
 
@@ -53,7 +57,11 @@ if test "$PHP_WXWIDGETS" != "no"; then
 	PHP_WXWIDGETS_CFLAGS="$PHP_WXWIDGETS_CFLAGS $WXWIDGETS_CONFIG_FLAGS"
 	
 	dnl Retreive and store wxWidgets library flags
-	PHP_WXWIDGETS_LIBS=`$WXCONFIG_PATH --libs`
+	if test "$PHP_WXWIDGETS_MONOLITHIC" != "no"; then
+		PHP_WXWIDGETS_LIBS=`$WXCONFIG_PATH --libs`
+	else
+		PHP_WXWIDGETS_LIBS=`$WXCONFIG_PATH --libs all`
+	fi
 	
 	dnl Append wxWidgets flags to the compiler flags and suppress warning flags
 	CXXFLAGS="$CXXFLAGS $PHP_WXWIDGETS_CFLAGS"
