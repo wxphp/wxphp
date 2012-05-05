@@ -1,0 +1,298 @@
+{
+	"wxAboutDialogInfo":[
+		"wxUSE_ABOUTDLG"
+	],
+	"wxAcceleratorTable":[
+		"wxUSE_ACCEL"
+	],
+	"wxAcceleratorEntry":[
+		"wxUSE_ACCEL"
+	],
+	"wxAnimationCtrl":[
+		"wxUSE_ANIMATIONCTRL"
+	],
+	"wxAnimation":[
+		"wxUSE_ANIMATIONCTRL"
+	],
+	"wxAny":[
+		"wxUSE_ANY"
+	],
+	"wxAuiDefaultToolBarArt":[
+		"wxUSE_AUI"
+	],
+	"wxAuiDockArt":[
+		"wxUSE_AUI"
+	],
+	"wxAuiManager":[
+		"wxUSE_AUI"
+	],
+	"wxAuiManagerEvent":[
+		"wxUSE_AUI"
+	],
+	"wxAuiNotebook":[
+		"wxUSE_AUI"
+	],
+	"wxAuiNotebookEvent":[
+		"wxUSE_AUI"
+	],
+	"wxAuiPaneInfo":[
+		"wxUSE_AUI"
+	],
+	"wxAuiTabArt":[
+		"wxUSE_AUI"
+	],
+	"wxAuiToolBar":[
+		"wxUSE_AUI"
+	],
+	"wxAuiToolBarArt":[
+		"wxUSE_AUI"
+	],
+	"wxAuiToolBarEvent":[
+		"wxUSE_AUI"
+	],
+	"wxAuiToolBarItem":[
+		"wxUSE_AUI"
+	],
+	"wxBitmapComboBox":[
+		"wxUSE_BITMAPCOMBOBOX"
+	],
+	"wxBitmapButton":[
+		"wxUSE_BMPBUTTON"
+	],
+	"wxBusyInfo":[
+		"wxUSE_BUSYINFO"
+	],
+	"wxButton":[
+		"wxUSE_BUTTON"
+	],
+	"wxCalendarCtrl":[
+		"wxUSE_CALENDARCTRL"
+	],
+	"wxCalendarEvent":[
+		"wxUSE_CALENDARCTRL"
+	],
+	"wxCaret":[
+		"wxUSE_CARET"
+	],
+	"wxCheckBox":[
+		"wxUSE_CHECKBOX"
+	],
+	"wxCheckListBox":[
+		"wxUSE_CHECKLISTBOX"
+	],
+	"wxChoice":[
+		"wxUSE_CHOICE"
+	],
+	"wxChoicebook":[
+		"wxUSE_CHOICEBOOK"
+	],
+	"wxSingleChoiceDialog":[
+		"wxUSE_CHOICEDLG"
+	],
+	"wxMultiChoiceDialog":[
+		"wxUSE_CHOICEDLG"
+	],
+	"wxClipboard":[
+		"wxUSE_CLIPBOARD"
+	],
+	"wxCmdLineParser":[
+		"wxUSE_CMDLINE_PARSER"
+	],
+	"wxCollapsiblePane":[
+		"wxUSE_COLLPANE"
+	],
+	"wxCollapsiblePaneEvent":[
+		"wxUSE_COLLPANE"
+	],
+	"wxColourDialog":[
+		"wxUSE_COLOURDLG"
+	],
+	"wxColourPickerCtrl":[
+		"wxUSE_COLOURPICKERCTRL"
+	],
+	"wxColourPickerEvent":[
+		"wxUSE_COLOURPICKERCTRL"
+	],
+	"wxComboBox":[
+		"wxUSE_COMBOBOX"
+	],
+	"wxComboCtrl":[
+		"wxUSE_COMBOCTRL"
+	],
+	"wxConfigBase":[
+		"wxUSE_CONFIG"
+	],
+	"wxLayoutConstraints":[
+		"wxUSE_CONSTRAINTS"
+	],
+	"wxComboCtrl":[
+		"wxUSE_COMBOCTRL"
+	],
+	"wxComboCtrl":[
+		"wxUSE_COMBOCTRL"
+	],
+	
+	
+	
+	wxUSE_CONSTRAINTS	Use wxLayoutConstraints
+	wxUSE_CONTROLS	If set to 0, no classes deriving from wxControl can be used.
+	wxUSE_DATAOBJ	Use wxDataObject and related classes.
+	wxUSE_DATAVIEWCTRL	Use wxDataViewCtrl class.
+	wxUSE_DATEPICKCTRL	Use wxDatePickerCtrl class.
+	wxUSE_DATETIME	Use wxDateTime and related classes.
+	wxUSE_DBGHELP	Use wxDbgHelpDLL class.
+	wxUSE_DC_TRANSFORM_MATRIX	Use wxDC::SetTransformMatrix() and related methods.
+	wxUSE_DEBUG_CONTEXT	Use wxDebugContext class.
+	wxUSE_DEBUG_NEW_ALWAYS	See Debugging
+	wxUSE_DEBUGREPORT	Use wxDebugReport class.
+	wxUSE_DIALUP_MANAGER	Use wxDialUpManager and related classes.
+	wxUSE_DIRDLG	Use wxDirDialog class.
+	wxUSE_DIRPICKERCTRL	Use wxDirPickerCtrl class.
+	wxUSE_DISPLAY	Use wxDisplay and related classes.
+	wxUSE_DOC_VIEW_ARCHITECTURE	Use wxDocument and related classes.
+	wxUSE_DRAG_AND_DROP	Use Drag and drop classes.
+	wxUSE_DRAGIMAGE	Use wxDragImage class.
+	wxUSE_DYNAMIC_LOADER	Use wxPluginManager and related classes. Requires wxDynamicLibrary
+	wxUSE_DYNLIB_CLASS	Use wxDynamicLibrary
+	wxUSE_EDITABLELISTBOX	Use wxEditableListBox class.
+	wxUSE_EXCEPTIONS	Use exception handling.
+	wxUSE_EXPAT	enable XML support using expat parser.
+	wxUSE_EXTENDED_RTTI	Use extended RTTI, see also Runtime class information (RTTI)
+	wxUSE_FFILE	Use wxFFile class.
+	wxUSE_FILE	Use wxFile class.
+	wxUSE_FILECONFIG	Use wxFileConfig class.
+	wxUSE_FILECTRL	Use wxFileCtrl class.
+	wxUSE_FILEDLG	Use wxFileDialog class.
+	wxUSE_FILEPICKERCTRL	Use wxFilePickerCtrl class.
+	wxUSE_FILESYSTEM	Use wxFileSystem and related classes.
+	wxUSE_FINDREPLDLG	Use wxFindReplaceDialog class.
+	wxUSE_FONTDLG	Use wxFontDialog class.
+	wxUSE_FONTENUM	Use wxFontEnumerator class.
+	wxUSE_FONTMAP	Use wxFontMapper class.
+	wxUSE_FONTPICKERCTRL	Use wxFontPickerCtrl class.
+	wxUSE_FS_ARCHIVE	Use virtual archive filesystems like wxArchiveFSHandler in wxFileSystem class.
+	wxUSE_FS_INET	Use virtual HTTP/FTP filesystems like wxInternetFSHandler in wxFileSystem class.
+	wxUSE_FS_ZIP	Please use wxUSE_FS_ARCHIVE instead.
+	wxUSE_FSVOLUME	Use wxFSVolume class.
+	wxUSE_GAUGE	Use wxGauge class.
+	wxUSE_GENERIC_DRAGIMAGE	Used in wxDragImage sample.
+	wxUSE_GENERIC_DRAWELLIPSE	See comment in wx/dc.h file.
+	wxUSE_GENERIC_MDI_AS_NATIVE	This is not a user-settable symbol, it is only used internally in wx/generic/mdig.h.
+	wxUSE_GEOMETRY	Use common geometry classes
+	wxUSE_GIF	Use GIF wxImageHandler
+	wxUSE_GLCANVAS	Enables OpenGL support.
+	wxUSE_GLOBAL_MEMORY_OPERATORS	Override global operators new and delete to use wxWidgets memory leak detection
+	wxUSE_GRAPHICS_CONTEXT	Use wxGraphicsContext and related classes.
+	wxUSE_GRID	Use wxGrid and related classes.
+	wxUSE_HELP	Use wxHelpController and related classes.
+	wxUSE_HTML	Use wxHtmlWindow and related classes.
+	wxUSE_HYPERLINKCTRL	Use wxHyperlinkCtrl
+	wxUSE_ICO_CUR	Support Windows ICO and CUR formats.
+	wxUSE_IFF	Enables the wxImage handler for Amiga IFF images.
+	wxUSE_IMAGE	Use wxImage and related classes.
+	wxUSE_IMAGLIST	Use wxImageList class.
+	wxUSE_INTL	Use wxLocale and related classes.
+	wxUSE_IOSTREAMH	Use header "iostream.h" instead of "iostream".
+	wxUSE_IPC	Use interprocess communication classes.
+	wxUSE_IPV6	Use experimental wxIPV6address and related classes.
+	wxUSE_JOYSTICK	Use wxJoystick class.
+	wxUSE_LIBJPEG	Enables JPEG format support (requires libjpeg).
+	wxUSE_LIBPNG	Enables PNG format support (requires libpng). Also requires wxUSE_ZLIB.
+	wxUSE_LIBTIFF	Enables TIFF format support (requires libtiff).
+	wxUSE_LISTBOOK	Use wxListbook class.
+	wxUSE_LISTBOX	Use wxListBox class.
+	wxUSE_LISTCTRL	Use wxListCtrl class.
+	wxUSE_LOG	Use wxLog and related classes.
+	wxUSE_LOG_DEBUG	Enabled when wxLog used with __WXDEBUG__ defined.
+	wxUSE_LOG_DIALOG	Use wxLogDialog class.
+	wxUSE_LOGGUI	Use wxLogGui class.
+	wxUSE_LOGWINDOW	Use wxLogFrame class.
+	wxUSE_LONGLONG	Use wxLongLong class.
+	wxUSE_LONGLONG_NATIVE	Use native long long type in wxLongLong implementation.
+	wxUSE_LONGLONG_WX	Use generic wxLongLong implementation.
+	wxUSE_MARKUP	Provide wxControl::SetLabelMarkup() method.
+	wxUSE_MDI	Use wxMDIParentFrame, and wxMDIChildFrame
+	wxUSE_MDI_ARCHITECTURE	Use MDI-based document-view classes.
+	wxUSE_MEDIACTRL	Use wxMediaCtrl.
+	wxUSE_MEMORY_TRACING	Use wxWidgets memory leak detection, not recommended if using another memory debugging tool.
+	wxUSE_MENUS	Use wxMenu and related classes.
+	wxUSE_METAFILE	Use wxMetaFile and related classes.
+	wxUSE_MIMETYPE	Use wxFileType class.
+	wxUSE_MINIFRAME	Use wxMiniFrame class.
+	wxUSE_MOUSEWHEEL	Support mouse wheel events.
+	wxUSE_MSGDLG	Use wxMessageDialog class and wxMessageBox function.
+	wxUSE_NATIVE_STATUSBAR	Use native wxStatusBar class.
+	wxUSE_NOTEBOOK	Use wxNotebook and related classes.
+	wxUSE_NUMBERDLG	Use wxNumberEntryDialog class.
+	wxUSE_ODCOMBOBOX	Use wxOwnerDrawnComboBox class.
+	wxUSE_ON_FATAL_EXCEPTION	Catch signals in wxApp::OnFatalException method.
+	wxUSE_OPENGL	Please use wxUSE_GLCANVAS to test for enabled OpenGL support instead.
+	wxUSE_OWNER_DRAWN	Use interface for owner-drawn GUI elements.
+	wxUSE_PALETTE	Use wxPalette and related classes.
+	wxUSE_PCX	Enables wxImage PCX handler.
+	wxUSE_PNM	Enables wxImage PNM handler.
+	wxUSE_POPUPWIN	Use wxPopupWindow class.
+	wxUSE_POSTSCRIPT	Use wxPostScriptPrinter class.
+	wxUSE_PRINTF_POS_PARAMS	Use wxVsnprintf which supports positional parameters.
+	wxUSE_PRINTING_ARCHITECTURE	Enable printer classes.
+	wxUSE_PROGRESSDLG	Enables progress dialog classes.
+	wxUSE_PROPGRID	Use wxPropertyGrid library.
+	wxUSE_PROTOCOL	Use wxProtocol and derived classes.
+	wxUSE_PROTOCOL_FILE	Use wxFileProto class. (requires wxProtocol)
+	wxUSE_PROTOCOL_FTP	Use wxFTP class. (requires wxProtocol)
+	wxUSE_PROTOCOL_HTTP	Use wxHTTP class. (requireswxProtocol)
+	wxUSE_RADIOBOX	Use wxRadioBox class.
+	wxUSE_RADIOBTN	Use wxRadioButton class.
+	wxUSE_REGEX	Use wxRegEx class.
+	wxUSE_RICHTEXT	Use wxRichTextCtrl class.
+	wxUSE_SASH	Use wxSashWindow class.
+	wxUSE_SCROLLBAR	Use wxScrollBar class.
+	wxUSE_SEARCHCTRL	Use wxSearchCtrl class.
+	wxUSE_SELECT_DISPATCHER	Use wxSelectDispatcher class.
+	wxUSE_SLIDER	Use wxSlider class.
+	wxUSE_SNGLINST_CHECKER	Use wxSingleInstanceChecker class.
+	wxUSE_SOCKETS	Enables Network address classes.
+	wxUSE_SOUND	Use wxSound class.
+	wxUSE_SPINBTN	Use wxSpinButton class.
+	wxUSE_SPINCTRL	Use wxSpinCtrl class.
+	wxUSE_SPLASH	Use wxSplashScreen class.
+	wxUSE_SPLITTER	Use wxSplitterWindow class.
+	wxUSE_STACKWALKER	Enables wxStackWalker and related classes.
+	wxUSE_STARTUP_TIPS	Use startup tips, wxTipProvider class.
+	wxUSE_STATBMP	Use wxStaticBitmap class.
+	wxUSE_STATBOX	Use wxStaticBox class.
+	wxUSE_STATLINE	Use wxStaticLine class.
+	wxUSE_STATTEXT	Use wxStaticText class.
+	wxUSE_STATUSBAR	Use wxStatusBar class.
+	wxUSE_STC	Use wxStyledTextCtrl.
+	wxUSE_STDPATHS	Use wxStandardPaths class.
+	wxUSE_STOPWATCH	Use wxStopWatch class.
+	wxUSE_STREAMS	Enable stream classes.
+	wxUSE_SVG	Use wxSVGFileDC class.
+	wxUSE_SYSTEM_OPTIONS	Use wxSystemOptions class.
+	wxUSE_TASKBARICON	Use wxTaskBarIcon class.
+	wxUSE_TEXTBUFFER	Use wxTextBuffer class.
+	wxUSE_TEXTCTRL	Use wxTextCtrl class.
+	wxUSE_TEXTDLG	Use wxTextEntryDialog class.
+	wxUSE_TEXTFILE	Use wxTextFile class.
+	wxUSE_THREADS	Use wxThread and related classes.
+	wxUSE_TIMER	Use wxTimer class.
+	wxUSE_TIPWINDOW	Use wxTipWindow class.
+	wxUSE_TOGGLEBTN	Use wxToggleButton class.
+	wxUSE_TOOLBAR	Use wxToolBar class.
+	wxUSE_TOOLBOOK	Use wxToolbook class.
+	wxUSE_TOOLTIPS	Use wxToolTip class.
+	wxUSE_TREEBOOK	Use wxTreebook class.
+	wxUSE_TREECTRL	Use wxTreeCtrl class.
+	wxUSE_TREELISTCTRL	Use wxTreeListCtrl class.
+	wxUSE_URL	Use wxURL class.
+	wxUSE_VALIDATORS	Use wxValidator class.
+	wxUSE_VARIANT	Use wxVariant class.
+	wxUSE_WEBVIEW	Use wxWebView class.
+	wxUSE_WIZARDDLG	Use wxWizard class.
+	wxUSE_WXHTML_HELP	Use wxHtmlHelpController and related classes.
+	wxUSE_XML	Use XML parsing classes.
+	wxUSE_XRC	Use XRC XML-based resource system.
+
+	wxUSE_ZLIB	Use wxZlibInput and wxZlibOutputStream classes, required by wxUSE_LIBPNG.
+}
