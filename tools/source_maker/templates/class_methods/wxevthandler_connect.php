@@ -1,3 +1,4 @@
+<?=proto_begin($method_name, $class_name)?>
 void <?=$class_name?>_php::onEvent(wxEvent& evnt)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -194,3 +195,4 @@ PHP_METHOD(php_<?=$class_name?>, Connect)
 	php_printf("===========================================\n\n");
 	#endif
 }
+<?=proto_end()?>

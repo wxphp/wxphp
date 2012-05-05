@@ -91,6 +91,8 @@ void php_wxLogWindow_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto wxFrame wxLogWindow::GetFrame()
+   Returns the associated log frame window. */
 PHP_METHOD(php_wxLogWindow, GetFrame)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -206,6 +208,10 @@ PHP_METHOD(php_wxLogWindow, GetFrame)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLogWindow::GetFrame\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxLogWindow::OnFrameClose(wxFrame &frame)
+   Called if the user closes the window interactively, will not be called if it is destroyed for another reason (such as when program exits). */
 bool wxLogWindow_php::OnFrameClose(wxFrame* frame)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -264,6 +270,10 @@ bool wxLogWindow_php::OnFrameClose(wxFrame* frame)
 	//Call original method
 	return wxLogWindow::OnFrameClose(frame);
 }
+/* }}} */
+
+/* {{{ proto  wxLogWindow::OnFrameCreate(wxFrame &frame)
+   Called immediately after the log frame creation allowing for any extra initializations. */
 void wxLogWindow_php::OnFrameCreate(wxFrame* frame)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -322,6 +332,10 @@ void wxLogWindow_php::OnFrameCreate(wxFrame* frame)
 	//Call original method
 	wxLogWindow::OnFrameCreate(frame);
 }
+/* }}} */
+
+/* {{{ proto  wxLogWindow::OnFrameDelete(wxFrame &frame)
+   Called right before the log frame is going to be deleted: will always be called unlike OnFrameClose(). */
 void wxLogWindow_php::OnFrameDelete(wxFrame* frame)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -380,6 +394,10 @@ void wxLogWindow_php::OnFrameDelete(wxFrame* frame)
 	//Call original method
 	wxLogWindow::OnFrameDelete(frame);
 }
+/* }}} */
+
+/* {{{ proto  wxLogWindow::Show(bool show)
+   Shows or hides the frame. */
 PHP_METHOD(php_wxLogWindow, Show)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -488,6 +506,10 @@ PHP_METHOD(php_wxLogWindow, Show)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLogWindow::Show\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxLogWindow::wxLogWindow(wxWindow &pParent, string szTitle, bool show, bool passToOld)
+   Creates the log frame window and starts collecting the messages in it. */
 PHP_METHOD(php_wxLogWindow, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -617,6 +639,8 @@ PHP_METHOD(php_wxLogWindow, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxLogChain_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -657,6 +681,8 @@ void php_wxLogChain_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxLogChain::DetachOldLog()
+   Detaches the old log target so it won't be destroyed when the wxLogChain object is destroyed. */
 PHP_METHOD(php_wxLogChain, DetachOldLog)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -757,6 +783,10 @@ PHP_METHOD(php_wxLogChain, DetachOldLog)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLogChain::DetachOldLog\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxLog wxLogChain::GetOldLog()
+   Returns the pointer to the previously active log target (which may be NULL). */
 PHP_METHOD(php_wxLogChain, GetOldLog)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -880,6 +910,10 @@ PHP_METHOD(php_wxLogChain, GetOldLog)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLogChain::GetOldLog\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxLogChain::IsPassingMessages()
+   Returns true if the messages are passed to the previously active log target (default) or false if PassMessages() had been called. */
 PHP_METHOD(php_wxLogChain, IsPassingMessages)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -980,6 +1014,10 @@ PHP_METHOD(php_wxLogChain, IsPassingMessages)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLogChain::IsPassingMessages\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxLogChain::PassMessages(bool passMessages)
+   By default, the log messages are passed to the previously active log target. */
 PHP_METHOD(php_wxLogChain, PassMessages)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1085,6 +1123,10 @@ PHP_METHOD(php_wxLogChain, PassMessages)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLogChain::PassMessages\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxLogChain::SetLog(wxLog &logger)
+   Sets another log target to use (may be NULL). */
 PHP_METHOD(php_wxLogChain, SetLog)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1208,6 +1250,10 @@ PHP_METHOD(php_wxLogChain, SetLog)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLogChain::SetLog\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxLogChain::wxLogChain(wxLog &logger)
+   Sets the specified logger (which may be NULL) as the default log target but the log messages are also passed to the previous log target if any. */
 PHP_METHOD(php_wxLogChain, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1311,6 +1357,8 @@ PHP_METHOD(php_wxLogChain, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxLogGui_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1351,6 +1399,8 @@ void php_wxLogGui_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxLogGui::Flush()
+   Presents the accumulated log messages, if any, to the user. */
 PHP_METHOD(php_wxLogGui, Flush)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1443,6 +1493,10 @@ PHP_METHOD(php_wxLogGui, Flush)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLogGui::Flush\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxLogGui::wxLogGui()
+   Default constructor. */
 PHP_METHOD(php_wxLogGui, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1523,6 +1577,8 @@ PHP_METHOD(php_wxLogGui, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 PHP_METHOD(php_wxLogGui, __get)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1641,6 +1697,8 @@ void php_wxLogBuffer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxLogBuffer::Flush()
+   Shows all the messages collected so far to the user (using a message box in the GUI applications or by printing them out to the console in text mode) and clears the internal buffer. */
 PHP_METHOD(php_wxLogBuffer, Flush)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1733,6 +1791,10 @@ PHP_METHOD(php_wxLogBuffer, Flush)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLogBuffer::Flush\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxLogBuffer::GetBuffer()
+   Returns the current buffer contains. */
 PHP_METHOD(php_wxLogBuffer, GetBuffer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1831,6 +1893,10 @@ PHP_METHOD(php_wxLogBuffer, GetBuffer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLogBuffer::GetBuffer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxLogBuffer::wxLogBuffer()
+   The default ctor does nothing. */
 PHP_METHOD(php_wxLogBuffer, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1911,6 +1977,8 @@ PHP_METHOD(php_wxLogBuffer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxLogInterposer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1951,6 +2019,8 @@ void php_wxLogInterposer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+/* {{{ proto  wxLogInterposer::wxLogInterposer()
+   The default constructor installs this object as the current active log target. */
 PHP_METHOD(php_wxLogInterposer, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2031,6 +2101,8 @@ PHP_METHOD(php_wxLogInterposer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxLogTextCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2071,6 +2143,8 @@ void php_wxLogTextCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxLogTextCtrl::wxLogTextCtrl(wxTextCtrl &pTextCtrl)
+   Constructs a log target which sends all the log messages to the given text control. */
 PHP_METHOD(php_wxLogTextCtrl, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2174,6 +2248,8 @@ PHP_METHOD(php_wxLogTextCtrl, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxLog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2214,6 +2290,8 @@ void php_wxLog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxLog::AddTraceMask(string mask)
+   Add the mask to the list of allowed masks for wxLogTrace(). */
 PHP_METHOD(php_wxLog, AddTraceMask)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2337,6 +2415,10 @@ PHP_METHOD(php_wxLog, AddTraceMask)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLog::AddTraceMask\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxLog::ClearTraceMasks()
+   Removes all trace masks previously set with AddTraceMask(). */
 PHP_METHOD(php_wxLog, ClearTraceMasks)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2454,6 +2536,10 @@ PHP_METHOD(php_wxLog, ClearTraceMasks)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLog::ClearTraceMasks\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxLog::DisableTimestamp()
+   Disables time stamping of the log messages. */
 PHP_METHOD(php_wxLog, DisableTimestamp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2571,6 +2657,10 @@ PHP_METHOD(php_wxLog, DisableTimestamp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLog::DisableTimestamp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxLog::DoLogText(string msg)
+   Called to log the specified string. */
 void wxLog_php::DoLogText(const wxString& msg)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2631,6 +2721,10 @@ void wxLog_php::DoLogText(const wxString& msg)
 	//Call original method
 	wxLog::DoLogText(msg);
 }
+/* }}} */
+
+/* {{{ proto  wxLog::DoLogTextAtLevel(int level, string msg)
+   Called to log the specified string at given level. */
 void wxLog_php::DoLogTextAtLevel(wxLogLevel level, const wxString& msg)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2692,6 +2786,10 @@ void wxLog_php::DoLogTextAtLevel(wxLogLevel level, const wxString& msg)
 	//Call original method
 	wxLog::DoLogTextAtLevel(level, msg);
 }
+/* }}} */
+
+/* {{{ proto  wxLog::DontCreateOnDemand()
+   Instructs wxLog to not create new log targets on the fly if there is none currently (see GetActiveTarget()). */
 PHP_METHOD(php_wxLog, DontCreateOnDemand)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2809,6 +2907,10 @@ PHP_METHOD(php_wxLog, DontCreateOnDemand)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLog::DontCreateOnDemand\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxLog::EnableLogging(bool enable)
+   Globally enable or disable logging. */
 PHP_METHOD(php_wxLog, EnableLogging)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2943,6 +3045,10 @@ PHP_METHOD(php_wxLog, EnableLogging)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLog::EnableLogging\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxLog::Flush()
+   Some of wxLog implementations, most notably the standard wxLogGui class, buffer the messages (for example, to avoid showing the user a zillion of modal message boxes one after another -- which would be really annoying). */
 PHP_METHOD(php_wxLog, Flush)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3078,6 +3184,10 @@ PHP_METHOD(php_wxLog, Flush)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLog::Flush\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxLog::FlushActive()
+   Flushes the current log target if any, does nothing if there is none. */
 PHP_METHOD(php_wxLog, FlushActive)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3195,6 +3305,10 @@ PHP_METHOD(php_wxLog, FlushActive)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLog::FlushActive\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxLog wxLog::GetActiveTarget()
+   Returns the pointer to the active log target (may be NULL). */
 PHP_METHOD(php_wxLog, GetActiveTarget)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3331,6 +3445,10 @@ PHP_METHOD(php_wxLog, GetActiveTarget)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLog::GetActiveTarget\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxLog::GetLogLevel()
+   Returns the current log level limit. */
 PHP_METHOD(php_wxLog, GetLogLevel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3448,6 +3566,10 @@ PHP_METHOD(php_wxLog, GetLogLevel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLog::GetLogLevel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxLog::GetRepetitionCounting()
+   Returns whether the repetition counting mode is enabled. */
 PHP_METHOD(php_wxLog, GetRepetitionCounting)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3565,6 +3687,10 @@ PHP_METHOD(php_wxLog, GetRepetitionCounting)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLog::GetRepetitionCounting\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxLog::GetTimestamp()
+   Returns the current timestamp format string. */
 PHP_METHOD(php_wxLog, GetTimestamp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3688,6 +3814,10 @@ PHP_METHOD(php_wxLog, GetTimestamp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLog::GetTimestamp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto array wxLog::GetTraceMasks()
+   Returns the currently allowed list of string trace masks. */
 PHP_METHOD(php_wxLog, GetTraceMasks)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3815,6 +3945,10 @@ PHP_METHOD(php_wxLog, GetTraceMasks)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLog::GetTraceMasks\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxLog::GetVerbose()
+   Returns whether the verbose mode is currently active. */
 PHP_METHOD(php_wxLog, GetVerbose)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3932,6 +4066,10 @@ PHP_METHOD(php_wxLog, GetVerbose)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLog::GetVerbose\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxLog::IsAllowedTraceMask(string mask)
+   Returns true if the mask is one of allowed masks for wxLogTrace(). */
 PHP_METHOD(php_wxLog, IsAllowedTraceMask)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4055,6 +4193,10 @@ PHP_METHOD(php_wxLog, IsAllowedTraceMask)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLog::IsAllowedTraceMask\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxLog::IsEnabled()
+   Returns true if logging is enabled at all now. */
 PHP_METHOD(php_wxLog, IsEnabled)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4172,6 +4314,10 @@ PHP_METHOD(php_wxLog, IsEnabled)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLog::IsEnabled\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxLog::IsLevelEnabled(int level, string component)
+   Returns true if logging at this level is enabled for the current thread. */
 PHP_METHOD(php_wxLog, IsLevelEnabled)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4296,6 +4442,10 @@ PHP_METHOD(php_wxLog, IsLevelEnabled)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLog::IsLevelEnabled\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxLog::RemoveTraceMask(string mask)
+   Remove the mask from the list of allowed masks for wxLogTrace(). */
 PHP_METHOD(php_wxLog, RemoveTraceMask)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4419,6 +4569,10 @@ PHP_METHOD(php_wxLog, RemoveTraceMask)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLog::RemoveTraceMask\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxLog::Resume()
+   Resumes logging previously suspended by a call to Suspend(). */
 PHP_METHOD(php_wxLog, Resume)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4536,6 +4690,10 @@ PHP_METHOD(php_wxLog, Resume)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLog::Resume\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxLog wxLog::SetActiveTarget(wxLog &logtarget)
+   Sets the specified log target as the active one. */
 PHP_METHOD(php_wxLog, SetActiveTarget)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4694,6 +4852,10 @@ PHP_METHOD(php_wxLog, SetActiveTarget)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLog::SetActiveTarget\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxLog::SetComponentLevel(string component, int level)
+   Sets the log level for the given component. */
 PHP_METHOD(php_wxLog, SetComponentLevel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4818,6 +4980,10 @@ PHP_METHOD(php_wxLog, SetComponentLevel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLog::SetComponentLevel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxLog::SetLogLevel(int logLevel)
+   Specifies that log messages with level greater (numerically) than logLevel should be ignored and not sent to the active log target. */
 PHP_METHOD(php_wxLog, SetLogLevel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4940,6 +5106,10 @@ PHP_METHOD(php_wxLog, SetLogLevel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLog::SetLogLevel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxLog::SetRepetitionCounting(bool repetCounting)
+   Enables logging mode in which a log message is logged once, and in case exactly the same message successively repeats one or more times, only the number of repetitions is logged. */
 PHP_METHOD(php_wxLog, SetRepetitionCounting)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5074,6 +5244,10 @@ PHP_METHOD(php_wxLog, SetRepetitionCounting)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLog::SetRepetitionCounting\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxLog wxLog::SetThreadActiveTarget(wxLog &logger)
+   Sets a thread-specific log target. */
 PHP_METHOD(php_wxLog, SetThreadActiveTarget)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5232,6 +5406,10 @@ PHP_METHOD(php_wxLog, SetThreadActiveTarget)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLog::SetThreadActiveTarget\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxLog::SetTimestamp(string format)
+   Sets the timestamp format prepended by the default log targets to all messages. */
 PHP_METHOD(php_wxLog, SetTimestamp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5355,6 +5533,10 @@ PHP_METHOD(php_wxLog, SetTimestamp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLog::SetTimestamp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxLog::SetVerbose(bool verbose)
+   Activates or deactivates verbose mode in which the verbose messages are logged as the normal ones instead of being silently dropped. */
 PHP_METHOD(php_wxLog, SetVerbose)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5489,6 +5671,10 @@ PHP_METHOD(php_wxLog, SetVerbose)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLog::SetVerbose\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxLog::Suspend()
+   Suspends the logging until Resume() is called. */
 PHP_METHOD(php_wxLog, Suspend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5606,3 +5792,5 @@ PHP_METHOD(php_wxLog, Suspend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLog::Suspend\n");
 	}
 }
+/* }}} */
+

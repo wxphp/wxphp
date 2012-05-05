@@ -91,6 +91,8 @@ void php_wxGBPosition_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto int wxGBPosition::GetCol()
+   Get the current column value. */
 PHP_METHOD(php_wxGBPosition, GetCol)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -183,6 +185,10 @@ PHP_METHOD(php_wxGBPosition, GetCol)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGBPosition::GetCol\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGBPosition::GetRow()
+   Get the current row value. */
 PHP_METHOD(php_wxGBPosition, GetRow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -275,6 +281,10 @@ PHP_METHOD(php_wxGBPosition, GetRow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGBPosition::GetRow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGBPosition::SetCol(int col)
+   Set a new column value. */
 PHP_METHOD(php_wxGBPosition, SetCol)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -372,6 +382,10 @@ PHP_METHOD(php_wxGBPosition, SetCol)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGBPosition::SetCol\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGBPosition::SetRow(int row)
+   Set a new row value. */
 PHP_METHOD(php_wxGBPosition, SetRow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -469,6 +483,10 @@ PHP_METHOD(php_wxGBPosition, SetRow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGBPosition::SetRow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGBPosition::wxGBPosition()
+   Default constructor, setting the row and column to (0,0). */
 PHP_METHOD(php_wxGBPosition, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -586,6 +604,8 @@ PHP_METHOD(php_wxGBPosition, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxGridBagSizer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -593,6 +613,8 @@ void php_wxGridBagSizer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto wxSizerItem wxGridBagSizer::Add(wxWindow &window, wxGBPosition pos, wxGBSpan span, int flag, int border, wxObject &userData)
+   Adds the given item to the given position. */
 PHP_METHOD(php_wxGridBagSizer, Add)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1562,6 +1584,10 @@ PHP_METHOD(php_wxGridBagSizer, Add)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridBagSizer::Add\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxGridBagSizer::CalcMin()
+   Called when the managed size of the sizer is needed or when layout needs done. */
 PHP_METHOD(php_wxGridBagSizer, CalcMin)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1659,6 +1685,10 @@ PHP_METHOD(php_wxGridBagSizer, CalcMin)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridBagSizer::CalcMin\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridBagSizer::CheckForIntersection(wxGBSizerItem &item, wxGBSizerItem &excludeItem)
+   Look at all items and see if any intersect (or would overlap) the given item. */
 PHP_METHOD(php_wxGridBagSizer, CheckForIntersection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1911,6 +1941,10 @@ PHP_METHOD(php_wxGridBagSizer, CheckForIntersection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridBagSizer::CheckForIntersection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxGBSizerItem wxGridBagSizer::FindItem(wxWindow &window)
+   Find the sizer item for the given window or subsizer, returns NULL if not found. */
 PHP_METHOD(php_wxGridBagSizer, FindItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2127,6 +2161,10 @@ PHP_METHOD(php_wxGridBagSizer, FindItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridBagSizer::FindItem\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxGBSizerItem wxGridBagSizer::FindItemAtPoint(wxPoint pt)
+   Return the sizer item located at the point given in pt, or NULL if there is no item at that point. */
 PHP_METHOD(php_wxGridBagSizer, FindItemAtPoint)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2265,6 +2303,10 @@ PHP_METHOD(php_wxGridBagSizer, FindItemAtPoint)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridBagSizer::FindItemAtPoint\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxGBSizerItem wxGridBagSizer::FindItemAtPosition(wxGBPosition pos)
+   Return the sizer item for the given grid cell, or NULL if there is no item at that position. */
 PHP_METHOD(php_wxGridBagSizer, FindItemAtPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2403,6 +2445,10 @@ PHP_METHOD(php_wxGridBagSizer, FindItemAtPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridBagSizer::FindItemAtPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxGBSizerItem wxGridBagSizer::FindItemWithData(wxObject userData)
+   Return the sizer item that has a matching user data (it only compares pointer values) or NULL if not found. */
 PHP_METHOD(php_wxGridBagSizer, FindItemWithData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2541,6 +2587,10 @@ PHP_METHOD(php_wxGridBagSizer, FindItemWithData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridBagSizer::FindItemWithData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxGridBagSizer::GetCellSize(int row, int col)
+   Get the size of the specified cell, including hgap and vgap. */
 PHP_METHOD(php_wxGridBagSizer, GetCellSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2644,6 +2694,10 @@ PHP_METHOD(php_wxGridBagSizer, GetCellSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridBagSizer::GetCellSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxGridBagSizer::GetEmptyCellSize()
+   Get the size used for cells in the grid with no item. */
 PHP_METHOD(php_wxGridBagSizer, GetEmptyCellSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2741,6 +2795,10 @@ PHP_METHOD(php_wxGridBagSizer, GetEmptyCellSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridBagSizer::GetEmptyCellSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxGBPosition wxGridBagSizer::GetItemPosition(wxWindow &window)
+   Get the grid position of the specified item. */
 PHP_METHOD(php_wxGridBagSizer, GetItemPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2963,6 +3021,10 @@ PHP_METHOD(php_wxGridBagSizer, GetItemPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridBagSizer::GetItemPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxGBSpan wxGridBagSizer::GetItemSpan(wxWindow &window)
+   Get the row/col spanning of the specified item. */
 PHP_METHOD(php_wxGridBagSizer, GetItemSpan)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3185,6 +3247,10 @@ PHP_METHOD(php_wxGridBagSizer, GetItemSpan)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridBagSizer::GetItemSpan\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridBagSizer::RecalcSizes()
+   Called when the managed size of the sizer is needed or when layout needs done. */
 PHP_METHOD(php_wxGridBagSizer, RecalcSizes)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3277,6 +3343,10 @@ PHP_METHOD(php_wxGridBagSizer, RecalcSizes)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridBagSizer::RecalcSizes\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridBagSizer::SetEmptyCellSize(wxSize sz)
+   Set the size used for cells in the grid with no item. */
 PHP_METHOD(php_wxGridBagSizer, SetEmptyCellSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3392,6 +3462,10 @@ PHP_METHOD(php_wxGridBagSizer, SetEmptyCellSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridBagSizer::SetEmptyCellSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridBagSizer::SetItemPosition(wxWindow &window, wxGBPosition pos)
+   Set the grid position of the specified item. */
 PHP_METHOD(php_wxGridBagSizer, SetItemPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3656,6 +3730,10 @@ PHP_METHOD(php_wxGridBagSizer, SetItemPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridBagSizer::SetItemPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridBagSizer::SetItemSpan(wxWindow &window, wxGBSpan span)
+   Set the row/col spanning of the specified item. */
 PHP_METHOD(php_wxGridBagSizer, SetItemSpan)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3920,6 +3998,10 @@ PHP_METHOD(php_wxGridBagSizer, SetItemSpan)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridBagSizer::SetItemSpan\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridBagSizer::wxGridBagSizer(int vgap, int hgap)
+   Constructor, with optional parameters to specify the gap between the rows and columns. */
 PHP_METHOD(php_wxGridBagSizer, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4026,6 +4108,8 @@ PHP_METHOD(php_wxGridBagSizer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxGBSizerItem_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4066,6 +4150,8 @@ void php_wxGBSizerItem_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxGBSizerItem::wxGBSizerItem(int width, int height, wxGBPosition pos, wxGBSpan span, int flag, int border, wxObject &userData)
+   Construct a sizer item for tracking a spacer. */
 PHP_METHOD(php_wxGBSizerItem, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4586,6 +4672,10 @@ PHP_METHOD(php_wxGBSizerItem, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto bool wxGBSizerItem::SetSpan(wxGBSpan span)
+   If the item is already a member of a sizer then first ensure that there is no other item that would intersect with this one with its new spanning size, then set the new spanning. */
 PHP_METHOD(php_wxGBSizerItem, SetSpan)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4701,6 +4791,10 @@ PHP_METHOD(php_wxGBSizerItem, SetSpan)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGBSizerItem::SetSpan\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGBSizerItem::SetPos(wxGBPosition pos)
+   If the item is already a member of a sizer then first ensure that there is no other item that would intersect with this one at the new position, then set the new position. */
 PHP_METHOD(php_wxGBSizerItem, SetPos)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4816,6 +4910,9 @@ PHP_METHOD(php_wxGBSizerItem, SetPos)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGBSizerItem::SetPos\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGBSizerItem::SetGBSizer(wxGridBagSizer &sizer) */
 PHP_METHOD(php_wxGBSizerItem, SetGBSizer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4931,6 +5028,10 @@ PHP_METHOD(php_wxGBSizerItem, SetGBSizer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGBSizerItem::SetGBSizer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGBSizerItem::Intersects(wxGBPosition pos, wxGBSpan span)
+   Returns true if the given pos/span would intersect with this item. */
 PHP_METHOD(php_wxGBSizerItem, Intersects)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5120,6 +5221,10 @@ PHP_METHOD(php_wxGBSizerItem, Intersects)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGBSizerItem::Intersects\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGBSizerItem::GetSpan(int &rowspan, int &colspan)
+   Get the row and column spanning of the item. */
 PHP_METHOD(php_wxGBSizerItem, GetSpan)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5262,6 +5367,10 @@ PHP_METHOD(php_wxGBSizerItem, GetSpan)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGBSizerItem::GetSpan\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGBSizerItem::GetPos(int &row, int &col)
+   Get the grid position of the item. */
 PHP_METHOD(php_wxGBSizerItem, GetPos)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5404,6 +5513,9 @@ PHP_METHOD(php_wxGBSizerItem, GetPos)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGBSizerItem::GetPos\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxGridBagSizer wxGBSizerItem::GetGBSizer() */
 PHP_METHOD(php_wxGBSizerItem, GetGBSizer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5519,6 +5631,10 @@ PHP_METHOD(php_wxGBSizerItem, GetGBSizer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGBSizerItem::GetGBSizer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGBSizerItem::GetEndPos(int &row, int &col)
+   Get the row and column of the endpoint of this item. */
 PHP_METHOD(php_wxGBSizerItem, GetEndPos)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5624,6 +5740,8 @@ PHP_METHOD(php_wxGBSizerItem, GetEndPos)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGBSizerItem::GetEndPos\n");
 	}
 }
+/* }}} */
+
 void php_wxGBSpan_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5664,6 +5782,8 @@ void php_wxGBSpan_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto int wxGBSpan::GetColspan()
+   Get the current colspan value. */
 PHP_METHOD(php_wxGBSpan, GetColspan)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5756,6 +5876,10 @@ PHP_METHOD(php_wxGBSpan, GetColspan)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGBSpan::GetColspan\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGBSpan::GetRowspan()
+   Get the current rowspan value. */
 PHP_METHOD(php_wxGBSpan, GetRowspan)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5848,6 +5972,10 @@ PHP_METHOD(php_wxGBSpan, GetRowspan)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGBSpan::GetRowspan\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGBSpan::SetColspan(int colspan)
+   Set a new colspan value. */
 PHP_METHOD(php_wxGBSpan, SetColspan)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5945,6 +6073,10 @@ PHP_METHOD(php_wxGBSpan, SetColspan)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGBSpan::SetColspan\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGBSpan::SetRowspan(int rowspan)
+   Set a new rowspan value. */
 PHP_METHOD(php_wxGBSpan, SetRowspan)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6042,6 +6174,10 @@ PHP_METHOD(php_wxGBSpan, SetRowspan)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGBSpan::SetRowspan\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGBSpan::wxGBSpan()
+   Default constructor, setting the rowspan and colspan to (1,1) meaning that the item occupies one cell in each direction. */
 PHP_METHOD(php_wxGBSpan, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6159,6 +6295,8 @@ PHP_METHOD(php_wxGBSpan, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxLayoutAlgorithm_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6199,6 +6337,8 @@ void php_wxLayoutAlgorithm_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 		#endif
 	}
 }
+/* {{{ proto bool wxLayoutAlgorithm::LayoutFrame(wxFrame &frame, wxWindow &mainWindow)
+   Lays out the children of a normal frame. */
 PHP_METHOD(php_wxLayoutAlgorithm, LayoutFrame)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6345,6 +6485,10 @@ PHP_METHOD(php_wxLayoutAlgorithm, LayoutFrame)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLayoutAlgorithm::LayoutFrame\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxLayoutAlgorithm::LayoutMDIFrame(wxMDIParentFrame &frame, wxRect &rect)
+   Lays out the children of an MDI parent frame. */
 PHP_METHOD(php_wxLayoutAlgorithm, LayoutMDIFrame)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6491,6 +6635,10 @@ PHP_METHOD(php_wxLayoutAlgorithm, LayoutMDIFrame)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLayoutAlgorithm::LayoutMDIFrame\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxLayoutAlgorithm::LayoutWindow(wxWindow &parent, wxWindow &mainWindow)
+   Lays out the children of a normal frame or other window. */
 PHP_METHOD(php_wxLayoutAlgorithm, LayoutWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6637,6 +6785,10 @@ PHP_METHOD(php_wxLayoutAlgorithm, LayoutWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxLayoutAlgorithm::LayoutWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxLayoutAlgorithm::wxLayoutAlgorithm()
+   Default constructor. */
 PHP_METHOD(php_wxLayoutAlgorithm, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6717,6 +6869,8 @@ PHP_METHOD(php_wxLayoutAlgorithm, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxSizer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6757,6 +6911,8 @@ void php_wxSizer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto bool wxSizer::Show(wxSizer &sizer, bool show, bool recursive)
+   Shows or hides sizer. */
 PHP_METHOD(php_wxSizer, Show)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7056,6 +7212,10 @@ PHP_METHOD(php_wxSizer, Show)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::Show\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSizer::wxSizer()
+   The constructor. */
 PHP_METHOD(php_wxSizer, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7136,6 +7296,10 @@ PHP_METHOD(php_wxSizer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxSizer::SetSizeHints(wxWindow &window)
+   This method first calls Fit() and then wxTopLevelWindow::SetSizeHints() on the window passed to it. */
 PHP_METHOD(php_wxSizer, SetSizeHints)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7279,6 +7443,10 @@ PHP_METHOD(php_wxSizer, SetSizeHints)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::SetSizeHints\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSizer::SetVirtualSizeHints(wxWindow &window)
+   Tell the sizer to set the minimal size of the window virtual area to match the sizer's minimal size. */
 PHP_METHOD(php_wxSizer, SetVirtualSizeHints)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7422,6 +7590,10 @@ PHP_METHOD(php_wxSizer, SetVirtualSizeHints)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::SetVirtualSizeHints\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSizer::SetMinSize(int width, int height)
+   This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. */
 PHP_METHOD(php_wxSizer, SetMinSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7603,6 +7775,10 @@ PHP_METHOD(php_wxSizer, SetMinSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::SetMinSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxSizer::SetItemMinSize(int index, wxSize size)
+   Set an item's minimum size by window, sizer, or position. */
 PHP_METHOD(php_wxSizer, SetItemMinSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8048,6 +8224,10 @@ PHP_METHOD(php_wxSizer, SetItemMinSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::SetItemMinSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSizer::SetDimension(wxPoint pos, wxSize size)
+   This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. */
 PHP_METHOD(php_wxSizer, SetDimension)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8250,6 +8430,10 @@ PHP_METHOD(php_wxSizer, SetDimension)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::SetDimension\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxSizer::Replace(wxSizer &oldsz, wxSizer &newsz, bool recursive)
+   Detaches the given oldsz from the sizer and replaces it with the given newsz. */
 PHP_METHOD(php_wxSizer, Replace)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8570,6 +8754,10 @@ PHP_METHOD(php_wxSizer, Replace)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::Replace\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxSizer::Remove(int index)
+   Removes a child from the sizer and destroys it if it is a sizer or a spacer, but not if it is a window (because windows are owned by their parent window, not the sizer). */
 PHP_METHOD(php_wxSizer, Remove)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8750,6 +8938,10 @@ PHP_METHOD(php_wxSizer, Remove)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::Remove\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSizer::RecalcSizes()
+   This method is abstract and has to be overwritten by any derived class. */
 void wxSizer_php::RecalcSizes()
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8792,6 +8984,10 @@ void wxSizer_php::RecalcSizes()
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto wxSizerItem wxSizer::PrependStretchSpacer(int prop)
+   Prepends stretchable space to the sizer. */
 PHP_METHOD(php_wxSizer, PrependStretchSpacer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8974,6 +9170,10 @@ PHP_METHOD(php_wxSizer, PrependStretchSpacer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::PrependStretchSpacer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizerItem wxSizer::PrependSpacer(int size)
+   Prepends non-stretchable space to the sizer. */
 PHP_METHOD(php_wxSizer, PrependSpacer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9122,6 +9322,9 @@ PHP_METHOD(php_wxSizer, PrependSpacer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::PrependSpacer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizerItem wxSizer::Prepend(wxSizerItem &item) */
 PHP_METHOD(php_wxSizer, Prepend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10181,6 +10384,10 @@ PHP_METHOD(php_wxSizer, Prepend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::Prepend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSizer::Layout()
+   Call this to force layout of the children anew, e.g. */
 PHP_METHOD(php_wxSizer, Layout)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10301,6 +10508,10 @@ PHP_METHOD(php_wxSizer, Layout)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::Layout\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxSizer::IsShown(int index)
+   Returns true if the item at index is shown. */
 PHP_METHOD(php_wxSizer, IsShown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10536,6 +10747,10 @@ PHP_METHOD(php_wxSizer, IsShown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::IsShown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxSizer::IsEmpty()
+   Return true if the sizer has no elements. */
 PHP_METHOD(php_wxSizer, IsEmpty)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10656,6 +10871,10 @@ PHP_METHOD(php_wxSizer, IsEmpty)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::IsEmpty\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizerItem wxSizer::InsertStretchSpacer(int index, int prop)
+   Inserts stretchable space to the sizer. */
 PHP_METHOD(php_wxSizer, InsertStretchSpacer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10839,6 +11058,10 @@ PHP_METHOD(php_wxSizer, InsertStretchSpacer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::InsertStretchSpacer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizerItem wxSizer::InsertSpacer(int index, int size)
+   Inserts non-stretchable space to the sizer. */
 PHP_METHOD(php_wxSizer, InsertSpacer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10988,6 +11211,10 @@ PHP_METHOD(php_wxSizer, InsertSpacer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::InsertSpacer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizerItem wxSizer::Insert(int index, int width, int height, int proportion, int flag, int border, wxObject &userData)
+   Insert a child into the sizer before any existing item at index. */
 PHP_METHOD(php_wxSizer, Insert)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12053,6 +12280,10 @@ PHP_METHOD(php_wxSizer, Insert)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::Insert\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxSizer::InformFirstDirection(int direction, int size, int availableOtherDir)
+   Inform sizer about the first direction that has been decided (by parent item). */
 PHP_METHOD(php_wxSizer, InformFirstDirection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12180,6 +12411,10 @@ PHP_METHOD(php_wxSizer, InformFirstDirection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::InformFirstDirection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxSizer::Hide(int index)
+   Hides the item at position index. */
 PHP_METHOD(php_wxSizer, Hide)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12441,6 +12676,10 @@ PHP_METHOD(php_wxSizer, Hide)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::Hide\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxSizer::GetSize()
+   Returns the current size of the sizer. */
 PHP_METHOD(php_wxSizer, GetSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12566,6 +12805,10 @@ PHP_METHOD(php_wxSizer, GetSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::GetSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPoint wxSizer::GetPosition()
+   Returns the current position of the sizer. */
 PHP_METHOD(php_wxSizer, GetPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12691,6 +12934,10 @@ PHP_METHOD(php_wxSizer, GetPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::GetPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxSizer::GetMinSize()
+   Returns the minimal size of the sizer. */
 PHP_METHOD(php_wxSizer, GetMinSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12816,6 +13063,10 @@ PHP_METHOD(php_wxSizer, GetMinSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::GetMinSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxSizer::GetItemCount()
+   Returns the number of items in the sizer. */
 PHP_METHOD(php_wxSizer, GetItemCount)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12936,6 +13187,10 @@ PHP_METHOD(php_wxSizer, GetItemCount)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::GetItemCount\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSizer::FitInside(wxWindow &window)
+   Tell the sizer to resize the virtual size of the window to match the sizer's minimal size. */
 PHP_METHOD(php_wxSizer, FitInside)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13079,6 +13334,10 @@ PHP_METHOD(php_wxSizer, FitInside)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::FitInside\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxSizer::Fit(wxWindow &window)
+   Tell the sizer to resize the window so that its client area matches the sizer's minimal size (ComputeFittingClientSize() is called to determine it). */
 PHP_METHOD(php_wxSizer, Fit)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13227,6 +13486,10 @@ PHP_METHOD(php_wxSizer, Fit)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::Fit\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxSizer::Detach(int index)
+   Detach a item at position index from the sizer without destroying it. */
 PHP_METHOD(php_wxSizer, Detach)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13462,6 +13725,10 @@ PHP_METHOD(php_wxSizer, Detach)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::Detach\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxSizer::ComputeFittingWindowSize(wxWindow &window)
+   Like ComputeFittingClientSize(), but converts the result into window size. */
 PHP_METHOD(php_wxSizer, ComputeFittingWindowSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13610,6 +13877,10 @@ PHP_METHOD(php_wxSizer, ComputeFittingWindowSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::ComputeFittingWindowSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxSizer::ComputeFittingClientSize(wxWindow &window)
+   Computes client area size for window so that it matches the sizer's minimal size. */
 PHP_METHOD(php_wxSizer, ComputeFittingClientSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13758,6 +14029,10 @@ PHP_METHOD(php_wxSizer, ComputeFittingClientSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::ComputeFittingClientSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizerItem wxSizer::Add(wxWindow &window, wxSizerFlags flags)
+   Appends a child to the sizer. */
 PHP_METHOD(php_wxSizer, Add)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14817,6 +15092,10 @@ PHP_METHOD(php_wxSizer, Add)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::Add\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizerItem wxSizer::AddSpacer(int size)
+   This base function adds non-stretchable space to both the horizontal and vertical orientation of the sizer. */
 PHP_METHOD(php_wxSizer, AddSpacer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14965,6 +15244,10 @@ PHP_METHOD(php_wxSizer, AddSpacer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::AddSpacer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizerItem wxSizer::AddStretchSpacer(int prop)
+   Adds stretchable space to the sizer. */
 PHP_METHOD(php_wxSizer, AddStretchSpacer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15147,6 +15430,10 @@ PHP_METHOD(php_wxSizer, AddStretchSpacer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::AddStretchSpacer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxSizer::CalcMin()
+   This method is abstract and has to be overwritten by any derived class. */
 wxSize wxSizer_php::CalcMin()
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15194,6 +15481,10 @@ wxSize wxSizer_php::CalcMin()
 		return *(wxSize*) return_object;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxSizer::Clear(bool delete_windows)
+   Detaches all children from the sizer. */
 PHP_METHOD(php_wxSizer, Clear)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15330,6 +15621,10 @@ PHP_METHOD(php_wxSizer, Clear)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::Clear\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxWindow wxSizer::GetContainingWindow()
+   Returns the window this sizer is used in or NULL if none. */
 PHP_METHOD(php_wxSizer, GetContainingWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15473,6 +15768,10 @@ PHP_METHOD(php_wxSizer, GetContainingWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::GetContainingWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizerItem wxSizer::GetItem(wxWindow &window, bool recursive)
+   Finds wxSizerItem which holds the given window. */
 PHP_METHOD(php_wxSizer, GetItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15849,6 +16148,10 @@ PHP_METHOD(php_wxSizer, GetItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::GetItem\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizerItem wxSizer::GetItemById(int id, bool recursive)
+   Finds item of the sizer which has the given id. */
 PHP_METHOD(php_wxSizer, GetItemById)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16032,6 +16335,8 @@ PHP_METHOD(php_wxSizer, GetItemById)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizer::GetItemById\n");
 	}
 }
+/* }}} */
+
 void php_wxStdDialogButtonSizer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16039,6 +16344,8 @@ void php_wxStdDialogButtonSizer_destruction_handler(zend_rsrc_list_entry *rsrc T
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto  wxStdDialogButtonSizer::AddButton(wxButton &button)
+   Adds a button to the wxStdDialogButtonSizer. */
 PHP_METHOD(php_wxStdDialogButtonSizer, AddButton)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16154,6 +16461,10 @@ PHP_METHOD(php_wxStdDialogButtonSizer, AddButton)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStdDialogButtonSizer::AddButton\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxStdDialogButtonSizer::CalcMin()
+   Implements the calculation of a box sizer's minimal. */
 PHP_METHOD(php_wxStdDialogButtonSizer, CalcMin)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16251,6 +16562,10 @@ PHP_METHOD(php_wxStdDialogButtonSizer, CalcMin)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStdDialogButtonSizer::CalcMin\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStdDialogButtonSizer::Realize()
+   Rearranges the buttons and applies proper spacing between buttons to make them match the platform or toolkit's interface guidelines. */
 PHP_METHOD(php_wxStdDialogButtonSizer, Realize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16343,6 +16658,10 @@ PHP_METHOD(php_wxStdDialogButtonSizer, Realize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStdDialogButtonSizer::Realize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStdDialogButtonSizer::RecalcSizes()
+   Implements the calculation of a box sizer's dimensions and then sets the size of its children (calling wxWindow::SetSize if the child is a window). */
 PHP_METHOD(php_wxStdDialogButtonSizer, RecalcSizes)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16435,6 +16754,10 @@ PHP_METHOD(php_wxStdDialogButtonSizer, RecalcSizes)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStdDialogButtonSizer::RecalcSizes\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStdDialogButtonSizer::SetAffirmativeButton(wxButton &button)
+   Sets the affirmative button for the sizer. */
 PHP_METHOD(php_wxStdDialogButtonSizer, SetAffirmativeButton)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16550,6 +16873,10 @@ PHP_METHOD(php_wxStdDialogButtonSizer, SetAffirmativeButton)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStdDialogButtonSizer::SetAffirmativeButton\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStdDialogButtonSizer::SetCancelButton(wxButton &button)
+   Sets the cancel button for the sizer. */
 PHP_METHOD(php_wxStdDialogButtonSizer, SetCancelButton)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16665,6 +16992,10 @@ PHP_METHOD(php_wxStdDialogButtonSizer, SetCancelButton)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStdDialogButtonSizer::SetCancelButton\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStdDialogButtonSizer::SetNegativeButton(wxButton &button)
+   Sets the negative button for the sizer. */
 PHP_METHOD(php_wxStdDialogButtonSizer, SetNegativeButton)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16780,6 +17111,10 @@ PHP_METHOD(php_wxStdDialogButtonSizer, SetNegativeButton)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStdDialogButtonSizer::SetNegativeButton\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStdDialogButtonSizer::wxStdDialogButtonSizer()
+   Constructor for a wxStdDialogButtonSizer. */
 PHP_METHOD(php_wxStdDialogButtonSizer, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16860,6 +17195,8 @@ PHP_METHOD(php_wxStdDialogButtonSizer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxSizerItem_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16900,6 +17237,8 @@ void php_wxSizerItem_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxSizerItem::wxSizerItem(wxWindow &window, wxSizerFlags flags)
+   Construct a sizer item for tracking a window. */
 PHP_METHOD(php_wxSizerItem, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17434,6 +17773,10 @@ PHP_METHOD(php_wxSizerItem, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxSizerItem::SetWindow(wxWindow &window)
+   Set the window to be tracked by this item. */
 PHP_METHOD(php_wxSizerItem, SetWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17553,6 +17896,10 @@ PHP_METHOD(php_wxSizerItem, SetWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::SetWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSizerItem::Show(bool show)
+   Set the show item attribute, which sizers use to determine if the item is to be made part of the layout or not. */
 PHP_METHOD(php_wxSizerItem, Show)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17654,6 +18001,9 @@ PHP_METHOD(php_wxSizerItem, Show)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::Show\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSizerItem::SetUserData(wxObject &userData) */
 PHP_METHOD(php_wxSizerItem, SetUserData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17773,6 +18123,10 @@ PHP_METHOD(php_wxSizerItem, SetUserData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::SetUserData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSizerItem::SetSpacer(wxSize size)
+   Set the size of the spacer tracked by this item. */
 PHP_METHOD(php_wxSizerItem, SetSpacer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17892,6 +18246,10 @@ PHP_METHOD(php_wxSizerItem, SetSpacer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::SetSpacer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSizerItem::SetSizer(wxSizer &sizer)
+   Set the sizer tracked by this item. */
 PHP_METHOD(php_wxSizerItem, SetSizer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18011,6 +18369,10 @@ PHP_METHOD(php_wxSizerItem, SetSizer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::SetSizer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSizerItem::SetRatio(float ratio)
+   Set the ratio item attribute. */
 PHP_METHOD(php_wxSizerItem, SetRatio)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18204,6 +18566,10 @@ PHP_METHOD(php_wxSizerItem, SetRatio)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::SetRatio\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSizerItem::SetProportion(int proportion)
+   Set the proportion item attribute. */
 PHP_METHOD(php_wxSizerItem, SetProportion)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18305,6 +18671,10 @@ PHP_METHOD(php_wxSizerItem, SetProportion)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::SetProportion\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSizerItem::SetMinSize(int x, int y)
+   This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. */
 PHP_METHOD(php_wxSizerItem, SetMinSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18462,6 +18832,9 @@ PHP_METHOD(php_wxSizerItem, SetMinSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::SetMinSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSizerItem::SetInitSize(int x, int y) */
 PHP_METHOD(php_wxSizerItem, SetInitSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18564,6 +18937,10 @@ PHP_METHOD(php_wxSizerItem, SetInitSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::SetInitSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSizerItem::SetId(int id)
+   Sets the numeric id of the wxSizerItem to id. */
 PHP_METHOD(php_wxSizerItem, SetId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18665,6 +19042,10 @@ PHP_METHOD(php_wxSizerItem, SetId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::SetId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSizerItem::SetFlag(int flag)
+   Set the flag item attribute. */
 PHP_METHOD(php_wxSizerItem, SetFlag)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18766,6 +19147,10 @@ PHP_METHOD(php_wxSizerItem, SetFlag)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::SetFlag\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSizerItem::SetDimension(wxPoint pos, wxSize size)
+   Set the position and size of the space allocated to the sizer, and adjust the position and size of the item to be within that space taking alignment and borders into account. */
 PHP_METHOD(php_wxSizerItem, SetDimension)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18904,6 +19289,10 @@ PHP_METHOD(php_wxSizerItem, SetDimension)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::SetDimension\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSizerItem::SetBorder(int border)
+   Set the border item attribute. */
 PHP_METHOD(php_wxSizerItem, SetBorder)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19005,6 +19394,10 @@ PHP_METHOD(php_wxSizerItem, SetBorder)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::SetBorder\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxSizerItem::IsWindow()
+   Is this item a window? */
 PHP_METHOD(php_wxSizerItem, IsWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19101,6 +19494,10 @@ PHP_METHOD(php_wxSizerItem, IsWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::IsWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxSizerItem::IsSpacer()
+   Is this item a spacer? */
 PHP_METHOD(php_wxSizerItem, IsSpacer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19197,6 +19594,10 @@ PHP_METHOD(php_wxSizerItem, IsSpacer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::IsSpacer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxSizerItem::IsSizer()
+   Is this item a sizer? */
 PHP_METHOD(php_wxSizerItem, IsSizer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19293,6 +19694,10 @@ PHP_METHOD(php_wxSizerItem, IsSizer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::IsSizer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxSizerItem::IsShown()
+   Returns true if this item is a window or a spacer and it is shown or if this item is a sizer and not all of its elements are hidden. */
 PHP_METHOD(php_wxSizerItem, IsShown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19389,6 +19794,10 @@ PHP_METHOD(php_wxSizerItem, IsShown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::IsShown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSizerItem::AssignSizer(wxSizer &sizer)
+   Set the sizer tracked by this item. */
 PHP_METHOD(php_wxSizerItem, AssignSizer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19508,6 +19917,10 @@ PHP_METHOD(php_wxSizerItem, AssignSizer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::AssignSizer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSizerItem::AssignSpacer(wxSize size)
+   Set the size of the spacer tracked by this item. */
 PHP_METHOD(php_wxSizerItem, AssignSpacer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19665,6 +20078,10 @@ PHP_METHOD(php_wxSizerItem, AssignSpacer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::AssignSpacer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSizerItem::AssignWindow(wxWindow &window)
+   Set the window to be tracked by this item. */
 PHP_METHOD(php_wxSizerItem, AssignWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19784,6 +20201,10 @@ PHP_METHOD(php_wxSizerItem, AssignWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::AssignWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxSizerItem::CalcMin()
+   Calculates the minimum desired size for the item, including any space needed by borders. */
 PHP_METHOD(php_wxSizerItem, CalcMin)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19885,6 +20306,10 @@ PHP_METHOD(php_wxSizerItem, CalcMin)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::CalcMin\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSizerItem::DeleteWindows()
+   Destroy the window or the windows in a subsizer, depending on the type of item. */
 PHP_METHOD(php_wxSizerItem, DeleteWindows)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19981,6 +20406,10 @@ PHP_METHOD(php_wxSizerItem, DeleteWindows)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::DeleteWindows\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSizerItem::DetachSizer()
+   Enable deleting the SizerItem without destroying the contained sizer. */
 PHP_METHOD(php_wxSizerItem, DetachSizer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20077,6 +20506,10 @@ PHP_METHOD(php_wxSizerItem, DetachSizer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::DetachSizer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxSizerItem::GetBorder()
+   Return the border attribute. */
 PHP_METHOD(php_wxSizerItem, GetBorder)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20173,6 +20606,10 @@ PHP_METHOD(php_wxSizerItem, GetBorder)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::GetBorder\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxSizerItem::GetFlag()
+   Return the flags attribute. */
 PHP_METHOD(php_wxSizerItem, GetFlag)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20269,6 +20706,10 @@ PHP_METHOD(php_wxSizerItem, GetFlag)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::GetFlag\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxSizerItem::GetId()
+   Return the numeric id of wxSizerItem, or wxID_NONE if the id has not been set. */
 PHP_METHOD(php_wxSizerItem, GetId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20365,6 +20806,10 @@ PHP_METHOD(php_wxSizerItem, GetId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::GetId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxSizerItem::GetMinSize()
+   Get the minimum size needed for the item. */
 PHP_METHOD(php_wxSizerItem, GetMinSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20466,6 +20911,10 @@ PHP_METHOD(php_wxSizerItem, GetMinSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::GetMinSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPoint wxSizerItem::GetPosition()
+   What is the current position of the item, as set in the last Layout. */
 PHP_METHOD(php_wxSizerItem, GetPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20567,6 +21016,10 @@ PHP_METHOD(php_wxSizerItem, GetPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::GetPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxSizerItem::GetProportion()
+   Get the proportion item attribute. */
 PHP_METHOD(php_wxSizerItem, GetProportion)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20663,6 +21116,10 @@ PHP_METHOD(php_wxSizerItem, GetProportion)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::GetProportion\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto float wxSizerItem::GetRatio()
+   Get the ration item attribute. */
 PHP_METHOD(php_wxSizerItem, GetRatio)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20759,6 +21216,10 @@ PHP_METHOD(php_wxSizerItem, GetRatio)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::GetRatio\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRect wxSizerItem::GetRect()
+   Get the rectangle of the item on the parent window, excluding borders. */
 PHP_METHOD(php_wxSizerItem, GetRect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20860,6 +21321,10 @@ PHP_METHOD(php_wxSizerItem, GetRect)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::GetRect\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxSizerItem::GetSize()
+   Get the current size of the item, as set in the last Layout. */
 PHP_METHOD(php_wxSizerItem, GetSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20961,6 +21426,10 @@ PHP_METHOD(php_wxSizerItem, GetSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::GetSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizer wxSizerItem::GetSizer()
+   If this item is tracking a sizer, return it. */
 PHP_METHOD(php_wxSizerItem, GetSizer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21080,6 +21549,10 @@ PHP_METHOD(php_wxSizerItem, GetSizer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::GetSizer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxSizerItem::GetSpacer()
+   If this item is tracking a spacer, return its size. */
 PHP_METHOD(php_wxSizerItem, GetSpacer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21181,6 +21654,10 @@ PHP_METHOD(php_wxSizerItem, GetSpacer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::GetSpacer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxObject wxSizerItem::GetUserData()
+   Get the userData item attribute. */
 PHP_METHOD(php_wxSizerItem, GetUserData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21300,6 +21777,10 @@ PHP_METHOD(php_wxSizerItem, GetUserData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::GetUserData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxWindow wxSizerItem::GetWindow()
+   If this item is tracking a window then return it. */
 PHP_METHOD(php_wxSizerItem, GetWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21419,6 +21900,8 @@ PHP_METHOD(php_wxSizerItem, GetWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerItem::GetWindow\n");
 	}
 }
+/* }}} */
+
 void php_wxSizerFlags_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21459,6 +21942,8 @@ void php_wxSizerFlags_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxSizerFlags::wxSizerFlags(int proportion)
+   Creates the wxSizer with the proportion specified by proportion. */
 PHP_METHOD(php_wxSizerFlags, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21554,6 +22039,10 @@ PHP_METHOD(php_wxSizerFlags, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto wxSizerFlags wxSizerFlags::TripleBorder(int direction)
+   Sets the border in the given direction having thrice the default border size. */
 PHP_METHOD(php_wxSizerFlags, TripleBorder)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21702,6 +22191,10 @@ PHP_METHOD(php_wxSizerFlags, TripleBorder)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerFlags::TripleBorder\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizerFlags wxSizerFlags::Top()
+   Aligns the object to the top, similar for Align(wxALIGN_TOP). */
 PHP_METHOD(php_wxSizerFlags, Top)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21814,6 +22307,10 @@ PHP_METHOD(php_wxSizerFlags, Top)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerFlags::Top\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizerFlags wxSizerFlags::Shaped()
+   Set the wx_SHAPED flag which indicates that the elements should always keep the fixed width to height ratio equal to its original value. */
 PHP_METHOD(php_wxSizerFlags, Shaped)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21926,6 +22423,10 @@ PHP_METHOD(php_wxSizerFlags, Shaped)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerFlags::Shaped\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizerFlags wxSizerFlags::Right()
+   Aligns the object to the right, similar for Align(wxALIGN_RIGHT). */
 PHP_METHOD(php_wxSizerFlags, Right)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22038,6 +22539,10 @@ PHP_METHOD(php_wxSizerFlags, Right)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerFlags::Right\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizerFlags wxSizerFlags::ReserveSpaceEvenIfHidden()
+   Set the wxRESERVE_SPACE_EVEN_IF_HIDDEN flag. */
 PHP_METHOD(php_wxSizerFlags, ReserveSpaceEvenIfHidden)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22150,6 +22655,10 @@ PHP_METHOD(php_wxSizerFlags, ReserveSpaceEvenIfHidden)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerFlags::ReserveSpaceEvenIfHidden\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizerFlags wxSizerFlags::Proportion(int proportion)
+   Sets the proportion of this wxSizerFlags to proportion. */
 PHP_METHOD(php_wxSizerFlags, Proportion)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22267,6 +22776,10 @@ PHP_METHOD(php_wxSizerFlags, Proportion)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerFlags::Proportion\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizerFlags wxSizerFlags::Left()
+   Aligns the object to the left, similar for Align(wxALIGN_LEFT). */
 PHP_METHOD(php_wxSizerFlags, Left)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22379,6 +22892,10 @@ PHP_METHOD(php_wxSizerFlags, Left)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerFlags::Left\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxSizerFlags::GetDefaultBorder()
+   Returns the border used by default in Border() method. */
 PHP_METHOD(php_wxSizerFlags, GetDefaultBorder)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22472,6 +22989,10 @@ PHP_METHOD(php_wxSizerFlags, GetDefaultBorder)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerFlags::GetDefaultBorder\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizerFlags wxSizerFlags::FixedMinSize()
+   Set the wxFIXED_MINSIZE flag which indicates that the initial size of the window should be also set as its minimal size. */
 PHP_METHOD(php_wxSizerFlags, FixedMinSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22584,6 +23105,10 @@ PHP_METHOD(php_wxSizerFlags, FixedMinSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerFlags::FixedMinSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizerFlags wxSizerFlags::Expand()
+   Sets the object of the wxSizerFlags to expand to fill as much area as it can. */
 PHP_METHOD(php_wxSizerFlags, Expand)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22696,6 +23221,10 @@ PHP_METHOD(php_wxSizerFlags, Expand)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerFlags::Expand\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizerFlags wxSizerFlags::DoubleHorzBorder()
+   Sets the border in left and right directions having twice the default border size. */
 PHP_METHOD(php_wxSizerFlags, DoubleHorzBorder)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22808,6 +23337,10 @@ PHP_METHOD(php_wxSizerFlags, DoubleHorzBorder)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerFlags::DoubleHorzBorder\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizerFlags wxSizerFlags::DoubleBorder(int direction)
+   Sets the border in the given direction having twice the default border size. */
 PHP_METHOD(php_wxSizerFlags, DoubleBorder)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22956,6 +23489,10 @@ PHP_METHOD(php_wxSizerFlags, DoubleBorder)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerFlags::DoubleBorder\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizerFlags wxSizerFlags::Centre()
+   Center() for people with the other dialect of English. */
 PHP_METHOD(php_wxSizerFlags, Centre)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23068,6 +23605,10 @@ PHP_METHOD(php_wxSizerFlags, Centre)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerFlags::Centre\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizerFlags wxSizerFlags::Center()
+   Sets the object of the wxSizerFlags to center itself in the area it is given. */
 PHP_METHOD(php_wxSizerFlags, Center)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23180,6 +23721,10 @@ PHP_METHOD(php_wxSizerFlags, Center)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerFlags::Center\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizerFlags wxSizerFlags::Bottom()
+   Aligns the object to the bottom, similar for Align(wxALIGN_BOTTOM). */
 PHP_METHOD(php_wxSizerFlags, Bottom)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23292,6 +23837,10 @@ PHP_METHOD(php_wxSizerFlags, Bottom)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerFlags::Bottom\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizerFlags wxSizerFlags::Border(int direction)
+   Sets the wxSizerFlags to have a border with size as returned by GetDefaultBorder(). */
 PHP_METHOD(php_wxSizerFlags, Border)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23498,6 +24047,10 @@ PHP_METHOD(php_wxSizerFlags, Border)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerFlags::Border\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizerFlags wxSizerFlags::Align(int alignment)
+   Sets the alignment of this wxSizerFlags to align. */
 PHP_METHOD(php_wxSizerFlags, Align)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23615,6 +24168,8 @@ PHP_METHOD(php_wxSizerFlags, Align)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizerFlags::Align\n");
 	}
 }
+/* }}} */
+
 void php_wxFlexGridSizer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23622,6 +24177,8 @@ void php_wxFlexGridSizer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto  wxFlexGridSizer::AddGrowableCol(int idx, int proportion)
+   Specifies that column idx (starting from zero) should be grown if there is extra space available to the sizer. */
 PHP_METHOD(php_wxFlexGridSizer, AddGrowableCol)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23735,6 +24292,10 @@ PHP_METHOD(php_wxFlexGridSizer, AddGrowableCol)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFlexGridSizer::AddGrowableCol\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFlexGridSizer::AddGrowableRow(int idx, int proportion)
+   Specifies that row idx (starting from zero) should be grown if there is extra space available to the sizer. */
 PHP_METHOD(php_wxFlexGridSizer, AddGrowableRow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23848,6 +24409,10 @@ PHP_METHOD(php_wxFlexGridSizer, AddGrowableRow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFlexGridSizer::AddGrowableRow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxFlexGridSizer::CalcMin()
+   This method is abstract and has to be overwritten by any derived class. */
 PHP_METHOD(php_wxFlexGridSizer, CalcMin)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23949,6 +24514,10 @@ PHP_METHOD(php_wxFlexGridSizer, CalcMin)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFlexGridSizer::CalcMin\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxFlexGridSizer::GetFlexibleDirection()
+   Returns a wxOrientation value that specifies whether the sizer flexibly resizes its columns, rows, or both (default). */
 PHP_METHOD(php_wxFlexGridSizer, GetFlexibleDirection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24045,6 +24614,10 @@ PHP_METHOD(php_wxFlexGridSizer, GetFlexibleDirection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFlexGridSizer::GetFlexibleDirection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFlexSizerGrowMode wxFlexGridSizer::GetNonFlexibleGrowMode()
+   Returns the value that specifies how the sizer grows in the "non-flexible" direction if there is one. */
 PHP_METHOD(php_wxFlexGridSizer, GetNonFlexibleGrowMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24141,6 +24714,10 @@ PHP_METHOD(php_wxFlexGridSizer, GetNonFlexibleGrowMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFlexGridSizer::GetNonFlexibleGrowMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFlexGridSizer::IsColGrowable(int idx)
+   Returns true if column idx is growable. */
 PHP_METHOD(php_wxFlexGridSizer, IsColGrowable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24242,6 +24819,10 @@ PHP_METHOD(php_wxFlexGridSizer, IsColGrowable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFlexGridSizer::IsColGrowable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFlexGridSizer::IsRowGrowable(int idx)
+   Returns true if row idx is growable. */
 PHP_METHOD(php_wxFlexGridSizer, IsRowGrowable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24343,6 +24924,10 @@ PHP_METHOD(php_wxFlexGridSizer, IsRowGrowable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFlexGridSizer::IsRowGrowable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFlexGridSizer::RecalcSizes()
+   This method is abstract and has to be overwritten by any derived class. */
 PHP_METHOD(php_wxFlexGridSizer, RecalcSizes)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24439,6 +25024,10 @@ PHP_METHOD(php_wxFlexGridSizer, RecalcSizes)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFlexGridSizer::RecalcSizes\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFlexGridSizer::RemoveGrowableCol(int idx)
+   Specifies that the idx column index is no longer growable. */
 PHP_METHOD(php_wxFlexGridSizer, RemoveGrowableCol)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24540,6 +25129,10 @@ PHP_METHOD(php_wxFlexGridSizer, RemoveGrowableCol)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFlexGridSizer::RemoveGrowableCol\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFlexGridSizer::RemoveGrowableRow(int idx)
+   Specifies that the idx row index is no longer growable. */
 PHP_METHOD(php_wxFlexGridSizer, RemoveGrowableRow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24641,6 +25234,10 @@ PHP_METHOD(php_wxFlexGridSizer, RemoveGrowableRow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFlexGridSizer::RemoveGrowableRow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFlexGridSizer::SetFlexibleDirection(int direction)
+   Specifies whether the sizer should flexibly resize its columns, rows, or both. */
 PHP_METHOD(php_wxFlexGridSizer, SetFlexibleDirection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24742,6 +25339,10 @@ PHP_METHOD(php_wxFlexGridSizer, SetFlexibleDirection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFlexGridSizer::SetFlexibleDirection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFlexGridSizer::SetNonFlexibleGrowMode(wxFlexSizerGrowMode mode)
+   Specifies how the sizer should grow in the non-flexible direction if there is one (so SetFlexibleDirection() must have been called previously). */
 PHP_METHOD(php_wxFlexGridSizer, SetNonFlexibleGrowMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24843,6 +25444,10 @@ PHP_METHOD(php_wxFlexGridSizer, SetNonFlexibleGrowMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFlexGridSizer::SetNonFlexibleGrowMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFlexGridSizer::wxFlexGridSizer(int cols, int vgap, int hgap)
+   wxFlexGridSizer constructors. */
 PHP_METHOD(php_wxFlexGridSizer, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25090,6 +25695,8 @@ PHP_METHOD(php_wxFlexGridSizer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxGridSizer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25097,6 +25704,8 @@ void php_wxGridSizer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto wxSize wxGridSizer::CalcMin()
+   This method is abstract and has to be overwritten by any derived class. */
 PHP_METHOD(php_wxGridSizer, CalcMin)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25202,6 +25811,10 @@ PHP_METHOD(php_wxGridSizer, CalcMin)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridSizer::CalcMin\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGridSizer::GetCols()
+   Returns the number of columns that has been specified for the sizer. */
 PHP_METHOD(php_wxGridSizer, GetCols)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25302,6 +25915,10 @@ PHP_METHOD(php_wxGridSizer, GetCols)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridSizer::GetCols\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGridSizer::GetEffectiveColsCount()
+   Returns the number of columns currently used by the sizer. */
 PHP_METHOD(php_wxGridSizer, GetEffectiveColsCount)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25402,6 +26019,10 @@ PHP_METHOD(php_wxGridSizer, GetEffectiveColsCount)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridSizer::GetEffectiveColsCount\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGridSizer::GetEffectiveRowsCount()
+   Returns the number of rows currently used by the sizer. */
 PHP_METHOD(php_wxGridSizer, GetEffectiveRowsCount)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25502,6 +26123,10 @@ PHP_METHOD(php_wxGridSizer, GetEffectiveRowsCount)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridSizer::GetEffectiveRowsCount\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGridSizer::GetHGap()
+   Returns the horizontal gap (in pixels) between cells in the sizer. */
 PHP_METHOD(php_wxGridSizer, GetHGap)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25602,6 +26227,10 @@ PHP_METHOD(php_wxGridSizer, GetHGap)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridSizer::GetHGap\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGridSizer::GetRows()
+   Returns the number of rows that has been specified for the sizer. */
 PHP_METHOD(php_wxGridSizer, GetRows)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25702,6 +26331,10 @@ PHP_METHOD(php_wxGridSizer, GetRows)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridSizer::GetRows\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGridSizer::GetVGap()
+   Returns the vertical gap (in pixels) between the cells in the sizer. */
 PHP_METHOD(php_wxGridSizer, GetVGap)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25802,6 +26435,10 @@ PHP_METHOD(php_wxGridSizer, GetVGap)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridSizer::GetVGap\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridSizer::RecalcSizes()
+   This method is abstract and has to be overwritten by any derived class. */
 PHP_METHOD(php_wxGridSizer, RecalcSizes)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25902,6 +26539,10 @@ PHP_METHOD(php_wxGridSizer, RecalcSizes)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridSizer::RecalcSizes\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridSizer::SetCols(int cols)
+   Sets the number of columns in the sizer. */
 PHP_METHOD(php_wxGridSizer, SetCols)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26007,6 +26648,10 @@ PHP_METHOD(php_wxGridSizer, SetCols)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridSizer::SetCols\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridSizer::SetHGap(int gap)
+   Sets the horizontal gap (in pixels) between cells in the sizer. */
 PHP_METHOD(php_wxGridSizer, SetHGap)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26112,6 +26757,10 @@ PHP_METHOD(php_wxGridSizer, SetHGap)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridSizer::SetHGap\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridSizer::SetRows(int rows)
+   Sets the number of rows in the sizer. */
 PHP_METHOD(php_wxGridSizer, SetRows)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26217,6 +26866,10 @@ PHP_METHOD(php_wxGridSizer, SetRows)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridSizer::SetRows\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridSizer::SetVGap(int gap)
+   Sets the vertical gap (in pixels) between the cells in the sizer. */
 PHP_METHOD(php_wxGridSizer, SetVGap)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26322,6 +26975,10 @@ PHP_METHOD(php_wxGridSizer, SetVGap)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridSizer::SetVGap\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridSizer::wxGridSizer(int cols, int vgap, int hgap)
+   wxGridSizer constructors. */
 PHP_METHOD(php_wxGridSizer, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26569,6 +27226,8 @@ PHP_METHOD(php_wxGridSizer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxStaticBoxSizer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26576,6 +27235,8 @@ void php_wxStaticBoxSizer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto wxSize wxStaticBoxSizer::CalcMin()
+   Implements the calculation of a box sizer's minimal. */
 PHP_METHOD(php_wxStaticBoxSizer, CalcMin)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26673,6 +27334,10 @@ PHP_METHOD(php_wxStaticBoxSizer, CalcMin)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStaticBoxSizer::CalcMin\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxStaticBox wxStaticBoxSizer::GetStaticBox()
+   Returns the static box associated with the sizer. */
 PHP_METHOD(php_wxStaticBoxSizer, GetStaticBox)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26788,6 +27453,10 @@ PHP_METHOD(php_wxStaticBoxSizer, GetStaticBox)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStaticBoxSizer::GetStaticBox\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStaticBoxSizer::RecalcSizes()
+   Implements the calculation of a box sizer's dimensions and then sets the size of its children (calling wxWindow::SetSize if the child is a window). */
 PHP_METHOD(php_wxStaticBoxSizer, RecalcSizes)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26880,6 +27549,10 @@ PHP_METHOD(php_wxStaticBoxSizer, RecalcSizes)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStaticBoxSizer::RecalcSizes\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStaticBoxSizer::wxStaticBoxSizer(wxStaticBox &box, int orient)
+   This constructor uses an already existing static box. */
 PHP_METHOD(php_wxStaticBoxSizer, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27052,6 +27725,8 @@ PHP_METHOD(php_wxStaticBoxSizer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxBoxSizer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27059,6 +27734,8 @@ void php_wxBoxSizer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto  wxBoxSizer::wxBoxSizer(int orient)
+   Constructor for a wxBoxSizer. */
 PHP_METHOD(php_wxBoxSizer, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27144,6 +27821,10 @@ PHP_METHOD(php_wxBoxSizer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxBoxSizer::RecalcSizes()
+   Implements the calculation of a box sizer's dimensions and then sets the size of its children (calling wxWindow::SetSize if the child is a window). */
 PHP_METHOD(php_wxBoxSizer, RecalcSizes)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27248,6 +27929,10 @@ PHP_METHOD(php_wxBoxSizer, RecalcSizes)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxBoxSizer::RecalcSizes\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxBoxSizer::GetOrientation()
+   Returns the orientation of the box sizer, either wxVERTICAL or wxHORIZONTAL. */
 PHP_METHOD(php_wxBoxSizer, GetOrientation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27352,6 +28037,10 @@ PHP_METHOD(php_wxBoxSizer, GetOrientation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxBoxSizer::GetOrientation\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxBoxSizer::CalcMin()
+   Implements the calculation of a box sizer's minimal. */
 PHP_METHOD(php_wxBoxSizer, CalcMin)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27461,6 +28150,10 @@ PHP_METHOD(php_wxBoxSizer, CalcMin)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxBoxSizer::CalcMin\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizerItem wxBoxSizer::AddSpacer(int size)
+   Adds non-stretchable space to the main orientation of the sizer only. */
 PHP_METHOD(php_wxBoxSizer, AddSpacer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27593,6 +28286,8 @@ PHP_METHOD(php_wxBoxSizer, AddSpacer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxBoxSizer::AddSpacer\n");
 	}
 }
+/* }}} */
+
 void php_wxWrapSizer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27600,6 +28295,8 @@ void php_wxWrapSizer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto  wxWrapSizer::wxWrapSizer(int orient, int flags)
+   Constructor for a wxWrapSizer. */
 PHP_METHOD(php_wxWrapSizer, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27706,6 +28403,10 @@ PHP_METHOD(php_wxWrapSizer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxWrapSizer::RecalcSizes()
+   Implements the calculation of a box sizer's dimensions and then sets the size of its children (calling wxWindow::SetSize if the child is a window). */
 PHP_METHOD(php_wxWrapSizer, RecalcSizes)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27798,6 +28499,10 @@ PHP_METHOD(php_wxWrapSizer, RecalcSizes)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWrapSizer::RecalcSizes\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxWrapSizer::IsSpaceItem(wxSizerItem &item)
+   Can be overridden in the derived classes to treat some normal items as spacers. */
 bool wxWrapSizer_php::IsSpaceItem(wxSizerItem* item)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27856,6 +28561,10 @@ bool wxWrapSizer_php::IsSpaceItem(wxSizerItem* item)const
 	//Call original method
 	return wxWrapSizer::IsSpaceItem(item);
 }
+/* }}} */
+
+/* {{{ proto bool wxWrapSizer::InformFirstDirection(int direction, int size, int availableOtherDir)
+   Not used by an application. */
 PHP_METHOD(php_wxWrapSizer, InformFirstDirection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27955,6 +28664,10 @@ PHP_METHOD(php_wxWrapSizer, InformFirstDirection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWrapSizer::InformFirstDirection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxWrapSizer::CalcMin()
+   Implements the calculation of a box sizer's minimal. */
 PHP_METHOD(php_wxWrapSizer, CalcMin)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28052,3 +28765,5 @@ PHP_METHOD(php_wxWrapSizer, CalcMin)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWrapSizer::CalcMin\n");
 	}
 }
+/* }}} */
+

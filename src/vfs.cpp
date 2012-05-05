@@ -91,6 +91,8 @@ void php_wxFileSystem_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxFileSystem::wxFileSystem()
+   Constructor. */
 PHP_METHOD(php_wxFileSystem, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -171,6 +173,10 @@ PHP_METHOD(php_wxFileSystem, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto wxFileName wxFileSystem::URLToFileName(string url)
+   Converts URL into a well-formed filename. */
 PHP_METHOD(php_wxFileSystem, URLToFileName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -279,6 +285,10 @@ PHP_METHOD(php_wxFileSystem, URLToFileName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileSystem::URLToFileName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFSFile wxFileSystem::OpenFile(string location, int flags)
+   Opens the file and returns a pointer to a wxFSFile object or NULL if failed. */
 PHP_METHOD(php_wxFileSystem, OpenFile)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -435,6 +445,10 @@ PHP_METHOD(php_wxFileSystem, OpenFile)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileSystem::OpenFile\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileSystem::HasHandlerForPath(string location)
+   This static function returns true if there is a registered handler which can open the given location. */
 PHP_METHOD(php_wxFileSystem, HasHandlerForPath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -534,6 +548,10 @@ PHP_METHOD(php_wxFileSystem, HasHandlerForPath)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileSystem::HasHandlerForPath\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileSystem::GetPath()
+   Returns the actual path (set by wxFileSystem::ChangePathTo). */
 PHP_METHOD(php_wxFileSystem, GetPath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -632,6 +650,10 @@ PHP_METHOD(php_wxFileSystem, GetPath)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileSystem::GetPath\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileSystem::FindNext()
+   Returns the next filename that matches the parameters passed to FindFirst(). */
 PHP_METHOD(php_wxFileSystem, FindNext)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -730,6 +752,10 @@ PHP_METHOD(php_wxFileSystem, FindNext)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileSystem::FindNext\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileSystem::FindFirst(string wildcard, int flags)
+   Works like wxFindFirstFile(). */
 PHP_METHOD(php_wxFileSystem, FindFirst)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -852,6 +878,10 @@ PHP_METHOD(php_wxFileSystem, FindFirst)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileSystem::FindFirst\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileSystem::FindFileInPath(string &pStr, string path, string file)
+   Looks for the file with the given name file in a colon or semi-colon (depending on the current platform) separated list of directories in path. */
 PHP_METHOD(php_wxFileSystem, FindFileInPath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -965,6 +995,10 @@ PHP_METHOD(php_wxFileSystem, FindFileInPath)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileSystem::FindFileInPath\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileSystem::FileNameToURL(wxFileName filename)
+   Converts a wxFileName into an URL. */
 PHP_METHOD(php_wxFileSystem, FileNameToURL)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1086,6 +1120,10 @@ PHP_METHOD(php_wxFileSystem, FileNameToURL)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileSystem::FileNameToURL\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileSystem::ChangePathTo(string location, bool is_dir)
+   Sets the current location. */
 PHP_METHOD(php_wxFileSystem, ChangePathTo)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1196,6 +1234,10 @@ PHP_METHOD(php_wxFileSystem, ChangePathTo)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileSystem::ChangePathTo\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileSystem::AddHandler(wxFileSystemHandler &handler)
+   This static function adds new handler into the list of handlers (see wxFileSystemHandler) which provide access to virtual FS. */
 PHP_METHOD(php_wxFileSystem, AddHandler)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1311,6 +1353,8 @@ PHP_METHOD(php_wxFileSystem, AddHandler)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileSystem::AddHandler\n");
 	}
 }
+/* }}} */
+
 void php_wxFileSystemHandler_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1351,6 +1395,8 @@ void php_wxFileSystemHandler_destruction_handler(zend_rsrc_list_entry *rsrc TSRM
 		#endif
 	}
 }
+/* {{{ proto bool wxFileSystemHandler::CanOpen(string location)
+   Returns true if the handler is able to open this file. */
 bool wxFileSystemHandler_php::CanOpen(const wxString& location)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1402,6 +1448,10 @@ bool wxFileSystemHandler_php::CanOpen(const wxString& location)
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto string wxFileSystemHandler::FindFirst(string wildcard, int flags)
+   Works like wxFindFirstFile(). */
 PHP_METHOD(php_wxFileSystemHandler, FindFirst)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1524,6 +1574,10 @@ PHP_METHOD(php_wxFileSystemHandler, FindFirst)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileSystemHandler::FindFirst\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileSystemHandler::FindNext()
+   Returns next filename that matches parameters passed to wxFileSystem::FindFirst. */
 PHP_METHOD(php_wxFileSystemHandler, FindNext)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1622,6 +1676,10 @@ PHP_METHOD(php_wxFileSystemHandler, FindNext)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileSystemHandler::FindNext\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileSystemHandler::GetMimeTypeFromExt(string location)
+   Returns the MIME type based on extension of location. */
 PHP_METHOD(php_wxFileSystemHandler, GetMimeTypeFromExt)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1727,6 +1785,10 @@ PHP_METHOD(php_wxFileSystemHandler, GetMimeTypeFromExt)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileSystemHandler::GetMimeTypeFromExt\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFSFile wxFileSystemHandler::OpenFile(wxFileSystem &fs, string location)
+   Opens the file and returns wxFSFile pointer or NULL if failed. */
 wxFSFile* wxFileSystemHandler_php::OpenFile(wxFileSystem& fs, const wxString& location)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1785,6 +1847,10 @@ wxFSFile* wxFileSystemHandler_php::OpenFile(wxFileSystem& fs, const wxString& lo
 		return (wxFSFile*) return_object;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxFileSystemHandler::wxFileSystemHandler()
+   Constructor. */
 PHP_METHOD(php_wxFileSystemHandler, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1865,3 +1931,5 @@ PHP_METHOD(php_wxFileSystemHandler, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+

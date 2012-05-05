@@ -1516,6 +1516,7 @@ static zend_function_entry php_wxWidgets_functions[] = {
 	PHP_FALIAS(wxYield, php_wxYield, NULL)
 	PHP_FALIAS(wxSafeYield, php_wxSafeYield, NULL)
 	PHP_FALIAS(wxExit, php_wxExit, NULL)
+	PHP_FALIAS(wxIsDragResultOk, php_wxIsDragResultOk, NULL)
 	PHP_FALIAS(wxFromString, php_wxFromString, NULL)
 	PHP_FALIAS(wxToString, php_wxToString, NULL)
 	PHP_FALIAS(wxSafeShowMessage, php_wxSafeShowMessage, NULL)
@@ -1928,7 +1929,7 @@ PHP_RINIT_FUNCTION(php_wxWidgets)
 		wxPHP_REGISTER_RESOURCE_CONSTANT("wxDefaultVideoMode", (void*) wxDefaultVideoMode_copy, php_wxVideoMode_entry, le_wxVideoMode, CONST_CS | CONST_PERSISTENT);
 
 	
-		wxUninitialize(); //Maybe this shouldn't be called for references like wxNORMAL_FONT
+		wxUninitialize();
 		
 		objects_intialized = 1;
 	}

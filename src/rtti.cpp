@@ -59,6 +59,8 @@ void php_wxRefCounter_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 }
+/* {{{ proto  wxRefCounter::DecRef()
+   Decrements the reference count associated with this shared data and, if it reaches zero, destroys this instance of wxRefCounter releasing its memory. */
 PHP_METHOD(php_wxRefCounter, DecRef)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -175,6 +177,10 @@ PHP_METHOD(php_wxRefCounter, DecRef)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRefCounter::DecRef\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxRefCounter::GetRefCount()
+   Returns the reference count associated with this shared data. */
 PHP_METHOD(php_wxRefCounter, GetRefCount)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -291,6 +297,10 @@ PHP_METHOD(php_wxRefCounter, GetRefCount)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRefCounter::GetRefCount\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRefCounter::IncRef()
+   Increments the reference count associated with this shared data. */
 PHP_METHOD(php_wxRefCounter, IncRef)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -407,6 +417,10 @@ PHP_METHOD(php_wxRefCounter, IncRef)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRefCounter::IncRef\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRefCounter::wxRefCounter()
+   Default constructor. */
 PHP_METHOD(php_wxRefCounter, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -487,6 +501,8 @@ PHP_METHOD(php_wxRefCounter, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -527,6 +543,8 @@ void php_wxObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxObject::wxObject(wxObject other)
+   Copy ctor. */
 PHP_METHOD(php_wxObject, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -661,6 +679,8 @@ PHP_METHOD(php_wxObject, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 PHP_METHOD(php_wxObject, __get)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -721,6 +741,8 @@ PHP_METHOD(php_wxObject, __get)
 		RETVAL_NULL();
 	}
 }
+/* {{{ proto  wxObject::UnShare()
+   This is the same of AllocExclusive() but this method is public. */
 PHP_METHOD(php_wxObject, UnShare)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1993,6 +2015,10 @@ PHP_METHOD(php_wxObject, UnShare)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxObject::UnShare\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxObject::UnRef()
+   Decrements the reference count in the associated data, and if it is zero, deletes the data. */
 PHP_METHOD(php_wxObject, UnRef)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3265,6 +3291,10 @@ PHP_METHOD(php_wxObject, UnRef)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxObject::UnRef\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxObject::IsSameAs(wxObject obj)
+   Returns true if this object has the same data pointer as obj. */
 PHP_METHOD(php_wxObject, IsSameAs)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4560,6 +4590,10 @@ PHP_METHOD(php_wxObject, IsSameAs)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxObject::IsSameAs\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxObject::Ref(wxObject clone)
+   Makes this object refer to the data in clone. */
 PHP_METHOD(php_wxObject, Ref)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5855,6 +5889,10 @@ PHP_METHOD(php_wxObject, Ref)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxObject::Ref\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxClassInfo wxObject::GetClassInfo()
+   This virtual function is redefined for every class that requires run-time type information, when using the wxDECLARE_CLASS macro (or similar). */
 PHP_METHOD(php_wxObject, GetClassInfo)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7150,6 +7188,10 @@ PHP_METHOD(php_wxObject, GetClassInfo)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxObject::GetClassInfo\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxObject::IsKindOf(wxClassInfo info)
+   Determines whether this class is a subclass of (or the same class as) the given class. */
 PHP_METHOD(php_wxObject, IsKindOf)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8445,6 +8487,8 @@ PHP_METHOD(php_wxObject, IsKindOf)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxObject::IsKindOf\n");
 	}
 }
+/* }}} */
+
 void php_wxClassInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8485,6 +8529,8 @@ void php_wxClassInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto wxObject wxClassInfo::CreateObject()
+   Creates an object of the appropriate kind. */
 PHP_METHOD(php_wxClassInfo, CreateObject)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8603,6 +8649,10 @@ PHP_METHOD(php_wxClassInfo, CreateObject)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxClassInfo::CreateObject\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxClassInfo wxClassInfo::FindClass(string className)
+   Finds the wxClassInfo object for a class with the given name. */
 PHP_METHOD(php_wxClassInfo, FindClass)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8721,6 +8771,10 @@ PHP_METHOD(php_wxClassInfo, FindClass)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxClassInfo::FindClass\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxClassInfo::GetSize()
+   Returns the size of the class. */
 PHP_METHOD(php_wxClassInfo, GetSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8816,6 +8870,10 @@ PHP_METHOD(php_wxClassInfo, GetSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxClassInfo::GetSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxClassInfo::IsDynamic()
+   Returns true if this class info can create objects of the associated class. */
 PHP_METHOD(php_wxClassInfo, IsDynamic)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8911,6 +8969,10 @@ PHP_METHOD(php_wxClassInfo, IsDynamic)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxClassInfo::IsDynamic\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxClassInfo::IsKindOf(wxClassInfo info)
+   Returns true if this class is a kind of (inherits from) the given class. */
 PHP_METHOD(php_wxClassInfo, IsKindOf)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9029,3 +9091,5 @@ PHP_METHOD(php_wxClassInfo, IsKindOf)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxClassInfo::IsKindOf\n");
 	}
 }
+/* }}} */
+

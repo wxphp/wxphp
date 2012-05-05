@@ -2,6 +2,7 @@
 	"wxGetApp":[
 		{
 			"return_type":"wxAppDerivedClass&",
+			"brief_description":"This function doesn't exist in wxWidgets but it is created by using the wxIMPLEMENT_APP() macro.",
 			"parameters_type":[
 				
 			],
@@ -25,6 +26,7 @@
 	"wxHandleFatalExceptions":[
 		{
 			"return_type":"bool",
+			"brief_description":"If doIt is true, the fatal exceptions (also known as general protection faults under Windows or segmentation violations in the Unix world) will be caught and passed to wxApp::OnFatalException.",
 			"parameters_type":[
 				"bool"
 			],
@@ -48,6 +50,7 @@
 	"wxInitialize":[
 		{
 			"return_type":"bool",
+			"brief_description":"This function is used in wxBase only and only if you don't create wxApp object at all.",
 			"parameters_type":[
 				
 			],
@@ -69,6 +72,7 @@
 		},
 		{
 			"return_type":"bool",
+			"brief_description":"Initialize the library (may be called as many times as needed, but each call to wxInitialize() must be matched by wxUninitialize()).",
 			"parameters_type":[
 				"int",
 				"wxChar**"
@@ -96,6 +100,7 @@
 	"wxUninitialize":[
 		{
 			"return_type":"void",
+			"brief_description":"This function is for use in console (wxBase) programs only.",
 			"parameters_type":[
 				
 			],
@@ -117,6 +122,7 @@
 		},
 		{
 			"return_type":"void",
+			"brief_description":"This function is for use in console (wxBase) programs only.",
 			"parameters_type":[
 				
 			],
@@ -140,6 +146,7 @@
 	"wxWakeUpIdle":[
 		{
 			"return_type":"void",
+			"brief_description":"This function wakes up the (internal and platform dependent) idle system, i.e.",
 			"parameters_type":[
 				
 			],
@@ -163,6 +170,7 @@
 	"wxYield":[
 		{
 			"return_type":"bool",
+			"brief_description":"Calls wxAppConsole::Yield.",
 			"parameters_type":[
 				
 			],
@@ -186,6 +194,7 @@
 	"wxSafeYield":[
 		{
 			"return_type":"bool",
+			"brief_description":"Calls wxApp::SafeYield.",
 			"parameters_type":[
 				"wxWindow*",
 				"bool"
@@ -213,6 +222,7 @@
 	"wxEntry":[
 		{
 			"return_type":"int",
+			"brief_description":"This function initializes wxWidgets in a platform-dependent way.",
 			"parameters_type":[
 				"int&",
 				"wxChar**"
@@ -239,6 +249,7 @@
 		},
 		{
 			"return_type":"int",
+			"brief_description":"See wxEntry(int&,wxChar**) for more info about this function.",
 			"parameters_type":[
 				"HINSTANCE",
 				"HINSTANCE",
@@ -274,6 +285,7 @@
 	"wxExit":[
 		{
 			"return_type":"void",
+			"brief_description":"Exits application after calling wxApp::OnExit.",
 			"parameters_type":[
 				
 			],
@@ -297,6 +309,7 @@
 	"wxCreatePersistentObject":[
 		{
 			"return_type":"wxPersistentObject*",
+			"brief_description":"Overload allowing persistence adapter creation for wxBookCtrlBase-derived objects.",
 			"parameters_type":[
 				"wxBookCtrlBase*"
 			],
@@ -318,6 +331,7 @@
 		},
 		{
 			"return_type":"wxPersistentObject*",
+			"brief_description":"Function used to create the correct persistent adapter for the given type of objects.",
 			"parameters_type":[
 				"T*"
 			],
@@ -339,6 +353,7 @@
 		},
 		{
 			"return_type":"wxPersistentObject*",
+			"brief_description":"Overload allowing persistence adapter creation for wxTopLevelWindow-derived objects.",
 			"parameters_type":[
 				"wxTopLevelWindow*"
 			],
@@ -360,6 +375,7 @@
 		},
 		{
 			"return_type":"wxPersistentObject*",
+			"brief_description":"Overload allowing persistence adapter creation for wxTreebook objects.",
 			"parameters_type":[
 				"wxTreebook*"
 			],
@@ -380,9 +396,34 @@
 			]
 		}
 	],
+	"wxIsDragResultOk":[
+		{
+			"return_type":"bool",
+			"brief_description":"Returns true if res indicates that something was done during a DnD operation, i.e.",
+			"parameters_type":[
+				"wxDragResult"
+			],
+			"parameters_is_array":[
+				false
+			],
+			"parameters_extra":[
+				false
+			],
+			"parameters_name":[
+				"res"
+			],
+			"parameters_required":[
+				true
+			],
+			"parameters_default_value":[
+				
+			]
+		}
+	],
 	"wxTransferFileToStream":[
 		{
 			"return_type":"bool",
+			"brief_description":"Copies the given file to stream.",
 			"parameters_type":[
 				"const wxString&",
 				"ostream&"
@@ -411,6 +452,7 @@
 	"wxTransferStreamToFile":[
 		{
 			"return_type":"bool",
+			"brief_description":"Copies the given stream to the file filename.",
 			"parameters_type":[
 				"istream&",
 				"const wxString&"
@@ -439,6 +481,7 @@
 	"wxFromString":[
 		{
 			"return_type":"bool",
+			"brief_description":"Converts string to a wxFont best represented by the given string.",
 			"parameters_type":[
 				"const wxString&",
 				"wxFont*"
@@ -465,6 +508,7 @@
 		},
 		{
 			"return_type":"bool",
+			"brief_description":"Converts string to a wxColour best represented by the given string.",
 			"parameters_type":[
 				"const wxString&",
 				"wxColour*"
@@ -493,6 +537,7 @@
 	"wxToString":[
 		{
 			"return_type":"wxString",
+			"brief_description":"Converts the given wxFont into a string.",
 			"parameters_type":[
 				"const wxFont&"
 			],
@@ -514,6 +559,7 @@
 		},
 		{
 			"return_type":"wxString",
+			"brief_description":"Converts the given wxColour into a string.",
 			"parameters_type":[
 				"const wxColour&"
 			],
@@ -537,6 +583,7 @@
 	"wxSafeShowMessage":[
 		{
 			"return_type":"void",
+			"brief_description":"This function shows a message to the user in a safe way and should be safe to call even before the application has been initialized or if it is currently in some other strange state (for example, about to crash).",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&"
@@ -565,6 +612,7 @@
 	"wxSysErrorCode":[
 		{
 			"return_type":"unsigned long",
+			"brief_description":"Returns the error code from the last system call.",
 			"parameters_type":[
 				
 			],
@@ -588,6 +636,7 @@
 	"wxSysErrorMsg":[
 		{
 			"return_type":"const wxChar*",
+			"brief_description":"Returns the error message corresponding to the given system error code.",
 			"parameters_type":[
 				"unsigned long"
 			],
@@ -611,6 +660,7 @@
 	"wxLogGeneric":[
 		{
 			"return_type":"void",
+			"brief_description":"Logs a message with the given wxLogLevel.",
 			"parameters_type":[
 				"wxLogLevel",
 				"const char*",
@@ -644,6 +694,7 @@
 	"wxVLogGeneric":[
 		{
 			"return_type":"void",
+			"brief_description":"",
 			"parameters_type":[
 				"wxLogLevel",
 				"const char*",
@@ -677,6 +728,7 @@
 	"wxLogMessage":[
 		{
 			"return_type":"void",
+			"brief_description":"For all normal, informational messages.",
 			"parameters_type":[
 				"const char*",
 				"..."
@@ -705,6 +757,7 @@
 	"wxVLogMessage":[
 		{
 			"return_type":"void",
+			"brief_description":"",
 			"parameters_type":[
 				"const char*",
 				"va_list"
@@ -733,6 +786,7 @@
 	"wxLogVerbose":[
 		{
 			"return_type":"void",
+			"brief_description":"For verbose output.",
 			"parameters_type":[
 				"const char*",
 				"..."
@@ -761,6 +815,7 @@
 	"wxVLogVerbose":[
 		{
 			"return_type":"void",
+			"brief_description":"",
 			"parameters_type":[
 				"const char*",
 				"va_list"
@@ -789,6 +844,7 @@
 	"wxLogWarning":[
 		{
 			"return_type":"void",
+			"brief_description":"For warnings - they are also normally shown to the user, but don't interrupt the program work.",
 			"parameters_type":[
 				"const char*",
 				"..."
@@ -817,6 +873,7 @@
 	"wxVLogWarning":[
 		{
 			"return_type":"void",
+			"brief_description":"",
 			"parameters_type":[
 				"const char*",
 				"va_list"
@@ -845,6 +902,7 @@
 	"wxLogFatalError":[
 		{
 			"return_type":"void",
+			"brief_description":"Like wxLogError(), but also terminates the program with the exit code 3.",
 			"parameters_type":[
 				"const char*",
 				"..."
@@ -873,6 +931,7 @@
 	"wxVLogFatalError":[
 		{
 			"return_type":"void",
+			"brief_description":"",
 			"parameters_type":[
 				"const char*",
 				"va_list"
@@ -901,6 +960,7 @@
 	"wxLogError":[
 		{
 			"return_type":"void",
+			"brief_description":"The functions to use for error messages, i.e.",
 			"parameters_type":[
 				"const char*",
 				"..."
@@ -929,6 +989,7 @@
 	"wxVLogError":[
 		{
 			"return_type":"void",
+			"brief_description":"",
 			"parameters_type":[
 				"const char*",
 				"va_list"
@@ -957,6 +1018,7 @@
 	"wxLogTrace":[
 		{
 			"return_type":"void",
+			"brief_description":"Log a message at wxLOG_Trace log level (see wxLogLevelValues enum).",
 			"parameters_type":[
 				"const char*",
 				"const char*",
@@ -988,6 +1050,7 @@
 		},
 		{
 			"return_type":"void",
+			"brief_description":"Like wxLogDebug(), trace functions only do something in debug builds and expand to nothing in the release one.",
 			"parameters_type":[
 				"wxTraceMask",
 				"const char*",
@@ -1021,6 +1084,7 @@
 	"wxVLogTrace":[
 		{
 			"return_type":"void",
+			"brief_description":"",
 			"parameters_type":[
 				"const char*",
 				"const char*",
@@ -1052,6 +1116,7 @@
 		},
 		{
 			"return_type":"void",
+			"brief_description":"",
 			"parameters_type":[
 				"wxTraceMask",
 				"const char*",
@@ -1085,6 +1150,7 @@
 	"wxLogDebug":[
 		{
 			"return_type":"void",
+			"brief_description":"The right functions for debug output.",
 			"parameters_type":[
 				"const char*",
 				"..."
@@ -1113,6 +1179,7 @@
 	"wxVLogDebug":[
 		{
 			"return_type":"void",
+			"brief_description":"",
 			"parameters_type":[
 				"const char*",
 				"va_list"
@@ -1141,6 +1208,7 @@
 	"wxLogStatus":[
 		{
 			"return_type":"void",
+			"brief_description":"Messages logged by this function will appear in the statusbar of the frame or of the top level application window by default (i.e.",
 			"parameters_type":[
 				"wxFrame*",
 				"const char*",
@@ -1172,6 +1240,7 @@
 		},
 		{
 			"return_type":"void",
+			"brief_description":"",
 			"parameters_type":[
 				"const char*",
 				"..."
@@ -1200,6 +1269,7 @@
 	"wxVLogStatus":[
 		{
 			"return_type":"void",
+			"brief_description":"",
 			"parameters_type":[
 				"wxFrame*",
 				"const char*",
@@ -1231,6 +1301,7 @@
 		},
 		{
 			"return_type":"void",
+			"brief_description":"",
 			"parameters_type":[
 				"const char*",
 				"va_list"
@@ -1259,6 +1330,7 @@
 	"wxLogSysError":[
 		{
 			"return_type":"void",
+			"brief_description":"Mostly used by wxWidgets itself, but might be handy for logging errors after system call (API function) failure.",
 			"parameters_type":[
 				"const char*",
 				"..."
@@ -1287,6 +1359,7 @@
 	"wxVLogSysError":[
 		{
 			"return_type":"void",
+			"brief_description":"",
 			"parameters_type":[
 				"const char*",
 				"va_list"
@@ -1315,6 +1388,7 @@
 	"wxStringCheck":[
 		{
 			"return_type":"bool",
+			"brief_description":"Allows to extend a function with the signature:",
 			"parameters_type":[
 				"const wxString&"
 			],
@@ -1338,6 +1412,7 @@
 	"wxIsMainThread":[
 		{
 			"return_type":"bool",
+			"brief_description":"Returns true if this thread is the main one.",
 			"parameters_type":[
 				
 			],
@@ -1361,6 +1436,7 @@
 	"wxMutexGuiEnter":[
 		{
 			"return_type":"void",
+			"brief_description":"This function must be called when any thread other than the main GUI thread wants to get access to the GUI library.",
 			"parameters_type":[
 				
 			],
@@ -1384,6 +1460,7 @@
 	"wxMutexGuiLeave":[
 		{
 			"return_type":"void",
+			"brief_description":"This function is only defined on platforms which support preemptive threads.",
 			"parameters_type":[
 				
 			],
@@ -1407,6 +1484,7 @@
 	"wxAboutBox":[
 		{
 			"return_type":"void",
+			"brief_description":"This function shows the standard about dialog containing the information specified in info.",
 			"parameters_type":[
 				"const wxAboutDialogInfo&",
 				"wxWindow*"
@@ -1434,6 +1512,7 @@
 	"wxGenericAboutBox":[
 		{
 			"return_type":"void",
+			"brief_description":"This function does the same thing as wxAboutBox() except that it always uses the generic wxWidgets version of the dialog instead of the native one.",
 			"parameters_type":[
 				"const wxAboutDialogInfo&",
 				"wxWindow*"
@@ -1461,6 +1540,7 @@
 	"wxSplit":[
 		{
 			"return_type":"wxArrayString",
+			"brief_description":"Splits the given wxString object using the separator sep and returns the result as a wxArrayString.",
 			"parameters_type":[
 				"const wxString&",
 				"const wxChar",
@@ -1493,6 +1573,7 @@
 	"wxJoin":[
 		{
 			"return_type":"wxString",
+			"brief_description":"Concatenate all lines of the given wxArrayString object using the separator sep and returns the result as a wxString.",
 			"parameters_type":[
 				"const wxArrayString&",
 				"const wxChar",
@@ -1525,6 +1606,7 @@
 	"wxAtomicInc":[
 		{
 			"return_type":"void",
+			"brief_description":"This function increments value in an atomic manner.",
 			"parameters_type":[
 				"wxAtomicInt&"
 			],
@@ -1548,6 +1630,7 @@
 	"wxAtomicDec":[
 		{
 			"return_type":"wxInt32",
+			"brief_description":"This function decrements value in an atomic manner.",
 			"parameters_type":[
 				"wxAtomicInt&"
 			],
@@ -1571,6 +1654,7 @@
 	"wxBase64Encode":[
 		{
 			"return_type":"size_t",
+			"brief_description":"This function encodes the given data using base64.",
 			"parameters_type":[
 				"char*",
 				"size_t",
@@ -1607,6 +1691,7 @@
 		},
 		{
 			"return_type":"wxString",
+			"brief_description":"This function encodes the given data using base64 and returns the output as a wxString.",
 			"parameters_type":[
 				"const void*",
 				"size_t"
@@ -1633,6 +1718,7 @@
 		},
 		{
 			"return_type":"wxString",
+			"brief_description":"This function encodes the given data using base64 and returns the output as a wxString.",
 			"parameters_type":[
 				"const wxMemoryBuffer&"
 			],
@@ -1656,6 +1742,7 @@
 	"wxBase64DecodedSize":[
 		{
 			"return_type":"size_t",
+			"brief_description":"Returns the size of the buffer necessary to contain the data encoded in a base64 string of length srcLen.",
 			"parameters_type":[
 				"size_t"
 			],
@@ -1679,6 +1766,7 @@
 	"wxBase64EncodedSize":[
 		{
 			"return_type":"size_t",
+			"brief_description":"Returns the length of the string with base64 representation of a buffer of specified size len.",
 			"parameters_type":[
 				"size_t"
 			],
@@ -1702,6 +1790,7 @@
 	"wxBase64Decode":[
 		{
 			"return_type":"size_t",
+			"brief_description":"This function decodes a Base64-encoded string.",
 			"parameters_type":[
 				"void*",
 				"size_t",
@@ -1745,6 +1834,7 @@
 		},
 		{
 			"return_type":"size_t",
+			"brief_description":"Decode a Base64-encoded wxString.",
 			"parameters_type":[
 				"void*",
 				"size_t",
@@ -1784,6 +1874,7 @@
 		},
 		{
 			"return_type":"wxMemoryBuffer",
+			"brief_description":"Decode a Base64-encoded string and return decoded contents in a buffer.",
 			"parameters_type":[
 				"const char*",
 				"size_t",
@@ -1817,6 +1908,7 @@
 		},
 		{
 			"return_type":"wxMemoryBuffer",
+			"brief_description":"Decode a Base64-encoded wxString and return decoded contents in a buffer.",
 			"parameters_type":[
 				"const wxString&",
 				"wxBase64DecodeMode",
@@ -1848,6 +1940,7 @@
 	"wxGetSingleChoiceIndex":[
 		{
 			"return_type":"int",
+			"brief_description":"Same as wxGetSingleChoice() but returns the index representing the selected string.",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&",
@@ -1907,6 +2000,7 @@
 		},
 		{
 			"return_type":"int",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&",
@@ -1971,6 +2065,7 @@
 		},
 		{
 			"return_type":"int",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&",
@@ -2011,6 +2106,7 @@
 		},
 		{
 			"return_type":"int",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&",
@@ -2058,6 +2154,7 @@
 	"wxGetSingleChoice":[
 		{
 			"return_type":"wxString",
+			"brief_description":"Pops up a dialog box containing a message, OK\/Cancel buttons and a single-selection listbox.",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&",
@@ -2117,6 +2214,7 @@
 		},
 		{
 			"return_type":"wxString",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&",
@@ -2181,6 +2279,7 @@
 		},
 		{
 			"return_type":"wxString",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&",
@@ -2221,6 +2320,7 @@
 		},
 		{
 			"return_type":"wxString",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&",
@@ -2268,6 +2368,7 @@
 	"wxGetSingleChoiceData":[
 		{
 			"return_type":"wxString",
+			"brief_description":"Same as wxGetSingleChoice but takes an array of client data pointers corresponding to the strings, and returns one of these pointers or NULL if Cancel was pressed.",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&",
@@ -2332,6 +2433,7 @@
 		},
 		{
 			"return_type":"wxString",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&",
@@ -2401,6 +2503,7 @@
 		},
 		{
 			"return_type":"void*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&",
@@ -2446,6 +2549,7 @@
 		},
 		{
 			"return_type":"void*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&",
@@ -2498,6 +2602,7 @@
 	"wxGetSelectedChoices":[
 		{
 			"return_type":"int",
+			"brief_description":"Pops up a dialog box containing a message, OK\/Cancel buttons and a multiple-selection listbox.",
 			"parameters_type":[
 				"wxArrayInt&",
 				"const wxString&",
@@ -2558,6 +2663,7 @@
 		},
 		{
 			"return_type":"int",
+			"brief_description":"",
 			"parameters_type":[
 				"wxArrayInt&",
 				"const wxString&",
@@ -2625,6 +2731,7 @@
 	"wxGetColourFromUser":[
 		{
 			"return_type":"wxColour",
+			"brief_description":"Shows the colour selection dialog and returns the colour selected by user or invalid colour (use wxColour::IsOk() to test whether a colour is valid) if the dialog was cancelled.",
 			"parameters_type":[
 				"wxWindow*",
 				"const wxColour&",
@@ -2661,6 +2768,7 @@
 	"wxDDECleanUp":[
 		{
 			"return_type":"void",
+			"brief_description":"Called when wxWidgets exits, to clean up the DDE system.",
 			"parameters_type":[
 				
 			],
@@ -2684,6 +2792,7 @@
 	"wxDDEInitialize":[
 		{
 			"return_type":"void",
+			"brief_description":"Initializes the DDE system.",
 			"parameters_type":[
 				
 			],
@@ -2707,6 +2816,7 @@
 	"wxAbort":[
 		{
 			"return_type":"void",
+			"brief_description":"Exits the program immediately.",
 			"parameters_type":[
 				
 			],
@@ -2730,6 +2840,7 @@
 	"wxDisableAsserts":[
 		{
 			"return_type":"void",
+			"brief_description":"Disable the condition checks in the assertions.",
 			"parameters_type":[
 				
 			],
@@ -2753,6 +2864,7 @@
 	"wxIsDebuggerRunning":[
 		{
 			"return_type":"bool",
+			"brief_description":"Returns true if the program is running under debugger, false otherwise.",
 			"parameters_type":[
 				
 			],
@@ -2776,6 +2888,7 @@
 	"wxSetAssertHandler":[
 		{
 			"return_type":"wxAssertHandler_t",
+			"brief_description":"Sets the function to be called in case of assertion failure.",
 			"parameters_type":[
 				"wxAssertHandler_t"
 			],
@@ -2799,6 +2912,7 @@
 	"wxSetDefaultAssertHandler":[
 		{
 			"return_type":"void",
+			"brief_description":"Reset the assert handler to default function which shows a message box when an assert happens.",
 			"parameters_type":[
 				
 			],
@@ -2822,6 +2936,7 @@
 	"wxTrap":[
 		{
 			"return_type":"void",
+			"brief_description":"Generate a debugger exception meaning that the control is passed to the debugger if one is attached to the process.",
 			"parameters_type":[
 				
 			],
@@ -2845,6 +2960,7 @@
 	"wxDELETE":[
 		{
 			"return_type":"",
+			"brief_description":"A function which deletes and nulls the pointer.",
 			"parameters_type":[
 				"T*&"
 			],
@@ -2868,6 +2984,7 @@
 	"wxDELETEA":[
 		{
 			"return_type":"",
+			"brief_description":"A function which deletes and nulls the pointer.",
 			"parameters_type":[
 				"T*&"
 			],
@@ -2891,6 +3008,7 @@
 	"wxSwap":[
 		{
 			"return_type":"",
+			"brief_description":"Swaps the contents of two variables.",
 			"parameters_type":[
 				"T&",
 				"T&"
@@ -2919,6 +3037,7 @@
 	"wxVaCopy":[
 		{
 			"return_type":"void",
+			"brief_description":"This macro is the same as the standard C99 va_copy for the compilers which support it or its replacement for those that don't.",
 			"parameters_type":[
 				"va_list",
 				"va_list"
@@ -2947,6 +3066,7 @@
 	"wxDirSelector":[
 		{
 			"return_type":"wxString",
+			"brief_description":"Pops up a directory selector dialog.",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&",
@@ -2986,6 +3106,7 @@
 	"wxNewEventType":[
 		{
 			"return_type":"wxEventType",
+			"brief_description":"Generates a new unique event type.",
 			"parameters_type":[
 				
 			],
@@ -3009,6 +3130,7 @@
 	"wxPostEvent":[
 		{
 			"return_type":"void",
+			"brief_description":"In a GUI application, this function posts event to the specified dest object using wxEvtHandler::AddPendingEvent().",
 			"parameters_type":[
 				"wxEvtHandler*",
 				"const wxEvent&"
@@ -3037,6 +3159,7 @@
 	"wxQueueEvent":[
 		{
 			"return_type":"void",
+			"brief_description":"Queue an event for processing on the given object.",
 			"parameters_type":[
 				"wxEvtHandler*",
 				"wxEvent*"
@@ -3065,6 +3188,7 @@
 	"wxFileSelector":[
 		{
 			"return_type":"wxString",
+			"brief_description":"Pops up a file selector box.",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&",
@@ -3120,6 +3244,7 @@
 	"wxFileSelectorEx":[
 		{
 			"return_type":"wxString",
+			"brief_description":"An extended version of wxFileSelector.",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&",
@@ -3175,6 +3300,7 @@
 	"wxLoadFileSelector":[
 		{
 			"return_type":"wxString",
+			"brief_description":"Ask for filename to load.",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&",
@@ -3211,6 +3337,7 @@
 	"wxSaveFileSelector":[
 		{
 			"return_type":"wxString",
+			"brief_description":"Ask for filename to save.",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&",
@@ -3247,6 +3374,7 @@
 	"wxGetDiskSpace":[
 		{
 			"return_type":"bool",
+			"brief_description":"This function returns the total number of bytes and number of free bytes on the disk containing the directory path (it should exist).",
 			"parameters_type":[
 				"const wxString&",
 				"wxLongLong",
@@ -3278,6 +3406,7 @@
 	"wxGetOSDirectory":[
 		{
 			"return_type":"wxString",
+			"brief_description":"Returns the Windows directory under Windows; other platforms return an empty string.",
 			"parameters_type":[
 				
 			],
@@ -3301,6 +3430,7 @@
 	"wxParseCommonDialogsFilter":[
 		{
 			"return_type":"int",
+			"brief_description":"Parses the wildCard, returning the number of filters.",
 			"parameters_type":[
 				"const wxString&",
 				"wxArrayString&",
@@ -3334,6 +3464,7 @@
 	"wxDos2UnixFilename":[
 		{
 			"return_type":"void",
+			"brief_description":"Converts a DOS to a Unix filename by replacing backslashes with forward slashes.",
 			"parameters_type":[
 				"wxChar*"
 			],
@@ -3357,6 +3488,7 @@
 	"wxUnix2DosFilename":[
 		{
 			"return_type":"void",
+			"brief_description":"Converts a Unix to a DOS filename by replacing forward slashes with backslashes.",
 			"parameters_type":[
 				"wxChar*"
 			],
@@ -3380,6 +3512,7 @@
 	"wxDirExists":[
 		{
 			"return_type":"bool",
+			"brief_description":"Returns true if dirname exists and is a directory.",
 			"parameters_type":[
 				"const wxString&"
 			],
@@ -3403,6 +3536,7 @@
 	"wxSplitPath":[
 		{
 			"return_type":"void",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"wxString*",
@@ -3441,6 +3575,7 @@
 	"wxFileModificationTime":[
 		{
 			"return_type":"time_t",
+			"brief_description":"Returns time of last modification of given file.",
 			"parameters_type":[
 				"const wxString&"
 			],
@@ -3464,6 +3599,7 @@
 	"wxRenameFile":[
 		{
 			"return_type":"bool",
+			"brief_description":"Renames file1 to file2, returning true if successful.",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&",
@@ -3496,6 +3632,7 @@
 	"wxCopyFile":[
 		{
 			"return_type":"bool",
+			"brief_description":"Copies file1 to file2, returning true if successful.",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&",
@@ -3528,6 +3665,7 @@
 	"wxFileExists":[
 		{
 			"return_type":"bool",
+			"brief_description":"Returns true if the file exists and is a plain file.",
 			"parameters_type":[
 				"const wxString&"
 			],
@@ -3551,6 +3689,7 @@
 	"wxMatchWild":[
 		{
 			"return_type":"bool",
+			"brief_description":"Returns true if the pattern matches the text; if dot_special is true, filenames beginning with a dot are not matched with wildcard characters.",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&",
@@ -3584,6 +3723,7 @@
 	"wxGetWorkingDirectory":[
 		{
 			"return_type":"wxString",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"int"
@@ -3611,6 +3751,7 @@
 	"wxPathOnly":[
 		{
 			"return_type":"wxString",
+			"brief_description":"Returns the directory part of the filename.",
 			"parameters_type":[
 				"const wxString&"
 			],
@@ -3634,6 +3775,7 @@
 	"wxIsWild":[
 		{
 			"return_type":"bool",
+			"brief_description":"Returns true if the pattern contains wildcards.",
 			"parameters_type":[
 				"const wxString&"
 			],
@@ -3657,6 +3799,7 @@
 	"wxIsAbsolutePath":[
 		{
 			"return_type":"bool",
+			"brief_description":"Returns true if the argument is an absolute filename, i.e.",
 			"parameters_type":[
 				"const wxString&"
 			],
@@ -3680,6 +3823,7 @@
 	"wxGetCwd":[
 		{
 			"return_type":"wxString",
+			"brief_description":"Returns a string containing the current (or working) directory.",
 			"parameters_type":[
 				
 			],
@@ -3703,6 +3847,7 @@
 	"wxSetWorkingDirectory":[
 		{
 			"return_type":"bool",
+			"brief_description":"Sets the current working directory, returning true if the operation succeeded.",
 			"parameters_type":[
 				"const wxString&"
 			],
@@ -3726,6 +3871,7 @@
 	"wxConcatFiles":[
 		{
 			"return_type":"bool",
+			"brief_description":"Concatenates file1 and file2 to file3, returning true if successful.",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&",
@@ -3759,6 +3905,7 @@
 	"wxRemoveFile":[
 		{
 			"return_type":"bool",
+			"brief_description":"Removes file, returning true if successful.",
 			"parameters_type":[
 				"const wxString&"
 			],
@@ -3782,6 +3929,7 @@
 	"wxMkdir":[
 		{
 			"return_type":"bool",
+			"brief_description":"Makes the directory dir, returning true if successful.",
 			"parameters_type":[
 				"const wxString&",
 				"int"
@@ -3809,6 +3957,7 @@
 	"wxRmdir":[
 		{
 			"return_type":"bool",
+			"brief_description":"Removes the directory dir, returning true if successful.",
 			"parameters_type":[
 				"const wxString&",
 				"int"
@@ -3836,6 +3985,7 @@
 	"wxFindNextFile":[
 		{
 			"return_type":"wxString",
+			"brief_description":"Returns the next file that matches the path passed to wxFindFirstFile().",
 			"parameters_type":[
 				
 			],
@@ -3859,6 +4009,7 @@
 	"wxFindFirstFile":[
 		{
 			"return_type":"wxString",
+			"brief_description":"This function does directory searching; returns the first file that matches the path spec, or the empty string.",
 			"parameters_type":[
 				"const wxString&",
 				"int"
@@ -3886,6 +4037,7 @@
 	"wxGetFileKind":[
 		{
 			"return_type":"wxFileKind",
+			"brief_description":"Returns the type of an open file.",
 			"parameters_type":[
 				"int"
 			],
@@ -3907,6 +4059,7 @@
 		},
 		{
 			"return_type":"wxFileKind",
+			"brief_description":"",
 			"parameters_type":[
 				"FILE*"
 			],
@@ -3930,6 +4083,7 @@
 	"wxFileNameFromPath":[
 		{
 			"return_type":"wxString",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&"
 			],
@@ -3951,6 +4105,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*"
 			],
@@ -3974,6 +4129,7 @@
 	"wxGetTempFileName":[
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"char*"
@@ -3999,6 +4155,7 @@
 		},
 		{
 			"return_type":"bool",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"wxString&"
@@ -4027,6 +4184,7 @@
 	"wxGetFontFromUser":[
 		{
 			"return_type":"wxFont",
+			"brief_description":"Shows the font selection dialog and returns the font selected by user or invalid font (use wxFont::IsOk() to test whether a font is valid) if the dialog was cancelled.",
 			"parameters_type":[
 				"wxWindow*",
 				"const wxFont&",
@@ -4059,6 +4217,7 @@
 	"wxColourDisplay":[
 		{
 			"return_type":"bool",
+			"brief_description":"Returns true if the display is colour, false otherwise.",
 			"parameters_type":[
 				
 			],
@@ -4082,6 +4241,7 @@
 	"wxDisplayDepth":[
 		{
 			"return_type":"int",
+			"brief_description":"Returns the depth of the display (a value of 1 denotes a monochrome display).",
 			"parameters_type":[
 				
 			],
@@ -4105,6 +4265,7 @@
 	"wxSetCursor":[
 		{
 			"return_type":"void",
+			"brief_description":"Globally sets the cursor; only has an effect on Windows, Mac and GTK+.",
 			"parameters_type":[
 				"const wxCursor&"
 			],
@@ -4128,6 +4289,7 @@
 	"wxClientDisplayRect":[
 		{
 			"return_type":"void",
+			"brief_description":"Returns the dimensions of the work area on the display.",
 			"parameters_type":[
 				"int*",
 				"int*",
@@ -4166,6 +4328,7 @@
 	"wxGetClientDisplayRect":[
 		{
 			"return_type":"wxRect",
+			"brief_description":"",
 			"parameters_type":[
 				
 			],
@@ -4189,6 +4352,7 @@
 	"wxGetDisplayPPI":[
 		{
 			"return_type":"wxSize",
+			"brief_description":"Returns the display resolution in pixels per inch.",
 			"parameters_type":[
 				
 			],
@@ -4212,6 +4376,7 @@
 	"wxDisplaySize":[
 		{
 			"return_type":"void",
+			"brief_description":"Returns the display size in pixels.",
 			"parameters_type":[
 				"int*",
 				"int*"
@@ -4240,6 +4405,7 @@
 	"wxGetDisplaySize":[
 		{
 			"return_type":"wxSize",
+			"brief_description":"",
 			"parameters_type":[
 				
 			],
@@ -4263,6 +4429,7 @@
 	"wxDisplaySizeMM":[
 		{
 			"return_type":"void",
+			"brief_description":"Returns the display size in millimeters.",
 			"parameters_type":[
 				"int*",
 				"int*"
@@ -4291,6 +4458,7 @@
 	"wxGetDisplaySizeMM":[
 		{
 			"return_type":"wxSize",
+			"brief_description":"",
 			"parameters_type":[
 				
 			],
@@ -4314,6 +4482,7 @@
 	"wxInitAllImageHandlers":[
 		{
 			"return_type":"void",
+			"brief_description":"Initializes all available image handlers.",
 			"parameters_type":[
 				
 			],
@@ -4337,6 +4506,7 @@
 	"wxEntryStart":[
 		{
 			"return_type":"bool",
+			"brief_description":"This function can be used to perform the initialization of wxWidgets if you can't use the default initialization code for any reason.",
 			"parameters_type":[
 				"int&",
 				"wxChar**"
@@ -4363,6 +4533,7 @@
 		},
 		{
 			"return_type":"bool",
+			"brief_description":"See wxEntryStart(int&,wxChar**) for more info about this function.",
 			"parameters_type":[
 				"HINSTANCE",
 				"HINSTANCE",
@@ -4398,6 +4569,7 @@
 	"wxEntryCleanup":[
 		{
 			"return_type":"void",
+			"brief_description":"Free resources allocated by a successful call to wxEntryStart().",
 			"parameters_type":[
 				
 			],
@@ -4421,6 +4593,7 @@
 	"wxLL":[
 		{
 			"return_type":"wxLongLong_t",
+			"brief_description":"This macro is defined for the platforms with a native 64 bit integer type and allow the use of 64 bit compile time constants:",
 			"parameters_type":[
 				"number"
 			],
@@ -4444,6 +4617,7 @@
 	"wxULL":[
 		{
 			"return_type":"wxLongLong_t",
+			"brief_description":"This macro is defined for the platforms with a native 64 bit integer type and allow the use of 64 bit compile time constants:",
 			"parameters_type":[
 				"number"
 			],
@@ -4467,6 +4641,7 @@
 	"wxFinite":[
 		{
 			"return_type":"int",
+			"brief_description":"Returns a non-zero value if x is neither infinite nor NaN (not a number), returns 0 otherwise.",
 			"parameters_type":[
 				"double"
 			],
@@ -4490,6 +4665,7 @@
 	"wxIsNaN":[
 		{
 			"return_type":"bool",
+			"brief_description":"Returns a non-zero value if x is NaN (not a number), returns 0 otherwise.",
 			"parameters_type":[
 				"double"
 			],
@@ -4513,6 +4689,7 @@
 	"wxConvertFromIeeeExtended":[
 		{
 			"return_type":"wxFloat64",
+			"brief_description":"Converts the given array of 10 bytes (corresponding to 80 bits) to a float number according to the IEEE floating point standard format (aka IEEE standard 754).",
 			"parameters_type":[
 				"const wxInt8*"
 			],
@@ -4536,6 +4713,7 @@
 	"wxConvertToIeeeExtended":[
 		{
 			"return_type":"void",
+			"brief_description":"Converts the given floating number num in a sequence of 10 bytes which are stored in the given array bytes (which must be large enough) according to the IEEE floating point standard format (aka IEEE standard 754).",
 			"parameters_type":[
 				"wxFloat64",
 				"wxInt8*"
@@ -4564,6 +4742,7 @@
 	"wxRound":[
 		{
 			"return_type":"int",
+			"brief_description":"Small wrapper around round().",
 			"parameters_type":[
 				"double"
 			],
@@ -4587,6 +4766,7 @@
 	"wxIsSameDouble":[
 		{
 			"return_type":"bool",
+			"brief_description":"Returns true if both double values are identical.",
 			"parameters_type":[
 				"double",
 				"double"
@@ -4615,6 +4795,7 @@
 	"wxIsNullDouble":[
 		{
 			"return_type":"bool",
+			"brief_description":"Return true of x is exactly zero.",
 			"parameters_type":[
 				"double"
 			],
@@ -4638,6 +4819,7 @@
 	"wxTrace":[
 		{
 			"return_type":"void",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"..."
@@ -4666,6 +4848,7 @@
 	"wxTraceLevel":[
 		{
 			"return_type":"void",
+			"brief_description":"",
 			"parameters_type":[
 				"int",
 				"const wxString&",
@@ -4699,6 +4882,7 @@
 	"wxMakeMetafilePlaceable":[
 		{
 			"return_type":"bool",
+			"brief_description":"Given a filename for an existing, valid metafile (as constructed using wxMetafileDC) makes it into a placeable metafile by prepending a header containing the given bounding box.",
 			"parameters_type":[
 				"const wxString&",
 				"int",
@@ -4746,6 +4930,7 @@
 	"wxMessageBox":[
 		{
 			"return_type":"int",
+			"brief_description":"Show a general purpose message dialog.",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&",
@@ -4789,6 +4974,7 @@
 	"wxGetNumberFromUser":[
 		{
 			"return_type":"long",
+			"brief_description":"Shows a dialog asking the user for numeric input.",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&",
@@ -4843,6 +5029,7 @@
 	"wxCreateDynamicObject":[
 		{
 			"return_type":"wxObject*",
+			"brief_description":"Creates and returns an object of the given class, if the class has been registered with the dynamic class system using DECLARE...",
 			"parameters_type":[
 				"const wxString&"
 			],
@@ -4866,6 +5053,7 @@
 	"wxPersistentRegisterAndRestore":[
 		{
 			"return_type":"bool",
+			"brief_description":"A shorter synonym for wxPersistenceManager::RegisterAndRestore().",
 			"parameters_type":[
 				"T*",
 				"const wxString&"
@@ -4893,6 +5081,7 @@
 	"wxFindWindowAtPointer":[
 		{
 			"return_type":"wxWindow*",
+			"brief_description":"Find the deepest window at the mouse pointer position, returning the window and current pointer position in screen coordinates.",
 			"parameters_type":[
 				"wxPoint&"
 			],
@@ -4916,6 +5105,7 @@
 	"wxGetActiveWindow":[
 		{
 			"return_type":"wxWindow*",
+			"brief_description":"Gets the currently active window (implemented for MSW and GTK only currently, always returns NULL in the other ports).",
 			"parameters_type":[
 				
 			],
@@ -4939,6 +5129,7 @@
 	"wxGetTopLevelParent":[
 		{
 			"return_type":"wxWindow*",
+			"brief_description":"Returns the first top level parent of the given window, or in other words, the frame or dialog containing it, or NULL.",
 			"parameters_type":[
 				"wxWindow*"
 			],
@@ -4962,6 +5153,7 @@
 	"wxRichTextHasStyle":[
 		{
 			"return_type":"bool",
+			"brief_description":"",
 			"parameters_type":[
 				"int",
 				"int"
@@ -4990,6 +5182,7 @@
 	"wxTextAttrEq":[
 		{
 			"return_type":"WXDLLIMPEXP_RICHTEXT bool",
+			"brief_description":"Compare two attribute objects.",
 			"parameters_type":[
 				"const wxRichTextAttr&",
 				"const wxRichTextAttr&"
@@ -5018,6 +5211,7 @@
 	"wxTextAttrEqPartial":[
 		{
 			"return_type":"WXDLLIMPEXP_RICHTEXT bool",
+			"brief_description":"Compare two attribute objects, but take into account the flags specifying attributes of interest.",
 			"parameters_type":[
 				"const wxRichTextAttr&",
 				"const wxRichTextAttr&"
@@ -5046,6 +5240,7 @@
 	"wxRichTextApplyStyle":[
 		{
 			"return_type":"WXDLLIMPEXP_RICHTEXT bool",
+			"brief_description":"Apply one style to another.",
 			"parameters_type":[
 				"wxRichTextAttr&",
 				"const wxRichTextAttr&",
@@ -5078,6 +5273,7 @@
 	"wxRichTextRemoveStyle":[
 		{
 			"return_type":"WXDLLIMPEXP_RICHTEXT bool",
+			"brief_description":"",
 			"parameters_type":[
 				"wxRichTextAttr&",
 				"const wxRichTextAttr&"
@@ -5106,6 +5302,7 @@
 	"wxRichTextCombineBitlists":[
 		{
 			"return_type":"WXDLLIMPEXP_RICHTEXT bool",
+			"brief_description":"Combine two bitlists.",
 			"parameters_type":[
 				"int&",
 				"int",
@@ -5144,6 +5341,7 @@
 	"wxRichTextBitlistsEqPartial":[
 		{
 			"return_type":"WXDLLIMPEXP_RICHTEXT bool",
+			"brief_description":"Compare two bitlists.",
 			"parameters_type":[
 				"int",
 				"int",
@@ -5177,6 +5375,7 @@
 	"wxRichTextSplitParaCharStyles":[
 		{
 			"return_type":"WXDLLIMPEXP_RICHTEXT bool",
+			"brief_description":"Split into paragraph and character styles.",
 			"parameters_type":[
 				"const wxRichTextAttr&",
 				"wxRichTextAttr&",
@@ -5210,6 +5409,7 @@
 	"wxRichTextTabsEq":[
 		{
 			"return_type":"WXDLLIMPEXP_RICHTEXT bool",
+			"brief_description":"Compare tabs.",
 			"parameters_type":[
 				"const wxArrayInt&",
 				"const wxArrayInt&"
@@ -5238,6 +5438,7 @@
 	"wxRichTextDecimalToRoman":[
 		{
 			"return_type":"WXDLLIMPEXP_RICHTEXT wxString",
+			"brief_description":"Convert a decimal to Roman numerals.",
 			"parameters_type":[
 				"long"
 			],
@@ -5261,6 +5462,7 @@
 	"wxTextAttrCollectCommonAttributes":[
 		{
 			"return_type":"WXDLLIMPEXP_RICHTEXT void",
+			"brief_description":"",
 			"parameters_type":[
 				"wxTextAttr&",
 				"const wxTextAttr&",
@@ -5299,6 +5501,7 @@
 	"wxRichTextModuleInit":[
 		{
 			"return_type":"WXDLLIMPEXP_RICHTEXT void",
+			"brief_description":"",
 			"parameters_type":[
 				
 			],
@@ -5322,6 +5525,7 @@
 	"wxMakeGuard":[
 		{
 			"return_type":"wxScopeGuard",
+			"brief_description":"Returns a scope guard object which will call the specified function with the given parameters on scope exit.",
 			"parameters_type":[
 				"F",
 				"P1",
@@ -5360,6 +5564,7 @@
 	"wxGetStockLabel":[
 		{
 			"return_type":"wxString",
+			"brief_description":"Returns label that should be used for given id element.",
 			"parameters_type":[
 				"wxWindowID",
 				"long"
@@ -5387,6 +5592,7 @@
 	"wxGetTextFromUser":[
 		{
 			"return_type":"wxString",
+			"brief_description":"Pop up a dialog box with title set to caption, message, and a default_value.",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&",
@@ -5434,6 +5640,7 @@
 	"wxGetPasswordFromUser":[
 		{
 			"return_type":"wxString",
+			"brief_description":"Similar to wxGetTextFromUser() but the text entered in the dialog is not shown on screen but replaced with stars.",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&",
@@ -5481,6 +5688,7 @@
 	"wxGetTimeZone":[
 		{
 			"return_type":"int",
+			"brief_description":"Returns the difference between UTC and local time in seconds.",
 			"parameters_type":[
 				
 			],
@@ -5504,6 +5712,7 @@
 	"wxGetLocalTime":[
 		{
 			"return_type":"long",
+			"brief_description":"Returns the number of seconds since local time 00:00:00 Jan 1st 1970.",
 			"parameters_type":[
 				
 			],
@@ -5527,6 +5736,7 @@
 	"wxGetLocalTimeMillis":[
 		{
 			"return_type":"wxLongLong",
+			"brief_description":"Returns the number of milliseconds since local time 00:00:00 Jan 1st 1970.",
 			"parameters_type":[
 				
 			],
@@ -5550,6 +5760,7 @@
 	"wxGetUTCTime":[
 		{
 			"return_type":"long",
+			"brief_description":"Returns the number of seconds since GMT 00:00:00 Jan 1st 1970.",
 			"parameters_type":[
 				
 			],
@@ -5573,6 +5784,7 @@
 	"wxGetUTCTimeMillis":[
 		{
 			"return_type":"wxLongLong",
+			"brief_description":"Returns the number of milliseconds since GMT 00:00:00 Jan 1st 1970.",
 			"parameters_type":[
 				
 			],
@@ -5596,6 +5808,7 @@
 	"wxGetUTCTimeUSec":[
 		{
 			"return_type":"wxLongLong",
+			"brief_description":"Returns the number of microseconds since GMT 00:00:00 Jan 1st 1970.",
 			"parameters_type":[
 				
 			],
@@ -5619,6 +5832,7 @@
 	"wxCreateFileTipProvider":[
 		{
 			"return_type":"wxTipProvider*",
+			"brief_description":"This function creates a wxTipProvider which may be used with wxShowTip().",
 			"parameters_type":[
 				"const wxString&",
 				"size_t"
@@ -5647,6 +5861,7 @@
 	"wxShowTip":[
 		{
 			"return_type":"bool",
+			"brief_description":"This function shows a \"startup tip\" to the user.",
 			"parameters_type":[
 				"wxWindow*",
 				"wxTipProvider*",
@@ -5679,6 +5894,7 @@
 	"wxStringTokenize":[
 		{
 			"return_type":"wxArrayString",
+			"brief_description":"This is a convenience function wrapping wxStringTokenizer which simply returns all tokens found in the given str as an array.",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&",
@@ -5710,6 +5926,7 @@
 	"wxGetTranslation":[
 		{
 			"return_type":"const wxString&",
+			"brief_description":"This function returns the translation of string in the current locale().",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&"
@@ -5735,6 +5952,7 @@
 		},
 		{
 			"return_type":"const wxString&",
+			"brief_description":"This is an overloaded version of wxGetTranslation(const wxString&, const wxString&), please see its documentation for general information.",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&",
@@ -5772,6 +5990,7 @@
 	"wxBeginBusyCursor":[
 		{
 			"return_type":"void",
+			"brief_description":"Changes the cursor to the given cursor for all windows in the application.",
 			"parameters_type":[
 				"const wxCursor*"
 			],
@@ -5795,6 +6014,7 @@
 	"wxEndBusyCursor":[
 		{
 			"return_type":"void",
+			"brief_description":"Changes the cursor back to the original cursor, for all windows in the application.",
 			"parameters_type":[
 				
 			],
@@ -5818,6 +6038,7 @@
 	"wxIsBusy":[
 		{
 			"return_type":"bool",
+			"brief_description":"Returns true if between two wxBeginBusyCursor() and wxEndBusyCursor() calls.",
 			"parameters_type":[
 				
 			],
@@ -5841,6 +6062,7 @@
 	"wxBell":[
 		{
 			"return_type":"void",
+			"brief_description":"Ring the system bell.",
 			"parameters_type":[
 				
 			],
@@ -5864,6 +6086,7 @@
 	"wxInfoMessageBox":[
 		{
 			"return_type":"void",
+			"brief_description":"Shows a message box with the information about the wxWidgets build used, including its version, most important build parameters and the version of the underlying GUI toolkit.",
 			"parameters_type":[
 				"wxWindow*"
 			],
@@ -5887,6 +6110,7 @@
 	"wxGetLibraryVersionInfo":[
 		{
 			"return_type":"wxVersionInfo",
+			"brief_description":"Get wxWidgets version information.",
 			"parameters_type":[
 				
 			],
@@ -5910,6 +6134,7 @@
 	"wxGetenv":[
 		{
 			"return_type":"wxChar*",
+			"brief_description":"This is a macro defined as getenv() or its wide char version in Unicode mode.",
 			"parameters_type":[
 				"const wxString&"
 			],
@@ -5931,6 +6156,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const char*"
 			],
@@ -5952,6 +6178,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wchar_t*"
 			],
@@ -5973,6 +6200,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&"
 			],
@@ -5994,6 +6222,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCStrData&"
 			],
@@ -6015,6 +6244,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCharBuffer&"
 			],
@@ -6036,6 +6266,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxWCharBuffer&"
 			],
@@ -6059,6 +6290,7 @@
 	"wxGetEnv":[
 		{
 			"return_type":"bool",
+			"brief_description":"Returns the current value of the environment variable var in value.",
 			"parameters_type":[
 				"const wxString&",
 				"wxString*"
@@ -6087,6 +6319,7 @@
 	"wxSetEnv":[
 		{
 			"return_type":"bool",
+			"brief_description":"Sets the value of the environment variable var (adding it if necessary) to value.",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&"
@@ -6115,6 +6348,7 @@
 	"wxUnsetEnv":[
 		{
 			"return_type":"bool",
+			"brief_description":"Removes the variable var from the environment.",
 			"parameters_type":[
 				"const wxString&"
 			],
@@ -6138,6 +6372,7 @@
 	"wxGetEnvMap":[
 		{
 			"return_type":"bool",
+			"brief_description":"Fill a map with the complete content of current environment.",
 			"parameters_type":[
 				"wxEnvVariableHashMap*"
 			],
@@ -6161,6 +6396,7 @@
 	"wxGetBatteryState":[
 		{
 			"return_type":"wxBatteryState",
+			"brief_description":"Returns battery state as one of wxBATTERY_NORMAL_STATE, wxBATTERY_LOW_STATE, wxBATTERY_CRITICAL_STATE, wxBATTERY_SHUTDOWN_STATE or wxBATTERY_UNKNOWN_STATE.",
 			"parameters_type":[
 				
 			],
@@ -6184,6 +6420,7 @@
 	"wxGetPowerType":[
 		{
 			"return_type":"wxPowerType",
+			"brief_description":"Returns the type of power source as one of wxPOWER_SOCKET, wxPOWER_BATTERY or wxPOWER_UNKNOWN.",
 			"parameters_type":[
 				
 			],
@@ -6207,6 +6444,7 @@
 	"wxGetDisplayName":[
 		{
 			"return_type":"wxString",
+			"brief_description":"Under X only, returns the current display name.",
 			"parameters_type":[
 				
 			],
@@ -6230,6 +6468,7 @@
 	"wxGetKeyState":[
 		{
 			"return_type":"bool",
+			"brief_description":"For normal keys, returns true if the specified key is currently down.",
 			"parameters_type":[
 				"wxKeyCode"
 			],
@@ -6253,6 +6492,7 @@
 	"wxGetMousePosition":[
 		{
 			"return_type":"wxPoint",
+			"brief_description":"Returns the mouse position in screen coordinates.",
 			"parameters_type":[
 				
 			],
@@ -6276,6 +6516,7 @@
 	"wxGetMouseState":[
 		{
 			"return_type":"wxMouseState",
+			"brief_description":"Returns the current state of the mouse.",
 			"parameters_type":[
 				
 			],
@@ -6299,6 +6540,7 @@
 	"wxEnableTopLevelWindows":[
 		{
 			"return_type":"void",
+			"brief_description":"This function enables or disables all top level windows.",
 			"parameters_type":[
 				"bool"
 			],
@@ -6322,6 +6564,7 @@
 	"wxFindWindowAtPoint":[
 		{
 			"return_type":"wxWindow*",
+			"brief_description":"Find the deepest window at the given mouse position in screen coordinates, returning the window if found, or NULL if not.",
 			"parameters_type":[
 				"const wxPoint&"
 			],
@@ -6345,6 +6588,7 @@
 	"wxFindWindowByLabel":[
 		{
 			"return_type":"wxWindow*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"wxWindow*"
@@ -6372,6 +6616,7 @@
 	"wxFindWindowByName":[
 		{
 			"return_type":"wxWindow*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"wxWindow*"
@@ -6399,6 +6644,7 @@
 	"wxFindMenuItemId":[
 		{
 			"return_type":"int",
+			"brief_description":"Find a menu item identifier associated with the given frame's menu bar.",
 			"parameters_type":[
 				"wxFrame*",
 				"const wxString&",
@@ -6432,6 +6678,7 @@
 	"wxNewId":[
 		{
 			"return_type":"long",
+			"brief_description":"",
 			"parameters_type":[
 				
 			],
@@ -6455,6 +6702,7 @@
 	"wxRegisterId":[
 		{
 			"return_type":"void",
+			"brief_description":"Ensures that Ids subsequently generated by wxNewId() do not clash with the given id.",
 			"parameters_type":[
 				"long"
 			],
@@ -6478,6 +6726,7 @@
 	"wxLaunchDefaultApplication":[
 		{
 			"return_type":"bool",
+			"brief_description":"Opens the document in the application associated with the files of this type.",
 			"parameters_type":[
 				"const wxString&",
 				"int"
@@ -6505,6 +6754,7 @@
 	"wxLaunchDefaultBrowser":[
 		{
 			"return_type":"bool",
+			"brief_description":"Opens the url in user's default browser.",
 			"parameters_type":[
 				"const wxString&",
 				"int"
@@ -6532,6 +6782,7 @@
 	"wxLoadUserResource":[
 		{
 			"return_type":"wxString",
+			"brief_description":"Loads a user-defined Windows resource as a string.",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&"
@@ -6559,6 +6810,7 @@
 	"wxPostDelete":[
 		{
 			"return_type":"void",
+			"brief_description":"",
 			"parameters_type":[
 				"wxObject*"
 			],
@@ -6582,6 +6834,7 @@
 	"wxQsort":[
 		{
 			"return_type":"void",
+			"brief_description":"Function implementing quick sort algorithm.",
 			"parameters_type":[
 				"void*",
 				"size_t",
@@ -6625,6 +6878,7 @@
 	"wxSetDisplayName":[
 		{
 			"return_type":"void",
+			"brief_description":"Under X only, sets the current display name.",
 			"parameters_type":[
 				"const wxString&"
 			],
@@ -6648,6 +6902,7 @@
 	"wxStripMenuCodes":[
 		{
 			"return_type":"wxString",
+			"brief_description":"Strips any menu codes from str and returns the result.",
 			"parameters_type":[
 				"const wxString&",
 				"int"
@@ -6675,6 +6930,7 @@
 	"wxGetEmailAddress":[
 		{
 			"return_type":"wxString",
+			"brief_description":"Copies the user's email address into the supplied buffer, by concatenating the values returned by wxGetFullHostName() and wxGetUserId().",
 			"parameters_type":[
 				
 			],
@@ -6696,6 +6952,7 @@
 		},
 		{
 			"return_type":"bool",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"int"
@@ -6724,6 +6981,7 @@
 	"wxGetFreeMemory":[
 		{
 			"return_type":"wxMemorySize",
+			"brief_description":"Returns the amount of free memory in bytes under environments which support it, and -1 if not supported or failed to perform measurement.",
 			"parameters_type":[
 				
 			],
@@ -6747,6 +7005,7 @@
 	"wxGetHomeDir":[
 		{
 			"return_type":"wxString",
+			"brief_description":"Return the (current) user's home directory.",
 			"parameters_type":[
 				
 			],
@@ -6770,6 +7029,7 @@
 	"wxGetHostName":[
 		{
 			"return_type":"wxString",
+			"brief_description":"Copies the current host machine's name into the supplied buffer.",
 			"parameters_type":[
 				
 			],
@@ -6791,6 +7051,7 @@
 		},
 		{
 			"return_type":"bool",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"int"
@@ -6819,6 +7080,7 @@
 	"wxGetFullHostName":[
 		{
 			"return_type":"wxString",
+			"brief_description":"Returns the FQDN (fully qualified domain host name) or an empty string on error.",
 			"parameters_type":[
 				
 			],
@@ -6842,6 +7104,7 @@
 	"wxGetUserHome":[
 		{
 			"return_type":"wxString",
+			"brief_description":"Returns the home directory for the given user.",
 			"parameters_type":[
 				"const wxString&"
 			],
@@ -6865,6 +7128,7 @@
 	"wxGetUserId":[
 		{
 			"return_type":"wxString",
+			"brief_description":"This function returns the \"user id\" also known as \"login name\" under Unix (i.e.",
 			"parameters_type":[
 				
 			],
@@ -6886,6 +7150,7 @@
 		},
 		{
 			"return_type":"bool",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"int"
@@ -6914,6 +7179,7 @@
 	"wxGetUserName":[
 		{
 			"return_type":"wxString",
+			"brief_description":"This function returns the full user name (something like \"Mr. John Smith\").",
 			"parameters_type":[
 				
 			],
@@ -6935,6 +7201,7 @@
 		},
 		{
 			"return_type":"bool",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"int"
@@ -6963,6 +7230,7 @@
 	"wxGetOsDescription":[
 		{
 			"return_type":"wxString",
+			"brief_description":"Returns the string containing the description of the current platform in a user-readable form.",
 			"parameters_type":[
 				
 			],
@@ -6986,6 +7254,7 @@
 	"wxGetOsVersion":[
 		{
 			"return_type":"wxOperatingSystemId",
+			"brief_description":"Gets the version and the operating system ID for currently running OS.",
 			"parameters_type":[
 				"int*",
 				"int*"
@@ -7013,6 +7282,7 @@
 	"wxIsPlatform64Bit":[
 		{
 			"return_type":"bool",
+			"brief_description":"Returns true if the operating system the program is running under is 64 bit.",
 			"parameters_type":[
 				
 			],
@@ -7036,6 +7306,7 @@
 	"wxIsPlatformLittleEndian":[
 		{
 			"return_type":"bool",
+			"brief_description":"Returns true if the current platform is little endian (instead of big endian).",
 			"parameters_type":[
 				
 			],
@@ -7059,6 +7330,7 @@
 	"wxGetLinuxDistributionInfo":[
 		{
 			"return_type":"wxLinuxDistributionInfo",
+			"brief_description":"Returns a structure containing informations about the currently running Linux distribution.",
 			"parameters_type":[
 				
 			],
@@ -7082,6 +7354,7 @@
 	"wxExecute":[
 		{
 			"return_type":"long",
+			"brief_description":"Executes another program in Unix or Windows.",
 			"parameters_type":[
 				"const wxString&",
 				"int",
@@ -7115,6 +7388,7 @@
 		},
 		{
 			"return_type":"long",
+			"brief_description":"This is an overloaded version of wxExecute(const wxString&,int,wxProcess*), please see its documentation for general information.",
 			"parameters_type":[
 				"char**",
 				"int",
@@ -7148,6 +7422,7 @@
 		},
 		{
 			"return_type":"long",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t**",
 				"int",
@@ -7181,6 +7456,7 @@
 		},
 		{
 			"return_type":"long",
+			"brief_description":"This is an overloaded version of wxExecute(const wxString&,int,wxProcess*), please see its documentation for general information.",
 			"parameters_type":[
 				"const wxString&",
 				"wxArrayString&",
@@ -7215,6 +7491,7 @@
 		},
 		{
 			"return_type":"long",
+			"brief_description":"This is an overloaded version of wxExecute(const wxString&,int,wxProcess*), please see its documentation for general information.",
 			"parameters_type":[
 				"const wxString&",
 				"wxArrayString&",
@@ -7256,6 +7533,7 @@
 	"wxGetProcessId":[
 		{
 			"return_type":"unsigned long",
+			"brief_description":"Returns the number uniquely identifying the current process in the system.",
 			"parameters_type":[
 				
 			],
@@ -7279,6 +7557,7 @@
 	"wxKill":[
 		{
 			"return_type":"int",
+			"brief_description":"Equivalent to the Unix kill function: send the given signal sig to the process with PID pid.",
 			"parameters_type":[
 				"long",
 				"wxSignal",
@@ -7314,6 +7593,7 @@
 	"wxShell":[
 		{
 			"return_type":"bool",
+			"brief_description":"Executes a command in an interactive shell window.",
 			"parameters_type":[
 				"const wxString&"
 			],
@@ -7337,6 +7617,7 @@
 	"wxShutdown":[
 		{
 			"return_type":"bool",
+			"brief_description":"This function shuts down or reboots the computer depending on the value of the flags.",
 			"parameters_type":[
 				"int"
 			],
@@ -7360,6 +7641,7 @@
 	"wxMicroSleep":[
 		{
 			"return_type":"void",
+			"brief_description":"Sleeps for the specified number of microseconds.",
 			"parameters_type":[
 				"unsigned long"
 			],
@@ -7383,6 +7665,7 @@
 	"wxMilliSleep":[
 		{
 			"return_type":"void",
+			"brief_description":"Sleeps for the specified number of milliseconds.",
 			"parameters_type":[
 				"unsigned long"
 			],
@@ -7406,6 +7689,7 @@
 	"wxNow":[
 		{
 			"return_type":"wxString",
+			"brief_description":"Returns a string representing the current date and time.",
 			"parameters_type":[
 				
 			],
@@ -7429,6 +7713,7 @@
 	"wxSleep":[
 		{
 			"return_type":"void",
+			"brief_description":"Sleeps for the specified number of seconds.",
 			"parameters_type":[
 				"int"
 			],
@@ -7452,6 +7737,7 @@
 	"wxUsleep":[
 		{
 			"return_type":"void",
+			"brief_description":"",
 			"parameters_type":[
 				"unsigned long"
 			],
@@ -7475,6 +7761,7 @@
 	"wxMakeFloatingPointValidator":[
 		{
 			"return_type":"wxFloatingPointValidator< T >",
+			"brief_description":"Creates a wxFloatingPointValidator object with automatic type deduction.",
 			"parameters_type":[
 				"T*",
 				"int"
@@ -7500,6 +7787,7 @@
 		},
 		{
 			"return_type":"wxFloatingPointValidator< T >",
+			"brief_description":"Creates a wxFloatingPointValidator object with automatic type deduction.",
 			"parameters_type":[
 				"int",
 				"T*",
@@ -7532,6 +7820,7 @@
 	"wxMakeIntegerValidator":[
 		{
 			"return_type":"wxIntegerValidator< T >",
+			"brief_description":"Creates a wxIntegerValidator object with automatic type deduction.",
 			"parameters_type":[
 				"T*",
 				"int"
@@ -7559,6 +7848,7 @@
 	"wxVectorSort":[
 		{
 			"return_type":"void",
+			"brief_description":"Sort the contents of a wxVector<T>.",
 			"parameters_type":[
 				"wxVector< T >&"
 			],
@@ -7582,6 +7872,7 @@
 	"wxIsEmpty":[
 		{
 			"return_type":"bool",
+			"brief_description":"",
 			"parameters_type":[
 				"const char*"
 			],
@@ -7603,6 +7894,7 @@
 		},
 		{
 			"return_type":"bool",
+			"brief_description":"",
 			"parameters_type":[
 				"const wchar_t*"
 			],
@@ -7624,6 +7916,7 @@
 		},
 		{
 			"return_type":"bool",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCharBuffer&"
 			],
@@ -7645,6 +7938,7 @@
 		},
 		{
 			"return_type":"bool",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxWCharBuffer&"
 			],
@@ -7666,6 +7960,7 @@
 		},
 		{
 			"return_type":"bool",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&"
 			],
@@ -7687,6 +7982,7 @@
 		},
 		{
 			"return_type":"bool",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCStrData&"
 			],
@@ -7710,6 +8006,7 @@
 	"wxTmemchr":[
 		{
 			"return_type":"wxChar*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxChar*",
 				"wxChar",
@@ -7741,6 +8038,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const char*",
 				"char",
@@ -7774,6 +8072,7 @@
 	"wxTmemcmp":[
 		{
 			"return_type":"int",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxChar*",
 				"const wxChar*",
@@ -7805,6 +8104,7 @@
 		},
 		{
 			"return_type":"int",
+			"brief_description":"",
 			"parameters_type":[
 				"const char*",
 				"const char*",
@@ -7838,6 +8138,7 @@
 	"wxTmemcpy":[
 		{
 			"return_type":"wxChar*",
+			"brief_description":"",
 			"parameters_type":[
 				"wxChar*",
 				"const wxChar*",
@@ -7869,6 +8170,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const char*",
@@ -7902,6 +8204,7 @@
 	"wxTmemmove":[
 		{
 			"return_type":"wxChar*",
+			"brief_description":"",
 			"parameters_type":[
 				"wxChar*",
 				"const wxChar*",
@@ -7933,6 +8236,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const char*",
@@ -7966,6 +8270,7 @@
 	"wxTmemset":[
 		{
 			"return_type":"wxChar*",
+			"brief_description":"",
 			"parameters_type":[
 				"wxChar*",
 				"const wxChar",
@@ -7997,6 +8302,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const char",
@@ -8030,6 +8336,7 @@
 	"wxSetlocale":[
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"int",
 				"const wxCharBuffer&"
@@ -8056,6 +8363,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"int",
 				"const wxString&"
@@ -8082,6 +8390,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"int",
 				"const wxCStrData&"
@@ -8110,6 +8419,7 @@
 	"wxStrlen":[
 		{
 			"return_type":"size_t",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCharBuffer&"
 			],
@@ -8131,6 +8441,7 @@
 		},
 		{
 			"return_type":"size_t",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxWCharBuffer&"
 			],
@@ -8152,6 +8463,7 @@
 		},
 		{
 			"return_type":"size_t",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&"
 			],
@@ -8173,6 +8485,7 @@
 		},
 		{
 			"return_type":"size_t",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCStrData&"
 			],
@@ -8196,6 +8509,7 @@
 	"wxStrnlen":[
 		{
 			"return_type":"size_t",
+			"brief_description":"",
 			"parameters_type":[
 				"const char*",
 				"size_t"
@@ -8222,6 +8536,7 @@
 		},
 		{
 			"return_type":"size_t",
+			"brief_description":"",
 			"parameters_type":[
 				"const wchar_t*",
 				"size_t"
@@ -8250,6 +8565,7 @@
 	"wxStrdup":[
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCharBuffer&"
 			],
@@ -8271,6 +8587,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxWCharBuffer&"
 			],
@@ -8292,6 +8609,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&"
 			],
@@ -8313,6 +8631,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCStrData&"
 			],
@@ -8336,6 +8655,7 @@
 	"wxStrcpy":[
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const char*"
@@ -8362,6 +8682,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const wchar_t*"
@@ -8388,6 +8709,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const wxString&"
@@ -8414,6 +8736,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const wxCStrData&"
@@ -8440,6 +8763,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const wxCharBuffer&"
@@ -8466,6 +8790,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const wxString&"
@@ -8492,6 +8817,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const wxCStrData&"
@@ -8518,6 +8844,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const wxWCharBuffer&"
@@ -8544,6 +8871,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const wchar_t*"
@@ -8570,6 +8898,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const char*"
@@ -8598,6 +8927,7 @@
 	"wxStrncpy":[
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const char*",
@@ -8629,6 +8959,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const wchar_t*",
@@ -8660,6 +8991,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const wxString&",
@@ -8691,6 +9023,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const wxCStrData&",
@@ -8722,6 +9055,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const wxCharBuffer&",
@@ -8753,6 +9087,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const wxString&",
@@ -8784,6 +9119,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const wxCStrData&",
@@ -8815,6 +9151,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const wxWCharBuffer&",
@@ -8846,6 +9183,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const wchar_t*",
@@ -8877,6 +9215,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const char*",
@@ -8910,6 +9249,7 @@
 	"wxStrlcpy":[
 		{
 			"return_type":"size_t",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const char*",
@@ -8941,6 +9281,7 @@
 		},
 		{
 			"return_type":"size_t",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const wchar_t*",
@@ -8974,6 +9315,7 @@
 	"wxStrcat":[
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const char*"
@@ -9000,6 +9342,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const wchar_t*"
@@ -9026,6 +9369,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const wxString&"
@@ -9052,6 +9396,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const wxCStrData&"
@@ -9078,6 +9423,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const wxCharBuffer&"
@@ -9104,6 +9450,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const wxString&"
@@ -9130,6 +9477,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const wxCStrData&"
@@ -9156,6 +9504,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const wxWCharBuffer&"
@@ -9182,6 +9531,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const wchar_t*"
@@ -9208,6 +9558,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const char*"
@@ -9236,6 +9587,7 @@
 	"wxStrncat":[
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const char*",
@@ -9267,6 +9619,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const wchar_t*",
@@ -9298,6 +9651,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const wxString&",
@@ -9329,6 +9683,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const wxCStrData&",
@@ -9360,6 +9715,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const wxCharBuffer&",
@@ -9391,6 +9747,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const wxString&",
@@ -9422,6 +9779,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const wxCStrData&",
@@ -9453,6 +9811,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const wxWCharBuffer&",
@@ -9484,6 +9843,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const wchar_t*",
@@ -9515,6 +9875,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const char*",
@@ -9548,6 +9909,7 @@
 	"wxStrcmp_String":[
 		{
 			"return_type":"int",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"const T&"
@@ -9576,6 +9938,7 @@
 	"wxStricmp_String":[
 		{
 			"return_type":"int",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"const T&"
@@ -9604,6 +9967,7 @@
 	"wxStrcoll_String":[
 		{
 			"return_type":"int",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"const T&"
@@ -9632,6 +9996,7 @@
 	"wxStrspn_String":[
 		{
 			"return_type":"size_t",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"const T&"
@@ -9660,6 +10025,7 @@
 	"wxStrcspn_String":[
 		{
 			"return_type":"size_t",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"const T&"
@@ -9688,6 +10054,7 @@
 	"wxStrncmp_String":[
 		{
 			"return_type":"int",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"const T&",
@@ -9721,6 +10088,7 @@
 	"wxStrnicmp_String":[
 		{
 			"return_type":"int",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"const T&",
@@ -9754,6 +10122,7 @@
 	"wxStrxfrm":[
 		{
 			"return_type":"size_t",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const char*",
@@ -9785,6 +10154,7 @@
 		},
 		{
 			"return_type":"size_t",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const wchar_t*",
@@ -9816,6 +10186,7 @@
 		},
 		{
 			"return_type":"size_t",
+			"brief_description":"",
 			"parameters_type":[
 				"T*",
 				"const wxCharTypeBuffer< T >&",
@@ -9847,6 +10218,7 @@
 		},
 		{
 			"return_type":"size_t",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const wxString&",
@@ -9878,6 +10250,7 @@
 		},
 		{
 			"return_type":"size_t",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const wxString&",
@@ -9909,6 +10282,7 @@
 		},
 		{
 			"return_type":"size_t",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const wxCStrData&",
@@ -9940,6 +10314,7 @@
 		},
 		{
 			"return_type":"size_t",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const wxCStrData&",
@@ -9973,6 +10348,7 @@
 	"wxStrtok":[
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const char*",
@@ -10004,6 +10380,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const wchar_t*",
@@ -10035,6 +10412,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const wxCStrData&",
@@ -10066,6 +10444,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const wxCStrData&",
@@ -10097,6 +10476,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const wxString&",
@@ -10128,6 +10508,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const wxString&",
@@ -10161,6 +10542,7 @@
 	"wxStrstr":[
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const char*",
 				"const char*"
@@ -10187,6 +10569,7 @@
 		},
 		{
 			"return_type":"const wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wchar_t*",
 				"const wchar_t*"
@@ -10213,6 +10596,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const char*",
 				"const wxString&"
@@ -10239,6 +10623,7 @@
 		},
 		{
 			"return_type":"const wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wchar_t*",
 				"const wxString&"
@@ -10265,6 +10650,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&"
@@ -10291,6 +10677,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCStrData&",
 				"const wxString&"
@@ -10317,6 +10704,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCStrData&",
 				"const wxCStrData&"
@@ -10343,6 +10731,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"const char*"
@@ -10369,6 +10758,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCStrData&",
 				"const char*"
@@ -10395,6 +10785,7 @@
 		},
 		{
 			"return_type":"const wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"const wchar_t*"
@@ -10421,6 +10812,7 @@
 		},
 		{
 			"return_type":"const wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCStrData&",
 				"const wchar_t*"
@@ -10447,6 +10839,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const char*"
@@ -10473,6 +10866,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const wchar_t*"
@@ -10499,6 +10893,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const wxString&"
@@ -10525,6 +10920,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const wxString&"
@@ -10553,6 +10949,7 @@
 	"wxStrchr":[
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const char*",
 				"char"
@@ -10579,6 +10976,7 @@
 		},
 		{
 			"return_type":"const wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wchar_t*",
 				"wchar_t"
@@ -10605,6 +11003,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const char*",
 				"const wxUniChar&"
@@ -10631,6 +11030,7 @@
 		},
 		{
 			"return_type":"const wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wchar_t*",
 				"const wxUniChar&"
@@ -10657,6 +11057,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const char*",
 				"const wxUniCharRef&"
@@ -10683,6 +11084,7 @@
 		},
 		{
 			"return_type":"const wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wchar_t*",
 				"const wxUniCharRef&"
@@ -10709,6 +11111,7 @@
 		},
 		{
 			"return_type":"const T*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCharTypeBuffer< T >&",
 				"T"
@@ -10735,6 +11138,7 @@
 		},
 		{
 			"return_type":"const T*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCharTypeBuffer< T >&",
 				"const wxUniChar&"
@@ -10761,6 +11165,7 @@
 		},
 		{
 			"return_type":"const T*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCharTypeBuffer< T >&",
 				"const wxUniCharRef&"
@@ -10787,6 +11192,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"char"
@@ -10813,6 +11219,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"int"
@@ -10839,6 +11246,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"const wxUniChar&"
@@ -10865,6 +11273,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"const wxUniCharRef&"
@@ -10891,6 +11300,7 @@
 		},
 		{
 			"return_type":"const wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"wchar_t"
@@ -10917,6 +11327,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCStrData&",
 				"char"
@@ -10943,6 +11354,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCStrData&",
 				"int"
@@ -10969,6 +11381,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCStrData&",
 				"const wxUniChar&"
@@ -10995,6 +11408,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCStrData&",
 				"const wxUniCharRef&"
@@ -11021,6 +11435,7 @@
 		},
 		{
 			"return_type":"const wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCStrData&",
 				"wchar_t"
@@ -11047,6 +11462,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"char"
@@ -11073,6 +11489,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"wchar_t"
@@ -11101,6 +11518,7 @@
 	"wxStrrchr":[
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const char*",
 				"char"
@@ -11127,6 +11545,7 @@
 		},
 		{
 			"return_type":"const wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wchar_t*",
 				"wchar_t"
@@ -11153,6 +11572,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const char*",
 				"const wxUniChar&"
@@ -11179,6 +11599,7 @@
 		},
 		{
 			"return_type":"const wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wchar_t*",
 				"const wxUniChar&"
@@ -11205,6 +11626,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const char*",
 				"const wxUniCharRef&"
@@ -11231,6 +11653,7 @@
 		},
 		{
 			"return_type":"const wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wchar_t*",
 				"const wxUniCharRef&"
@@ -11257,6 +11680,7 @@
 		},
 		{
 			"return_type":"const T*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCharTypeBuffer< T >&",
 				"T"
@@ -11283,6 +11707,7 @@
 		},
 		{
 			"return_type":"const T*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCharTypeBuffer< T >&",
 				"const wxUniChar&"
@@ -11309,6 +11734,7 @@
 		},
 		{
 			"return_type":"const T*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCharTypeBuffer< T >&",
 				"const wxUniCharRef&"
@@ -11335,6 +11761,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"char"
@@ -11361,6 +11788,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"int"
@@ -11387,6 +11815,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"const wxUniChar&"
@@ -11413,6 +11842,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"const wxUniCharRef&"
@@ -11439,6 +11869,7 @@
 		},
 		{
 			"return_type":"const wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"wchar_t"
@@ -11465,6 +11896,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCStrData&",
 				"char"
@@ -11491,6 +11923,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCStrData&",
 				"int"
@@ -11517,6 +11950,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCStrData&",
 				"const wxUniChar&"
@@ -11543,6 +11977,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCStrData&",
 				"const wxUniCharRef&"
@@ -11569,6 +12004,7 @@
 		},
 		{
 			"return_type":"const wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCStrData&",
 				"wchar_t"
@@ -11595,6 +12031,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"char"
@@ -11621,6 +12058,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"wchar_t"
@@ -11649,6 +12087,7 @@
 	"wxStrpbrk":[
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const char*",
 				"const char*"
@@ -11675,6 +12114,7 @@
 		},
 		{
 			"return_type":"const wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wchar_t*",
 				"const wchar_t*"
@@ -11701,6 +12141,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const char*",
 				"const wxString&"
@@ -11727,6 +12168,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const char*",
 				"const wxCStrData&"
@@ -11753,6 +12195,7 @@
 		},
 		{
 			"return_type":"const wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wchar_t*",
 				"const wxString&"
@@ -11779,6 +12222,7 @@
 		},
 		{
 			"return_type":"const wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wchar_t*",
 				"const wxCStrData&"
@@ -11805,6 +12249,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&"
@@ -11831,6 +12276,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"const char*"
@@ -11857,6 +12303,7 @@
 		},
 		{
 			"return_type":"const wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"const wchar_t*"
@@ -11883,6 +12330,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"const wxCStrData&"
@@ -11909,6 +12357,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCStrData&",
 				"const wxString&"
@@ -11935,6 +12384,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCStrData&",
 				"const char*"
@@ -11961,6 +12411,7 @@
 		},
 		{
 			"return_type":"const wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCStrData&",
 				"const wchar_t*"
@@ -11987,6 +12438,7 @@
 		},
 		{
 			"return_type":"const char*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCStrData&",
 				"const wxCStrData&"
@@ -12013,6 +12465,7 @@
 		},
 		{
 			"return_type":"const T*",
+			"brief_description":"",
 			"parameters_type":[
 				"const S&",
 				"const wxCharTypeBuffer< T >&"
@@ -12039,6 +12492,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const char*"
@@ -12065,6 +12519,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const wchar_t*"
@@ -12091,6 +12546,7 @@
 		},
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"const wxString&"
@@ -12117,6 +12573,7 @@
 		},
 		{
 			"return_type":"wchar_t*",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"const wxString&"
@@ -12145,6 +12602,7 @@
 	"wxFopen":[
 		{
 			"return_type":"FILE*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&"
@@ -12173,6 +12631,7 @@
 	"wxFreopen":[
 		{
 			"return_type":"FILE*",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&",
@@ -12206,6 +12665,7 @@
 	"wxRemove":[
 		{
 			"return_type":"int",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&"
 			],
@@ -12229,6 +12689,7 @@
 	"wxRename":[
 		{
 			"return_type":"int",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"const wxString&"
@@ -12257,6 +12718,7 @@
 	"wxFgets":[
 		{
 			"return_type":"char*",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"int",
@@ -12290,6 +12752,7 @@
 	"wxFgetc":[
 		{
 			"return_type":"int",
+			"brief_description":"",
 			"parameters_type":[
 				"FILE*"
 			],
@@ -12313,6 +12776,7 @@
 	"wxUngetc":[
 		{
 			"return_type":"int",
+			"brief_description":"",
 			"parameters_type":[
 				"int",
 				"FILE*"
@@ -12341,6 +12805,7 @@
 	"wxAtoi":[
 		{
 			"return_type":"int",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&"
 			],
@@ -12364,6 +12829,7 @@
 	"wxAtol":[
 		{
 			"return_type":"long",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&"
 			],
@@ -12387,6 +12853,7 @@
 	"wxAtof":[
 		{
 			"return_type":"double",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&"
 			],
@@ -12410,6 +12877,7 @@
 	"wxStrtod":[
 		{
 			"return_type":"double",
+			"brief_description":"",
 			"parameters_type":[
 				"const char*",
 				"char**"
@@ -12436,6 +12904,7 @@
 		},
 		{
 			"return_type":"double",
+			"brief_description":"",
 			"parameters_type":[
 				"const wchar_t*",
 				"wchar_t**"
@@ -12462,6 +12931,7 @@
 		},
 		{
 			"return_type":"double",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCharTypeBuffer< T >&",
 				"T**"
@@ -12488,6 +12958,7 @@
 		},
 		{
 			"return_type":"double",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&",
 				"T"
@@ -12514,6 +12985,7 @@
 		},
 		{
 			"return_type":"double",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxCStrData&",
 				"T"
@@ -12542,6 +13014,7 @@
 	"wxSystem":[
 		{
 			"return_type":"int",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxString&"
 			],
@@ -12565,6 +13038,7 @@
 	"wxStrftime":[
 		{
 			"return_type":"size_t",
+			"brief_description":"",
 			"parameters_type":[
 				"char*",
 				"size_t",
@@ -12606,6 +13080,7 @@
 		},
 		{
 			"return_type":"size_t",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t*",
 				"size_t",
@@ -12649,6 +13124,7 @@
 	"wxIsalnum":[
 		{
 			"return_type":"bool",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxUniChar&"
 			],
@@ -12672,6 +13148,7 @@
 	"wxIsalpha":[
 		{
 			"return_type":"bool",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxUniChar&"
 			],
@@ -12695,6 +13172,7 @@
 	"wxIscntrl":[
 		{
 			"return_type":"bool",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxUniChar&"
 			],
@@ -12718,6 +13196,7 @@
 	"wxIsdigit":[
 		{
 			"return_type":"bool",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxUniChar&"
 			],
@@ -12741,6 +13220,7 @@
 	"wxIsgraph":[
 		{
 			"return_type":"bool",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxUniChar&"
 			],
@@ -12764,6 +13244,7 @@
 	"wxIslower":[
 		{
 			"return_type":"bool",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxUniChar&"
 			],
@@ -12787,6 +13268,7 @@
 	"wxIsprint":[
 		{
 			"return_type":"bool",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxUniChar&"
 			],
@@ -12810,6 +13292,7 @@
 	"wxIspunct":[
 		{
 			"return_type":"bool",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxUniChar&"
 			],
@@ -12833,6 +13316,7 @@
 	"wxIsspace":[
 		{
 			"return_type":"bool",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxUniChar&"
 			],
@@ -12856,6 +13340,7 @@
 	"wxIsupper":[
 		{
 			"return_type":"bool",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxUniChar&"
 			],
@@ -12879,6 +13364,7 @@
 	"wxIsxdigit":[
 		{
 			"return_type":"bool",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxUniChar&"
 			],
@@ -12902,6 +13388,7 @@
 	"wxTolower":[
 		{
 			"return_type":"wxUniChar",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxUniChar&"
 			],
@@ -12925,6 +13412,7 @@
 	"wxToupper":[
 		{
 			"return_type":"wxUniChar",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxUniChar&"
 			],
@@ -12948,6 +13436,7 @@
 	"wxIsctrl":[
 		{
 			"return_type":"int",
+			"brief_description":"",
 			"parameters_type":[
 				"const wxUniChar&"
 			],
@@ -12971,6 +13460,7 @@
 	"wxIsalnum_l":[
 		{
 			"return_type":"int",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t",
 				"const wxXLocale&"
@@ -12999,6 +13489,7 @@
 	"wxIsalpha_l":[
 		{
 			"return_type":"int",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t",
 				"const wxXLocale&"
@@ -13027,6 +13518,7 @@
 	"wxIscntrl_l":[
 		{
 			"return_type":"int",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t",
 				"const wxXLocale&"
@@ -13055,6 +13547,7 @@
 	"wxIsdigit_l":[
 		{
 			"return_type":"int",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t",
 				"const wxXLocale&"
@@ -13083,6 +13576,7 @@
 	"wxIsgraph_l":[
 		{
 			"return_type":"int",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t",
 				"const wxXLocale&"
@@ -13111,6 +13605,7 @@
 	"wxIslower_l":[
 		{
 			"return_type":"int",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t",
 				"const wxXLocale&"
@@ -13139,6 +13634,7 @@
 	"wxIsprint_l":[
 		{
 			"return_type":"int",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t",
 				"const wxXLocale&"
@@ -13167,6 +13663,7 @@
 	"wxIspunct_l":[
 		{
 			"return_type":"int",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t",
 				"const wxXLocale&"
@@ -13195,6 +13692,7 @@
 	"wxIsspace_l":[
 		{
 			"return_type":"int",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t",
 				"const wxXLocale&"
@@ -13223,6 +13721,7 @@
 	"wxIsupper_l":[
 		{
 			"return_type":"int",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t",
 				"const wxXLocale&"
@@ -13251,6 +13750,7 @@
 	"wxIsxdigit_l":[
 		{
 			"return_type":"int",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t",
 				"const wxXLocale&"
@@ -13279,6 +13779,7 @@
 	"wxTolower_l":[
 		{
 			"return_type":"wchar_t",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t",
 				"const wxXLocale&"
@@ -13307,6 +13808,7 @@
 	"wxToupper_l":[
 		{
 			"return_type":"wchar_t",
+			"brief_description":"",
 			"parameters_type":[
 				"wchar_t",
 				"const wxXLocale&"
@@ -13335,6 +13837,7 @@
 	"wxStrtod_l":[
 		{
 			"return_type":"double",
+			"brief_description":"",
 			"parameters_type":[
 				"const wchar_t*",
 				"wchar_t**",
@@ -13368,6 +13871,7 @@
 	"wxStrtol_l":[
 		{
 			"return_type":"long",
+			"brief_description":"",
 			"parameters_type":[
 				"const wchar_t*",
 				"wchar_t**",
@@ -13406,6 +13910,7 @@
 	"wxStrtoul_l":[
 		{
 			"return_type":"unsigned long",
+			"brief_description":"",
 			"parameters_type":[
 				"const wchar_t*",
 				"wchar_t**",

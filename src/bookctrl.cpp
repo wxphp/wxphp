@@ -91,6 +91,7 @@ void php_wxAuiNotebookEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 		#endif
 	}
 }
+/* {{{ proto wxEvent wxAuiNotebookEvent::Clone() */
 PHP_METHOD(php_wxAuiNotebookEvent, Clone)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -206,6 +207,10 @@ PHP_METHOD(php_wxAuiNotebookEvent, Clone)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebookEvent::Clone\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiNotebookEvent::wxAuiNotebookEvent(int command_type, int win_id)
+   Constructor. */
 PHP_METHOD(php_wxAuiNotebookEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -312,6 +317,8 @@ PHP_METHOD(php_wxAuiNotebookEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxBookCtrlBase_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -319,6 +326,8 @@ void php_wxBookCtrlBase_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto bool wxBookCtrlBase::Create(wxWindow &parent, int winid, wxPoint pos, wxSize size, int style, string name)
+   Constructs the book control with the given parameters. */
 PHP_METHOD(php_wxBookCtrlBase, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -628,6 +637,10 @@ PHP_METHOD(php_wxBookCtrlBase, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxBookCtrlBase::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxBookCtrlBase::AddPage(wxWindow &page, string text, bool select, int imageId)
+   Adds a new page. */
 PHP_METHOD(php_wxBookCtrlBase, AddPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -852,6 +865,10 @@ PHP_METHOD(php_wxBookCtrlBase, AddPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxBookCtrlBase::AddPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxBookCtrlBase::AdvanceSelection(bool forward)
+   Cycles through the tabs. */
 PHP_METHOD(php_wxBookCtrlBase, AdvanceSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1030,6 +1047,10 @@ PHP_METHOD(php_wxBookCtrlBase, AdvanceSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxBookCtrlBase::AdvanceSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxBookCtrlBase::DeleteAllPages()
+   Deletes all pages. */
 PHP_METHOD(php_wxBookCtrlBase, DeleteAllPages)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1169,6 +1190,10 @@ PHP_METHOD(php_wxBookCtrlBase, DeleteAllPages)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxBookCtrlBase::DeleteAllPages\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxBookCtrlBase::DeletePage(int page)
+   Deletes the specified page, and the associated window. */
 PHP_METHOD(php_wxBookCtrlBase, DeletePage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1309,6 +1334,10 @@ PHP_METHOD(php_wxBookCtrlBase, DeletePage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxBookCtrlBase::DeletePage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxWindow wxBookCtrlBase::GetCurrentPage()
+   Returns the currently selected page or NULL. */
 PHP_METHOD(php_wxBookCtrlBase, GetCurrentPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1476,6 +1505,10 @@ PHP_METHOD(php_wxBookCtrlBase, GetCurrentPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxBookCtrlBase::GetCurrentPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxWindow wxBookCtrlBase::GetPage(int page)
+   Returns the window at the given page position. */
 PHP_METHOD(php_wxBookCtrlBase, GetPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1648,6 +1681,10 @@ PHP_METHOD(php_wxBookCtrlBase, GetPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxBookCtrlBase::GetPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxBookCtrlBase::GetPageCount()
+   Returns the number of pages in the control. */
 PHP_METHOD(php_wxBookCtrlBase, GetPageCount)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1787,6 +1824,10 @@ PHP_METHOD(php_wxBookCtrlBase, GetPageCount)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxBookCtrlBase::GetPageCount\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxBookCtrlBase::HitTest(wxPoint pt, int &flags)
+   Returns the index of the tab at the specified position or wxNOT_FOUND if none. */
 PHP_METHOD(php_wxBookCtrlBase, HitTest)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2003,6 +2044,10 @@ PHP_METHOD(php_wxBookCtrlBase, HitTest)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxBookCtrlBase::HitTest\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxBookCtrlBase::InsertPage(int index, wxWindow &page, string text, bool select, int imageId)
+   Inserts a new page at the specified position. */
 bool wxBookCtrlBase_php::InsertPage(size_t index, wxWindow* page, const wxString& text, bool select, int imageId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2059,6 +2104,10 @@ bool wxBookCtrlBase_php::InsertPage(size_t index, wxWindow* page, const wxString
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto bool wxBookCtrlBase::RemovePage(int page)
+   Deletes the specified page, without deleting the associated window. */
 PHP_METHOD(php_wxBookCtrlBase, RemovePage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2203,6 +2252,10 @@ PHP_METHOD(php_wxBookCtrlBase, RemovePage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxBookCtrlBase::RemovePage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxBookCtrlBase::SetPageImage(int page, int image)
+   Sets the image index for the given page. */
 bool wxBookCtrlBase_php::SetPageImage(size_t page, int image)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2252,6 +2305,10 @@ bool wxBookCtrlBase_php::SetPageImage(size_t page, int image)
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto  wxBookCtrlBase::SetPageSize(wxSize size)
+   Sets the width and height of the pages. */
 PHP_METHOD(php_wxBookCtrlBase, SetPageSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2418,6 +2475,10 @@ PHP_METHOD(php_wxBookCtrlBase, SetPageSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxBookCtrlBase::SetPageSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxBookCtrlBase::SetPageText(int page, string text)
+   Sets the text for the given page. */
 bool wxBookCtrlBase_php::SetPageText(size_t page, const wxString& text)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2470,6 +2531,10 @@ bool wxBookCtrlBase_php::SetPageText(size_t page, const wxString& text)
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto int wxBookCtrlBase::SetSelection(int page)
+   Sets the selection for the given page, returning the previous selection. */
 int wxBookCtrlBase_php::SetSelection(size_t page)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2518,6 +2583,10 @@ int wxBookCtrlBase_php::SetSelection(size_t page)
 		return (int) Z_LVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto int wxBookCtrlBase::GetSelection()
+   Returns the currently selected page, or wxNOT_FOUND if none was selected. */
 int wxBookCtrlBase_php::GetSelection()const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2560,6 +2629,10 @@ int wxBookCtrlBase_php::GetSelection()const
 		return (int) Z_LVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto string wxBookCtrlBase::GetPageText(int nPage)
+   Returns the string for the given page. */
 wxString wxBookCtrlBase_php::GetPageText(size_t nPage)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2608,6 +2681,10 @@ wxString wxBookCtrlBase_php::GetPageText(size_t nPage)const
 		return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
 	
 }
+/* }}} */
+
+/* {{{ proto int wxBookCtrlBase::GetPageImage(int nPage)
+   Returns the image index for the given page. */
 int wxBookCtrlBase_php::GetPageImage(size_t nPage)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2656,6 +2733,10 @@ int wxBookCtrlBase_php::GetPageImage(size_t nPage)const
 		return (int) Z_LVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto int wxBookCtrlBase::ChangeSelection(int page)
+   Changes the selection for the given page, returning the previous selection. */
 int wxBookCtrlBase_php::ChangeSelection(size_t page)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2704,6 +2785,8 @@ int wxBookCtrlBase_php::ChangeSelection(size_t page)
 		return (int) Z_LVAL_P(return_value);
 	
 }
+/* }}} */
+
 void php_wxBookCtrlEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2744,6 +2827,8 @@ void php_wxBookCtrlEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+/* {{{ proto int wxBookCtrlEvent::GetOldSelection()
+   Returns the page that was selected before the change, wxNOT_FOUND if none was selected. */
 PHP_METHOD(php_wxBookCtrlEvent, GetOldSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2840,6 +2925,10 @@ PHP_METHOD(php_wxBookCtrlEvent, GetOldSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxBookCtrlEvent::GetOldSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxBookCtrlEvent::GetSelection()
+   Returns the currently selected page, or wxNOT_FOUND if none was selected. */
 PHP_METHOD(php_wxBookCtrlEvent, GetSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2936,6 +3025,10 @@ PHP_METHOD(php_wxBookCtrlEvent, GetSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxBookCtrlEvent::GetSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxBookCtrlEvent::SetOldSelection(int page)
+   Sets the id of the page selected before the change. */
 PHP_METHOD(php_wxBookCtrlEvent, SetOldSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3037,6 +3130,10 @@ PHP_METHOD(php_wxBookCtrlEvent, SetOldSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxBookCtrlEvent::SetOldSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxBookCtrlEvent::SetSelection(int page)
+   Sets the selection member variable. */
 PHP_METHOD(php_wxBookCtrlEvent, SetSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3138,6 +3235,10 @@ PHP_METHOD(php_wxBookCtrlEvent, SetSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxBookCtrlEvent::SetSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxBookCtrlEvent::wxBookCtrlEvent(int eventType, int id, int sel, int oldSel)
+   Constructor (used internally by wxWidgets only). */
 PHP_METHOD(php_wxBookCtrlEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3266,6 +3367,8 @@ PHP_METHOD(php_wxBookCtrlEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxChoicebook_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3273,6 +3376,8 @@ void php_wxChoicebook_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto wxChoice wxChoicebook::GetChoiceCtrl()
+   Returns the wxChoice associated with the control. */
 PHP_METHOD(php_wxChoicebook, GetChoiceCtrl)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3388,6 +3493,10 @@ PHP_METHOD(php_wxChoicebook, GetChoiceCtrl)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxChoicebook::GetChoiceCtrl\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxChoicebook::wxChoicebook()
+   Constructs a choicebook control. */
 PHP_METHOD(php_wxChoicebook, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3613,6 +3722,8 @@ PHP_METHOD(php_wxChoicebook, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxListbook_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3620,6 +3731,8 @@ void php_wxListbook_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto  wxListbook::wxListbook(wxWindow &parent, int id, wxPoint pos, wxSize size, int style, string name)
+   Constructs a listbook control. */
 PHP_METHOD(php_wxListbook, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3845,6 +3958,10 @@ PHP_METHOD(php_wxListbook, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto wxListView wxListbook::GetListView()
+   Returns the wxListView associated with the control. */
 PHP_METHOD(php_wxListbook, GetListView)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3960,6 +4077,8 @@ PHP_METHOD(php_wxListbook, GetListView)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListbook::GetListView\n");
 	}
 }
+/* }}} */
+
 void php_wxNotebook_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3967,6 +4086,8 @@ void php_wxNotebook_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto int wxNotebook::ChangeSelection(int page)
+   Changes the selection for the given page, returning the previous selection. */
 PHP_METHOD(php_wxNotebook, ChangeSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4064,6 +4185,10 @@ PHP_METHOD(php_wxNotebook, ChangeSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxNotebook::ChangeSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxNotebook::Create(wxWindow &parent, int id, wxPoint pos, wxSize size, int style, string name)
+   Creates a notebook control. */
 PHP_METHOD(php_wxNotebook, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4274,6 +4399,10 @@ PHP_METHOD(php_wxNotebook, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxNotebook::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxNotebook::GetPageImage(int nPage)
+   Returns the image index for the given page. */
 PHP_METHOD(php_wxNotebook, GetPageImage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4371,6 +4500,10 @@ PHP_METHOD(php_wxNotebook, GetPageImage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxNotebook::GetPageImage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxNotebook::GetPageText(int nPage)
+   Returns the string for the given page. */
 PHP_METHOD(php_wxNotebook, GetPageText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4474,6 +4607,10 @@ PHP_METHOD(php_wxNotebook, GetPageText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxNotebook::GetPageText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxNotebook::GetRowCount()
+   Returns the number of rows in the notebook control. */
 PHP_METHOD(php_wxNotebook, GetRowCount)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4566,6 +4703,10 @@ PHP_METHOD(php_wxNotebook, GetRowCount)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxNotebook::GetRowCount\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxNotebook::GetSelection()
+   Returns the currently selected page, or wxNOT_FOUND if none was selected. */
 PHP_METHOD(php_wxNotebook, GetSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4658,6 +4799,10 @@ PHP_METHOD(php_wxNotebook, GetSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxNotebook::GetSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxNotebook::GetThemeBackgroundColour()
+   If running under Windows and themes are enabled for the application, this function returns a suitable colour for painting the background of a notebook page, and can be passed to SetBackgroundColour(). */
 PHP_METHOD(php_wxNotebook, GetThemeBackgroundColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4755,6 +4900,10 @@ PHP_METHOD(php_wxNotebook, GetThemeBackgroundColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxNotebook::GetThemeBackgroundColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxNotebook::InsertPage(int index, wxWindow &page, string text, bool select, int imageId)
+   Inserts a new page at the specified position. */
 PHP_METHOD(php_wxNotebook, InsertPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4899,6 +5048,10 @@ PHP_METHOD(php_wxNotebook, InsertPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxNotebook::InsertPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxNotebook::SetPadding(wxSize padding)
+   Sets the amount of space around each page's icon and label, in pixels. */
 PHP_METHOD(php_wxNotebook, SetPadding)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5014,6 +5167,10 @@ PHP_METHOD(php_wxNotebook, SetPadding)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxNotebook::SetPadding\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxNotebook::SetPageImage(int page, int image)
+   Sets the image index for the given page. */
 PHP_METHOD(php_wxNotebook, SetPageImage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5112,6 +5269,10 @@ PHP_METHOD(php_wxNotebook, SetPageImage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxNotebook::SetPageImage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxNotebook::SetPageText(int page, string text)
+   Sets the text for the given page. */
 PHP_METHOD(php_wxNotebook, SetPageText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5211,6 +5372,10 @@ PHP_METHOD(php_wxNotebook, SetPageText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxNotebook::SetPageText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxNotebook::SetSelection(int page)
+   Sets the selection for the given page, returning the previous selection. */
 PHP_METHOD(php_wxNotebook, SetSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5308,6 +5473,10 @@ PHP_METHOD(php_wxNotebook, SetSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxNotebook::SetSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxNotebook::wxNotebook()
+   Constructs a notebook control. */
 PHP_METHOD(php_wxNotebook, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5533,6 +5702,8 @@ PHP_METHOD(php_wxNotebook, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxToolbook_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5540,6 +5711,8 @@ void php_wxToolbook_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto  wxToolbook::wxToolbook()
+   Constructs a choicebook control. */
 PHP_METHOD(php_wxToolbook, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5765,6 +5938,10 @@ PHP_METHOD(php_wxToolbook, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto wxToolBar wxToolbook::GetToolBar()
+   Returns the wxToolBarBase associated with the control. */
 PHP_METHOD(php_wxToolbook, GetToolBar)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5880,6 +6057,8 @@ PHP_METHOD(php_wxToolbook, GetToolBar)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxToolbook::GetToolBar\n");
 	}
 }
+/* }}} */
+
 void php_wxTreebook_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5887,6 +6066,8 @@ void php_wxTreebook_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto bool wxTreebook::AddPage(wxWindow &page, string text, bool bSelect, int imageId)
+   Adds a new page. */
 PHP_METHOD(php_wxTreebook, AddPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6030,6 +6211,10 @@ PHP_METHOD(php_wxTreebook, AddPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTreebook::AddPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTreebook::AddSubPage(wxWindow &page, string text, bool bSelect, int imageId)
+   Adds a new child-page to the last top-level page. */
 PHP_METHOD(php_wxTreebook, AddSubPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6173,6 +6358,10 @@ PHP_METHOD(php_wxTreebook, AddSubPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTreebook::AddSubPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTreebook::CollapseNode(int pageId)
+   Shortcut for ExpandNode( pageId, false ). */
 PHP_METHOD(php_wxTreebook, CollapseNode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6270,6 +6459,10 @@ PHP_METHOD(php_wxTreebook, CollapseNode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTreebook::CollapseNode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTreebook::Create(wxWindow &parent, int id, wxPoint pos, wxSize size, int style, string name)
+   Creates a treebook control. */
 PHP_METHOD(php_wxTreebook, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6480,6 +6673,10 @@ PHP_METHOD(php_wxTreebook, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTreebook::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTreebook::DeletePage(int pagePos)
+   Deletes the page at the specified position and all its children. */
 PHP_METHOD(php_wxTreebook, DeletePage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6577,6 +6774,10 @@ PHP_METHOD(php_wxTreebook, DeletePage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTreebook::DeletePage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTreebook::ExpandNode(int pageId, bool expand)
+   Expands (collapses) the pageId node. */
 PHP_METHOD(php_wxTreebook, ExpandNode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6686,6 +6887,10 @@ PHP_METHOD(php_wxTreebook, ExpandNode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTreebook::ExpandNode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxTreebook::GetPageParent(int page)
+   Returns the parent page of the given one or wxNOT_FOUND if this is a top-level page. */
 PHP_METHOD(php_wxTreebook, GetPageParent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6783,6 +6988,10 @@ PHP_METHOD(php_wxTreebook, GetPageParent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTreebook::GetPageParent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxTreebook::GetSelection()
+   Returns the currently selected page, or wxNOT_FOUND if none was selected. */
 PHP_METHOD(php_wxTreebook, GetSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6875,6 +7084,10 @@ PHP_METHOD(php_wxTreebook, GetSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTreebook::GetSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTreebook::InsertPage(int pagePos, wxWindow &page, string text, bool bSelect, int imageId)
+   Inserts a new page just before the page indicated by pagePos. */
 PHP_METHOD(php_wxTreebook, InsertPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7019,6 +7232,10 @@ PHP_METHOD(php_wxTreebook, InsertPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTreebook::InsertPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTreebook::InsertSubPage(int pagePos, wxWindow &page, string text, bool bSelect, int imageId)
+   Inserts a sub page under the specified page. */
 PHP_METHOD(php_wxTreebook, InsertSubPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7163,6 +7380,10 @@ PHP_METHOD(php_wxTreebook, InsertSubPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTreebook::InsertSubPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTreebook::IsNodeExpanded(int pageId)
+   Returns true if the page represented by pageId is expanded. */
 PHP_METHOD(php_wxTreebook, IsNodeExpanded)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7260,6 +7481,10 @@ PHP_METHOD(php_wxTreebook, IsNodeExpanded)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTreebook::IsNodeExpanded\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTreebook::wxTreebook()
+   Default constructor. */
 PHP_METHOD(php_wxTreebook, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7485,3 +7710,5 @@ PHP_METHOD(php_wxTreebook, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+

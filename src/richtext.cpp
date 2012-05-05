@@ -91,6 +91,8 @@ void php_wxTextAttr_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxTextAttr::wxTextAttr(wxTextAttr attr)
+   Constructors. */
 PHP_METHOD(php_wxTextAttr, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -354,6 +356,10 @@ PHP_METHOD(php_wxTextAttr, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetURL(string url)
+   Sets the URL for the content. */
 PHP_METHOD(php_wxTextAttr, SetURL)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -452,6 +458,10 @@ PHP_METHOD(php_wxTextAttr, SetURL)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetURL\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetTextEffects(int effects)
+   Sets the text effects, a bit list of styles. */
 PHP_METHOD(php_wxTextAttr, SetTextEffects)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -549,6 +559,10 @@ PHP_METHOD(php_wxTextAttr, SetTextEffects)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetTextEffects\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetTextEffectFlags(int flags)
+   Sets the text effect bits of interest. */
 PHP_METHOD(php_wxTextAttr, SetTextEffectFlags)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -646,6 +660,10 @@ PHP_METHOD(php_wxTextAttr, SetTextEffectFlags)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetTextEffectFlags\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetTextColour(wxColour colText)
+   Sets the text foreground colour. */
 PHP_METHOD(php_wxTextAttr, SetTextColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -761,6 +779,10 @@ PHP_METHOD(php_wxTextAttr, SetTextColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetTextColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetRightIndent(int indent)
+   Sets the right indent in tenths of a millimetre. */
 PHP_METHOD(php_wxTextAttr, SetRightIndent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -858,6 +880,10 @@ PHP_METHOD(php_wxTextAttr, SetRightIndent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetRightIndent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetParagraphStyleName(string name)
+   Sets the name of the paragraph style. */
 PHP_METHOD(php_wxTextAttr, SetParagraphStyleName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -956,6 +982,10 @@ PHP_METHOD(php_wxTextAttr, SetParagraphStyleName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetParagraphStyleName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetParagraphSpacingBefore(int spacing)
+   Sets the spacing before a paragraph, in tenths of a millimetre. */
 PHP_METHOD(php_wxTextAttr, SetParagraphSpacingBefore)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1053,6 +1083,10 @@ PHP_METHOD(php_wxTextAttr, SetParagraphSpacingBefore)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetParagraphSpacingBefore\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetParagraphSpacingAfter(int spacing)
+   Sets the spacing after a paragraph, in tenths of a millimetre. */
 PHP_METHOD(php_wxTextAttr, SetParagraphSpacingAfter)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1150,6 +1184,10 @@ PHP_METHOD(php_wxTextAttr, SetParagraphSpacingAfter)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetParagraphSpacingAfter\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetOutlineLevel(int level)
+   Specifies the outline level. */
 PHP_METHOD(php_wxTextAttr, SetOutlineLevel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1247,6 +1285,10 @@ PHP_METHOD(php_wxTextAttr, SetOutlineLevel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetOutlineLevel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetListStyleName(string name)
+   Sets the list style name. */
 PHP_METHOD(php_wxTextAttr, SetListStyleName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1345,6 +1387,10 @@ PHP_METHOD(php_wxTextAttr, SetListStyleName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetListStyleName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetLineSpacing(int spacing)
+   Sets the line spacing. */
 PHP_METHOD(php_wxTextAttr, SetLineSpacing)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1442,6 +1488,10 @@ PHP_METHOD(php_wxTextAttr, SetLineSpacing)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetLineSpacing\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetLeftIndent(int indent, int subIndent)
+   Sets the left indent and left subindent in tenths of a millimetre. */
 PHP_METHOD(php_wxTextAttr, SetLeftIndent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1551,6 +1601,10 @@ PHP_METHOD(php_wxTextAttr, SetLeftIndent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetLeftIndent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetFontWeight(wxFontWeight fontWeight)
+   Sets the font weight. */
 PHP_METHOD(php_wxTextAttr, SetFontWeight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1648,6 +1702,10 @@ PHP_METHOD(php_wxTextAttr, SetFontWeight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetFontWeight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetFontUnderlined(bool underlined)
+   Sets the font underlining. */
 PHP_METHOD(php_wxTextAttr, SetFontUnderlined)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1745,6 +1803,10 @@ PHP_METHOD(php_wxTextAttr, SetFontUnderlined)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetFontUnderlined\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetFontStyle(wxFontStyle fontStyle)
+   Sets the font style (normal, italic or slanted). */
 PHP_METHOD(php_wxTextAttr, SetFontStyle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1842,6 +1904,10 @@ PHP_METHOD(php_wxTextAttr, SetFontStyle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetFontStyle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetFontSize(int pointSize)
+   Sets the font size in points. */
 PHP_METHOD(php_wxTextAttr, SetFontSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1939,6 +2005,10 @@ PHP_METHOD(php_wxTextAttr, SetFontSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetFontSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::Apply(wxTextAttr style, wxTextAttr compareWith)
+   Applies the attributes in style to the original object, but not those attributes from style that are the same as those in compareWith (if passed). */
 PHP_METHOD(php_wxTextAttr, Apply)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2085,6 +2155,10 @@ PHP_METHOD(php_wxTextAttr, Apply)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::Apply\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxTextAttrAlignment wxTextAttr::GetAlignment()
+   Returns the alignment flags. */
 PHP_METHOD(php_wxTextAttr, GetAlignment)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2177,6 +2251,10 @@ PHP_METHOD(php_wxTextAttr, GetAlignment)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetAlignment\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxTextAttr::GetBackgroundColour()
+   Returns the background colour. */
 PHP_METHOD(php_wxTextAttr, GetBackgroundColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2289,6 +2367,10 @@ PHP_METHOD(php_wxTextAttr, GetBackgroundColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetBackgroundColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxTextAttr::GetBulletFont()
+   Returns a string containing the name of the font associated with the bullet symbol. */
 PHP_METHOD(php_wxTextAttr, GetBulletFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2387,6 +2469,10 @@ PHP_METHOD(php_wxTextAttr, GetBulletFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetBulletFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxTextAttr::GetBulletName()
+   Returns the standard bullet name, applicable if the bullet style is wxTEXT_ATTR_BULLET_STYLE_STANDARD. */
 PHP_METHOD(php_wxTextAttr, GetBulletName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2485,6 +2571,10 @@ PHP_METHOD(php_wxTextAttr, GetBulletName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetBulletName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxTextAttr::GetBulletNumber()
+   Returns the bullet number. */
 PHP_METHOD(php_wxTextAttr, GetBulletNumber)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2577,6 +2667,10 @@ PHP_METHOD(php_wxTextAttr, GetBulletNumber)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetBulletNumber\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxTextAttr::GetBulletStyle()
+   Returns the bullet style. */
 PHP_METHOD(php_wxTextAttr, GetBulletStyle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2669,6 +2763,10 @@ PHP_METHOD(php_wxTextAttr, GetBulletStyle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetBulletStyle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxTextAttr::GetBulletText()
+   Returns the bullet text, which could be a symbol, or (for example) cached outline text. */
 PHP_METHOD(php_wxTextAttr, GetBulletText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2767,6 +2865,10 @@ PHP_METHOD(php_wxTextAttr, GetBulletText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetBulletText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxTextAttr::GetCharacterStyleName()
+   Returns the name of the character style. */
 PHP_METHOD(php_wxTextAttr, GetCharacterStyleName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2865,6 +2967,10 @@ PHP_METHOD(php_wxTextAttr, GetCharacterStyleName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetCharacterStyleName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxTextAttr::GetFlags()
+   Returns flags indicating which attributes are applicable. */
 PHP_METHOD(php_wxTextAttr, GetFlags)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2957,6 +3063,10 @@ PHP_METHOD(php_wxTextAttr, GetFlags)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetFlags\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFont wxTextAttr::GetFont()
+   Creates and returns a font specified by the font attributes in the wxTextAttr object. */
 PHP_METHOD(php_wxTextAttr, GetFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3054,6 +3164,10 @@ PHP_METHOD(php_wxTextAttr, GetFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::GetFontAttributes(wxFont font, int flags)
+   Gets the font attributes from the given font, using only the attributes specified by flags. */
 PHP_METHOD(php_wxTextAttr, GetFontAttributes)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3182,6 +3296,10 @@ PHP_METHOD(php_wxTextAttr, GetFontAttributes)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetFontAttributes\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFontEncoding wxTextAttr::GetFontEncoding()
+   Returns the font encoding. */
 PHP_METHOD(php_wxTextAttr, GetFontEncoding)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3274,6 +3392,10 @@ PHP_METHOD(php_wxTextAttr, GetFontEncoding)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetFontEncoding\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxTextAttr::GetFontFaceName()
+   Returns the font face name. */
 PHP_METHOD(php_wxTextAttr, GetFontFaceName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3372,6 +3494,10 @@ PHP_METHOD(php_wxTextAttr, GetFontFaceName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetFontFaceName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFontFamily wxTextAttr::GetFontFamily()
+   Returns the font family. */
 PHP_METHOD(php_wxTextAttr, GetFontFamily)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3464,6 +3590,10 @@ PHP_METHOD(php_wxTextAttr, GetFontFamily)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetFontFamily\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxTextAttr::GetFontSize()
+   Returns the font size in points. */
 PHP_METHOD(php_wxTextAttr, GetFontSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3556,6 +3686,10 @@ PHP_METHOD(php_wxTextAttr, GetFontSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetFontSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFontStyle wxTextAttr::GetFontStyle()
+   Returns the font style. */
 PHP_METHOD(php_wxTextAttr, GetFontStyle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3648,6 +3782,10 @@ PHP_METHOD(php_wxTextAttr, GetFontStyle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetFontStyle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::GetFontUnderlined()
+   Returns true if the font is underlined. */
 PHP_METHOD(php_wxTextAttr, GetFontUnderlined)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3740,6 +3878,10 @@ PHP_METHOD(php_wxTextAttr, GetFontUnderlined)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetFontUnderlined\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFontWeight wxTextAttr::GetFontWeight()
+   Returns the font weight. */
 PHP_METHOD(php_wxTextAttr, GetFontWeight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3832,6 +3974,10 @@ PHP_METHOD(php_wxTextAttr, GetFontWeight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetFontWeight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxTextAttr::GetLeftIndent()
+   Returns the left indent in tenths of a millimetre. */
 PHP_METHOD(php_wxTextAttr, GetLeftIndent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3924,6 +4070,10 @@ PHP_METHOD(php_wxTextAttr, GetLeftIndent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetLeftIndent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxTextAttr::GetLeftSubIndent()
+   Returns the left sub-indent in tenths of a millimetre. */
 PHP_METHOD(php_wxTextAttr, GetLeftSubIndent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4016,6 +4166,10 @@ PHP_METHOD(php_wxTextAttr, GetLeftSubIndent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetLeftSubIndent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxTextAttr::GetLineSpacing()
+   Returns the line spacing value, one of wxTextAttrLineSpacing values. */
 PHP_METHOD(php_wxTextAttr, GetLineSpacing)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4108,6 +4262,10 @@ PHP_METHOD(php_wxTextAttr, GetLineSpacing)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetLineSpacing\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxTextAttr::GetListStyleName()
+   Returns the name of the list style. */
 PHP_METHOD(php_wxTextAttr, GetListStyleName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4206,6 +4364,10 @@ PHP_METHOD(php_wxTextAttr, GetListStyleName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetListStyleName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxTextAttr::GetOutlineLevel()
+   Returns the outline level. */
 PHP_METHOD(php_wxTextAttr, GetOutlineLevel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4298,6 +4460,10 @@ PHP_METHOD(php_wxTextAttr, GetOutlineLevel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetOutlineLevel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxTextAttr::GetParagraphSpacingAfter()
+   Returns the space in tenths of a millimeter after the paragraph. */
 PHP_METHOD(php_wxTextAttr, GetParagraphSpacingAfter)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4390,6 +4556,10 @@ PHP_METHOD(php_wxTextAttr, GetParagraphSpacingAfter)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetParagraphSpacingAfter\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxTextAttr::GetParagraphSpacingBefore()
+   Returns the space in tenths of a millimeter before the paragraph. */
 PHP_METHOD(php_wxTextAttr, GetParagraphSpacingBefore)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4482,6 +4652,10 @@ PHP_METHOD(php_wxTextAttr, GetParagraphSpacingBefore)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetParagraphSpacingBefore\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxTextAttr::GetParagraphStyleName()
+   Returns the name of the paragraph style. */
 PHP_METHOD(php_wxTextAttr, GetParagraphStyleName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4580,6 +4754,10 @@ PHP_METHOD(php_wxTextAttr, GetParagraphStyleName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetParagraphStyleName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxTextAttr::GetRightIndent()
+   Returns the right indent in tenths of a millimeter. */
 PHP_METHOD(php_wxTextAttr, GetRightIndent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4672,6 +4850,10 @@ PHP_METHOD(php_wxTextAttr, GetRightIndent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetRightIndent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxTextAttr::GetTextColour()
+   Returns the text foreground colour. */
 PHP_METHOD(php_wxTextAttr, GetTextColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4784,6 +4966,10 @@ PHP_METHOD(php_wxTextAttr, GetTextColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetTextColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxTextAttr::GetTextEffectFlags()
+   Returns the text effect bits of interest. */
 PHP_METHOD(php_wxTextAttr, GetTextEffectFlags)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4876,6 +5062,10 @@ PHP_METHOD(php_wxTextAttr, GetTextEffectFlags)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetTextEffectFlags\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxTextAttr::GetTextEffects()
+   Returns the text effects, a bit list of styles. */
 PHP_METHOD(php_wxTextAttr, GetTextEffects)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4968,6 +5158,10 @@ PHP_METHOD(php_wxTextAttr, GetTextEffects)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetTextEffects\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxTextAttr::GetURL()
+   Returns the URL for the content. */
 PHP_METHOD(php_wxTextAttr, GetURL)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5066,6 +5260,10 @@ PHP_METHOD(php_wxTextAttr, GetURL)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::GetURL\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::HasAlignment()
+   Returns true if the attribute object specifies alignment. */
 PHP_METHOD(php_wxTextAttr, HasAlignment)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5158,6 +5356,10 @@ PHP_METHOD(php_wxTextAttr, HasAlignment)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::HasAlignment\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::HasBackgroundColour()
+   Returns true if the attribute object specifies a background colour. */
 PHP_METHOD(php_wxTextAttr, HasBackgroundColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5250,6 +5452,10 @@ PHP_METHOD(php_wxTextAttr, HasBackgroundColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::HasBackgroundColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::HasBulletName()
+   Returns true if the attribute object specifies a standard bullet name. */
 PHP_METHOD(php_wxTextAttr, HasBulletName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5342,6 +5548,10 @@ PHP_METHOD(php_wxTextAttr, HasBulletName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::HasBulletName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::HasBulletNumber()
+   Returns true if the attribute object specifies a bullet number. */
 PHP_METHOD(php_wxTextAttr, HasBulletNumber)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5434,6 +5644,10 @@ PHP_METHOD(php_wxTextAttr, HasBulletNumber)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::HasBulletNumber\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::HasBulletStyle()
+   Returns true if the attribute object specifies a bullet style. */
 PHP_METHOD(php_wxTextAttr, HasBulletStyle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5526,6 +5740,10 @@ PHP_METHOD(php_wxTextAttr, HasBulletStyle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::HasBulletStyle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::HasBulletText()
+   Returns true if the attribute object specifies bullet text (usually specifying a symbol). */
 PHP_METHOD(php_wxTextAttr, HasBulletText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5618,6 +5836,10 @@ PHP_METHOD(php_wxTextAttr, HasBulletText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::HasBulletText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::HasCharacterStyleName()
+   Returns true if the attribute object specifies a character style name. */
 PHP_METHOD(php_wxTextAttr, HasCharacterStyleName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5710,6 +5932,10 @@ PHP_METHOD(php_wxTextAttr, HasCharacterStyleName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::HasCharacterStyleName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::HasFlag(int flag)
+   Returns true if the flag is present in the attribute object's flag bitlist. */
 PHP_METHOD(php_wxTextAttr, HasFlag)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5807,6 +6033,10 @@ PHP_METHOD(php_wxTextAttr, HasFlag)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::HasFlag\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::HasFont()
+   Returns true if the attribute object specifies any font attributes. */
 PHP_METHOD(php_wxTextAttr, HasFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5899,6 +6129,10 @@ PHP_METHOD(php_wxTextAttr, HasFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::HasFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::HasFontEncoding()
+   Returns true if the attribute object specifies an encoding. */
 PHP_METHOD(php_wxTextAttr, HasFontEncoding)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5991,6 +6225,10 @@ PHP_METHOD(php_wxTextAttr, HasFontEncoding)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::HasFontEncoding\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::HasFontFaceName()
+   Returns true if the attribute object specifies a font face name. */
 PHP_METHOD(php_wxTextAttr, HasFontFaceName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6083,6 +6321,10 @@ PHP_METHOD(php_wxTextAttr, HasFontFaceName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::HasFontFaceName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::HasFontFamily()
+   Returns true if the attribute object specifies a font family. */
 PHP_METHOD(php_wxTextAttr, HasFontFamily)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6175,6 +6417,10 @@ PHP_METHOD(php_wxTextAttr, HasFontFamily)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::HasFontFamily\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::HasFontItalic()
+   Returns true if the attribute object specifies italic style. */
 PHP_METHOD(php_wxTextAttr, HasFontItalic)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6267,6 +6513,10 @@ PHP_METHOD(php_wxTextAttr, HasFontItalic)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::HasFontItalic\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::HasFontSize()
+   Returns true if the attribute object specifies a font point size. */
 PHP_METHOD(php_wxTextAttr, HasFontSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6359,6 +6609,10 @@ PHP_METHOD(php_wxTextAttr, HasFontSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::HasFontSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::HasFontUnderlined()
+   Returns true if the attribute object specifies either underlining or no underlining. */
 PHP_METHOD(php_wxTextAttr, HasFontUnderlined)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6451,6 +6705,10 @@ PHP_METHOD(php_wxTextAttr, HasFontUnderlined)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::HasFontUnderlined\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::HasFontWeight()
+   Returns true if the attribute object specifies font weight (bold, light or normal). */
 PHP_METHOD(php_wxTextAttr, HasFontWeight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6543,6 +6801,10 @@ PHP_METHOD(php_wxTextAttr, HasFontWeight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::HasFontWeight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::HasLeftIndent()
+   Returns true if the attribute object specifies a left indent. */
 PHP_METHOD(php_wxTextAttr, HasLeftIndent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6635,6 +6897,10 @@ PHP_METHOD(php_wxTextAttr, HasLeftIndent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::HasLeftIndent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::HasLineSpacing()
+   Returns true if the attribute object specifies line spacing. */
 PHP_METHOD(php_wxTextAttr, HasLineSpacing)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6727,6 +6993,10 @@ PHP_METHOD(php_wxTextAttr, HasLineSpacing)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::HasLineSpacing\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::HasListStyleName()
+   Returns true if the attribute object specifies a list style name. */
 PHP_METHOD(php_wxTextAttr, HasListStyleName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6819,6 +7089,10 @@ PHP_METHOD(php_wxTextAttr, HasListStyleName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::HasListStyleName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::HasOutlineLevel()
+   Returns true if the attribute object specifies an outline level. */
 PHP_METHOD(php_wxTextAttr, HasOutlineLevel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6911,6 +7185,10 @@ PHP_METHOD(php_wxTextAttr, HasOutlineLevel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::HasOutlineLevel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::HasPageBreak()
+   Returns true if the attribute object specifies a page break before this paragraph. */
 PHP_METHOD(php_wxTextAttr, HasPageBreak)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7003,6 +7281,10 @@ PHP_METHOD(php_wxTextAttr, HasPageBreak)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::HasPageBreak\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::HasParagraphSpacingAfter()
+   Returns true if the attribute object specifies spacing after a paragraph. */
 PHP_METHOD(php_wxTextAttr, HasParagraphSpacingAfter)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7095,6 +7377,10 @@ PHP_METHOD(php_wxTextAttr, HasParagraphSpacingAfter)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::HasParagraphSpacingAfter\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::HasParagraphSpacingBefore()
+   Returns true if the attribute object specifies spacing before a paragraph. */
 PHP_METHOD(php_wxTextAttr, HasParagraphSpacingBefore)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7187,6 +7473,10 @@ PHP_METHOD(php_wxTextAttr, HasParagraphSpacingBefore)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::HasParagraphSpacingBefore\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::HasParagraphStyleName()
+   Returns true if the attribute object specifies a paragraph style name. */
 PHP_METHOD(php_wxTextAttr, HasParagraphStyleName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7279,6 +7569,10 @@ PHP_METHOD(php_wxTextAttr, HasParagraphStyleName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::HasParagraphStyleName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::HasRightIndent()
+   Returns true if the attribute object specifies a right indent. */
 PHP_METHOD(php_wxTextAttr, HasRightIndent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7371,6 +7665,10 @@ PHP_METHOD(php_wxTextAttr, HasRightIndent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::HasRightIndent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::HasTabs()
+   Returns true if the attribute object specifies tab stops. */
 PHP_METHOD(php_wxTextAttr, HasTabs)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7463,6 +7761,10 @@ PHP_METHOD(php_wxTextAttr, HasTabs)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::HasTabs\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::HasTextColour()
+   Returns true if the attribute object specifies a text foreground colour. */
 PHP_METHOD(php_wxTextAttr, HasTextColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7555,6 +7857,10 @@ PHP_METHOD(php_wxTextAttr, HasTextColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::HasTextColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::HasTextEffects()
+   Returns true if the attribute object specifies text effects. */
 PHP_METHOD(php_wxTextAttr, HasTextEffects)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7647,6 +7953,10 @@ PHP_METHOD(php_wxTextAttr, HasTextEffects)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::HasTextEffects\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::HasURL()
+   Returns true if the attribute object specifies a URL. */
 PHP_METHOD(php_wxTextAttr, HasURL)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7739,6 +8049,10 @@ PHP_METHOD(php_wxTextAttr, HasURL)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::HasURL\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::IsCharacterStyle()
+   Returns true if the object represents a character style, that is, the flags specify a font or a text background or foreground colour. */
 PHP_METHOD(php_wxTextAttr, IsCharacterStyle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7831,6 +8145,10 @@ PHP_METHOD(php_wxTextAttr, IsCharacterStyle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::IsCharacterStyle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::IsDefault()
+   Returns false if we have any attributes set, true otherwise. */
 PHP_METHOD(php_wxTextAttr, IsDefault)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7923,6 +8241,10 @@ PHP_METHOD(php_wxTextAttr, IsDefault)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::IsDefault\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextAttr::IsParagraphStyle()
+   Returns true if the object represents a paragraph style, that is, the flags specify alignment, indentation, tabs, paragraph spacing, or bullet style. */
 PHP_METHOD(php_wxTextAttr, IsParagraphStyle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8015,6 +8337,10 @@ PHP_METHOD(php_wxTextAttr, IsParagraphStyle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::IsParagraphStyle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::Merge(wxTextAttr overlay)
+   Copies all defined/valid properties from overlay to current object. */
 PHP_METHOD(php_wxTextAttr, Merge)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8212,6 +8538,10 @@ PHP_METHOD(php_wxTextAttr, Merge)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::Merge\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetAlignment(wxTextAttrAlignment alignment)
+   Sets the paragraph alignment. */
 PHP_METHOD(php_wxTextAttr, SetAlignment)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8309,6 +8639,10 @@ PHP_METHOD(php_wxTextAttr, SetAlignment)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetAlignment\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetBackgroundColour(wxColour colBack)
+   Sets the background colour. */
 PHP_METHOD(php_wxTextAttr, SetBackgroundColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8424,6 +8758,10 @@ PHP_METHOD(php_wxTextAttr, SetBackgroundColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetBackgroundColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetBulletFont(string font)
+   Sets the name of the font associated with the bullet symbol. */
 PHP_METHOD(php_wxTextAttr, SetBulletFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8522,6 +8860,10 @@ PHP_METHOD(php_wxTextAttr, SetBulletFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetBulletFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetBulletName(string name)
+   Sets the standard bullet name, applicable if the bullet style is wxTEXT_ATTR_BULLET_STYLE_STANDARD. */
 PHP_METHOD(php_wxTextAttr, SetBulletName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8620,6 +8962,10 @@ PHP_METHOD(php_wxTextAttr, SetBulletName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetBulletName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetBulletNumber(int n)
+   Sets the bullet number. */
 PHP_METHOD(php_wxTextAttr, SetBulletNumber)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8717,6 +9063,10 @@ PHP_METHOD(php_wxTextAttr, SetBulletNumber)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetBulletNumber\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetBulletStyle(int style)
+   Sets the bullet style. */
 PHP_METHOD(php_wxTextAttr, SetBulletStyle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8814,6 +9164,10 @@ PHP_METHOD(php_wxTextAttr, SetBulletStyle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetBulletStyle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetBulletText(string text)
+   Sets the bullet text, which could be a symbol, or (for example) cached outline text. */
 PHP_METHOD(php_wxTextAttr, SetBulletText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8912,6 +9266,10 @@ PHP_METHOD(php_wxTextAttr, SetBulletText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetBulletText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetCharacterStyleName(string name)
+   Sets the character style name. */
 PHP_METHOD(php_wxTextAttr, SetCharacterStyleName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9010,6 +9368,10 @@ PHP_METHOD(php_wxTextAttr, SetCharacterStyleName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetCharacterStyleName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetFlags(int flags)
+   Sets the flags determining which styles are being specified. */
 PHP_METHOD(php_wxTextAttr, SetFlags)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9107,6 +9469,10 @@ PHP_METHOD(php_wxTextAttr, SetFlags)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetFlags\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetFont(wxFont font, int flags)
+   Sets the attributes for the given font. */
 PHP_METHOD(php_wxTextAttr, SetFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9235,6 +9601,10 @@ PHP_METHOD(php_wxTextAttr, SetFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetFontEncoding(wxFontEncoding encoding)
+   Sets the font encoding. */
 PHP_METHOD(php_wxTextAttr, SetFontEncoding)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9332,6 +9702,10 @@ PHP_METHOD(php_wxTextAttr, SetFontEncoding)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetFontEncoding\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetFontFaceName(string faceName)
+   Sets the font face name. */
 PHP_METHOD(php_wxTextAttr, SetFontFaceName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9430,6 +9804,10 @@ PHP_METHOD(php_wxTextAttr, SetFontFaceName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetFontFaceName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetFontFamily(wxFontFamily family)
+   Sets the font family. */
 PHP_METHOD(php_wxTextAttr, SetFontFamily)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9527,6 +9905,10 @@ PHP_METHOD(php_wxTextAttr, SetFontFamily)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetFontFamily\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextAttr::SetPageBreak(bool pageBreak)
+   Specifies a page break before this paragraph. */
 PHP_METHOD(php_wxTextAttr, SetPageBreak)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9635,3 +10017,5 @@ PHP_METHOD(php_wxTextAttr, SetPageBreak)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextAttr::SetPageBreak\n");
 	}
 }
+/* }}} */
+

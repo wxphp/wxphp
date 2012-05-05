@@ -91,6 +91,8 @@ void php_wxHtmlHelpController_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 		#endif
 	}
 }
+/* {{{ proto bool wxHtmlHelpController::AddBook(wxFileName bookFile, bool showWaitMsg)
+   Adds a book (i.e. */
 PHP_METHOD(php_wxHtmlHelpController, AddBook)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -269,6 +271,10 @@ PHP_METHOD(php_wxHtmlHelpController, AddBook)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpController::AddBook\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxHtmlHelpDialog wxHtmlHelpController::CreateHelpDialog(wxHtmlHelpData &data)
+   This protected virtual method may be overridden so that when specifying the wxHF_DIALOG style, the controller uses a different dialog. */
 wxHtmlHelpDialog* wxHtmlHelpController_php::CreateHelpDialog(wxHtmlHelpData* data)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -332,6 +338,10 @@ wxHtmlHelpDialog* wxHtmlHelpController_php::CreateHelpDialog(wxHtmlHelpData* dat
 	//Call original method
 	return wxHtmlHelpController::CreateHelpDialog(data);
 }
+/* }}} */
+
+/* {{{ proto wxHtmlHelpFrame wxHtmlHelpController::CreateHelpFrame(wxHtmlHelpData &data)
+   This protected virtual method may be overridden so that the controller uses a different frame. */
 wxHtmlHelpFrame* wxHtmlHelpController_php::CreateHelpFrame(wxHtmlHelpData* data)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -395,6 +405,10 @@ wxHtmlHelpFrame* wxHtmlHelpController_php::CreateHelpFrame(wxHtmlHelpData* data)
 	//Call original method
 	return wxHtmlHelpController::CreateHelpFrame(data);
 }
+/* }}} */
+
+/* {{{ proto bool wxHtmlHelpController::Display(string x)
+   Displays page x. */
 PHP_METHOD(php_wxHtmlHelpController, Display)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -530,6 +544,10 @@ PHP_METHOD(php_wxHtmlHelpController, Display)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpController::Display\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxHtmlHelpController::DisplayContents()
+   Displays help window and focuses contents panel. */
 PHP_METHOD(php_wxHtmlHelpController, DisplayContents)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -622,6 +640,10 @@ PHP_METHOD(php_wxHtmlHelpController, DisplayContents)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpController::DisplayContents\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxHtmlHelpController::DisplayIndex()
+   Displays help window and focuses index panel. */
 PHP_METHOD(php_wxHtmlHelpController, DisplayIndex)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -714,6 +736,10 @@ PHP_METHOD(php_wxHtmlHelpController, DisplayIndex)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpController::DisplayIndex\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxHtmlHelpController::KeywordSearch(string keyword, wxHelpSearchMode mode)
+   Displays the help window, focuses search panel and starts searching. */
 PHP_METHOD(php_wxHtmlHelpController, KeywordSearch)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -824,6 +850,10 @@ PHP_METHOD(php_wxHtmlHelpController, KeywordSearch)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpController::KeywordSearch\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlHelpController::ReadCustomization(wxConfigBase &cfg, string path)
+   Reads the controller's setting (position of window, etc.) */
 PHP_METHOD(php_wxHtmlHelpController, ReadCustomization)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -953,6 +983,10 @@ PHP_METHOD(php_wxHtmlHelpController, ReadCustomization)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpController::ReadCustomization\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlHelpController::SetShouldPreventAppExit(bool enable)
+   Sets whether the help frame should prevent application from exiting if it's the only remaining top level window. */
 PHP_METHOD(php_wxHtmlHelpController, SetShouldPreventAppExit)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1050,6 +1084,10 @@ PHP_METHOD(php_wxHtmlHelpController, SetShouldPreventAppExit)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpController::SetShouldPreventAppExit\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlHelpController::SetTempDir(string path)
+   Sets the path for storing temporary files - cached binary versions of index and contents files. */
 PHP_METHOD(php_wxHtmlHelpController, SetTempDir)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1148,6 +1186,10 @@ PHP_METHOD(php_wxHtmlHelpController, SetTempDir)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpController::SetTempDir\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlHelpController::SetTitleFormat(string format)
+   Sets format of title of the frame. */
 PHP_METHOD(php_wxHtmlHelpController, SetTitleFormat)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1246,6 +1288,10 @@ PHP_METHOD(php_wxHtmlHelpController, SetTitleFormat)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpController::SetTitleFormat\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlHelpController::UseConfig(wxConfigBase &config, string rootpath)
+   Associates the config object with the controller. */
 PHP_METHOD(php_wxHtmlHelpController, UseConfig)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1375,6 +1421,10 @@ PHP_METHOD(php_wxHtmlHelpController, UseConfig)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpController::UseConfig\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlHelpController::WriteCustomization(wxConfigBase &cfg, string path)
+   Stores controllers setting (position of window etc.) */
 PHP_METHOD(php_wxHtmlHelpController, WriteCustomization)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1504,6 +1554,10 @@ PHP_METHOD(php_wxHtmlHelpController, WriteCustomization)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpController::WriteCustomization\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlHelpController::wxHtmlHelpController(int style, wxWindow &parentWindow)
+   Constructor. */
 PHP_METHOD(php_wxHtmlHelpController, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1628,6 +1682,8 @@ PHP_METHOD(php_wxHtmlHelpController, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxHtmlModalHelp_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1668,6 +1724,8 @@ void php_wxHtmlModalHelp_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+/* {{{ proto  wxHtmlModalHelp::wxHtmlModalHelp(wxWindow &parent, string helpFile, string topic, int style)
+   The ctor. */
 PHP_METHOD(php_wxHtmlModalHelp, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1798,6 +1856,8 @@ PHP_METHOD(php_wxHtmlModalHelp, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxHtmlHelpData_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1838,6 +1898,8 @@ void php_wxHtmlHelpData_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 		#endif
 	}
 }
+/* {{{ proto bool wxHtmlHelpData::AddBook(string book_url)
+   Adds new book. */
 PHP_METHOD(php_wxHtmlHelpData, AddBook)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1936,6 +1998,10 @@ PHP_METHOD(php_wxHtmlHelpData, AddBook)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpData::AddBook\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxHtmlHelpData::FindPageById(int id)
+   Returns page's URL based on integer ID stored in project. */
 PHP_METHOD(php_wxHtmlHelpData, FindPageById)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2039,6 +2105,10 @@ PHP_METHOD(php_wxHtmlHelpData, FindPageById)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpData::FindPageById\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxHtmlHelpData::FindPageByName(string page)
+   Returns page's URL based on its (file)name. */
 PHP_METHOD(php_wxHtmlHelpData, FindPageByName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2143,6 +2213,10 @@ PHP_METHOD(php_wxHtmlHelpData, FindPageByName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpData::FindPageByName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlHelpData::SetTempDir(string path)
+   Sets the temporary directory where binary cached versions of MS HTML Workshop files will be stored. */
 PHP_METHOD(php_wxHtmlHelpData, SetTempDir)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2241,6 +2315,10 @@ PHP_METHOD(php_wxHtmlHelpData, SetTempDir)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpData::SetTempDir\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlHelpData::wxHtmlHelpData()
+   Constructor. */
 PHP_METHOD(php_wxHtmlHelpData, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2321,10 +2399,14 @@ PHP_METHOD(php_wxHtmlHelpData, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxHtmlHelpDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxHtmlHelpDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
 }
+/* {{{ proto  wxHtmlHelpDialog::AddToolbarButtons(wxToolBar &toolBar, int style)
+   You may override this virtual method to add more buttons to the help window's toolbar. */
 PHP_METHOD(php_wxHtmlHelpDialog, AddToolbarButtons)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2441,6 +2523,10 @@ PHP_METHOD(php_wxHtmlHelpDialog, AddToolbarButtons)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpDialog::AddToolbarButtons\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxHtmlHelpDialog::Create(wxWindow &parent, int id, string title, int style)
+   Creates the dialog. */
 PHP_METHOD(php_wxHtmlHelpDialog, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2584,6 +2670,10 @@ PHP_METHOD(php_wxHtmlHelpDialog, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpDialog::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxHtmlHelpController wxHtmlHelpDialog::GetController()
+   Returns the help controller associated with the dialog. */
 PHP_METHOD(php_wxHtmlHelpDialog, GetController)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2699,6 +2789,10 @@ PHP_METHOD(php_wxHtmlHelpDialog, GetController)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpDialog::GetController\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlHelpDialog::SetController(wxHtmlHelpController &controller)
+   Sets the help controller associated with the dialog. */
 PHP_METHOD(php_wxHtmlHelpDialog, SetController)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2814,6 +2908,10 @@ PHP_METHOD(php_wxHtmlHelpDialog, SetController)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpDialog::SetController\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlHelpDialog::SetTitleFormat(string format)
+   Sets the dialog's title format. */
 PHP_METHOD(php_wxHtmlHelpDialog, SetTitleFormat)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2912,6 +3010,9 @@ PHP_METHOD(php_wxHtmlHelpDialog, SetTitleFormat)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpDialog::SetTitleFormat\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlHelpDialog::wxHtmlHelpDialog(wxHtmlHelpData &data) */
 PHP_METHOD(php_wxHtmlHelpDialog, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3135,10 +3236,14 @@ PHP_METHOD(php_wxHtmlHelpDialog, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxHtmlHelpFrame_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxHtmlHelpFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");
 }
+/* {{{ proto  wxHtmlHelpFrame::AddToolbarButtons(wxToolBar &toolBar, int style)
+   You may override this virtual method to add more buttons to the help window's toolbar. */
 PHP_METHOD(php_wxHtmlHelpFrame, AddToolbarButtons)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3255,6 +3360,10 @@ PHP_METHOD(php_wxHtmlHelpFrame, AddToolbarButtons)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpFrame::AddToolbarButtons\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxHtmlHelpFrame::Create(wxWindow &parent, int id, string title, int style, wxConfigBase &config, string rootpath)
+   Creates the frame. */
 PHP_METHOD(php_wxHtmlHelpFrame, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3444,6 +3553,10 @@ PHP_METHOD(php_wxHtmlHelpFrame, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpFrame::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxHtmlHelpController wxHtmlHelpFrame::GetController()
+   Returns the help controller associated with the frame. */
 PHP_METHOD(php_wxHtmlHelpFrame, GetController)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3559,6 +3672,10 @@ PHP_METHOD(php_wxHtmlHelpFrame, GetController)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpFrame::GetController\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlHelpFrame::SetController(wxHtmlHelpController &controller)
+   Sets the help controller associated with the frame. */
 PHP_METHOD(php_wxHtmlHelpFrame, SetController)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3674,6 +3791,10 @@ PHP_METHOD(php_wxHtmlHelpFrame, SetController)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpFrame::SetController\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlHelpFrame::SetTitleFormat(string format)
+   Sets the frame's title format. */
 PHP_METHOD(php_wxHtmlHelpFrame, SetTitleFormat)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3772,6 +3893,9 @@ PHP_METHOD(php_wxHtmlHelpFrame, SetTitleFormat)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpFrame::SetTitleFormat\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlHelpFrame::wxHtmlHelpFrame(wxHtmlHelpData &data) */
 PHP_METHOD(php_wxHtmlHelpFrame, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4041,6 +4165,8 @@ PHP_METHOD(php_wxHtmlHelpFrame, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxHtmlHelpWindow_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4082,6 +4208,8 @@ void php_wxHtmlHelpWindow_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		#endif
 	}
 }
+/* {{{ proto  wxHtmlHelpWindow::AddToolbarButtons(wxToolBar &toolBar, int style)
+   You may override this virtual method to add more buttons to the help window's toolbar. */
 void wxHtmlHelpWindow_php::AddToolbarButtons(wxToolBar* toolBar, int style)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4141,6 +4269,10 @@ void wxHtmlHelpWindow_php::AddToolbarButtons(wxToolBar* toolBar, int style)
 	//Call original method
 	wxHtmlHelpWindow::AddToolbarButtons(toolBar, style);
 }
+/* }}} */
+
+/* {{{ proto bool wxHtmlHelpWindow::Create(wxWindow &parent, int id, wxPoint pos, wxSize size, int style, int helpStyle)
+   Creates the help window. */
 PHP_METHOD(php_wxHtmlHelpWindow, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4350,6 +4482,10 @@ PHP_METHOD(php_wxHtmlHelpWindow, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpWindow::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxHtmlHelpWindow::Display(string x)
+   Displays page x. */
 PHP_METHOD(php_wxHtmlHelpWindow, Display)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4485,6 +4621,10 @@ PHP_METHOD(php_wxHtmlHelpWindow, Display)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpWindow::Display\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxHtmlHelpWindow::DisplayIndex()
+   Displays index panel. */
 PHP_METHOD(php_wxHtmlHelpWindow, DisplayIndex)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4577,6 +4717,10 @@ PHP_METHOD(php_wxHtmlHelpWindow, DisplayIndex)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpWindow::DisplayIndex\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxHtmlHelpData wxHtmlHelpWindow::GetData()
+   Returns the wxHtmlHelpData object, which is usually a pointer to the controller's data. */
 PHP_METHOD(php_wxHtmlHelpWindow, GetData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4692,6 +4836,10 @@ PHP_METHOD(php_wxHtmlHelpWindow, GetData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpWindow::GetData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxHtmlHelpWindow::DisplayContents()
+   Displays contents panel. */
 PHP_METHOD(php_wxHtmlHelpWindow, DisplayContents)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4784,6 +4932,10 @@ PHP_METHOD(php_wxHtmlHelpWindow, DisplayContents)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpWindow::DisplayContents\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxHtmlHelpWindow::KeywordSearch(string keyword, wxHelpSearchMode mode)
+   Search for given keyword. */
 PHP_METHOD(php_wxHtmlHelpWindow, KeywordSearch)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4894,6 +5046,10 @@ PHP_METHOD(php_wxHtmlHelpWindow, KeywordSearch)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpWindow::KeywordSearch\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlHelpWindow::ReadCustomization(wxConfigBase &cfg, string path)
+   Reads the user's settings for this window. */
 PHP_METHOD(php_wxHtmlHelpWindow, ReadCustomization)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5023,6 +5179,10 @@ PHP_METHOD(php_wxHtmlHelpWindow, ReadCustomization)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpWindow::ReadCustomization\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlHelpWindow::RefreshLists()
+   Refresh all panels. */
 PHP_METHOD(php_wxHtmlHelpWindow, RefreshLists)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5115,6 +5275,10 @@ PHP_METHOD(php_wxHtmlHelpWindow, RefreshLists)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpWindow::RefreshLists\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlHelpWindow::UseConfig(wxConfigBase &config, string rootpath)
+   Associates a wxConfig object with the help window. */
 PHP_METHOD(php_wxHtmlHelpWindow, UseConfig)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5244,6 +5408,10 @@ PHP_METHOD(php_wxHtmlHelpWindow, UseConfig)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpWindow::UseConfig\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlHelpWindow::WriteCustomization(wxConfigBase &cfg, string path)
+   Saves the user's settings for this window. */
 PHP_METHOD(php_wxHtmlHelpWindow, WriteCustomization)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5373,6 +5541,9 @@ PHP_METHOD(php_wxHtmlHelpWindow, WriteCustomization)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlHelpWindow::WriteCustomization\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlHelpWindow::wxHtmlHelpWindow(wxHtmlHelpData &data) */
 PHP_METHOD(php_wxHtmlHelpWindow, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5662,6 +5833,8 @@ PHP_METHOD(php_wxHtmlHelpWindow, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxHtmlRenderingStyle_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5702,6 +5875,8 @@ void php_wxHtmlRenderingStyle_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 		#endif
 	}
 }
+/* {{{ proto wxColour wxHtmlRenderingStyle::GetSelectedTextBgColour(wxColour clr)
+   Returns the colour to use for the selected text's background. */
 wxColour wxHtmlRenderingStyle_php::GetSelectedTextBgColour(const wxColour& clr)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5756,6 +5931,10 @@ wxColour wxHtmlRenderingStyle_php::GetSelectedTextBgColour(const wxColour& clr)
 		return *(wxColour*) return_object;
 	
 }
+/* }}} */
+
+/* {{{ proto wxColour wxHtmlRenderingStyle::GetSelectedTextColour(wxColour clr)
+   Returns the colour to use for the selected text. */
 wxColour wxHtmlRenderingStyle_php::GetSelectedTextColour(const wxColour& clr)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5810,6 +5989,8 @@ wxColour wxHtmlRenderingStyle_php::GetSelectedTextColour(const wxColour& clr)
 		return *(wxColour*) return_object;
 	
 }
+/* }}} */
+
 void php_wxHtmlRenderingInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5850,6 +6031,8 @@ void php_wxHtmlRenderingInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRM
 		#endif
 	}
 }
+/* {{{ proto wxHtmlRenderingStyle wxHtmlRenderingInfo::GetStyle()
+   Accessors. */
 PHP_METHOD(php_wxHtmlRenderingInfo, GetStyle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5962,6 +6145,10 @@ PHP_METHOD(php_wxHtmlRenderingInfo, GetStyle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlRenderingInfo::GetStyle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlRenderingInfo::SetStyle(wxHtmlRenderingStyle &style)
+   Accessors. */
 PHP_METHOD(php_wxHtmlRenderingInfo, SetStyle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6077,6 +6264,10 @@ PHP_METHOD(php_wxHtmlRenderingInfo, SetStyle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlRenderingInfo::SetStyle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlRenderingInfo::wxHtmlRenderingInfo()
+   Default ctor. */
 PHP_METHOD(php_wxHtmlRenderingInfo, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6157,6 +6348,8 @@ PHP_METHOD(php_wxHtmlRenderingInfo, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxHtmlCell_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6197,6 +6390,8 @@ void php_wxHtmlCell_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto int wxHtmlCell::GetDescent()
+   Returns descent value of the cell (m_Descent member). */
 PHP_METHOD(php_wxHtmlCell, GetDescent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6301,6 +6496,10 @@ PHP_METHOD(php_wxHtmlCell, GetDescent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlCell::GetDescent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxHtmlCell wxHtmlCell::GetFirstChild()
+   Returns pointer to the first cell in the list. */
 PHP_METHOD(php_wxHtmlCell, GetFirstChild)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6428,6 +6627,10 @@ PHP_METHOD(php_wxHtmlCell, GetFirstChild)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlCell::GetFirstChild\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxHtmlCell::GetHeight()
+   Returns height of the cell (m_Height member). */
 PHP_METHOD(php_wxHtmlCell, GetHeight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6532,6 +6735,10 @@ PHP_METHOD(php_wxHtmlCell, GetHeight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlCell::GetHeight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxHtmlCell::GetId()
+   Returns unique cell identifier if there is any, the empty string otherwise. */
 PHP_METHOD(php_wxHtmlCell, GetId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6642,6 +6849,10 @@ PHP_METHOD(php_wxHtmlCell, GetId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlCell::GetId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxHtmlLinkInfo wxHtmlCell::GetLink(int x, int y)
+   Returns hypertext link if associated with this cell or NULL otherwise. */
 PHP_METHOD(php_wxHtmlCell, GetLink)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6843,6 +7054,10 @@ PHP_METHOD(php_wxHtmlCell, GetLink)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlCell::GetLink\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxHtmlCell wxHtmlCell::GetNext()
+   Returns pointer to the next cell in list (see htmlcell.h if you're interested in details). */
 PHP_METHOD(php_wxHtmlCell, GetNext)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6970,6 +7185,10 @@ PHP_METHOD(php_wxHtmlCell, GetNext)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlCell::GetNext\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxHtmlContainerCell wxHtmlCell::GetParent()
+   Returns pointer to parent container. */
 PHP_METHOD(php_wxHtmlCell, GetParent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7097,6 +7316,10 @@ PHP_METHOD(php_wxHtmlCell, GetParent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlCell::GetParent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxHtmlCell::GetPosX()
+   Returns X position within parent (the value is relative to parent's upper left corner). */
 PHP_METHOD(php_wxHtmlCell, GetPosX)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7201,6 +7424,10 @@ PHP_METHOD(php_wxHtmlCell, GetPosX)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlCell::GetPosX\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxHtmlCell::GetPosY()
+   Returns Y position within parent (the value is relative to parent's upper left corner). */
 PHP_METHOD(php_wxHtmlCell, GetPosY)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7305,6 +7532,10 @@ PHP_METHOD(php_wxHtmlCell, GetPosY)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlCell::GetPosY\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxHtmlCell::GetWidth()
+   Returns width of the cell (m_Width member). */
 PHP_METHOD(php_wxHtmlCell, GetWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7409,6 +7640,10 @@ PHP_METHOD(php_wxHtmlCell, GetWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlCell::GetWidth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlCell::Layout(int w)
+   Layouts the cell. */
 PHP_METHOD(php_wxHtmlCell, Layout)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7518,6 +7753,10 @@ PHP_METHOD(php_wxHtmlCell, Layout)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlCell::Layout\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlCell::SetId(string id)
+   Sets unique cell identifier. */
 PHP_METHOD(php_wxHtmlCell, SetId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7628,6 +7867,10 @@ PHP_METHOD(php_wxHtmlCell, SetId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlCell::SetId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlCell::SetLink(wxHtmlLinkInfo link)
+   Sets the hypertext link associated with this cell. */
 PHP_METHOD(php_wxHtmlCell, SetLink)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7755,6 +7998,10 @@ PHP_METHOD(php_wxHtmlCell, SetLink)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlCell::SetLink\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlCell::SetNext(wxHtmlCell &cell)
+   Sets the next cell in the list. */
 PHP_METHOD(php_wxHtmlCell, SetNext)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7882,6 +8129,10 @@ PHP_METHOD(php_wxHtmlCell, SetNext)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlCell::SetNext\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlCell::SetParent(wxHtmlContainerCell &p)
+   Sets parent container of this cell. */
 PHP_METHOD(php_wxHtmlCell, SetParent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8009,6 +8260,10 @@ PHP_METHOD(php_wxHtmlCell, SetParent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlCell::SetParent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlCell::SetPos(int x, int y)
+   Sets the cell's position within parent container. */
 PHP_METHOD(php_wxHtmlCell, SetPos)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8119,6 +8374,10 @@ PHP_METHOD(php_wxHtmlCell, SetPos)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlCell::SetPos\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlCell::wxHtmlCell()
+   Constructor. */
 PHP_METHOD(php_wxHtmlCell, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8199,6 +8458,10 @@ PHP_METHOD(php_wxHtmlCell, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto wxHtmlCell wxHtmlCell::Find(int condition, void param)
+   Returns pointer to itself if this cell matches condition (or if any of the cells following in the list matches), NULL otherwise. */
 PHP_METHOD(php_wxHtmlCell, Find)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8333,6 +8596,8 @@ PHP_METHOD(php_wxHtmlCell, Find)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlCell::Find\n");
 	}
 }
+/* }}} */
+
 void php_wxHtmlContainerCell_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8373,6 +8638,8 @@ void php_wxHtmlContainerCell_destruction_handler(zend_rsrc_list_entry *rsrc TSRM
 		#endif
 	}
 }
+/* {{{ proto  wxHtmlContainerCell::wxHtmlContainerCell(wxHtmlContainerCell &parent)
+   Constructor. */
 PHP_METHOD(php_wxHtmlContainerCell, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8476,6 +8743,10 @@ PHP_METHOD(php_wxHtmlContainerCell, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlContainerCell::SetWidthFloat(wxHtmlTag tag, float pixel_scale)
+   Sets floating width adjustment. */
 PHP_METHOD(php_wxHtmlContainerCell, SetWidthFloat)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8642,6 +8913,10 @@ PHP_METHOD(php_wxHtmlContainerCell, SetWidthFloat)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlContainerCell::SetWidthFloat\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlContainerCell::SetMinHeight(int h, int align)
+   Sets minimal height of the container. */
 PHP_METHOD(php_wxHtmlContainerCell, SetMinHeight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8751,6 +9026,10 @@ PHP_METHOD(php_wxHtmlContainerCell, SetMinHeight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlContainerCell::SetMinHeight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlContainerCell::SetIndent(int i, int what, int units)
+   Sets the indentation (free space between borders of container and subcells). */
 PHP_METHOD(php_wxHtmlContainerCell, SetIndent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8861,6 +9140,10 @@ PHP_METHOD(php_wxHtmlContainerCell, SetIndent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlContainerCell::SetIndent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlContainerCell::SetBorder(wxColour clr1, wxColour clr2, int border)
+   Sets the border (frame) colours. */
 PHP_METHOD(php_wxHtmlContainerCell, SetBorder)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9009,6 +9292,10 @@ PHP_METHOD(php_wxHtmlContainerCell, SetBorder)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlContainerCell::SetBorder\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlContainerCell::SetBackgroundColour(wxColour clr)
+   Sets the background colour for this container. */
 PHP_METHOD(php_wxHtmlContainerCell, SetBackgroundColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9124,6 +9411,10 @@ PHP_METHOD(php_wxHtmlContainerCell, SetBackgroundColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlContainerCell::SetBackgroundColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlContainerCell::SetAlignVer(int al)
+   Sets the container's vertical alignment. */
 PHP_METHOD(php_wxHtmlContainerCell, SetAlignVer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9221,6 +9512,10 @@ PHP_METHOD(php_wxHtmlContainerCell, SetAlignVer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlContainerCell::SetAlignVer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlContainerCell::SetAlignHor(int al)
+   Sets the container's horizontal alignment. */
 PHP_METHOD(php_wxHtmlContainerCell, SetAlignHor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9318,6 +9613,10 @@ PHP_METHOD(php_wxHtmlContainerCell, SetAlignHor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlContainerCell::SetAlignHor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlContainerCell::SetAlign(wxHtmlTag tag)
+   Sets the container's alignment (both horizontal and vertical) according to the values stored in tag. */
 PHP_METHOD(php_wxHtmlContainerCell, SetAlign)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9433,6 +9732,10 @@ PHP_METHOD(php_wxHtmlContainerCell, SetAlign)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlContainerCell::SetAlign\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlContainerCell::InsertCell(wxHtmlCell &cell)
+   Inserts a new cell into the container. */
 PHP_METHOD(php_wxHtmlContainerCell, InsertCell)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9548,6 +9851,10 @@ PHP_METHOD(php_wxHtmlContainerCell, InsertCell)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlContainerCell::InsertCell\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxHtmlContainerCell::GetIndentUnits(int ind)
+   Returns the units of indentation for ind where ind is one of the wxHTML_INDENT_* constants. */
 PHP_METHOD(php_wxHtmlContainerCell, GetIndentUnits)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9645,6 +9952,10 @@ PHP_METHOD(php_wxHtmlContainerCell, GetIndentUnits)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlContainerCell::GetIndentUnits\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxHtmlContainerCell::GetIndent(int ind)
+   Returns the indentation. */
 PHP_METHOD(php_wxHtmlContainerCell, GetIndent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9742,6 +10053,10 @@ PHP_METHOD(php_wxHtmlContainerCell, GetIndent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlContainerCell::GetIndent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxHtmlContainerCell::GetBackgroundColour()
+   Returns the background colour of the container or wxNullColour if no background colour is set. */
 PHP_METHOD(php_wxHtmlContainerCell, GetBackgroundColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9839,6 +10154,10 @@ PHP_METHOD(php_wxHtmlContainerCell, GetBackgroundColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlContainerCell::GetBackgroundColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxHtmlContainerCell::GetAlignVer()
+   Returns container's vertical alignment. */
 PHP_METHOD(php_wxHtmlContainerCell, GetAlignVer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9931,6 +10250,10 @@ PHP_METHOD(php_wxHtmlContainerCell, GetAlignVer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlContainerCell::GetAlignVer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxHtmlContainerCell::GetAlignHor()
+   Returns container's horizontal alignment. */
 PHP_METHOD(php_wxHtmlContainerCell, GetAlignHor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10023,6 +10346,8 @@ PHP_METHOD(php_wxHtmlContainerCell, GetAlignHor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlContainerCell::GetAlignHor\n");
 	}
 }
+/* }}} */
+
 void php_wxHtmlLinkInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10063,6 +10388,8 @@ void php_wxHtmlLinkInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 		#endif
 	}
 }
+/* {{{ proto wxMouseEvent wxHtmlLinkInfo::GetEvent()
+   Return pointer to event that generated OnLinkClicked() event. */
 PHP_METHOD(php_wxHtmlLinkInfo, GetEvent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10178,6 +10505,10 @@ PHP_METHOD(php_wxHtmlLinkInfo, GetEvent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlLinkInfo::GetEvent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxHtmlLinkInfo::GetHref()
+   Return HREF value of the <A> tag. */
 PHP_METHOD(php_wxHtmlLinkInfo, GetHref)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10276,6 +10607,10 @@ PHP_METHOD(php_wxHtmlLinkInfo, GetHref)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlLinkInfo::GetHref\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxHtmlCell wxHtmlLinkInfo::GetHtmlCell()
+   Return pointer to the cell that was clicked. */
 PHP_METHOD(php_wxHtmlLinkInfo, GetHtmlCell)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10391,6 +10726,10 @@ PHP_METHOD(php_wxHtmlLinkInfo, GetHtmlCell)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlLinkInfo::GetHtmlCell\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxHtmlLinkInfo::GetTarget()
+   Return TARGET value of the <A> tag (this value is used to specify in which frame should be the page pointed by GetHref() Href opened). */
 PHP_METHOD(php_wxHtmlLinkInfo, GetTarget)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10489,6 +10828,10 @@ PHP_METHOD(php_wxHtmlLinkInfo, GetTarget)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlLinkInfo::GetTarget\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlLinkInfo::wxHtmlLinkInfo()
+   Default ctor. */
 PHP_METHOD(php_wxHtmlLinkInfo, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10618,6 +10961,8 @@ PHP_METHOD(php_wxHtmlLinkInfo, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxHtmlColourCell_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10658,6 +11003,8 @@ void php_wxHtmlColourCell_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		#endif
 	}
 }
+/* {{{ proto  wxHtmlColourCell::wxHtmlColourCell(wxColour clr, int flags)
+   Constructor. */
 PHP_METHOD(php_wxHtmlColourCell, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10773,6 +11120,8 @@ PHP_METHOD(php_wxHtmlColourCell, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxHtmlWidgetCell_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10813,6 +11162,8 @@ void php_wxHtmlWidgetCell_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		#endif
 	}
 }
+/* {{{ proto  wxHtmlWidgetCell::wxHtmlWidgetCell(wxWindow &wnd, int w)
+   Constructor. */
 PHP_METHOD(php_wxHtmlWidgetCell, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10928,6 +11279,8 @@ PHP_METHOD(php_wxHtmlWidgetCell, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxHtmlFilter_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10968,6 +11321,8 @@ void php_wxHtmlFilter_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto bool wxHtmlFilter::CanRead(wxFSFile file)
+   Returns true if this filter is capable of reading file file. */
 bool wxHtmlFilter_php::CanRead(const wxFSFile& file)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11017,6 +11372,10 @@ bool wxHtmlFilter_php::CanRead(const wxFSFile& file)const
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto string wxHtmlFilter::ReadFile(wxFSFile file)
+   Reads the file and returns string with HTML document. */
 wxString wxHtmlFilter_php::ReadFile(const wxFSFile& file)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11066,6 +11425,10 @@ wxString wxHtmlFilter_php::ReadFile(const wxFSFile& file)const
 		return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
 	
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlFilter::wxHtmlFilter()
+   Constructor. */
 PHP_METHOD(php_wxHtmlFilter, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11146,6 +11509,8 @@ PHP_METHOD(php_wxHtmlFilter, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxHtmlTagHandler_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11186,6 +11551,8 @@ void php_wxHtmlTagHandler_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		#endif
 	}
 }
+/* {{{ proto string wxHtmlTagHandler::GetSupportedTags()
+   Returns list of supported tags. */
 wxString wxHtmlTagHandler_php::GetSupportedTags()
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11228,6 +11595,10 @@ wxString wxHtmlTagHandler_php::GetSupportedTags()
 		return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
 	
 }
+/* }}} */
+
+/* {{{ proto bool wxHtmlTagHandler::HandleTag(wxHtmlTag tag)
+   This is the core method of each handler. */
 bool wxHtmlTagHandler_php::HandleTag(const wxHtmlTag& tag)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11277,6 +11648,10 @@ bool wxHtmlTagHandler_php::HandleTag(const wxHtmlTag& tag)
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlTagHandler::wxHtmlTagHandler()
+   Constructor. */
 PHP_METHOD(php_wxHtmlTagHandler, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11357,6 +11732,8 @@ PHP_METHOD(php_wxHtmlTagHandler, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 PHP_METHOD(php_wxHtmlTagHandler, __get)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11457,6 +11834,8 @@ void php_wxHtmlTag_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto string wxHtmlTag::GetAllParams()
+   Returns a string containing all parameters. */
 PHP_METHOD(php_wxHtmlTag, GetAllParams)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11558,6 +11937,10 @@ PHP_METHOD(php_wxHtmlTag, GetAllParams)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlTag::GetAllParams\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxHtmlTag::GetBeginPos()
+   Returns beginning position of the text between this tag and paired ending tag. */
 PHP_METHOD(php_wxHtmlTag, GetBeginPos)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11653,6 +12036,10 @@ PHP_METHOD(php_wxHtmlTag, GetBeginPos)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlTag::GetBeginPos\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxHtmlTag::GetEndPos1()
+   Returns ending position of the text between this tag and paired ending tag. */
 PHP_METHOD(php_wxHtmlTag, GetEndPos1)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11748,6 +12135,10 @@ PHP_METHOD(php_wxHtmlTag, GetEndPos1)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlTag::GetEndPos1\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxHtmlTag::GetEndPos2()
+   Returns ending position 2 of the text between this tag and paired ending tag. */
 PHP_METHOD(php_wxHtmlTag, GetEndPos2)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11843,6 +12234,10 @@ PHP_METHOD(php_wxHtmlTag, GetEndPos2)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlTag::GetEndPos2\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxHtmlTag::GetName()
+   Returns tag's name. */
 PHP_METHOD(php_wxHtmlTag, GetName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11944,6 +12339,10 @@ PHP_METHOD(php_wxHtmlTag, GetName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlTag::GetName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxHtmlTag::GetParam(string par, bool with_quotes)
+   Returns the value of the parameter. */
 PHP_METHOD(php_wxHtmlTag, GetParam)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12072,6 +12471,10 @@ PHP_METHOD(php_wxHtmlTag, GetParam)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlTag::GetParam\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxHtmlTag::GetParamAsColour(string par, wxColour &clr)
+   Interprets tag parameter par as colour specification and saves its value into wxColour variable pointed by clr. */
 PHP_METHOD(php_wxHtmlTag, GetParamAsColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12192,6 +12595,10 @@ PHP_METHOD(php_wxHtmlTag, GetParamAsColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlTag::GetParamAsColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxHtmlTag::HasEnding()
+   Returns true if this tag is paired with ending tag, false otherwise. */
 PHP_METHOD(php_wxHtmlTag, HasEnding)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12287,6 +12694,10 @@ PHP_METHOD(php_wxHtmlTag, HasEnding)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlTag::HasEnding\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxHtmlTag::HasParam(string par)
+   Returns true if the tag has a parameter of the given name. */
 PHP_METHOD(php_wxHtmlTag, HasParam)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12388,6 +12799,10 @@ PHP_METHOD(php_wxHtmlTag, HasParam)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlTag::HasParam\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxHtmlTag::ParseAsColour(string str, wxColour &clr)
+   Parses the given string as an HTML colour. */
 PHP_METHOD(php_wxHtmlTag, ParseAsColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12505,6 +12920,10 @@ PHP_METHOD(php_wxHtmlTag, ParseAsColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlTag::ParseAsColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxHtmlTag::ScanParam(string par, string format, void value)
+   This method scans the given parameter. */
 PHP_METHOD(php_wxHtmlTag, ScanParam)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12615,6 +13034,10 @@ PHP_METHOD(php_wxHtmlTag, ScanParam)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlTag::ScanParam\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxHtmlTag::GetParamAsInt(string par, int &value)
+   Interprets tag parameter par as an integer and saves its value into int variable pointed by value. */
 PHP_METHOD(php_wxHtmlTag, GetParamAsInt)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12727,6 +13150,8 @@ PHP_METHOD(php_wxHtmlTag, GetParamAsInt)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlTag::GetParamAsInt\n");
 	}
 }
+/* }}} */
+
 void php_wxHtmlWindow_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12734,6 +13159,8 @@ void php_wxHtmlWindow_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto bool wxHtmlWindow::AppendToPage(string source)
+   Appends HTML fragment to currently displayed text and refreshes the window. */
 PHP_METHOD(php_wxHtmlWindow, AppendToPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12832,6 +13259,10 @@ PHP_METHOD(php_wxHtmlWindow, AppendToPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWindow::AppendToPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxHtmlWindow::GetOpenedAnchor()
+   Returns anchor within currently opened page (see wxHtmlWindow::GetOpenedPage). */
 PHP_METHOD(php_wxHtmlWindow, GetOpenedAnchor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12930,6 +13361,10 @@ PHP_METHOD(php_wxHtmlWindow, GetOpenedAnchor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWindow::GetOpenedAnchor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxHtmlWindow::GetOpenedPage()
+   Returns full location of the opened page. */
 PHP_METHOD(php_wxHtmlWindow, GetOpenedPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13028,6 +13463,10 @@ PHP_METHOD(php_wxHtmlWindow, GetOpenedPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWindow::GetOpenedPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxHtmlWindow::GetOpenedPageTitle()
+   Returns title of the opened page or wxEmptyString if the current page does not contain <TITLE> tag. */
 PHP_METHOD(php_wxHtmlWindow, GetOpenedPageTitle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13126,6 +13565,10 @@ PHP_METHOD(php_wxHtmlWindow, GetOpenedPageTitle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWindow::GetOpenedPageTitle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFrame wxHtmlWindow::GetRelatedFrame()
+   Returns the related frame. */
 PHP_METHOD(php_wxHtmlWindow, GetRelatedFrame)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13241,6 +13684,10 @@ PHP_METHOD(php_wxHtmlWindow, GetRelatedFrame)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWindow::GetRelatedFrame\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxHtmlWindow::HistoryBack()
+   Moves back to the previous page. */
 PHP_METHOD(php_wxHtmlWindow, HistoryBack)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13333,6 +13780,10 @@ PHP_METHOD(php_wxHtmlWindow, HistoryBack)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWindow::HistoryBack\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxHtmlWindow::HistoryCanBack()
+   Returns true if it is possible to go back in the history i.e. */
 PHP_METHOD(php_wxHtmlWindow, HistoryCanBack)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13425,6 +13876,10 @@ PHP_METHOD(php_wxHtmlWindow, HistoryCanBack)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWindow::HistoryCanBack\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxHtmlWindow::HistoryCanForward()
+   Returns true if it is possible to go forward in the history i.e. */
 PHP_METHOD(php_wxHtmlWindow, HistoryCanForward)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13517,6 +13972,10 @@ PHP_METHOD(php_wxHtmlWindow, HistoryCanForward)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWindow::HistoryCanForward\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlWindow::HistoryClear()
+   Clears history. */
 PHP_METHOD(php_wxHtmlWindow, HistoryClear)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13609,6 +14068,10 @@ PHP_METHOD(php_wxHtmlWindow, HistoryClear)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWindow::HistoryClear\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxHtmlWindow::HistoryForward()
+   Moves to next page in history. */
 PHP_METHOD(php_wxHtmlWindow, HistoryForward)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13701,6 +14164,10 @@ PHP_METHOD(php_wxHtmlWindow, HistoryForward)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWindow::HistoryForward\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxHtmlWindow::LoadPage(string location)
+   Unlike SetPage() this function first loads the HTML page from location and then displays it. */
 PHP_METHOD(php_wxHtmlWindow, LoadPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13799,6 +14266,10 @@ PHP_METHOD(php_wxHtmlWindow, LoadPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWindow::LoadPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxHtmlWindow::LoadFile(wxFileName filename)
+   Loads an HTML page from a file and displays it. */
 PHP_METHOD(php_wxHtmlWindow, LoadFile)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13914,6 +14385,10 @@ PHP_METHOD(php_wxHtmlWindow, LoadFile)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWindow::LoadFile\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxHtmlWindow::OnCellClicked(wxHtmlCell &cell, int x, int y, wxMouseEvent event)
+   This method is called when a mouse button is clicked inside wxHtmlWindow. */
 bool wxHtmlWindow_php::OnCellClicked(wxHtmlCell* cell, wxCoord x, wxCoord y, const wxMouseEvent& event)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13976,6 +14451,10 @@ bool wxHtmlWindow_php::OnCellClicked(wxHtmlCell* cell, wxCoord x, wxCoord y, con
 	//Call original method
 	return wxHtmlWindow::OnCellClicked(cell, x, y, event);
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlWindow::OnCellMouseHover(wxHtmlCell &cell, int x, int y)
+   This method is called when a mouse moves over an HTML cell. */
 void wxHtmlWindow_php::OnCellMouseHover(wxHtmlCell* cell, wxCoord x, wxCoord y)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14036,6 +14515,10 @@ void wxHtmlWindow_php::OnCellMouseHover(wxHtmlCell* cell, wxCoord x, wxCoord y)
 	//Call original method
 	wxHtmlWindow::OnCellMouseHover(cell, x, y);
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlWindow::OnLinkClicked(wxHtmlLinkInfo link)
+   Called when user clicks on hypertext link. */
 void wxHtmlWindow_php::OnLinkClicked(const wxHtmlLinkInfo& link)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14094,6 +14577,10 @@ void wxHtmlWindow_php::OnLinkClicked(const wxHtmlLinkInfo& link)
 	//Call original method
 	wxHtmlWindow::OnLinkClicked(link);
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlWindow::OnSetTitle(string title)
+   Called on parsing <TITLE> tag. */
 void wxHtmlWindow_php::OnSetTitle(const wxString& title)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14154,6 +14641,10 @@ void wxHtmlWindow_php::OnSetTitle(const wxString& title)
 	//Call original method
 	wxHtmlWindow::OnSetTitle(title);
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlWindow::SelectAll()
+   Selects all text in the window. */
 PHP_METHOD(php_wxHtmlWindow, SelectAll)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14246,6 +14737,10 @@ PHP_METHOD(php_wxHtmlWindow, SelectAll)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWindow::SelectAll\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlWindow::SelectLine(wxPoint pos)
+   Selects the line of text that pos points at. */
 PHP_METHOD(php_wxHtmlWindow, SelectLine)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14361,6 +14856,10 @@ PHP_METHOD(php_wxHtmlWindow, SelectLine)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWindow::SelectLine\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlWindow::SelectWord(wxPoint pos)
+   Selects the word at position pos. */
 PHP_METHOD(php_wxHtmlWindow, SelectWord)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14476,6 +14975,10 @@ PHP_METHOD(php_wxHtmlWindow, SelectWord)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWindow::SelectWord\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxHtmlWindow::SelectionToText()
+   Returns the current selection as plain text. */
 PHP_METHOD(php_wxHtmlWindow, SelectionToText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14574,6 +15077,10 @@ PHP_METHOD(php_wxHtmlWindow, SelectionToText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWindow::SelectionToText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlWindow::SetBorders(int b)
+   This function sets the space between border of window and HTML contents. */
 PHP_METHOD(php_wxHtmlWindow, SetBorders)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14671,6 +15178,10 @@ PHP_METHOD(php_wxHtmlWindow, SetBorders)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWindow::SetBorders\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxHtmlWindow::SetPage(string source)
+   Sets the source of a page and displays it, for example: */
 PHP_METHOD(php_wxHtmlWindow, SetPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14769,6 +15280,10 @@ PHP_METHOD(php_wxHtmlWindow, SetPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWindow::SetPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlWindow::SetRelatedFrame(wxFrame &frame, string format)
+   Sets the frame in which page title will be displayed. */
 PHP_METHOD(php_wxHtmlWindow, SetRelatedFrame)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14886,6 +15401,10 @@ PHP_METHOD(php_wxHtmlWindow, SetRelatedFrame)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWindow::SetRelatedFrame\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlWindow::SetRelatedStatusBar(int index)
+   After calling SetRelatedFrame(), this sets statusbar slot where messages will be displayed. */
 PHP_METHOD(php_wxHtmlWindow, SetRelatedStatusBar)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15051,6 +15570,10 @@ PHP_METHOD(php_wxHtmlWindow, SetRelatedStatusBar)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWindow::SetRelatedStatusBar\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlWindow::SetStandardFonts(int size, string normal_face, string fixed_face)
+   Sets default font sizes and/or default font size. */
 PHP_METHOD(php_wxHtmlWindow, SetStandardFonts)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15185,6 +15708,10 @@ PHP_METHOD(php_wxHtmlWindow, SetStandardFonts)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWindow::SetStandardFonts\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxHtmlWindow::ToText()
+   Returns content of currently displayed page as plain text. */
 PHP_METHOD(php_wxHtmlWindow, ToText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15283,6 +15810,10 @@ PHP_METHOD(php_wxHtmlWindow, ToText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWindow::ToText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlWindow::WriteCustomization(wxConfigBase &cfg, string path)
+   Saves custom settings into wxConfig. */
 PHP_METHOD(php_wxHtmlWindow, WriteCustomization)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15412,6 +15943,10 @@ PHP_METHOD(php_wxHtmlWindow, WriteCustomization)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWindow::WriteCustomization\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlWindow::wxHtmlWindow()
+   Default ctor. */
 PHP_METHOD(php_wxHtmlWindow, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15648,6 +16183,10 @@ PHP_METHOD(php_wxHtmlWindow, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto wxHtmlContainerCell wxHtmlWindow::GetInternalRepresentation()
+   Returns pointer to the top-level container. */
 PHP_METHOD(php_wxHtmlWindow, GetInternalRepresentation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15763,6 +16302,10 @@ PHP_METHOD(php_wxHtmlWindow, GetInternalRepresentation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWindow::GetInternalRepresentation\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlWindow::AddFilter(wxHtmlFilter &filter)
+   Adds input filter to the static list of available filters. */
 PHP_METHOD(php_wxHtmlWindow, AddFilter)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15878,6 +16421,10 @@ PHP_METHOD(php_wxHtmlWindow, AddFilter)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWindow::AddFilter\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlWindow::SetFonts(string normal_face, string fixed_face, array sizes)
+   This function sets font sizes and faces. */
 PHP_METHOD(php_wxHtmlWindow, SetFonts)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16016,6 +16563,8 @@ PHP_METHOD(php_wxHtmlWindow, SetFonts)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWindow::SetFonts\n");
 	}
 }
+/* }}} */
+
 void php_wxHtmlLinkEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16056,6 +16605,8 @@ void php_wxHtmlLinkEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+/* {{{ proto wxHtmlLinkInfo wxHtmlLinkEvent::GetLinkInfo()
+   Returns the wxHtmlLinkInfo which contains info about the cell clicked and the hyperlink it contains. */
 PHP_METHOD(php_wxHtmlLinkEvent, GetLinkInfo)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16168,6 +16719,10 @@ PHP_METHOD(php_wxHtmlLinkEvent, GetLinkInfo)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlLinkEvent::GetLinkInfo\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlLinkEvent::wxHtmlLinkEvent(int id, wxHtmlLinkInfo linkinfo)
+   The constructor is not normally used by the user code. */
 PHP_METHOD(php_wxHtmlLinkEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16272,6 +16827,8 @@ PHP_METHOD(php_wxHtmlLinkEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxHtmlCellEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16312,6 +16869,8 @@ void php_wxHtmlCellEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+/* {{{ proto wxHtmlCell wxHtmlCellEvent::GetCell()
+   Returns the wxHtmlCellEvent associated with the event. */
 PHP_METHOD(php_wxHtmlCellEvent, GetCell)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16427,6 +16986,10 @@ PHP_METHOD(php_wxHtmlCellEvent, GetCell)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlCellEvent::GetCell\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxHtmlCellEvent::GetLinkClicked()
+   Returns true if SetLinkClicked(true) has previously been called; false otherwise. */
 PHP_METHOD(php_wxHtmlCellEvent, GetLinkClicked)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16519,6 +17082,10 @@ PHP_METHOD(php_wxHtmlCellEvent, GetLinkClicked)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlCellEvent::GetLinkClicked\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPoint wxHtmlCellEvent::GetPoint()
+   Returns the wxPoint associated with the event. */
 PHP_METHOD(php_wxHtmlCellEvent, GetPoint)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16616,6 +17183,10 @@ PHP_METHOD(php_wxHtmlCellEvent, GetPoint)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlCellEvent::GetPoint\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlCellEvent::SetLinkClicked(bool linkclicked)
+   Call this function with linkclicked set to true if the cell which has been clicked contained a link or false otherwise (which is the default). */
 PHP_METHOD(php_wxHtmlCellEvent, SetLinkClicked)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16713,6 +17284,10 @@ PHP_METHOD(php_wxHtmlCellEvent, SetLinkClicked)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlCellEvent::SetLinkClicked\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlCellEvent::wxHtmlCellEvent(int commandType, int id, wxHtmlCell &cell, wxPoint point, wxMouseEvent ev)
+   The constructor is not normally used by the user code. */
 PHP_METHOD(php_wxHtmlCellEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16856,6 +17431,8 @@ PHP_METHOD(php_wxHtmlCellEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxHtmlDCRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16896,6 +17473,8 @@ void php_wxHtmlDCRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		#endif
 	}
 }
+/* {{{ proto int wxHtmlDCRenderer::GetTotalHeight()
+   Returns the height of the HTML text in pixels. */
 PHP_METHOD(php_wxHtmlDCRenderer, GetTotalHeight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16988,6 +17567,10 @@ PHP_METHOD(php_wxHtmlDCRenderer, GetTotalHeight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlDCRenderer::GetTotalHeight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxHtmlDCRenderer::GetTotalWidth()
+   Returns the width of the HTML text in pixels. */
 PHP_METHOD(php_wxHtmlDCRenderer, GetTotalWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17080,6 +17663,10 @@ PHP_METHOD(php_wxHtmlDCRenderer, GetTotalWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlDCRenderer::GetTotalWidth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlDCRenderer::wxHtmlDCRenderer()
+   Constructor. */
 PHP_METHOD(php_wxHtmlDCRenderer, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17160,6 +17747,10 @@ PHP_METHOD(php_wxHtmlDCRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlDCRenderer::SetStandardFonts(int size, string normal_face, string fixed_face)
+   Sets font sizes to be relative to the given size or the system default size; use either specified or default font. */
 PHP_METHOD(php_wxHtmlDCRenderer, SetStandardFonts)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17294,6 +17885,10 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetStandardFonts)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlDCRenderer::SetStandardFonts\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlDCRenderer::SetSize(int width, int height)
+   Set size of output rectangle, in pixels. */
 PHP_METHOD(php_wxHtmlDCRenderer, SetSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17392,6 +17987,10 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlDCRenderer::SetSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlDCRenderer::SetHtmlText(string html, string basepath, bool isdir)
+   Assign text to the renderer. */
 PHP_METHOD(php_wxHtmlDCRenderer, SetHtmlText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17515,6 +18114,10 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetHtmlText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlDCRenderer::SetHtmlText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlDCRenderer::SetFonts(string normal_face, string fixed_face, array sizes)
+   This function sets font sizes and faces. */
 PHP_METHOD(php_wxHtmlDCRenderer, SetFonts)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17653,6 +18256,10 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetFonts)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlDCRenderer::SetFonts\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlDCRenderer::SetDC(wxDC &dc, float pixel_scale)
+   Assign DC instance to the renderer. */
 PHP_METHOD(php_wxHtmlDCRenderer, SetDC)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17781,6 +18388,8 @@ PHP_METHOD(php_wxHtmlDCRenderer, SetDC)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlDCRenderer::SetDC\n");
 	}
 }
+/* }}} */
+
 void php_wxHtmlEasyPrinting_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17821,6 +18430,8 @@ void php_wxHtmlEasyPrinting_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 		#endif
 	}
 }
+/* {{{ proto string wxHtmlEasyPrinting::GetName()
+   Returns the current name being used for preview frames and setup dialogs. */
 PHP_METHOD(php_wxHtmlEasyPrinting, GetName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17919,6 +18530,10 @@ PHP_METHOD(php_wxHtmlEasyPrinting, GetName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlEasyPrinting::GetName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPageSetupDialogData wxHtmlEasyPrinting::GetPageSetupData()
+   Returns a pointer to wxPageSetupDialogData instance used by this class. */
 PHP_METHOD(php_wxHtmlEasyPrinting, GetPageSetupData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18034,6 +18649,10 @@ PHP_METHOD(php_wxHtmlEasyPrinting, GetPageSetupData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlEasyPrinting::GetPageSetupData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxWindow wxHtmlEasyPrinting::GetParentWindow()
+   Gets the parent window for dialogs. */
 PHP_METHOD(php_wxHtmlEasyPrinting, GetParentWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18149,6 +18768,10 @@ PHP_METHOD(php_wxHtmlEasyPrinting, GetParentWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlEasyPrinting::GetParentWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPrintData wxHtmlEasyPrinting::GetPrintData()
+   Returns pointer to wxPrintData instance used by this class. */
 PHP_METHOD(php_wxHtmlEasyPrinting, GetPrintData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18264,6 +18887,10 @@ PHP_METHOD(php_wxHtmlEasyPrinting, GetPrintData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlEasyPrinting::GetPrintData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlEasyPrinting::PageSetup()
+   Display page setup dialog and allows the user to modify settings. */
 PHP_METHOD(php_wxHtmlEasyPrinting, PageSetup)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18356,6 +18983,10 @@ PHP_METHOD(php_wxHtmlEasyPrinting, PageSetup)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlEasyPrinting::PageSetup\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxHtmlEasyPrinting::PreviewFile(string htmlfile)
+   Preview HTML file. */
 PHP_METHOD(php_wxHtmlEasyPrinting, PreviewFile)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18454,6 +19085,10 @@ PHP_METHOD(php_wxHtmlEasyPrinting, PreviewFile)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlEasyPrinting::PreviewFile\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxHtmlEasyPrinting::PreviewText(string htmltext, string basepath)
+   Preview HTML text (not file!). */
 PHP_METHOD(php_wxHtmlEasyPrinting, PreviewText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18565,6 +19200,10 @@ PHP_METHOD(php_wxHtmlEasyPrinting, PreviewText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlEasyPrinting::PreviewText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxHtmlEasyPrinting::PrintFile(string htmlfile)
+   Print HTML file. */
 PHP_METHOD(php_wxHtmlEasyPrinting, PrintFile)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18663,6 +19302,10 @@ PHP_METHOD(php_wxHtmlEasyPrinting, PrintFile)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlEasyPrinting::PrintFile\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxHtmlEasyPrinting::PrintText(string htmltext, string basepath)
+   Print HTML text (not file!). */
 PHP_METHOD(php_wxHtmlEasyPrinting, PrintText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18774,6 +19417,10 @@ PHP_METHOD(php_wxHtmlEasyPrinting, PrintText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlEasyPrinting::PrintText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlEasyPrinting::SetFooter(string footer, int pg)
+   Set page footer. */
 PHP_METHOD(php_wxHtmlEasyPrinting, SetFooter)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18884,6 +19531,10 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetFooter)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlEasyPrinting::SetFooter\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlEasyPrinting::SetHeader(string header, int pg)
+   Set page header. */
 PHP_METHOD(php_wxHtmlEasyPrinting, SetHeader)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18994,6 +19645,10 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetHeader)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlEasyPrinting::SetHeader\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlEasyPrinting::wxHtmlEasyPrinting(string name, wxWindow &parentWindow)
+   Constructor. */
 PHP_METHOD(php_wxHtmlEasyPrinting, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19119,6 +19774,10 @@ PHP_METHOD(php_wxHtmlEasyPrinting, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlEasyPrinting::SetStandardFonts(int size, string normal_face, string fixed_face)
+   Sets default font sizes and/or default font size. */
 PHP_METHOD(php_wxHtmlEasyPrinting, SetStandardFonts)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19253,6 +19912,10 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetStandardFonts)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlEasyPrinting::SetStandardFonts\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlEasyPrinting::SetParentWindow(wxWindow &window)
+   Sets the parent window for dialogs. */
 PHP_METHOD(php_wxHtmlEasyPrinting, SetParentWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19368,6 +20031,10 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetParentWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlEasyPrinting::SetParentWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlEasyPrinting::SetName(string name)
+   Sets the name used for preview frames and setup dialogs. */
 PHP_METHOD(php_wxHtmlEasyPrinting, SetName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19466,6 +20133,10 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlEasyPrinting::SetName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlEasyPrinting::SetFonts(string normal_face, string fixed_face, array sizes)
+   Sets fonts. */
 PHP_METHOD(php_wxHtmlEasyPrinting, SetFonts)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19604,6 +20275,8 @@ PHP_METHOD(php_wxHtmlEasyPrinting, SetFonts)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlEasyPrinting::SetFonts\n");
 	}
 }
+/* }}} */
+
 void php_wxHtmlPrintout_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19644,6 +20317,8 @@ void php_wxHtmlPrintout_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 		#endif
 	}
 }
+/* {{{ proto  wxHtmlPrintout::wxHtmlPrintout(string title)
+   Constructor. */
 PHP_METHOD(php_wxHtmlPrintout, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19740,6 +20415,10 @@ PHP_METHOD(php_wxHtmlPrintout, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlPrintout::SetMargins(float top, float bottom, float left, float right, float spaces)
+   Sets margins in millimeters. */
 PHP_METHOD(php_wxHtmlPrintout, SetMargins)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19896,6 +20575,10 @@ PHP_METHOD(php_wxHtmlPrintout, SetMargins)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlPrintout::SetMargins\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlPrintout::SetHtmlText(string html, string basepath, bool isdir)
+   Prepare the class for printing this HTML text. */
 PHP_METHOD(php_wxHtmlPrintout, SetHtmlText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20019,6 +20702,10 @@ PHP_METHOD(php_wxHtmlPrintout, SetHtmlText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlPrintout::SetHtmlText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlPrintout::SetHtmlFile(string htmlfile)
+   Prepare the class for printing this HTML file. */
 PHP_METHOD(php_wxHtmlPrintout, SetHtmlFile)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20117,6 +20804,10 @@ PHP_METHOD(php_wxHtmlPrintout, SetHtmlFile)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlPrintout::SetHtmlFile\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlPrintout::SetHeader(string header, int pg)
+   Set page header. */
 PHP_METHOD(php_wxHtmlPrintout, SetHeader)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20227,6 +20918,10 @@ PHP_METHOD(php_wxHtmlPrintout, SetHeader)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlPrintout::SetHeader\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlPrintout::SetFooter(string footer, int pg)
+   Set page footer. */
 PHP_METHOD(php_wxHtmlPrintout, SetFooter)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20337,6 +21032,10 @@ PHP_METHOD(php_wxHtmlPrintout, SetFooter)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlPrintout::SetFooter\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlPrintout::SetFonts(string normal_face, string fixed_face, array sizes)
+   This function sets font sizes and faces. */
 PHP_METHOD(php_wxHtmlPrintout, SetFonts)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20475,6 +21174,10 @@ PHP_METHOD(php_wxHtmlPrintout, SetFonts)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlPrintout::SetFonts\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlPrintout::AddFilter(wxHtmlFilter &filter)
+   Adds a filter to the static list of filters for wxHtmlPrintout. */
 PHP_METHOD(php_wxHtmlPrintout, AddFilter)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20590,6 +21293,8 @@ PHP_METHOD(php_wxHtmlPrintout, AddFilter)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlPrintout::AddFilter\n");
 	}
 }
+/* }}} */
+
 void php_wxHtmlTagsModule_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20630,6 +21335,8 @@ void php_wxHtmlTagsModule_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		#endif
 	}
 }
+/* {{{ proto  wxHtmlTagsModule::FillHandlersTable(wxHtmlWinParser &parser)
+   You must override this method. */
 PHP_METHOD(php_wxHtmlTagsModule, FillHandlersTable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20748,6 +21455,8 @@ PHP_METHOD(php_wxHtmlTagsModule, FillHandlersTable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlTagsModule::FillHandlersTable\n");
 	}
 }
+/* }}} */
+
 void php_wxHtmlWinTagHandler_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20828,6 +21537,8 @@ void php_wxHtmlWinParser_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+/* {{{ proto  wxHtmlWinParser::AddModule(wxHtmlTagsModule &module)
+   Adds module() to the list of wxHtmlWinParser tag handler. */
 PHP_METHOD(php_wxHtmlWinParser, AddModule)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20943,6 +21654,10 @@ PHP_METHOD(php_wxHtmlWinParser, AddModule)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::AddModule\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxHtmlContainerCell wxHtmlWinParser::CloseContainer()
+   Closes the container, sets actual container to the parent one and returns pointer to it (see Cells and Containers). */
 PHP_METHOD(php_wxHtmlWinParser, CloseContainer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21061,6 +21776,10 @@ PHP_METHOD(php_wxHtmlWinParser, CloseContainer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::CloseContainer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFont wxHtmlWinParser::CreateCurrentFont()
+   Creates font based on current setting (see SetFontSize(), SetFontBold(), SetFontItalic(), SetFontFixed(), wxHtmlWinParser::SetFontUnderlined) and returns pointer to it. */
 PHP_METHOD(php_wxHtmlWinParser, CreateCurrentFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21179,6 +21898,10 @@ PHP_METHOD(php_wxHtmlWinParser, CreateCurrentFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::CreateCurrentFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxHtmlWinParser::GetActualColor()
+   Returns actual text colour. */
 PHP_METHOD(php_wxHtmlWinParser, GetActualColor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21294,6 +22017,10 @@ PHP_METHOD(php_wxHtmlWinParser, GetActualColor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::GetActualColor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxHtmlWinParser::GetAlign()
+   Returns default horizontal alignment. */
 PHP_METHOD(php_wxHtmlWinParser, GetAlign)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21389,6 +22116,10 @@ PHP_METHOD(php_wxHtmlWinParser, GetAlign)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::GetAlign\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxHtmlWinParser::GetCharHeight()
+   Returns (average) char height in standard font. */
 PHP_METHOD(php_wxHtmlWinParser, GetCharHeight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21484,6 +22215,10 @@ PHP_METHOD(php_wxHtmlWinParser, GetCharHeight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::GetCharHeight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxHtmlWinParser::GetCharWidth()
+   Returns average char width in standard font. */
 PHP_METHOD(php_wxHtmlWinParser, GetCharWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21579,6 +22314,10 @@ PHP_METHOD(php_wxHtmlWinParser, GetCharWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::GetCharWidth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxHtmlContainerCell wxHtmlWinParser::GetContainer()
+   Returns pointer to the currently opened container (see Cells and Containers). */
 PHP_METHOD(php_wxHtmlWinParser, GetContainer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21697,6 +22436,10 @@ PHP_METHOD(php_wxHtmlWinParser, GetContainer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::GetContainer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxDC wxHtmlWinParser::GetDC()
+   Returns pointer to the DC used during parsing. */
 PHP_METHOD(php_wxHtmlWinParser, GetDC)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21815,6 +22558,10 @@ PHP_METHOD(php_wxHtmlWinParser, GetDC)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::GetDC\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxHtmlWinParser::GetFontBold()
+   Returns true if actual font is bold, false otherwise. */
 PHP_METHOD(php_wxHtmlWinParser, GetFontBold)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21910,6 +22657,10 @@ PHP_METHOD(php_wxHtmlWinParser, GetFontBold)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::GetFontBold\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxHtmlWinParser::GetFontFace()
+   Returns actual font face name. */
 PHP_METHOD(php_wxHtmlWinParser, GetFontFace)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22011,6 +22762,10 @@ PHP_METHOD(php_wxHtmlWinParser, GetFontFace)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::GetFontFace\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxHtmlWinParser::GetFontFixed()
+   Returns true if actual font is fixed face, false otherwise. */
 PHP_METHOD(php_wxHtmlWinParser, GetFontFixed)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22106,6 +22861,10 @@ PHP_METHOD(php_wxHtmlWinParser, GetFontFixed)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::GetFontFixed\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxHtmlWinParser::GetFontItalic()
+   Returns true if actual font is italic, false otherwise. */
 PHP_METHOD(php_wxHtmlWinParser, GetFontItalic)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22201,6 +22960,10 @@ PHP_METHOD(php_wxHtmlWinParser, GetFontItalic)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::GetFontItalic\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxHtmlWinParser::GetFontSize()
+   Returns actual font size (HTML size varies from -2 to +4) */
 PHP_METHOD(php_wxHtmlWinParser, GetFontSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22296,6 +23059,10 @@ PHP_METHOD(php_wxHtmlWinParser, GetFontSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::GetFontSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxHtmlWinParser::GetFontUnderlined()
+   Returns true if actual font is underlined, false otherwise. */
 PHP_METHOD(php_wxHtmlWinParser, GetFontUnderlined)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22391,6 +23158,10 @@ PHP_METHOD(php_wxHtmlWinParser, GetFontUnderlined)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::GetFontUnderlined\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxHtmlLinkInfo wxHtmlWinParser::GetLink()
+   Returns actual hypertext link. */
 PHP_METHOD(php_wxHtmlWinParser, GetLink)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22506,6 +23277,10 @@ PHP_METHOD(php_wxHtmlWinParser, GetLink)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::GetLink\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxHtmlWinParser::GetLinkColor()
+   Returns the colour of hypertext link text. */
 PHP_METHOD(php_wxHtmlWinParser, GetLinkColor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22621,6 +23396,10 @@ PHP_METHOD(php_wxHtmlWinParser, GetLinkColor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::GetLinkColor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlWinParser::SetActualColor(wxColour clr)
+   Sets actual text colour. */
 PHP_METHOD(php_wxHtmlWinParser, SetActualColor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22739,6 +23518,10 @@ PHP_METHOD(php_wxHtmlWinParser, SetActualColor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::SetActualColor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlWinParser::SetAlign(int a)
+   Sets default horizontal alignment (see wxHtmlContainerCell::SetAlignHor). */
 PHP_METHOD(php_wxHtmlWinParser, SetAlign)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22839,6 +23622,10 @@ PHP_METHOD(php_wxHtmlWinParser, SetAlign)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::SetAlign\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxHtmlContainerCell wxHtmlWinParser::SetContainer(wxHtmlContainerCell &c)
+   Allows you to directly set opened container. */
 PHP_METHOD(php_wxHtmlWinParser, SetContainer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22980,6 +23767,10 @@ PHP_METHOD(php_wxHtmlWinParser, SetContainer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::SetContainer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlWinParser::SetDC(wxDC &dc, float pixel_scale)
+   Sets the DC. */
 PHP_METHOD(php_wxHtmlWinParser, SetDC)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23114,6 +23905,10 @@ PHP_METHOD(php_wxHtmlWinParser, SetDC)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::SetDC\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxHtmlContainerCell wxHtmlWinParser::OpenContainer()
+   Opens new container and returns pointer to it (see Cells and Containers). */
 PHP_METHOD(php_wxHtmlWinParser, OpenContainer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23232,6 +24027,10 @@ PHP_METHOD(php_wxHtmlWinParser, OpenContainer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::OpenContainer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlWinParser::SetFontBold(int x)
+   Sets bold flag of actualfont. */
 PHP_METHOD(php_wxHtmlWinParser, SetFontBold)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23332,6 +24131,10 @@ PHP_METHOD(php_wxHtmlWinParser, SetFontBold)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::SetFontBold\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlWinParser::SetFontFace(string face)
+   Sets current font face to face. */
 PHP_METHOD(php_wxHtmlWinParser, SetFontFace)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23433,6 +24236,10 @@ PHP_METHOD(php_wxHtmlWinParser, SetFontFace)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::SetFontFace\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlWinParser::SetFontFixed(int x)
+   Sets fixed face flag of actualfont. */
 PHP_METHOD(php_wxHtmlWinParser, SetFontFixed)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23533,6 +24340,10 @@ PHP_METHOD(php_wxHtmlWinParser, SetFontFixed)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::SetFontFixed\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlWinParser::SetFontItalic(int x)
+   Sets italic flag of actualfont. */
 PHP_METHOD(php_wxHtmlWinParser, SetFontItalic)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23633,6 +24444,10 @@ PHP_METHOD(php_wxHtmlWinParser, SetFontItalic)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::SetFontItalic\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlWinParser::SetFontSize(int s)
+   Sets actual font size (HTML size varies from 1 to 7). */
 PHP_METHOD(php_wxHtmlWinParser, SetFontSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23733,6 +24548,10 @@ PHP_METHOD(php_wxHtmlWinParser, SetFontSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::SetFontSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlWinParser::SetFontUnderlined(int x)
+   Sets underlined flag of actualfont. */
 PHP_METHOD(php_wxHtmlWinParser, SetFontUnderlined)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23833,6 +24652,10 @@ PHP_METHOD(php_wxHtmlWinParser, SetFontUnderlined)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::SetFontUnderlined\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlWinParser::SetFonts(string normal_face, string fixed_face, array sizes)
+   Sets fonts. */
 PHP_METHOD(php_wxHtmlWinParser, SetFonts)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23977,6 +24800,10 @@ PHP_METHOD(php_wxHtmlWinParser, SetFonts)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::SetFonts\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlWinParser::SetLink(wxHtmlLinkInfo link)
+   Sets actual hypertext link. */
 PHP_METHOD(php_wxHtmlWinParser, SetLink)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24095,6 +24922,10 @@ PHP_METHOD(php_wxHtmlWinParser, SetLink)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::SetLink\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHtmlWinParser::SetLinkColor(wxColour clr)
+   Sets colour of hypertext link. */
 PHP_METHOD(php_wxHtmlWinParser, SetLinkColor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24213,3 +25044,5 @@ PHP_METHOD(php_wxHtmlWinParser, SetLinkColor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHtmlWinParser::SetLinkColor\n");
 	}
 }
+/* }}} */
+

@@ -1299,6 +1299,310 @@ function function_arguments_call_string($function_definition)
 }
 
 /**
+ * Generate the documentation heading placed at the begining
+ * of a method/function implementation
+ */
+function proto_begin($function_name, $class_name=null)
+{
+	global $defIni, $defFunctions;
+	
+	if($class_name)
+		$function_definition = $defIni[$class_name][$function_name][0];
+	else
+		$function_definition = $defFunctions[$function_name][0];
+	
+	$output = "/* {{{ proto ";
+	
+	$output .= str_replace(array(" ", "*", "&"), "", get_proto_php_type($function_definition["return_type"], "", $function_name, $class_name));
+	
+	if($class_name)
+		$output .= " $class_name::$function_name";
+	else
+		$output .= " $function_name";
+		
+	$output .= "(";
+	
+	foreach($function_definition["parameters_type"] as $parameter_index=>$parameter_type)
+	{
+		$parameter_name = $function_definition["parameters_name"][$parameter_index];
+		
+		$output .= get_proto_php_type($parameter_type, $parameter_name, $method_name, $class_name); 
+		
+		if($function_definition["parameters_default_value"][$parameter_index])
+		{
+			$parameters .= "=" . $function_definition["parameters_default_value"][$parameter_index];
+		}
+		
+		$output .= ", ";
+	}
+	
+	$output = rtrim($output, ", ");
+	
+	$output .= ")";	
+	
+	if($function_definition["brief_description"])
+	{
+		$output .= "\n   ";
+		$output .= $function_definition["brief_description"];
+	}
+	
+	$output .= " */\n";
+	
+	return $output;
+}
+
+/**
+ * Generates the proto/documentation eclosure used at the
+ * end of a method/function implementation
+ */
+function proto_end()
+{
+	return "/* }}} */\n\n";
+}
+
+/**
+ * Used by the documentation/proto generation functions to convert a type
+ * to standard php type.
+ */
+function get_proto_php_type($type, $type_name, $function_name, $class_name=null)
+{
+	$declaration_modifier = "";
+	$standard_type = parameter_type($type, false, $function_name, $class_name, $declaration_modifier, true);
+	
+	$cleaned_type = str_replace(array("const ", "*", "&"), "", $type);
+	
+	$method_type = "";
+	
+	switch($standard_type)
+	{
+		case	"bool":
+		{
+			switch($declaration_modifier)
+			{
+				case "pointer": //bool*
+				case "reference": //bool&
+					$method_type = "bool &$type_name";
+					break;
+					
+				case "const_pointer": //const bool* Array
+					$method_type = "array $type_name";
+					break;
+				
+				case "const_reference": //const bool&
+				case "none": //bool
+				case "const_none": //const bool
+					$method_type = "bool $type_name";
+					break;
+			}
+			break;
+		}	
+		case	"integer":
+		{
+			switch($declaration_modifier)
+			{
+				case "pointer": //integer*
+				case "reference": //integer&
+					$method_type = "int &$type_name";
+					break;
+					
+				case "const_pointer": //const integer* Array
+					$method_type = "array $type_name";
+					break;
+				
+				case "const_reference": //const integer&
+				case "none": //integer
+				case "const_none": //const integer
+					$method_type = "int $type_name";
+					break;
+			}
+			break;
+		}	
+		case	"class_enum":
+		{
+			switch($declaration_modifier)
+			{
+				case "pointer": //integer*
+				case "reference": //integer&
+					$method_type = "$cleaned_type &$type_name";
+					break;
+					
+				case "const_pointer": //const integer* Array
+					$method_type = "array $type_name";
+					break;
+				
+				case "const_reference": //const integer&
+				case "none": //integer
+				case "const_none": //const integer
+					$method_type = "$cleaned_type $type_name";
+					break;
+			}
+			break;
+		}	
+		case	"global_enum":
+		{
+			switch($declaration_modifier)
+			{
+				case "pointer": //integer*
+				case "reference": //integer&
+					$method_type = "$cleaned_type &$type_name";
+					break;
+					
+				case "const_pointer": //const integer* Array
+					$method_type = "array $type_name";
+					break;
+				
+				case "const_reference": //const integer&
+				case "none": //integer
+				case "const_none": //const integer
+					$method_type = "$cleaned_type $type_name";
+					break;
+			}
+			break;
+		}
+		case	"float":
+		{
+			switch($declaration_modifier)
+			{
+				case "pointer": //float*
+				case "reference": //float&
+					$method_type = "float &$type_name";
+					break;
+					
+				case "const_pointer": //const float* Array
+					$method_type = "array $type_name";
+					break;
+				
+				case "const_reference": //const float&
+				case "none": //float
+				case "const_none": //const float
+					$method_type = "float $type_name";
+					break;
+			}
+			break;
+		}
+		case	"characters":
+		{
+			switch($declaration_modifier)
+			{
+				case "pointer": //char*
+				case "reference": //char&
+					$method_type = "string &$type_name";
+					break;
+					
+				case "const_pointer": //const char*
+					$method_type = "string $type_name";
+					break;
+				
+				case "const_reference": //const char&
+				case "none": //char
+				case "const_none": //const char
+					$method_type = "string $type_name";
+					break;
+			}
+			break;
+		}
+		case	"void":
+		{
+			switch($declaration_modifier)
+			{
+				case "const_pointer_pointer": //const void**
+				case "pointer_pointer":
+				case "const_pointer": //const void*
+				case "pointer": //void*
+					$method_type = "void $type_name";
+					break;
+			}
+			break;
+		}
+		case	"date":
+		{
+			switch($declaration_modifier)
+			{
+				case "pointer": //long*
+				case "reference": //long&
+					$method_type = "timestamp &$type_name";
+					break;
+					
+				case "const_pointer": //const long* Array
+					$method_type = "array $type_name";
+					break;
+				
+				case "const_reference": //const long&
+				case "none": //long
+				case "const_none": //const long
+					$method_type = "timestamp $type_name";
+					break;
+			}
+			break;
+		}	
+		case	"string":
+		{
+			switch($declaration_modifier)
+			{
+				case "pointer": //wxString*
+				case "reference": //wxString&
+					$method_type = "string &$type_name";
+					break;
+					
+				case "const_pointer": //const wxString* Array
+					$method_type = "array $type_name";
+					break;
+				
+				case "const_reference": //const wxString&
+				case "none": //wxString
+				case "const_none": //const wxString
+					$method_type = "string $type_name";
+					break;
+			}
+			break;
+		}
+		case	"strings_array":
+		{
+			switch($declaration_modifier)
+			{
+				case "pointer": //wxArrayString*
+				case "reference": //wxArrayString&
+					$method_type = "array &$type_name";
+					break;
+					
+				case "const_pointer": //const wxArrayString* Array
+					$method_type = "array $type_name";
+					break;
+				
+				case "const_reference": //const wxArrayString&
+				case "none": //wxArrayString
+				case "const_none": //const wxArrayString
+					$method_type = "array $type_name";
+					break;
+			}
+			break;
+		}	
+		case "object":
+		{
+			switch($declaration_modifier)
+			{
+				case "pointer": //object*
+				case "reference": //object&
+					$method_type = "$cleaned_type &$type_name";
+					break;
+					
+				case "const_pointer": //const bool* Array
+				case "const_reference": //const bool&
+				case "none": //bool
+				case "const_none": //const bool
+					$method_type = "$cleaned_type $type_name";
+					break;
+			}
+			break;
+		}	
+		default: 
+			
+	}
+	
+	return $method_type;
+}
+
+/**
  * Indents a flat JSON string to make it more human-readable.
  * URL: http://recursive-design.com/blog/2008/03/11/format-json-with-php/
  *

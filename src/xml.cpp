@@ -91,6 +91,8 @@ void php_wxXmlNode_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxXmlNode::AddAttribute(string name, string value)
+   Appends a attribute with given name and value to the list of attributes for this node. */
 PHP_METHOD(php_wxXmlNode, AddAttribute)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -246,6 +248,10 @@ PHP_METHOD(php_wxXmlNode, AddAttribute)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlNode::AddAttribute\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxXmlNode::AddChild(wxXmlNode &child)
+   Adds node child as the last child of this node. */
 PHP_METHOD(php_wxXmlNode, AddChild)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -361,6 +367,10 @@ PHP_METHOD(php_wxXmlNode, AddChild)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlNode::AddChild\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxXmlNode::DeleteAttribute(string name)
+   Removes the first attributes which has the given name from the list of attributes for this node. */
 PHP_METHOD(php_wxXmlNode, DeleteAttribute)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -459,6 +469,10 @@ PHP_METHOD(php_wxXmlNode, DeleteAttribute)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlNode::DeleteAttribute\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxXmlNode::GetAttribute(string attrName, string &value)
+   Returns true if a attribute named attrName could be found. */
 PHP_METHOD(php_wxXmlNode, GetAttribute)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -633,6 +647,10 @@ PHP_METHOD(php_wxXmlNode, GetAttribute)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlNode::GetAttribute\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxXmlAttribute wxXmlNode::GetAttributes()
+   Return a pointer to the first attribute of this node. */
 PHP_METHOD(php_wxXmlNode, GetAttributes)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -748,6 +766,10 @@ PHP_METHOD(php_wxXmlNode, GetAttributes)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlNode::GetAttributes\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxXmlNode wxXmlNode::GetChildren()
+   Returns the first child of this node. */
 PHP_METHOD(php_wxXmlNode, GetChildren)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -863,6 +885,10 @@ PHP_METHOD(php_wxXmlNode, GetChildren)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlNode::GetChildren\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxXmlNode::GetContent()
+   Returns the content of this node. */
 PHP_METHOD(php_wxXmlNode, GetContent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -961,6 +987,10 @@ PHP_METHOD(php_wxXmlNode, GetContent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlNode::GetContent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxXmlNode::GetDepth(wxXmlNode &grandparent)
+   Returns the number of nodes which separate this node from grandparent. */
 PHP_METHOD(php_wxXmlNode, GetDepth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1087,6 +1117,10 @@ PHP_METHOD(php_wxXmlNode, GetDepth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlNode::GetDepth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxXmlNode::GetLineNumber()
+   Returns line number of the node in the input XML file or -1 if it is unknown. */
 PHP_METHOD(php_wxXmlNode, GetLineNumber)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1179,6 +1213,10 @@ PHP_METHOD(php_wxXmlNode, GetLineNumber)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlNode::GetLineNumber\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxXmlNode::GetName()
+   Returns the name of this node. */
 PHP_METHOD(php_wxXmlNode, GetName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1277,6 +1315,10 @@ PHP_METHOD(php_wxXmlNode, GetName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlNode::GetName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxXmlNode wxXmlNode::GetNext()
+   Returns a pointer to the sibling of this node or NULL if there are no siblings. */
 PHP_METHOD(php_wxXmlNode, GetNext)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1392,6 +1434,10 @@ PHP_METHOD(php_wxXmlNode, GetNext)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlNode::GetNext\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxXmlNode::GetNoConversion()
+   Returns a flag indicating whether encoding conversion is necessary when saving. */
 PHP_METHOD(php_wxXmlNode, GetNoConversion)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1484,6 +1530,10 @@ PHP_METHOD(php_wxXmlNode, GetNoConversion)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlNode::GetNoConversion\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxXmlNode::GetNodeContent()
+   Returns the content of the first child node of type wxXML_TEXT_NODE or wxXML_CDATA_SECTION_NODE. */
 PHP_METHOD(php_wxXmlNode, GetNodeContent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1582,6 +1632,10 @@ PHP_METHOD(php_wxXmlNode, GetNodeContent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlNode::GetNodeContent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxXmlNode wxXmlNode::GetParent()
+   Returns a pointer to the parent of this node or NULL if this node has no parent. */
 PHP_METHOD(php_wxXmlNode, GetParent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1697,6 +1751,10 @@ PHP_METHOD(php_wxXmlNode, GetParent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlNode::GetParent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxXmlNodeType wxXmlNode::GetType()
+   Returns the type of this node. */
 PHP_METHOD(php_wxXmlNode, GetType)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1789,6 +1847,10 @@ PHP_METHOD(php_wxXmlNode, GetType)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlNode::GetType\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxXmlNode::HasAttribute(string attrName)
+   Returns true if this node has a attribute named attrName. */
 PHP_METHOD(php_wxXmlNode, HasAttribute)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1887,6 +1949,10 @@ PHP_METHOD(php_wxXmlNode, HasAttribute)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlNode::HasAttribute\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxXmlNode::InsertChild(wxXmlNode &child, wxXmlNode &followingNode)
+   Inserts the child node immediately before followingNode in the children list. */
 PHP_METHOD(php_wxXmlNode, InsertChild)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2021,6 +2087,10 @@ PHP_METHOD(php_wxXmlNode, InsertChild)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlNode::InsertChild\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxXmlNode::InsertChildAfter(wxXmlNode &child, wxXmlNode &precedingNode)
+   Inserts the child node immediately after precedingNode in the children list. */
 PHP_METHOD(php_wxXmlNode, InsertChildAfter)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2155,6 +2225,10 @@ PHP_METHOD(php_wxXmlNode, InsertChildAfter)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlNode::InsertChildAfter\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxXmlNode::IsWhitespaceOnly()
+   Returns true if the content of this node is a string containing only whitespaces (spaces, tabs, new lines, etc). */
 PHP_METHOD(php_wxXmlNode, IsWhitespaceOnly)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2247,6 +2321,10 @@ PHP_METHOD(php_wxXmlNode, IsWhitespaceOnly)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlNode::IsWhitespaceOnly\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxXmlNode::RemoveChild(wxXmlNode &child)
+   Removes the given node from the children list. */
 PHP_METHOD(php_wxXmlNode, RemoveChild)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2362,6 +2440,10 @@ PHP_METHOD(php_wxXmlNode, RemoveChild)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlNode::RemoveChild\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxXmlNode::SetAttributes(wxXmlAttribute &attr)
+   Sets as first attribute the given wxXmlAttribute object. */
 PHP_METHOD(php_wxXmlNode, SetAttributes)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2477,6 +2559,10 @@ PHP_METHOD(php_wxXmlNode, SetAttributes)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlNode::SetAttributes\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxXmlNode::SetChildren(wxXmlNode &child)
+   Sets as first child the given node. */
 PHP_METHOD(php_wxXmlNode, SetChildren)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2592,6 +2678,10 @@ PHP_METHOD(php_wxXmlNode, SetChildren)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlNode::SetChildren\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxXmlNode::SetContent(string con)
+   Sets the content of this node. */
 PHP_METHOD(php_wxXmlNode, SetContent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2690,6 +2780,10 @@ PHP_METHOD(php_wxXmlNode, SetContent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlNode::SetContent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxXmlNode::SetName(string name)
+   Sets the name of this node. */
 PHP_METHOD(php_wxXmlNode, SetName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2788,6 +2882,10 @@ PHP_METHOD(php_wxXmlNode, SetName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlNode::SetName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxXmlNode::SetNext(wxXmlNode &next)
+   Sets as sibling the given node. */
 PHP_METHOD(php_wxXmlNode, SetNext)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2903,6 +3001,10 @@ PHP_METHOD(php_wxXmlNode, SetNext)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlNode::SetNext\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxXmlNode::SetNoConversion(bool noconversion)
+   Sets a flag to indicate whether encoding conversion is necessary when saving. */
 PHP_METHOD(php_wxXmlNode, SetNoConversion)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3000,6 +3102,10 @@ PHP_METHOD(php_wxXmlNode, SetNoConversion)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlNode::SetNoConversion\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxXmlNode::SetParent(wxXmlNode &parent)
+   Sets as parent the given node. */
 PHP_METHOD(php_wxXmlNode, SetParent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3115,6 +3221,10 @@ PHP_METHOD(php_wxXmlNode, SetParent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlNode::SetParent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxXmlNode::SetType(wxXmlNodeType type)
+   Sets the type of this node. */
 PHP_METHOD(php_wxXmlNode, SetType)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3212,6 +3322,10 @@ PHP_METHOD(php_wxXmlNode, SetType)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlNode::SetType\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxXmlNode::wxXmlNode(wxXmlNode &parent, wxXmlNodeType type, string name, string content, wxXmlAttribute &attrs, wxXmlNode &next, int lineNo)
+   Creates this XML node and eventually insert it into an existing XML tree. */
 PHP_METHOD(php_wxXmlNode, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3521,6 +3635,8 @@ PHP_METHOD(php_wxXmlNode, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxXmlAttribute_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3561,6 +3677,8 @@ void php_wxXmlAttribute_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 		#endif
 	}
 }
+/* {{{ proto string wxXmlAttribute::GetName()
+   Returns the name of this attribute. */
 PHP_METHOD(php_wxXmlAttribute, GetName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3659,6 +3777,10 @@ PHP_METHOD(php_wxXmlAttribute, GetName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlAttribute::GetName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxXmlAttribute wxXmlAttribute::GetNext()
+   Returns the sibling of this attribute or NULL if there are no siblings. */
 PHP_METHOD(php_wxXmlAttribute, GetNext)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3774,6 +3896,10 @@ PHP_METHOD(php_wxXmlAttribute, GetNext)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlAttribute::GetNext\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxXmlAttribute::GetValue()
+   Returns the value of this attribute. */
 PHP_METHOD(php_wxXmlAttribute, GetValue)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3872,6 +3998,10 @@ PHP_METHOD(php_wxXmlAttribute, GetValue)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlAttribute::GetValue\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxXmlAttribute::SetName(string name)
+   Sets the name of this attribute. */
 PHP_METHOD(php_wxXmlAttribute, SetName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3970,6 +4100,10 @@ PHP_METHOD(php_wxXmlAttribute, SetName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlAttribute::SetName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxXmlAttribute::SetNext(wxXmlAttribute &next)
+   Sets the sibling of this attribute. */
 PHP_METHOD(php_wxXmlAttribute, SetNext)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4085,6 +4219,10 @@ PHP_METHOD(php_wxXmlAttribute, SetNext)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlAttribute::SetNext\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxXmlAttribute::SetValue(string value)
+   Sets the value of this attribute. */
 PHP_METHOD(php_wxXmlAttribute, SetValue)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4183,6 +4321,10 @@ PHP_METHOD(php_wxXmlAttribute, SetValue)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlAttribute::SetValue\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxXmlAttribute::wxXmlAttribute()
+   Default constructor. */
 PHP_METHOD(php_wxXmlAttribute, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4331,6 +4473,8 @@ PHP_METHOD(php_wxXmlAttribute, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxXmlDocument_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4371,6 +4515,8 @@ void php_wxXmlDocument_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxXmlDocument::AppendToProlog(wxXmlNode &node)
+   Appends a Process Instruction or Comment node to the document prologue. */
 PHP_METHOD(php_wxXmlDocument, AppendToProlog)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4486,6 +4632,10 @@ PHP_METHOD(php_wxXmlDocument, AppendToProlog)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlDocument::AppendToProlog\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxXmlNode wxXmlDocument::DetachDocumentNode()
+   Detaches the document node and returns it. */
 PHP_METHOD(php_wxXmlDocument, DetachDocumentNode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4601,6 +4751,10 @@ PHP_METHOD(php_wxXmlDocument, DetachDocumentNode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlDocument::DetachDocumentNode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxXmlNode wxXmlDocument::DetachRoot()
+   Detaches the root entity node and returns it. */
 PHP_METHOD(php_wxXmlDocument, DetachRoot)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4716,6 +4870,10 @@ PHP_METHOD(php_wxXmlDocument, DetachRoot)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlDocument::DetachRoot\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxXmlNode wxXmlDocument::GetDocumentNode()
+   Returns the document node of the document. */
 PHP_METHOD(php_wxXmlDocument, GetDocumentNode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4831,6 +4989,10 @@ PHP_METHOD(php_wxXmlDocument, GetDocumentNode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlDocument::GetDocumentNode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxXmlDocument::GetFileEncoding()
+   Returns encoding of document (may be empty). */
 PHP_METHOD(php_wxXmlDocument, GetFileEncoding)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4929,6 +5091,10 @@ PHP_METHOD(php_wxXmlDocument, GetFileEncoding)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlDocument::GetFileEncoding\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxVersionInfo wxXmlDocument::GetLibraryVersionInfo()
+   Get expat library version information. */
 PHP_METHOD(php_wxXmlDocument, GetLibraryVersionInfo)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5031,6 +5197,10 @@ PHP_METHOD(php_wxXmlDocument, GetLibraryVersionInfo)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlDocument::GetLibraryVersionInfo\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxXmlNode wxXmlDocument::GetRoot()
+   Returns the root element node of the document. */
 PHP_METHOD(php_wxXmlDocument, GetRoot)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5146,6 +5316,10 @@ PHP_METHOD(php_wxXmlDocument, GetRoot)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlDocument::GetRoot\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxXmlDocument::GetVersion()
+   Returns the version of document. */
 PHP_METHOD(php_wxXmlDocument, GetVersion)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5244,6 +5418,10 @@ PHP_METHOD(php_wxXmlDocument, GetVersion)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlDocument::GetVersion\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxXmlDocument::IsOk()
+   Returns true if the document has been loaded successfully. */
 PHP_METHOD(php_wxXmlDocument, IsOk)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5336,6 +5514,10 @@ PHP_METHOD(php_wxXmlDocument, IsOk)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlDocument::IsOk\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxXmlDocument::Load(string filename, string encoding, int flags)
+   Parses filename as an xml document and loads its data. */
 PHP_METHOD(php_wxXmlDocument, Load)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5541,6 +5723,10 @@ PHP_METHOD(php_wxXmlDocument, Load)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlDocument::Load\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxXmlDocument::Save(string filename, int indentstep)
+   Saves XML tree creating a file named with given string. */
 PHP_METHOD(php_wxXmlDocument, Save)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5719,6 +5905,10 @@ PHP_METHOD(php_wxXmlDocument, Save)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlDocument::Save\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxXmlDocument::SetDocumentNode(wxXmlNode &node)
+   Sets the document node of this document. */
 PHP_METHOD(php_wxXmlDocument, SetDocumentNode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5834,6 +6024,10 @@ PHP_METHOD(php_wxXmlDocument, SetDocumentNode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlDocument::SetDocumentNode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxXmlDocument::SetFileEncoding(string encoding)
+   Sets the enconding of the file which will be used to save the document. */
 PHP_METHOD(php_wxXmlDocument, SetFileEncoding)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5932,6 +6126,10 @@ PHP_METHOD(php_wxXmlDocument, SetFileEncoding)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlDocument::SetFileEncoding\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxXmlDocument::SetRoot(wxXmlNode &node)
+   Sets the root element node of this document. */
 PHP_METHOD(php_wxXmlDocument, SetRoot)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6047,6 +6245,10 @@ PHP_METHOD(php_wxXmlDocument, SetRoot)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlDocument::SetRoot\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxXmlDocument::SetVersion(string version)
+   Sets the version of the XML file which will be used to save the document. */
 PHP_METHOD(php_wxXmlDocument, SetVersion)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6145,6 +6347,10 @@ PHP_METHOD(php_wxXmlDocument, SetVersion)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlDocument::SetVersion\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxXmlDocument::wxXmlDocument()
+   Default constructor. */
 PHP_METHOD(php_wxXmlDocument, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6395,3 +6601,5 @@ PHP_METHOD(php_wxXmlDocument, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+

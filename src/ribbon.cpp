@@ -91,6 +91,8 @@ void php_wxRibbonArtProvider_destruction_handler(zend_rsrc_list_entry *rsrc TSRM
 		#endif
 	}
 }
+/* {{{ proto wxRibbonArtProvider wxRibbonArtProvider::Clone()
+   Create a new art provider which is a clone of this one. */
 wxRibbonArtProvider* wxRibbonArtProvider_php::Clone()const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -138,6 +140,10 @@ wxRibbonArtProvider* wxRibbonArtProvider_php::Clone()const
 		return (wxRibbonArtProvider*) return_object;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonArtProvider::DrawButtonBarBackground(wxDC &dc, wxWindow &wnd, wxRect rect)
+   Draw the background for a wxRibbonButtonBar control. */
 void wxRibbonArtProvider_php::DrawButtonBarBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -191,6 +197,10 @@ void wxRibbonArtProvider_php::DrawButtonBarBackground(wxDC& dc, wxWindow* wnd, c
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonArtProvider::DrawGalleryBackground(wxDC &dc, wxRibbonGallery &wnd, wxRect rect)
+   Draw the background and chrome for a wxRibbonGallery control. */
 void wxRibbonArtProvider_php::DrawGalleryBackground(wxDC& dc, wxRibbonGallery* wnd, const wxRect& rect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -244,6 +254,10 @@ void wxRibbonArtProvider_php::DrawGalleryBackground(wxDC& dc, wxRibbonGallery* w
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonArtProvider::DrawGalleryItemBackground(wxDC &dc, wxRibbonGallery &wnd, wxRect rect, wxRibbonGalleryItem &item)
+   Draw the background of a single item in a wxRibbonGallery control. */
 void wxRibbonArtProvider_php::DrawGalleryItemBackground(wxDC& dc, wxRibbonGallery* wnd, const wxRect& rect, wxRibbonGalleryItem* item)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -299,6 +313,10 @@ void wxRibbonArtProvider_php::DrawGalleryItemBackground(wxDC& dc, wxRibbonGaller
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonArtProvider::DrawMinimisedPanel(wxDC &dc, wxRibbonPanel &wnd, wxRect rect, wxBitmap &bitmap)
+   Draw a minimised ribbon panel. */
 void wxRibbonArtProvider_php::DrawMinimisedPanel(wxDC& dc, wxRibbonPanel* wnd, const wxRect& rect, wxBitmap& bitmap)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -354,6 +372,10 @@ void wxRibbonArtProvider_php::DrawMinimisedPanel(wxDC& dc, wxRibbonPanel* wnd, c
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonArtProvider::DrawPageBackground(wxDC &dc, wxWindow &wnd, wxRect rect)
+   Draw the background of a ribbon page. */
 void wxRibbonArtProvider_php::DrawPageBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -407,6 +429,10 @@ void wxRibbonArtProvider_php::DrawPageBackground(wxDC& dc, wxWindow* wnd, const 
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonArtProvider::DrawPanelBackground(wxDC &dc, wxRibbonPanel &wnd, wxRect rect)
+   Draw the background and chrome for a ribbon panel. */
 void wxRibbonArtProvider_php::DrawPanelBackground(wxDC& dc, wxRibbonPanel* wnd, const wxRect& rect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -460,6 +486,10 @@ void wxRibbonArtProvider_php::DrawPanelBackground(wxDC& dc, wxRibbonPanel* wnd, 
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonArtProvider::DrawScrollButton(wxDC &dc, wxWindow &wnd, wxRect rect, int style)
+   Draw a ribbon-style scroll button. */
 void wxRibbonArtProvider_php::DrawScrollButton(wxDC& dc, wxWindow* wnd, const wxRect& rect, long style)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -514,6 +544,10 @@ void wxRibbonArtProvider_php::DrawScrollButton(wxDC& dc, wxWindow* wnd, const wx
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonArtProvider::DrawTabCtrlBackground(wxDC &dc, wxWindow &wnd, wxRect rect)
+   Draw the background of the tab region of a ribbon bar. */
 void wxRibbonArtProvider_php::DrawTabCtrlBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -567,6 +601,10 @@ void wxRibbonArtProvider_php::DrawTabCtrlBackground(wxDC& dc, wxWindow* wnd, con
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonArtProvider::DrawTabSeparator(wxDC &dc, wxWindow &wnd, wxRect rect, float visibility)
+   Draw a separator between two tabs in a ribbon bar. */
 void wxRibbonArtProvider_php::DrawTabSeparator(wxDC& dc, wxWindow* wnd, const wxRect& rect, double visibility)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -621,6 +659,10 @@ void wxRibbonArtProvider_php::DrawTabSeparator(wxDC& dc, wxWindow* wnd, const wx
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonArtProvider::DrawTool(wxDC &dc, wxWindow &wnd, wxRect rect, wxBitmap bitmap, wxRibbonButtonKind kind, int state)
+   Draw a single tool (for a wxRibbonToolBar control). */
 void wxRibbonArtProvider_php::DrawTool(wxDC& dc, wxWindow* wnd, const wxRect& rect, const wxBitmap& bitmap, wxRibbonButtonKind kind, long state)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -678,6 +720,10 @@ void wxRibbonArtProvider_php::DrawTool(wxDC& dc, wxWindow* wnd, const wxRect& re
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonArtProvider::DrawToolBarBackground(wxDC &dc, wxWindow &wnd, wxRect rect)
+   Draw the background for a wxRibbonToolBar control. */
 void wxRibbonArtProvider_php::DrawToolBarBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -731,6 +777,10 @@ void wxRibbonArtProvider_php::DrawToolBarBackground(wxDC& dc, wxWindow* wnd, con
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonArtProvider::DrawToolGroupBackground(wxDC &dc, wxWindow &wnd, wxRect rect)
+   Draw the background for a group of tools on a wxRibbonToolBar control. */
 void wxRibbonArtProvider_php::DrawToolGroupBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -784,6 +834,10 @@ void wxRibbonArtProvider_php::DrawToolGroupBackground(wxDC& dc, wxWindow* wnd, c
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonArtProvider::GetBarTabWidth(wxDC &dc, wxWindow &wnd, string label, wxBitmap bitmap, int &ideal, int &small_begin_need_separator, int &small_must_have_separator, int &minimum)
+   Calculate the ideal and minimum width (in pixels) of a tab in a ribbon bar. */
 void wxRibbonArtProvider_php::GetBarTabWidth(wxDC& dc, wxWindow* wnd, const wxString& label, const wxBitmap& bitmap, int* ideal, int* small_begin_need_separator, int* small_must_have_separator, int* minimum)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -845,6 +899,9 @@ void wxRibbonArtProvider_php::GetBarTabWidth(wxDC& dc, wxWindow* wnd, const wxSt
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto wxColour wxRibbonArtProvider::GetColor(int id) */
 PHP_METHOD(php_wxRibbonArtProvider, GetColor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -950,6 +1007,10 @@ PHP_METHOD(php_wxRibbonArtProvider, GetColor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonArtProvider::GetColor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxRibbonArtProvider::GetColour(int id)
+   Get the value of a certain colour setting. */
 wxColour wxRibbonArtProvider_php::GetColour(int id)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1003,6 +1064,10 @@ wxColour wxRibbonArtProvider_php::GetColour(int id)const
 		return *(wxColour*) return_object;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonArtProvider::GetColourScheme(wxColour &primary, wxColour &secondary, wxColour &tertiary)
+   Get the current colour scheme. */
 void wxRibbonArtProvider_php::GetColourScheme(wxColour* primary, wxColour* secondary, wxColour* tertiary)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1056,6 +1121,10 @@ void wxRibbonArtProvider_php::GetColourScheme(wxColour* primary, wxColour* secon
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto int wxRibbonArtProvider::GetFlags()
+   Get the previously set style flags. */
 long wxRibbonArtProvider_php::GetFlags()const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1098,6 +1167,10 @@ long wxRibbonArtProvider_php::GetFlags()const
 		return (long) Z_LVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto wxFont wxRibbonArtProvider::GetFont(int id)
+   Get the value of a certain font setting. */
 wxFont wxRibbonArtProvider_php::GetFont(int id)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1151,6 +1224,10 @@ wxFont wxRibbonArtProvider_php::GetFont(int id)const
 		return *(wxFont*) return_object;
 	
 }
+/* }}} */
+
+/* {{{ proto wxSize wxRibbonArtProvider::GetGalleryClientSize(wxDC &dc, wxRibbonGallery wnd, wxSize size, wxPoint &client_offset, wxRect &scroll_up_button, wxRect &scroll_down_button, wxRect &extension_button)
+   Calculate the client size of a wxRibbonGallery control for a given size. */
 wxSize wxRibbonArtProvider_php::GetGalleryClientSize(wxDC& dc, const wxRibbonGallery* wnd, wxSize size, wxPoint* client_offset, wxRect* scroll_up_button, wxRect* scroll_down_button, wxRect* extension_button)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1217,6 +1294,10 @@ wxSize wxRibbonArtProvider_php::GetGalleryClientSize(wxDC& dc, const wxRibbonGal
 		return *(wxSize*) return_object;
 	
 }
+/* }}} */
+
+/* {{{ proto wxSize wxRibbonArtProvider::GetGallerySize(wxDC &dc, wxRibbonGallery wnd, wxSize client_size)
+   Calculate the size of a wxRibbonGallery control for a given client size. */
 wxSize wxRibbonArtProvider_php::GetGallerySize(wxDC& dc, const wxRibbonGallery* wnd, wxSize client_size)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1275,6 +1356,10 @@ wxSize wxRibbonArtProvider_php::GetGallerySize(wxDC& dc, const wxRibbonGallery* 
 		return *(wxSize*) return_object;
 	
 }
+/* }}} */
+
+/* {{{ proto int wxRibbonArtProvider::GetMetric(int id)
+   Get the value of a certain integer setting. */
 int wxRibbonArtProvider_php::GetMetric(int id)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1323,6 +1408,10 @@ int wxRibbonArtProvider_php::GetMetric(int id)const
 		return (int) Z_LVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto wxSize wxRibbonArtProvider::GetMinimisedPanelMinimumSize(wxDC &dc, wxRibbonPanel wnd, wxSize &desired_bitmap_size, wxDirection &expanded_panel_direction)
+   Calculate the size of a minimised ribbon panel. */
 wxSize wxRibbonArtProvider_php::GetMinimisedPanelMinimumSize(wxDC& dc, const wxRibbonPanel* wnd, wxSize* desired_bitmap_size, wxDirection* expanded_panel_direction)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1382,6 +1471,10 @@ wxSize wxRibbonArtProvider_php::GetMinimisedPanelMinimumSize(wxDC& dc, const wxR
 		return *(wxSize*) return_object;
 	
 }
+/* }}} */
+
+/* {{{ proto wxRect wxRibbonArtProvider::GetPageBackgroundRedrawArea(wxDC &dc, wxRibbonPage wnd, wxSize page_old_size, wxSize page_new_size)
+   Calculate the portion of a page background which needs to be redrawn when a page is resized. */
 wxRect wxRibbonArtProvider_php::GetPageBackgroundRedrawArea(wxDC& dc, const wxRibbonPage* wnd, wxSize page_old_size, wxSize page_new_size)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1442,6 +1535,10 @@ wxRect wxRibbonArtProvider_php::GetPageBackgroundRedrawArea(wxDC& dc, const wxRi
 		return *(wxRect*) return_object;
 	
 }
+/* }}} */
+
+/* {{{ proto wxSize wxRibbonArtProvider::GetPanelClientSize(wxDC &dc, wxRibbonPanel wnd, wxSize size, wxPoint &client_offset)
+   Calculate the client size of a panel for a given overall size. */
 wxSize wxRibbonArtProvider_php::GetPanelClientSize(wxDC& dc, const wxRibbonPanel* wnd, wxSize size, wxPoint* client_offset)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1502,6 +1599,10 @@ wxSize wxRibbonArtProvider_php::GetPanelClientSize(wxDC& dc, const wxRibbonPanel
 		return *(wxSize*) return_object;
 	
 }
+/* }}} */
+
+/* {{{ proto wxSize wxRibbonArtProvider::GetPanelSize(wxDC &dc, wxRibbonPanel wnd, wxSize client_size, wxPoint &client_offset)
+   Calculate the size of a panel for a given client size. */
 wxSize wxRibbonArtProvider_php::GetPanelSize(wxDC& dc, const wxRibbonPanel* wnd, wxSize client_size, wxPoint* client_offset)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1562,6 +1663,10 @@ wxSize wxRibbonArtProvider_php::GetPanelSize(wxDC& dc, const wxRibbonPanel* wnd,
 		return *(wxSize*) return_object;
 	
 }
+/* }}} */
+
+/* {{{ proto wxSize wxRibbonArtProvider::GetScrollButtonMinimumSize(wxDC &dc, wxWindow &wnd, int style)
+   Calculate the minimum size (in pixels) of a scroll button. */
 wxSize wxRibbonArtProvider_php::GetScrollButtonMinimumSize(wxDC& dc, wxWindow* wnd, long style)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1619,6 +1724,10 @@ wxSize wxRibbonArtProvider_php::GetScrollButtonMinimumSize(wxDC& dc, wxWindow* w
 		return *(wxSize*) return_object;
 	
 }
+/* }}} */
+
+/* {{{ proto wxSize wxRibbonArtProvider::GetToolSize(wxDC &dc, wxWindow &wnd, wxSize bitmap_size, wxRibbonButtonKind kind, bool is_first, bool is_last, wxRect &dropdown_region)
+   Calculate the size of a tool within a wxRibbonToolBar. */
 wxSize wxRibbonArtProvider_php::GetToolSize(wxDC& dc, wxWindow* wnd, wxSize bitmap_size, wxRibbonButtonKind kind, bool is_first, bool is_last, wxRect* dropdown_region)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1682,6 +1791,9 @@ wxSize wxRibbonArtProvider_php::GetToolSize(wxDC& dc, wxWindow* wnd, wxSize bitm
 		return *(wxSize*) return_object;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonArtProvider::SetColor(int id, wxColour color) */
 PHP_METHOD(php_wxRibbonArtProvider, SetColor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1801,6 +1913,10 @@ PHP_METHOD(php_wxRibbonArtProvider, SetColor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonArtProvider::SetColor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonArtProvider::SetColourScheme(wxColour primary, wxColour secondary, wxColour tertiary)
+   Set all applicable colour settings from a few base colours. */
 void wxRibbonArtProvider_php::SetColourScheme(const wxColour& primary, const wxColour& secondary, const wxColour& tertiary)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1854,6 +1970,10 @@ void wxRibbonArtProvider_php::SetColourScheme(const wxColour& primary, const wxC
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonArtProvider::SetFlags(int flags)
+   Set the style flags. */
 void wxRibbonArtProvider_php::SetFlags(long flags)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1902,6 +2022,10 @@ void wxRibbonArtProvider_php::SetFlags(long flags)
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonArtProvider::SetFont(int id, wxFont font)
+   Set the value of a certain font setting to the value font. */
 void wxRibbonArtProvider_php::SetFont(int id, const wxFont& font)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1952,6 +2076,10 @@ void wxRibbonArtProvider_php::SetFont(int id, const wxFont& font)
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonArtProvider::SetMetric(int id, int new_val)
+   Set the value of a certain integer setting to the value new_val. */
 void wxRibbonArtProvider_php::SetMetric(int id, int new_val)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2001,6 +2129,10 @@ void wxRibbonArtProvider_php::SetMetric(int id, int new_val)
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonArtProvider::DrawButtonBarButton(wxDC &dc, wxWindow &wnd, wxRect rect, wxRibbonButtonKind kind, int state, string label, wxBitmap bitmap_large, wxBitmap bitmap_small)
+   Draw a single button for a wxRibbonButtonBar control. */
 void wxRibbonArtProvider_php::DrawButtonBarButton(wxDC& dc, wxWindow* wnd, const wxRect& rect, wxRibbonButtonKind kind, long state, const wxString& label, const wxBitmap& bitmap_large, const wxBitmap& bitmap_small)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2064,6 +2196,10 @@ void wxRibbonArtProvider_php::DrawButtonBarButton(wxDC& dc, wxWindow* wnd, const
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto bool wxRibbonArtProvider::GetButtonBarButtonSize(wxDC &dc, wxWindow &wnd, wxRibbonButtonKind kind, wxRibbonButtonBarButtonState size, string label, wxSize bitmap_size_large, wxSize bitmap_size_small, wxSize &button_size, wxRect &normal_region, wxRect &dropdown_region)
+   Calculate the size of a button within a wxRibbonButtonBar. */
 bool wxRibbonArtProvider_php::GetButtonBarButtonSize(wxDC& dc, wxWindow* wnd, wxRibbonButtonKind kind, wxRibbonButtonBarButtonState size, const wxString& label, wxSize bitmap_size_large, wxSize bitmap_size_small, wxSize* button_size, wxRect* normal_region, wxRect* dropdown_region)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2131,6 +2267,8 @@ bool wxRibbonArtProvider_php::GetButtonBarButtonSize(wxDC& dc, wxWindow* wnd, wx
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
 void php_wxRibbonBar_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2138,6 +2276,8 @@ void php_wxRibbonBar_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto bool wxRibbonBar::ArePanelsShown()
+   Indicates whether the panel area of the ribbon bar is shown. */
 PHP_METHOD(php_wxRibbonBar, ArePanelsShown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2230,6 +2370,10 @@ PHP_METHOD(php_wxRibbonBar, ArePanelsShown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonBar::ArePanelsShown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRibbonBar::Create(wxWindow &parent, int id, wxPoint pos, wxSize size, int style)
+   Create a ribbon bar in two-step ribbon bar construction. */
 PHP_METHOD(php_wxRibbonBar, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2436,6 +2580,10 @@ PHP_METHOD(php_wxRibbonBar, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonBar::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRibbonBar::DismissExpandedPanel()
+   Dismiss the expanded panel of the currently active page. */
 PHP_METHOD(php_wxRibbonBar, DismissExpandedPanel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2528,6 +2676,10 @@ PHP_METHOD(php_wxRibbonBar, DismissExpandedPanel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonBar::DismissExpandedPanel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxRibbonBar::GetActivePage()
+   Get the index of the active page. */
 PHP_METHOD(php_wxRibbonBar, GetActivePage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2620,6 +2772,10 @@ PHP_METHOD(php_wxRibbonBar, GetActivePage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonBar::GetActivePage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRibbonPage wxRibbonBar::GetPage(int n)
+   Get a page by index. */
 PHP_METHOD(php_wxRibbonBar, GetPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2740,6 +2896,10 @@ PHP_METHOD(php_wxRibbonBar, GetPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonBar::GetPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonBar::HidePanels()
+   Hides the panel area of the ribbon bar. */
 PHP_METHOD(php_wxRibbonBar, HidePanels)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2832,6 +2992,10 @@ PHP_METHOD(php_wxRibbonBar, HidePanels)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonBar::HidePanels\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRibbonBar::Realize()
+   Perform initial layout and size calculations of the bar and its children. */
 PHP_METHOD(php_wxRibbonBar, Realize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2924,6 +3088,10 @@ PHP_METHOD(php_wxRibbonBar, Realize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonBar::Realize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRibbonBar::SetActivePage(int page)
+   Set the active page by index, without triggering any events. */
 PHP_METHOD(php_wxRibbonBar, SetActivePage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3076,6 +3244,10 @@ PHP_METHOD(php_wxRibbonBar, SetActivePage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonBar::SetActivePage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonBar::SetArtProvider(wxRibbonArtProvider &art)
+   Set the art provider to be used be the ribbon bar. */
 PHP_METHOD(php_wxRibbonBar, SetArtProvider)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3191,6 +3363,10 @@ PHP_METHOD(php_wxRibbonBar, SetArtProvider)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonBar::SetArtProvider\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonBar::SetTabCtrlMargins(int left, int right)
+   Set the margin widths (in pixels) on the left and right sides of the tab bar region of the ribbon bar. */
 PHP_METHOD(php_wxRibbonBar, SetTabCtrlMargins)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3289,6 +3465,10 @@ PHP_METHOD(php_wxRibbonBar, SetTabCtrlMargins)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonBar::SetTabCtrlMargins\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonBar::ShowPanels(bool show)
+   Shows or hides the panel area of the ribbon bar. */
 PHP_METHOD(php_wxRibbonBar, ShowPanels)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3397,6 +3577,10 @@ PHP_METHOD(php_wxRibbonBar, ShowPanels)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonBar::ShowPanels\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonBar::wxRibbonBar()
+   Default constructor. */
 PHP_METHOD(php_wxRibbonBar, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3618,6 +3802,8 @@ PHP_METHOD(php_wxRibbonBar, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxRibbonButtonBar_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3625,6 +3811,8 @@ void php_wxRibbonButtonBar_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto wxRibbonButtonBarButtonBase wxRibbonButtonBar::AddDropdownButton(int button_id, string label, wxBitmap bitmap, string help_string)
+   Add a dropdown button to the button bar (simple version). */
 PHP_METHOD(php_wxRibbonButtonBar, AddDropdownButton)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3803,6 +3991,10 @@ PHP_METHOD(php_wxRibbonButtonBar, AddDropdownButton)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonButtonBar::AddDropdownButton\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRibbonButtonBarButtonBase wxRibbonButtonBar::AddHybridButton(int button_id, string label, wxBitmap bitmap, string help_string)
+   Add a hybrid button to the button bar (simple version). */
 PHP_METHOD(php_wxRibbonButtonBar, AddHybridButton)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3981,6 +4173,10 @@ PHP_METHOD(php_wxRibbonButtonBar, AddHybridButton)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonButtonBar::AddHybridButton\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRibbonButtonBarButtonBase wxRibbonButtonBar::AddToggleButton(int button_id, string label, wxBitmap bitmap, string help_string)
+   Add a toggle button to the button bar (simple version). */
 PHP_METHOD(php_wxRibbonButtonBar, AddToggleButton)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4159,6 +4355,10 @@ PHP_METHOD(php_wxRibbonButtonBar, AddToggleButton)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonButtonBar::AddToggleButton\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonButtonBar::ClearButtons()
+   Delete all buttons from the button bar. */
 PHP_METHOD(php_wxRibbonButtonBar, ClearButtons)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4251,6 +4451,10 @@ PHP_METHOD(php_wxRibbonButtonBar, ClearButtons)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonButtonBar::ClearButtons\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRibbonButtonBar::Create(wxWindow &parent, int id, wxPoint pos, wxSize size, int style)
+   Create a button bar in two-step button bar construction. */
 PHP_METHOD(php_wxRibbonButtonBar, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4457,6 +4661,10 @@ PHP_METHOD(php_wxRibbonButtonBar, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonButtonBar::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRibbonButtonBar::DeleteButton(int button_id)
+   Delete a single button from the button bar. */
 PHP_METHOD(php_wxRibbonButtonBar, DeleteButton)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4554,6 +4762,10 @@ PHP_METHOD(php_wxRibbonButtonBar, DeleteButton)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonButtonBar::DeleteButton\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonButtonBar::EnableButton(int button_id, bool enable)
+   Enable or disable a single button on the bar. */
 PHP_METHOD(php_wxRibbonButtonBar, EnableButton)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4663,6 +4875,10 @@ PHP_METHOD(php_wxRibbonButtonBar, EnableButton)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonButtonBar::EnableButton\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRibbonButtonBar::Realize()
+   Calculate button layouts and positions. */
 PHP_METHOD(php_wxRibbonButtonBar, Realize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4755,6 +4971,10 @@ PHP_METHOD(php_wxRibbonButtonBar, Realize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonButtonBar::Realize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonButtonBar::ToggleButton(int button_id, bool checked)
+   Set a toggle button to the checked or unchecked state. */
 PHP_METHOD(php_wxRibbonButtonBar, ToggleButton)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4853,6 +5073,10 @@ PHP_METHOD(php_wxRibbonButtonBar, ToggleButton)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonButtonBar::ToggleButton\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonButtonBar::wxRibbonButtonBar()
+   Default constructor. */
 PHP_METHOD(php_wxRibbonButtonBar, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5074,6 +5298,10 @@ PHP_METHOD(php_wxRibbonButtonBar, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto wxRibbonButtonBarButtonBase wxRibbonButtonBar::AddButton(int button_id, string label, wxBitmap bitmap, string help_string, wxRibbonButtonKind kind)
+   Add a button to the button bar (simple version). */
 PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5635,6 +5863,8 @@ PHP_METHOD(php_wxRibbonButtonBar, AddButton)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonButtonBar::AddButton\n");
 	}
 }
+/* }}} */
+
 void php_wxRibbonControl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5642,6 +5872,8 @@ void php_wxRibbonControl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto wxSize wxRibbonControl::DoGetNextLargerSize(wxOrientation direction, wxSize relative_to)
+   Implementation of GetNextLargerSize(). */
 wxSize wxRibbonControl_php::DoGetNextLargerSize(wxOrientation direction, wxSize relative_to)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5706,6 +5938,10 @@ wxSize wxRibbonControl_php::DoGetNextLargerSize(wxOrientation direction, wxSize 
 	//Call original method
 	return wxRibbonControl::DoGetNextLargerSize(direction, relative_to);
 }
+/* }}} */
+
+/* {{{ proto wxSize wxRibbonControl::DoGetNextSmallerSize(wxOrientation direction, wxSize relative_to)
+   Implementation of GetNextSmallerSize(). */
 wxSize wxRibbonControl_php::DoGetNextSmallerSize(wxOrientation direction, wxSize relative_to)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5770,6 +6006,10 @@ wxSize wxRibbonControl_php::DoGetNextSmallerSize(wxOrientation direction, wxSize
 	//Call original method
 	return wxRibbonControl::DoGetNextSmallerSize(direction, relative_to);
 }
+/* }}} */
+
+/* {{{ proto wxRibbonArtProvider wxRibbonControl::GetArtProvider()
+   Get the art provider to be used. */
 PHP_METHOD(php_wxRibbonControl, GetArtProvider)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5909,6 +6149,10 @@ PHP_METHOD(php_wxRibbonControl, GetArtProvider)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonControl::GetArtProvider\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxRibbonControl::GetNextLargerSize(wxOrientation direction)
+   If sizing is not continuous, then return a suitable size for the control which is larger than the current size. */
 PHP_METHOD(php_wxRibbonControl, GetNextLargerSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6095,6 +6339,10 @@ PHP_METHOD(php_wxRibbonControl, GetNextLargerSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonControl::GetNextLargerSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxRibbonControl::GetNextSmallerSize(wxOrientation direction)
+   If sizing is not continuous, then return a suitable size for the control which is smaller than the current size. */
 PHP_METHOD(php_wxRibbonControl, GetNextSmallerSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6281,6 +6529,9 @@ PHP_METHOD(php_wxRibbonControl, GetNextSmallerSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonControl::GetNextSmallerSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRibbonControl::IsSizingContinuous() */
 PHP_METHOD(php_wxRibbonControl, IsSizingContinuous)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6397,6 +6648,10 @@ PHP_METHOD(php_wxRibbonControl, IsSizingContinuous)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonControl::IsSizingContinuous\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRibbonControl::Realise()
+   Alias for Realize(). */
 PHP_METHOD(php_wxRibbonControl, Realise)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6513,6 +6768,10 @@ PHP_METHOD(php_wxRibbonControl, Realise)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonControl::Realise\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRibbonControl::Realize()
+   Perform initial size and layout calculations after children have been added, and/or realize children. */
 PHP_METHOD(php_wxRibbonControl, Realize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6629,6 +6888,10 @@ PHP_METHOD(php_wxRibbonControl, Realize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonControl::Realize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonControl::SetArtProvider(wxRibbonArtProvider &art)
+   Set the art provider to be used. */
 PHP_METHOD(php_wxRibbonControl, SetArtProvider)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6768,6 +7031,10 @@ PHP_METHOD(php_wxRibbonControl, SetArtProvider)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonControl::SetArtProvider\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonControl::wxRibbonControl()
+   Constructor. */
 PHP_METHOD(php_wxRibbonControl, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7026,6 +7293,8 @@ PHP_METHOD(php_wxRibbonControl, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxRibbonGallery_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7033,6 +7302,8 @@ void php_wxRibbonGallery_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto wxRibbonGalleryItem wxRibbonGallery::Append(wxBitmap bitmap, int id)
+   Add an item to the gallery (with no client data). */
 PHP_METHOD(php_wxRibbonGallery, Append)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7356,6 +7627,10 @@ PHP_METHOD(php_wxRibbonGallery, Append)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonGallery::Append\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonGallery::Clear()
+   Remove all items from the gallery. */
 PHP_METHOD(php_wxRibbonGallery, Clear)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7448,6 +7723,10 @@ PHP_METHOD(php_wxRibbonGallery, Clear)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonGallery::Clear\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRibbonGallery::Create(wxWindow &parent, int id, wxPoint pos, wxSize size, int style)
+   Create a gallery in two-step gallery construction. */
 PHP_METHOD(php_wxRibbonGallery, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7654,6 +7933,10 @@ PHP_METHOD(php_wxRibbonGallery, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonGallery::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonGallery::EnsureVisible(wxRibbonGalleryItem item)
+   Scroll the gallery to ensure that the given item is visible. */
 PHP_METHOD(php_wxRibbonGallery, EnsureVisible)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7769,6 +8052,10 @@ PHP_METHOD(php_wxRibbonGallery, EnsureVisible)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonGallery::EnsureVisible\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRibbonGalleryItem wxRibbonGallery::GetActiveItem()
+   Get the currently active item, or NULL if there is none. */
 PHP_METHOD(php_wxRibbonGallery, GetActiveItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7884,6 +8171,10 @@ PHP_METHOD(php_wxRibbonGallery, GetActiveItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonGallery::GetActiveItem\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxRibbonGallery::GetCount()
+   Get the number of items in the gallery. */
 PHP_METHOD(php_wxRibbonGallery, GetCount)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7976,6 +8267,10 @@ PHP_METHOD(php_wxRibbonGallery, GetCount)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonGallery::GetCount\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRibbonGalleryButtonState wxRibbonGallery::GetDownButtonState()
+   Get the state of the scroll down button. */
 PHP_METHOD(php_wxRibbonGallery, GetDownButtonState)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8068,6 +8363,10 @@ PHP_METHOD(php_wxRibbonGallery, GetDownButtonState)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonGallery::GetDownButtonState\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRibbonGalleryButtonState wxRibbonGallery::GetExtensionButtonState()
+   Get the state of the "extension" button. */
 PHP_METHOD(php_wxRibbonGallery, GetExtensionButtonState)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8160,6 +8459,10 @@ PHP_METHOD(php_wxRibbonGallery, GetExtensionButtonState)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonGallery::GetExtensionButtonState\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRibbonGalleryItem wxRibbonGallery::GetHoveredItem()
+   Get the currently hovered item, or NULL if there is none. */
 PHP_METHOD(php_wxRibbonGallery, GetHoveredItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8275,6 +8578,10 @@ PHP_METHOD(php_wxRibbonGallery, GetHoveredItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonGallery::GetHoveredItem\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRibbonGalleryItem wxRibbonGallery::GetItem(int n)
+   Get an item by index. */
 PHP_METHOD(php_wxRibbonGallery, GetItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8395,6 +8702,10 @@ PHP_METHOD(php_wxRibbonGallery, GetItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonGallery::GetItem\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto void wxRibbonGallery::GetItemClientData(wxRibbonGalleryItem item)
+   Get the client data associated with a gallery item. */
 PHP_METHOD(php_wxRibbonGallery, GetItemClientData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8510,6 +8821,10 @@ PHP_METHOD(php_wxRibbonGallery, GetItemClientData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonGallery::GetItemClientData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxClientData wxRibbonGallery::GetItemClientObject(wxRibbonGalleryItem item)
+   Get the client object associated with a gallery item. */
 PHP_METHOD(php_wxRibbonGallery, GetItemClientObject)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8648,6 +8963,10 @@ PHP_METHOD(php_wxRibbonGallery, GetItemClientObject)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonGallery::GetItemClientObject\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRibbonGalleryItem wxRibbonGallery::GetSelection()
+   Get the currently selected item, or NULL if there is none. */
 PHP_METHOD(php_wxRibbonGallery, GetSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8763,6 +9082,10 @@ PHP_METHOD(php_wxRibbonGallery, GetSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonGallery::GetSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRibbonGalleryButtonState wxRibbonGallery::GetUpButtonState()
+   Get the state of the scroll up button. */
 PHP_METHOD(php_wxRibbonGallery, GetUpButtonState)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8855,6 +9178,10 @@ PHP_METHOD(php_wxRibbonGallery, GetUpButtonState)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonGallery::GetUpButtonState\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRibbonGallery::IsEmpty()
+   Query if the gallery has no items in it. */
 PHP_METHOD(php_wxRibbonGallery, IsEmpty)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8947,6 +9274,10 @@ PHP_METHOD(php_wxRibbonGallery, IsEmpty)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonGallery::IsEmpty\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRibbonGallery::IsHovered()
+   Query is the mouse is currently hovered over the gallery. */
 PHP_METHOD(php_wxRibbonGallery, IsHovered)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9039,6 +9370,10 @@ PHP_METHOD(php_wxRibbonGallery, IsHovered)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonGallery::IsHovered\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRibbonGallery::ScrollLines(int lines)
+   Scroll the gallery contents by some amount. */
 PHP_METHOD(php_wxRibbonGallery, ScrollLines)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9136,6 +9471,10 @@ PHP_METHOD(php_wxRibbonGallery, ScrollLines)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonGallery::ScrollLines\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRibbonGallery::ScrollPixels(int pixels)
+   Scroll the gallery contents by some fine-grained amount. */
 PHP_METHOD(php_wxRibbonGallery, ScrollPixels)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9233,6 +9572,10 @@ PHP_METHOD(php_wxRibbonGallery, ScrollPixels)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonGallery::ScrollPixels\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonGallery::SetItemClientData(wxRibbonGalleryItem &item, void data)
+   Set the client data associated with a gallery item. */
 PHP_METHOD(php_wxRibbonGallery, SetItemClientData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9355,6 +9698,10 @@ PHP_METHOD(php_wxRibbonGallery, SetItemClientData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonGallery::SetItemClientData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonGallery::SetItemClientObject(wxRibbonGalleryItem &item, wxClientData &data)
+   Set the client object associated with a gallery item. */
 PHP_METHOD(php_wxRibbonGallery, SetItemClientObject)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9489,6 +9836,10 @@ PHP_METHOD(php_wxRibbonGallery, SetItemClientObject)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonGallery::SetItemClientObject\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonGallery::SetSelection(wxRibbonGalleryItem &item)
+   Set the selection to the given item, or removes the selection if item == NULL. */
 PHP_METHOD(php_wxRibbonGallery, SetSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9604,6 +9955,10 @@ PHP_METHOD(php_wxRibbonGallery, SetSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonGallery::SetSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonGallery::wxRibbonGallery()
+   Default constructor. */
 PHP_METHOD(php_wxRibbonGallery, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9825,6 +10180,8 @@ PHP_METHOD(php_wxRibbonGallery, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxRibbonPage_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9832,6 +10189,8 @@ void php_wxRibbonPage_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto  wxRibbonPage::AdjustRectToIncludeScrollButtons(wxRect &rect)
+   Expand a rectangle of the page to include external scroll buttons (if any). */
 PHP_METHOD(php_wxRibbonPage, AdjustRectToIncludeScrollButtons)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9947,6 +10306,10 @@ PHP_METHOD(php_wxRibbonPage, AdjustRectToIncludeScrollButtons)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonPage::AdjustRectToIncludeScrollButtons\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRibbonPage::Create(wxRibbonBar &parent, int id, string label, wxBitmap icon, int style)
+   Create a ribbon page in two-step ribbon page construction. */
 PHP_METHOD(php_wxRibbonPage, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10134,6 +10497,10 @@ PHP_METHOD(php_wxRibbonPage, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonPage::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRibbonPage::DismissExpandedPanel()
+   Dismiss the current externally expanded panel, if there is one. */
 PHP_METHOD(php_wxRibbonPage, DismissExpandedPanel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10226,6 +10593,10 @@ PHP_METHOD(php_wxRibbonPage, DismissExpandedPanel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonPage::DismissExpandedPanel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxBitmap wxRibbonPage::GetIcon()
+   Get the icon used for the page in the ribbon bar tab area (only displayed if the ribbon bar is actually showing icons). */
 PHP_METHOD(php_wxRibbonPage, GetIcon)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10338,6 +10709,10 @@ PHP_METHOD(php_wxRibbonPage, GetIcon)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonPage::GetIcon\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxOrientation wxRibbonPage::GetMajorAxis()
+   Get the direction in which ribbon panels are stacked within the page. */
 PHP_METHOD(php_wxRibbonPage, GetMajorAxis)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10430,6 +10805,10 @@ PHP_METHOD(php_wxRibbonPage, GetMajorAxis)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonPage::GetMajorAxis\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRibbonPage::Realize()
+   Perform a full re-layout of all panels on the page. */
 PHP_METHOD(php_wxRibbonPage, Realize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10522,6 +10901,10 @@ PHP_METHOD(php_wxRibbonPage, Realize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonPage::Realize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRibbonPage::ScrollLines(int lines)
+   Scroll the page by some amount up / down / left / right. */
 PHP_METHOD(php_wxRibbonPage, ScrollLines)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10619,6 +11002,10 @@ PHP_METHOD(php_wxRibbonPage, ScrollLines)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonPage::ScrollLines\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRibbonPage::ScrollPixels(int pixels)
+   Scroll the page by a set number of pixels up / down / left / right. */
 PHP_METHOD(php_wxRibbonPage, ScrollPixels)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10716,6 +11103,10 @@ PHP_METHOD(php_wxRibbonPage, ScrollPixels)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonPage::ScrollPixels\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonPage::SetArtProvider(wxRibbonArtProvider &art)
+   Set the art provider to be used. */
 PHP_METHOD(php_wxRibbonPage, SetArtProvider)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10831,6 +11222,10 @@ PHP_METHOD(php_wxRibbonPage, SetArtProvider)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonPage::SetArtProvider\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonPage::SetSizeWithScrollButtonAdjustment(int x, int y, int width, int height)
+   Set the size of the page and the external scroll buttons (if any). */
 PHP_METHOD(php_wxRibbonPage, SetSizeWithScrollButtonAdjustment)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10931,6 +11326,10 @@ PHP_METHOD(php_wxRibbonPage, SetSizeWithScrollButtonAdjustment)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonPage::SetSizeWithScrollButtonAdjustment\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonPage::wxRibbonPage()
+   Default constructor. */
 PHP_METHOD(php_wxRibbonPage, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11133,6 +11532,8 @@ PHP_METHOD(php_wxRibbonPage, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxRibbonPanel_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11140,6 +11541,8 @@ void php_wxRibbonPanel_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto bool wxRibbonPanel::CanAutoMinimise()
+   Query if the panel can automatically minimise itself at small sizes. */
 PHP_METHOD(php_wxRibbonPanel, CanAutoMinimise)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11232,6 +11635,10 @@ PHP_METHOD(php_wxRibbonPanel, CanAutoMinimise)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonPanel::CanAutoMinimise\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRibbonPanel::Create(wxWindow &parent, int id, string label, wxBitmap icon, wxPoint pos, wxSize size, int style)
+   Create a ribbon panel in two-step ribbon panel construction. */
 PHP_METHOD(php_wxRibbonPanel, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11486,6 +11893,10 @@ PHP_METHOD(php_wxRibbonPanel, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonPanel::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRibbonPanel wxRibbonPanel::GetExpandedDummy()
+   Get the dummy panel of an expanded panel. */
 PHP_METHOD(php_wxRibbonPanel, GetExpandedDummy)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11601,6 +12012,10 @@ PHP_METHOD(php_wxRibbonPanel, GetExpandedDummy)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonPanel::GetExpandedDummy\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRibbonPanel wxRibbonPanel::GetExpandedPanel()
+   Get the expanded panel of a dummy panel. */
 PHP_METHOD(php_wxRibbonPanel, GetExpandedPanel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11716,6 +12131,10 @@ PHP_METHOD(php_wxRibbonPanel, GetExpandedPanel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonPanel::GetExpandedPanel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxBitmap wxRibbonPanel::GetMinimisedIcon()
+   Get the bitmap to be used in place of the panel children when it is minimised. */
 PHP_METHOD(php_wxRibbonPanel, GetMinimisedIcon)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11880,6 +12299,10 @@ PHP_METHOD(php_wxRibbonPanel, GetMinimisedIcon)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonPanel::GetMinimisedIcon\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRibbonPanel::HideExpanded()
+   Hide the panel's external expansion. */
 PHP_METHOD(php_wxRibbonPanel, HideExpanded)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11972,6 +12395,10 @@ PHP_METHOD(php_wxRibbonPanel, HideExpanded)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonPanel::HideExpanded\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRibbonPanel::IsHovered()
+   Query is the mouse is currently hovered over the panel. */
 PHP_METHOD(php_wxRibbonPanel, IsHovered)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12064,6 +12491,10 @@ PHP_METHOD(php_wxRibbonPanel, IsHovered)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonPanel::IsHovered\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRibbonPanel::IsMinimised()
+   Query if the panel is currently minimised. */
 PHP_METHOD(php_wxRibbonPanel, IsMinimised)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12210,6 +12641,10 @@ PHP_METHOD(php_wxRibbonPanel, IsMinimised)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonPanel::IsMinimised\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRibbonPanel::Realize()
+   Realize all children of the panel. */
 PHP_METHOD(php_wxRibbonPanel, Realize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12302,6 +12737,10 @@ PHP_METHOD(php_wxRibbonPanel, Realize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonPanel::Realize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonPanel::SetArtProvider(wxRibbonArtProvider &art)
+   Set the art provider to be used. */
 PHP_METHOD(php_wxRibbonPanel, SetArtProvider)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12417,6 +12856,10 @@ PHP_METHOD(php_wxRibbonPanel, SetArtProvider)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonPanel::SetArtProvider\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRibbonPanel::ShowExpanded()
+   Show the panel externally expanded. */
 PHP_METHOD(php_wxRibbonPanel, ShowExpanded)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12509,6 +12952,10 @@ PHP_METHOD(php_wxRibbonPanel, ShowExpanded)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonPanel::ShowExpanded\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonPanel::wxRibbonPanel()
+   Default constructor. */
 PHP_METHOD(php_wxRibbonPanel, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12776,6 +13223,8 @@ PHP_METHOD(php_wxRibbonPanel, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxRibbonToolBar_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12783,6 +13232,8 @@ void php_wxRibbonToolBar_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto wxRibbonToolBarToolBase wxRibbonToolBar::AddDropdownTool(int tool_id, wxBitmap bitmap, string help_string)
+   Add a dropdown tool to the tool bar (simple version). */
 PHP_METHOD(php_wxRibbonToolBar, AddDropdownTool)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12959,6 +13410,10 @@ PHP_METHOD(php_wxRibbonToolBar, AddDropdownTool)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonToolBar::AddDropdownTool\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRibbonToolBarToolBase wxRibbonToolBar::AddHybridTool(int tool_id, wxBitmap bitmap, string help_string)
+   Add a hybrid tool to the tool bar (simple version). */
 PHP_METHOD(php_wxRibbonToolBar, AddHybridTool)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13135,6 +13590,10 @@ PHP_METHOD(php_wxRibbonToolBar, AddHybridTool)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonToolBar::AddHybridTool\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRibbonToolBarToolBase wxRibbonToolBar::AddSeparator()
+   Add a separator to the tool bar. */
 PHP_METHOD(php_wxRibbonToolBar, AddSeparator)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13250,6 +13709,10 @@ PHP_METHOD(php_wxRibbonToolBar, AddSeparator)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonToolBar::AddSeparator\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRibbonToolBarToolBase wxRibbonToolBar::AddTool(int tool_id, wxBitmap bitmap, string help_string, wxRibbonButtonKind kind)
+   Add a tool to the tool bar (simple version). */
 PHP_METHOD(php_wxRibbonToolBar, AddTool)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13690,6 +14153,10 @@ PHP_METHOD(php_wxRibbonToolBar, AddTool)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonToolBar::AddTool\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRibbonToolBar::Create(wxWindow &parent, int id, wxPoint pos, wxSize size, int style)
+   Create a tool bar in two-step tool bar construction. */
 PHP_METHOD(php_wxRibbonToolBar, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13896,6 +14363,10 @@ PHP_METHOD(php_wxRibbonToolBar, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonToolBar::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonToolBar::SetRows(int nMin, int nMax)
+   Set the number of rows to distribute tool groups over. */
 PHP_METHOD(php_wxRibbonToolBar, SetRows)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14005,6 +14476,10 @@ PHP_METHOD(php_wxRibbonToolBar, SetRows)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonToolBar::SetRows\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonToolBar::wxRibbonToolBar()
+   Default constructor. */
 PHP_METHOD(php_wxRibbonToolBar, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14226,3 +14701,5 @@ PHP_METHOD(php_wxRibbonToolBar, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+

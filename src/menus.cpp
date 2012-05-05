@@ -58,6 +58,8 @@ void php_wxMenuBar_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto  wxMenuBar::wxMenuBar(int style)
+   Construct an empty menu bar. */
 PHP_METHOD(php_wxMenuBar, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -153,6 +155,10 @@ PHP_METHOD(php_wxMenuBar, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto bool wxMenuBar::Append(wxMenu &menu, string title)
+   Adds the item to the end of the menu bar. */
 PHP_METHOD(php_wxMenuBar, Append)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -270,6 +276,9 @@ PHP_METHOD(php_wxMenuBar, Append)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuBar::Append\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMenuBar::Attach(wxFrame &frame) */
 PHP_METHOD(php_wxMenuBar, Attach)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -385,6 +394,10 @@ PHP_METHOD(php_wxMenuBar, Attach)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuBar::Attach\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMenuBar::Check(int id, bool check)
+   Checks or unchecks a menu item. */
 PHP_METHOD(php_wxMenuBar, Check)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -483,6 +496,9 @@ PHP_METHOD(php_wxMenuBar, Check)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuBar::Check\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMenuBar::Detach() */
 PHP_METHOD(php_wxMenuBar, Detach)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -575,6 +591,10 @@ PHP_METHOD(php_wxMenuBar, Detach)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuBar::Detach\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMenuBar::Enable(int id, bool enable)
+   Enables or disables (greys out) a menu item. */
 PHP_METHOD(php_wxMenuBar, Enable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -673,6 +693,10 @@ PHP_METHOD(php_wxMenuBar, Enable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuBar::Enable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMenuBar::EnableTop(int pos, bool enable)
+   Enables or disables a whole menu. */
 PHP_METHOD(php_wxMenuBar, EnableTop)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -771,6 +795,10 @@ PHP_METHOD(php_wxMenuBar, EnableTop)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuBar::EnableTop\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxMenuBar::FindMenu(string title)
+   Returns the index of the menu with the given title or wxNOT_FOUND if no such menu exists in this menubar. */
 PHP_METHOD(php_wxMenuBar, FindMenu)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -869,6 +897,10 @@ PHP_METHOD(php_wxMenuBar, FindMenu)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuBar::FindMenu\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxMenuBar::FindMenuItem(string menuString, string itemString)
+   Finds the menu item id for a menu name/menu item string pair. */
 PHP_METHOD(php_wxMenuBar, FindMenuItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -969,6 +1001,9 @@ PHP_METHOD(php_wxMenuBar, FindMenuItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuBar::FindMenuItem\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFrame wxMenuBar::GetFrame() */
 PHP_METHOD(php_wxMenuBar, GetFrame)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1084,6 +1119,10 @@ PHP_METHOD(php_wxMenuBar, GetFrame)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuBar::GetFrame\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxMenuBar::GetHelpString(int id)
+   Gets the help string associated with the menu item identifier. */
 PHP_METHOD(php_wxMenuBar, GetHelpString)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1187,6 +1226,10 @@ PHP_METHOD(php_wxMenuBar, GetHelpString)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuBar::GetHelpString\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxMenuBar::GetLabel(int id)
+   Gets the label associated with a menu item. */
 PHP_METHOD(php_wxMenuBar, GetLabel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1290,6 +1333,10 @@ PHP_METHOD(php_wxMenuBar, GetLabel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuBar::GetLabel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxMenuBar::GetLabelTop(int pos)
+   Returns the label of a top-level menu. */
 PHP_METHOD(php_wxMenuBar, GetLabelTop)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1393,6 +1440,10 @@ PHP_METHOD(php_wxMenuBar, GetLabelTop)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuBar::GetLabelTop\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMenu wxMenuBar::GetMenu(int menuIndex)
+   Returns the menu at menuIndex (zero-based). */
 PHP_METHOD(php_wxMenuBar, GetMenu)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1513,6 +1564,10 @@ PHP_METHOD(php_wxMenuBar, GetMenu)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuBar::GetMenu\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxMenuBar::GetMenuCount()
+   Returns the number of menus in this menubar. */
 PHP_METHOD(php_wxMenuBar, GetMenuCount)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1605,6 +1660,10 @@ PHP_METHOD(php_wxMenuBar, GetMenuCount)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuBar::GetMenuCount\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxMenuBar::GetMenuLabel(int pos)
+   Returns the label of a top-level menu. */
 PHP_METHOD(php_wxMenuBar, GetMenuLabel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1708,6 +1767,10 @@ PHP_METHOD(php_wxMenuBar, GetMenuLabel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuBar::GetMenuLabel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxMenuBar::GetMenuLabelText(int pos)
+   Returns the label of a top-level menu. */
 PHP_METHOD(php_wxMenuBar, GetMenuLabelText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1811,6 +1874,10 @@ PHP_METHOD(php_wxMenuBar, GetMenuLabelText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuBar::GetMenuLabelText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMenuBar::Insert(int pos, wxMenu &menu, string title)
+   Inserts the menu at the given position into the menu bar. */
 PHP_METHOD(php_wxMenuBar, Insert)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1929,6 +1996,9 @@ PHP_METHOD(php_wxMenuBar, Insert)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuBar::Insert\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMenuBar::IsAttached() */
 PHP_METHOD(php_wxMenuBar, IsAttached)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2021,6 +2091,10 @@ PHP_METHOD(php_wxMenuBar, IsAttached)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuBar::IsAttached\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMenuBar::IsChecked(int id)
+   Determines whether an item is checked. */
 PHP_METHOD(php_wxMenuBar, IsChecked)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2118,6 +2192,10 @@ PHP_METHOD(php_wxMenuBar, IsChecked)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuBar::IsChecked\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMenuBar::IsEnabled(int id)
+   Determines whether an item is enabled. */
 PHP_METHOD(php_wxMenuBar, IsEnabled)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2215,6 +2293,10 @@ PHP_METHOD(php_wxMenuBar, IsEnabled)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuBar::IsEnabled\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMenuBar::Refresh(bool eraseBackground, wxRect rect)
+   Redraw the menu bar. */
 PHP_METHOD(php_wxMenuBar, Refresh)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2353,6 +2435,10 @@ PHP_METHOD(php_wxMenuBar, Refresh)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuBar::Refresh\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMenu wxMenuBar::Remove(int pos)
+   Removes the menu from the menu bar and returns the menu object - the caller is responsible for deleting it. */
 PHP_METHOD(php_wxMenuBar, Remove)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2473,6 +2559,10 @@ PHP_METHOD(php_wxMenuBar, Remove)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuBar::Remove\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMenu wxMenuBar::Replace(int pos, wxMenu &menu, string title)
+   Replaces the menu at the given position with another one. */
 PHP_METHOD(php_wxMenuBar, Replace)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2614,6 +2704,10 @@ PHP_METHOD(php_wxMenuBar, Replace)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuBar::Replace\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMenuBar::SetHelpString(int id, string helpString)
+   Sets the help string associated with a menu item. */
 PHP_METHOD(php_wxMenuBar, SetHelpString)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2713,6 +2807,10 @@ PHP_METHOD(php_wxMenuBar, SetHelpString)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuBar::SetHelpString\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMenuBar::SetLabel(int id, string label)
+   Sets the label of a menu item. */
 PHP_METHOD(php_wxMenuBar, SetLabel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2812,6 +2910,10 @@ PHP_METHOD(php_wxMenuBar, SetLabel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuBar::SetLabel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMenuBar::SetLabelTop(int pos, string label)
+   Sets the label of a top-level menu. */
 PHP_METHOD(php_wxMenuBar, SetLabelTop)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2911,6 +3013,10 @@ PHP_METHOD(php_wxMenuBar, SetLabelTop)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuBar::SetLabelTop\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMenuBar::SetMenuLabel(int pos, string label)
+   Sets the label of a top-level menu. */
 PHP_METHOD(php_wxMenuBar, SetMenuLabel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3010,6 +3116,8 @@ PHP_METHOD(php_wxMenuBar, SetMenuLabel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuBar::SetMenuLabel\n");
 	}
 }
+/* }}} */
+
 void php_wxMenu_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3017,6 +3125,8 @@ void php_wxMenu_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto  wxMenu::wxMenu(int style)
+   Constructs a wxMenu object. */
 PHP_METHOD(php_wxMenu, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3181,6 +3291,10 @@ PHP_METHOD(php_wxMenu, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxMenu::SetTitle(string title)
+   Sets the title of the menu. */
 PHP_METHOD(php_wxMenu, SetTitle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3279,6 +3393,9 @@ PHP_METHOD(php_wxMenu, SetTitle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::SetTitle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMenu::SetParent(wxMenu &parent) */
 PHP_METHOD(php_wxMenu, SetParent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3394,6 +3511,10 @@ PHP_METHOD(php_wxMenu, SetParent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::SetParent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMenu::SetLabel(int id, string label)
+   Sets the label of a menu item. */
 PHP_METHOD(php_wxMenu, SetLabel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3493,6 +3614,9 @@ PHP_METHOD(php_wxMenu, SetLabel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::SetLabel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMenu::SetInvokingWindow(wxWindow &win) */
 PHP_METHOD(php_wxMenu, SetInvokingWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3608,6 +3732,10 @@ PHP_METHOD(php_wxMenu, SetInvokingWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::SetInvokingWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMenu::SetHelpString(int id, string helpString)
+   Sets an item's help string. */
 PHP_METHOD(php_wxMenu, SetHelpString)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3707,6 +3835,10 @@ PHP_METHOD(php_wxMenu, SetHelpString)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::SetHelpString\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMenuItem wxMenu::Remove(wxMenuItem &item)
+   Removes the menu item from the menu but doesn't delete the associated C++ object. */
 PHP_METHOD(php_wxMenu, Remove)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3905,6 +4037,10 @@ PHP_METHOD(php_wxMenu, Remove)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::Remove\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMenuItem wxMenu::PrependSeparator()
+   Inserts a separator at position 0. */
 PHP_METHOD(php_wxMenu, PrependSeparator)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4020,6 +4156,10 @@ PHP_METHOD(php_wxMenu, PrependSeparator)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::PrependSeparator\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMenuItem wxMenu::PrependRadioItem(int id, string item, string helpString)
+   Inserts a radio item at position 0. */
 PHP_METHOD(php_wxMenu, PrependRadioItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4178,6 +4318,10 @@ PHP_METHOD(php_wxMenu, PrependRadioItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::PrependRadioItem\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMenuItem wxMenu::PrependCheckItem(int id, string item, string helpString)
+   Inserts a checkable item at position 0. */
 PHP_METHOD(php_wxMenu, PrependCheckItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4336,6 +4480,10 @@ PHP_METHOD(php_wxMenu, PrependCheckItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::PrependCheckItem\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMenuItem wxMenu::Prepend(int id, string item, string helpString, wxItemKind kind)
+   Inserts the given item at position 0, i.e. */
 PHP_METHOD(php_wxMenu, Prepend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4641,6 +4789,10 @@ PHP_METHOD(php_wxMenu, Prepend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::Prepend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMenuItem wxMenu::Append(int id, string item, string helpString, wxItemKind kind)
+   Adds a menu item. */
 PHP_METHOD(php_wxMenu, Append)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5064,6 +5216,10 @@ PHP_METHOD(php_wxMenu, Append)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::Append\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMenuItem wxMenu::AppendCheckItem(int id, string item, string help)
+   Adds a checkable item to the end of the menu. */
 PHP_METHOD(php_wxMenu, AppendCheckItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5222,6 +5378,10 @@ PHP_METHOD(php_wxMenu, AppendCheckItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::AppendCheckItem\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMenuItem wxMenu::AppendRadioItem(int id, string item, string help)
+   Adds a radio item to the end of the menu. */
 PHP_METHOD(php_wxMenu, AppendRadioItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5380,6 +5540,10 @@ PHP_METHOD(php_wxMenu, AppendRadioItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::AppendRadioItem\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMenuItem wxMenu::AppendSeparator()
+   Adds a separator to the end of the menu. */
 PHP_METHOD(php_wxMenu, AppendSeparator)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5495,6 +5659,10 @@ PHP_METHOD(php_wxMenu, AppendSeparator)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::AppendSeparator\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMenuItem wxMenu::AppendSubMenu(wxMenu &submenu, string text, string help)
+   Adds the given submenu to this menu. */
 PHP_METHOD(php_wxMenu, AppendSubMenu)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5672,6 +5840,9 @@ PHP_METHOD(php_wxMenu, AppendSubMenu)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::AppendSubMenu\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMenu::Attach(wxMenuBar &menubar) */
 PHP_METHOD(php_wxMenu, Attach)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5787,6 +5958,10 @@ PHP_METHOD(php_wxMenu, Attach)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::Attach\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMenu::Break()
+   Inserts a break in a menu, causing the next appended item to appear in a new column. */
 PHP_METHOD(php_wxMenu, Break)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5879,6 +6054,10 @@ PHP_METHOD(php_wxMenu, Break)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::Break\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMenu::Check(int id, bool check)
+   Checks or unchecks the menu item. */
 PHP_METHOD(php_wxMenu, Check)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5977,6 +6156,10 @@ PHP_METHOD(php_wxMenu, Check)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::Check\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMenu::Delete(int id)
+   Deletes the menu item from the menu. */
 PHP_METHOD(php_wxMenu, Delete)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6129,6 +6312,10 @@ PHP_METHOD(php_wxMenu, Delete)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::Delete\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMenu::Destroy(int id)
+   Deletes the menu item from the menu. */
 PHP_METHOD(php_wxMenu, Destroy)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6281,6 +6468,9 @@ PHP_METHOD(php_wxMenu, Destroy)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::Destroy\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMenu::Detach() */
 PHP_METHOD(php_wxMenu, Detach)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6373,6 +6563,10 @@ PHP_METHOD(php_wxMenu, Detach)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::Detach\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMenu::Enable(int id, bool enable)
+   Enables or disables (greys out) a menu item. */
 PHP_METHOD(php_wxMenu, Enable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6471,6 +6665,10 @@ PHP_METHOD(php_wxMenu, Enable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::Enable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxMenu::FindItem(string itemString)
+   Finds the menu id for a menu item string. */
 PHP_METHOD(php_wxMenu, FindItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6569,6 +6767,10 @@ PHP_METHOD(php_wxMenu, FindItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::FindItem\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMenuItem wxMenu::FindItemByPosition(int position)
+   Returns the wxMenuItem given a position in the menu. */
 PHP_METHOD(php_wxMenu, FindItemByPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6689,6 +6891,10 @@ PHP_METHOD(php_wxMenu, FindItemByPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::FindItemByPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxMenu::GetHelpString(int id)
+   Returns the help string associated with a menu item. */
 PHP_METHOD(php_wxMenu, GetHelpString)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6792,6 +6998,9 @@ PHP_METHOD(php_wxMenu, GetHelpString)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::GetHelpString\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxWindow wxMenu::GetInvokingWindow() */
 PHP_METHOD(php_wxMenu, GetInvokingWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6907,6 +7116,10 @@ PHP_METHOD(php_wxMenu, GetInvokingWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::GetInvokingWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxMenu::GetLabel(int id)
+   Returns a menu item label. */
 PHP_METHOD(php_wxMenu, GetLabel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7010,6 +7223,10 @@ PHP_METHOD(php_wxMenu, GetLabel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::GetLabel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxMenu::GetLabelText(int id)
+   Returns a menu item label, without any of the original mnemonics and accelerators. */
 PHP_METHOD(php_wxMenu, GetLabelText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7113,6 +7330,10 @@ PHP_METHOD(php_wxMenu, GetLabelText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::GetLabelText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxMenu::GetMenuItemCount()
+   Returns the number of items in the menu. */
 PHP_METHOD(php_wxMenu, GetMenuItemCount)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7205,6 +7426,9 @@ PHP_METHOD(php_wxMenu, GetMenuItemCount)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::GetMenuItemCount\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMenu wxMenu::GetParent() */
 PHP_METHOD(php_wxMenu, GetParent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7320,6 +7544,9 @@ PHP_METHOD(php_wxMenu, GetParent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::GetParent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxMenu::GetStyle() */
 PHP_METHOD(php_wxMenu, GetStyle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7412,6 +7639,10 @@ PHP_METHOD(php_wxMenu, GetStyle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::GetStyle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxMenu::GetTitle()
+   Returns the title of the menu. */
 PHP_METHOD(php_wxMenu, GetTitle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7510,6 +7741,9 @@ PHP_METHOD(php_wxMenu, GetTitle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::GetTitle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxWindow wxMenu::GetWindow() */
 PHP_METHOD(php_wxMenu, GetWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7625,6 +7859,10 @@ PHP_METHOD(php_wxMenu, GetWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::GetWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMenuItem wxMenu::Insert(int pos, wxMenuItem &menuItem)
+   Inserts the given item before the position pos. */
 PHP_METHOD(php_wxMenu, Insert)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7932,6 +8170,10 @@ PHP_METHOD(php_wxMenu, Insert)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::Insert\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMenuItem wxMenu::InsertCheckItem(int pos, int id, string item, string helpString)
+   Inserts a checkable item at the given position. */
 PHP_METHOD(php_wxMenu, InsertCheckItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8091,6 +8333,10 @@ PHP_METHOD(php_wxMenu, InsertCheckItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::InsertCheckItem\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMenuItem wxMenu::InsertRadioItem(int pos, int id, string item, string helpString)
+   Inserts a radio item at the given position. */
 PHP_METHOD(php_wxMenu, InsertRadioItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8250,6 +8496,10 @@ PHP_METHOD(php_wxMenu, InsertRadioItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::InsertRadioItem\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMenuItem wxMenu::InsertSeparator(int pos)
+   Inserts a separator at the given position. */
 PHP_METHOD(php_wxMenu, InsertSeparator)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8370,6 +8620,9 @@ PHP_METHOD(php_wxMenu, InsertSeparator)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::InsertSeparator\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMenu::IsAttached() */
 PHP_METHOD(php_wxMenu, IsAttached)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8462,6 +8715,10 @@ PHP_METHOD(php_wxMenu, IsAttached)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::IsAttached\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMenu::IsChecked(int id)
+   Determines whether a menu item is checked. */
 PHP_METHOD(php_wxMenu, IsChecked)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8559,6 +8816,10 @@ PHP_METHOD(php_wxMenu, IsChecked)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::IsChecked\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMenu::IsEnabled(int id)
+   Determines whether a menu item is enabled. */
 PHP_METHOD(php_wxMenu, IsEnabled)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8656,6 +8917,10 @@ PHP_METHOD(php_wxMenu, IsEnabled)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::IsEnabled\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMenuItem wxMenu::FindChildItem(int id, int &pos)
+   Finds the menu item object associated with the given menu item identifier and, optionally, the position of the item in the menu. */
 PHP_METHOD(php_wxMenu, FindChildItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8821,6 +9086,8 @@ PHP_METHOD(php_wxMenu, FindChildItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenu::FindChildItem\n");
 	}
 }
+/* }}} */
+
 void php_wxMenuItem_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8828,6 +9095,8 @@ void php_wxMenuItem_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto  wxMenuItem::wxMenuItem(wxMenu &parentMenu, int id, string text, string helpString, wxItemKind kind, wxMenu &subMenu)
+   Constructs a wxMenuItem object. */
 PHP_METHOD(php_wxMenuItem, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9021,6 +9290,10 @@ PHP_METHOD(php_wxMenuItem, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxMenuItem::SetText(string text)
+   Sets the text associated with the menu item. */
 PHP_METHOD(php_wxMenuItem, SetText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9119,6 +9392,10 @@ PHP_METHOD(php_wxMenuItem, SetText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuItem::SetText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMenuItem::SetSubMenu(wxMenu &menu)
+   Sets the submenu of this menu item. */
 PHP_METHOD(php_wxMenuItem, SetSubMenu)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9234,6 +9511,10 @@ PHP_METHOD(php_wxMenuItem, SetSubMenu)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuItem::SetSubMenu\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMenuItem::SetMenu(wxMenu &menu)
+   Sets the parent menu which will contain this menu item. */
 PHP_METHOD(php_wxMenuItem, SetMenu)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9349,6 +9630,10 @@ PHP_METHOD(php_wxMenuItem, SetMenu)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuItem::SetMenu\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMenuItem::SetItemLabel(string label)
+   Sets the label associated with the menu item. */
 PHP_METHOD(php_wxMenuItem, SetItemLabel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9447,6 +9732,10 @@ PHP_METHOD(php_wxMenuItem, SetItemLabel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuItem::SetItemLabel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMenuItem::SetHelp(string helpString)
+   Sets the help string. */
 PHP_METHOD(php_wxMenuItem, SetHelp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9545,6 +9834,10 @@ PHP_METHOD(php_wxMenuItem, SetHelp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuItem::SetHelp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMenuItem::IsSubMenu()
+   Returns true if the item is a submenu. */
 PHP_METHOD(php_wxMenuItem, IsSubMenu)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9637,6 +9930,10 @@ PHP_METHOD(php_wxMenuItem, IsSubMenu)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuItem::IsSubMenu\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMenuItem::IsSeparator()
+   Returns true if the item is a separator. */
 PHP_METHOD(php_wxMenuItem, IsSeparator)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9729,6 +10026,10 @@ PHP_METHOD(php_wxMenuItem, IsSeparator)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuItem::IsSeparator\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMenuItem::Check(bool check)
+   Checks or unchecks the menu item. */
 PHP_METHOD(php_wxMenuItem, Check)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9837,6 +10138,10 @@ PHP_METHOD(php_wxMenuItem, Check)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuItem::Check\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMenuItem::Enable(bool enable)
+   Enables or disables the menu item. */
 PHP_METHOD(php_wxMenuItem, Enable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9945,6 +10250,10 @@ PHP_METHOD(php_wxMenuItem, Enable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuItem::Enable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxMenuItem::GetHelp()
+   Returns the help string associated with the menu item. */
 PHP_METHOD(php_wxMenuItem, GetHelp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10043,6 +10352,10 @@ PHP_METHOD(php_wxMenuItem, GetHelp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuItem::GetHelp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxMenuItem::GetId()
+   Returns the menu item identifier. */
 PHP_METHOD(php_wxMenuItem, GetId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10135,6 +10448,10 @@ PHP_METHOD(php_wxMenuItem, GetId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuItem::GetId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxMenuItem::GetItemLabel()
+   Returns the text associated with the menu item including any accelerator characters that were passed to the constructor or SetItemLabel(). */
 PHP_METHOD(php_wxMenuItem, GetItemLabel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10233,6 +10550,10 @@ PHP_METHOD(php_wxMenuItem, GetItemLabel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuItem::GetItemLabel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxMenuItem::GetItemLabelText()
+   Returns the text associated with the menu item, without any accelerator characters. */
 PHP_METHOD(php_wxMenuItem, GetItemLabelText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10331,6 +10652,10 @@ PHP_METHOD(php_wxMenuItem, GetItemLabelText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuItem::GetItemLabelText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxItemKind wxMenuItem::GetKind()
+   Returns the item kind, one of wxITEM_SEPARATOR, wxITEM_NORMAL, wxITEM_CHECK or wxITEM_RADIO. */
 PHP_METHOD(php_wxMenuItem, GetKind)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10423,6 +10748,10 @@ PHP_METHOD(php_wxMenuItem, GetKind)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuItem::GetKind\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxMenuItem::GetLabel()
+   Returns the text associated with the menu item without any accelerator characters it might contain. */
 PHP_METHOD(php_wxMenuItem, GetLabel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10521,6 +10850,9 @@ PHP_METHOD(php_wxMenuItem, GetLabel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuItem::GetLabel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxMenuItem::GetLabelFromText(string text) */
 PHP_METHOD(php_wxMenuItem, GetLabelFromText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10626,6 +10958,10 @@ PHP_METHOD(php_wxMenuItem, GetLabelFromText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuItem::GetLabelFromText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxMenuItem::GetLabelText(string text)
+   Strips all accelerator characters and mnemonics from the given text. */
 PHP_METHOD(php_wxMenuItem, GetLabelText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10731,6 +11067,10 @@ PHP_METHOD(php_wxMenuItem, GetLabelText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuItem::GetLabelText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMenu wxMenuItem::GetMenu()
+   Returns the menu this menu item is in, or NULL if this menu item is not attached. */
 PHP_METHOD(php_wxMenuItem, GetMenu)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10846,6 +11186,10 @@ PHP_METHOD(php_wxMenuItem, GetMenu)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuItem::GetMenu\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxMenuItem::GetName()
+   Returns the text associated with the menu item. */
 PHP_METHOD(php_wxMenuItem, GetName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10944,6 +11288,10 @@ PHP_METHOD(php_wxMenuItem, GetName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuItem::GetName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMenu wxMenuItem::GetSubMenu()
+   Returns the submenu associated with the menu item, or NULL if there isn't one. */
 PHP_METHOD(php_wxMenuItem, GetSubMenu)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11059,6 +11407,10 @@ PHP_METHOD(php_wxMenuItem, GetSubMenu)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuItem::GetSubMenu\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxMenuItem::GetText()
+   Returns the text associated with the menu item, such as it was passed to the wxMenuItem constructor, i.e. */
 PHP_METHOD(php_wxMenuItem, GetText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11157,6 +11509,10 @@ PHP_METHOD(php_wxMenuItem, GetText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuItem::GetText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMenuItem::IsCheckable()
+   Returns true if the item is checkable. */
 PHP_METHOD(php_wxMenuItem, IsCheckable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11249,6 +11605,10 @@ PHP_METHOD(php_wxMenuItem, IsCheckable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuItem::IsCheckable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMenuItem::IsChecked()
+   Returns true if the item is checked. */
 PHP_METHOD(php_wxMenuItem, IsChecked)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11341,6 +11701,10 @@ PHP_METHOD(php_wxMenuItem, IsChecked)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuItem::IsChecked\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMenuItem::IsEnabled()
+   Returns true if the item is enabled. */
 PHP_METHOD(php_wxMenuItem, IsEnabled)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11433,6 +11797,10 @@ PHP_METHOD(php_wxMenuItem, IsEnabled)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuItem::IsEnabled\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMenuItem::SetBitmap(wxBitmap bmp)
+   Sets the bitmap for the menu item. */
 PHP_METHOD(php_wxMenuItem, SetBitmap)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11548,3 +11916,5 @@ PHP_METHOD(php_wxMenuItem, SetBitmap)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuItem::SetBitmap\n");
 	}
 }
+/* }}} */
+

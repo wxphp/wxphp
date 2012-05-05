@@ -58,6 +58,8 @@ void php_wxStyledTextCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto  wxStyledTextCtrl::wxStyledTextCtrl(wxWindow &parent, int id, wxPoint pos, wxSize size, int style, string name)
+   Ctor. */
 PHP_METHOD(php_wxStyledTextCtrl, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -263,6 +265,10 @@ PHP_METHOD(php_wxStyledTextCtrl, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::ZoomOut()
+   Make the displayed text smaller by decreasing the sizes by 1 point. */
 PHP_METHOD(php_wxStyledTextCtrl, ZoomOut)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -355,6 +361,10 @@ PHP_METHOD(php_wxStyledTextCtrl, ZoomOut)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::ZoomOut\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::ZoomIn()
+   Magnify the displayed text by increasing the sizes by 1 point. */
 PHP_METHOD(php_wxStyledTextCtrl, ZoomIn)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -447,6 +457,10 @@ PHP_METHOD(php_wxStyledTextCtrl, ZoomIn)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::ZoomIn\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::AddText(string text)
+   Add text to the document at current position. */
 PHP_METHOD(php_wxStyledTextCtrl, AddText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -545,6 +559,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AddText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AddText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::AddSelection(int caret, int anchor)
+   Add a selection. */
 PHP_METHOD(php_wxStyledTextCtrl, AddSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -643,6 +661,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AddSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AddSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::WrapCount(int line)
+   The number of display lines needed to wrap a document line. */
 PHP_METHOD(php_wxStyledTextCtrl, WrapCount)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -740,6 +762,10 @@ PHP_METHOD(php_wxStyledTextCtrl, WrapCount)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::WrapCount\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::WordStartPosition(int pos, bool onlyWordCharacters)
+   Get position of start of word. */
 PHP_METHOD(php_wxStyledTextCtrl, WordStartPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -838,6 +864,10 @@ PHP_METHOD(php_wxStyledTextCtrl, WordStartPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::WordStartPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::WordRightExtend()
+   Move caret right one word extending selection to new caret position. */
 PHP_METHOD(php_wxStyledTextCtrl, WordRightExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -930,6 +960,10 @@ PHP_METHOD(php_wxStyledTextCtrl, WordRightExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::WordRightExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::AddUndoAction(int token, int flags)
+   Add a container action to the undo stack. */
 PHP_METHOD(php_wxStyledTextCtrl, AddUndoAction)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1028,6 +1062,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AddUndoAction)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AddUndoAction\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::Allocate(int bytes)
+   Enlarge the document to a particular size of text bytes. */
 PHP_METHOD(php_wxStyledTextCtrl, Allocate)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1125,6 +1163,10 @@ PHP_METHOD(php_wxStyledTextCtrl, Allocate)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::Allocate\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::AnnotationClearAll()
+   Clear the annotations from all lines. */
 PHP_METHOD(php_wxStyledTextCtrl, AnnotationClearAll)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1217,6 +1259,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationClearAll)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AnnotationClearAll\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::AnnotationGetLines(int line)
+   Get the number of annotation lines for a line. */
 PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetLines)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1314,6 +1360,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetLines)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AnnotationGetLines\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::AnnotationGetStyle(int line)
+   Get the style number for the annotations for a line. */
 PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetStyle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1411,6 +1461,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetStyle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AnnotationGetStyle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::AnnotationGetStyleOffset()
+   Get the start of the range of style numbers used for annotations. */
 PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetStyleOffset)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1503,6 +1557,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetStyleOffset)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AnnotationGetStyleOffset\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxStyledTextCtrl::AnnotationGetStyles(int line)
+   Get the annotation styles for a line. */
 PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetStyles)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1606,6 +1664,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetStyles)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AnnotationGetStyles\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxStyledTextCtrl::AnnotationGetText(int line)
+   Get the annotation text for a line. */
 PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1709,6 +1771,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AnnotationGetText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::AnnotationGetVisible()
+   Get the visibility for the annotations for a view. */
 PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetVisible)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1801,6 +1867,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationGetVisible)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AnnotationGetVisible\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::AnnotationSetStyle(int line, int style)
+   Set the style number for the annotations for a line. */
 PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetStyle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1899,6 +1969,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetStyle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AnnotationSetStyle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::AnnotationSetStyleOffset(int style)
+   Get the start of the range of style numbers used for annotations. */
 PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetStyleOffset)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1996,6 +2070,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetStyleOffset)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AnnotationSetStyleOffset\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::AnnotationSetStyles(int line, string styles)
+   Set the annotation styles for a line. */
 PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetStyles)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2095,6 +2173,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetStyles)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AnnotationSetStyles\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::AnnotationSetText(int line, string text)
+   Set the annotation text for a line. */
 PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2194,6 +2276,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AnnotationSetText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::AnnotationSetVisible(int visible)
+   Set the visibility for the annotations for a view. */
 PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetVisible)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2291,6 +2377,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AnnotationSetVisible)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AnnotationSetVisible\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::AppendText(string text)
+   Append a string to the end of the document without changing the selection. */
 PHP_METHOD(php_wxStyledTextCtrl, AppendText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2389,6 +2479,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AppendText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AppendText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::AutoCompActive()
+   Is there an auto-completion list visible? */
 PHP_METHOD(php_wxStyledTextCtrl, AutoCompActive)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2481,6 +2575,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompActive)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AutoCompActive\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::AutoCompCancel()
+   Remove the auto-completion list from the screen. */
 PHP_METHOD(php_wxStyledTextCtrl, AutoCompCancel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2573,6 +2671,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompCancel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AutoCompCancel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::AutoCompComplete()
+   User has selected an item so remove the list and insert the selection. */
 PHP_METHOD(php_wxStyledTextCtrl, AutoCompComplete)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2665,6 +2767,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompComplete)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AutoCompComplete\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::AutoCompGetAutoHide()
+   Retrieve whether or not autocompletion is hidden automatically when nothing matches. */
 PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetAutoHide)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2757,6 +2863,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetAutoHide)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AutoCompGetAutoHide\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::AutoCompGetCancelAtStart()
+   Retrieve whether auto-completion cancelled by backspacing before start. */
 PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetCancelAtStart)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2849,6 +2959,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetCancelAtStart)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AutoCompGetCancelAtStart\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::AutoCompGetChooseSingle()
+   Retrieve whether a single item auto-completion list automatically choose the item. */
 PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetChooseSingle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2941,6 +3055,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetChooseSingle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AutoCompGetChooseSingle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::AutoCompGetCurrent()
+   Get currently selected item position in the auto-completion list. */
 PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetCurrent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3033,6 +3151,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetCurrent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AutoCompGetCurrent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::AutoCompGetDropRestOfWord()
+   Retrieve whether or not autocompletion deletes any word characters after the inserted text upon completion. */
 PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetDropRestOfWord)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3125,6 +3247,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetDropRestOfWord)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AutoCompGetDropRestOfWord\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::AutoCompGetIgnoreCase()
+   Retrieve state of ignore case flag. */
 PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetIgnoreCase)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3217,6 +3343,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetIgnoreCase)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AutoCompGetIgnoreCase\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::AutoCompGetMaxHeight()
+   Set the maximum height, in rows, of auto-completion and user lists. */
 PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetMaxHeight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3309,6 +3439,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetMaxHeight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AutoCompGetMaxHeight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::AutoCompGetMaxWidth()
+   Get the maximum width, in characters, of auto-completion and user lists. */
 PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetMaxWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3401,6 +3535,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetMaxWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AutoCompGetMaxWidth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::AutoCompGetSeparator()
+   Retrieve the auto-completion list separator character. */
 PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetSeparator)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3493,6 +3631,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetSeparator)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AutoCompGetSeparator\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::AutoCompGetTypeSeparator()
+   Retrieve the auto-completion list type-separator character. */
 PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetTypeSeparator)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3585,6 +3727,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompGetTypeSeparator)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AutoCompGetTypeSeparator\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::AutoCompPosStart()
+   Retrieve the position of the caret when the auto-completion list was displayed. */
 PHP_METHOD(php_wxStyledTextCtrl, AutoCompPosStart)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3677,6 +3823,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompPosStart)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AutoCompPosStart\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::AutoCompSelect(string text)
+   Select the item in the auto-completion list that starts with a string. */
 PHP_METHOD(php_wxStyledTextCtrl, AutoCompSelect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3775,6 +3925,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSelect)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AutoCompSelect\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::AutoCompSetAutoHide(bool autoHide)
+   Set whether or not autocompletion is hidden automatically when nothing matches. */
 PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetAutoHide)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3872,6 +4026,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetAutoHide)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AutoCompSetAutoHide\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::AutoCompSetCancelAtStart(bool cancel)
+   Should the auto-completion list be cancelled if the user backspaces to a position before where the box was created. */
 PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetCancelAtStart)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3969,6 +4127,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetCancelAtStart)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AutoCompSetCancelAtStart\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::AutoCompSetChooseSingle(bool chooseSingle)
+   Should a single item auto-completion list automatically choose the item. */
 PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetChooseSingle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4066,6 +4228,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetChooseSingle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AutoCompSetChooseSingle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::AutoCompSetDropRestOfWord(bool dropRestOfWord)
+   Set whether or not autocompletion deletes any word characters after the inserted text upon completion. */
 PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetDropRestOfWord)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4163,6 +4329,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetDropRestOfWord)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AutoCompSetDropRestOfWord\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::AutoCompSetFillUps(string characterSet)
+   Define a set of characters that when typed will cause the autocompletion to choose the selected item. */
 PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetFillUps)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4261,6 +4431,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetFillUps)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AutoCompSetFillUps\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::AutoCompSetIgnoreCase(bool ignoreCase)
+   Set whether case is significant when performing auto-completion searches. */
 PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetIgnoreCase)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4358,6 +4532,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetIgnoreCase)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AutoCompSetIgnoreCase\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::AutoCompSetMaxHeight(int rowCount)
+   Set the maximum height, in rows, of auto-completion and user lists. */
 PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetMaxHeight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4455,6 +4633,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetMaxHeight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AutoCompSetMaxHeight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::AutoCompSetMaxWidth(int characterCount)
+   Set the maximum width, in characters, of auto-completion and user lists. */
 PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetMaxWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4552,6 +4734,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetMaxWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AutoCompSetMaxWidth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::AutoCompSetSeparator(int separatorCharacter)
+   Change the separator character in the string setting up an auto-completion list. */
 PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetSeparator)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4649,6 +4835,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetSeparator)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AutoCompSetSeparator\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::AutoCompSetTypeSeparator(int separatorCharacter)
+   Change the type-separator character in the string setting up an auto-completion list. */
 PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetTypeSeparator)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4746,6 +4936,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompSetTypeSeparator)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AutoCompSetTypeSeparator\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::AutoCompShow(int lenEntered, string itemList)
+   Display a auto-completion list. */
 PHP_METHOD(php_wxStyledTextCtrl, AutoCompShow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4845,6 +5039,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompShow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AutoCompShow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::AutoCompStops(string characterSet)
+   Define a set of character that when typed cancel the auto-completion list. */
 PHP_METHOD(php_wxStyledTextCtrl, AutoCompStops)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4943,6 +5141,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AutoCompStops)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AutoCompStops\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::BackTab()
+   Dedent the selected lines. */
 PHP_METHOD(php_wxStyledTextCtrl, BackTab)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5035,6 +5237,10 @@ PHP_METHOD(php_wxStyledTextCtrl, BackTab)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::BackTab\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::BeginUndoAction()
+   Start a sequence of actions that is undone and redone as a unit. */
 PHP_METHOD(php_wxStyledTextCtrl, BeginUndoAction)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5127,6 +5333,10 @@ PHP_METHOD(php_wxStyledTextCtrl, BeginUndoAction)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::BeginUndoAction\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::BraceBadLight(int pos)
+   Highlight the character at a position indicating there is no matching brace. */
 PHP_METHOD(php_wxStyledTextCtrl, BraceBadLight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5224,6 +5434,10 @@ PHP_METHOD(php_wxStyledTextCtrl, BraceBadLight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::BraceBadLight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::BraceHighlight(int pos1, int pos2)
+   Highlight the characters at two positions. */
 PHP_METHOD(php_wxStyledTextCtrl, BraceHighlight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5322,6 +5536,10 @@ PHP_METHOD(php_wxStyledTextCtrl, BraceHighlight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::BraceHighlight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::BraceMatch(int pos)
+   Find the position of a matching brace or wxSTC_INVALID_POSITION if no match. */
 PHP_METHOD(php_wxStyledTextCtrl, BraceMatch)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5419,6 +5637,10 @@ PHP_METHOD(php_wxStyledTextCtrl, BraceMatch)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::BraceMatch\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::CallTipActive()
+   Is there an active call tip? */
 PHP_METHOD(php_wxStyledTextCtrl, CallTipActive)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5511,6 +5733,10 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipActive)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::CallTipActive\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::CallTipCancel()
+   Remove the call tip from the screen. */
 PHP_METHOD(php_wxStyledTextCtrl, CallTipCancel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5603,6 +5829,10 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipCancel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::CallTipCancel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::CallTipPosAtStart()
+   Retrieve the position where the caret was before displaying the call tip. */
 PHP_METHOD(php_wxStyledTextCtrl, CallTipPosAtStart)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5695,6 +5925,10 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipPosAtStart)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::CallTipPosAtStart\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::CallTipSetBackground(wxColour back)
+   Set the background colour for the call tip. */
 PHP_METHOD(php_wxStyledTextCtrl, CallTipSetBackground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5810,6 +6044,10 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetBackground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::CallTipSetBackground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::CallTipSetForeground(wxColour fore)
+   Set the foreground colour for the call tip. */
 PHP_METHOD(php_wxStyledTextCtrl, CallTipSetForeground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5925,6 +6163,10 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetForeground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::CallTipSetForeground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::CallTipSetForegroundHighlight(wxColour fore)
+   Set the foreground colour for the highlighted part of the call tip. */
 PHP_METHOD(php_wxStyledTextCtrl, CallTipSetForegroundHighlight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6040,6 +6282,10 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetForegroundHighlight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::CallTipSetForegroundHighlight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::CallTipSetHighlight(int start, int end)
+   Highlight a segment of the definition. */
 PHP_METHOD(php_wxStyledTextCtrl, CallTipSetHighlight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6138,6 +6384,10 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipSetHighlight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::CallTipSetHighlight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::CallTipShow(int pos, string definition)
+   Show a call tip containing a definition near position pos. */
 PHP_METHOD(php_wxStyledTextCtrl, CallTipShow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6237,6 +6487,10 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipShow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::CallTipShow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::CallTipUseStyle(int tabSize)
+   Enable use of STYLE_CALLTIP and set call tip tab size in pixels. */
 PHP_METHOD(php_wxStyledTextCtrl, CallTipUseStyle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6334,6 +6588,10 @@ PHP_METHOD(php_wxStyledTextCtrl, CallTipUseStyle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::CallTipUseStyle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::CanPaste()
+   Will a paste succeed? */
 PHP_METHOD(php_wxStyledTextCtrl, CanPaste)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6426,6 +6684,10 @@ PHP_METHOD(php_wxStyledTextCtrl, CanPaste)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::CanPaste\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::CanRedo()
+   Are there any redoable actions in the undo history? */
 PHP_METHOD(php_wxStyledTextCtrl, CanRedo)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6518,6 +6780,10 @@ PHP_METHOD(php_wxStyledTextCtrl, CanRedo)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::CanRedo\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::CanUndo()
+   Are there any undoable actions in the undo history? */
 PHP_METHOD(php_wxStyledTextCtrl, CanUndo)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6610,6 +6876,10 @@ PHP_METHOD(php_wxStyledTextCtrl, CanUndo)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::CanUndo\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::Cancel()
+   Cancel any modes such as call tip or auto-completion list display. */
 PHP_METHOD(php_wxStyledTextCtrl, Cancel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6702,6 +6972,10 @@ PHP_METHOD(php_wxStyledTextCtrl, Cancel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::Cancel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::CharLeft()
+   Move caret left one character. */
 PHP_METHOD(php_wxStyledTextCtrl, CharLeft)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6794,6 +7068,10 @@ PHP_METHOD(php_wxStyledTextCtrl, CharLeft)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::CharLeft\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::CharLeftExtend()
+   Move caret left one character extending selection to new caret position. */
 PHP_METHOD(php_wxStyledTextCtrl, CharLeftExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6886,6 +7164,10 @@ PHP_METHOD(php_wxStyledTextCtrl, CharLeftExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::CharLeftExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::CharLeftRectExtend()
+   Move caret left one character, extending rectangular selection to new caret position. */
 PHP_METHOD(php_wxStyledTextCtrl, CharLeftRectExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6978,6 +7260,10 @@ PHP_METHOD(php_wxStyledTextCtrl, CharLeftRectExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::CharLeftRectExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::CharPositionFromPoint(int x, int y)
+   Find the position of a character from a point within the window. */
 PHP_METHOD(php_wxStyledTextCtrl, CharPositionFromPoint)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7076,6 +7362,10 @@ PHP_METHOD(php_wxStyledTextCtrl, CharPositionFromPoint)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::CharPositionFromPoint\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::CharPositionFromPointClose(int x, int y)
+   Find the position of a character from a point within the window. */
 PHP_METHOD(php_wxStyledTextCtrl, CharPositionFromPointClose)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7174,6 +7464,10 @@ PHP_METHOD(php_wxStyledTextCtrl, CharPositionFromPointClose)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::CharPositionFromPointClose\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::CharRight()
+   Move caret right one character. */
 PHP_METHOD(php_wxStyledTextCtrl, CharRight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7266,6 +7560,10 @@ PHP_METHOD(php_wxStyledTextCtrl, CharRight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::CharRight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::CharRightExtend()
+   Move caret right one character extending selection to new caret position. */
 PHP_METHOD(php_wxStyledTextCtrl, CharRightExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7358,6 +7656,10 @@ PHP_METHOD(php_wxStyledTextCtrl, CharRightExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::CharRightExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::CharRightRectExtend()
+   Move caret right one character, extending rectangular selection to new caret position. */
 PHP_METHOD(php_wxStyledTextCtrl, CharRightRectExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7450,6 +7752,10 @@ PHP_METHOD(php_wxStyledTextCtrl, CharRightRectExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::CharRightRectExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::ChooseCaretX()
+   Set the last x chosen value to be the caret x position. */
 PHP_METHOD(php_wxStyledTextCtrl, ChooseCaretX)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7542,6 +7848,10 @@ PHP_METHOD(php_wxStyledTextCtrl, ChooseCaretX)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::ChooseCaretX\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::Clear()
+   Clear the selection. */
 PHP_METHOD(php_wxStyledTextCtrl, Clear)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7634,6 +7944,10 @@ PHP_METHOD(php_wxStyledTextCtrl, Clear)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::Clear\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::ClearAll()
+   Delete all text in the document. */
 PHP_METHOD(php_wxStyledTextCtrl, ClearAll)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7726,6 +8040,10 @@ PHP_METHOD(php_wxStyledTextCtrl, ClearAll)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::ClearAll\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::ClearDocumentStyle()
+   Set all style bytes to 0, remove all folding information. */
 PHP_METHOD(php_wxStyledTextCtrl, ClearDocumentStyle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7818,6 +8136,10 @@ PHP_METHOD(php_wxStyledTextCtrl, ClearDocumentStyle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::ClearDocumentStyle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::ClearRegisteredImages()
+   Clear all the registered images. */
 PHP_METHOD(php_wxStyledTextCtrl, ClearRegisteredImages)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7910,6 +8232,10 @@ PHP_METHOD(php_wxStyledTextCtrl, ClearRegisteredImages)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::ClearRegisteredImages\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::ClearSelections()
+   Clear selections to a single empty stream selection. */
 PHP_METHOD(php_wxStyledTextCtrl, ClearSelections)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8002,6 +8328,10 @@ PHP_METHOD(php_wxStyledTextCtrl, ClearSelections)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::ClearSelections\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::CmdKeyAssign(int key, int modifiers, int cmd)
+   When key+modifier combination km is pressed perform msg. */
 PHP_METHOD(php_wxStyledTextCtrl, CmdKeyAssign)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8101,6 +8431,10 @@ PHP_METHOD(php_wxStyledTextCtrl, CmdKeyAssign)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::CmdKeyAssign\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::CmdKeyClear(int key, int modifiers)
+   When key+modifier combination km is pressed do nothing. */
 PHP_METHOD(php_wxStyledTextCtrl, CmdKeyClear)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8199,6 +8533,10 @@ PHP_METHOD(php_wxStyledTextCtrl, CmdKeyClear)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::CmdKeyClear\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::CmdKeyClearAll()
+   Drop all key mappings. */
 PHP_METHOD(php_wxStyledTextCtrl, CmdKeyClearAll)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8291,6 +8629,10 @@ PHP_METHOD(php_wxStyledTextCtrl, CmdKeyClearAll)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::CmdKeyClearAll\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::CmdKeyExecute(int cmd)
+   Perform one of the operations defined by the wxSTC_CMD_* constants. */
 PHP_METHOD(php_wxStyledTextCtrl, CmdKeyExecute)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8388,6 +8730,10 @@ PHP_METHOD(php_wxStyledTextCtrl, CmdKeyExecute)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::CmdKeyExecute\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::Colourise(int start, int end)
+   Colourise a segment of the document using the current lexing language. */
 PHP_METHOD(php_wxStyledTextCtrl, Colourise)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8486,6 +8832,10 @@ PHP_METHOD(php_wxStyledTextCtrl, Colourise)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::Colourise\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::ConvertEOLs(int eolMode)
+   Convert all line endings in the document to one mode. */
 PHP_METHOD(php_wxStyledTextCtrl, ConvertEOLs)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8583,6 +8933,10 @@ PHP_METHOD(php_wxStyledTextCtrl, ConvertEOLs)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::ConvertEOLs\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::Copy()
+   Copy the selection to the clipboard. */
 PHP_METHOD(php_wxStyledTextCtrl, Copy)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8675,6 +9029,10 @@ PHP_METHOD(php_wxStyledTextCtrl, Copy)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::Copy\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::CopyAllowLine()
+   Copy the selection, if selection empty copy the line with the caret. */
 PHP_METHOD(php_wxStyledTextCtrl, CopyAllowLine)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8767,6 +9125,10 @@ PHP_METHOD(php_wxStyledTextCtrl, CopyAllowLine)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::CopyAllowLine\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::CopyRange(int start, int end)
+   Copy a range of text to the clipboard. */
 PHP_METHOD(php_wxStyledTextCtrl, CopyRange)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8865,6 +9227,10 @@ PHP_METHOD(php_wxStyledTextCtrl, CopyRange)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::CopyRange\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::CopyText(int length, string text)
+   Copy argument text to the clipboard. */
 PHP_METHOD(php_wxStyledTextCtrl, CopyText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8964,6 +9330,9 @@ PHP_METHOD(php_wxStyledTextCtrl, CopyText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::CopyText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::Create(wxWindow &parent, int id, wxPoint pos, wxSize size, int style, string name) */
 PHP_METHOD(php_wxStyledTextCtrl, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9186,6 +9555,10 @@ PHP_METHOD(php_wxStyledTextCtrl, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto void wxStyledTextCtrl::CreateDocument()
+   Create a new document object. */
 PHP_METHOD(php_wxStyledTextCtrl, CreateDocument)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9278,6 +9651,10 @@ PHP_METHOD(php_wxStyledTextCtrl, CreateDocument)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::CreateDocument\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::Cut()
+   Cut the selection to the clipboard. */
 PHP_METHOD(php_wxStyledTextCtrl, Cut)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9370,6 +9747,10 @@ PHP_METHOD(php_wxStyledTextCtrl, Cut)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::Cut\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::DelLineLeft()
+   Delete back from the current position to the start of the line. */
 PHP_METHOD(php_wxStyledTextCtrl, DelLineLeft)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9462,6 +9843,10 @@ PHP_METHOD(php_wxStyledTextCtrl, DelLineLeft)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::DelLineLeft\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::DelLineRight()
+   Delete forwards from the current position to the end of the line. */
 PHP_METHOD(php_wxStyledTextCtrl, DelLineRight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9554,6 +9939,10 @@ PHP_METHOD(php_wxStyledTextCtrl, DelLineRight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::DelLineRight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::DelWordLeft()
+   Delete the word to the left of the caret. */
 PHP_METHOD(php_wxStyledTextCtrl, DelWordLeft)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9646,6 +10035,10 @@ PHP_METHOD(php_wxStyledTextCtrl, DelWordLeft)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::DelWordLeft\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::DelWordRight()
+   Delete the word to the right of the caret. */
 PHP_METHOD(php_wxStyledTextCtrl, DelWordRight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9738,6 +10131,10 @@ PHP_METHOD(php_wxStyledTextCtrl, DelWordRight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::DelWordRight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::DeleteBack()
+   Delete the selection or if no selection, the character before the caret. */
 PHP_METHOD(php_wxStyledTextCtrl, DeleteBack)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9830,6 +10227,10 @@ PHP_METHOD(php_wxStyledTextCtrl, DeleteBack)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::DeleteBack\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::DeleteBackNotLine()
+   Delete the selection or if no selection, the character before the caret. */
 PHP_METHOD(php_wxStyledTextCtrl, DeleteBackNotLine)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9922,6 +10323,10 @@ PHP_METHOD(php_wxStyledTextCtrl, DeleteBackNotLine)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::DeleteBackNotLine\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxDragResult wxStyledTextCtrl::DoDragOver(int x, int y, wxDragResult def)
+   Allow for simulating a DnD DragOver. */
 PHP_METHOD(php_wxStyledTextCtrl, DoDragOver)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10021,6 +10426,10 @@ PHP_METHOD(php_wxStyledTextCtrl, DoDragOver)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::DoDragOver\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::DoDropText(int x, int y, string data)
+   Allow for simulating a DnD DropText. */
 PHP_METHOD(php_wxStyledTextCtrl, DoDropText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10121,6 +10530,10 @@ PHP_METHOD(php_wxStyledTextCtrl, DoDropText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::DoDropText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::DocLineFromVisible(int lineDisplay)
+   Find the document line of a display line taking hidden lines into account. */
 PHP_METHOD(php_wxStyledTextCtrl, DocLineFromVisible)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10218,6 +10631,10 @@ PHP_METHOD(php_wxStyledTextCtrl, DocLineFromVisible)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::DocLineFromVisible\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::DocumentEnd()
+   Move caret to last position in document. */
 PHP_METHOD(php_wxStyledTextCtrl, DocumentEnd)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10310,6 +10727,10 @@ PHP_METHOD(php_wxStyledTextCtrl, DocumentEnd)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::DocumentEnd\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::DocumentEndExtend()
+   Move caret to last position in document extending selection to new caret position. */
 PHP_METHOD(php_wxStyledTextCtrl, DocumentEndExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10402,6 +10823,10 @@ PHP_METHOD(php_wxStyledTextCtrl, DocumentEndExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::DocumentEndExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::DocumentStart()
+   Move caret to first position in document. */
 PHP_METHOD(php_wxStyledTextCtrl, DocumentStart)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10494,6 +10919,10 @@ PHP_METHOD(php_wxStyledTextCtrl, DocumentStart)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::DocumentStart\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::DocumentStartExtend()
+   Move caret to first position in document extending selection to new caret position. */
 PHP_METHOD(php_wxStyledTextCtrl, DocumentStartExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10586,6 +11015,10 @@ PHP_METHOD(php_wxStyledTextCtrl, DocumentStartExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::DocumentStartExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::EditToggleOvertype()
+   Switch from insert to overtype mode or the reverse. */
 PHP_METHOD(php_wxStyledTextCtrl, EditToggleOvertype)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10678,6 +11111,10 @@ PHP_METHOD(php_wxStyledTextCtrl, EditToggleOvertype)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::EditToggleOvertype\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::EmptyUndoBuffer()
+   Delete the undo history. */
 PHP_METHOD(php_wxStyledTextCtrl, EmptyUndoBuffer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10770,6 +11207,10 @@ PHP_METHOD(php_wxStyledTextCtrl, EmptyUndoBuffer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::EmptyUndoBuffer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::EndUndoAction()
+   End a sequence of actions that is undone and redone as a unit. */
 PHP_METHOD(php_wxStyledTextCtrl, EndUndoAction)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10862,6 +11303,10 @@ PHP_METHOD(php_wxStyledTextCtrl, EndUndoAction)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::EndUndoAction\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::EnsureCaretVisible()
+   Ensure the caret is visible. */
 PHP_METHOD(php_wxStyledTextCtrl, EnsureCaretVisible)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10954,6 +11399,10 @@ PHP_METHOD(php_wxStyledTextCtrl, EnsureCaretVisible)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::EnsureCaretVisible\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::EnsureVisible(int line)
+   Ensure a particular line is visible by expanding any header line hiding it. */
 PHP_METHOD(php_wxStyledTextCtrl, EnsureVisible)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11051,6 +11500,10 @@ PHP_METHOD(php_wxStyledTextCtrl, EnsureVisible)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::EnsureVisible\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::EnsureVisibleEnforcePolicy(int line)
+   Ensure a particular line is visible by expanding any header line hiding it. */
 PHP_METHOD(php_wxStyledTextCtrl, EnsureVisibleEnforcePolicy)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11148,6 +11601,10 @@ PHP_METHOD(php_wxStyledTextCtrl, EnsureVisibleEnforcePolicy)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::EnsureVisibleEnforcePolicy\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::FindColumn(int line, int column)
+   Find the position of a column on a line taking into account tabs and multi-byte characters. */
 PHP_METHOD(php_wxStyledTextCtrl, FindColumn)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11246,6 +11703,10 @@ PHP_METHOD(php_wxStyledTextCtrl, FindColumn)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::FindColumn\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::FindText(int minPos, int maxPos, string text, int flags)
+   Find some text in the document. */
 PHP_METHOD(php_wxStyledTextCtrl, FindText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11358,6 +11819,10 @@ PHP_METHOD(php_wxStyledTextCtrl, FindText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::FindText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::FormFeed()
+   Insert a Form Feed character. */
 PHP_METHOD(php_wxStyledTextCtrl, FormFeed)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11450,6 +11915,10 @@ PHP_METHOD(php_wxStyledTextCtrl, FormFeed)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::FormFeed\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::FormatRange(bool doDraw, int startPos, int endPos, wxDC &draw, wxDC &target, wxRect renderRect, wxRect pageRect)
+   On Windows, will draw the document into a display context such as a printer. */
 PHP_METHOD(php_wxStyledTextCtrl, FormatRange)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11623,6 +12092,10 @@ PHP_METHOD(php_wxStyledTextCtrl, FormatRange)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::FormatRange\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxStyledTextCtrl::GetAdditionalCaretForeground()
+   Get the foreground colour of additional carets. */
 PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalCaretForeground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11720,6 +12193,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalCaretForeground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetAdditionalCaretForeground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetAdditionalCaretsBlink()
+   Whether additional carets will blink. */
 PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalCaretsBlink)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11812,6 +12289,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalCaretsBlink)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetAdditionalCaretsBlink\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetAdditionalCaretsVisible()
+   Whether additional carets are visible. */
 PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalCaretsVisible)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11904,6 +12385,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalCaretsVisible)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetAdditionalCaretsVisible\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetAdditionalSelAlpha()
+   Get the alpha of the selection. */
 PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalSelAlpha)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11996,6 +12481,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalSelAlpha)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetAdditionalSelAlpha\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetAdditionalSelectionTyping()
+   Whether typing can be performed into multiple selections. */
 PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalSelectionTyping)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12088,6 +12577,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAdditionalSelectionTyping)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetAdditionalSelectionTyping\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetAnchor()
+   Returns the position of the opposite end of the selection to the caret. */
 PHP_METHOD(php_wxStyledTextCtrl, GetAnchor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12180,6 +12673,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetAnchor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetAnchor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetBackSpaceUnIndents()
+   Does a backspace pressed when caret is within indentation unindent? */
 PHP_METHOD(php_wxStyledTextCtrl, GetBackSpaceUnIndents)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12272,6 +12769,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetBackSpaceUnIndents)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetBackSpaceUnIndents\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetBufferedDraw()
+   Is drawing done first into a buffer or direct to the screen? */
 PHP_METHOD(php_wxStyledTextCtrl, GetBufferedDraw)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12364,6 +12865,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetBufferedDraw)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetBufferedDraw\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxStyledTextCtrl::GetCaretForeground()
+   Get the foreground colour of the caret. */
 PHP_METHOD(php_wxStyledTextCtrl, GetCaretForeground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12461,6 +12966,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretForeground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetCaretForeground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetCaretLineBackAlpha()
+   Get the background alpha of the caret line. */
 PHP_METHOD(php_wxStyledTextCtrl, GetCaretLineBackAlpha)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12553,6 +13062,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretLineBackAlpha)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetCaretLineBackAlpha\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxStyledTextCtrl::GetCaretLineBackground()
+   Get the colour of the background of the line containing the caret. */
 PHP_METHOD(php_wxStyledTextCtrl, GetCaretLineBackground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12650,6 +13163,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretLineBackground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetCaretLineBackground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetCaretLineVisible()
+   Is the background of the line containing the caret in a different colour? */
 PHP_METHOD(php_wxStyledTextCtrl, GetCaretLineVisible)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12742,6 +13259,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretLineVisible)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetCaretLineVisible\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetCaretPeriod()
+   Get the time in milliseconds that the caret is on and off. */
 PHP_METHOD(php_wxStyledTextCtrl, GetCaretPeriod)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12834,6 +13355,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretPeriod)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetCaretPeriod\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetCaretSticky()
+   Can the caret preferred x position only be changed by explicit movement commands? */
 PHP_METHOD(php_wxStyledTextCtrl, GetCaretSticky)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12926,6 +13451,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretSticky)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetCaretSticky\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetCaretWidth()
+   Returns the width of the insert mode caret. */
 PHP_METHOD(php_wxStyledTextCtrl, GetCaretWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13018,6 +13547,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCaretWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetCaretWidth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetCharAt(int pos)
+   Returns the character byte at the position. */
 PHP_METHOD(php_wxStyledTextCtrl, GetCharAt)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13115,6 +13648,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCharAt)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetCharAt\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxStyledTextCtrl::GetCharacterPointer()
+   Compact the document buffer and return a read-only pointer to the characters in the document. */
 PHP_METHOD(php_wxStyledTextCtrl, GetCharacterPointer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13209,6 +13746,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCharacterPointer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetCharacterPointer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetCodePage()
+   Get the code page used to interpret the bytes of the document as characters. */
 PHP_METHOD(php_wxStyledTextCtrl, GetCodePage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13301,6 +13842,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCodePage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetCodePage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetColumn(int pos)
+   Retrieve the column number of a position, taking tab width into account. */
 PHP_METHOD(php_wxStyledTextCtrl, GetColumn)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13398,6 +13943,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetColumn)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetColumn\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetControlCharSymbol()
+   Get the way control characters are displayed. */
 PHP_METHOD(php_wxStyledTextCtrl, GetControlCharSymbol)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13490,6 +14039,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetControlCharSymbol)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetControlCharSymbol\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetCurrentLine()
+   END of generated section Others... */
 PHP_METHOD(php_wxStyledTextCtrl, GetCurrentLine)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13582,6 +14135,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCurrentLine)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetCurrentLine\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetCurrentPos()
+   Returns the position of the caret. */
 PHP_METHOD(php_wxStyledTextCtrl, GetCurrentPos)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13674,6 +14231,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetCurrentPos)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetCurrentPos\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetEOLMode()
+   Retrieve the current end of line mode - one of CRLF, CR, or LF. */
 PHP_METHOD(php_wxStyledTextCtrl, GetEOLMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13766,6 +14327,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEOLMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetEOLMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxStyledTextCtrl::GetEdgeColour()
+   Retrieve the colour used in edge indication. */
 PHP_METHOD(php_wxStyledTextCtrl, GetEdgeColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13863,6 +14428,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEdgeColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetEdgeColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetEdgeColumn()
+   Retrieve the column number which text should be kept within. */
 PHP_METHOD(php_wxStyledTextCtrl, GetEdgeColumn)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13955,6 +14524,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEdgeColumn)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetEdgeColumn\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetEdgeMode()
+   Retrieve the edge highlight mode. */
 PHP_METHOD(php_wxStyledTextCtrl, GetEdgeMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14047,6 +14620,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEdgeMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetEdgeMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetEndAtLastLine()
+   Retrieve whether the maximum scroll position has the last line at the bottom of the view. */
 PHP_METHOD(php_wxStyledTextCtrl, GetEndAtLastLine)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14139,6 +14716,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEndAtLastLine)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetEndAtLastLine\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetEndStyled()
+   Retrieve the position of the last correctly styled character. */
 PHP_METHOD(php_wxStyledTextCtrl, GetEndStyled)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14231,6 +14812,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetEndStyled)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetEndStyled\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetExtraAscent()
+   Get extra ascent for each line. */
 PHP_METHOD(php_wxStyledTextCtrl, GetExtraAscent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14323,6 +14908,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetExtraAscent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetExtraAscent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetExtraDescent()
+   Get extra descent for each line. */
 PHP_METHOD(php_wxStyledTextCtrl, GetExtraDescent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14415,6 +15004,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetExtraDescent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetExtraDescent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetFirstVisibleLine()
+   Retrieve the display line at the top of the display. */
 PHP_METHOD(php_wxStyledTextCtrl, GetFirstVisibleLine)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14507,6 +15100,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetFirstVisibleLine)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetFirstVisibleLine\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetFoldExpanded(int line)
+   Is a header line expanded? */
 PHP_METHOD(php_wxStyledTextCtrl, GetFoldExpanded)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14604,6 +15201,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetFoldExpanded)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetFoldExpanded\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetFoldLevel(int line)
+   Retrieve the fold level of a line. */
 PHP_METHOD(php_wxStyledTextCtrl, GetFoldLevel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14701,6 +15302,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetFoldLevel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetFoldLevel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetFoldParent(int line)
+   Find the parent line of a child line. */
 PHP_METHOD(php_wxStyledTextCtrl, GetFoldParent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14798,6 +15403,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetFoldParent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetFoldParent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetHighlightGuide()
+   Get the highlighted indentation guide column. */
 PHP_METHOD(php_wxStyledTextCtrl, GetHighlightGuide)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14890,6 +15499,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetHighlightGuide)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetHighlightGuide\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetIndent()
+   Retrieve indentation size. */
 PHP_METHOD(php_wxStyledTextCtrl, GetIndent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14982,6 +15595,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetIndent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetIndent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetIndentationGuides()
+   Are the indentation guides visible? */
 PHP_METHOD(php_wxStyledTextCtrl, GetIndentationGuides)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15074,6 +15691,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetIndentationGuides)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetIndentationGuides\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetKeysUnicode()
+   Are keys always interpreted as Unicode? */
 PHP_METHOD(php_wxStyledTextCtrl, GetKeysUnicode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15166,6 +15787,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetKeysUnicode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetKeysUnicode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetLastChild(int line, int level)
+   Find the last child line of a header line. */
 PHP_METHOD(php_wxStyledTextCtrl, GetLastChild)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15264,6 +15889,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLastChild)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetLastChild\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetLastKeydownProcessed()
+   Can be used to prevent the EVT_CHAR handler from adding the char. */
 PHP_METHOD(php_wxStyledTextCtrl, GetLastKeydownProcessed)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15356,6 +15985,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLastKeydownProcessed)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetLastKeydownProcessed\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetLayoutCache()
+   Retrieve the degree of caching of layout information. */
 PHP_METHOD(php_wxStyledTextCtrl, GetLayoutCache)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15448,6 +16081,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLayoutCache)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetLayoutCache\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetLength()
+   Returns the number of bytes in the document. */
 PHP_METHOD(php_wxStyledTextCtrl, GetLength)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15540,6 +16177,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLength)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetLength\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetLexer()
+   Retrieve the lexing language of the document. */
 PHP_METHOD(php_wxStyledTextCtrl, GetLexer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15632,6 +16273,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLexer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetLexer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxVersionInfo wxStyledTextCtrl::GetLibraryVersionInfo()
+   Get Scintilla library version information. */
 PHP_METHOD(php_wxStyledTextCtrl, GetLibraryVersionInfo)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15734,6 +16379,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLibraryVersionInfo)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetLibraryVersionInfo\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxStyledTextCtrl::GetLine(int line)
+   Retrieve the contents of a line. */
 PHP_METHOD(php_wxStyledTextCtrl, GetLine)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15837,6 +16486,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLine)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetLine\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetLineCount()
+   Returns the number of lines in the document. */
 PHP_METHOD(php_wxStyledTextCtrl, GetLineCount)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15929,6 +16582,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineCount)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetLineCount\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetLineEndPosition(int line)
+   Get the position after the last visible characters on a line. */
 PHP_METHOD(php_wxStyledTextCtrl, GetLineEndPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16026,6 +16683,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineEndPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetLineEndPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetLineIndentPosition(int line)
+   Retrieve the position before the first non indentation character on a line. */
 PHP_METHOD(php_wxStyledTextCtrl, GetLineIndentPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16123,6 +16784,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineIndentPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetLineIndentPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetLineIndentation(int line)
+   Retrieve the number of columns that a line is indented. */
 PHP_METHOD(php_wxStyledTextCtrl, GetLineIndentation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16220,6 +16885,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineIndentation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetLineIndentation\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetLineSelEndPosition(int line)
+   Retrieve the position of the end of the selection at the given line (wxSTC_INVALID_POSITION if no selection on this line). */
 PHP_METHOD(php_wxStyledTextCtrl, GetLineSelEndPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16317,6 +16986,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineSelEndPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetLineSelEndPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetLineSelStartPosition(int line)
+   Retrieve the position of the start of the selection at the given line (wxSTC_INVALID_POSITION if no selection on this line). */
 PHP_METHOD(php_wxStyledTextCtrl, GetLineSelStartPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16414,6 +17087,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineSelStartPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetLineSelStartPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetLineState(int line)
+   Retrieve the extra styling information for a line. */
 PHP_METHOD(php_wxStyledTextCtrl, GetLineState)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16511,6 +17188,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineState)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetLineState\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetLineVisible(int line)
+   Is a line visible? */
 PHP_METHOD(php_wxStyledTextCtrl, GetLineVisible)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16608,6 +17289,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetLineVisible)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetLineVisible\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetMainSelection()
+   Which selection is the main selection. */
 PHP_METHOD(php_wxStyledTextCtrl, GetMainSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16700,6 +17385,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMainSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetMainSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetMarginLeft()
+   Returns the size in pixels of the left margin. */
 PHP_METHOD(php_wxStyledTextCtrl, GetMarginLeft)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16792,6 +17481,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginLeft)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetMarginLeft\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetMarginMask(int margin)
+   Retrieve the marker mask of a margin. */
 PHP_METHOD(php_wxStyledTextCtrl, GetMarginMask)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16889,6 +17582,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginMask)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetMarginMask\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetMarginRight()
+   Returns the size in pixels of the right margin. */
 PHP_METHOD(php_wxStyledTextCtrl, GetMarginRight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16981,6 +17678,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginRight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetMarginRight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetMarginSensitive(int margin)
+   Retrieve the mouse click sensitivity of a margin. */
 PHP_METHOD(php_wxStyledTextCtrl, GetMarginSensitive)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17078,6 +17779,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginSensitive)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetMarginSensitive\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetMarginType(int margin)
+   Retrieve the type of a margin. */
 PHP_METHOD(php_wxStyledTextCtrl, GetMarginType)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17175,6 +17880,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginType)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetMarginType\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetMarginWidth(int margin)
+   Retrieve the width of a margin in pixels. */
 PHP_METHOD(php_wxStyledTextCtrl, GetMarginWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17272,6 +17981,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarginWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetMarginWidth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetMarkerSymbolDefined(int markerNumber)
+   Which symbol was defined for markerNumber with MarkerDefine. */
 PHP_METHOD(php_wxStyledTextCtrl, GetMarkerSymbolDefined)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17369,6 +18082,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMarkerSymbolDefined)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetMarkerSymbolDefined\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetMaxLineState()
+   Retrieve the last line number that has line state. */
 PHP_METHOD(php_wxStyledTextCtrl, GetMaxLineState)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17461,6 +18178,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMaxLineState)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetMaxLineState\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetModEventMask()
+   Get which document modification events are sent to the container. */
 PHP_METHOD(php_wxStyledTextCtrl, GetModEventMask)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17553,6 +18274,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetModEventMask)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetModEventMask\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetModify()
+   Is the document different from when it was last saved? */
 PHP_METHOD(php_wxStyledTextCtrl, GetModify)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17645,6 +18370,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetModify)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetModify\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetMouseDownCaptures()
+   Get whether mouse gets captured. */
 PHP_METHOD(php_wxStyledTextCtrl, GetMouseDownCaptures)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17737,6 +18466,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMouseDownCaptures)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetMouseDownCaptures\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetMouseDwellTime()
+   Retrieve the time the mouse must sit still to generate a mouse dwell event. */
 PHP_METHOD(php_wxStyledTextCtrl, GetMouseDwellTime)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17829,6 +18562,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMouseDwellTime)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetMouseDwellTime\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetMultipleSelection()
+   Whether multiple selections can be made. */
 PHP_METHOD(php_wxStyledTextCtrl, GetMultipleSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17921,6 +18658,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetMultipleSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetMultipleSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetOvertype()
+   Returns true if overtype mode is active otherwise false is returned. */
 PHP_METHOD(php_wxStyledTextCtrl, GetOvertype)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18013,6 +18754,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetOvertype)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetOvertype\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetPasteConvertEndings()
+   Get convert-on-paste setting. */
 PHP_METHOD(php_wxStyledTextCtrl, GetPasteConvertEndings)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18105,6 +18850,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPasteConvertEndings)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetPasteConvertEndings\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetPrintColourMode()
+   Returns the print colour mode. */
 PHP_METHOD(php_wxStyledTextCtrl, GetPrintColourMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18197,6 +18946,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPrintColourMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetPrintColourMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetPrintMagnification()
+   Returns the print magnification. */
 PHP_METHOD(php_wxStyledTextCtrl, GetPrintMagnification)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18289,6 +19042,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPrintMagnification)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetPrintMagnification\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetPrintWrapMode()
+   Is printing line wrapped? */
 PHP_METHOD(php_wxStyledTextCtrl, GetPrintWrapMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18381,6 +19138,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPrintWrapMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetPrintWrapMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxStyledTextCtrl::GetProperty(string key)
+   Retrieve a 'property' value previously set with SetProperty. */
 PHP_METHOD(php_wxStyledTextCtrl, GetProperty)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18485,6 +19246,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetProperty)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetProperty\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxStyledTextCtrl::GetPropertyExpanded(string key)
+   Retrieve a 'property' value previously set with SetProperty, with '$()' variable replacement on returned buffer. */
 PHP_METHOD(php_wxStyledTextCtrl, GetPropertyExpanded)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18589,6 +19354,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPropertyExpanded)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetPropertyExpanded\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetPropertyInt(string key)
+   Retrieve a 'property' value previously set with SetProperty, interpreted as an int AFTER any '$()' variable replacement. */
 PHP_METHOD(php_wxStyledTextCtrl, GetPropertyInt)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18687,6 +19456,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetPropertyInt)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetPropertyInt\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetReadOnly()
+   In read-only mode? */
 PHP_METHOD(php_wxStyledTextCtrl, GetReadOnly)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18779,6 +19552,9 @@ PHP_METHOD(php_wxStyledTextCtrl, GetReadOnly)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetReadOnly\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetRectangularSelectionAnchor() */
 PHP_METHOD(php_wxStyledTextCtrl, GetRectangularSelectionAnchor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18871,6 +19647,9 @@ PHP_METHOD(php_wxStyledTextCtrl, GetRectangularSelectionAnchor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetRectangularSelectionAnchor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetRectangularSelectionAnchorVirtualSpace() */
 PHP_METHOD(php_wxStyledTextCtrl, GetRectangularSelectionAnchorVirtualSpace)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18963,6 +19742,9 @@ PHP_METHOD(php_wxStyledTextCtrl, GetRectangularSelectionAnchorVirtualSpace)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetRectangularSelectionAnchorVirtualSpace\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetRectangularSelectionCaret() */
 PHP_METHOD(php_wxStyledTextCtrl, GetRectangularSelectionCaret)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19055,6 +19837,9 @@ PHP_METHOD(php_wxStyledTextCtrl, GetRectangularSelectionCaret)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetRectangularSelectionCaret\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetRectangularSelectionCaretVirtualSpace() */
 PHP_METHOD(php_wxStyledTextCtrl, GetRectangularSelectionCaretVirtualSpace)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19147,6 +19932,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetRectangularSelectionCaretVirtualSpace)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetRectangularSelectionCaretVirtualSpace\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetRectangularSelectionModifier()
+   Get the modifier key used for rectangular selection. */
 PHP_METHOD(php_wxStyledTextCtrl, GetRectangularSelectionModifier)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19239,6 +20028,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetRectangularSelectionModifier)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetRectangularSelectionModifier\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetSTCCursor()
+   Get cursor type. */
 PHP_METHOD(php_wxStyledTextCtrl, GetSTCCursor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19331,6 +20124,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSTCCursor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetSTCCursor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetSTCFocus()
+   Get internal focus flag. */
 PHP_METHOD(php_wxStyledTextCtrl, GetSTCFocus)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19423,6 +20220,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSTCFocus)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetSTCFocus\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetScrollWidth()
+   Retrieve the document width assumed for scrolling. */
 PHP_METHOD(php_wxStyledTextCtrl, GetScrollWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19515,6 +20316,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetScrollWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetScrollWidth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetSearchFlags()
+   Get the search flags used by SearchInTarget. */
 PHP_METHOD(php_wxStyledTextCtrl, GetSearchFlags)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19607,6 +20412,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSearchFlags)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetSearchFlags\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetSelAlpha()
+   Get the alpha of the selection. */
 PHP_METHOD(php_wxStyledTextCtrl, GetSelAlpha)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19699,6 +20508,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelAlpha)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetSelAlpha\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxStyledTextCtrl::GetSelectedText()
+   Retrieve the selected text. */
 PHP_METHOD(php_wxStyledTextCtrl, GetSelectedText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19797,6 +20610,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectedText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetSelectedText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetSelectionEnd()
+   Returns the position at the end of the selection. */
 PHP_METHOD(php_wxStyledTextCtrl, GetSelectionEnd)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19889,6 +20706,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionEnd)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetSelectionEnd\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetSelectionMode()
+   Get the mode of the current selection. */
 PHP_METHOD(php_wxStyledTextCtrl, GetSelectionMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19981,6 +20802,9 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetSelectionMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetSelectionNAnchor(int selection) */
 PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNAnchor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20078,6 +20902,9 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNAnchor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetSelectionNAnchor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetSelectionNAnchorVirtualSpace(int selection) */
 PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNAnchorVirtualSpace)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20175,6 +21002,9 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNAnchorVirtualSpace)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetSelectionNAnchorVirtualSpace\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetSelectionNCaret(int selection) */
 PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNCaret)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20272,6 +21102,9 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNCaret)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetSelectionNCaret\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetSelectionNCaretVirtualSpace(int selection) */
 PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNCaretVirtualSpace)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20369,6 +21202,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNCaretVirtualSpace)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetSelectionNCaretVirtualSpace\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetSelectionNEnd(int selection)
+   Returns the position at the end of the selection. */
 PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNEnd)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20466,6 +21303,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNEnd)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetSelectionNEnd\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetSelectionNStart(int selection)
+   Returns the position at the start of the selection. */
 PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNStart)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20563,6 +21404,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionNStart)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetSelectionNStart\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetSelectionStart()
+   Returns the position at the start of the selection. */
 PHP_METHOD(php_wxStyledTextCtrl, GetSelectionStart)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20655,6 +21500,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelectionStart)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetSelectionStart\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetSelections()
+   How many selections are there? */
 PHP_METHOD(php_wxStyledTextCtrl, GetSelections)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20747,6 +21596,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetSelections)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetSelections\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetStatus()
+   Get error status. */
 PHP_METHOD(php_wxStyledTextCtrl, GetStatus)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20839,6 +21692,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetStatus)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetStatus\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetStyleAt(int pos)
+   Returns the style byte at the position. */
 PHP_METHOD(php_wxStyledTextCtrl, GetStyleAt)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20936,6 +21793,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetStyleAt)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetStyleAt\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetStyleBits()
+   Retrieve number of bits in style bytes used to hold the lexical state. */
 PHP_METHOD(php_wxStyledTextCtrl, GetStyleBits)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21028,6 +21889,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetStyleBits)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetStyleBits\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetStyleBitsNeeded()
+   Retrieve the number of bits the current lexer needs for styling. */
 PHP_METHOD(php_wxStyledTextCtrl, GetStyleBitsNeeded)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21120,6 +21985,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetStyleBitsNeeded)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetStyleBitsNeeded\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetTabIndents()
+   Does a tab pressed when caret is within indentation indent? */
 PHP_METHOD(php_wxStyledTextCtrl, GetTabIndents)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21212,6 +22081,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTabIndents)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetTabIndents\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetTabWidth()
+   Retrieve the visible size of a tab. */
 PHP_METHOD(php_wxStyledTextCtrl, GetTabWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21304,6 +22177,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTabWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetTabWidth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetTargetEnd()
+   Get the position that ends the target. */
 PHP_METHOD(php_wxStyledTextCtrl, GetTargetEnd)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21396,6 +22273,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTargetEnd)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetTargetEnd\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetTargetStart()
+   Get the position that starts the target. */
 PHP_METHOD(php_wxStyledTextCtrl, GetTargetStart)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21488,6 +22369,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTargetStart)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetTargetStart\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxStyledTextCtrl::GetText()
+   Retrieve all the text in the document. */
 PHP_METHOD(php_wxStyledTextCtrl, GetText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21586,6 +22471,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetTextLength()
+   Retrieve the number of characters in the document. */
 PHP_METHOD(php_wxStyledTextCtrl, GetTextLength)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21678,6 +22567,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTextLength)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetTextLength\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxStyledTextCtrl::GetTextRange(int startPos, int endPos)
+   Retrieve a range of text. */
 PHP_METHOD(php_wxStyledTextCtrl, GetTextRange)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21782,6 +22675,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTextRange)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetTextRange\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetTwoPhaseDraw()
+   Is drawing done in two phases with backgrounds drawn before foregrounds? */
 PHP_METHOD(php_wxStyledTextCtrl, GetTwoPhaseDraw)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21874,6 +22771,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetTwoPhaseDraw)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetTwoPhaseDraw\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetUndoCollection()
+   Is undo history being collected? */
 PHP_METHOD(php_wxStyledTextCtrl, GetUndoCollection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21966,6 +22867,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetUndoCollection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetUndoCollection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetUseAntiAliasing()
+   Returns the current UseAntiAliasing setting. */
 PHP_METHOD(php_wxStyledTextCtrl, GetUseAntiAliasing)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22058,6 +22963,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetUseAntiAliasing)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetUseAntiAliasing\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetUseHorizontalScrollBar()
+   Is the horizontal scroll bar visible? */
 PHP_METHOD(php_wxStyledTextCtrl, GetUseHorizontalScrollBar)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22150,6 +23059,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetUseHorizontalScrollBar)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetUseHorizontalScrollBar\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetUseTabs()
+   Retrieve whether tabs will be used in indentation. */
 PHP_METHOD(php_wxStyledTextCtrl, GetUseTabs)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22242,6 +23155,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetUseTabs)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetUseTabs\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetUseVerticalScrollBar()
+   Is the vertical scroll bar visible? */
 PHP_METHOD(php_wxStyledTextCtrl, GetUseVerticalScrollBar)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22334,6 +23251,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetUseVerticalScrollBar)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetUseVerticalScrollBar\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::GetViewEOL()
+   Are the end of line characters visible? */
 PHP_METHOD(php_wxStyledTextCtrl, GetViewEOL)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22426,6 +23347,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetViewEOL)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetViewEOL\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetViewWhiteSpace()
+   Are white space characters currently visible? Returns one of SCWS_* constants. */
 PHP_METHOD(php_wxStyledTextCtrl, GetViewWhiteSpace)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22518,6 +23443,9 @@ PHP_METHOD(php_wxStyledTextCtrl, GetViewWhiteSpace)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetViewWhiteSpace\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetVirtualSpaceOptions() */
 PHP_METHOD(php_wxStyledTextCtrl, GetVirtualSpaceOptions)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22610,6 +23538,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetVirtualSpaceOptions)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetVirtualSpaceOptions\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetWhitespaceSize()
+   Get the size of the dots used to mark space characters. */
 PHP_METHOD(php_wxStyledTextCtrl, GetWhitespaceSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22702,6 +23634,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWhitespaceSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetWhitespaceSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetWrapIndentMode()
+   Retrieve how wrapped sublines are placed. */
 PHP_METHOD(php_wxStyledTextCtrl, GetWrapIndentMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22794,6 +23730,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWrapIndentMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetWrapIndentMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetWrapMode()
+   Retrieve whether text is word wrapped. */
 PHP_METHOD(php_wxStyledTextCtrl, GetWrapMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22886,6 +23826,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWrapMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetWrapMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetWrapStartIndent()
+   Retrieve the start indent for wrapped lines. */
 PHP_METHOD(php_wxStyledTextCtrl, GetWrapStartIndent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22978,6 +23922,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWrapStartIndent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetWrapStartIndent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetWrapVisualFlags()
+   Retrieve the display mode of visual flags for wrapped lines. */
 PHP_METHOD(php_wxStyledTextCtrl, GetWrapVisualFlags)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23070,6 +24018,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWrapVisualFlags)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetWrapVisualFlags\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetWrapVisualFlagsLocation()
+   Retrieve the location of visual flags for wrapped lines. */
 PHP_METHOD(php_wxStyledTextCtrl, GetWrapVisualFlagsLocation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23162,6 +24114,9 @@ PHP_METHOD(php_wxStyledTextCtrl, GetWrapVisualFlagsLocation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetWrapVisualFlagsLocation\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetXOffset() */
 PHP_METHOD(php_wxStyledTextCtrl, GetXOffset)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23254,6 +24209,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetXOffset)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetXOffset\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::GetZoom()
+   Retrieve the zoom level. */
 PHP_METHOD(php_wxStyledTextCtrl, GetZoom)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23346,6 +24305,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GetZoom)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GetZoom\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::GotoLine(int line)
+   Set caret to start of a line and ensure it is visible. */
 PHP_METHOD(php_wxStyledTextCtrl, GotoLine)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23443,6 +24406,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GotoLine)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GotoLine\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::GotoPos(int pos)
+   Set caret to a position and ensure it is visible. */
 PHP_METHOD(php_wxStyledTextCtrl, GotoPos)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23540,6 +24507,10 @@ PHP_METHOD(php_wxStyledTextCtrl, GotoPos)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::GotoPos\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::HideLines(int lineStart, int lineEnd)
+   Make a range of lines invisible. */
 PHP_METHOD(php_wxStyledTextCtrl, HideLines)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23638,6 +24609,10 @@ PHP_METHOD(php_wxStyledTextCtrl, HideLines)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::HideLines\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::HideSelection(bool normal)
+   Draw the selection in normal style or with selection highlighted. */
 PHP_METHOD(php_wxStyledTextCtrl, HideSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23735,6 +24710,10 @@ PHP_METHOD(php_wxStyledTextCtrl, HideSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::HideSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::Home()
+   Move caret to first position on line. */
 PHP_METHOD(php_wxStyledTextCtrl, Home)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23827,6 +24806,10 @@ PHP_METHOD(php_wxStyledTextCtrl, Home)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::Home\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::HomeDisplay()
+   Move caret to first position on display line. */
 PHP_METHOD(php_wxStyledTextCtrl, HomeDisplay)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23919,6 +24902,10 @@ PHP_METHOD(php_wxStyledTextCtrl, HomeDisplay)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::HomeDisplay\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::HomeDisplayExtend()
+   Move caret to first position on display line extending selection to new caret position. */
 PHP_METHOD(php_wxStyledTextCtrl, HomeDisplayExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24011,6 +24998,10 @@ PHP_METHOD(php_wxStyledTextCtrl, HomeDisplayExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::HomeDisplayExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::HomeExtend()
+   Move caret to first position on line extending selection to new caret position. */
 PHP_METHOD(php_wxStyledTextCtrl, HomeExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24103,6 +25094,10 @@ PHP_METHOD(php_wxStyledTextCtrl, HomeExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::HomeExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::HomeRectExtend()
+   Move caret to first position on line, extending rectangular selection to new caret position. */
 PHP_METHOD(php_wxStyledTextCtrl, HomeRectExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24195,6 +25190,10 @@ PHP_METHOD(php_wxStyledTextCtrl, HomeRectExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::HomeRectExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::HomeWrap()
+   These are like their namesakes Home(Extend)?, LineEnd(Extend)?, VCHome(Extend)? except they behave differently when word-wrap is enabled: They go first to the start / end of the display line, like (Home|LineEnd)Display The difference is that, the cursor is already at the point, it goes on to the start or end of the document line, as appropriate for (Home|LineEnd|VCHome)(Extend)?. */
 PHP_METHOD(php_wxStyledTextCtrl, HomeWrap)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24287,6 +25286,9 @@ PHP_METHOD(php_wxStyledTextCtrl, HomeWrap)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::HomeWrap\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::HomeWrapExtend() */
 PHP_METHOD(php_wxStyledTextCtrl, HomeWrapExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24379,6 +25381,10 @@ PHP_METHOD(php_wxStyledTextCtrl, HomeWrapExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::HomeWrapExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::IndicatorGetAlpha(int indicator)
+   Get the alpha fill colour of the given indicator. */
 PHP_METHOD(php_wxStyledTextCtrl, IndicatorGetAlpha)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24476,6 +25482,10 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorGetAlpha)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::IndicatorGetAlpha\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxStyledTextCtrl::IndicatorGetForeground(int indic)
+   Retrieve the foreground colour of an indicator. */
 PHP_METHOD(php_wxStyledTextCtrl, IndicatorGetForeground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24578,6 +25588,10 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorGetForeground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::IndicatorGetForeground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::IndicatorGetStyle(int indic)
+   Retrieve the style of an indicator. */
 PHP_METHOD(php_wxStyledTextCtrl, IndicatorGetStyle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24675,6 +25689,10 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorGetStyle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::IndicatorGetStyle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::IndicatorSetAlpha(int indicator, int alpha)
+   Set the alpha fill colour of the given indicator. */
 PHP_METHOD(php_wxStyledTextCtrl, IndicatorSetAlpha)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24773,6 +25791,10 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorSetAlpha)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::IndicatorSetAlpha\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::IndicatorSetForeground(int indic, wxColour fore)
+   Set the foreground colour of an indicator. */
 PHP_METHOD(php_wxStyledTextCtrl, IndicatorSetForeground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24889,6 +25911,10 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorSetForeground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::IndicatorSetForeground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::IndicatorSetStyle(int indic, int style)
+   Set an indicator to plain, squiggle or TT. */
 PHP_METHOD(php_wxStyledTextCtrl, IndicatorSetStyle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24987,6 +26013,10 @@ PHP_METHOD(php_wxStyledTextCtrl, IndicatorSetStyle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::IndicatorSetStyle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::InsertText(int pos, string text)
+   Insert string at a position. */
 PHP_METHOD(php_wxStyledTextCtrl, InsertText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25086,6 +26116,10 @@ PHP_METHOD(php_wxStyledTextCtrl, InsertText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::InsertText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::InsertTextRaw(int pos, string text)
+   Insert string at a position. */
 PHP_METHOD(php_wxStyledTextCtrl, InsertTextRaw)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25185,6 +26219,10 @@ PHP_METHOD(php_wxStyledTextCtrl, InsertTextRaw)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::InsertTextRaw\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::LineCopy()
+   Copy the line containing the caret. */
 PHP_METHOD(php_wxStyledTextCtrl, LineCopy)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25277,6 +26315,10 @@ PHP_METHOD(php_wxStyledTextCtrl, LineCopy)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::LineCopy\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::LineCut()
+   Cut the line containing the caret. */
 PHP_METHOD(php_wxStyledTextCtrl, LineCut)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25369,6 +26411,10 @@ PHP_METHOD(php_wxStyledTextCtrl, LineCut)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::LineCut\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::LineDelete()
+   Delete the line containing the caret. */
 PHP_METHOD(php_wxStyledTextCtrl, LineDelete)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25461,6 +26507,10 @@ PHP_METHOD(php_wxStyledTextCtrl, LineDelete)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::LineDelete\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::LineDown()
+   Move caret down one line. */
 PHP_METHOD(php_wxStyledTextCtrl, LineDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25553,6 +26603,10 @@ PHP_METHOD(php_wxStyledTextCtrl, LineDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::LineDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::LineDownExtend()
+   Move caret down one line extending selection to new caret position. */
 PHP_METHOD(php_wxStyledTextCtrl, LineDownExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25645,6 +26699,10 @@ PHP_METHOD(php_wxStyledTextCtrl, LineDownExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::LineDownExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::LineDownRectExtend()
+   Move caret down one line, extending rectangular selection to new caret position. */
 PHP_METHOD(php_wxStyledTextCtrl, LineDownRectExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25737,6 +26795,10 @@ PHP_METHOD(php_wxStyledTextCtrl, LineDownRectExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::LineDownRectExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::LineDuplicate()
+   Duplicate the current line. */
 PHP_METHOD(php_wxStyledTextCtrl, LineDuplicate)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25829,6 +26891,10 @@ PHP_METHOD(php_wxStyledTextCtrl, LineDuplicate)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::LineDuplicate\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::LineEnd()
+   Move caret to last position on line. */
 PHP_METHOD(php_wxStyledTextCtrl, LineEnd)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25921,6 +26987,10 @@ PHP_METHOD(php_wxStyledTextCtrl, LineEnd)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::LineEnd\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::LineEndDisplay()
+   Move caret to last position on display line. */
 PHP_METHOD(php_wxStyledTextCtrl, LineEndDisplay)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26013,6 +27083,10 @@ PHP_METHOD(php_wxStyledTextCtrl, LineEndDisplay)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::LineEndDisplay\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::LineEndDisplayExtend()
+   Move caret to last position on display line extending selection to new caret position. */
 PHP_METHOD(php_wxStyledTextCtrl, LineEndDisplayExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26105,6 +27179,10 @@ PHP_METHOD(php_wxStyledTextCtrl, LineEndDisplayExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::LineEndDisplayExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::LineEndExtend()
+   Move caret to last position on line extending selection to new caret position. */
 PHP_METHOD(php_wxStyledTextCtrl, LineEndExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26197,6 +27275,10 @@ PHP_METHOD(php_wxStyledTextCtrl, LineEndExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::LineEndExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::LineEndRectExtend()
+   Move caret to last position on line, extending rectangular selection to new caret position. */
 PHP_METHOD(php_wxStyledTextCtrl, LineEndRectExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26289,6 +27371,9 @@ PHP_METHOD(php_wxStyledTextCtrl, LineEndRectExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::LineEndRectExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::LineEndWrap() */
 PHP_METHOD(php_wxStyledTextCtrl, LineEndWrap)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26381,6 +27466,9 @@ PHP_METHOD(php_wxStyledTextCtrl, LineEndWrap)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::LineEndWrap\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::LineEndWrapExtend() */
 PHP_METHOD(php_wxStyledTextCtrl, LineEndWrapExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26473,6 +27561,10 @@ PHP_METHOD(php_wxStyledTextCtrl, LineEndWrapExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::LineEndWrapExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::LineFromPosition(int pos)
+   Retrieve the line containing a position. */
 PHP_METHOD(php_wxStyledTextCtrl, LineFromPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26570,6 +27662,10 @@ PHP_METHOD(php_wxStyledTextCtrl, LineFromPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::LineFromPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::LineLength(int line)
+   How many characters are on a line, including end of line characters? */
 PHP_METHOD(php_wxStyledTextCtrl, LineLength)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26667,6 +27763,10 @@ PHP_METHOD(php_wxStyledTextCtrl, LineLength)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::LineLength\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::LineScroll(int columns, int lines)
+   Scroll horizontally and vertically. */
 PHP_METHOD(php_wxStyledTextCtrl, LineScroll)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26765,6 +27865,10 @@ PHP_METHOD(php_wxStyledTextCtrl, LineScroll)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::LineScroll\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::LineScrollDown()
+   Scroll the document down, keeping the caret visible. */
 PHP_METHOD(php_wxStyledTextCtrl, LineScrollDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26857,6 +27961,10 @@ PHP_METHOD(php_wxStyledTextCtrl, LineScrollDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::LineScrollDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::LineScrollUp()
+   Scroll the document up, keeping the caret visible. */
 PHP_METHOD(php_wxStyledTextCtrl, LineScrollUp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26949,6 +28057,10 @@ PHP_METHOD(php_wxStyledTextCtrl, LineScrollUp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::LineScrollUp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::LineTranspose()
+   Switch the current line with the previous. */
 PHP_METHOD(php_wxStyledTextCtrl, LineTranspose)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27041,6 +28153,10 @@ PHP_METHOD(php_wxStyledTextCtrl, LineTranspose)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::LineTranspose\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::LineUp()
+   Move caret up one line. */
 PHP_METHOD(php_wxStyledTextCtrl, LineUp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27133,6 +28249,10 @@ PHP_METHOD(php_wxStyledTextCtrl, LineUp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::LineUp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::LineUpExtend()
+   Move caret up one line extending selection to new caret position. */
 PHP_METHOD(php_wxStyledTextCtrl, LineUpExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27225,6 +28345,10 @@ PHP_METHOD(php_wxStyledTextCtrl, LineUpExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::LineUpExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::LineUpRectExtend()
+   Move caret up one line, extending rectangular selection to new caret position. */
 PHP_METHOD(php_wxStyledTextCtrl, LineUpRectExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27317,6 +28441,10 @@ PHP_METHOD(php_wxStyledTextCtrl, LineUpRectExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::LineUpRectExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::LinesJoin()
+   Join the lines in the target. */
 PHP_METHOD(php_wxStyledTextCtrl, LinesJoin)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27409,6 +28537,10 @@ PHP_METHOD(php_wxStyledTextCtrl, LinesJoin)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::LinesJoin\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::LinesOnScreen()
+   Retrieves the number of lines completely visible. */
 PHP_METHOD(php_wxStyledTextCtrl, LinesOnScreen)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27501,6 +28633,10 @@ PHP_METHOD(php_wxStyledTextCtrl, LinesOnScreen)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::LinesOnScreen\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::LinesSplit(int pixelWidth)
+   Split the lines in the target into lines that are less wide than pixelWidth where possible. */
 PHP_METHOD(php_wxStyledTextCtrl, LinesSplit)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27598,6 +28734,10 @@ PHP_METHOD(php_wxStyledTextCtrl, LinesSplit)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::LinesSplit\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::LoadFile(string file, int fileType)
+   Load the contents of filename into the editor. */
 PHP_METHOD(php_wxStyledTextCtrl, LoadFile)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27708,6 +28848,10 @@ PHP_METHOD(php_wxStyledTextCtrl, LoadFile)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::LoadFile\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::LowerCase()
+   Transform the selection to lower case. */
 PHP_METHOD(php_wxStyledTextCtrl, LowerCase)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27800,6 +28944,10 @@ PHP_METHOD(php_wxStyledTextCtrl, LowerCase)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::LowerCase\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::MarginGetStyle(int line)
+   Get the style number for the text margin for a line. */
 PHP_METHOD(php_wxStyledTextCtrl, MarginGetStyle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27897,6 +29045,10 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginGetStyle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::MarginGetStyle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::MarginGetStyleOffset()
+   Get the start of the range of style numbers used for margin text. */
 PHP_METHOD(php_wxStyledTextCtrl, MarginGetStyleOffset)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27989,6 +29141,10 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginGetStyleOffset)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::MarginGetStyleOffset\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxStyledTextCtrl::MarginGetStyles(int line)
+   Get the styles in the text margin for a line. */
 PHP_METHOD(php_wxStyledTextCtrl, MarginGetStyles)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28092,6 +29248,10 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginGetStyles)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::MarginGetStyles\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxStyledTextCtrl::MarginGetText(int line)
+   Get the text in the text margin for a line. */
 PHP_METHOD(php_wxStyledTextCtrl, MarginGetText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28195,6 +29355,10 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginGetText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::MarginGetText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::MarginSetStyle(int line, int style)
+   Set the style number for the text margin for a line. */
 PHP_METHOD(php_wxStyledTextCtrl, MarginSetStyle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28293,6 +29457,10 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginSetStyle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::MarginSetStyle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::MarginSetStyleOffset(int style)
+   Get the start of the range of style numbers used for margin text. */
 PHP_METHOD(php_wxStyledTextCtrl, MarginSetStyleOffset)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28390,6 +29558,10 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginSetStyleOffset)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::MarginSetStyleOffset\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::MarginSetStyles(int line, string styles)
+   Set the style in the text margin for a line. */
 PHP_METHOD(php_wxStyledTextCtrl, MarginSetStyles)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28489,6 +29661,10 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginSetStyles)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::MarginSetStyles\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::MarginSetText(int line, string text)
+   Set the text in the text margin for a line. */
 PHP_METHOD(php_wxStyledTextCtrl, MarginSetText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28588,6 +29764,10 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginSetText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::MarginSetText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::MarginTextClearAll()
+   Clear the margin text on all lines. */
 PHP_METHOD(php_wxStyledTextCtrl, MarginTextClearAll)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28680,6 +29860,10 @@ PHP_METHOD(php_wxStyledTextCtrl, MarginTextClearAll)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::MarginTextClearAll\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::MarkerAdd(int line, int markerNumber)
+   Add a marker to a line, returning an ID which can be used to find or delete the marker. */
 PHP_METHOD(php_wxStyledTextCtrl, MarkerAdd)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28778,6 +29962,10 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerAdd)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::MarkerAdd\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::MarkerAddSet(int line, int set)
+   Add a set of markers to a line. */
 PHP_METHOD(php_wxStyledTextCtrl, MarkerAddSet)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28876,6 +30064,10 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerAddSet)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::MarkerAddSet\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::MarkerDefine(int markerNumber, int markerSymbol, wxColour foreground, wxColour background)
+   Set the symbol used for a particular marker number, and optionally the fore and background colours. */
 PHP_METHOD(php_wxStyledTextCtrl, MarkerDefine)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29035,6 +30227,10 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefine)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::MarkerDefine\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::MarkerDefineBitmap(int markerNumber, wxBitmap bmp)
+   Define a marker from a bitmap. */
 PHP_METHOD(php_wxStyledTextCtrl, MarkerDefineBitmap)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29151,6 +30347,10 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDefineBitmap)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::MarkerDefineBitmap\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::MarkerDelete(int line, int markerNumber)
+   Delete a marker from a line. */
 PHP_METHOD(php_wxStyledTextCtrl, MarkerDelete)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29249,6 +30449,10 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDelete)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::MarkerDelete\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::MarkerDeleteAll(int markerNumber)
+   Delete all markers with a particular number from all lines. */
 PHP_METHOD(php_wxStyledTextCtrl, MarkerDeleteAll)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29346,6 +30550,10 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDeleteAll)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::MarkerDeleteAll\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::MarkerDeleteHandle(int handle)
+   Delete a marker. */
 PHP_METHOD(php_wxStyledTextCtrl, MarkerDeleteHandle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29443,6 +30651,10 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerDeleteHandle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::MarkerDeleteHandle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::MarkerGet(int line)
+   Get a bit mask of all the markers set on a line. */
 PHP_METHOD(php_wxStyledTextCtrl, MarkerGet)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29540,6 +30752,10 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerGet)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::MarkerGet\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::MarkerLineFromHandle(int handle)
+   Retrieve the line number at which a particular marker is located. */
 PHP_METHOD(php_wxStyledTextCtrl, MarkerLineFromHandle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29637,6 +30853,10 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerLineFromHandle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::MarkerLineFromHandle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::MarkerNext(int lineStart, int markerMask)
+   Find the next line after lineStart that includes a marker in mask. */
 PHP_METHOD(php_wxStyledTextCtrl, MarkerNext)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29735,6 +30955,10 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerNext)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::MarkerNext\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::MarkerPrevious(int lineStart, int markerMask)
+   Find the previous line before lineStart that includes a marker in mask. */
 PHP_METHOD(php_wxStyledTextCtrl, MarkerPrevious)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29833,6 +31057,10 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerPrevious)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::MarkerPrevious\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::MarkerSetAlpha(int markerNumber, int alpha)
+   Set the alpha used for a marker that is drawn in the text area, not the margin. */
 PHP_METHOD(php_wxStyledTextCtrl, MarkerSetAlpha)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29931,6 +31159,10 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerSetAlpha)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::MarkerSetAlpha\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::MarkerSetBackground(int markerNumber, wxColour back)
+   Set the background colour used for a particular marker number. */
 PHP_METHOD(php_wxStyledTextCtrl, MarkerSetBackground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30047,6 +31279,10 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerSetBackground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::MarkerSetBackground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::MarkerSetForeground(int markerNumber, wxColour fore)
+   Set the foreground colour used for a particular marker number. */
 PHP_METHOD(php_wxStyledTextCtrl, MarkerSetForeground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30163,6 +31399,10 @@ PHP_METHOD(php_wxStyledTextCtrl, MarkerSetForeground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::MarkerSetForeground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::MoveCaretInsideView()
+   Move the caret inside current view if it's not there already. */
 PHP_METHOD(php_wxStyledTextCtrl, MoveCaretInsideView)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30255,6 +31495,10 @@ PHP_METHOD(php_wxStyledTextCtrl, MoveCaretInsideView)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::MoveCaretInsideView\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::NewLine()
+   Insert a new line, may use a CRLF, CR or LF depending on EOL mode. */
 PHP_METHOD(php_wxStyledTextCtrl, NewLine)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30347,6 +31591,10 @@ PHP_METHOD(php_wxStyledTextCtrl, NewLine)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::NewLine\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::PageDown()
+   Move caret one page down. */
 PHP_METHOD(php_wxStyledTextCtrl, PageDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30439,6 +31687,10 @@ PHP_METHOD(php_wxStyledTextCtrl, PageDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::PageDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::PageDownExtend()
+   Move caret one page down extending selection to new caret position. */
 PHP_METHOD(php_wxStyledTextCtrl, PageDownExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30531,6 +31783,10 @@ PHP_METHOD(php_wxStyledTextCtrl, PageDownExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::PageDownExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::PageDownRectExtend()
+   Move caret one page down, extending rectangular selection to new caret position. */
 PHP_METHOD(php_wxStyledTextCtrl, PageDownRectExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30623,6 +31879,10 @@ PHP_METHOD(php_wxStyledTextCtrl, PageDownRectExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::PageDownRectExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::PageUp()
+   Move caret one page up. */
 PHP_METHOD(php_wxStyledTextCtrl, PageUp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30715,6 +31975,10 @@ PHP_METHOD(php_wxStyledTextCtrl, PageUp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::PageUp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::PageUpExtend()
+   Move caret one page up extending selection to new caret position. */
 PHP_METHOD(php_wxStyledTextCtrl, PageUpExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30807,6 +32071,10 @@ PHP_METHOD(php_wxStyledTextCtrl, PageUpExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::PageUpExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::PageUpRectExtend()
+   Move caret one page up, extending rectangular selection to new caret position. */
 PHP_METHOD(php_wxStyledTextCtrl, PageUpRectExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30899,6 +32167,10 @@ PHP_METHOD(php_wxStyledTextCtrl, PageUpRectExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::PageUpRectExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::ParaDown()
+   Move caret between paragraphs (delimited by empty lines). */
 PHP_METHOD(php_wxStyledTextCtrl, ParaDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30991,6 +32263,9 @@ PHP_METHOD(php_wxStyledTextCtrl, ParaDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::ParaDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::ParaDownExtend() */
 PHP_METHOD(php_wxStyledTextCtrl, ParaDownExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31083,6 +32358,9 @@ PHP_METHOD(php_wxStyledTextCtrl, ParaDownExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::ParaDownExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::ParaUp() */
 PHP_METHOD(php_wxStyledTextCtrl, ParaUp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31175,6 +32453,9 @@ PHP_METHOD(php_wxStyledTextCtrl, ParaUp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::ParaUp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::ParaUpExtend() */
 PHP_METHOD(php_wxStyledTextCtrl, ParaUpExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31267,6 +32548,10 @@ PHP_METHOD(php_wxStyledTextCtrl, ParaUpExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::ParaUpExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::Paste()
+   Paste the contents of the clipboard into the document replacing the selection. */
 PHP_METHOD(php_wxStyledTextCtrl, Paste)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31359,6 +32644,10 @@ PHP_METHOD(php_wxStyledTextCtrl, Paste)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::Paste\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPoint wxStyledTextCtrl::PointFromPosition(int pos)
+   Retrieve the point in the window where a position is displayed. */
 PHP_METHOD(php_wxStyledTextCtrl, PointFromPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31461,6 +32750,10 @@ PHP_METHOD(php_wxStyledTextCtrl, PointFromPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::PointFromPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::PositionAfter(int pos)
+   Given a valid document position, return the next position taking code page into account. */
 PHP_METHOD(php_wxStyledTextCtrl, PositionAfter)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31558,6 +32851,10 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionAfter)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::PositionAfter\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::PositionBefore(int pos)
+   Given a valid document position, return the previous position taking code page into account. */
 PHP_METHOD(php_wxStyledTextCtrl, PositionBefore)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31655,6 +32952,10 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionBefore)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::PositionBefore\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::PositionFromLine(int line)
+   Retrieve the position at the start of a line. */
 PHP_METHOD(php_wxStyledTextCtrl, PositionFromLine)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31752,6 +33053,10 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionFromLine)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::PositionFromLine\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::PositionFromPoint(wxPoint pt)
+   Find the position from a point within the window. */
 PHP_METHOD(php_wxStyledTextCtrl, PositionFromPoint)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31866,6 +33171,10 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionFromPoint)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::PositionFromPoint\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::PositionFromPointClose(int x, int y)
+   Find the position from a point within the window but return wxSTC_INVALID_POSITION if not close to text. */
 PHP_METHOD(php_wxStyledTextCtrl, PositionFromPointClose)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31964,6 +33273,10 @@ PHP_METHOD(php_wxStyledTextCtrl, PositionFromPointClose)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::PositionFromPointClose\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::Redo()
+   Redoes the next action on the undo history. */
 PHP_METHOD(php_wxStyledTextCtrl, Redo)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -32056,6 +33369,10 @@ PHP_METHOD(php_wxStyledTextCtrl, Redo)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::Redo\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::RegisterImage(int type, wxBitmap bmp)
+   Register an image for use in autocompletion lists. */
 PHP_METHOD(php_wxStyledTextCtrl, RegisterImage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -32172,6 +33489,10 @@ PHP_METHOD(php_wxStyledTextCtrl, RegisterImage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::RegisterImage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::ReplaceSelection(string text)
+   Replace the selected text with the argument text. */
 PHP_METHOD(php_wxStyledTextCtrl, ReplaceSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -32270,6 +33591,10 @@ PHP_METHOD(php_wxStyledTextCtrl, ReplaceSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::ReplaceSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::ReplaceTarget(string text)
+   Replace the target text with the argument text. */
 PHP_METHOD(php_wxStyledTextCtrl, ReplaceTarget)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -32368,6 +33693,10 @@ PHP_METHOD(php_wxStyledTextCtrl, ReplaceTarget)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::ReplaceTarget\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::ReplaceTargetRE(string text)
+   Replace the target text with the argument text after d processing. */
 PHP_METHOD(php_wxStyledTextCtrl, ReplaceTargetRE)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -32466,6 +33795,10 @@ PHP_METHOD(php_wxStyledTextCtrl, ReplaceTargetRE)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::ReplaceTargetRE\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::RotateSelection()
+   Set the main selection to the next selection. */
 PHP_METHOD(php_wxStyledTextCtrl, RotateSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -32558,6 +33891,10 @@ PHP_METHOD(php_wxStyledTextCtrl, RotateSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::RotateSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::SaveFile(string file, int fileType)
+   Write the contents of the editor to filename. */
 PHP_METHOD(php_wxStyledTextCtrl, SaveFile)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -32679,6 +34016,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SaveFile)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SaveFile\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::ScrollToColumn(int column)
+   Scroll enough to make the given column visible. */
 PHP_METHOD(php_wxStyledTextCtrl, ScrollToColumn)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -32776,6 +34117,10 @@ PHP_METHOD(php_wxStyledTextCtrl, ScrollToColumn)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::ScrollToColumn\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::ScrollToLine(int line)
+   Scroll enough to make the given line visible. */
 PHP_METHOD(php_wxStyledTextCtrl, ScrollToLine)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -32873,6 +34218,10 @@ PHP_METHOD(php_wxStyledTextCtrl, ScrollToLine)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::ScrollToLine\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SearchAnchor()
+   Sets the current caret position to be the search anchor. */
 PHP_METHOD(php_wxStyledTextCtrl, SearchAnchor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -32965,6 +34314,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SearchAnchor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SearchAnchor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::SearchInTarget(string text)
+   Search for a counted string in the target and set the target to the found range. */
 PHP_METHOD(php_wxStyledTextCtrl, SearchInTarget)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -33063,6 +34416,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SearchInTarget)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SearchInTarget\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::SearchNext(int flags, string text)
+   Find some text starting at the search anchor. */
 PHP_METHOD(php_wxStyledTextCtrl, SearchNext)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -33162,6 +34519,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SearchNext)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SearchNext\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::SearchPrev(int flags, string text)
+   Find some text starting at the search anchor and moving backwards. */
 PHP_METHOD(php_wxStyledTextCtrl, SearchPrev)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -33261,6 +34622,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SearchPrev)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SearchPrev\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SelectAll()
+   Select all the text in the document. */
 PHP_METHOD(php_wxStyledTextCtrl, SelectAll)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -33353,6 +34718,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SelectAll)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SelectAll\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SelectionDuplicate()
+   Duplicate the selection. */
 PHP_METHOD(php_wxStyledTextCtrl, SelectionDuplicate)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -33445,6 +34814,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SelectionDuplicate)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SelectionDuplicate\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextCtrl::SelectionIsRectangle()
+   Is the selection rectangular? The alternative is the more common stream selection. */
 PHP_METHOD(php_wxStyledTextCtrl, SelectionIsRectangle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -33537,6 +34910,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SelectionIsRectangle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SelectionIsRectangle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetAdditionalCaretForeground(wxColour fore)
+   Set the foreground colour of additional carets. */
 PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalCaretForeground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -33652,6 +35029,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalCaretForeground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetAdditionalCaretForeground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetAdditionalCaretsBlink(bool additionalCaretsBlink)
+   Set whether additional carets will blink. */
 PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalCaretsBlink)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -33749,6 +35130,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalCaretsBlink)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetAdditionalCaretsBlink\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetAdditionalCaretsVisible(bool additionalCaretsBlink)
+   Set whether additional carets are visible. */
 PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalCaretsVisible)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -33846,6 +35231,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalCaretsVisible)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetAdditionalCaretsVisible\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetAdditionalSelAlpha(int alpha)
+   Set the alpha of the selection. */
 PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelAlpha)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -33943,6 +35332,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelAlpha)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetAdditionalSelAlpha\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetAdditionalSelBackground(wxColour back)
+   Set the background colour of additional selections. */
 PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelBackground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -34058,6 +35451,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelBackground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetAdditionalSelBackground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetAdditionalSelForeground(wxColour fore)
+   Set the foreground colour of additional selections. */
 PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelForeground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -34173,6 +35570,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelForeground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetAdditionalSelForeground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetAdditionalSelectionTyping(bool additionalSelectionTyping)
+   Set whether typing can be performed into multiple selections. */
 PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelectionTyping)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -34270,6 +35671,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAdditionalSelectionTyping)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetAdditionalSelectionTyping\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetAnchor(int posAnchor)
+   Set the selection anchor to a position. */
 PHP_METHOD(php_wxStyledTextCtrl, SetAnchor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -34367,6 +35772,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetAnchor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetAnchor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetBackSpaceUnIndents(bool bsUnIndents)
+   Sets whether a backspace pressed when caret is within indentation unindents. */
 PHP_METHOD(php_wxStyledTextCtrl, SetBackSpaceUnIndents)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -34464,6 +35873,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetBackSpaceUnIndents)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetBackSpaceUnIndents\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetBufferedDraw(bool buffered)
+   If drawing is buffered then each line of text is drawn into a bitmap buffer before drawing it to the screen to avoid flicker. */
 PHP_METHOD(php_wxStyledTextCtrl, SetBufferedDraw)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -34561,6 +35974,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetBufferedDraw)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetBufferedDraw\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetCaretForeground(wxColour fore)
+   Set the foreground colour of the caret. */
 PHP_METHOD(php_wxStyledTextCtrl, SetCaretForeground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -34676,6 +36093,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretForeground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetCaretForeground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetCaretLineBackAlpha(int alpha)
+   Set background alpha of the caret line. */
 PHP_METHOD(php_wxStyledTextCtrl, SetCaretLineBackAlpha)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -34773,6 +36194,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretLineBackAlpha)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetCaretLineBackAlpha\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetCaretLineBackground(wxColour back)
+   Set the colour of the background of the line containing the caret. */
 PHP_METHOD(php_wxStyledTextCtrl, SetCaretLineBackground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -34888,6 +36313,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretLineBackground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetCaretLineBackground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetCaretLineVisible(bool show)
+   Display the background of the line containing the caret in a different colour. */
 PHP_METHOD(php_wxStyledTextCtrl, SetCaretLineVisible)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -34985,6 +36414,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretLineVisible)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetCaretLineVisible\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetCaretPeriod(int periodMilliseconds)
+   Get the time in milliseconds that the caret is on and off. */
 PHP_METHOD(php_wxStyledTextCtrl, SetCaretPeriod)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -35082,6 +36515,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretPeriod)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetCaretPeriod\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetCaretSticky(bool useCaretStickyBehaviour)
+   Stop the caret preferred x position changing when the user types. */
 PHP_METHOD(php_wxStyledTextCtrl, SetCaretSticky)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -35179,6 +36616,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretSticky)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetCaretSticky\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetCaretWidth(int pixelWidth)
+   Set the width of the insert mode caret. */
 PHP_METHOD(php_wxStyledTextCtrl, SetCaretWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -35276,6 +36717,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCaretWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetCaretWidth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetCharsDefault()
+   Reset the set of characters for whitespace and word characters to the defaults. */
 PHP_METHOD(php_wxStyledTextCtrl, SetCharsDefault)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -35368,6 +36813,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCharsDefault)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetCharsDefault\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetCodePage(int codePage)
+   Set the code page used to interpret the bytes of the document as characters. */
 PHP_METHOD(php_wxStyledTextCtrl, SetCodePage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -35465,6 +36914,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCodePage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetCodePage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetControlCharSymbol(int symbol)
+   Change the way control characters are displayed: If symbol is 32, keep the drawn way, else, use the given character. */
 PHP_METHOD(php_wxStyledTextCtrl, SetControlCharSymbol)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -35562,6 +37015,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetControlCharSymbol)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetControlCharSymbol\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetCurrentPos(int pos)
+   Sets the position of the caret. */
 PHP_METHOD(php_wxStyledTextCtrl, SetCurrentPos)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -35659,6 +37116,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetCurrentPos)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetCurrentPos\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetEOLMode(int eolMode)
+   Set the current end of line mode. */
 PHP_METHOD(php_wxStyledTextCtrl, SetEOLMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -35756,6 +37217,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetEOLMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetEOLMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetEdgeColour(wxColour edgeColour)
+   Change the colour used in edge indication. */
 PHP_METHOD(php_wxStyledTextCtrl, SetEdgeColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -35871,6 +37336,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetEdgeColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetEdgeColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetEdgeColumn(int column)
+   Set the column number of the edge. */
 PHP_METHOD(php_wxStyledTextCtrl, SetEdgeColumn)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -35968,6 +37437,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetEdgeColumn)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetEdgeColumn\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetEdgeMode(int mode)
+   The edge may be displayed by a line (EDGE_LINE) or by highlighting text that goes beyond it (EDGE_BACKGROUND) or not displayed at all (EDGE_NONE). */
 PHP_METHOD(php_wxStyledTextCtrl, SetEdgeMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -36065,6 +37538,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetEdgeMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetEdgeMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetEndAtLastLine(bool endAtLastLine)
+   Sets the scroll range so that maximum scroll position has the last line at the bottom of the view (default). */
 PHP_METHOD(php_wxStyledTextCtrl, SetEndAtLastLine)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -36162,6 +37639,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetEndAtLastLine)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetEndAtLastLine\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetExtraAscent(int extraAscent)
+   Set extra ascent for each line. */
 PHP_METHOD(php_wxStyledTextCtrl, SetExtraAscent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -36259,6 +37740,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetExtraAscent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetExtraAscent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetExtraDescent(int extraDescent)
+   Set extra descent for each line. */
 PHP_METHOD(php_wxStyledTextCtrl, SetExtraDescent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -36356,6 +37841,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetExtraDescent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetExtraDescent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetFirstVisibleLine(int lineDisplay)
+   Scroll so that a display line is at the top of the display. */
 PHP_METHOD(php_wxStyledTextCtrl, SetFirstVisibleLine)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -36453,6 +37942,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFirstVisibleLine)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetFirstVisibleLine\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetFoldExpanded(int line, bool expanded)
+   Show the children of a header line. */
 PHP_METHOD(php_wxStyledTextCtrl, SetFoldExpanded)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -36551,6 +38044,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldExpanded)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetFoldExpanded\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetFoldFlags(int flags)
+   Set some style options for folding. */
 PHP_METHOD(php_wxStyledTextCtrl, SetFoldFlags)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -36648,6 +38145,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldFlags)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetFoldFlags\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetFoldLevel(int line, int level)
+   Set the fold level of a line. */
 PHP_METHOD(php_wxStyledTextCtrl, SetFoldLevel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -36746,6 +38247,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldLevel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetFoldLevel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetFoldMarginColour(bool useSetting, wxColour back)
+   Set the colours used as a chequerboard pattern in the fold margin. */
 PHP_METHOD(php_wxStyledTextCtrl, SetFoldMarginColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -36862,6 +38367,9 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldMarginColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetFoldMarginColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetFoldMarginHiColour(bool useSetting, wxColour fore) */
 PHP_METHOD(php_wxStyledTextCtrl, SetFoldMarginHiColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -36978,6 +38486,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetFoldMarginHiColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetFoldMarginHiColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetHScrollBar(wxScrollBar &bar)
+   Set the horizontal scrollbar to use instead of the ont that's built-in. */
 PHP_METHOD(php_wxStyledTextCtrl, SetHScrollBar)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -37093,6 +38605,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHScrollBar)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetHScrollBar\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetHighlightGuide(int column)
+   Set the highlighted indentation guide column. */
 PHP_METHOD(php_wxStyledTextCtrl, SetHighlightGuide)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -37190,6 +38706,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHighlightGuide)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetHighlightGuide\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetHotspotActiveBackground(bool useSetting, wxColour back)
+   Set a back colour for active hotspots. */
 PHP_METHOD(php_wxStyledTextCtrl, SetHotspotActiveBackground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -37306,6 +38826,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHotspotActiveBackground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetHotspotActiveBackground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetHotspotActiveForeground(bool useSetting, wxColour fore)
+   Set a fore colour for active hotspots. */
 PHP_METHOD(php_wxStyledTextCtrl, SetHotspotActiveForeground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -37422,6 +38946,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHotspotActiveForeground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetHotspotActiveForeground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetHotspotActiveUnderline(bool underline)
+   Enable / Disable underlining active hotspots. */
 PHP_METHOD(php_wxStyledTextCtrl, SetHotspotActiveUnderline)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -37519,6 +39047,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHotspotActiveUnderline)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetHotspotActiveUnderline\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetHotspotSingleLine(bool singleLine)
+   Limit hotspots to single line so hotspots on two lines don't merge. */
 PHP_METHOD(php_wxStyledTextCtrl, SetHotspotSingleLine)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -37616,6 +39148,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetHotspotSingleLine)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetHotspotSingleLine\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetIndent(int indentSize)
+   Set the number of spaces used for one level of indentation. */
 PHP_METHOD(php_wxStyledTextCtrl, SetIndent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -37713,6 +39249,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetIndent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetIndent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetIndentationGuides(int indentView)
+   Show or hide indentation guides. */
 PHP_METHOD(php_wxStyledTextCtrl, SetIndentationGuides)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -37810,6 +39350,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetIndentationGuides)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetIndentationGuides\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetKeyWords(int keywordSet, string keyWords)
+   Set up the key words used by the lexer. */
 PHP_METHOD(php_wxStyledTextCtrl, SetKeyWords)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -37909,6 +39453,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetKeyWords)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetKeyWords\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetKeysUnicode(bool keysUnicode)
+   Always interpret keyboard input as Unicode. */
 PHP_METHOD(php_wxStyledTextCtrl, SetKeysUnicode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -38006,6 +39554,9 @@ PHP_METHOD(php_wxStyledTextCtrl, SetKeysUnicode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetKeysUnicode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetLastKeydownProcessed(bool val) */
 PHP_METHOD(php_wxStyledTextCtrl, SetLastKeydownProcessed)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -38103,6 +39654,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLastKeydownProcessed)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetLastKeydownProcessed\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetLayoutCache(int mode)
+   Sets the degree of caching of layout information. */
 PHP_METHOD(php_wxStyledTextCtrl, SetLayoutCache)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -38200,6 +39755,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLayoutCache)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetLayoutCache\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetLexer(int lexer)
+   Set the lexing language of the document. */
 PHP_METHOD(php_wxStyledTextCtrl, SetLexer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -38297,6 +39856,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLexer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetLexer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetLexerLanguage(string language)
+   Set the lexing language of the document based on string name. */
 PHP_METHOD(php_wxStyledTextCtrl, SetLexerLanguage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -38395,6 +39958,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLexerLanguage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetLexerLanguage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetLineIndentation(int line, int indentSize)
+   Change the indentation of a line to a number of columns. */
 PHP_METHOD(php_wxStyledTextCtrl, SetLineIndentation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -38493,6 +40060,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLineIndentation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetLineIndentation\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetLineState(int line, int state)
+   Used to hold extra styling information for each line. */
 PHP_METHOD(php_wxStyledTextCtrl, SetLineState)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -38591,6 +40162,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetLineState)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetLineState\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetMainSelection(int selection)
+   Set the main selection. */
 PHP_METHOD(php_wxStyledTextCtrl, SetMainSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -38688,6 +40263,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMainSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetMainSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetMarginLeft(int pixelWidth)
+   Sets the size in pixels of the left margin. */
 PHP_METHOD(php_wxStyledTextCtrl, SetMarginLeft)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -38785,6 +40364,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMarginLeft)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetMarginLeft\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetMarginMask(int margin, int mask)
+   Set a mask that determines which markers are displayed in a margin. */
 PHP_METHOD(php_wxStyledTextCtrl, SetMarginMask)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -38883,6 +40466,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMarginMask)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetMarginMask\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetMarginRight(int pixelWidth)
+   Sets the size in pixels of the right margin. */
 PHP_METHOD(php_wxStyledTextCtrl, SetMarginRight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -38980,6 +40567,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMarginRight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetMarginRight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetMarginSensitive(int margin, bool sensitive)
+   Make a margin sensitive or insensitive to mouse clicks. */
 PHP_METHOD(php_wxStyledTextCtrl, SetMarginSensitive)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -39078,6 +40669,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMarginSensitive)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetMarginSensitive\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetMarginType(int margin, int marginType)
+   Set a margin to be either numeric or symbolic. */
 PHP_METHOD(php_wxStyledTextCtrl, SetMarginType)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -39176,6 +40771,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMarginType)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetMarginType\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetMarginWidth(int margin, int pixelWidth)
+   Set the width of a margin to a width expressed in pixels. */
 PHP_METHOD(php_wxStyledTextCtrl, SetMarginWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -39274,6 +40873,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMarginWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetMarginWidth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetMargins(int left, int right)
+   Set the left and right margin in the edit area, measured in pixels. */
 PHP_METHOD(php_wxStyledTextCtrl, SetMargins)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -39372,6 +40975,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMargins)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetMargins\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetModEventMask(int mask)
+   Set which document modification events are sent to the container. */
 PHP_METHOD(php_wxStyledTextCtrl, SetModEventMask)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -39469,6 +41076,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetModEventMask)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetModEventMask\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetMouseDownCaptures(bool captures)
+   Set whether the mouse is captured when its button is pressed. */
 PHP_METHOD(php_wxStyledTextCtrl, SetMouseDownCaptures)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -39566,6 +41177,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMouseDownCaptures)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetMouseDownCaptures\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetMouseDwellTime(int periodMilliseconds)
+   Sets the time the mouse must sit still to generate a mouse dwell event. */
 PHP_METHOD(php_wxStyledTextCtrl, SetMouseDwellTime)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -39663,6 +41278,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMouseDwellTime)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetMouseDwellTime\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetMultipleSelection(bool multipleSelection)
+   Set whether multiple selections can be made. */
 PHP_METHOD(php_wxStyledTextCtrl, SetMultipleSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -39760,6 +41379,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetMultipleSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetMultipleSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetOvertype(bool overtype)
+   Set to overtype (true) or insert mode. */
 PHP_METHOD(php_wxStyledTextCtrl, SetOvertype)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -39857,6 +41480,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetOvertype)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetOvertype\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetPasteConvertEndings(bool convert)
+   Enable/Disable convert-on-paste for line endings. */
 PHP_METHOD(php_wxStyledTextCtrl, SetPasteConvertEndings)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -39954,6 +41581,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetPasteConvertEndings)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetPasteConvertEndings\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetPrintColourMode(int mode)
+   Modify colours when printing for clearer printed text. */
 PHP_METHOD(php_wxStyledTextCtrl, SetPrintColourMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -40051,6 +41682,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetPrintColourMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetPrintColourMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetPrintMagnification(int magnification)
+   Sets the print magnification added to the point size of each style for printing. */
 PHP_METHOD(php_wxStyledTextCtrl, SetPrintMagnification)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -40148,6 +41783,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetPrintMagnification)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetPrintMagnification\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetPrintWrapMode(int mode)
+   Set printing to line wrapped (SC_WRAP_WORD) or not line wrapped (SC_WRAP_NONE). */
 PHP_METHOD(php_wxStyledTextCtrl, SetPrintWrapMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -40245,6 +41884,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetPrintWrapMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetPrintWrapMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetProperty(string key, string value)
+   Set up a value that may be used by a lexer for some optional feature. */
 PHP_METHOD(php_wxStyledTextCtrl, SetProperty)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -40345,6 +41988,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetProperty)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetProperty\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetReadOnly(bool readOnly)
+   Set to read only or read write. */
 PHP_METHOD(php_wxStyledTextCtrl, SetReadOnly)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -40442,6 +42089,9 @@ PHP_METHOD(php_wxStyledTextCtrl, SetReadOnly)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetReadOnly\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetRectangularSelectionAnchor(int posAnchor) */
 PHP_METHOD(php_wxStyledTextCtrl, SetRectangularSelectionAnchor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -40539,6 +42189,9 @@ PHP_METHOD(php_wxStyledTextCtrl, SetRectangularSelectionAnchor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetRectangularSelectionAnchor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetRectangularSelectionAnchorVirtualSpace(int space) */
 PHP_METHOD(php_wxStyledTextCtrl, SetRectangularSelectionAnchorVirtualSpace)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -40636,6 +42289,9 @@ PHP_METHOD(php_wxStyledTextCtrl, SetRectangularSelectionAnchorVirtualSpace)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetRectangularSelectionAnchorVirtualSpace\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetRectangularSelectionCaret(int pos) */
 PHP_METHOD(php_wxStyledTextCtrl, SetRectangularSelectionCaret)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -40733,6 +42389,9 @@ PHP_METHOD(php_wxStyledTextCtrl, SetRectangularSelectionCaret)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetRectangularSelectionCaret\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetRectangularSelectionCaretVirtualSpace(int space) */
 PHP_METHOD(php_wxStyledTextCtrl, SetRectangularSelectionCaretVirtualSpace)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -40830,6 +42489,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetRectangularSelectionCaretVirtualSpace)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetRectangularSelectionCaretVirtualSpace\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetRectangularSelectionModifier(int modifier)
+   Select the modifier key to use for mouse-based rectangular selection. */
 PHP_METHOD(php_wxStyledTextCtrl, SetRectangularSelectionModifier)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -40927,6 +42590,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetRectangularSelectionModifier)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetRectangularSelectionModifier\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetSTCCursor(int cursorType)
+   Sets the cursor to one of the SC_CURSOR* values. */
 PHP_METHOD(php_wxStyledTextCtrl, SetSTCCursor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -41024,6 +42691,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSTCCursor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetSTCCursor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetSTCFocus(bool focus)
+   Change internal focus flag. */
 PHP_METHOD(php_wxStyledTextCtrl, SetSTCFocus)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -41121,6 +42792,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSTCFocus)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetSTCFocus\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetSavePoint()
+   Remember the current position in the undo history as the position at which the document was saved. */
 PHP_METHOD(php_wxStyledTextCtrl, SetSavePoint)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -41213,6 +42888,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSavePoint)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetSavePoint\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetScrollWidth(int pixelWidth)
+   Sets the document width assumed for scrolling. */
 PHP_METHOD(php_wxStyledTextCtrl, SetScrollWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -41310,6 +42989,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetScrollWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetScrollWidth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetSearchFlags(int flags)
+   Set the search flags used by SearchInTarget. */
 PHP_METHOD(php_wxStyledTextCtrl, SetSearchFlags)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -41407,6 +43090,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSearchFlags)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetSearchFlags\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetSelAlpha(int alpha)
+   Set the alpha of the selection. */
 PHP_METHOD(php_wxStyledTextCtrl, SetSelAlpha)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -41504,6 +43191,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelAlpha)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetSelAlpha\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetSelBackground(bool useSetting, wxColour back)
+   Set the background colour of the main and additional selections and whether to use this setting. */
 PHP_METHOD(php_wxStyledTextCtrl, SetSelBackground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -41620,6 +43311,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelBackground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetSelBackground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetSelForeground(bool useSetting, wxColour fore)
+   Set the foreground colour of the main and additional selections and whether to use this setting. */
 PHP_METHOD(php_wxStyledTextCtrl, SetSelForeground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -41736,6 +43431,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelForeground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetSelForeground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetSelection(int from, int to)
+   Select a range of text. */
 PHP_METHOD(php_wxStyledTextCtrl, SetSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -41834,6 +43533,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetSelectionEnd(int pos)
+   Sets the position that ends the selection - this becomes the currentPosition. */
 PHP_METHOD(php_wxStyledTextCtrl, SetSelectionEnd)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -41931,6 +43634,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionEnd)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetSelectionEnd\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetSelectionMode(int mode)
+   Set the selection mode to stream (wxSTC_SEL_STREAM) or rectangular (wxSTC_SEL_RECTANGLE/wxSTC_SEL_THIN) or by lines (wxSTC_SEL_LINES). */
 PHP_METHOD(php_wxStyledTextCtrl, SetSelectionMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -42028,6 +43735,9 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetSelectionMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetSelectionNAnchor(int selection, int posAnchor) */
 PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNAnchor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -42126,6 +43836,9 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNAnchor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetSelectionNAnchor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetSelectionNAnchorVirtualSpace(int selection, int space) */
 PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNAnchorVirtualSpace)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -42224,6 +43937,9 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNAnchorVirtualSpace)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetSelectionNAnchorVirtualSpace\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetSelectionNCaret(int selection, int pos) */
 PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNCaret)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -42322,6 +44038,9 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNCaret)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetSelectionNCaret\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetSelectionNCaretVirtualSpace(int selection, int space) */
 PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNCaretVirtualSpace)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -42420,6 +44139,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNCaretVirtualSpace)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetSelectionNCaretVirtualSpace\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetSelectionNEnd(int selection, int pos)
+   Sets the position that ends the selection - this becomes the currentPosition. */
 PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNEnd)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -42518,6 +44241,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNEnd)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetSelectionNEnd\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetSelectionNStart(int selection, int pos)
+   Sets the position that starts the selection - this becomes the anchor. */
 PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNStart)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -42616,6 +44343,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionNStart)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetSelectionNStart\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetSelectionStart(int pos)
+   Sets the position that starts the selection - this becomes the anchor. */
 PHP_METHOD(php_wxStyledTextCtrl, SetSelectionStart)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -42713,6 +44444,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetSelectionStart)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetSelectionStart\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetStatus(int statusCode)
+   Change error status - 0 = OK. */
 PHP_METHOD(php_wxStyledTextCtrl, SetStatus)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -42810,6 +44545,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetStatus)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetStatus\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetStyleBits(int bits)
+   Divide each styling byte into lexical class bits (default: 5) and indicator bits (default: 3). */
 PHP_METHOD(php_wxStyledTextCtrl, SetStyleBits)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -42907,6 +44646,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetStyleBits)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetStyleBits\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetStyling(int length, int style)
+   Change style from current styling position for length characters to a style and move the current styling position to after this newly styled segment. */
 PHP_METHOD(php_wxStyledTextCtrl, SetStyling)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -43005,6 +44748,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetStyling)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetStyling\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetTabIndents(bool tabIndents)
+   Sets whether a tab pressed when caret is within indentation indents. */
 PHP_METHOD(php_wxStyledTextCtrl, SetTabIndents)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -43102,6 +44849,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTabIndents)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetTabIndents\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetTabWidth(int tabWidth)
+   Change the visible size of a tab to be a multiple of the width of a space character. */
 PHP_METHOD(php_wxStyledTextCtrl, SetTabWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -43199,6 +44950,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTabWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetTabWidth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetTargetEnd(int pos)
+   Sets the position that ends the target which is used for updating the document without affecting the scroll position. */
 PHP_METHOD(php_wxStyledTextCtrl, SetTargetEnd)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -43296,6 +45051,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTargetEnd)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetTargetEnd\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetTargetStart(int pos)
+   Sets the position that starts the target which is used for updating the document without affecting the scroll position. */
 PHP_METHOD(php_wxStyledTextCtrl, SetTargetStart)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -43393,6 +45152,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTargetStart)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetTargetStart\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetText(string text)
+   Replace the contents of the document with the argument text. */
 PHP_METHOD(php_wxStyledTextCtrl, SetText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -43491,6 +45254,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetTextRaw(string text)
+   Replace the contents of the document with the argument text. */
 PHP_METHOD(php_wxStyledTextCtrl, SetTextRaw)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -43589,6 +45356,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTextRaw)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetTextRaw\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetTwoPhaseDraw(bool twoPhase)
+   In twoPhaseDraw mode, drawing is performed in two phases, first the background and then the foreground. */
 PHP_METHOD(php_wxStyledTextCtrl, SetTwoPhaseDraw)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -43686,6 +45457,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetTwoPhaseDraw)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetTwoPhaseDraw\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetUndoCollection(bool collectUndo)
+   Choose between collecting actions into the undo history and discarding them. */
 PHP_METHOD(php_wxStyledTextCtrl, SetUndoCollection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -43783,6 +45558,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetUndoCollection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetUndoCollection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetUseAntiAliasing(bool useAA)
+   Specify whether anti-aliased fonts should be used. */
 PHP_METHOD(php_wxStyledTextCtrl, SetUseAntiAliasing)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -43880,6 +45659,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetUseAntiAliasing)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetUseAntiAliasing\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetUseHorizontalScrollBar(bool show)
+   Show or hide the horizontal scroll bar. */
 PHP_METHOD(php_wxStyledTextCtrl, SetUseHorizontalScrollBar)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -43977,6 +45760,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetUseHorizontalScrollBar)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetUseHorizontalScrollBar\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetUseTabs(bool useTabs)
+   Indentation will only use space characters if useTabs is false, otherwise it will use a combination of tabs and spaces. */
 PHP_METHOD(php_wxStyledTextCtrl, SetUseTabs)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -44074,6 +45861,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetUseTabs)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetUseTabs\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetUseVerticalScrollBar(bool show)
+   Show or hide the vertical scroll bar. */
 PHP_METHOD(php_wxStyledTextCtrl, SetUseVerticalScrollBar)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -44171,6 +45962,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetUseVerticalScrollBar)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetUseVerticalScrollBar\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetVScrollBar(wxScrollBar &bar)
+   Set the vertical scrollbar to use instead of the ont that's built-in. */
 PHP_METHOD(php_wxStyledTextCtrl, SetVScrollBar)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -44286,6 +46081,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetVScrollBar)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetVScrollBar\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetViewEOL(bool visible)
+   Make the end of line characters visible or invisible. */
 PHP_METHOD(php_wxStyledTextCtrl, SetViewEOL)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -44383,6 +46182,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetViewEOL)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetViewEOL\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetViewWhiteSpace(int viewWS)
+   Make white space characters invisible, always visible or visible outside indentation. */
 PHP_METHOD(php_wxStyledTextCtrl, SetViewWhiteSpace)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -44480,6 +46283,9 @@ PHP_METHOD(php_wxStyledTextCtrl, SetViewWhiteSpace)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetViewWhiteSpace\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetVirtualSpaceOptions(int virtualSpaceOptions) */
 PHP_METHOD(php_wxStyledTextCtrl, SetVirtualSpaceOptions)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -44577,6 +46383,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetVirtualSpaceOptions)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetVirtualSpaceOptions\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetVisiblePolicy(int visiblePolicy, int visibleSlop)
+   Set the way the display area is determined when a particular line is to be moved to by Find, FindNext, GotoLine, etc. */
 PHP_METHOD(php_wxStyledTextCtrl, SetVisiblePolicy)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -44675,6 +46485,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetVisiblePolicy)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetVisiblePolicy\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetWhitespaceBackground(bool useSetting, wxColour back)
+   Set the background colour of all whitespace and whether to use this setting. */
 PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceBackground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -44791,6 +46605,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceBackground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetWhitespaceBackground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetWhitespaceChars(string characters)
+   Set the set of characters making up whitespace for when moving or selecting by word. */
 PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceChars)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -44889,6 +46707,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceChars)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetWhitespaceChars\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetWhitespaceForeground(bool useSetting, wxColour fore)
+   Set the foreground colour of all whitespace and whether to use this setting. */
 PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceForeground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -45005,6 +46827,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceForeground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetWhitespaceForeground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetWhitespaceSize(int size)
+   Set the size of the dots used to mark space characters. */
 PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -45102,6 +46928,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWhitespaceSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetWhitespaceSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetWordChars(string characters)
+   Set the set of characters making up words for when moving or selecting by word. */
 PHP_METHOD(php_wxStyledTextCtrl, SetWordChars)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -45200,6 +47030,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWordChars)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetWordChars\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetWrapIndentMode(int mode)
+   Sets how wrapped sublines are placed. */
 PHP_METHOD(php_wxStyledTextCtrl, SetWrapIndentMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -45297,6 +47131,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWrapIndentMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetWrapIndentMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetWrapMode(int mode)
+   Sets whether text is word wrapped. */
 PHP_METHOD(php_wxStyledTextCtrl, SetWrapMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -45394,6 +47232,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWrapMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetWrapMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetWrapStartIndent(int indent)
+   Set the start indent for wrapped lines. */
 PHP_METHOD(php_wxStyledTextCtrl, SetWrapStartIndent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -45491,6 +47333,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWrapStartIndent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetWrapStartIndent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetWrapVisualFlags(int wrapVisualFlags)
+   Set the display mode of visual flags for wrapped lines. */
 PHP_METHOD(php_wxStyledTextCtrl, SetWrapVisualFlags)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -45588,6 +47434,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWrapVisualFlags)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetWrapVisualFlags\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetWrapVisualFlagsLocation(int wrapVisualFlagsLocation)
+   Set the location of visual flags for wrapped lines. */
 PHP_METHOD(php_wxStyledTextCtrl, SetWrapVisualFlagsLocation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -45685,6 +47535,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetWrapVisualFlagsLocation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetWrapVisualFlagsLocation\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetXCaretPolicy(int caretPolicy, int caretSlop)
+   Set the way the caret is kept visible when going sideway. */
 PHP_METHOD(php_wxStyledTextCtrl, SetXCaretPolicy)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -45783,6 +47637,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetXCaretPolicy)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetXCaretPolicy\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetXOffset(int newOffset)
+   Get and Set the xOffset (ie, horizontal scroll position). */
 PHP_METHOD(php_wxStyledTextCtrl, SetXOffset)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -45880,6 +47738,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetXOffset)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetXOffset\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetYCaretPolicy(int caretPolicy, int caretSlop)
+   Set the way the line the caret is on is kept visible. */
 PHP_METHOD(php_wxStyledTextCtrl, SetYCaretPolicy)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -45978,6 +47840,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetYCaretPolicy)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetYCaretPolicy\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SetZoom(int zoom)
+   Set the zoom level. */
 PHP_METHOD(php_wxStyledTextCtrl, SetZoom)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -46075,6 +47941,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SetZoom)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SetZoom\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::ShowLines(int lineStart, int lineEnd)
+   Make a range of lines visible. */
 PHP_METHOD(php_wxStyledTextCtrl, ShowLines)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -46173,6 +48043,10 @@ PHP_METHOD(php_wxStyledTextCtrl, ShowLines)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::ShowLines\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::StartRecord()
+   Start notifying the container of all key presses and commands. */
 PHP_METHOD(php_wxStyledTextCtrl, StartRecord)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -46265,6 +48139,10 @@ PHP_METHOD(php_wxStyledTextCtrl, StartRecord)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StartRecord\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::StartStyling(int pos, int mask)
+   Set the current styling position to pos and the styling mask to mask. */
 PHP_METHOD(php_wxStyledTextCtrl, StartStyling)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -46363,6 +48241,10 @@ PHP_METHOD(php_wxStyledTextCtrl, StartStyling)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StartStyling\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::StopRecord()
+   Stop notifying the container of all key presses and commands. */
 PHP_METHOD(php_wxStyledTextCtrl, StopRecord)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -46455,6 +48337,10 @@ PHP_METHOD(php_wxStyledTextCtrl, StopRecord)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StopRecord\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::StutteredPageDown()
+   Move caret to bottom of page, or one page down if already at bottom of page. */
 PHP_METHOD(php_wxStyledTextCtrl, StutteredPageDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -46547,6 +48433,10 @@ PHP_METHOD(php_wxStyledTextCtrl, StutteredPageDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StutteredPageDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::StutteredPageDownExtend()
+   Move caret to bottom of page, or one page down if already at bottom of page, extending selection to new caret position. */
 PHP_METHOD(php_wxStyledTextCtrl, StutteredPageDownExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -46639,6 +48529,10 @@ PHP_METHOD(php_wxStyledTextCtrl, StutteredPageDownExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StutteredPageDownExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::StutteredPageUp()
+   Move caret to top of page, or one page up if already at top of page. */
 PHP_METHOD(php_wxStyledTextCtrl, StutteredPageUp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -46731,6 +48625,10 @@ PHP_METHOD(php_wxStyledTextCtrl, StutteredPageUp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StutteredPageUp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::StutteredPageUpExtend()
+   Move caret to top of page, or one page up if already at top of page, extending selection to new caret position. */
 PHP_METHOD(php_wxStyledTextCtrl, StutteredPageUpExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -46823,6 +48721,10 @@ PHP_METHOD(php_wxStyledTextCtrl, StutteredPageUpExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StutteredPageUpExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::StyleClearAll()
+   Clear all the styles and make equivalent to the global default style. */
 PHP_METHOD(php_wxStyledTextCtrl, StyleClearAll)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -46915,6 +48817,10 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleClearAll)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleClearAll\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::StyleResetDefault()
+   Reset the default style to its state at startup. */
 PHP_METHOD(php_wxStyledTextCtrl, StyleResetDefault)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -47007,6 +48913,10 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleResetDefault)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleResetDefault\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::StyleSetBackground(int style, wxColour back)
+   Set the background colour of a style. */
 PHP_METHOD(php_wxStyledTextCtrl, StyleSetBackground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -47123,6 +49033,10 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetBackground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleSetBackground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::StyleSetBold(int style, bool bold)
+   Set a style to be bold or not. */
 PHP_METHOD(php_wxStyledTextCtrl, StyleSetBold)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -47221,6 +49135,10 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetBold)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleSetBold\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::StyleSetCase(int style, int caseForce)
+   Set a style to be mixed case, or to force upper or lower case. */
 PHP_METHOD(php_wxStyledTextCtrl, StyleSetCase)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -47319,6 +49237,10 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetCase)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleSetCase\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::StyleSetChangeable(int style, bool changeable)
+   Set a style to be changeable or not (read only). */
 PHP_METHOD(php_wxStyledTextCtrl, StyleSetChangeable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -47417,6 +49339,10 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetChangeable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleSetChangeable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::StyleSetCharacterSet(int style, int characterSet)
+   Set the character set of the font in a style. */
 PHP_METHOD(php_wxStyledTextCtrl, StyleSetCharacterSet)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -47515,6 +49441,10 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetCharacterSet)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleSetCharacterSet\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::StyleSetEOLFilled(int style, bool filled)
+   Set a style to have its end of line filled or not. */
 PHP_METHOD(php_wxStyledTextCtrl, StyleSetEOLFilled)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -47613,6 +49543,10 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetEOLFilled)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleSetEOLFilled\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::StyleSetFaceName(int style, string fontName)
+   Set the font of a style. */
 PHP_METHOD(php_wxStyledTextCtrl, StyleSetFaceName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -47712,6 +49646,10 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetFaceName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleSetFaceName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::StyleSetFont(int styleNum, wxFont &font)
+   Set style size, face, bold, italic, and underline attributes from a wxFont's attributes. */
 PHP_METHOD(php_wxStyledTextCtrl, StyleSetFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -47828,6 +49766,10 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleSetFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::StyleSetFontAttr(int styleNum, int size, string faceName, bool bold, bool italic, bool underline, wxFontEncoding encoding)
+   Set all font style attributes at once. */
 PHP_METHOD(php_wxStyledTextCtrl, StyleSetFontAttr)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -47943,6 +49885,10 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetFontAttr)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleSetFontAttr\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::StyleSetFontEncoding(int style, wxFontEncoding encoding)
+   Set the font encoding to be used by a style. */
 PHP_METHOD(php_wxStyledTextCtrl, StyleSetFontEncoding)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -48041,6 +49987,10 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetFontEncoding)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleSetFontEncoding\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::StyleSetForeground(int style, wxColour fore)
+   Set the foreground colour of a style. */
 PHP_METHOD(php_wxStyledTextCtrl, StyleSetForeground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -48157,6 +50107,10 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetForeground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleSetForeground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::StyleSetHotSpot(int style, bool hotspot)
+   Set a style to be a hotspot or not. */
 PHP_METHOD(php_wxStyledTextCtrl, StyleSetHotSpot)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -48255,6 +50209,10 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetHotSpot)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleSetHotSpot\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::StyleSetItalic(int style, bool italic)
+   Set a style to be italic or not. */
 PHP_METHOD(php_wxStyledTextCtrl, StyleSetItalic)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -48353,6 +50311,10 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetItalic)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleSetItalic\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::StyleSetSize(int style, int sizePoints)
+   Set the size of characters of a style. */
 PHP_METHOD(php_wxStyledTextCtrl, StyleSetSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -48451,6 +50413,10 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleSetSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::StyleSetSpec(int styleNum, string spec)
+   Extract style settings from a spec-string which is composed of one or more of the following comma separated elements: bold turns on bold italic turns on italics fore:[name or #RRGGBB] sets the foreground colour back:[name or #RRGGBB] sets the background colour face:[facename] sets the font face name to use size:[num] sets the font size in points eol turns on eol filling underline turns on underlining. */
 PHP_METHOD(php_wxStyledTextCtrl, StyleSetSpec)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -48550,6 +50516,10 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetSpec)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleSetSpec\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::StyleSetUnderline(int style, bool underline)
+   Set a style to be underlined or not. */
 PHP_METHOD(php_wxStyledTextCtrl, StyleSetUnderline)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -48648,6 +50618,10 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetUnderline)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleSetUnderline\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::StyleSetVisible(int style, bool visible)
+   Set a style to be visible or not. */
 PHP_METHOD(php_wxStyledTextCtrl, StyleSetVisible)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -48746,6 +50720,10 @@ PHP_METHOD(php_wxStyledTextCtrl, StyleSetVisible)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::StyleSetVisible\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::SwapMainAnchorCaret()
+   Swap that caret and anchor of the main selection. */
 PHP_METHOD(php_wxStyledTextCtrl, SwapMainAnchorCaret)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -48838,6 +50816,10 @@ PHP_METHOD(php_wxStyledTextCtrl, SwapMainAnchorCaret)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::SwapMainAnchorCaret\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::Tab()
+   If selection is empty or all on one line replace the selection with a tab character. */
 PHP_METHOD(php_wxStyledTextCtrl, Tab)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -48930,6 +50912,10 @@ PHP_METHOD(php_wxStyledTextCtrl, Tab)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::Tab\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::TargetFromSelection()
+   Make the target range start and end be the same as the selection range start and end. */
 PHP_METHOD(php_wxStyledTextCtrl, TargetFromSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -49022,6 +51008,10 @@ PHP_METHOD(php_wxStyledTextCtrl, TargetFromSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::TargetFromSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::TextHeight(int line)
+   Retrieve the height of a particular line of text in pixels. */
 PHP_METHOD(php_wxStyledTextCtrl, TextHeight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -49119,6 +51109,10 @@ PHP_METHOD(php_wxStyledTextCtrl, TextHeight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::TextHeight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::TextWidth(int style, string text)
+   Measure the pixel width of some text in a particular style. */
 PHP_METHOD(php_wxStyledTextCtrl, TextWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -49218,6 +51212,10 @@ PHP_METHOD(php_wxStyledTextCtrl, TextWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::TextWidth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::ToggleCaretSticky()
+   Switch between sticky and non-sticky: meant to be bound to a key. */
 PHP_METHOD(php_wxStyledTextCtrl, ToggleCaretSticky)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -49310,6 +51308,10 @@ PHP_METHOD(php_wxStyledTextCtrl, ToggleCaretSticky)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::ToggleCaretSticky\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::ToggleFold(int line)
+   Switch a header line between expanded and contracted. */
 PHP_METHOD(php_wxStyledTextCtrl, ToggleFold)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -49407,6 +51409,10 @@ PHP_METHOD(php_wxStyledTextCtrl, ToggleFold)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::ToggleFold\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::Undo()
+   Undo one action in the undo history. */
 PHP_METHOD(php_wxStyledTextCtrl, Undo)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -49499,6 +51505,10 @@ PHP_METHOD(php_wxStyledTextCtrl, Undo)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::Undo\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::UpperCase()
+   Transform the selection to upper case. */
 PHP_METHOD(php_wxStyledTextCtrl, UpperCase)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -49591,6 +51601,10 @@ PHP_METHOD(php_wxStyledTextCtrl, UpperCase)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::UpperCase\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::UsePopUp(bool allowPopUp)
+   Set whether a pop up menu is displayed automatically when the user presses the wrong mouse button. */
 PHP_METHOD(php_wxStyledTextCtrl, UsePopUp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -49688,6 +51702,10 @@ PHP_METHOD(php_wxStyledTextCtrl, UsePopUp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::UsePopUp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::UserListShow(int listType, string itemList)
+   Display a list of strings and send notification when user chooses one. */
 PHP_METHOD(php_wxStyledTextCtrl, UserListShow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -49787,6 +51805,10 @@ PHP_METHOD(php_wxStyledTextCtrl, UserListShow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::UserListShow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::VCHome()
+   Move caret to before first visible character on line. */
 PHP_METHOD(php_wxStyledTextCtrl, VCHome)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -49879,6 +51901,10 @@ PHP_METHOD(php_wxStyledTextCtrl, VCHome)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::VCHome\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::VCHomeExtend()
+   Like VCHome but extending selection to new caret position. */
 PHP_METHOD(php_wxStyledTextCtrl, VCHomeExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -49971,6 +51997,10 @@ PHP_METHOD(php_wxStyledTextCtrl, VCHomeExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::VCHomeExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::VCHomeRectExtend()
+   Move caret to before first visible character on line. */
 PHP_METHOD(php_wxStyledTextCtrl, VCHomeRectExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -50063,6 +52093,9 @@ PHP_METHOD(php_wxStyledTextCtrl, VCHomeRectExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::VCHomeRectExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::VCHomeWrap() */
 PHP_METHOD(php_wxStyledTextCtrl, VCHomeWrap)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -50155,6 +52188,9 @@ PHP_METHOD(php_wxStyledTextCtrl, VCHomeWrap)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::VCHomeWrap\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::VCHomeWrapExtend() */
 PHP_METHOD(php_wxStyledTextCtrl, VCHomeWrapExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -50247,6 +52283,10 @@ PHP_METHOD(php_wxStyledTextCtrl, VCHomeWrapExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::VCHomeWrapExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::VisibleFromDocLine(int line)
+   Find the display line of a document line taking hidden lines into account. */
 PHP_METHOD(php_wxStyledTextCtrl, VisibleFromDocLine)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -50344,6 +52384,10 @@ PHP_METHOD(php_wxStyledTextCtrl, VisibleFromDocLine)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::VisibleFromDocLine\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextCtrl::WordEndPosition(int pos, bool onlyWordCharacters)
+   Get position of end of word. */
 PHP_METHOD(php_wxStyledTextCtrl, WordEndPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -50442,6 +52486,10 @@ PHP_METHOD(php_wxStyledTextCtrl, WordEndPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::WordEndPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::WordLeft()
+   Move caret left one word. */
 PHP_METHOD(php_wxStyledTextCtrl, WordLeft)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -50534,6 +52582,10 @@ PHP_METHOD(php_wxStyledTextCtrl, WordLeft)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::WordLeft\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::WordLeftEnd()
+   Move caret left one word, position cursor at end of word. */
 PHP_METHOD(php_wxStyledTextCtrl, WordLeftEnd)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -50626,6 +52678,10 @@ PHP_METHOD(php_wxStyledTextCtrl, WordLeftEnd)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::WordLeftEnd\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::WordLeftEndExtend()
+   Move caret left one word, position cursor at end of word, extending selection to new caret position. */
 PHP_METHOD(php_wxStyledTextCtrl, WordLeftEndExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -50718,6 +52774,10 @@ PHP_METHOD(php_wxStyledTextCtrl, WordLeftEndExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::WordLeftEndExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::WordLeftExtend()
+   Move caret left one word extending selection to new caret position. */
 PHP_METHOD(php_wxStyledTextCtrl, WordLeftExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -50810,6 +52870,10 @@ PHP_METHOD(php_wxStyledTextCtrl, WordLeftExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::WordLeftExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::WordPartLeft()
+   Move to the previous change in capitalisation. */
 PHP_METHOD(php_wxStyledTextCtrl, WordPartLeft)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -50902,6 +52966,10 @@ PHP_METHOD(php_wxStyledTextCtrl, WordPartLeft)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::WordPartLeft\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::WordPartLeftExtend()
+   Move to the previous change in capitalisation extending selection to new caret position. */
 PHP_METHOD(php_wxStyledTextCtrl, WordPartLeftExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -50994,6 +53062,10 @@ PHP_METHOD(php_wxStyledTextCtrl, WordPartLeftExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::WordPartLeftExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::WordPartRight()
+   Move to the change next in capitalisation. */
 PHP_METHOD(php_wxStyledTextCtrl, WordPartRight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -51086,6 +53158,10 @@ PHP_METHOD(php_wxStyledTextCtrl, WordPartRight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::WordPartRight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::WordPartRightExtend()
+   Move to the next change in capitalisation extending selection to new caret position. */
 PHP_METHOD(php_wxStyledTextCtrl, WordPartRightExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -51178,6 +53254,10 @@ PHP_METHOD(php_wxStyledTextCtrl, WordPartRightExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::WordPartRightExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::WordRight()
+   Move caret right one word. */
 PHP_METHOD(php_wxStyledTextCtrl, WordRight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -51270,6 +53350,10 @@ PHP_METHOD(php_wxStyledTextCtrl, WordRight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::WordRight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::WordRightEnd()
+   Move caret right one word, position cursor at end of word. */
 PHP_METHOD(php_wxStyledTextCtrl, WordRightEnd)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -51362,6 +53446,10 @@ PHP_METHOD(php_wxStyledTextCtrl, WordRightEnd)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::WordRightEnd\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::WordRightEndExtend()
+   Move caret right one word, position cursor at end of word, extending selection to new caret position. */
 PHP_METHOD(php_wxStyledTextCtrl, WordRightEndExtend)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -51454,6 +53542,10 @@ PHP_METHOD(php_wxStyledTextCtrl, WordRightEndExtend)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::WordRightEndExtend\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::AppendTextRaw(string text, int length)
+   Append a string to the end of the document without changing the selection. */
 PHP_METHOD(php_wxStyledTextCtrl, AppendTextRaw)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -51564,6 +53656,10 @@ PHP_METHOD(php_wxStyledTextCtrl, AppendTextRaw)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AppendTextRaw\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextCtrl::AddTextRaw(string text, int length)
+   Add raw text to the document at current position. */
 PHP_METHOD(php_wxStyledTextCtrl, AddTextRaw)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -51674,3 +53770,5 @@ PHP_METHOD(php_wxStyledTextCtrl, AddTextRaw)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextCtrl::AddTextRaw\n");
 	}
 }
+/* }}} */
+

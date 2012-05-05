@@ -91,6 +91,8 @@ void php_wxDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxDC::StartPage()
+   Starts a document page (only relevant when outputting to a printer). */
 PHP_METHOD(php_wxDC, StartPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -274,6 +276,10 @@ PHP_METHOD(php_wxDC, StartPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::StartPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDC::StartDoc(string message)
+   Starts a document (only relevant when outputting to a printer). */
 PHP_METHOD(php_wxDC, StartDoc)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -463,6 +469,10 @@ PHP_METHOD(php_wxDC, StartDoc)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::StartDoc\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::SetUserScale(float xScale, float yScale)
+   Sets the user scaling factor, useful for applications which require 'zooming'. */
 PHP_METHOD(php_wxDC, SetUserScale)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -652,6 +662,10 @@ PHP_METHOD(php_wxDC, SetUserScale)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::SetUserScale\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::SetTextForeground(wxColour colour)
+   Sets the current text foreground colour for the DC. */
 PHP_METHOD(php_wxDC, SetTextForeground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -858,6 +872,10 @@ PHP_METHOD(php_wxDC, SetTextForeground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::SetTextForeground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::SetTextBackground(wxColour colour)
+   Sets the current text background colour for the DC. */
 PHP_METHOD(php_wxDC, SetTextBackground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1064,6 +1082,10 @@ PHP_METHOD(php_wxDC, SetTextBackground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::SetTextBackground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::CalcBoundingBox(int x, int y)
+   Adds the specified point to the bounding box which can be retrieved with MinX(), MaxX() and MinY(), MaxY() functions. */
 PHP_METHOD(php_wxDC, CalcBoundingBox)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1253,6 +1275,10 @@ PHP_METHOD(php_wxDC, CalcBoundingBox)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::CalcBoundingBox\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDC::CanUseTransformMatrix()
+   Check if the use of transformation matrix is supported by the current system. */
 PHP_METHOD(php_wxDC, CanUseTransformMatrix)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1436,6 +1462,10 @@ PHP_METHOD(php_wxDC, CanUseTransformMatrix)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::CanUseTransformMatrix\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::Clear()
+   Clears the device context using the current background brush. */
 PHP_METHOD(php_wxDC, Clear)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1619,6 +1649,10 @@ PHP_METHOD(php_wxDC, Clear)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::Clear\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::CopyAttributes(wxDC dc)
+   Copy attributes from another DC. */
 PHP_METHOD(php_wxDC, CopyAttributes)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1825,6 +1859,10 @@ PHP_METHOD(php_wxDC, CopyAttributes)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::CopyAttributes\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::CrossHair(int x, int y)
+   Displays a cross hair using the current pen. */
 PHP_METHOD(php_wxDC, CrossHair)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2116,6 +2154,10 @@ PHP_METHOD(php_wxDC, CrossHair)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::CrossHair\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::DestroyClippingRegion()
+   Destroys the current clipping region so that none of the DC is clipped. */
 PHP_METHOD(php_wxDC, DestroyClippingRegion)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2299,6 +2341,10 @@ PHP_METHOD(php_wxDC, DestroyClippingRegion)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::DestroyClippingRegion\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDC::DeviceToLogicalX(int x)
+   Convert device X coordinate to logical coordinate, using the current mapping mode, user scale factor, device origin and axis orientation. */
 PHP_METHOD(php_wxDC, DeviceToLogicalX)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2487,6 +2533,10 @@ PHP_METHOD(php_wxDC, DeviceToLogicalX)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::DeviceToLogicalX\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDC::DeviceToLogicalXRel(int x)
+   Convert device X coordinate to relative logical coordinate, using the current mapping mode and user scale factor but ignoring the axis orientation. */
 PHP_METHOD(php_wxDC, DeviceToLogicalXRel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2675,6 +2725,10 @@ PHP_METHOD(php_wxDC, DeviceToLogicalXRel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::DeviceToLogicalXRel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDC::DeviceToLogicalY(int y)
+   Converts device Y coordinate to logical coordinate, using the current mapping mode, user scale factor, device origin and axis orientation. */
 PHP_METHOD(php_wxDC, DeviceToLogicalY)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2863,6 +2917,10 @@ PHP_METHOD(php_wxDC, DeviceToLogicalY)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::DeviceToLogicalY\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDC::DeviceToLogicalYRel(int y)
+   Convert device Y coordinate to relative logical coordinate, using the current mapping mode and user scale factor but ignoring the axis orientation. */
 PHP_METHOD(php_wxDC, DeviceToLogicalYRel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3051,6 +3109,10 @@ PHP_METHOD(php_wxDC, DeviceToLogicalYRel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::DeviceToLogicalYRel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::DrawArc(int xStart, int yStart, int xEnd, int yEnd, int xc, int yc)
+   Draws an arc of a circle, centred on (xc, yc), with starting point (xStart, yStart) and ending at (xEnd, yEnd). */
 PHP_METHOD(php_wxDC, DrawArc)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3384,6 +3446,10 @@ PHP_METHOD(php_wxDC, DrawArc)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::DrawArc\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::DrawBitmap(wxBitmap bitmap, int x, int y, bool useMask)
+   Draw a bitmap on the device context at the specified point. */
 PHP_METHOD(php_wxDC, DrawBitmap)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3834,6 +3900,10 @@ PHP_METHOD(php_wxDC, DrawBitmap)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::DrawBitmap\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::DrawCheckMark(int x, int y, int width, int height)
+   Draws a check mark inside the given rectangle. */
 PHP_METHOD(php_wxDC, DrawCheckMark)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4127,6 +4197,10 @@ PHP_METHOD(php_wxDC, DrawCheckMark)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::DrawCheckMark\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::DrawCircle(int x, int y, int radius)
+   Draws a circle with the given centre and radius. */
 PHP_METHOD(php_wxDC, DrawCircle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4420,6 +4494,10 @@ PHP_METHOD(php_wxDC, DrawCircle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::DrawCircle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::DrawEllipse(int x, int y, int width, int height)
+   Draws an ellipse contained in the rectangle specified either with the given top left corner and the given size or directly. */
 PHP_METHOD(php_wxDC, DrawEllipse)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4834,6 +4912,10 @@ PHP_METHOD(php_wxDC, DrawEllipse)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::DrawEllipse\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::DrawEllipticArc(int x, int y, int width, int height, float start, float end)
+   Draws an arc of an ellipse. */
 PHP_METHOD(php_wxDC, DrawEllipticArc)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5150,6 +5232,10 @@ PHP_METHOD(php_wxDC, DrawEllipticArc)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::DrawEllipticArc\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::DrawIcon(wxIcon icon, int x, int y)
+   Draw an icon on the display (does nothing if the device context is PostScript). */
 PHP_METHOD(php_wxDC, DrawIcon)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5479,6 +5565,10 @@ PHP_METHOD(php_wxDC, DrawIcon)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::DrawIcon\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::DrawLabel(string text, wxBitmap bitmap, wxRect rect, int alignment, int indexAccel, wxRect &rectBounding)
+   Draw optional bitmap and the text into the given rectangle and aligns it as specified by alignment parameter; it also will emphasize the character with the given index if it is != -1 and return the bounding rectangle if required. */
 PHP_METHOD(php_wxDC, DrawLabel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6131,6 +6221,10 @@ PHP_METHOD(php_wxDC, DrawLabel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::DrawLabel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::DrawLine(int x1, int y1, int x2, int y2)
+   Draws a line from the first point to the second. */
 PHP_METHOD(php_wxDC, DrawLine)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6443,6 +6537,10 @@ PHP_METHOD(php_wxDC, DrawLine)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::DrawLine\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::DrawPoint(int x, int y)
+   Draws a point using the color of the current pen. */
 PHP_METHOD(php_wxDC, DrawPoint)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6734,6 +6832,10 @@ PHP_METHOD(php_wxDC, DrawPoint)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::DrawPoint\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::DrawRectangle(int x, int y, int width, int height)
+   Draws a rectangle with the given top left corner, and with the given size. */
 PHP_METHOD(php_wxDC, DrawRectangle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7148,6 +7250,10 @@ PHP_METHOD(php_wxDC, DrawRectangle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::DrawRectangle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::DrawRotatedText(string text, int x, int y, float angle)
+   Draws the text rotated by angle degrees (positive angles are counterclockwise; the full angle is 360 degrees). */
 PHP_METHOD(php_wxDC, DrawRotatedText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7445,6 +7551,10 @@ PHP_METHOD(php_wxDC, DrawRotatedText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::DrawRotatedText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::DrawRoundedRectangle(int x, int y, int width, int height, float radius)
+   Draws a rectangle with the given top left corner, and with the given size. */
 PHP_METHOD(php_wxDC, DrawRoundedRectangle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7862,6 +7972,10 @@ PHP_METHOD(php_wxDC, DrawRoundedRectangle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::DrawRoundedRectangle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::DrawSpline(int x1, int y1, int x2, int y2, int x3, int y3)
+   This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. */
 PHP_METHOD(php_wxDC, DrawSpline)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8055,6 +8169,10 @@ PHP_METHOD(php_wxDC, DrawSpline)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::DrawSpline\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::DrawText(string text, int x, int y)
+   Draws a text string at the specified point, using the current text font, and the current text foreground and background colours. */
 PHP_METHOD(php_wxDC, DrawText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8350,6 +8468,10 @@ PHP_METHOD(php_wxDC, DrawText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::DrawText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::EndDoc()
+   Ends a document (only relevant when outputting to a printer). */
 PHP_METHOD(php_wxDC, EndDoc)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8533,6 +8655,10 @@ PHP_METHOD(php_wxDC, EndDoc)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::EndDoc\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::EndPage()
+   Ends a document page (only relevant when outputting to a printer). */
 PHP_METHOD(php_wxDC, EndPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8716,6 +8842,10 @@ PHP_METHOD(php_wxDC, EndPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::EndPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDC::FloodFill(int x, int y, wxColour colour, wxFloodFillStyle style)
+   Flood fills the device context starting from the given point, using the current brush colour, and using a style: */
 PHP_METHOD(php_wxDC, FloodFill)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9166,6 +9296,10 @@ PHP_METHOD(php_wxDC, FloodFill)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::FloodFill\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxBrush wxDC::GetBackground()
+   Gets the brush used for painting the background. */
 PHP_METHOD(php_wxDC, GetBackground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9380,6 +9514,10 @@ PHP_METHOD(php_wxDC, GetBackground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::GetBackground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDC::GetBackgroundMode()
+   Returns the current background mode: wxSOLID or wxTRANSPARENT. */
 PHP_METHOD(php_wxDC, GetBackgroundMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9563,6 +9701,10 @@ PHP_METHOD(php_wxDC, GetBackgroundMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::GetBackgroundMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxBrush wxDC::GetBrush()
+   Gets the current brush. */
 PHP_METHOD(php_wxDC, GetBrush)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9777,6 +9919,10 @@ PHP_METHOD(php_wxDC, GetBrush)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::GetBrush\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDC::GetCharHeight()
+   Gets the character height of the currently set font. */
 PHP_METHOD(php_wxDC, GetCharHeight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9960,6 +10106,10 @@ PHP_METHOD(php_wxDC, GetCharHeight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::GetCharHeight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDC::GetCharWidth()
+   Gets the average character width of the currently set font. */
 PHP_METHOD(php_wxDC, GetCharWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10143,6 +10293,10 @@ PHP_METHOD(php_wxDC, GetCharWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::GetCharWidth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::GetClippingBox(int x, int y, int width, int height)
+   Gets the rectangle surrounding the current clipping region. */
 PHP_METHOD(php_wxDC, GetClippingBox)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10334,6 +10488,10 @@ PHP_METHOD(php_wxDC, GetClippingBox)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::GetClippingBox\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDC::GetDepth()
+   Returns the depth (number of bits/pixel) of this DC. */
 PHP_METHOD(php_wxDC, GetDepth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10517,6 +10675,10 @@ PHP_METHOD(php_wxDC, GetDepth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::GetDepth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPoint wxDC::GetDeviceOrigin()
+   Returns the current device origin. */
 PHP_METHOD(php_wxDC, GetDeviceOrigin)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10749,6 +10911,10 @@ PHP_METHOD(php_wxDC, GetDeviceOrigin)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::GetDeviceOrigin\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFont wxDC::GetFont()
+   Gets the current font. */
 PHP_METHOD(php_wxDC, GetFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10963,6 +11129,10 @@ PHP_METHOD(php_wxDC, GetFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::GetFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxLayoutDirection wxDC::GetLayoutDirection()
+   Gets the current layout direction of the device context. */
 PHP_METHOD(php_wxDC, GetLayoutDirection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11146,6 +11316,10 @@ PHP_METHOD(php_wxDC, GetLayoutDirection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::GetLayoutDirection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRasterOperationMode wxDC::GetLogicalFunction()
+   Gets the current logical function. */
 PHP_METHOD(php_wxDC, GetLogicalFunction)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11329,6 +11503,9 @@ PHP_METHOD(php_wxDC, GetLogicalFunction)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::GetLogicalFunction\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::GetLogicalOrigin(int x, int y) */
 PHP_METHOD(php_wxDC, GetLogicalOrigin)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11646,6 +11823,9 @@ PHP_METHOD(php_wxDC, GetLogicalOrigin)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::GetLogicalOrigin\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::GetLogicalScale(float &x, float &y) */
 PHP_METHOD(php_wxDC, GetLogicalScale)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11852,6 +12032,10 @@ PHP_METHOD(php_wxDC, GetLogicalScale)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::GetLogicalScale\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMappingMode wxDC::GetMapMode()
+   Gets the current mapping mode for the device context. */
 PHP_METHOD(php_wxDC, GetMapMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12035,6 +12219,10 @@ PHP_METHOD(php_wxDC, GetMapMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::GetMapMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::GetMultiLineTextExtent(string string, int w, int h, int heightLine, wxFont font)
+   Gets the dimensions of the string using the currently selected font. */
 PHP_METHOD(php_wxDC, GetMultiLineTextExtent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12496,6 +12684,10 @@ PHP_METHOD(php_wxDC, GetMultiLineTextExtent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::GetMultiLineTextExtent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxDC::GetPPI()
+   Returns the resolution of the device in pixels per inch. */
 PHP_METHOD(php_wxDC, GetPPI)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12728,6 +12920,10 @@ PHP_METHOD(php_wxDC, GetPPI)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::GetPPI\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPen wxDC::GetPen()
+   Gets the current pen. */
 PHP_METHOD(php_wxDC, GetPen)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12942,6 +13138,10 @@ PHP_METHOD(php_wxDC, GetPen)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::GetPen\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDC::GetPixel(int x, int y, wxColour &colour)
+   Gets in colour the colour at the specified location. */
 PHP_METHOD(php_wxDC, GetPixel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13150,6 +13350,10 @@ PHP_METHOD(php_wxDC, GetPixel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::GetPixel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::GetSize(int width, int height)
+   Gets the horizontal and vertical extent of this device context in device units. */
 PHP_METHOD(php_wxDC, GetSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13467,6 +13671,10 @@ PHP_METHOD(php_wxDC, GetSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::GetSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::GetSizeMM(int width, int height)
+   Returns the horizontal and vertical resolution in millimetres. */
 PHP_METHOD(php_wxDC, GetSizeMM)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13784,6 +13992,10 @@ PHP_METHOD(php_wxDC, GetSizeMM)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::GetSizeMM\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxDC::GetTextBackground()
+   Gets the current text background colour. */
 PHP_METHOD(php_wxDC, GetTextBackground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13998,6 +14210,10 @@ PHP_METHOD(php_wxDC, GetTextBackground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::GetTextBackground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::GetTextExtent(string string, int w, int h, int descent, int externalLeading, wxFont font)
+   Gets the dimensions of the string using the currently selected font. */
 PHP_METHOD(php_wxDC, GetTextExtent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14518,6 +14734,10 @@ PHP_METHOD(php_wxDC, GetTextExtent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::GetTextExtent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxDC::GetTextForeground()
+   Gets the current text foreground colour. */
 PHP_METHOD(php_wxDC, GetTextForeground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14732,6 +14952,10 @@ PHP_METHOD(php_wxDC, GetTextForeground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::GetTextForeground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::GetUserScale(float &x, float &y)
+   Gets the current user scale factor. */
 PHP_METHOD(php_wxDC, GetUserScale)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14938,6 +15162,10 @@ PHP_METHOD(php_wxDC, GetUserScale)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::GetUserScale\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::GradientFillConcentric(wxRect rect, wxColour initialColour, wxColour destColour)
+   Fill the area specified by rect with a radial gradient, starting from initialColour at the centre of the circle and fading to destColour on the circle outside. */
 PHP_METHOD(php_wxDC, GradientFillConcentric)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15341,6 +15569,10 @@ PHP_METHOD(php_wxDC, GradientFillConcentric)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::GradientFillConcentric\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::GradientFillLinear(wxRect rect, wxColour initialColour, wxColour destColour, wxDirection nDirection)
+   Fill the area specified by rect with a linear gradient, starting from initialColour and eventually fading to destColour. */
 PHP_METHOD(php_wxDC, GradientFillLinear)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15647,6 +15879,10 @@ PHP_METHOD(php_wxDC, GradientFillLinear)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::GradientFillLinear\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDC::IsOk()
+   Returns true if the DC is ok to use. */
 PHP_METHOD(php_wxDC, IsOk)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15830,6 +16066,10 @@ PHP_METHOD(php_wxDC, IsOk)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::IsOk\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDC::LogicalToDeviceX(int x)
+   Converts logical X coordinate to device coordinate, using the current mapping mode, user scale factor, device origin and axis orientation. */
 PHP_METHOD(php_wxDC, LogicalToDeviceX)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16018,6 +16258,10 @@ PHP_METHOD(php_wxDC, LogicalToDeviceX)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::LogicalToDeviceX\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDC::LogicalToDeviceY(int y)
+   Converts logical Y coordinate to device coordinate, using the current mapping mode, user scale factor, device origin and axis orientation. */
 PHP_METHOD(php_wxDC, LogicalToDeviceY)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16206,6 +16450,10 @@ PHP_METHOD(php_wxDC, LogicalToDeviceY)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::LogicalToDeviceY\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDC::LogicalToDeviceXRel(int x)
+   Converts logical X coordinate to relative device coordinate, using the current mapping mode and user scale factor but ignoring the axis orientation. */
 PHP_METHOD(php_wxDC, LogicalToDeviceXRel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16394,6 +16642,10 @@ PHP_METHOD(php_wxDC, LogicalToDeviceXRel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::LogicalToDeviceXRel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDC::LogicalToDeviceYRel(int y)
+   Converts logical Y coordinate to relative device coordinate, using the current mapping mode and user scale factor but ignoring the axis orientation. */
 PHP_METHOD(php_wxDC, LogicalToDeviceYRel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16582,6 +16834,10 @@ PHP_METHOD(php_wxDC, LogicalToDeviceYRel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::LogicalToDeviceYRel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDC::MaxX()
+   Gets the maximum horizontal extent used in drawing commands so far. */
 PHP_METHOD(php_wxDC, MaxX)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16765,6 +17021,10 @@ PHP_METHOD(php_wxDC, MaxX)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::MaxX\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDC::MaxY()
+   Gets the maximum vertical extent used in drawing commands so far. */
 PHP_METHOD(php_wxDC, MaxY)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16948,6 +17208,10 @@ PHP_METHOD(php_wxDC, MaxY)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::MaxY\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDC::MinX()
+   Gets the minimum horizontal extent used in drawing commands so far. */
 PHP_METHOD(php_wxDC, MinX)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17131,6 +17395,10 @@ PHP_METHOD(php_wxDC, MinX)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::MinX\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDC::MinY()
+   Gets the minimum vertical extent used in drawing commands so far. */
 PHP_METHOD(php_wxDC, MinY)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17314,6 +17582,10 @@ PHP_METHOD(php_wxDC, MinY)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::MinY\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::ResetBoundingBox()
+   Resets the bounding box: after a call to this function, the bounding box doesn't contain anything. */
 PHP_METHOD(php_wxDC, ResetBoundingBox)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17497,6 +17769,10 @@ PHP_METHOD(php_wxDC, ResetBoundingBox)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::ResetBoundingBox\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::ResetTransformMatrix()
+   Revert the transformation matrix to identity matrix. */
 PHP_METHOD(php_wxDC, ResetTransformMatrix)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17680,6 +17956,10 @@ PHP_METHOD(php_wxDC, ResetTransformMatrix)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::ResetTransformMatrix\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::SetAxisOrientation(bool xLeftRight, bool yBottomUp)
+   Sets the x and y axis orientation (i.e., the direction from lowest to highest values on the axis). */
 PHP_METHOD(php_wxDC, SetAxisOrientation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17869,6 +18149,10 @@ PHP_METHOD(php_wxDC, SetAxisOrientation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::SetAxisOrientation\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::SetBackground(wxBrush brush)
+   Sets the current background brush for the DC. */
 PHP_METHOD(php_wxDC, SetBackground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18075,6 +18359,10 @@ PHP_METHOD(php_wxDC, SetBackground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::SetBackground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::SetBackgroundMode(int mode)
+   mode may be one of wxSOLID and wxTRANSPARENT. */
 PHP_METHOD(php_wxDC, SetBackgroundMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18263,6 +18551,10 @@ PHP_METHOD(php_wxDC, SetBackgroundMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::SetBackgroundMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::SetBrush(wxBrush brush)
+   Sets the current brush for the DC. */
 PHP_METHOD(php_wxDC, SetBrush)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18469,6 +18761,10 @@ PHP_METHOD(php_wxDC, SetBrush)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::SetBrush\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::SetClippingRegion(int x, int y, int width, int height)
+   Sets the clipping region for this device context to the intersection of the given region described by the parameters of this method and the previously set clipping region. */
 PHP_METHOD(php_wxDC, SetClippingRegion)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18883,6 +19179,10 @@ PHP_METHOD(php_wxDC, SetClippingRegion)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::SetClippingRegion\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::SetDeviceClippingRegion(wxRegion region)
+   Sets the clipping region for this device context. */
 PHP_METHOD(php_wxDC, SetDeviceClippingRegion)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19089,6 +19389,10 @@ PHP_METHOD(php_wxDC, SetDeviceClippingRegion)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::SetDeviceClippingRegion\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::SetDeviceOrigin(int x, int y)
+   Sets the device origin (i.e., the origin in pixels after scaling has been applied). */
 PHP_METHOD(php_wxDC, SetDeviceOrigin)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19278,6 +19582,10 @@ PHP_METHOD(php_wxDC, SetDeviceOrigin)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::SetDeviceOrigin\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::SetFont(wxFont font)
+   Sets the current font for the DC. */
 PHP_METHOD(php_wxDC, SetFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19484,6 +19792,10 @@ PHP_METHOD(php_wxDC, SetFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::SetFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::SetLayoutDirection(wxLayoutDirection dir)
+   Sets the current layout direction for the device context. */
 PHP_METHOD(php_wxDC, SetLayoutDirection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19672,6 +19984,10 @@ PHP_METHOD(php_wxDC, SetLayoutDirection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::SetLayoutDirection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::SetLogicalFunction(wxRasterOperationMode function)
+   Sets the current logical function for the device context. */
 PHP_METHOD(php_wxDC, SetLogicalFunction)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19860,6 +20176,9 @@ PHP_METHOD(php_wxDC, SetLogicalFunction)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::SetLogicalFunction\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::SetLogicalOrigin(int x, int y) */
 PHP_METHOD(php_wxDC, SetLogicalOrigin)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20049,6 +20368,9 @@ PHP_METHOD(php_wxDC, SetLogicalOrigin)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::SetLogicalOrigin\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::SetLogicalScale(float x, float y) */
 PHP_METHOD(php_wxDC, SetLogicalScale)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20238,6 +20560,10 @@ PHP_METHOD(php_wxDC, SetLogicalScale)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::SetLogicalScale\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::SetMapMode(wxMappingMode mode)
+   The mapping mode of the device context defines the unit of measurement used to convert logical units to device units. */
 PHP_METHOD(php_wxDC, SetMapMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20426,6 +20752,10 @@ PHP_METHOD(php_wxDC, SetMapMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::SetMapMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::SetPalette(wxPalette palette)
+   If this is a window DC or memory DC, assigns the given palette to the window or bitmap associated with the DC. */
 PHP_METHOD(php_wxDC, SetPalette)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20632,6 +20962,10 @@ PHP_METHOD(php_wxDC, SetPalette)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::SetPalette\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDC::SetPen(wxPen pen)
+   Sets the current pen for the DC. */
 PHP_METHOD(php_wxDC, SetPen)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20838,6 +21172,10 @@ PHP_METHOD(php_wxDC, SetPen)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::SetPen\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDC::StretchBlit(int xdest, int ydest, int dstWidth, int dstHeight, wxDC &source, int xsrc, int ysrc, int srcWidth, int srcHeight, wxRasterOperationMode logicalFunc, bool useMask, int xsrcMask, int ysrcMask)
+   Copy from a source DC to this DC possibly changing the scale. */
 PHP_METHOD(php_wxDC, StretchBlit)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21292,6 +21630,10 @@ PHP_METHOD(php_wxDC, StretchBlit)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::StretchBlit\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDC::Blit(int xdest, int ydest, int width, int height, wxDC &source, int xsrc, int ysrc, wxRasterOperationMode logicalFunc, bool useMask, int xsrcMask, int ysrcMask)
+   Copy from a source DC to this DC. */
 PHP_METHOD(php_wxDC, Blit)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21744,6 +22086,8 @@ PHP_METHOD(php_wxDC, Blit)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDC::Blit\n");
 	}
 }
+/* }}} */
+
 void php_wxBufferedDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21784,6 +22128,8 @@ void php_wxBufferedDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxBufferedDC::Init(wxDC &dc, wxSize area, int style)
+   Initializes the object created using the default constructor. */
 PHP_METHOD(php_wxBufferedDC, Init)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22040,6 +22386,10 @@ PHP_METHOD(php_wxBufferedDC, Init)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxBufferedDC::Init\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxBufferedDC::wxBufferedDC()
+   Default constructor. */
 PHP_METHOD(php_wxBufferedDC, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22303,6 +22653,8 @@ PHP_METHOD(php_wxBufferedDC, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxAutoBufferedPaintDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22343,6 +22695,8 @@ void php_wxAutoBufferedPaintDC_destruction_handler(zend_rsrc_list_entry *rsrc TS
 		#endif
 	}
 }
+/* {{{ proto  wxAutoBufferedPaintDC::wxAutoBufferedPaintDC(wxWindow &window)
+   Constructor. */
 PHP_METHOD(php_wxAutoBufferedPaintDC, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22446,6 +22800,8 @@ PHP_METHOD(php_wxAutoBufferedPaintDC, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxBufferedPaintDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22486,6 +22842,8 @@ void php_wxBufferedPaintDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 		#endif
 	}
 }
+/* {{{ proto  wxBufferedPaintDC::wxBufferedPaintDC(wxWindow &window, wxBitmap &buffer, int style)
+   As with wxBufferedDC, you may either provide the bitmap to be used for buffering or let this object create one internally (in the latter case, the size of the client part of the window is used). */
 PHP_METHOD(php_wxBufferedPaintDC, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22687,6 +23045,8 @@ PHP_METHOD(php_wxBufferedPaintDC, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxPaintDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22727,6 +23087,8 @@ void php_wxPaintDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxPaintDC::wxPaintDC(wxWindow &window)
+   Constructor. */
 PHP_METHOD(php_wxPaintDC, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22830,6 +23192,8 @@ PHP_METHOD(php_wxPaintDC, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxClientDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22870,6 +23234,8 @@ void php_wxClientDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxClientDC::wxClientDC(wxWindow &window)
+   Constructor. */
 PHP_METHOD(php_wxClientDC, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22973,6 +23339,8 @@ PHP_METHOD(php_wxClientDC, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxWindowDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23013,6 +23381,8 @@ void php_wxWindowDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxWindowDC::wxWindowDC(wxWindow &window)
+   Constructor. */
 PHP_METHOD(php_wxWindowDC, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23116,6 +23486,8 @@ PHP_METHOD(php_wxWindowDC, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxMemoryDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23156,6 +23528,8 @@ void php_wxMemoryDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxMemoryDC::SelectObject(wxBitmap &bitmap)
+   Works exactly like SelectObjectAsSource() but this is the function you should use when you select a bitmap because you want to modify it, e.g. */
 PHP_METHOD(php_wxMemoryDC, SelectObject)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23283,6 +23657,10 @@ PHP_METHOD(php_wxMemoryDC, SelectObject)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMemoryDC::SelectObject\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMemoryDC::SelectObjectAsSource(wxBitmap bitmap)
+   Selects the given bitmap into the device context, to use as the memory bitmap. */
 PHP_METHOD(php_wxMemoryDC, SelectObjectAsSource)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23410,6 +23788,10 @@ PHP_METHOD(php_wxMemoryDC, SelectObjectAsSource)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMemoryDC::SelectObjectAsSource\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMemoryDC::wxMemoryDC()
+   Constructs a new memory device context. */
 PHP_METHOD(php_wxMemoryDC, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23598,6 +23980,8 @@ PHP_METHOD(php_wxMemoryDC, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxMirrorDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23638,6 +24022,8 @@ void php_wxMirrorDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxMirrorDC::wxMirrorDC(wxDC &dc, bool mirror)
+   Creates a (maybe) mirrored DC associated with the real dc. */
 PHP_METHOD(php_wxMirrorDC, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23742,6 +24128,8 @@ PHP_METHOD(php_wxMirrorDC, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxPostScriptDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23782,6 +24170,7 @@ void php_wxPostScriptDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 		#endif
 	}
 }
+/* {{{ proto  wxPostScriptDC::wxPostScriptDC() */
 PHP_METHOD(php_wxPostScriptDC, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23916,6 +24305,8 @@ PHP_METHOD(php_wxPostScriptDC, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxScreenDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23956,6 +24347,8 @@ void php_wxScreenDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto bool wxScreenDC::EndDrawingOnTop()
+   Use this in conjunction with StartDrawingOnTop(). */
 PHP_METHOD(php_wxScreenDC, EndDrawingOnTop)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24049,6 +24442,10 @@ PHP_METHOD(php_wxScreenDC, EndDrawingOnTop)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxScreenDC::EndDrawingOnTop\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxScreenDC::StartDrawingOnTop(wxWindow &window)
+   Use this in conjunction with EndDrawingOnTop() to ensure that drawing to the screen occurs on top of existing windows. */
 PHP_METHOD(php_wxScreenDC, StartDrawingOnTop)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24231,6 +24628,10 @@ PHP_METHOD(php_wxScreenDC, StartDrawingOnTop)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxScreenDC::StartDrawingOnTop\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxScreenDC::wxScreenDC()
+   Constructor. */
 PHP_METHOD(php_wxScreenDC, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24311,3 +24712,5 @@ PHP_METHOD(php_wxScreenDC, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+

@@ -91,6 +91,8 @@ void php_wxXmlResourceHandler_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 		#endif
 	}
 }
+/* {{{ proto bool wxXmlResourceHandler::CanHandle(wxXmlNode &node)
+   Returns true if it understands this node and can create a resource from it, false otherwise. */
 bool wxXmlResourceHandler_php::CanHandle(wxXmlNode* node)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -140,6 +142,10 @@ bool wxXmlResourceHandler_php::CanHandle(wxXmlNode* node)
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto wxObject wxXmlResourceHandler::CreateResource(wxXmlNode &node, wxObject &parent, wxObject &instance)
+   Creates an object (menu, dialog, control, ...) from an XML node. */
 PHP_METHOD(php_wxXmlResourceHandler, CreateResource)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -316,6 +322,10 @@ PHP_METHOD(php_wxXmlResourceHandler, CreateResource)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResourceHandler::CreateResource\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxObject wxXmlResourceHandler::DoCreateResource()
+   Called from CreateResource after variables were filled. */
 wxObject* wxXmlResourceHandler_php::DoCreateResource()
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -363,6 +373,10 @@ wxObject* wxXmlResourceHandler_php::DoCreateResource()
 		return (wxObject*) return_object;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxXmlResourceHandler::SetParentResource(wxXmlResource &res)
+   Sets the parent resource. */
 PHP_METHOD(php_wxXmlResourceHandler, SetParentResource)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -478,6 +492,10 @@ PHP_METHOD(php_wxXmlResourceHandler, SetParentResource)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResourceHandler::SetParentResource\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxXmlResourceHandler::wxXmlResourceHandler()
+   Default constructor. */
 PHP_METHOD(php_wxXmlResourceHandler, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -558,6 +576,8 @@ PHP_METHOD(php_wxXmlResourceHandler, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxXmlResource_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -598,6 +618,8 @@ void php_wxXmlResource_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxXmlResource::AddHandler(wxXmlResourceHandler &handler)
+   Initializes only a specific handler (or custom handler). */
 PHP_METHOD(php_wxXmlResource, AddHandler)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -713,6 +735,10 @@ PHP_METHOD(php_wxXmlResource, AddHandler)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResource::AddHandler\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxXmlResource::AttachUnknownControl(string name, wxWindow &control, wxWindow &parent)
+   Attaches an unknown control to the given panel/window/dialog. */
 PHP_METHOD(php_wxXmlResource, AttachUnknownControl)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -861,6 +887,10 @@ PHP_METHOD(php_wxXmlResource, AttachUnknownControl)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResource::AttachUnknownControl\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxXmlResource::ClearHandlers()
+   Removes all handlers and deletes them (this means that any handlers added using AddHandler() must be allocated on the heap). */
 PHP_METHOD(php_wxXmlResource, ClearHandlers)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -953,6 +983,10 @@ PHP_METHOD(php_wxXmlResource, ClearHandlers)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResource::ClearHandlers\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxXmlResource::CompareVersion(int major, int minor, int release, int revision)
+   Compares the XRC version to the argument. */
 PHP_METHOD(php_wxXmlResource, CompareVersion)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1053,6 +1087,10 @@ PHP_METHOD(php_wxXmlResource, CompareVersion)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResource::CompareVersion\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxXmlResource::DoReportError(string xrcFile, wxXmlNode position, string message)
+   Implementation of XRC resources errors reporting. */
 void wxXmlResource_php::DoReportError(const wxString& xrcFile, const wxXmlNode* position, const wxString& message)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1119,6 +1157,10 @@ void wxXmlResource_php::DoReportError(const wxString& xrcFile, const wxXmlNode* 
 	//Call original method
 	wxXmlResource::DoReportError(xrcFile, position, message);
 }
+/* }}} */
+
+/* {{{ proto string wxXmlResource::FindXRCIDById(int numId)
+   Returns a string ID corresponding to the given numeric ID. */
 PHP_METHOD(php_wxXmlResource, FindXRCIDById)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1223,6 +1265,10 @@ PHP_METHOD(php_wxXmlResource, FindXRCIDById)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResource::FindXRCIDById\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxXmlResource wxXmlResource::Get()
+   Gets the global resources object or creates one if none exists. */
 PHP_METHOD(php_wxXmlResource, Get)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1335,6 +1381,10 @@ PHP_METHOD(php_wxXmlResource, Get)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResource::Get\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxXmlResource::GetDomain()
+   Returns the domain (message catalog) that will be used to load translatable strings in the XRC. */
 PHP_METHOD(php_wxXmlResource, GetDomain)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1433,6 +1483,10 @@ PHP_METHOD(php_wxXmlResource, GetDomain)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResource::GetDomain\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxXmlResource::GetFlags()
+   Returns flags, which may be a bitlist of wxXmlResourceFlags enumeration values. */
 PHP_METHOD(php_wxXmlResource, GetFlags)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1525,6 +1579,10 @@ PHP_METHOD(php_wxXmlResource, GetFlags)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResource::GetFlags\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxXmlNode wxXmlResource::GetResourceNode(string name)
+   Returns the wxXmlNode containing the definition of the object with the given name or NULL. */
 PHP_METHOD(php_wxXmlResource, GetResourceNode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1646,6 +1704,10 @@ PHP_METHOD(php_wxXmlResource, GetResourceNode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResource::GetResourceNode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxXmlResource::GetVersion()
+   Returns version information (a.b.c.d = d + 256*c + 2562*b + 2563*a). */
 PHP_METHOD(php_wxXmlResource, GetVersion)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1738,6 +1800,10 @@ PHP_METHOD(php_wxXmlResource, GetVersion)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResource::GetVersion\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxXmlResource::GetXRCID(string str_id, int value_if_not_found)
+   Returns a numeric ID that is equivalent to the string ID used in an XML resource. */
 PHP_METHOD(php_wxXmlResource, GetXRCID)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1850,6 +1916,10 @@ PHP_METHOD(php_wxXmlResource, GetXRCID)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResource::GetXRCID\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxXmlResource::InitAllHandlers()
+   Initializes handlers for all supported controls/windows. */
 PHP_METHOD(php_wxXmlResource, InitAllHandlers)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1942,6 +2012,10 @@ PHP_METHOD(php_wxXmlResource, InitAllHandlers)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResource::InitAllHandlers\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxXmlResource::Load(string filemask)
+   Loads resources from XML files that match given filemask. */
 PHP_METHOD(php_wxXmlResource, Load)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2040,6 +2114,10 @@ PHP_METHOD(php_wxXmlResource, Load)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResource::Load\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxXmlResource::LoadAllFiles(string dirname)
+   Loads all .xrc files from directory dirname. */
 PHP_METHOD(php_wxXmlResource, LoadAllFiles)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2138,6 +2216,10 @@ PHP_METHOD(php_wxXmlResource, LoadAllFiles)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResource::LoadAllFiles\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxBitmap wxXmlResource::LoadBitmap(string name)
+   Loads a bitmap resource from a file. */
 PHP_METHOD(php_wxXmlResource, LoadBitmap)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2241,6 +2323,10 @@ PHP_METHOD(php_wxXmlResource, LoadBitmap)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResource::LoadBitmap\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxDialog wxXmlResource::LoadDialog(wxWindow &parent, string name)
+   Loads a dialog. */
 PHP_METHOD(php_wxXmlResource, LoadDialog)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2457,6 +2543,10 @@ PHP_METHOD(php_wxXmlResource, LoadDialog)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResource::LoadDialog\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxXmlResource::LoadFile(wxFileName file)
+   Simpler form of Load() for loading a single XRC file. */
 PHP_METHOD(php_wxXmlResource, LoadFile)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2572,6 +2662,10 @@ PHP_METHOD(php_wxXmlResource, LoadFile)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResource::LoadFile\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxXmlResource::LoadFrame(wxFrame &frame, wxWindow &parent, string name)
+   Loads a frame. */
 PHP_METHOD(php_wxXmlResource, LoadFrame)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2708,6 +2802,10 @@ PHP_METHOD(php_wxXmlResource, LoadFrame)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResource::LoadFrame\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxIcon wxXmlResource::LoadIcon(string name)
+   Loads an icon resource from a file. */
 PHP_METHOD(php_wxXmlResource, LoadIcon)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2811,6 +2909,10 @@ PHP_METHOD(php_wxXmlResource, LoadIcon)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResource::LoadIcon\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMenu wxXmlResource::LoadMenu(string name)
+   Loads menu from resource. */
 PHP_METHOD(php_wxXmlResource, LoadMenu)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2932,6 +3034,10 @@ PHP_METHOD(php_wxXmlResource, LoadMenu)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResource::LoadMenu\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMenuBar wxXmlResource::LoadMenuBar(wxWindow &parent, string name)
+   Loads a menubar from resource. */
 PHP_METHOD(php_wxXmlResource, LoadMenuBar)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3133,6 +3239,10 @@ PHP_METHOD(php_wxXmlResource, LoadMenuBar)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResource::LoadMenuBar\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxObject wxXmlResource::LoadObject(wxWindow &parent, string name, string classname)
+   Load an object from the resource specifying both the resource name and the class name. */
 PHP_METHOD(php_wxXmlResource, LoadObject)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3353,6 +3463,10 @@ PHP_METHOD(php_wxXmlResource, LoadObject)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResource::LoadObject\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxObject wxXmlResource::LoadObjectRecursively(wxWindow &parent, string name, string classname)
+   Load an object from anywhere in the resource tree. */
 PHP_METHOD(php_wxXmlResource, LoadObjectRecursively)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3573,6 +3687,10 @@ PHP_METHOD(php_wxXmlResource, LoadObjectRecursively)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResource::LoadObjectRecursively\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPanel wxXmlResource::LoadPanel(wxWindow &parent, string name)
+   Loads a panel. */
 PHP_METHOD(php_wxXmlResource, LoadPanel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3789,6 +3907,10 @@ PHP_METHOD(php_wxXmlResource, LoadPanel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResource::LoadPanel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxToolBar wxXmlResource::LoadToolBar(wxWindow &parent, string name)
+   Loads a toolbar. */
 PHP_METHOD(php_wxXmlResource, LoadToolBar)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3929,6 +4051,10 @@ PHP_METHOD(php_wxXmlResource, LoadToolBar)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResource::LoadToolBar\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxXmlResource wxXmlResource::Set(wxXmlResource &res)
+   Sets the global resources object and returns a pointer to the previous one (may be NULL). */
 PHP_METHOD(php_wxXmlResource, Set)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4063,6 +4189,10 @@ PHP_METHOD(php_wxXmlResource, Set)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResource::Set\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxXmlResource::SetDomain(string domain)
+   Sets the domain (message catalog) that will be used to load translatable strings in the XRC. */
 PHP_METHOD(php_wxXmlResource, SetDomain)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4161,6 +4291,10 @@ PHP_METHOD(php_wxXmlResource, SetDomain)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResource::SetDomain\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxXmlResource::SetFlags(int flags)
+   Sets flags (bitlist of wxXmlResourceFlags enumeration values). */
 PHP_METHOD(php_wxXmlResource, SetFlags)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4258,6 +4392,10 @@ PHP_METHOD(php_wxXmlResource, SetFlags)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResource::SetFlags\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxXmlResource::Unload(string filename)
+   This function unloads a resource previously loaded by Load(). */
 PHP_METHOD(php_wxXmlResource, Unload)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4356,6 +4494,10 @@ PHP_METHOD(php_wxXmlResource, Unload)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxXmlResource::Unload\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxXmlResource::wxXmlResource(string filemask, int flags, string domain)
+   Constructor. */
 PHP_METHOD(php_wxXmlResource, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4523,3 +4665,5 @@ PHP_METHOD(php_wxXmlResource, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+

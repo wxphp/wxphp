@@ -91,6 +91,8 @@ void php_wxWebViewHistoryItem_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 		#endif
 	}
 }
+/* {{{ proto  wxWebViewHistoryItem::wxWebViewHistoryItem(string url, string title)
+   Construtor. */
 PHP_METHOD(php_wxWebViewHistoryItem, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -179,6 +181,9 @@ PHP_METHOD(php_wxWebViewHistoryItem, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto string wxWebViewHistoryItem::GetUrl() */
 PHP_METHOD(php_wxWebViewHistoryItem, GetUrl)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -277,6 +282,9 @@ PHP_METHOD(php_wxWebViewHistoryItem, GetUrl)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebViewHistoryItem::GetUrl\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxWebViewHistoryItem::GetTitle() */
 PHP_METHOD(php_wxWebViewHistoryItem, GetTitle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -375,6 +383,8 @@ PHP_METHOD(php_wxWebViewHistoryItem, GetTitle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebViewHistoryItem::GetTitle\n");
 	}
 }
+/* }}} */
+
 void php_wxWebViewHandler_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -415,6 +425,8 @@ void php_wxWebViewHandler_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		#endif
 	}
 }
+/* {{{ proto  wxWebViewHandler::wxWebViewHandler(string scheme)
+   Constructor. */
 PHP_METHOD(php_wxWebViewHandler, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -501,6 +513,9 @@ PHP_METHOD(php_wxWebViewHandler, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto string wxWebViewHandler::GetName() */
 PHP_METHOD(php_wxWebViewHandler, GetName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -603,6 +618,9 @@ PHP_METHOD(php_wxWebViewHandler, GetName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebViewHandler::GetName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFSFile wxWebViewHandler::GetFile(string uri) */
 wxFSFile* wxWebViewHandler_php::GetFile(const wxString& uri)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -659,6 +677,8 @@ wxFSFile* wxWebViewHandler_php::GetFile(const wxString& uri)
 		return (wxFSFile*) return_object;
 	
 }
+/* }}} */
+
 void php_wxWebViewArchiveHandler_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -699,6 +719,8 @@ void php_wxWebViewArchiveHandler_destruction_handler(zend_rsrc_list_entry *rsrc 
 		#endif
 	}
 }
+/* {{{ proto  wxWebViewArchiveHandler::wxWebViewArchiveHandler(string scheme)
+   Constructor. */
 PHP_METHOD(php_wxWebViewArchiveHandler, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -785,6 +807,9 @@ PHP_METHOD(php_wxWebViewArchiveHandler, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto wxFSFile wxWebViewArchiveHandler::GetFile(string uri) */
 PHP_METHOD(php_wxWebViewArchiveHandler, GetFile)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -906,3 +931,5 @@ PHP_METHOD(php_wxWebViewArchiveHandler, GetFile)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebViewArchiveHandler::GetFile\n");
 	}
 }
+/* }}} */
+

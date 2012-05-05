@@ -91,6 +91,8 @@ void php_wxCondition_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto wxCondError wxCondition::Broadcast()
+   Broadcasts to all waiting threads, waking all of them up. */
 PHP_METHOD(php_wxCondition, Broadcast)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -183,6 +185,10 @@ PHP_METHOD(php_wxCondition, Broadcast)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCondition::Broadcast\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxCondition::IsOk()
+   Returns true if the object had been initialized successfully, false if an error occurred. */
 PHP_METHOD(php_wxCondition, IsOk)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -275,6 +281,10 @@ PHP_METHOD(php_wxCondition, IsOk)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCondition::IsOk\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxCondError wxCondition::Signal()
+   Signals the object waking up at most one thread. */
 PHP_METHOD(php_wxCondition, Signal)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -367,6 +377,10 @@ PHP_METHOD(php_wxCondition, Signal)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCondition::Signal\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxCondError wxCondition::Wait()
+   Waits until the condition is signalled. */
 PHP_METHOD(php_wxCondition, Wait)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -459,6 +473,10 @@ PHP_METHOD(php_wxCondition, Wait)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCondition::Wait\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxCondError wxCondition::WaitTimeout(int milliseconds)
+   Waits until the condition is signalled or the timeout has elapsed. */
 PHP_METHOD(php_wxCondition, WaitTimeout)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -556,6 +574,10 @@ PHP_METHOD(php_wxCondition, WaitTimeout)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCondition::WaitTimeout\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxCondition::wxCondition(wxMutex &mutex)
+   Default and only constructor. */
 PHP_METHOD(php_wxCondition, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -659,6 +681,8 @@ PHP_METHOD(php_wxCondition, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxCriticalSectionLocker_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -699,6 +723,8 @@ void php_wxCriticalSectionLocker_destruction_handler(zend_rsrc_list_entry *rsrc 
 		#endif
 	}
 }
+/* {{{ proto  wxCriticalSectionLocker::wxCriticalSectionLocker(wxCriticalSection &criticalsection)
+   Constructs a wxCriticalSectionLocker object associated with given criticalsection and enters it. */
 PHP_METHOD(php_wxCriticalSectionLocker, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -802,6 +828,8 @@ PHP_METHOD(php_wxCriticalSectionLocker, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxThreadHelper_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -842,6 +870,8 @@ void php_wxThreadHelper_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 		#endif
 	}
 }
+/* {{{ proto wxThread wxThreadHelper::GetThread()
+   This is a public function that returns the wxThread object associated with the thread. */
 PHP_METHOD(php_wxThreadHelper, GetThread)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -960,6 +990,10 @@ PHP_METHOD(php_wxThreadHelper, GetThread)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThreadHelper::GetThread\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxThreadError wxThreadHelper::CreateThread(wxThreadKind kind, int stackSize)
+   Creates a new thread of the given kind. */
 PHP_METHOD(php_wxThreadHelper, CreateThread)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1089,6 +1123,9 @@ PHP_METHOD(php_wxThreadHelper, CreateThread)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThreadHelper::CreateThread\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxThreadError wxThreadHelper::Create(int stackSize) */
 PHP_METHOD(php_wxThreadHelper, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1203,6 +1240,8 @@ PHP_METHOD(php_wxThreadHelper, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThreadHelper::Create\n");
 	}
 }
+/* }}} */
+
 void php_wxCriticalSection_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1243,6 +1282,8 @@ void php_wxCriticalSection_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 		#endif
 	}
 }
+/* {{{ proto  wxCriticalSection::Enter()
+   Enter the critical section (same as locking a mutex): if another thread has already entered it, this call will block until the other thread calls Leave(). */
 PHP_METHOD(php_wxCriticalSection, Enter)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1335,6 +1376,10 @@ PHP_METHOD(php_wxCriticalSection, Enter)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCriticalSection::Enter\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxCriticalSection::Leave()
+   Leave the critical section allowing other threads use the global data protected by it. */
 PHP_METHOD(php_wxCriticalSection, Leave)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1427,6 +1472,10 @@ PHP_METHOD(php_wxCriticalSection, Leave)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCriticalSection::Leave\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxCriticalSection::TryEnter()
+   Try to enter the critical section (same as trying to lock a mutex). */
 PHP_METHOD(php_wxCriticalSection, TryEnter)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1519,6 +1568,10 @@ PHP_METHOD(php_wxCriticalSection, TryEnter)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCriticalSection::TryEnter\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxCriticalSection::wxCriticalSection(wxCriticalSectionType critSecType)
+   Default constructor initializes critical section object. */
 PHP_METHOD(php_wxCriticalSection, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1614,6 +1667,8 @@ PHP_METHOD(php_wxCriticalSection, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxThread_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1654,6 +1709,8 @@ void php_wxThread_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxThread::wxThread(wxThreadKind kind)
+   This constructor creates a new detached (default) or joinable C++ thread object. */
 PHP_METHOD(php_wxThread, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1749,6 +1806,10 @@ PHP_METHOD(php_wxThread, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxThread::Yield()
+   Give the rest of the thread's time-slice to the system allowing the other threads to run. */
 PHP_METHOD(php_wxThread, Yield)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1842,6 +1903,10 @@ PHP_METHOD(php_wxThread, Yield)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThread::Yield\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxThread wxThread::This()
+   Return the thread object for the calling thread. */
 PHP_METHOD(php_wxThread, This)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1954,6 +2019,10 @@ PHP_METHOD(php_wxThread, This)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThread::This\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxThread::TestDestroy()
+   This function should be called periodically by the thread to ensure that calls to Pause() and Delete() will work. */
 PHP_METHOD(php_wxThread, TestDestroy)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2046,6 +2115,10 @@ PHP_METHOD(php_wxThread, TestDestroy)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThread::TestDestroy\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxThread::SetPriority(int priority)
+   Sets the priority of the thread, between 0 and 100. */
 PHP_METHOD(php_wxThread, SetPriority)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2143,6 +2216,10 @@ PHP_METHOD(php_wxThread, SetPriority)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThread::SetPriority\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxThread::Sleep(int milliseconds)
+   Pauses the thread execution for the given amount of time. */
 PHP_METHOD(php_wxThread, Sleep)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2241,6 +2318,10 @@ PHP_METHOD(php_wxThread, Sleep)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThread::Sleep\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxThread::SetConcurrency(int level)
+   Sets the thread concurrency level for this process. */
 PHP_METHOD(php_wxThread, SetConcurrency)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2339,6 +2420,10 @@ PHP_METHOD(php_wxThread, SetConcurrency)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThread::SetConcurrency\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxThread::GetCPUCount()
+   Returns the number of system CPUs or -1 if the value is unknown. */
 PHP_METHOD(php_wxThread, GetCPUCount)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2432,6 +2517,10 @@ PHP_METHOD(php_wxThread, GetCPUCount)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThread::GetCPUCount\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxThread::GetCurrentId()
+   Returns the platform specific thread ID of the current thread as a long. */
 PHP_METHOD(php_wxThread, GetCurrentId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2525,6 +2614,10 @@ PHP_METHOD(php_wxThread, GetCurrentId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThread::GetCurrentId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxThread::GetId()
+   Gets the thread identifier: this is a platform dependent number that uniquely identifies the thread throughout the system during its existence (i.e. */
 PHP_METHOD(php_wxThread, GetId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2617,6 +2710,10 @@ PHP_METHOD(php_wxThread, GetId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThread::GetId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxThreadKind wxThread::GetKind()
+   Returns the thread kind as it was given in the ctor. */
 PHP_METHOD(php_wxThread, GetKind)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2709,6 +2806,10 @@ PHP_METHOD(php_wxThread, GetKind)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThread::GetKind\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxThread::GetMainId()
+   Returns the thread ID of the main thread. */
 PHP_METHOD(php_wxThread, GetMainId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2802,6 +2903,10 @@ PHP_METHOD(php_wxThread, GetMainId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThread::GetMainId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxThread::GetPriority()
+   Gets the priority of the thread, between zero and 100. */
 PHP_METHOD(php_wxThread, GetPriority)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2894,6 +2999,10 @@ PHP_METHOD(php_wxThread, GetPriority)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThread::GetPriority\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxThread::IsAlive()
+   Returns true if the thread is alive (i.e. */
 PHP_METHOD(php_wxThread, IsAlive)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2986,6 +3095,10 @@ PHP_METHOD(php_wxThread, IsAlive)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThread::IsAlive\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxThread::IsDetached()
+   Returns true if the thread is of the detached kind, false if it is a joinable one. */
 PHP_METHOD(php_wxThread, IsDetached)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3078,6 +3191,10 @@ PHP_METHOD(php_wxThread, IsDetached)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThread::IsDetached\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxThread::IsMain()
+   Returns true if the calling thread is the main application thread. */
 PHP_METHOD(php_wxThread, IsMain)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3171,6 +3288,10 @@ PHP_METHOD(php_wxThread, IsMain)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThread::IsMain\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxThread::IsPaused()
+   Returns true if the thread is paused. */
 PHP_METHOD(php_wxThread, IsPaused)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3263,6 +3384,10 @@ PHP_METHOD(php_wxThread, IsPaused)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThread::IsPaused\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxThread::IsRunning()
+   Returns true if the thread is running. */
 PHP_METHOD(php_wxThread, IsRunning)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3355,6 +3480,10 @@ PHP_METHOD(php_wxThread, IsRunning)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThread::IsRunning\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxThreadError wxThread::Kill()
+   Immediately terminates the target thread. */
 PHP_METHOD(php_wxThread, Kill)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3447,6 +3576,10 @@ PHP_METHOD(php_wxThread, Kill)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThread::Kill\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxThreadError wxThread::Pause()
+   Suspends the thread. */
 PHP_METHOD(php_wxThread, Pause)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3539,6 +3672,10 @@ PHP_METHOD(php_wxThread, Pause)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThread::Pause\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxThreadError wxThread::Resume()
+   Resumes a thread suspended by the call to Pause(). */
 PHP_METHOD(php_wxThread, Resume)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3631,6 +3768,10 @@ PHP_METHOD(php_wxThread, Resume)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThread::Resume\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxThreadError wxThread::Run()
+   Starts the thread execution. */
 PHP_METHOD(php_wxThread, Run)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3723,6 +3864,10 @@ PHP_METHOD(php_wxThread, Run)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThread::Run\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxThreadError wxThread::Create(int stackSize)
+   Creates a new thread. */
 PHP_METHOD(php_wxThread, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3831,6 +3976,10 @@ PHP_METHOD(php_wxThread, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThread::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxThreadError wxThread::Delete(void rc, wxThreadWait waitMode)
+   Calling Delete() gracefully terminates a detached thread, either when the thread calls TestDestroy() or when it finishes processing. */
 PHP_METHOD(php_wxThread, Delete)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3956,6 +4105,10 @@ PHP_METHOD(php_wxThread, Delete)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThread::Delete\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto void wxThread::Entry()
+   This is the entry point of the thread. */
 void* wxThread_php::Entry()
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3998,6 +4151,10 @@ void* wxThread_php::Entry()
 		return (void*) Z_STRVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto void wxThread::Wait(wxThreadWait flags)
+   Waits for a joinable thread to terminate and returns the value the thread returned from Entry() or "(ExitCode)-1" on error. */
 PHP_METHOD(php_wxThread, Wait)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4106,6 +4263,8 @@ PHP_METHOD(php_wxThread, Wait)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThread::Wait\n");
 	}
 }
+/* }}} */
+
 void php_wxSemaphore_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4146,6 +4305,8 @@ void php_wxSemaphore_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto wxSemaError wxSemaphore::Post()
+   Increments the semaphore count and signals one of the waiting threads in an atomic way. */
 PHP_METHOD(php_wxSemaphore, Post)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4238,6 +4399,10 @@ PHP_METHOD(php_wxSemaphore, Post)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSemaphore::Post\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSemaError wxSemaphore::TryWait()
+   Same as Wait(), but returns immediately. */
 PHP_METHOD(php_wxSemaphore, TryWait)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4330,6 +4495,10 @@ PHP_METHOD(php_wxSemaphore, TryWait)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSemaphore::TryWait\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSemaError wxSemaphore::Wait()
+   Wait indefinitely until the semaphore count becomes strictly positive and then decrement it and return. */
 PHP_METHOD(php_wxSemaphore, Wait)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4422,6 +4591,10 @@ PHP_METHOD(php_wxSemaphore, Wait)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSemaphore::Wait\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSemaError wxSemaphore::WaitTimeout(int timeout_millis)
+   Same as Wait(), but with a timeout limit. */
 PHP_METHOD(php_wxSemaphore, WaitTimeout)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4519,6 +4692,10 @@ PHP_METHOD(php_wxSemaphore, WaitTimeout)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSemaphore::WaitTimeout\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSemaphore::wxSemaphore(int initialcount, int maxcount)
+   Specifying a maxcount of 0 actually makes wxSemaphore behave as if there is no upper limit. */
 PHP_METHOD(php_wxSemaphore, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4625,6 +4802,8 @@ PHP_METHOD(php_wxSemaphore, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxMutexLocker_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4665,6 +4844,8 @@ void php_wxMutexLocker_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto bool wxMutexLocker::IsOk()
+   Returns true if mutex was acquired in the constructor, false otherwise. */
 PHP_METHOD(php_wxMutexLocker, IsOk)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4757,6 +4938,10 @@ PHP_METHOD(php_wxMutexLocker, IsOk)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMutexLocker::IsOk\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMutexLocker::wxMutexLocker(wxMutex &mutex)
+   Constructs a wxMutexLocker object associated with mutex and locks it. */
 PHP_METHOD(php_wxMutexLocker, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4860,6 +5045,8 @@ PHP_METHOD(php_wxMutexLocker, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxMutex_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4900,6 +5087,8 @@ void php_wxMutex_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto wxMutexError wxMutex::Lock()
+   Locks the mutex object. */
 PHP_METHOD(php_wxMutex, Lock)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4992,6 +5181,10 @@ PHP_METHOD(php_wxMutex, Lock)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMutex::Lock\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMutexError wxMutex::LockTimeout(int msec)
+   Try to lock the mutex object during the specified time interval. */
 PHP_METHOD(php_wxMutex, LockTimeout)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5089,6 +5282,10 @@ PHP_METHOD(php_wxMutex, LockTimeout)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMutex::LockTimeout\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMutexError wxMutex::TryLock()
+   Tries to lock the mutex object. */
 PHP_METHOD(php_wxMutex, TryLock)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5181,6 +5378,10 @@ PHP_METHOD(php_wxMutex, TryLock)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMutex::TryLock\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMutexError wxMutex::Unlock()
+   Unlocks the mutex object. */
 PHP_METHOD(php_wxMutex, Unlock)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5273,6 +5474,10 @@ PHP_METHOD(php_wxMutex, Unlock)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMutex::Unlock\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMutex::wxMutex(wxMutexType type)
+   Default constructor. */
 PHP_METHOD(php_wxMutex, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5368,3 +5573,5 @@ PHP_METHOD(php_wxMutex, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+

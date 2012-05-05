@@ -91,6 +91,8 @@ void php_wxAboutDialogInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 		#endif
 	}
 }
+/* {{{ proto  wxAboutDialogInfo::wxAboutDialogInfo()
+   Default constructor leaves all fields are initially uninitialized, in general you should call at least SetVersion(), SetCopyright() and SetDescription(). */
 PHP_METHOD(php_wxAboutDialogInfo, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -171,6 +173,10 @@ PHP_METHOD(php_wxAboutDialogInfo, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxAboutDialogInfo::SetWebSite(string url, string desc)
+   Set the web site for the program and its description (which defaults to url itself if empty). */
 PHP_METHOD(php_wxAboutDialogInfo, SetWebSite)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -282,6 +288,10 @@ PHP_METHOD(php_wxAboutDialogInfo, SetWebSite)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAboutDialogInfo::SetWebSite\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAboutDialogInfo::SetVersion(string version, string longVersion)
+   Set the version of the program. */
 PHP_METHOD(php_wxAboutDialogInfo, SetVersion)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -393,6 +403,10 @@ PHP_METHOD(php_wxAboutDialogInfo, SetVersion)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAboutDialogInfo::SetVersion\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAboutDialogInfo::AddDeveloper(string developer)
+   Adds a developer name to be shown in the program credits. */
 PHP_METHOD(php_wxAboutDialogInfo, AddDeveloper)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -491,6 +505,10 @@ PHP_METHOD(php_wxAboutDialogInfo, AddDeveloper)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAboutDialogInfo::AddDeveloper\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAboutDialogInfo::AddDocWriter(string docwriter)
+   Adds a documentation writer name to be shown in the program credits. */
 PHP_METHOD(php_wxAboutDialogInfo, AddDocWriter)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -589,6 +607,10 @@ PHP_METHOD(php_wxAboutDialogInfo, AddDocWriter)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAboutDialogInfo::AddDocWriter\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAboutDialogInfo::AddTranslator(string translator)
+   Adds a translator name to be shown in the program credits. */
 PHP_METHOD(php_wxAboutDialogInfo, AddTranslator)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -687,6 +709,10 @@ PHP_METHOD(php_wxAboutDialogInfo, AddTranslator)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAboutDialogInfo::AddTranslator\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxAboutDialogInfo::GetCopyright()
+   Get the copyright string. */
 PHP_METHOD(php_wxAboutDialogInfo, GetCopyright)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -785,6 +811,10 @@ PHP_METHOD(php_wxAboutDialogInfo, GetCopyright)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAboutDialogInfo::GetCopyright\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxAboutDialogInfo::GetDescription()
+   Get the description string. */
 PHP_METHOD(php_wxAboutDialogInfo, GetDescription)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -883,6 +913,10 @@ PHP_METHOD(php_wxAboutDialogInfo, GetDescription)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAboutDialogInfo::GetDescription\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAboutDialogInfo::HasCopyright()
+   Returns true if a copyright string has been specified. */
 PHP_METHOD(php_wxAboutDialogInfo, HasCopyright)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -975,6 +1009,10 @@ PHP_METHOD(php_wxAboutDialogInfo, HasCopyright)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAboutDialogInfo::HasCopyright\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAboutDialogInfo::HasDescription()
+   Returns true if a description string has been specified. */
 PHP_METHOD(php_wxAboutDialogInfo, HasDescription)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1067,6 +1105,10 @@ PHP_METHOD(php_wxAboutDialogInfo, HasDescription)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAboutDialogInfo::HasDescription\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAboutDialogInfo::SetArtists(array artists)
+   Sets the list of artists to be shown in the program credits. */
 PHP_METHOD(php_wxAboutDialogInfo, SetArtists)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1182,6 +1224,10 @@ PHP_METHOD(php_wxAboutDialogInfo, SetArtists)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAboutDialogInfo::SetArtists\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAboutDialogInfo::SetCopyright(string copyright)
+   Set the short string containing the program copyright information. */
 PHP_METHOD(php_wxAboutDialogInfo, SetCopyright)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1280,6 +1326,10 @@ PHP_METHOD(php_wxAboutDialogInfo, SetCopyright)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAboutDialogInfo::SetCopyright\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAboutDialogInfo::SetDescription(string desc)
+   Set brief, but possibly multiline, description of the program. */
 PHP_METHOD(php_wxAboutDialogInfo, SetDescription)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1378,6 +1428,10 @@ PHP_METHOD(php_wxAboutDialogInfo, SetDescription)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAboutDialogInfo::SetDescription\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAboutDialogInfo::SetDevelopers(array developers)
+   Set the list of developers of the program. */
 PHP_METHOD(php_wxAboutDialogInfo, SetDevelopers)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1493,6 +1547,10 @@ PHP_METHOD(php_wxAboutDialogInfo, SetDevelopers)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAboutDialogInfo::SetDevelopers\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAboutDialogInfo::SetDocWriters(array docwriters)
+   Set the list of documentation writers. */
 PHP_METHOD(php_wxAboutDialogInfo, SetDocWriters)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1608,6 +1666,10 @@ PHP_METHOD(php_wxAboutDialogInfo, SetDocWriters)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAboutDialogInfo::SetDocWriters\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAboutDialogInfo::SetIcon(wxIcon icon)
+   Set the icon to be shown in the dialog. */
 PHP_METHOD(php_wxAboutDialogInfo, SetIcon)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1723,6 +1785,10 @@ PHP_METHOD(php_wxAboutDialogInfo, SetIcon)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAboutDialogInfo::SetIcon\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAboutDialogInfo::SetLicence(string licence)
+   Set the long, multiline string containing the text of the program licence. */
 PHP_METHOD(php_wxAboutDialogInfo, SetLicence)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1821,6 +1887,10 @@ PHP_METHOD(php_wxAboutDialogInfo, SetLicence)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAboutDialogInfo::SetLicence\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAboutDialogInfo::SetLicense(string licence)
+   This is the same as SetLicence(). */
 PHP_METHOD(php_wxAboutDialogInfo, SetLicense)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1919,6 +1989,10 @@ PHP_METHOD(php_wxAboutDialogInfo, SetLicense)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAboutDialogInfo::SetLicense\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAboutDialogInfo::SetName(string name)
+   Set the name of the program. */
 PHP_METHOD(php_wxAboutDialogInfo, SetName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2017,6 +2091,10 @@ PHP_METHOD(php_wxAboutDialogInfo, SetName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAboutDialogInfo::SetName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAboutDialogInfo::SetTranslators(array translators)
+   Set the list of translators. */
 PHP_METHOD(php_wxAboutDialogInfo, SetTranslators)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2132,6 +2210,10 @@ PHP_METHOD(php_wxAboutDialogInfo, SetTranslators)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAboutDialogInfo::SetTranslators\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAboutDialogInfo::AddArtist(string artist)
+   Adds an artist name to be shown in the program credits. */
 PHP_METHOD(php_wxAboutDialogInfo, AddArtist)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2230,6 +2312,10 @@ PHP_METHOD(php_wxAboutDialogInfo, AddArtist)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAboutDialogInfo::AddArtist\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxAboutDialogInfo::GetName()
+   Get the name of the program. */
 PHP_METHOD(php_wxAboutDialogInfo, GetName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2328,6 +2414,8 @@ PHP_METHOD(php_wxAboutDialogInfo, GetName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAboutDialogInfo::GetName\n");
 	}
 }
+/* }}} */
+
 void php_wxBusyInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2368,6 +2456,8 @@ void php_wxBusyInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxBusyInfo::wxBusyInfo(string msg, wxWindow &parent)
+   Constructs a busy info window as child of parent and displays msg in it. */
 PHP_METHOD(php_wxBusyInfo, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2483,10 +2573,14 @@ PHP_METHOD(php_wxBusyInfo, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxSingleChoiceDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxSingleChoiceDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
 }
+/* {{{ proto int wxSingleChoiceDialog::GetSelection()
+   Returns the index of selected item. */
 PHP_METHOD(php_wxSingleChoiceDialog, GetSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2579,6 +2673,10 @@ PHP_METHOD(php_wxSingleChoiceDialog, GetSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSingleChoiceDialog::GetSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxSingleChoiceDialog::GetStringSelection()
+   Returns the selected string. */
 PHP_METHOD(php_wxSingleChoiceDialog, GetStringSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2677,6 +2775,10 @@ PHP_METHOD(php_wxSingleChoiceDialog, GetStringSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSingleChoiceDialog::GetStringSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSingleChoiceDialog::SetSelection(int selection)
+   Sets the index of the initially selected item. */
 PHP_METHOD(php_wxSingleChoiceDialog, SetSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2774,6 +2876,10 @@ PHP_METHOD(php_wxSingleChoiceDialog, SetSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSingleChoiceDialog::SetSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxSingleChoiceDialog::ShowModal()
+   Shows the dialog, returning either wxID_OK or wxID_CANCEL. */
 PHP_METHOD(php_wxSingleChoiceDialog, ShowModal)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2866,6 +2972,10 @@ PHP_METHOD(php_wxSingleChoiceDialog, ShowModal)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSingleChoiceDialog::ShowModal\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSingleChoiceDialog::wxSingleChoiceDialog(wxWindow &parent, string message, string caption, int n, array choices, void clientData, int style, wxPoint pos)
+   Constructor, taking an array of wxString choices and optional client data. */
 PHP_METHOD(php_wxSingleChoiceDialog, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3285,6 +3395,10 @@ PHP_METHOD(php_wxSingleChoiceDialog, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto void wxSingleChoiceDialog::GetSelectionData()
+   Returns the client data associated with the selection. */
 PHP_METHOD(php_wxSingleChoiceDialog, GetSelectionData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3377,6 +3491,8 @@ PHP_METHOD(php_wxSingleChoiceDialog, GetSelectionData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSingleChoiceDialog::GetSelectionData\n");
 	}
 }
+/* }}} */
+
 void php_wxPrintDialogData_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3417,6 +3533,8 @@ void php_wxPrintDialogData_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 		#endif
 	}
 }
+/* {{{ proto  wxPrintDialogData::EnableHelp(bool flag)
+   Enables or disables the "Help" button. */
 PHP_METHOD(php_wxPrintDialogData, EnableHelp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3514,6 +3632,10 @@ PHP_METHOD(php_wxPrintDialogData, EnableHelp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintDialogData::EnableHelp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintDialogData::EnablePageNumbers(bool flag)
+   Enables or disables the "Page numbers" controls. */
 PHP_METHOD(php_wxPrintDialogData, EnablePageNumbers)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3611,6 +3733,10 @@ PHP_METHOD(php_wxPrintDialogData, EnablePageNumbers)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintDialogData::EnablePageNumbers\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintDialogData::EnablePrintToFile(bool flag)
+   Enables or disables the "Print to file" checkbox. */
 PHP_METHOD(php_wxPrintDialogData, EnablePrintToFile)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3708,6 +3834,10 @@ PHP_METHOD(php_wxPrintDialogData, EnablePrintToFile)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintDialogData::EnablePrintToFile\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintDialogData::EnableSelection(bool flag)
+   Enables or disables the "Selection" radio button. */
 PHP_METHOD(php_wxPrintDialogData, EnableSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3805,6 +3935,10 @@ PHP_METHOD(php_wxPrintDialogData, EnableSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintDialogData::EnableSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPrintDialogData::GetAllPages()
+   Returns true if the user requested that all pages be printed. */
 PHP_METHOD(php_wxPrintDialogData, GetAllPages)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3897,6 +4031,10 @@ PHP_METHOD(php_wxPrintDialogData, GetAllPages)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintDialogData::GetAllPages\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPrintDialogData::GetCollate()
+   Returns true if the user requested that the document(s) be collated. */
 PHP_METHOD(php_wxPrintDialogData, GetCollate)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3989,6 +4127,10 @@ PHP_METHOD(php_wxPrintDialogData, GetCollate)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintDialogData::GetCollate\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxPrintDialogData::GetFromPage()
+   Returns the from page number, as entered by the user. */
 PHP_METHOD(php_wxPrintDialogData, GetFromPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4081,6 +4223,10 @@ PHP_METHOD(php_wxPrintDialogData, GetFromPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintDialogData::GetFromPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxPrintDialogData::GetMaxPage()
+   Returns the maximum page number. */
 PHP_METHOD(php_wxPrintDialogData, GetMaxPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4173,6 +4319,10 @@ PHP_METHOD(php_wxPrintDialogData, GetMaxPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintDialogData::GetMaxPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxPrintDialogData::GetMinPage()
+   Returns the minimum page number. */
 PHP_METHOD(php_wxPrintDialogData, GetMinPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4265,6 +4415,10 @@ PHP_METHOD(php_wxPrintDialogData, GetMinPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintDialogData::GetMinPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxPrintDialogData::GetNoCopies()
+   Returns the number of copies requested by the user. */
 PHP_METHOD(php_wxPrintDialogData, GetNoCopies)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4357,6 +4511,10 @@ PHP_METHOD(php_wxPrintDialogData, GetNoCopies)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintDialogData::GetNoCopies\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPrintData wxPrintDialogData::GetPrintData()
+   Returns a reference to the internal wxPrintData object. */
 PHP_METHOD(php_wxPrintDialogData, GetPrintData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4469,6 +4627,10 @@ PHP_METHOD(php_wxPrintDialogData, GetPrintData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintDialogData::GetPrintData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPrintDialogData::GetPrintToFile()
+   Returns true if the user has selected printing to a file. */
 PHP_METHOD(php_wxPrintDialogData, GetPrintToFile)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4561,6 +4723,10 @@ PHP_METHOD(php_wxPrintDialogData, GetPrintToFile)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintDialogData::GetPrintToFile\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPrintDialogData::GetSelection()
+   Returns true if the user requested that the selection be printed (where "selection" is a concept specific to the application). */
 PHP_METHOD(php_wxPrintDialogData, GetSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4653,6 +4819,10 @@ PHP_METHOD(php_wxPrintDialogData, GetSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintDialogData::GetSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxPrintDialogData::GetToPage()
+   Returns the "print to" page number, as entered by the user. */
 PHP_METHOD(php_wxPrintDialogData, GetToPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4745,6 +4915,10 @@ PHP_METHOD(php_wxPrintDialogData, GetToPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintDialogData::GetToPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPrintDialogData::IsOk()
+   Returns true if the print data is valid for using in print dialogs. */
 PHP_METHOD(php_wxPrintDialogData, IsOk)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4837,6 +5011,10 @@ PHP_METHOD(php_wxPrintDialogData, IsOk)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintDialogData::IsOk\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintDialogData::SetCollate(bool flag)
+   Sets the "Collate" checkbox to true or false. */
 PHP_METHOD(php_wxPrintDialogData, SetCollate)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4934,6 +5112,10 @@ PHP_METHOD(php_wxPrintDialogData, SetCollate)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintDialogData::SetCollate\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintDialogData::SetFromPage(int page)
+   Sets the from page number. */
 PHP_METHOD(php_wxPrintDialogData, SetFromPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5031,6 +5213,10 @@ PHP_METHOD(php_wxPrintDialogData, SetFromPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintDialogData::SetFromPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintDialogData::SetMaxPage(int page)
+   Sets the maximum page number. */
 PHP_METHOD(php_wxPrintDialogData, SetMaxPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5128,6 +5314,10 @@ PHP_METHOD(php_wxPrintDialogData, SetMaxPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintDialogData::SetMaxPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintDialogData::SetMinPage(int page)
+   Sets the minimum page number. */
 PHP_METHOD(php_wxPrintDialogData, SetMinPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5225,6 +5415,10 @@ PHP_METHOD(php_wxPrintDialogData, SetMinPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintDialogData::SetMinPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintDialogData::SetNoCopies(int n)
+   Sets the default number of copies the user has requested to be printed out. */
 PHP_METHOD(php_wxPrintDialogData, SetNoCopies)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5322,6 +5516,10 @@ PHP_METHOD(php_wxPrintDialogData, SetNoCopies)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintDialogData::SetNoCopies\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintDialogData::SetPrintData(wxPrintData printData)
+   Sets the internal wxPrintData. */
 PHP_METHOD(php_wxPrintDialogData, SetPrintData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5437,6 +5635,10 @@ PHP_METHOD(php_wxPrintDialogData, SetPrintData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintDialogData::SetPrintData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintDialogData::SetPrintToFile(bool flag)
+   Sets the "Print to file" checkbox to true or false. */
 PHP_METHOD(php_wxPrintDialogData, SetPrintToFile)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5534,6 +5736,10 @@ PHP_METHOD(php_wxPrintDialogData, SetPrintToFile)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintDialogData::SetPrintToFile\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintDialogData::SetSelection(bool flag)
+   Selects the "Selection" radio button. */
 PHP_METHOD(php_wxPrintDialogData, SetSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5631,6 +5837,10 @@ PHP_METHOD(php_wxPrintDialogData, SetSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintDialogData::SetSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintDialogData::SetToPage(int page)
+   Sets the "print to" page number. */
 PHP_METHOD(php_wxPrintDialogData, SetToPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5728,6 +5938,10 @@ PHP_METHOD(php_wxPrintDialogData, SetToPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintDialogData::SetToPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintDialogData::wxPrintDialogData()
+   Default constructor. */
 PHP_METHOD(php_wxPrintDialogData, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5862,10 +6076,14 @@ PHP_METHOD(php_wxPrintDialogData, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxColourDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxColourDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
 }
+/* {{{ proto  wxColourDialog::wxColourDialog(wxWindow &parent, wxColourData &data)
+   Constructor. */
 PHP_METHOD(php_wxColourDialog, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5999,6 +6217,10 @@ PHP_METHOD(php_wxColourDialog, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto int wxColourDialog::ShowModal()
+   Shows the dialog, returning wxID_OK if the user pressed OK, and wxID_CANCEL otherwise. */
 PHP_METHOD(php_wxColourDialog, ShowModal)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6091,6 +6313,10 @@ PHP_METHOD(php_wxColourDialog, ShowModal)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxColourDialog::ShowModal\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColourData wxColourDialog::GetColourData()
+   Returns the colour data associated with the colour dialog. */
 PHP_METHOD(php_wxColourDialog, GetColourData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6203,6 +6429,10 @@ PHP_METHOD(php_wxColourDialog, GetColourData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxColourDialog::GetColourData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxColourDialog::Create(wxWindow &parent, wxColourData &data)
+   Same as wxColourDialog(). */
 PHP_METHOD(php_wxColourDialog, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6349,6 +6579,8 @@ PHP_METHOD(php_wxColourDialog, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxColourDialog::Create\n");
 	}
 }
+/* }}} */
+
 void php_wxColourData_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6389,6 +6621,8 @@ void php_wxColourData_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxColourData::wxColourData()
+   Constructor. */
 PHP_METHOD(php_wxColourData, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6469,6 +6703,10 @@ PHP_METHOD(php_wxColourData, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto string wxColourData::ToString()
+   Converts the colours saved in this class in a string form, separating the various colours with a comma. */
 PHP_METHOD(php_wxColourData, ToString)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6567,6 +6805,10 @@ PHP_METHOD(php_wxColourData, ToString)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxColourData::ToString\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxColourData::SetCustomColour(int i, wxColour colour)
+   Sets custom colours for the colour dialog. */
 PHP_METHOD(php_wxColourData, SetCustomColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6683,6 +6925,10 @@ PHP_METHOD(php_wxColourData, SetCustomColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxColourData::SetCustomColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxColourData::SetColour(wxColour colour)
+   Sets the default colour for the colour dialog. */
 PHP_METHOD(php_wxColourData, SetColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6798,6 +7044,10 @@ PHP_METHOD(php_wxColourData, SetColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxColourData::SetColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxColourData::SetChooseFull(bool flag)
+   Under Windows, tells the Windows colour dialog to display the full dialog with custom colour selection controls. */
 PHP_METHOD(php_wxColourData, SetChooseFull)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6895,6 +7145,10 @@ PHP_METHOD(php_wxColourData, SetChooseFull)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxColourData::SetChooseFull\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxColourData::GetCustomColour(int i)
+   Returns custom colours associated with the colour dialog. */
 PHP_METHOD(php_wxColourData, GetCustomColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6997,6 +7251,10 @@ PHP_METHOD(php_wxColourData, GetCustomColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxColourData::GetCustomColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxColourData::GetColour()
+   Gets the current colour associated with the colour dialog. */
 PHP_METHOD(php_wxColourData, GetColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7109,6 +7367,10 @@ PHP_METHOD(php_wxColourData, GetColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxColourData::GetColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxColourData::GetChooseFull()
+   Under Windows, determines whether the Windows colour dialog will display the full dialog with custom colour selection controls. */
 PHP_METHOD(php_wxColourData, GetChooseFull)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7201,6 +7463,10 @@ PHP_METHOD(php_wxColourData, GetChooseFull)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxColourData::GetChooseFull\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxColourData::FromString(string str)
+   Decodes the given string, which should be in the same format returned by ToString(), and sets the internal colours. */
 PHP_METHOD(php_wxColourData, FromString)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7299,10 +7565,14 @@ PHP_METHOD(php_wxColourData, FromString)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxColourData::FromString\n");
 	}
 }
+/* }}} */
+
 void php_wxDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
 }
+/* {{{ proto  wxDialog::AddMainButtonId(int id)
+   Adds an identifier to be regarded as a main button for the non-scrolling area of a dialog. */
 PHP_METHOD(php_wxDialog, AddMainButtonId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7464,6 +7734,10 @@ PHP_METHOD(php_wxDialog, AddMainButtonId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::AddMainButtonId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDialog::Centre(int direction)
+   Centres the dialog box on the display. */
 PHP_METHOD(php_wxDialog, Centre)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7636,6 +7910,10 @@ PHP_METHOD(php_wxDialog, Centre)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::Centre\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDialog::Create(wxWindow &parent, int id, string title, wxPoint pos, wxSize size, int style, string name)
+   Used for two-step dialog box construction. */
 PHP_METHOD(php_wxDialog, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7912,6 +8190,10 @@ PHP_METHOD(php_wxDialog, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizer wxDialog::CreateButtonSizer(int flags)
+   Creates a sizer with standard buttons. */
 PHP_METHOD(php_wxDialog, CreateButtonSizer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8096,6 +8378,10 @@ PHP_METHOD(php_wxDialog, CreateButtonSizer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::CreateButtonSizer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizer wxDialog::CreateSeparatedButtonSizer(int flags)
+   Creates a sizer with standard buttons using CreateButtonSizer() separated from the rest of the dialog contents by a horizontal wxStaticLine. */
 PHP_METHOD(php_wxDialog, CreateSeparatedButtonSizer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8280,6 +8566,10 @@ PHP_METHOD(php_wxDialog, CreateSeparatedButtonSizer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::CreateSeparatedButtonSizer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizer wxDialog::CreateSeparatedSizer(wxSizer &sizer)
+   Returns the sizer containing the given one with a separating wxStaticLine if necessarily. */
 PHP_METHOD(php_wxDialog, CreateSeparatedSizer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8482,6 +8772,10 @@ PHP_METHOD(php_wxDialog, CreateSeparatedSizer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::CreateSeparatedSizer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxStdDialogButtonSizer wxDialog::CreateStdDialogButtonSizer(int flags)
+   Creates a wxStdDialogButtonSizer with standard buttons. */
 PHP_METHOD(php_wxDialog, CreateStdDialogButtonSizer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8666,6 +8960,10 @@ PHP_METHOD(php_wxDialog, CreateStdDialogButtonSizer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::CreateStdDialogButtonSizer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDialog::EndModal(int retCode)
+   Ends a modal dialog, passing a value to be returned from the ShowModal() invocation. */
 PHP_METHOD(php_wxDialog, EndModal)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8827,6 +9125,10 @@ PHP_METHOD(php_wxDialog, EndModal)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::EndModal\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDialog::GetAffirmativeId()
+   Gets the identifier of the button which works like standard OK button in this dialog. */
 PHP_METHOD(php_wxDialog, GetAffirmativeId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8983,6 +9285,10 @@ PHP_METHOD(php_wxDialog, GetAffirmativeId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::GetAffirmativeId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxWindow wxDialog::GetContentWindow()
+   Override this to return a window containing the main content of the dialog. */
 PHP_METHOD(php_wxDialog, GetContentWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9162,6 +9468,10 @@ PHP_METHOD(php_wxDialog, GetContentWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::GetContentWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDialog::GetEscapeId()
+   Gets the identifier of the button to map presses of ESC button to. */
 PHP_METHOD(php_wxDialog, GetEscapeId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9318,6 +9628,10 @@ PHP_METHOD(php_wxDialog, GetEscapeId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::GetEscapeId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDialog::GetReturnCode()
+   Gets the return code for this window. */
 PHP_METHOD(php_wxDialog, GetReturnCode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9474,6 +9788,10 @@ PHP_METHOD(php_wxDialog, GetReturnCode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::GetReturnCode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDialog::Iconize(bool iconize)
+   Iconizes or restores the dialog. */
 PHP_METHOD(php_wxDialog, Iconize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9646,6 +9964,10 @@ PHP_METHOD(php_wxDialog, Iconize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::Iconize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDialog::IsIconized()
+   Returns true if the dialog box is iconized. */
 PHP_METHOD(php_wxDialog, IsIconized)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9802,6 +10124,10 @@ PHP_METHOD(php_wxDialog, IsIconized)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::IsIconized\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDialog::IsModal()
+   Returns true if the dialog box is modal, false otherwise. */
 PHP_METHOD(php_wxDialog, IsModal)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9958,6 +10284,10 @@ PHP_METHOD(php_wxDialog, IsModal)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::IsModal\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDialog::SetAffirmativeId(int id)
+   Sets the identifier to be used as OK button. */
 PHP_METHOD(php_wxDialog, SetAffirmativeId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10119,6 +10449,10 @@ PHP_METHOD(php_wxDialog, SetAffirmativeId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::SetAffirmativeId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDialog::wxDialog(wxWindow &parent, int id, string title, wxPoint pos, wxSize size, int style, string name)
+   Constructor. */
 PHP_METHOD(php_wxDialog, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10346,6 +10680,10 @@ PHP_METHOD(php_wxDialog, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxDialog::ShowWindowModal()
+   Shows a dialog modal to the parent top level window only. */
 PHP_METHOD(php_wxDialog, ShowWindowModal)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10502,6 +10840,10 @@ PHP_METHOD(php_wxDialog, ShowWindowModal)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::ShowWindowModal\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDialog::ShowModal()
+   Shows an application-modal dialog. */
 PHP_METHOD(php_wxDialog, ShowModal)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10658,6 +11000,10 @@ PHP_METHOD(php_wxDialog, ShowModal)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::ShowModal\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDialog::Show(bool show)
+   Hides or shows the dialog. */
 PHP_METHOD(php_wxDialog, Show)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10830,6 +11176,10 @@ PHP_METHOD(php_wxDialog, Show)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::Show\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDialog::SetReturnCode(int retCode)
+   Sets the return code for this window. */
 PHP_METHOD(php_wxDialog, SetReturnCode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10991,6 +11341,10 @@ PHP_METHOD(php_wxDialog, SetReturnCode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::SetReturnCode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDialog::SetLayoutAdaptationMode(wxDialogLayoutAdaptationMode mode)
+   Sets the adaptation mode, overriding the global adaptation flag. */
 PHP_METHOD(php_wxDialog, SetLayoutAdaptationMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11152,6 +11506,10 @@ PHP_METHOD(php_wxDialog, SetLayoutAdaptationMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::SetLayoutAdaptationMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDialog::SetLayoutAdaptationLevel(int level)
+   Sets the aggressiveness of search for buttons and sizers to be in the non-scrolling part of a layout-adapted dialog. */
 PHP_METHOD(php_wxDialog, SetLayoutAdaptationLevel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11313,6 +11671,10 @@ PHP_METHOD(php_wxDialog, SetLayoutAdaptationLevel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::SetLayoutAdaptationLevel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDialog::SetIcons(wxIconBundle icons)
+   Sets the icons for this dialog. */
 PHP_METHOD(php_wxDialog, SetIcons)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11492,6 +11854,10 @@ PHP_METHOD(php_wxDialog, SetIcons)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::SetIcons\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDialog::SetIcon(wxIcon icon)
+   Sets the icon for this dialog. */
 PHP_METHOD(php_wxDialog, SetIcon)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11671,6 +12037,10 @@ PHP_METHOD(php_wxDialog, SetIcon)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::SetIcon\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDialog::SetEscapeId(int id)
+   Sets the identifier of the button which should work like the standard "Cancel" button in this dialog. */
 PHP_METHOD(php_wxDialog, SetEscapeId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11832,6 +12202,10 @@ PHP_METHOD(php_wxDialog, SetEscapeId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::SetEscapeId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDialog::SetLayoutAdaptationDone(bool done)
+   Marks the dialog as having been adapted, usually by making it scrollable to work with a small display. */
 PHP_METHOD(php_wxDialog, SetLayoutAdaptationDone)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11993,6 +12367,10 @@ PHP_METHOD(php_wxDialog, SetLayoutAdaptationDone)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::SetLayoutAdaptationDone\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDialog::GetLayoutAdaptationDone()
+   Returns true if the dialog has been adapted, usually by making it scrollable to work with a small display. */
 PHP_METHOD(php_wxDialog, GetLayoutAdaptationDone)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12149,6 +12527,10 @@ PHP_METHOD(php_wxDialog, GetLayoutAdaptationDone)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::GetLayoutAdaptationDone\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDialog::GetLayoutAdaptationLevel()
+   Gets a value representing the aggressiveness of search for buttons and sizers to be in the non-scrolling part of a layout-adapted dialog. */
 PHP_METHOD(php_wxDialog, GetLayoutAdaptationLevel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12305,6 +12687,10 @@ PHP_METHOD(php_wxDialog, GetLayoutAdaptationLevel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::GetLayoutAdaptationLevel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDialog::EnableLayoutAdaptation(bool enable)
+   A static function enabling or disabling layout adaptation for all dialogs. */
 PHP_METHOD(php_wxDialog, EnableLayoutAdaptation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12467,6 +12853,10 @@ PHP_METHOD(php_wxDialog, EnableLayoutAdaptation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::EnableLayoutAdaptation\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDialog::DoLayoutAdaptation()
+   Performs layout adaptation, usually if the dialog is too large to fit on the display. */
 PHP_METHOD(php_wxDialog, DoLayoutAdaptation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12623,6 +13013,10 @@ PHP_METHOD(php_wxDialog, DoLayoutAdaptation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::DoLayoutAdaptation\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDialog::CanDoLayoutAdaptation()
+   Returns true if this dialog can and should perform layout adaptation using DoLayoutAdaptation(), usually if the dialog is too large to fit on the display. */
 PHP_METHOD(php_wxDialog, CanDoLayoutAdaptation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12779,6 +13173,10 @@ PHP_METHOD(php_wxDialog, CanDoLayoutAdaptation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::CanDoLayoutAdaptation\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDialog::IsLayoutAdaptationEnabled()
+   A static function returning true if layout adaptation is enabled for all dialogs. */
 PHP_METHOD(php_wxDialog, IsLayoutAdaptationEnabled)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12936,10 +13334,14 @@ PHP_METHOD(php_wxDialog, IsLayoutAdaptationEnabled)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDialog::IsLayoutAdaptationEnabled\n");
 	}
 }
+/* }}} */
+
 void php_wxDirDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxDirDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
 }
+/* {{{ proto string wxDirDialog::GetMessage()
+   Returns the message that will be displayed on the dialog. */
 PHP_METHOD(php_wxDirDialog, GetMessage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13038,6 +13440,10 @@ PHP_METHOD(php_wxDirDialog, GetMessage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDirDialog::GetMessage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxDirDialog::GetPath()
+   Returns the default or user-selected path. */
 PHP_METHOD(php_wxDirDialog, GetPath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13136,6 +13542,10 @@ PHP_METHOD(php_wxDirDialog, GetPath)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDirDialog::GetPath\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDirDialog::SetMessage(string message)
+   Sets the message that will be displayed on the dialog. */
 PHP_METHOD(php_wxDirDialog, SetMessage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13234,6 +13644,10 @@ PHP_METHOD(php_wxDirDialog, SetMessage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDirDialog::SetMessage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDirDialog::SetPath(string path)
+   Sets the default path. */
 PHP_METHOD(php_wxDirDialog, SetPath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13332,6 +13746,10 @@ PHP_METHOD(php_wxDirDialog, SetPath)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDirDialog::SetPath\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDirDialog::ShowModal()
+   Shows the dialog, returning wxID_OK if the user pressed OK, and wxID_CANCEL otherwise. */
 PHP_METHOD(php_wxDirDialog, ShowModal)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13424,6 +13842,10 @@ PHP_METHOD(php_wxDirDialog, ShowModal)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDirDialog::ShowModal\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDirDialog::wxDirDialog(wxWindow &parent, string message, string defaultPath, int style, wxPoint pos, wxSize size, string name)
+   Constructor. */
 PHP_METHOD(php_wxDirDialog, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13641,6 +14063,8 @@ PHP_METHOD(php_wxDirDialog, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxFindReplaceData_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13681,6 +14105,8 @@ void php_wxFindReplaceData_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 		#endif
 	}
 }
+/* {{{ proto string wxFindReplaceData::GetFindString()
+   Get the string to find. */
 PHP_METHOD(php_wxFindReplaceData, GetFindString)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13779,6 +14205,10 @@ PHP_METHOD(php_wxFindReplaceData, GetFindString)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFindReplaceData::GetFindString\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxFindReplaceData::GetFlags()
+   Get the combination of wxFindReplaceFlags values. */
 PHP_METHOD(php_wxFindReplaceData, GetFlags)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13871,6 +14301,10 @@ PHP_METHOD(php_wxFindReplaceData, GetFlags)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFindReplaceData::GetFlags\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFindReplaceData::GetReplaceString()
+   Get the replacement string. */
 PHP_METHOD(php_wxFindReplaceData, GetReplaceString)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13969,6 +14403,10 @@ PHP_METHOD(php_wxFindReplaceData, GetReplaceString)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFindReplaceData::GetReplaceString\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFindReplaceData::SetFindString(string str)
+   Set the string to find (used as initial value by the dialog). */
 PHP_METHOD(php_wxFindReplaceData, SetFindString)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14067,6 +14505,10 @@ PHP_METHOD(php_wxFindReplaceData, SetFindString)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFindReplaceData::SetFindString\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFindReplaceData::SetFlags(int flags)
+   Set the flags to use to initialize the controls of the dialog. */
 PHP_METHOD(php_wxFindReplaceData, SetFlags)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14164,6 +14606,10 @@ PHP_METHOD(php_wxFindReplaceData, SetFlags)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFindReplaceData::SetFlags\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFindReplaceData::SetReplaceString(string str)
+   Set the replacement string (used as initial value by the dialog). */
 PHP_METHOD(php_wxFindReplaceData, SetReplaceString)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14262,6 +14708,10 @@ PHP_METHOD(php_wxFindReplaceData, SetReplaceString)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFindReplaceData::SetReplaceString\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFindReplaceData::wxFindReplaceData(int flags)
+   Constructor initializes the flags to default value (0). */
 PHP_METHOD(php_wxFindReplaceData, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14357,10 +14807,14 @@ PHP_METHOD(php_wxFindReplaceData, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxFindReplaceDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxFindReplaceDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
 }
+/* {{{ proto bool wxFindReplaceDialog::Create(wxWindow &parent, wxFindReplaceData &data, string title, int style)
+   Creates the dialog; use wxWindow::Show to show it on screen. */
 PHP_METHOD(php_wxFindReplaceDialog, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14511,6 +14965,10 @@ PHP_METHOD(php_wxFindReplaceDialog, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFindReplaceDialog::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFindReplaceData wxFindReplaceDialog::GetData()
+   Get the wxFindReplaceData object used by this dialog. */
 PHP_METHOD(php_wxFindReplaceDialog, GetData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14626,6 +15084,10 @@ PHP_METHOD(php_wxFindReplaceDialog, GetData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFindReplaceDialog::GetData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFindReplaceDialog::wxFindReplaceDialog(wxWindow &parent, wxFindReplaceData &data, string title, int style)
+   After using default constructor Create() must be called. */
 PHP_METHOD(php_wxFindReplaceDialog, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14794,10 +15256,14 @@ PHP_METHOD(php_wxFindReplaceDialog, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxFileDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxFileDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
 }
+/* {{{ proto  wxFileDialog::wxFileDialog(wxWindow &parent, string message, string defaultDir, string defaultFile, string wildcard, int style, wxPoint pos, wxSize size, string name)
+   Constructor. */
 PHP_METHOD(php_wxFileDialog, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15041,6 +15507,10 @@ PHP_METHOD(php_wxFileDialog, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto int wxFileDialog::ShowModal()
+   Shows the dialog, returning wxID_OK if the user pressed OK, and wxID_CANCEL otherwise. */
 PHP_METHOD(php_wxFileDialog, ShowModal)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15133,6 +15603,10 @@ PHP_METHOD(php_wxFileDialog, ShowModal)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileDialog::ShowModal\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileDialog::SetWildcard(string wildCard)
+   Sets the wildcard, which can contain multiple file types, for example: "BMP files (*.bmp)|*.bmp|GIF files (*.gif)|*.gif". */
 PHP_METHOD(php_wxFileDialog, SetWildcard)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15231,6 +15705,10 @@ PHP_METHOD(php_wxFileDialog, SetWildcard)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileDialog::SetWildcard\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileDialog::SetPath(string path)
+   Sets the path (the combined directory and filename that will be returned when the dialog is dismissed). */
 PHP_METHOD(php_wxFileDialog, SetPath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15329,6 +15807,10 @@ PHP_METHOD(php_wxFileDialog, SetPath)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileDialog::SetPath\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileDialog::SetMessage(string message)
+   Sets the message that will be displayed on the dialog. */
 PHP_METHOD(php_wxFileDialog, SetMessage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15427,6 +15909,10 @@ PHP_METHOD(php_wxFileDialog, SetMessage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileDialog::SetMessage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileDialog::SetFilterIndex(int filterIndex)
+   Sets the default filter index, starting from zero. */
 PHP_METHOD(php_wxFileDialog, SetFilterIndex)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15524,6 +16010,10 @@ PHP_METHOD(php_wxFileDialog, SetFilterIndex)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileDialog::SetFilterIndex\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileDialog::SetFilename(string setfilename)
+   Sets the default filename. */
 PHP_METHOD(php_wxFileDialog, SetFilename)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15622,6 +16112,10 @@ PHP_METHOD(php_wxFileDialog, SetFilename)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileDialog::SetFilename\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileDialog::SetDirectory(string directory)
+   Sets the default directory. */
 PHP_METHOD(php_wxFileDialog, SetDirectory)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15720,6 +16214,10 @@ PHP_METHOD(php_wxFileDialog, SetDirectory)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileDialog::SetDirectory\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileDialog::GetWildcard()
+   Returns the file dialog wildcard. */
 PHP_METHOD(php_wxFileDialog, GetWildcard)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15818,6 +16316,10 @@ PHP_METHOD(php_wxFileDialog, GetWildcard)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileDialog::GetWildcard\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileDialog::GetPaths(array &paths)
+   Fills the array paths with the full paths of the files chosen. */
 PHP_METHOD(php_wxFileDialog, GetPaths)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15944,6 +16446,10 @@ PHP_METHOD(php_wxFileDialog, GetPaths)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileDialog::GetPaths\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileDialog::GetMessage()
+   Returns the message that will be displayed on the dialog. */
 PHP_METHOD(php_wxFileDialog, GetMessage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16042,6 +16548,10 @@ PHP_METHOD(php_wxFileDialog, GetMessage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileDialog::GetMessage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileDialog::GetPath()
+   Returns the full path (directory and filename) of the selected file. */
 PHP_METHOD(php_wxFileDialog, GetPath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16140,6 +16650,10 @@ PHP_METHOD(php_wxFileDialog, GetPath)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileDialog::GetPath\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxFileDialog::GetFilterIndex()
+   Returns the index into the list of filters supplied, optionally, in the wildcard parameter. */
 PHP_METHOD(php_wxFileDialog, GetFilterIndex)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16232,6 +16746,10 @@ PHP_METHOD(php_wxFileDialog, GetFilterIndex)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileDialog::GetFilterIndex\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileDialog::GetFilenames(array &filenames)
+   Fills the array filenames with the names of the files chosen. */
 PHP_METHOD(php_wxFileDialog, GetFilenames)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16358,6 +16876,10 @@ PHP_METHOD(php_wxFileDialog, GetFilenames)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileDialog::GetFilenames\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileDialog::GetFilename()
+   Returns the default filename. */
 PHP_METHOD(php_wxFileDialog, GetFilename)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16456,6 +16978,10 @@ PHP_METHOD(php_wxFileDialog, GetFilename)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileDialog::GetFilename\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxWindow wxFileDialog::GetExtraControl()
+   If functions SetExtraControlCreator() and ShowModal() were called, returns the extra window. */
 PHP_METHOD(php_wxFileDialog, GetExtraControl)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16571,6 +17097,10 @@ PHP_METHOD(php_wxFileDialog, GetExtraControl)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileDialog::GetExtraControl\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileDialog::GetDirectory()
+   Returns the default directory. */
 PHP_METHOD(php_wxFileDialog, GetDirectory)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16669,6 +17199,8 @@ PHP_METHOD(php_wxFileDialog, GetDirectory)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileDialog::GetDirectory\n");
 	}
 }
+/* }}} */
+
 void php_wxFontData_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16709,6 +17241,8 @@ void php_wxFontData_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxFontData::wxFontData()
+   Constructor. */
 PHP_METHOD(php_wxFontData, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16789,6 +17323,10 @@ PHP_METHOD(php_wxFontData, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxFontData::SetShowHelp(bool showHelp)
+   Determines whether the Help button will be displayed in the font dialog (Windows only). */
 PHP_METHOD(php_wxFontData, SetShowHelp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16886,6 +17424,10 @@ PHP_METHOD(php_wxFontData, SetShowHelp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontData::SetShowHelp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFontData::SetRange(int min, int max)
+   Sets the valid range for the font point size (Windows only). */
 PHP_METHOD(php_wxFontData, SetRange)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16984,6 +17526,10 @@ PHP_METHOD(php_wxFontData, SetRange)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontData::SetRange\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFontData::SetInitialFont(wxFont font)
+   Sets the font that will be initially used by the font dialog. */
 PHP_METHOD(php_wxFontData, SetInitialFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17099,6 +17645,10 @@ PHP_METHOD(php_wxFontData, SetInitialFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontData::SetInitialFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFontData::SetColour(wxColour colour)
+   Sets the colour that will be used for the font foreground colour. */
 PHP_METHOD(php_wxFontData, SetColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17214,6 +17764,10 @@ PHP_METHOD(php_wxFontData, SetColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontData::SetColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFontData::SetChosenFont(wxFont font)
+   Sets the font that will be returned to the user (for internal use only). */
 PHP_METHOD(php_wxFontData, SetChosenFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17329,6 +17883,10 @@ PHP_METHOD(php_wxFontData, SetChosenFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontData::SetChosenFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFontData::SetAllowSymbols(bool allowSymbols)
+   Under Windows, determines whether symbol fonts can be selected. */
 PHP_METHOD(php_wxFontData, SetAllowSymbols)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17426,6 +17984,10 @@ PHP_METHOD(php_wxFontData, SetAllowSymbols)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontData::SetAllowSymbols\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFontData::GetShowHelp()
+   Returns true if the Help button will be shown (Windows only). */
 PHP_METHOD(php_wxFontData, GetShowHelp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17518,6 +18080,10 @@ PHP_METHOD(php_wxFontData, GetShowHelp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontData::GetShowHelp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFont wxFontData::GetInitialFont()
+   Gets the font that will be initially used by the font dialog. */
 PHP_METHOD(php_wxFontData, GetInitialFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17615,6 +18181,10 @@ PHP_METHOD(php_wxFontData, GetInitialFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontData::GetInitialFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFontData::GetEnableEffects()
+   Determines whether "effects" are enabled under Windows. */
 PHP_METHOD(php_wxFontData, GetEnableEffects)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17707,6 +18277,10 @@ PHP_METHOD(php_wxFontData, GetEnableEffects)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontData::GetEnableEffects\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxFontData::GetColour()
+   Gets the colour associated with the font dialog. */
 PHP_METHOD(php_wxFontData, GetColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17819,6 +18393,10 @@ PHP_METHOD(php_wxFontData, GetColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontData::GetColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFont wxFontData::GetChosenFont()
+   Gets the font chosen by the user if the user pressed OK (wxFontDialog::ShowModal() returned wxID_OK). */
 PHP_METHOD(php_wxFontData, GetChosenFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17916,6 +18494,10 @@ PHP_METHOD(php_wxFontData, GetChosenFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontData::GetChosenFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFontData::GetAllowSymbols()
+   Under Windows, returns a flag determining whether symbol fonts can be selected. */
 PHP_METHOD(php_wxFontData, GetAllowSymbols)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18008,6 +18590,10 @@ PHP_METHOD(php_wxFontData, GetAllowSymbols)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontData::GetAllowSymbols\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFontData::EnableEffects(bool enable)
+   Enables or disables "effects" under Windows or generic only. */
 PHP_METHOD(php_wxFontData, EnableEffects)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18105,10 +18691,14 @@ PHP_METHOD(php_wxFontData, EnableEffects)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontData::EnableEffects\n");
 	}
 }
+/* }}} */
+
 void php_wxFontDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxFontDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
 }
+/* {{{ proto bool wxFontDialog::Create(wxWindow &parent)
+   Creates the dialog if the wxFontDialog object had been initialized using the default constructor. */
 PHP_METHOD(php_wxFontDialog, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18298,6 +18888,10 @@ PHP_METHOD(php_wxFontDialog, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontDialog::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFontData wxFontDialog::GetFontData()
+   Returns the font data associated with the font dialog. */
 PHP_METHOD(php_wxFontDialog, GetFontData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18462,6 +19056,10 @@ PHP_METHOD(php_wxFontDialog, GetFontData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontDialog::GetFontData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxFontDialog::ShowModal()
+   Shows the dialog, returning wxID_OK if the user pressed Ok, and wxID_CANCEL otherwise. */
 PHP_METHOD(php_wxFontDialog, ShowModal)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18554,6 +19152,10 @@ PHP_METHOD(php_wxFontDialog, ShowModal)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontDialog::ShowModal\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFontDialog::wxFontDialog()
+   Default ctor. */
 PHP_METHOD(php_wxFontDialog, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18761,10 +19363,13 @@ PHP_METHOD(php_wxFontDialog, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxMessageDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxMessageDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
 }
+/* {{{ proto string wxMessageDialog::GetCancelLabel() */
 PHP_METHOD(php_wxMessageDialog, GetCancelLabel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18863,6 +19468,9 @@ PHP_METHOD(php_wxMessageDialog, GetCancelLabel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMessageDialog::GetCancelLabel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxMessageDialog::GetCaption() */
 PHP_METHOD(php_wxMessageDialog, GetCaption)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18961,6 +19569,9 @@ PHP_METHOD(php_wxMessageDialog, GetCaption)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMessageDialog::GetCaption\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxMessageDialog::GetEffectiveIcon() */
 PHP_METHOD(php_wxMessageDialog, GetEffectiveIcon)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19053,6 +19664,9 @@ PHP_METHOD(php_wxMessageDialog, GetEffectiveIcon)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMessageDialog::GetEffectiveIcon\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxMessageDialog::GetExtendedMessage() */
 PHP_METHOD(php_wxMessageDialog, GetExtendedMessage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19151,6 +19765,9 @@ PHP_METHOD(php_wxMessageDialog, GetExtendedMessage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMessageDialog::GetExtendedMessage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxMessageDialog::GetHelpLabel() */
 PHP_METHOD(php_wxMessageDialog, GetHelpLabel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19249,6 +19866,9 @@ PHP_METHOD(php_wxMessageDialog, GetHelpLabel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMessageDialog::GetHelpLabel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxMessageDialog::GetMessage() */
 PHP_METHOD(php_wxMessageDialog, GetMessage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19347,6 +19967,9 @@ PHP_METHOD(php_wxMessageDialog, GetMessage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMessageDialog::GetMessage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxMessageDialog::GetMessageDialogStyle() */
 PHP_METHOD(php_wxMessageDialog, GetMessageDialogStyle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19439,6 +20062,9 @@ PHP_METHOD(php_wxMessageDialog, GetMessageDialogStyle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMessageDialog::GetMessageDialogStyle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxMessageDialog::GetNoLabel() */
 PHP_METHOD(php_wxMessageDialog, GetNoLabel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19537,6 +20163,9 @@ PHP_METHOD(php_wxMessageDialog, GetNoLabel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMessageDialog::GetNoLabel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxMessageDialog::GetOKLabel() */
 PHP_METHOD(php_wxMessageDialog, GetOKLabel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19635,6 +20264,9 @@ PHP_METHOD(php_wxMessageDialog, GetOKLabel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMessageDialog::GetOKLabel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxMessageDialog::GetYesLabel() */
 PHP_METHOD(php_wxMessageDialog, GetYesLabel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19733,6 +20365,9 @@ PHP_METHOD(php_wxMessageDialog, GetYesLabel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMessageDialog::GetYesLabel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMessageDialog::HasCustomLabels() */
 PHP_METHOD(php_wxMessageDialog, HasCustomLabels)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19825,6 +20460,10 @@ PHP_METHOD(php_wxMessageDialog, HasCustomLabels)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMessageDialog::HasCustomLabels\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMessageDialog::SetExtendedMessage(string extendedMessage)
+   Sets the extended message for the dialog: this message is usually an extension of the short message specified in the constructor or set with SetMessage(). */
 PHP_METHOD(php_wxMessageDialog, SetExtendedMessage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19923,6 +20562,10 @@ PHP_METHOD(php_wxMessageDialog, SetExtendedMessage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMessageDialog::SetExtendedMessage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMessageDialog::wxMessageDialog(wxWindow &parent, string message, string caption, int style, wxPoint pos)
+   Constructor specifying the message box properties. */
 PHP_METHOD(php_wxMessageDialog, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20083,6 +20726,10 @@ PHP_METHOD(php_wxMessageDialog, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto int wxMessageDialog::ShowModal()
+   Shows the dialog, returning one of wxID_OK, wxID_CANCEL, wxID_YES, wxID_NO or wxID_HELP. */
 PHP_METHOD(php_wxMessageDialog, ShowModal)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20175,6 +20822,10 @@ PHP_METHOD(php_wxMessageDialog, ShowModal)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMessageDialog::ShowModal\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMessageDialog::SetYesNoLabels(string yes, string no)
+   Overrides the default labels of the Yes and No buttons. */
 PHP_METHOD(php_wxMessageDialog, SetYesNoLabels)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20275,6 +20926,10 @@ PHP_METHOD(php_wxMessageDialog, SetYesNoLabels)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMessageDialog::SetYesNoLabels\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMessageDialog::SetYesNoCancelLabels(string yes, string no, string cancel)
+   Overrides the default labels of the Yes, No and Cancel buttons. */
 PHP_METHOD(php_wxMessageDialog, SetYesNoCancelLabels)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20377,6 +21032,10 @@ PHP_METHOD(php_wxMessageDialog, SetYesNoCancelLabels)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMessageDialog::SetYesNoCancelLabels\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMessageDialog::SetOKLabel(string ok)
+   Overrides the default label of the OK button. */
 PHP_METHOD(php_wxMessageDialog, SetOKLabel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20475,6 +21134,10 @@ PHP_METHOD(php_wxMessageDialog, SetOKLabel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMessageDialog::SetOKLabel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMessageDialog::SetOKCancelLabels(string ok, string cancel)
+   Overrides the default labels of the OK and Cancel buttons. */
 PHP_METHOD(php_wxMessageDialog, SetOKCancelLabels)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20575,6 +21238,10 @@ PHP_METHOD(php_wxMessageDialog, SetOKCancelLabels)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMessageDialog::SetOKCancelLabels\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMessageDialog::SetMessage(string message)
+   Sets the message shown by the dialog. */
 PHP_METHOD(php_wxMessageDialog, SetMessage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20673,6 +21340,10 @@ PHP_METHOD(php_wxMessageDialog, SetMessage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMessageDialog::SetMessage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMessageDialog::SetHelpLabel(string help)
+   Sets the label for the Help button. */
 PHP_METHOD(php_wxMessageDialog, SetHelpLabel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20771,10 +21442,14 @@ PHP_METHOD(php_wxMessageDialog, SetHelpLabel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMessageDialog::SetHelpLabel\n");
 	}
 }
+/* }}} */
+
 void php_wxGenericProgressDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxGenericProgressDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
 }
+/* {{{ proto string wxGenericProgressDialog::GetMessage()
+   Returns the last message passed to the Update() function; if you always passed wxEmptyString to Update() then the message set through the constructor is returned. */
 PHP_METHOD(php_wxGenericProgressDialog, GetMessage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20877,6 +21552,10 @@ PHP_METHOD(php_wxGenericProgressDialog, GetMessage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGenericProgressDialog::GetMessage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGenericProgressDialog::GetRange()
+   Returns the maximum value of the progress meter, as passed to the constructor or wxNOT_FOUND if the dialog has no progress bar. */
 PHP_METHOD(php_wxGenericProgressDialog, GetRange)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20973,6 +21652,10 @@ PHP_METHOD(php_wxGenericProgressDialog, GetRange)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGenericProgressDialog::GetRange\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGenericProgressDialog::GetValue()
+   Returns the last value passed to the Update() function or wxNOT_FOUND if the dialog has no progress bar. */
 PHP_METHOD(php_wxGenericProgressDialog, GetValue)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21069,6 +21752,10 @@ PHP_METHOD(php_wxGenericProgressDialog, GetValue)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGenericProgressDialog::GetValue\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGenericProgressDialog::Resume()
+   Can be used to continue with the dialog, after the user had clicked the "Abort" button. */
 PHP_METHOD(php_wxGenericProgressDialog, Resume)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21165,6 +21852,10 @@ PHP_METHOD(php_wxGenericProgressDialog, Resume)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGenericProgressDialog::Resume\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGenericProgressDialog::Pulse(string newmsg, bool &skip)
+   Like Update() but makes the gauge control run in indeterminate mode. */
 PHP_METHOD(php_wxGenericProgressDialog, Pulse)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21300,6 +21991,10 @@ PHP_METHOD(php_wxGenericProgressDialog, Pulse)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGenericProgressDialog::Pulse\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGenericProgressDialog::SetRange(int maximum)
+   Changes the maximum value of the progress meter given in the constructor. */
 PHP_METHOD(php_wxGenericProgressDialog, SetRange)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21401,6 +22096,10 @@ PHP_METHOD(php_wxGenericProgressDialog, SetRange)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGenericProgressDialog::SetRange\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGenericProgressDialog::Update(int value, string newmsg, bool &skip)
+   Updates the dialog, setting the progress bar to the new value and updating the message if new one is specified. */
 PHP_METHOD(php_wxGenericProgressDialog, Update)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21537,6 +22236,10 @@ PHP_METHOD(php_wxGenericProgressDialog, Update)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGenericProgressDialog::Update\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGenericProgressDialog::WasCancelled()
+   Returns true if the "Cancel" button was pressed. */
 PHP_METHOD(php_wxGenericProgressDialog, WasCancelled)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21633,6 +22336,10 @@ PHP_METHOD(php_wxGenericProgressDialog, WasCancelled)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGenericProgressDialog::WasCancelled\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGenericProgressDialog::WasSkipped()
+   Returns true if the "Skip" button was pressed. */
 PHP_METHOD(php_wxGenericProgressDialog, WasSkipped)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21729,6 +22436,10 @@ PHP_METHOD(php_wxGenericProgressDialog, WasSkipped)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGenericProgressDialog::WasSkipped\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGenericProgressDialog::wxGenericProgressDialog(string title, string message, int maximum, wxWindow &parent, int style)
+   Constructor. */
 PHP_METHOD(php_wxGenericProgressDialog, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21869,6 +22580,8 @@ PHP_METHOD(php_wxGenericProgressDialog, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxRearrangeDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21909,6 +22622,8 @@ void php_wxRearrangeDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 		#endif
 	}
 }
+/* {{{ proto  wxRearrangeDialog::AddExtraControls(wxWindow &win)
+   Customize the dialog by adding extra controls to it. */
 PHP_METHOD(php_wxRearrangeDialog, AddExtraControls)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22024,6 +22739,10 @@ PHP_METHOD(php_wxRearrangeDialog, AddExtraControls)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRearrangeDialog::AddExtraControls\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRearrangeList wxRearrangeDialog::GetList()
+   Return the list control used by the dialog. */
 PHP_METHOD(php_wxRearrangeDialog, GetList)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22139,6 +22858,10 @@ PHP_METHOD(php_wxRearrangeDialog, GetList)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRearrangeDialog::GetList\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRearrangeDialog::wxRearrangeDialog()
+   Default constructor. */
 PHP_METHOD(php_wxRearrangeDialog, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22219,10 +22942,14 @@ PHP_METHOD(php_wxRearrangeDialog, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxSymbolPickerDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxSymbolPickerDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
 }
+/* {{{ proto bool wxSymbolPickerDialog::Create(string symbol, string initialFont, string normalTextFont, wxWindow &parent, int id, string caption, wxPoint pos, wxSize size, int style)
+   Creation: see the constructor for details about the parameters. */
 PHP_METHOD(php_wxSymbolPickerDialog, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22449,6 +23176,10 @@ PHP_METHOD(php_wxSymbolPickerDialog, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSymbolPickerDialog::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxSymbolPickerDialog::GetFontName()
+   Returns the font name (the font reflected in the font list). */
 PHP_METHOD(php_wxSymbolPickerDialog, GetFontName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22547,6 +23278,10 @@ PHP_METHOD(php_wxSymbolPickerDialog, GetFontName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSymbolPickerDialog::GetFontName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxSymbolPickerDialog::GetFromUnicode()
+   Returns true if the dialog is showing the full range of Unicode characters. */
 PHP_METHOD(php_wxSymbolPickerDialog, GetFromUnicode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22639,6 +23374,10 @@ PHP_METHOD(php_wxSymbolPickerDialog, GetFromUnicode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSymbolPickerDialog::GetFromUnicode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxSymbolPickerDialog::GetNormalTextFontName()
+   Gets the font name used for displaying symbols in the absence of a selected font. */
 PHP_METHOD(php_wxSymbolPickerDialog, GetNormalTextFontName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22737,6 +23476,10 @@ PHP_METHOD(php_wxSymbolPickerDialog, GetNormalTextFontName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSymbolPickerDialog::GetNormalTextFontName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxSymbolPickerDialog::GetSymbol()
+   Gets the current or initial symbol as a string. */
 PHP_METHOD(php_wxSymbolPickerDialog, GetSymbol)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22835,6 +23578,10 @@ PHP_METHOD(php_wxSymbolPickerDialog, GetSymbol)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSymbolPickerDialog::GetSymbol\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxSymbolPickerDialog::GetSymbolChar()
+   Gets the selected symbol character as an integer. */
 PHP_METHOD(php_wxSymbolPickerDialog, GetSymbolChar)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22927,6 +23674,10 @@ PHP_METHOD(php_wxSymbolPickerDialog, GetSymbolChar)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSymbolPickerDialog::GetSymbolChar\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxSymbolPickerDialog::HasSelection()
+   Returns true if a symbol is selected. */
 PHP_METHOD(php_wxSymbolPickerDialog, HasSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23019,6 +23770,10 @@ PHP_METHOD(php_wxSymbolPickerDialog, HasSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSymbolPickerDialog::HasSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSymbolPickerDialog::SetFontName(string value)
+   Sets the initial/selected font name. */
 PHP_METHOD(php_wxSymbolPickerDialog, SetFontName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23117,6 +23872,10 @@ PHP_METHOD(php_wxSymbolPickerDialog, SetFontName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSymbolPickerDialog::SetFontName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSymbolPickerDialog::SetFromUnicode(bool value)
+   Sets the internal flag indicating that the full Unicode range should be displayed. */
 PHP_METHOD(php_wxSymbolPickerDialog, SetFromUnicode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23214,6 +23973,10 @@ PHP_METHOD(php_wxSymbolPickerDialog, SetFromUnicode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSymbolPickerDialog::SetFromUnicode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSymbolPickerDialog::SetNormalTextFontName(string value)
+   Sets the name of the font to be used in the absence of a selected font. */
 PHP_METHOD(php_wxSymbolPickerDialog, SetNormalTextFontName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23312,6 +24075,10 @@ PHP_METHOD(php_wxSymbolPickerDialog, SetNormalTextFontName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSymbolPickerDialog::SetNormalTextFontName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSymbolPickerDialog::SetSymbol(string value)
+   Sets the symbol as a one or zero character string. */
 PHP_METHOD(php_wxSymbolPickerDialog, SetSymbol)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23410,6 +24177,10 @@ PHP_METHOD(php_wxSymbolPickerDialog, SetSymbol)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSymbolPickerDialog::SetSymbol\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSymbolPickerDialog::SetUnicodeMode(bool unicodeMode)
+   Sets Unicode display mode. */
 PHP_METHOD(php_wxSymbolPickerDialog, SetUnicodeMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23507,6 +24278,10 @@ PHP_METHOD(php_wxSymbolPickerDialog, SetUnicodeMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSymbolPickerDialog::SetUnicodeMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxSymbolPickerDialog::UseNormalFont()
+   Returns true if the has specified normal text - that is, there is no selected font. */
 PHP_METHOD(php_wxSymbolPickerDialog, UseNormalFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23599,6 +24374,10 @@ PHP_METHOD(php_wxSymbolPickerDialog, UseNormalFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSymbolPickerDialog::UseNormalFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSymbolPickerDialog::wxSymbolPickerDialog()
+   Default ctor. */
 PHP_METHOD(php_wxSymbolPickerDialog, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23839,10 +24618,14 @@ PHP_METHOD(php_wxSymbolPickerDialog, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxPasswordEntryDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxPasswordEntryDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
 }
+/* {{{ proto  wxPasswordEntryDialog::wxPasswordEntryDialog(wxWindow &parent, string message, string caption, string defaultValue, int style, wxPoint pos)
+   Constructor. */
 PHP_METHOD(php_wxPasswordEntryDialog, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24016,10 +24799,14 @@ PHP_METHOD(php_wxPasswordEntryDialog, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxTextEntryDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxTextEntryDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
 }
+/* {{{ proto string wxTextEntryDialog::GetValue()
+   Returns the text that the user has entered if the user has pressed OK, or the original value if the user has pressed Cancel. */
 PHP_METHOD(php_wxTextEntryDialog, GetValue)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24122,6 +24909,10 @@ PHP_METHOD(php_wxTextEntryDialog, GetValue)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextEntryDialog::GetValue\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextEntryDialog::SetValue(string value)
+   Sets the default text value. */
 PHP_METHOD(php_wxTextEntryDialog, SetValue)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24224,6 +25015,10 @@ PHP_METHOD(php_wxTextEntryDialog, SetValue)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextEntryDialog::SetValue\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxTextEntryDialog::ShowModal()
+   Shows the dialog, returning wxID_OK if the user pressed OK, and wxID_CANCEL otherwise. */
 PHP_METHOD(php_wxTextEntryDialog, ShowModal)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24320,6 +25115,10 @@ PHP_METHOD(php_wxTextEntryDialog, ShowModal)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextEntryDialog::ShowModal\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextEntryDialog::wxTextEntryDialog(wxWindow &parent, string message, string caption, string value, int style, wxPoint pos)
+   Constructor. */
 PHP_METHOD(php_wxTextEntryDialog, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24493,10 +25292,14 @@ PHP_METHOD(php_wxTextEntryDialog, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxWizard_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxWizard went out of scope. Remember to always call Destroy() to prevent memory leaks.");
 }
+/* {{{ proto bool wxWizard::Create(wxWindow &parent, int id, string title, wxBitmap bitmap, wxPoint pos, int style)
+   Creates the wizard dialog. */
 PHP_METHOD(php_wxWizard, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24717,6 +25520,10 @@ PHP_METHOD(php_wxWizard, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWizard::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxWizard::FitToPage(wxWizardPage firstPage)
+   This method is obsolete, use GetPageAreaSizer() instead. */
 PHP_METHOD(php_wxWizard, FitToPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24832,6 +25639,10 @@ PHP_METHOD(php_wxWizard, FitToPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWizard::FitToPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxBitmap wxWizard::GetBitmap()
+   Returns the bitmap used for the wizard. */
 PHP_METHOD(php_wxWizard, GetBitmap)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24944,6 +25755,10 @@ PHP_METHOD(php_wxWizard, GetBitmap)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWizard::GetBitmap\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxWizard::GetBitmapBackgroundColour()
+   Returns the colour that should be used to fill the area not taken up by the wizard or page bitmap, if a non-zero bitmap placement flag has been set. */
 PHP_METHOD(php_wxWizard, GetBitmapBackgroundColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25056,6 +25871,10 @@ PHP_METHOD(php_wxWizard, GetBitmapBackgroundColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWizard::GetBitmapBackgroundColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxWizard::GetBitmapPlacement()
+   Returns the flags indicating how the wizard or page bitmap should be expanded and positioned to fit the page height. */
 PHP_METHOD(php_wxWizard, GetBitmapPlacement)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25148,6 +25967,10 @@ PHP_METHOD(php_wxWizard, GetBitmapPlacement)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWizard::GetBitmapPlacement\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxWizardPage wxWizard::GetCurrentPage()
+   Get the current page while the wizard is running. */
 PHP_METHOD(php_wxWizard, GetCurrentPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25263,6 +26086,10 @@ PHP_METHOD(php_wxWizard, GetCurrentPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWizard::GetCurrentPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxWizard::GetMinimumBitmapWidth()
+   Returns the minimum width for the bitmap that will be constructed to contain the actual wizard or page bitmap if a non-zero bitmap placement flag has been set. */
 PHP_METHOD(php_wxWizard, GetMinimumBitmapWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25355,6 +26182,10 @@ PHP_METHOD(php_wxWizard, GetMinimumBitmapWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWizard::GetMinimumBitmapWidth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxWizard::GetPageSize()
+   Returns the size available for the pages. */
 PHP_METHOD(php_wxWizard, GetPageSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25452,6 +26283,10 @@ PHP_METHOD(php_wxWizard, GetPageSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWizard::GetPageSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxWizard::HasNextPage(wxWizardPage &page)
+   Return true if this page is not the last one in the wizard. */
 PHP_METHOD(php_wxWizard, HasNextPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25567,6 +26402,10 @@ PHP_METHOD(php_wxWizard, HasNextPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWizard::HasNextPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxWizard::HasPrevPage(wxWizardPage &page)
+   Returns true if this page is not the last one in the wizard. */
 PHP_METHOD(php_wxWizard, HasPrevPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25682,6 +26521,10 @@ PHP_METHOD(php_wxWizard, HasPrevPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWizard::HasPrevPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxWizard::RunWizard(wxWizardPage &firstPage)
+   Executes the wizard starting from the given page, returning true if it was successfully finished or false if user cancelled it. */
 PHP_METHOD(php_wxWizard, RunWizard)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25797,6 +26640,10 @@ PHP_METHOD(php_wxWizard, RunWizard)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWizard::RunWizard\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxWizard::SetBitmap(wxBitmap bitmap)
+   Sets the bitmap used for the wizard. */
 PHP_METHOD(php_wxWizard, SetBitmap)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25912,6 +26759,10 @@ PHP_METHOD(php_wxWizard, SetBitmap)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWizard::SetBitmap\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxWizard::SetBitmapBackgroundColour(wxColour colour)
+   Sets the colour that should be used to fill the area not taken up by the wizard or page bitmap, if a non-zero bitmap placement flag has been set. */
 PHP_METHOD(php_wxWizard, SetBitmapBackgroundColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26027,6 +26878,10 @@ PHP_METHOD(php_wxWizard, SetBitmapBackgroundColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWizard::SetBitmapBackgroundColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxWizard::SetBitmapPlacement(int placement)
+   Sets the flags indicating how the wizard or page bitmap should be expanded and positioned to fit the page height. */
 PHP_METHOD(php_wxWizard, SetBitmapPlacement)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26124,6 +26979,10 @@ PHP_METHOD(php_wxWizard, SetBitmapPlacement)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWizard::SetBitmapPlacement\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxWizard::SetBorder(int border)
+   Sets width of border around page area. */
 PHP_METHOD(php_wxWizard, SetBorder)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26221,6 +27080,10 @@ PHP_METHOD(php_wxWizard, SetBorder)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWizard::SetBorder\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxWizard::SetMinimumBitmapWidth(int width)
+   Sets the minimum width for the bitmap that will be constructed to contain the actual wizard or page bitmap if a non-zero bitmap placement flag has been set. */
 PHP_METHOD(php_wxWizard, SetMinimumBitmapWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26318,6 +27181,10 @@ PHP_METHOD(php_wxWizard, SetMinimumBitmapWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWizard::SetMinimumBitmapWidth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxWizard::SetPageSize(wxSize sizePage)
+   Sets the minimal size to be made available for the wizard pages. */
 PHP_METHOD(php_wxWizard, SetPageSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26433,6 +27300,10 @@ PHP_METHOD(php_wxWizard, SetPageSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWizard::SetPageSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxWizard::wxWizard()
+   Default constructor. */
 PHP_METHOD(php_wxWizard, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26667,6 +27538,10 @@ PHP_METHOD(php_wxWizard, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto wxSizer wxWizard::GetPageAreaSizer()
+   Returns pointer to page area sizer. */
 PHP_METHOD(php_wxWizard, GetPageAreaSizer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26782,3 +27657,5 @@ PHP_METHOD(php_wxWizard, GetPageAreaSizer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWizard::GetPageAreaSizer\n");
 	}
 }
+/* }}} */
+

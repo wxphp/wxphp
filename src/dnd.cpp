@@ -91,6 +91,8 @@ void php_wxClipboard_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto bool wxClipboard::AddData(wxDataObject &data)
+   Call this function to add the data object to the clipboard. */
 PHP_METHOD(php_wxClipboard, AddData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -206,6 +208,10 @@ PHP_METHOD(php_wxClipboard, AddData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxClipboard::AddData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxClipboard::Clear()
+   Clears the global clipboard object and the system's clipboard if possible. */
 PHP_METHOD(php_wxClipboard, Clear)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -298,6 +304,10 @@ PHP_METHOD(php_wxClipboard, Clear)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxClipboard::Clear\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxClipboard::Close()
+   Call this function to close the clipboard, having opened it with Open(). */
 PHP_METHOD(php_wxClipboard, Close)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -390,6 +400,10 @@ PHP_METHOD(php_wxClipboard, Close)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxClipboard::Close\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxClipboard::Flush()
+   Flushes the clipboard: this means that the data which is currently on clipboard will stay available even after the application exits (possibly eating memory), otherwise the clipboard will be emptied on exit. */
 PHP_METHOD(php_wxClipboard, Flush)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -482,6 +496,10 @@ PHP_METHOD(php_wxClipboard, Flush)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxClipboard::Flush\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxClipboard::GetData(wxDataObject &data)
+   Call this function to fill data with data on the clipboard, if available in the required format. */
 PHP_METHOD(php_wxClipboard, GetData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -597,6 +615,10 @@ PHP_METHOD(php_wxClipboard, GetData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxClipboard::GetData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxClipboard::IsOpened()
+   Returns true if the clipboard has been opened. */
 PHP_METHOD(php_wxClipboard, IsOpened)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -689,6 +711,10 @@ PHP_METHOD(php_wxClipboard, IsOpened)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxClipboard::IsOpened\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxClipboard::IsSupported(wxDataFormat format)
+   Returns true if there is data which matches the data format of the given data object currently available on the clipboard. */
 PHP_METHOD(php_wxClipboard, IsSupported)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -804,6 +830,10 @@ PHP_METHOD(php_wxClipboard, IsSupported)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxClipboard::IsSupported\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxClipboard::IsUsingPrimarySelection()
+   Returns true if we are using the primary selection, false if clipboard one. */
 PHP_METHOD(php_wxClipboard, IsUsingPrimarySelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -896,6 +926,10 @@ PHP_METHOD(php_wxClipboard, IsUsingPrimarySelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxClipboard::IsUsingPrimarySelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxClipboard::Open()
+   Call this function to open the clipboard before calling SetData() and GetData(). */
 PHP_METHOD(php_wxClipboard, Open)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -988,6 +1022,10 @@ PHP_METHOD(php_wxClipboard, Open)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxClipboard::Open\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxClipboard::SetData(wxDataObject &data)
+   Call this function to set the data object to the clipboard. */
 PHP_METHOD(php_wxClipboard, SetData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1103,6 +1141,10 @@ PHP_METHOD(php_wxClipboard, SetData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxClipboard::SetData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxClipboard::UsePrimarySelection(bool primary)
+   On platforms supporting it (all X11-based ports), wxClipboard uses the CLIPBOARD X11 selection by default. */
 PHP_METHOD(php_wxClipboard, UsePrimarySelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1211,6 +1253,10 @@ PHP_METHOD(php_wxClipboard, UsePrimarySelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxClipboard::UsePrimarySelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxClipboard::wxClipboard()
+   Default constructor. */
 PHP_METHOD(php_wxClipboard, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1291,6 +1337,8 @@ PHP_METHOD(php_wxClipboard, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxDataFormat_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1331,6 +1379,8 @@ void php_wxDataFormat_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto string wxDataFormat::GetId()
+   Returns the name of a custom format (this function will fail for a standard format). */
 PHP_METHOD(php_wxDataFormat, GetId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1429,6 +1479,10 @@ PHP_METHOD(php_wxDataFormat, GetId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataFormat::GetId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxDataFormatId wxDataFormat::GetType()
+   Returns the platform-specific number identifying the format. */
 PHP_METHOD(php_wxDataFormat, GetType)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1521,6 +1575,10 @@ PHP_METHOD(php_wxDataFormat, GetType)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataFormat::GetType\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataFormat::SetId(string format)
+   Sets the format to be the custom format identified by the given name. */
 PHP_METHOD(php_wxDataFormat, SetId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1619,6 +1677,10 @@ PHP_METHOD(php_wxDataFormat, SetId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataFormat::SetId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataFormat::SetType(wxDataFormatId type)
+   Sets the format to the given value, which should be one of wxDF_XXX constants. */
 PHP_METHOD(php_wxDataFormat, SetType)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1716,6 +1778,10 @@ PHP_METHOD(php_wxDataFormat, SetType)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataFormat::SetType\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataFormat::wxDataFormat(wxDataFormatId format)
+   Constructs a data format object for one of the standard data formats or an empty data object (use SetType() or SetId() later in this case). */
 PHP_METHOD(php_wxDataFormat, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1848,6 +1914,8 @@ PHP_METHOD(php_wxDataFormat, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1888,6 +1956,8 @@ void php_wxDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxDataObject::GetAllFormats(wxDataFormat &formats, Direction dir)
+   Copies all formats supported in the given direction dir to the array pointed to by formats. */
 void wxDataObject_php::GetAllFormats(wxDataFormat* formats, Direction dir)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1938,6 +2008,10 @@ void wxDataObject_php::GetAllFormats(wxDataFormat* formats, Direction dir)const
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto bool wxDataObject::GetDataHere(wxDataFormat format, void buf)
+   The method will write the data of the format format in the buffer buf and return true on success, false on failure. */
 bool wxDataObject_php::GetDataHere(const wxDataFormat& format, void* buf)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1988,6 +2062,10 @@ bool wxDataObject_php::GetDataHere(const wxDataFormat& format, void* buf)const
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto int wxDataObject::GetDataSize(wxDataFormat format)
+   Returns the data size of the given format format. */
 size_t wxDataObject_php::GetDataSize(const wxDataFormat& format)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2037,6 +2115,10 @@ size_t wxDataObject_php::GetDataSize(const wxDataFormat& format)const
 		return (size_t) Z_LVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto int wxDataObject::GetFormatCount(Direction dir)
+   Returns the number of available formats for rendering or setting the data. */
 size_t wxDataObject_php::GetFormatCount(Direction dir)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2085,6 +2167,10 @@ size_t wxDataObject_php::GetFormatCount(Direction dir)const
 		return (size_t) Z_LVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto wxDataFormat wxDataObject::GetPreferredFormat(Direction dir)
+   Returns the preferred format for either rendering the data (if dir is Get, its default value) or for setting it. */
 wxDataFormat wxDataObject_php::GetPreferredFormat(Direction dir)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2138,6 +2224,10 @@ wxDataFormat wxDataObject_php::GetPreferredFormat(Direction dir)const
 		return *(wxDataFormat*) return_object;
 	
 }
+/* }}} */
+
+/* {{{ proto bool wxDataObject::IsSupported(wxDataFormat format, Direction dir)
+   Returns true if this format is supported. */
 PHP_METHOD(php_wxDataObject, IsSupported)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2294,6 +2384,10 @@ PHP_METHOD(php_wxDataObject, IsSupported)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataObject::IsSupported\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDataObject::SetData(wxDataFormat format, int len, void buf)
+   Set the data in the format format of the length len provided in the buffer buf. */
 PHP_METHOD(php_wxDataObject, SetData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2440,6 +2534,10 @@ PHP_METHOD(php_wxDataObject, SetData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataObject::SetData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataObject::wxDataObject()
+   Constructor. */
 PHP_METHOD(php_wxDataObject, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2520,6 +2618,8 @@ PHP_METHOD(php_wxDataObject, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxCustomDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2560,6 +2660,8 @@ void php_wxCustomDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 		#endif
 	}
 }
+/* {{{ proto void wxCustomDataObject::Alloc(int size)
+   This function is called to allocate size bytes of memory from SetData(). */
 PHP_METHOD(php_wxCustomDataObject, Alloc)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2657,6 +2759,10 @@ PHP_METHOD(php_wxCustomDataObject, Alloc)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCustomDataObject::Alloc\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxCustomDataObject::Free()
+   This function is called when the data is freed, you may override it to anything you want (or may be nothing at all). */
 PHP_METHOD(php_wxCustomDataObject, Free)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2749,6 +2855,10 @@ PHP_METHOD(php_wxCustomDataObject, Free)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCustomDataObject::Free\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto void wxCustomDataObject::GetData()
+   Returns a pointer to the data. */
 PHP_METHOD(php_wxCustomDataObject, GetData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2841,6 +2951,10 @@ PHP_METHOD(php_wxCustomDataObject, GetData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCustomDataObject::GetData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxCustomDataObject::GetSize()
+   Returns the data size in bytes. */
 PHP_METHOD(php_wxCustomDataObject, GetSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2933,6 +3047,10 @@ PHP_METHOD(php_wxCustomDataObject, GetSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCustomDataObject::GetSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxCustomDataObject::SetData(int size, void data)
+   Set the data. */
 PHP_METHOD(php_wxCustomDataObject, SetData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3032,6 +3150,10 @@ PHP_METHOD(php_wxCustomDataObject, SetData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCustomDataObject::SetData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxCustomDataObject::TakeData(int size, void data)
+   Like SetData(), but doesn't copy the data - instead the object takes ownership of the pointer. */
 PHP_METHOD(php_wxCustomDataObject, TakeData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3136,6 +3258,10 @@ PHP_METHOD(php_wxCustomDataObject, TakeData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCustomDataObject::TakeData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxCustomDataObject::wxCustomDataObject(wxDataFormat format)
+   The constructor accepts a format argument which specifies the (single) format supported by this object. */
 PHP_METHOD(php_wxCustomDataObject, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3249,6 +3375,8 @@ PHP_METHOD(php_wxCustomDataObject, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxDataObjectComposite_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3289,6 +3417,8 @@ void php_wxDataObjectComposite_destruction_handler(zend_rsrc_list_entry *rsrc TS
 		#endif
 	}
 }
+/* {{{ proto  wxDataObjectComposite::Add(wxDataObjectSimple &dataObject, bool preferred)
+   Adds the dataObject to the list of supported objects and it becomes the preferred object if preferred is true. */
 PHP_METHOD(php_wxDataObjectComposite, Add)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3417,6 +3547,10 @@ PHP_METHOD(php_wxDataObjectComposite, Add)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataObjectComposite::Add\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxDataFormat wxDataObjectComposite::GetReceivedFormat()
+   Report the format passed to the SetData() method. */
 PHP_METHOD(php_wxDataObjectComposite, GetReceivedFormat)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3514,6 +3648,10 @@ PHP_METHOD(php_wxDataObjectComposite, GetReceivedFormat)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataObjectComposite::GetReceivedFormat\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataObjectComposite::wxDataObjectComposite()
+   The default constructor. */
 PHP_METHOD(php_wxDataObjectComposite, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3594,6 +3732,8 @@ PHP_METHOD(php_wxDataObjectComposite, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxDataObjectSimple_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3634,6 +3774,8 @@ void php_wxDataObjectSimple_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 		#endif
 	}
 }
+/* {{{ proto bool wxDataObjectSimple::GetDataHere(void buf)
+   Copy the data to the buffer, return true on success. */
 PHP_METHOD(php_wxDataObjectSimple, GetDataHere)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3757,6 +3899,10 @@ PHP_METHOD(php_wxDataObjectSimple, GetDataHere)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataObjectSimple::GetDataHere\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDataObjectSimple::GetDataSize()
+   Gets the size of our data. */
 PHP_METHOD(php_wxDataObjectSimple, GetDataSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3869,6 +4015,10 @@ PHP_METHOD(php_wxDataObjectSimple, GetDataSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataObjectSimple::GetDataSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxDataFormat wxDataObjectSimple::GetFormat()
+   Returns the (one and only one) format supported by this object. */
 PHP_METHOD(php_wxDataObjectSimple, GetFormat)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4001,6 +4151,10 @@ PHP_METHOD(php_wxDataObjectSimple, GetFormat)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataObjectSimple::GetFormat\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDataObjectSimple::SetData(int len, void buf)
+   Copy the data from the buffer, return true on success. */
 PHP_METHOD(php_wxDataObjectSimple, SetData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4120,6 +4274,10 @@ PHP_METHOD(php_wxDataObjectSimple, SetData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataObjectSimple::SetData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataObjectSimple::SetFormat(wxDataFormat format)
+   Sets the supported format. */
 PHP_METHOD(php_wxDataObjectSimple, SetFormat)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4255,6 +4413,10 @@ PHP_METHOD(php_wxDataObjectSimple, SetFormat)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataObjectSimple::SetFormat\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataObjectSimple::wxDataObjectSimple(wxDataFormat format)
+   Constructor accepts the supported format (none by default) which may also be set later with SetFormat(). */
 PHP_METHOD(php_wxDataObjectSimple, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4368,6 +4530,8 @@ PHP_METHOD(php_wxDataObjectSimple, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxBitmapDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4408,6 +4572,8 @@ void php_wxBitmapDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 		#endif
 	}
 }
+/* {{{ proto wxBitmap wxBitmapDataObject::GetBitmap()
+   Returns the bitmap associated with the data object. */
 PHP_METHOD(php_wxBitmapDataObject, GetBitmap)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4505,6 +4671,10 @@ PHP_METHOD(php_wxBitmapDataObject, GetBitmap)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxBitmapDataObject::GetBitmap\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxBitmapDataObject::SetBitmap(wxBitmap bitmap)
+   Sets the bitmap associated with the data object. */
 PHP_METHOD(php_wxBitmapDataObject, SetBitmap)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4620,6 +4790,10 @@ PHP_METHOD(php_wxBitmapDataObject, SetBitmap)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxBitmapDataObject::SetBitmap\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxBitmapDataObject::wxBitmapDataObject(wxBitmap bitmap)
+   Constructor, optionally passing a bitmap (otherwise use SetBitmap() later). */
 PHP_METHOD(php_wxBitmapDataObject, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4733,6 +4907,8 @@ PHP_METHOD(php_wxBitmapDataObject, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxURLDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4773,6 +4949,8 @@ void php_wxURLDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+/* {{{ proto string wxURLDataObject::GetURL()
+   Returns the URL stored by this object, as a string. */
 PHP_METHOD(php_wxURLDataObject, GetURL)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4871,6 +5049,10 @@ PHP_METHOD(php_wxURLDataObject, GetURL)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxURLDataObject::GetURL\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxURLDataObject::SetURL(string url)
+   Sets the URL stored by this object. */
 PHP_METHOD(php_wxURLDataObject, SetURL)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4969,6 +5151,10 @@ PHP_METHOD(php_wxURLDataObject, SetURL)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxURLDataObject::SetURL\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxURLDataObject::wxURLDataObject(string url)
+   Constructor, may be used to initialize the URL. */
 PHP_METHOD(php_wxURLDataObject, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5065,6 +5251,8 @@ PHP_METHOD(php_wxURLDataObject, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxTextDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5105,6 +5293,8 @@ void php_wxTextDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		#endif
 	}
 }
+/* {{{ proto  wxTextDataObject::GetAllFormats(wxDataFormat &formats, Direction dir)
+   Returns all the formats supported by wxTextDataObject. */
 void wxTextDataObject_php::GetAllFormats(wxDataFormat* formats, Direction dir)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5155,6 +5345,10 @@ void wxTextDataObject_php::GetAllFormats(wxDataFormat* formats, Direction dir)co
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto wxDataFormat wxTextDataObject::GetFormat()
+   Returns the preferred format supported by this object. */
 PHP_METHOD(php_wxTextDataObject, GetFormat)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5271,6 +5465,10 @@ PHP_METHOD(php_wxTextDataObject, GetFormat)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextDataObject::GetFormat\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxTextDataObject::GetText()
+   Returns the text associated with the data object. */
 PHP_METHOD(php_wxTextDataObject, GetText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5373,6 +5571,10 @@ PHP_METHOD(php_wxTextDataObject, GetText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextDataObject::GetText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxTextDataObject::GetTextLength()
+   Returns the data size. */
 PHP_METHOD(php_wxTextDataObject, GetTextLength)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5469,6 +5671,10 @@ PHP_METHOD(php_wxTextDataObject, GetTextLength)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextDataObject::GetTextLength\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextDataObject::SetText(string strText)
+   Sets the text associated with the data object. */
 PHP_METHOD(php_wxTextDataObject, SetText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5571,6 +5777,10 @@ PHP_METHOD(php_wxTextDataObject, SetText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextDataObject::SetText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextDataObject::wxTextDataObject(string text)
+   Constructor, may be used to initialise the text (otherwise SetText() should be used later). */
 PHP_METHOD(php_wxTextDataObject, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5667,6 +5877,10 @@ PHP_METHOD(php_wxTextDataObject, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto int wxTextDataObject::GetFormatCount(Direction dir)
+   Returns 2 under wxMac and wxGTK, where text data coming from the clipboard may be provided as ANSI (wxDF_TEXT) or as Unicode text (wxDF_UNICODETEXT, but only when wxUSE_UNICODE==1). */
 PHP_METHOD(php_wxTextDataObject, GetFormatCount)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5779,6 +5993,8 @@ PHP_METHOD(php_wxTextDataObject, GetFormatCount)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextDataObject::GetFormatCount\n");
 	}
 }
+/* }}} */
+
 void php_wxFileDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5819,6 +6035,8 @@ void php_wxFileDataObject_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		#endif
 	}
 }
+/* {{{ proto  wxFileDataObject::AddFile(string file)
+   Adds a file to the file list represented by this data object (Windows only). */
 PHP_METHOD(php_wxFileDataObject, AddFile)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5917,6 +6135,10 @@ PHP_METHOD(php_wxFileDataObject, AddFile)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileDataObject::AddFile\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto array wxFileDataObject::GetFilenames()
+   Returns the array of file names. */
 PHP_METHOD(php_wxFileDataObject, GetFilenames)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6019,6 +6241,10 @@ PHP_METHOD(php_wxFileDataObject, GetFilenames)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileDataObject::GetFilenames\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileDataObject::wxFileDataObject()
+   Constructor. */
 PHP_METHOD(php_wxFileDataObject, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6099,237 +6325,8 @@ PHP_METHOD(php_wxFileDataObject, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-void php_wxTextDropTarget_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxTextDropTarget_destruction_handler on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	
-	wxTextDropTarget_php* object = static_cast<wxTextDropTarget_php*>(rsrc->ptr);
-	
-	if(rsrc->ptr != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
-		#endif
-		
-		if(object->references.IsUserInitialized())
-		{	
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-			delete object;
-			
-			rsrc->ptr = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxTextDropTarget done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
-}
-PHP_METHOD(php_wxTextDropTarget, __construct)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxTextDropTarget::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
+/* }}} */
 
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct()\n");
-				#endif
-				_this = new wxTextDropTarget_php();
-
-				((wxTextDropTarget_php*) _this)->references.Initialize();
-				break;
-			}
-		}
-	}
-
-		
-	if(already_called)
-	{
-		long id_to_find = zend_list_insert(_this, le_wxTextDropTarget);
-		
-		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxTextDropTarget_php*) _this)->evnArray);
-		
-		array_init(((wxTextDropTarget_php*) _this)->evnArray);
-		
-		((wxTextDropTarget_php*) _this)->phpObj = getThis();
-		
-		((wxTextDropTarget_php*) _this)->InitProperties();
-		
-		#ifdef ZTS 
-		((wxTextDropTarget_php*) _this)->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxTextDropTarget::__constructor\n");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
-}
-bool wxTextDropTarget_php::OnDropText(wxCoord x, wxCoord y, const wxString& data)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxTextDropTarget::OnDropText\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zval *arguments[3];
-	
-	//Initilize arguments array
-	for(int i=0; i<3; i++)
-	{
-		MAKE_STD_ZVAL(arguments[i]);
-	}
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "OnDropText", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
-	zval **tmp;
-	int id_to_find;
-	void* return_object;
-	int rsrc_type;
-	
-	//Parameters for conversion
-	ZVAL_LONG(arguments[0], x);
-	ZVAL_LONG(arguments[1], y);
-	temp_string = (char*)malloc(sizeof(wxChar)*(data.size()+1));
-	strcpy(temp_string, (const char *) data.char_str());
-	ZVAL_STRING(arguments[2], temp_string, 1);
-	free(temp_string);
-		
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
-	#endif
-	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
-		#endif
-		
-		wxMessageBox("Failed to call virtual method 'wxTextDropTarget::OnDropText'!", "Error");
-	}
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
-		
-		return Z_BVAL_P(return_value);
-	
-}
-bool wxTextDropTarget_php::OnDrop(wxCoord x, wxCoord y)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxTextDropTarget::OnDrop\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zval *arguments[2];
-	
-	//Initilize arguments array
-	for(int i=0; i<2; i++)
-	{
-		MAKE_STD_ZVAL(arguments[i]);
-	}
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "OnDrop", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
-	zval **tmp;
-	int id_to_find;
-	void* return_object;
-	int rsrc_type;
-	
-	//Parameters for conversion
-	ZVAL_LONG(arguments[0], x);
-	ZVAL_LONG(arguments[1], y);
-		
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
-	#endif
-	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
-		#endif
-		
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
-		
-		return Z_BVAL_P(return_value);
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxTextDropTarget::OnDrop(x, y);
-}
 void php_wxDropTarget_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6370,124 +6367,8 @@ void php_wxDropTarget_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
-wxDragResult wxDropTarget_php::OnDragOver(wxCoord x, wxCoord y, wxDragResult def)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxDropTarget::OnDragOver\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zval *arguments[3];
-	
-	//Initilize arguments array
-	for(int i=0; i<3; i++)
-	{
-		MAKE_STD_ZVAL(arguments[i]);
-	}
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "OnDragOver", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
-	zval **tmp;
-	int id_to_find;
-	void* return_object;
-	int rsrc_type;
-	
-	//Parameters for conversion
-	ZVAL_LONG(arguments[0], x);
-	ZVAL_LONG(arguments[1], y);
-	ZVAL_LONG(arguments[2], def);
-		
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
-	#endif
-	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
-		#endif
-		
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
-		
-		return (wxDragResult) Z_LVAL_P(return_value);
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxDropTarget::OnDragOver(x, y, def);
-}
-wxDragResult wxDropTarget_php::OnEnter(wxCoord x, wxCoord y, wxDragResult def)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxDropTarget::OnEnter\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	zval *arguments[3];
-	
-	//Initilize arguments array
-	for(int i=0; i<3; i++)
-	{
-		MAKE_STD_ZVAL(arguments[i]);
-	}
-
-	zval* return_value;
-	MAKE_STD_ZVAL(return_value);
-	zval function_name;
-	ZVAL_STRING(&function_name, "OnEnter", 0);
-	char* temp_string;
-	char _wxResource[] = "wxResource";
-	zval **tmp;
-	int id_to_find;
-	void* return_object;
-	int rsrc_type;
-	
-	//Parameters for conversion
-	ZVAL_LONG(arguments[0], x);
-	ZVAL_LONG(arguments[1], y);
-	ZVAL_LONG(arguments[2], def);
-		
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Trying to call user defined method\n");
-	#endif
-	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Invocation of user defined method failed\n");
-		#endif
-		
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Returning userspace value.\n");
-		#endif
-		
-		return (wxDragResult) Z_LVAL_P(return_value);
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling original method\n");
-	php_printf("===========================================\n\n");
-	#endif
-	
-	//Call original method
-	return wxDropTarget::OnEnter(x, y, def);
-}
+/* {{{ proto  wxDropTarget::OnLeave()
+   Called when the mouse leaves the drop target. */
 void wxDropTarget_php::OnLeave()
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6539,6 +6420,10 @@ void wxDropTarget_php::OnLeave()
 	//Call original method
 	wxDropTarget::OnLeave();
 }
+/* }}} */
+
+/* {{{ proto  wxDropTarget::wxDropTarget(wxDataObject &data)
+   Constructor. */
 PHP_METHOD(php_wxDropTarget, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6652,6 +6537,10 @@ PHP_METHOD(php_wxDropTarget, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxDropTarget::SetDataObject(wxDataObject &data)
+   Sets the data wxDataObject associated with the drop target and deletes any previously associated data object. */
 PHP_METHOD(php_wxDropTarget, SetDataObject)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6775,20 +6664,29 @@ PHP_METHOD(php_wxDropTarget, SetDataObject)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDropTarget::SetDataObject\n");
 	}
 }
-bool wxDropTarget_php::GetData()
+/* }}} */
+
+/* {{{ proto wxDragResult wxDropTarget::OnDragOver(int x, int y, wxDragResult defResult)
+   Called when the mouse is being dragged over the drop target. */
+wxDragResult wxDropTarget_php::OnDragOver(wxCoord x, wxCoord y, wxDragResult defResult)
 {
 	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking virtual wxDropTarget::GetData\n");
+	php_printf("Invoking virtual wxDropTarget::OnDragOver\n");
 	php_printf("===========================================\n");
 	#endif
 	
-	zval* arguments[1];
-	arguments[0] = NULL;
+	zval *arguments[3];
+	
+	//Initilize arguments array
+	for(int i=0; i<3; i++)
+	{
+		MAKE_STD_ZVAL(arguments[i]);
+	}
 
 	zval* return_value;
 	MAKE_STD_ZVAL(return_value);
 	zval function_name;
-	ZVAL_STRING(&function_name, "GetData", 0);
+	ZVAL_STRING(&function_name, "OnDragOver", 0);
 	char* temp_string;
 	char _wxResource[] = "wxResource";
 	zval **tmp;
@@ -6797,27 +6695,210 @@ bool wxDropTarget_php::GetData()
 	int rsrc_type;
 	
 	//Parameters for conversion
+	ZVAL_LONG(arguments[0], x);
+	ZVAL_LONG(arguments[1], y);
+	ZVAL_LONG(arguments[2], defResult);
 		
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
 	#endif
 	
-	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 0, arguments TSRMLS_CC) == FAILURE)
+	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
 	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Invocation of user defined method failed\n");
 		#endif
 		
-		wxMessageBox("Failed to call virtual method 'wxDropTarget::GetData'!", "Error");
 	}
+	else
+	{
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
 		#endif
 		
-		return Z_BVAL_P(return_value);
+		return (wxDragResult) Z_LVAL_P(return_value);
+	}
 	
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling original method\n");
+	php_printf("===========================================\n\n");
+	#endif
+	
+	//Call original method
+	return wxDropTarget::OnDragOver(x, y, defResult);
 }
-wxDragResult wxDropTarget_php::OnData(wxCoord x, wxCoord y, wxDragResult def)
+/* }}} */
+
+/* {{{ proto wxDragResult wxDropTarget::OnEnter(int x, int y, wxDragResult defResult)
+   Called when the mouse enters the drop target. */
+wxDragResult wxDropTarget_php::OnEnter(wxCoord x, wxCoord y, wxDragResult defResult)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking virtual wxDropTarget::OnEnter\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zval *arguments[3];
+	
+	//Initilize arguments array
+	for(int i=0; i<3; i++)
+	{
+		MAKE_STD_ZVAL(arguments[i]);
+	}
+
+	zval* return_value;
+	MAKE_STD_ZVAL(return_value);
+	zval function_name;
+	ZVAL_STRING(&function_name, "OnEnter", 0);
+	char* temp_string;
+	char _wxResource[] = "wxResource";
+	zval **tmp;
+	int id_to_find;
+	void* return_object;
+	int rsrc_type;
+	
+	//Parameters for conversion
+	ZVAL_LONG(arguments[0], x);
+	ZVAL_LONG(arguments[1], y);
+	ZVAL_LONG(arguments[2], defResult);
+		
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Trying to call user defined method\n");
+	#endif
+	
+	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Invocation of user defined method failed\n");
+		#endif
+		
+	}
+	else
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Returning userspace value.\n");
+		#endif
+		
+		return (wxDragResult) Z_LVAL_P(return_value);
+	}
+	
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling original method\n");
+	php_printf("===========================================\n\n");
+	#endif
+	
+	//Call original method
+	return wxDropTarget::OnEnter(x, y, defResult);
+}
+/* }}} */
+
+/* {{{ proto bool wxDropTarget::GetData()
+   This method may only be called from within OnData(). */
+PHP_METHOD(php_wxDropTarget, GetData)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxDropTarget::GetData\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	//In case the constructor uses objects
+	zval **tmp;
+	int rsrc_type;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxDropTarget::GetData\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDropTarget){
+				references = &((wxDropTarget_php*)_this)->references;
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxFileDropTarget) && (!reference_type_found)){
+				references = &((wxFileDropTarget_php*)_this)->references;
+				reference_type_found = true;
+			}
+			if((parent_rsrc_type == le_wxTextDropTarget) && (!reference_type_found)){
+				references = &((wxTextDropTarget_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_BOOL(wxDropTarget::GetData())\n\n");
+				#endif
+				ZVAL_BOOL(return_value, ((wxDropTarget_php*)_this)->GetData());
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDropTarget::GetData\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto wxDragResult wxDropTarget::OnData(int x, int y, wxDragResult defResult)
+   Called after OnDrop() returns true. */
+wxDragResult wxDropTarget_php::OnData(wxCoord x, wxCoord y, wxDragResult defResult)
 {
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Invoking virtual wxDropTarget::OnData\n");
@@ -6846,7 +6927,7 @@ wxDragResult wxDropTarget_php::OnData(wxCoord x, wxCoord y, wxDragResult def)
 	//Parameters for conversion
 	ZVAL_LONG(arguments[0], x);
 	ZVAL_LONG(arguments[1], y);
-	ZVAL_LONG(arguments[2], def);
+	ZVAL_LONG(arguments[2], defResult);
 		
 	#ifdef USE_WXPHP_DEBUG
 	php_printf("Trying to call user defined method\n");
@@ -6867,6 +6948,10 @@ wxDragResult wxDropTarget_php::OnData(wxCoord x, wxCoord y, wxDragResult def)
 		return (wxDragResult) Z_LVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto bool wxDropTarget::OnDrop(int x, int y)
+   Called when the user drops a data object on the target. */
 bool wxDropTarget_php::OnDrop(wxCoord x, wxCoord y)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6907,7 +6992,197 @@ bool wxDropTarget_php::OnDrop(wxCoord x, wxCoord y)
 		php_printf("Invocation of user defined method failed\n");
 		#endif
 		
-		wxMessageBox("Failed to call virtual method 'wxDropTarget::OnDrop'!", "Error");
+	}
+	else
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Returning userspace value.\n");
+		#endif
+		
+		return Z_BVAL_P(return_value);
+	}
+	
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling original method\n");
+	php_printf("===========================================\n\n");
+	#endif
+	
+	//Call original method
+	return wxDropTarget::OnDrop(x, y);
+}
+/* }}} */
+
+void php_wxTextDropTarget_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling php_wxTextDropTarget_destruction_handler on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n");
+	#endif
+	
+	
+	wxTextDropTarget_php* object = static_cast<wxTextDropTarget_php*>(rsrc->ptr);
+	
+	if(rsrc->ptr != NULL)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Pointer not null\n");
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
+		#endif
+		
+		if(object->references.IsUserInitialized())
+		{	
+			#ifdef USE_WXPHP_DEBUG
+			php_printf("Deleting pointer with delete\n");
+			#endif
+			
+			delete object;
+			
+			rsrc->ptr = NULL;
+		}
+		
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Deletion of wxTextDropTarget done\n");
+		php_printf("===========================================\n\n");
+		#endif
+	}
+	else
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Not user space initialized\n");
+		#endif
+	}
+}
+/* {{{ proto  wxTextDropTarget::wxTextDropTarget()
+   Constructor. */
+PHP_METHOD(php_wxTextDropTarget, __construct)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxTextDropTarget::__construct\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	//In case the constructor uses objects
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing __construct()\n");
+				#endif
+				_this = new wxTextDropTarget_php();
+
+				((wxTextDropTarget_php*) _this)->references.Initialize();
+				break;
+			}
+		}
+	}
+
+		
+	if(already_called)
+	{
+		long id_to_find = zend_list_insert(_this, le_wxTextDropTarget);
+		
+		add_property_resource(getThis(), _wxResource, id_to_find);
+		
+		MAKE_STD_ZVAL(((wxTextDropTarget_php*) _this)->evnArray);
+		
+		array_init(((wxTextDropTarget_php*) _this)->evnArray);
+		
+		((wxTextDropTarget_php*) _this)->phpObj = getThis();
+		
+		((wxTextDropTarget_php*) _this)->InitProperties();
+		
+		#ifdef ZTS 
+		((wxTextDropTarget_php*) _this)->TSRMLS_C = TSRMLS_C;
+		#endif
+	}
+	else
+	{
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxTextDropTarget::__constructor\n");
+	}
+	
+	#ifdef USE_WXPHP_DEBUG
+		php_printf("===========================================\n\n");
+	#endif
+}
+/* }}} */
+
+/* {{{ proto bool wxTextDropTarget::OnDropText(int x, int y, string data)
+   Override this function to receive dropped text. */
+bool wxTextDropTarget_php::OnDropText(wxCoord x, wxCoord y, const wxString& data)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking virtual wxTextDropTarget::OnDropText\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zval *arguments[3];
+	
+	//Initilize arguments array
+	for(int i=0; i<3; i++)
+	{
+		MAKE_STD_ZVAL(arguments[i]);
+	}
+
+	zval* return_value;
+	MAKE_STD_ZVAL(return_value);
+	zval function_name;
+	ZVAL_STRING(&function_name, "OnDropText", 0);
+	char* temp_string;
+	char _wxResource[] = "wxResource";
+	zval **tmp;
+	int id_to_find;
+	void* return_object;
+	int rsrc_type;
+	
+	//Parameters for conversion
+	ZVAL_LONG(arguments[0], x);
+	ZVAL_LONG(arguments[1], y);
+	temp_string = (char*)malloc(sizeof(wxChar)*(data.size()+1));
+	strcpy(temp_string, (const char *) data.char_str());
+	ZVAL_STRING(arguments[2], temp_string, 1);
+	free(temp_string);
+		
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Trying to call user defined method\n");
+	#endif
+	
+	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 3, arguments TSRMLS_CC) == FAILURE)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Invocation of user defined method failed\n");
+		#endif
+		
+		wxMessageBox("Failed to call virtual method 'wxTextDropTarget::OnDropText'!", "Error");
 	}
 		#ifdef USE_WXPHP_DEBUG
 		php_printf("Returning userspace value.\n");
@@ -6916,6 +7191,70 @@ bool wxDropTarget_php::OnDrop(wxCoord x, wxCoord y)
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto bool wxTextDropTarget::OnDrop(int x, int y)
+   See wxDropTarget::OnDrop(). */
+bool wxTextDropTarget_php::OnDrop(wxCoord x, wxCoord y)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking virtual wxTextDropTarget::OnDrop\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	zval *arguments[2];
+	
+	//Initilize arguments array
+	for(int i=0; i<2; i++)
+	{
+		MAKE_STD_ZVAL(arguments[i]);
+	}
+
+	zval* return_value;
+	MAKE_STD_ZVAL(return_value);
+	zval function_name;
+	ZVAL_STRING(&function_name, "OnDrop", 0);
+	char* temp_string;
+	char _wxResource[] = "wxResource";
+	zval **tmp;
+	int id_to_find;
+	void* return_object;
+	int rsrc_type;
+	
+	//Parameters for conversion
+	ZVAL_LONG(arguments[0], x);
+	ZVAL_LONG(arguments[1], y);
+		
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Trying to call user defined method\n");
+	#endif
+	
+	if(call_user_function(NULL, (zval**) &this->phpObj, &function_name, return_value, 2, arguments TSRMLS_CC) == FAILURE)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Invocation of user defined method failed\n");
+		#endif
+		
+	}
+	else
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Returning userspace value.\n");
+		#endif
+		
+		return Z_BVAL_P(return_value);
+	}
+	
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling original method\n");
+	php_printf("===========================================\n\n");
+	#endif
+	
+	//Call original method
+	return wxTextDropTarget::OnDrop(x, y);
+}
+/* }}} */
+
 void php_wxFileDropTarget_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6956,6 +7295,8 @@ void php_wxFileDropTarget_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		#endif
 	}
 }
+/* {{{ proto  wxFileDropTarget::wxFileDropTarget()
+   Constructor. */
 PHP_METHOD(php_wxFileDropTarget, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7036,6 +7377,10 @@ PHP_METHOD(php_wxFileDropTarget, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto bool wxFileDropTarget::OnDropFiles(int x, int y, array filenames)
+   Override this function to receive dropped files. */
 bool wxFileDropTarget_php::OnDropFiles(wxCoord x, wxCoord y, const wxArrayString& filenames)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7093,6 +7438,10 @@ bool wxFileDropTarget_php::OnDropFiles(wxCoord x, wxCoord y, const wxArrayString
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto bool wxFileDropTarget::OnDrop(int x, int y)
+   See wxDropTarget::OnDrop(). */
 bool wxFileDropTarget_php::OnDrop(wxCoord x, wxCoord y)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7151,3 +7500,5 @@ bool wxFileDropTarget_php::OnDrop(wxCoord x, wxCoord y)
 	//Call original method
 	return wxFileDropTarget::OnDrop(x, y);
 }
+/* }}} */
+

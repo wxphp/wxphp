@@ -91,6 +91,8 @@ void php_wxSound_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto bool wxSound::Create(string fileName, bool isResource)
+   Constructs a wave object from a file or resource. */
 PHP_METHOD(php_wxSound, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -201,6 +203,10 @@ PHP_METHOD(php_wxSound, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSound::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxSound::IsOk()
+   Returns true if the object contains a successfully loaded file or resource, false otherwise. */
 PHP_METHOD(php_wxSound, IsOk)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -293,6 +299,10 @@ PHP_METHOD(php_wxSound, IsOk)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSound::IsOk\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxSound::Play(int flags)
+   Plays the sound file. */
 PHP_METHOD(php_wxSound, Play)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -453,6 +463,10 @@ PHP_METHOD(php_wxSound, Play)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSound::Play\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSound::Stop()
+   If a sound is played, this function stops it. */
 PHP_METHOD(php_wxSound, Stop)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -546,6 +560,10 @@ PHP_METHOD(php_wxSound, Stop)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSound::Stop\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSound::wxSound()
+   Default ctor. */
 PHP_METHOD(php_wxSound, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -712,3 +730,5 @@ PHP_METHOD(php_wxSound, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+

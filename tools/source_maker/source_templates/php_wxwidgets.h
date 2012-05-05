@@ -22,8 +22,8 @@
  * Define Extension Properties 
  */
 #define PHP_WXWIDGETS_EXTNAME    "wxWidgets"
-#define PHP_WXWIDGETS_EXTVER    "1.2"
-#define PHP_WXWIDGETS_VERSION	"SVN Revision 71250"
+#define PHP_WXWIDGETS_EXTVER    "2.9.4.0"
+#define PHP_WXWIDGETS_VERSION	"2.9.4 SVN"
 
 /**
  * Import configure options when building outside 
@@ -67,7 +67,6 @@ class wxPhpClientData : public wxClientData
 /**
  * Predefined wxApp class method bindings
  */
-PHP_METHOD(php_wxApp, helloWorld);
 PHP_METHOD(php_wxApp, __construct);
 PHP_METHOD(php_wxApp, SetInstance);
 PHP_METHOD(php_wxApp, Yield);

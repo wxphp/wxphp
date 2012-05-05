@@ -241,6 +241,9 @@ for ($i = 0; $i < $entries->length; $i++)
 				//Retrieve member type
 				$function_type = str_replace(array(" *", " &"), array("*", "&"), $class_xpath->evaluate("type", $class_member->item($member))->item(0)->nodeValue);
 				
+				//Retrieve brief description
+				$function_brief_description = trim($class_xpath->evaluate("briefdescription", $class_member->item($member))->item(0)->nodeValue);
+				
 				//Store type base class to later check which bases classes aren't documented
 				if("" . stristr($function_type, "Base") . "" != "")
 				{
@@ -309,7 +312,7 @@ for ($i = 0; $i < $entries->length; $i++)
 				
 				if($platforms)
 				{
-					$classes[$name][$function_name][] = array("return_type"=>$function_type,
+					$classes[$name][$function_name][] = array("return_type"=>$function_type, "brief_description"=>$function_brief_description,
 					"constant"=>$function_constant, "virtual"=>$function_virtual, "pure_virtual"=>$function_pure_virtual, 
 					"static"=>$function_static, "protected"=>$function_protected, "parameters_type"=>$parameters_type, 
 					"parameters_is_array"=>$parameters_is_array, "parameters_extra"=>$parameters_extra, "parameters_name"=>$parameters_name, 
@@ -317,7 +320,7 @@ for ($i = 0; $i < $entries->length; $i++)
 				}
 				else
 				{
-					$classes[$name][$function_name][] = array("return_type"=>$function_type,
+					$classes[$name][$function_name][] = array("return_type"=>$function_type, "brief_description"=>$function_brief_description,
 					"constant"=>$function_constant, "virtual"=>$function_virtual, "pure_virtual"=>$function_pure_virtual, 
 					"static"=>$function_static, "protected"=>$function_protected, "parameters_type"=>$parameters_type, 
 					"parameters_is_array"=>$parameters_is_array, "parameters_extra"=>$parameters_extra, "parameters_name"=>$parameters_name, 
@@ -457,6 +460,7 @@ for ($i = 0; $i < $entries->length; $i++)
 					if($function_name{0} == "w" && $function_name{1} == "x")
 					{
 						$function_type = $file_xpath->evaluate("type", $file_members->item($member))->item(0)->nodeValue;
+						$function_brief_description = trim($file_xpath->evaluate("briefdescription", $file_members->item($member))->item(0)->nodeValue);
 						$function_type = str_replace(array(" *", " &"), array("*", "&"), $function_type);
 						
 						//Check all function parameters
@@ -508,7 +512,7 @@ for ($i = 0; $i < $entries->length; $i++)
 							}
 						}
 						
-						$functions[$function_name][] = array("return_type"=>$function_type,
+						$functions[$function_name][] = array("return_type"=>$function_type, "brief_description"=>$function_brief_description,
 						"parameters_type"=>$parameters_type, "parameters_is_array"=>$parameters_is_array, 
 						"parameters_extra"=>$parameters_extra, "parameters_name"=>$parameters_name, 
 						"parameters_required"=>$parameters_required, "parameters_default_value"=>$parameters_values);

@@ -31,10 +31,10 @@ if [ ! -e "config.h" ]; then
 fi
 
 # Check if running script from wxphp root
-if [ ! -e "includes/app.h" ]; then
-	echo "app.h not found: Please run this script from the wxphp root directory"
-	exit 1
-fi
+#if [ ! -e "includes/app.h" ]; then
+#	echo "app.h not found: Please run this script from the wxphp root directory"
+#	exit 1
+#fi
 
 # Copy the most recent classes binding file
 cp tools/source_maker/class_selector/classes.json json

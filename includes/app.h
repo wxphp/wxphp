@@ -1,5 +1,6 @@
 /*
  * @author Mário Soares
+ * @contributors Jefferson González
  * 
  * @license 
  * This file is part of wxPHP check the LICENSE file for information.
@@ -25,7 +26,6 @@ class wxAppWrapper : public wxApp
 };
 
 static function_entry php_wxApp_functions[] = {
-	PHP_ME(php_wxApp, helloWorld ,NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxApp, SetInstance ,NULL,ZEND_ACC_STATIC|ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxApp, Yield ,NULL,ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxApp, __construct, NULL,ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
