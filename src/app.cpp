@@ -1,5 +1,6 @@
-/**
+/*
  * @author Mário Soares
+ * @contributors Jefferson González
  * 
  * @license 
  * This file is part of wxPHP check the LICENSE file for information.
@@ -43,24 +44,26 @@ bool wxAppWrapper::OnInit()
 	return true;
 }
 
+
 IMPLEMENT_APP_NO_MAIN(wxAppWrapper);
 
 
-PHP_METHOD(php_wxApp, helloWorld)
-{
-    php_printf("Hello World\n");
-}
-
+/* {{{ proto wxApp wxApp::__construct() 
+   Constructor. */
 PHP_METHOD(php_wxApp, __construct)
 {
 	wxAppWrapper* my = new wxAppWrapper();
 	my->phpObj = getThis();
-#ifdef ZTS
+	
+	#ifdef ZTS
 	my->tsrm_ls = tsrm_ls;
-#endif
+	#endif
+	
 	add_property_resource(getThis(),(char *)"wxResource", zend_list_insert(my, le_wxApp));
 }
 
+/* {{{ proto void wxApp::SetInstance(wxApp app) 
+   Allows external code to modify global wxTheApp, but you should really know what you're doing if you call it.*/
 PHP_METHOD(php_wxApp, SetInstance)
 {
 	zval **tmp;
@@ -85,6 +88,7 @@ PHP_METHOD(php_wxApp, SetInstance)
 	wxApp::SetInstance((wxAppWrapper*) property);
 }
 
+/* {{{ proto bool wxApp::Yield() */
 PHP_METHOD(php_wxApp, Yield)
 {
 	zval **tmp;

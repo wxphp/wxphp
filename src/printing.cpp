@@ -91,6 +91,8 @@ void php_wxPrinterDC_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto wxRect wxPrinterDC::GetPaperRect()
+   Return the rectangle in device coordinates that corresponds to the full paper area, including the nonprinting regions of the paper. */
 PHP_METHOD(php_wxPrinterDC, GetPaperRect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -188,6 +190,10 @@ PHP_METHOD(php_wxPrinterDC, GetPaperRect)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrinterDC::GetPaperRect\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrinterDC::wxPrinterDC(wxPrintData printData)
+   Constructor. */
 PHP_METHOD(php_wxPrinterDC, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -291,6 +297,8 @@ PHP_METHOD(php_wxPrinterDC, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxPreviewControlBar_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -298,6 +306,8 @@ void php_wxPreviewControlBar_destruction_handler(zend_rsrc_list_entry *rsrc TSRM
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto  wxPreviewControlBar::CreateButtons()
+   Creates buttons, according to value of the button style flags. */
 PHP_METHOD(php_wxPreviewControlBar, CreateButtons)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -390,6 +400,10 @@ PHP_METHOD(php_wxPreviewControlBar, CreateButtons)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPreviewControlBar::CreateButtons\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxPreviewControlBar::GetZoomControl()
+   Gets the current zoom setting in percent. */
 PHP_METHOD(php_wxPreviewControlBar, GetZoomControl)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -482,6 +496,10 @@ PHP_METHOD(php_wxPreviewControlBar, GetZoomControl)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPreviewControlBar::GetZoomControl\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPreviewControlBar::SetZoomControl(int percent)
+   Sets the zoom control. */
 PHP_METHOD(php_wxPreviewControlBar, SetZoomControl)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -579,6 +597,10 @@ PHP_METHOD(php_wxPreviewControlBar, SetZoomControl)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPreviewControlBar::SetZoomControl\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPreviewControlBar::wxPreviewControlBar(wxPrintPreview &preview, int buttons, wxWindow &parent, wxPoint pos, wxSize size, int style, string name)
+   Constructor. */
 PHP_METHOD(php_wxPreviewControlBar, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -796,6 +818,8 @@ PHP_METHOD(php_wxPreviewControlBar, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxPreviewCanvas_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -803,6 +827,8 @@ void php_wxPreviewCanvas_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto  wxPreviewCanvas::wxPreviewCanvas(wxPrintPreview &preview, wxWindow &parent, wxPoint pos, wxSize size, int style, string name)
+   Constructor. */
 PHP_METHOD(php_wxPreviewCanvas, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1019,10 +1045,14 @@ PHP_METHOD(php_wxPreviewCanvas, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxPreviewFrame_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxPreviewFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");
 }
+/* {{{ proto  wxPreviewFrame::CreateCanvas()
+   Creates a wxPreviewCanvas. */
 PHP_METHOD(php_wxPreviewFrame, CreateCanvas)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1118,6 +1148,10 @@ PHP_METHOD(php_wxPreviewFrame, CreateCanvas)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPreviewFrame::CreateCanvas\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPreviewFrame::CreateControlBar()
+   Creates a wxPreviewControlBar. */
 PHP_METHOD(php_wxPreviewFrame, CreateControlBar)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1213,6 +1247,10 @@ PHP_METHOD(php_wxPreviewFrame, CreateControlBar)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPreviewFrame::CreateControlBar\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPreviewFrame::Initialize()
+   Initializes the frame elements and prepares for showing it. */
 PHP_METHOD(php_wxPreviewFrame, Initialize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1308,6 +1346,10 @@ PHP_METHOD(php_wxPreviewFrame, Initialize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPreviewFrame::Initialize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPreviewFrame::InitializeWithModality(wxPreviewFrameModalityKind kind)
+   Initializes the frame elements and prepares for showing it with the given modality kind. */
 PHP_METHOD(php_wxPreviewFrame, InitializeWithModality)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1408,6 +1450,8 @@ PHP_METHOD(php_wxPreviewFrame, InitializeWithModality)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPreviewFrame::InitializeWithModality\n");
 	}
 }
+/* }}} */
+
 void php_wxPrintPreview_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1448,6 +1492,8 @@ void php_wxPrintPreview_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 		#endif
 	}
 }
+/* {{{ proto wxPreviewCanvas wxPrintPreview::GetCanvas()
+   Gets the preview window used for displaying the print preview image. */
 PHP_METHOD(php_wxPrintPreview, GetCanvas)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1563,6 +1609,10 @@ PHP_METHOD(php_wxPrintPreview, GetCanvas)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintPreview::GetCanvas\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxPrintPreview::GetCurrentPage()
+   Gets the page currently being previewed. */
 PHP_METHOD(php_wxPrintPreview, GetCurrentPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1655,6 +1705,10 @@ PHP_METHOD(php_wxPrintPreview, GetCurrentPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintPreview::GetCurrentPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFrame wxPrintPreview::GetFrame()
+   Gets the frame used for displaying the print preview canvas and control bar. */
 PHP_METHOD(php_wxPrintPreview, GetFrame)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1770,6 +1824,10 @@ PHP_METHOD(php_wxPrintPreview, GetFrame)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintPreview::GetFrame\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxPrintPreview::GetMaxPage()
+   Returns the maximum page number. */
 PHP_METHOD(php_wxPrintPreview, GetMaxPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1862,6 +1920,10 @@ PHP_METHOD(php_wxPrintPreview, GetMaxPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintPreview::GetMaxPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxPrintPreview::GetMinPage()
+   Returns the minimum page number. */
 PHP_METHOD(php_wxPrintPreview, GetMinPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1954,6 +2016,10 @@ PHP_METHOD(php_wxPrintPreview, GetMinPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintPreview::GetMinPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPrintout wxPrintPreview::GetPrintout()
+   Gets the preview printout object associated with the wxPrintPreview object. */
 PHP_METHOD(php_wxPrintPreview, GetPrintout)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2069,6 +2135,10 @@ PHP_METHOD(php_wxPrintPreview, GetPrintout)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintPreview::GetPrintout\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPrintout wxPrintPreview::GetPrintoutForPrinting()
+   Gets the printout object to be used for printing from within the preview interface, or NULL if none exists. */
 PHP_METHOD(php_wxPrintPreview, GetPrintoutForPrinting)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2184,6 +2254,10 @@ PHP_METHOD(php_wxPrintPreview, GetPrintoutForPrinting)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintPreview::GetPrintoutForPrinting\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPrintPreview::IsOk()
+   Returns true if the wxPrintPreview is valid, false otherwise. */
 PHP_METHOD(php_wxPrintPreview, IsOk)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2276,6 +2350,10 @@ PHP_METHOD(php_wxPrintPreview, IsOk)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintPreview::IsOk\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPrintPreview::PaintPage(wxPreviewCanvas &canvas, wxDC &dc)
+   This refreshes the preview window with the preview image. */
 PHP_METHOD(php_wxPrintPreview, PaintPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2410,6 +2488,10 @@ PHP_METHOD(php_wxPrintPreview, PaintPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintPreview::PaintPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPrintPreview::Print(bool prompt)
+   Invokes the print process using the second wxPrintout object supplied in the wxPrintPreview constructor. */
 PHP_METHOD(php_wxPrintPreview, Print)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2507,6 +2589,10 @@ PHP_METHOD(php_wxPrintPreview, Print)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintPreview::Print\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPrintPreview::RenderPage(int pageNum)
+   Renders a page into a wxMemoryDC. */
 PHP_METHOD(php_wxPrintPreview, RenderPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2604,6 +2690,10 @@ PHP_METHOD(php_wxPrintPreview, RenderPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintPreview::RenderPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintPreview::SetCanvas(wxPreviewCanvas &window)
+   Sets the window to be used for displaying the print preview image. */
 PHP_METHOD(php_wxPrintPreview, SetCanvas)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2719,6 +2809,10 @@ PHP_METHOD(php_wxPrintPreview, SetCanvas)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintPreview::SetCanvas\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPrintPreview::SetCurrentPage(int pageNum)
+   Sets the current page to be previewed. */
 PHP_METHOD(php_wxPrintPreview, SetCurrentPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2816,6 +2910,10 @@ PHP_METHOD(php_wxPrintPreview, SetCurrentPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintPreview::SetCurrentPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintPreview::SetFrame(wxFrame &frame)
+   Sets the frame to be used for displaying the print preview canvas and control bar. */
 PHP_METHOD(php_wxPrintPreview, SetFrame)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2931,6 +3029,10 @@ PHP_METHOD(php_wxPrintPreview, SetFrame)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintPreview::SetFrame\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintPreview::SetPrintout(wxPrintout &printout)
+   Associates a printout object with the wxPrintPreview object. */
 PHP_METHOD(php_wxPrintPreview, SetPrintout)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3046,6 +3148,10 @@ PHP_METHOD(php_wxPrintPreview, SetPrintout)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintPreview::SetPrintout\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintPreview::SetZoom(int percent)
+   Sets the percentage preview zoom, and refreshes the preview canvas accordingly. */
 PHP_METHOD(php_wxPrintPreview, SetZoom)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3143,6 +3249,10 @@ PHP_METHOD(php_wxPrintPreview, SetZoom)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintPreview::SetZoom\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintPreview::wxPrintPreview(wxPrintout &printout, wxPrintout &printoutForPrinting, wxPrintDialogData &data)
+   Constructor. */
 PHP_METHOD(php_wxPrintPreview, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3307,6 +3417,8 @@ PHP_METHOD(php_wxPrintPreview, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxPrinter_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3347,6 +3459,8 @@ void php_wxPrinter_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto wxWindow wxPrinter::CreateAbortWindow(wxWindow &parent, wxPrintout &printout)
+   Creates the default printing abort window, with a cancel button. */
 PHP_METHOD(php_wxPrinter, CreateAbortWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3504,6 +3618,10 @@ PHP_METHOD(php_wxPrinter, CreateAbortWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrinter::CreateAbortWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPrinter::GetAbort()
+   Returns true if the user has aborted the print job. */
 PHP_METHOD(php_wxPrinter, GetAbort)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3596,6 +3714,10 @@ PHP_METHOD(php_wxPrinter, GetAbort)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrinter::GetAbort\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPrinterError wxPrinter::GetLastError()
+   Return last error. */
 PHP_METHOD(php_wxPrinter, GetLastError)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3689,6 +3811,10 @@ PHP_METHOD(php_wxPrinter, GetLastError)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrinter::GetLastError\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPrintDialogData wxPrinter::GetPrintDialogData()
+   Returns the print data associated with the printer object. */
 PHP_METHOD(php_wxPrinter, GetPrintDialogData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3801,6 +3927,10 @@ PHP_METHOD(php_wxPrinter, GetPrintDialogData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrinter::GetPrintDialogData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPrinter::Print(wxWindow &parent, wxPrintout &printout, bool prompt)
+   Starts the printing process. */
 PHP_METHOD(php_wxPrinter, Print)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3949,6 +4079,10 @@ PHP_METHOD(php_wxPrinter, Print)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrinter::Print\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxDC wxPrinter::PrintDialog(wxWindow &parent)
+   Invokes the print dialog. */
 PHP_METHOD(php_wxPrinter, PrintDialog)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4087,6 +4221,10 @@ PHP_METHOD(php_wxPrinter, PrintDialog)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrinter::PrintDialog\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrinter::ReportError(wxWindow &parent, wxPrintout &printout, string message)
+   Default error-reporting function. */
 PHP_METHOD(php_wxPrinter, ReportError)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4223,6 +4361,10 @@ PHP_METHOD(php_wxPrinter, ReportError)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrinter::ReportError\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPrinter::Setup(wxWindow &parent)
+   Invokes the print setup dialog. */
 PHP_METHOD(php_wxPrinter, Setup)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4338,6 +4480,10 @@ PHP_METHOD(php_wxPrinter, Setup)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrinter::Setup\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrinter::wxPrinter(wxPrintDialogData &data)
+   Constructor. */
 PHP_METHOD(php_wxPrinter, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4451,6 +4597,8 @@ PHP_METHOD(php_wxPrinter, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxPrintout_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4491,6 +4639,8 @@ void php_wxPrintout_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxPrintout::FitThisSizeToPage(wxSize imageSize)
+   Set the user scale and device origin of the wxDC associated with this wxPrintout so that the given image size fits entirely within the page rectangle and the origin is at the top left corner of the page rectangle. */
 PHP_METHOD(php_wxPrintout, FitThisSizeToPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4610,6 +4760,10 @@ PHP_METHOD(php_wxPrintout, FitThisSizeToPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintout::FitThisSizeToPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintout::FitThisSizeToPageMargins(wxSize imageSize, wxPageSetupDialogData pageSetupData)
+   Set the user scale and device origin of the wxDC associated with this wxPrintout so that the given image size fits entirely within the page margins set in the given wxPageSetupDialogData object. */
 PHP_METHOD(php_wxPrintout, FitThisSizeToPageMargins)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4748,6 +4902,10 @@ PHP_METHOD(php_wxPrintout, FitThisSizeToPageMargins)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintout::FitThisSizeToPageMargins\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintout::FitThisSizeToPaper(wxSize imageSize)
+   Set the user scale and device origin of the wxDC associated with this wxPrintout so that the given image size fits entirely within the paper and the origin is at the top left corner of the paper. */
 PHP_METHOD(php_wxPrintout, FitThisSizeToPaper)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4867,6 +5025,10 @@ PHP_METHOD(php_wxPrintout, FitThisSizeToPaper)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintout::FitThisSizeToPaper\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxDC wxPrintout::GetDC()
+   Returns the device context associated with the printout (given to the printout at start of printing or previewing). */
 PHP_METHOD(php_wxPrintout, GetDC)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4986,6 +5148,10 @@ PHP_METHOD(php_wxPrintout, GetDC)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintout::GetDC\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRect wxPrintout::GetLogicalPageMarginsRect(wxPageSetupDialogData pageSetupData)
+   Return the rectangle corresponding to the page margins specified by the given wxPageSetupDialogData object in the associated wxDC's logical coordinates for the current user scale and device origin. */
 PHP_METHOD(php_wxPrintout, GetLogicalPageMarginsRect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5110,6 +5276,10 @@ PHP_METHOD(php_wxPrintout, GetLogicalPageMarginsRect)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintout::GetLogicalPageMarginsRect\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRect wxPrintout::GetLogicalPageRect()
+   Return the rectangle corresponding to the page in the associated wxDC 's logical coordinates for the current user scale and device origin. */
 PHP_METHOD(php_wxPrintout, GetLogicalPageRect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5211,6 +5381,10 @@ PHP_METHOD(php_wxPrintout, GetLogicalPageRect)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintout::GetLogicalPageRect\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRect wxPrintout::GetLogicalPaperRect()
+   Return the rectangle corresponding to the paper in the associated wxDC 's logical coordinates for the current user scale and device origin. */
 PHP_METHOD(php_wxPrintout, GetLogicalPaperRect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5312,6 +5486,10 @@ PHP_METHOD(php_wxPrintout, GetLogicalPaperRect)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintout::GetLogicalPaperRect\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintout::GetPPIPrinter(int &w, int &h)
+   Returns the number of pixels per logical inch of the printer device context. */
 PHP_METHOD(php_wxPrintout, GetPPIPrinter)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5431,6 +5609,10 @@ PHP_METHOD(php_wxPrintout, GetPPIPrinter)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintout::GetPPIPrinter\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintout::GetPPIScreen(int &w, int &h)
+   Returns the number of pixels per logical inch of the screen device context. */
 PHP_METHOD(php_wxPrintout, GetPPIScreen)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5550,6 +5732,10 @@ PHP_METHOD(php_wxPrintout, GetPPIScreen)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintout::GetPPIScreen\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintout::GetPageInfo(int &minPage, int &maxPage, int &pageFrom, int &pageTo)
+   Called by the framework to obtain information from the application about minimum and maximum page values that the user can select, and the required page range to be printed. */
 PHP_METHOD(php_wxPrintout, GetPageInfo)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5685,6 +5871,10 @@ PHP_METHOD(php_wxPrintout, GetPageInfo)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintout::GetPageInfo\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintout::GetPageSizeMM(int &w, int &h)
+   Returns the size of the printer page in millimetres. */
 PHP_METHOD(php_wxPrintout, GetPageSizeMM)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5804,6 +5994,10 @@ PHP_METHOD(php_wxPrintout, GetPageSizeMM)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintout::GetPageSizeMM\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintout::GetPageSizePixels(int &w, int &h)
+   Returns the size of the printer page in pixels, called the page rectangle. */
 PHP_METHOD(php_wxPrintout, GetPageSizePixels)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5923,6 +6117,10 @@ PHP_METHOD(php_wxPrintout, GetPageSizePixels)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintout::GetPageSizePixels\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRect wxPrintout::GetPaperRectPixels()
+   Returns the rectangle that corresponds to the entire paper in pixels, called the paper rectangle. */
 PHP_METHOD(php_wxPrintout, GetPaperRectPixels)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6024,6 +6222,10 @@ PHP_METHOD(php_wxPrintout, GetPaperRectPixels)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintout::GetPaperRectPixels\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPrintPreview wxPrintout::GetPreview()
+   Returns the associated preview object if any. */
 PHP_METHOD(php_wxPrintout, GetPreview)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6143,6 +6345,10 @@ PHP_METHOD(php_wxPrintout, GetPreview)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintout::GetPreview\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxPrintout::GetTitle()
+   Returns the title of the printout. */
 PHP_METHOD(php_wxPrintout, GetTitle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6245,6 +6451,10 @@ PHP_METHOD(php_wxPrintout, GetTitle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintout::GetTitle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPrintout::HasPage(int pageNum)
+   Should be overridden to return true if the document has this page, or false if not. */
 PHP_METHOD(php_wxPrintout, HasPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6346,6 +6556,10 @@ PHP_METHOD(php_wxPrintout, HasPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintout::HasPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPrintout::IsPreview()
+   Returns true if the printout is currently being used for previewing. */
 PHP_METHOD(php_wxPrintout, IsPreview)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6442,6 +6656,10 @@ PHP_METHOD(php_wxPrintout, IsPreview)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintout::IsPreview\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintout::MapScreenSizeToDevice()
+   Set the user scale and device origin of the wxDC associated with this wxPrintout so that one screen pixel maps to one device pixel on the DC. */
 PHP_METHOD(php_wxPrintout, MapScreenSizeToDevice)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6538,6 +6756,10 @@ PHP_METHOD(php_wxPrintout, MapScreenSizeToDevice)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintout::MapScreenSizeToDevice\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintout::MapScreenSizeToPage()
+   This sets the user scale of the wxDC associated with this wxPrintout to the same scale as MapScreenSizeToPaper() but sets the logical origin to the top left corner of the page rectangle. */
 PHP_METHOD(php_wxPrintout, MapScreenSizeToPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6634,6 +6856,10 @@ PHP_METHOD(php_wxPrintout, MapScreenSizeToPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintout::MapScreenSizeToPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintout::MapScreenSizeToPageMargins(wxPageSetupDialogData pageSetupData)
+   This sets the user scale of the wxDC associated with this wxPrintout to the same scale as MapScreenSizeToPageMargins() but sets the logical origin to the top left corner of the page margins specified by the given wxPageSetupDialogData object. */
 PHP_METHOD(php_wxPrintout, MapScreenSizeToPageMargins)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6753,6 +6979,10 @@ PHP_METHOD(php_wxPrintout, MapScreenSizeToPageMargins)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintout::MapScreenSizeToPageMargins\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintout::MapScreenSizeToPaper()
+   Set the user scale and device origin of the wxDC associated with this wxPrintout so that the printed page matches the screen size as closely as possible and the logical origin is in the top left corner of the paper rectangle. */
 PHP_METHOD(php_wxPrintout, MapScreenSizeToPaper)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6849,6 +7079,10 @@ PHP_METHOD(php_wxPrintout, MapScreenSizeToPaper)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintout::MapScreenSizeToPaper\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintout::OffsetLogicalOrigin(int xoff, int yoff)
+   Shift the device origin by an amount specified in logical coordinates. */
 PHP_METHOD(php_wxPrintout, OffsetLogicalOrigin)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6951,6 +7185,10 @@ PHP_METHOD(php_wxPrintout, OffsetLogicalOrigin)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintout::OffsetLogicalOrigin\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPrintout::OnBeginDocument(int startPage, int endPage)
+   Called by the framework at the start of document printing. */
 bool wxPrintout_php::OnBeginDocument(int startPage, int endPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7009,6 +7247,10 @@ bool wxPrintout_php::OnBeginDocument(int startPage, int endPage)
 	//Call original method
 	return wxPrintout::OnBeginDocument(startPage, endPage);
 }
+/* }}} */
+
+/* {{{ proto  wxPrintout::OnBeginPrinting()
+   Called by the framework at the start of printing. */
 void wxPrintout_php::OnBeginPrinting()
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7060,6 +7302,10 @@ void wxPrintout_php::OnBeginPrinting()
 	//Call original method
 	wxPrintout::OnBeginPrinting();
 }
+/* }}} */
+
+/* {{{ proto  wxPrintout::OnEndDocument()
+   Called by the framework at the end of document printing. */
 void wxPrintout_php::OnEndDocument()
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7111,6 +7357,10 @@ void wxPrintout_php::OnEndDocument()
 	//Call original method
 	wxPrintout::OnEndDocument();
 }
+/* }}} */
+
+/* {{{ proto  wxPrintout::OnEndPrinting()
+   Called by the framework at the end of printing. */
 void wxPrintout_php::OnEndPrinting()
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7162,6 +7412,10 @@ void wxPrintout_php::OnEndPrinting()
 	//Call original method
 	wxPrintout::OnEndPrinting();
 }
+/* }}} */
+
+/* {{{ proto  wxPrintout::OnPreparePrinting()
+   Called once by the framework before any other demands are made of the wxPrintout object. */
 void wxPrintout_php::OnPreparePrinting()
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7213,6 +7467,10 @@ void wxPrintout_php::OnPreparePrinting()
 	//Call original method
 	wxPrintout::OnPreparePrinting();
 }
+/* }}} */
+
+/* {{{ proto bool wxPrintout::OnPrintPage(int pageNum)
+   Called by the framework when a page should be printed. */
 bool wxPrintout_php::OnPrintPage(int pageNum)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7261,6 +7519,10 @@ bool wxPrintout_php::OnPrintPage(int pageNum)
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto  wxPrintout::SetLogicalOrigin(int x, int y)
+   Set the device origin of the associated wxDC so that the current logical point becomes the new logical origin. */
 PHP_METHOD(php_wxPrintout, SetLogicalOrigin)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7363,6 +7625,10 @@ PHP_METHOD(php_wxPrintout, SetLogicalOrigin)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintout::SetLogicalOrigin\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintout::wxPrintout(string title)
+   Constructor. */
 PHP_METHOD(php_wxPrintout, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7459,10 +7725,14 @@ PHP_METHOD(php_wxPrintout, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxPrintDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxPrintDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
 }
+/* {{{ proto wxDC wxPrintDialog::GetPrintDC()
+   Returns the device context created by the print dialog, if any. */
 PHP_METHOD(php_wxPrintDialog, GetPrintDC)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7578,6 +7848,10 @@ PHP_METHOD(php_wxPrintDialog, GetPrintDC)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintDialog::GetPrintDC\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPrintDialogData wxPrintDialog::GetPrintDialogData()
+   Returns the print dialog data associated with the print dialog. */
 PHP_METHOD(php_wxPrintDialog, GetPrintDialogData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7690,6 +7964,10 @@ PHP_METHOD(php_wxPrintDialog, GetPrintDialogData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintDialog::GetPrintDialogData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxPrintDialog::ShowModal()
+   Shows the dialog, returning wxID_OK if the user pressed OK, and wxID_CANCEL otherwise. */
 PHP_METHOD(php_wxPrintDialog, ShowModal)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7782,6 +8060,10 @@ PHP_METHOD(php_wxPrintDialog, ShowModal)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintDialog::ShowModal\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintDialog::wxPrintDialog(wxWindow &parent, wxPrintDialogData &data)
+   Constructor. */
 PHP_METHOD(php_wxPrintDialog, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7915,10 +8197,14 @@ PHP_METHOD(php_wxPrintDialog, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxPageSetupDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxPageSetupDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
 }
+/* {{{ proto wxPageSetupDialogData wxPageSetupDialog::GetPageSetupData()
+   Returns the wxPageSetupDialogData object associated with the dialog. */
 PHP_METHOD(php_wxPageSetupDialog, GetPageSetupData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8031,6 +8317,10 @@ PHP_METHOD(php_wxPageSetupDialog, GetPageSetupData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialog::GetPageSetupData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPageSetupDialog::wxPageSetupDialog(wxWindow &parent, wxPageSetupDialogData &data)
+   Constructor. */
 PHP_METHOD(php_wxPageSetupDialog, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8164,6 +8454,10 @@ PHP_METHOD(php_wxPageSetupDialog, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto int wxPageSetupDialog::ShowModal()
+   Shows the dialog, returning wxID_OK if the user pressed OK, and wxID_CANCEL otherwise. */
 PHP_METHOD(php_wxPageSetupDialog, ShowModal)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8256,3 +8550,5 @@ PHP_METHOD(php_wxPageSetupDialog, ShowModal)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialog::ShowModal\n");
 	}
 }
+/* }}} */
+

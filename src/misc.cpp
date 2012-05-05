@@ -91,6 +91,8 @@ void php_wxArtProvider_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto bool wxArtProvider::Remove(wxArtProvider &provider)
+   Remove a provider from the stack if it is on it. */
 PHP_METHOD(php_wxArtProvider, Remove)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -206,6 +208,10 @@ PHP_METHOD(php_wxArtProvider, Remove)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxArtProvider::Remove\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxArtProvider::PushBack(wxArtProvider &provider)
+   Register new art provider and add it to the bottom of providers stack. */
 PHP_METHOD(php_wxArtProvider, PushBack)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -321,6 +327,10 @@ PHP_METHOD(php_wxArtProvider, PushBack)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxArtProvider::PushBack\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxArtProvider::Push(wxArtProvider &provider)
+   Register new art provider and add it to the top of providers stack (i.e. */
 PHP_METHOD(php_wxArtProvider, Push)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -436,6 +446,10 @@ PHP_METHOD(php_wxArtProvider, Push)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxArtProvider::Push\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxArtProvider::Pop()
+   Remove latest added provider and delete it. */
 PHP_METHOD(php_wxArtProvider, Pop)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -529,6 +543,9 @@ PHP_METHOD(php_wxArtProvider, Pop)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxArtProvider::Pop\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxArtProvider::Insert(wxArtProvider &provider) */
 PHP_METHOD(php_wxArtProvider, Insert)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -644,6 +661,10 @@ PHP_METHOD(php_wxArtProvider, Insert)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxArtProvider::Insert\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxArtProvider::HasNativeProvider()
+   Returns true if the platform uses native icons provider that should take precedence over any customizations. */
 PHP_METHOD(php_wxArtProvider, HasNativeProvider)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -737,6 +758,10 @@ PHP_METHOD(php_wxArtProvider, HasNativeProvider)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxArtProvider::HasNativeProvider\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxArtProvider::GetSizeHint(string client, bool platform_default)
+   Returns a suitable size hint for the given wxArtClient. */
 PHP_METHOD(php_wxArtProvider, GetSizeHint)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -867,6 +892,10 @@ PHP_METHOD(php_wxArtProvider, GetSizeHint)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxArtProvider::GetSizeHint\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxArtProvider::GetNativeSizeHint(string client)
+   Returns native icon size for use specified by client hint. */
 PHP_METHOD(php_wxArtProvider, GetNativeSizeHint)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -975,6 +1004,10 @@ PHP_METHOD(php_wxArtProvider, GetNativeSizeHint)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxArtProvider::GetNativeSizeHint\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxIconBundle wxArtProvider::GetIconBundle(string id, string client)
+   Query registered providers for icon bundle with given ID. */
 PHP_METHOD(php_wxArtProvider, GetIconBundle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1106,6 +1139,10 @@ PHP_METHOD(php_wxArtProvider, GetIconBundle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxArtProvider::GetIconBundle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxIcon wxArtProvider::GetIcon(string id, string client, wxSize size)
+   Same as wxArtProvider::GetBitmap, but return a wxIcon object (or wxNullIcon on failure). */
 PHP_METHOD(php_wxArtProvider, GetIcon)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1276,6 +1313,10 @@ PHP_METHOD(php_wxArtProvider, GetIcon)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxArtProvider::GetIcon\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxBitmap wxArtProvider::GetBitmap(string id, string client, wxSize size)
+   Query registered providers for bitmap with given ID. */
 PHP_METHOD(php_wxArtProvider, GetBitmap)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1446,6 +1487,10 @@ PHP_METHOD(php_wxArtProvider, GetBitmap)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxArtProvider::GetBitmap\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxArtProvider::Delete(wxArtProvider &provider)
+   Delete the given provider. */
 PHP_METHOD(php_wxArtProvider, Delete)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1561,6 +1606,8 @@ PHP_METHOD(php_wxArtProvider, Delete)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxArtProvider::Delete\n");
 	}
 }
+/* }}} */
+
 void php_wxCaret_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1601,6 +1648,8 @@ void php_wxCaret_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxCaret::wxCaret()
+   Default constructor. */
 PHP_METHOD(php_wxCaret, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1737,6 +1786,10 @@ PHP_METHOD(php_wxCaret, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxCaret::Show(bool show)
+   Shows or hides the caret. */
 PHP_METHOD(php_wxCaret, Show)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1845,6 +1898,10 @@ PHP_METHOD(php_wxCaret, Show)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCaret::Show\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxCaret::SetSize(wxSize size)
+   Changes the size of the caret. */
 PHP_METHOD(php_wxCaret, SetSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1998,6 +2055,10 @@ PHP_METHOD(php_wxCaret, SetSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCaret::SetSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxCaret::SetBlinkTime(int milliseconds)
+   Sets the blink time for all the carets. */
 PHP_METHOD(php_wxCaret, SetBlinkTime)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2096,6 +2157,10 @@ PHP_METHOD(php_wxCaret, SetBlinkTime)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCaret::SetBlinkTime\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxCaret::Move(wxPoint pt)
+   Move the caret to given position (in logical coordinates). */
 PHP_METHOD(php_wxCaret, Move)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2249,6 +2314,10 @@ PHP_METHOD(php_wxCaret, Move)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCaret::Move\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxCaret::IsVisible()
+   Returns true if the caret is visible and false if it is permanently hidden (if it is blinking and not shown currently but will be after the next blink, this method still returns true). */
 PHP_METHOD(php_wxCaret, IsVisible)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2341,6 +2410,10 @@ PHP_METHOD(php_wxCaret, IsVisible)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCaret::IsVisible\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxCaret::IsOk()
+   Returns true if the caret was created successfully. */
 PHP_METHOD(php_wxCaret, IsOk)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2433,6 +2506,10 @@ PHP_METHOD(php_wxCaret, IsOk)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCaret::IsOk\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxCaret::Hide()
+   Hides the caret, same as Show(false). */
 PHP_METHOD(php_wxCaret, Hide)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2525,6 +2602,10 @@ PHP_METHOD(php_wxCaret, Hide)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCaret::Hide\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxWindow wxCaret::GetWindow()
+   Get the window the caret is associated with. */
 PHP_METHOD(php_wxCaret, GetWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2640,6 +2721,10 @@ PHP_METHOD(php_wxCaret, GetWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCaret::GetWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxCaret::GetSize()
+   Get the caret size. */
 PHP_METHOD(php_wxCaret, GetSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2792,6 +2877,10 @@ PHP_METHOD(php_wxCaret, GetSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCaret::GetSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxCaret::GetBlinkTime()
+   Returns the blink time which is measured in milliseconds and is the time elapsed between 2 inversions of the caret (blink time of the caret is the same for all carets, so this functions is static). */
 PHP_METHOD(php_wxCaret, GetBlinkTime)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2885,6 +2974,10 @@ PHP_METHOD(php_wxCaret, GetBlinkTime)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCaret::GetBlinkTime\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPoint wxCaret::GetPosition()
+   Get the caret position (in pixels). */
 PHP_METHOD(php_wxCaret, GetPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3037,6 +3130,8 @@ PHP_METHOD(php_wxCaret, GetPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCaret::GetPosition\n");
 	}
 }
+/* }}} */
+
 void php_wxNotificationMessage_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3077,6 +3172,8 @@ void php_wxNotificationMessage_destruction_handler(zend_rsrc_list_entry *rsrc TS
 		#endif
 	}
 }
+/* {{{ proto bool wxNotificationMessage::Close()
+   Hides the notification. */
 PHP_METHOD(php_wxNotificationMessage, Close)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3169,6 +3266,10 @@ PHP_METHOD(php_wxNotificationMessage, Close)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxNotificationMessage::Close\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxNotificationMessage::SetFlags(int flags)
+   This parameter can be currently used to specify the icon to show in the notification. */
 PHP_METHOD(php_wxNotificationMessage, SetFlags)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3266,6 +3367,10 @@ PHP_METHOD(php_wxNotificationMessage, SetFlags)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxNotificationMessage::SetFlags\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxNotificationMessage::SetMessage(string message)
+   Set the main text of the notification. */
 PHP_METHOD(php_wxNotificationMessage, SetMessage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3364,6 +3469,10 @@ PHP_METHOD(php_wxNotificationMessage, SetMessage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxNotificationMessage::SetMessage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxNotificationMessage::SetParent(wxWindow &parent)
+   Set the parent for this notification: the notification will be associated with the top level parent of this window or, if this method is not called, with the main application window by default. */
 PHP_METHOD(php_wxNotificationMessage, SetParent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3479,6 +3588,10 @@ PHP_METHOD(php_wxNotificationMessage, SetParent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxNotificationMessage::SetParent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxNotificationMessage::SetTitle(string title)
+   Set the title, it must be a concise string (not more than 64 characters), use SetMessage() to give the user more details. */
 PHP_METHOD(php_wxNotificationMessage, SetTitle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3577,6 +3690,10 @@ PHP_METHOD(php_wxNotificationMessage, SetTitle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxNotificationMessage::SetTitle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxNotificationMessage::Show(int timeout)
+   Show the notification to the user and hides it after timeout seconds are elapsed. */
 PHP_METHOD(php_wxNotificationMessage, Show)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3685,6 +3802,10 @@ PHP_METHOD(php_wxNotificationMessage, Show)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxNotificationMessage::Show\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxNotificationMessage::wxNotificationMessage()
+   Default constructor, use SetParent(), SetTitle() and SetMessage() to initialize the object before showing it. */
 PHP_METHOD(php_wxNotificationMessage, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3855,6 +3976,8 @@ PHP_METHOD(php_wxNotificationMessage, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxStopWatch_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3895,6 +4018,8 @@ void php_wxStopWatch_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxStopWatch::wxStopWatch()
+   Constructor. */
 PHP_METHOD(php_wxStopWatch, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3975,6 +4100,10 @@ PHP_METHOD(php_wxStopWatch, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto int wxStopWatch::Time()
+   Returns the time in milliseconds since the start (or restart) or the last call of Pause(). */
 PHP_METHOD(php_wxStopWatch, Time)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4067,6 +4196,10 @@ PHP_METHOD(php_wxStopWatch, Time)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStopWatch::Time\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStopWatch::Start(int milliseconds)
+   (Re)starts the stop watch with a given initial value. */
 PHP_METHOD(php_wxStopWatch, Start)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4175,6 +4308,10 @@ PHP_METHOD(php_wxStopWatch, Start)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStopWatch::Start\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStopWatch::Resume()
+   Resumes the stop watch which had been paused with Pause(). */
 PHP_METHOD(php_wxStopWatch, Resume)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4267,6 +4404,10 @@ PHP_METHOD(php_wxStopWatch, Resume)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStopWatch::Resume\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStopWatch::Pause()
+   Pauses the stop watch. */
 PHP_METHOD(php_wxStopWatch, Pause)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4359,6 +4500,8 @@ PHP_METHOD(php_wxStopWatch, Pause)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStopWatch::Pause\n");
 	}
 }
+/* }}} */
+
 void php_wxTaskBarIcon_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4399,6 +4542,8 @@ void php_wxTaskBarIcon_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto wxMenu wxTaskBarIcon::CreatePopupMenu()
+   This method is called by the library when the user requests popup menu (on Windows and Unix platforms, this is when the user right-clicks the icon). */
 wxMenu* wxTaskBarIcon_php::CreatePopupMenu()
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4455,6 +4600,10 @@ wxMenu* wxTaskBarIcon_php::CreatePopupMenu()
 	//Call original method
 	return wxTaskBarIcon::CreatePopupMenu();
 }
+/* }}} */
+
+/* {{{ proto  wxTaskBarIcon::Destroy()
+   This method is similar to wxWindow::Destroy and can be used to schedule the task bar icon object for the delayed destruction: it will be deleted during the next event loop iteration, which allows the task bar icon to process any pending events for it before being destroyed. */
 PHP_METHOD(php_wxTaskBarIcon, Destroy)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4547,6 +4696,10 @@ PHP_METHOD(php_wxTaskBarIcon, Destroy)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTaskBarIcon::Destroy\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTaskBarIcon::IsAvailable()
+   Returns true if system tray is available in the desktop environment the app runs under. */
 PHP_METHOD(php_wxTaskBarIcon, IsAvailable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4640,6 +4793,10 @@ PHP_METHOD(php_wxTaskBarIcon, IsAvailable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTaskBarIcon::IsAvailable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTaskBarIcon::IsIconInstalled()
+   Returns true if SetIcon() was called with no subsequent RemoveIcon(). */
 PHP_METHOD(php_wxTaskBarIcon, IsIconInstalled)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4732,6 +4889,10 @@ PHP_METHOD(php_wxTaskBarIcon, IsIconInstalled)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTaskBarIcon::IsIconInstalled\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTaskBarIcon::IsOk()
+   Returns true if the object initialized successfully. */
 PHP_METHOD(php_wxTaskBarIcon, IsOk)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4824,6 +4985,10 @@ PHP_METHOD(php_wxTaskBarIcon, IsOk)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTaskBarIcon::IsOk\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTaskBarIcon::PopupMenu(wxMenu &menu)
+   Pops up a menu at the current mouse position. */
 PHP_METHOD(php_wxTaskBarIcon, PopupMenu)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4939,6 +5104,10 @@ PHP_METHOD(php_wxTaskBarIcon, PopupMenu)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTaskBarIcon::PopupMenu\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTaskBarIcon::RemoveIcon()
+   Removes the icon previously set with SetIcon(). */
 PHP_METHOD(php_wxTaskBarIcon, RemoveIcon)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5031,6 +5200,10 @@ PHP_METHOD(php_wxTaskBarIcon, RemoveIcon)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTaskBarIcon::RemoveIcon\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTaskBarIcon::SetIcon(wxIcon icon, string tooltip)
+   Sets the icon, and optional tooltip text. */
 PHP_METHOD(php_wxTaskBarIcon, SetIcon)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5160,6 +5333,10 @@ PHP_METHOD(php_wxTaskBarIcon, SetIcon)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTaskBarIcon::SetIcon\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTaskBarIcon::wxTaskBarIcon(wxTaskBarIconType iconType)
+   Default constructor. */
 PHP_METHOD(php_wxTaskBarIcon, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5255,6 +5432,8 @@ PHP_METHOD(php_wxTaskBarIcon, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxTimer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5295,6 +5474,8 @@ void php_wxTimer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto int wxTimer::GetId()
+   Returns the ID of the events generated by this timer. */
 PHP_METHOD(php_wxTimer, GetId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5387,6 +5568,10 @@ PHP_METHOD(php_wxTimer, GetId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTimer::GetId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxTimer::GetInterval()
+   Returns the current interval for the timer (in milliseconds). */
 PHP_METHOD(php_wxTimer, GetInterval)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5479,6 +5664,10 @@ PHP_METHOD(php_wxTimer, GetInterval)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTimer::GetInterval\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxEvtHandler wxTimer::GetOwner()
+   Returns the current owner of the timer. */
 PHP_METHOD(php_wxTimer, GetOwner)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5594,6 +5783,10 @@ PHP_METHOD(php_wxTimer, GetOwner)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTimer::GetOwner\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTimer::IsOneShot()
+   Returns true if the timer is one shot, i.e. */
 PHP_METHOD(php_wxTimer, IsOneShot)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5686,6 +5879,10 @@ PHP_METHOD(php_wxTimer, IsOneShot)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTimer::IsOneShot\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTimer::IsRunning()
+   Returns true if the timer is running, false if it is stopped. */
 PHP_METHOD(php_wxTimer, IsRunning)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5778,6 +5975,10 @@ PHP_METHOD(php_wxTimer, IsRunning)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTimer::IsRunning\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTimer::Notify()
+   This member should be overridden by the user if the default constructor was used and SetOwner() wasn't called. */
 PHP_METHOD(php_wxTimer, Notify)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5870,6 +6071,10 @@ PHP_METHOD(php_wxTimer, Notify)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTimer::Notify\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTimer::SetOwner(wxEvtHandler &owner, int id)
+   Associates the timer with the given owner object. */
 PHP_METHOD(php_wxTimer, SetOwner)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5998,6 +6203,10 @@ PHP_METHOD(php_wxTimer, SetOwner)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTimer::SetOwner\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTimer::Start(int milliseconds, bool oneShot)
+   (Re)starts the timer. */
 PHP_METHOD(php_wxTimer, Start)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6118,6 +6327,10 @@ PHP_METHOD(php_wxTimer, Start)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTimer::Start\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTimer::Stop()
+   Stops the timer. */
 PHP_METHOD(php_wxTimer, Stop)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6210,6 +6423,10 @@ PHP_METHOD(php_wxTimer, Stop)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTimer::Stop\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTimer::wxTimer()
+   Default constructor. */
 PHP_METHOD(php_wxTimer, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6356,6 +6573,8 @@ PHP_METHOD(php_wxTimer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxWindowDisabler_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6396,6 +6615,8 @@ void php_wxWindowDisabler_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		#endif
 	}
 }
+/* {{{ proto  wxWindowDisabler::wxWindowDisabler(bool disable)
+   Disables all top level windows of the applications. */
 PHP_METHOD(php_wxWindowDisabler, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6545,6 +6766,8 @@ PHP_METHOD(php_wxWindowDisabler, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxBusyCursor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6585,6 +6808,8 @@ void php_wxBusyCursor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxBusyCursor::wxBusyCursor(wxCursor cursor)
+   Constructs a busy cursor object, calling wxBeginBusyCursor(). */
 PHP_METHOD(php_wxBusyCursor, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6698,3 +6923,5 @@ PHP_METHOD(php_wxBusyCursor, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+

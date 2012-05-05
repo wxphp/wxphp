@@ -1,3 +1,4 @@
+<?=proto_begin($function_name)?>
 PHP_FUNCTION(php_wxDynamicCast)
 {
 	zval **tmp;
@@ -42,3 +43,4 @@ PHP_FUNCTION(php_wxDynamicCast)
 		}
 	}
 }
+<?=proto_end()?>

@@ -91,6 +91,8 @@ void php_wxFileHistory_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxFileHistory::AddFileToHistory(string filename)
+   Adds a file to the file history list, if the object has a pointer to an appropriate file menu. */
 PHP_METHOD(php_wxFileHistory, AddFileToHistory)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -189,6 +191,10 @@ PHP_METHOD(php_wxFileHistory, AddFileToHistory)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileHistory::AddFileToHistory\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileHistory::AddFilesToMenu()
+   Appends the files in the history list, to all menus managed by the file history object. */
 PHP_METHOD(php_wxFileHistory, AddFilesToMenu)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -336,6 +342,10 @@ PHP_METHOD(php_wxFileHistory, AddFilesToMenu)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileHistory::AddFilesToMenu\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxFileHistory::GetBaseId()
+   Returns the base identifier for the range used for appending items. */
 PHP_METHOD(php_wxFileHistory, GetBaseId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -428,6 +438,10 @@ PHP_METHOD(php_wxFileHistory, GetBaseId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileHistory::GetBaseId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxFileHistory::GetCount()
+   Returns the number of files currently stored in the file history. */
 PHP_METHOD(php_wxFileHistory, GetCount)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -520,6 +534,10 @@ PHP_METHOD(php_wxFileHistory, GetCount)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileHistory::GetCount\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileHistory::GetHistoryFile(int index)
+   Returns the file at this index (zero-based). */
 PHP_METHOD(php_wxFileHistory, GetHistoryFile)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -623,6 +641,10 @@ PHP_METHOD(php_wxFileHistory, GetHistoryFile)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileHistory::GetHistoryFile\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxFileHistory::GetMaxFiles()
+   Returns the maximum number of files that can be stored. */
 PHP_METHOD(php_wxFileHistory, GetMaxFiles)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -715,6 +737,10 @@ PHP_METHOD(php_wxFileHistory, GetMaxFiles)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileHistory::GetMaxFiles\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileHistory::Load(wxConfigBase config)
+   Loads the file history from the given config object. */
 PHP_METHOD(php_wxFileHistory, Load)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -830,6 +856,10 @@ PHP_METHOD(php_wxFileHistory, Load)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileHistory::Load\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileHistory::RemoveFileFromHistory(int i)
+   Removes the specified file from the history. */
 PHP_METHOD(php_wxFileHistory, RemoveFileFromHistory)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -927,6 +957,10 @@ PHP_METHOD(php_wxFileHistory, RemoveFileFromHistory)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileHistory::RemoveFileFromHistory\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileHistory::RemoveMenu(wxMenu &menu)
+   Removes this menu from the list of those managed by this object. */
 PHP_METHOD(php_wxFileHistory, RemoveMenu)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1042,6 +1076,10 @@ PHP_METHOD(php_wxFileHistory, RemoveMenu)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileHistory::RemoveMenu\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileHistory::Save(wxConfigBase &config)
+   Saves the file history into the given config object. */
 PHP_METHOD(php_wxFileHistory, Save)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1157,6 +1195,10 @@ PHP_METHOD(php_wxFileHistory, Save)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileHistory::Save\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileHistory::SetBaseId(int baseId)
+   Sets the base identifier for the range used for appending items. */
 PHP_METHOD(php_wxFileHistory, SetBaseId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1254,6 +1296,10 @@ PHP_METHOD(php_wxFileHistory, SetBaseId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileHistory::SetBaseId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileHistory::UseMenu(wxMenu &menu)
+   Adds this menu to the list of those menus that are managed by this file history object. */
 PHP_METHOD(php_wxFileHistory, UseMenu)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1369,6 +1415,10 @@ PHP_METHOD(php_wxFileHistory, UseMenu)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileHistory::UseMenu\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileHistory::wxFileHistory(int maxFiles, int idBase)
+   Constructor. */
 PHP_METHOD(php_wxFileHistory, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1475,3 +1525,5 @@ PHP_METHOD(php_wxFileHistory, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+

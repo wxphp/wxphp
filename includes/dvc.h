@@ -18,6 +18,52 @@ ZEND_BEGIN_ARG_INFO_EX(wxphp_dvc_get_args, 0, 0, 1)
 	ZEND_ARG_INFO(0, name)
 ZEND_END_ARG_INFO()
 
+extern int le_wxDataViewChoiceRenderer;
+extern zend_class_entry *php_wxDataViewChoiceRenderer_entry;
+void php_wxDataViewChoiceRenderer_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+class wxDataViewChoiceRenderer_php: public wxDataViewChoiceRenderer{
+	public:
+	
+	wxDataViewChoiceRenderer_php(const wxArrayString& choices, wxDataViewCellMode mode=wxDATAVIEW_CELL_EDITABLE, int alignment=wxDVR_DEFAULT_ALIGNMENT):wxDataViewChoiceRenderer(choices, mode, alignment){}
+		
+		
+	void InitProperties(){
+	}
+	
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+	void** properties;
+	wxPHPObjectReferences references;
+};
+
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
+static zend_function_entry php_wxDataViewChoiceRenderer_functions[] = {
+	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxObject, IsSameAs, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxObject, Ref, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxObject, GetClassInfo, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxObject, IsKindOf, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewRenderer, EnableEllipsize, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewRenderer, DisableEllipsize, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewRenderer, GetAlignment, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewRenderer, GetEllipsizeMode, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewRenderer, GetMode, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewRenderer, GetOwner, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewRenderer, GetVariantType, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewRenderer, SetAlignment, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewRenderer, SetOwner, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewRenderer, Validate, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewChoiceRenderer, GetChoice, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewChoiceRenderer, GetChoices, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDataViewChoiceRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+	PHP_FE_END
+};
+#endif
+
 extern int le_wxDataViewModel;
 extern zend_class_entry *php_wxDataViewModel_entry;
 void php_wxDataViewModel_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
@@ -581,52 +627,6 @@ static zend_function_entry php_wxDataViewToggleRenderer_functions[] = {
 	PHP_ME(php_wxDataViewRenderer, SetOwner, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewRenderer, Validate, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxDataViewToggleRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
-};
-#endif
-
-extern int le_wxDataViewChoiceRenderer;
-extern zend_class_entry *php_wxDataViewChoiceRenderer_entry;
-void php_wxDataViewChoiceRenderer_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
-
-class wxDataViewChoiceRenderer_php: public wxDataViewChoiceRenderer{
-	public:
-	
-	wxDataViewChoiceRenderer_php(const wxArrayString& choices, wxDataViewCellMode mode=wxDATAVIEW_CELL_EDITABLE, int alignment=wxDVR_DEFAULT_ALIGNMENT):wxDataViewChoiceRenderer(choices, mode, alignment){}
-		
-		
-	void InitProperties(){
-	}
-	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
-	void ***tsrm_ls;
-	zval* phpObj;
-	void** properties;
-	wxPHPObjectReferences references;
-};
-
-#ifdef WXPHP_INCLUDE_METHOD_TABLES
-static zend_function_entry php_wxDataViewChoiceRenderer_functions[] = {
-	PHP_ME(php_wxObject, UnShare, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, UnRef, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, IsSameAs, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, Ref, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, GetClassInfo, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxObject, IsKindOf, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataViewRenderer, EnableEllipsize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataViewRenderer, DisableEllipsize, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataViewRenderer, GetAlignment, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataViewRenderer, GetEllipsizeMode, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataViewRenderer, GetMode, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataViewRenderer, GetOwner, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataViewRenderer, GetVariantType, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataViewRenderer, SetAlignment, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataViewRenderer, SetOwner, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataViewRenderer, Validate, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataViewChoiceRenderer, GetChoice, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataViewChoiceRenderer, GetChoices, NULL, ZEND_ACC_PUBLIC)
-	PHP_ME(php_wxDataViewChoiceRenderer, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };
 #endif

@@ -91,6 +91,8 @@ void php_wxEventLoopBase_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+/* {{{ proto bool wxEventLoopBase::Dispatch()
+   Dispatches the next event in the windowing system event queue. */
 bool wxEventLoopBase_php::Dispatch()
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -133,6 +135,10 @@ bool wxEventLoopBase_php::Dispatch()
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto int wxEventLoopBase::DispatchTimeout(int timeout)
+   Dispatch an event but not wait longer than the specified timeout for it. */
 int wxEventLoopBase_php::DispatchTimeout(unsigned long timeout)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -181,6 +187,10 @@ int wxEventLoopBase_php::DispatchTimeout(unsigned long timeout)
 		return (int) Z_LVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto  wxEventLoopBase::Exit(int rc)
+   Exit from the loop with the given exit code. */
 void wxEventLoopBase_php::Exit(int rc)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -229,6 +239,10 @@ void wxEventLoopBase_php::Exit(int rc)
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto wxEventLoopBase wxEventLoopBase::GetActive()
+   Return the currently active (running) event loop. */
 PHP_METHOD(php_wxEventLoopBase, GetActive)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -341,6 +355,10 @@ PHP_METHOD(php_wxEventLoopBase, GetActive)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEventLoopBase::GetActive\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxEventLoopBase::IsEventAllowedInsideYield(wxEventCategory cat)
+   Returns true if the given event category is allowed inside a YieldFor() call (i.e. */
 PHP_METHOD(php_wxEventLoopBase, IsEventAllowedInsideYield)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -441,6 +459,10 @@ PHP_METHOD(php_wxEventLoopBase, IsEventAllowedInsideYield)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEventLoopBase::IsEventAllowedInsideYield\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxEventLoopBase::IsMain()
+   Returns true if this is the main loop executed by wxApp::OnRun(). */
 PHP_METHOD(php_wxEventLoopBase, IsMain)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -536,6 +558,10 @@ PHP_METHOD(php_wxEventLoopBase, IsMain)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEventLoopBase::IsMain\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxEventLoopBase::IsOk()
+   Use this to check whether the event loop was successfully created before using it. */
 PHP_METHOD(php_wxEventLoopBase, IsOk)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -631,6 +657,10 @@ PHP_METHOD(php_wxEventLoopBase, IsOk)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEventLoopBase::IsOk\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxEventLoopBase::IsRunning()
+   Return true if this event loop is currently running. */
 PHP_METHOD(php_wxEventLoopBase, IsRunning)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -726,6 +756,10 @@ PHP_METHOD(php_wxEventLoopBase, IsRunning)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEventLoopBase::IsRunning\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxEventLoopBase::IsYielding()
+   Returns true if called from inside Yield() or from inside YieldFor(). */
 PHP_METHOD(php_wxEventLoopBase, IsYielding)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -821,6 +855,10 @@ PHP_METHOD(php_wxEventLoopBase, IsYielding)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEventLoopBase::IsYielding\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxEventLoopBase::OnExit()
+   This function is called before the event loop terminates, whether this happens normally (because of Exit() call) or abnormally (because of an exception thrown from inside the loop). */
 void wxEventLoopBase_php::OnExit()
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -872,6 +910,10 @@ void wxEventLoopBase_php::OnExit()
 	//Call original method
 	wxEventLoopBase::OnExit();
 }
+/* }}} */
+
+/* {{{ proto bool wxEventLoopBase::Pending()
+   Return true if any events are available. */
 bool wxEventLoopBase_php::Pending()const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -914,6 +956,10 @@ bool wxEventLoopBase_php::Pending()const
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto bool wxEventLoopBase::ProcessIdle()
+   This virtual function is called when the application becomes idle and normally just sends wxIdleEvent to all interested parties. */
 PHP_METHOD(php_wxEventLoopBase, ProcessIdle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1009,6 +1055,10 @@ PHP_METHOD(php_wxEventLoopBase, ProcessIdle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEventLoopBase::ProcessIdle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxEventLoopBase::Run()
+   Start the event loop, return the exit code when it is finished. */
 int wxEventLoopBase_php::Run()
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1051,6 +1101,10 @@ int wxEventLoopBase_php::Run()
 		return (int) Z_LVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto  wxEventLoopBase::SetActive(wxEventLoopBase &loop)
+   Set currently active (running) event loop. */
 PHP_METHOD(php_wxEventLoopBase, SetActive)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1166,6 +1220,10 @@ PHP_METHOD(php_wxEventLoopBase, SetActive)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEventLoopBase::SetActive\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxEventLoopBase::WakeUp()
+   Called by wxWidgets to wake up the event loop even if it is currently blocked inside Dispatch(). */
 void wxEventLoopBase_php::WakeUp()
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1208,6 +1266,10 @@ void wxEventLoopBase_php::WakeUp()
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxEventLoopBase::WakeUpIdle()
+   Makes sure that idle events are sent again. */
 PHP_METHOD(php_wxEventLoopBase, WakeUpIdle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1303,6 +1365,10 @@ PHP_METHOD(php_wxEventLoopBase, WakeUpIdle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEventLoopBase::WakeUpIdle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxEventLoopBase::Yield(bool onlyIfNeeded)
+   Yields control to pending messages in the windowing system. */
 PHP_METHOD(php_wxEventLoopBase, Yield)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1417,6 +1483,10 @@ PHP_METHOD(php_wxEventLoopBase, Yield)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEventLoopBase::Yield\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxEventLoopBase::YieldFor(int eventsToProcess)
+   Works like Yield() with onlyIfNeeded == true, except that it allows the caller to specify a mask of the wxEventCategory values which indicates which events should be processed and which should instead be "delayed" (i.e. */
 PHP_METHOD(php_wxEventLoopBase, YieldFor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1517,6 +1587,8 @@ PHP_METHOD(php_wxEventLoopBase, YieldFor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEventLoopBase::YieldFor\n");
 	}
 }
+/* }}} */
+
 void php_wxEventLoopActivator_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1557,6 +1629,8 @@ void php_wxEventLoopActivator_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 		#endif
 	}
 }
+/* {{{ proto  wxEventLoopActivator::wxEventLoopActivator(wxEventLoopBase &loop)
+   Makes the loop passed as the parameter currently active. */
 PHP_METHOD(php_wxEventLoopActivator, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1660,6 +1734,8 @@ PHP_METHOD(php_wxEventLoopActivator, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxModule_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1700,6 +1776,8 @@ void php_wxModule_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxModule::OnExit()
+   Provide this function with appropriate cleanup for your module. */
 void wxModule_php::OnExit()
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1742,6 +1820,10 @@ void wxModule_php::OnExit()
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto bool wxModule::OnInit()
+   Provide this function with appropriate initialization for your module. */
 bool wxModule_php::OnInit()
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1784,6 +1866,10 @@ bool wxModule_php::OnInit()
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto  wxModule::wxModule()
+   Constructs a wxModule object. */
 PHP_METHOD(php_wxModule, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1864,6 +1950,8 @@ PHP_METHOD(php_wxModule, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxProcess_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1904,6 +1992,8 @@ void php_wxProcess_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxProcess::CloseOutput()
+   Closes the output stream (the one connected to the stdin of the child process). */
 PHP_METHOD(php_wxProcess, CloseOutput)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1996,6 +2086,10 @@ PHP_METHOD(php_wxProcess, CloseOutput)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxProcess::CloseOutput\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxProcess::Detach()
+   Detaches this event handler from the parent specified in the constructor (see wxEvtHandler::Unlink() for a similar but not identic function). */
 PHP_METHOD(php_wxProcess, Detach)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2088,6 +2182,10 @@ PHP_METHOD(php_wxProcess, Detach)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxProcess::Detach\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxProcess::Exists(int pid)
+   Returns true if the given process exists in the system. */
 PHP_METHOD(php_wxProcess, Exists)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2186,6 +2284,10 @@ PHP_METHOD(php_wxProcess, Exists)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxProcess::Exists\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxInputStream wxProcess::GetErrorStream()
+   Returns an input stream which corresponds to the standard error output (stderr) of the child process. */
 PHP_METHOD(php_wxProcess, GetErrorStream)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2301,6 +2403,10 @@ PHP_METHOD(php_wxProcess, GetErrorStream)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxProcess::GetErrorStream\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxInputStream wxProcess::GetInputStream()
+   It returns an input stream corresponding to the standard output stream of the subprocess. */
 PHP_METHOD(php_wxProcess, GetInputStream)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2416,6 +2522,10 @@ PHP_METHOD(php_wxProcess, GetInputStream)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxProcess::GetInputStream\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxOutputStream wxProcess::GetOutputStream()
+   It returns an output stream corresponding to the input stream of the subprocess. */
 PHP_METHOD(php_wxProcess, GetOutputStream)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2531,6 +2641,10 @@ PHP_METHOD(php_wxProcess, GetOutputStream)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxProcess::GetOutputStream\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxProcess::GetPid()
+   Returns the process ID of the process launched by Open() or set by wxExecute() (if you passed this wxProcess as argument). */
 PHP_METHOD(php_wxProcess, GetPid)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2623,6 +2737,10 @@ PHP_METHOD(php_wxProcess, GetPid)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxProcess::GetPid\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxProcess::IsErrorAvailable()
+   Returns true if there is data to be read on the child process standard error stream. */
 PHP_METHOD(php_wxProcess, IsErrorAvailable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2715,6 +2833,10 @@ PHP_METHOD(php_wxProcess, IsErrorAvailable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxProcess::IsErrorAvailable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxProcess::IsInputOpened()
+   Returns true if the child process standard output stream is opened. */
 PHP_METHOD(php_wxProcess, IsInputOpened)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2807,6 +2929,10 @@ PHP_METHOD(php_wxProcess, IsInputOpened)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxProcess::IsInputOpened\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxKillError wxProcess::Kill(int pid, wxSignal sig, int flags)
+   Send the specified signal to the given process. */
 PHP_METHOD(php_wxProcess, Kill)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2931,6 +3057,10 @@ PHP_METHOD(php_wxProcess, Kill)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxProcess::Kill\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxProcess::IsInputAvailable()
+   Returns true if there is data to be read on the child process standard output stream. */
 PHP_METHOD(php_wxProcess, IsInputAvailable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3023,6 +3153,10 @@ PHP_METHOD(php_wxProcess, IsInputAvailable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxProcess::IsInputAvailable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxProcess::OnTerminate(int pid, int status)
+   It is called when the process with the pid pid finishes. */
 void wxProcess_php::OnTerminate(int pid, int status)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3081,6 +3215,10 @@ void wxProcess_php::OnTerminate(int pid, int status)
 	//Call original method
 	wxProcess::OnTerminate(pid, status);
 }
+/* }}} */
+
+/* {{{ proto  wxProcess::Redirect()
+   Turns on redirection. */
 PHP_METHOD(php_wxProcess, Redirect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3173,6 +3311,10 @@ PHP_METHOD(php_wxProcess, Redirect)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxProcess::Redirect\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxProcess wxProcess::Open(string cmd, int flags)
+   This static method replaces the standard popen() function: it launches the process specified by the cmd parameter and returns the wxProcess object which can be used to retrieve the streams connected to the standard input, output and error output of the child process. */
 PHP_METHOD(php_wxProcess, Open)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3323,6 +3465,10 @@ PHP_METHOD(php_wxProcess, Open)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxProcess::Open\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxProcess::wxProcess(wxEvtHandler &parent, int id)
+   Constructs a process object. */
 PHP_METHOD(php_wxProcess, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3484,6 +3630,8 @@ PHP_METHOD(php_wxProcess, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxSingleInstanceChecker_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3524,6 +3672,8 @@ void php_wxSingleInstanceChecker_destruction_handler(zend_rsrc_list_entry *rsrc 
 		#endif
 	}
 }
+/* {{{ proto bool wxSingleInstanceChecker::Create(string name, string path)
+   Initialize the object if it had been created using the default constructor. */
 PHP_METHOD(php_wxSingleInstanceChecker, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3635,6 +3785,10 @@ PHP_METHOD(php_wxSingleInstanceChecker, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSingleInstanceChecker::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxSingleInstanceChecker::CreateDefault()
+   Calls Create() with default name. */
 PHP_METHOD(php_wxSingleInstanceChecker, CreateDefault)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3727,6 +3881,10 @@ PHP_METHOD(php_wxSingleInstanceChecker, CreateDefault)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSingleInstanceChecker::CreateDefault\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxSingleInstanceChecker::IsAnotherRunning()
+   Returns true if another copy of this program is already running and false otherwise. */
 PHP_METHOD(php_wxSingleInstanceChecker, IsAnotherRunning)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3819,6 +3977,10 @@ PHP_METHOD(php_wxSingleInstanceChecker, IsAnotherRunning)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSingleInstanceChecker::IsAnotherRunning\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSingleInstanceChecker::wxSingleInstanceChecker()
+   Default constructor. */
 PHP_METHOD(php_wxSingleInstanceChecker, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3948,3 +4110,5 @@ PHP_METHOD(php_wxSingleInstanceChecker, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+

@@ -91,6 +91,8 @@ void php_wxDataOutputStream_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 		#endif
 	}
 }
+/* {{{ proto  wxDataOutputStream::BigEndianOrdered(bool be_order)
+   If be_order is true, all data will be written in big-endian order, e.g. */
 PHP_METHOD(php_wxDataOutputStream, BigEndianOrdered)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -191,6 +193,10 @@ PHP_METHOD(php_wxDataOutputStream, BigEndianOrdered)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataOutputStream::BigEndianOrdered\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataOutputStream::Write16(int i16)
+   Writes the 16 bit unsigned integer i16 to the stream. */
 PHP_METHOD(php_wxDataOutputStream, Write16)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -332,6 +338,10 @@ PHP_METHOD(php_wxDataOutputStream, Write16)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataOutputStream::Write16\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataOutputStream::Write32(int i32)
+   Writes the 32 bit unsigned integer i32 to the stream. */
 PHP_METHOD(php_wxDataOutputStream, Write32)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -473,6 +483,10 @@ PHP_METHOD(php_wxDataOutputStream, Write32)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataOutputStream::Write32\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataOutputStream::Write8(int i8)
+   Writes the single byte i8 to the stream. */
 PHP_METHOD(php_wxDataOutputStream, Write8)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -614,6 +628,10 @@ PHP_METHOD(php_wxDataOutputStream, Write8)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataOutputStream::Write8\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataOutputStream::WriteDouble(float f)
+   Writes the double f to the stream using the IEEE format. */
 PHP_METHOD(php_wxDataOutputStream, WriteDouble)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -781,6 +799,10 @@ PHP_METHOD(php_wxDataOutputStream, WriteDouble)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataOutputStream::WriteDouble\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataOutputStream::WriteString(string string)
+   Writes string to the stream. */
 PHP_METHOD(php_wxDataOutputStream, WriteString)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -882,6 +904,8 @@ PHP_METHOD(php_wxDataOutputStream, WriteString)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataOutputStream::WriteString\n");
 	}
 }
+/* }}} */
+
 void php_wxDataInputStream_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -922,6 +946,8 @@ void php_wxDataInputStream_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 		#endif
 	}
 }
+/* {{{ proto string wxDataInputStream::ReadString()
+   Reads a string from a stream. */
 PHP_METHOD(php_wxDataInputStream, ReadString)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1023,6 +1049,10 @@ PHP_METHOD(php_wxDataInputStream, ReadString)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataInputStream::ReadString\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataInputStream::ReadDouble(float &buffer, int size)
+   Reads double data (IEEE encoded) from the stream in a specified buffer. */
 PHP_METHOD(php_wxDataInputStream, ReadDouble)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1169,6 +1199,10 @@ PHP_METHOD(php_wxDataInputStream, ReadDouble)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataInputStream::ReadDouble\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataInputStream::Read8(int buffer, int size)
+   Reads bytes from the stream in a specified buffer. */
 PHP_METHOD(php_wxDataInputStream, Read8)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1305,6 +1339,10 @@ PHP_METHOD(php_wxDataInputStream, Read8)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataInputStream::Read8\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataInputStream::Read32(int buffer, int size)
+   Reads 32 bit unsigned integers from the stream in a specified buffer. */
 PHP_METHOD(php_wxDataInputStream, Read32)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1441,6 +1479,10 @@ PHP_METHOD(php_wxDataInputStream, Read32)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataInputStream::Read32\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataInputStream::Read16(int buffer, int size)
+   Reads 16 bit unsigned integers from the stream in a specified buffer. */
 PHP_METHOD(php_wxDataInputStream, Read16)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1577,6 +1619,10 @@ PHP_METHOD(php_wxDataInputStream, Read16)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataInputStream::Read16\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataInputStream::BigEndianOrdered(bool be_order)
+   If be_order is true, all data will be read in big-endian order, such as written by programs on a big endian architecture (e.g. */
 PHP_METHOD(php_wxDataInputStream, BigEndianOrdered)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1677,6 +1723,8 @@ PHP_METHOD(php_wxDataInputStream, BigEndianOrdered)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataInputStream::BigEndianOrdered\n");
 	}
 }
+/* }}} */
+
 void php_wxStreamBase_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1717,6 +1765,8 @@ void php_wxStreamBase_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxStreamBase::wxStreamBase()
+   Creates a dummy stream object. */
 PHP_METHOD(php_wxStreamBase, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1797,6 +1847,10 @@ PHP_METHOD(php_wxStreamBase, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxStreamBase::Reset(wxStreamError error)
+   Resets the stream state. */
 PHP_METHOD(php_wxStreamBase, Reset)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1937,6 +1991,10 @@ PHP_METHOD(php_wxStreamBase, Reset)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStreamBase::Reset\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStreamBase::IsSeekable()
+   Returns true if the stream supports seeking to arbitrary offsets. */
 PHP_METHOD(php_wxStreamBase, IsSeekable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2061,6 +2119,10 @@ PHP_METHOD(php_wxStreamBase, IsSeekable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStreamBase::IsSeekable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStreamBase::IsOk()
+   Returns true if no error occurred on the stream. */
 PHP_METHOD(php_wxStreamBase, IsOk)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2185,6 +2247,10 @@ PHP_METHOD(php_wxStreamBase, IsOk)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStreamBase::IsOk\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStreamBase::GetSize()
+   This function returns the size of the stream. */
 PHP_METHOD(php_wxStreamBase, GetSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2309,6 +2375,10 @@ PHP_METHOD(php_wxStreamBase, GetSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStreamBase::GetSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStreamBase::GetLength()
+   Returns the length of the stream in bytes. */
 PHP_METHOD(php_wxStreamBase, GetLength)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2433,6 +2503,10 @@ PHP_METHOD(php_wxStreamBase, GetLength)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStreamBase::GetLength\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxStreamError wxStreamBase::GetLastError()
+   This function returns the last error. */
 PHP_METHOD(php_wxStreamBase, GetLastError)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2557,6 +2631,10 @@ PHP_METHOD(php_wxStreamBase, GetLastError)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStreamBase::GetLastError\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStreamBase::OnSysSeek(int pos, wxSeekMode mode)
+   Internal function. */
 wxFileOffset wxStreamBase_php::OnSysSeek(wxFileOffset pos, wxSeekMode mode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2615,6 +2693,10 @@ wxFileOffset wxStreamBase_php::OnSysSeek(wxFileOffset pos, wxSeekMode mode)
 	//Call original method
 	return wxStreamBase::OnSysSeek(pos, mode);
 }
+/* }}} */
+
+/* {{{ proto int wxStreamBase::OnSysTell()
+   Internal function. */
 wxFileOffset wxStreamBase_php::OnSysTell()const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2666,6 +2748,8 @@ wxFileOffset wxStreamBase_php::OnSysTell()const
 	//Call original method
 	return wxStreamBase::OnSysTell();
 }
+/* }}} */
+
 void php_wxOutputStream_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2706,6 +2790,8 @@ void php_wxOutputStream_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 		#endif
 	}
 }
+/* {{{ proto  wxOutputStream::wxOutputStream()
+   Creates a dummy wxOutputStream object. */
 PHP_METHOD(php_wxOutputStream, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2786,6 +2872,10 @@ PHP_METHOD(php_wxOutputStream, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto wxOutputStream wxOutputStream::Write(wxInputStream &stream_in)
+   Reads data from the specified input stream and stores them in the current stream. */
 PHP_METHOD(php_wxOutputStream, Write)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2937,6 +3027,10 @@ PHP_METHOD(php_wxOutputStream, Write)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxOutputStream::Write\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxOutputStream::TellO()
+   Returns the current stream position. */
 PHP_METHOD(php_wxOutputStream, TellO)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3045,6 +3139,10 @@ PHP_METHOD(php_wxOutputStream, TellO)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxOutputStream::TellO\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxOutputStream::SeekO(int pos, wxSeekMode mode)
+   Changes the stream current position. */
 PHP_METHOD(php_wxOutputStream, SeekO)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3170,6 +3268,10 @@ PHP_METHOD(php_wxOutputStream, SeekO)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxOutputStream::SeekO\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxOutputStream::PutC(string c)
+   Puts the specified character in the output queue and increments the stream position. */
 PHP_METHOD(php_wxOutputStream, PutC)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3283,6 +3385,10 @@ PHP_METHOD(php_wxOutputStream, PutC)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxOutputStream::PutC\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxOutputStream::Close()
+   Closes the stream, returning false if an error occurs. */
 PHP_METHOD(php_wxOutputStream, Close)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3391,6 +3497,10 @@ PHP_METHOD(php_wxOutputStream, Close)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxOutputStream::Close\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxOutputStream::LastWrite()
+   Returns the number of bytes written during the last Write(). */
 PHP_METHOD(php_wxOutputStream, LastWrite)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3499,6 +3609,8 @@ PHP_METHOD(php_wxOutputStream, LastWrite)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxOutputStream::LastWrite\n");
 	}
 }
+/* }}} */
+
 void php_wxInputStream_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3539,6 +3651,8 @@ void php_wxInputStream_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxInputStream::wxInputStream()
+   Creates a dummy input stream. */
 PHP_METHOD(php_wxInputStream, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3619,6 +3733,10 @@ PHP_METHOD(php_wxInputStream, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto bool wxInputStream::Ungetch(string c)
+   This function acts like the previous one except that it takes only one character: it is sometimes shorter to use than the generic function. */
 PHP_METHOD(php_wxInputStream, Ungetch)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3771,6 +3889,10 @@ PHP_METHOD(php_wxInputStream, Ungetch)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxInputStream::Ungetch\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxInputStream::TellI()
+   Returns the current stream position or wxInvalidOffset if it's not available (e.g. */
 PHP_METHOD(php_wxInputStream, TellI)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3879,6 +4001,10 @@ PHP_METHOD(php_wxInputStream, TellI)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxInputStream::TellI\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxInputStream::SeekI(int pos, wxSeekMode mode)
+   Changes the stream current position. */
 PHP_METHOD(php_wxInputStream, SeekI)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4004,6 +4130,10 @@ PHP_METHOD(php_wxInputStream, SeekI)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxInputStream::SeekI\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxInputStream wxInputStream::Read(wxOutputStream &stream_out)
+   Reads data from the input queue and stores it in the specified output stream. */
 PHP_METHOD(php_wxInputStream, Read)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4155,6 +4285,10 @@ PHP_METHOD(php_wxInputStream, Read)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxInputStream::Read\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxInputStream::Peek()
+   Returns the first character in the input queue without removing it. */
 PHP_METHOD(php_wxInputStream, Peek)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4266,6 +4400,10 @@ PHP_METHOD(php_wxInputStream, Peek)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxInputStream::Peek\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxInputStream::OnSysRead(void buffer, int bufsize)
+   Internal function. */
 size_t wxInputStream_php::OnSysRead(void* buffer, size_t bufsize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4315,6 +4453,10 @@ size_t wxInputStream_php::OnSysRead(void* buffer, size_t bufsize)
 		return (size_t) Z_LVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto int wxInputStream::LastRead()
+   Returns the last number of bytes read. */
 PHP_METHOD(php_wxInputStream, LastRead)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4423,6 +4565,10 @@ PHP_METHOD(php_wxInputStream, LastRead)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxInputStream::LastRead\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxInputStream::GetC()
+   Returns the first character in the input queue and removes it, blocking until it appears if necessary. */
 PHP_METHOD(php_wxInputStream, GetC)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4531,6 +4677,10 @@ PHP_METHOD(php_wxInputStream, GetC)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxInputStream::GetC\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxInputStream::Eof()
+   Returns true after an attempt has been made to read past the end of the stream. */
 PHP_METHOD(php_wxInputStream, Eof)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4639,6 +4789,10 @@ PHP_METHOD(php_wxInputStream, Eof)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxInputStream::Eof\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxInputStream::CanRead()
+   Returns true if some data is available in the stream right now, so that calling Read() wouldn't block. */
 PHP_METHOD(php_wxInputStream, CanRead)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4747,6 +4901,8 @@ PHP_METHOD(php_wxInputStream, CanRead)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxInputStream::CanRead\n");
 	}
 }
+/* }}} */
+
 void php_wxFFileOutputStream_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4787,6 +4943,8 @@ void php_wxFFileOutputStream_destruction_handler(zend_rsrc_list_entry *rsrc TSRM
 		#endif
 	}
 }
+/* {{{ proto bool wxFFileOutputStream::IsOk()
+   Returns true if the stream is initialized and ready. */
 PHP_METHOD(php_wxFFileOutputStream, IsOk)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4883,6 +5041,10 @@ PHP_METHOD(php_wxFFileOutputStream, IsOk)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFFileOutputStream::IsOk\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFFileOutputStream::wxFFileOutputStream(string filename, string mode)
+   Open the given file filename with mode mode. */
 PHP_METHOD(php_wxFFileOutputStream, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5035,6 +5197,8 @@ PHP_METHOD(php_wxFFileOutputStream, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxFileOutputStream_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5075,6 +5239,8 @@ void php_wxFileOutputStream_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 		#endif
 	}
 }
+/* {{{ proto bool wxFileOutputStream::IsOk()
+   Returns true if the stream is initialized and ready. */
 PHP_METHOD(php_wxFileOutputStream, IsOk)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5171,6 +5337,10 @@ PHP_METHOD(php_wxFileOutputStream, IsOk)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileOutputStream::IsOk\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileOutputStream::wxFileOutputStream(string ofileName)
+   Creates a new file with ofileName name and initializes the stream in write-only mode. */
 PHP_METHOD(php_wxFileOutputStream, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5347,6 +5517,8 @@ PHP_METHOD(php_wxFileOutputStream, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxFileInputStream_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5387,6 +5559,8 @@ void php_wxFileInputStream_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 		#endif
 	}
 }
+/* {{{ proto bool wxFileInputStream::IsOk()
+   Returns true if the stream is initialized and ready. */
 PHP_METHOD(php_wxFileInputStream, IsOk)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5483,6 +5657,10 @@ PHP_METHOD(php_wxFileInputStream, IsOk)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileInputStream::IsOk\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileInputStream::wxFileInputStream(string ifileName)
+   Opens the specified file using its ifileName name in read-only mode. */
 PHP_METHOD(php_wxFileInputStream, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5659,6 +5837,8 @@ PHP_METHOD(php_wxFileInputStream, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxFFileInputStream_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5699,6 +5879,8 @@ void php_wxFFileInputStream_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 		#endif
 	}
 }
+/* {{{ proto  wxFFileInputStream::wxFFileInputStream(wxFFile &file)
+   Initializes a file stream in read-only mode using the file I/O object file. */
 PHP_METHOD(php_wxFFileInputStream, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5851,6 +6033,10 @@ PHP_METHOD(php_wxFFileInputStream, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto bool wxFFileInputStream::IsOk()
+   Returns true if the stream is initialized and ready. */
 PHP_METHOD(php_wxFFileInputStream, IsOk)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5947,6 +6133,8 @@ PHP_METHOD(php_wxFFileInputStream, IsOk)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFFileInputStream::IsOk\n");
 	}
 }
+/* }}} */
+
 void php_wxFFileStream_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5987,6 +6175,8 @@ void php_wxFFileStream_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto bool wxFFileStream::IsOk()
+   Returns true if the stream is initialized and ready. */
 PHP_METHOD(php_wxFFileStream, IsOk)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6079,6 +6269,10 @@ PHP_METHOD(php_wxFFileStream, IsOk)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFFileStream::IsOk\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFFileStream::wxFFileStream(string iofileName, string mode)
+   Initializes a new file stream in the given mode using the specified iofileName name. */
 PHP_METHOD(php_wxFFileStream, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6177,6 +6371,8 @@ PHP_METHOD(php_wxFFileStream, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxFileStream_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6217,6 +6413,8 @@ void php_wxFileStream_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto bool wxFileStream::IsOk()
+   Returns true if the stream is initialized and ready. */
 PHP_METHOD(php_wxFileStream, IsOk)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6309,6 +6507,10 @@ PHP_METHOD(php_wxFileStream, IsOk)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileStream::IsOk\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileStream::wxFileStream(string iofileName)
+   Initializes a new file stream in read-write mode using the specified iofileName name. */
 PHP_METHOD(php_wxFileStream, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6395,3 +6597,5 @@ PHP_METHOD(php_wxFileStream, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+

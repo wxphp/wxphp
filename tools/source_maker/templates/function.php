@@ -1,3 +1,4 @@
+<?=proto_begin($function_name)?>
 PHP_FUNCTION(php_<?=$function_name?>)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29,3 +30,4 @@ PHP_FUNCTION(php_<?=$function_name?>)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: <?=$function_name?>\n");
 	}
 }
+<?=proto_end()?>

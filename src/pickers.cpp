@@ -58,6 +58,8 @@ void php_wxColourPickerCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto bool wxColourPickerCtrl::Create(wxWindow &parent, int id, wxColour colour, wxPoint pos, wxSize size, int style, wxValidator validator, string name)
+   Creates a colour picker with the given arguments. */
 PHP_METHOD(php_wxColourPickerCtrl, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -338,6 +340,10 @@ PHP_METHOD(php_wxColourPickerCtrl, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxColourPickerCtrl::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxColourPickerCtrl::GetColour()
+   Returns the currently selected colour. */
 PHP_METHOD(php_wxColourPickerCtrl, GetColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -435,6 +441,10 @@ PHP_METHOD(php_wxColourPickerCtrl, GetColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxColourPickerCtrl::GetColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxColourPickerCtrl::SetColour(wxColour col)
+   Sets the currently selected colour. */
 PHP_METHOD(php_wxColourPickerCtrl, SetColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -588,6 +598,10 @@ PHP_METHOD(php_wxColourPickerCtrl, SetColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxColourPickerCtrl::SetColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxColourPickerCtrl::wxColourPickerCtrl(wxWindow &parent, int id, wxColour colour, wxPoint pos, wxSize size, int style, wxValidator validator, string name)
+   Initializes the object and calls Create() with all the parameters. */
 PHP_METHOD(php_wxColourPickerCtrl, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -850,6 +864,8 @@ PHP_METHOD(php_wxColourPickerCtrl, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxDatePickerCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -857,6 +873,8 @@ void php_wxDatePickerCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto  wxDatePickerCtrl::wxDatePickerCtrl(wxWindow &parent, int id, timestamp dt, wxPoint pos, wxSize size, int style, wxValidator validator, string name)
+   Initializes the object and calls Create() with all the parameters. */
 PHP_METHOD(php_wxDatePickerCtrl, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1096,6 +1114,10 @@ PHP_METHOD(php_wxDatePickerCtrl, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto bool wxDatePickerCtrl::Create(wxWindow &parent, int id, timestamp dt, wxPoint pos, wxSize size, int style, wxValidator validator, string name)
+   Create the control window. */
 PHP_METHOD(php_wxDatePickerCtrl, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1353,6 +1375,10 @@ PHP_METHOD(php_wxDatePickerCtrl, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDatePickerCtrl::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDatePickerCtrl::SetValue(timestamp dt)
+   Changes the current value of the control. */
 PHP_METHOD(php_wxDatePickerCtrl, SetValue)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1450,6 +1476,10 @@ PHP_METHOD(php_wxDatePickerCtrl, SetValue)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDatePickerCtrl::SetValue\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDatePickerCtrl::SetRange(timestamp dt1, timestamp dt2)
+   Sets the valid range for the date selection. */
 PHP_METHOD(php_wxDatePickerCtrl, SetRange)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1548,6 +1578,10 @@ PHP_METHOD(php_wxDatePickerCtrl, SetRange)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDatePickerCtrl::SetRange\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto timestamp wxDatePickerCtrl::GetValue()
+   Returns the currently entered date. */
 PHP_METHOD(php_wxDatePickerCtrl, GetValue)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1642,6 +1676,10 @@ PHP_METHOD(php_wxDatePickerCtrl, GetValue)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDatePickerCtrl::GetValue\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDatePickerCtrl::GetRange(timestamp &dt1, timestamp &dt2)
+   If the control had been previously limited to a range of dates using SetRange(), returns the lower and upper bounds of this range. */
 PHP_METHOD(php_wxDatePickerCtrl, GetRange)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1749,6 +1787,8 @@ PHP_METHOD(php_wxDatePickerCtrl, GetRange)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDatePickerCtrl::GetRange\n");
 	}
 }
+/* }}} */
+
 void php_wxFilePickerCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1756,6 +1796,8 @@ void php_wxFilePickerCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto bool wxFilePickerCtrl::Create(wxWindow &parent, int id, string path, string message, string wildcard, wxPoint pos, wxSize size, int style, wxValidator validator, string name)
+   Creates this widget with the given parameters. */
 PHP_METHOD(php_wxFilePickerCtrl, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2042,6 +2084,10 @@ PHP_METHOD(php_wxFilePickerCtrl, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFilePickerCtrl::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFilePickerCtrl::GetPath()
+   Returns the absolute path of the currently selected file. */
 PHP_METHOD(php_wxFilePickerCtrl, GetPath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2140,6 +2186,10 @@ PHP_METHOD(php_wxFilePickerCtrl, GetPath)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFilePickerCtrl::GetPath\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFilePickerCtrl::SetFileName(wxFileName filename)
+   This method does the same thing as SetPath() but takes a wxFileName object instead of a string. */
 PHP_METHOD(php_wxFilePickerCtrl, SetFileName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2255,6 +2305,10 @@ PHP_METHOD(php_wxFilePickerCtrl, SetFileName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFilePickerCtrl::SetFileName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFilePickerCtrl::SetPath(string filename)
+   Sets the absolute path of the currently selected file. */
 PHP_METHOD(php_wxFilePickerCtrl, SetPath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2353,6 +2407,10 @@ PHP_METHOD(php_wxFilePickerCtrl, SetPath)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFilePickerCtrl::SetPath\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFilePickerCtrl::wxFilePickerCtrl(wxWindow &parent, int id, string path, string message, string wildcard, wxPoint pos, wxSize size, int style, wxValidator validator, string name)
+   Initializes the object and calls Create() with all the parameters. */
 PHP_METHOD(php_wxFilePickerCtrl, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2619,6 +2677,10 @@ PHP_METHOD(php_wxFilePickerCtrl, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto wxFileName wxFilePickerCtrl::GetFileName()
+   Similar to GetPath() but returns the path of the currently selected file as a wxFileName object. */
 PHP_METHOD(php_wxFilePickerCtrl, GetFileName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2716,6 +2778,8 @@ PHP_METHOD(php_wxFilePickerCtrl, GetFileName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFilePickerCtrl::GetFileName\n");
 	}
 }
+/* }}} */
+
 void php_wxDirPickerCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2723,6 +2787,8 @@ void php_wxDirPickerCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto bool wxDirPickerCtrl::Create(wxWindow &parent, int id, string path, string message, wxPoint pos, wxSize size, int style, wxValidator validator, string name)
+   Creates the widgets with the given parameters. */
 PHP_METHOD(php_wxDirPickerCtrl, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2995,6 +3061,10 @@ PHP_METHOD(php_wxDirPickerCtrl, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDirPickerCtrl::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFileName wxDirPickerCtrl::GetDirName()
+   Returns the absolute path of the currently selected directory as a wxFileName object. */
 PHP_METHOD(php_wxDirPickerCtrl, GetDirName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3092,6 +3162,10 @@ PHP_METHOD(php_wxDirPickerCtrl, GetDirName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDirPickerCtrl::GetDirName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxDirPickerCtrl::GetPath()
+   Returns the absolute path of the currently selected directory. */
 PHP_METHOD(php_wxDirPickerCtrl, GetPath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3190,6 +3264,10 @@ PHP_METHOD(php_wxDirPickerCtrl, GetPath)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDirPickerCtrl::GetPath\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDirPickerCtrl::SetDirName(wxFileName dirname)
+   Just like SetPath() but this function takes a wxFileName object. */
 PHP_METHOD(php_wxDirPickerCtrl, SetDirName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3305,6 +3383,10 @@ PHP_METHOD(php_wxDirPickerCtrl, SetDirName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDirPickerCtrl::SetDirName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDirPickerCtrl::SetPath(string dirname)
+   Sets the absolute path of (the default converter uses current locale's charset)the currently selected directory. */
 PHP_METHOD(php_wxDirPickerCtrl, SetPath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3403,6 +3485,10 @@ PHP_METHOD(php_wxDirPickerCtrl, SetPath)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDirPickerCtrl::SetPath\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDirPickerCtrl::wxDirPickerCtrl(wxWindow &parent, int id, string path, string message, wxPoint pos, wxSize size, int style, wxValidator validator, string name)
+   Initializes the object and calls Create() with all the parameters. */
 PHP_METHOD(php_wxDirPickerCtrl, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3656,6 +3742,8 @@ PHP_METHOD(php_wxDirPickerCtrl, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxFontPickerCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3663,6 +3751,8 @@ void php_wxFontPickerCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto bool wxFontPickerCtrl::Create(wxWindow &parent, int id, wxFont font, wxPoint pos, wxSize size, int style, wxValidator validator, string name)
+   Creates this widget with given parameters. */
 PHP_METHOD(php_wxFontPickerCtrl, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3943,6 +4033,10 @@ PHP_METHOD(php_wxFontPickerCtrl, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontPickerCtrl::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxFontPickerCtrl::GetMaxPointSize()
+   Returns the maximum point size value allowed for the user-chosen font. */
 PHP_METHOD(php_wxFontPickerCtrl, GetMaxPointSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4035,6 +4129,10 @@ PHP_METHOD(php_wxFontPickerCtrl, GetMaxPointSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontPickerCtrl::GetMaxPointSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFont wxFontPickerCtrl::GetSelectedFont()
+   Returns the currently selected font. */
 PHP_METHOD(php_wxFontPickerCtrl, GetSelectedFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4132,6 +4230,10 @@ PHP_METHOD(php_wxFontPickerCtrl, GetSelectedFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontPickerCtrl::GetSelectedFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFontPickerCtrl::SetMaxPointSize(int max)
+   Sets the maximum point size value allowed for the user-chosen font. */
 PHP_METHOD(php_wxFontPickerCtrl, SetMaxPointSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4229,6 +4331,10 @@ PHP_METHOD(php_wxFontPickerCtrl, SetMaxPointSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontPickerCtrl::SetMaxPointSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFontPickerCtrl::SetSelectedFont(wxFont font)
+   Sets the currently selected font. */
 PHP_METHOD(php_wxFontPickerCtrl, SetSelectedFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4344,6 +4450,10 @@ PHP_METHOD(php_wxFontPickerCtrl, SetSelectedFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontPickerCtrl::SetSelectedFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFontPickerCtrl::wxFontPickerCtrl(wxWindow &parent, int id, wxFont font, wxPoint pos, wxSize size, int style, wxValidator validator, string name)
+   Initializes the object and calls Create() with all the parameters. */
 PHP_METHOD(php_wxFontPickerCtrl, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4606,6 +4716,8 @@ PHP_METHOD(php_wxFontPickerCtrl, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxPickerBase_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4613,6 +4725,8 @@ void php_wxPickerBase_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto int wxPickerBase::GetInternalMargin()
+   Returns the margin (in pixel) between the picker and the text control. */
 PHP_METHOD(php_wxPickerBase, GetInternalMargin)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4740,6 +4854,10 @@ PHP_METHOD(php_wxPickerBase, GetInternalMargin)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPickerBase::GetInternalMargin\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxControl wxPickerBase::GetPickerCtrl()
+   Returns the native implementation of the real picker control. */
 PHP_METHOD(php_wxPickerBase, GetPickerCtrl)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4894,6 +5012,10 @@ PHP_METHOD(php_wxPickerBase, GetPickerCtrl)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPickerBase::GetPickerCtrl\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxPickerBase::GetPickerCtrlProportion()
+   Returns the proportion value of the picker. */
 PHP_METHOD(php_wxPickerBase, GetPickerCtrlProportion)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5021,6 +5143,10 @@ PHP_METHOD(php_wxPickerBase, GetPickerCtrlProportion)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPickerBase::GetPickerCtrlProportion\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxTextCtrl wxPickerBase::GetTextCtrl()
+   Returns a pointer to the text control handled by this window or NULL if the wxPB_USE_TEXTCTRL style was not specified when this control was created. */
 PHP_METHOD(php_wxPickerBase, GetTextCtrl)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5175,6 +5301,10 @@ PHP_METHOD(php_wxPickerBase, GetTextCtrl)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPickerBase::GetTextCtrl\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxPickerBase::GetTextCtrlProportion()
+   Returns the proportion value of the text control. */
 PHP_METHOD(php_wxPickerBase, GetTextCtrlProportion)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5302,6 +5432,10 @@ PHP_METHOD(php_wxPickerBase, GetTextCtrlProportion)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPickerBase::GetTextCtrlProportion\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPickerBase::HasTextCtrl()
+   Returns true if this window has a valid text control (i.e. */
 PHP_METHOD(php_wxPickerBase, HasTextCtrl)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5429,6 +5563,10 @@ PHP_METHOD(php_wxPickerBase, HasTextCtrl)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPickerBase::HasTextCtrl\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPickerBase::IsPickerCtrlGrowable()
+   Returns true if the picker control is growable. */
 PHP_METHOD(php_wxPickerBase, IsPickerCtrlGrowable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5556,6 +5694,10 @@ PHP_METHOD(php_wxPickerBase, IsPickerCtrlGrowable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPickerBase::IsPickerCtrlGrowable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPickerBase::IsTextCtrlGrowable()
+   Returns true if the text control is growable. */
 PHP_METHOD(php_wxPickerBase, IsTextCtrlGrowable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5683,6 +5825,10 @@ PHP_METHOD(php_wxPickerBase, IsTextCtrlGrowable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPickerBase::IsTextCtrlGrowable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPickerBase::SetInternalMargin(int margin)
+   Sets the margin (in pixel) between the picker and the text control. */
 PHP_METHOD(php_wxPickerBase, SetInternalMargin)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5815,6 +5961,10 @@ PHP_METHOD(php_wxPickerBase, SetInternalMargin)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPickerBase::SetInternalMargin\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPickerBase::SetPickerCtrlGrowable(bool grow)
+   Sets the picker control as growable when grow is true. */
 PHP_METHOD(php_wxPickerBase, SetPickerCtrlGrowable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5977,6 +6127,10 @@ PHP_METHOD(php_wxPickerBase, SetPickerCtrlGrowable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPickerBase::SetPickerCtrlGrowable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPickerBase::SetPickerCtrlProportion(int prop)
+   Sets the proportion value of the picker. */
 PHP_METHOD(php_wxPickerBase, SetPickerCtrlProportion)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6109,6 +6263,10 @@ PHP_METHOD(php_wxPickerBase, SetPickerCtrlProportion)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPickerBase::SetPickerCtrlProportion\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPickerBase::SetTextCtrlGrowable(bool grow)
+   Sets the text control as growable when grow is true. */
 PHP_METHOD(php_wxPickerBase, SetTextCtrlGrowable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6271,6 +6429,10 @@ PHP_METHOD(php_wxPickerBase, SetTextCtrlGrowable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPickerBase::SetTextCtrlGrowable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPickerBase::SetTextCtrlProportion(int prop)
+   Sets the proportion value of the text control. */
 PHP_METHOD(php_wxPickerBase, SetTextCtrlProportion)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6403,6 +6565,8 @@ PHP_METHOD(php_wxPickerBase, SetTextCtrlProportion)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPickerBase::SetTextCtrlProportion\n");
 	}
 }
+/* }}} */
+
 void php_wxTimePickerCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6410,6 +6574,8 @@ void php_wxTimePickerCtrl_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto  wxTimePickerCtrl::wxTimePickerCtrl(wxWindow &parent, int id, timestamp dt, wxPoint pos, wxSize size, int style, wxValidator validator, string name)
+   Initializes the object and calls Create() with all the parameters. */
 PHP_METHOD(php_wxTimePickerCtrl, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6649,6 +6815,10 @@ PHP_METHOD(php_wxTimePickerCtrl, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxTimePickerCtrl::SetValue(timestamp dt)
+   Changes the current value of the control. */
 void wxTimePickerCtrl_php::SetValue(const wxDateTime& dt)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6697,6 +6867,10 @@ void wxTimePickerCtrl_php::SetValue(const wxDateTime& dt)
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto timestamp wxTimePickerCtrl::GetValue()
+   Returns the currently entered time. */
 wxDateTime wxTimePickerCtrl_php::GetValue()const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6739,6 +6913,10 @@ wxDateTime wxTimePickerCtrl_php::GetValue()const
 		return wxDateTime(Z_LVAL_P(return_value));
 	
 }
+/* }}} */
+
+/* {{{ proto bool wxTimePickerCtrl::Create(wxWindow &parent, int id, timestamp dt, wxPoint pos, wxSize size, int style, wxValidator validator, string name)
+   Create the control window. */
 PHP_METHOD(php_wxTimePickerCtrl, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6996,3 +7174,5 @@ PHP_METHOD(php_wxTimePickerCtrl, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTimePickerCtrl::Create\n");
 	}
 }
+/* }}} */
+

@@ -1,3 +1,4 @@
+<?=proto_begin($method_name, $class_name)?>
 <?=$method_definition["return_type"] ?> <?=$class_name?>_php::<?=$method_name?>(<?=function_arguments_string($method_definition, false)?>)<?=$method_definition["constant"]?"const\n":"\n"?>
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -72,3 +73,4 @@
 <? } ?>
 <? } ?>
 }
+<?=proto_end()?>

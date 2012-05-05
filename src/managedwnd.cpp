@@ -55,6 +55,8 @@ void php_wxFrame_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 {
 	zend_error(E_NOTICE, "Object of class wxFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");
 }
+/* {{{ proto  wxFrame::wxFrame()
+   Default constructor. */
 PHP_METHOD(php_wxFrame, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -282,6 +284,10 @@ PHP_METHOD(php_wxFrame, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxFrame::Centre(int direction)
+   Centres the frame on the display. */
 PHP_METHOD(php_wxFrame, Centre)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -418,6 +424,10 @@ PHP_METHOD(php_wxFrame, Centre)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFrame::Centre\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFrame::Create(wxWindow &parent, int id, string title, wxPoint pos, wxSize size, int style, string name)
+   Used in two-step frame construction. */
 PHP_METHOD(php_wxFrame, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -658,6 +668,10 @@ PHP_METHOD(php_wxFrame, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFrame::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFrame::SetStatusBar(wxStatusBar &statusBar)
+   Associates a status bar with the frame. */
 PHP_METHOD(php_wxFrame, SetStatusBar)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -801,6 +815,10 @@ PHP_METHOD(php_wxFrame, SetStatusBar)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFrame::SetStatusBar\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFrame::SetStatusBarPane(int n)
+   Set the status bar pane used to display menu and toolbar help. */
 PHP_METHOD(php_wxFrame, SetStatusBarPane)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -926,6 +944,10 @@ PHP_METHOD(php_wxFrame, SetStatusBarPane)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFrame::SetStatusBarPane\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFrame::SetStatusText(string text, int number)
+   Sets the status bar text and redraws the status bar. */
 PHP_METHOD(php_wxFrame, SetStatusText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1064,6 +1086,10 @@ PHP_METHOD(php_wxFrame, SetStatusText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFrame::SetStatusText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFrame::SetMenuBar(wxMenuBar &menuBar)
+   Tells the frame to show the given menu bar. */
 PHP_METHOD(php_wxFrame, SetMenuBar)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1207,6 +1233,10 @@ PHP_METHOD(php_wxFrame, SetMenuBar)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFrame::SetMenuBar\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMenuBar wxFrame::GetMenuBar()
+   Returns a pointer to the menubar currently associated with the frame (if any). */
 PHP_METHOD(php_wxFrame, GetMenuBar)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1350,6 +1380,10 @@ PHP_METHOD(php_wxFrame, GetMenuBar)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFrame::GetMenuBar\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxStatusBar wxFrame::OnCreateStatusBar(int number, int style, int id, string name)
+   Virtual function called when a status bar is requested by CreateStatusBar(). */
 wxStatusBar* wxFrame_php::OnCreateStatusBar(int number, long style, wxWindowID id, const wxString& name)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1418,6 +1452,10 @@ wxStatusBar* wxFrame_php::OnCreateStatusBar(int number, long style, wxWindowID i
 	//Call original method
 	return wxFrame::OnCreateStatusBar(number, style, id, name);
 }
+/* }}} */
+
+/* {{{ proto wxStatusBar wxFrame::GetStatusBar()
+   Returns a pointer to the status bar currently associated with the frame (if any). */
 PHP_METHOD(php_wxFrame, GetStatusBar)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1561,6 +1599,10 @@ PHP_METHOD(php_wxFrame, GetStatusBar)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFrame::GetStatusBar\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxFrame::GetStatusBarPane()
+   Returns the status bar pane used to display menu and toolbar help. */
 PHP_METHOD(php_wxFrame, GetStatusBarPane)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1681,6 +1723,10 @@ PHP_METHOD(php_wxFrame, GetStatusBarPane)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFrame::GetStatusBarPane\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPoint wxFrame::GetClientAreaOrigin()
+   Returns the origin of the frame client area (in client coordinates). */
 PHP_METHOD(php_wxFrame, GetClientAreaOrigin)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1806,6 +1852,9 @@ PHP_METHOD(php_wxFrame, GetClientAreaOrigin)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFrame::GetClientAreaOrigin\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFrame::PopStatusText(int number) */
 PHP_METHOD(php_wxFrame, PopStatusText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1942,6 +1991,10 @@ PHP_METHOD(php_wxFrame, PopStatusText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFrame::PopStatusText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFrame::ProcessCommand(int id)
+   Simulate a menu command. */
 PHP_METHOD(php_wxFrame, ProcessCommand)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2067,6 +2120,9 @@ PHP_METHOD(php_wxFrame, ProcessCommand)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFrame::ProcessCommand\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFrame::PushStatusText(string text, int number) */
 PHP_METHOD(php_wxFrame, PushStatusText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2205,6 +2261,10 @@ PHP_METHOD(php_wxFrame, PushStatusText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFrame::PushStatusText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFrame::SetStatusWidths(int n, array widths_field)
+   Sets the widths of the fields in the status bar. */
 PHP_METHOD(php_wxFrame, SetStatusWidths)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2357,6 +2417,10 @@ PHP_METHOD(php_wxFrame, SetStatusWidths)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFrame::SetStatusWidths\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxToolBar wxFrame::CreateToolBar(int style, int id, string name)
+   Creates a toolbar at the top or left of the frame. */
 PHP_METHOD(php_wxFrame, CreateToolBar)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2610,6 +2674,10 @@ PHP_METHOD(php_wxFrame, CreateToolBar)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFrame::CreateToolBar\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxToolBar wxFrame::GetToolBar()
+   Returns a pointer to the toolbar currently associated with the frame (if any). */
 PHP_METHOD(php_wxFrame, GetToolBar)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2753,6 +2821,10 @@ PHP_METHOD(php_wxFrame, GetToolBar)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFrame::GetToolBar\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxToolBar wxFrame::OnCreateToolBar(int style, int id, string name)
+   Virtual function called when a toolbar is requested by CreateToolBar(). */
 wxToolBar* wxFrame_php::OnCreateToolBar(long style, wxWindowID id, const wxString& name)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2820,6 +2892,10 @@ wxToolBar* wxFrame_php::OnCreateToolBar(long style, wxWindowID id, const wxStrin
 	//Call original method
 	return wxFrame::OnCreateToolBar(style, id, name);
 }
+/* }}} */
+
+/* {{{ proto  wxFrame::SetToolBar(wxToolBar &toolBar)
+   Associates a toolbar with the frame. */
 PHP_METHOD(php_wxFrame, SetToolBar)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2963,6 +3039,10 @@ PHP_METHOD(php_wxFrame, SetToolBar)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFrame::SetToolBar\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxStatusBar wxFrame::CreateStatusBar(int number, int style, int id, string name)
+   Creates a status bar at the bottom of the frame. */
 PHP_METHOD(php_wxFrame, CreateStatusBar)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3251,6 +3331,8 @@ PHP_METHOD(php_wxFrame, CreateStatusBar)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFrame::CreateStatusBar\n");
 	}
 }
+/* }}} */
+
 void php_wxMDIClientWindow_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3292,6 +3374,8 @@ void php_wxMDIClientWindow_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 		#endif
 	}
 }
+/* {{{ proto  wxMDIClientWindow::wxMDIClientWindow()
+   Default constructor. */
 PHP_METHOD(php_wxMDIClientWindow, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3372,6 +3456,10 @@ PHP_METHOD(php_wxMDIClientWindow, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto bool wxMDIClientWindow::CreateClient(wxMDIParentFrame &parent, int style)
+   Called by wxMDIParentFrame immediately after creating the client window. */
 PHP_METHOD(php_wxMDIClientWindow, CreateClient)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3500,10 +3588,14 @@ PHP_METHOD(php_wxMDIClientWindow, CreateClient)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMDIClientWindow::CreateClient\n");
 	}
 }
+/* }}} */
+
 void php_wxMDIParentFrame_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxMDIParentFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");
 }
+/* {{{ proto  wxMDIParentFrame::ActivateNext()
+   Activates the MDI child following the currently active one. */
 PHP_METHOD(php_wxMDIParentFrame, ActivateNext)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3596,6 +3688,10 @@ PHP_METHOD(php_wxMDIParentFrame, ActivateNext)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMDIParentFrame::ActivateNext\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMDIParentFrame::ActivatePrevious()
+   Activates the MDI child preceding the currently active one. */
 PHP_METHOD(php_wxMDIParentFrame, ActivatePrevious)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3688,6 +3784,10 @@ PHP_METHOD(php_wxMDIParentFrame, ActivatePrevious)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMDIParentFrame::ActivatePrevious\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMDIParentFrame::ArrangeIcons()
+   Arranges any iconized (minimized) MDI child windows. */
 PHP_METHOD(php_wxMDIParentFrame, ArrangeIcons)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3780,6 +3880,10 @@ PHP_METHOD(php_wxMDIParentFrame, ArrangeIcons)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMDIParentFrame::ArrangeIcons\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMDIParentFrame::Cascade()
+   Arranges the MDI child windows in a cascade. */
 PHP_METHOD(php_wxMDIParentFrame, Cascade)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3872,6 +3976,10 @@ PHP_METHOD(php_wxMDIParentFrame, Cascade)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMDIParentFrame::Cascade\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMDIParentFrame::Create(wxWindow &parent, int id, string title, wxPoint pos, wxSize size, int style, string name)
+   Used in two-step frame construction. */
 PHP_METHOD(php_wxMDIParentFrame, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4084,6 +4192,10 @@ PHP_METHOD(php_wxMDIParentFrame, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMDIParentFrame::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMDIChildFrame wxMDIParentFrame::GetActiveChild()
+   Returns a pointer to the active MDI child, if there is one. */
 PHP_METHOD(php_wxMDIParentFrame, GetActiveChild)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4199,6 +4311,10 @@ PHP_METHOD(php_wxMDIParentFrame, GetActiveChild)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMDIParentFrame::GetActiveChild\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMenu wxMDIParentFrame::GetWindowMenu()
+   Returns the current MDI Window menu. */
 PHP_METHOD(php_wxMDIParentFrame, GetWindowMenu)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4314,6 +4430,10 @@ PHP_METHOD(php_wxMDIParentFrame, GetWindowMenu)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMDIParentFrame::GetWindowMenu\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMDIParentFrame::IsTDI()
+   Returns whether the MDI implementation is tab-based. */
 PHP_METHOD(php_wxMDIParentFrame, IsTDI)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4407,6 +4527,10 @@ PHP_METHOD(php_wxMDIParentFrame, IsTDI)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMDIParentFrame::IsTDI\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMDIClientWindow wxMDIParentFrame::OnCreateClient()
+   Override this to return a different kind of client window. */
 wxMDIClientWindow* wxMDIParentFrame_php::OnCreateClient()
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4463,6 +4587,10 @@ wxMDIClientWindow* wxMDIParentFrame_php::OnCreateClient()
 	//Call original method
 	return wxMDIParentFrame::OnCreateClient();
 }
+/* }}} */
+
+/* {{{ proto  wxMDIParentFrame::SetWindowMenu(wxMenu &menu)
+   Replace the current MDI Window menu. */
 PHP_METHOD(php_wxMDIParentFrame, SetWindowMenu)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4578,6 +4706,10 @@ PHP_METHOD(php_wxMDIParentFrame, SetWindowMenu)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMDIParentFrame::SetWindowMenu\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMDIParentFrame::Tile(wxOrientation orient)
+   Tiles the MDI child windows either horizontally or vertically depending on whether orient is wxHORIZONTAL or wxVERTICAL. */
 PHP_METHOD(php_wxMDIParentFrame, Tile)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4686,6 +4818,10 @@ PHP_METHOD(php_wxMDIParentFrame, Tile)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMDIParentFrame::Tile\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMDIParentFrame::wxMDIParentFrame()
+   Default constructor. */
 PHP_METHOD(php_wxMDIParentFrame, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4913,10 +5049,14 @@ PHP_METHOD(php_wxMDIParentFrame, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxMDIChildFrame_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxMDIChildFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");
 }
+/* {{{ proto  wxMDIChildFrame::wxMDIChildFrame(wxMDIParentFrame &parent, int id, string title, wxPoint pos, wxSize size, int style, string name)
+   Constructor, creating the window. */
 PHP_METHOD(php_wxMDIChildFrame, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5144,6 +5284,10 @@ PHP_METHOD(php_wxMDIChildFrame, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxMDIChildFrame::Restore()
+   Restores this MDI child frame (unmaximizes). */
 PHP_METHOD(php_wxMDIChildFrame, Restore)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5236,6 +5380,10 @@ PHP_METHOD(php_wxMDIChildFrame, Restore)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMDIChildFrame::Restore\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMDIChildFrame::Maximize(bool maximize)
+   Maximizes this MDI child frame. */
 PHP_METHOD(php_wxMDIChildFrame, Maximize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5344,6 +5492,10 @@ PHP_METHOD(php_wxMDIChildFrame, Maximize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMDIChildFrame::Maximize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMDIChildFrame::IsAlwaysMaximized()
+   Returns true for MDI children in TDI implementations. */
 PHP_METHOD(php_wxMDIChildFrame, IsAlwaysMaximized)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5436,6 +5588,10 @@ PHP_METHOD(php_wxMDIChildFrame, IsAlwaysMaximized)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMDIChildFrame::IsAlwaysMaximized\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMDIParentFrame wxMDIChildFrame::GetMDIParent()
+   Returns the MDI parent frame containing this child. */
 PHP_METHOD(php_wxMDIChildFrame, GetMDIParent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5551,6 +5707,10 @@ PHP_METHOD(php_wxMDIChildFrame, GetMDIParent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMDIChildFrame::GetMDIParent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMDIChildFrame::Create(wxMDIParentFrame &parent, int id, string title, wxPoint pos, wxSize size, int style, string name)
+   Used in two-step frame construction. */
 PHP_METHOD(php_wxMDIChildFrame, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5763,6 +5923,10 @@ PHP_METHOD(php_wxMDIChildFrame, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMDIChildFrame::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMDIChildFrame::Activate()
+   Activates this MDI child frame. */
 PHP_METHOD(php_wxMDIChildFrame, Activate)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5855,10 +6019,14 @@ PHP_METHOD(php_wxMDIChildFrame, Activate)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMDIChildFrame::Activate\n");
 	}
 }
+/* }}} */
+
 void php_wxMiniFrame_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxMiniFrame went out of scope. Remember to always call Destroy() to prevent memory leaks.");
 }
+/* {{{ proto bool wxMiniFrame::Create(wxWindow &parent, int id, string title, wxPoint pos, wxSize size, int style, string name)
+   Used in two-step frame construction. */
 PHP_METHOD(php_wxMiniFrame, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6071,6 +6239,10 @@ PHP_METHOD(php_wxMiniFrame, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMiniFrame::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMiniFrame::wxMiniFrame()
+   Default ctor. */
 PHP_METHOD(php_wxMiniFrame, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6298,6 +6470,8 @@ PHP_METHOD(php_wxMiniFrame, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxPopupWindow_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6339,6 +6513,8 @@ void php_wxPopupWindow_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto bool wxPopupWindow::Create(wxWindow &parent, int flags)
+   Create method for two-step creation. */
 PHP_METHOD(php_wxPopupWindow, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6471,6 +6647,10 @@ PHP_METHOD(php_wxPopupWindow, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPopupWindow::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPopupWindow::Position(wxPoint ptOrigin, wxSize sizePopup)
+   Move the popup window to the right position, i.e. */
 PHP_METHOD(php_wxPopupWindow, Position)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6609,6 +6789,10 @@ PHP_METHOD(php_wxPopupWindow, Position)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPopupWindow::Position\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPopupWindow::wxPopupWindow(wxWindow &parent, int flags)
+   Constructor. */
 PHP_METHOD(php_wxPopupWindow, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6724,6 +6908,8 @@ PHP_METHOD(php_wxPopupWindow, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxPopupTransientWindow_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6765,6 +6951,8 @@ void php_wxPopupTransientWindow_destruction_handler(zend_rsrc_list_entry *rsrc T
 		#endif
 	}
 }
+/* {{{ proto  wxPopupTransientWindow::Dismiss()
+   Hide the window. */
 PHP_METHOD(php_wxPopupTransientWindow, Dismiss)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6857,6 +7045,10 @@ PHP_METHOD(php_wxPopupTransientWindow, Dismiss)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPopupTransientWindow::Dismiss\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPopupTransientWindow::Popup(wxWindow &focus)
+   Popup the window (this will show it too). */
 PHP_METHOD(php_wxPopupTransientWindow, Popup)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6983,6 +7175,10 @@ PHP_METHOD(php_wxPopupTransientWindow, Popup)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPopupTransientWindow::Popup\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPopupTransientWindow::ProcessLeftDown(wxMouseEvent &event)
+   Called when a mouse is pressed while the popup is shown. */
 PHP_METHOD(php_wxPopupTransientWindow, ProcessLeftDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7098,6 +7294,10 @@ PHP_METHOD(php_wxPopupTransientWindow, ProcessLeftDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPopupTransientWindow::ProcessLeftDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPopupTransientWindow::wxPopupTransientWindow(wxWindow &parent, int flags)
+   Constructor. */
 PHP_METHOD(php_wxPopupTransientWindow, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7213,10 +7413,14 @@ PHP_METHOD(php_wxPopupTransientWindow, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxPropertySheetDialog_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxPropertySheetDialog went out of scope. Remember to always call Destroy() to prevent memory leaks.");
 }
+/* {{{ proto  wxPropertySheetDialog::AddBookCtrl(wxSizer &sizer)
+   Override this if you wish to add the book control in a way different from the standard way (for example, using different spacing). */
 PHP_METHOD(php_wxPropertySheetDialog, AddBookCtrl)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7332,6 +7536,10 @@ PHP_METHOD(php_wxPropertySheetDialog, AddBookCtrl)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPropertySheetDialog::AddBookCtrl\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPropertySheetDialog::Create(wxWindow &parent, int id, string title, wxPoint pos, wxSize size, int style, string name)
+   Call this from your own Create function, before adding buttons and pages. */
 PHP_METHOD(php_wxPropertySheetDialog, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7544,6 +7752,10 @@ PHP_METHOD(php_wxPropertySheetDialog, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPropertySheetDialog::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxBookCtrlBase wxPropertySheetDialog::CreateBookCtrl()
+   Override this if you wish to create a different kind of book control; by default, the value passed to SetSheetStyle() is used to determine the control. */
 PHP_METHOD(php_wxPropertySheetDialog, CreateBookCtrl)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7659,6 +7871,10 @@ PHP_METHOD(php_wxPropertySheetDialog, CreateBookCtrl)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPropertySheetDialog::CreateBookCtrl\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPropertySheetDialog::CreateButtons(int flags)
+   Call this to create the buttons for the dialog. */
 PHP_METHOD(php_wxPropertySheetDialog, CreateButtons)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7767,6 +7983,10 @@ PHP_METHOD(php_wxPropertySheetDialog, CreateButtons)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPropertySheetDialog::CreateButtons\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxBookCtrlBase wxPropertySheetDialog::GetBookCtrl()
+   Returns the book control that will contain your settings pages. */
 PHP_METHOD(php_wxPropertySheetDialog, GetBookCtrl)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7882,6 +8102,10 @@ PHP_METHOD(php_wxPropertySheetDialog, GetBookCtrl)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPropertySheetDialog::GetBookCtrl\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizer wxPropertySheetDialog::GetInnerSizer()
+   Returns the inner sizer that contains the book control and button sizer. */
 PHP_METHOD(php_wxPropertySheetDialog, GetInnerSizer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7997,6 +8221,10 @@ PHP_METHOD(php_wxPropertySheetDialog, GetInnerSizer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPropertySheetDialog::GetInnerSizer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxPropertySheetDialog::GetSheetStyle()
+   Returns the sheet style. */
 PHP_METHOD(php_wxPropertySheetDialog, GetSheetStyle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8089,6 +8317,10 @@ PHP_METHOD(php_wxPropertySheetDialog, GetSheetStyle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPropertySheetDialog::GetSheetStyle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPropertySheetDialog::LayoutDialog(int centreFlags)
+   Call this to lay out the dialog. */
 PHP_METHOD(php_wxPropertySheetDialog, LayoutDialog)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8197,6 +8429,10 @@ PHP_METHOD(php_wxPropertySheetDialog, LayoutDialog)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPropertySheetDialog::LayoutDialog\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPropertySheetDialog::SetBookCtrl(wxBookCtrlBase &bookCtrl)
+   Sets the book control used for the dialog. */
 PHP_METHOD(php_wxPropertySheetDialog, SetBookCtrl)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8312,6 +8548,10 @@ PHP_METHOD(php_wxPropertySheetDialog, SetBookCtrl)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPropertySheetDialog::SetBookCtrl\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPropertySheetDialog::SetSheetStyle(int style)
+   You can customize the look and feel of the dialog by setting the sheet style. */
 PHP_METHOD(php_wxPropertySheetDialog, SetSheetStyle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8409,6 +8649,10 @@ PHP_METHOD(php_wxPropertySheetDialog, SetSheetStyle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPropertySheetDialog::SetSheetStyle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPropertySheetDialog::wxPropertySheetDialog(wxWindow &parent, int id, string title, wxPoint pos, wxSize size, int style, string name)
+   Constructor. */
 PHP_METHOD(php_wxPropertySheetDialog, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8605,10 +8849,14 @@ PHP_METHOD(php_wxPropertySheetDialog, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxSplashScreen_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	zend_error(E_NOTICE, "Object of class wxSplashScreen went out of scope. Remember to always call Destroy() to prevent memory leaks.");
 }
+/* {{{ proto int wxSplashScreen::GetSplashStyle()
+   Returns the splash style (see wxSplashScreen() for details). */
 PHP_METHOD(php_wxSplashScreen, GetSplashStyle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8701,6 +8949,10 @@ PHP_METHOD(php_wxSplashScreen, GetSplashStyle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSplashScreen::GetSplashStyle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxSplashScreen::GetTimeout()
+   Returns the timeout in milliseconds. */
 PHP_METHOD(php_wxSplashScreen, GetTimeout)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8793,6 +9045,10 @@ PHP_METHOD(php_wxSplashScreen, GetTimeout)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSplashScreen::GetTimeout\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSplashScreen::wxSplashScreen(wxBitmap bitmap, int splashStyle, int milliseconds, wxWindow &parent, int id, wxPoint pos, wxSize size, int style)
+   Construct the splash screen passing a bitmap, a style, a timeout, a window id, optional position and size, and a window style. */
 PHP_METHOD(php_wxSplashScreen, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8996,6 +9252,8 @@ PHP_METHOD(php_wxSplashScreen, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxTopLevelWindow_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9037,6 +9295,8 @@ void php_wxTopLevelWindow_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		#endif
 	}
 }
+/* {{{ proto  wxTopLevelWindow::wxTopLevelWindow()
+   Default ctor. */
 PHP_METHOD(php_wxTopLevelWindow, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9264,6 +9524,10 @@ PHP_METHOD(php_wxTopLevelWindow, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxTopLevelWindow::SetTitle(string title)
+   Sets the window title. */
 PHP_METHOD(php_wxTopLevelWindow, SetTitle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9462,6 +9726,10 @@ PHP_METHOD(php_wxTopLevelWindow, SetTitle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTopLevelWindow::SetTitle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTopLevelWindow::Maximize(bool maximize)
+   Maximizes or restores the window. */
 PHP_METHOD(php_wxTopLevelWindow, Maximize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9670,6 +9938,10 @@ PHP_METHOD(php_wxTopLevelWindow, Maximize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTopLevelWindow::Maximize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxTopLevelWindow::GetTitle()
+   Gets a string containing the window title. */
 PHP_METHOD(php_wxTopLevelWindow, GetTitle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9868,6 +10140,10 @@ PHP_METHOD(php_wxTopLevelWindow, GetTitle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTopLevelWindow::GetTitle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTopLevelWindow::ShowFullScreen(bool show, int style)
+   Depending on the value of show parameter the window is either shown full screen or restored to its normal state. */
 PHP_METHOD(php_wxTopLevelWindow, ShowFullScreen)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10077,6 +10353,10 @@ PHP_METHOD(php_wxTopLevelWindow, ShowFullScreen)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTopLevelWindow::ShowFullScreen\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTopLevelWindow::IsFullScreen()
+   Returns true if the window is in fullscreen mode. */
 PHP_METHOD(php_wxTopLevelWindow, IsFullScreen)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10269,6 +10549,10 @@ PHP_METHOD(php_wxTopLevelWindow, IsFullScreen)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTopLevelWindow::IsFullScreen\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTopLevelWindow::SetIcon(wxIcon icon)
+   Sets the icon for this window. */
 PHP_METHOD(php_wxTopLevelWindow, SetIcon)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10484,6 +10768,10 @@ PHP_METHOD(php_wxTopLevelWindow, SetIcon)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTopLevelWindow::SetIcon\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTopLevelWindow::CanSetTransparent()
+   Returns true if the platform supports making the window translucent. */
 PHP_METHOD(php_wxTopLevelWindow, CanSetTransparent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10676,6 +10964,10 @@ PHP_METHOD(php_wxTopLevelWindow, CanSetTransparent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTopLevelWindow::CanSetTransparent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTopLevelWindow::CenterOnScreen(int direction)
+   A synonym for CentreOnScreen(). */
 PHP_METHOD(php_wxTopLevelWindow, CenterOnScreen)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10873,6 +11165,10 @@ PHP_METHOD(php_wxTopLevelWindow, CenterOnScreen)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTopLevelWindow::CenterOnScreen\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTopLevelWindow::CentreOnScreen(int direction)
+   Centres the window on screen. */
 PHP_METHOD(php_wxTopLevelWindow, CentreOnScreen)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11081,6 +11377,10 @@ PHP_METHOD(php_wxTopLevelWindow, CentreOnScreen)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTopLevelWindow::CentreOnScreen\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTopLevelWindow::Create(wxWindow &parent, int id, string title, wxPoint pos, wxSize size, int style, string name)
+   Creates the top level window. */
 PHP_METHOD(php_wxTopLevelWindow, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11393,6 +11693,10 @@ PHP_METHOD(php_wxTopLevelWindow, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTopLevelWindow::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxWindow wxTopLevelWindow::GetDefaultItem()
+   Returns a pointer to the button which is the default for this window, or  NULL. */
 PHP_METHOD(php_wxTopLevelWindow, GetDefaultItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11608,6 +11912,10 @@ PHP_METHOD(php_wxTopLevelWindow, GetDefaultItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTopLevelWindow::GetDefaultItem\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxTopLevelWindow::GetDefaultSize()
+   Get the default size for a new top level window. */
 PHP_METHOD(php_wxTopLevelWindow, GetDefaultSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11810,6 +12118,10 @@ PHP_METHOD(php_wxTopLevelWindow, GetDefaultSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTopLevelWindow::GetDefaultSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxIcon wxTopLevelWindow::GetIcon()
+   Returns the standard icon of the window. */
 PHP_METHOD(php_wxTopLevelWindow, GetIcon)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12007,6 +12319,10 @@ PHP_METHOD(php_wxTopLevelWindow, GetIcon)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTopLevelWindow::GetIcon\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxIconBundle wxTopLevelWindow::GetIcons()
+   Returns all icons associated with the window, there will be none of them if neither SetIcon() nor SetIcons() had been called before. */
 PHP_METHOD(php_wxTopLevelWindow, GetIcons)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12219,6 +12535,9 @@ PHP_METHOD(php_wxTopLevelWindow, GetIcons)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTopLevelWindow::GetIcons\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxWindow wxTopLevelWindow::GetTmpDefaultItem() */
 PHP_METHOD(php_wxTopLevelWindow, GetTmpDefaultItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12434,6 +12753,10 @@ PHP_METHOD(php_wxTopLevelWindow, GetTmpDefaultItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTopLevelWindow::GetTmpDefaultItem\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTopLevelWindow::Iconize(bool iconize)
+   Iconizes or restores the window. */
 PHP_METHOD(php_wxTopLevelWindow, Iconize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12642,6 +12965,10 @@ PHP_METHOD(php_wxTopLevelWindow, Iconize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTopLevelWindow::Iconize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTopLevelWindow::IsActive()
+   Returns true if this window is currently active, i.e. */
 PHP_METHOD(php_wxTopLevelWindow, IsActive)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12834,6 +13161,10 @@ PHP_METHOD(php_wxTopLevelWindow, IsActive)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTopLevelWindow::IsActive\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTopLevelWindow::IsAlwaysMaximized()
+   Returns true if this window is expected to be always maximized, either due to platform policy or due to local policy regarding particular class. */
 PHP_METHOD(php_wxTopLevelWindow, IsAlwaysMaximized)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13026,6 +13357,10 @@ PHP_METHOD(php_wxTopLevelWindow, IsAlwaysMaximized)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTopLevelWindow::IsAlwaysMaximized\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTopLevelWindow::IsIconized()
+   Returns true if the window is iconized. */
 PHP_METHOD(php_wxTopLevelWindow, IsIconized)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13218,6 +13553,10 @@ PHP_METHOD(php_wxTopLevelWindow, IsIconized)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTopLevelWindow::IsIconized\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTopLevelWindow::IsMaximized()
+   Returns true if the window is maximized. */
 PHP_METHOD(php_wxTopLevelWindow, IsMaximized)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13410,6 +13749,10 @@ PHP_METHOD(php_wxTopLevelWindow, IsMaximized)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTopLevelWindow::IsMaximized\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTopLevelWindow::Layout()
+   See wxWindow::SetAutoLayout(): when auto layout is on, this function gets called automatically when the window is resized. */
 PHP_METHOD(php_wxTopLevelWindow, Layout)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13602,6 +13945,10 @@ PHP_METHOD(php_wxTopLevelWindow, Layout)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTopLevelWindow::Layout\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTopLevelWindow::RequestUserAttention(int flags)
+   Use a system-dependent way to attract users attention to the window when it is in background. */
 PHP_METHOD(php_wxTopLevelWindow, RequestUserAttention)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13810,6 +14157,10 @@ PHP_METHOD(php_wxTopLevelWindow, RequestUserAttention)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTopLevelWindow::RequestUserAttention\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxWindow wxTopLevelWindow::SetDefaultItem(wxWindow &win)
+   Changes the default item for the panel, usually win is a button. */
 PHP_METHOD(php_wxTopLevelWindow, SetDefaultItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14048,6 +14399,10 @@ PHP_METHOD(php_wxTopLevelWindow, SetDefaultItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTopLevelWindow::SetDefaultItem\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTopLevelWindow::SetIcons(wxIconBundle icons)
+   Sets several icons of different sizes for this window: this allows to use different icons for different situations (e.g. */
 PHP_METHOD(php_wxTopLevelWindow, SetIcons)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14263,6 +14618,10 @@ PHP_METHOD(php_wxTopLevelWindow, SetIcons)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTopLevelWindow::SetIcons\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTopLevelWindow::SetMaxSize(wxSize size)
+   A simpler interface for setting the size hints than SetSizeHints(). */
 PHP_METHOD(php_wxTopLevelWindow, SetMaxSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14478,6 +14837,10 @@ PHP_METHOD(php_wxTopLevelWindow, SetMaxSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTopLevelWindow::SetMaxSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTopLevelWindow::SetMinSize(wxSize size)
+   A simpler interface for setting the size hints than SetSizeHints(). */
 PHP_METHOD(php_wxTopLevelWindow, SetMinSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14693,6 +15056,10 @@ PHP_METHOD(php_wxTopLevelWindow, SetMinSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTopLevelWindow::SetMinSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTopLevelWindow::SetSizeHints(int minW, int minH, int maxW, int maxH, int incW, int incH)
+   Allows specification of minimum and maximum window sizes, and window size increments. */
 PHP_METHOD(php_wxTopLevelWindow, SetSizeHints)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15057,6 +15424,9 @@ PHP_METHOD(php_wxTopLevelWindow, SetSizeHints)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTopLevelWindow::SetSizeHints\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxWindow wxTopLevelWindow::SetTmpDefaultItem(wxWindow &win) */
 PHP_METHOD(php_wxTopLevelWindow, SetTmpDefaultItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15295,6 +15665,10 @@ PHP_METHOD(php_wxTopLevelWindow, SetTmpDefaultItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTopLevelWindow::SetTmpDefaultItem\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTopLevelWindow::SetTransparent(int alpha)
+   If the platform supports it will set the window to be translucent. */
 PHP_METHOD(php_wxTopLevelWindow, SetTransparent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15492,6 +15866,10 @@ PHP_METHOD(php_wxTopLevelWindow, SetTransparent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTopLevelWindow::SetTransparent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTopLevelWindow::ShouldPreventAppExit()
+   This virtual function is not meant to be called directly but can be overridden to return false (it returns true by default) to allow the application to close even if this, presumably not very important, window is still opened. */
 PHP_METHOD(php_wxTopLevelWindow, ShouldPreventAppExit)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15684,3 +16062,5 @@ PHP_METHOD(php_wxTopLevelWindow, ShouldPreventAppExit)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTopLevelWindow::ShouldPreventAppExit\n");
 	}
 }
+/* }}} */
+

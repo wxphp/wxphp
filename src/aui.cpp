@@ -58,6 +58,8 @@ void php_wxAuiNotebook_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto  wxAuiNotebook::wxAuiNotebook(wxWindow &parent, int id, wxPoint pos, wxSize size, int style)
+   Constructor. */
 PHP_METHOD(php_wxAuiNotebook, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -279,6 +281,10 @@ PHP_METHOD(php_wxAuiNotebook, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxAuiNotebook::Split(int page, int direction)
+   Split performs a split operation programmatically. */
 PHP_METHOD(php_wxAuiNotebook, Split)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -377,6 +383,10 @@ PHP_METHOD(php_wxAuiNotebook, Split)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebook::Split\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiNotebook::ShowWindowMenu()
+   Shows the window menu for the active tab control associated with this notebook, and returns true if a selection was made. */
 PHP_METHOD(php_wxAuiNotebook, ShowWindowMenu)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -469,6 +479,10 @@ PHP_METHOD(php_wxAuiNotebook, ShowWindowMenu)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebook::ShowWindowMenu\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiNotebook::SetUniformBitmapSize(wxSize size)
+   Split performs a split operation programmatically. */
 PHP_METHOD(php_wxAuiNotebook, SetUniformBitmapSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -584,6 +598,10 @@ PHP_METHOD(php_wxAuiNotebook, SetUniformBitmapSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebook::SetUniformBitmapSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiNotebook::SetTabCtrlHeight(int height)
+   Sets the tab height. */
 PHP_METHOD(php_wxAuiNotebook, SetTabCtrlHeight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -681,6 +699,10 @@ PHP_METHOD(php_wxAuiNotebook, SetTabCtrlHeight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebook::SetTabCtrlHeight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiNotebook::SetSelectedFont(wxFont font)
+   Sets the font for drawing selected tab labels. */
 PHP_METHOD(php_wxAuiNotebook, SetSelectedFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -796,6 +818,10 @@ PHP_METHOD(php_wxAuiNotebook, SetSelectedFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebook::SetSelectedFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiNotebook::SetPageText(int page, string text)
+   Sets the tab label for the page. */
 PHP_METHOD(php_wxAuiNotebook, SetPageText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -895,6 +921,10 @@ PHP_METHOD(php_wxAuiNotebook, SetPageText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebook::SetPageText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiNotebook::SetPageImage(int n, int imageId)
+   Sets the image index for the given page. */
 PHP_METHOD(php_wxAuiNotebook, SetPageImage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -993,6 +1023,10 @@ PHP_METHOD(php_wxAuiNotebook, SetPageImage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebook::SetPageImage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiNotebook::SetPageBitmap(int page, wxBitmap bitmap)
+   Sets the bitmap for the page. */
 PHP_METHOD(php_wxAuiNotebook, SetPageBitmap)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1109,6 +1143,10 @@ PHP_METHOD(php_wxAuiNotebook, SetPageBitmap)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebook::SetPageBitmap\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiNotebook::SetNormalFont(wxFont font)
+   Sets the font for drawing unselected tab labels. */
 PHP_METHOD(php_wxAuiNotebook, SetNormalFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1224,6 +1262,10 @@ PHP_METHOD(php_wxAuiNotebook, SetNormalFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebook::SetNormalFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiNotebook::SetMeasuringFont(wxFont font)
+   Sets the font for measuring tab labels. */
 PHP_METHOD(php_wxAuiNotebook, SetMeasuringFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1339,6 +1381,10 @@ PHP_METHOD(php_wxAuiNotebook, SetMeasuringFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebook::SetMeasuringFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiNotebook::SetFont(wxFont font)
+   Sets the font for drawing the tab labels, using a bold version of the font for selected tab labels. */
 PHP_METHOD(php_wxAuiNotebook, SetFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1454,6 +1500,10 @@ PHP_METHOD(php_wxAuiNotebook, SetFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebook::SetFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiNotebook::SetArtProvider(wxAuiTabArt &art)
+   Sets the art provider to be used by the notebook. */
 PHP_METHOD(php_wxAuiNotebook, SetArtProvider)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1569,6 +1619,10 @@ PHP_METHOD(php_wxAuiNotebook, SetArtProvider)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebook::SetArtProvider\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiNotebook::RemovePage(int page)
+   Removes a page, without deleting the window pointer. */
 PHP_METHOD(php_wxAuiNotebook, RemovePage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1666,6 +1720,10 @@ PHP_METHOD(php_wxAuiNotebook, RemovePage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebook::RemovePage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAuiNotebook::GetTabCtrlHeight()
+   Returns the height of the tab control. */
 PHP_METHOD(php_wxAuiNotebook, GetTabCtrlHeight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1758,6 +1816,10 @@ PHP_METHOD(php_wxAuiNotebook, GetTabCtrlHeight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebook::GetTabCtrlHeight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAuiNotebook::GetSelection()
+   Returns the currently selected page. */
 PHP_METHOD(php_wxAuiNotebook, GetSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1850,6 +1912,10 @@ PHP_METHOD(php_wxAuiNotebook, GetSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebook::GetSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxAuiNotebook::GetPageText(int page)
+   Returns the tab label for the page. */
 PHP_METHOD(php_wxAuiNotebook, GetPageText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1953,6 +2019,10 @@ PHP_METHOD(php_wxAuiNotebook, GetPageText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebook::GetPageText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAuiNotebook::GetPageIndex(wxWindow &page_wnd)
+   Returns the page index for the specified window. */
 PHP_METHOD(php_wxAuiNotebook, GetPageIndex)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2068,6 +2138,10 @@ PHP_METHOD(php_wxAuiNotebook, GetPageIndex)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebook::GetPageIndex\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAuiNotebook::GetPageCount()
+   Returns the number of pages in the notebook. */
 PHP_METHOD(php_wxAuiNotebook, GetPageCount)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2160,6 +2234,10 @@ PHP_METHOD(php_wxAuiNotebook, GetPageCount)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebook::GetPageCount\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxBitmap wxAuiNotebook::GetPageBitmap(int page)
+   Returns the tab bitmap for the page. */
 PHP_METHOD(php_wxAuiNotebook, GetPageBitmap)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2262,6 +2340,10 @@ PHP_METHOD(php_wxAuiNotebook, GetPageBitmap)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebook::GetPageBitmap\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxWindow wxAuiNotebook::GetPage(int page_idx)
+   Returns the page specified by the given index. */
 PHP_METHOD(php_wxAuiNotebook, GetPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2382,6 +2464,10 @@ PHP_METHOD(php_wxAuiNotebook, GetPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebook::GetPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAuiNotebook::GetHeightForPageHeight(int pageHeight)
+   Returns the desired height of the notebook for the given page height. */
 PHP_METHOD(php_wxAuiNotebook, GetHeightForPageHeight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2479,6 +2565,10 @@ PHP_METHOD(php_wxAuiNotebook, GetHeightForPageHeight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebook::GetHeightForPageHeight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxWindow wxAuiNotebook::GetCurrentPage()
+   Returns the currently selected page or NULL. */
 PHP_METHOD(php_wxAuiNotebook, GetCurrentPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2594,6 +2684,10 @@ PHP_METHOD(php_wxAuiNotebook, GetCurrentPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebook::GetCurrentPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiTabArt wxAuiNotebook::GetArtProvider()
+   Returns the associated art provider. */
 PHP_METHOD(php_wxAuiNotebook, GetArtProvider)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2709,6 +2803,10 @@ PHP_METHOD(php_wxAuiNotebook, GetArtProvider)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebook::GetArtProvider\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiNotebook::DeletePage(int page)
+   Deletes a page at the given index. */
 PHP_METHOD(php_wxAuiNotebook, DeletePage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2806,6 +2904,10 @@ PHP_METHOD(php_wxAuiNotebook, DeletePage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebook::DeletePage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiNotebook::DeleteAllPages()
+   Deletes all pages. */
 PHP_METHOD(php_wxAuiNotebook, DeleteAllPages)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2898,6 +3000,10 @@ PHP_METHOD(php_wxAuiNotebook, DeleteAllPages)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebook::DeleteAllPages\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiNotebook::Create(wxWindow &parent, int id, wxPoint pos, wxSize size, int style)
+   Creates the notebook window. */
 PHP_METHOD(php_wxAuiNotebook, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3104,6 +3210,10 @@ PHP_METHOD(php_wxAuiNotebook, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebook::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAuiNotebook::ChangeSelection(int n)
+   Changes the selection for the given page, returning the previous selection. */
 PHP_METHOD(php_wxAuiNotebook, ChangeSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3201,6 +3311,10 @@ PHP_METHOD(php_wxAuiNotebook, ChangeSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebook::ChangeSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiNotebook::AdvanceSelection(bool forward)
+   Sets the selection to the next or previous page. */
 PHP_METHOD(php_wxAuiNotebook, AdvanceSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3309,6 +3423,10 @@ PHP_METHOD(php_wxAuiNotebook, AdvanceSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebook::AdvanceSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiNotebook::AddPage(wxWindow &page, string caption, bool select, wxBitmap bitmap)
+   Adds a page. */
 PHP_METHOD(php_wxAuiNotebook, AddPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3470,6 +3588,10 @@ PHP_METHOD(php_wxAuiNotebook, AddPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebook::AddPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAuiNotebook::SetSelection(int new_page)
+   Sets the page selection. */
 PHP_METHOD(php_wxAuiNotebook, SetSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3567,6 +3689,8 @@ PHP_METHOD(php_wxAuiNotebook, SetSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiNotebook::SetSelection\n");
 	}
 }
+/* }}} */
+
 void php_wxAuiTabArt_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3607,6 +3731,8 @@ void php_wxAuiTabArt_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxAuiTabArt::SetSizingInfo(wxSize tab_ctrl_size, int tab_count)
+   Sets sizing information. */
 void wxAuiTabArt_php::SetSizingInfo(const wxSize& tab_ctrl_size, size_t tab_count)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3657,6 +3783,10 @@ void wxAuiTabArt_php::SetSizingInfo(const wxSize& tab_ctrl_size, size_t tab_coun
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxAuiTabArt::SetSelectedFont(wxFont font)
+   Sets the font for drawing text for selected UI elements. */
 void wxAuiTabArt_php::SetSelectedFont(const wxFont& font)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3706,6 +3836,10 @@ void wxAuiTabArt_php::SetSelectedFont(const wxFont& font)
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxAuiTabArt::SetNormalFont(wxFont font)
+   Sets the normal font for drawing labels. */
 void wxAuiTabArt_php::SetNormalFont(const wxFont& font)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3755,6 +3889,10 @@ void wxAuiTabArt_php::SetNormalFont(const wxFont& font)
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxAuiTabArt::SetMeasuringFont(wxFont font)
+   Sets the font used for calculating measurements. */
 void wxAuiTabArt_php::SetMeasuringFont(const wxFont& font)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3804,6 +3942,10 @@ void wxAuiTabArt_php::SetMeasuringFont(const wxFont& font)
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxAuiTabArt::SetFlags(int flags)
+   Sets flags. */
 void wxAuiTabArt_php::SetFlags(unsigned int flags)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3852,6 +3994,10 @@ void wxAuiTabArt_php::SetFlags(unsigned int flags)
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxAuiTabArt::SetColour(wxColour colour)
+   Sets the colour of the inactive tabs. */
 void wxAuiTabArt_php::SetColour(const wxColour& colour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3901,6 +4047,10 @@ void wxAuiTabArt_php::SetColour(const wxColour& colour)
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxAuiTabArt::SetActiveColour(wxColour colour)
+   Sets the colour of the selected tab. */
 void wxAuiTabArt_php::SetActiveColour(const wxColour& colour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3950,6 +4100,10 @@ void wxAuiTabArt_php::SetActiveColour(const wxColour& colour)
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto wxSize wxAuiTabArt::GetTabSize(wxDC &dc, wxWindow &wnd, string caption, wxBitmap bitmap, bool active, int close_button_state, int &x_extent)
+   Returns the tab size for the given caption, bitmap and state. */
 wxSize wxAuiTabArt_php::GetTabSize(wxDC& dc, wxWindow* wnd, const wxString& caption, const wxBitmap& bitmap, bool active, int close_button_state, int* x_extent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4015,6 +4169,10 @@ wxSize wxAuiTabArt_php::GetTabSize(wxDC& dc, wxWindow* wnd, const wxString& capt
 		return *(wxSize*) return_object;
 	
 }
+/* }}} */
+
+/* {{{ proto int wxAuiTabArt::GetIndentSize()
+   Returns the indent size. */
 int wxAuiTabArt_php::GetIndentSize()
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4057,6 +4215,10 @@ int wxAuiTabArt_php::GetIndentSize()
 		return (int) Z_LVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto  wxAuiTabArt::DrawButton(wxDC &dc, wxWindow &wnd, wxRect in_rect, int bitmap_id, int button_state, int orientation, wxRect &out_rect)
+   Draws a button. */
 void wxAuiTabArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxRect& in_rect, int bitmap_id, int button_state, int orientation, wxRect* out_rect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4115,6 +4277,10 @@ void wxAuiTabArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxRect& in_rect,
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxAuiTabArt::DrawBackground(wxDC &dc, wxWindow &wnd, wxRect rect)
+   Draws a background on the given area. */
 void wxAuiTabArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4168,6 +4334,10 @@ void wxAuiTabArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto wxAuiTabArt wxAuiTabArt::Clone()
+   Clones the art object. */
 wxAuiTabArt* wxAuiTabArt_php::Clone()
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4215,6 +4385,8 @@ wxAuiTabArt* wxAuiTabArt_php::Clone()
 		return (wxAuiTabArt*) return_object;
 	
 }
+/* }}} */
+
 void php_wxAuiDockArt_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4255,6 +4427,8 @@ void php_wxAuiDockArt_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxAuiDockArt::wxAuiDockArt()
+   Constructor. */
 PHP_METHOD(php_wxAuiDockArt, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4335,6 +4509,10 @@ PHP_METHOD(php_wxAuiDockArt, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxAuiDockArt::SetMetric(int id, int new_val)
+   Set a certain setting with the value new_val. */
 void wxAuiDockArt_php::SetMetric(int id, int new_val)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4384,6 +4562,10 @@ void wxAuiDockArt_php::SetMetric(int id, int new_val)
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxAuiDockArt::SetFont(int id, wxFont font)
+   Set a font setting. */
 void wxAuiDockArt_php::SetFont(int id, const wxFont& font)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4434,6 +4616,10 @@ void wxAuiDockArt_php::SetFont(int id, const wxFont& font)
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto int wxAuiDockArt::GetMetric(int id)
+   Get the value of a certain setting. */
 int wxAuiDockArt_php::GetMetric(int id)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4482,6 +4668,10 @@ int wxAuiDockArt_php::GetMetric(int id)
 		return (int) Z_LVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto  wxAuiDockArt::SetColour(int id, wxColour colour)
+   Set a certain setting with the value colour. */
 void wxAuiDockArt_php::SetColour(int id, const wxColour& colour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4532,6 +4722,10 @@ void wxAuiDockArt_php::SetColour(int id, const wxColour& colour)
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto wxFont wxAuiDockArt::GetFont(int id)
+   Get a font setting. */
 wxFont wxAuiDockArt_php::GetFont(int id)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4585,6 +4779,10 @@ wxFont wxAuiDockArt_php::GetFont(int id)
 		return *(wxFont*) return_object;
 	
 }
+/* }}} */
+
+/* {{{ proto wxColour wxAuiDockArt::GetColour(int id)
+   Get the colour of a certain setting. */
 wxColour wxAuiDockArt_php::GetColour(int id)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4638,6 +4836,10 @@ wxColour wxAuiDockArt_php::GetColour(int id)
 		return *(wxColour*) return_object;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxAuiDockArt::DrawSash(wxDC &dc, wxWindow &window, int orientation, wxRect rect)
+   Draws a sash between two windows. */
 void wxAuiDockArt_php::DrawSash(wxDC& dc, wxWindow* window, int orientation, const wxRect& rect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4692,6 +4894,10 @@ void wxAuiDockArt_php::DrawSash(wxDC& dc, wxWindow* window, int orientation, con
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxAuiDockArt::DrawPaneButton(wxDC &dc, wxWindow &window, int button, int button_state, wxRect rect, wxAuiPaneInfo &pane)
+   Draws a button in the pane's title bar. */
 void wxAuiDockArt_php::DrawPaneButton(wxDC& dc, wxWindow* window, int button, int button_state, const wxRect& rect, wxAuiPaneInfo& pane)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4749,6 +4955,10 @@ void wxAuiDockArt_php::DrawPaneButton(wxDC& dc, wxWindow* window, int button, in
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxAuiDockArt::DrawGripper(wxDC &dc, wxWindow &window, wxRect rect, wxAuiPaneInfo &pane)
+   Draws a gripper. */
 void wxAuiDockArt_php::DrawGripper(wxDC& dc, wxWindow* window, const wxRect& rect, wxAuiPaneInfo& pane)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4804,6 +5014,10 @@ void wxAuiDockArt_php::DrawGripper(wxDC& dc, wxWindow* window, const wxRect& rec
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxAuiDockArt::DrawCaption(wxDC &dc, wxWindow &window, string text, wxRect rect, wxAuiPaneInfo &pane)
+   Draws a caption. */
 void wxAuiDockArt_php::DrawCaption(wxDC& dc, wxWindow* window, const wxString& text, const wxRect& rect, wxAuiPaneInfo& pane)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4863,6 +5077,10 @@ void wxAuiDockArt_php::DrawCaption(wxDC& dc, wxWindow* window, const wxString& t
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxAuiDockArt::DrawBorder(wxDC &dc, wxWindow &window, wxRect rect, wxAuiPaneInfo &pane)
+   Draws a border. */
 void wxAuiDockArt_php::DrawBorder(wxDC& dc, wxWindow* window, const wxRect& rect, wxAuiPaneInfo& pane)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4918,6 +5136,10 @@ void wxAuiDockArt_php::DrawBorder(wxDC& dc, wxWindow* window, const wxRect& rect
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxAuiDockArt::DrawBackground(wxDC &dc, wxWindow &window, int orientation, wxRect rect)
+   Draws a background. */
 void wxAuiDockArt_php::DrawBackground(wxDC& dc, wxWindow* window, int orientation, const wxRect& rect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4972,6 +5194,8 @@ void wxAuiDockArt_php::DrawBackground(wxDC& dc, wxWindow* window, int orientatio
 		return;
 	
 }
+/* }}} */
+
 void php_wxAuiManager_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4979,6 +5203,8 @@ void php_wxAuiManager_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto  wxAuiManager::wxAuiManager(wxWindow &managed_wnd, int flags)
+   Constructor. */
 PHP_METHOD(php_wxAuiManager, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5104,6 +5330,10 @@ PHP_METHOD(php_wxAuiManager, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxAuiManager::Update()
+   This method is called after any number of changes are made to any of the managed panes. */
 PHP_METHOD(php_wxAuiManager, Update)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5196,6 +5426,10 @@ PHP_METHOD(php_wxAuiManager, Update)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManager::Update\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiManager::UnInit()
+   Uninitializes the framework and should be called before a managed frame or window is destroyed. */
 PHP_METHOD(php_wxAuiManager, UnInit)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5288,6 +5522,10 @@ PHP_METHOD(php_wxAuiManager, UnInit)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManager::UnInit\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiManager::ShowHint(wxRect rect)
+   This function is used by controls to explicitly show a hint window at the specified rectangle. */
 PHP_METHOD(php_wxAuiManager, ShowHint)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5403,6 +5641,10 @@ PHP_METHOD(php_wxAuiManager, ShowHint)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManager::ShowHint\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiManager::SetManagedWindow(wxWindow &managed_wnd)
+   Called to specify the frame or window which is to be managed by wxAuiManager. */
 PHP_METHOD(php_wxAuiManager, SetManagedWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5518,6 +5760,10 @@ PHP_METHOD(php_wxAuiManager, SetManagedWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManager::SetManagedWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiManager::SetDockSizeConstraint(float widthpct, float heightpct)
+   When a user creates a new dock by dragging a window into a docked position, often times the large size of the window will create a dock that is unwieldly large. */
 PHP_METHOD(php_wxAuiManager, SetDockSizeConstraint)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5616,6 +5862,10 @@ PHP_METHOD(php_wxAuiManager, SetDockSizeConstraint)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManager::SetDockSizeConstraint\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiManager::SetFlags(int flags)
+   This method is used to specify wxAuiManagerOption's flags. */
 PHP_METHOD(php_wxAuiManager, SetFlags)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5713,6 +5963,10 @@ PHP_METHOD(php_wxAuiManager, SetFlags)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManager::SetFlags\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiManager::SetArtProvider(wxAuiDockArt &art_provider)
+   Instructs wxAuiManager to use art provider specified by parameter art_provider for all drawing calls. */
 PHP_METHOD(php_wxAuiManager, SetArtProvider)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5828,6 +6082,10 @@ PHP_METHOD(php_wxAuiManager, SetArtProvider)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManager::SetArtProvider\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxAuiManager::SavePerspective()
+   Saves the entire user interface layout into an encoded wxString, which can then be stored by the application (probably using wxConfig). */
 PHP_METHOD(php_wxAuiManager, SavePerspective)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5926,6 +6184,10 @@ PHP_METHOD(php_wxAuiManager, SavePerspective)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManager::SavePerspective\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxAuiManager::SavePaneInfo(wxAuiPaneInfo &pane)
+   SavePaneInfo() is similar to SavePerspective, with the exception that it only saves information about a single pane. */
 PHP_METHOD(php_wxAuiManager, SavePaneInfo)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6047,6 +6309,10 @@ PHP_METHOD(php_wxAuiManager, SavePaneInfo)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManager::SavePaneInfo\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiManager::ProcessDockResult(wxAuiPaneInfo &target, wxAuiPaneInfo new_pos)
+   ProcessDockResult() is a protected member of the wxAUI layout manager. */
 bool wxAuiManager_php::ProcessDockResult(wxAuiPaneInfo& target, const wxAuiPaneInfo& new_pos)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6107,6 +6373,10 @@ bool wxAuiManager_php::ProcessDockResult(wxAuiPaneInfo& target, const wxAuiPaneI
 	//Call original method
 	return wxAuiManager::ProcessDockResult(target, new_pos);
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiManager::LoadPerspective(string perspective, bool update)
+   Loads a saved perspective. */
 PHP_METHOD(php_wxAuiManager, LoadPerspective)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6217,6 +6487,10 @@ PHP_METHOD(php_wxAuiManager, LoadPerspective)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManager::LoadPerspective\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiManager::LoadPaneInfo(string pane_part, wxAuiPaneInfo &pane)
+   LoadPaneInfo() is similar to LoadPerspective, with the exception that it only loads information about a single pane. */
 PHP_METHOD(php_wxAuiManager, LoadPaneInfo)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6334,6 +6608,10 @@ PHP_METHOD(php_wxAuiManager, LoadPaneInfo)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManager::LoadPaneInfo\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiManager::InsertPane(wxWindow &window, wxAuiPaneInfo insert_location, int insert_level)
+   This method is used to insert either a previously unmanaged pane window into the frame manager, or to insert a currently managed pane somewhere else. */
 PHP_METHOD(php_wxAuiManager, InsertPane)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6482,6 +6760,10 @@ PHP_METHOD(php_wxAuiManager, InsertPane)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManager::InsertPane\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiManager::HideHint()
+   HideHint() hides any docking hint that may be visible. */
 PHP_METHOD(php_wxAuiManager, HideHint)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6574,6 +6856,10 @@ PHP_METHOD(php_wxAuiManager, HideHint)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManager::HideHint\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiManager::GetPane(string name)
+   GetPane() is used to lookup a wxAuiPaneInfo object either by window pointer or by pane name, which acts as a unique id for a window pane. */
 PHP_METHOD(php_wxAuiManager, GetPane)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6767,6 +7053,10 @@ PHP_METHOD(php_wxAuiManager, GetPane)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManager::GetPane\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiManager wxAuiManager::GetManager(wxWindow &window)
+   Calling this method will return the wxAuiManager for a given window. */
 PHP_METHOD(php_wxAuiManager, GetManager)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6901,6 +7191,10 @@ PHP_METHOD(php_wxAuiManager, GetManager)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManager::GetManager\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxWindow wxAuiManager::GetManagedWindow()
+   Returns the frame currently being managed by wxAuiManager. */
 PHP_METHOD(php_wxAuiManager, GetManagedWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7016,6 +7310,10 @@ PHP_METHOD(php_wxAuiManager, GetManagedWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManager::GetManagedWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAuiManager::GetFlags()
+   Returns the current wxAuiManagerOption's flags. */
 PHP_METHOD(php_wxAuiManager, GetFlags)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7108,6 +7406,10 @@ PHP_METHOD(php_wxAuiManager, GetFlags)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManager::GetFlags\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiManager::GetDockSizeConstraint(float &widthpct, float &heightpct)
+   Returns the current dock constraint values. */
 PHP_METHOD(php_wxAuiManager, GetDockSizeConstraint)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7223,6 +7525,10 @@ PHP_METHOD(php_wxAuiManager, GetDockSizeConstraint)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManager::GetDockSizeConstraint\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiDockArt wxAuiManager::GetArtProvider()
+   Returns the current art provider being used. */
 PHP_METHOD(php_wxAuiManager, GetArtProvider)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7338,6 +7644,10 @@ PHP_METHOD(php_wxAuiManager, GetArtProvider)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManager::GetArtProvider\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiManager::DetachPane(wxWindow &window)
+   Tells the wxAuiManager to stop managing the pane specified by window. */
 PHP_METHOD(php_wxAuiManager, DetachPane)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7453,6 +7763,10 @@ PHP_METHOD(php_wxAuiManager, DetachPane)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManager::DetachPane\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiManager::AddPane(wxWindow &window, wxAuiPaneInfo pane_info, wxPoint drop_pos)
+   AddPane() tells the frame manager to start managing a child window. */
 PHP_METHOD(php_wxAuiManager, AddPane)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7762,6 +8076,8 @@ PHP_METHOD(php_wxAuiManager, AddPane)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManager::AddPane\n");
 	}
 }
+/* }}} */
+
 void php_wxAuiPaneInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7802,6 +8118,8 @@ void php_wxAuiPaneInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxAuiPaneInfo::wxAuiPaneInfo(wxAuiPaneInfo c)
+   Copy constructor. */
 PHP_METHOD(php_wxAuiPaneInfo, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7936,6 +8254,10 @@ PHP_METHOD(php_wxAuiPaneInfo, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::Window(wxWindow &w)
+   Window() assigns the window pointer that the wxAuiPaneInfo should use. */
 PHP_METHOD(php_wxAuiPaneInfo, Window)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8071,6 +8393,10 @@ PHP_METHOD(php_wxAuiPaneInfo, Window)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::Window\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::TopDockable(bool b)
+   TopDockable() indicates whether a pane can be docked at the top of the frame. */
 PHP_METHOD(php_wxAuiPaneInfo, TopDockable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8219,6 +8545,10 @@ PHP_METHOD(php_wxAuiPaneInfo, TopDockable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::TopDockable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::Top()
+   Top() sets the pane dock position to the top of the frame. */
 PHP_METHOD(php_wxAuiPaneInfo, Top)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8331,6 +8661,10 @@ PHP_METHOD(php_wxAuiPaneInfo, Top)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::Top\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::ToolbarPane()
+   ToolbarPane() specifies that the pane should adopt the default toolbar pane settings. */
 PHP_METHOD(php_wxAuiPaneInfo, ToolbarPane)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8443,6 +8777,10 @@ PHP_METHOD(php_wxAuiPaneInfo, ToolbarPane)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::ToolbarPane\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::Show(bool show)
+   Show() indicates that a pane should be shown. */
 PHP_METHOD(php_wxAuiPaneInfo, Show)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8591,6 +8929,10 @@ PHP_METHOD(php_wxAuiPaneInfo, Show)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::Show\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::SetFlag(int flag, bool option_state)
+   SetFlag() turns the property given by flag on or off with the option_state parameter. */
 PHP_METHOD(php_wxAuiPaneInfo, SetFlag)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8709,6 +9051,10 @@ PHP_METHOD(php_wxAuiPaneInfo, SetFlag)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::SetFlag\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiPaneInfo::SafeSet(wxAuiPaneInfo source)
+   Write the safe parts of a newly loaded PaneInfo structure "source" into "this" used on loading perspectives etc. */
 PHP_METHOD(php_wxAuiPaneInfo, SafeSet)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8823,6 +9169,10 @@ PHP_METHOD(php_wxAuiPaneInfo, SafeSet)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::SafeSet\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::Row(int row)
+   Row() determines the row of the docked pane. */
 PHP_METHOD(php_wxAuiPaneInfo, Row)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8940,6 +9290,10 @@ PHP_METHOD(php_wxAuiPaneInfo, Row)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::Row\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::RightDockable(bool b)
+   RightDockable() indicates whether a pane can be docked on the right of the frame. */
 PHP_METHOD(php_wxAuiPaneInfo, RightDockable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9088,6 +9442,10 @@ PHP_METHOD(php_wxAuiPaneInfo, RightDockable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::RightDockable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::Right()
+   Right() sets the pane dock position to the right side of the frame. */
 PHP_METHOD(php_wxAuiPaneInfo, Right)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9200,6 +9558,10 @@ PHP_METHOD(php_wxAuiPaneInfo, Right)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::Right\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::Resizable(bool resizable)
+   Resizable() allows a pane to be resized if the parameter is true, and forces it to be a fixed size if the parameter is false. */
 PHP_METHOD(php_wxAuiPaneInfo, Resizable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9348,6 +9710,10 @@ PHP_METHOD(php_wxAuiPaneInfo, Resizable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::Resizable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::Position(int pos)
+   Position() determines the position of the docked pane. */
 PHP_METHOD(php_wxAuiPaneInfo, Position)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9465,6 +9831,10 @@ PHP_METHOD(php_wxAuiPaneInfo, Position)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::Position\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::PinButton(bool visible)
+   PinButton() indicates that a pin button should be drawn for the pane. */
 PHP_METHOD(php_wxAuiPaneInfo, PinButton)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9613,6 +9983,10 @@ PHP_METHOD(php_wxAuiPaneInfo, PinButton)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::PinButton\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::PaneBorder(bool visible)
+   PaneBorder indicates that a border should be drawn for the pane. */
 PHP_METHOD(php_wxAuiPaneInfo, PaneBorder)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9761,6 +10135,10 @@ PHP_METHOD(php_wxAuiPaneInfo, PaneBorder)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::PaneBorder\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::Name(string n)
+   Name() sets the name of the pane so it can be referenced in lookup functions. */
 PHP_METHOD(php_wxAuiPaneInfo, Name)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9879,6 +10257,10 @@ PHP_METHOD(php_wxAuiPaneInfo, Name)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::Name\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::Movable(bool b)
+   Movable indicates whether a frame can be moved. */
 PHP_METHOD(php_wxAuiPaneInfo, Movable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10027,6 +10409,10 @@ PHP_METHOD(php_wxAuiPaneInfo, Movable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::Movable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::MinimizeButton(bool visible)
+   MinimizeButton() indicates that a minimize button should be drawn for the pane. */
 PHP_METHOD(php_wxAuiPaneInfo, MinimizeButton)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10175,6 +10561,10 @@ PHP_METHOD(php_wxAuiPaneInfo, MinimizeButton)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::MinimizeButton\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::MinSize(int x, int y)
+   MinSize() sets the minimum size of the pane. */
 PHP_METHOD(php_wxAuiPaneInfo, MinSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10368,6 +10758,10 @@ PHP_METHOD(php_wxAuiPaneInfo, MinSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::MinSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::MaximizeButton(bool visible)
+   MaximizeButton() indicates that a maximize button should be drawn for the pane. */
 PHP_METHOD(php_wxAuiPaneInfo, MaximizeButton)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10516,6 +10910,10 @@ PHP_METHOD(php_wxAuiPaneInfo, MaximizeButton)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::MaximizeButton\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::MaxSize(int x, int y)
+   MaxSize() sets the maximum size of the pane. */
 PHP_METHOD(php_wxAuiPaneInfo, MaxSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10709,6 +11107,10 @@ PHP_METHOD(php_wxAuiPaneInfo, MaxSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::MaxSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::LeftDockable(bool b)
+   LeftDockable() indicates whether a pane can be docked on the left of the frame. */
 PHP_METHOD(php_wxAuiPaneInfo, LeftDockable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10857,6 +11259,10 @@ PHP_METHOD(php_wxAuiPaneInfo, LeftDockable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::LeftDockable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::Left()
+   Left() sets the pane dock position to the left side of the frame. */
 PHP_METHOD(php_wxAuiPaneInfo, Left)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10969,6 +11375,10 @@ PHP_METHOD(php_wxAuiPaneInfo, Left)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::Left\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::Layer(int layer)
+   Layer() determines the layer of the docked pane. */
 PHP_METHOD(php_wxAuiPaneInfo, Layer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11086,6 +11496,10 @@ PHP_METHOD(php_wxAuiPaneInfo, Layer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::Layer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiPaneInfo::IsTopDockable()
+   IsTopDockable() returns true if the pane can be docked at the top of the managed frame. */
 PHP_METHOD(php_wxAuiPaneInfo, IsTopDockable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11178,6 +11592,10 @@ PHP_METHOD(php_wxAuiPaneInfo, IsTopDockable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::IsTopDockable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiPaneInfo::IsToolbar()
+   IsToolbar() returns true if the pane contains a toolbar. */
 PHP_METHOD(php_wxAuiPaneInfo, IsToolbar)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11270,6 +11688,10 @@ PHP_METHOD(php_wxAuiPaneInfo, IsToolbar)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::IsToolbar\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiPaneInfo::IsShown()
+   IsShown() returns true if the pane is currently shown. */
 PHP_METHOD(php_wxAuiPaneInfo, IsShown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11362,6 +11784,10 @@ PHP_METHOD(php_wxAuiPaneInfo, IsShown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::IsShown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiPaneInfo::IsRightDockable()
+   IsRightDockable() returns true if the pane can be docked on the right of the managed frame. */
 PHP_METHOD(php_wxAuiPaneInfo, IsRightDockable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11454,6 +11880,10 @@ PHP_METHOD(php_wxAuiPaneInfo, IsRightDockable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::IsRightDockable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiPaneInfo::IsResizable()
+   IsResizable() returns true if the pane can be resized. */
 PHP_METHOD(php_wxAuiPaneInfo, IsResizable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11546,6 +11976,10 @@ PHP_METHOD(php_wxAuiPaneInfo, IsResizable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::IsResizable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiPaneInfo::IsOk()
+   IsOk() returns true if the wxAuiPaneInfo structure is valid. */
 PHP_METHOD(php_wxAuiPaneInfo, IsOk)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11638,6 +12072,10 @@ PHP_METHOD(php_wxAuiPaneInfo, IsOk)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::IsOk\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiPaneInfo::IsMovable()
+   IsMoveable() returns true if the docked frame can be undocked or moved to another dock position. */
 PHP_METHOD(php_wxAuiPaneInfo, IsMovable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11730,6 +12168,10 @@ PHP_METHOD(php_wxAuiPaneInfo, IsMovable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::IsMovable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiPaneInfo::IsLeftDockable()
+   IsLeftDockable() returns true if the pane can be docked on the left of the managed frame. */
 PHP_METHOD(php_wxAuiPaneInfo, IsLeftDockable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11822,6 +12264,10 @@ PHP_METHOD(php_wxAuiPaneInfo, IsLeftDockable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::IsLeftDockable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiPaneInfo::IsFloating()
+   IsFloating() returns true if the pane is floating. */
 PHP_METHOD(php_wxAuiPaneInfo, IsFloating)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11914,6 +12360,10 @@ PHP_METHOD(php_wxAuiPaneInfo, IsFloating)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::IsFloating\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiPaneInfo::IsFloatable()
+   IsFloatable() returns true if the pane can be undocked and displayed as a floating window. */
 PHP_METHOD(php_wxAuiPaneInfo, IsFloatable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12006,6 +12456,10 @@ PHP_METHOD(php_wxAuiPaneInfo, IsFloatable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::IsFloatable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiPaneInfo::IsFixed()
+   IsFixed() returns true if the pane cannot be resized. */
 PHP_METHOD(php_wxAuiPaneInfo, IsFixed)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12098,6 +12552,10 @@ PHP_METHOD(php_wxAuiPaneInfo, IsFixed)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::IsFixed\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiPaneInfo::IsDocked()
+   IsDocked() returns true if the pane is currently docked. */
 PHP_METHOD(php_wxAuiPaneInfo, IsDocked)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12190,6 +12648,10 @@ PHP_METHOD(php_wxAuiPaneInfo, IsDocked)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::IsDocked\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiPaneInfo::IsDockable()
+   Returns true if the pane can be docked at any side. */
 PHP_METHOD(php_wxAuiPaneInfo, IsDockable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12282,6 +12744,10 @@ PHP_METHOD(php_wxAuiPaneInfo, IsDockable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::IsDockable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiPaneInfo::IsBottomDockable()
+   IsBottomDockable() returns true if the pane can be docked at the bottom of the managed frame. */
 PHP_METHOD(php_wxAuiPaneInfo, IsBottomDockable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12374,6 +12840,10 @@ PHP_METHOD(php_wxAuiPaneInfo, IsBottomDockable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::IsBottomDockable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::Icon(wxBitmap b)
+   Icon() sets the icon of the pane. */
 PHP_METHOD(php_wxAuiPaneInfo, Icon)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12509,6 +12979,10 @@ PHP_METHOD(php_wxAuiPaneInfo, Icon)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::Icon\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::Hide()
+   Hide() indicates that a pane should be hidden. */
 PHP_METHOD(php_wxAuiPaneInfo, Hide)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12621,6 +13095,10 @@ PHP_METHOD(php_wxAuiPaneInfo, Hide)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::Hide\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiPaneInfo::HasPinButton()
+   HasPinButton() returns true if the pane displays a button to float the pane. */
 PHP_METHOD(php_wxAuiPaneInfo, HasPinButton)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12713,6 +13191,10 @@ PHP_METHOD(php_wxAuiPaneInfo, HasPinButton)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::HasPinButton\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiPaneInfo::HasMinimizeButton()
+   HasMinimizeButton() returns true if the pane displays a button to minimize the pane. */
 PHP_METHOD(php_wxAuiPaneInfo, HasMinimizeButton)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12805,6 +13287,10 @@ PHP_METHOD(php_wxAuiPaneInfo, HasMinimizeButton)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::HasMinimizeButton\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiPaneInfo::HasMaximizeButton()
+   HasMaximizeButton() returns true if the pane displays a button to maximize the pane. */
 PHP_METHOD(php_wxAuiPaneInfo, HasMaximizeButton)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12897,6 +13383,10 @@ PHP_METHOD(php_wxAuiPaneInfo, HasMaximizeButton)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::HasMaximizeButton\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiPaneInfo::HasGripperTop()
+   HasGripper() returns true if the pane displays a gripper at the top. */
 PHP_METHOD(php_wxAuiPaneInfo, HasGripperTop)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12989,6 +13479,10 @@ PHP_METHOD(php_wxAuiPaneInfo, HasGripperTop)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::HasGripperTop\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiPaneInfo::HasGripper()
+   HasGripper() returns true if the pane displays a gripper. */
 PHP_METHOD(php_wxAuiPaneInfo, HasGripper)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13081,6 +13575,10 @@ PHP_METHOD(php_wxAuiPaneInfo, HasGripper)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::HasGripper\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiPaneInfo::HasFlag(int flag)
+   HasFlag() returns true if the property specified by flag is active for the pane. */
 PHP_METHOD(php_wxAuiPaneInfo, HasFlag)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13178,6 +13676,10 @@ PHP_METHOD(php_wxAuiPaneInfo, HasFlag)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::HasFlag\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiPaneInfo::HasCloseButton()
+   HasCloseButton() returns true if the pane displays a button to close the pane. */
 PHP_METHOD(php_wxAuiPaneInfo, HasCloseButton)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13270,6 +13772,10 @@ PHP_METHOD(php_wxAuiPaneInfo, HasCloseButton)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::HasCloseButton\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiPaneInfo::HasCaption()
+   HasCaption() returns true if the pane displays a caption. */
 PHP_METHOD(php_wxAuiPaneInfo, HasCaption)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13362,6 +13868,10 @@ PHP_METHOD(php_wxAuiPaneInfo, HasCaption)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::HasCaption\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiPaneInfo::HasBorder()
+   HasBorder() returns true if the pane displays a border. */
 PHP_METHOD(php_wxAuiPaneInfo, HasBorder)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13454,6 +13964,10 @@ PHP_METHOD(php_wxAuiPaneInfo, HasBorder)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::HasBorder\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::GripperTop(bool attop)
+   GripperTop() indicates that a gripper should be drawn at the top of the pane. */
 PHP_METHOD(php_wxAuiPaneInfo, GripperTop)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13602,6 +14116,10 @@ PHP_METHOD(php_wxAuiPaneInfo, GripperTop)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::GripperTop\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::Gripper(bool visible)
+   Gripper() indicates that a gripper should be drawn for the pane. */
 PHP_METHOD(php_wxAuiPaneInfo, Gripper)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13750,6 +14268,10 @@ PHP_METHOD(php_wxAuiPaneInfo, Gripper)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::Gripper\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::FloatingSize(int x, int y)
+   FloatingSize() sets the size of the floating pane. */
 PHP_METHOD(php_wxAuiPaneInfo, FloatingSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13943,6 +14465,10 @@ PHP_METHOD(php_wxAuiPaneInfo, FloatingSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::FloatingSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::FloatingPosition(int x, int y)
+   FloatingPosition() sets the position of the floating pane. */
 PHP_METHOD(php_wxAuiPaneInfo, FloatingPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14136,6 +14662,10 @@ PHP_METHOD(php_wxAuiPaneInfo, FloatingPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::FloatingPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::Floatable(bool b)
+   Floatable() sets whether the user will be able to undock a pane and turn it into a floating window. */
 PHP_METHOD(php_wxAuiPaneInfo, Floatable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14284,6 +14814,10 @@ PHP_METHOD(php_wxAuiPaneInfo, Floatable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::Floatable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::Float()
+   Float() indicates that a pane should be floated. */
 PHP_METHOD(php_wxAuiPaneInfo, Float)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14396,6 +14930,10 @@ PHP_METHOD(php_wxAuiPaneInfo, Float)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::Float\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::Fixed()
+   Fixed() forces a pane to be fixed size so that it cannot be resized. */
 PHP_METHOD(php_wxAuiPaneInfo, Fixed)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14508,6 +15046,10 @@ PHP_METHOD(php_wxAuiPaneInfo, Fixed)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::Fixed\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::Dockable(bool b)
+   Dockable() specifies whether a frame can be docked or not. */
 PHP_METHOD(php_wxAuiPaneInfo, Dockable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14656,6 +15198,10 @@ PHP_METHOD(php_wxAuiPaneInfo, Dockable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::Dockable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::DockFixed(bool b)
+   DockFixed() causes the containing dock to have no resize sash. */
 PHP_METHOD(php_wxAuiPaneInfo, DockFixed)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14804,6 +15350,10 @@ PHP_METHOD(php_wxAuiPaneInfo, DockFixed)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::DockFixed\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::Dock()
+   Dock() indicates that a pane should be docked. */
 PHP_METHOD(php_wxAuiPaneInfo, Dock)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14916,6 +15466,10 @@ PHP_METHOD(php_wxAuiPaneInfo, Dock)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::Dock\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::Direction(int direction)
+   Direction() determines the direction of the docked pane. */
 PHP_METHOD(php_wxAuiPaneInfo, Direction)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15033,6 +15587,10 @@ PHP_METHOD(php_wxAuiPaneInfo, Direction)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::Direction\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::DestroyOnClose(bool b)
+   DestroyOnClose() indicates whether a pane should be destroyed when it is closed. */
 PHP_METHOD(php_wxAuiPaneInfo, DestroyOnClose)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15181,6 +15739,10 @@ PHP_METHOD(php_wxAuiPaneInfo, DestroyOnClose)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::DestroyOnClose\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::DefaultPane()
+   DefaultPane() specifies that the pane should adopt the default pane settings. */
 PHP_METHOD(php_wxAuiPaneInfo, DefaultPane)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15293,6 +15855,10 @@ PHP_METHOD(php_wxAuiPaneInfo, DefaultPane)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::DefaultPane\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::CloseButton(bool visible)
+   CloseButton() indicates that a close button should be drawn for the pane. */
 PHP_METHOD(php_wxAuiPaneInfo, CloseButton)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15441,6 +16007,10 @@ PHP_METHOD(php_wxAuiPaneInfo, CloseButton)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::CloseButton\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::CentrePane()
+   CentrePane() specifies that the pane should adopt the default center pane settings. */
 PHP_METHOD(php_wxAuiPaneInfo, CentrePane)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15553,6 +16123,10 @@ PHP_METHOD(php_wxAuiPaneInfo, CentrePane)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::CentrePane\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::Centre()
+   Center() sets the pane dock position to the left side of the frame. */
 PHP_METHOD(php_wxAuiPaneInfo, Centre)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15665,6 +16239,10 @@ PHP_METHOD(php_wxAuiPaneInfo, Centre)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::Centre\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::CenterPane()
+   CentrePane() specifies that the pane should adopt the default center pane settings. */
 PHP_METHOD(php_wxAuiPaneInfo, CenterPane)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15777,6 +16355,10 @@ PHP_METHOD(php_wxAuiPaneInfo, CenterPane)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::CenterPane\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::Center()
+   Center() sets the pane dock position to the left side of the frame. */
 PHP_METHOD(php_wxAuiPaneInfo, Center)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15889,6 +16471,10 @@ PHP_METHOD(php_wxAuiPaneInfo, Center)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::Center\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::CaptionVisible(bool visible)
+   CaptionVisible indicates that a pane caption should be visible. */
 PHP_METHOD(php_wxAuiPaneInfo, CaptionVisible)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16037,6 +16623,10 @@ PHP_METHOD(php_wxAuiPaneInfo, CaptionVisible)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::CaptionVisible\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::Caption(string c)
+   Caption() sets the caption of the pane. */
 PHP_METHOD(php_wxAuiPaneInfo, Caption)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16155,6 +16745,10 @@ PHP_METHOD(php_wxAuiPaneInfo, Caption)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::Caption\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::BottomDockable(bool b)
+   BottomDockable() indicates whether a pane can be docked at the bottom of the frame. */
 PHP_METHOD(php_wxAuiPaneInfo, BottomDockable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16303,6 +16897,10 @@ PHP_METHOD(php_wxAuiPaneInfo, BottomDockable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::BottomDockable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::Bottom()
+   Bottom() sets the pane dock position to the bottom side of the frame. */
 PHP_METHOD(php_wxAuiPaneInfo, Bottom)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16415,6 +17013,10 @@ PHP_METHOD(php_wxAuiPaneInfo, Bottom)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::Bottom\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiPaneInfo::BestSize(int x, int y)
+   BestSize() sets the ideal size for the pane. */
 PHP_METHOD(php_wxAuiPaneInfo, BestSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16608,6 +17210,8 @@ PHP_METHOD(php_wxAuiPaneInfo, BestSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiPaneInfo::BestSize\n");
 	}
 }
+/* }}} */
+
 void php_wxAuiToolBarEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16648,6 +17252,7 @@ void php_wxAuiToolBarEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 		#endif
 	}
 }
+/* {{{ proto wxPoint wxAuiToolBarEvent::GetClickPoint() */
 PHP_METHOD(php_wxAuiToolBarEvent, GetClickPoint)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16748,6 +17353,9 @@ PHP_METHOD(php_wxAuiToolBarEvent, GetClickPoint)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarEvent::GetClickPoint\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRect wxAuiToolBarEvent::GetItemRect() */
 PHP_METHOD(php_wxAuiToolBarEvent, GetItemRect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16848,6 +17456,9 @@ PHP_METHOD(php_wxAuiToolBarEvent, GetItemRect)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarEvent::GetItemRect\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAuiToolBarEvent::GetToolId() */
 PHP_METHOD(php_wxAuiToolBarEvent, GetToolId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16943,6 +17554,9 @@ PHP_METHOD(php_wxAuiToolBarEvent, GetToolId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarEvent::GetToolId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiToolBarEvent::IsDropDownClicked() */
 PHP_METHOD(php_wxAuiToolBarEvent, IsDropDownClicked)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17038,6 +17652,8 @@ PHP_METHOD(php_wxAuiToolBarEvent, IsDropDownClicked)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarEvent::IsDropDownClicked\n");
 	}
 }
+/* }}} */
+
 void php_wxAuiToolBarItem_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17078,6 +17694,7 @@ void php_wxAuiToolBarItem_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		#endif
 	}
 }
+/* {{{ proto  wxAuiToolBarItem::wxAuiToolBarItem(wxAuiToolBarItem c) */
 PHP_METHOD(php_wxAuiToolBarItem, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17212,6 +17829,9 @@ PHP_METHOD(php_wxAuiToolBarItem, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarItem::SetWindow(wxWindow &w) */
 PHP_METHOD(php_wxAuiToolBarItem, SetWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17327,6 +17947,9 @@ PHP_METHOD(php_wxAuiToolBarItem, SetWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::SetWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarItem::SetUserData(int l) */
 PHP_METHOD(php_wxAuiToolBarItem, SetUserData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17424,6 +18047,9 @@ PHP_METHOD(php_wxAuiToolBarItem, SetUserData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::SetUserData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarItem::SetSticky(bool b) */
 PHP_METHOD(php_wxAuiToolBarItem, SetSticky)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17521,6 +18147,9 @@ PHP_METHOD(php_wxAuiToolBarItem, SetSticky)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::SetSticky\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarItem::SetState(int new_state) */
 PHP_METHOD(php_wxAuiToolBarItem, SetState)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17618,6 +18247,9 @@ PHP_METHOD(php_wxAuiToolBarItem, SetState)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::SetState\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarItem::SetSpacerPixels(int s) */
 PHP_METHOD(php_wxAuiToolBarItem, SetSpacerPixels)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17715,6 +18347,9 @@ PHP_METHOD(php_wxAuiToolBarItem, SetSpacerPixels)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::SetSpacerPixels\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarItem::SetSizerItem(wxSizerItem &s) */
 PHP_METHOD(php_wxAuiToolBarItem, SetSizerItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17830,6 +18465,9 @@ PHP_METHOD(php_wxAuiToolBarItem, SetSizerItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::SetSizerItem\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarItem::SetShortHelp(string s) */
 PHP_METHOD(php_wxAuiToolBarItem, SetShortHelp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17928,6 +18566,9 @@ PHP_METHOD(php_wxAuiToolBarItem, SetShortHelp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::SetShortHelp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarItem::SetProportion(int p) */
 PHP_METHOD(php_wxAuiToolBarItem, SetProportion)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18025,6 +18666,9 @@ PHP_METHOD(php_wxAuiToolBarItem, SetProportion)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::SetProportion\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarItem::SetMinSize(wxSize s) */
 PHP_METHOD(php_wxAuiToolBarItem, SetMinSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18140,6 +18784,9 @@ PHP_METHOD(php_wxAuiToolBarItem, SetMinSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::SetMinSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarItem::SetLongHelp(string s) */
 PHP_METHOD(php_wxAuiToolBarItem, SetLongHelp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18238,6 +18885,9 @@ PHP_METHOD(php_wxAuiToolBarItem, SetLongHelp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::SetLongHelp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarItem::SetLabel(string s) */
 PHP_METHOD(php_wxAuiToolBarItem, SetLabel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18336,6 +18986,9 @@ PHP_METHOD(php_wxAuiToolBarItem, SetLabel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::SetLabel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarItem::SetKind(int new_kind) */
 PHP_METHOD(php_wxAuiToolBarItem, SetKind)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18433,6 +19086,9 @@ PHP_METHOD(php_wxAuiToolBarItem, SetKind)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::SetKind\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarItem::SetId(int new_id) */
 PHP_METHOD(php_wxAuiToolBarItem, SetId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18530,6 +19186,9 @@ PHP_METHOD(php_wxAuiToolBarItem, SetId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::SetId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarItem::SetHoverBitmap(wxBitmap bmp) */
 PHP_METHOD(php_wxAuiToolBarItem, SetHoverBitmap)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18645,6 +19304,9 @@ PHP_METHOD(php_wxAuiToolBarItem, SetHoverBitmap)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::SetHoverBitmap\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarItem::SetHasDropDown(bool b) */
 PHP_METHOD(php_wxAuiToolBarItem, SetHasDropDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18742,6 +19404,9 @@ PHP_METHOD(php_wxAuiToolBarItem, SetHasDropDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::SetHasDropDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarItem::SetDisabledBitmap(wxBitmap bmp) */
 PHP_METHOD(php_wxAuiToolBarItem, SetDisabledBitmap)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18857,6 +19522,9 @@ PHP_METHOD(php_wxAuiToolBarItem, SetDisabledBitmap)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::SetDisabledBitmap\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarItem::SetBitmap(wxBitmap bmp) */
 PHP_METHOD(php_wxAuiToolBarItem, SetBitmap)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18972,6 +19640,9 @@ PHP_METHOD(php_wxAuiToolBarItem, SetBitmap)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::SetBitmap\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarItem::SetAlignment(int l) */
 PHP_METHOD(php_wxAuiToolBarItem, SetAlignment)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19069,6 +19740,9 @@ PHP_METHOD(php_wxAuiToolBarItem, SetAlignment)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::SetAlignment\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarItem::SetActive(bool b) */
 PHP_METHOD(php_wxAuiToolBarItem, SetActive)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19166,6 +19840,9 @@ PHP_METHOD(php_wxAuiToolBarItem, SetActive)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::SetActive\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiToolBarItem::IsSticky() */
 PHP_METHOD(php_wxAuiToolBarItem, IsSticky)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19258,6 +19935,9 @@ PHP_METHOD(php_wxAuiToolBarItem, IsSticky)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::IsSticky\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiToolBarItem::IsActive() */
 PHP_METHOD(php_wxAuiToolBarItem, IsActive)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19350,6 +20030,9 @@ PHP_METHOD(php_wxAuiToolBarItem, IsActive)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::IsActive\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiToolBarItem::HasDropDown() */
 PHP_METHOD(php_wxAuiToolBarItem, HasDropDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19442,6 +20125,9 @@ PHP_METHOD(php_wxAuiToolBarItem, HasDropDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::HasDropDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxWindow wxAuiToolBarItem::GetWindow() */
 PHP_METHOD(php_wxAuiToolBarItem, GetWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19557,6 +20243,9 @@ PHP_METHOD(php_wxAuiToolBarItem, GetWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::GetWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAuiToolBarItem::GetUserData() */
 PHP_METHOD(php_wxAuiToolBarItem, GetUserData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19649,6 +20338,9 @@ PHP_METHOD(php_wxAuiToolBarItem, GetUserData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::GetUserData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAuiToolBarItem::GetState() */
 PHP_METHOD(php_wxAuiToolBarItem, GetState)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19741,6 +20433,9 @@ PHP_METHOD(php_wxAuiToolBarItem, GetState)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::GetState\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAuiToolBarItem::GetSpacerPixels() */
 PHP_METHOD(php_wxAuiToolBarItem, GetSpacerPixels)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19833,6 +20528,9 @@ PHP_METHOD(php_wxAuiToolBarItem, GetSpacerPixels)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::GetSpacerPixels\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSizerItem wxAuiToolBarItem::GetSizerItem() */
 PHP_METHOD(php_wxAuiToolBarItem, GetSizerItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19948,6 +20646,9 @@ PHP_METHOD(php_wxAuiToolBarItem, GetSizerItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::GetSizerItem\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxAuiToolBarItem::GetShortHelp() */
 PHP_METHOD(php_wxAuiToolBarItem, GetShortHelp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20046,6 +20747,9 @@ PHP_METHOD(php_wxAuiToolBarItem, GetShortHelp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::GetShortHelp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAuiToolBarItem::GetProportion() */
 PHP_METHOD(php_wxAuiToolBarItem, GetProportion)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20138,6 +20842,9 @@ PHP_METHOD(php_wxAuiToolBarItem, GetProportion)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::GetProportion\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxAuiToolBarItem::GetMinSize() */
 PHP_METHOD(php_wxAuiToolBarItem, GetMinSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20250,6 +20957,9 @@ PHP_METHOD(php_wxAuiToolBarItem, GetMinSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::GetMinSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxAuiToolBarItem::GetLongHelp() */
 PHP_METHOD(php_wxAuiToolBarItem, GetLongHelp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20348,6 +21058,9 @@ PHP_METHOD(php_wxAuiToolBarItem, GetLongHelp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::GetLongHelp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxAuiToolBarItem::GetLabel() */
 PHP_METHOD(php_wxAuiToolBarItem, GetLabel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20446,6 +21159,9 @@ PHP_METHOD(php_wxAuiToolBarItem, GetLabel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::GetLabel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAuiToolBarItem::GetKind() */
 PHP_METHOD(php_wxAuiToolBarItem, GetKind)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20538,6 +21254,9 @@ PHP_METHOD(php_wxAuiToolBarItem, GetKind)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::GetKind\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAuiToolBarItem::GetId() */
 PHP_METHOD(php_wxAuiToolBarItem, GetId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20630,6 +21349,9 @@ PHP_METHOD(php_wxAuiToolBarItem, GetId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::GetId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxBitmap wxAuiToolBarItem::GetHoverBitmap() */
 PHP_METHOD(php_wxAuiToolBarItem, GetHoverBitmap)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20742,6 +21464,9 @@ PHP_METHOD(php_wxAuiToolBarItem, GetHoverBitmap)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::GetHoverBitmap\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxBitmap wxAuiToolBarItem::GetDisabledBitmap() */
 PHP_METHOD(php_wxAuiToolBarItem, GetDisabledBitmap)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20854,6 +21579,9 @@ PHP_METHOD(php_wxAuiToolBarItem, GetDisabledBitmap)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::GetDisabledBitmap\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxBitmap wxAuiToolBarItem::GetBitmap() */
 PHP_METHOD(php_wxAuiToolBarItem, GetBitmap)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20966,6 +21694,9 @@ PHP_METHOD(php_wxAuiToolBarItem, GetBitmap)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::GetBitmap\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAuiToolBarItem::GetAlignment() */
 PHP_METHOD(php_wxAuiToolBarItem, GetAlignment)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21058,6 +21789,9 @@ PHP_METHOD(php_wxAuiToolBarItem, GetAlignment)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::GetAlignment\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarItem::Assign(wxAuiToolBarItem c) */
 PHP_METHOD(php_wxAuiToolBarItem, Assign)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21173,6 +21907,8 @@ PHP_METHOD(php_wxAuiToolBarItem, Assign)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBarItem::Assign\n");
 	}
 }
+/* }}} */
+
 void php_wxAuiToolBarArt_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21213,6 +21949,7 @@ void php_wxAuiToolBarArt_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+/* {{{ proto wxAuiToolBarArt wxAuiToolBarArt::Clone() */
 wxAuiToolBarArt* wxAuiToolBarArt_php::Clone()
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21260,6 +21997,9 @@ wxAuiToolBarArt* wxAuiToolBarArt_php::Clone()
 		return (wxAuiToolBarArt*) return_object;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarArt::DrawBackground(wxDC &dc, wxWindow &wnd, wxRect rect) */
 void wxAuiToolBarArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& rect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21313,6 +22053,9 @@ void wxAuiToolBarArt_php::DrawBackground(wxDC& dc, wxWindow* wnd, const wxRect& 
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarArt::DrawButton(wxDC &dc, wxWindow &wnd, wxAuiToolBarItem item, wxRect rect) */
 void wxAuiToolBarArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxAuiToolBarItem& item, const wxRect& rect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21368,6 +22111,9 @@ void wxAuiToolBarArt_php::DrawButton(wxDC& dc, wxWindow* wnd, const wxAuiToolBar
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarArt::DrawControlLabel(wxDC &dc, wxWindow &wnd, wxAuiToolBarItem item, wxRect rect) */
 void wxAuiToolBarArt_php::DrawControlLabel(wxDC& dc, wxWindow* wnd, const wxAuiToolBarItem& item, const wxRect& rect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21423,6 +22169,9 @@ void wxAuiToolBarArt_php::DrawControlLabel(wxDC& dc, wxWindow* wnd, const wxAuiT
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarArt::DrawDropDownButton(wxDC &dc, wxWindow &wnd, wxAuiToolBarItem item, wxRect rect) */
 void wxAuiToolBarArt_php::DrawDropDownButton(wxDC& dc, wxWindow* wnd, const wxAuiToolBarItem& item, const wxRect& rect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21478,6 +22227,9 @@ void wxAuiToolBarArt_php::DrawDropDownButton(wxDC& dc, wxWindow* wnd, const wxAu
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarArt::DrawGripper(wxDC &dc, wxWindow &wnd, wxRect rect) */
 void wxAuiToolBarArt_php::DrawGripper(wxDC& dc, wxWindow* wnd, const wxRect& rect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21531,6 +22283,9 @@ void wxAuiToolBarArt_php::DrawGripper(wxDC& dc, wxWindow* wnd, const wxRect& rec
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarArt::DrawLabel(wxDC &dc, wxWindow &wnd, wxAuiToolBarItem item, wxRect rect) */
 void wxAuiToolBarArt_php::DrawLabel(wxDC& dc, wxWindow* wnd, const wxAuiToolBarItem& item, const wxRect& rect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21586,6 +22341,9 @@ void wxAuiToolBarArt_php::DrawLabel(wxDC& dc, wxWindow* wnd, const wxAuiToolBarI
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarArt::DrawOverflowButton(wxDC &dc, wxWindow &wnd, wxRect rect, int state) */
 void wxAuiToolBarArt_php::DrawOverflowButton(wxDC& dc, wxWindow* wnd, const wxRect& rect, int state)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21640,6 +22398,9 @@ void wxAuiToolBarArt_php::DrawOverflowButton(wxDC& dc, wxWindow* wnd, const wxRe
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarArt::DrawSeparator(wxDC &dc, wxWindow &wnd, wxRect rect) */
 void wxAuiToolBarArt_php::DrawSeparator(wxDC& dc, wxWindow* wnd, const wxRect& rect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21693,6 +22454,9 @@ void wxAuiToolBarArt_php::DrawSeparator(wxDC& dc, wxWindow* wnd, const wxRect& r
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto int wxAuiToolBarArt::GetElementSize(int element_id) */
 int wxAuiToolBarArt_php::GetElementSize(int element_id)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21741,6 +22505,9 @@ int wxAuiToolBarArt_php::GetElementSize(int element_id)
 		return (int) Z_LVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto int wxAuiToolBarArt::GetFlags() */
 unsigned int wxAuiToolBarArt_php::GetFlags()
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21783,6 +22550,9 @@ unsigned int wxAuiToolBarArt_php::GetFlags()
 		return (unsigned int) Z_LVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto wxFont wxAuiToolBarArt::GetFont() */
 wxFont wxAuiToolBarArt_php::GetFont()
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21830,6 +22600,9 @@ wxFont wxAuiToolBarArt_php::GetFont()
 		return *(wxFont*) return_object;
 	
 }
+/* }}} */
+
+/* {{{ proto wxSize wxAuiToolBarArt::GetLabelSize(wxDC &dc, wxWindow &wnd, wxAuiToolBarItem item) */
 wxSize wxAuiToolBarArt_php::GetLabelSize(wxDC& dc, wxWindow* wnd, const wxAuiToolBarItem& item)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21888,6 +22661,9 @@ wxSize wxAuiToolBarArt_php::GetLabelSize(wxDC& dc, wxWindow* wnd, const wxAuiToo
 		return *(wxSize*) return_object;
 	
 }
+/* }}} */
+
+/* {{{ proto int wxAuiToolBarArt::GetTextOrientation() */
 int wxAuiToolBarArt_php::GetTextOrientation()
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21930,6 +22706,9 @@ int wxAuiToolBarArt_php::GetTextOrientation()
 		return (int) Z_LVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto wxSize wxAuiToolBarArt::GetToolSize(wxDC &dc, wxWindow &wnd, wxAuiToolBarItem item) */
 wxSize wxAuiToolBarArt_php::GetToolSize(wxDC& dc, wxWindow* wnd, const wxAuiToolBarItem& item)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21988,6 +22767,9 @@ wxSize wxAuiToolBarArt_php::GetToolSize(wxDC& dc, wxWindow* wnd, const wxAuiTool
 		return *(wxSize*) return_object;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarArt::SetElementSize(int element_id, int size) */
 void wxAuiToolBarArt_php::SetElementSize(int element_id, int size)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22037,6 +22819,9 @@ void wxAuiToolBarArt_php::SetElementSize(int element_id, int size)
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarArt::SetFlags(int flags) */
 void wxAuiToolBarArt_php::SetFlags(unsigned int flags)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22085,6 +22870,9 @@ void wxAuiToolBarArt_php::SetFlags(unsigned int flags)
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarArt::SetFont(wxFont font) */
 void wxAuiToolBarArt_php::SetFont(const wxFont& font)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22134,6 +22922,9 @@ void wxAuiToolBarArt_php::SetFont(const wxFont& font)
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBarArt::SetTextOrientation(int orientation) */
 void wxAuiToolBarArt_php::SetTextOrientation(int orientation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22182,6 +22973,8 @@ void wxAuiToolBarArt_php::SetTextOrientation(int orientation)
 		return;
 	
 }
+/* }}} */
+
 void php_wxAuiDefaultToolBarArt_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22222,6 +23015,7 @@ void php_wxAuiDefaultToolBarArt_destruction_handler(zend_rsrc_list_entry *rsrc T
 		#endif
 	}
 }
+/* {{{ proto wxAuiToolBarArt wxAuiDefaultToolBarArt::Clone() */
 PHP_METHOD(php_wxAuiDefaultToolBarArt, Clone)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22337,6 +23131,9 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, Clone)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiDefaultToolBarArt::Clone\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiDefaultToolBarArt::DrawBackground(wxDC &dc, wxWindow &wnd, wxRect rect) */
 PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawBackground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22490,6 +23287,9 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawBackground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiDefaultToolBarArt::DrawBackground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiDefaultToolBarArt::DrawButton(wxDC &dc, wxWindow &wnd, wxAuiToolBarItem item, wxRect rect) */
 PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawButton)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22662,6 +23462,9 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawButton)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiDefaultToolBarArt::DrawButton\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiDefaultToolBarArt::DrawControlLabel(wxDC &dc, wxWindow &wnd, wxAuiToolBarItem item, wxRect rect) */
 PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawControlLabel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22834,6 +23637,9 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawControlLabel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiDefaultToolBarArt::DrawControlLabel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiDefaultToolBarArt::DrawDropDownButton(wxDC &dc, wxWindow &wnd, wxAuiToolBarItem item, wxRect rect) */
 PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawDropDownButton)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23006,6 +23812,9 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawDropDownButton)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiDefaultToolBarArt::DrawDropDownButton\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiDefaultToolBarArt::DrawGripper(wxDC &dc, wxWindow &wnd, wxRect rect) */
 PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawGripper)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23159,6 +23968,9 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawGripper)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiDefaultToolBarArt::DrawGripper\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiDefaultToolBarArt::DrawLabel(wxDC &dc, wxWindow &wnd, wxAuiToolBarItem item, wxRect rect) */
 PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawLabel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23331,6 +24143,9 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawLabel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiDefaultToolBarArt::DrawLabel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiDefaultToolBarArt::DrawOverflowButton(wxDC &dc, wxWindow &wnd, wxRect rect, int state) */
 PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawOverflowButton)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23485,6 +24300,9 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawOverflowButton)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiDefaultToolBarArt::DrawOverflowButton\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiDefaultToolBarArt::DrawSeparator(wxDC &dc, wxWindow &wnd, wxRect rect) */
 PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawSeparator)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23638,6 +24456,9 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, DrawSeparator)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiDefaultToolBarArt::DrawSeparator\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAuiDefaultToolBarArt::GetElementSize(int element) */
 PHP_METHOD(php_wxAuiDefaultToolBarArt, GetElementSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23735,6 +24556,9 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetElementSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiDefaultToolBarArt::GetElementSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAuiDefaultToolBarArt::GetFlags() */
 PHP_METHOD(php_wxAuiDefaultToolBarArt, GetFlags)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23827,6 +24651,9 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetFlags)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiDefaultToolBarArt::GetFlags\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFont wxAuiDefaultToolBarArt::GetFont() */
 PHP_METHOD(php_wxAuiDefaultToolBarArt, GetFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23924,6 +24751,9 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiDefaultToolBarArt::GetFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxAuiDefaultToolBarArt::GetLabelSize(wxDC &dc, wxWindow &wnd, wxAuiToolBarItem item) */
 PHP_METHOD(php_wxAuiDefaultToolBarArt, GetLabelSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24082,6 +24912,9 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetLabelSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiDefaultToolBarArt::GetLabelSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAuiDefaultToolBarArt::GetTextOrientation() */
 PHP_METHOD(php_wxAuiDefaultToolBarArt, GetTextOrientation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24174,6 +25007,9 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetTextOrientation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiDefaultToolBarArt::GetTextOrientation\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxAuiDefaultToolBarArt::GetToolSize(wxDC &dc, wxWindow &wnd, wxAuiToolBarItem item) */
 PHP_METHOD(php_wxAuiDefaultToolBarArt, GetToolSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24332,6 +25168,9 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, GetToolSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiDefaultToolBarArt::GetToolSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiDefaultToolBarArt::SetElementSize(int element_id, int size) */
 PHP_METHOD(php_wxAuiDefaultToolBarArt, SetElementSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24430,6 +25269,9 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, SetElementSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiDefaultToolBarArt::SetElementSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiDefaultToolBarArt::SetFlags(int flags) */
 PHP_METHOD(php_wxAuiDefaultToolBarArt, SetFlags)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24527,6 +25369,9 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, SetFlags)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiDefaultToolBarArt::SetFlags\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiDefaultToolBarArt::SetFont(wxFont font) */
 PHP_METHOD(php_wxAuiDefaultToolBarArt, SetFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24642,6 +25487,9 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, SetFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiDefaultToolBarArt::SetFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiDefaultToolBarArt::SetTextOrientation(int orientation) */
 PHP_METHOD(php_wxAuiDefaultToolBarArt, SetTextOrientation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24739,6 +25587,9 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, SetTextOrientation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiDefaultToolBarArt::SetTextOrientation\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiDefaultToolBarArt::wxAuiDefaultToolBarArt() */
 PHP_METHOD(php_wxAuiDefaultToolBarArt, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24819,6 +25670,8 @@ PHP_METHOD(php_wxAuiDefaultToolBarArt, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxAuiToolBar_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24826,6 +25679,7 @@ void php_wxAuiToolBar_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto wxAuiToolBarItem wxAuiToolBar::AddControl(wxControl &control, string label) */
 PHP_METHOD(php_wxAuiToolBar, AddControl)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25001,6 +25855,9 @@ PHP_METHOD(php_wxAuiToolBar, AddControl)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::AddControl\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiToolBarItem wxAuiToolBar::AddLabel(int tool_id, string label, int width) */
 PHP_METHOD(php_wxAuiToolBar, AddLabel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25192,6 +26049,9 @@ PHP_METHOD(php_wxAuiToolBar, AddLabel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::AddLabel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiToolBarItem wxAuiToolBar::AddSeparator() */
 PHP_METHOD(php_wxAuiToolBar, AddSeparator)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25307,6 +26167,9 @@ PHP_METHOD(php_wxAuiToolBar, AddSeparator)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::AddSeparator\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiToolBarItem wxAuiToolBar::AddSpacer(int pixels) */
 PHP_METHOD(php_wxAuiToolBar, AddSpacer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25427,6 +26290,9 @@ PHP_METHOD(php_wxAuiToolBar, AddSpacer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::AddSpacer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiToolBarItem wxAuiToolBar::AddStretchSpacer(int proportion) */
 PHP_METHOD(php_wxAuiToolBar, AddStretchSpacer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25581,6 +26447,9 @@ PHP_METHOD(php_wxAuiToolBar, AddStretchSpacer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::AddStretchSpacer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBar::Clear() */
 PHP_METHOD(php_wxAuiToolBar, Clear)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25673,6 +26542,9 @@ PHP_METHOD(php_wxAuiToolBar, Clear)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::Clear\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBar::ClearTools() */
 PHP_METHOD(php_wxAuiToolBar, ClearTools)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25765,6 +26637,9 @@ PHP_METHOD(php_wxAuiToolBar, ClearTools)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::ClearTools\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiToolBar::DeleteByIndex(int tool_id) */
 PHP_METHOD(php_wxAuiToolBar, DeleteByIndex)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25862,6 +26737,9 @@ PHP_METHOD(php_wxAuiToolBar, DeleteByIndex)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::DeleteByIndex\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiToolBar::DeleteTool(int tool_id) */
 PHP_METHOD(php_wxAuiToolBar, DeleteTool)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25959,6 +26837,9 @@ PHP_METHOD(php_wxAuiToolBar, DeleteTool)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::DeleteTool\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBar::EnableTool(int tool_id, bool state) */
 PHP_METHOD(php_wxAuiToolBar, EnableTool)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26057,6 +26938,9 @@ PHP_METHOD(php_wxAuiToolBar, EnableTool)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::EnableTool\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBar::wxAuiToolBar(wxWindow &parent, int id, wxPoint position, wxSize size, int style) */
 PHP_METHOD(php_wxAuiToolBar, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26247,6 +27131,9 @@ PHP_METHOD(php_wxAuiToolBar, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBar::ToggleTool(int tool_id, bool state) */
 PHP_METHOD(php_wxAuiToolBar, ToggleTool)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26345,6 +27232,10 @@ PHP_METHOD(php_wxAuiToolBar, ToggleTool)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::ToggleTool\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBar::SetWindowStyleFlag(int style)
+   Sets the style of the window. */
 PHP_METHOD(php_wxAuiToolBar, SetWindowStyleFlag)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26442,6 +27333,9 @@ PHP_METHOD(php_wxAuiToolBar, SetWindowStyleFlag)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::SetWindowStyleFlag\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBar::SetToolTextOrientation(int orientation) */
 PHP_METHOD(php_wxAuiToolBar, SetToolTextOrientation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26539,6 +27433,9 @@ PHP_METHOD(php_wxAuiToolBar, SetToolTextOrientation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::SetToolTextOrientation\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBar::SetToolSticky(int tool_id, bool sticky) */
 PHP_METHOD(php_wxAuiToolBar, SetToolSticky)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26637,6 +27534,9 @@ PHP_METHOD(php_wxAuiToolBar, SetToolSticky)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::SetToolSticky\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBar::SetToolShortHelp(int tool_id, string help_string) */
 PHP_METHOD(php_wxAuiToolBar, SetToolShortHelp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26736,6 +27636,9 @@ PHP_METHOD(php_wxAuiToolBar, SetToolShortHelp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::SetToolShortHelp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBar::SetToolSeparation(int separation) */
 PHP_METHOD(php_wxAuiToolBar, SetToolSeparation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26833,6 +27736,9 @@ PHP_METHOD(php_wxAuiToolBar, SetToolSeparation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::SetToolSeparation\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBar::SetToolProportion(int tool_id, int proportion) */
 PHP_METHOD(php_wxAuiToolBar, SetToolProportion)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26931,6 +27837,9 @@ PHP_METHOD(php_wxAuiToolBar, SetToolProportion)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::SetToolProportion\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBar::SetToolPacking(int packing) */
 PHP_METHOD(php_wxAuiToolBar, SetToolPacking)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27028,6 +27937,9 @@ PHP_METHOD(php_wxAuiToolBar, SetToolPacking)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::SetToolPacking\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBar::SetToolLongHelp(int tool_id, string help_string) */
 PHP_METHOD(php_wxAuiToolBar, SetToolLongHelp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27127,6 +28039,9 @@ PHP_METHOD(php_wxAuiToolBar, SetToolLongHelp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::SetToolLongHelp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBar::SetToolLabel(int tool_id, string label) */
 PHP_METHOD(php_wxAuiToolBar, SetToolLabel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27226,6 +28141,9 @@ PHP_METHOD(php_wxAuiToolBar, SetToolLabel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::SetToolLabel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBar::SetToolDropDown(int tool_id, bool dropdown) */
 PHP_METHOD(php_wxAuiToolBar, SetToolDropDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27324,6 +28242,9 @@ PHP_METHOD(php_wxAuiToolBar, SetToolDropDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::SetToolDropDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBar::SetToolBorderPadding(int padding) */
 PHP_METHOD(php_wxAuiToolBar, SetToolBorderPadding)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27421,6 +28342,9 @@ PHP_METHOD(php_wxAuiToolBar, SetToolBorderPadding)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::SetToolBorderPadding\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBar::SetToolBitmapSize(wxSize size) */
 PHP_METHOD(php_wxAuiToolBar, SetToolBitmapSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27536,6 +28460,9 @@ PHP_METHOD(php_wxAuiToolBar, SetToolBitmapSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::SetToolBitmapSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBar::SetToolBitmap(int tool_id, wxBitmap bitmap) */
 PHP_METHOD(php_wxAuiToolBar, SetToolBitmap)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27652,6 +28579,9 @@ PHP_METHOD(php_wxAuiToolBar, SetToolBitmap)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::SetToolBitmap\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBar::SetOverflowVisible(bool visible) */
 PHP_METHOD(php_wxAuiToolBar, SetOverflowVisible)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27749,6 +28679,9 @@ PHP_METHOD(php_wxAuiToolBar, SetOverflowVisible)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::SetOverflowVisible\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBar::SetMargins(int left, int right, int top, int bottom) */
 PHP_METHOD(php_wxAuiToolBar, SetMargins)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27942,6 +28875,9 @@ PHP_METHOD(php_wxAuiToolBar, SetMargins)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::SetMargins\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiToolBar::SetGripperVisible(bool visible) */
 PHP_METHOD(php_wxAuiToolBar, SetGripperVisible)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28039,6 +28975,10 @@ PHP_METHOD(php_wxAuiToolBar, SetGripperVisible)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::SetGripperVisible\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiToolBar::SetFont(wxFont font)
+   Sets the font for this window. */
 PHP_METHOD(php_wxAuiToolBar, SetFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28154,6 +29094,9 @@ PHP_METHOD(php_wxAuiToolBar, SetFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::SetFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiToolBar::Realize() */
 PHP_METHOD(php_wxAuiToolBar, Realize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28246,6 +29189,9 @@ PHP_METHOD(php_wxAuiToolBar, Realize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::Realize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiToolBar::IsPaneValid(wxAuiPaneInfo pane) */
 PHP_METHOD(php_wxAuiToolBar, IsPaneValid)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28361,6 +29307,10 @@ PHP_METHOD(php_wxAuiToolBar, IsPaneValid)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::IsPaneValid\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAuiToolBar::GetWindowStyleFlag()
+   Gets the window style that was passed to the constructor or Create() method. */
 PHP_METHOD(php_wxAuiToolBar, GetWindowStyleFlag)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28453,6 +29403,9 @@ PHP_METHOD(php_wxAuiToolBar, GetWindowStyleFlag)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::GetWindowStyleFlag\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiToolBar::GetToolToggled(int tool_id) */
 PHP_METHOD(php_wxAuiToolBar, GetToolToggled)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28550,6 +29503,9 @@ PHP_METHOD(php_wxAuiToolBar, GetToolToggled)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::GetToolToggled\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAuiToolBar::GetToolTextOrientation() */
 PHP_METHOD(php_wxAuiToolBar, GetToolTextOrientation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28642,6 +29598,9 @@ PHP_METHOD(php_wxAuiToolBar, GetToolTextOrientation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::GetToolTextOrientation\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiToolBar::GetToolSticky(int tool_id) */
 PHP_METHOD(php_wxAuiToolBar, GetToolSticky)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28739,6 +29698,9 @@ PHP_METHOD(php_wxAuiToolBar, GetToolSticky)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::GetToolSticky\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxAuiToolBar::GetToolShortHelp(int tool_id) */
 PHP_METHOD(php_wxAuiToolBar, GetToolShortHelp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28842,6 +29804,9 @@ PHP_METHOD(php_wxAuiToolBar, GetToolShortHelp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::GetToolShortHelp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAuiToolBar::GetToolSeparation() */
 PHP_METHOD(php_wxAuiToolBar, GetToolSeparation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28934,6 +29899,9 @@ PHP_METHOD(php_wxAuiToolBar, GetToolSeparation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::GetToolSeparation\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxControl wxAuiToolBar::FindControl(int window_id) */
 PHP_METHOD(php_wxAuiToolBar, FindControl)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29054,6 +30022,9 @@ PHP_METHOD(php_wxAuiToolBar, FindControl)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::FindControl\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiToolBarItem wxAuiToolBar::FindTool(int tool_id) */
 PHP_METHOD(php_wxAuiToolBar, FindTool)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29174,6 +30145,9 @@ PHP_METHOD(php_wxAuiToolBar, FindTool)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::FindTool\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiToolBarItem wxAuiToolBar::FindToolByIndex(int idx) */
 PHP_METHOD(php_wxAuiToolBar, FindToolByIndex)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29294,6 +30268,9 @@ PHP_METHOD(php_wxAuiToolBar, FindToolByIndex)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::FindToolByIndex\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiToolBarItem wxAuiToolBar::FindToolByPosition(int x, int y) */
 PHP_METHOD(php_wxAuiToolBar, FindToolByPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29415,6 +30392,9 @@ PHP_METHOD(php_wxAuiToolBar, FindToolByPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::FindToolByPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiToolBarArt wxAuiToolBar::GetArtProvider() */
 PHP_METHOD(php_wxAuiToolBar, GetArtProvider)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29530,6 +30510,9 @@ PHP_METHOD(php_wxAuiToolBar, GetArtProvider)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::GetArtProvider\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiToolBar::GetGripperVisible() */
 PHP_METHOD(php_wxAuiToolBar, GetGripperVisible)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29622,6 +30605,10 @@ PHP_METHOD(php_wxAuiToolBar, GetGripperVisible)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::GetGripperVisible\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxAuiToolBar::GetHintSize(int dock_direction)
+   get size of hint rectangle for a particular dock location */
 PHP_METHOD(php_wxAuiToolBar, GetHintSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29724,6 +30711,9 @@ PHP_METHOD(php_wxAuiToolBar, GetHintSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::GetHintSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiToolBar::GetOverflowVisible() */
 PHP_METHOD(php_wxAuiToolBar, GetOverflowVisible)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29816,6 +30806,9 @@ PHP_METHOD(php_wxAuiToolBar, GetOverflowVisible)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::GetOverflowVisible\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiToolBar::GetToolBarFits() */
 PHP_METHOD(php_wxAuiToolBar, GetToolBarFits)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29908,6 +30901,9 @@ PHP_METHOD(php_wxAuiToolBar, GetToolBarFits)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::GetToolBarFits\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxBitmap wxAuiToolBar::GetToolBitmap(int tool_id) */
 PHP_METHOD(php_wxAuiToolBar, GetToolBitmap)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30010,6 +31006,9 @@ PHP_METHOD(php_wxAuiToolBar, GetToolBitmap)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::GetToolBitmap\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxAuiToolBar::GetToolBitmapSize() */
 PHP_METHOD(php_wxAuiToolBar, GetToolBitmapSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30107,6 +31106,9 @@ PHP_METHOD(php_wxAuiToolBar, GetToolBitmapSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::GetToolBitmapSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAuiToolBar::GetToolBorderPadding() */
 PHP_METHOD(php_wxAuiToolBar, GetToolBorderPadding)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30199,6 +31201,9 @@ PHP_METHOD(php_wxAuiToolBar, GetToolBorderPadding)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::GetToolBorderPadding\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAuiToolBar::GetToolCount() */
 PHP_METHOD(php_wxAuiToolBar, GetToolCount)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30291,6 +31296,9 @@ PHP_METHOD(php_wxAuiToolBar, GetToolCount)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::GetToolCount\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiToolBar::GetToolDropDown(int tool_id) */
 PHP_METHOD(php_wxAuiToolBar, GetToolDropDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30388,6 +31396,9 @@ PHP_METHOD(php_wxAuiToolBar, GetToolDropDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::GetToolDropDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiToolBar::GetToolEnabled(int tool_id) */
 PHP_METHOD(php_wxAuiToolBar, GetToolEnabled)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30485,6 +31496,9 @@ PHP_METHOD(php_wxAuiToolBar, GetToolEnabled)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::GetToolEnabled\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiToolBar::GetToolFits(int tool_id) */
 PHP_METHOD(php_wxAuiToolBar, GetToolFits)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30582,6 +31596,9 @@ PHP_METHOD(php_wxAuiToolBar, GetToolFits)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::GetToolFits\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiToolBar::GetToolFitsByIndex(int tool_id) */
 PHP_METHOD(php_wxAuiToolBar, GetToolFitsByIndex)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30679,6 +31696,9 @@ PHP_METHOD(php_wxAuiToolBar, GetToolFitsByIndex)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::GetToolFitsByIndex\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAuiToolBar::GetToolIndex(int tool_id) */
 PHP_METHOD(php_wxAuiToolBar, GetToolIndex)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30776,6 +31796,9 @@ PHP_METHOD(php_wxAuiToolBar, GetToolIndex)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::GetToolIndex\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxAuiToolBar::GetToolLabel(int tool_id) */
 PHP_METHOD(php_wxAuiToolBar, GetToolLabel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30879,6 +31902,9 @@ PHP_METHOD(php_wxAuiToolBar, GetToolLabel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::GetToolLabel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxAuiToolBar::GetToolLongHelp(int tool_id) */
 PHP_METHOD(php_wxAuiToolBar, GetToolLongHelp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30982,6 +32008,9 @@ PHP_METHOD(php_wxAuiToolBar, GetToolLongHelp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::GetToolLongHelp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAuiToolBar::GetToolPacking() */
 PHP_METHOD(php_wxAuiToolBar, GetToolPacking)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31074,6 +32103,9 @@ PHP_METHOD(php_wxAuiToolBar, GetToolPacking)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::GetToolPacking\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAuiToolBar::GetToolPos(int tool_id) */
 PHP_METHOD(php_wxAuiToolBar, GetToolPos)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31171,6 +32203,9 @@ PHP_METHOD(php_wxAuiToolBar, GetToolPos)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::GetToolPos\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAuiToolBar::GetToolProportion(int tool_id) */
 PHP_METHOD(php_wxAuiToolBar, GetToolProportion)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31268,6 +32303,9 @@ PHP_METHOD(php_wxAuiToolBar, GetToolProportion)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::GetToolProportion\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRect wxAuiToolBar::GetToolRect(int tool_id) */
 PHP_METHOD(php_wxAuiToolBar, GetToolRect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31370,6 +32408,9 @@ PHP_METHOD(php_wxAuiToolBar, GetToolRect)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::GetToolRect\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiToolBarItem wxAuiToolBar::AddTool(int tool_id, string label, wxBitmap bitmap, string short_help_string, wxItemKind kind) */
 PHP_METHOD(php_wxAuiToolBar, AddTool)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31976,3 +33017,5 @@ PHP_METHOD(php_wxAuiToolBar, AddTool)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiToolBar::AddTool\n");
 	}
 }
+/* }}} */
+

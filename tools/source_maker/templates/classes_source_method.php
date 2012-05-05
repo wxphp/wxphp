@@ -1,3 +1,4 @@
+<?=proto_begin($method_name, $class_name)?>
 PHP_METHOD(php_<?=$class_name?>, <?=$method_name=="New"?"NewObject":$method_name?>)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -56,3 +57,4 @@ PHP_METHOD(php_<?=$class_name?>, <?=$method_name=="New"?"NewObject":$method_name
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: <?=$class_name . "::" . $method_name ?>\n");
 	}
 }
+<?=proto_end()?>

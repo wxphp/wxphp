@@ -91,6 +91,8 @@ void php_wxConfigBase_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto wxConfigBase wxConfigBase::Create()
+   Create a new config object and sets it as the current one. */
 PHP_METHOD(php_wxConfigBase, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -207,6 +209,10 @@ PHP_METHOD(php_wxConfigBase, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxConfigBase::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxConfigBase::DeleteAll()
+   Delete the whole underlying object (disk file, registry key, ...). */
 bool wxConfigBase_php::DeleteAll()
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -249,6 +255,10 @@ bool wxConfigBase_php::DeleteAll()
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto bool wxConfigBase::DeleteEntry(string key, bool bDeleteGroupIfEmpty)
+   Deletes the specified entry and the group it belongs to if it was the last key in it and the second parameter is true. */
 bool wxConfigBase_php::DeleteEntry(const wxString& key, bool bDeleteGroupIfEmpty)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -301,6 +311,10 @@ bool wxConfigBase_php::DeleteEntry(const wxString& key, bool bDeleteGroupIfEmpty
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto bool wxConfigBase::DeleteGroup(string key)
+   Delete the group (with all subgroups). */
 bool wxConfigBase_php::DeleteGroup(const wxString& key)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -352,6 +366,10 @@ bool wxConfigBase_php::DeleteGroup(const wxString& key)
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto  wxConfigBase::DontCreateOnDemand()
+   Calling this function will prevent Get() from automatically creating a new config object if the current one is NULL. */
 PHP_METHOD(php_wxConfigBase, DontCreateOnDemand)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -449,6 +467,9 @@ PHP_METHOD(php_wxConfigBase, DontCreateOnDemand)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxConfigBase::DontCreateOnDemand\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxConfigBase::Exists(string strName) */
 PHP_METHOD(php_wxConfigBase, Exists)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -558,6 +579,10 @@ PHP_METHOD(php_wxConfigBase, Exists)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxConfigBase::Exists\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxConfigBase::Flush(bool bCurrentOnly)
+   Permanently writes all changes (otherwise, they're only written from object's destructor). */
 bool wxConfigBase_php::Flush(bool bCurrentOnly)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -606,6 +631,10 @@ bool wxConfigBase_php::Flush(bool bCurrentOnly)
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto wxConfigBase wxConfigBase::Get(bool CreateOnDemand)
+   Get the current config object. */
 PHP_METHOD(php_wxConfigBase, Get)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -758,6 +787,10 @@ PHP_METHOD(php_wxConfigBase, Get)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxConfigBase::Get\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxConfigBase::GetAppName()
+   Returns the application name. */
 PHP_METHOD(php_wxConfigBase, GetAppName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -867,6 +900,10 @@ PHP_METHOD(php_wxConfigBase, GetAppName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxConfigBase::GetAppName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxConfigBase::EntryType wxConfigBase::GetEntryType(string name)
+   Returns the type of the given entry or Unknown if the entry doesn't exist. */
 PHP_METHOD(php_wxConfigBase, GetEntryType)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -976,6 +1013,10 @@ PHP_METHOD(php_wxConfigBase, GetEntryType)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxConfigBase::GetEntryType\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxConfigBase::GetFirstEntry(string &str, int &index)
+   Gets the first entry. */
 bool wxConfigBase_php::GetFirstEntry(wxString& str, long& index)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1028,6 +1069,10 @@ bool wxConfigBase_php::GetFirstEntry(wxString& str, long& index)const
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto bool wxConfigBase::GetFirstGroup(string &str, int &index)
+   Gets the first group. */
 bool wxConfigBase_php::GetFirstGroup(wxString& str, long& index)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1080,6 +1125,10 @@ bool wxConfigBase_php::GetFirstGroup(wxString& str, long& index)const
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto bool wxConfigBase::GetNextEntry(string &str, int &index)
+   Gets the next entry. */
 bool wxConfigBase_php::GetNextEntry(wxString& str, long& index)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1132,6 +1181,10 @@ bool wxConfigBase_php::GetNextEntry(wxString& str, long& index)const
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto bool wxConfigBase::GetNextGroup(string &str, int &index)
+   Gets the next group. */
 bool wxConfigBase_php::GetNextGroup(wxString& str, long& index)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1184,6 +1237,10 @@ bool wxConfigBase_php::GetNextGroup(wxString& str, long& index)const
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto int wxConfigBase::GetNumberOfEntries(bool bRecursive)
+   Get number of entries in the current group. */
 size_t wxConfigBase_php::GetNumberOfEntries(bool bRecursive)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1232,6 +1289,10 @@ size_t wxConfigBase_php::GetNumberOfEntries(bool bRecursive)const
 		return (size_t) Z_LVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto int wxConfigBase::GetNumberOfGroups(bool bRecursive)
+   Get number of entries/subgroups in the current group, with or without its subgroups. */
 size_t wxConfigBase_php::GetNumberOfGroups(bool bRecursive)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1280,6 +1341,10 @@ size_t wxConfigBase_php::GetNumberOfGroups(bool bRecursive)const
 		return (size_t) Z_LVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto string wxConfigBase::GetPath()
+   Retrieve the current path (always as absolute path). */
 const wxString& wxConfigBase_php::GetPath()const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1322,6 +1387,10 @@ const wxString& wxConfigBase_php::GetPath()const
 		return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
 	
 }
+/* }}} */
+
+/* {{{ proto string wxConfigBase::GetVendorName()
+   Returns the vendor name. */
 PHP_METHOD(php_wxConfigBase, GetVendorName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1431,6 +1500,9 @@ PHP_METHOD(php_wxConfigBase, GetVendorName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxConfigBase::GetVendorName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxConfigBase::HasEntry(string strName) */
 bool wxConfigBase_php::HasEntry(const wxString& strName)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1482,6 +1554,9 @@ bool wxConfigBase_php::HasEntry(const wxString& strName)const
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto bool wxConfigBase::HasGroup(string strName) */
 bool wxConfigBase_php::HasGroup(const wxString& strName)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1533,6 +1608,10 @@ bool wxConfigBase_php::HasGroup(const wxString& strName)const
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto bool wxConfigBase::IsExpandingEnvVars()
+   Returns true if we are expanding environment variables in key values. */
 PHP_METHOD(php_wxConfigBase, IsExpandingEnvVars)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1636,6 +1715,10 @@ PHP_METHOD(php_wxConfigBase, IsExpandingEnvVars)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxConfigBase::IsExpandingEnvVars\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxConfigBase::IsRecordingDefaults()
+   Returns true if we are writing defaults back to the config file. */
 PHP_METHOD(php_wxConfigBase, IsRecordingDefaults)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1739,6 +1822,10 @@ PHP_METHOD(php_wxConfigBase, IsRecordingDefaults)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxConfigBase::IsRecordingDefaults\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxConfigBase::Read(string key, string &str)
+   Read a string from the key, returning true if the value was read. */
 PHP_METHOD(php_wxConfigBase, Read)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2426,6 +2513,10 @@ PHP_METHOD(php_wxConfigBase, Read)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxConfigBase::Read\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxConfigBase::ReadBool(string key, bool defaultVal)
+   Reads a bool value from the key and returns it. */
 PHP_METHOD(php_wxConfigBase, ReadBool)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2536,6 +2627,10 @@ PHP_METHOD(php_wxConfigBase, ReadBool)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxConfigBase::ReadBool\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto float wxConfigBase::ReadDouble(string key, float defaultVal)
+   Reads a double value from the key and returns it. */
 PHP_METHOD(php_wxConfigBase, ReadDouble)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2646,6 +2741,10 @@ PHP_METHOD(php_wxConfigBase, ReadDouble)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxConfigBase::ReadDouble\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxConfigBase::ReadLong(string key, int defaultVal)
+   Reads a long value from the key and returns it. */
 PHP_METHOD(php_wxConfigBase, ReadLong)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2756,6 +2855,10 @@ PHP_METHOD(php_wxConfigBase, ReadLong)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxConfigBase::ReadLong\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxConfigBase::RenameEntry(string oldName, string newName)
+   Renames an entry in the current group. */
 bool wxConfigBase_php::RenameEntry(const wxString& oldName, const wxString& newName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2811,6 +2914,10 @@ bool wxConfigBase_php::RenameEntry(const wxString& oldName, const wxString& newN
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto bool wxConfigBase::RenameGroup(string oldName, string newName)
+   Renames a subgroup of the current group. */
 bool wxConfigBase_php::RenameGroup(const wxString& oldName, const wxString& newName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2866,6 +2973,10 @@ bool wxConfigBase_php::RenameGroup(const wxString& oldName, const wxString& newN
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto wxConfigBase wxConfigBase::Set(wxConfigBase &pConfig)
+   Sets the config object as the current one, returns the pointer to the previous current object (both the parameter and returned value may be NULL). */
 PHP_METHOD(php_wxConfigBase, Set)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3004,6 +3115,10 @@ PHP_METHOD(php_wxConfigBase, Set)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxConfigBase::Set\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxConfigBase::SetExpandEnvVars(bool bDoIt)
+   Determine whether we wish to expand environment variables in key values. */
 PHP_METHOD(php_wxConfigBase, SetExpandEnvVars)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3130,6 +3245,10 @@ PHP_METHOD(php_wxConfigBase, SetExpandEnvVars)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxConfigBase::SetExpandEnvVars\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxConfigBase::SetPath(string strPath)
+   Set current path: if the first character is '/', it is the absolute path, otherwise it is a relative path. */
 void wxConfigBase_php::SetPath(const wxString& strPath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3181,6 +3300,10 @@ void wxConfigBase_php::SetPath(const wxString& strPath)
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxConfigBase::SetRecordDefaults(bool bDoIt)
+   Sets whether defaults are recorded to the config file whenever an attempt to read the value which is not present in it is done. */
 PHP_METHOD(php_wxConfigBase, SetRecordDefaults)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3307,6 +3430,10 @@ PHP_METHOD(php_wxConfigBase, SetRecordDefaults)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxConfigBase::SetRecordDefaults\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxConfigBase::Write(string key, string value)
+   Writes the wxString value to the config file and returns true on success. */
 PHP_METHOD(php_wxConfigBase, Write)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3556,6 +3683,8 @@ PHP_METHOD(php_wxConfigBase, Write)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxConfigBase::Write\n");
 	}
 }
+/* }}} */
+
 void php_wxDisplay_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3596,6 +3725,8 @@ void php_wxDisplay_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto bool wxDisplay::ChangeMode(wxVideoMode mode)
+   Changes the video mode of this display to the mode specified in the mode parameter. */
 PHP_METHOD(php_wxDisplay, ChangeMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3722,6 +3853,10 @@ PHP_METHOD(php_wxDisplay, ChangeMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDisplay::ChangeMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRect wxDisplay::GetClientArea()
+   Returns the client area of the display. */
 PHP_METHOD(php_wxDisplay, GetClientArea)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3819,6 +3954,10 @@ PHP_METHOD(php_wxDisplay, GetClientArea)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDisplay::GetClientArea\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDisplay::GetCount()
+   Returns the number of connected displays. */
 PHP_METHOD(php_wxDisplay, GetCount)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3912,6 +4051,10 @@ PHP_METHOD(php_wxDisplay, GetCount)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDisplay::GetCount\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxVideoMode wxDisplay::GetCurrentMode()
+   Returns the current video mode that this display is in. */
 PHP_METHOD(php_wxDisplay, GetCurrentMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4009,6 +4152,10 @@ PHP_METHOD(php_wxDisplay, GetCurrentMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDisplay::GetCurrentMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDisplay::GetFromPoint(wxPoint pt)
+   Returns the index of the display on which the given point lies, or wxNOT_FOUND if the point is not on any connected display. */
 PHP_METHOD(php_wxDisplay, GetFromPoint)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4124,6 +4271,10 @@ PHP_METHOD(php_wxDisplay, GetFromPoint)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDisplay::GetFromPoint\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDisplay::GetFromWindow(wxWindow win)
+   Returns the index of the display on which the given window lies. */
 PHP_METHOD(php_wxDisplay, GetFromWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4239,6 +4390,10 @@ PHP_METHOD(php_wxDisplay, GetFromWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDisplay::GetFromWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRect wxDisplay::GetGeometry()
+   Returns the bounding rectangle of the display whose index was passed to the constructor. */
 PHP_METHOD(php_wxDisplay, GetGeometry)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4336,6 +4491,10 @@ PHP_METHOD(php_wxDisplay, GetGeometry)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDisplay::GetGeometry\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxDisplay::GetName()
+   Returns the display's name. */
 PHP_METHOD(php_wxDisplay, GetName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4434,6 +4593,10 @@ PHP_METHOD(php_wxDisplay, GetName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDisplay::GetName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDisplay::IsPrimary()
+   Returns true if the display is the primary display. */
 PHP_METHOD(php_wxDisplay, IsPrimary)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4526,6 +4689,10 @@ PHP_METHOD(php_wxDisplay, IsPrimary)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDisplay::IsPrimary\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDisplay::wxDisplay(int index)
+   Constructor, setting up a wxDisplay instance with the specified display. */
 PHP_METHOD(php_wxDisplay, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4621,6 +4788,8 @@ PHP_METHOD(php_wxDisplay, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxFileConfig_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4661,6 +4830,8 @@ void php_wxFileConfig_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto bool wxFileConfig::DeleteAll()
+   Delete the whole underlying object (disk file, registry key, ...). */
 PHP_METHOD(php_wxFileConfig, DeleteAll)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4756,6 +4927,10 @@ PHP_METHOD(php_wxFileConfig, DeleteAll)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileConfig::DeleteAll\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileConfig::DeleteEntry(string key, bool bDeleteGroupIfEmpty)
+   Deletes the specified entry and the group it belongs to if it was the last key in it and the second parameter is true. */
 PHP_METHOD(php_wxFileConfig, DeleteEntry)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4872,6 +5047,10 @@ PHP_METHOD(php_wxFileConfig, DeleteEntry)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileConfig::DeleteEntry\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileConfig::DeleteGroup(string key)
+   Delete the group (with all subgroups). */
 PHP_METHOD(php_wxFileConfig, DeleteGroup)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4973,6 +5152,10 @@ PHP_METHOD(php_wxFileConfig, DeleteGroup)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileConfig::DeleteGroup\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileConfig::Flush(bool bCurrentOnly)
+   Permanently writes all changes (otherwise, they're only written from object's destructor). */
 PHP_METHOD(php_wxFileConfig, Flush)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5087,6 +5270,10 @@ PHP_METHOD(php_wxFileConfig, Flush)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileConfig::Flush\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileConfig::GetFirstEntry(string &str, int &index)
+   Gets the first entry. */
 PHP_METHOD(php_wxFileConfig, GetFirstEntry)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5202,6 +5389,10 @@ PHP_METHOD(php_wxFileConfig, GetFirstEntry)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileConfig::GetFirstEntry\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileConfig::GetFirstGroup(string &str, int &index)
+   Gets the first group. */
 PHP_METHOD(php_wxFileConfig, GetFirstGroup)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5317,6 +5508,10 @@ PHP_METHOD(php_wxFileConfig, GetFirstGroup)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileConfig::GetFirstGroup\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFileName wxFileConfig::GetGlobalFile(string basename)
+   Return the full path to the file which would be used by wxFileConfig as global, system-wide, file if it were constructed with basename as "global filename" parameter in the constructor. */
 PHP_METHOD(php_wxFileConfig, GetGlobalFile)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5425,6 +5620,9 @@ PHP_METHOD(php_wxFileConfig, GetGlobalFile)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileConfig::GetGlobalFile\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileConfig::GetGlobalFileName(string szFile) */
 PHP_METHOD(php_wxFileConfig, GetGlobalFileName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5530,6 +5728,10 @@ PHP_METHOD(php_wxFileConfig, GetGlobalFileName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileConfig::GetGlobalFileName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFileName wxFileConfig::GetLocalFile(string basename, int style)
+   Return the full path to the file which would be used by wxFileConfig as local, user-specific, file if it were constructed with basename as "local filename" parameter in the constructor. */
 PHP_METHOD(php_wxFileConfig, GetLocalFile)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5660,6 +5862,9 @@ PHP_METHOD(php_wxFileConfig, GetLocalFile)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileConfig::GetLocalFile\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileConfig::GetLocalFileName(string szFile, int style) */
 PHP_METHOD(php_wxFileConfig, GetLocalFileName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5784,6 +5989,10 @@ PHP_METHOD(php_wxFileConfig, GetLocalFileName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileConfig::GetLocalFileName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileConfig::GetNextEntry(string &str, int &index)
+   Gets the next entry. */
 PHP_METHOD(php_wxFileConfig, GetNextEntry)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5899,6 +6108,10 @@ PHP_METHOD(php_wxFileConfig, GetNextEntry)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileConfig::GetNextEntry\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileConfig::GetNextGroup(string &str, int &index)
+   Gets the next group. */
 PHP_METHOD(php_wxFileConfig, GetNextGroup)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6014,6 +6227,10 @@ PHP_METHOD(php_wxFileConfig, GetNextGroup)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileConfig::GetNextGroup\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxFileConfig::GetNumberOfEntries(bool bRecursive)
+   Get number of entries in the current group. */
 PHP_METHOD(php_wxFileConfig, GetNumberOfEntries)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6128,6 +6345,10 @@ PHP_METHOD(php_wxFileConfig, GetNumberOfEntries)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileConfig::GetNumberOfEntries\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxFileConfig::GetNumberOfGroups(bool bRecursive)
+   Get number of entries/subgroups in the current group, with or without its subgroups. */
 PHP_METHOD(php_wxFileConfig, GetNumberOfGroups)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6242,6 +6463,10 @@ PHP_METHOD(php_wxFileConfig, GetNumberOfGroups)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileConfig::GetNumberOfGroups\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileConfig::GetPath()
+   Retrieve the current path (always as absolute path). */
 PHP_METHOD(php_wxFileConfig, GetPath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6343,6 +6568,9 @@ PHP_METHOD(php_wxFileConfig, GetPath)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileConfig::GetPath\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileConfig::HasEntry(string strName) */
 PHP_METHOD(php_wxFileConfig, HasEntry)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6444,6 +6672,9 @@ PHP_METHOD(php_wxFileConfig, HasEntry)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileConfig::HasEntry\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileConfig::HasGroup(string strName) */
 PHP_METHOD(php_wxFileConfig, HasGroup)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6545,6 +6776,10 @@ PHP_METHOD(php_wxFileConfig, HasGroup)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileConfig::HasGroup\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileConfig::RenameEntry(string oldName, string newName)
+   Renames an entry in the current group. */
 PHP_METHOD(php_wxFileConfig, RenameEntry)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6648,6 +6883,10 @@ PHP_METHOD(php_wxFileConfig, RenameEntry)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileConfig::RenameEntry\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileConfig::RenameGroup(string oldName, string newName)
+   Renames a subgroup of the current group. */
 PHP_METHOD(php_wxFileConfig, RenameGroup)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6751,6 +6990,10 @@ PHP_METHOD(php_wxFileConfig, RenameGroup)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileConfig::RenameGroup\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileConfig::SetPath(string strPath)
+   Set current path: if the first character is '/', it is the absolute path, otherwise it is a relative path. */
 PHP_METHOD(php_wxFileConfig, SetPath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6852,6 +7095,10 @@ PHP_METHOD(php_wxFileConfig, SetPath)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileConfig::SetPath\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileConfig::SetUmask(int mode)
+   Allows to set the mode to be used for the config file creation. */
 PHP_METHOD(php_wxFileConfig, SetUmask)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6952,6 +7199,8 @@ PHP_METHOD(php_wxFileConfig, SetUmask)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileConfig::SetUmask\n");
 	}
 }
+/* }}} */
+
 void php_wxFontMapper_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6992,6 +7241,8 @@ void php_wxFontMapper_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto wxFontEncoding wxFontMapper::CharsetToEncoding(string charset, bool interactive)
+   Returns the encoding for the given charset (in the form of RFC 2046) or wxFONTENCODING_SYSTEM if couldn't decode it. */
 PHP_METHOD(php_wxFontMapper, CharsetToEncoding)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7102,6 +7353,10 @@ PHP_METHOD(php_wxFontMapper, CharsetToEncoding)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontMapper::CharsetToEncoding\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFontMapper wxFontMapper::Get()
+   Get the current font mapper object. */
 PHP_METHOD(php_wxFontMapper, Get)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7214,6 +7469,10 @@ PHP_METHOD(php_wxFontMapper, Get)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontMapper::Get\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFontMapper::GetAltForEncoding(wxFontEncoding encoding, wxFontEncoding &alt_encoding, string facename, bool interactive)
+   Find an alternative for the given encoding (which is supposed to not be available on this system). */
 PHP_METHOD(php_wxFontMapper, GetAltForEncoding)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7359,6 +7618,10 @@ PHP_METHOD(php_wxFontMapper, GetAltForEncoding)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontMapper::GetAltForEncoding\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFontEncoding wxFontMapper::GetEncoding(int n)
+   Returns the n-th supported encoding. */
 PHP_METHOD(php_wxFontMapper, GetEncoding)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7457,6 +7720,10 @@ PHP_METHOD(php_wxFontMapper, GetEncoding)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontMapper::GetEncoding\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFontMapper::GetEncodingDescription(wxFontEncoding encoding)
+   Return user-readable string describing the given encoding. */
 PHP_METHOD(php_wxFontMapper, GetEncodingDescription)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7561,6 +7828,10 @@ PHP_METHOD(php_wxFontMapper, GetEncodingDescription)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontMapper::GetEncodingDescription\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFontEncoding wxFontMapper::GetEncodingFromName(string encoding)
+   Return the encoding corresponding to the given internal name. */
 PHP_METHOD(php_wxFontMapper, GetEncodingFromName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7660,6 +7931,10 @@ PHP_METHOD(php_wxFontMapper, GetEncodingFromName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontMapper::GetEncodingFromName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFontMapper::GetEncodingName(wxFontEncoding encoding)
+   Return internal string identifier for the encoding (see also wxFontMapper::GetEncodingDescription). */
 PHP_METHOD(php_wxFontMapper, GetEncodingName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7764,6 +8039,10 @@ PHP_METHOD(php_wxFontMapper, GetEncodingName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontMapper::GetEncodingName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxFontMapper::GetSupportedEncodingsCount()
+   Returns the number of the font encodings supported by this class. */
 PHP_METHOD(php_wxFontMapper, GetSupportedEncodingsCount)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7857,6 +8136,10 @@ PHP_METHOD(php_wxFontMapper, GetSupportedEncodingsCount)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontMapper::GetSupportedEncodingsCount\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFontMapper::IsEncodingAvailable(wxFontEncoding encoding, string facename)
+   Check whether given encoding is available in given face or not. */
 PHP_METHOD(php_wxFontMapper, IsEncodingAvailable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7967,6 +8250,10 @@ PHP_METHOD(php_wxFontMapper, IsEncodingAvailable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontMapper::IsEncodingAvailable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFontMapper wxFontMapper::Set(wxFontMapper &mapper)
+   Set the current font mapper object and return previous one (may be NULL). */
 PHP_METHOD(php_wxFontMapper, Set)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8101,6 +8388,10 @@ PHP_METHOD(php_wxFontMapper, Set)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontMapper::Set\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFontMapper::SetConfigPath(string prefix)
+   Set the root config path to use (should be an absolute path). */
 PHP_METHOD(php_wxFontMapper, SetConfigPath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8199,6 +8490,10 @@ PHP_METHOD(php_wxFontMapper, SetConfigPath)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontMapper::SetConfigPath\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFontMapper::SetDialogParent(wxWindow &parent)
+   The parent window for modal dialogs. */
 PHP_METHOD(php_wxFontMapper, SetDialogParent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8314,6 +8609,10 @@ PHP_METHOD(php_wxFontMapper, SetDialogParent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontMapper::SetDialogParent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFontMapper::SetDialogTitle(string title)
+   The title for the dialogs (note that default is quite reasonable). */
 PHP_METHOD(php_wxFontMapper, SetDialogTitle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8412,6 +8711,10 @@ PHP_METHOD(php_wxFontMapper, SetDialogTitle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontMapper::SetDialogTitle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFontMapper::wxFontMapper()
+   Default ctor. */
 PHP_METHOD(php_wxFontMapper, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8492,6 +8795,8 @@ PHP_METHOD(php_wxFontMapper, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxPlatformInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8532,6 +8837,8 @@ void php_wxPlatformInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 		#endif
 	}
 }
+/* {{{ proto  wxPlatformInfo::wxPlatformInfo()
+   Initializes the instance with the values corresponding to the currently running platform. */
 PHP_METHOD(php_wxPlatformInfo, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8725,6 +9032,10 @@ PHP_METHOD(php_wxPlatformInfo, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto bool wxPlatformInfo::CheckOSVersion(int major, int minor)
+   Returns true if the OS version is at least major.minor. */
 PHP_METHOD(php_wxPlatformInfo, CheckOSVersion)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8823,6 +9134,10 @@ PHP_METHOD(php_wxPlatformInfo, CheckOSVersion)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::CheckOSVersion\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPlatformInfo::CheckToolkitVersion(int major, int minor)
+   Returns true if the toolkit version is at least major.minor. */
 PHP_METHOD(php_wxPlatformInfo, CheckToolkitVersion)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8921,6 +9236,10 @@ PHP_METHOD(php_wxPlatformInfo, CheckToolkitVersion)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::CheckToolkitVersion\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPlatformInfo wxPlatformInfo::Get()
+   Returns the global wxPlatformInfo object, initialized with the values for the currently running platform. */
 PHP_METHOD(php_wxPlatformInfo, Get)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9030,6 +9349,10 @@ PHP_METHOD(php_wxPlatformInfo, Get)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::Get\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxArchitecture wxPlatformInfo::GetArch(string arch)
+   Converts the given string to a wxArchitecture enum value or to wxARCH_INVALID if the given string is not a valid architecture string (i.e. */
 PHP_METHOD(php_wxPlatformInfo, GetArch)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9129,6 +9452,10 @@ PHP_METHOD(php_wxPlatformInfo, GetArch)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::GetArch\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxPlatformInfo::GetArchName()
+   Returns the name for the architecture of this wxPlatformInfo instance. */
 PHP_METHOD(php_wxPlatformInfo, GetArchName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9271,6 +9598,10 @@ PHP_METHOD(php_wxPlatformInfo, GetArchName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::GetArchName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxArchitecture wxPlatformInfo::GetArchitecture()
+   Returns the architecture ID of this wxPlatformInfo instance. */
 PHP_METHOD(php_wxPlatformInfo, GetArchitecture)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9363,6 +9694,10 @@ PHP_METHOD(php_wxPlatformInfo, GetArchitecture)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::GetArchitecture\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxPlatformInfo::GetDesktopEnvironment()
+   Returns the desktop environment associated with this wxPlatformInfo instance. */
 PHP_METHOD(php_wxPlatformInfo, GetDesktopEnvironment)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9461,6 +9796,10 @@ PHP_METHOD(php_wxPlatformInfo, GetDesktopEnvironment)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::GetDesktopEnvironment\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxEndianness wxPlatformInfo::GetEndianness()
+   Returns the endianness ID of this wxPlatformInfo instance. */
 PHP_METHOD(php_wxPlatformInfo, GetEndianness)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9592,6 +9931,10 @@ PHP_METHOD(php_wxPlatformInfo, GetEndianness)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::GetEndianness\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxPlatformInfo::GetEndiannessName()
+   Returns the name for the endianness of this wxPlatformInfo instance. */
 PHP_METHOD(php_wxPlatformInfo, GetEndiannessName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9734,6 +10077,10 @@ PHP_METHOD(php_wxPlatformInfo, GetEndiannessName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::GetEndiannessName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxPlatformInfo::GetOSMajorVersion()
+   Returns the run-time major version of the OS associated with this wxPlatformInfo instance. */
 PHP_METHOD(php_wxPlatformInfo, GetOSMajorVersion)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9826,6 +10173,10 @@ PHP_METHOD(php_wxPlatformInfo, GetOSMajorVersion)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::GetOSMajorVersion\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxPlatformInfo::GetOSMinorVersion()
+   Returns the run-time minor version of the OS associated with this wxPlatformInfo instance. */
 PHP_METHOD(php_wxPlatformInfo, GetOSMinorVersion)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9918,6 +10269,10 @@ PHP_METHOD(php_wxPlatformInfo, GetOSMinorVersion)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::GetOSMinorVersion\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxPlatformInfo::GetOperatingSystemDescription()
+   Returns the description of the operating system of this wxPlatformInfo instance. */
 PHP_METHOD(php_wxPlatformInfo, GetOperatingSystemDescription)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10016,6 +10371,10 @@ PHP_METHOD(php_wxPlatformInfo, GetOperatingSystemDescription)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::GetOperatingSystemDescription\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxPlatformInfo::GetOperatingSystemDirectory()
+   Returns the operating system directory. */
 PHP_METHOD(php_wxPlatformInfo, GetOperatingSystemDirectory)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10115,6 +10474,10 @@ PHP_METHOD(php_wxPlatformInfo, GetOperatingSystemDirectory)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::GetOperatingSystemDirectory\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxPlatformInfo::GetOperatingSystemFamilyName()
+   Returns the operating system family name of the OS associated with this wxPlatformInfo instance. */
 PHP_METHOD(php_wxPlatformInfo, GetOperatingSystemFamilyName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10257,6 +10620,10 @@ PHP_METHOD(php_wxPlatformInfo, GetOperatingSystemFamilyName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::GetOperatingSystemFamilyName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxOperatingSystemId wxPlatformInfo::GetOperatingSystemId()
+   Returns the operating system ID of this wxPlatformInfo instance. */
 PHP_METHOD(php_wxPlatformInfo, GetOperatingSystemId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10388,6 +10755,10 @@ PHP_METHOD(php_wxPlatformInfo, GetOperatingSystemId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::GetOperatingSystemId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxPlatformInfo::GetOperatingSystemIdName()
+   Returns the operating system name of the OS associated with this wxPlatformInfo instance. */
 PHP_METHOD(php_wxPlatformInfo, GetOperatingSystemIdName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10530,6 +10901,10 @@ PHP_METHOD(php_wxPlatformInfo, GetOperatingSystemIdName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::GetOperatingSystemIdName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPortId wxPlatformInfo::GetPortId()
+   Returns the wxWidgets port ID associated with this wxPlatformInfo instance. */
 PHP_METHOD(php_wxPlatformInfo, GetPortId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10661,6 +11036,10 @@ PHP_METHOD(php_wxPlatformInfo, GetPortId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::GetPortId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxPlatformInfo::GetPortIdName()
+   Returns the name of the wxWidgets port ID associated with this wxPlatformInfo instance. */
 PHP_METHOD(php_wxPlatformInfo, GetPortIdName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10804,6 +11183,10 @@ PHP_METHOD(php_wxPlatformInfo, GetPortIdName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::GetPortIdName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxPlatformInfo::GetPortIdShortName()
+   Returns the short name of the wxWidgets port ID associated with this wxPlatformInfo instance. */
 PHP_METHOD(php_wxPlatformInfo, GetPortIdShortName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10947,6 +11330,10 @@ PHP_METHOD(php_wxPlatformInfo, GetPortIdShortName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::GetPortIdShortName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxPlatformInfo::GetToolkitMajorVersion()
+   Returns the run-time major version of the toolkit associated with this wxPlatformInfo instance. */
 PHP_METHOD(php_wxPlatformInfo, GetToolkitMajorVersion)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11039,6 +11426,10 @@ PHP_METHOD(php_wxPlatformInfo, GetToolkitMajorVersion)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::GetToolkitMajorVersion\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxPlatformInfo::GetToolkitMinorVersion()
+   Returns the run-time minor version of the toolkit associated with this wxPlatformInfo instance. */
 PHP_METHOD(php_wxPlatformInfo, GetToolkitMinorVersion)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11131,6 +11522,10 @@ PHP_METHOD(php_wxPlatformInfo, GetToolkitMinorVersion)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::GetToolkitMinorVersion\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPlatformInfo::IsOk()
+   Returns true if this instance is fully initialized with valid values. */
 PHP_METHOD(php_wxPlatformInfo, IsOk)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11223,6 +11618,10 @@ PHP_METHOD(php_wxPlatformInfo, IsOk)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::IsOk\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPlatformInfo::IsUsingUniversalWidgets()
+   Returns true if this wxPlatformInfo describes wxUniversal build. */
 PHP_METHOD(php_wxPlatformInfo, IsUsingUniversalWidgets)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11315,6 +11714,10 @@ PHP_METHOD(php_wxPlatformInfo, IsUsingUniversalWidgets)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::IsUsingUniversalWidgets\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPlatformInfo::SetArchitecture(wxArchitecture n)
+   Sets the architecture enum value associated with this wxPlatformInfo instance. */
 PHP_METHOD(php_wxPlatformInfo, SetArchitecture)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11412,6 +11815,10 @@ PHP_METHOD(php_wxPlatformInfo, SetArchitecture)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::SetArchitecture\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPlatformInfo::SetDesktopEnvironment(string de)
+   Sets the desktop environment associated with this wxPlatformInfo instance. */
 PHP_METHOD(php_wxPlatformInfo, SetDesktopEnvironment)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11510,6 +11917,10 @@ PHP_METHOD(php_wxPlatformInfo, SetDesktopEnvironment)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::SetDesktopEnvironment\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPlatformInfo::SetEndianness(wxEndianness n)
+   Sets the endianness enum value associated with this wxPlatformInfo instance. */
 PHP_METHOD(php_wxPlatformInfo, SetEndianness)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11607,6 +12018,10 @@ PHP_METHOD(php_wxPlatformInfo, SetEndianness)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::SetEndianness\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPlatformInfo::SetOSVersion(int major, int minor)
+   Sets the version of the operating system associated with this wxPlatformInfo instance. */
 PHP_METHOD(php_wxPlatformInfo, SetOSVersion)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11705,6 +12120,10 @@ PHP_METHOD(php_wxPlatformInfo, SetOSVersion)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::SetOSVersion\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPlatformInfo::SetOperatingSystemDescription(string desc)
+   Sets the operating system description associated with this wxPlatformInfo instance. */
 PHP_METHOD(php_wxPlatformInfo, SetOperatingSystemDescription)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11803,6 +12222,10 @@ PHP_METHOD(php_wxPlatformInfo, SetOperatingSystemDescription)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::SetOperatingSystemDescription\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPlatformInfo::SetOperatingSystemId(wxOperatingSystemId n)
+   Sets the operating system associated with this wxPlatformInfo instance. */
 PHP_METHOD(php_wxPlatformInfo, SetOperatingSystemId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11900,6 +12323,10 @@ PHP_METHOD(php_wxPlatformInfo, SetOperatingSystemId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::SetOperatingSystemId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPlatformInfo::SetPortId(wxPortId n)
+   Sets the wxWidgets port ID associated with this wxPlatformInfo instance. */
 PHP_METHOD(php_wxPlatformInfo, SetPortId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11997,6 +12424,10 @@ PHP_METHOD(php_wxPlatformInfo, SetPortId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::SetPortId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPlatformInfo::SetToolkitVersion(int major, int minor)
+   Sets the version of the toolkit associated with this wxPlatformInfo instance. */
 PHP_METHOD(php_wxPlatformInfo, SetToolkitVersion)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12095,6 +12526,8 @@ PHP_METHOD(php_wxPlatformInfo, SetToolkitVersion)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPlatformInfo::SetToolkitVersion\n");
 	}
 }
+/* }}} */
+
 void php_wxSystemSettings_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12135,6 +12568,8 @@ void php_wxSystemSettings_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		#endif
 	}
 }
+/* {{{ proto wxColour wxSystemSettings::GetColour(wxSystemColour index)
+   Returns a system colour. */
 PHP_METHOD(php_wxSystemSettings, GetColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12242,6 +12677,10 @@ PHP_METHOD(php_wxSystemSettings, GetColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSystemSettings::GetColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFont wxSystemSettings::GetFont(wxSystemFont index)
+   Returns a system font. */
 PHP_METHOD(php_wxSystemSettings, GetFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12349,6 +12788,10 @@ PHP_METHOD(php_wxSystemSettings, GetFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSystemSettings::GetFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxSystemSettings::GetMetric(wxSystemMetric index, wxWindow &win)
+   Returns the value of a system metric, or -1 if the metric is not supported on the current system. */
 PHP_METHOD(php_wxSystemSettings, GetMetric)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12477,6 +12920,10 @@ PHP_METHOD(php_wxSystemSettings, GetMetric)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSystemSettings::GetMetric\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSystemScreenType wxSystemSettings::GetScreenType()
+   Returns the screen type. */
 PHP_METHOD(php_wxSystemSettings, GetScreenType)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12570,6 +13017,10 @@ PHP_METHOD(php_wxSystemSettings, GetScreenType)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSystemSettings::GetScreenType\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxSystemSettings::HasFeature(wxSystemFeature index)
+   Returns true if the port has certain feature. */
 PHP_METHOD(php_wxSystemSettings, HasFeature)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12668,6 +13119,8 @@ PHP_METHOD(php_wxSystemSettings, HasFeature)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSystemSettings::HasFeature\n");
 	}
 }
+/* }}} */
+
 void php_wxSystemOptions_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12708,6 +13161,8 @@ void php_wxSystemOptions_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+/* {{{ proto string wxSystemOptions::GetOption(string name)
+   Gets an option. */
 PHP_METHOD(php_wxSystemOptions, GetOption)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12813,6 +13268,10 @@ PHP_METHOD(php_wxSystemOptions, GetOption)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSystemOptions::GetOption\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxSystemOptions::GetOptionInt(string name)
+   Gets an option as an integer. */
 PHP_METHOD(php_wxSystemOptions, GetOptionInt)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12912,6 +13371,10 @@ PHP_METHOD(php_wxSystemOptions, GetOptionInt)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSystemOptions::GetOptionInt\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxSystemOptions::HasOption(string name)
+   Returns true if the given option is present. */
 PHP_METHOD(php_wxSystemOptions, HasOption)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13011,6 +13474,10 @@ PHP_METHOD(php_wxSystemOptions, HasOption)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSystemOptions::HasOption\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxSystemOptions::IsFalse(string name)
+   Returns true if the option with the given name had been set to 0 value. */
 PHP_METHOD(php_wxSystemOptions, IsFalse)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13110,6 +13577,10 @@ PHP_METHOD(php_wxSystemOptions, IsFalse)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSystemOptions::IsFalse\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSystemOptions::SetOption(string name, string value)
+   Sets an option. */
 PHP_METHOD(php_wxSystemOptions, SetOption)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13251,6 +13722,8 @@ PHP_METHOD(php_wxSystemOptions, SetOption)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSystemOptions::SetOption\n");
 	}
 }
+/* }}} */
+
 void php_wxVideoMode_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13291,6 +13764,8 @@ void php_wxVideoMode_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxVideoMode::wxVideoMode(int width, int height, int depth, int freq)
+   Constructs this class using the given parameters. */
 PHP_METHOD(php_wxVideoMode, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13419,6 +13894,8 @@ PHP_METHOD(php_wxVideoMode, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 PHP_METHOD(php_wxVideoMode, __get)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13492,6 +13969,8 @@ PHP_METHOD(php_wxVideoMode, __get)
 		RETVAL_NULL();
 	}
 }
+/* {{{ proto bool wxVideoMode::Matches(wxVideoMode other)
+   Returns true if this mode matches the other one in the sense that all non zero fields of the other mode have the same value in this one (except for refresh which is allowed to have a greater value). */
 PHP_METHOD(php_wxVideoMode, Matches)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13607,6 +14086,10 @@ PHP_METHOD(php_wxVideoMode, Matches)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVideoMode::Matches\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxVideoMode::IsOk()
+   Returns true if the object has been initialized. */
 PHP_METHOD(php_wxVideoMode, IsOk)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13699,6 +14182,10 @@ PHP_METHOD(php_wxVideoMode, IsOk)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVideoMode::IsOk\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxVideoMode::GetWidth()
+   Returns the screen width in pixels (e.g. */
 PHP_METHOD(php_wxVideoMode, GetWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13791,6 +14278,10 @@ PHP_METHOD(php_wxVideoMode, GetWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVideoMode::GetWidth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxVideoMode::GetHeight()
+   Returns the screen height in pixels (e.g. */
 PHP_METHOD(php_wxVideoMode, GetHeight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13883,6 +14374,10 @@ PHP_METHOD(php_wxVideoMode, GetHeight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVideoMode::GetHeight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxVideoMode::GetDepth()
+   Returns bits per pixel (e.g. */
 PHP_METHOD(php_wxVideoMode, GetDepth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13975,3 +14470,5 @@ PHP_METHOD(php_wxVideoMode, GetDepth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVideoMode::GetDepth\n");
 	}
 }
+/* }}} */
+

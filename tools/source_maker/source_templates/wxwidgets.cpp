@@ -97,7 +97,7 @@ PHP_RINIT_FUNCTION(php_wxWidgets)
 	 
 <?php print $object_constants ?>
 	
-		wxUninitialize(); //Maybe this shouldn't be called for references like wxNORMAL_FONT
+		wxUninitialize();
 		
 		objects_intialized = 1;
 	}

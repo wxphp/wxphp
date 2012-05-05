@@ -1,3 +1,4 @@
+<?=proto_begin($method_name, $class_name)?>
 PHP_METHOD(php_<?=$class_name?>, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -50,3 +51,4 @@ PHP_METHOD(php_<?=$class_name?>, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+<?=proto_end()?>

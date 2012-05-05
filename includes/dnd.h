@@ -387,6 +387,41 @@ static zend_function_entry php_wxFileDataObject_functions[] = {
 };
 #endif
 
+extern int le_wxDropTarget;
+extern zend_class_entry *php_wxDropTarget_entry;
+void php_wxDropTarget_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
+
+class wxDropTarget_php: public wxDropTarget{
+	public:
+	
+	wxDropTarget_php(wxDataObject* data=NULL):wxDropTarget(data){}
+		
+	void OnLeave();
+	wxDragResult OnDragOver(wxCoord x, wxCoord y, wxDragResult defResult);
+	wxDragResult OnEnter(wxCoord x, wxCoord y, wxDragResult defResult);
+	wxDragResult OnData(wxCoord x, wxCoord y, wxDragResult defResult);
+	bool OnDrop(wxCoord x, wxCoord y);
+		
+	void InitProperties(){
+	}
+	
+	zval *evnArray;
+	void onEvent(wxEvent& evnt);
+	void ***tsrm_ls;
+	zval* phpObj;
+	void** properties;
+	wxPHPObjectReferences references;
+};
+
+#ifdef WXPHP_INCLUDE_METHOD_TABLES
+static zend_function_entry php_wxDropTarget_functions[] = {
+	PHP_ME(php_wxDropTarget, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
+	PHP_ME(php_wxDropTarget, SetDataObject, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDropTarget, GetData, NULL, ZEND_ACC_PUBLIC)
+	PHP_FE_END
+};
+#endif
+
 extern int le_wxTextDropTarget;
 extern zend_class_entry *php_wxTextDropTarget_entry;
 void php_wxTextDropTarget_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
@@ -413,42 +448,8 @@ class wxTextDropTarget_php: public wxTextDropTarget{
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxTextDropTarget_functions[] = {
 	PHP_ME(php_wxDropTarget, SetDataObject, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDropTarget, GetData, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxTextDropTarget, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_FE_END
-};
-#endif
-
-extern int le_wxDropTarget;
-extern zend_class_entry *php_wxDropTarget_entry;
-void php_wxDropTarget_destruction_handler(zend_rsrc_list_entry * TSRMLS_DC);
-
-class wxDropTarget_php: public wxDropTarget{
-	public:
-	
-	wxDropTarget_php(wxDataObject* data=NULL):wxDropTarget(data){}
-		
-	wxDragResult OnDragOver(wxCoord x, wxCoord y, wxDragResult def);
-	wxDragResult OnEnter(wxCoord x, wxCoord y, wxDragResult def);
-	void OnLeave();
-	bool GetData();
-	wxDragResult OnData(wxCoord x, wxCoord y, wxDragResult def);
-	bool OnDrop(wxCoord x, wxCoord y);
-		
-	void InitProperties(){
-	}
-	
-	zval *evnArray;
-	void onEvent(wxEvent& evnt);
-	void ***tsrm_ls;
-	zval* phpObj;
-	void** properties;
-	wxPHPObjectReferences references;
-};
-
-#ifdef WXPHP_INCLUDE_METHOD_TABLES
-static zend_function_entry php_wxDropTarget_functions[] = {
-	PHP_ME(php_wxDropTarget, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
-	PHP_ME(php_wxDropTarget, SetDataObject, NULL, ZEND_ACC_PUBLIC)
 	PHP_FE_END
 };
 #endif
@@ -479,6 +480,7 @@ class wxFileDropTarget_php: public wxFileDropTarget{
 #ifdef WXPHP_INCLUDE_METHOD_TABLES
 static zend_function_entry php_wxFileDropTarget_functions[] = {
 	PHP_ME(php_wxDropTarget, SetDataObject, NULL, ZEND_ACC_PUBLIC)
+	PHP_ME(php_wxDropTarget, GetData, NULL, ZEND_ACC_PUBLIC)
 	PHP_ME(php_wxFileDropTarget, __construct, NULL, ZEND_ACC_PUBLIC|ZEND_ACC_CTOR)
 	PHP_FE_END
 };

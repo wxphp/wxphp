@@ -91,6 +91,8 @@ void php_wxGridCellRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 		#endif
 	}
 }
+/* {{{ proto wxSize wxGridCellRenderer::GetBestSize(wxGrid &grid, wxGridCellAttr &attr, wxDC &dc, int row, int col)
+   Get the preferred size of the cell for its contents. */
 wxSize wxGridCellRenderer_php::GetBestSize(wxGrid& grid, wxGridCellAttr& attr, wxDC& dc, int row, int col)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -151,6 +153,10 @@ wxSize wxGridCellRenderer_php::GetBestSize(wxGrid& grid, wxGridCellAttr& attr, w
 		return *(wxSize*) return_object;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellRenderer::Draw(wxGrid &grid, wxGridCellAttr &attr, wxDC &dc, wxRect rect, int row, int col, bool isSelected)
+   Draw the given cell on the provided DC inside the given rectangle using the style specified by the attribute and the default or selected state corresponding to the isSelected value. */
 void wxGridCellRenderer_php::Draw(wxGrid& grid, wxGridCellAttr& attr, wxDC& dc, const wxRect& rect, int row, int col, bool isSelected)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -209,6 +215,10 @@ void wxGridCellRenderer_php::Draw(wxGrid& grid, wxGridCellAttr& attr, wxDC& dc, 
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto wxGridCellRenderer wxGridCellRenderer::Clone()
+   This function must be implemented in derived classes to return a copy of itself. */
 wxGridCellRenderer* wxGridCellRenderer_php::Clone()const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -256,6 +266,8 @@ wxGridCellRenderer* wxGridCellRenderer_php::Clone()const
 		return (wxGridCellRenderer*) return_object;
 	
 }
+/* }}} */
+
 void php_wxGridCellAutoWrapStringRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -296,6 +308,8 @@ void php_wxGridCellAutoWrapStringRenderer_destruction_handler(zend_rsrc_list_ent
 		#endif
 	}
 }
+/* {{{ proto  wxGridCellAutoWrapStringRenderer::wxGridCellAutoWrapStringRenderer()
+   Default constructor. */
 PHP_METHOD(php_wxGridCellAutoWrapStringRenderer, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -376,6 +390,8 @@ PHP_METHOD(php_wxGridCellAutoWrapStringRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxGridCellBoolRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -416,6 +432,8 @@ void php_wxGridCellBoolRenderer_destruction_handler(zend_rsrc_list_entry *rsrc T
 		#endif
 	}
 }
+/* {{{ proto  wxGridCellBoolRenderer::wxGridCellBoolRenderer()
+   Default constructor. */
 PHP_METHOD(php_wxGridCellBoolRenderer, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -496,6 +514,8 @@ PHP_METHOD(php_wxGridCellBoolRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxGridCellDateTimeRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -536,6 +556,8 @@ void php_wxGridCellDateTimeRenderer_destruction_handler(zend_rsrc_list_entry *rs
 		#endif
 	}
 }
+/* {{{ proto  wxGridCellDateTimeRenderer::SetParameters(string params)
+   Sets the strptime()-like format string which will be used to parse the date/time. */
 PHP_METHOD(php_wxGridCellDateTimeRenderer, SetParameters)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -634,6 +656,10 @@ PHP_METHOD(php_wxGridCellDateTimeRenderer, SetParameters)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellDateTimeRenderer::SetParameters\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellDateTimeRenderer::wxGridCellDateTimeRenderer(string outformat, string informat)
+   Date/time renderer constructor. */
 PHP_METHOD(php_wxGridCellDateTimeRenderer, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -742,6 +768,8 @@ PHP_METHOD(php_wxGridCellDateTimeRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxGridCellEnumRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -782,6 +810,8 @@ void php_wxGridCellEnumRenderer_destruction_handler(zend_rsrc_list_entry *rsrc T
 		#endif
 	}
 }
+/* {{{ proto  wxGridCellEnumRenderer::SetParameters(string params)
+   Sets the comma separated string content of the enum. */
 PHP_METHOD(php_wxGridCellEnumRenderer, SetParameters)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -880,6 +910,10 @@ PHP_METHOD(php_wxGridCellEnumRenderer, SetParameters)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellEnumRenderer::SetParameters\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellEnumRenderer::wxGridCellEnumRenderer(string choices)
+   Enum renderer ctor. */
 PHP_METHOD(php_wxGridCellEnumRenderer, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -976,6 +1010,8 @@ PHP_METHOD(php_wxGridCellEnumRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxGridCellFloatRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1016,6 +1052,8 @@ void php_wxGridCellFloatRenderer_destruction_handler(zend_rsrc_list_entry *rsrc 
 		#endif
 	}
 }
+/* {{{ proto int wxGridCellFloatRenderer::GetFormat()
+   Returns the specifier used to format the data to string. */
 PHP_METHOD(php_wxGridCellFloatRenderer, GetFormat)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1108,6 +1146,10 @@ PHP_METHOD(php_wxGridCellFloatRenderer, GetFormat)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellFloatRenderer::GetFormat\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGridCellFloatRenderer::GetPrecision()
+   Returns the precision. */
 PHP_METHOD(php_wxGridCellFloatRenderer, GetPrecision)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1200,6 +1242,10 @@ PHP_METHOD(php_wxGridCellFloatRenderer, GetPrecision)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellFloatRenderer::GetPrecision\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGridCellFloatRenderer::GetWidth()
+   Returns the width. */
 PHP_METHOD(php_wxGridCellFloatRenderer, GetWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1292,6 +1338,10 @@ PHP_METHOD(php_wxGridCellFloatRenderer, GetWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellFloatRenderer::GetWidth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellFloatRenderer::SetFormat(int format)
+   Set the format to use for display the number. */
 PHP_METHOD(php_wxGridCellFloatRenderer, SetFormat)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1389,6 +1439,10 @@ PHP_METHOD(php_wxGridCellFloatRenderer, SetFormat)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellFloatRenderer::SetFormat\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellFloatRenderer::SetParameters(string params)
+   The parameters string format is "width[,precision[,format]]" where format should be chosen between f|e|g|E|G (f is used by default) */
 PHP_METHOD(php_wxGridCellFloatRenderer, SetParameters)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1487,6 +1541,10 @@ PHP_METHOD(php_wxGridCellFloatRenderer, SetParameters)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellFloatRenderer::SetParameters\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellFloatRenderer::SetPrecision(int precision)
+   Sets the precision. */
 PHP_METHOD(php_wxGridCellFloatRenderer, SetPrecision)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1584,6 +1642,10 @@ PHP_METHOD(php_wxGridCellFloatRenderer, SetPrecision)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellFloatRenderer::SetPrecision\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellFloatRenderer::SetWidth(int width)
+   Sets the width. */
 PHP_METHOD(php_wxGridCellFloatRenderer, SetWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1681,6 +1743,10 @@ PHP_METHOD(php_wxGridCellFloatRenderer, SetWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellFloatRenderer::SetWidth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellFloatRenderer::wxGridCellFloatRenderer(int width, int precision, int format)
+   Float cell renderer ctor. */
 PHP_METHOD(php_wxGridCellFloatRenderer, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1798,6 +1864,8 @@ PHP_METHOD(php_wxGridCellFloatRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxGridCellNumberRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1838,6 +1906,8 @@ void php_wxGridCellNumberRenderer_destruction_handler(zend_rsrc_list_entry *rsrc
 		#endif
 	}
 }
+/* {{{ proto  wxGridCellNumberRenderer::wxGridCellNumberRenderer()
+   Default constructor. */
 PHP_METHOD(php_wxGridCellNumberRenderer, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1918,6 +1988,8 @@ PHP_METHOD(php_wxGridCellNumberRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxGridCellStringRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1958,6 +2030,8 @@ void php_wxGridCellStringRenderer_destruction_handler(zend_rsrc_list_entry *rsrc
 		#endif
 	}
 }
+/* {{{ proto  wxGridCellStringRenderer::wxGridCellStringRenderer()
+   Default constructor. */
 PHP_METHOD(php_wxGridCellStringRenderer, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2038,6 +2112,8 @@ PHP_METHOD(php_wxGridCellStringRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxGridCellEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2046,6 +2122,8 @@ void php_wxGridCellEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 	#endif
 	
 }
+/* {{{ proto  wxGridCellEditor::ApplyEdit(int row, int col, wxGrid &grid)
+   Effectively save the changes in the grid. */
 void wxGridCellEditor_php::ApplyEdit(int row, int col, wxGrid* grid)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2097,6 +2175,10 @@ void wxGridCellEditor_php::ApplyEdit(int row, int col, wxGrid* grid)
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellEditor::BeginEdit(int row, int col, wxGrid &grid)
+   Fetch the value from the table and prepare the edit control to begin editing. */
 void wxGridCellEditor_php::BeginEdit(int row, int col, wxGrid* grid)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2148,6 +2230,10 @@ void wxGridCellEditor_php::BeginEdit(int row, int col, wxGrid* grid)
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto wxGridCellEditor wxGridCellEditor::Clone()
+   Create a new object which is the copy of this one. */
 wxGridCellEditor* wxGridCellEditor_php::Clone()const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2195,6 +2281,10 @@ wxGridCellEditor* wxGridCellEditor_php::Clone()const
 		return (wxGridCellEditor*) return_object;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellEditor::Create(wxWindow &parent, int id, wxEvtHandler &evtHandler)
+   Creates the actual edit control. */
 void wxGridCellEditor_php::Create(wxWindow* parent, wxWindowID id, wxEvtHandler* evtHandler)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2247,6 +2337,10 @@ void wxGridCellEditor_php::Create(wxWindow* parent, wxWindowID id, wxEvtHandler*
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellEditor::Destroy()
+   Final cleanup. */
 PHP_METHOD(php_wxGridCellEditor, Destroy)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2390,6 +2484,10 @@ PHP_METHOD(php_wxGridCellEditor, Destroy)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellEditor::Destroy\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridCellEditor::EndEdit(int row, int col, wxGrid grid, string oldval, string &newval)
+   End editing the cell. */
 bool wxGridCellEditor_php::EndEdit(int row, int col, const wxGrid* grid, const wxString& oldval, wxString* newval)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2449,6 +2547,10 @@ bool wxGridCellEditor_php::EndEdit(int row, int col, const wxGrid* grid, const w
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellEditor::HandleReturn(wxKeyEvent &event)
+   Some types of controls on some platforms may need some help with the Return key. */
 PHP_METHOD(php_wxGridCellEditor, HandleReturn)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2615,6 +2717,10 @@ PHP_METHOD(php_wxGridCellEditor, HandleReturn)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellEditor::HandleReturn\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridCellEditor::IsCreated()
+   Returns true if the edit control has been created. */
 PHP_METHOD(php_wxGridCellEditor, IsCreated)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2758,6 +2864,10 @@ PHP_METHOD(php_wxGridCellEditor, IsCreated)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellEditor::IsCreated\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellEditor::PaintBackground(wxRect rectCell, wxGridCellAttr &attr)
+   Draws the part of the cell not occupied by the control: the base class version just fills it with background colour from the attribute. */
 PHP_METHOD(php_wxGridCellEditor, PaintBackground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2943,6 +3053,10 @@ PHP_METHOD(php_wxGridCellEditor, PaintBackground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellEditor::PaintBackground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellEditor::SetSize(wxRect rect)
+   Size and position the edit control. */
 PHP_METHOD(php_wxGridCellEditor, SetSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3109,6 +3223,10 @@ PHP_METHOD(php_wxGridCellEditor, SetSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellEditor::SetSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellEditor::Reset()
+   Reset the value in the control back to its starting value. */
 void wxGridCellEditor_php::Reset()
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3151,6 +3269,10 @@ void wxGridCellEditor_php::Reset()
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellEditor::Show(bool show, wxGridCellAttr &attr)
+   Show or hide the edit control, use the specified attributes to set colours/fonts for it. */
 PHP_METHOD(php_wxGridCellEditor, Show)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3356,6 +3478,10 @@ PHP_METHOD(php_wxGridCellEditor, Show)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellEditor::Show\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellEditor::StartingClick()
+   If the editor is enabled by clicking on the cell, this method will be called. */
 PHP_METHOD(php_wxGridCellEditor, StartingClick)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3499,6 +3625,10 @@ PHP_METHOD(php_wxGridCellEditor, StartingClick)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellEditor::StartingClick\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellEditor::StartingKey(wxKeyEvent &event)
+   If the editor is enabled by pressing keys on the grid, this will be called to let the editor do something about that first key if desired. */
 PHP_METHOD(php_wxGridCellEditor, StartingKey)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3665,6 +3795,8 @@ PHP_METHOD(php_wxGridCellEditor, StartingKey)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellEditor::StartingKey\n");
 	}
 }
+/* }}} */
+
 void php_wxGridCellAutoWrapStringEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3705,6 +3837,7 @@ void php_wxGridCellAutoWrapStringEditor_destruction_handler(zend_rsrc_list_entry
 		#endif
 	}
 }
+/* {{{ proto  wxGridCellAutoWrapStringEditor::wxGridCellAutoWrapStringEditor() */
 PHP_METHOD(php_wxGridCellAutoWrapStringEditor, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3785,6 +3918,8 @@ PHP_METHOD(php_wxGridCellAutoWrapStringEditor, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxGridCellBoolEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3825,6 +3960,8 @@ void php_wxGridCellBoolEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 		#endif
 	}
 }
+/* {{{ proto bool wxGridCellBoolEditor::IsTrueValue(string value)
+   Returns true if the given value is equal to the string representation of the truth value we currently use (see UseStringValues()). */
 PHP_METHOD(php_wxGridCellBoolEditor, IsTrueValue)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3924,6 +4061,10 @@ PHP_METHOD(php_wxGridCellBoolEditor, IsTrueValue)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellBoolEditor::IsTrueValue\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellBoolEditor::UseStringValues(string valueTrue, string valueFalse)
+   This method allows you to customize the values returned by GetValue() for the cell using this editor. */
 PHP_METHOD(php_wxGridCellBoolEditor, UseStringValues)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4049,6 +4190,10 @@ PHP_METHOD(php_wxGridCellBoolEditor, UseStringValues)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellBoolEditor::UseStringValues\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellBoolEditor::wxGridCellBoolEditor()
+   Default constructor. */
 PHP_METHOD(php_wxGridCellBoolEditor, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4129,6 +4274,8 @@ PHP_METHOD(php_wxGridCellBoolEditor, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxGridCellChoiceEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4169,6 +4316,8 @@ void php_wxGridCellChoiceEditor_destruction_handler(zend_rsrc_list_entry *rsrc T
 		#endif
 	}
 }
+/* {{{ proto  wxGridCellChoiceEditor::SetParameters(string params)
+   Parameters string format is "item1[,item2[...,itemN]]". */
 PHP_METHOD(php_wxGridCellChoiceEditor, SetParameters)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4271,6 +4420,10 @@ PHP_METHOD(php_wxGridCellChoiceEditor, SetParameters)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellChoiceEditor::SetParameters\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellChoiceEditor::wxGridCellChoiceEditor(array choices, bool allowOthers)
+   Choice cell renderer ctor. */
 PHP_METHOD(php_wxGridCellChoiceEditor, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4400,6 +4553,8 @@ PHP_METHOD(php_wxGridCellChoiceEditor, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxGridCellEnumEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4440,6 +4595,8 @@ void php_wxGridCellEnumEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 		#endif
 	}
 }
+/* {{{ proto  wxGridCellEnumEditor::wxGridCellEnumEditor(string choices)
+   Enum cell editor ctor. */
 PHP_METHOD(php_wxGridCellEnumEditor, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4536,6 +4693,8 @@ PHP_METHOD(php_wxGridCellEnumEditor, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxGridCellTextEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4576,6 +4735,8 @@ void php_wxGridCellTextEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 		#endif
 	}
 }
+/* {{{ proto  wxGridCellTextEditor::wxGridCellTextEditor()
+   Default constructor. */
 PHP_METHOD(php_wxGridCellTextEditor, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4656,6 +4817,10 @@ PHP_METHOD(php_wxGridCellTextEditor, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellTextEditor::SetParameters(string params)
+   The parameters string format is "n" where n is a number representing the maximum width. */
 PHP_METHOD(php_wxGridCellTextEditor, SetParameters)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4762,6 +4927,8 @@ PHP_METHOD(php_wxGridCellTextEditor, SetParameters)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellTextEditor::SetParameters\n");
 	}
 }
+/* }}} */
+
 void php_wxGridCellFloatEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4802,6 +4969,8 @@ void php_wxGridCellFloatEditor_destruction_handler(zend_rsrc_list_entry *rsrc TS
 		#endif
 	}
 }
+/* {{{ proto  wxGridCellFloatEditor::wxGridCellFloatEditor(int width, int precision, int format)
+   Float cell editor ctor. */
 PHP_METHOD(php_wxGridCellFloatEditor, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4919,6 +5088,10 @@ PHP_METHOD(php_wxGridCellFloatEditor, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellFloatEditor::SetParameters(string params)
+   The parameters string format is "width[,precision[,format]]" where format should be chosen between f|e|g|E|G (f is used by default) */
 PHP_METHOD(php_wxGridCellFloatEditor, SetParameters)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5017,6 +5190,8 @@ PHP_METHOD(php_wxGridCellFloatEditor, SetParameters)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellFloatEditor::SetParameters\n");
 	}
 }
+/* }}} */
+
 void php_wxGridCellNumberEditor_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5057,6 +5232,8 @@ void php_wxGridCellNumberEditor_destruction_handler(zend_rsrc_list_entry *rsrc T
 		#endif
 	}
 }
+/* {{{ proto  wxGridCellNumberEditor::wxGridCellNumberEditor(int min, int max)
+   Allows you to specify the range for acceptable data. */
 PHP_METHOD(php_wxGridCellNumberEditor, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5163,6 +5340,10 @@ PHP_METHOD(php_wxGridCellNumberEditor, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellNumberEditor::SetParameters(string params)
+   Parameters string format is "min,max". */
 PHP_METHOD(php_wxGridCellNumberEditor, SetParameters)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5261,6 +5442,8 @@ PHP_METHOD(php_wxGridCellNumberEditor, SetParameters)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellNumberEditor::SetParameters\n");
 	}
 }
+/* }}} */
+
 void php_wxGridCellAttr_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5269,6 +5452,8 @@ void php_wxGridCellAttr_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 	#endif
 	
 }
+/* {{{ proto wxGridCellAttr wxGridCellAttr::Clone()
+   Creates a new copy of this object. */
 PHP_METHOD(php_wxGridCellAttr, Clone)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5384,6 +5569,10 @@ PHP_METHOD(php_wxGridCellAttr, Clone)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellAttr::Clone\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellAttr::DecRef()
+   This class is reference counted: it is created with ref count of 1, so calling DecRef() once will delete it. */
 PHP_METHOD(php_wxGridCellAttr, DecRef)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5476,6 +5665,10 @@ PHP_METHOD(php_wxGridCellAttr, DecRef)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellAttr::DecRef\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellAttr::GetAlignment(int &hAlign, int &vAlign)
+   Get the alignment to use for the cell with the given attribute. */
 PHP_METHOD(php_wxGridCellAttr, GetAlignment)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5591,6 +5784,10 @@ PHP_METHOD(php_wxGridCellAttr, GetAlignment)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellAttr::GetAlignment\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxGridCellAttr::GetBackgroundColour()
+   Returns the background colour. */
 PHP_METHOD(php_wxGridCellAttr, GetBackgroundColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5703,6 +5900,10 @@ PHP_METHOD(php_wxGridCellAttr, GetBackgroundColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellAttr::GetBackgroundColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxGridCellEditor wxGridCellAttr::GetEditor(wxGrid grid, int row, int col)
+   Returns the cell editor. */
 PHP_METHOD(php_wxGridCellAttr, GetEditor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5843,6 +6044,10 @@ PHP_METHOD(php_wxGridCellAttr, GetEditor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellAttr::GetEditor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFont wxGridCellAttr::GetFont()
+   Returns the font. */
 PHP_METHOD(php_wxGridCellAttr, GetFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5955,6 +6160,10 @@ PHP_METHOD(php_wxGridCellAttr, GetFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellAttr::GetFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellAttr::GetNonDefaultAlignment(int &hAlign, int &vAlign)
+   Get the alignment defined by this attribute. */
 PHP_METHOD(php_wxGridCellAttr, GetNonDefaultAlignment)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6070,6 +6279,10 @@ PHP_METHOD(php_wxGridCellAttr, GetNonDefaultAlignment)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellAttr::GetNonDefaultAlignment\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxGridCellRenderer wxGridCellAttr::GetRenderer(wxGrid grid, int row, int col)
+   Returns the cell renderer. */
 PHP_METHOD(php_wxGridCellAttr, GetRenderer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6210,6 +6423,10 @@ PHP_METHOD(php_wxGridCellAttr, GetRenderer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellAttr::GetRenderer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxGridCellAttr::GetTextColour()
+   Returns the text colour. */
 PHP_METHOD(php_wxGridCellAttr, GetTextColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6322,6 +6539,10 @@ PHP_METHOD(php_wxGridCellAttr, GetTextColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellAttr::GetTextColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridCellAttr::HasAlignment()
+   Returns true if this attribute has a valid alignment set. */
 PHP_METHOD(php_wxGridCellAttr, HasAlignment)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6414,6 +6635,10 @@ PHP_METHOD(php_wxGridCellAttr, HasAlignment)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellAttr::HasAlignment\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridCellAttr::HasBackgroundColour()
+   Returns true if this attribute has a valid background colour set. */
 PHP_METHOD(php_wxGridCellAttr, HasBackgroundColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6506,6 +6731,10 @@ PHP_METHOD(php_wxGridCellAttr, HasBackgroundColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellAttr::HasBackgroundColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridCellAttr::HasEditor()
+   Returns true if this attribute has a valid cell editor set. */
 PHP_METHOD(php_wxGridCellAttr, HasEditor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6598,6 +6827,10 @@ PHP_METHOD(php_wxGridCellAttr, HasEditor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellAttr::HasEditor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridCellAttr::HasFont()
+   Returns true if this attribute has a valid font set. */
 PHP_METHOD(php_wxGridCellAttr, HasFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6690,6 +6923,10 @@ PHP_METHOD(php_wxGridCellAttr, HasFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellAttr::HasFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridCellAttr::HasRenderer()
+   Returns true if this attribute has a valid cell renderer set. */
 PHP_METHOD(php_wxGridCellAttr, HasRenderer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6782,6 +7019,10 @@ PHP_METHOD(php_wxGridCellAttr, HasRenderer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellAttr::HasRenderer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridCellAttr::HasTextColour()
+   Returns true if this attribute has a valid text colour set. */
 PHP_METHOD(php_wxGridCellAttr, HasTextColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6874,6 +7115,10 @@ PHP_METHOD(php_wxGridCellAttr, HasTextColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellAttr::HasTextColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellAttr::IncRef()
+   This class is reference counted: it is created with ref count of 1, so calling DecRef() once will delete it. */
 PHP_METHOD(php_wxGridCellAttr, IncRef)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6966,6 +7211,10 @@ PHP_METHOD(php_wxGridCellAttr, IncRef)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellAttr::IncRef\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridCellAttr::IsReadOnly()
+   Returns true if this cell is set as read-only. */
 PHP_METHOD(php_wxGridCellAttr, IsReadOnly)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7058,6 +7307,10 @@ PHP_METHOD(php_wxGridCellAttr, IsReadOnly)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellAttr::IsReadOnly\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellAttr::SetAlignment(int hAlign, int vAlign)
+   Sets the alignment. */
 PHP_METHOD(php_wxGridCellAttr, SetAlignment)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7156,6 +7409,10 @@ PHP_METHOD(php_wxGridCellAttr, SetAlignment)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellAttr::SetAlignment\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellAttr::SetBackgroundColour(wxColour colBack)
+   Sets the background colour. */
 PHP_METHOD(php_wxGridCellAttr, SetBackgroundColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7271,6 +7528,9 @@ PHP_METHOD(php_wxGridCellAttr, SetBackgroundColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellAttr::SetBackgroundColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellAttr::SetDefAttr(wxGridCellAttr &defAttr) */
 PHP_METHOD(php_wxGridCellAttr, SetDefAttr)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7386,6 +7646,10 @@ PHP_METHOD(php_wxGridCellAttr, SetDefAttr)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellAttr::SetDefAttr\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellAttr::SetEditor(wxGridCellEditor &editor)
+   Sets the editor to be used with the cells with this attribute. */
 PHP_METHOD(php_wxGridCellAttr, SetEditor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7501,6 +7765,10 @@ PHP_METHOD(php_wxGridCellAttr, SetEditor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellAttr::SetEditor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellAttr::SetFont(wxFont font)
+   Sets the font. */
 PHP_METHOD(php_wxGridCellAttr, SetFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7616,6 +7884,10 @@ PHP_METHOD(php_wxGridCellAttr, SetFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellAttr::SetFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellAttr::SetReadOnly(bool isReadOnly)
+   Sets the cell as read-only. */
 PHP_METHOD(php_wxGridCellAttr, SetReadOnly)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7724,6 +7996,10 @@ PHP_METHOD(php_wxGridCellAttr, SetReadOnly)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellAttr::SetReadOnly\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellAttr::SetRenderer(wxGridCellRenderer &renderer)
+   Sets the renderer to be used for cells with this attribute. */
 PHP_METHOD(php_wxGridCellAttr, SetRenderer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7839,6 +8115,10 @@ PHP_METHOD(php_wxGridCellAttr, SetRenderer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellAttr::SetRenderer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellAttr::SetTextColour(wxColour colText)
+   Sets the text colour. */
 PHP_METHOD(php_wxGridCellAttr, SetTextColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7954,6 +8234,10 @@ PHP_METHOD(php_wxGridCellAttr, SetTextColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridCellAttr::SetTextColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridCellAttr::wxGridCellAttr(wxGridCellAttr &attrDefault)
+   Default constructor. */
 PHP_METHOD(php_wxGridCellAttr, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8161,6 +8445,8 @@ PHP_METHOD(php_wxGridCellAttr, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxGridTableBase_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8201,6 +8487,8 @@ void php_wxGridTableBase_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+/* {{{ proto bool wxGridTableBase::AppendCols(int numCols)
+   Exactly the same as AppendRows() but for columns. */
 PHP_METHOD(php_wxGridTableBase, AppendCols)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8309,6 +8597,10 @@ PHP_METHOD(php_wxGridTableBase, AppendCols)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::AppendCols\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridTableBase::AppendRows(int numRows)
+   Append additional rows at the end of the table. */
 PHP_METHOD(php_wxGridTableBase, AppendRows)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8417,6 +8709,10 @@ PHP_METHOD(php_wxGridTableBase, AppendRows)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::AppendRows\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridTableBase::CanGetValueAs(int row, int col, string typeName)
+   Returns true if the value of the given cell can be accessed as if it were of the specified type. */
 PHP_METHOD(php_wxGridTableBase, CanGetValueAs)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8517,6 +8813,10 @@ PHP_METHOD(php_wxGridTableBase, CanGetValueAs)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::CanGetValueAs\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridTableBase::CanHaveAttributes()
+   Returns true if this table supports attributes or false otherwise. */
 PHP_METHOD(php_wxGridTableBase, CanHaveAttributes)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8609,6 +8909,10 @@ PHP_METHOD(php_wxGridTableBase, CanHaveAttributes)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::CanHaveAttributes\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridTableBase::CanSetValueAs(int row, int col, string typeName)
+   Returns true if the value of the given cell can be set as if it were of the specified type. */
 PHP_METHOD(php_wxGridTableBase, CanSetValueAs)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8709,6 +9013,10 @@ PHP_METHOD(php_wxGridTableBase, CanSetValueAs)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::CanSetValueAs\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridTableBase::Clear()
+   Clear the table contents. */
 PHP_METHOD(php_wxGridTableBase, Clear)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8801,6 +9109,10 @@ PHP_METHOD(php_wxGridTableBase, Clear)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::Clear\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridTableBase::DeleteCols(int pos, int numCols)
+   Exactly the same as DeleteRows() but for columns. */
 PHP_METHOD(php_wxGridTableBase, DeleteCols)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8921,6 +9233,10 @@ PHP_METHOD(php_wxGridTableBase, DeleteCols)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::DeleteCols\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridTableBase::DeleteRows(int pos, int numRows)
+   Delete rows from the table. */
 PHP_METHOD(php_wxGridTableBase, DeleteRows)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9041,6 +9357,10 @@ PHP_METHOD(php_wxGridTableBase, DeleteRows)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::DeleteRows\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxGridCellAttr wxGridTableBase::GetAttr(int row, int col, wxGridCellAttr::wxAttrKind kind)
+   Return the attribute for the given cell. */
 PHP_METHOD(php_wxGridTableBase, GetAttr)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9163,6 +9483,10 @@ PHP_METHOD(php_wxGridTableBase, GetAttr)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::GetAttr\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxGridCellAttrProvider wxGridTableBase::GetAttrProvider()
+   Returns the attribute provider currently being used. */
 PHP_METHOD(php_wxGridTableBase, GetAttrProvider)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9278,6 +9602,10 @@ PHP_METHOD(php_wxGridTableBase, GetAttrProvider)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::GetAttrProvider\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxGridTableBase::GetColLabelValue(int col)
+   Return the label of the specified column. */
 PHP_METHOD(php_wxGridTableBase, GetColLabelValue)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9381,6 +9709,10 @@ PHP_METHOD(php_wxGridTableBase, GetColLabelValue)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::GetColLabelValue\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGridTableBase::GetColsCount()
+   Return the number of columns in the table. */
 PHP_METHOD(php_wxGridTableBase, GetColsCount)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9473,6 +9805,10 @@ PHP_METHOD(php_wxGridTableBase, GetColsCount)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::GetColsCount\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGridTableBase::GetNumberCols()
+   Must be overridden to return the number of columns in the table. */
 int wxGridTableBase_php::GetNumberCols()
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9515,6 +9851,10 @@ int wxGridTableBase_php::GetNumberCols()
 		return (int) Z_LVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto int wxGridTableBase::GetNumberRows()
+   Must be overridden to return the number of rows in the table. */
 int wxGridTableBase_php::GetNumberRows()
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9557,6 +9897,10 @@ int wxGridTableBase_php::GetNumberRows()
 		return (int) Z_LVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto string wxGridTableBase::GetRowLabelValue(int row)
+   Return the label of the specified row. */
 PHP_METHOD(php_wxGridTableBase, GetRowLabelValue)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9660,6 +10004,10 @@ PHP_METHOD(php_wxGridTableBase, GetRowLabelValue)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::GetRowLabelValue\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGridTableBase::GetRowsCount()
+   Return the number of rows in the table. */
 PHP_METHOD(php_wxGridTableBase, GetRowsCount)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9752,6 +10100,10 @@ PHP_METHOD(php_wxGridTableBase, GetRowsCount)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::GetRowsCount\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxGridTableBase::GetTypeName(int row, int col)
+   Returns the type of the value in the given cell. */
 PHP_METHOD(php_wxGridTableBase, GetTypeName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9856,6 +10208,10 @@ PHP_METHOD(php_wxGridTableBase, GetTypeName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::GetTypeName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxGridTableBase::GetValue(int row, int col)
+   Must be overridden to implement accessing the table values as text. */
 wxString wxGridTableBase_php::GetValue(int row, int col)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9905,6 +10261,10 @@ wxString wxGridTableBase_php::GetValue(int row, int col)
 		return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
 	
 }
+/* }}} */
+
+/* {{{ proto bool wxGridTableBase::GetValueAsBool(int row, int col)
+   Returns the value of the given cell as a boolean. */
 PHP_METHOD(php_wxGridTableBase, GetValueAsBool)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10003,6 +10363,10 @@ PHP_METHOD(php_wxGridTableBase, GetValueAsBool)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::GetValueAsBool\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto void wxGridTableBase::GetValueAsCustom(int row, int col, string typeName)
+   Returns the value of the given cell as a user-defined type. */
 PHP_METHOD(php_wxGridTableBase, GetValueAsCustom)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10103,6 +10467,10 @@ PHP_METHOD(php_wxGridTableBase, GetValueAsCustom)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::GetValueAsCustom\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto float wxGridTableBase::GetValueAsDouble(int row, int col)
+   Returns the value of the given cell as a double. */
 PHP_METHOD(php_wxGridTableBase, GetValueAsDouble)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10201,6 +10569,10 @@ PHP_METHOD(php_wxGridTableBase, GetValueAsDouble)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::GetValueAsDouble\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGridTableBase::GetValueAsLong(int row, int col)
+   Returns the value of the given cell as a long. */
 PHP_METHOD(php_wxGridTableBase, GetValueAsLong)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10299,6 +10671,10 @@ PHP_METHOD(php_wxGridTableBase, GetValueAsLong)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::GetValueAsLong\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxGrid wxGridTableBase::GetView()
+   Returns the last grid passed to SetView(). */
 PHP_METHOD(php_wxGridTableBase, GetView)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10414,6 +10790,10 @@ PHP_METHOD(php_wxGridTableBase, GetView)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::GetView\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridTableBase::InsertCols(int pos, int numCols)
+   Exactly the same as InsertRows() but for columns. */
 PHP_METHOD(php_wxGridTableBase, InsertCols)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10534,6 +10914,10 @@ PHP_METHOD(php_wxGridTableBase, InsertCols)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::InsertCols\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridTableBase::InsertRows(int pos, int numRows)
+   Insert additional rows into the table. */
 PHP_METHOD(php_wxGridTableBase, InsertRows)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10654,6 +11038,10 @@ PHP_METHOD(php_wxGridTableBase, InsertRows)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::InsertRows\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridTableBase::IsEmptyCell(int row, int col)
+   May be overridden to implement testing for empty cells. */
 PHP_METHOD(php_wxGridTableBase, IsEmptyCell)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10752,6 +11140,10 @@ PHP_METHOD(php_wxGridTableBase, IsEmptyCell)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::IsEmptyCell\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridTableBase::SetAttr(wxGridCellAttr &attr, int row, int col)
+   Set attribute of the specified cell. */
 PHP_METHOD(php_wxGridTableBase, SetAttr)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10869,6 +11261,10 @@ PHP_METHOD(php_wxGridTableBase, SetAttr)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::SetAttr\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridTableBase::SetAttrProvider(wxGridCellAttrProvider &attrProvider)
+   Associate this attributes provider with the table. */
 PHP_METHOD(php_wxGridTableBase, SetAttrProvider)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10984,6 +11380,10 @@ PHP_METHOD(php_wxGridTableBase, SetAttrProvider)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::SetAttrProvider\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridTableBase::SetColAttr(wxGridCellAttr &attr, int col)
+   Set attribute of the specified column. */
 PHP_METHOD(php_wxGridTableBase, SetColAttr)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11100,6 +11500,10 @@ PHP_METHOD(php_wxGridTableBase, SetColAttr)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::SetColAttr\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridTableBase::SetColLabelValue(int col, string label)
+   Exactly the same as SetRowLabelValue() but for columns. */
 PHP_METHOD(php_wxGridTableBase, SetColLabelValue)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11199,6 +11603,10 @@ PHP_METHOD(php_wxGridTableBase, SetColLabelValue)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::SetColLabelValue\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridTableBase::SetRowAttr(wxGridCellAttr &attr, int row)
+   Set attribute of the specified row. */
 PHP_METHOD(php_wxGridTableBase, SetRowAttr)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11315,6 +11723,10 @@ PHP_METHOD(php_wxGridTableBase, SetRowAttr)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::SetRowAttr\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridTableBase::SetRowLabelValue(int row, string label)
+   Set the given label for the specified row. */
 PHP_METHOD(php_wxGridTableBase, SetRowLabelValue)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11414,6 +11826,10 @@ PHP_METHOD(php_wxGridTableBase, SetRowLabelValue)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::SetRowLabelValue\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridTableBase::SetValue(int row, int col, string value)
+   Must be overridden to implement setting the table values as text. */
 void wxGridTableBase_php::SetValue(int row, int col, const wxString& value)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11467,6 +11883,10 @@ void wxGridTableBase_php::SetValue(int row, int col, const wxString& value)
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxGridTableBase::SetValueAsBool(int row, int col, bool value)
+   Sets the value of the given cell as a boolean. */
 PHP_METHOD(php_wxGridTableBase, SetValueAsBool)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11566,6 +11986,10 @@ PHP_METHOD(php_wxGridTableBase, SetValueAsBool)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::SetValueAsBool\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridTableBase::SetValueAsCustom(int row, int col, string typeName, void value)
+   Sets the value of the given cell as a user-defined type. */
 PHP_METHOD(php_wxGridTableBase, SetValueAsCustom)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11673,6 +12097,10 @@ PHP_METHOD(php_wxGridTableBase, SetValueAsCustom)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::SetValueAsCustom\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridTableBase::SetValueAsDouble(int row, int col, float value)
+   Sets the value of the given cell as a double. */
 PHP_METHOD(php_wxGridTableBase, SetValueAsDouble)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11772,6 +12200,10 @@ PHP_METHOD(php_wxGridTableBase, SetValueAsDouble)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::SetValueAsDouble\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridTableBase::SetValueAsLong(int row, int col, int value)
+   Sets the value of the given cell as a long. */
 PHP_METHOD(php_wxGridTableBase, SetValueAsLong)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11871,6 +12303,10 @@ PHP_METHOD(php_wxGridTableBase, SetValueAsLong)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::SetValueAsLong\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridTableBase::SetView(wxGrid &grid)
+   Called by the grid when the table is associated with it. */
 PHP_METHOD(php_wxGridTableBase, SetView)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11986,6 +12422,10 @@ PHP_METHOD(php_wxGridTableBase, SetView)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridTableBase::SetView\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridTableBase::wxGridTableBase()
+   Default constructor. */
 PHP_METHOD(php_wxGridTableBase, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12066,6 +12506,8 @@ PHP_METHOD(php_wxGridTableBase, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxGridSizesInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12106,6 +12548,8 @@ void php_wxGridSizesInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+/* {{{ proto  wxGridSizesInfo::wxGridSizesInfo()
+   Default constructor. */
 PHP_METHOD(php_wxGridSizesInfo, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12186,6 +12630,8 @@ PHP_METHOD(php_wxGridSizesInfo, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 PHP_METHOD(php_wxGridSizesInfo, __get)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12250,6 +12696,8 @@ PHP_METHOD(php_wxGridSizesInfo, __get)
 		RETVAL_NULL();
 	}
 }
+/* {{{ proto int wxGridSizesInfo::GetSize(int pos)
+   Get the element size. */
 PHP_METHOD(php_wxGridSizesInfo, GetSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12347,6 +12795,8 @@ PHP_METHOD(php_wxGridSizesInfo, GetSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridSizesInfo::GetSize\n");
 	}
 }
+/* }}} */
+
 void php_wxGrid_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12354,6 +12804,8 @@ void php_wxGrid_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* {{{ proto bool wxGrid::AppendCols(int numCols, bool updateLabels)
+   Appends one or more new columns to the right of the grid. */
 PHP_METHOD(php_wxGrid, AppendCols)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12474,6 +12926,10 @@ PHP_METHOD(php_wxGrid, AppendCols)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::AppendCols\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::AppendRows(int numRows, bool updateLabels)
+   Appends one or more new rows to the bottom of the grid. */
 PHP_METHOD(php_wxGrid, AppendRows)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12594,6 +13050,10 @@ PHP_METHOD(php_wxGrid, AppendRows)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::AppendRows\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::AreHorzGridLinesClipped()
+   Return true if the horizontal grid lines stop at the last column boundary or false if they continue to the end of the window. */
 PHP_METHOD(php_wxGrid, AreHorzGridLinesClipped)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12686,6 +13146,10 @@ PHP_METHOD(php_wxGrid, AreHorzGridLinesClipped)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::AreHorzGridLinesClipped\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::AreVertGridLinesClipped()
+   Return true if the vertical grid lines stop at the last row boundary or false if they continue to the end of the window. */
 PHP_METHOD(php_wxGrid, AreVertGridLinesClipped)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12778,6 +13242,10 @@ PHP_METHOD(php_wxGrid, AreVertGridLinesClipped)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::AreVertGridLinesClipped\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::AutoSize()
+   Automatically sets the height and width of all rows and columns to fit their contents. */
 PHP_METHOD(php_wxGrid, AutoSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12870,6 +13338,10 @@ PHP_METHOD(php_wxGrid, AutoSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::AutoSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::AutoSizeColLabelSize(int col)
+   Automatically adjusts width of the column to fit its label. */
 PHP_METHOD(php_wxGrid, AutoSizeColLabelSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12967,6 +13439,10 @@ PHP_METHOD(php_wxGrid, AutoSizeColLabelSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::AutoSizeColLabelSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::AutoSizeColumn(int col, bool setAsMin)
+   Automatically sizes the column to fit its contents. */
 PHP_METHOD(php_wxGrid, AutoSizeColumn)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13076,6 +13552,10 @@ PHP_METHOD(php_wxGrid, AutoSizeColumn)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::AutoSizeColumn\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::AutoSizeColumns(bool setAsMin)
+   Automatically sizes all columns to fit their contents. */
 PHP_METHOD(php_wxGrid, AutoSizeColumns)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13184,6 +13664,10 @@ PHP_METHOD(php_wxGrid, AutoSizeColumns)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::AutoSizeColumns\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::AutoSizeRow(int row, bool setAsMin)
+   Automatically sizes the row to fit its contents. */
 PHP_METHOD(php_wxGrid, AutoSizeRow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13293,6 +13777,10 @@ PHP_METHOD(php_wxGrid, AutoSizeRow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::AutoSizeRow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::AutoSizeRowLabelSize(int col)
+   Automatically adjusts height of the row to fit its label. */
 PHP_METHOD(php_wxGrid, AutoSizeRowLabelSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13390,6 +13878,10 @@ PHP_METHOD(php_wxGrid, AutoSizeRowLabelSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::AutoSizeRowLabelSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::AutoSizeRows(bool setAsMin)
+   Automatically sizes all rows to fit their contents. */
 PHP_METHOD(php_wxGrid, AutoSizeRows)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13498,6 +13990,10 @@ PHP_METHOD(php_wxGrid, AutoSizeRows)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::AutoSizeRows\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::BeginBatch()
+   Increments the grid's batch count. */
 PHP_METHOD(php_wxGrid, BeginBatch)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13590,6 +14086,10 @@ PHP_METHOD(php_wxGrid, BeginBatch)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::BeginBatch\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::CanDragCell()
+   Return true if the dragging of cells is enabled or false otherwise. */
 PHP_METHOD(php_wxGrid, CanDragCell)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13682,6 +14182,10 @@ PHP_METHOD(php_wxGrid, CanDragCell)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::CanDragCell\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::CanDragColMove()
+   Returns true if columns can be moved by dragging with the mouse. */
 PHP_METHOD(php_wxGrid, CanDragColMove)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13774,6 +14278,10 @@ PHP_METHOD(php_wxGrid, CanDragColMove)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::CanDragColMove\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::CanDragColSize(int col)
+   Returns true if the given column can be resized by dragging with the mouse. */
 PHP_METHOD(php_wxGrid, CanDragColSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13871,6 +14379,10 @@ PHP_METHOD(php_wxGrid, CanDragColSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::CanDragColSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::CanDragGridSize()
+   Return true if the dragging of grid lines to resize rows and columns is enabled or false otherwise. */
 PHP_METHOD(php_wxGrid, CanDragGridSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13963,6 +14475,10 @@ PHP_METHOD(php_wxGrid, CanDragGridSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::CanDragGridSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::CanDragRowSize(int row)
+   Returns true if the given row can be resized by dragging with the mouse. */
 PHP_METHOD(php_wxGrid, CanDragRowSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14060,6 +14576,10 @@ PHP_METHOD(php_wxGrid, CanDragRowSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::CanDragRowSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::CanEnableCellControl()
+   Returns true if the in-place edit control for the current grid cell can be used and false otherwise. */
 PHP_METHOD(php_wxGrid, CanEnableCellControl)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14152,6 +14672,10 @@ PHP_METHOD(php_wxGrid, CanEnableCellControl)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::CanEnableCellControl\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRect wxGrid::CellToRect(int row, int col)
+   Return the rectangle corresponding to the grid cell's size and position in logical coordinates. */
 PHP_METHOD(php_wxGrid, CellToRect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14255,6 +14779,10 @@ PHP_METHOD(php_wxGrid, CellToRect)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::CellToRect\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::ClearGrid()
+   Clears all data in the underlying grid table and repaints the grid. */
 PHP_METHOD(php_wxGrid, ClearGrid)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14347,6 +14875,10 @@ PHP_METHOD(php_wxGrid, ClearGrid)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::ClearGrid\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::ClearSelection()
+   Deselects all cells that are currently selected. */
 PHP_METHOD(php_wxGrid, ClearSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14439,6 +14971,10 @@ PHP_METHOD(php_wxGrid, ClearSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::ClearSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::ClipHorzGridLines(bool clip)
+   Change whether the horizontal grid lines are clipped by the end of the last column. */
 PHP_METHOD(php_wxGrid, ClipHorzGridLines)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14536,6 +15072,10 @@ PHP_METHOD(php_wxGrid, ClipHorzGridLines)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::ClipHorzGridLines\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::ClipVertGridLines(bool clip)
+   Change whether the vertical grid lines are clipped by the end of the last row. */
 PHP_METHOD(php_wxGrid, ClipVertGridLines)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14633,6 +15173,10 @@ PHP_METHOD(php_wxGrid, ClipVertGridLines)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::ClipVertGridLines\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::Create(wxWindow &parent, int id, wxPoint pos, wxSize size, int style, string name)
+   Creates the grid window for an object initialized using the default constructor. */
 PHP_METHOD(php_wxGrid, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14843,6 +15387,10 @@ PHP_METHOD(php_wxGrid, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::CreateGrid(int numRows, int numCols, wxGridSelectionModes selmode)
+   Creates a grid with the specified initial number of rows and columns. */
 PHP_METHOD(php_wxGrid, CreateGrid)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14953,6 +15501,10 @@ PHP_METHOD(php_wxGrid, CreateGrid)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::CreateGrid\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::DeleteCols(int pos, int numCols, bool updateLabels)
+   Deletes one or more columns from a grid starting at the specified position. */
 PHP_METHOD(php_wxGrid, DeleteCols)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15085,6 +15637,10 @@ PHP_METHOD(php_wxGrid, DeleteCols)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::DeleteCols\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::DeleteRows(int pos, int numRows, bool updateLabels)
+   Deletes one or more rows from a grid starting at the specified position. */
 PHP_METHOD(php_wxGrid, DeleteRows)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15217,6 +15773,10 @@ PHP_METHOD(php_wxGrid, DeleteRows)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::DeleteRows\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::DisableCellEditControl()
+   Disables in-place editing of grid cells. */
 PHP_METHOD(php_wxGrid, DisableCellEditControl)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15309,6 +15869,10 @@ PHP_METHOD(php_wxGrid, DisableCellEditControl)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::DisableCellEditControl\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::DisableColResize(int col)
+   Disable interactive resizing of the specified column. */
 PHP_METHOD(php_wxGrid, DisableColResize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15406,6 +15970,10 @@ PHP_METHOD(php_wxGrid, DisableColResize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::DisableColResize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::DisableDragColMove()
+   Disables column moving by dragging with the mouse. */
 PHP_METHOD(php_wxGrid, DisableDragColMove)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15498,6 +16066,10 @@ PHP_METHOD(php_wxGrid, DisableDragColMove)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::DisableDragColMove\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::DisableDragColSize()
+   Disables column sizing by dragging with the mouse. */
 PHP_METHOD(php_wxGrid, DisableDragColSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15590,6 +16162,10 @@ PHP_METHOD(php_wxGrid, DisableDragColSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::DisableDragColSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::DisableDragGridSize()
+   Disable mouse dragging of grid lines to resize rows and columns. */
 PHP_METHOD(php_wxGrid, DisableDragGridSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15682,6 +16258,10 @@ PHP_METHOD(php_wxGrid, DisableDragGridSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::DisableDragGridSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::DisableDragRowSize()
+   Disables row sizing by dragging with the mouse. */
 PHP_METHOD(php_wxGrid, DisableDragRowSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15774,6 +16354,10 @@ PHP_METHOD(php_wxGrid, DisableDragRowSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::DisableDragRowSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::DisableRowResize(int row)
+   Disable interactive resizing of the specified row. */
 PHP_METHOD(php_wxGrid, DisableRowResize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15871,6 +16455,10 @@ PHP_METHOD(php_wxGrid, DisableRowResize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::DisableRowResize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::EnableCellEditControl(bool enable)
+   Enables or disables in-place editing of grid cell data. */
 PHP_METHOD(php_wxGrid, EnableCellEditControl)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15979,6 +16567,10 @@ PHP_METHOD(php_wxGrid, EnableCellEditControl)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::EnableCellEditControl\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::EnableDragCell(bool enable)
+   Enables or disables cell dragging with the mouse. */
 PHP_METHOD(php_wxGrid, EnableDragCell)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16087,6 +16679,10 @@ PHP_METHOD(php_wxGrid, EnableDragCell)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::EnableDragCell\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::EnableDragColMove(bool enable)
+   Enables or disables column moving by dragging with the mouse. */
 PHP_METHOD(php_wxGrid, EnableDragColMove)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16195,6 +16791,10 @@ PHP_METHOD(php_wxGrid, EnableDragColMove)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::EnableDragColMove\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::EnableDragColSize(bool enable)
+   Enables or disables column sizing by dragging with the mouse. */
 PHP_METHOD(php_wxGrid, EnableDragColSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16303,6 +16903,10 @@ PHP_METHOD(php_wxGrid, EnableDragColSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::EnableDragColSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::EnableDragGridSize(bool enable)
+   Enables or disables row and column resizing by dragging gridlines with the mouse. */
 PHP_METHOD(php_wxGrid, EnableDragGridSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16411,6 +17015,10 @@ PHP_METHOD(php_wxGrid, EnableDragGridSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::EnableDragGridSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::EnableDragRowSize(bool enable)
+   Enables or disables row sizing by dragging with the mouse. */
 PHP_METHOD(php_wxGrid, EnableDragRowSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16519,6 +17127,10 @@ PHP_METHOD(php_wxGrid, EnableDragRowSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::EnableDragRowSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::EnableEditing(bool edit)
+   Makes the grid globally editable or read-only. */
 PHP_METHOD(php_wxGrid, EnableEditing)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16616,6 +17228,10 @@ PHP_METHOD(php_wxGrid, EnableEditing)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::EnableEditing\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::EnableGridLines(bool enable)
+   Turns the drawing of grid lines on or off. */
 PHP_METHOD(php_wxGrid, EnableGridLines)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16724,6 +17340,10 @@ PHP_METHOD(php_wxGrid, EnableGridLines)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::EnableGridLines\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::EndBatch()
+   Decrements the grid's batch count. */
 PHP_METHOD(php_wxGrid, EndBatch)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16816,6 +17436,10 @@ PHP_METHOD(php_wxGrid, EndBatch)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::EndBatch\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::Fit()
+   Overridden wxWindow method. */
 PHP_METHOD(php_wxGrid, Fit)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16908,6 +17532,10 @@ PHP_METHOD(php_wxGrid, Fit)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::Fit\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::ForceRefresh()
+   Causes immediate repainting of the grid. */
 PHP_METHOD(php_wxGrid, ForceRefresh)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17000,6 +17628,10 @@ PHP_METHOD(php_wxGrid, ForceRefresh)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::ForceRefresh\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGrid::GetBatchCount()
+   Returns the number of times that BeginBatch() has been called without (yet) matching calls to EndBatch(). */
 PHP_METHOD(php_wxGrid, GetBatchCount)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17092,6 +17724,10 @@ PHP_METHOD(php_wxGrid, GetBatchCount)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetBatchCount\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::GetCellAlignment(int row, int col, int &horiz, int &vert)
+   Sets the arguments to the horizontal and vertical text alignment values for the grid cell at the specified location. */
 PHP_METHOD(php_wxGrid, GetCellAlignment)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17209,6 +17845,10 @@ PHP_METHOD(php_wxGrid, GetCellAlignment)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetCellAlignment\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxGrid::GetCellBackgroundColour(int row, int col)
+   Returns the background colour of the cell at the specified location. */
 PHP_METHOD(php_wxGrid, GetCellBackgroundColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17312,6 +17952,10 @@ PHP_METHOD(php_wxGrid, GetCellBackgroundColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetCellBackgroundColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxGridCellEditor wxGrid::GetCellEditor(int row, int col)
+   Returns a pointer to the editor for the cell at the specified location. */
 PHP_METHOD(php_wxGrid, GetCellEditor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17433,6 +18077,10 @@ PHP_METHOD(php_wxGrid, GetCellEditor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetCellEditor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFont wxGrid::GetCellFont(int row, int col)
+   Returns the font for text in the grid cell at the specified location. */
 PHP_METHOD(php_wxGrid, GetCellFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17536,6 +18184,10 @@ PHP_METHOD(php_wxGrid, GetCellFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetCellFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxGridCellRenderer wxGrid::GetCellRenderer(int row, int col)
+   Returns a pointer to the renderer for the grid cell at the specified location. */
 PHP_METHOD(php_wxGrid, GetCellRenderer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17657,6 +18309,10 @@ PHP_METHOD(php_wxGrid, GetCellRenderer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetCellRenderer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto CellSpan wxGrid::GetCellSize(int row, int col, int &num_rows, int &num_cols)
+   Get the size of the cell in number of cells covered by it. */
 PHP_METHOD(php_wxGrid, GetCellSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17774,6 +18430,10 @@ PHP_METHOD(php_wxGrid, GetCellSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetCellSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxGrid::GetCellTextColour(int row, int col)
+   Returns the text colour for the grid cell at the specified location. */
 PHP_METHOD(php_wxGrid, GetCellTextColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17877,6 +18537,10 @@ PHP_METHOD(php_wxGrid, GetCellTextColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetCellTextColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxGrid::GetCellValue(int row, int col)
+   Returns the string contained in the cell at the specified location. */
 PHP_METHOD(php_wxGrid, GetCellValue)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17981,6 +18645,10 @@ PHP_METHOD(php_wxGrid, GetCellValue)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetCellValue\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGrid::GetColAt(int colPos)
+   Returns the column ID of the specified column position. */
 PHP_METHOD(php_wxGrid, GetColAt)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18078,6 +18746,10 @@ PHP_METHOD(php_wxGrid, GetColAt)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetColAt\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPen wxGrid::GetColGridLinePen(int col)
+   Returns the pen used for vertical grid lines. */
 PHP_METHOD(php_wxGrid, GetColGridLinePen)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18180,6 +18852,10 @@ PHP_METHOD(php_wxGrid, GetColGridLinePen)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetColGridLinePen\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::GetColLabelAlignment(int &horiz, int &vert)
+   Sets the arguments to the current column label alignment values. */
 PHP_METHOD(php_wxGrid, GetColLabelAlignment)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18295,6 +18971,10 @@ PHP_METHOD(php_wxGrid, GetColLabelAlignment)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetColLabelAlignment\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGrid::GetColLabelSize()
+   Returns the current height of the column labels. */
 PHP_METHOD(php_wxGrid, GetColLabelSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18387,6 +19067,10 @@ PHP_METHOD(php_wxGrid, GetColLabelSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetColLabelSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGrid::GetColLabelTextOrientation()
+   Returns the orientation of the column labels (either wxHORIZONTAL or wxVERTICAL). */
 PHP_METHOD(php_wxGrid, GetColLabelTextOrientation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18479,6 +19163,10 @@ PHP_METHOD(php_wxGrid, GetColLabelTextOrientation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetColLabelTextOrientation\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxGrid::GetColLabelValue(int col)
+   Returns the specified column label. */
 PHP_METHOD(php_wxGrid, GetColLabelValue)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18582,6 +19270,10 @@ PHP_METHOD(php_wxGrid, GetColLabelValue)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetColLabelValue\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGrid::GetColMinimalAcceptableWidth()
+   Returns the minimal width to which a column may be resized. */
 PHP_METHOD(php_wxGrid, GetColMinimalAcceptableWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18674,6 +19366,10 @@ PHP_METHOD(php_wxGrid, GetColMinimalAcceptableWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetColMinimalAcceptableWidth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGrid::GetColPos(int colID)
+   Returns the position of the specified column. */
 PHP_METHOD(php_wxGrid, GetColPos)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18771,6 +19467,10 @@ PHP_METHOD(php_wxGrid, GetColPos)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetColPos\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGrid::GetColSize(int col)
+   Returns the width of the specified column. */
 PHP_METHOD(php_wxGrid, GetColSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18868,6 +19568,10 @@ PHP_METHOD(php_wxGrid, GetColSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetColSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxGridSizesInfo wxGrid::GetColSizes()
+   Get size information for all columns at once. */
 PHP_METHOD(php_wxGrid, GetColSizes)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18965,6 +19669,10 @@ PHP_METHOD(php_wxGrid, GetColSizes)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetColSizes\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::GetDefaultCellAlignment(int &horiz, int &vert)
+   Returns the default cell alignment. */
 PHP_METHOD(php_wxGrid, GetDefaultCellAlignment)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19080,6 +19788,10 @@ PHP_METHOD(php_wxGrid, GetDefaultCellAlignment)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetDefaultCellAlignment\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxGrid::GetDefaultCellBackgroundColour()
+   Returns the current default background colour for grid cells. */
 PHP_METHOD(php_wxGrid, GetDefaultCellBackgroundColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19177,6 +19889,10 @@ PHP_METHOD(php_wxGrid, GetDefaultCellBackgroundColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetDefaultCellBackgroundColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFont wxGrid::GetDefaultCellFont()
+   Returns the current default font for grid cell text. */
 PHP_METHOD(php_wxGrid, GetDefaultCellFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19274,6 +19990,10 @@ PHP_METHOD(php_wxGrid, GetDefaultCellFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetDefaultCellFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxGrid::GetDefaultCellTextColour()
+   Returns the current default colour for grid cell text. */
 PHP_METHOD(php_wxGrid, GetDefaultCellTextColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19371,6 +20091,10 @@ PHP_METHOD(php_wxGrid, GetDefaultCellTextColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetDefaultCellTextColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGrid::GetDefaultColLabelSize()
+   Returns the default height for column labels. */
 PHP_METHOD(php_wxGrid, GetDefaultColLabelSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19463,6 +20187,10 @@ PHP_METHOD(php_wxGrid, GetDefaultColLabelSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetDefaultColLabelSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGrid::GetDefaultColSize()
+   Returns the current default width for grid columns. */
 PHP_METHOD(php_wxGrid, GetDefaultColSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19555,6 +20283,10 @@ PHP_METHOD(php_wxGrid, GetDefaultColSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetDefaultColSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxGridCellEditor wxGrid::GetDefaultEditor()
+   Returns a pointer to the current default grid cell editor. */
 PHP_METHOD(php_wxGrid, GetDefaultEditor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19670,6 +20402,10 @@ PHP_METHOD(php_wxGrid, GetDefaultEditor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetDefaultEditor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxGridCellEditor wxGrid::GetDefaultEditorForType(string typeName)
+   Returns the default editor for the cells containing values of the given type. */
 PHP_METHOD(php_wxGrid, GetDefaultEditorForType)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19791,6 +20527,10 @@ PHP_METHOD(php_wxGrid, GetDefaultEditorForType)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetDefaultEditorForType\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPen wxGrid::GetDefaultGridLinePen()
+   Returns the pen used for grid lines. */
 PHP_METHOD(php_wxGrid, GetDefaultGridLinePen)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19888,6 +20628,10 @@ PHP_METHOD(php_wxGrid, GetDefaultGridLinePen)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetDefaultGridLinePen\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxGridCellRenderer wxGrid::GetDefaultRenderer()
+   Returns a pointer to the current default grid cell renderer. */
 PHP_METHOD(php_wxGrid, GetDefaultRenderer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20003,6 +20747,10 @@ PHP_METHOD(php_wxGrid, GetDefaultRenderer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetDefaultRenderer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxGridCellRenderer wxGrid::GetDefaultRendererForCell(int row, int col)
+   Returns the default renderer for the given cell. */
 PHP_METHOD(php_wxGrid, GetDefaultRendererForCell)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20124,6 +20872,10 @@ PHP_METHOD(php_wxGrid, GetDefaultRendererForCell)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetDefaultRendererForCell\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxGridCellRenderer wxGrid::GetDefaultRendererForType(string typeName)
+   Returns the default renderer for the cell containing values of the given type. */
 PHP_METHOD(php_wxGrid, GetDefaultRendererForType)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20245,6 +20997,10 @@ PHP_METHOD(php_wxGrid, GetDefaultRendererForType)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetDefaultRendererForType\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGrid::GetDefaultRowLabelSize()
+   Returns the default width for the row labels. */
 PHP_METHOD(php_wxGrid, GetDefaultRowLabelSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20337,6 +21093,10 @@ PHP_METHOD(php_wxGrid, GetDefaultRowLabelSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetDefaultRowLabelSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGrid::GetDefaultRowSize()
+   Returns the current default height for grid rows. */
 PHP_METHOD(php_wxGrid, GetDefaultRowSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20429,6 +21189,10 @@ PHP_METHOD(php_wxGrid, GetDefaultRowSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetDefaultRowSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxHeaderCtrl wxGrid::GetGridColHeader()
+   Return the header control used for column labels display. */
 PHP_METHOD(php_wxGrid, GetGridColHeader)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20544,6 +21308,10 @@ PHP_METHOD(php_wxGrid, GetGridColHeader)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetGridColHeader\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxWindow wxGrid::GetGridColLabelWindow()
+   Return the column labels window. */
 PHP_METHOD(php_wxGrid, GetGridColLabelWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20659,6 +21427,10 @@ PHP_METHOD(php_wxGrid, GetGridColLabelWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetGridColLabelWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxWindow wxGrid::GetGridCornerLabelWindow()
+   Return the window in the top left grid corner. */
 PHP_METHOD(php_wxGrid, GetGridCornerLabelWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20774,6 +21546,10 @@ PHP_METHOD(php_wxGrid, GetGridCornerLabelWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetGridCornerLabelWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGrid::GetGridCursorCol()
+   Returns the current grid cell column position. */
 PHP_METHOD(php_wxGrid, GetGridCursorCol)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20866,6 +21642,10 @@ PHP_METHOD(php_wxGrid, GetGridCursorCol)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetGridCursorCol\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGrid::GetGridCursorRow()
+   Returns the current grid cell row position. */
 PHP_METHOD(php_wxGrid, GetGridCursorRow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20958,6 +21738,10 @@ PHP_METHOD(php_wxGrid, GetGridCursorRow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetGridCursorRow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxGrid::GetGridLineColour()
+   Returns the colour used for grid lines. */
 PHP_METHOD(php_wxGrid, GetGridLineColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21055,6 +21839,10 @@ PHP_METHOD(php_wxGrid, GetGridLineColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetGridLineColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxWindow wxGrid::GetGridRowLabelWindow()
+   Return the row labels window. */
 PHP_METHOD(php_wxGrid, GetGridRowLabelWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21170,6 +21958,10 @@ PHP_METHOD(php_wxGrid, GetGridRowLabelWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetGridRowLabelWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxWindow wxGrid::GetGridWindow()
+   Return the main grid window containing the grid cells. */
 PHP_METHOD(php_wxGrid, GetGridWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21285,6 +22077,10 @@ PHP_METHOD(php_wxGrid, GetGridWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetGridWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxGrid::GetLabelBackgroundColour()
+   Returns the colour used for the background of row and column labels. */
 PHP_METHOD(php_wxGrid, GetLabelBackgroundColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21382,6 +22178,10 @@ PHP_METHOD(php_wxGrid, GetLabelBackgroundColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetLabelBackgroundColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFont wxGrid::GetLabelFont()
+   Returns the font used for row and column labels. */
 PHP_METHOD(php_wxGrid, GetLabelFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21479,6 +22279,10 @@ PHP_METHOD(php_wxGrid, GetLabelFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetLabelFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxGrid::GetLabelTextColour()
+   Returns the colour used for row and column label text. */
 PHP_METHOD(php_wxGrid, GetLabelTextColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21576,6 +22380,10 @@ PHP_METHOD(php_wxGrid, GetLabelTextColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetLabelTextColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGrid::GetNumberCols()
+   Returns the total number of grid columns. */
 PHP_METHOD(php_wxGrid, GetNumberCols)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21668,6 +22476,10 @@ PHP_METHOD(php_wxGrid, GetNumberCols)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetNumberCols\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGrid::GetNumberRows()
+   Returns the total number of grid rows. */
 PHP_METHOD(php_wxGrid, GetNumberRows)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21760,6 +22572,10 @@ PHP_METHOD(php_wxGrid, GetNumberRows)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetNumberRows\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxGridCellAttr wxGrid::GetOrCreateCellAttr(int row, int col)
+   Returns the attribute for the given cell creating one if necessary. */
 PHP_METHOD(php_wxGrid, GetOrCreateCellAttr)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21881,6 +22697,10 @@ PHP_METHOD(php_wxGrid, GetOrCreateCellAttr)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetOrCreateCellAttr\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPen wxGrid::GetRowGridLinePen(int row)
+   Returns the pen used for horizontal grid lines. */
 PHP_METHOD(php_wxGrid, GetRowGridLinePen)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21983,6 +22803,10 @@ PHP_METHOD(php_wxGrid, GetRowGridLinePen)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetRowGridLinePen\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::GetRowLabelAlignment(int &horiz, int &vert)
+   Returns the alignment used for row labels. */
 PHP_METHOD(php_wxGrid, GetRowLabelAlignment)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22098,6 +22922,10 @@ PHP_METHOD(php_wxGrid, GetRowLabelAlignment)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetRowLabelAlignment\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGrid::GetRowLabelSize()
+   Returns the current width of the row labels. */
 PHP_METHOD(php_wxGrid, GetRowLabelSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22190,6 +23018,10 @@ PHP_METHOD(php_wxGrid, GetRowLabelSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetRowLabelSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxGrid::GetRowLabelValue(int row)
+   Returns the specified row label. */
 PHP_METHOD(php_wxGrid, GetRowLabelValue)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22293,6 +23125,10 @@ PHP_METHOD(php_wxGrid, GetRowLabelValue)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetRowLabelValue\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGrid::GetRowMinimalAcceptableHeight()
+   Returns the minimal size to which rows can be resized. */
 PHP_METHOD(php_wxGrid, GetRowMinimalAcceptableHeight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22385,6 +23221,10 @@ PHP_METHOD(php_wxGrid, GetRowMinimalAcceptableHeight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetRowMinimalAcceptableHeight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGrid::GetRowSize(int row)
+   Returns the height of the specified row. */
 PHP_METHOD(php_wxGrid, GetRowSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22482,6 +23322,10 @@ PHP_METHOD(php_wxGrid, GetRowSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetRowSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxGridSizesInfo wxGrid::GetRowSizes()
+   Get size information for all row at once. */
 PHP_METHOD(php_wxGrid, GetRowSizes)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22579,6 +23423,10 @@ PHP_METHOD(php_wxGrid, GetRowSizes)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetRowSizes\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGrid::GetScrollLineX()
+   Returns the number of pixels per horizontal scroll increment. */
 PHP_METHOD(php_wxGrid, GetScrollLineX)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22671,6 +23519,10 @@ PHP_METHOD(php_wxGrid, GetScrollLineX)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetScrollLineX\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGrid::GetScrollLineY()
+   Returns the number of pixels per vertical scroll increment. */
 PHP_METHOD(php_wxGrid, GetScrollLineY)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22763,6 +23615,10 @@ PHP_METHOD(php_wxGrid, GetScrollLineY)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetScrollLineY\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxGrid::GetSelectionBackground()
+   Returns the colour used for drawing the selection background. */
 PHP_METHOD(php_wxGrid, GetSelectionBackground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22860,6 +23716,10 @@ PHP_METHOD(php_wxGrid, GetSelectionBackground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetSelectionBackground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxGrid::GetSelectionForeground()
+   Returns the colour used for drawing the selection foreground. */
 PHP_METHOD(php_wxGrid, GetSelectionForeground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22957,6 +23817,10 @@ PHP_METHOD(php_wxGrid, GetSelectionForeground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetSelectionForeground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxGridSelectionModes wxGrid::GetSelectionMode()
+   Returns the current selection mode. */
 PHP_METHOD(php_wxGrid, GetSelectionMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23049,6 +23913,10 @@ PHP_METHOD(php_wxGrid, GetSelectionMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetSelectionMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGrid::GetSortingColumn()
+   Return the column in which the sorting indicator is currently displayed. */
 PHP_METHOD(php_wxGrid, GetSortingColumn)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23141,6 +24009,10 @@ PHP_METHOD(php_wxGrid, GetSortingColumn)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetSortingColumn\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxGridTableBase wxGrid::GetTable()
+   Returns a base pointer to the current table object. */
 PHP_METHOD(php_wxGrid, GetTable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23256,6 +24128,10 @@ PHP_METHOD(php_wxGrid, GetTable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GetTable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::GoToCell(int row, int col)
+   Make the given cell current and ensure it is visible. */
 PHP_METHOD(php_wxGrid, GoToCell)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23354,6 +24230,10 @@ PHP_METHOD(php_wxGrid, GoToCell)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GoToCell\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::GridLinesEnabled()
+   Returns true if drawing of grid lines is turned on, false otherwise. */
 PHP_METHOD(php_wxGrid, GridLinesEnabled)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23446,6 +24326,10 @@ PHP_METHOD(php_wxGrid, GridLinesEnabled)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::GridLinesEnabled\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::HideCellEditControl()
+   Hides the in-place cell edit control. */
 PHP_METHOD(php_wxGrid, HideCellEditControl)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23538,6 +24422,10 @@ PHP_METHOD(php_wxGrid, HideCellEditControl)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::HideCellEditControl\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::HideCol(int col)
+   Hides the specified column. */
 PHP_METHOD(php_wxGrid, HideCol)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23635,6 +24523,10 @@ PHP_METHOD(php_wxGrid, HideCol)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::HideCol\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::HideColLabels()
+   Hides the column labels by calling SetColLabelSize() with a size of 0. */
 PHP_METHOD(php_wxGrid, HideColLabels)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23727,6 +24619,10 @@ PHP_METHOD(php_wxGrid, HideColLabels)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::HideColLabels\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::HideRow(int col)
+   Hides the specified row. */
 PHP_METHOD(php_wxGrid, HideRow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23824,6 +24720,10 @@ PHP_METHOD(php_wxGrid, HideRow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::HideRow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::HideRowLabels()
+   Hides the row labels by calling SetRowLabelSize() with a size of 0. */
 PHP_METHOD(php_wxGrid, HideRowLabels)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23916,6 +24816,10 @@ PHP_METHOD(php_wxGrid, HideRowLabels)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::HideRowLabels\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::InsertCols(int pos, int numCols, bool updateLabels)
+   Inserts one or more new columns into a grid with the first new column at the specified position. */
 PHP_METHOD(php_wxGrid, InsertCols)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24048,6 +24952,10 @@ PHP_METHOD(php_wxGrid, InsertCols)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::InsertCols\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::InsertRows(int pos, int numRows, bool updateLabels)
+   Inserts one or more new rows into a grid with the first new row at the specified position. */
 PHP_METHOD(php_wxGrid, InsertRows)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24180,6 +25088,10 @@ PHP_METHOD(php_wxGrid, InsertRows)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::InsertRows\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::IsCellEditControlEnabled()
+   Returns true if the in-place edit control is currently enabled. */
 PHP_METHOD(php_wxGrid, IsCellEditControlEnabled)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24272,6 +25184,10 @@ PHP_METHOD(php_wxGrid, IsCellEditControlEnabled)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::IsCellEditControlEnabled\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::IsCurrentCellReadOnly()
+   Returns true if the current cell is read-only. */
 PHP_METHOD(php_wxGrid, IsCurrentCellReadOnly)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24364,6 +25280,10 @@ PHP_METHOD(php_wxGrid, IsCurrentCellReadOnly)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::IsCurrentCellReadOnly\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::IsEditable()
+   Returns false if the whole grid has been set as read-only or true otherwise. */
 PHP_METHOD(php_wxGrid, IsEditable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24456,6 +25376,10 @@ PHP_METHOD(php_wxGrid, IsEditable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::IsEditable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::IsColShown(int col)
+   Returns true if the specified column is not currently hidden. */
 PHP_METHOD(php_wxGrid, IsColShown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24553,6 +25477,10 @@ PHP_METHOD(php_wxGrid, IsColShown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::IsColShown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::IsInSelection(int row, int col)
+   Returns true if the given cell is selected. */
 PHP_METHOD(php_wxGrid, IsInSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24651,6 +25579,10 @@ PHP_METHOD(php_wxGrid, IsInSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::IsInSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::IsReadOnly(int row, int col)
+   Returns true if the cell at the specified location can't be edited. */
 PHP_METHOD(php_wxGrid, IsReadOnly)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24749,6 +25681,10 @@ PHP_METHOD(php_wxGrid, IsReadOnly)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::IsReadOnly\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::IsRowShown(int row)
+   Returns true if the specified row is not currently hidden. */
 PHP_METHOD(php_wxGrid, IsRowShown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24846,6 +25782,10 @@ PHP_METHOD(php_wxGrid, IsRowShown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::IsRowShown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::IsSelection()
+   Returns true if there are currently any selected cells, rows, columns or blocks. */
 PHP_METHOD(php_wxGrid, IsSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24938,6 +25878,10 @@ PHP_METHOD(php_wxGrid, IsSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::IsSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::IsSortOrderAscending()
+   Return true if the current sorting order is ascending or false if it is descending. */
 PHP_METHOD(php_wxGrid, IsSortOrderAscending)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25030,6 +25974,10 @@ PHP_METHOD(php_wxGrid, IsSortOrderAscending)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::IsSortOrderAscending\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::IsSortingBy(int col)
+   Return true if this column is currently used for sorting. */
 PHP_METHOD(php_wxGrid, IsSortingBy)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25127,6 +26075,10 @@ PHP_METHOD(php_wxGrid, IsSortingBy)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::IsSortingBy\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::IsVisible(int row, int col, bool wholeCellVisible)
+   Returns true if a cell is either entirely or at least partially visible in the grid window. */
 PHP_METHOD(php_wxGrid, IsVisible)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25237,6 +26189,10 @@ PHP_METHOD(php_wxGrid, IsVisible)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::IsVisible\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::MakeCellVisible(int row, int col)
+   Brings the specified cell into the visible grid cell area with minimal scrolling. */
 PHP_METHOD(php_wxGrid, MakeCellVisible)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25335,6 +26291,10 @@ PHP_METHOD(php_wxGrid, MakeCellVisible)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::MakeCellVisible\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::MoveCursorDown(bool expandSelection)
+   Moves the grid cursor down by one row. */
 PHP_METHOD(php_wxGrid, MoveCursorDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25432,6 +26392,10 @@ PHP_METHOD(php_wxGrid, MoveCursorDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::MoveCursorDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::MoveCursorDownBlock(bool expandSelection)
+   Moves the grid cursor down in the current column such that it skips to the beginning or end of a block of non-empty cells. */
 PHP_METHOD(php_wxGrid, MoveCursorDownBlock)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25529,6 +26493,10 @@ PHP_METHOD(php_wxGrid, MoveCursorDownBlock)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::MoveCursorDownBlock\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::MoveCursorLeft(bool expandSelection)
+   Moves the grid cursor left by one column. */
 PHP_METHOD(php_wxGrid, MoveCursorLeft)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25626,6 +26594,10 @@ PHP_METHOD(php_wxGrid, MoveCursorLeft)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::MoveCursorLeft\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::MoveCursorLeftBlock(bool expandSelection)
+   Moves the grid cursor left in the current row such that it skips to the beginning or end of a block of non-empty cells. */
 PHP_METHOD(php_wxGrid, MoveCursorLeftBlock)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25723,6 +26695,10 @@ PHP_METHOD(php_wxGrid, MoveCursorLeftBlock)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::MoveCursorLeftBlock\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::MoveCursorRight(bool expandSelection)
+   Moves the grid cursor right by one column. */
 PHP_METHOD(php_wxGrid, MoveCursorRight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25820,6 +26796,10 @@ PHP_METHOD(php_wxGrid, MoveCursorRight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::MoveCursorRight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::MoveCursorRightBlock(bool expandSelection)
+   Moves the grid cursor right in the current row such that it skips to the beginning or end of a block of non-empty cells. */
 PHP_METHOD(php_wxGrid, MoveCursorRightBlock)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25917,6 +26897,10 @@ PHP_METHOD(php_wxGrid, MoveCursorRightBlock)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::MoveCursorRightBlock\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::MoveCursorUp(bool expandSelection)
+   Moves the grid cursor up by one row. */
 PHP_METHOD(php_wxGrid, MoveCursorUp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26014,6 +26998,10 @@ PHP_METHOD(php_wxGrid, MoveCursorUp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::MoveCursorUp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::MoveCursorUpBlock(bool expandSelection)
+   Moves the grid cursor up in the current column such that it skips to the beginning or end of a block of non-empty cells. */
 PHP_METHOD(php_wxGrid, MoveCursorUpBlock)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26111,6 +27099,10 @@ PHP_METHOD(php_wxGrid, MoveCursorUpBlock)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::MoveCursorUpBlock\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::MovePageDown()
+   Moves the grid cursor down by some number of rows so that the previous bottom visible row becomes the top visible row. */
 PHP_METHOD(php_wxGrid, MovePageDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26203,6 +27195,10 @@ PHP_METHOD(php_wxGrid, MovePageDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::MovePageDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::MovePageUp()
+   Moves the grid cursor up by some number of rows so that the previous top visible row becomes the bottom visible row. */
 PHP_METHOD(php_wxGrid, MovePageUp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26295,6 +27291,10 @@ PHP_METHOD(php_wxGrid, MovePageUp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::MovePageUp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::RefreshAttr(int row, int col)
+   Invalidates the cached attribute for the given cell. */
 PHP_METHOD(php_wxGrid, RefreshAttr)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26393,6 +27393,10 @@ PHP_METHOD(php_wxGrid, RefreshAttr)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::RefreshAttr\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::RegisterDataType(string typeName, wxGridCellRenderer &renderer, wxGridCellEditor &editor)
+   Register a new data type. */
 PHP_METHOD(php_wxGrid, RegisterDataType)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26529,6 +27533,10 @@ PHP_METHOD(php_wxGrid, RegisterDataType)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::RegisterDataType\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::ResetColPos()
+   Resets the position of the columns to the default. */
 PHP_METHOD(php_wxGrid, ResetColPos)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26621,6 +27629,10 @@ PHP_METHOD(php_wxGrid, ResetColPos)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::ResetColPos\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SaveEditControlValue()
+   Sets the value of the current grid cell to the current in-place edit control value. */
 PHP_METHOD(php_wxGrid, SaveEditControlValue)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26713,6 +27725,10 @@ PHP_METHOD(php_wxGrid, SaveEditControlValue)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SaveEditControlValue\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SelectAll()
+   Selects all cells in the grid. */
 PHP_METHOD(php_wxGrid, SelectAll)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26805,6 +27821,10 @@ PHP_METHOD(php_wxGrid, SelectAll)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SelectAll\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SelectBlock(int topRow, int leftCol, int bottomRow, int rightCol, bool addToSelected)
+   Selects a rectangular block of cells. */
 PHP_METHOD(php_wxGrid, SelectBlock)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26917,6 +27937,10 @@ PHP_METHOD(php_wxGrid, SelectBlock)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SelectBlock\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SelectCol(int col, bool addToSelected)
+   Selects the specified column. */
 PHP_METHOD(php_wxGrid, SelectCol)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27026,6 +28050,10 @@ PHP_METHOD(php_wxGrid, SelectCol)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SelectCol\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SelectRow(int row, bool addToSelected)
+   Selects the specified row. */
 PHP_METHOD(php_wxGrid, SelectRow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27135,6 +28163,10 @@ PHP_METHOD(php_wxGrid, SelectRow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SelectRow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetCellAlignment(int row, int col, int horiz, int vert)
+   Sets the horizontal and vertical alignment for grid cell text at the specified location. */
 PHP_METHOD(php_wxGrid, SetCellAlignment)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27274,6 +28306,10 @@ PHP_METHOD(php_wxGrid, SetCellAlignment)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetCellAlignment\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetCellBackgroundColour(int row, int col, wxColour colour)
+   Set the background colour for the given cell or all cells by default. */
 PHP_METHOD(php_wxGrid, SetCellBackgroundColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27391,6 +28427,10 @@ PHP_METHOD(php_wxGrid, SetCellBackgroundColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetCellBackgroundColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetCellEditor(int row, int col, wxGridCellEditor &editor)
+   Sets the editor for the grid cell at the specified location. */
 PHP_METHOD(php_wxGrid, SetCellEditor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27508,6 +28548,10 @@ PHP_METHOD(php_wxGrid, SetCellEditor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetCellEditor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetCellFont(int row, int col, wxFont font)
+   Sets the font for text in the grid cell at the specified location. */
 PHP_METHOD(php_wxGrid, SetCellFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27625,6 +28669,10 @@ PHP_METHOD(php_wxGrid, SetCellFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetCellFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetCellRenderer(int row, int col, wxGridCellRenderer &renderer)
+   Sets the renderer for the grid cell at the specified location. */
 PHP_METHOD(php_wxGrid, SetCellRenderer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27742,6 +28790,10 @@ PHP_METHOD(php_wxGrid, SetCellRenderer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetCellRenderer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetCellSize(int row, int col, int num_rows, int num_cols)
+   Set the size of the cell. */
 PHP_METHOD(php_wxGrid, SetCellSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27842,6 +28894,10 @@ PHP_METHOD(php_wxGrid, SetCellSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetCellSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetCellTextColour(int row, int col, wxColour colour)
+   Sets the text colour for the given cell. */
 PHP_METHOD(php_wxGrid, SetCellTextColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28071,6 +29127,10 @@ PHP_METHOD(php_wxGrid, SetCellTextColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetCellTextColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetCellValue(int row, int col, string s)
+   Sets the string value for the cell at the specified location. */
 PHP_METHOD(php_wxGrid, SetCellValue)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28211,6 +29271,10 @@ PHP_METHOD(php_wxGrid, SetCellValue)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetCellValue\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetColAttr(int col, wxGridCellAttr &attr)
+   Sets the cell attributes for all cells in the specified column. */
 PHP_METHOD(php_wxGrid, SetColAttr)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28327,6 +29391,10 @@ PHP_METHOD(php_wxGrid, SetColAttr)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetColAttr\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetColFormatBool(int col)
+   Sets the specified column to display boolean values. */
 PHP_METHOD(php_wxGrid, SetColFormatBool)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28424,6 +29492,10 @@ PHP_METHOD(php_wxGrid, SetColFormatBool)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetColFormatBool\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetColFormatCustom(int col, string typeName)
+   Sets the specified column to display data in a custom format. */
 PHP_METHOD(php_wxGrid, SetColFormatCustom)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28523,6 +29595,10 @@ PHP_METHOD(php_wxGrid, SetColFormatCustom)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetColFormatCustom\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetColFormatFloat(int col, int width, int precision)
+   Sets the specified column to display floating point values with the given width and precision. */
 PHP_METHOD(php_wxGrid, SetColFormatFloat)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28644,6 +29720,10 @@ PHP_METHOD(php_wxGrid, SetColFormatFloat)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetColFormatFloat\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetColFormatNumber(int col)
+   Sets the specified column to display integer values. */
 PHP_METHOD(php_wxGrid, SetColFormatNumber)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28741,6 +29821,10 @@ PHP_METHOD(php_wxGrid, SetColFormatNumber)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetColFormatNumber\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetColLabelAlignment(int horiz, int vert)
+   Sets the horizontal and vertical alignment of column label text. */
 PHP_METHOD(php_wxGrid, SetColLabelAlignment)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28839,6 +29923,10 @@ PHP_METHOD(php_wxGrid, SetColLabelAlignment)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetColLabelAlignment\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetColLabelSize(int height)
+   Sets the height of the column labels. */
 PHP_METHOD(php_wxGrid, SetColLabelSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28936,6 +30024,10 @@ PHP_METHOD(php_wxGrid, SetColLabelSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetColLabelSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetColLabelTextOrientation(int textOrientation)
+   Sets the orientation of the column labels (either wxHORIZONTAL or wxVERTICAL). */
 PHP_METHOD(php_wxGrid, SetColLabelTextOrientation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29033,6 +30125,10 @@ PHP_METHOD(php_wxGrid, SetColLabelTextOrientation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetColLabelTextOrientation\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetColLabelValue(int col, string value)
+   Set the value for the given column label. */
 PHP_METHOD(php_wxGrid, SetColLabelValue)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29132,6 +30228,10 @@ PHP_METHOD(php_wxGrid, SetColLabelValue)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetColLabelValue\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetColMinimalAcceptableWidth(int width)
+   Sets the minimal width to which the user can resize columns. */
 PHP_METHOD(php_wxGrid, SetColMinimalAcceptableWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29229,6 +30329,10 @@ PHP_METHOD(php_wxGrid, SetColMinimalAcceptableWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetColMinimalAcceptableWidth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetColMinimalWidth(int col, int width)
+   Sets the minimal width for the specified column col. */
 PHP_METHOD(php_wxGrid, SetColMinimalWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29327,6 +30431,10 @@ PHP_METHOD(php_wxGrid, SetColMinimalWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetColMinimalWidth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetColPos(int colID, int newPos)
+   Sets the position of the specified column. */
 PHP_METHOD(php_wxGrid, SetColPos)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29425,6 +30533,10 @@ PHP_METHOD(php_wxGrid, SetColPos)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetColPos\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetColSize(int col, int width)
+   Sets the width of the specified column. */
 PHP_METHOD(php_wxGrid, SetColSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29523,6 +30635,10 @@ PHP_METHOD(php_wxGrid, SetColSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetColSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetColSizes(wxGridSizesInfo sizeInfo)
+   Restore all columns sizes. */
 PHP_METHOD(php_wxGrid, SetColSizes)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29638,6 +30754,10 @@ PHP_METHOD(php_wxGrid, SetColSizes)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetColSizes\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetDefaultCellAlignment(int horiz, int vert)
+   Sets the default horizontal and vertical alignment for grid cell text. */
 PHP_METHOD(php_wxGrid, SetDefaultCellAlignment)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29736,6 +30856,10 @@ PHP_METHOD(php_wxGrid, SetDefaultCellAlignment)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetDefaultCellAlignment\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetDefaultCellBackgroundColour(wxColour colour)
+   Sets the default background colour for grid cells. */
 PHP_METHOD(php_wxGrid, SetDefaultCellBackgroundColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29851,6 +30975,10 @@ PHP_METHOD(php_wxGrid, SetDefaultCellBackgroundColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetDefaultCellBackgroundColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetDefaultCellFont(wxFont font)
+   Sets the default font to be used for grid cell text. */
 PHP_METHOD(php_wxGrid, SetDefaultCellFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29966,6 +31094,10 @@ PHP_METHOD(php_wxGrid, SetDefaultCellFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetDefaultCellFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetDefaultCellTextColour(wxColour colour)
+   Sets the current default colour for grid cell text. */
 PHP_METHOD(php_wxGrid, SetDefaultCellTextColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30081,6 +31213,10 @@ PHP_METHOD(php_wxGrid, SetDefaultCellTextColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetDefaultCellTextColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetDefaultColSize(int width, bool resizeExistingCols)
+   Sets the default width for columns in the grid. */
 PHP_METHOD(php_wxGrid, SetDefaultColSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30190,6 +31326,10 @@ PHP_METHOD(php_wxGrid, SetDefaultColSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetDefaultColSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetDefaultEditor(wxGridCellEditor &editor)
+   Sets the default editor for grid cells. */
 PHP_METHOD(php_wxGrid, SetDefaultEditor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30305,6 +31445,10 @@ PHP_METHOD(php_wxGrid, SetDefaultEditor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetDefaultEditor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetDefaultRenderer(wxGridCellRenderer &renderer)
+   Sets the default renderer for grid cells. */
 PHP_METHOD(php_wxGrid, SetDefaultRenderer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30420,6 +31564,10 @@ PHP_METHOD(php_wxGrid, SetDefaultRenderer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetDefaultRenderer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetDefaultRowSize(int height, bool resizeExistingRows)
+   Sets the default height for rows in the grid. */
 PHP_METHOD(php_wxGrid, SetDefaultRowSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30529,6 +31677,10 @@ PHP_METHOD(php_wxGrid, SetDefaultRowSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetDefaultRowSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetGridCursor(int row, int col)
+   Set the grid cursor to the specified cell. */
 PHP_METHOD(php_wxGrid, SetGridCursor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30627,6 +31779,10 @@ PHP_METHOD(php_wxGrid, SetGridCursor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetGridCursor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetGridLineColour(wxColour colour)
+   Sets the colour used to draw grid lines. */
 PHP_METHOD(php_wxGrid, SetGridLineColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30742,6 +31898,10 @@ PHP_METHOD(php_wxGrid, SetGridLineColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetGridLineColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetLabelBackgroundColour(wxColour colour)
+   Sets the background colour for row and column labels. */
 PHP_METHOD(php_wxGrid, SetLabelBackgroundColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30857,6 +32017,10 @@ PHP_METHOD(php_wxGrid, SetLabelBackgroundColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetLabelBackgroundColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetLabelFont(wxFont font)
+   Sets the font for row and column labels. */
 PHP_METHOD(php_wxGrid, SetLabelFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30972,6 +32136,10 @@ PHP_METHOD(php_wxGrid, SetLabelFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetLabelFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetLabelTextColour(wxColour colour)
+   Sets the colour for row and column label text. */
 PHP_METHOD(php_wxGrid, SetLabelTextColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31087,6 +32255,10 @@ PHP_METHOD(php_wxGrid, SetLabelTextColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetLabelTextColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetMargins(int extraWidth, int extraHeight)
+   Sets the extra margins used around the grid area. */
 PHP_METHOD(php_wxGrid, SetMargins)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31185,6 +32357,10 @@ PHP_METHOD(php_wxGrid, SetMargins)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetMargins\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetReadOnly(int row, int col, bool isReadOnly)
+   Makes the cell at the specified location read-only or editable. */
 PHP_METHOD(php_wxGrid, SetReadOnly)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31295,6 +32471,10 @@ PHP_METHOD(php_wxGrid, SetReadOnly)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetReadOnly\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetRowAttr(int row, wxGridCellAttr &attr)
+   Sets the cell attributes for all cells in the specified row. */
 PHP_METHOD(php_wxGrid, SetRowAttr)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31411,6 +32591,10 @@ PHP_METHOD(php_wxGrid, SetRowAttr)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetRowAttr\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetRowLabelAlignment(int horiz, int vert)
+   Sets the horizontal and vertical alignment of row label text. */
 PHP_METHOD(php_wxGrid, SetRowLabelAlignment)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31509,6 +32693,10 @@ PHP_METHOD(php_wxGrid, SetRowLabelAlignment)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetRowLabelAlignment\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetRowLabelSize(int width)
+   Sets the width of the row labels. */
 PHP_METHOD(php_wxGrid, SetRowLabelSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31606,6 +32794,10 @@ PHP_METHOD(php_wxGrid, SetRowLabelSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetRowLabelSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetRowLabelValue(int row, string value)
+   Sets the value for the given row label. */
 PHP_METHOD(php_wxGrid, SetRowLabelValue)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31705,6 +32897,10 @@ PHP_METHOD(php_wxGrid, SetRowLabelValue)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetRowLabelValue\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetRowMinimalAcceptableHeight(int height)
+   Sets the minimal row height used by default. */
 PHP_METHOD(php_wxGrid, SetRowMinimalAcceptableHeight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31802,6 +32998,10 @@ PHP_METHOD(php_wxGrid, SetRowMinimalAcceptableHeight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetRowMinimalAcceptableHeight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetRowMinimalHeight(int row, int height)
+   Sets the minimal height for the specified row. */
 PHP_METHOD(php_wxGrid, SetRowMinimalHeight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31900,6 +33100,10 @@ PHP_METHOD(php_wxGrid, SetRowMinimalHeight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetRowMinimalHeight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetRowSize(int row, int height)
+   Sets the height of the specified row. */
 PHP_METHOD(php_wxGrid, SetRowSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31998,6 +33202,10 @@ PHP_METHOD(php_wxGrid, SetRowSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetRowSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetRowSizes(wxGridSizesInfo sizeInfo)
+   Restore all rows sizes. */
 PHP_METHOD(php_wxGrid, SetRowSizes)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -32113,6 +33321,10 @@ PHP_METHOD(php_wxGrid, SetRowSizes)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetRowSizes\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetScrollLineX(int x)
+   Sets the number of pixels per horizontal scroll increment. */
 PHP_METHOD(php_wxGrid, SetScrollLineX)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -32210,6 +33422,10 @@ PHP_METHOD(php_wxGrid, SetScrollLineX)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetScrollLineX\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetScrollLineY(int y)
+   Sets the number of pixels per vertical scroll increment. */
 PHP_METHOD(php_wxGrid, SetScrollLineY)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -32307,6 +33523,10 @@ PHP_METHOD(php_wxGrid, SetScrollLineY)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetScrollLineY\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetSelectionBackground(wxColour c)
+   Set the colour to be used for drawing the selection background. */
 PHP_METHOD(php_wxGrid, SetSelectionBackground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -32422,6 +33642,10 @@ PHP_METHOD(php_wxGrid, SetSelectionBackground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetSelectionBackground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetSelectionForeground(wxColour c)
+   Set the colour to be used for drawing the selection foreground. */
 PHP_METHOD(php_wxGrid, SetSelectionForeground)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -32537,6 +33761,10 @@ PHP_METHOD(php_wxGrid, SetSelectionForeground)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetSelectionForeground\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetSelectionMode(wxGridSelectionModes selmode)
+   Set the selection behaviour of the grid. */
 PHP_METHOD(php_wxGrid, SetSelectionMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -32634,6 +33862,10 @@ PHP_METHOD(php_wxGrid, SetSelectionMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetSelectionMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetSortingColumn(int col, bool ascending)
+   Set the column to display the sorting indicator in and its direction. */
 PHP_METHOD(php_wxGrid, SetSortingColumn)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -32743,6 +33975,10 @@ PHP_METHOD(php_wxGrid, SetSortingColumn)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetSortingColumn\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGrid::SetTable(wxGridTableBase &table, bool takeOwnership, wxGridSelectionModes selmode)
+   Passes a pointer to a custom grid table to be used by the grid. */
 PHP_METHOD(php_wxGrid, SetTable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -32884,6 +34120,10 @@ PHP_METHOD(php_wxGrid, SetTable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetTable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::SetUseNativeColLabels(bool native)
+   Call this in order to make the column labels use a native look by using wxRendererNative::DrawHeaderButton() internally. */
 PHP_METHOD(php_wxGrid, SetUseNativeColLabels)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -32992,6 +34232,10 @@ PHP_METHOD(php_wxGrid, SetUseNativeColLabels)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::SetUseNativeColLabels\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::ShowCellEditControl()
+   Displays the in-place cell edit control for the current cell. */
 PHP_METHOD(php_wxGrid, ShowCellEditControl)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -33084,6 +34328,10 @@ PHP_METHOD(php_wxGrid, ShowCellEditControl)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::ShowCellEditControl\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::ShowCol(int col)
+   Shows the previously hidden column by resizing it to non-0 size. */
 PHP_METHOD(php_wxGrid, ShowCol)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -33181,6 +34429,10 @@ PHP_METHOD(php_wxGrid, ShowCol)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::ShowCol\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::ShowRow(int col)
+   Shows the previously hidden row by resizing it to non-0 size. */
 PHP_METHOD(php_wxGrid, ShowRow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -33278,6 +34530,10 @@ PHP_METHOD(php_wxGrid, ShowRow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::ShowRow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::UnsetSortingColumn()
+   Remove any currently shown sorting indicator. */
 PHP_METHOD(php_wxGrid, UnsetSortingColumn)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -33370,6 +34626,10 @@ PHP_METHOD(php_wxGrid, UnsetSortingColumn)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::UnsetSortingColumn\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::UseNativeColHeader(bool native)
+   Enable the use of native header window for column labels. */
 PHP_METHOD(php_wxGrid, UseNativeColHeader)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -33478,6 +34738,10 @@ PHP_METHOD(php_wxGrid, UseNativeColHeader)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::UseNativeColHeader\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGrid::XToCol(int x, bool clipToMinMax)
+   Returns the column at the given pixel position. */
 PHP_METHOD(php_wxGrid, XToCol)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -33587,6 +34851,10 @@ PHP_METHOD(php_wxGrid, XToCol)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::XToCol\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGrid::XToEdgeOfCol(int x)
+   Returns the column whose right hand edge is close to the given logical x position. */
 PHP_METHOD(php_wxGrid, XToEdgeOfCol)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -33684,6 +34952,10 @@ PHP_METHOD(php_wxGrid, XToEdgeOfCol)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::XToEdgeOfCol\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGrid::YToEdgeOfRow(int y)
+   Returns the row whose bottom edge is close to the given logical y position. */
 PHP_METHOD(php_wxGrid, YToEdgeOfRow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -33781,6 +35053,10 @@ PHP_METHOD(php_wxGrid, YToEdgeOfRow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::YToEdgeOfRow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGrid::YToRow(int y, bool clipToMinMax)
+   Returns the grid row that corresponds to the logical y coordinate. */
 PHP_METHOD(php_wxGrid, YToRow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -33890,6 +35166,10 @@ PHP_METHOD(php_wxGrid, YToRow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGrid::YToRow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGrid::wxGrid()
+   Default constructor. */
 PHP_METHOD(php_wxGrid, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -34115,6 +35395,8 @@ PHP_METHOD(php_wxGrid, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxGridUpdateLocker_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -34155,6 +35437,8 @@ void php_wxGridUpdateLocker_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 		#endif
 	}
 }
+/* {{{ proto  wxGridUpdateLocker::Create(wxGrid &grid)
+   This method can be called if the object had been constructed using the default constructor. */
 PHP_METHOD(php_wxGridUpdateLocker, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -34270,6 +35554,10 @@ PHP_METHOD(php_wxGridUpdateLocker, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridUpdateLocker::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridUpdateLocker::wxGridUpdateLocker(wxGrid &grid)
+   Creates an object preventing the updates of the specified grid. */
 PHP_METHOD(php_wxGridUpdateLocker, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -34383,3 +35671,5 @@ PHP_METHOD(php_wxGridUpdateLocker, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+

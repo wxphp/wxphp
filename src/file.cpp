@@ -91,6 +91,8 @@ void php_wxFFile_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxFFile::wxFFile(string filename, string mode)
+   Opens a file with the given mode. */
 PHP_METHOD(php_wxFFile, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -220,6 +222,10 @@ PHP_METHOD(php_wxFFile, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto int wxFFile::Write(void buffer, int count)
+   Writes the specified number of bytes from a buffer. */
 PHP_METHOD(php_wxFFile, Write)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -319,6 +325,10 @@ PHP_METHOD(php_wxFFile, Write)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFFile::Write\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxFFile::Tell()
+   Returns the current position. */
 PHP_METHOD(php_wxFFile, Tell)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -411,6 +421,10 @@ PHP_METHOD(php_wxFFile, Tell)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFFile::Tell\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFFile::SeekEnd(int ofs)
+   Moves the file pointer to the specified number of bytes before the end of the file and returns true on success. */
 PHP_METHOD(php_wxFFile, SeekEnd)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -519,6 +533,10 @@ PHP_METHOD(php_wxFFile, SeekEnd)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFFile::SeekEnd\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFFile::Seek(int ofs, wxSeekMode mode)
+   Seeks to the specified position and returns true on success. */
 PHP_METHOD(php_wxFFile, Seek)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -628,6 +646,10 @@ PHP_METHOD(php_wxFFile, Seek)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFFile::Seek\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxFFile::Read(void buffer, int count)
+   Reads the specified number of bytes into a buffer, returning the actual number read. */
 PHP_METHOD(php_wxFFile, Read)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -732,6 +754,10 @@ PHP_METHOD(php_wxFFile, Read)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFFile::Read\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFFile::Open(string filename, string mode)
+   Opens the file, returning true if successful. */
 PHP_METHOD(php_wxFFile, Open)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -843,6 +869,10 @@ PHP_METHOD(php_wxFFile, Open)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFFile::Open\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxFFile::Length()
+   Returns the length of the file. */
 PHP_METHOD(php_wxFFile, Length)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -935,6 +965,10 @@ PHP_METHOD(php_wxFFile, Length)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFFile::Length\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFFile::IsOpened()
+   Returns true if the file is opened. */
 PHP_METHOD(php_wxFFile, IsOpened)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1027,6 +1061,10 @@ PHP_METHOD(php_wxFFile, IsOpened)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFFile::IsOpened\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFileKind wxFFile::GetKind()
+   Returns the type of the file. */
 PHP_METHOD(php_wxFFile, GetKind)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1119,6 +1157,10 @@ PHP_METHOD(php_wxFFile, GetKind)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFFile::GetKind\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFFile::Flush()
+   Flushes the file and returns true on success. */
 PHP_METHOD(php_wxFFile, Flush)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1211,6 +1253,10 @@ PHP_METHOD(php_wxFFile, Flush)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFFile::Flush\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFFile::Error()
+   Returns true if an error has occurred on this file, similar to the standard ferror() function. */
 PHP_METHOD(php_wxFFile, Error)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1303,6 +1349,10 @@ PHP_METHOD(php_wxFFile, Error)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFFile::Error\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFFile::Eof()
+   Returns true if an attempt has been made to read past the end of the file. */
 PHP_METHOD(php_wxFFile, Eof)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1395,6 +1445,10 @@ PHP_METHOD(php_wxFFile, Eof)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFFile::Eof\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFFile::Detach()
+   Get back a file pointer from wxFFile object -- the caller is responsible for closing the file if this descriptor is opened. */
 PHP_METHOD(php_wxFFile, Detach)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1487,6 +1541,10 @@ PHP_METHOD(php_wxFFile, Detach)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFFile::Detach\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFFile::Close()
+   Closes the file and returns true on success. */
 PHP_METHOD(php_wxFFile, Close)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1579,6 +1637,8 @@ PHP_METHOD(php_wxFFile, Close)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFFile::Close\n");
 	}
 }
+/* }}} */
+
 void php_wxFile_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1619,6 +1679,8 @@ void php_wxFile_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto int wxFile::Seek(int ofs, wxSeekMode mode)
+   Seeks to the specified position. */
 PHP_METHOD(php_wxFile, Seek)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1728,6 +1790,10 @@ PHP_METHOD(php_wxFile, Seek)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFile::Seek\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxFile::SeekEnd(int ofs)
+   Moves the file pointer to the specified number of bytes relative to the end of the file. */
 PHP_METHOD(php_wxFile, SeekEnd)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1836,6 +1902,10 @@ PHP_METHOD(php_wxFile, SeekEnd)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFile::SeekEnd\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxFile::Tell()
+   Returns the current position or wxInvalidOffset if file is not opened or if another error occurred. */
 PHP_METHOD(php_wxFile, Tell)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1928,6 +1998,10 @@ PHP_METHOD(php_wxFile, Tell)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFile::Tell\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxFile::Write(void buffer, int count)
+   Write data to the file (descriptor). */
 PHP_METHOD(php_wxFile, Write)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2027,6 +2101,10 @@ PHP_METHOD(php_wxFile, Write)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFile::Write\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxFile::fd()
+   Returns the file descriptor associated with the file. */
 PHP_METHOD(php_wxFile, fd)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2119,6 +2197,10 @@ PHP_METHOD(php_wxFile, fd)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFile::fd\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFile::wxFile()
+   Default constructor. */
 PHP_METHOD(php_wxFile, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2283,6 +2365,10 @@ PHP_METHOD(php_wxFile, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto bool wxFile::Open(string filename, wxFile::OpenMode mode, int access)
+   Opens the file, returning true if successful. */
 PHP_METHOD(php_wxFile, Open)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2405,6 +2491,10 @@ PHP_METHOD(php_wxFile, Open)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFile::Open\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxFile::Length()
+   Returns the length of the file. */
 PHP_METHOD(php_wxFile, Length)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2497,6 +2587,10 @@ PHP_METHOD(php_wxFile, Length)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFile::Length\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFile::IsOpened()
+   Returns true if the file has been opened. */
 PHP_METHOD(php_wxFile, IsOpened)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2589,6 +2683,10 @@ PHP_METHOD(php_wxFile, IsOpened)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFile::IsOpened\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxFile::GetLastError()
+   Returns the error code for the last unsuccessful operation. */
 PHP_METHOD(php_wxFile, GetLastError)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2681,6 +2779,10 @@ PHP_METHOD(php_wxFile, GetLastError)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFile::GetLastError\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFileKind wxFile::GetKind()
+   Returns the type of the file. */
 PHP_METHOD(php_wxFile, GetKind)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2773,6 +2875,10 @@ PHP_METHOD(php_wxFile, GetKind)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFile::GetKind\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFile::Flush()
+   Flushes the file descriptor. */
 PHP_METHOD(php_wxFile, Flush)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2865,6 +2971,10 @@ PHP_METHOD(php_wxFile, Flush)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFile::Flush\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFile::Exists(string filename)
+   Returns true if the given name specifies an existing regular file (not a directory or a link). */
 PHP_METHOD(php_wxFile, Exists)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2964,6 +3074,10 @@ PHP_METHOD(php_wxFile, Exists)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFile::Exists\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFile::Eof()
+   Returns true if the end of the file has been reached. */
 PHP_METHOD(php_wxFile, Eof)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3056,6 +3170,10 @@ PHP_METHOD(php_wxFile, Eof)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFile::Eof\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFile::Detach()
+   Get back a file descriptor from wxFile object - the caller is responsible for closing the file if this descriptor is opened. */
 PHP_METHOD(php_wxFile, Detach)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3148,6 +3266,10 @@ PHP_METHOD(php_wxFile, Detach)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFile::Detach\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFile::Create(string filename, bool overwrite, int access)
+   Creates a file for writing. */
 PHP_METHOD(php_wxFile, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3270,6 +3392,10 @@ PHP_METHOD(php_wxFile, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFile::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFile::Close()
+   Closes the file. */
 PHP_METHOD(php_wxFile, Close)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3362,6 +3488,10 @@ PHP_METHOD(php_wxFile, Close)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFile::Close\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFile::ClearLastError()
+   Resets the error code. */
 PHP_METHOD(php_wxFile, ClearLastError)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3454,6 +3584,10 @@ PHP_METHOD(php_wxFile, ClearLastError)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFile::ClearLastError\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFile::Attach(int fd)
+   Attaches an existing file descriptor to the wxFile object. */
 PHP_METHOD(php_wxFile, Attach)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3551,6 +3685,10 @@ PHP_METHOD(php_wxFile, Attach)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFile::Attach\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFile::Access(string name, wxFile::OpenMode mode)
+   This function verifies if we may access the given file in specified mode. */
 PHP_METHOD(php_wxFile, Access)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3651,6 +3789,8 @@ PHP_METHOD(php_wxFile, Access)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFile::Access\n");
 	}
 }
+/* }}} */
+
 void php_wxPathList_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3691,6 +3831,8 @@ void php_wxPathList_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto bool wxPathList::Add(string path)
+   Adds the given directory to the path list, if the path is not already in the list. */
 PHP_METHOD(php_wxPathList, Add)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3844,6 +3986,10 @@ PHP_METHOD(php_wxPathList, Add)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPathList::Add\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPathList::AddEnvList(string env_variable)
+   Finds the value of the given environment variable, and adds all paths to the path list. */
 PHP_METHOD(php_wxPathList, AddEnvList)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3942,6 +4088,10 @@ PHP_METHOD(php_wxPathList, AddEnvList)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPathList::AddEnvList\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPathList::EnsureFileAccessible(string filename)
+   Given a full filename (with path), calls Add() with the path of the file. */
 PHP_METHOD(php_wxPathList, EnsureFileAccessible)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4040,6 +4190,10 @@ PHP_METHOD(php_wxPathList, EnsureFileAccessible)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPathList::EnsureFileAccessible\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxPathList::FindAbsoluteValidPath(string file)
+   Like FindValidPath() but this function always returns an absolute path (eventually prepending the current working directory to the value returned wxPathList::FindValidPath()) or an empty string. */
 PHP_METHOD(php_wxPathList, FindAbsoluteValidPath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4144,6 +4298,10 @@ PHP_METHOD(php_wxPathList, FindAbsoluteValidPath)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPathList::FindAbsoluteValidPath\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxPathList::FindValidPath(string file)
+   Searches the given file in all paths stored in this class. */
 PHP_METHOD(php_wxPathList, FindValidPath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4248,6 +4406,10 @@ PHP_METHOD(php_wxPathList, FindValidPath)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPathList::FindValidPath\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPathList::wxPathList()
+   Standard constructor. */
 PHP_METHOD(php_wxPathList, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4382,6 +4544,8 @@ PHP_METHOD(php_wxPathList, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxFileName_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4422,6 +4586,8 @@ void php_wxFileName_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxFileName::AppendDir(string dir)
+   Appends a directory component to the path. */
 PHP_METHOD(php_wxFileName, AppendDir)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4520,6 +4686,10 @@ PHP_METHOD(php_wxFileName, AppendDir)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::AppendDir\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileName::Assign(wxFileName filepath)
+   Creates the file name from another filename object. */
 PHP_METHOD(php_wxFileName, Assign)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4904,6 +5074,10 @@ PHP_METHOD(php_wxFileName, Assign)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::Assign\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileName::wxFileName(wxFileName filename)
+   Copy constructor. */
 PHP_METHOD(php_wxFileName, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5242,6 +5416,10 @@ PHP_METHOD(php_wxFileName, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto bool wxFileName::Touch()
+   Sets the access and modification times to the current moment. */
 PHP_METHOD(php_wxFileName, Touch)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5334,6 +5512,10 @@ PHP_METHOD(php_wxFileName, Touch)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::Touch\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileName::StripExtension(string fullname)
+   Strip the file extension. */
 PHP_METHOD(php_wxFileName, StripExtension)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5439,6 +5621,10 @@ PHP_METHOD(php_wxFileName, StripExtension)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::StripExtension\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileName::SplitVolume(string fullpath, string &volume, string &path, wxPathFormat format)
+   Splits the given fullpath into the volume part (which may be empty) and the pure path part, not containing any volume. */
 PHP_METHOD(php_wxFileName, SplitVolume)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5588,6 +5774,10 @@ PHP_METHOD(php_wxFileName, SplitVolume)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::SplitVolume\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileName::SplitPath(string fullpath, string &path, string &name, string &ext, wxPathFormat format)
+   This function splits a full file name into components: the volume (with the first version) path (including the volume in the second version), the base name and the extension. */
 PHP_METHOD(php_wxFileName, SplitPath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6014,6 +6204,10 @@ PHP_METHOD(php_wxFileName, SplitPath)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::SplitPath\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileName::SetVolume(string volume)
+   Sets the volume specifier. */
 PHP_METHOD(php_wxFileName, SetVolume)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6112,6 +6306,10 @@ PHP_METHOD(php_wxFileName, SetVolume)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::SetVolume\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileName::SetTimes(array dtAccess, array dtMod, array dtCreate)
+   Sets the file creation and last access/modification times (any of the pointers may be NULL). */
 PHP_METHOD(php_wxFileName, SetTimes)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6289,6 +6487,10 @@ PHP_METHOD(php_wxFileName, SetTimes)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::SetTimes\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileName::SetPath(string path, wxPathFormat format)
+   Sets the path. */
 PHP_METHOD(php_wxFileName, SetPath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6399,6 +6601,10 @@ PHP_METHOD(php_wxFileName, SetPath)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::SetPath\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileName::SetName(string name)
+   Sets the name part (without extension). */
 PHP_METHOD(php_wxFileName, SetName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6497,6 +6703,10 @@ PHP_METHOD(php_wxFileName, SetName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::SetName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileName::SetFullName(string fullname)
+   The full name is the file name and extension (but without the path). */
 PHP_METHOD(php_wxFileName, SetFullName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6595,6 +6805,10 @@ PHP_METHOD(php_wxFileName, SetFullName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::SetFullName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileName::SetExt(string ext)
+   Sets the extension of the file name. */
 PHP_METHOD(php_wxFileName, SetExt)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6693,6 +6907,10 @@ PHP_METHOD(php_wxFileName, SetExt)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::SetExt\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileName::SetEmptyExt()
+   Sets the extension of the file name to be an empty extension. */
 PHP_METHOD(php_wxFileName, SetEmptyExt)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6785,6 +7003,10 @@ PHP_METHOD(php_wxFileName, SetEmptyExt)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::SetEmptyExt\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileName::SetCwd(string cwd)
+   Changes the current working directory. */
 PHP_METHOD(php_wxFileName, SetCwd)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6916,6 +7138,10 @@ PHP_METHOD(php_wxFileName, SetCwd)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::SetCwd\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileName::SameAs(wxFileName filepath, wxPathFormat format)
+   Compares the filename using the rules of this platform. */
 PHP_METHOD(php_wxFileName, SameAs)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7044,6 +7270,10 @@ PHP_METHOD(php_wxFileName, SameAs)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::SameAs\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileName::Rmdir(string dir, int flags)
+   Deletes the specified directory from the file system. */
 PHP_METHOD(php_wxFileName, Rmdir)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7204,6 +7434,10 @@ PHP_METHOD(php_wxFileName, Rmdir)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::Rmdir\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileName::ReplaceHomeDir(wxPathFormat format)
+   Replaces, if present in the path, the home directory for the given user (see wxGetHomeDir) with a tilde (~). */
 PHP_METHOD(php_wxFileName, ReplaceHomeDir)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7312,6 +7546,10 @@ PHP_METHOD(php_wxFileName, ReplaceHomeDir)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::ReplaceHomeDir\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileName::ReplaceEnvVariable(string envname, string replacementFmtString, wxPathFormat format)
+   If the path contains the value of the environment variable named envname then this function replaces it with the string obtained from wxString::Format(replacementFmtString, value_of_envname_variable). */
 PHP_METHOD(php_wxFileName, ReplaceEnvVariable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7435,6 +7673,10 @@ PHP_METHOD(php_wxFileName, ReplaceEnvVariable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::ReplaceEnvVariable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileName::RemoveLastDir()
+   Removes last directory component from the path. */
 PHP_METHOD(php_wxFileName, RemoveLastDir)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7527,6 +7769,10 @@ PHP_METHOD(php_wxFileName, RemoveLastDir)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::RemoveLastDir\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileName::RemoveDir(int pos)
+   Removes the specified directory component from the path. */
 PHP_METHOD(php_wxFileName, RemoveDir)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7624,6 +7870,10 @@ PHP_METHOD(php_wxFileName, RemoveDir)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::RemoveDir\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileName::PrependDir(string dir)
+   Prepends a directory to the file path. */
 PHP_METHOD(php_wxFileName, PrependDir)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7722,6 +7972,10 @@ PHP_METHOD(php_wxFileName, PrependDir)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::PrependDir\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileName::AssignCwd(string volume)
+   Makes this object refer to the current working directory on the specified volume (or current volume if volume is empty). */
 PHP_METHOD(php_wxFileName, AssignCwd)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7831,6 +8085,10 @@ PHP_METHOD(php_wxFileName, AssignCwd)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::AssignCwd\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileName::AssignDir(string dir, wxPathFormat format)
+   Sets this file name object to the given directory name. */
 PHP_METHOD(php_wxFileName, AssignDir)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7941,6 +8199,10 @@ PHP_METHOD(php_wxFileName, AssignDir)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::AssignDir\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileName::AssignHomeDir()
+   Sets this file name object to the home directory. */
 PHP_METHOD(php_wxFileName, AssignHomeDir)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8033,6 +8295,10 @@ PHP_METHOD(php_wxFileName, AssignHomeDir)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::AssignHomeDir\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileName::AssignTempFileName(string prefix)
+   The function calls CreateTempFileName() to create a temporary file and sets this object to the name of the file. */
 PHP_METHOD(php_wxFileName, AssignTempFileName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8245,6 +8511,10 @@ PHP_METHOD(php_wxFileName, AssignTempFileName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::AssignTempFileName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileName::Clear()
+   Reset all components to default, uninitialized state. */
 PHP_METHOD(php_wxFileName, Clear)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8337,6 +8607,10 @@ PHP_METHOD(php_wxFileName, Clear)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::Clear\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileName::ClearExt()
+   Removes the extension from the file name resulting in a file name with no trailing dot. */
 PHP_METHOD(php_wxFileName, ClearExt)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8429,6 +8703,10 @@ PHP_METHOD(php_wxFileName, ClearExt)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::ClearExt\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileName::CreateTempFileName(string prefix, wxFile &fileTemp)
+   Returns a temporary file name starting with the given prefix. */
 PHP_METHOD(php_wxFileName, CreateTempFileName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8651,6 +8929,10 @@ PHP_METHOD(php_wxFileName, CreateTempFileName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::CreateTempFileName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileName::DirExists()
+   Returns true if the directory with this name exists. */
 PHP_METHOD(php_wxFileName, DirExists)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8782,6 +9064,10 @@ PHP_METHOD(php_wxFileName, DirExists)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::DirExists\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFileName wxFileName::DirName(string dir, wxPathFormat format)
+   Returns the object corresponding to the directory with the given name. */
 PHP_METHOD(php_wxFileName, DirName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8912,6 +9198,10 @@ PHP_METHOD(php_wxFileName, DirName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::DirName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileName::FileExists()
+   Returns true if the file with this name exists. */
 PHP_METHOD(php_wxFileName, FileExists)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9043,6 +9333,10 @@ PHP_METHOD(php_wxFileName, FileExists)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::FileExists\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFileName wxFileName::FileName(string file, wxPathFormat format)
+   Returns the file name object corresponding to the given file. */
 PHP_METHOD(php_wxFileName, FileName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9173,6 +9467,10 @@ PHP_METHOD(php_wxFileName, FileName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::FileName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileName::GetCwd(string volume)
+   Retrieves the value of the current working directory on the specified volume. */
 PHP_METHOD(php_wxFileName, GetCwd)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9296,6 +9594,10 @@ PHP_METHOD(php_wxFileName, GetCwd)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::GetCwd\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxFileName::GetDirCount()
+   Returns the number of directories in the file name. */
 PHP_METHOD(php_wxFileName, GetDirCount)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9388,6 +9690,10 @@ PHP_METHOD(php_wxFileName, GetDirCount)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::GetDirCount\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto array wxFileName::GetDirs()
+   Returns the directories in string array form. */
 PHP_METHOD(php_wxFileName, GetDirs)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9490,6 +9796,10 @@ PHP_METHOD(php_wxFileName, GetDirs)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::GetDirs\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileName::GetExt()
+   Returns the file name extension. */
 PHP_METHOD(php_wxFileName, GetExt)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9588,6 +9898,10 @@ PHP_METHOD(php_wxFileName, GetExt)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::GetExt\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileName::GetForbiddenChars(wxPathFormat format)
+   Returns the characters that can't be used in filenames and directory names for the specified format. */
 PHP_METHOD(php_wxFileName, GetForbiddenChars)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9710,6 +10024,10 @@ PHP_METHOD(php_wxFileName, GetForbiddenChars)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::GetForbiddenChars\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPathFormat wxFileName::GetFormat(wxPathFormat format)
+   Returns the canonical path format for this platform. */
 PHP_METHOD(php_wxFileName, GetFormat)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9820,6 +10138,10 @@ PHP_METHOD(php_wxFileName, GetFormat)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::GetFormat\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileName::GetFullName()
+   Returns the full name (including extension but excluding directories). */
 PHP_METHOD(php_wxFileName, GetFullName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9918,6 +10240,10 @@ PHP_METHOD(php_wxFileName, GetFullName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::GetFullName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileName::GetFullPath(wxPathFormat format)
+   Returns the full path with name and extension. */
 PHP_METHOD(php_wxFileName, GetFullPath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10038,6 +10364,10 @@ PHP_METHOD(php_wxFileName, GetFullPath)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::GetFullPath\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileName::GetHomeDir()
+   Returns the home directory. */
 PHP_METHOD(php_wxFileName, GetHomeDir)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10137,6 +10467,10 @@ PHP_METHOD(php_wxFileName, GetHomeDir)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::GetHomeDir\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileName::GetHumanReadableSize(string failmsg, int precision, wxSizeConvention conv)
+   Returns the representation of the file size in a human-readable form. */
 PHP_METHOD(php_wxFileName, GetHumanReadableSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10294,6 +10628,10 @@ PHP_METHOD(php_wxFileName, GetHumanReadableSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::GetHumanReadableSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileName::GetLongPath()
+   Return the long form of the path (returns identity on non-Windows platforms). */
 PHP_METHOD(php_wxFileName, GetLongPath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10392,6 +10730,10 @@ PHP_METHOD(php_wxFileName, GetLongPath)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::GetLongPath\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileName::GetName()
+   Returns the name part of the filename (without extension). */
 PHP_METHOD(php_wxFileName, GetName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10490,6 +10832,10 @@ PHP_METHOD(php_wxFileName, GetName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::GetName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto timestamp wxFileName::GetModificationTime()
+   Returns the last time the file was last modified. */
 PHP_METHOD(php_wxFileName, GetModificationTime)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10584,6 +10930,10 @@ PHP_METHOD(php_wxFileName, GetModificationTime)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::GetModificationTime\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileName::GetPath(int flags, wxPathFormat format)
+   Returns the path part of the filename (without the name or extension). */
 PHP_METHOD(php_wxFileName, GetPath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10722,6 +11072,10 @@ PHP_METHOD(php_wxFileName, GetPath)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::GetPath\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileName::GetPathSeparators(wxPathFormat format)
+   Returns the string containing all the path separators for this format. */
 PHP_METHOD(php_wxFileName, GetPathSeparators)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10844,6 +11198,10 @@ PHP_METHOD(php_wxFileName, GetPathSeparators)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::GetPathSeparators\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileName::GetPathTerminators(wxPathFormat format)
+   Returns the string of characters which may terminate the path part. */
 PHP_METHOD(php_wxFileName, GetPathTerminators)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10966,6 +11324,10 @@ PHP_METHOD(php_wxFileName, GetPathTerminators)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::GetPathTerminators\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileName::GetPathWithSep(wxPathFormat format)
+   Returns the path with the trailing separator, useful for appending the name to the given path. */
 PHP_METHOD(php_wxFileName, GetPathWithSep)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11086,6 +11448,10 @@ PHP_METHOD(php_wxFileName, GetPathWithSep)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::GetPathWithSep\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileName::GetShortPath()
+   Return the short form of the path (returns identity on non-Windows platforms). */
 PHP_METHOD(php_wxFileName, GetShortPath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11184,6 +11550,10 @@ PHP_METHOD(php_wxFileName, GetShortPath)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::GetShortPath\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileName::GetTempDir()
+   Returns the directory used for temporary files. */
 PHP_METHOD(php_wxFileName, GetTempDir)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11283,6 +11653,10 @@ PHP_METHOD(php_wxFileName, GetTempDir)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::GetTempDir\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileName::GetVolumeSeparator(wxPathFormat format)
+   Returns the string separating the volume from the path for this format. */
 PHP_METHOD(php_wxFileName, GetVolumeSeparator)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11405,6 +11779,10 @@ PHP_METHOD(php_wxFileName, GetVolumeSeparator)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::GetVolumeSeparator\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileName::GetVolume()
+   Returns the string containing the volume for this file name, empty if it doesn't have one or if the file system doesn't support volumes at all (for example, Unix). */
 PHP_METHOD(php_wxFileName, GetVolume)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11503,6 +11881,10 @@ PHP_METHOD(php_wxFileName, GetVolume)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::GetVolume\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileName::HasExt()
+   Returns true if an extension is present. */
 PHP_METHOD(php_wxFileName, HasExt)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11595,6 +11977,10 @@ PHP_METHOD(php_wxFileName, HasExt)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::HasExt\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileName::HasName()
+   Returns true if a name is present. */
 PHP_METHOD(php_wxFileName, HasName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11687,6 +12073,10 @@ PHP_METHOD(php_wxFileName, HasName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::HasName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileName::HasVolume()
+   Returns true if a volume specifier is present. */
 PHP_METHOD(php_wxFileName, HasVolume)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11779,6 +12169,10 @@ PHP_METHOD(php_wxFileName, HasVolume)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::HasVolume\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileName::InsertDir(int before, string dir)
+   Inserts a directory component before the zero-based position in the directory list. */
 PHP_METHOD(php_wxFileName, InsertDir)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11878,6 +12272,10 @@ PHP_METHOD(php_wxFileName, InsertDir)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::InsertDir\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileName::IsAbsolute(wxPathFormat format)
+   Returns true if this filename is absolute. */
 PHP_METHOD(php_wxFileName, IsAbsolute)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11986,6 +12384,10 @@ PHP_METHOD(php_wxFileName, IsAbsolute)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::IsAbsolute\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileName::IsCaseSensitive(wxPathFormat format)
+   Returns true if the file names of this type are case-sensitive. */
 PHP_METHOD(php_wxFileName, IsCaseSensitive)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12096,6 +12498,10 @@ PHP_METHOD(php_wxFileName, IsCaseSensitive)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::IsCaseSensitive\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileName::IsDir()
+   Returns true if this object represents a directory, false otherwise (i.e. */
 PHP_METHOD(php_wxFileName, IsDir)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12188,6 +12594,10 @@ PHP_METHOD(php_wxFileName, IsDir)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::IsDir\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileName::IsDirReadable()
+   Returns true if the directory component of this instance is an existing directory and this process has read permissions on it. */
 PHP_METHOD(php_wxFileName, IsDirReadable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12319,6 +12729,10 @@ PHP_METHOD(php_wxFileName, IsDirReadable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::IsDirReadable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileName::IsDirWritable()
+   Returns true if the directory component of this instance is an existing directory and this process has write permissions on it. */
 PHP_METHOD(php_wxFileName, IsDirWritable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12450,6 +12864,10 @@ PHP_METHOD(php_wxFileName, IsDirWritable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::IsDirWritable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileName::IsFileExecutable()
+   Returns true if a file with this name exists and if this process has execute permissions on it. */
 PHP_METHOD(php_wxFileName, IsFileExecutable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12581,6 +12999,10 @@ PHP_METHOD(php_wxFileName, IsFileExecutable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::IsFileExecutable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileName::IsFileReadable()
+   Returns true if a file with this name exists and if this process has read permissions on it. */
 PHP_METHOD(php_wxFileName, IsFileReadable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12712,6 +13134,10 @@ PHP_METHOD(php_wxFileName, IsFileReadable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::IsFileReadable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileName::IsFileWritable()
+   Returns true if a file with this name exists and if this process has write permissions on it. */
 PHP_METHOD(php_wxFileName, IsFileWritable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12843,6 +13269,10 @@ PHP_METHOD(php_wxFileName, IsFileWritable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::IsFileWritable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileName::IsMSWUniqueVolumeNamePath(string path, wxPathFormat format)
+   Returns true if the volume part of the path is a unique volume name. */
 PHP_METHOD(php_wxFileName, IsMSWUniqueVolumeNamePath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12955,6 +13385,10 @@ PHP_METHOD(php_wxFileName, IsMSWUniqueVolumeNamePath)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::IsMSWUniqueVolumeNamePath\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileName::IsOk()
+   Returns true if the filename is valid, false if it is not initialized yet. */
 PHP_METHOD(php_wxFileName, IsOk)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13047,6 +13481,10 @@ PHP_METHOD(php_wxFileName, IsOk)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::IsOk\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileName::IsRelative(wxPathFormat format)
+   Returns true if this filename is not absolute. */
 PHP_METHOD(php_wxFileName, IsRelative)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13155,6 +13593,10 @@ PHP_METHOD(php_wxFileName, IsRelative)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::IsRelative\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileName::MakeAbsolute(string cwd, wxPathFormat format)
+   Make the file name absolute. */
 PHP_METHOD(php_wxFileName, MakeAbsolute)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13276,6 +13718,10 @@ PHP_METHOD(php_wxFileName, MakeAbsolute)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::MakeAbsolute\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileName::MakeRelativeTo(string pathBase, wxPathFormat format)
+   This function tries to put this file name in a form relative to pathBase. */
 PHP_METHOD(php_wxFileName, MakeRelativeTo)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13397,6 +13843,10 @@ PHP_METHOD(php_wxFileName, MakeRelativeTo)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::MakeRelativeTo\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileName::Mkdir(int perm, int flags)
+   Creates a directory. */
 PHP_METHOD(php_wxFileName, Mkdir)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13582,6 +14032,10 @@ PHP_METHOD(php_wxFileName, Mkdir)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::Mkdir\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileName::Normalize(int flags, string cwd, wxPathFormat format)
+   Normalize the path. */
 PHP_METHOD(php_wxFileName, Normalize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13715,6 +14169,8 @@ PHP_METHOD(php_wxFileName, Normalize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileName::Normalize\n");
 	}
 }
+/* }}} */
+
 void php_wxFSFile_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13755,6 +14211,8 @@ void php_wxFSFile_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxFSFile::wxFSFile(wxInputStream &stream, string location, string mimetype, string anchor, timestamp modif)
+   Constructor. */
 PHP_METHOD(php_wxFSFile, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13865,6 +14323,10 @@ PHP_METHOD(php_wxFSFile, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto wxInputStream wxFSFile::GetStream()
+   Returns pointer to the stream. */
 PHP_METHOD(php_wxFSFile, GetStream)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13980,6 +14442,10 @@ PHP_METHOD(php_wxFSFile, GetStream)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFSFile::GetStream\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto timestamp wxFSFile::GetModificationTime()
+   Returns time when this file was modified. */
 PHP_METHOD(php_wxFSFile, GetModificationTime)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14074,6 +14540,10 @@ PHP_METHOD(php_wxFSFile, GetModificationTime)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFSFile::GetModificationTime\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFSFile::GetMimeType()
+   Returns the MIME type of the content of this file. */
 PHP_METHOD(php_wxFSFile, GetMimeType)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14172,6 +14642,10 @@ PHP_METHOD(php_wxFSFile, GetMimeType)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFSFile::GetMimeType\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFSFile::GetLocation()
+   Returns full location of the file, including path and protocol. */
 PHP_METHOD(php_wxFSFile, GetLocation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14270,6 +14744,10 @@ PHP_METHOD(php_wxFSFile, GetLocation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFSFile::GetLocation\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFSFile::GetAnchor()
+   Returns anchor (if present). */
 PHP_METHOD(php_wxFSFile, GetAnchor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14368,6 +14846,10 @@ PHP_METHOD(php_wxFSFile, GetAnchor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFSFile::GetAnchor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxInputStream wxFSFile::DetachStream()
+   Detaches the stream from the wxFSFile object. */
 PHP_METHOD(php_wxFSFile, DetachStream)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14483,6 +14965,8 @@ PHP_METHOD(php_wxFSFile, DetachStream)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFSFile::DetachStream\n");
 	}
 }
+/* }}} */
+
 void php_wxFileSystemWatcher_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14523,6 +15007,8 @@ void php_wxFileSystemWatcher_destruction_handler(zend_rsrc_list_entry *rsrc TSRM
 		#endif
 	}
 }
+/* {{{ proto bool wxFileSystemWatcher::Add(wxFileName path, int events)
+   Adds path to currently watched files. */
 PHP_METHOD(php_wxFileSystemWatcher, Add)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14651,6 +15137,10 @@ PHP_METHOD(php_wxFileSystemWatcher, Add)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileSystemWatcher::Add\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileSystemWatcher::AddTree(wxFileName path, int events, string filter)
+   This is the same as Add(), but recursively adds every file/directory in the tree rooted at path. */
 PHP_METHOD(php_wxFileSystemWatcher, AddTree)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14793,6 +15283,10 @@ PHP_METHOD(php_wxFileSystemWatcher, AddTree)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileSystemWatcher::AddTree\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxFileSystemWatcher::GetWatchedPathsCount()
+   Returns the number of currently watched paths. */
 PHP_METHOD(php_wxFileSystemWatcher, GetWatchedPathsCount)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14885,6 +15379,10 @@ PHP_METHOD(php_wxFileSystemWatcher, GetWatchedPathsCount)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileSystemWatcher::GetWatchedPathsCount\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileSystemWatcher::Remove(wxFileName path)
+   Removes path from the list of watched paths. */
 PHP_METHOD(php_wxFileSystemWatcher, Remove)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15000,6 +15498,10 @@ PHP_METHOD(php_wxFileSystemWatcher, Remove)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileSystemWatcher::Remove\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileSystemWatcher::RemoveAll()
+   Clears the list of currently watched paths. */
 PHP_METHOD(php_wxFileSystemWatcher, RemoveAll)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15092,6 +15594,10 @@ PHP_METHOD(php_wxFileSystemWatcher, RemoveAll)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileSystemWatcher::RemoveAll\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileSystemWatcher::RemoveTree(wxFileName path)
+   Same as Remove(), but also removes every file/directory belonging to the tree rooted at path. */
 PHP_METHOD(php_wxFileSystemWatcher, RemoveTree)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15207,6 +15713,10 @@ PHP_METHOD(php_wxFileSystemWatcher, RemoveTree)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileSystemWatcher::RemoveTree\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileSystemWatcher::SetOwner(wxEvtHandler &handler)
+   Associates the file system watcher with the given handler object. */
 PHP_METHOD(php_wxFileSystemWatcher, SetOwner)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15322,6 +15832,10 @@ PHP_METHOD(php_wxFileSystemWatcher, SetOwner)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileSystemWatcher::SetOwner\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileSystemWatcher::wxFileSystemWatcher()
+   Default constructor. */
 PHP_METHOD(php_wxFileSystemWatcher, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15402,6 +15916,8 @@ PHP_METHOD(php_wxFileSystemWatcher, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxStandardPaths_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15442,6 +15958,8 @@ void php_wxStandardPaths_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+/* {{{ proto wxStandardPaths wxStandardPaths::Get()
+   Returns reference to the unique global standard paths object. */
 PHP_METHOD(php_wxStandardPaths, Get)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15551,6 +16069,10 @@ PHP_METHOD(php_wxStandardPaths, Get)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStandardPaths::Get\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxStandardPaths::GetAppDocumentsDir()
+   Return the directory for the document files used by this application. */
 PHP_METHOD(php_wxStandardPaths, GetAppDocumentsDir)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15652,6 +16174,10 @@ PHP_METHOD(php_wxStandardPaths, GetAppDocumentsDir)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStandardPaths::GetAppDocumentsDir\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxStandardPaths::GetConfigDir()
+   Return the directory containing the system config files. */
 PHP_METHOD(php_wxStandardPaths, GetConfigDir)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15753,6 +16279,10 @@ PHP_METHOD(php_wxStandardPaths, GetConfigDir)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStandardPaths::GetConfigDir\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxStandardPaths::GetDataDir()
+   Return the location of the applications global, i.e. */
 PHP_METHOD(php_wxStandardPaths, GetDataDir)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15854,6 +16384,10 @@ PHP_METHOD(php_wxStandardPaths, GetDataDir)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStandardPaths::GetDataDir\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxStandardPaths::GetDocumentsDir()
+   Return the directory containing the current user's documents. */
 PHP_METHOD(php_wxStandardPaths, GetDocumentsDir)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15955,6 +16489,10 @@ PHP_METHOD(php_wxStandardPaths, GetDocumentsDir)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStandardPaths::GetDocumentsDir\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxStandardPaths::GetExecutablePath()
+   Return the directory and the filename for the current executable. */
 PHP_METHOD(php_wxStandardPaths, GetExecutablePath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16056,6 +16594,10 @@ PHP_METHOD(php_wxStandardPaths, GetExecutablePath)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStandardPaths::GetExecutablePath\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxStandardPaths::GetLocalDataDir()
+   Return the location for application data files which are host-specific and can't, or shouldn't, be shared with the other machines. */
 PHP_METHOD(php_wxStandardPaths, GetLocalDataDir)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16157,6 +16699,10 @@ PHP_METHOD(php_wxStandardPaths, GetLocalDataDir)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStandardPaths::GetLocalDataDir\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxStandardPaths::GetPluginsDir()
+   Return the directory where the loadable modules (plugins) live. */
 PHP_METHOD(php_wxStandardPaths, GetPluginsDir)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16258,6 +16804,10 @@ PHP_METHOD(php_wxStandardPaths, GetPluginsDir)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStandardPaths::GetPluginsDir\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxStandardPaths::GetResourcesDir()
+   Return the directory where the application resource files are located. */
 PHP_METHOD(php_wxStandardPaths, GetResourcesDir)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16359,6 +16909,10 @@ PHP_METHOD(php_wxStandardPaths, GetResourcesDir)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStandardPaths::GetResourcesDir\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxStandardPaths::GetTempDir()
+   Return the directory for storing temporary files. */
 PHP_METHOD(php_wxStandardPaths, GetTempDir)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16460,6 +17014,10 @@ PHP_METHOD(php_wxStandardPaths, GetTempDir)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStandardPaths::GetTempDir\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxStandardPaths::GetUserConfigDir()
+   Return the directory for the user config files: */
 PHP_METHOD(php_wxStandardPaths, GetUserConfigDir)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16561,6 +17119,10 @@ PHP_METHOD(php_wxStandardPaths, GetUserConfigDir)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStandardPaths::GetUserConfigDir\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxStandardPaths::GetUserDataDir()
+   Return the directory for the user-dependent application data files: */
 PHP_METHOD(php_wxStandardPaths, GetUserDataDir)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16662,6 +17224,10 @@ PHP_METHOD(php_wxStandardPaths, GetUserDataDir)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStandardPaths::GetUserDataDir\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxStandardPaths::GetUserLocalDataDir()
+   Return the directory for user data files which shouldn't be shared with the other machines. */
 PHP_METHOD(php_wxStandardPaths, GetUserLocalDataDir)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16763,6 +17329,10 @@ PHP_METHOD(php_wxStandardPaths, GetUserLocalDataDir)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStandardPaths::GetUserLocalDataDir\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStandardPaths::UseAppInfo(int info)
+   Controls what application information is used when constructing paths that should be unique to this program, such as the application data directory, the plugins directory on Unix, etc. */
 PHP_METHOD(php_wxStandardPaths, UseAppInfo)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16863,3 +17433,5 @@ PHP_METHOD(php_wxStandardPaths, UseAppInfo)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStandardPaths::UseAppInfo\n");
 	}
 }
+/* }}} */
+

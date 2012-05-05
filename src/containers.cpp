@@ -91,6 +91,8 @@ void php_wxClientData_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxClientData::wxClientData()
+   Constructor. */
 PHP_METHOD(php_wxClientData, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -171,6 +173,8 @@ PHP_METHOD(php_wxClientData, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxTreeItemData_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -211,6 +215,8 @@ void php_wxTreeItemData_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 		#endif
 	}
 }
+/* {{{ proto wxTreeItemId wxTreeItemData::GetId()
+   Returns the item associated with this node. */
 PHP_METHOD(php_wxTreeItemData, GetId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -323,6 +329,10 @@ PHP_METHOD(php_wxTreeItemData, GetId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTreeItemData::GetId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTreeItemData::SetId(wxTreeItemId id)
+   Sets the item associated with this node. */
 PHP_METHOD(php_wxTreeItemData, SetId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -438,6 +448,10 @@ PHP_METHOD(php_wxTreeItemData, SetId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTreeItemData::SetId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTreeItemData::wxTreeItemData()
+   Default constructor. */
 PHP_METHOD(php_wxTreeItemData, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -518,3 +532,5 @@ PHP_METHOD(php_wxTreeItemData, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+

@@ -22,8 +22,8 @@
  * Define Extension Properties 
  */
 #define PHP_WXWIDGETS_EXTNAME    "wxWidgets"
-#define PHP_WXWIDGETS_EXTVER    "1.2"
-#define PHP_WXWIDGETS_VERSION	"SVN Revision 71250"
+#define PHP_WXWIDGETS_EXTVER    "2.9.4.0"
+#define PHP_WXWIDGETS_VERSION	"2.9.4 SVN"
 
 /**
  * Import configure options when building outside 
@@ -67,7 +67,6 @@ class wxPhpClientData : public wxClientData
 /**
  * Predefined wxApp class method bindings
  */
-PHP_METHOD(php_wxApp, helloWorld);
 PHP_METHOD(php_wxApp, __construct);
 PHP_METHOD(php_wxApp, SetInstance);
 PHP_METHOD(php_wxApp, Yield);
@@ -3622,11 +3621,11 @@ PHP_METHOD(php_wxLayoutConstraints, AreSatisfied);
 PHP_METHOD(php_wxLayoutConstraints, __get);
 PHP_METHOD(php_wxLayoutConstraints, __construct);
 PHP_METHOD(php_wxLayoutConstraints, SatisfyConstraints);
-PHP_METHOD(php_wxDropTarget, OnDragOver);
-PHP_METHOD(php_wxDropTarget, OnEnter);
 PHP_METHOD(php_wxDropTarget, OnLeave);
 PHP_METHOD(php_wxDropTarget, __construct);
 PHP_METHOD(php_wxDropTarget, SetDataObject);
+PHP_METHOD(php_wxDropTarget, OnDragOver);
+PHP_METHOD(php_wxDropTarget, OnEnter);
 PHP_METHOD(php_wxDropTarget, GetData);
 PHP_METHOD(php_wxDropTarget, OnData);
 PHP_METHOD(php_wxDropTarget, OnDrop);
@@ -4429,7 +4428,6 @@ PHP_METHOD(php_wxDataViewEvent, GetCacheTo);
 PHP_METHOD(php_wxDataViewEvent, GetColumn);
 PHP_METHOD(php_wxDataViewEvent, GetDataBuffer);
 PHP_METHOD(php_wxDataViewEvent, GetDataFormat);
-PHP_METHOD(php_wxDataViewEvent, GetDataObject);
 PHP_METHOD(php_wxDataViewEvent, GetDataSize);
 PHP_METHOD(php_wxDataViewEvent, GetDataViewColumn);
 PHP_METHOD(php_wxDataViewEvent, GetModel);
@@ -4437,10 +4435,7 @@ PHP_METHOD(php_wxDataViewEvent, GetPosition);
 PHP_METHOD(php_wxDataViewEvent, GetValue);
 PHP_METHOD(php_wxDataViewEvent, IsEditCancelled);
 PHP_METHOD(php_wxDataViewEvent, SetColumn);
-PHP_METHOD(php_wxDataViewEvent, SetDataBuffer);
-PHP_METHOD(php_wxDataViewEvent, SetDataFormat);
 PHP_METHOD(php_wxDataViewEvent, SetDataObject);
-PHP_METHOD(php_wxDataViewEvent, SetDataSize);
 PHP_METHOD(php_wxDataViewEvent, SetDataViewColumn);
 PHP_METHOD(php_wxDataViewEvent, SetModel);
 PHP_METHOD(php_wxDataViewEvent, SetValue);

@@ -51,6 +51,418 @@
 #include "others.h"
 
 
+void php_wxDataViewChoiceRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Calling php_wxDataViewChoiceRenderer_destruction_handler on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
+	php_printf("===========================================\n");
+	#endif
+	
+	
+	wxDataViewChoiceRenderer_php* object = static_cast<wxDataViewChoiceRenderer_php*>(rsrc->ptr);
+	
+	if(rsrc->ptr != NULL)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Pointer not null\n");
+		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
+		#endif
+		
+		if(object->references.IsUserInitialized())
+		{	
+			#ifdef USE_WXPHP_DEBUG
+			php_printf("Deleting pointer with delete\n");
+			#endif
+			
+			delete object;
+			
+			rsrc->ptr = NULL;
+		}
+		
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Deletion of wxDataViewChoiceRenderer done\n");
+		php_printf("===========================================\n\n");
+		#endif
+	}
+	else
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Not user space initialized\n");
+		#endif
+	}
+}
+/* {{{ proto string wxDataViewChoiceRenderer::GetChoice(int index)
+   Returns the choice referred to by index. */
+PHP_METHOD(php_wxDataViewChoiceRenderer, GetChoice)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxDataViewChoiceRenderer::GetChoice\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	//In case the constructor uses objects
+	zval **tmp;
+	int rsrc_type;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxDataViewChoiceRenderer::GetChoice\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDataViewChoiceRenderer){
+				references = &((wxDataViewChoiceRenderer_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	long index0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 1)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'l' (&index0)\n");
+		#endif
+		char parse_parameters_string[] = "l";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing RETURN_STRING(wxDataViewChoiceRenderer::GetChoice((size_t) index0).fn_str(), 1)\n\n");
+				#endif
+				wxString value_to_return1;
+				value_to_return1 = ((wxDataViewChoiceRenderer_php*)_this)->GetChoice((size_t) index0);
+				char* temp_string1;
+				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
+				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
+				ZVAL_STRING(return_value, temp_string1, 1);
+				free(temp_string1);
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewChoiceRenderer::GetChoice\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto array wxDataViewChoiceRenderer::GetChoices()
+   Returns all choices. */
+PHP_METHOD(php_wxDataViewChoiceRenderer, GetChoices)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxDataViewChoiceRenderer::GetChoices\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	//In case the constructor uses objects
+	zval **tmp;
+	int rsrc_type;
+	int parent_rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	wxPHPObjectReferences* references;
+	bool return_is_user_initialized = false;
+	
+	//Get pointer of object that called this method if not a static method
+	if (getThis() != NULL) 
+	{
+		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
+		{
+			zend_error(E_ERROR, "Failed to get the parent object that called wxDataViewChoiceRenderer::GetChoices\n");
+			
+			return;
+		}
+		else
+		{
+			id_to_find = Z_RESVAL_P(*tmp);
+			_this = zend_list_find(id_to_find, &parent_rsrc_type);
+			
+			bool reference_type_found = false;
+
+			if(parent_rsrc_type == le_wxDataViewChoiceRenderer){
+				references = &((wxDataViewChoiceRenderer_php*)_this)->references;
+				reference_type_found = true;
+			}
+		}
+	}
+	#ifdef USE_WXPHP_DEBUG
+	else
+	{
+		php_printf("Processing the method call as static\n");
+	}
+	#endif
+	
+	//Parameters for overload 0
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received == 0)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with '' ()\n");
+		#endif
+		overload0_called = true;
+		already_called = true;
+	}
+
+		
+	if(overload0_called)
+	{
+		switch(arguments_received)
+		{
+			case 0:
+			{
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing wxDataViewChoiceRenderer::GetChoices() to return strings array\n\n");
+				#endif
+				wxArrayString value_to_return0;
+				value_to_return0 = ((wxDataViewChoiceRenderer_php*)_this)->GetChoices();
+				char* temp_string0;
+				array_init(return_value);
+				for(size_t i=0; i<value_to_return0.GetCount(); i++)
+				{
+					temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0[i].size()+1));
+					strcpy (temp_string0, (const char *) value_to_return0[i].char_str() );
+					add_next_index_string(return_value, (char*) temp_string0, 1);
+					free(temp_string0);
+				}
+
+
+				return;
+				break;
+			}
+		}
+	}
+
+		
+	//In case wrong type/count of parameters was passed
+	if(!already_called)
+	{
+		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewChoiceRenderer::GetChoices\n");
+	}
+}
+/* }}} */
+
+/* {{{ proto  wxDataViewChoiceRenderer::wxDataViewChoiceRenderer(array choices, wxDataViewCellMode mode, int alignment)
+   The ctor. */
+PHP_METHOD(php_wxDataViewChoiceRenderer, __construct)
+{
+	#ifdef USE_WXPHP_DEBUG
+	php_printf("Invoking wxDataViewChoiceRenderer::__construct\n");
+	php_printf("===========================================\n");
+	#endif
+	
+	//In case the constructor uses objects
+	zval **tmp;
+	int rsrc_type;
+	int id_to_find;
+	char _wxResource[] = "wxResource";
+	
+	//Other variables used thru the code
+	int arguments_received = ZEND_NUM_ARGS();
+	void *_this;
+	zval* dummy;
+	bool already_called = false;
+	
+	//Parameters for overload 0
+	zval* choices0 = 0;
+	long mode0;
+	long alignment0;
+	bool overload0_called = false;
+		
+	//Overload 0
+	overload0:
+	if(!already_called && arguments_received >= 1  && arguments_received <= 3)
+	{
+		#ifdef USE_WXPHP_DEBUG
+		php_printf("Parameters received %d\n", arguments_received);
+		php_printf("Parsing parameters with 'a|ll' (&choices0, &mode0, &alignment0)\n");
+		#endif
+		char parse_parameters_string[] = "a|ll";
+		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &choices0, &mode0, &alignment0 ) == SUCCESS)
+		{
+			overload0_called = true;
+			already_called = true;
+		}
+	}
+
+		
+	if(overload0_called)
+	{
+		wxArrayString strings_array0_0;
+		bool strings_continue0_0 = true;
+
+		switch(arguments_received)
+		{
+			case 1:
+			{
+				int array_index0_0 = 0;
+				zval** temp_array_value0_0 = 0;
+				while(strings_continue0_0)
+				{
+					if(zend_hash_index_find(HASH_OF(choices0), array_index0_0, (void**)&temp_array_value0_0) == SUCCESS)
+					{
+						convert_to_string(*temp_array_value0_0);
+						strings_array0_0.Add(wxString(Z_STRVAL_PP(temp_array_value0_0), wxConvUTF8));
+						array_index0_0++;
+					}
+					else
+					{
+						strings_continue0_0 = false;
+					}
+				}
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing __construct(strings_array0_0)\n");
+				#endif
+				_this = new wxDataViewChoiceRenderer_php(strings_array0_0);
+
+				((wxDataViewChoiceRenderer_php*) _this)->references.Initialize();
+				break;
+			}
+			case 2:
+			{
+				int array_index0_0 = 0;
+				zval** temp_array_value0_0 = 0;
+				while(strings_continue0_0)
+				{
+					if(zend_hash_index_find(HASH_OF(choices0), array_index0_0, (void**)&temp_array_value0_0) == SUCCESS)
+					{
+						convert_to_string(*temp_array_value0_0);
+						strings_array0_0.Add(wxString(Z_STRVAL_PP(temp_array_value0_0), wxConvUTF8));
+						array_index0_0++;
+					}
+					else
+					{
+						strings_continue0_0 = false;
+					}
+				}
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing __construct(strings_array0_0, (wxDataViewCellMode) mode0)\n");
+				#endif
+				_this = new wxDataViewChoiceRenderer_php(strings_array0_0, (wxDataViewCellMode) mode0);
+
+				((wxDataViewChoiceRenderer_php*) _this)->references.Initialize();
+				break;
+			}
+			case 3:
+			{
+				int array_index0_0 = 0;
+				zval** temp_array_value0_0 = 0;
+				while(strings_continue0_0)
+				{
+					if(zend_hash_index_find(HASH_OF(choices0), array_index0_0, (void**)&temp_array_value0_0) == SUCCESS)
+					{
+						convert_to_string(*temp_array_value0_0);
+						strings_array0_0.Add(wxString(Z_STRVAL_PP(temp_array_value0_0), wxConvUTF8));
+						array_index0_0++;
+					}
+					else
+					{
+						strings_continue0_0 = false;
+					}
+				}
+				#ifdef USE_WXPHP_DEBUG
+				php_printf("Executing __construct(strings_array0_0, (wxDataViewCellMode) mode0, (int) alignment0)\n");
+				#endif
+				_this = new wxDataViewChoiceRenderer_php(strings_array0_0, (wxDataViewCellMode) mode0, (int) alignment0);
+
+				((wxDataViewChoiceRenderer_php*) _this)->references.Initialize();
+				break;
+			}
+		}
+	}
+
+		
+	if(already_called)
+	{
+		long id_to_find = zend_list_insert(_this, le_wxDataViewChoiceRenderer);
+		
+		add_property_resource(getThis(), _wxResource, id_to_find);
+		
+		MAKE_STD_ZVAL(((wxDataViewChoiceRenderer_php*) _this)->evnArray);
+		
+		array_init(((wxDataViewChoiceRenderer_php*) _this)->evnArray);
+		
+		((wxDataViewChoiceRenderer_php*) _this)->phpObj = getThis();
+		
+		((wxDataViewChoiceRenderer_php*) _this)->InitProperties();
+		
+		#ifdef ZTS 
+		((wxDataViewChoiceRenderer_php*) _this)->TSRMLS_C = TSRMLS_C;
+		#endif
+	}
+	else
+	{
+		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxDataViewChoiceRenderer::__constructor\n");
+	}
+	
+	#ifdef USE_WXPHP_DEBUG
+		php_printf("===========================================\n\n");
+	#endif
+}
+/* }}} */
+
 void php_wxDataViewModel_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -59,6 +471,8 @@ void php_wxDataViewModel_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 	#endif
 	
 }
+/* {{{ proto  wxDataViewModel::AddNotifier(wxDataViewModelNotifier &notifier)
+   Adds a wxDataViewModelNotifier to the model. */
 PHP_METHOD(php_wxDataViewModel, AddNotifier)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -217,6 +631,10 @@ PHP_METHOD(php_wxDataViewModel, AddNotifier)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewModel::AddNotifier\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDataViewModel::ChangeValue(wxVariant variant, wxDataViewItem item, int col)
+   Change the value of the given item and update the control to reflect it. */
 PHP_METHOD(php_wxDataViewModel, ChangeValue)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -395,6 +813,10 @@ PHP_METHOD(php_wxDataViewModel, ChangeValue)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewModel::ChangeValue\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDataViewModel::Cleared()
+   Called to inform the model that all data has been cleared. */
 PHP_METHOD(php_wxDataViewModel, Cleared)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -530,6 +952,10 @@ PHP_METHOD(php_wxDataViewModel, Cleared)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewModel::Cleared\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDataViewModel::Compare(wxDataViewItem item1, wxDataViewItem item2, int column, bool ascending)
+   The compare function to be used by control. */
 PHP_METHOD(php_wxDataViewModel, Compare)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -709,6 +1135,10 @@ PHP_METHOD(php_wxDataViewModel, Compare)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewModel::Compare\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDataViewModel::GetAttr(wxDataViewItem item, int col, wxDataViewItemAttr &attr)
+   Override this to indicate that the item has special font attributes. */
 PHP_METHOD(php_wxDataViewModel, GetAttr)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -887,6 +1317,10 @@ PHP_METHOD(php_wxDataViewModel, GetAttr)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewModel::GetAttr\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDataViewModel::GetColumnCount()
+   Override this to indicate the number of columns in the model. */
 unsigned int wxDataViewModel_php::GetColumnCount()const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -929,6 +1363,10 @@ unsigned int wxDataViewModel_php::GetColumnCount()const
 		return (unsigned int) Z_LVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto string wxDataViewModel::GetColumnType(int col)
+   Override this to indicate what type of data is stored in the column specified by col. */
 wxString wxDataViewModel_php::GetColumnType(unsigned int col)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -977,6 +1415,10 @@ wxString wxDataViewModel_php::GetColumnType(unsigned int col)const
 		return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
 	
 }
+/* }}} */
+
+/* {{{ proto wxDataViewItem wxDataViewModel::GetParent(wxDataViewItem item)
+   Override this to indicate which wxDataViewItem representing the parent of item or an invalid wxDataViewItem if the root item is the parent item. */
 wxDataViewItem wxDataViewModel_php::GetParent(const wxDataViewItem& item)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1031,6 +1473,10 @@ wxDataViewItem wxDataViewModel_php::GetParent(const wxDataViewItem& item)const
 		return *(wxDataViewItem*) return_object;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewModel::GetValue(wxVariant &variant, wxDataViewItem item, int col)
+   Override this to indicate the value of item. */
 void wxDataViewModel_php::GetValue(wxVariant& variant, const wxDataViewItem& item, unsigned int col)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1083,6 +1529,10 @@ void wxDataViewModel_php::GetValue(wxVariant& variant, const wxDataViewItem& ite
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto bool wxDataViewModel::HasContainerColumns(wxDataViewItem item)
+   Override this method to indicate if a container item merely acts as a headline (or for categorisation) or if it also acts a normal item with entries for further columns. */
 PHP_METHOD(php_wxDataViewModel, HasContainerColumns)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1241,6 +1691,10 @@ PHP_METHOD(php_wxDataViewModel, HasContainerColumns)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewModel::HasContainerColumns\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDataViewModel::HasDefaultCompare()
+   Override this to indicate that the model provides a default compare function that the control should use if no wxDataViewColumn has been chosen for sorting. */
 PHP_METHOD(php_wxDataViewModel, HasDefaultCompare)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1376,6 +1830,10 @@ PHP_METHOD(php_wxDataViewModel, HasDefaultCompare)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewModel::HasDefaultCompare\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDataViewModel::HasValue(wxDataViewItem item, int col)
+   Return true if there is a value in the given column of this item. */
 PHP_METHOD(php_wxDataViewModel, HasValue)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1535,6 +1993,10 @@ PHP_METHOD(php_wxDataViewModel, HasValue)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewModel::HasValue\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDataViewModel::IsContainer(wxDataViewItem item)
+   Override this to indicate of item is a container, i.e. */
 bool wxDataViewModel_php::IsContainer(const wxDataViewItem& item)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1584,6 +2046,10 @@ bool wxDataViewModel_php::IsContainer(const wxDataViewItem& item)const
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto bool wxDataViewModel::IsEnabled(wxDataViewItem item, int col)
+   Override this to indicate that the item should be disabled. */
 PHP_METHOD(php_wxDataViewModel, IsEnabled)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1743,6 +2209,10 @@ PHP_METHOD(php_wxDataViewModel, IsEnabled)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewModel::IsEnabled\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDataViewModel::ItemAdded(wxDataViewItem parent, wxDataViewItem item)
+   Call this to inform the model that an item has been added to the data. */
 PHP_METHOD(php_wxDataViewModel, ItemAdded)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1920,6 +2390,10 @@ PHP_METHOD(php_wxDataViewModel, ItemAdded)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewModel::ItemAdded\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDataViewModel::ItemChanged(wxDataViewItem item)
+   Call this to inform the model that an item has changed. */
 PHP_METHOD(php_wxDataViewModel, ItemChanged)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2078,6 +2552,10 @@ PHP_METHOD(php_wxDataViewModel, ItemChanged)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewModel::ItemChanged\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDataViewModel::ItemDeleted(wxDataViewItem parent, wxDataViewItem item)
+   Call this to inform the model that an item has been deleted from the data. */
 PHP_METHOD(php_wxDataViewModel, ItemDeleted)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2255,6 +2733,10 @@ PHP_METHOD(php_wxDataViewModel, ItemDeleted)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewModel::ItemDeleted\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewModel::RemoveNotifier(wxDataViewModelNotifier &notifier)
+   Remove the notifier from the list of notifiers. */
 PHP_METHOD(php_wxDataViewModel, RemoveNotifier)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2413,6 +2895,10 @@ PHP_METHOD(php_wxDataViewModel, RemoveNotifier)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewModel::RemoveNotifier\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewModel::Resort()
+   Call this to initiate a resort after the sort function has been changed. */
 PHP_METHOD(php_wxDataViewModel, Resort)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2548,6 +3034,10 @@ PHP_METHOD(php_wxDataViewModel, Resort)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewModel::Resort\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDataViewModel::SetValue(wxVariant variant, wxDataViewItem item, int col)
+   This gets called in order to set a value in the data model. */
 bool wxDataViewModel_php::SetValue(const wxVariant& variant, const wxDataViewItem& item, unsigned int col)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2600,6 +3090,10 @@ bool wxDataViewModel_php::SetValue(const wxVariant& variant, const wxDataViewIte
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto bool wxDataViewModel::ValueChanged(wxDataViewItem item, int col)
+   Call this to inform this model that a value in the model has been changed. */
 PHP_METHOD(php_wxDataViewModel, ValueChanged)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2759,6 +3253,8 @@ PHP_METHOD(php_wxDataViewModel, ValueChanged)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewModel::ValueChanged\n");
 	}
 }
+/* }}} */
+
 void php_wxDataViewListModel_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2799,6 +3295,8 @@ void php_wxDataViewListModel_destruction_handler(zend_rsrc_list_entry *rsrc TSRM
 		#endif
 	}
 }
+/* {{{ proto bool wxDataViewListModel::GetAttrByRow(int row, int col, wxDataViewItemAttr &attr)
+   Override this to indicate that the row has special font attributes. */
 PHP_METHOD(php_wxDataViewListModel, GetAttrByRow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2943,6 +3441,10 @@ PHP_METHOD(php_wxDataViewListModel, GetAttrByRow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewListModel::GetAttrByRow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDataViewListModel::GetCount()
+   Returns the number of items (or rows) in the list. */
 PHP_METHOD(php_wxDataViewListModel, GetCount)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3062,6 +3564,10 @@ PHP_METHOD(php_wxDataViewListModel, GetCount)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewListModel::GetCount\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDataViewListModel::GetRow(wxDataViewItem item)
+   Returns the position of given item. */
 PHP_METHOD(php_wxDataViewListModel, GetRow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3204,6 +3710,10 @@ PHP_METHOD(php_wxDataViewListModel, GetRow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewListModel::GetRow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewListModel::GetValueByRow(wxVariant &variant, int row, int col)
+   Override this to allow getting values from the model. */
 void wxDataViewListModel_php::GetValueByRow(wxVariant& variant, unsigned int row, unsigned int col)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3255,6 +3765,10 @@ void wxDataViewListModel_php::GetValueByRow(wxVariant& variant, unsigned int row
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto bool wxDataViewListModel::IsEnabledByRow(int row, int col)
+   Override this if you want to disable specific items. */
 PHP_METHOD(php_wxDataViewListModel, IsEnabledByRow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3380,6 +3894,10 @@ PHP_METHOD(php_wxDataViewListModel, IsEnabledByRow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewListModel::IsEnabledByRow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDataViewListModel::SetValueByRow(wxVariant variant, int row, int col)
+   Called in order to set a value in the model. */
 bool wxDataViewListModel_php::SetValueByRow(const wxVariant& variant, unsigned int row, unsigned int col)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3431,6 +3949,8 @@ bool wxDataViewListModel_php::SetValueByRow(const wxVariant& variant, unsigned i
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
 void php_wxDataViewIndexListModel_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3551,6 +4071,8 @@ void php_wxDataViewItemAttr_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 		#endif
 	}
 }
+/* {{{ proto  wxDataViewItemAttr::SetBold(bool set)
+   Call this to indicate that the item shall be displayed in bold text. */
 PHP_METHOD(php_wxDataViewItemAttr, SetBold)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3648,6 +4170,10 @@ PHP_METHOD(php_wxDataViewItemAttr, SetBold)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewItemAttr::SetBold\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewItemAttr::SetColour(wxColour colour)
+   Call this to indicate that the item shall be displayed with that colour. */
 PHP_METHOD(php_wxDataViewItemAttr, SetColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3763,6 +4289,10 @@ PHP_METHOD(php_wxDataViewItemAttr, SetColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewItemAttr::SetColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewItemAttr::SetItalic(bool set)
+   Call this to indicate that the item shall be displayed in italic text. */
 PHP_METHOD(php_wxDataViewItemAttr, SetItalic)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3860,6 +4390,10 @@ PHP_METHOD(php_wxDataViewItemAttr, SetItalic)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewItemAttr::SetItalic\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewItemAttr::wxDataViewItemAttr()
+   Constructor. */
 PHP_METHOD(php_wxDataViewItemAttr, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3940,6 +4474,8 @@ PHP_METHOD(php_wxDataViewItemAttr, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxDataViewItem_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3980,6 +4516,8 @@ void php_wxDataViewItem_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 		#endif
 	}
 }
+/* {{{ proto void wxDataViewItem::GetID()
+   Returns the ID. */
 PHP_METHOD(php_wxDataViewItem, GetID)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4072,6 +4610,10 @@ PHP_METHOD(php_wxDataViewItem, GetID)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewItem::GetID\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDataViewItem::IsOk()
+   Returns true if the ID is not NULL. */
 PHP_METHOD(php_wxDataViewItem, IsOk)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4164,6 +4706,10 @@ PHP_METHOD(php_wxDataViewItem, IsOk)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewItem::IsOk\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewItem::wxDataViewItem()
+   Constructor. */
 PHP_METHOD(php_wxDataViewItem, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4339,6 +4885,8 @@ PHP_METHOD(php_wxDataViewItem, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxDataViewModelNotifier_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4379,6 +4927,8 @@ void php_wxDataViewModelNotifier_destruction_handler(zend_rsrc_list_entry *rsrc 
 		#endif
 	}
 }
+/* {{{ proto bool wxDataViewModelNotifier::Cleared()
+   Called by owning model. */
 bool wxDataViewModelNotifier_php::Cleared()
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4421,6 +4971,10 @@ bool wxDataViewModelNotifier_php::Cleared()
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto wxDataViewModel wxDataViewModelNotifier::GetOwner()
+   Get owning wxDataViewModel. */
 PHP_METHOD(php_wxDataViewModelNotifier, GetOwner)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4536,6 +5090,10 @@ PHP_METHOD(php_wxDataViewModelNotifier, GetOwner)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewModelNotifier::GetOwner\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDataViewModelNotifier::ItemAdded(wxDataViewItem parent, wxDataViewItem item)
+   Called by owning model. */
 bool wxDataViewModelNotifier_php::ItemAdded(const wxDataViewItem& parent, const wxDataViewItem& item)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4587,6 +5145,10 @@ bool wxDataViewModelNotifier_php::ItemAdded(const wxDataViewItem& parent, const 
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto bool wxDataViewModelNotifier::ItemChanged(wxDataViewItem item)
+   Called by owning model. */
 bool wxDataViewModelNotifier_php::ItemChanged(const wxDataViewItem& item)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4636,6 +5198,10 @@ bool wxDataViewModelNotifier_php::ItemChanged(const wxDataViewItem& item)
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto bool wxDataViewModelNotifier::ItemDeleted(wxDataViewItem parent, wxDataViewItem item)
+   Called by owning model. */
 bool wxDataViewModelNotifier_php::ItemDeleted(const wxDataViewItem& parent, const wxDataViewItem& item)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4687,6 +5253,10 @@ bool wxDataViewModelNotifier_php::ItemDeleted(const wxDataViewItem& parent, cons
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewModelNotifier::Resort()
+   Called by owning model. */
 void wxDataViewModelNotifier_php::Resort()
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4729,6 +5299,10 @@ void wxDataViewModelNotifier_php::Resort()
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewModelNotifier::SetOwner(wxDataViewModel &owner)
+   Set owner of this notifier. */
 PHP_METHOD(php_wxDataViewModelNotifier, SetOwner)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4844,6 +5418,10 @@ PHP_METHOD(php_wxDataViewModelNotifier, SetOwner)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewModelNotifier::SetOwner\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDataViewModelNotifier::ValueChanged(wxDataViewItem item, int col)
+   Called by owning model. */
 bool wxDataViewModelNotifier_php::ValueChanged(const wxDataViewItem& item, unsigned int col)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4894,6 +5472,10 @@ bool wxDataViewModelNotifier_php::ValueChanged(const wxDataViewItem& item, unsig
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewModelNotifier::wxDataViewModelNotifier()
+   Constructor. */
 PHP_METHOD(php_wxDataViewModelNotifier, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4974,6 +5556,8 @@ PHP_METHOD(php_wxDataViewModelNotifier, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxDataViewRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5014,6 +5598,8 @@ void php_wxDataViewRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 		#endif
 	}
 }
+/* {{{ proto  wxDataViewRenderer::EnableEllipsize(wxEllipsizeMode mode)
+   Enable or disable replacing parts of the item text with ellipsis to make it fit the column width. */
 PHP_METHOD(php_wxDataViewRenderer, EnableEllipsize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5236,6 +5822,10 @@ PHP_METHOD(php_wxDataViewRenderer, EnableEllipsize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewRenderer::EnableEllipsize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewRenderer::DisableEllipsize()
+   Disable replacing parts of the item text with ellipsis. */
 PHP_METHOD(php_wxDataViewRenderer, DisableEllipsize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5403,6 +5993,10 @@ PHP_METHOD(php_wxDataViewRenderer, DisableEllipsize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewRenderer::DisableEllipsize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDataViewRenderer::GetAlignment()
+   Returns the alignment. */
 PHP_METHOD(php_wxDataViewRenderer, GetAlignment)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5570,6 +6164,10 @@ PHP_METHOD(php_wxDataViewRenderer, GetAlignment)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewRenderer::GetAlignment\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxEllipsizeMode wxDataViewRenderer::GetEllipsizeMode()
+   Returns the ellipsize mode used by the renderer. */
 PHP_METHOD(php_wxDataViewRenderer, GetEllipsizeMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5737,6 +6335,10 @@ PHP_METHOD(php_wxDataViewRenderer, GetEllipsizeMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewRenderer::GetEllipsizeMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxDataViewCellMode wxDataViewRenderer::GetMode()
+   Returns the cell mode. */
 PHP_METHOD(php_wxDataViewRenderer, GetMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5904,6 +6506,10 @@ PHP_METHOD(php_wxDataViewRenderer, GetMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewRenderer::GetMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxDataViewColumn wxDataViewRenderer::GetOwner()
+   Returns pointer to the owning wxDataViewColumn. */
 PHP_METHOD(php_wxDataViewRenderer, GetOwner)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6103,6 +6709,10 @@ PHP_METHOD(php_wxDataViewRenderer, GetOwner)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewRenderer::GetOwner\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDataViewRenderer::GetValue(wxVariant &value)
+   This methods retrieves the value from the renderer in order to transfer the value back to the data model. */
 bool wxDataViewRenderer_php::GetValue(wxVariant& value)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6152,6 +6762,10 @@ bool wxDataViewRenderer_php::GetValue(wxVariant& value)const
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto string wxDataViewRenderer::GetVariantType()
+   Returns a string with the type of the wxVariant supported by this renderer. */
 PHP_METHOD(php_wxDataViewRenderer, GetVariantType)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6325,6 +6939,10 @@ PHP_METHOD(php_wxDataViewRenderer, GetVariantType)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewRenderer::GetVariantType\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewRenderer::SetAlignment(int align)
+   Sets the alignment of the renderer's content. */
 PHP_METHOD(php_wxDataViewRenderer, SetAlignment)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6497,6 +7115,10 @@ PHP_METHOD(php_wxDataViewRenderer, SetAlignment)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewRenderer::SetAlignment\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewRenderer::SetOwner(wxDataViewColumn &owner)
+   Sets the owning wxDataViewColumn. */
 PHP_METHOD(php_wxDataViewRenderer, SetOwner)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6687,6 +7309,10 @@ PHP_METHOD(php_wxDataViewRenderer, SetOwner)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewRenderer::SetOwner\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDataViewRenderer::SetValue(wxVariant value)
+   Set the value of the renderer (and thus its cell) to value. */
 bool wxDataViewRenderer_php::SetValue(const wxVariant& value)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6736,6 +7362,10 @@ bool wxDataViewRenderer_php::SetValue(const wxVariant& value)
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto bool wxDataViewRenderer::Validate(wxVariant &value)
+   Before data is committed to the data model, it is passed to this method where it can be checked for validity. */
 PHP_METHOD(php_wxDataViewRenderer, Validate)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6926,6 +7556,8 @@ PHP_METHOD(php_wxDataViewRenderer, Validate)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewRenderer::Validate\n");
 	}
 }
+/* }}} */
+
 void php_wxDataViewTextRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6966,6 +7598,8 @@ void php_wxDataViewTextRenderer_destruction_handler(zend_rsrc_list_entry *rsrc T
 		#endif
 	}
 }
+/* {{{ proto  wxDataViewTextRenderer::wxDataViewTextRenderer(string varianttype, wxDataViewCellMode mode, int align)
+   The ctor. */
 PHP_METHOD(php_wxDataViewTextRenderer, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7084,6 +7718,8 @@ PHP_METHOD(php_wxDataViewTextRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxDataViewIconTextRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7124,6 +7760,8 @@ void php_wxDataViewIconTextRenderer_destruction_handler(zend_rsrc_list_entry *rs
 		#endif
 	}
 }
+/* {{{ proto  wxDataViewIconTextRenderer::wxDataViewIconTextRenderer(string varianttype, wxDataViewCellMode mode, int align)
+   The ctor. */
 PHP_METHOD(php_wxDataViewIconTextRenderer, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7242,6 +7880,8 @@ PHP_METHOD(php_wxDataViewIconTextRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxDataViewProgressRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7282,6 +7922,8 @@ void php_wxDataViewProgressRenderer_destruction_handler(zend_rsrc_list_entry *rs
 		#endif
 	}
 }
+/* {{{ proto  wxDataViewProgressRenderer::wxDataViewProgressRenderer(string label, string varianttype, wxDataViewCellMode mode, int align)
+   The ctor. */
 PHP_METHOD(php_wxDataViewProgressRenderer, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7412,6 +8054,8 @@ PHP_METHOD(php_wxDataViewProgressRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxDataViewSpinRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7452,6 +8096,8 @@ void php_wxDataViewSpinRenderer_destruction_handler(zend_rsrc_list_entry *rsrc T
 		#endif
 	}
 }
+/* {{{ proto  wxDataViewSpinRenderer::wxDataViewSpinRenderer(int min, int max, wxDataViewCellMode mode, int align)
+   Constructor. */
 PHP_METHOD(php_wxDataViewSpinRenderer, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7560,6 +8206,8 @@ PHP_METHOD(php_wxDataViewSpinRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxDataViewToggleRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7600,6 +8248,8 @@ void php_wxDataViewToggleRenderer_destruction_handler(zend_rsrc_list_entry *rsrc
 		#endif
 	}
 }
+/* {{{ proto  wxDataViewToggleRenderer::wxDataViewToggleRenderer(string varianttype, wxDataViewCellMode mode, int align)
+   The ctor. */
 PHP_METHOD(php_wxDataViewToggleRenderer, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7718,406 +8368,8 @@ PHP_METHOD(php_wxDataViewToggleRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
-void php_wxDataViewChoiceRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Calling php_wxDataViewChoiceRenderer_destruction_handler on %s at line %i\n", zend_get_executed_filename(TSRMLS_C), zend_get_executed_lineno(TSRMLS_C));
-	php_printf("===========================================\n");
-	#endif
-	
-	
-	wxDataViewChoiceRenderer_php* object = static_cast<wxDataViewChoiceRenderer_php*>(rsrc->ptr);
-	
-	if(rsrc->ptr != NULL)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Pointer not null\n");
-		php_printf("Pointer address %x\n", (unsigned int)(size_t)rsrc->ptr);
-		#endif
-		
-		if(object->references.IsUserInitialized())
-		{	
-			#ifdef USE_WXPHP_DEBUG
-			php_printf("Deleting pointer with delete\n");
-			#endif
-			
-			delete object;
-			
-			rsrc->ptr = NULL;
-		}
-		
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Deletion of wxDataViewChoiceRenderer done\n");
-		php_printf("===========================================\n\n");
-		#endif
-	}
-	else
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Not user space initialized\n");
-		#endif
-	}
-}
-PHP_METHOD(php_wxDataViewChoiceRenderer, GetChoice)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataViewChoiceRenderer::GetChoice\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	bool return_is_user_initialized = false;
-	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
-	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
-		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxDataViewChoiceRenderer::GetChoice\n");
-			
-			return;
-		}
-		else
-		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
-			
-			bool reference_type_found = false;
+/* }}} */
 
-			if(parent_rsrc_type == le_wxDataViewChoiceRenderer){
-				references = &((wxDataViewChoiceRenderer_php*)_this)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	long index0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l' (&index0)\n");
-		#endif
-		char parse_parameters_string[] = "l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &index0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing RETURN_STRING(wxDataViewChoiceRenderer::GetChoice((size_t) index0).fn_str(), 1)\n\n");
-				#endif
-				wxString value_to_return1;
-				value_to_return1 = ((wxDataViewChoiceRenderer_php*)_this)->GetChoice((size_t) index0);
-				char* temp_string1;
-				temp_string1 = (char*)malloc(sizeof(wxChar)*(value_to_return1.size()+1));
-				strcpy (temp_string1, (const char *) value_to_return1.char_str() );
-				ZVAL_STRING(return_value, temp_string1, 1);
-				free(temp_string1);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewChoiceRenderer::GetChoice\n");
-	}
-}
-PHP_METHOD(php_wxDataViewChoiceRenderer, GetChoices)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataViewChoiceRenderer::GetChoices\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	bool return_is_user_initialized = false;
-	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
-	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
-		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxDataViewChoiceRenderer::GetChoices\n");
-			
-			return;
-		}
-		else
-		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
-			
-			bool reference_type_found = false;
-
-			if(parent_rsrc_type == le_wxDataViewChoiceRenderer){
-				references = &((wxDataViewChoiceRenderer_php*)_this)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataViewChoiceRenderer::GetChoices() to return strings array\n\n");
-				#endif
-				wxArrayString value_to_return0;
-				value_to_return0 = ((wxDataViewChoiceRenderer_php*)_this)->GetChoices();
-				char* temp_string0;
-				array_init(return_value);
-				for(size_t i=0; i<value_to_return0.GetCount(); i++)
-				{
-					temp_string0 = (char*)malloc(sizeof(wxChar)*(value_to_return0[i].size()+1));
-					strcpy (temp_string0, (const char *) value_to_return0[i].char_str() );
-					add_next_index_string(return_value, (char*) temp_string0, 1);
-					free(temp_string0);
-				}
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewChoiceRenderer::GetChoices\n");
-	}
-}
-PHP_METHOD(php_wxDataViewChoiceRenderer, __construct)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataViewChoiceRenderer::__construct\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	
-	//Parameters for overload 0
-	zval* choices0 = 0;
-	long mode0;
-	long alignment0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received >= 1  && arguments_received <= 3)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'a|ll' (&choices0, &mode0, &alignment0)\n");
-		#endif
-		char parse_parameters_string[] = "a|ll";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &choices0, &mode0, &alignment0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		wxArrayString strings_array0_0;
-		bool strings_continue0_0 = true;
-
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				int array_index0_0 = 0;
-				zval** temp_array_value0_0 = 0;
-				while(strings_continue0_0)
-				{
-					if(zend_hash_index_find(HASH_OF(choices0), array_index0_0, (void**)&temp_array_value0_0) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value0_0);
-						strings_array0_0.Add(wxString(Z_STRVAL_PP(temp_array_value0_0), wxConvUTF8));
-						array_index0_0++;
-					}
-					else
-					{
-						strings_continue0_0 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct(strings_array0_0)\n");
-				#endif
-				_this = new wxDataViewChoiceRenderer_php(strings_array0_0);
-
-				((wxDataViewChoiceRenderer_php*) _this)->references.Initialize();
-				break;
-			}
-			case 2:
-			{
-				int array_index0_0 = 0;
-				zval** temp_array_value0_0 = 0;
-				while(strings_continue0_0)
-				{
-					if(zend_hash_index_find(HASH_OF(choices0), array_index0_0, (void**)&temp_array_value0_0) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value0_0);
-						strings_array0_0.Add(wxString(Z_STRVAL_PP(temp_array_value0_0), wxConvUTF8));
-						array_index0_0++;
-					}
-					else
-					{
-						strings_continue0_0 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct(strings_array0_0, (wxDataViewCellMode) mode0)\n");
-				#endif
-				_this = new wxDataViewChoiceRenderer_php(strings_array0_0, (wxDataViewCellMode) mode0);
-
-				((wxDataViewChoiceRenderer_php*) _this)->references.Initialize();
-				break;
-			}
-			case 3:
-			{
-				int array_index0_0 = 0;
-				zval** temp_array_value0_0 = 0;
-				while(strings_continue0_0)
-				{
-					if(zend_hash_index_find(HASH_OF(choices0), array_index0_0, (void**)&temp_array_value0_0) == SUCCESS)
-					{
-						convert_to_string(*temp_array_value0_0);
-						strings_array0_0.Add(wxString(Z_STRVAL_PP(temp_array_value0_0), wxConvUTF8));
-						array_index0_0++;
-					}
-					else
-					{
-						strings_continue0_0 = false;
-					}
-				}
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing __construct(strings_array0_0, (wxDataViewCellMode) mode0, (int) alignment0)\n");
-				#endif
-				_this = new wxDataViewChoiceRenderer_php(strings_array0_0, (wxDataViewCellMode) mode0, (int) alignment0);
-
-				((wxDataViewChoiceRenderer_php*) _this)->references.Initialize();
-				break;
-			}
-		}
-	}
-
-		
-	if(already_called)
-	{
-		long id_to_find = zend_list_insert(_this, le_wxDataViewChoiceRenderer);
-		
-		add_property_resource(getThis(), _wxResource, id_to_find);
-		
-		MAKE_STD_ZVAL(((wxDataViewChoiceRenderer_php*) _this)->evnArray);
-		
-		array_init(((wxDataViewChoiceRenderer_php*) _this)->evnArray);
-		
-		((wxDataViewChoiceRenderer_php*) _this)->phpObj = getThis();
-		
-		((wxDataViewChoiceRenderer_php*) _this)->InitProperties();
-		
-		#ifdef ZTS 
-		((wxDataViewChoiceRenderer_php*) _this)->TSRMLS_C = TSRMLS_C;
-		#endif
-	}
-	else
-	{
-		zend_error(E_ERROR, "Abstract class or wrong type/count of parameters passed to: wxDataViewChoiceRenderer::__constructor\n");
-	}
-	
-	#ifdef USE_WXPHP_DEBUG
-		php_printf("===========================================\n\n");
-	#endif
-}
 void php_wxDataViewDateRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8158,6 +8410,8 @@ void php_wxDataViewDateRenderer_destruction_handler(zend_rsrc_list_entry *rsrc T
 		#endif
 	}
 }
+/* {{{ proto  wxDataViewDateRenderer::wxDataViewDateRenderer(string varianttype, wxDataViewCellMode mode, int align)
+   The ctor. */
 PHP_METHOD(php_wxDataViewDateRenderer, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8276,6 +8530,8 @@ PHP_METHOD(php_wxDataViewDateRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxDataViewCustomRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8316,6 +8572,8 @@ void php_wxDataViewCustomRenderer_destruction_handler(zend_rsrc_list_entry *rsrc
 		#endif
 	}
 }
+/* {{{ proto bool wxDataViewCustomRenderer::ActivateCell(wxRect cell, wxDataViewModel &model, wxDataViewItem item, int col, wxMouseEvent mouseEvent)
+   Override this to react to cell activation. */
 PHP_METHOD(php_wxDataViewCustomRenderer, ActivateCell)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8500,6 +8758,10 @@ PHP_METHOD(php_wxDataViewCustomRenderer, ActivateCell)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewCustomRenderer::ActivateCell\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxWindow wxDataViewCustomRenderer::CreateEditorCtrl(wxWindow &parent, wxRect labelRect, wxVariant value)
+   Override this to create the actual editor control once editing is about to start. */
 PHP_METHOD(php_wxDataViewCustomRenderer, CreateEditorCtrl)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8687,6 +8949,10 @@ PHP_METHOD(php_wxDataViewCustomRenderer, CreateEditorCtrl)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewCustomRenderer::CreateEditorCtrl\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxDataViewItemAttr wxDataViewCustomRenderer::GetAttr()
+   Return the attribute to be used for rendering. */
 PHP_METHOD(php_wxDataViewCustomRenderer, GetAttr)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8811,6 +9077,10 @@ PHP_METHOD(php_wxDataViewCustomRenderer, GetAttr)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewCustomRenderer::GetAttr\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxDataViewCustomRenderer::GetSize()
+   Return size required to show content. */
 wxSize wxDataViewCustomRenderer_php::GetSize()const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8858,6 +9128,10 @@ wxSize wxDataViewCustomRenderer_php::GetSize()const
 		return *(wxSize*) return_object;
 	
 }
+/* }}} */
+
+/* {{{ proto bool wxDataViewCustomRenderer::GetValueFromEditorCtrl(wxWindow &editor, wxVariant &value)
+   Override this so that the renderer can get the value from the editor control (pointed to by editor): */
 PHP_METHOD(php_wxDataViewCustomRenderer, GetValueFromEditorCtrl)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9003,6 +9277,10 @@ PHP_METHOD(php_wxDataViewCustomRenderer, GetValueFromEditorCtrl)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewCustomRenderer::GetValueFromEditorCtrl\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDataViewCustomRenderer::HasEditorCtrl()
+   Override this and make it return true in order to indicate that this renderer supports in-place editing. */
 PHP_METHOD(php_wxDataViewCustomRenderer, HasEditorCtrl)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9106,6 +9384,10 @@ PHP_METHOD(php_wxDataViewCustomRenderer, HasEditorCtrl)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewCustomRenderer::HasEditorCtrl\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDataViewCustomRenderer::LeftClick(wxPoint cursor, wxRect cell, wxDataViewModel &model, wxDataViewItem item, int col)
+   Override this to react to a left click. */
 PHP_METHOD(php_wxDataViewCustomRenderer, LeftClick)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9290,6 +9572,10 @@ PHP_METHOD(php_wxDataViewCustomRenderer, LeftClick)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewCustomRenderer::LeftClick\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDataViewCustomRenderer::Render(wxRect cell, wxDC &dc, int state)
+   Override this to render the cell. */
 bool wxDataViewCustomRenderer_php::Render(wxRect cell, wxDC* dc, int state)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9342,6 +9628,10 @@ bool wxDataViewCustomRenderer_php::Render(wxRect cell, wxDC* dc, int state)
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewCustomRenderer::RenderText(string text, int xoffset, wxRect cell, wxDC &dc, int state)
+   This method should be called from within Render() whenever you need to render simple text. */
 PHP_METHOD(php_wxDataViewCustomRenderer, RenderText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9490,6 +9780,10 @@ PHP_METHOD(php_wxDataViewCustomRenderer, RenderText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewCustomRenderer::RenderText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDataViewCustomRenderer::StartDrag(wxPoint cursor, wxRect cell, wxDataViewModel &model, wxDataViewItem item, int col)
+   Override this to start a drag operation. */
 PHP_METHOD(php_wxDataViewCustomRenderer, StartDrag)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9674,6 +9968,8 @@ PHP_METHOD(php_wxDataViewCustomRenderer, StartDrag)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewCustomRenderer::StartDrag\n");
 	}
 }
+/* }}} */
+
 void php_wxDataViewBitmapRenderer_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9714,6 +10010,8 @@ void php_wxDataViewBitmapRenderer_destruction_handler(zend_rsrc_list_entry *rsrc
 		#endif
 	}
 }
+/* {{{ proto  wxDataViewBitmapRenderer::wxDataViewBitmapRenderer(string varianttype, wxDataViewCellMode mode, int align)
+   The ctor. */
 PHP_METHOD(php_wxDataViewBitmapRenderer, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9832,6 +10130,8 @@ PHP_METHOD(php_wxDataViewBitmapRenderer, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxDataViewColumn_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9872,6 +10172,8 @@ void php_wxDataViewColumn_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		#endif
 	}
 }
+/* {{{ proto int wxDataViewColumn::GetModelColumn()
+   Returns the index of the column of the model, which this wxDataViewColumn is displaying. */
 PHP_METHOD(php_wxDataViewColumn, GetModelColumn)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9964,6 +10266,10 @@ PHP_METHOD(php_wxDataViewColumn, GetModelColumn)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewColumn::GetModelColumn\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxDataViewCtrl wxDataViewColumn::GetOwner()
+   Returns the owning wxDataViewCtrl. */
 PHP_METHOD(php_wxDataViewColumn, GetOwner)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10079,6 +10385,10 @@ PHP_METHOD(php_wxDataViewColumn, GetOwner)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewColumn::GetOwner\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewColumn::wxDataViewColumn(string title, wxDataViewRenderer &renderer, int model_column, int width, wxAlignment align, int flags)
+   Constructs a text column. */
 PHP_METHOD(php_wxDataViewColumn, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10334,6 +10644,10 @@ PHP_METHOD(php_wxDataViewColumn, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto wxDataViewRenderer wxDataViewColumn::GetRenderer()
+   Returns the renderer of this wxDataViewColumn. */
 PHP_METHOD(php_wxDataViewColumn, GetRenderer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10449,6 +10763,8 @@ PHP_METHOD(php_wxDataViewColumn, GetRenderer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewColumn::GetRenderer\n");
 	}
 }
+/* }}} */
+
 void php_wxDataViewListStore_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10489,6 +10805,8 @@ void php_wxDataViewListStore_destruction_handler(zend_rsrc_list_entry *rsrc TSRM
 		#endif
 	}
 }
+/* {{{ proto  wxDataViewListStore::AppendColumn(string varianttype)
+   Appends a data column. */
 PHP_METHOD(php_wxDataViewListStore, AppendColumn)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10587,6 +10905,10 @@ PHP_METHOD(php_wxDataViewListStore, AppendColumn)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewListStore::AppendColumn\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewListStore::DeleteAllItems()
+   Delete all item (=all rows) in the store. */
 PHP_METHOD(php_wxDataViewListStore, DeleteAllItems)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10679,6 +11001,10 @@ PHP_METHOD(php_wxDataViewListStore, DeleteAllItems)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewListStore::DeleteAllItems\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewListStore::DeleteItem(int pos)
+   Delete the item (=row) at position pos. */
 PHP_METHOD(php_wxDataViewListStore, DeleteItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10776,6 +11102,10 @@ PHP_METHOD(php_wxDataViewListStore, DeleteItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewListStore::DeleteItem\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDataViewListStore::GetColumnCount()
+   Overridden from wxDataViewModel. */
 PHP_METHOD(php_wxDataViewListStore, GetColumnCount)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10868,6 +11198,10 @@ PHP_METHOD(php_wxDataViewListStore, GetColumnCount)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewListStore::GetColumnCount\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxDataViewListStore::GetColumnType(int col)
+   Overridden from wxDataViewModel. */
 PHP_METHOD(php_wxDataViewListStore, GetColumnType)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10971,6 +11305,10 @@ PHP_METHOD(php_wxDataViewListStore, GetColumnType)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewListStore::GetColumnType\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewListStore::GetValueByRow(wxVariant &value, int row, int col)
+   Overridden from wxDataViewIndexListModel. */
 PHP_METHOD(php_wxDataViewListStore, GetValueByRow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11088,6 +11426,10 @@ PHP_METHOD(php_wxDataViewListStore, GetValueByRow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewListStore::GetValueByRow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewListStore::InsertColumn(int pos, string varianttype)
+   Inserts a data column before pos. */
 PHP_METHOD(php_wxDataViewListStore, InsertColumn)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11187,6 +11529,10 @@ PHP_METHOD(php_wxDataViewListStore, InsertColumn)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewListStore::InsertColumn\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewListStore::PrependColumn(string varianttype)
+   Prepends a data column. */
 PHP_METHOD(php_wxDataViewListStore, PrependColumn)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11285,6 +11631,10 @@ PHP_METHOD(php_wxDataViewListStore, PrependColumn)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewListStore::PrependColumn\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDataViewListStore::SetValueByRow(wxVariant value, int row, int col)
+   Overridden from wxDataViewIndexListModel. */
 PHP_METHOD(php_wxDataViewListStore, SetValueByRow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11402,6 +11752,10 @@ PHP_METHOD(php_wxDataViewListStore, SetValueByRow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewListStore::SetValueByRow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewListStore::wxDataViewListStore()
+   Constructor. */
 PHP_METHOD(php_wxDataViewListStore, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11482,6 +11836,8 @@ PHP_METHOD(php_wxDataViewListStore, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxDataViewTreeStore_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11522,6 +11878,8 @@ void php_wxDataViewTreeStore_destruction_handler(zend_rsrc_list_entry *rsrc TSRM
 		#endif
 	}
 }
+/* {{{ proto wxDataViewItem wxDataViewTreeStore::AppendContainer(wxDataViewItem parent, string text, wxIcon icon, wxIcon expanded, wxClientData &data)
+   Append a container. */
 PHP_METHOD(php_wxDataViewTreeStore, AppendContainer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11755,6 +12113,10 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendContainer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewTreeStore::AppendContainer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxDataViewItem wxDataViewTreeStore::AppendItem(wxDataViewItem parent, string text, wxIcon icon, wxClientData &data)
+   Append an item. */
 PHP_METHOD(php_wxDataViewTreeStore, AppendItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11950,6 +12312,10 @@ PHP_METHOD(php_wxDataViewTreeStore, AppendItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewTreeStore::AppendItem\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewTreeStore::DeleteAllItems()
+   Delete all item in the model. */
 PHP_METHOD(php_wxDataViewTreeStore, DeleteAllItems)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12042,6 +12408,10 @@ PHP_METHOD(php_wxDataViewTreeStore, DeleteAllItems)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewTreeStore::DeleteAllItems\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewTreeStore::DeleteChildren(wxDataViewItem item)
+   Delete all children of the item, but not the item itself. */
 PHP_METHOD(php_wxDataViewTreeStore, DeleteChildren)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12157,6 +12527,10 @@ PHP_METHOD(php_wxDataViewTreeStore, DeleteChildren)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewTreeStore::DeleteChildren\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewTreeStore::DeleteItem(wxDataViewItem item)
+   Delete this item. */
 PHP_METHOD(php_wxDataViewTreeStore, DeleteItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12272,6 +12646,10 @@ PHP_METHOD(php_wxDataViewTreeStore, DeleteItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewTreeStore::DeleteItem\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDataViewTreeStore::GetChildCount(wxDataViewItem parent)
+   Return the number of children of item. */
 PHP_METHOD(php_wxDataViewTreeStore, GetChildCount)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12387,6 +12765,10 @@ PHP_METHOD(php_wxDataViewTreeStore, GetChildCount)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewTreeStore::GetChildCount\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxClientData wxDataViewTreeStore::GetItemData(wxDataViewItem item)
+   Returns the client data associated with the item. */
 PHP_METHOD(php_wxDataViewTreeStore, GetItemData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12525,6 +12907,10 @@ PHP_METHOD(php_wxDataViewTreeStore, GetItemData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewTreeStore::GetItemData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxIcon wxDataViewTreeStore::GetItemExpandedIcon(wxDataViewItem item)
+   Returns the icon to display in expanded containers. */
 PHP_METHOD(php_wxDataViewTreeStore, GetItemExpandedIcon)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12660,6 +13046,10 @@ PHP_METHOD(php_wxDataViewTreeStore, GetItemExpandedIcon)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewTreeStore::GetItemExpandedIcon\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxIcon wxDataViewTreeStore::GetItemIcon(wxDataViewItem item)
+   Returns the icon of the item. */
 PHP_METHOD(php_wxDataViewTreeStore, GetItemIcon)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12795,6 +13185,10 @@ PHP_METHOD(php_wxDataViewTreeStore, GetItemIcon)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewTreeStore::GetItemIcon\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxDataViewTreeStore::GetItemText(wxDataViewItem item)
+   Returns the text of the item. */
 PHP_METHOD(php_wxDataViewTreeStore, GetItemText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12916,6 +13310,10 @@ PHP_METHOD(php_wxDataViewTreeStore, GetItemText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewTreeStore::GetItemText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxDataViewItem wxDataViewTreeStore::GetNthChild(wxDataViewItem parent, int pos)
+   Returns the nth child item of item. */
 PHP_METHOD(php_wxDataViewTreeStore, GetNthChild)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13037,6 +13435,10 @@ PHP_METHOD(php_wxDataViewTreeStore, GetNthChild)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewTreeStore::GetNthChild\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxDataViewItem wxDataViewTreeStore::InsertContainer(wxDataViewItem parent, wxDataViewItem previous, string text, wxIcon icon, wxIcon expanded, wxClientData &data)
+   Inserts a container after previous. */
 PHP_METHOD(php_wxDataViewTreeStore, InsertContainer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13292,6 +13694,10 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertContainer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewTreeStore::InsertContainer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxDataViewItem wxDataViewTreeStore::InsertItem(wxDataViewItem parent, wxDataViewItem previous, string text, wxIcon icon, wxClientData &data)
+   Inserts an item after previous. */
 PHP_METHOD(php_wxDataViewTreeStore, InsertItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13508,6 +13914,10 @@ PHP_METHOD(php_wxDataViewTreeStore, InsertItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewTreeStore::InsertItem\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxDataViewItem wxDataViewTreeStore::PrependContainer(wxDataViewItem parent, string text, wxIcon icon, wxIcon expanded, wxClientData &data)
+   Inserts a container before the first child item or parent. */
 PHP_METHOD(php_wxDataViewTreeStore, PrependContainer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13741,6 +14151,10 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependContainer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewTreeStore::PrependContainer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxDataViewItem wxDataViewTreeStore::PrependItem(wxDataViewItem parent, string text, wxIcon icon, wxClientData &data)
+   Inserts an item before the first child item or parent. */
 PHP_METHOD(php_wxDataViewTreeStore, PrependItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13936,6 +14350,10 @@ PHP_METHOD(php_wxDataViewTreeStore, PrependItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewTreeStore::PrependItem\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewTreeStore::SetItemData(wxDataViewItem item, wxClientData &data)
+   Sets the client data associated with the item. */
 PHP_METHOD(php_wxDataViewTreeStore, SetItemData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14070,6 +14488,10 @@ PHP_METHOD(php_wxDataViewTreeStore, SetItemData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewTreeStore::SetItemData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewTreeStore::SetItemExpandedIcon(wxDataViewItem item, wxIcon icon)
+   Sets the expanded icon for the item. */
 PHP_METHOD(php_wxDataViewTreeStore, SetItemExpandedIcon)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14204,6 +14626,10 @@ PHP_METHOD(php_wxDataViewTreeStore, SetItemExpandedIcon)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewTreeStore::SetItemExpandedIcon\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewTreeStore::SetItemIcon(wxDataViewItem item, wxIcon icon)
+   Sets the icon for the item. */
 PHP_METHOD(php_wxDataViewTreeStore, SetItemIcon)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14338,6 +14764,10 @@ PHP_METHOD(php_wxDataViewTreeStore, SetItemIcon)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewTreeStore::SetItemIcon\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewTreeStore::wxDataViewTreeStore()
+   Constructor. */
 PHP_METHOD(php_wxDataViewTreeStore, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14418,6 +14848,8 @@ PHP_METHOD(php_wxDataViewTreeStore, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxDataViewIconText_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14458,6 +14890,8 @@ void php_wxDataViewIconText_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 		#endif
 	}
 }
+/* {{{ proto wxIcon wxDataViewIconText::GetIcon()
+   Gets the icon. */
 PHP_METHOD(php_wxDataViewIconText, GetIcon)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14570,6 +15004,10 @@ PHP_METHOD(php_wxDataViewIconText, GetIcon)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewIconText::GetIcon\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxDataViewIconText::GetText()
+   Gets the text. */
 PHP_METHOD(php_wxDataViewIconText, GetText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14668,6 +15106,10 @@ PHP_METHOD(php_wxDataViewIconText, GetText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewIconText::GetText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewIconText::SetIcon(wxIcon icon)
+   Set the icon. */
 PHP_METHOD(php_wxDataViewIconText, SetIcon)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14783,6 +15225,10 @@ PHP_METHOD(php_wxDataViewIconText, SetIcon)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewIconText::SetIcon\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewIconText::SetText(string text)
+   Set the text. */
 PHP_METHOD(php_wxDataViewIconText, SetText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14881,6 +15327,10 @@ PHP_METHOD(php_wxDataViewIconText, SetText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewIconText::SetText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewIconText::wxDataViewIconText(string text, wxIcon icon)
+   Constructor. */
 PHP_METHOD(php_wxDataViewIconText, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15060,3 +15510,5 @@ PHP_METHOD(php_wxDataViewIconText, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+

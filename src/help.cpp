@@ -91,6 +91,8 @@ void php_wxToolTip_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxToolTip::wxToolTip(string tip)
+   Constructor. */
 PHP_METHOD(php_wxToolTip, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -177,6 +179,10 @@ PHP_METHOD(php_wxToolTip, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxToolTip::SetTip(string tip)
+   Set the tooltip text. */
 PHP_METHOD(php_wxToolTip, SetTip)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -275,6 +281,10 @@ PHP_METHOD(php_wxToolTip, SetTip)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxToolTip::SetTip\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxToolTip::SetReshow(int msecs)
+   Set the delay between subsequent tooltips to appear. */
 PHP_METHOD(php_wxToolTip, SetReshow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -373,6 +383,10 @@ PHP_METHOD(php_wxToolTip, SetReshow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxToolTip::SetReshow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxToolTip::SetDelay(int msecs)
+   Set the delay after which the tooltip appears. */
 PHP_METHOD(php_wxToolTip, SetDelay)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -471,6 +485,10 @@ PHP_METHOD(php_wxToolTip, SetDelay)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxToolTip::SetDelay\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxToolTip::SetAutoPop(int msecs)
+   Set the delay after which the tooltip disappears or how long a tooltip remains visible. */
 PHP_METHOD(php_wxToolTip, SetAutoPop)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -569,6 +587,10 @@ PHP_METHOD(php_wxToolTip, SetAutoPop)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxToolTip::SetAutoPop\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxWindow wxToolTip::GetWindow()
+   Get the associated window. */
 PHP_METHOD(php_wxToolTip, GetWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -684,6 +706,10 @@ PHP_METHOD(php_wxToolTip, GetWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxToolTip::GetWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxToolTip::GetTip()
+   Get the tooltip text. */
 PHP_METHOD(php_wxToolTip, GetTip)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -782,6 +808,10 @@ PHP_METHOD(php_wxToolTip, GetTip)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxToolTip::GetTip\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxToolTip::Enable(bool flag)
+   Enable or disable tooltips globally. */
 PHP_METHOD(php_wxToolTip, Enable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -880,3 +910,5 @@ PHP_METHOD(php_wxToolTip, Enable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxToolTip::Enable\n");
 	}
 }
+/* }}} */
+

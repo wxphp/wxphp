@@ -91,6 +91,8 @@ void php_wxEventFilter_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto int wxEventFilter::FilterEvent(wxEvent &event)
+   Override this method to implement event pre-processing. */
 int wxEventFilter_php::FilterEvent(wxEvent& event)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -140,6 +142,10 @@ int wxEventFilter_php::FilterEvent(wxEvent& event)
 		return (int) Z_LVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto  wxEventFilter::wxEventFilter()
+   Default constructor. */
 PHP_METHOD(php_wxEventFilter, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -220,6 +226,8 @@ PHP_METHOD(php_wxEventFilter, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxKeyboardState_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -260,6 +268,8 @@ void php_wxKeyboardState_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+/* {{{ proto bool wxKeyboardState::AltDown()
+   Returns true if the Alt key is pressed. */
 PHP_METHOD(php_wxKeyboardState, AltDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -364,6 +374,10 @@ PHP_METHOD(php_wxKeyboardState, AltDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxKeyboardState::AltDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxKeyboardState::CmdDown()
+   Returns true if the key used for command accelerators is pressed. */
 PHP_METHOD(php_wxKeyboardState, CmdDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -468,6 +482,10 @@ PHP_METHOD(php_wxKeyboardState, CmdDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxKeyboardState::CmdDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxKeyboardState::ControlDown()
+   Returns true if the Control key or Apple/Command key under OS X is pressed. */
 PHP_METHOD(php_wxKeyboardState, ControlDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -572,6 +590,10 @@ PHP_METHOD(php_wxKeyboardState, ControlDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxKeyboardState::ControlDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxKeyboardState::GetModifiers()
+   Return the bit mask of all pressed modifier keys. */
 PHP_METHOD(php_wxKeyboardState, GetModifiers)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -676,6 +698,10 @@ PHP_METHOD(php_wxKeyboardState, GetModifiers)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxKeyboardState::GetModifiers\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxKeyboardState::HasModifiers()
+   Returns true if any modifiers at all are pressed. */
 PHP_METHOD(php_wxKeyboardState, HasModifiers)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -780,6 +806,10 @@ PHP_METHOD(php_wxKeyboardState, HasModifiers)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxKeyboardState::HasModifiers\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxKeyboardState::MetaDown()
+   Returns true if the Meta/Windows/Apple key is pressed. */
 PHP_METHOD(php_wxKeyboardState, MetaDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -884,6 +914,10 @@ PHP_METHOD(php_wxKeyboardState, MetaDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxKeyboardState::MetaDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxKeyboardState::RawControlDown()
+   Returns true if the Control key (also under OS X). */
 PHP_METHOD(php_wxKeyboardState, RawControlDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -988,6 +1022,9 @@ PHP_METHOD(php_wxKeyboardState, RawControlDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxKeyboardState::RawControlDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxKeyboardState::SetAltDown(bool down) */
 PHP_METHOD(php_wxKeyboardState, SetAltDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1097,6 +1134,9 @@ PHP_METHOD(php_wxKeyboardState, SetAltDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxKeyboardState::SetAltDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxKeyboardState::SetControlDown(bool down) */
 PHP_METHOD(php_wxKeyboardState, SetControlDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1206,6 +1246,9 @@ PHP_METHOD(php_wxKeyboardState, SetControlDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxKeyboardState::SetControlDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxKeyboardState::SetMetaDown(bool down) */
 PHP_METHOD(php_wxKeyboardState, SetMetaDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1315,6 +1358,9 @@ PHP_METHOD(php_wxKeyboardState, SetMetaDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxKeyboardState::SetMetaDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxKeyboardState::SetRawControlDown(bool down) */
 PHP_METHOD(php_wxKeyboardState, SetRawControlDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1424,6 +1470,9 @@ PHP_METHOD(php_wxKeyboardState, SetRawControlDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxKeyboardState::SetRawControlDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxKeyboardState::SetShiftDown(bool down) */
 PHP_METHOD(php_wxKeyboardState, SetShiftDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1533,6 +1582,10 @@ PHP_METHOD(php_wxKeyboardState, SetShiftDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxKeyboardState::SetShiftDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxKeyboardState::ShiftDown()
+   Returns true if the Shift key is pressed. */
 PHP_METHOD(php_wxKeyboardState, ShiftDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1637,6 +1690,10 @@ PHP_METHOD(php_wxKeyboardState, ShiftDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxKeyboardState::ShiftDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxKeyboardState::wxKeyboardState(bool controlDown, bool shiftDown, bool altDown, bool metaDown)
+   Constructor initializes the modifier key settings. */
 PHP_METHOD(php_wxKeyboardState, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1765,6 +1822,8 @@ PHP_METHOD(php_wxKeyboardState, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxAuiManagerEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1805,6 +1864,8 @@ void php_wxAuiManagerEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 		#endif
 	}
 }
+/* {{{ proto  wxAuiManagerEvent::wxAuiManagerEvent(int type)
+   Constructor. */
 PHP_METHOD(php_wxAuiManagerEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1900,6 +1961,10 @@ PHP_METHOD(php_wxAuiManagerEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxAuiManagerEvent::Veto(bool veto)
+   Cancels the action indicated by this event if CanVeto() is true. */
 PHP_METHOD(php_wxAuiManagerEvent, Veto)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2008,6 +2073,10 @@ PHP_METHOD(php_wxAuiManagerEvent, Veto)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManagerEvent::Veto\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiManagerEvent::SetPane(wxAuiPaneInfo &pane)
+   Sets the pane this event is associated with. */
 PHP_METHOD(php_wxAuiManagerEvent, SetPane)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2123,6 +2192,10 @@ PHP_METHOD(php_wxAuiManagerEvent, SetPane)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManagerEvent::SetPane\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiManagerEvent::SetManager(wxAuiManager &manager)
+   Sets the wxAuiManager this event is associated with. */
 PHP_METHOD(php_wxAuiManagerEvent, SetManager)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2238,6 +2311,9 @@ PHP_METHOD(php_wxAuiManagerEvent, SetManager)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManagerEvent::SetManager\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiManagerEvent::SetDC(wxDC &pdc) */
 PHP_METHOD(php_wxAuiManagerEvent, SetDC)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2353,6 +2429,10 @@ PHP_METHOD(php_wxAuiManagerEvent, SetDC)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManagerEvent::SetDC\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiManagerEvent::SetCanVeto(bool can_veto)
+   Sets whether or not this event can be vetoed. */
 PHP_METHOD(php_wxAuiManagerEvent, SetCanVeto)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2450,6 +2530,10 @@ PHP_METHOD(php_wxAuiManagerEvent, SetCanVeto)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManagerEvent::SetCanVeto\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAuiManagerEvent::SetButton(int button)
+   Sets the ID of the button clicked that triggered this event. */
 PHP_METHOD(php_wxAuiManagerEvent, SetButton)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2547,6 +2631,9 @@ PHP_METHOD(php_wxAuiManagerEvent, SetButton)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManagerEvent::SetButton\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiManagerEvent::GetVeto() */
 PHP_METHOD(php_wxAuiManagerEvent, GetVeto)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2639,6 +2726,9 @@ PHP_METHOD(php_wxAuiManagerEvent, GetVeto)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManagerEvent::GetVeto\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiPaneInfo wxAuiManagerEvent::GetPane() */
 PHP_METHOD(php_wxAuiManagerEvent, GetPane)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2754,6 +2844,9 @@ PHP_METHOD(php_wxAuiManagerEvent, GetPane)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManagerEvent::GetPane\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxAuiManager wxAuiManagerEvent::GetManager() */
 PHP_METHOD(php_wxAuiManagerEvent, GetManager)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2869,6 +2962,9 @@ PHP_METHOD(php_wxAuiManagerEvent, GetManager)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManagerEvent::GetManager\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxDC wxAuiManagerEvent::GetDC() */
 PHP_METHOD(php_wxAuiManagerEvent, GetDC)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2984,6 +3080,9 @@ PHP_METHOD(php_wxAuiManagerEvent, GetDC)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManagerEvent::GetDC\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAuiManagerEvent::GetButton() */
 PHP_METHOD(php_wxAuiManagerEvent, GetButton)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3076,6 +3175,9 @@ PHP_METHOD(php_wxAuiManagerEvent, GetButton)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManagerEvent::GetButton\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAuiManagerEvent::CanVeto() */
 PHP_METHOD(php_wxAuiManagerEvent, CanVeto)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3168,6 +3270,8 @@ PHP_METHOD(php_wxAuiManagerEvent, CanVeto)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAuiManagerEvent::CanVeto\n");
 	}
 }
+/* }}} */
+
 void php_wxCalendarEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3208,6 +3312,8 @@ void php_wxCalendarEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+/* {{{ proto wxDateTime::WeekDay wxCalendarEvent::GetWeekDay()
+   Returns the week day on which the user clicked in EVT_CALENDAR_WEEKDAY_CLICKED handler. */
 PHP_METHOD(php_wxCalendarEvent, GetWeekDay)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3303,6 +3409,10 @@ PHP_METHOD(php_wxCalendarEvent, GetWeekDay)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCalendarEvent::GetWeekDay\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxCalendarEvent::SetWeekDay(wxDateTime::WeekDay day)
+   Sets the week day carried by the event, normally only used by the library internally. */
 PHP_METHOD(php_wxCalendarEvent, SetWeekDay)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3403,6 +3513,8 @@ PHP_METHOD(php_wxCalendarEvent, SetWeekDay)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCalendarEvent::SetWeekDay\n");
 	}
 }
+/* }}} */
+
 void php_wxColourPickerEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3443,6 +3555,8 @@ void php_wxColourPickerEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRM
 		#endif
 	}
 }
+/* {{{ proto wxColour wxColourPickerEvent::GetColour()
+   Retrieve the colour the user has just selected. */
 PHP_METHOD(php_wxColourPickerEvent, GetColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3540,6 +3654,10 @@ PHP_METHOD(php_wxColourPickerEvent, GetColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxColourPickerEvent::GetColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxColourPickerEvent::SetColour(wxColour pos)
+   Set the colour associated with the event. */
 PHP_METHOD(php_wxColourPickerEvent, SetColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3655,6 +3773,10 @@ PHP_METHOD(php_wxColourPickerEvent, SetColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxColourPickerEvent::SetColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxColourPickerEvent::wxColourPickerEvent(wxObject &generator, int id, wxColour colour)
+   The constructor is not normally used by the user code. */
 PHP_METHOD(php_wxColourPickerEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3778,6 +3900,8 @@ PHP_METHOD(php_wxColourPickerEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxCollapsiblePaneEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3818,6 +3942,8 @@ void php_wxCollapsiblePaneEvent_destruction_handler(zend_rsrc_list_entry *rsrc T
 		#endif
 	}
 }
+/* {{{ proto bool wxCollapsiblePaneEvent::GetCollapsed()
+   Returns true if the pane has been collapsed. */
 PHP_METHOD(php_wxCollapsiblePaneEvent, GetCollapsed)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3910,6 +4036,10 @@ PHP_METHOD(php_wxCollapsiblePaneEvent, GetCollapsed)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCollapsiblePaneEvent::GetCollapsed\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxCollapsiblePaneEvent::SetCollapsed(bool collapsed)
+   Sets this as a collapsed pane event (if collapsed is true) or as an expanded pane event (if collapsed is false). */
 PHP_METHOD(php_wxCollapsiblePaneEvent, SetCollapsed)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4007,6 +4137,10 @@ PHP_METHOD(php_wxCollapsiblePaneEvent, SetCollapsed)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCollapsiblePaneEvent::SetCollapsed\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxCollapsiblePaneEvent::wxCollapsiblePaneEvent(wxObject &generator, int id, bool collapsed)
+   The constructor is not normally used by the user code. */
 PHP_METHOD(php_wxCollapsiblePaneEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4112,6 +4246,8 @@ PHP_METHOD(php_wxCollapsiblePaneEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxDataViewEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4152,6 +4288,8 @@ void php_wxDataViewEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+/* {{{ proto int wxDataViewEvent::GetCacheFrom()
+   Return the first row that will be displayed. */
 PHP_METHOD(php_wxDataViewEvent, GetCacheFrom)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4244,6 +4382,10 @@ PHP_METHOD(php_wxDataViewEvent, GetCacheFrom)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::GetCacheFrom\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDataViewEvent::GetCacheTo()
+   Return the last row that will be displayed. */
 PHP_METHOD(php_wxDataViewEvent, GetCacheTo)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4336,6 +4478,10 @@ PHP_METHOD(php_wxDataViewEvent, GetCacheTo)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::GetCacheTo\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxDataViewEvent::GetColumn()
+   Returns the position of the column in the control or -1 if no column field was set by the event emitter. */
 PHP_METHOD(php_wxDataViewEvent, GetColumn)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4428,6 +4574,10 @@ PHP_METHOD(php_wxDataViewEvent, GetColumn)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::GetColumn\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto void wxDataViewEvent::GetDataBuffer()
+   Gets the data buffer for a drop data transfer. */
 PHP_METHOD(php_wxDataViewEvent, GetDataBuffer)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4520,6 +4670,10 @@ PHP_METHOD(php_wxDataViewEvent, GetDataBuffer)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::GetDataBuffer\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxDataFormat wxDataViewEvent::GetDataFormat()
+   Gets the wxDataFormat during a drop operation. */
 PHP_METHOD(php_wxDataViewEvent, GetDataFormat)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4617,121 +4771,10 @@ PHP_METHOD(php_wxDataViewEvent, GetDataFormat)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::GetDataFormat\n");
 	}
 }
-PHP_METHOD(php_wxDataViewEvent, GetDataObject)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataViewEvent::GetDataObject\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	bool return_is_user_initialized = false;
-	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
-	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
-		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxDataViewEvent::GetDataObject\n");
-			
-			return;
-		}
-		else
-		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
-			
-			bool reference_type_found = false;
+/* }}} */
 
-			if(parent_rsrc_type == le_wxDataViewEvent){
-				references = &((wxDataViewEvent_php*)_this)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 0)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with '' ()\n");
-		#endif
-		overload0_called = true;
-		already_called = true;
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 0:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataViewEvent::GetDataObject() to return object pointer\n\n");
-				#endif
-				wxDataObject_php* value_to_return0;
-				value_to_return0 = (wxDataObject_php*) ((wxDataViewEvent_php*)_this)->GetDataObject();
-
-				if(value_to_return0 == NULL){
-					ZVAL_NULL(return_value);
-				}
-				else if(value_to_return0->references.IsUserInitialized()){
-					if(value_to_return0->phpObj != NULL){
-						*return_value = *value_to_return0->phpObj;
-						zval_add_ref(&value_to_return0->phpObj);
-						return_is_user_initialized = true;
-					}
-					else{
-						zend_error(E_ERROR, "Could not retreive original zval.");
-					}
-				}
-				else{
-					object_init_ex(return_value,php_wxDataObject_entry);
-					add_property_resource(return_value, "wxResource", zend_list_insert(value_to_return0, le_wxDataObject));
-				}
-
-				if(Z_TYPE_P(return_value) != IS_NULL && value_to_return0 != _this && return_is_user_initialized){
-					references->AddReference(return_value);
-				}
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::GetDataObject\n");
-	}
-}
+/* {{{ proto int wxDataViewEvent::GetDataSize()
+   Gets the data size for a drop data transfer. */
 PHP_METHOD(php_wxDataViewEvent, GetDataSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4824,6 +4867,10 @@ PHP_METHOD(php_wxDataViewEvent, GetDataSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::GetDataSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxDataViewColumn wxDataViewEvent::GetDataViewColumn()
+   Returns a pointer to the wxDataViewColumn from which the event was emitted or NULL. */
 PHP_METHOD(php_wxDataViewEvent, GetDataViewColumn)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4939,6 +4986,10 @@ PHP_METHOD(php_wxDataViewEvent, GetDataViewColumn)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::GetDataViewColumn\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxDataViewModel wxDataViewEvent::GetModel()
+   Returns the wxDataViewModel associated with the event. */
 PHP_METHOD(php_wxDataViewEvent, GetModel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5054,6 +5105,10 @@ PHP_METHOD(php_wxDataViewEvent, GetModel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::GetModel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPoint wxDataViewEvent::GetPosition()
+   Returns the position of a context menu event in screen coordinates. */
 PHP_METHOD(php_wxDataViewEvent, GetPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5151,6 +5206,10 @@ PHP_METHOD(php_wxDataViewEvent, GetPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::GetPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxVariant wxDataViewEvent::GetValue()
+   Returns a reference to a value. */
 PHP_METHOD(php_wxDataViewEvent, GetValue)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5263,6 +5322,10 @@ PHP_METHOD(php_wxDataViewEvent, GetValue)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::GetValue\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxDataViewEvent::IsEditCancelled()
+   Can be used to determine whether the new value is going to be accepted in wxEVT_COMMAND_DATAVIEW_ITEM_EDITING_DONE handler. */
 PHP_METHOD(php_wxDataViewEvent, IsEditCancelled)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5355,6 +5418,10 @@ PHP_METHOD(php_wxDataViewEvent, IsEditCancelled)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::IsEditCancelled\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewEvent::SetColumn(int col)
+   Sets the column index associated with this event. */
 PHP_METHOD(php_wxDataViewEvent, SetColumn)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5452,224 +5519,10 @@ PHP_METHOD(php_wxDataViewEvent, SetColumn)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::SetColumn\n");
 	}
 }
-PHP_METHOD(php_wxDataViewEvent, SetDataBuffer)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataViewEvent::SetDataBuffer\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	bool return_is_user_initialized = false;
-	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
-	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
-		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxDataViewEvent::SetDataBuffer\n");
-			
-			return;
-		}
-		else
-		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
-			
-			bool reference_type_found = false;
+/* }}} */
 
-			if(parent_rsrc_type == le_wxDataViewEvent){
-				references = &((wxDataViewEvent_php*)_this)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	char* buf0;
-	long buf_len0;
-	zval* buf0_ref;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 's' (&buf0, &buf_len0)\n");
-		#endif
-		char parse_parameters_string[] = "s";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &buf0, &buf_len0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-
-			char parse_references_string[] = "z";
-			zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_references_string, &buf0_ref );
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataViewEvent::SetDataBuffer((void*) buf0)\n\n");
-				#endif
-				((wxDataViewEvent_php*)_this)->SetDataBuffer((void*) buf0);
-
-				ZVAL_STRING(buf0_ref, (char*) buf0, 1);
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::SetDataBuffer\n");
-	}
-}
-PHP_METHOD(php_wxDataViewEvent, SetDataFormat)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataViewEvent::SetDataFormat\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	bool return_is_user_initialized = false;
-	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
-	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
-		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxDataViewEvent::SetDataFormat\n");
-			
-			return;
-		}
-		else
-		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
-			
-			bool reference_type_found = false;
-
-			if(parent_rsrc_type == le_wxDataViewEvent){
-				references = &((wxDataViewEvent_php*)_this)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	zval* format0 = 0;
-	void* object_pointer0_0 = 0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'O' (&format0, php_wxDataFormat_entry)\n");
-		#endif
-		char parse_parameters_string[] = "O";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &format0, php_wxDataFormat_entry ) == SUCCESS)
-		{
-			if(arguments_received >= 1){
-				if(Z_TYPE_P(format0) == IS_OBJECT && zend_hash_find(Z_OBJPROP_P(format0), _wxResource , sizeof(_wxResource),  (void **)&tmp) == SUCCESS)
-				{
-					id_to_find = Z_RESVAL_P(*tmp);
-					object_pointer0_0 = zend_list_find(id_to_find, &rsrc_type);
-					if (!object_pointer0_0 )
-					{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-					}
-				}
-				else if(Z_TYPE_P(format0) != IS_NULL)
-				{
-						zend_error(E_ERROR, "Parameter  could not be retreived correctly.");
-				}
-			}
-
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataViewEvent::SetDataFormat(*(wxDataFormat*) object_pointer0_0)\n\n");
-				#endif
-				((wxDataViewEvent_php*)_this)->SetDataFormat(*(wxDataFormat*) object_pointer0_0);
-
-				references->AddReference(format0);
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::SetDataFormat\n");
-	}
-}
+/* {{{ proto  wxDataViewEvent::SetDataObject(wxDataObject &obj)
+   Set wxDataObject for data transfer within a drag operation. */
 PHP_METHOD(php_wxDataViewEvent, SetDataObject)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5785,103 +5638,10 @@ PHP_METHOD(php_wxDataViewEvent, SetDataObject)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::SetDataObject\n");
 	}
 }
-PHP_METHOD(php_wxDataViewEvent, SetDataSize)
-{
-	#ifdef USE_WXPHP_DEBUG
-	php_printf("Invoking wxDataViewEvent::SetDataSize\n");
-	php_printf("===========================================\n");
-	#endif
-	
-	//In case the constructor uses objects
-	zval **tmp;
-	int rsrc_type;
-	int parent_rsrc_type;
-	int id_to_find;
-	char _wxResource[] = "wxResource";
-	
-	//Other variables used thru the code
-	int arguments_received = ZEND_NUM_ARGS();
-	void *_this;
-	zval* dummy;
-	bool already_called = false;
-	wxPHPObjectReferences* references;
-	bool return_is_user_initialized = false;
-	
-	//Get pointer of object that called this method if not a static method
-	if (getThis() != NULL) 
-	{
-		if(zend_hash_find(Z_OBJPROP_P(getThis()), _wxResource, sizeof(_wxResource),  (void **)&tmp) == FAILURE)
-		{
-			zend_error(E_ERROR, "Failed to get the parent object that called wxDataViewEvent::SetDataSize\n");
-			
-			return;
-		}
-		else
-		{
-			id_to_find = Z_RESVAL_P(*tmp);
-			_this = zend_list_find(id_to_find, &parent_rsrc_type);
-			
-			bool reference_type_found = false;
+/* }}} */
 
-			if(parent_rsrc_type == le_wxDataViewEvent){
-				references = &((wxDataViewEvent_php*)_this)->references;
-				reference_type_found = true;
-			}
-		}
-	}
-	#ifdef USE_WXPHP_DEBUG
-	else
-	{
-		php_printf("Processing the method call as static\n");
-	}
-	#endif
-	
-	//Parameters for overload 0
-	long size0;
-	bool overload0_called = false;
-		
-	//Overload 0
-	overload0:
-	if(!already_called && arguments_received == 1)
-	{
-		#ifdef USE_WXPHP_DEBUG
-		php_printf("Parameters received %d\n", arguments_received);
-		php_printf("Parsing parameters with 'l' (&size0)\n");
-		#endif
-		char parse_parameters_string[] = "l";
-		if(zend_parse_parameters_ex(ZEND_PARSE_PARAMS_QUIET, arguments_received TSRMLS_CC, parse_parameters_string, &size0 ) == SUCCESS)
-		{
-			overload0_called = true;
-			already_called = true;
-		}
-	}
-
-		
-	if(overload0_called)
-	{
-		switch(arguments_received)
-		{
-			case 1:
-			{
-				#ifdef USE_WXPHP_DEBUG
-				php_printf("Executing wxDataViewEvent::SetDataSize((size_t) size0)\n\n");
-				#endif
-				((wxDataViewEvent_php*)_this)->SetDataSize((size_t) size0);
-
-
-				return;
-				break;
-			}
-		}
-	}
-
-		
-	//In case wrong type/count of parameters was passed
-	if(!already_called)
-	{
-		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::SetDataSize\n");
-	}
-}
+/* {{{ proto  wxDataViewEvent::SetDataViewColumn(wxDataViewColumn &col)
+   For wxEVT_DATAVIEW_COLUMN_HEADER_CLICK only. */
 PHP_METHOD(php_wxDataViewEvent, SetDataViewColumn)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5997,6 +5757,10 @@ PHP_METHOD(php_wxDataViewEvent, SetDataViewColumn)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::SetDataViewColumn\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewEvent::SetModel(wxDataViewModel &model)
+   Sets the dataview model associated with this event. */
 PHP_METHOD(php_wxDataViewEvent, SetModel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6112,6 +5876,10 @@ PHP_METHOD(php_wxDataViewEvent, SetModel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::SetModel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewEvent::SetValue(wxVariant value)
+   Sets the value associated with this event. */
 PHP_METHOD(php_wxDataViewEvent, SetValue)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6227,6 +5995,10 @@ PHP_METHOD(php_wxDataViewEvent, SetValue)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDataViewEvent::SetValue\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDataViewEvent::wxDataViewEvent(int commandType, int winid)
+   Constructor. */
 PHP_METHOD(php_wxDataViewEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6333,6 +6105,8 @@ PHP_METHOD(php_wxDataViewEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxDateEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6373,6 +6147,8 @@ void php_wxDateEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto timestamp wxDateEvent::GetDate()
+   Returns the date. */
 PHP_METHOD(php_wxDateEvent, GetDate)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6478,6 +6254,10 @@ PHP_METHOD(php_wxDateEvent, GetDate)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDateEvent::GetDate\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxDateEvent::SetDate(timestamp date)
+   Sets the date carried by the event, normally only used by the library internally. */
 PHP_METHOD(php_wxDateEvent, SetDate)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6586,6 +6366,8 @@ PHP_METHOD(php_wxDateEvent, SetDate)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxDateEvent::SetDate\n");
 	}
 }
+/* }}} */
+
 void php_wxEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6626,6 +6408,8 @@ void php_wxEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto wxEventCategory wxEvent::GetEventCategory()
+   Returns a generic category for this event. */
 PHP_METHOD(php_wxEvent, GetEventCategory)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6994,6 +6778,10 @@ PHP_METHOD(php_wxEvent, GetEventCategory)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvent::GetEventCategory\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxObject wxEvent::GetEventObject()
+   Returns the object (usually a window) associated with the event, if any. */
 PHP_METHOD(php_wxEvent, GetEventObject)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7385,6 +7173,10 @@ PHP_METHOD(php_wxEvent, GetEventObject)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvent::GetEventObject\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxEvent::GetEventType()
+   Returns the identifier of the given event type, such as wxEVT_COMMAND_BUTTON_CLICKED. */
 PHP_METHOD(php_wxEvent, GetEventType)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7753,6 +7545,10 @@ PHP_METHOD(php_wxEvent, GetEventType)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvent::GetEventType\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxEvent::GetId()
+   Returns the identifier associated with this event, such as a button command id. */
 PHP_METHOD(php_wxEvent, GetId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8121,6 +7917,10 @@ PHP_METHOD(php_wxEvent, GetId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvent::GetId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxEvent::GetSkipped()
+   Returns true if the event handler should be skipped, false otherwise. */
 PHP_METHOD(php_wxEvent, GetSkipped)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8489,6 +8289,10 @@ PHP_METHOD(php_wxEvent, GetSkipped)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvent::GetSkipped\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxEvent::GetTimestamp()
+   Gets the timestamp for the event. */
 PHP_METHOD(php_wxEvent, GetTimestamp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8857,6 +8661,10 @@ PHP_METHOD(php_wxEvent, GetTimestamp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvent::GetTimestamp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxEvent::IsCommandEvent()
+   Returns true if the event is or is derived from wxCommandEvent else it returns false. */
 PHP_METHOD(php_wxEvent, IsCommandEvent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9225,6 +9033,10 @@ PHP_METHOD(php_wxEvent, IsCommandEvent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvent::IsCommandEvent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxEvent::ResumePropagation(int propagationLevel)
+   Sets the propagation level to the given value (for example returned from an earlier call to wxEvent::StopPropagation). */
 PHP_METHOD(php_wxEvent, ResumePropagation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9598,6 +9410,10 @@ PHP_METHOD(php_wxEvent, ResumePropagation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvent::ResumePropagation\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxEvent::SetEventObject(wxObject &object)
+   Sets the originating object. */
 PHP_METHOD(php_wxEvent, SetEventObject)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9989,6 +9805,10 @@ PHP_METHOD(php_wxEvent, SetEventObject)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvent::SetEventObject\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxEvent::SetEventType(int type)
+   Sets the event type. */
 PHP_METHOD(php_wxEvent, SetEventType)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10362,6 +10182,10 @@ PHP_METHOD(php_wxEvent, SetEventType)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvent::SetEventType\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxEvent::SetId(int id)
+   Sets the identifier associated with this event, such as a button command id. */
 PHP_METHOD(php_wxEvent, SetId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10735,6 +10559,10 @@ PHP_METHOD(php_wxEvent, SetId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvent::SetId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxEvent::SetTimestamp(int timeStamp)
+   Sets the timestamp for the event. */
 PHP_METHOD(php_wxEvent, SetTimestamp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11119,6 +10947,10 @@ PHP_METHOD(php_wxEvent, SetTimestamp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvent::SetTimestamp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxEvent::ShouldPropagate()
+   Test if this event should be propagated or not, i.e. */
 PHP_METHOD(php_wxEvent, ShouldPropagate)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11487,6 +11319,10 @@ PHP_METHOD(php_wxEvent, ShouldPropagate)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvent::ShouldPropagate\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxEvent::Skip(bool skip)
+   This method can be used inside an event handler to control whether further event handlers bound to this event will be called after the current one returns. */
 PHP_METHOD(php_wxEvent, Skip)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11871,6 +11707,10 @@ PHP_METHOD(php_wxEvent, Skip)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvent::Skip\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxEvent::StopPropagation()
+   Stop the event from propagating to its parent window. */
 PHP_METHOD(php_wxEvent, StopPropagation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12239,6 +12079,10 @@ PHP_METHOD(php_wxEvent, StopPropagation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvent::StopPropagation\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxEvent::wxEvent(int id, int eventType)
+   Constructor. */
 PHP_METHOD(php_wxEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12345,6 +12189,8 @@ PHP_METHOD(php_wxEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 PHP_METHOD(php_wxEvent, __get)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12406,6 +12252,8 @@ PHP_METHOD(php_wxEvent, __get)
 		RETVAL_NULL();
 	}
 }
+/* {{{ proto wxEvent wxEvent::Clone()
+   Returns a copy of the event. */
 wxEvent* wxEvent_php::Clone()const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12453,6 +12301,8 @@ wxEvent* wxEvent_php::Clone()const
 		return (wxEvent*) return_object;
 	
 }
+/* }}} */
+
 void php_wxEventBlocker_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12493,6 +12343,8 @@ void php_wxEventBlocker_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 		#endif
 	}
 }
+/* {{{ proto  wxEventBlocker::Block(int eventType)
+   Adds to the list of event types which should be blocked the given eventType. */
 PHP_METHOD(php_wxEventBlocker, Block)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12590,6 +12442,10 @@ PHP_METHOD(php_wxEventBlocker, Block)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEventBlocker::Block\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxEventBlocker::wxEventBlocker(wxWindow &win, int type)
+   Constructs the blocker for the given window and for the given event type. */
 PHP_METHOD(php_wxEventBlocker, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12705,6 +12561,8 @@ PHP_METHOD(php_wxEventBlocker, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxEvtHandler_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12745,6 +12603,8 @@ void php_wxEvtHandler_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxEvtHandler::wxEvtHandler()
+   Constructor. */
 PHP_METHOD(php_wxEvtHandler, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12825,6 +12685,10 @@ PHP_METHOD(php_wxEvtHandler, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxEvtHandler::Connect(int id, int lastId, int eventType, , wxObject &userData, wxEvtHandler &eventSink)
+   Connects the given function dynamically with the event handler, id and event type. */
 void wxEvtHandler_php::onEvent(wxEvent& evnt)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13700,6 +13564,10 @@ PHP_METHOD(php_wxEvtHandler, Connect)
 	php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxEvtHandler::AddFilter(wxEventFilter &filter)
+   Add an event filter whose FilterEvent() method will be called for each and every event processed by wxWidgets. */
 PHP_METHOD(php_wxEvtHandler, AddFilter)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14335,6 +14203,10 @@ PHP_METHOD(php_wxEvtHandler, AddFilter)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvtHandler::AddFilter\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxEvtHandler::AddPendingEvent(wxEvent event)
+   Post an event to be processed later. */
 PHP_METHOD(php_wxEvtHandler, AddPendingEvent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14970,6 +14842,10 @@ PHP_METHOD(php_wxEvtHandler, AddPendingEvent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvtHandler::AddPendingEvent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxEvtHandler::DeletePendingEvents()
+   Deletes all events queued on this event handler using QueueEvent() or AddPendingEvent(). */
 PHP_METHOD(php_wxEvtHandler, DeletePendingEvents)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15582,6 +15458,10 @@ PHP_METHOD(php_wxEvtHandler, DeletePendingEvents)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvtHandler::DeletePendingEvents\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxEvtHandler::GetEvtHandlerEnabled()
+   Returns true if the event handler is enabled, false otherwise. */
 PHP_METHOD(php_wxEvtHandler, GetEvtHandlerEnabled)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16194,6 +16074,10 @@ PHP_METHOD(php_wxEvtHandler, GetEvtHandlerEnabled)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvtHandler::GetEvtHandlerEnabled\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxEvtHandler wxEvtHandler::GetNextHandler()
+   Returns the pointer to the next handler in the chain. */
 PHP_METHOD(php_wxEvtHandler, GetNextHandler)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16829,6 +16713,10 @@ PHP_METHOD(php_wxEvtHandler, GetNextHandler)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvtHandler::GetNextHandler\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxEvtHandler wxEvtHandler::GetPreviousHandler()
+   Returns the pointer to the previous handler in the chain. */
 PHP_METHOD(php_wxEvtHandler, GetPreviousHandler)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17464,6 +17352,10 @@ PHP_METHOD(php_wxEvtHandler, GetPreviousHandler)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvtHandler::GetPreviousHandler\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxEvtHandler::IsUnlinked()
+   Returns true if the next and the previous handler pointers of this event handler instance are NULL. */
 PHP_METHOD(php_wxEvtHandler, IsUnlinked)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18076,6 +17968,10 @@ PHP_METHOD(php_wxEvtHandler, IsUnlinked)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvtHandler::IsUnlinked\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxEvtHandler::ProcessEvent(wxEvent &event)
+   Processes an event, searching event tables and calling zero or more suitable event handler function(s). */
 PHP_METHOD(php_wxEvtHandler, ProcessEvent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18711,6 +18607,10 @@ PHP_METHOD(php_wxEvtHandler, ProcessEvent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvtHandler::ProcessEvent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxEvtHandler::ProcessEventLocally(wxEvent &event)
+   Try to process the event in this handler and all those chained to it. */
 PHP_METHOD(php_wxEvtHandler, ProcessEventLocally)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19346,6 +19246,10 @@ PHP_METHOD(php_wxEvtHandler, ProcessEventLocally)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvtHandler::ProcessEventLocally\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxEvtHandler::ProcessPendingEvents()
+   Processes the pending events previously queued using QueueEvent() or AddPendingEvent(); you must call this function only if you are sure there are pending events for this handler, otherwise a wxCHECK will fail. */
 PHP_METHOD(php_wxEvtHandler, ProcessPendingEvents)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19958,6 +19862,10 @@ PHP_METHOD(php_wxEvtHandler, ProcessPendingEvents)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvtHandler::ProcessPendingEvents\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxEvtHandler::QueueEvent(wxEvent &event)
+   Queue event for a later processing. */
 PHP_METHOD(php_wxEvtHandler, QueueEvent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20593,6 +20501,10 @@ PHP_METHOD(php_wxEvtHandler, QueueEvent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvtHandler::QueueEvent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxEvtHandler::RemoveFilter(wxEventFilter &filter)
+   Remove a filter previously installed with AddFilter(). */
 PHP_METHOD(php_wxEvtHandler, RemoveFilter)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21228,6 +21140,10 @@ PHP_METHOD(php_wxEvtHandler, RemoveFilter)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvtHandler::RemoveFilter\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxEvtHandler::SafelyProcessEvent(wxEvent &event)
+   Processes an event by calling ProcessEvent() and handles any exceptions that occur in the process. */
 PHP_METHOD(php_wxEvtHandler, SafelyProcessEvent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21863,6 +21779,10 @@ PHP_METHOD(php_wxEvtHandler, SafelyProcessEvent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvtHandler::SafelyProcessEvent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxEvtHandler::SetEvtHandlerEnabled(bool enabled)
+   Enables or disables the event handler. */
 PHP_METHOD(php_wxEvtHandler, SetEvtHandlerEnabled)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22480,6 +22400,10 @@ PHP_METHOD(php_wxEvtHandler, SetEvtHandlerEnabled)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvtHandler::SetEvtHandlerEnabled\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxEvtHandler::SetNextHandler(wxEvtHandler &handler)
+   Sets the pointer to the next handler. */
 PHP_METHOD(php_wxEvtHandler, SetNextHandler)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23115,6 +23039,10 @@ PHP_METHOD(php_wxEvtHandler, SetNextHandler)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvtHandler::SetNextHandler\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxEvtHandler::SetPreviousHandler(wxEvtHandler &handler)
+   Sets the pointer to the previous handler. */
 PHP_METHOD(php_wxEvtHandler, SetPreviousHandler)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23750,6 +23678,10 @@ PHP_METHOD(php_wxEvtHandler, SetPreviousHandler)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvtHandler::SetPreviousHandler\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxEvtHandler::TryAfter(wxEvent &event)
+   Method called by ProcessEvent() as last resort. */
 bool wxEvtHandler_php::TryAfter(wxEvent& event)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23808,6 +23740,10 @@ bool wxEvtHandler_php::TryAfter(wxEvent& event)
 	//Call original method
 	return wxEvtHandler::TryAfter(event);
 }
+/* }}} */
+
+/* {{{ proto bool wxEvtHandler::TryBefore(wxEvent &event)
+   Method called by ProcessEvent() before examining this object event tables. */
 bool wxEvtHandler_php::TryBefore(wxEvent& event)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23866,6 +23802,10 @@ bool wxEvtHandler_php::TryBefore(wxEvent& event)
 	//Call original method
 	return wxEvtHandler::TryBefore(event);
 }
+/* }}} */
+
+/* {{{ proto  wxEvtHandler::Unlink()
+   Unlinks this event handler from the chain it's part of (if any); then links the "previous" event handler to the "next" one (so that the chain won't be interrupted). */
 PHP_METHOD(php_wxEvtHandler, Unlink)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24478,6 +24418,8 @@ PHP_METHOD(php_wxEvtHandler, Unlink)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEvtHandler::Unlink\n");
 	}
 }
+/* }}} */
+
 void php_wxKeyEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24518,6 +24460,8 @@ void php_wxKeyEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxKeyEvent::DoAllowNextEvent()
+   Allow normal key events generation. */
 PHP_METHOD(php_wxKeyEvent, DoAllowNextEvent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24610,6 +24554,10 @@ PHP_METHOD(php_wxKeyEvent, DoAllowNextEvent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxKeyEvent::DoAllowNextEvent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxKeyEvent::GetKeyCode()
+   Returns the key code of the key that generated this event. */
 PHP_METHOD(php_wxKeyEvent, GetKeyCode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24702,6 +24650,10 @@ PHP_METHOD(php_wxKeyEvent, GetKeyCode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxKeyEvent::GetKeyCode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPoint wxKeyEvent::GetPosition()
+   Obtains the position (in client coordinates) at which the key was pressed. */
 PHP_METHOD(php_wxKeyEvent, GetPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24854,6 +24806,10 @@ PHP_METHOD(php_wxKeyEvent, GetPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxKeyEvent::GetPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxKeyEvent::GetRawKeyCode()
+   Returns the raw key code for this event. */
 PHP_METHOD(php_wxKeyEvent, GetRawKeyCode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24946,6 +24902,10 @@ PHP_METHOD(php_wxKeyEvent, GetRawKeyCode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxKeyEvent::GetRawKeyCode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxKeyEvent::GetRawKeyFlags()
+   Returns the low level key flags for this event. */
 PHP_METHOD(php_wxKeyEvent, GetRawKeyFlags)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25038,6 +24998,10 @@ PHP_METHOD(php_wxKeyEvent, GetRawKeyFlags)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxKeyEvent::GetRawKeyFlags\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxKeyEvent::GetX()
+   Returns the X position (in client coordinates) of the event. */
 PHP_METHOD(php_wxKeyEvent, GetX)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25130,6 +25094,10 @@ PHP_METHOD(php_wxKeyEvent, GetX)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxKeyEvent::GetX\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxKeyEvent::GetY()
+   Returns the Y position (in client coordinates) of the event. */
 PHP_METHOD(php_wxKeyEvent, GetY)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25222,6 +25190,10 @@ PHP_METHOD(php_wxKeyEvent, GetY)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxKeyEvent::GetY\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxKeyEvent::IsKeyInCategory(int category)
+   Returns true if the key is in the given key category. */
 PHP_METHOD(php_wxKeyEvent, IsKeyInCategory)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25319,6 +25291,10 @@ PHP_METHOD(php_wxKeyEvent, IsKeyInCategory)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxKeyEvent::IsKeyInCategory\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxKeyEvent::IsNextEventAllowed()
+   Returns true if DoAllowNextEvent() had been called, false by default. */
 PHP_METHOD(php_wxKeyEvent, IsNextEventAllowed)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25411,6 +25387,10 @@ PHP_METHOD(php_wxKeyEvent, IsNextEventAllowed)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxKeyEvent::IsNextEventAllowed\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxKeyEvent::wxKeyEvent(int keyEventType)
+   Constructor. */
 PHP_METHOD(php_wxKeyEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25506,6 +25486,8 @@ PHP_METHOD(php_wxKeyEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxScrollWinEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25546,6 +25528,8 @@ void php_wxScrollWinEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		#endif
 	}
 }
+/* {{{ proto  wxScrollWinEvent::wxScrollWinEvent(int commandType, int pos, int orientation)
+   Constructor. */
 PHP_METHOD(php_wxScrollWinEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25663,6 +25647,9 @@ PHP_METHOD(php_wxScrollWinEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxScrollWinEvent::SetPosition(int pos) */
 PHP_METHOD(php_wxScrollWinEvent, SetPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25760,6 +25747,9 @@ PHP_METHOD(php_wxScrollWinEvent, SetPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxScrollWinEvent::SetPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxScrollWinEvent::SetOrientation(int orient) */
 PHP_METHOD(php_wxScrollWinEvent, SetOrientation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25857,6 +25847,10 @@ PHP_METHOD(php_wxScrollWinEvent, SetOrientation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxScrollWinEvent::SetOrientation\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxScrollWinEvent::GetPosition()
+   Returns the position of the scrollbar for the thumb track and release events. */
 PHP_METHOD(php_wxScrollWinEvent, GetPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25949,6 +25943,10 @@ PHP_METHOD(php_wxScrollWinEvent, GetPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxScrollWinEvent::GetPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxScrollWinEvent::GetOrientation()
+   Returns wxHORIZONTAL or wxVERTICAL, depending on the orientation of the scrollbar. */
 PHP_METHOD(php_wxScrollWinEvent, GetOrientation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26041,6 +26039,8 @@ PHP_METHOD(php_wxScrollWinEvent, GetOrientation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxScrollWinEvent::GetOrientation\n");
 	}
 }
+/* }}} */
+
 void php_wxSysColourChangedEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26081,6 +26081,8 @@ void php_wxSysColourChangedEvent_destruction_handler(zend_rsrc_list_entry *rsrc 
 		#endif
 	}
 }
+/* {{{ proto  wxSysColourChangedEvent::wxSysColourChangedEvent()
+   Constructor. */
 PHP_METHOD(php_wxSysColourChangedEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26161,6 +26163,8 @@ PHP_METHOD(php_wxSysColourChangedEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxWindowCreateEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26201,6 +26205,8 @@ void php_wxWindowCreateEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRM
 		#endif
 	}
 }
+/* {{{ proto wxWindow wxWindowCreateEvent::GetWindow()
+   Return the window being created. */
 PHP_METHOD(php_wxWindowCreateEvent, GetWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26316,6 +26322,10 @@ PHP_METHOD(php_wxWindowCreateEvent, GetWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWindowCreateEvent::GetWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxWindowCreateEvent::wxWindowCreateEvent(wxWindow &win)
+   Constructor. */
 PHP_METHOD(php_wxWindowCreateEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26429,6 +26439,8 @@ PHP_METHOD(php_wxWindowCreateEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxPaintEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26469,6 +26481,8 @@ void php_wxPaintEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxPaintEvent::wxPaintEvent(int id)
+   Constructor. */
 PHP_METHOD(php_wxPaintEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26564,6 +26578,8 @@ PHP_METHOD(php_wxPaintEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxMaximizeEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26604,6 +26620,8 @@ void php_wxMaximizeEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+/* {{{ proto  wxMaximizeEvent::wxMaximizeEvent(int id)
+   Constructor. */
 PHP_METHOD(php_wxMaximizeEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26699,6 +26717,8 @@ PHP_METHOD(php_wxMaximizeEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxUpdateUIEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26739,6 +26759,8 @@ void php_wxUpdateUIEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+/* {{{ proto bool wxUpdateUIEvent::CanUpdate(wxWindow &window)
+   Returns true if it is appropriate to update (send UI update events to) this window. */
 PHP_METHOD(php_wxUpdateUIEvent, CanUpdate)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26854,6 +26876,10 @@ PHP_METHOD(php_wxUpdateUIEvent, CanUpdate)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxUpdateUIEvent::CanUpdate\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxUpdateUIEvent::Check(bool check)
+   Check or uncheck the UI element. */
 PHP_METHOD(php_wxUpdateUIEvent, Check)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26951,6 +26977,10 @@ PHP_METHOD(php_wxUpdateUIEvent, Check)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxUpdateUIEvent::Check\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxUpdateUIEvent::Enable(bool enable)
+   Enable or disable the UI element. */
 PHP_METHOD(php_wxUpdateUIEvent, Enable)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27048,6 +27078,10 @@ PHP_METHOD(php_wxUpdateUIEvent, Enable)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxUpdateUIEvent::Enable\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxUpdateUIEvent::GetEnabled()
+   Returns true if the UI element should be enabled. */
 PHP_METHOD(php_wxUpdateUIEvent, GetEnabled)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27140,6 +27174,10 @@ PHP_METHOD(php_wxUpdateUIEvent, GetEnabled)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxUpdateUIEvent::GetEnabled\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxUpdateUIEvent::GetChecked()
+   Returns true if the UI element should be checked. */
 PHP_METHOD(php_wxUpdateUIEvent, GetChecked)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27232,6 +27270,10 @@ PHP_METHOD(php_wxUpdateUIEvent, GetChecked)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxUpdateUIEvent::GetChecked\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxUpdateUIMode wxUpdateUIEvent::GetMode()
+   Static function returning a value specifying how wxWidgets will send update events: to all windows, or only to those which specify that they will process the events. */
 PHP_METHOD(php_wxUpdateUIEvent, GetMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27325,6 +27367,10 @@ PHP_METHOD(php_wxUpdateUIEvent, GetMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxUpdateUIEvent::GetMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxUpdateUIEvent::GetSetChecked()
+   Returns true if the application has called Check(). */
 PHP_METHOD(php_wxUpdateUIEvent, GetSetChecked)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27417,6 +27463,10 @@ PHP_METHOD(php_wxUpdateUIEvent, GetSetChecked)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxUpdateUIEvent::GetSetChecked\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxUpdateUIEvent::GetSetEnabled()
+   Returns true if the application has called Enable(). */
 PHP_METHOD(php_wxUpdateUIEvent, GetSetEnabled)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27509,6 +27559,10 @@ PHP_METHOD(php_wxUpdateUIEvent, GetSetEnabled)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxUpdateUIEvent::GetSetEnabled\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxUpdateUIEvent::GetSetShown()
+   Returns true if the application has called Show(). */
 PHP_METHOD(php_wxUpdateUIEvent, GetSetShown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27601,6 +27655,10 @@ PHP_METHOD(php_wxUpdateUIEvent, GetSetShown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxUpdateUIEvent::GetSetShown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxUpdateUIEvent::GetSetText()
+   Returns true if the application has called SetText(). */
 PHP_METHOD(php_wxUpdateUIEvent, GetSetText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27693,6 +27751,10 @@ PHP_METHOD(php_wxUpdateUIEvent, GetSetText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxUpdateUIEvent::GetSetText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxUpdateUIEvent::GetShown()
+   Returns true if the UI element should be shown. */
 PHP_METHOD(php_wxUpdateUIEvent, GetShown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27785,6 +27847,10 @@ PHP_METHOD(php_wxUpdateUIEvent, GetShown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxUpdateUIEvent::GetShown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxUpdateUIEvent::GetText()
+   Returns the text that should be set for the UI element. */
 PHP_METHOD(php_wxUpdateUIEvent, GetText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27883,6 +27949,10 @@ PHP_METHOD(php_wxUpdateUIEvent, GetText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxUpdateUIEvent::GetText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxUpdateUIEvent::GetUpdateInterval()
+   Returns the current interval between updates in milliseconds. */
 PHP_METHOD(php_wxUpdateUIEvent, GetUpdateInterval)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27976,6 +28046,10 @@ PHP_METHOD(php_wxUpdateUIEvent, GetUpdateInterval)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxUpdateUIEvent::GetUpdateInterval\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxUpdateUIEvent::ResetUpdateTime()
+   Used internally to reset the last-updated time to the current time. */
 PHP_METHOD(php_wxUpdateUIEvent, ResetUpdateTime)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28069,6 +28143,10 @@ PHP_METHOD(php_wxUpdateUIEvent, ResetUpdateTime)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxUpdateUIEvent::ResetUpdateTime\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxUpdateUIEvent::SetMode(wxUpdateUIMode mode)
+   Specify how wxWidgets will send update events: to all windows, or only to those which specify that they will process the events. */
 PHP_METHOD(php_wxUpdateUIEvent, SetMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28167,6 +28245,10 @@ PHP_METHOD(php_wxUpdateUIEvent, SetMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxUpdateUIEvent::SetMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxUpdateUIEvent::SetText(string text)
+   Sets the text for this UI element. */
 PHP_METHOD(php_wxUpdateUIEvent, SetText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28265,6 +28347,10 @@ PHP_METHOD(php_wxUpdateUIEvent, SetText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxUpdateUIEvent::SetText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxUpdateUIEvent::SetUpdateInterval(int updateInterval)
+   Sets the interval between updates in milliseconds. */
 PHP_METHOD(php_wxUpdateUIEvent, SetUpdateInterval)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28363,6 +28449,10 @@ PHP_METHOD(php_wxUpdateUIEvent, SetUpdateInterval)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxUpdateUIEvent::SetUpdateInterval\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxUpdateUIEvent::Show(bool show)
+   Show or hide the UI element. */
 PHP_METHOD(php_wxUpdateUIEvent, Show)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28460,6 +28550,10 @@ PHP_METHOD(php_wxUpdateUIEvent, Show)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxUpdateUIEvent::Show\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxUpdateUIEvent::wxUpdateUIEvent(int commandId)
+   Constructor. */
 PHP_METHOD(php_wxUpdateUIEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28555,6 +28649,8 @@ PHP_METHOD(php_wxUpdateUIEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxClipboardTextEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28595,6 +28691,8 @@ void php_wxClipboardTextEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 		#endif
 	}
 }
+/* {{{ proto  wxClipboardTextEvent::wxClipboardTextEvent(int commandType, int id)
+   Constructor. */
 PHP_METHOD(php_wxClipboardTextEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28701,6 +28799,8 @@ PHP_METHOD(php_wxClipboardTextEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxMouseEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28741,6 +28841,8 @@ void php_wxMouseEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto bool wxMouseEvent::Aux1DClick()
+   Returns true if the event was a first extra button double click. */
 PHP_METHOD(php_wxMouseEvent, Aux1DClick)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28833,6 +28935,10 @@ PHP_METHOD(php_wxMouseEvent, Aux1DClick)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::Aux1DClick\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseEvent::Aux1Down()
+   Returns true if the first extra button mouse button changed to down. */
 PHP_METHOD(php_wxMouseEvent, Aux1Down)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28925,6 +29031,10 @@ PHP_METHOD(php_wxMouseEvent, Aux1Down)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::Aux1Down\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseEvent::Aux1Up()
+   Returns true if the first extra button mouse button changed to up. */
 PHP_METHOD(php_wxMouseEvent, Aux1Up)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29017,6 +29127,10 @@ PHP_METHOD(php_wxMouseEvent, Aux1Up)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::Aux1Up\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseEvent::Aux2DClick()
+   Returns true if the event was a second extra button double click. */
 PHP_METHOD(php_wxMouseEvent, Aux2DClick)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29109,6 +29223,10 @@ PHP_METHOD(php_wxMouseEvent, Aux2DClick)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::Aux2DClick\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseEvent::Aux2Down()
+   Returns true if the second extra button mouse button changed to down. */
 PHP_METHOD(php_wxMouseEvent, Aux2Down)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29201,6 +29319,10 @@ PHP_METHOD(php_wxMouseEvent, Aux2Down)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::Aux2Down\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseEvent::Aux2Up()
+   Returns true if the second extra button mouse button changed to up. */
 PHP_METHOD(php_wxMouseEvent, Aux2Up)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29293,6 +29415,10 @@ PHP_METHOD(php_wxMouseEvent, Aux2Up)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::Aux2Up\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseEvent::Button(wxMouseButton but)
+   Returns true if the event was generated by the specified button. */
 PHP_METHOD(php_wxMouseEvent, Button)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29390,6 +29516,10 @@ PHP_METHOD(php_wxMouseEvent, Button)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::Button\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseEvent::ButtonDClick(wxMouseButton but)
+   If the argument is omitted, this returns true if the event was a mouse double click event. */
 PHP_METHOD(php_wxMouseEvent, ButtonDClick)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29498,6 +29628,10 @@ PHP_METHOD(php_wxMouseEvent, ButtonDClick)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::ButtonDClick\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseEvent::ButtonDown(wxMouseButton but)
+   If the argument is omitted, this returns true if the event was a mouse button down event. */
 PHP_METHOD(php_wxMouseEvent, ButtonDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29606,6 +29740,10 @@ PHP_METHOD(php_wxMouseEvent, ButtonDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::ButtonDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseEvent::ButtonUp(wxMouseButton but)
+   If the argument is omitted, this returns true if the event was a mouse button up event. */
 PHP_METHOD(php_wxMouseEvent, ButtonUp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29714,6 +29852,10 @@ PHP_METHOD(php_wxMouseEvent, ButtonUp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::ButtonUp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseEvent::Dragging()
+   Returns true if this was a dragging event (motion while a button is depressed). */
 PHP_METHOD(php_wxMouseEvent, Dragging)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29806,6 +29948,10 @@ PHP_METHOD(php_wxMouseEvent, Dragging)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::Dragging\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseEvent::Entering()
+   Returns true if the mouse was entering the window. */
 PHP_METHOD(php_wxMouseEvent, Entering)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29898,6 +30044,10 @@ PHP_METHOD(php_wxMouseEvent, Entering)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::Entering\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxMouseEvent::GetButton()
+   Returns the mouse button which generated this event or wxMOUSE_BTN_NONE if no button is involved (for mouse move, enter or leave event, for example). */
 PHP_METHOD(php_wxMouseEvent, GetButton)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -29990,6 +30140,10 @@ PHP_METHOD(php_wxMouseEvent, GetButton)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::GetButton\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxMouseEvent::GetClickCount()
+   Returns the number of mouse clicks for this event: 1 for a simple click, 2 for a double-click, 3 for a triple-click and so on. */
 PHP_METHOD(php_wxMouseEvent, GetClickCount)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30082,6 +30236,10 @@ PHP_METHOD(php_wxMouseEvent, GetClickCount)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::GetClickCount\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxMouseEvent::GetLinesPerAction()
+   Returns the configured number of lines (or whatever) to be scrolled per wheel action. */
 PHP_METHOD(php_wxMouseEvent, GetLinesPerAction)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30174,6 +30332,10 @@ PHP_METHOD(php_wxMouseEvent, GetLinesPerAction)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::GetLinesPerAction\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPoint wxMouseEvent::GetLogicalPosition(wxDC dc)
+   Returns the logical mouse position in pixels (i.e. */
 PHP_METHOD(php_wxMouseEvent, GetLogicalPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30294,6 +30456,10 @@ PHP_METHOD(php_wxMouseEvent, GetLogicalPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::GetLogicalPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxMouseEvent::GetWheelDelta()
+   Get wheel delta, normally 120. */
 PHP_METHOD(php_wxMouseEvent, GetWheelDelta)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30386,6 +30552,10 @@ PHP_METHOD(php_wxMouseEvent, GetWheelDelta)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::GetWheelDelta\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxMouseEvent::GetWheelRotation()
+   Get wheel rotation, positive or negative indicates direction of rotation. */
 PHP_METHOD(php_wxMouseEvent, GetWheelRotation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30478,6 +30648,10 @@ PHP_METHOD(php_wxMouseEvent, GetWheelRotation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::GetWheelRotation\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseEvent::IsButton()
+   Returns true if the event was a mouse button event (not necessarily a button down event - that may be tested using ButtonDown()). */
 PHP_METHOD(php_wxMouseEvent, IsButton)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30570,6 +30744,10 @@ PHP_METHOD(php_wxMouseEvent, IsButton)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::IsButton\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseEvent::IsPageScroll()
+   Returns true if the system has been setup to do page scrolling with the mouse wheel instead of line scrolling. */
 PHP_METHOD(php_wxMouseEvent, IsPageScroll)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30662,6 +30840,10 @@ PHP_METHOD(php_wxMouseEvent, IsPageScroll)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::IsPageScroll\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseEvent::Leaving()
+   Returns true if the mouse was leaving the window. */
 PHP_METHOD(php_wxMouseEvent, Leaving)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30754,6 +30936,10 @@ PHP_METHOD(php_wxMouseEvent, Leaving)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::Leaving\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseEvent::LeftDClick()
+   Returns true if the event was a left double click. */
 PHP_METHOD(php_wxMouseEvent, LeftDClick)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30846,6 +31032,10 @@ PHP_METHOD(php_wxMouseEvent, LeftDClick)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::LeftDClick\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseEvent::LeftDown()
+   Returns true if the left mouse button changed to down. */
 PHP_METHOD(php_wxMouseEvent, LeftDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -30938,6 +31128,10 @@ PHP_METHOD(php_wxMouseEvent, LeftDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::LeftDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseEvent::LeftUp()
+   Returns true if the left mouse button changed to up. */
 PHP_METHOD(php_wxMouseEvent, LeftUp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31030,6 +31224,10 @@ PHP_METHOD(php_wxMouseEvent, LeftUp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::LeftUp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseEvent::MetaDown()
+   Returns true if the Meta key was down at the time of the event. */
 PHP_METHOD(php_wxMouseEvent, MetaDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31122,6 +31320,10 @@ PHP_METHOD(php_wxMouseEvent, MetaDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::MetaDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseEvent::MiddleDClick()
+   Returns true if the event was a middle double click. */
 PHP_METHOD(php_wxMouseEvent, MiddleDClick)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31214,6 +31416,10 @@ PHP_METHOD(php_wxMouseEvent, MiddleDClick)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::MiddleDClick\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseEvent::MiddleDown()
+   Returns true if the middle mouse button changed to down. */
 PHP_METHOD(php_wxMouseEvent, MiddleDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31306,6 +31512,10 @@ PHP_METHOD(php_wxMouseEvent, MiddleDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::MiddleDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseEvent::MiddleUp()
+   Returns true if the middle mouse button changed to up. */
 PHP_METHOD(php_wxMouseEvent, MiddleUp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31398,6 +31608,10 @@ PHP_METHOD(php_wxMouseEvent, MiddleUp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::MiddleUp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseEvent::Moving()
+   Returns true if this was a motion event and no mouse buttons were pressed. */
 PHP_METHOD(php_wxMouseEvent, Moving)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31490,6 +31704,10 @@ PHP_METHOD(php_wxMouseEvent, Moving)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::Moving\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseEvent::RightDClick()
+   Returns true if the event was a right double click. */
 PHP_METHOD(php_wxMouseEvent, RightDClick)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31582,6 +31800,10 @@ PHP_METHOD(php_wxMouseEvent, RightDClick)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::RightDClick\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseEvent::RightDown()
+   Returns true if the right mouse button changed to down. */
 PHP_METHOD(php_wxMouseEvent, RightDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31674,6 +31896,10 @@ PHP_METHOD(php_wxMouseEvent, RightDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::RightDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseEvent::RightUp()
+   Returns true if the right mouse button changed to up. */
 PHP_METHOD(php_wxMouseEvent, RightUp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31766,6 +31992,10 @@ PHP_METHOD(php_wxMouseEvent, RightUp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::RightUp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMouseEvent::wxMouseEvent(int mouseEventType)
+   Constructor. */
 PHP_METHOD(php_wxMouseEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31861,6 +32091,10 @@ PHP_METHOD(php_wxMouseEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto wxMouseWheelAxis wxMouseEvent::GetWheelAxis()
+   Gets the axis the wheel operation concerns. */
 PHP_METHOD(php_wxMouseEvent, GetWheelAxis)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31953,6 +32187,8 @@ PHP_METHOD(php_wxMouseEvent, GetWheelAxis)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEvent::GetWheelAxis\n");
 	}
 }
+/* }}} */
+
 void php_wxCommandEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -31993,6 +32229,8 @@ void php_wxCommandEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 		#endif
 	}
 }
+/* {{{ proto  wxCommandEvent::wxCommandEvent(int commandEventType, int id)
+   Constructor. */
 PHP_METHOD(php_wxCommandEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -32099,6 +32337,10 @@ PHP_METHOD(php_wxCommandEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxCommandEvent::SetString(string string)
+   Sets the m_commandString member. */
 PHP_METHOD(php_wxCommandEvent, SetString)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -32361,6 +32603,10 @@ PHP_METHOD(php_wxCommandEvent, SetString)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCommandEvent::SetString\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxCommandEvent::SetInt(int intCommand)
+   Sets the m_commandInt member. */
 PHP_METHOD(php_wxCommandEvent, SetInt)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -32622,6 +32868,10 @@ PHP_METHOD(php_wxCommandEvent, SetInt)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCommandEvent::SetInt\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxCommandEvent::SetExtraLong(int extraLong)
+   Sets the m_extraLong member. */
 PHP_METHOD(php_wxCommandEvent, SetExtraLong)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -32883,6 +33133,10 @@ PHP_METHOD(php_wxCommandEvent, SetExtraLong)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCommandEvent::SetExtraLong\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxCommandEvent::IsSelection()
+   For a listbox or similar event, returns true if it is a selection, false if it is a deselection. */
 PHP_METHOD(php_wxCommandEvent, IsSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -33139,6 +33393,10 @@ PHP_METHOD(php_wxCommandEvent, IsSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCommandEvent::IsSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxCommandEvent::IsChecked()
+   This method can be used with checkbox and menu events: for the checkboxes, the method returns true for a selection event and false for a deselection one. */
 PHP_METHOD(php_wxCommandEvent, IsChecked)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -33395,6 +33653,10 @@ PHP_METHOD(php_wxCommandEvent, IsChecked)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCommandEvent::IsChecked\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxCommandEvent::GetString()
+   Returns item string for a listbox or choice selection event. */
 PHP_METHOD(php_wxCommandEvent, GetString)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -33657,6 +33919,10 @@ PHP_METHOD(php_wxCommandEvent, GetString)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCommandEvent::GetString\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxCommandEvent::GetSelection()
+   Returns item index for a listbox or choice selection event (not valid for a deselection). */
 PHP_METHOD(php_wxCommandEvent, GetSelection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -33913,6 +34179,10 @@ PHP_METHOD(php_wxCommandEvent, GetSelection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCommandEvent::GetSelection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxCommandEvent::GetInt()
+   Returns the integer identifier corresponding to a listbox, choice or radiobox selection (only if the event was a selection, not a deselection), or a boolean value representing the value of a checkbox. */
 PHP_METHOD(php_wxCommandEvent, GetInt)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -34169,6 +34439,10 @@ PHP_METHOD(php_wxCommandEvent, GetInt)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCommandEvent::GetInt\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxCommandEvent::GetExtraLong()
+   Returns extra information dependent on the event objects type. */
 PHP_METHOD(php_wxCommandEvent, GetExtraLong)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -34425,6 +34699,8 @@ PHP_METHOD(php_wxCommandEvent, GetExtraLong)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCommandEvent::GetExtraLong\n");
 	}
 }
+/* }}} */
+
 void php_wxActivateEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -34465,6 +34741,8 @@ void php_wxActivateEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+/* {{{ proto bool wxActivateEvent::GetActive()
+   Returns true if the application or window is being activated, false otherwise. */
 PHP_METHOD(php_wxActivateEvent, GetActive)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -34557,6 +34835,10 @@ PHP_METHOD(php_wxActivateEvent, GetActive)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxActivateEvent::GetActive\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxActivateEvent::wxActivateEvent(int eventType, bool active, int id)
+   Constructor. */
 PHP_METHOD(php_wxActivateEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -34674,6 +34956,8 @@ PHP_METHOD(php_wxActivateEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxContextMenuEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -34714,6 +34998,8 @@ void php_wxContextMenuEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 		#endif
 	}
 }
+/* {{{ proto wxPoint wxContextMenuEvent::GetPosition()
+   Returns the position in screen coordinates at which the menu should be shown. */
 PHP_METHOD(php_wxContextMenuEvent, GetPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -34826,6 +35112,10 @@ PHP_METHOD(php_wxContextMenuEvent, GetPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxContextMenuEvent::GetPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxContextMenuEvent::SetPosition(wxPoint point)
+   Sets the position at which the menu should be shown. */
 PHP_METHOD(php_wxContextMenuEvent, SetPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -34941,6 +35231,10 @@ PHP_METHOD(php_wxContextMenuEvent, SetPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxContextMenuEvent::SetPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxContextMenuEvent::wxContextMenuEvent(int type, int id, wxPoint pos)
+   Constructor. */
 PHP_METHOD(php_wxContextMenuEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -35076,6 +35370,8 @@ PHP_METHOD(php_wxContextMenuEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxEraseEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -35116,6 +35412,8 @@ void php_wxEraseEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto wxDC wxEraseEvent::GetDC()
+   Returns the device context associated with the erase event to draw on. */
 PHP_METHOD(php_wxEraseEvent, GetDC)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -35231,6 +35529,10 @@ PHP_METHOD(php_wxEraseEvent, GetDC)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxEraseEvent::GetDC\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxEraseEvent::wxEraseEvent(int id, wxDC &dc)
+   Constructor. */
 PHP_METHOD(php_wxEraseEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -35355,6 +35657,8 @@ PHP_METHOD(php_wxEraseEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxFocusEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -35395,6 +35699,8 @@ void php_wxFocusEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto wxWindow wxFocusEvent::GetWindow()
+   Returns the window associated with this event, that is the window which had the focus before for the wxEVT_SET_FOCUS event and the window which is going to receive focus for the wxEVT_KILL_FOCUS one. */
 PHP_METHOD(php_wxFocusEvent, GetWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -35510,6 +35816,9 @@ PHP_METHOD(php_wxFocusEvent, GetWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFocusEvent::GetWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFocusEvent::SetWindow(wxWindow &win) */
 PHP_METHOD(php_wxFocusEvent, SetWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -35625,6 +35934,10 @@ PHP_METHOD(php_wxFocusEvent, SetWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFocusEvent::SetWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFocusEvent::wxFocusEvent(int eventType, int id)
+   Constructor. */
 PHP_METHOD(php_wxFocusEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -35731,6 +36044,8 @@ PHP_METHOD(php_wxFocusEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxChildFocusEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -35771,6 +36086,8 @@ void php_wxChildFocusEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 		#endif
 	}
 }
+/* {{{ proto wxWindow wxChildFocusEvent::GetWindow()
+   Returns the direct child which receives the focus, or a (grand-)parent of the control receiving the focus. */
 PHP_METHOD(php_wxChildFocusEvent, GetWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -35886,6 +36203,10 @@ PHP_METHOD(php_wxChildFocusEvent, GetWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxChildFocusEvent::GetWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxChildFocusEvent::wxChildFocusEvent(wxWindow &win)
+   Constructor. */
 PHP_METHOD(php_wxChildFocusEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -35999,6 +36320,8 @@ PHP_METHOD(php_wxChildFocusEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxNotifyEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -36039,6 +36362,8 @@ void php_wxNotifyEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxNotifyEvent::Allow()
+   This is the opposite of Veto(): it explicitly allows the event to be processed. */
 PHP_METHOD(php_wxNotifyEvent, Allow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -36195,6 +36520,10 @@ PHP_METHOD(php_wxNotifyEvent, Allow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxNotifyEvent::Allow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxNotifyEvent::IsAllowed()
+   Returns true if the change is allowed (Veto() hasn't been called) or false otherwise (if it was). */
 PHP_METHOD(php_wxNotifyEvent, IsAllowed)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -36351,6 +36680,10 @@ PHP_METHOD(php_wxNotifyEvent, IsAllowed)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxNotifyEvent::IsAllowed\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxNotifyEvent::Veto()
+   Prevents the change announced by this event from happening. */
 PHP_METHOD(php_wxNotifyEvent, Veto)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -36507,6 +36840,10 @@ PHP_METHOD(php_wxNotifyEvent, Veto)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxNotifyEvent::Veto\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxNotifyEvent::wxNotifyEvent(int eventType, int id)
+   Constructor (used internally by wxWidgets only). */
 PHP_METHOD(php_wxNotifyEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -36613,6 +36950,8 @@ PHP_METHOD(php_wxNotifyEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxThreadEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -36653,6 +36992,8 @@ void php_wxThreadEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto wxEvent wxThreadEvent::Clone()
+   Clones this event making sure that all internal members which use COW (only m_commandString for now; see Reference Counting) are unshared (see wxObject::UnShare). */
 PHP_METHOD(php_wxThreadEvent, Clone)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -36768,6 +37109,10 @@ PHP_METHOD(php_wxThreadEvent, Clone)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThreadEvent::Clone\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxThreadEvent::GetExtraLong()
+   Returns extra information integer value. */
 PHP_METHOD(php_wxThreadEvent, GetExtraLong)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -36860,6 +37205,10 @@ PHP_METHOD(php_wxThreadEvent, GetExtraLong)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThreadEvent::GetExtraLong\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxEventCategory wxThreadEvent::GetEventCategory()
+   Returns wxEVT_CATEGORY_THREAD. */
 PHP_METHOD(php_wxThreadEvent, GetEventCategory)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -36952,6 +37301,10 @@ PHP_METHOD(php_wxThreadEvent, GetEventCategory)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThreadEvent::GetEventCategory\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxThreadEvent::GetInt()
+   Returns stored integer value. */
 PHP_METHOD(php_wxThreadEvent, GetInt)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -37044,6 +37397,10 @@ PHP_METHOD(php_wxThreadEvent, GetInt)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThreadEvent::GetInt\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxThreadEvent::GetString()
+   Returns stored string value. */
 PHP_METHOD(php_wxThreadEvent, GetString)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -37142,6 +37499,10 @@ PHP_METHOD(php_wxThreadEvent, GetString)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThreadEvent::GetString\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxThreadEvent::SetInt(int intCommand)
+   Sets the integer value. */
 PHP_METHOD(php_wxThreadEvent, SetInt)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -37239,6 +37600,10 @@ PHP_METHOD(php_wxThreadEvent, SetInt)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThreadEvent::SetInt\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxThreadEvent::SetExtraLong(int extraLong)
+   Sets the extra information value. */
 PHP_METHOD(php_wxThreadEvent, SetExtraLong)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -37336,6 +37701,10 @@ PHP_METHOD(php_wxThreadEvent, SetExtraLong)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThreadEvent::SetExtraLong\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxThreadEvent::SetString(string string)
+   Sets the string value. */
 PHP_METHOD(php_wxThreadEvent, SetString)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -37434,6 +37803,10 @@ PHP_METHOD(php_wxThreadEvent, SetString)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxThreadEvent::SetString\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxThreadEvent::wxThreadEvent(int eventType, int id)
+   Constructor. */
 PHP_METHOD(php_wxThreadEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -37540,6 +37913,8 @@ PHP_METHOD(php_wxThreadEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxHelpEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -37580,6 +37955,8 @@ void php_wxHelpEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto wxHelpEvent::Origin wxHelpEvent::GetOrigin()
+   Returns the origin of the help event which is one of the ::wxHelpEventOrigin values. */
 PHP_METHOD(php_wxHelpEvent, GetOrigin)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -37672,6 +38049,10 @@ PHP_METHOD(php_wxHelpEvent, GetOrigin)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHelpEvent::GetOrigin\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPoint wxHelpEvent::GetPosition()
+   Returns the left-click position of the mouse, in screen coordinates. */
 PHP_METHOD(php_wxHelpEvent, GetPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -37784,6 +38165,10 @@ PHP_METHOD(php_wxHelpEvent, GetPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHelpEvent::GetPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHelpEvent::SetOrigin(wxHelpEvent::Origin origin)
+   Set the help event origin, only used internally by wxWidgets normally. */
 PHP_METHOD(php_wxHelpEvent, SetOrigin)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -37881,6 +38266,10 @@ PHP_METHOD(php_wxHelpEvent, SetOrigin)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHelpEvent::SetOrigin\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHelpEvent::SetPosition(wxPoint pt)
+   Sets the left-click position of the mouse, in screen coordinates. */
 PHP_METHOD(php_wxHelpEvent, SetPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -37996,6 +38385,10 @@ PHP_METHOD(php_wxHelpEvent, SetPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHelpEvent::SetPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHelpEvent::wxHelpEvent(int type, int winid, wxPoint pt, wxHelpEvent::Origin origin)
+   Constructor. */
 PHP_METHOD(php_wxHelpEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -38143,6 +38536,8 @@ PHP_METHOD(php_wxHelpEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxScrollEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -38183,6 +38578,8 @@ void php_wxScrollEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxScrollEvent::wxScrollEvent(int commandType, int id, int pos, int orientation)
+   Constructor. */
 PHP_METHOD(php_wxScrollEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -38311,6 +38708,9 @@ PHP_METHOD(php_wxScrollEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxScrollEvent::SetPosition(int pos) */
 PHP_METHOD(php_wxScrollEvent, SetPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -38408,6 +38808,9 @@ PHP_METHOD(php_wxScrollEvent, SetPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxScrollEvent::SetPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxScrollEvent::SetOrientation(int orient) */
 PHP_METHOD(php_wxScrollEvent, SetOrientation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -38505,6 +38908,10 @@ PHP_METHOD(php_wxScrollEvent, SetOrientation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxScrollEvent::SetOrientation\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxScrollEvent::GetPosition()
+   Returns the position of the scrollbar. */
 PHP_METHOD(php_wxScrollEvent, GetPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -38597,6 +39004,10 @@ PHP_METHOD(php_wxScrollEvent, GetPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxScrollEvent::GetPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxScrollEvent::GetOrientation()
+   Returns wxHORIZONTAL or wxVERTICAL, depending on the orientation of the scrollbar. */
 PHP_METHOD(php_wxScrollEvent, GetOrientation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -38689,6 +39100,8 @@ PHP_METHOD(php_wxScrollEvent, GetOrientation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxScrollEvent::GetOrientation\n");
 	}
 }
+/* }}} */
+
 void php_wxIdleEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -38729,6 +39142,8 @@ void php_wxIdleEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto wxIdleMode wxIdleEvent::GetMode()
+   Static function returning a value specifying how wxWidgets will send idle events: to all windows, or only to those which specify that they will process the events. */
 PHP_METHOD(php_wxIdleEvent, GetMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -38822,6 +39237,10 @@ PHP_METHOD(php_wxIdleEvent, GetMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxIdleEvent::GetMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxIdleEvent::MoreRequested()
+   Returns true if the OnIdle function processing this event requested more processing time. */
 PHP_METHOD(php_wxIdleEvent, MoreRequested)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -38914,6 +39333,10 @@ PHP_METHOD(php_wxIdleEvent, MoreRequested)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxIdleEvent::MoreRequested\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxIdleEvent::RequestMore(bool needMore)
+   Tells wxWidgets that more processing is required. */
 PHP_METHOD(php_wxIdleEvent, RequestMore)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -39022,6 +39445,10 @@ PHP_METHOD(php_wxIdleEvent, RequestMore)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxIdleEvent::RequestMore\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxIdleEvent::SetMode(wxIdleMode mode)
+   Static function for specifying how wxWidgets will send idle events: to all windows, or only to those which specify that they will process the events. */
 PHP_METHOD(php_wxIdleEvent, SetMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -39120,6 +39547,10 @@ PHP_METHOD(php_wxIdleEvent, SetMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxIdleEvent::SetMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxIdleEvent::wxIdleEvent()
+   Constructor. */
 PHP_METHOD(php_wxIdleEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -39200,6 +39631,8 @@ PHP_METHOD(php_wxIdleEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxInitDialogEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -39240,6 +39673,8 @@ void php_wxInitDialogEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 		#endif
 	}
 }
+/* {{{ proto  wxInitDialogEvent::wxInitDialogEvent(int id)
+   Constructor. */
 PHP_METHOD(php_wxInitDialogEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -39335,6 +39770,8 @@ PHP_METHOD(php_wxInitDialogEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxWindowDestroyEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -39375,6 +39812,8 @@ void php_wxWindowDestroyEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 		#endif
 	}
 }
+/* {{{ proto wxWindow wxWindowDestroyEvent::GetWindow()
+   Return the window being destroyed. */
 PHP_METHOD(php_wxWindowDestroyEvent, GetWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -39490,6 +39929,10 @@ PHP_METHOD(php_wxWindowDestroyEvent, GetWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWindowDestroyEvent::GetWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxWindowDestroyEvent::wxWindowDestroyEvent(wxWindow &win)
+   Constructor. */
 PHP_METHOD(php_wxWindowDestroyEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -39603,6 +40046,8 @@ PHP_METHOD(php_wxWindowDestroyEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxNavigationKeyEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -39643,6 +40088,8 @@ void php_wxNavigationKeyEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 		#endif
 	}
 }
+/* {{{ proto wxWindow wxNavigationKeyEvent::GetCurrentFocus()
+   Returns the child that has the focus, or NULL. */
 PHP_METHOD(php_wxNavigationKeyEvent, GetCurrentFocus)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -39758,6 +40205,10 @@ PHP_METHOD(php_wxNavigationKeyEvent, GetCurrentFocus)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxNavigationKeyEvent::GetCurrentFocus\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxNavigationKeyEvent::GetDirection()
+   Returns true if the navigation was in the forward direction. */
 PHP_METHOD(php_wxNavigationKeyEvent, GetDirection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -39850,6 +40301,10 @@ PHP_METHOD(php_wxNavigationKeyEvent, GetDirection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxNavigationKeyEvent::GetDirection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxNavigationKeyEvent::IsFromTab()
+   Returns true if the navigation event was from a tab key. */
 PHP_METHOD(php_wxNavigationKeyEvent, IsFromTab)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -39942,6 +40397,10 @@ PHP_METHOD(php_wxNavigationKeyEvent, IsFromTab)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxNavigationKeyEvent::IsFromTab\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxNavigationKeyEvent::IsWindowChange()
+   Returns true if the navigation event represents a window change (for example, from Ctrl-Page Down in a notebook). */
 PHP_METHOD(php_wxNavigationKeyEvent, IsWindowChange)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -40034,6 +40493,10 @@ PHP_METHOD(php_wxNavigationKeyEvent, IsWindowChange)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxNavigationKeyEvent::IsWindowChange\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxNavigationKeyEvent::SetCurrentFocus(wxWindow &currentFocus)
+   Sets the current focus window member. */
 PHP_METHOD(php_wxNavigationKeyEvent, SetCurrentFocus)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -40149,6 +40612,10 @@ PHP_METHOD(php_wxNavigationKeyEvent, SetCurrentFocus)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxNavigationKeyEvent::SetCurrentFocus\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxNavigationKeyEvent::SetDirection(bool direction)
+   Sets the direction to forward if direction is true, or backward if false. */
 PHP_METHOD(php_wxNavigationKeyEvent, SetDirection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -40246,6 +40713,10 @@ PHP_METHOD(php_wxNavigationKeyEvent, SetDirection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxNavigationKeyEvent::SetDirection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxNavigationKeyEvent::SetFlags(int flags)
+   Sets the flags for this event. */
 PHP_METHOD(php_wxNavigationKeyEvent, SetFlags)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -40343,6 +40814,10 @@ PHP_METHOD(php_wxNavigationKeyEvent, SetFlags)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxNavigationKeyEvent::SetFlags\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxNavigationKeyEvent::SetFromTab(bool fromTab)
+   Marks the navigation event as from a tab key. */
 PHP_METHOD(php_wxNavigationKeyEvent, SetFromTab)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -40440,6 +40915,10 @@ PHP_METHOD(php_wxNavigationKeyEvent, SetFromTab)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxNavigationKeyEvent::SetFromTab\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxNavigationKeyEvent::SetWindowChange(bool windowChange)
+   Marks the event as a window change event. */
 PHP_METHOD(php_wxNavigationKeyEvent, SetWindowChange)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -40537,6 +41016,9 @@ PHP_METHOD(php_wxNavigationKeyEvent, SetWindowChange)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxNavigationKeyEvent::SetWindowChange\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxNavigationKeyEvent::wxNavigationKeyEvent() */
 PHP_METHOD(php_wxNavigationKeyEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -40617,6 +41099,8 @@ PHP_METHOD(php_wxNavigationKeyEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxCloseEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -40657,6 +41141,8 @@ void php_wxCloseEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto bool wxCloseEvent::CanVeto()
+   Returns true if you can veto a system shutdown or a window close event. */
 PHP_METHOD(php_wxCloseEvent, CanVeto)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -40749,6 +41235,10 @@ PHP_METHOD(php_wxCloseEvent, CanVeto)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCloseEvent::CanVeto\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxCloseEvent::GetLoggingOff()
+   Returns true if the user is just logging off or false if the system is shutting down. */
 PHP_METHOD(php_wxCloseEvent, GetLoggingOff)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -40841,6 +41331,10 @@ PHP_METHOD(php_wxCloseEvent, GetLoggingOff)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCloseEvent::GetLoggingOff\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxCloseEvent::SetCanVeto(bool canVeto)
+   Sets the 'can veto' flag. */
 PHP_METHOD(php_wxCloseEvent, SetCanVeto)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -40938,6 +41432,10 @@ PHP_METHOD(php_wxCloseEvent, SetCanVeto)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCloseEvent::SetCanVeto\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxCloseEvent::SetLoggingOff(bool loggingOff)
+   Sets the 'logging off' flag. */
 PHP_METHOD(php_wxCloseEvent, SetLoggingOff)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -41035,6 +41533,10 @@ PHP_METHOD(php_wxCloseEvent, SetLoggingOff)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCloseEvent::SetLoggingOff\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxCloseEvent::Veto(bool veto)
+   Call this from your event handler to veto a system shutdown or to signal to the calling application that a window close did not happen. */
 PHP_METHOD(php_wxCloseEvent, Veto)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -41143,6 +41645,10 @@ PHP_METHOD(php_wxCloseEvent, Veto)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCloseEvent::Veto\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxCloseEvent::wxCloseEvent(int commandEventType, int id)
+   Constructor. */
 PHP_METHOD(php_wxCloseEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -41249,6 +41755,8 @@ PHP_METHOD(php_wxCloseEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxMenuEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -41289,6 +41797,8 @@ void php_wxMenuEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto wxMenu wxMenuEvent::GetMenu()
+   Returns the menu which is being opened or closed. */
 PHP_METHOD(php_wxMenuEvent, GetMenu)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -41404,6 +41914,10 @@ PHP_METHOD(php_wxMenuEvent, GetMenu)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuEvent::GetMenu\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxMenuEvent::GetMenuId()
+   Returns the menu identifier associated with the event. */
 PHP_METHOD(php_wxMenuEvent, GetMenuId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -41496,6 +42010,10 @@ PHP_METHOD(php_wxMenuEvent, GetMenuId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuEvent::GetMenuId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMenuEvent::IsPopup()
+   Returns true if the menu which is being opened or closed is a popup menu, false if it is a normal one. */
 PHP_METHOD(php_wxMenuEvent, IsPopup)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -41588,6 +42106,10 @@ PHP_METHOD(php_wxMenuEvent, IsPopup)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMenuEvent::IsPopup\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMenuEvent::wxMenuEvent(int type, int id, wxMenu &menu)
+   Constructor. */
 PHP_METHOD(php_wxMenuEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -41723,6 +42245,8 @@ PHP_METHOD(php_wxMenuEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxMoveEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -41763,6 +42287,8 @@ void php_wxMoveEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto wxPoint wxMoveEvent::GetPosition()
+   Returns the position of the window generating the move change event. */
 PHP_METHOD(php_wxMoveEvent, GetPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -41860,6 +42386,9 @@ PHP_METHOD(php_wxMoveEvent, GetPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMoveEvent::GetPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRect wxMoveEvent::GetRect() */
 PHP_METHOD(php_wxMoveEvent, GetRect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -41957,6 +42486,9 @@ PHP_METHOD(php_wxMoveEvent, GetRect)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMoveEvent::GetRect\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMoveEvent::SetPosition(wxPoint pos) */
 PHP_METHOD(php_wxMoveEvent, SetPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -42072,6 +42604,9 @@ PHP_METHOD(php_wxMoveEvent, SetPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMoveEvent::SetPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMoveEvent::SetRect(wxRect rect) */
 PHP_METHOD(php_wxMoveEvent, SetRect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -42187,6 +42722,10 @@ PHP_METHOD(php_wxMoveEvent, SetRect)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMoveEvent::SetRect\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMoveEvent::wxMoveEvent(wxPoint pt, int id)
+   Constructor. */
 PHP_METHOD(php_wxMoveEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -42302,6 +42841,8 @@ PHP_METHOD(php_wxMoveEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxSizeEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -42342,6 +42883,7 @@ void php_wxSizeEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto wxRect wxSizeEvent::GetRect() */
 PHP_METHOD(php_wxSizeEvent, GetRect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -42439,6 +42981,10 @@ PHP_METHOD(php_wxSizeEvent, GetRect)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizeEvent::GetRect\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxSizeEvent::GetSize()
+   Returns the entire size of the window generating the size change event. */
 PHP_METHOD(php_wxSizeEvent, GetSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -42536,6 +43082,9 @@ PHP_METHOD(php_wxSizeEvent, GetSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizeEvent::GetSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSizeEvent::SetRect(wxRect rect) */
 PHP_METHOD(php_wxSizeEvent, SetRect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -42650,6 +43199,9 @@ PHP_METHOD(php_wxSizeEvent, SetRect)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizeEvent::SetRect\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSizeEvent::SetSize(wxSize size) */
 PHP_METHOD(php_wxSizeEvent, SetSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -42764,6 +43316,10 @@ PHP_METHOD(php_wxSizeEvent, SetSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSizeEvent::SetSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSizeEvent::wxSizeEvent(wxSize sz, int id)
+   Constructor. */
 PHP_METHOD(php_wxSizeEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -42879,6 +43435,8 @@ PHP_METHOD(php_wxSizeEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxSetCursorEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -42919,6 +43477,8 @@ void php_wxSetCursorEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		#endif
 	}
 }
+/* {{{ proto wxCursor wxSetCursorEvent::GetCursor()
+   Returns a reference to the cursor specified by this event. */
 PHP_METHOD(php_wxSetCursorEvent, GetCursor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -43031,6 +43591,10 @@ PHP_METHOD(php_wxSetCursorEvent, GetCursor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSetCursorEvent::GetCursor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxSetCursorEvent::GetX()
+   Returns the X coordinate of the mouse in client coordinates. */
 PHP_METHOD(php_wxSetCursorEvent, GetX)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -43123,6 +43687,10 @@ PHP_METHOD(php_wxSetCursorEvent, GetX)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSetCursorEvent::GetX\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxSetCursorEvent::GetY()
+   Returns the Y coordinate of the mouse in client coordinates. */
 PHP_METHOD(php_wxSetCursorEvent, GetY)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -43215,6 +43783,10 @@ PHP_METHOD(php_wxSetCursorEvent, GetY)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSetCursorEvent::GetY\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxSetCursorEvent::HasCursor()
+   Returns true if the cursor specified by this event is a valid cursor. */
 PHP_METHOD(php_wxSetCursorEvent, HasCursor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -43307,6 +43879,10 @@ PHP_METHOD(php_wxSetCursorEvent, HasCursor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSetCursorEvent::HasCursor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSetCursorEvent::SetCursor(wxCursor cursor)
+   Sets the cursor associated with this event. */
 PHP_METHOD(php_wxSetCursorEvent, SetCursor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -43422,6 +43998,10 @@ PHP_METHOD(php_wxSetCursorEvent, SetCursor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSetCursorEvent::SetCursor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSetCursorEvent::wxSetCursorEvent(int x, int y)
+   Constructor, used by the library itself internally to initialize the event object. */
 PHP_METHOD(php_wxSetCursorEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -43528,6 +44108,8 @@ PHP_METHOD(php_wxSetCursorEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxFileCtrlEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -43568,6 +44150,8 @@ void php_wxFileCtrlEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+/* {{{ proto string wxFileCtrlEvent::GetDirectory()
+   Returns the current directory. */
 PHP_METHOD(php_wxFileCtrlEvent, GetDirectory)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -43666,6 +44250,10 @@ PHP_METHOD(php_wxFileCtrlEvent, GetDirectory)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileCtrlEvent::GetDirectory\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileCtrlEvent::GetFile()
+   Returns the file selected (assuming it is only one file). */
 PHP_METHOD(php_wxFileCtrlEvent, GetFile)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -43764,6 +44352,10 @@ PHP_METHOD(php_wxFileCtrlEvent, GetFile)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileCtrlEvent::GetFile\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto array wxFileCtrlEvent::GetFiles()
+   Returns the files selected. */
 PHP_METHOD(php_wxFileCtrlEvent, GetFiles)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -43866,6 +44458,10 @@ PHP_METHOD(php_wxFileCtrlEvent, GetFiles)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileCtrlEvent::GetFiles\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxFileCtrlEvent::GetFilterIndex()
+   Returns the current file filter index. */
 PHP_METHOD(php_wxFileCtrlEvent, GetFilterIndex)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -43958,6 +44554,10 @@ PHP_METHOD(php_wxFileCtrlEvent, GetFilterIndex)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileCtrlEvent::GetFilterIndex\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileCtrlEvent::SetDirectory(string directory)
+   Sets the directory of this event. */
 PHP_METHOD(php_wxFileCtrlEvent, SetDirectory)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -44056,6 +44656,10 @@ PHP_METHOD(php_wxFileCtrlEvent, SetDirectory)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileCtrlEvent::SetDirectory\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileCtrlEvent::SetFiles(array files)
+   Sets the files changed by this event. */
 PHP_METHOD(php_wxFileCtrlEvent, SetFiles)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -44171,6 +44775,10 @@ PHP_METHOD(php_wxFileCtrlEvent, SetFiles)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileCtrlEvent::SetFiles\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileCtrlEvent::SetFilterIndex(int index)
+   Sets the filter index changed by this event. */
 PHP_METHOD(php_wxFileCtrlEvent, SetFilterIndex)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -44268,6 +44876,10 @@ PHP_METHOD(php_wxFileCtrlEvent, SetFilterIndex)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileCtrlEvent::SetFilterIndex\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileCtrlEvent::wxFileCtrlEvent(int type, wxObject &evtObject, int id)
+   Constructor. */
 PHP_METHOD(php_wxFileCtrlEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -44373,6 +44985,8 @@ PHP_METHOD(php_wxFileCtrlEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxFileDirPickerEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -44413,6 +45027,8 @@ void php_wxFileDirPickerEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 		#endif
 	}
 }
+/* {{{ proto string wxFileDirPickerEvent::GetPath()
+   Retrieve the absolute path of the file/directory the user has just selected. */
 PHP_METHOD(php_wxFileDirPickerEvent, GetPath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -44511,6 +45127,10 @@ PHP_METHOD(php_wxFileDirPickerEvent, GetPath)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileDirPickerEvent::GetPath\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileDirPickerEvent::SetPath(string path)
+   Set the absolute path of the file/directory associated with the event. */
 PHP_METHOD(php_wxFileDirPickerEvent, SetPath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -44609,6 +45229,10 @@ PHP_METHOD(php_wxFileDirPickerEvent, SetPath)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileDirPickerEvent::SetPath\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileDirPickerEvent::wxFileDirPickerEvent(int type, wxObject &generator, int id, string path)
+   The constructor is not normally used by the user code. */
 PHP_METHOD(php_wxFileDirPickerEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -44716,6 +45340,8 @@ PHP_METHOD(php_wxFileDirPickerEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxFontPickerEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -44756,6 +45382,8 @@ void php_wxFontPickerEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 		#endif
 	}
 }
+/* {{{ proto wxFont wxFontPickerEvent::GetFont()
+   Retrieve the font the user has just selected. */
 PHP_METHOD(php_wxFontPickerEvent, GetFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -44853,6 +45481,10 @@ PHP_METHOD(php_wxFontPickerEvent, GetFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontPickerEvent::GetFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFontPickerEvent::SetFont(wxFont f)
+   Set the font associated with the event. */
 PHP_METHOD(php_wxFontPickerEvent, SetFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -44968,6 +45600,10 @@ PHP_METHOD(php_wxFontPickerEvent, SetFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFontPickerEvent::SetFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFontPickerEvent::wxFontPickerEvent(wxObject &generator, int id, wxFont font)
+   The constructor is not normally used by the user code. */
 PHP_METHOD(php_wxFontPickerEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -45091,6 +45727,8 @@ PHP_METHOD(php_wxFontPickerEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxFileSystemWatcherEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -45131,6 +45769,8 @@ void php_wxFileSystemWatcherEvent_destruction_handler(zend_rsrc_list_entry *rsrc
 		#endif
 	}
 }
+/* {{{ proto int wxFileSystemWatcherEvent::GetChangeType()
+   Returns the type of file system change that occurred. */
 PHP_METHOD(php_wxFileSystemWatcherEvent, GetChangeType)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -45226,6 +45866,10 @@ PHP_METHOD(php_wxFileSystemWatcherEvent, GetChangeType)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileSystemWatcherEvent::GetChangeType\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileSystemWatcherEvent::GetErrorDescription()
+   Return a description of the warning or error if this is an error event. */
 PHP_METHOD(php_wxFileSystemWatcherEvent, GetErrorDescription)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -45327,6 +45971,10 @@ PHP_METHOD(php_wxFileSystemWatcherEvent, GetErrorDescription)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileSystemWatcherEvent::GetErrorDescription\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFileName wxFileSystemWatcherEvent::GetNewPath()
+   Returns the new path of the renamed file/directory if this is a rename event. */
 PHP_METHOD(php_wxFileSystemWatcherEvent, GetNewPath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -45442,6 +46090,10 @@ PHP_METHOD(php_wxFileSystemWatcherEvent, GetNewPath)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileSystemWatcherEvent::GetNewPath\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFileName wxFileSystemWatcherEvent::GetPath()
+   Returns the path at which the event occurred. */
 PHP_METHOD(php_wxFileSystemWatcherEvent, GetPath)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -45557,6 +46209,10 @@ PHP_METHOD(php_wxFileSystemWatcherEvent, GetPath)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileSystemWatcherEvent::GetPath\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileSystemWatcherEvent::IsError()
+   Returns true if this error is an error event. */
 PHP_METHOD(php_wxFileSystemWatcherEvent, IsError)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -45652,6 +46308,10 @@ PHP_METHOD(php_wxFileSystemWatcherEvent, IsError)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileSystemWatcherEvent::IsError\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileSystemWatcherEvent::ToString()
+   Returns a wxString describing an event, useful for logging, debugging or testing. */
 PHP_METHOD(php_wxFileSystemWatcherEvent, ToString)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -45753,6 +46413,8 @@ PHP_METHOD(php_wxFileSystemWatcherEvent, ToString)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileSystemWatcherEvent::ToString\n");
 	}
 }
+/* }}} */
+
 void php_wxGridEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -45793,6 +46455,8 @@ void php_wxGridEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto bool wxGridEvent::AltDown()
+   Returns true if the Alt key was down at the time of the event. */
 PHP_METHOD(php_wxGridEvent, AltDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -45885,6 +46549,10 @@ PHP_METHOD(php_wxGridEvent, AltDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridEvent::AltDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridEvent::ControlDown()
+   Returns true if the Control key was down at the time of the event. */
 PHP_METHOD(php_wxGridEvent, ControlDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -45977,6 +46645,10 @@ PHP_METHOD(php_wxGridEvent, ControlDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridEvent::ControlDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGridEvent::GetCol()
+   Column at which the event occurred. */
 PHP_METHOD(php_wxGridEvent, GetCol)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -46069,6 +46741,10 @@ PHP_METHOD(php_wxGridEvent, GetCol)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridEvent::GetCol\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPoint wxGridEvent::GetPosition()
+   Position in pixels at which the event occurred. */
 PHP_METHOD(php_wxGridEvent, GetPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -46166,6 +46842,10 @@ PHP_METHOD(php_wxGridEvent, GetPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridEvent::GetPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGridEvent::GetRow()
+   Row at which the event occurred. */
 PHP_METHOD(php_wxGridEvent, GetRow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -46258,6 +46938,10 @@ PHP_METHOD(php_wxGridEvent, GetRow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridEvent::GetRow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridEvent::MetaDown()
+   Returns true if the Meta key was down at the time of the event. */
 PHP_METHOD(php_wxGridEvent, MetaDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -46350,6 +47034,10 @@ PHP_METHOD(php_wxGridEvent, MetaDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridEvent::MetaDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridEvent::Selecting()
+   Returns true if the user is selecting grid cells, or false if deselecting. */
 PHP_METHOD(php_wxGridEvent, Selecting)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -46442,6 +47130,10 @@ PHP_METHOD(php_wxGridEvent, Selecting)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridEvent::Selecting\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridEvent::ShiftDown()
+   Returns true if the Shift key was down at the time of the event. */
 PHP_METHOD(php_wxGridEvent, ShiftDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -46534,6 +47226,10 @@ PHP_METHOD(php_wxGridEvent, ShiftDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridEvent::ShiftDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridEvent::wxGridEvent()
+   Default constructor. */
 PHP_METHOD(php_wxGridEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -46760,6 +47456,8 @@ PHP_METHOD(php_wxGridEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxGridSizeEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -46800,6 +47498,8 @@ void php_wxGridSizeEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+/* {{{ proto bool wxGridSizeEvent::AltDown()
+   Returns true if the Alt key was down at the time of the event. */
 PHP_METHOD(php_wxGridSizeEvent, AltDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -46892,6 +47592,10 @@ PHP_METHOD(php_wxGridSizeEvent, AltDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridSizeEvent::AltDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridSizeEvent::ControlDown()
+   Returns true if the Control key was down at the time of the event. */
 PHP_METHOD(php_wxGridSizeEvent, ControlDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -46984,6 +47688,10 @@ PHP_METHOD(php_wxGridSizeEvent, ControlDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridSizeEvent::ControlDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPoint wxGridSizeEvent::GetPosition()
+   Position in pixels at which the event occurred. */
 PHP_METHOD(php_wxGridSizeEvent, GetPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -47081,6 +47789,10 @@ PHP_METHOD(php_wxGridSizeEvent, GetPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridSizeEvent::GetPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGridSizeEvent::GetRowOrCol()
+   Row or column at that was resized. */
 PHP_METHOD(php_wxGridSizeEvent, GetRowOrCol)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -47173,6 +47885,10 @@ PHP_METHOD(php_wxGridSizeEvent, GetRowOrCol)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridSizeEvent::GetRowOrCol\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridSizeEvent::MetaDown()
+   Returns true if the Meta key was down at the time of the event. */
 PHP_METHOD(php_wxGridSizeEvent, MetaDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -47265,6 +47981,10 @@ PHP_METHOD(php_wxGridSizeEvent, MetaDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridSizeEvent::MetaDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridSizeEvent::ShiftDown()
+   Returns true if the Shift key was down at the time of the event. */
 PHP_METHOD(php_wxGridSizeEvent, ShiftDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -47357,6 +48077,10 @@ PHP_METHOD(php_wxGridSizeEvent, ShiftDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridSizeEvent::ShiftDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridSizeEvent::wxGridSizeEvent()
+   Default constructor. */
 PHP_METHOD(php_wxGridSizeEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -47559,6 +48283,8 @@ PHP_METHOD(php_wxGridSizeEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxGridRangeSelectEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -47599,6 +48325,8 @@ void php_wxGridRangeSelectEvent_destruction_handler(zend_rsrc_list_entry *rsrc T
 		#endif
 	}
 }
+/* {{{ proto bool wxGridRangeSelectEvent::AltDown()
+   Returns true if the Alt key was down at the time of the event. */
 PHP_METHOD(php_wxGridRangeSelectEvent, AltDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -47691,6 +48419,10 @@ PHP_METHOD(php_wxGridRangeSelectEvent, AltDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridRangeSelectEvent::AltDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridRangeSelectEvent::ControlDown()
+   Returns true if the Control key was down at the time of the event. */
 PHP_METHOD(php_wxGridRangeSelectEvent, ControlDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -47783,6 +48515,10 @@ PHP_METHOD(php_wxGridRangeSelectEvent, ControlDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridRangeSelectEvent::ControlDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGridRangeSelectEvent::GetBottomRow()
+   Bottom row of the rectangular area that was (de)selected. */
 PHP_METHOD(php_wxGridRangeSelectEvent, GetBottomRow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -47875,6 +48611,10 @@ PHP_METHOD(php_wxGridRangeSelectEvent, GetBottomRow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridRangeSelectEvent::GetBottomRow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGridRangeSelectEvent::GetLeftCol()
+   Left column of the rectangular area that was (de)selected. */
 PHP_METHOD(php_wxGridRangeSelectEvent, GetLeftCol)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -47967,6 +48707,10 @@ PHP_METHOD(php_wxGridRangeSelectEvent, GetLeftCol)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridRangeSelectEvent::GetLeftCol\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGridRangeSelectEvent::GetRightCol()
+   Right column of the rectangular area that was (de)selected. */
 PHP_METHOD(php_wxGridRangeSelectEvent, GetRightCol)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -48059,6 +48803,10 @@ PHP_METHOD(php_wxGridRangeSelectEvent, GetRightCol)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridRangeSelectEvent::GetRightCol\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGridRangeSelectEvent::GetTopRow()
+   Top row of the rectangular area that was (de)selected. */
 PHP_METHOD(php_wxGridRangeSelectEvent, GetTopRow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -48151,6 +48899,10 @@ PHP_METHOD(php_wxGridRangeSelectEvent, GetTopRow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridRangeSelectEvent::GetTopRow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridRangeSelectEvent::MetaDown()
+   Returns true if the Meta key was down at the time of the event. */
 PHP_METHOD(php_wxGridRangeSelectEvent, MetaDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -48243,6 +48995,10 @@ PHP_METHOD(php_wxGridRangeSelectEvent, MetaDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridRangeSelectEvent::MetaDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridRangeSelectEvent::Selecting()
+   Returns true if the area was selected, false otherwise. */
 PHP_METHOD(php_wxGridRangeSelectEvent, Selecting)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -48335,6 +49091,10 @@ PHP_METHOD(php_wxGridRangeSelectEvent, Selecting)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridRangeSelectEvent::Selecting\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGridRangeSelectEvent::ShiftDown()
+   Returns true if the Shift key was down at the time of the event. */
 PHP_METHOD(php_wxGridRangeSelectEvent, ShiftDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -48427,6 +49187,10 @@ PHP_METHOD(php_wxGridRangeSelectEvent, ShiftDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridRangeSelectEvent::ShiftDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridRangeSelectEvent::wxGridRangeSelectEvent()
+   Default constructor. */
 PHP_METHOD(php_wxGridRangeSelectEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -48507,6 +49271,8 @@ PHP_METHOD(php_wxGridRangeSelectEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxGridEditorCreatedEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -48547,6 +49313,8 @@ void php_wxGridEditorCreatedEvent_destruction_handler(zend_rsrc_list_entry *rsrc
 		#endif
 	}
 }
+/* {{{ proto int wxGridEditorCreatedEvent::GetCol()
+   Returns the column at which the event occurred. */
 PHP_METHOD(php_wxGridEditorCreatedEvent, GetCol)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -48639,6 +49407,10 @@ PHP_METHOD(php_wxGridEditorCreatedEvent, GetCol)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridEditorCreatedEvent::GetCol\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxControl wxGridEditorCreatedEvent::GetControl()
+   Returns the edit control. */
 PHP_METHOD(php_wxGridEditorCreatedEvent, GetControl)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -48754,6 +49526,10 @@ PHP_METHOD(php_wxGridEditorCreatedEvent, GetControl)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridEditorCreatedEvent::GetControl\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxGridEditorCreatedEvent::GetRow()
+   Returns the row at which the event occurred. */
 PHP_METHOD(php_wxGridEditorCreatedEvent, GetRow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -48846,6 +49622,10 @@ PHP_METHOD(php_wxGridEditorCreatedEvent, GetRow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridEditorCreatedEvent::GetRow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridEditorCreatedEvent::SetCol(int col)
+   Sets the column at which the event occurred. */
 PHP_METHOD(php_wxGridEditorCreatedEvent, SetCol)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -48943,6 +49723,10 @@ PHP_METHOD(php_wxGridEditorCreatedEvent, SetCol)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridEditorCreatedEvent::SetCol\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridEditorCreatedEvent::SetControl(wxControl &ctrl)
+   Sets the edit control. */
 PHP_METHOD(php_wxGridEditorCreatedEvent, SetControl)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -49058,6 +49842,10 @@ PHP_METHOD(php_wxGridEditorCreatedEvent, SetControl)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridEditorCreatedEvent::SetControl\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridEditorCreatedEvent::SetRow(int row)
+   Sets the row at which the event occurred. */
 PHP_METHOD(php_wxGridEditorCreatedEvent, SetRow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -49155,6 +49943,10 @@ PHP_METHOD(php_wxGridEditorCreatedEvent, SetRow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGridEditorCreatedEvent::SetRow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGridEditorCreatedEvent::wxGridEditorCreatedEvent()
+   Default constructor. */
 PHP_METHOD(php_wxGridEditorCreatedEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -49312,6 +50104,8 @@ PHP_METHOD(php_wxGridEditorCreatedEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxHeaderCtrlEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -49352,6 +50146,8 @@ void php_wxHeaderCtrlEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 		#endif
 	}
 }
+/* {{{ proto int wxHeaderCtrlEvent::GetColumn()
+   Return the index of the column affected by this event. */
 PHP_METHOD(php_wxHeaderCtrlEvent, GetColumn)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -49447,6 +50243,10 @@ PHP_METHOD(php_wxHeaderCtrlEvent, GetColumn)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHeaderCtrlEvent::GetColumn\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxHeaderCtrlEvent::GetNewOrder()
+   Return the new order of the column. */
 PHP_METHOD(php_wxHeaderCtrlEvent, GetNewOrder)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -49542,6 +50342,10 @@ PHP_METHOD(php_wxHeaderCtrlEvent, GetNewOrder)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHeaderCtrlEvent::GetNewOrder\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxHeaderCtrlEvent::GetWidth()
+   Return the current width of the column. */
 PHP_METHOD(php_wxHeaderCtrlEvent, GetWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -49637,6 +50441,8 @@ PHP_METHOD(php_wxHeaderCtrlEvent, GetWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHeaderCtrlEvent::GetWidth\n");
 	}
 }
+/* }}} */
+
 void php_wxHyperlinkEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -49677,6 +50483,8 @@ void php_wxHyperlinkEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		#endif
 	}
 }
+/* {{{ proto string wxHyperlinkEvent::GetURL()
+   Returns the URL of the hyperlink where the user has just clicked. */
 PHP_METHOD(php_wxHyperlinkEvent, GetURL)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -49775,6 +50583,10 @@ PHP_METHOD(php_wxHyperlinkEvent, GetURL)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHyperlinkEvent::GetURL\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHyperlinkEvent::SetURL(string url)
+   Sets the URL associated with the event. */
 PHP_METHOD(php_wxHyperlinkEvent, SetURL)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -49873,6 +50685,10 @@ PHP_METHOD(php_wxHyperlinkEvent, SetURL)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxHyperlinkEvent::SetURL\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxHyperlinkEvent::wxHyperlinkEvent(wxObject &generator, int id, string url)
+   The constructor is not normally used by the user code. */
 PHP_METHOD(php_wxHyperlinkEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -49979,6 +50795,8 @@ PHP_METHOD(php_wxHyperlinkEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxQueryLayoutInfoEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -50019,6 +50837,8 @@ void php_wxQueryLayoutInfoEvent_destruction_handler(zend_rsrc_list_entry *rsrc T
 		#endif
 	}
 }
+/* {{{ proto wxLayoutAlignment wxQueryLayoutInfoEvent::GetAlignment()
+   Specifies the alignment of the window (which side of the remaining parent client area the window sticks to). */
 PHP_METHOD(php_wxQueryLayoutInfoEvent, GetAlignment)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -50111,6 +50931,10 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, GetAlignment)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxQueryLayoutInfoEvent::GetAlignment\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxQueryLayoutInfoEvent::GetFlags()
+   Returns the flags associated with this event. */
 PHP_METHOD(php_wxQueryLayoutInfoEvent, GetFlags)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -50203,6 +51027,10 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, GetFlags)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxQueryLayoutInfoEvent::GetFlags\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxLayoutOrientation wxQueryLayoutInfoEvent::GetOrientation()
+   Returns the orientation that the event handler specified to the event object. */
 PHP_METHOD(php_wxQueryLayoutInfoEvent, GetOrientation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -50295,6 +51123,10 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, GetOrientation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxQueryLayoutInfoEvent::GetOrientation\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxQueryLayoutInfoEvent::GetRequestedLength()
+   Returns the requested length of the window in the direction of the window orientation. */
 PHP_METHOD(php_wxQueryLayoutInfoEvent, GetRequestedLength)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -50387,6 +51219,10 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, GetRequestedLength)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxQueryLayoutInfoEvent::GetRequestedLength\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxQueryLayoutInfoEvent::GetSize()
+   Returns the size that the event handler specified to the event object as being the requested size of the window. */
 PHP_METHOD(php_wxQueryLayoutInfoEvent, GetSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -50484,6 +51320,10 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, GetSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxQueryLayoutInfoEvent::GetSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxQueryLayoutInfoEvent::SetAlignment(wxLayoutAlignment alignment)
+   Call this to specify the alignment of the window (which side of the remaining parent client area the window sticks to). */
 PHP_METHOD(php_wxQueryLayoutInfoEvent, SetAlignment)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -50581,6 +51421,10 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, SetAlignment)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxQueryLayoutInfoEvent::SetAlignment\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxQueryLayoutInfoEvent::SetFlags(int flags)
+   Sets the flags associated with this event. */
 PHP_METHOD(php_wxQueryLayoutInfoEvent, SetFlags)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -50678,6 +51522,10 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, SetFlags)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxQueryLayoutInfoEvent::SetFlags\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxQueryLayoutInfoEvent::SetOrientation(wxLayoutOrientation orientation)
+   Call this to specify the orientation of the window. */
 PHP_METHOD(php_wxQueryLayoutInfoEvent, SetOrientation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -50775,6 +51623,10 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, SetOrientation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxQueryLayoutInfoEvent::SetOrientation\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxQueryLayoutInfoEvent::SetRequestedLength(int length)
+   Sets the requested length of the window in the direction of the window orientation. */
 PHP_METHOD(php_wxQueryLayoutInfoEvent, SetRequestedLength)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -50872,6 +51724,10 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, SetRequestedLength)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxQueryLayoutInfoEvent::SetRequestedLength\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxQueryLayoutInfoEvent::SetSize(wxSize size)
+   Call this to let the calling code know what the size of the window is. */
 PHP_METHOD(php_wxQueryLayoutInfoEvent, SetSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -50987,6 +51843,10 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, SetSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxQueryLayoutInfoEvent::SetSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxQueryLayoutInfoEvent::wxQueryLayoutInfoEvent(int id)
+   Constructor. */
 PHP_METHOD(php_wxQueryLayoutInfoEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -51082,6 +51942,8 @@ PHP_METHOD(php_wxQueryLayoutInfoEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxCalculateLayoutEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -51122,6 +51984,8 @@ void php_wxCalculateLayoutEvent_destruction_handler(zend_rsrc_list_entry *rsrc T
 		#endif
 	}
 }
+/* {{{ proto int wxCalculateLayoutEvent::GetFlags()
+   Returns the flags associated with this event. */
 PHP_METHOD(php_wxCalculateLayoutEvent, GetFlags)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -51214,6 +52078,10 @@ PHP_METHOD(php_wxCalculateLayoutEvent, GetFlags)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCalculateLayoutEvent::GetFlags\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRect wxCalculateLayoutEvent::GetRect()
+   Before the event handler is entered, returns the remaining parent client area that the window could occupy. */
 PHP_METHOD(php_wxCalculateLayoutEvent, GetRect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -51311,6 +52179,10 @@ PHP_METHOD(php_wxCalculateLayoutEvent, GetRect)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCalculateLayoutEvent::GetRect\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxCalculateLayoutEvent::SetFlags(int flags)
+   Sets the flags associated with this event. */
 PHP_METHOD(php_wxCalculateLayoutEvent, SetFlags)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -51408,6 +52280,10 @@ PHP_METHOD(php_wxCalculateLayoutEvent, SetFlags)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCalculateLayoutEvent::SetFlags\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxCalculateLayoutEvent::SetRect(wxRect rect)
+   Call this to specify the new remaining parent client area, after the space occupied by the window has been subtracted. */
 PHP_METHOD(php_wxCalculateLayoutEvent, SetRect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -51523,6 +52399,10 @@ PHP_METHOD(php_wxCalculateLayoutEvent, SetRect)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCalculateLayoutEvent::SetRect\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxCalculateLayoutEvent::wxCalculateLayoutEvent(int id)
+   Constructor. */
 PHP_METHOD(php_wxCalculateLayoutEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -51618,6 +52498,8 @@ PHP_METHOD(php_wxCalculateLayoutEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxListEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -51658,6 +52540,8 @@ void php_wxListEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto int wxListEvent::GetCacheFrom()
+   For EVT_LIST_CACHE_HINT event only: return the first item which the list control advises us to cache. */
 PHP_METHOD(php_wxListEvent, GetCacheFrom)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -51750,6 +52634,10 @@ PHP_METHOD(php_wxListEvent, GetCacheFrom)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListEvent::GetCacheFrom\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxListEvent::GetCacheTo()
+   For EVT_LIST_CACHE_HINT event only: return the last item (inclusive) which the list control advises us to cache. */
 PHP_METHOD(php_wxListEvent, GetCacheTo)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -51842,6 +52730,10 @@ PHP_METHOD(php_wxListEvent, GetCacheTo)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListEvent::GetCacheTo\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxListEvent::GetColumn()
+   The column position: it is only used with COL events. */
 PHP_METHOD(php_wxListEvent, GetColumn)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -51934,6 +52826,10 @@ PHP_METHOD(php_wxListEvent, GetColumn)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListEvent::GetColumn\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxListEvent::GetData()
+   The data. */
 PHP_METHOD(php_wxListEvent, GetData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -52026,6 +52922,10 @@ PHP_METHOD(php_wxListEvent, GetData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListEvent::GetData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxListEvent::GetImage()
+   The image. */
 PHP_METHOD(php_wxListEvent, GetImage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -52118,6 +53018,10 @@ PHP_METHOD(php_wxListEvent, GetImage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListEvent::GetImage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxListEvent::GetIndex()
+   The item index. */
 PHP_METHOD(php_wxListEvent, GetIndex)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -52210,6 +53114,10 @@ PHP_METHOD(php_wxListEvent, GetIndex)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListEvent::GetIndex\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxListItem wxListEvent::GetItem()
+   An item object, used by some events. */
 PHP_METHOD(php_wxListEvent, GetItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -52322,6 +53230,10 @@ PHP_METHOD(php_wxListEvent, GetItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListEvent::GetItem\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxListEvent::GetKeyCode()
+   Key code if the event is a keypress event. */
 PHP_METHOD(php_wxListEvent, GetKeyCode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -52414,6 +53326,10 @@ PHP_METHOD(php_wxListEvent, GetKeyCode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListEvent::GetKeyCode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxListEvent::GetLabel()
+   The (new) item label for EVT_LIST_END_LABEL_EDIT event. */
 PHP_METHOD(php_wxListEvent, GetLabel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -52512,6 +53428,10 @@ PHP_METHOD(php_wxListEvent, GetLabel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListEvent::GetLabel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxListEvent::GetMask()
+   The mask. */
 PHP_METHOD(php_wxListEvent, GetMask)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -52604,6 +53524,10 @@ PHP_METHOD(php_wxListEvent, GetMask)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListEvent::GetMask\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPoint wxListEvent::GetPoint()
+   The position of the mouse pointer if the event is a drag event. */
 PHP_METHOD(php_wxListEvent, GetPoint)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -52701,6 +53625,10 @@ PHP_METHOD(php_wxListEvent, GetPoint)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListEvent::GetPoint\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxListEvent::GetText()
+   The text. */
 PHP_METHOD(php_wxListEvent, GetText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -52799,6 +53727,10 @@ PHP_METHOD(php_wxListEvent, GetText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListEvent::GetText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxListEvent::IsEditCancelled()
+   This method only makes sense for EVT_LIST_END_LABEL_EDIT message and returns true if it the label editing has been cancelled by the user (GetLabel() returns an empty string in this case but it doesn't allow the application to distinguish between really cancelling the edit and the admittedly rare case when the user wants to rename it to an empty string). */
 PHP_METHOD(php_wxListEvent, IsEditCancelled)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -52891,6 +53823,10 @@ PHP_METHOD(php_wxListEvent, IsEditCancelled)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListEvent::IsEditCancelled\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxListEvent::wxListEvent(int commandType, int id)
+   Constructor. */
 PHP_METHOD(php_wxListEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -52997,6 +53933,8 @@ PHP_METHOD(php_wxListEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxMouseEventsManager_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -53037,6 +53975,8 @@ void php_wxMouseEventsManager_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 		#endif
 	}
 }
+/* {{{ proto bool wxMouseEventsManager::Create(wxWindow &win)
+   Finishes initialization of the object created using default constructor. */
 PHP_METHOD(php_wxMouseEventsManager, Create)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -53152,6 +54092,10 @@ PHP_METHOD(php_wxMouseEventsManager, Create)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseEventsManager::Create\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMouseEventsManager::MouseClickBegin(int item)
+   May be overridden to update the state of an item when it is pressed. */
 void wxMouseEventsManager_php::MouseClickBegin(int item)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -53209,6 +54153,10 @@ void wxMouseEventsManager_php::MouseClickBegin(int item)
 	//Call original method
 	wxMouseEventsManager::MouseClickBegin(item);
 }
+/* }}} */
+
+/* {{{ proto  wxMouseEventsManager::MouseClickCancelled(int item)
+   Must be overridden to reset the item appearance changed by MouseClickBegin(). */
 void wxMouseEventsManager_php::MouseClickCancelled(int item)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -53266,6 +54214,10 @@ void wxMouseEventsManager_php::MouseClickCancelled(int item)
 	//Call original method
 	wxMouseEventsManager::MouseClickCancelled(item);
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseEventsManager::MouseClicked(int item)
+   Must be overridden to react to mouse clicks. */
 bool wxMouseEventsManager_php::MouseClicked(int item)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -53314,6 +54266,10 @@ bool wxMouseEventsManager_php::MouseClicked(int item)
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseEventsManager::MouseDragBegin(int item, wxPoint pos)
+   Must be overridden to allow or deny dragging of the item. */
 bool wxMouseEventsManager_php::MouseDragBegin(int item, const wxPoint& pos)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -53364,6 +54320,10 @@ bool wxMouseEventsManager_php::MouseDragBegin(int item, const wxPoint& pos)
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto  wxMouseEventsManager::MouseDragCancelled(int item)
+   Must be overridden to handle cancellation of mouse dragging. */
 void wxMouseEventsManager_php::MouseDragCancelled(int item)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -53412,6 +54372,10 @@ void wxMouseEventsManager_php::MouseDragCancelled(int item)
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxMouseEventsManager::MouseDragEnd(int item, wxPoint pos)
+   Must be overridden to handle item drop. */
 void wxMouseEventsManager_php::MouseDragEnd(int item, const wxPoint& pos)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -53462,6 +54426,10 @@ void wxMouseEventsManager_php::MouseDragEnd(int item, const wxPoint& pos)
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto  wxMouseEventsManager::MouseDragging(int item, wxPoint pos)
+   Must be overridden to provide feed back while an item is being dragged. */
 void wxMouseEventsManager_php::MouseDragging(int item, const wxPoint& pos)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -53512,6 +54480,10 @@ void wxMouseEventsManager_php::MouseDragging(int item, const wxPoint& pos)
 		return;
 	
 }
+/* }}} */
+
+/* {{{ proto int wxMouseEventsManager::MouseHitTest(wxPoint pos)
+   Must be overridden to return the item at the given position. */
 int wxMouseEventsManager_php::MouseHitTest(const wxPoint& pos)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -53561,6 +54533,10 @@ int wxMouseEventsManager_php::MouseHitTest(const wxPoint& pos)
 		return (int) Z_LVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto  wxMouseEventsManager::wxMouseEventsManager()
+   Default constructor. */
 PHP_METHOD(php_wxMouseEventsManager, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -53695,6 +54671,8 @@ PHP_METHOD(php_wxMouseEventsManager, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxMouseState_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -53735,6 +54713,8 @@ void php_wxMouseState_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto bool wxMouseState::Aux1IsDown()
+   Returns true if the first extra button mouse button is currently down. */
 PHP_METHOD(php_wxMouseState, Aux1IsDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -53831,6 +54811,10 @@ PHP_METHOD(php_wxMouseState, Aux1IsDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseState::Aux1IsDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseState::Aux2IsDown()
+   Returns true if the second extra button mouse button is currently down. */
 PHP_METHOD(php_wxMouseState, Aux2IsDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -53927,6 +54911,10 @@ PHP_METHOD(php_wxMouseState, Aux2IsDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseState::Aux2IsDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPoint wxMouseState::GetPosition()
+   Returns the physical mouse position. */
 PHP_METHOD(php_wxMouseState, GetPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -54028,6 +55016,10 @@ PHP_METHOD(php_wxMouseState, GetPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseState::GetPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxMouseState::GetX()
+   Returns X coordinate of the physical mouse event position. */
 PHP_METHOD(php_wxMouseState, GetX)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -54124,6 +55116,10 @@ PHP_METHOD(php_wxMouseState, GetX)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseState::GetX\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxMouseState::GetY()
+   Returns Y coordinate of the physical mouse event position. */
 PHP_METHOD(php_wxMouseState, GetY)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -54220,6 +55216,10 @@ PHP_METHOD(php_wxMouseState, GetY)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseState::GetY\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseState::LeftIsDown()
+   Returns true if the left mouse button is currently down. */
 PHP_METHOD(php_wxMouseState, LeftIsDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -54316,6 +55316,10 @@ PHP_METHOD(php_wxMouseState, LeftIsDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseState::LeftIsDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseState::MiddleIsDown()
+   Returns true if the middle mouse button is currently down. */
 PHP_METHOD(php_wxMouseState, MiddleIsDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -54412,6 +55416,10 @@ PHP_METHOD(php_wxMouseState, MiddleIsDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseState::MiddleIsDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxMouseState::RightIsDown()
+   Returns true if the right mouse button is currently down. */
 PHP_METHOD(php_wxMouseState, RightIsDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -54508,6 +55516,9 @@ PHP_METHOD(php_wxMouseState, RightIsDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseState::RightIsDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMouseState::SetAux1Down(bool down) */
 PHP_METHOD(php_wxMouseState, SetAux1Down)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -54609,6 +55620,9 @@ PHP_METHOD(php_wxMouseState, SetAux1Down)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseState::SetAux1Down\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMouseState::SetAux2Down(bool down) */
 PHP_METHOD(php_wxMouseState, SetAux2Down)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -54710,6 +55724,9 @@ PHP_METHOD(php_wxMouseState, SetAux2Down)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseState::SetAux2Down\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMouseState::SetLeftDown(bool down) */
 PHP_METHOD(php_wxMouseState, SetLeftDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -54811,6 +55828,9 @@ PHP_METHOD(php_wxMouseState, SetLeftDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseState::SetLeftDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMouseState::SetMiddleDown(bool down) */
 PHP_METHOD(php_wxMouseState, SetMiddleDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -54912,6 +55932,9 @@ PHP_METHOD(php_wxMouseState, SetMiddleDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseState::SetMiddleDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMouseState::SetPosition(wxPoint pos) */
 PHP_METHOD(php_wxMouseState, SetPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -55030,6 +56053,9 @@ PHP_METHOD(php_wxMouseState, SetPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseState::SetPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMouseState::SetRightDown(bool down) */
 PHP_METHOD(php_wxMouseState, SetRightDown)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -55131,6 +56157,9 @@ PHP_METHOD(php_wxMouseState, SetRightDown)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseState::SetRightDown\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMouseState::SetState(wxMouseState state) */
 PHP_METHOD(php_wxMouseState, SetState)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -55250,6 +56279,9 @@ PHP_METHOD(php_wxMouseState, SetState)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseState::SetState\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMouseState::SetX(int x) */
 PHP_METHOD(php_wxMouseState, SetX)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -55351,6 +56383,9 @@ PHP_METHOD(php_wxMouseState, SetX)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseState::SetX\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMouseState::SetY(int y) */
 PHP_METHOD(php_wxMouseState, SetY)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -55452,6 +56487,10 @@ PHP_METHOD(php_wxMouseState, SetY)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxMouseState::SetY\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxMouseState::wxMouseState()
+   Default constructor. */
 PHP_METHOD(php_wxMouseState, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -55532,6 +56571,8 @@ PHP_METHOD(php_wxMouseState, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxProcessEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -55572,6 +56613,8 @@ void php_wxProcessEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 		#endif
 	}
 }
+/* {{{ proto int wxProcessEvent::GetExitCode()
+   Returns the exist status. */
 PHP_METHOD(php_wxProcessEvent, GetExitCode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -55664,6 +56707,10 @@ PHP_METHOD(php_wxProcessEvent, GetExitCode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxProcessEvent::GetExitCode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxProcessEvent::GetPid()
+   Returns the process id. */
 PHP_METHOD(php_wxProcessEvent, GetPid)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -55756,6 +56803,10 @@ PHP_METHOD(php_wxProcessEvent, GetPid)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxProcessEvent::GetPid\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxProcessEvent::wxProcessEvent(int id, int pid, int exitcode)
+   Constructor. */
 PHP_METHOD(php_wxProcessEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -55873,6 +56924,8 @@ PHP_METHOD(php_wxProcessEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxRibbonBarEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -55913,6 +56966,8 @@ void php_wxRibbonBarEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_
 		#endif
 	}
 }
+/* {{{ proto wxRibbonPage wxRibbonBarEvent::GetPage()
+   Returns the page being changed to, or being clicked on. */
 PHP_METHOD(php_wxRibbonBarEvent, GetPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -56028,6 +57083,10 @@ PHP_METHOD(php_wxRibbonBarEvent, GetPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonBarEvent::GetPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonBarEvent::SetPage(wxRibbonPage &page)
+   Sets the page relating to this event. */
 PHP_METHOD(php_wxRibbonBarEvent, SetPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -56143,6 +57202,10 @@ PHP_METHOD(php_wxRibbonBarEvent, SetPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonBarEvent::SetPage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonBarEvent::wxRibbonBarEvent(int command_type, int win_id, wxRibbonPage &page)
+   Constructor. */
 PHP_METHOD(php_wxRibbonBarEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -56278,6 +57341,8 @@ PHP_METHOD(php_wxRibbonBarEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxRibbonButtonBarEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -56318,6 +57383,8 @@ void php_wxRibbonButtonBarEvent_destruction_handler(zend_rsrc_list_entry *rsrc T
 		#endif
 	}
 }
+/* {{{ proto wxRibbonButtonBar wxRibbonButtonBarEvent::GetBar()
+   Returns the bar which contains the button which the event relates to. */
 PHP_METHOD(php_wxRibbonButtonBarEvent, GetBar)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -56433,6 +57500,10 @@ PHP_METHOD(php_wxRibbonButtonBarEvent, GetBar)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonButtonBarEvent::GetBar\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRibbonButtonBarEvent::PopupMenu(wxMenu &menu)
+   Display a popup menu as a result of this (dropdown clicked) event. */
 PHP_METHOD(php_wxRibbonButtonBarEvent, PopupMenu)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -56548,6 +57619,10 @@ PHP_METHOD(php_wxRibbonButtonBarEvent, PopupMenu)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonButtonBarEvent::PopupMenu\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonButtonBarEvent::SetBar(wxRibbonButtonBar &bar)
+   Sets the button bar relating to this event. */
 PHP_METHOD(php_wxRibbonButtonBarEvent, SetBar)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -56663,6 +57738,10 @@ PHP_METHOD(php_wxRibbonButtonBarEvent, SetBar)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonButtonBarEvent::SetBar\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonButtonBarEvent::wxRibbonButtonBarEvent(int command_type, int win_id, wxRibbonButtonBar &bar)
+   Constructor. */
 PHP_METHOD(php_wxRibbonButtonBarEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -56798,6 +57877,8 @@ PHP_METHOD(php_wxRibbonButtonBarEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxRibbonGalleryEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -56838,6 +57919,8 @@ void php_wxRibbonGalleryEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSR
 		#endif
 	}
 }
+/* {{{ proto wxRibbonGallery wxRibbonGalleryEvent::GetGallery()
+   Returns the gallery which the event relates to. */
 PHP_METHOD(php_wxRibbonGalleryEvent, GetGallery)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -56953,6 +58036,10 @@ PHP_METHOD(php_wxRibbonGalleryEvent, GetGallery)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonGalleryEvent::GetGallery\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRibbonGalleryItem wxRibbonGalleryEvent::GetGalleryItem()
+   Returns the gallery item which the event relates to, or NULL if it does not relate to an item. */
 PHP_METHOD(php_wxRibbonGalleryEvent, GetGalleryItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -57068,6 +58155,10 @@ PHP_METHOD(php_wxRibbonGalleryEvent, GetGalleryItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonGalleryEvent::GetGalleryItem\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonGalleryEvent::SetGallery(wxRibbonGallery &gallery)
+   Sets the gallery relating to this event. */
 PHP_METHOD(php_wxRibbonGalleryEvent, SetGallery)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -57183,6 +58274,10 @@ PHP_METHOD(php_wxRibbonGalleryEvent, SetGallery)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonGalleryEvent::SetGallery\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonGalleryEvent::SetGalleryItem(wxRibbonGalleryItem &item)
+   Sets the gallery item relating to this event. */
 PHP_METHOD(php_wxRibbonGalleryEvent, SetGalleryItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -57298,6 +58393,10 @@ PHP_METHOD(php_wxRibbonGalleryEvent, SetGalleryItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRibbonGalleryEvent::SetGalleryItem\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRibbonGalleryEvent::wxRibbonGalleryEvent(int command_type, int win_id, wxRibbonGallery &gallery, wxRibbonGalleryItem &item)
+   Constructor. */
 PHP_METHOD(php_wxRibbonGalleryEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -57463,6 +58562,8 @@ PHP_METHOD(php_wxRibbonGalleryEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxSashEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -57503,6 +58604,8 @@ void php_wxSashEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto wxRect wxSashEvent::GetDragRect()
+   Returns the rectangle representing the new size the window would be if the resize was applied. */
 PHP_METHOD(php_wxSashEvent, GetDragRect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -57600,6 +58703,10 @@ PHP_METHOD(php_wxSashEvent, GetDragRect)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSashEvent::GetDragRect\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSashDragStatus wxSashEvent::GetDragStatus()
+   Returns the status of the sash: one of wxSASH_STATUS_OK, wxSASH_STATUS_OUT_OF_RANGE. */
 PHP_METHOD(php_wxSashEvent, GetDragStatus)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -57692,6 +58799,10 @@ PHP_METHOD(php_wxSashEvent, GetDragStatus)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSashEvent::GetDragStatus\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSashEdgePosition wxSashEvent::GetEdge()
+   Returns the dragged edge. */
 PHP_METHOD(php_wxSashEvent, GetEdge)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -57784,6 +58895,10 @@ PHP_METHOD(php_wxSashEvent, GetEdge)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSashEvent::GetEdge\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSashEvent::wxSashEvent(int id, wxSashEdgePosition edge)
+   Constructor. */
 PHP_METHOD(php_wxSashEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -57890,6 +59005,8 @@ PHP_METHOD(php_wxSashEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxSpinEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -57930,6 +59047,8 @@ void php_wxSpinEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto int wxSpinEvent::GetPosition()
+   Retrieve the current spin button or control value. */
 PHP_METHOD(php_wxSpinEvent, GetPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -58022,6 +59141,10 @@ PHP_METHOD(php_wxSpinEvent, GetPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSpinEvent::GetPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSpinEvent::SetPosition(int pos)
+   Set the value associated with the event. */
 PHP_METHOD(php_wxSpinEvent, SetPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -58119,6 +59242,10 @@ PHP_METHOD(php_wxSpinEvent, SetPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSpinEvent::SetPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSpinEvent::wxSpinEvent(int commandType, int id)
+   The constructor is not normally used by the user code. */
 PHP_METHOD(php_wxSpinEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -58225,6 +59352,8 @@ PHP_METHOD(php_wxSpinEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxSpinDoubleEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -58265,6 +59394,8 @@ void php_wxSpinDoubleEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 		#endif
 	}
 }
+/* {{{ proto  wxSpinDoubleEvent::wxSpinDoubleEvent(wxSpinDoubleEvent event)
+   The copy constructor. */
 PHP_METHOD(php_wxSpinDoubleEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -58436,6 +59567,10 @@ PHP_METHOD(php_wxSpinDoubleEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxSpinDoubleEvent::SetValue(float value)
+   Set the value associated with the event. */
 PHP_METHOD(php_wxSpinDoubleEvent, SetValue)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -58533,6 +59668,10 @@ PHP_METHOD(php_wxSpinDoubleEvent, SetValue)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSpinDoubleEvent::SetValue\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto float wxSpinDoubleEvent::GetValue()
+   Returns the value associated with this spin control event. */
 PHP_METHOD(php_wxSpinDoubleEvent, GetValue)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -58625,6 +59764,8 @@ PHP_METHOD(php_wxSpinDoubleEvent, GetValue)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSpinDoubleEvent::GetValue\n");
 	}
 }
+/* }}} */
+
 void php_wxSplitterEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -58665,6 +59806,8 @@ void php_wxSplitterEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+/* {{{ proto int wxSplitterEvent::GetSashPosition()
+   Returns the new sash position. */
 PHP_METHOD(php_wxSplitterEvent, GetSashPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -58757,6 +59900,10 @@ PHP_METHOD(php_wxSplitterEvent, GetSashPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSplitterEvent::GetSashPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxWindow wxSplitterEvent::GetWindowBeingRemoved()
+   Returns a pointer to the window being removed when a splitter window is unsplit. */
 PHP_METHOD(php_wxSplitterEvent, GetWindowBeingRemoved)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -58872,6 +60019,10 @@ PHP_METHOD(php_wxSplitterEvent, GetWindowBeingRemoved)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSplitterEvent::GetWindowBeingRemoved\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxSplitterEvent::GetX()
+   Returns the x coordinate of the double-click point. */
 PHP_METHOD(php_wxSplitterEvent, GetX)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -58964,6 +60115,10 @@ PHP_METHOD(php_wxSplitterEvent, GetX)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSplitterEvent::GetX\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxSplitterEvent::GetY()
+   Returns the y coordinate of the double-click point. */
 PHP_METHOD(php_wxSplitterEvent, GetY)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -59056,6 +60211,10 @@ PHP_METHOD(php_wxSplitterEvent, GetY)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSplitterEvent::GetY\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSplitterEvent::SetSashPosition(int pos)
+   In the case of wxEVT_COMMAND_SPLITTER_SASH_POS_CHANGED events, sets the new sash position. */
 PHP_METHOD(php_wxSplitterEvent, SetSashPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -59153,6 +60312,10 @@ PHP_METHOD(php_wxSplitterEvent, SetSashPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSplitterEvent::SetSashPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSplitterEvent::wxSplitterEvent(int eventType, wxSplitterWindow &splitter)
+   Constructor. */
 PHP_METHOD(php_wxSplitterEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -59277,6 +60440,8 @@ PHP_METHOD(php_wxSplitterEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxStyledTextEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -59317,6 +60482,8 @@ void php_wxStyledTextEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS
 		#endif
 	}
 }
+/* {{{ proto  wxStyledTextEvent::wxStyledTextEvent(int commandType, int id)
+   Ctors; used internally by wxWidgets. */
 PHP_METHOD(php_wxStyledTextEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -59477,6 +60644,9 @@ PHP_METHOD(php_wxStyledTextEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextEvent::SetY(int val) */
 PHP_METHOD(php_wxStyledTextEvent, SetY)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -59574,6 +60744,9 @@ PHP_METHOD(php_wxStyledTextEvent, SetY)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::SetY\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextEvent::SetX(int val) */
 PHP_METHOD(php_wxStyledTextEvent, SetX)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -59671,6 +60844,9 @@ PHP_METHOD(php_wxStyledTextEvent, SetX)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::SetX\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextEvent::SetWParam(int val) */
 PHP_METHOD(php_wxStyledTextEvent, SetWParam)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -59768,6 +60944,9 @@ PHP_METHOD(php_wxStyledTextEvent, SetWParam)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::SetWParam\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextEvent::SetText(string t) */
 PHP_METHOD(php_wxStyledTextEvent, SetText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -59866,6 +61045,9 @@ PHP_METHOD(php_wxStyledTextEvent, SetText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::SetText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextEvent::SetPosition(int pos) */
 PHP_METHOD(php_wxStyledTextEvent, SetPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -59963,6 +61145,9 @@ PHP_METHOD(php_wxStyledTextEvent, SetPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::SetPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextEvent::SetModifiers(int m) */
 PHP_METHOD(php_wxStyledTextEvent, SetModifiers)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -60060,6 +61245,9 @@ PHP_METHOD(php_wxStyledTextEvent, SetModifiers)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::SetModifiers\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextEvent::SetModificationType(int t) */
 PHP_METHOD(php_wxStyledTextEvent, SetModificationType)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -60157,6 +61345,9 @@ PHP_METHOD(php_wxStyledTextEvent, SetModificationType)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::SetModificationType\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextEvent::SetMessage(int val) */
 PHP_METHOD(php_wxStyledTextEvent, SetMessage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -60254,6 +61445,9 @@ PHP_METHOD(php_wxStyledTextEvent, SetMessage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::SetMessage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextEvent::SetMargin(int val) */
 PHP_METHOD(php_wxStyledTextEvent, SetMargin)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -60351,6 +61545,9 @@ PHP_METHOD(php_wxStyledTextEvent, SetMargin)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::SetMargin\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextEvent::SetListType(int val) */
 PHP_METHOD(php_wxStyledTextEvent, SetListType)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -60448,6 +61645,9 @@ PHP_METHOD(php_wxStyledTextEvent, SetListType)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::SetListType\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextEvent::SetLinesAdded(int num) */
 PHP_METHOD(php_wxStyledTextEvent, SetLinesAdded)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -60545,6 +61745,9 @@ PHP_METHOD(php_wxStyledTextEvent, SetLinesAdded)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::SetLinesAdded\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextEvent::SetLine(int val) */
 PHP_METHOD(php_wxStyledTextEvent, SetLine)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -60642,6 +61845,9 @@ PHP_METHOD(php_wxStyledTextEvent, SetLine)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::SetLine\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextEvent::GetAlt() */
 PHP_METHOD(php_wxStyledTextEvent, GetAlt)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -60734,6 +61940,9 @@ PHP_METHOD(php_wxStyledTextEvent, GetAlt)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::GetAlt\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextEvent::GetControl() */
 PHP_METHOD(php_wxStyledTextEvent, GetControl)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -60826,6 +62035,9 @@ PHP_METHOD(php_wxStyledTextEvent, GetControl)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::GetControl\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextEvent::GetDragAllowMove() */
 PHP_METHOD(php_wxStyledTextEvent, GetDragAllowMove)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -60918,6 +62130,9 @@ PHP_METHOD(php_wxStyledTextEvent, GetDragAllowMove)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::GetDragAllowMove\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxStyledTextEvent::GetDragText() */
 PHP_METHOD(php_wxStyledTextEvent, GetDragText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -61016,6 +62231,9 @@ PHP_METHOD(php_wxStyledTextEvent, GetDragText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::GetDragText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextEvent::GetFoldLevelNow() */
 PHP_METHOD(php_wxStyledTextEvent, GetFoldLevelNow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -61108,6 +62326,9 @@ PHP_METHOD(php_wxStyledTextEvent, GetFoldLevelNow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::GetFoldLevelNow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextEvent::GetFoldLevelPrev() */
 PHP_METHOD(php_wxStyledTextEvent, GetFoldLevelPrev)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -61200,6 +62421,9 @@ PHP_METHOD(php_wxStyledTextEvent, GetFoldLevelPrev)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::GetFoldLevelPrev\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextEvent::GetKey() */
 PHP_METHOD(php_wxStyledTextEvent, GetKey)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -61292,6 +62516,9 @@ PHP_METHOD(php_wxStyledTextEvent, GetKey)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::GetKey\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextEvent::GetLParam() */
 PHP_METHOD(php_wxStyledTextEvent, GetLParam)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -61384,6 +62611,9 @@ PHP_METHOD(php_wxStyledTextEvent, GetLParam)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::GetLParam\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextEvent::GetLength() */
 PHP_METHOD(php_wxStyledTextEvent, GetLength)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -61476,6 +62706,9 @@ PHP_METHOD(php_wxStyledTextEvent, GetLength)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::GetLength\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextEvent::GetLine() */
 PHP_METHOD(php_wxStyledTextEvent, GetLine)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -61568,6 +62801,9 @@ PHP_METHOD(php_wxStyledTextEvent, GetLine)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::GetLine\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextEvent::GetLinesAdded() */
 PHP_METHOD(php_wxStyledTextEvent, GetLinesAdded)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -61660,6 +62896,9 @@ PHP_METHOD(php_wxStyledTextEvent, GetLinesAdded)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::GetLinesAdded\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextEvent::GetListType() */
 PHP_METHOD(php_wxStyledTextEvent, GetListType)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -61752,6 +62991,9 @@ PHP_METHOD(php_wxStyledTextEvent, GetListType)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::GetListType\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextEvent::GetMargin() */
 PHP_METHOD(php_wxStyledTextEvent, GetMargin)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -61844,6 +63086,9 @@ PHP_METHOD(php_wxStyledTextEvent, GetMargin)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::GetMargin\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextEvent::GetMessage() */
 PHP_METHOD(php_wxStyledTextEvent, GetMessage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -61936,6 +63181,9 @@ PHP_METHOD(php_wxStyledTextEvent, GetMessage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::GetMessage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextEvent::GetModificationType() */
 PHP_METHOD(php_wxStyledTextEvent, GetModificationType)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -62028,6 +63276,9 @@ PHP_METHOD(php_wxStyledTextEvent, GetModificationType)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::GetModificationType\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextEvent::GetModifiers() */
 PHP_METHOD(php_wxStyledTextEvent, GetModifiers)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -62120,6 +63371,9 @@ PHP_METHOD(php_wxStyledTextEvent, GetModifiers)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::GetModifiers\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextEvent::GetPosition() */
 PHP_METHOD(php_wxStyledTextEvent, GetPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -62212,6 +63466,9 @@ PHP_METHOD(php_wxStyledTextEvent, GetPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::GetPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxStyledTextEvent::GetShift() */
 PHP_METHOD(php_wxStyledTextEvent, GetShift)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -62304,6 +63561,9 @@ PHP_METHOD(php_wxStyledTextEvent, GetShift)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::GetShift\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxStyledTextEvent::GetText() */
 PHP_METHOD(php_wxStyledTextEvent, GetText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -62402,6 +63662,9 @@ PHP_METHOD(php_wxStyledTextEvent, GetText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::GetText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextEvent::GetWParam() */
 PHP_METHOD(php_wxStyledTextEvent, GetWParam)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -62494,6 +63757,9 @@ PHP_METHOD(php_wxStyledTextEvent, GetWParam)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::GetWParam\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextEvent::GetX() */
 PHP_METHOD(php_wxStyledTextEvent, GetX)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -62586,6 +63852,9 @@ PHP_METHOD(php_wxStyledTextEvent, GetX)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::GetX\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStyledTextEvent::GetY() */
 PHP_METHOD(php_wxStyledTextEvent, GetY)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -62678,6 +63947,9 @@ PHP_METHOD(php_wxStyledTextEvent, GetY)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::GetY\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextEvent::SetDragAllowMove(bool val) */
 PHP_METHOD(php_wxStyledTextEvent, SetDragAllowMove)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -62775,6 +64047,9 @@ PHP_METHOD(php_wxStyledTextEvent, SetDragAllowMove)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::SetDragAllowMove\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextEvent::SetDragResult(wxDragResult val) */
 PHP_METHOD(php_wxStyledTextEvent, SetDragResult)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -62872,6 +64147,9 @@ PHP_METHOD(php_wxStyledTextEvent, SetDragResult)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::SetDragResult\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextEvent::SetDragText(string val) */
 PHP_METHOD(php_wxStyledTextEvent, SetDragText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -62970,6 +64248,9 @@ PHP_METHOD(php_wxStyledTextEvent, SetDragText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::SetDragText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextEvent::SetFoldLevelNow(int val) */
 PHP_METHOD(php_wxStyledTextEvent, SetFoldLevelNow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -63067,6 +64348,9 @@ PHP_METHOD(php_wxStyledTextEvent, SetFoldLevelNow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::SetFoldLevelNow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextEvent::SetFoldLevelPrev(int val) */
 PHP_METHOD(php_wxStyledTextEvent, SetFoldLevelPrev)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -63164,6 +64448,9 @@ PHP_METHOD(php_wxStyledTextEvent, SetFoldLevelPrev)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::SetFoldLevelPrev\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextEvent::SetKey(int k) */
 PHP_METHOD(php_wxStyledTextEvent, SetKey)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -63261,6 +64548,9 @@ PHP_METHOD(php_wxStyledTextEvent, SetKey)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::SetKey\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextEvent::SetLParam(int val) */
 PHP_METHOD(php_wxStyledTextEvent, SetLParam)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -63358,6 +64648,9 @@ PHP_METHOD(php_wxStyledTextEvent, SetLParam)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::SetLParam\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStyledTextEvent::SetLength(int len) */
 PHP_METHOD(php_wxStyledTextEvent, SetLength)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -63455,6 +64748,9 @@ PHP_METHOD(php_wxStyledTextEvent, SetLength)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::SetLength\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxDragResult wxStyledTextEvent::GetDragResult() */
 PHP_METHOD(php_wxStyledTextEvent, GetDragResult)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -63547,6 +64843,8 @@ PHP_METHOD(php_wxStyledTextEvent, GetDragResult)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStyledTextEvent::GetDragResult\n");
 	}
 }
+/* }}} */
+
 void php_wxTaskBarIconEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -63587,6 +64885,8 @@ void php_wxTaskBarIconEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 		#endif
 	}
 }
+/* {{{ proto  wxTaskBarIconEvent::wxTaskBarIconEvent(int evtType, wxTaskBarIcon &tbIcon)
+   Constructor. */
 PHP_METHOD(php_wxTaskBarIconEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -63691,6 +64991,8 @@ PHP_METHOD(php_wxTaskBarIconEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxTimerEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -63731,6 +65033,8 @@ void php_wxTimerEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto int wxTimerEvent::GetInterval()
+   Returns the interval of the timer which generated this event. */
 PHP_METHOD(php_wxTimerEvent, GetInterval)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -63823,6 +65127,9 @@ PHP_METHOD(php_wxTimerEvent, GetInterval)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTimerEvent::GetInterval\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTimerEvent::wxTimerEvent() */
 PHP_METHOD(php_wxTimerEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -63957,6 +65264,8 @@ PHP_METHOD(php_wxTimerEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxTreeEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -63997,6 +65306,8 @@ void php_wxTreeEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto wxTreeItemId wxTreeEvent::GetItem()
+   Returns the item (valid for all events). */
 PHP_METHOD(php_wxTreeEvent, GetItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -64094,6 +65405,10 @@ PHP_METHOD(php_wxTreeEvent, GetItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTreeEvent::GetItem\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxTreeEvent::GetKeyCode()
+   Returns the key code if the event is a key event. */
 PHP_METHOD(php_wxTreeEvent, GetKeyCode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -64186,6 +65501,10 @@ PHP_METHOD(php_wxTreeEvent, GetKeyCode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTreeEvent::GetKeyCode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxKeyEvent wxTreeEvent::GetKeyEvent()
+   Returns the key event for EVT_TREE_KEY_DOWN events. */
 PHP_METHOD(php_wxTreeEvent, GetKeyEvent)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -64298,6 +65617,10 @@ PHP_METHOD(php_wxTreeEvent, GetKeyEvent)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTreeEvent::GetKeyEvent\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxTreeEvent::GetLabel()
+   Returns the label if the event is a begin or end edit label event. */
 PHP_METHOD(php_wxTreeEvent, GetLabel)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -64396,6 +65719,10 @@ PHP_METHOD(php_wxTreeEvent, GetLabel)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTreeEvent::GetLabel\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxTreeItemId wxTreeEvent::GetOldItem()
+   Returns the old item index (valid for EVT_TREE_ITEM_CHANGING and EVT_TREE_ITEM_CHANGED events). */
 PHP_METHOD(php_wxTreeEvent, GetOldItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -64493,6 +65820,10 @@ PHP_METHOD(php_wxTreeEvent, GetOldItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTreeEvent::GetOldItem\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPoint wxTreeEvent::GetPoint()
+   Returns the position of the mouse pointer if the event is a drag or menu-context event. */
 PHP_METHOD(php_wxTreeEvent, GetPoint)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -64590,6 +65921,10 @@ PHP_METHOD(php_wxTreeEvent, GetPoint)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTreeEvent::GetPoint\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTreeEvent::IsEditCancelled()
+   Returns true if the label edit was cancelled. */
 PHP_METHOD(php_wxTreeEvent, IsEditCancelled)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -64682,6 +66017,10 @@ PHP_METHOD(php_wxTreeEvent, IsEditCancelled)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTreeEvent::IsEditCancelled\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTreeEvent::SetToolTip(string tooltip)
+   Set the tooltip for the item (valid for EVT_TREE_ITEM_GETTOOLTIP events). */
 PHP_METHOD(php_wxTreeEvent, SetToolTip)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -64780,6 +66119,10 @@ PHP_METHOD(php_wxTreeEvent, SetToolTip)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTreeEvent::SetToolTip\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTreeEvent::wxTreeEvent(int commandType, wxTreeCtrl &tree, wxTreeItemId item)
+   Constructor, used by wxWidgets itself only. */
 PHP_METHOD(php_wxTreeEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -64914,6 +66257,8 @@ PHP_METHOD(php_wxTreeEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxWebViewEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -64954,6 +66299,8 @@ void php_wxWebViewEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 		#endif
 	}
 }
+/* {{{ proto string wxWebViewEvent::GetTarget()
+   Get the name of the target frame which the url of this event has been or will be loaded into. */
 PHP_METHOD(php_wxWebViewEvent, GetTarget)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -65052,6 +66399,10 @@ PHP_METHOD(php_wxWebViewEvent, GetTarget)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebViewEvent::GetTarget\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxWebViewEvent::GetURL()
+   Get the URL being visited. */
 PHP_METHOD(php_wxWebViewEvent, GetURL)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -65150,6 +66501,9 @@ PHP_METHOD(php_wxWebViewEvent, GetURL)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWebViewEvent::GetURL\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxWebViewEvent::wxWebViewEvent() */
 PHP_METHOD(php_wxWebViewEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -65271,6 +66625,8 @@ PHP_METHOD(php_wxWebViewEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxWizardEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -65311,6 +66667,8 @@ void php_wxWizardEvent_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto bool wxWizardEvent::GetDirection()
+   Return the direction in which the page is changing: for EVT_WIZARD_PAGE_CHANGING, return true if we're going forward or false otherwise and for EVT_WIZARD_PAGE_CHANGED return true if we came from the previous page and false if we returned from the next one. */
 PHP_METHOD(php_wxWizardEvent, GetDirection)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -65403,6 +66761,10 @@ PHP_METHOD(php_wxWizardEvent, GetDirection)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWizardEvent::GetDirection\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxWizardEvent::wxWizardEvent(int type, int id, bool direction, wxWizardPage &page)
+   Constructor. */
 PHP_METHOD(php_wxWizardEvent, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -65549,6 +66911,10 @@ PHP_METHOD(php_wxWizardEvent, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto wxWizardPage wxWizardEvent::GetPage()
+   Returns the wxWizardPage which was active when this event was generated. */
 PHP_METHOD(php_wxWizardEvent, GetPage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -65664,3 +67030,5 @@ PHP_METHOD(php_wxWizardEvent, GetPage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxWizardEvent::GetPage\n");
 	}
 }
+/* }}} */
+

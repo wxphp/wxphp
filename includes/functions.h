@@ -45,6 +45,8 @@ PHP_FUNCTION(php_wxSafeYield);
 
 PHP_FUNCTION(php_wxExit);
 
+PHP_FUNCTION(php_wxIsDragResultOk);
+
 PHP_FUNCTION(php_wxFromString);
 
 PHP_FUNCTION(php_wxToString);

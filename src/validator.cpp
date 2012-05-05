@@ -91,6 +91,8 @@ void php_wxGenericValidator_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 		#endif
 	}
 }
+/* {{{ proto wxObject wxGenericValidator::Clone()
+   Clones the generic validator using the copy constructor. */
 PHP_METHOD(php_wxGenericValidator, Clone)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -206,6 +208,10 @@ PHP_METHOD(php_wxGenericValidator, Clone)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGenericValidator::Clone\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGenericValidator::TransferFromWindow()
+   Transfers the value from the window to the appropriate data type. */
 PHP_METHOD(php_wxGenericValidator, TransferFromWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -298,6 +304,10 @@ PHP_METHOD(php_wxGenericValidator, TransferFromWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGenericValidator::TransferFromWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxGenericValidator::TransferToWindow()
+   Transfers the value to the window. */
 PHP_METHOD(php_wxGenericValidator, TransferToWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -390,6 +400,10 @@ PHP_METHOD(php_wxGenericValidator, TransferToWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxGenericValidator::TransferToWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxGenericValidator::wxGenericValidator(bool &valPtr)
+   Constructor taking a bool pointer. */
 PHP_METHOD(php_wxGenericValidator, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -736,6 +750,8 @@ PHP_METHOD(php_wxGenericValidator, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxValidator_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -776,6 +792,8 @@ void php_wxValidator_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxValidator::wxValidator()
+   Constructor. */
 PHP_METHOD(php_wxValidator, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -856,6 +874,10 @@ PHP_METHOD(php_wxValidator, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto bool wxValidator::Validate(wxWindow &parent)
+   This overridable function is called when the value in the associated window must be validated. */
 PHP_METHOD(php_wxValidator, Validate)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -979,6 +1001,10 @@ PHP_METHOD(php_wxValidator, Validate)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxValidator::Validate\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxValidator::TransferToWindow()
+   This overridable function is called when the value associated with the validator must be transferred to the window. */
 PHP_METHOD(php_wxValidator, TransferToWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1079,6 +1105,10 @@ PHP_METHOD(php_wxValidator, TransferToWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxValidator::TransferToWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxValidator::TransferFromWindow()
+   This overridable function is called when the value in the window must be transferred to the validator. */
 PHP_METHOD(php_wxValidator, TransferFromWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1179,6 +1209,10 @@ PHP_METHOD(php_wxValidator, TransferFromWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxValidator::TransferFromWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxValidator::SetWindow(wxWindow &window)
+   Associates a window with the validator. */
 PHP_METHOD(php_wxValidator, SetWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1302,6 +1336,10 @@ PHP_METHOD(php_wxValidator, SetWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxValidator::SetWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxWindow wxValidator::GetWindow()
+   Returns the window associated with the validator. */
 PHP_METHOD(php_wxValidator, GetWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1425,6 +1463,10 @@ PHP_METHOD(php_wxValidator, GetWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxValidator::GetWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxValidator::SuppressBellOnError(bool suppress)
+   This functions switches on or turns off the error sound produced by the validators if an invalid key is pressed. */
 PHP_METHOD(php_wxValidator, SuppressBellOnError)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1543,6 +1585,10 @@ PHP_METHOD(php_wxValidator, SuppressBellOnError)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxValidator::SuppressBellOnError\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxObject wxValidator::Clone()
+   All validator classes must implement the Clone() function, which returns an identical copy of itself. */
 PHP_METHOD(php_wxValidator, Clone)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1666,6 +1712,8 @@ PHP_METHOD(php_wxValidator, Clone)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxValidator::Clone\n");
 	}
 }
+/* }}} */
+
 void php_wxTextValidator_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1706,6 +1754,8 @@ void php_wxTextValidator_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+/* {{{ proto wxObject wxTextValidator::Clone()
+   Clones the text validator using the copy constructor. */
 PHP_METHOD(php_wxTextValidator, Clone)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1821,6 +1871,10 @@ PHP_METHOD(php_wxTextValidator, Clone)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextValidator::Clone\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto array wxTextValidator::GetExcludes()
+   Returns a reference to the exclude list (the list of invalid values). */
 PHP_METHOD(php_wxTextValidator, GetExcludes)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1923,6 +1977,10 @@ PHP_METHOD(php_wxTextValidator, GetExcludes)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextValidator::GetExcludes\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto array wxTextValidator::GetIncludes()
+   Returns a reference to the include list (the list of valid values). */
 PHP_METHOD(php_wxTextValidator, GetIncludes)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2025,6 +2083,10 @@ PHP_METHOD(php_wxTextValidator, GetIncludes)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextValidator::GetIncludes\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxTextValidator::GetStyle()
+   Returns the validator style. */
 PHP_METHOD(php_wxTextValidator, GetStyle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2117,6 +2179,10 @@ PHP_METHOD(php_wxTextValidator, GetStyle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextValidator::GetStyle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextValidator::HasFlag(wxTextValidatorStyle style)
+   Returns true if the given style bit is set in the current style. */
 PHP_METHOD(php_wxTextValidator, HasFlag)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2214,6 +2280,10 @@ PHP_METHOD(php_wxTextValidator, HasFlag)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextValidator::HasFlag\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxTextValidator::IsValid(string val)
+   Returns the error message if the contents of val are invalid or the empty string if val is valid. */
 wxString wxTextValidator_php::IsValid(const wxString& val)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2274,6 +2344,10 @@ wxString wxTextValidator_php::IsValid(const wxString& val)const
 	//Call original method
 	return wxTextValidator::IsValid(val);
 }
+/* }}} */
+
+/* {{{ proto  wxTextValidator::SetCharExcludes(string chars)
+   Breaks the given chars strings in single characters and sets the internal wxArrayString used to store the "excluded" characters (see SetExcludes()). */
 PHP_METHOD(php_wxTextValidator, SetCharExcludes)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2372,6 +2446,10 @@ PHP_METHOD(php_wxTextValidator, SetCharExcludes)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextValidator::SetCharExcludes\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextValidator::SetCharIncludes(string chars)
+   Breaks the given chars strings in single characters and sets the internal wxArrayString used to store the "included" characters (see SetIncludes()). */
 PHP_METHOD(php_wxTextValidator, SetCharIncludes)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2470,6 +2548,10 @@ PHP_METHOD(php_wxTextValidator, SetCharIncludes)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextValidator::SetCharIncludes\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextValidator::SetExcludes(array stringList)
+   Sets the exclude list (invalid values for the user input). */
 PHP_METHOD(php_wxTextValidator, SetExcludes)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2585,6 +2667,10 @@ PHP_METHOD(php_wxTextValidator, SetExcludes)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextValidator::SetExcludes\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextValidator::SetIncludes(array stringList)
+   Sets the include list (valid values for the user input). */
 PHP_METHOD(php_wxTextValidator, SetIncludes)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2700,6 +2786,10 @@ PHP_METHOD(php_wxTextValidator, SetIncludes)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextValidator::SetIncludes\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextValidator::SetStyle(int style)
+   Sets the validator style which must be a combination of one or more of the wxTextValidatorStyle values. */
 PHP_METHOD(php_wxTextValidator, SetStyle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2797,6 +2887,10 @@ PHP_METHOD(php_wxTextValidator, SetStyle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextValidator::SetStyle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextValidator::TransferFromWindow()
+   Transfers the value in the text control to the string. */
 PHP_METHOD(php_wxTextValidator, TransferFromWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2889,6 +2983,10 @@ PHP_METHOD(php_wxTextValidator, TransferFromWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextValidator::TransferFromWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextValidator::TransferToWindow()
+   Transfers the string value to the text control. */
 PHP_METHOD(php_wxTextValidator, TransferToWindow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2981,6 +3079,10 @@ PHP_METHOD(php_wxTextValidator, TransferToWindow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextValidator::TransferToWindow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxTextValidator::Validate(wxWindow &parent)
+   Validates the window contents against the include or exclude lists, depending on the validator style. */
 PHP_METHOD(php_wxTextValidator, Validate)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3096,6 +3198,10 @@ PHP_METHOD(php_wxTextValidator, Validate)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTextValidator::Validate\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxTextValidator::wxTextValidator(int style, string &valPtr)
+   Constructor taking a style and optional pointer to a wxString variable. */
 PHP_METHOD(php_wxTextValidator, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3208,3 +3314,5 @@ PHP_METHOD(php_wxTextValidator, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+

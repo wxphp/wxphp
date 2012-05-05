@@ -91,6 +91,8 @@ void php_wxAcceleratorEntry_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 		#endif
 	}
 }
+/* {{{ proto  wxAcceleratorEntry::wxAcceleratorEntry(wxAcceleratorEntry entry)
+   Copy ctor. */
 PHP_METHOD(php_wxAcceleratorEntry, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -291,6 +293,10 @@ PHP_METHOD(php_wxAcceleratorEntry, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto string wxAcceleratorEntry::ToString()
+   Returns a textual representation of this accelerator. */
 PHP_METHOD(php_wxAcceleratorEntry, ToString)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -389,6 +395,10 @@ PHP_METHOD(php_wxAcceleratorEntry, ToString)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAcceleratorEntry::ToString\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAcceleratorEntry::Set(int flags, int keyCode, int cmd, wxMenuItem &item)
+   Sets the accelerator entry parameters. */
 PHP_METHOD(php_wxAcceleratorEntry, Set)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -518,6 +528,10 @@ PHP_METHOD(php_wxAcceleratorEntry, Set)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAcceleratorEntry::Set\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAcceleratorEntry::IsOk()
+   Returns true if this object is correctly initialized. */
 PHP_METHOD(php_wxAcceleratorEntry, IsOk)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -610,6 +624,10 @@ PHP_METHOD(php_wxAcceleratorEntry, IsOk)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAcceleratorEntry::IsOk\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxMenuItem wxAcceleratorEntry::GetMenuItem()
+   Returns the menu item associated with this accelerator entry. */
 PHP_METHOD(php_wxAcceleratorEntry, GetMenuItem)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -725,6 +743,10 @@ PHP_METHOD(php_wxAcceleratorEntry, GetMenuItem)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAcceleratorEntry::GetMenuItem\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAcceleratorEntry::GetKeyCode()
+   Returns the keycode for the accelerator table entry. */
 PHP_METHOD(php_wxAcceleratorEntry, GetKeyCode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -817,6 +839,10 @@ PHP_METHOD(php_wxAcceleratorEntry, GetKeyCode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAcceleratorEntry::GetKeyCode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAcceleratorEntry::GetFlags()
+   Returns the flags for the accelerator table entry. */
 PHP_METHOD(php_wxAcceleratorEntry, GetFlags)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -909,6 +935,10 @@ PHP_METHOD(php_wxAcceleratorEntry, GetFlags)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAcceleratorEntry::GetFlags\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxAcceleratorEntry::GetCommand()
+   Returns the command identifier for the accelerator table entry. */
 PHP_METHOD(php_wxAcceleratorEntry, GetCommand)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1001,6 +1031,10 @@ PHP_METHOD(php_wxAcceleratorEntry, GetCommand)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAcceleratorEntry::GetCommand\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxAcceleratorEntry::FromString(string str)
+   Parses the given string and sets the accelerator accordingly. */
 PHP_METHOD(php_wxAcceleratorEntry, FromString)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1099,6 +1133,8 @@ PHP_METHOD(php_wxAcceleratorEntry, FromString)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAcceleratorEntry::FromString\n");
 	}
 }
+/* }}} */
+
 void php_wxAcceleratorTable_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1139,6 +1175,8 @@ void php_wxAcceleratorTable_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 		#endif
 	}
 }
+/* {{{ proto bool wxAcceleratorTable::IsOk()
+   Returns true if the accelerator table is valid. */
 PHP_METHOD(php_wxAcceleratorTable, IsOk)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1231,6 +1269,10 @@ PHP_METHOD(php_wxAcceleratorTable, IsOk)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxAcceleratorTable::IsOk\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxAcceleratorTable::wxAcceleratorTable()
+   Default ctor. */
 PHP_METHOD(php_wxAcceleratorTable, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1311,6 +1353,8 @@ PHP_METHOD(php_wxAcceleratorTable, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxCalendarDateAttr_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1351,6 +1395,8 @@ void php_wxCalendarDateAttr_destruction_handler(zend_rsrc_list_entry *rsrc TSRML
 		#endif
 	}
 }
+/* {{{ proto  wxCalendarDateAttr::wxCalendarDateAttr(int border, wxColour colBorder)
+   Constructor using default properties except the given border. */
 PHP_METHOD(php_wxCalendarDateAttr, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1637,6 +1683,10 @@ PHP_METHOD(php_wxCalendarDateAttr, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxCalendarDateAttr::SetTextColour(wxColour colText)
+   Sets the text (foreground) colour to use. */
 PHP_METHOD(php_wxCalendarDateAttr, SetTextColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1752,6 +1802,10 @@ PHP_METHOD(php_wxCalendarDateAttr, SetTextColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCalendarDateAttr::SetTextColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxCalendarDateAttr::SetHoliday(bool holiday)
+   If holiday is true, this calendar day will be displayed as a holiday. */
 PHP_METHOD(php_wxCalendarDateAttr, SetHoliday)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1849,6 +1903,10 @@ PHP_METHOD(php_wxCalendarDateAttr, SetHoliday)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCalendarDateAttr::SetHoliday\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxCalendarDateAttr::SetFont(wxFont font)
+   Sets the font to use. */
 PHP_METHOD(php_wxCalendarDateAttr, SetFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -1964,6 +2022,10 @@ PHP_METHOD(php_wxCalendarDateAttr, SetFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCalendarDateAttr::SetFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxCalendarDateAttr::SetBorderColour(wxColour col)
+   Sets the border colour to use. */
 PHP_METHOD(php_wxCalendarDateAttr, SetBorderColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2079,6 +2141,10 @@ PHP_METHOD(php_wxCalendarDateAttr, SetBorderColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCalendarDateAttr::SetBorderColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxCalendarDateAttr::SetBorder(int border)
+   Sets the border to use. */
 PHP_METHOD(php_wxCalendarDateAttr, SetBorder)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2176,6 +2242,10 @@ PHP_METHOD(php_wxCalendarDateAttr, SetBorder)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCalendarDateAttr::SetBorder\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxCalendarDateAttr::SetBackgroundColour(wxColour colBack)
+   Sets the text background colour to use. */
 PHP_METHOD(php_wxCalendarDateAttr, SetBackgroundColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2291,6 +2361,10 @@ PHP_METHOD(php_wxCalendarDateAttr, SetBackgroundColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCalendarDateAttr::SetBackgroundColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxCalendarDateAttr::IsHoliday()
+   Returns true if this calendar day is displayed as a holiday. */
 PHP_METHOD(php_wxCalendarDateAttr, IsHoliday)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2383,6 +2457,10 @@ PHP_METHOD(php_wxCalendarDateAttr, IsHoliday)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCalendarDateAttr::IsHoliday\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxCalendarDateAttr::HasTextColour()
+   Returns true if a non-default text foreground colour is set. */
 PHP_METHOD(php_wxCalendarDateAttr, HasTextColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2475,6 +2553,10 @@ PHP_METHOD(php_wxCalendarDateAttr, HasTextColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCalendarDateAttr::HasTextColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxCalendarDateAttr::HasFont()
+   Returns true if a non-default font is set. */
 PHP_METHOD(php_wxCalendarDateAttr, HasFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2567,6 +2649,10 @@ PHP_METHOD(php_wxCalendarDateAttr, HasFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCalendarDateAttr::HasFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxCalendarDateAttr::HasBorderColour()
+   Returns true if a non-default border colour is set. */
 PHP_METHOD(php_wxCalendarDateAttr, HasBorderColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2659,6 +2745,10 @@ PHP_METHOD(php_wxCalendarDateAttr, HasBorderColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCalendarDateAttr::HasBorderColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxCalendarDateAttr::HasBorder()
+   Returns true if a non-default (i.e. */
 PHP_METHOD(php_wxCalendarDateAttr, HasBorder)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2751,6 +2841,10 @@ PHP_METHOD(php_wxCalendarDateAttr, HasBorder)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCalendarDateAttr::HasBorder\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxCalendarDateAttr::HasBackgroundColour()
+   Returns true if a non-default text background colour is set. */
 PHP_METHOD(php_wxCalendarDateAttr, HasBackgroundColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2843,6 +2937,10 @@ PHP_METHOD(php_wxCalendarDateAttr, HasBackgroundColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCalendarDateAttr::HasBackgroundColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxCalendarDateAttr::GetTextColour()
+   Returns the text colour set for the calendar date. */
 PHP_METHOD(php_wxCalendarDateAttr, GetTextColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -2955,6 +3053,10 @@ PHP_METHOD(php_wxCalendarDateAttr, GetTextColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCalendarDateAttr::GetTextColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxCalendarDateAttr wxCalendarDateAttr::GetMark()
+   Used (internally) by the generic wxCalendarCtrl::Mark(). */
 PHP_METHOD(php_wxCalendarDateAttr, GetMark)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3064,6 +3166,10 @@ PHP_METHOD(php_wxCalendarDateAttr, GetMark)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCalendarDateAttr::GetMark\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFont wxCalendarDateAttr::GetFont()
+   Returns the font set for the calendar date. */
 PHP_METHOD(php_wxCalendarDateAttr, GetFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3176,6 +3282,10 @@ PHP_METHOD(php_wxCalendarDateAttr, GetFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCalendarDateAttr::GetFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxCalendarDateAttr::GetBorderColour()
+   Returns the border colour set for the calendar date. */
 PHP_METHOD(php_wxCalendarDateAttr, GetBorderColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3288,6 +3398,10 @@ PHP_METHOD(php_wxCalendarDateAttr, GetBorderColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCalendarDateAttr::GetBorderColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxCalendarDateAttr::GetBorder()
+   Returns the border set for the calendar date. */
 PHP_METHOD(php_wxCalendarDateAttr, GetBorder)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3380,6 +3494,10 @@ PHP_METHOD(php_wxCalendarDateAttr, GetBorder)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCalendarDateAttr::GetBorder\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxCalendarDateAttr::GetBackgroundColour()
+   Returns the background colour set for the calendar date. */
 PHP_METHOD(php_wxCalendarDateAttr, GetBackgroundColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3492,6 +3610,10 @@ PHP_METHOD(php_wxCalendarDateAttr, GetBackgroundColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCalendarDateAttr::GetBackgroundColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxCalendarDateAttr::SetMark(wxCalendarDateAttr m)
+   Set the attributes that will be used to Mark() days on the generic wxCalendarCtrl. */
 PHP_METHOD(php_wxCalendarDateAttr, SetMark)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3607,6 +3729,8 @@ PHP_METHOD(php_wxCalendarDateAttr, SetMark)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxCalendarDateAttr::SetMark\n");
 	}
 }
+/* }}} */
+
 void php_wxPageSetupDialogData_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3647,6 +3771,8 @@ void php_wxPageSetupDialogData_destruction_handler(zend_rsrc_list_entry *rsrc TS
 		#endif
 	}
 }
+/* {{{ proto  wxPageSetupDialogData::EnableHelp(bool flag)
+   Enables or disables the "Help" button (Windows only). */
 PHP_METHOD(php_wxPageSetupDialogData, EnableHelp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3744,6 +3870,10 @@ PHP_METHOD(php_wxPageSetupDialogData, EnableHelp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialogData::EnableHelp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPageSetupDialogData::EnableMargins(bool flag)
+   Enables or disables the margin controls (Windows only). */
 PHP_METHOD(php_wxPageSetupDialogData, EnableMargins)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3841,6 +3971,10 @@ PHP_METHOD(php_wxPageSetupDialogData, EnableMargins)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialogData::EnableMargins\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPageSetupDialogData::EnableOrientation(bool flag)
+   Enables or disables the orientation control (Windows only). */
 PHP_METHOD(php_wxPageSetupDialogData, EnableOrientation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -3938,6 +4072,10 @@ PHP_METHOD(php_wxPageSetupDialogData, EnableOrientation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialogData::EnableOrientation\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPageSetupDialogData::EnablePaper(bool flag)
+   Enables or disables the paper size control (Windows only). */
 PHP_METHOD(php_wxPageSetupDialogData, EnablePaper)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4035,6 +4173,10 @@ PHP_METHOD(php_wxPageSetupDialogData, EnablePaper)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialogData::EnablePaper\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPageSetupDialogData::EnablePrinter(bool flag)
+   Enables or disables the "Printer" button, which invokes a printer setup dialog. */
 PHP_METHOD(php_wxPageSetupDialogData, EnablePrinter)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4132,6 +4274,10 @@ PHP_METHOD(php_wxPageSetupDialogData, EnablePrinter)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialogData::EnablePrinter\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPageSetupDialogData::GetDefaultInfo()
+   Returns true if the dialog will simply return default printer information (such as orientation) instead of showing a dialog (Windows only). */
 PHP_METHOD(php_wxPageSetupDialogData, GetDefaultInfo)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4224,6 +4370,10 @@ PHP_METHOD(php_wxPageSetupDialogData, GetDefaultInfo)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialogData::GetDefaultInfo\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPageSetupDialogData::GetDefaultMinMargins()
+   Returns true if the page setup dialog will take its minimum margin values from the currently selected printer properties (Windows only). */
 PHP_METHOD(php_wxPageSetupDialogData, GetDefaultMinMargins)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4316,6 +4466,10 @@ PHP_METHOD(php_wxPageSetupDialogData, GetDefaultMinMargins)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialogData::GetDefaultMinMargins\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPageSetupDialogData::GetEnableHelp()
+   Returns true if the printer setup button is enabled. */
 PHP_METHOD(php_wxPageSetupDialogData, GetEnableHelp)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4408,6 +4562,10 @@ PHP_METHOD(php_wxPageSetupDialogData, GetEnableHelp)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialogData::GetEnableHelp\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPageSetupDialogData::GetEnableMargins()
+   Returns true if the margin controls are enabled (Windows only). */
 PHP_METHOD(php_wxPageSetupDialogData, GetEnableMargins)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4500,6 +4658,10 @@ PHP_METHOD(php_wxPageSetupDialogData, GetEnableMargins)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialogData::GetEnableMargins\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPageSetupDialogData::GetEnableOrientation()
+   Returns true if the orientation control is enabled (Windows only). */
 PHP_METHOD(php_wxPageSetupDialogData, GetEnableOrientation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4592,6 +4754,10 @@ PHP_METHOD(php_wxPageSetupDialogData, GetEnableOrientation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialogData::GetEnableOrientation\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPageSetupDialogData::GetEnablePaper()
+   Returns true if the paper size control is enabled (Windows only). */
 PHP_METHOD(php_wxPageSetupDialogData, GetEnablePaper)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4684,6 +4850,10 @@ PHP_METHOD(php_wxPageSetupDialogData, GetEnablePaper)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialogData::GetEnablePaper\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPageSetupDialogData::GetEnablePrinter()
+   Returns true if the printer setup button is enabled. */
 PHP_METHOD(php_wxPageSetupDialogData, GetEnablePrinter)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4776,6 +4946,10 @@ PHP_METHOD(php_wxPageSetupDialogData, GetEnablePrinter)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialogData::GetEnablePrinter\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPoint wxPageSetupDialogData::GetMarginBottomRight()
+   Returns the right (x) and bottom (y) margins in millimetres. */
 PHP_METHOD(php_wxPageSetupDialogData, GetMarginBottomRight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4873,6 +5047,10 @@ PHP_METHOD(php_wxPageSetupDialogData, GetMarginBottomRight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialogData::GetMarginBottomRight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPoint wxPageSetupDialogData::GetMarginTopLeft()
+   Returns the left (x) and top (y) margins in millimetres. */
 PHP_METHOD(php_wxPageSetupDialogData, GetMarginTopLeft)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -4970,6 +5148,10 @@ PHP_METHOD(php_wxPageSetupDialogData, GetMarginTopLeft)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialogData::GetMarginTopLeft\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPoint wxPageSetupDialogData::GetMinMarginBottomRight()
+   Returns the right (x) and bottom (y) minimum margins the user can enter (Windows only). */
 PHP_METHOD(php_wxPageSetupDialogData, GetMinMarginBottomRight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5067,6 +5249,10 @@ PHP_METHOD(php_wxPageSetupDialogData, GetMinMarginBottomRight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialogData::GetMinMarginBottomRight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPoint wxPageSetupDialogData::GetMinMarginTopLeft()
+   Returns the left (x) and top (y) minimum margins the user can enter (Windows only). */
 PHP_METHOD(php_wxPageSetupDialogData, GetMinMarginTopLeft)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5164,6 +5350,10 @@ PHP_METHOD(php_wxPageSetupDialogData, GetMinMarginTopLeft)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialogData::GetMinMarginTopLeft\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPaperSize wxPageSetupDialogData::GetPaperId()
+   Returns the paper id (stored in the internal wxPrintData object). */
 PHP_METHOD(php_wxPageSetupDialogData, GetPaperId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5256,6 +5446,10 @@ PHP_METHOD(php_wxPageSetupDialogData, GetPaperId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialogData::GetPaperId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxPageSetupDialogData::GetPaperSize()
+   Returns the paper size in millimetres. */
 PHP_METHOD(php_wxPageSetupDialogData, GetPaperSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5353,6 +5547,10 @@ PHP_METHOD(php_wxPageSetupDialogData, GetPaperSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialogData::GetPaperSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPrintData wxPageSetupDialogData::GetPrintData()
+   Returns a reference to the print data associated with this object. */
 PHP_METHOD(php_wxPageSetupDialogData, GetPrintData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5517,6 +5715,10 @@ PHP_METHOD(php_wxPageSetupDialogData, GetPrintData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialogData::GetPrintData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPageSetupDialogData::IsOk()
+   Returns true if the print data associated with the dialog data is valid. */
 PHP_METHOD(php_wxPageSetupDialogData, IsOk)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5609,6 +5811,10 @@ PHP_METHOD(php_wxPageSetupDialogData, IsOk)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialogData::IsOk\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPageSetupDialogData::SetDefaultInfo(bool flag)
+   Pass true if the dialog will simply return default printer information (such as orientation) instead of showing a dialog (Windows only). */
 PHP_METHOD(php_wxPageSetupDialogData, SetDefaultInfo)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5706,6 +5912,10 @@ PHP_METHOD(php_wxPageSetupDialogData, SetDefaultInfo)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialogData::SetDefaultInfo\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPageSetupDialogData::SetDefaultMinMargins(bool flag)
+   Pass true if the page setup dialog will take its minimum margin values from the currently selected printer properties (Windows only). */
 PHP_METHOD(php_wxPageSetupDialogData, SetDefaultMinMargins)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5803,6 +6013,10 @@ PHP_METHOD(php_wxPageSetupDialogData, SetDefaultMinMargins)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialogData::SetDefaultMinMargins\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPageSetupDialogData::SetMarginBottomRight(wxPoint pt)
+   Sets the right (x) and bottom (y) margins in millimetres. */
 PHP_METHOD(php_wxPageSetupDialogData, SetMarginBottomRight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -5918,6 +6132,10 @@ PHP_METHOD(php_wxPageSetupDialogData, SetMarginBottomRight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialogData::SetMarginBottomRight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPageSetupDialogData::SetMarginTopLeft(wxPoint pt)
+   Sets the left (x) and top (y) margins in millimetres. */
 PHP_METHOD(php_wxPageSetupDialogData, SetMarginTopLeft)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6033,6 +6251,10 @@ PHP_METHOD(php_wxPageSetupDialogData, SetMarginTopLeft)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialogData::SetMarginTopLeft\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPageSetupDialogData::SetMinMarginBottomRight(wxPoint pt)
+   Sets the right (x) and bottom (y) minimum margins the user can enter (Windows only). */
 PHP_METHOD(php_wxPageSetupDialogData, SetMinMarginBottomRight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6148,6 +6370,10 @@ PHP_METHOD(php_wxPageSetupDialogData, SetMinMarginBottomRight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialogData::SetMinMarginBottomRight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPageSetupDialogData::SetMinMarginTopLeft(wxPoint pt)
+   Sets the left (x) and top (y) minimum margins the user can enter (Windows only). */
 PHP_METHOD(php_wxPageSetupDialogData, SetMinMarginTopLeft)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6263,6 +6489,10 @@ PHP_METHOD(php_wxPageSetupDialogData, SetMinMarginTopLeft)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialogData::SetMinMarginTopLeft\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPageSetupDialogData::SetPaperId(wxPaperSize id)
+   Sets the paper size id. */
 PHP_METHOD(php_wxPageSetupDialogData, SetPaperId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6360,6 +6590,10 @@ PHP_METHOD(php_wxPageSetupDialogData, SetPaperId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialogData::SetPaperId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPageSetupDialogData::SetPaperSize(wxSize size)
+   Sets the paper size in millimetres. */
 PHP_METHOD(php_wxPageSetupDialogData, SetPaperSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6475,6 +6709,10 @@ PHP_METHOD(php_wxPageSetupDialogData, SetPaperSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialogData::SetPaperSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPageSetupDialogData::SetPrintData(wxPrintData printData)
+   Sets the print data associated with this object. */
 PHP_METHOD(php_wxPageSetupDialogData, SetPrintData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6590,6 +6828,10 @@ PHP_METHOD(php_wxPageSetupDialogData, SetPrintData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPageSetupDialogData::SetPrintData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPageSetupDialogData::wxPageSetupDialogData()
+   Default constructor. */
 PHP_METHOD(php_wxPageSetupDialogData, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6724,6 +6966,8 @@ PHP_METHOD(php_wxPageSetupDialogData, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxPrintData_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6764,6 +7008,8 @@ void php_wxPrintData_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto wxPrintBin wxPrintData::GetBin()
+   Returns the current bin (papersource). */
 PHP_METHOD(php_wxPrintData, GetBin)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6856,6 +7102,10 @@ PHP_METHOD(php_wxPrintData, GetBin)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintData::GetBin\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPrintData::GetCollate()
+   Returns true if collation is on. */
 PHP_METHOD(php_wxPrintData, GetCollate)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -6948,6 +7198,10 @@ PHP_METHOD(php_wxPrintData, GetCollate)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintData::GetCollate\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPrintData::GetColour()
+   Returns true if colour printing is on. */
 PHP_METHOD(php_wxPrintData, GetColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7040,6 +7294,10 @@ PHP_METHOD(php_wxPrintData, GetColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintData::GetColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxDuplexMode wxPrintData::GetDuplex()
+   Returns the duplex mode. */
 PHP_METHOD(php_wxPrintData, GetDuplex)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7132,6 +7390,9 @@ PHP_METHOD(php_wxPrintData, GetDuplex)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintData::GetDuplex\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxPrintData::GetFilename() */
 PHP_METHOD(php_wxPrintData, GetFilename)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7230,6 +7491,10 @@ PHP_METHOD(php_wxPrintData, GetFilename)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintData::GetFilename\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxPrintData::GetNoCopies()
+   Returns the number of copies requested by the user. */
 PHP_METHOD(php_wxPrintData, GetNoCopies)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7322,6 +7587,10 @@ PHP_METHOD(php_wxPrintData, GetNoCopies)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintData::GetNoCopies\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPrintOrientation wxPrintData::GetOrientation()
+   Gets the orientation. */
 PHP_METHOD(php_wxPrintData, GetOrientation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7414,6 +7683,10 @@ PHP_METHOD(php_wxPrintData, GetOrientation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintData::GetOrientation\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPaperSize wxPrintData::GetPaperId()
+   Returns the paper size id. */
 PHP_METHOD(php_wxPrintData, GetPaperId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7506,6 +7779,9 @@ PHP_METHOD(php_wxPrintData, GetPaperId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintData::GetPaperId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPrintMode wxPrintData::GetPrintMode() */
 PHP_METHOD(php_wxPrintData, GetPrintMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7598,6 +7874,10 @@ PHP_METHOD(php_wxPrintData, GetPrintMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintData::GetPrintMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxPrintData::GetPrinterName()
+   Returns the printer name. */
 PHP_METHOD(php_wxPrintData, GetPrinterName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7696,6 +7976,10 @@ PHP_METHOD(php_wxPrintData, GetPrinterName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintData::GetPrinterName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxPrintData::GetQuality()
+   Returns the current print quality. */
 PHP_METHOD(php_wxPrintData, GetQuality)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7788,6 +8072,10 @@ PHP_METHOD(php_wxPrintData, GetQuality)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintData::GetQuality\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxPrintData::IsOk()
+   Returns true if the print data is valid for using in print dialogs. */
 PHP_METHOD(php_wxPrintData, IsOk)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7880,6 +8168,10 @@ PHP_METHOD(php_wxPrintData, IsOk)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintData::IsOk\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintData::SetBin(wxPrintBin flag)
+   Sets the current bin. */
 PHP_METHOD(php_wxPrintData, SetBin)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -7977,6 +8269,10 @@ PHP_METHOD(php_wxPrintData, SetBin)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintData::SetBin\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintData::SetCollate(bool flag)
+   Sets collation to on or off. */
 PHP_METHOD(php_wxPrintData, SetCollate)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8074,6 +8370,10 @@ PHP_METHOD(php_wxPrintData, SetCollate)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintData::SetCollate\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintData::SetColour(bool flag)
+   Sets colour printing on or off. */
 PHP_METHOD(php_wxPrintData, SetColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8171,6 +8471,10 @@ PHP_METHOD(php_wxPrintData, SetColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintData::SetColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintData::SetDuplex(wxDuplexMode mode)
+   Returns the duplex mode. */
 PHP_METHOD(php_wxPrintData, SetDuplex)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8268,6 +8572,9 @@ PHP_METHOD(php_wxPrintData, SetDuplex)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintData::SetDuplex\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintData::SetFilename(string filename) */
 PHP_METHOD(php_wxPrintData, SetFilename)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8366,6 +8673,10 @@ PHP_METHOD(php_wxPrintData, SetFilename)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintData::SetFilename\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintData::SetNoCopies(int n)
+   Sets the default number of copies to be printed out. */
 PHP_METHOD(php_wxPrintData, SetNoCopies)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8463,6 +8774,10 @@ PHP_METHOD(php_wxPrintData, SetNoCopies)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintData::SetNoCopies\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintData::SetOrientation(wxPrintOrientation orientation)
+   Sets the orientation. */
 PHP_METHOD(php_wxPrintData, SetOrientation)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8560,6 +8875,10 @@ PHP_METHOD(php_wxPrintData, SetOrientation)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintData::SetOrientation\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintData::SetPaperId(wxPaperSize paperId)
+   Sets the paper id. */
 PHP_METHOD(php_wxPrintData, SetPaperId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8657,6 +8976,9 @@ PHP_METHOD(php_wxPrintData, SetPaperId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintData::SetPaperId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintData::SetPrintMode(wxPrintMode printMode) */
 PHP_METHOD(php_wxPrintData, SetPrintMode)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8754,6 +9076,10 @@ PHP_METHOD(php_wxPrintData, SetPrintMode)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintData::SetPrintMode\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintData::SetPrinterName(string printerName)
+   Sets the printer name. */
 PHP_METHOD(php_wxPrintData, SetPrinterName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8852,6 +9178,10 @@ PHP_METHOD(php_wxPrintData, SetPrinterName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintData::SetPrinterName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintData::SetQuality(int quality)
+   Sets the desired print quality. */
 PHP_METHOD(php_wxPrintData, SetQuality)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -8949,6 +9279,10 @@ PHP_METHOD(php_wxPrintData, SetQuality)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPrintData::SetQuality\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPrintData::wxPrintData()
+   Default constructor. */
 PHP_METHOD(php_wxPrintData, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9029,6 +9363,8 @@ PHP_METHOD(php_wxPrintData, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxRealPoint_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9069,6 +9405,8 @@ void php_wxRealPoint_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxRealPoint::wxRealPoint()
+   Initializes to zero the x and y members. */
 PHP_METHOD(php_wxRealPoint, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9240,6 +9578,8 @@ PHP_METHOD(php_wxRealPoint, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 PHP_METHOD(php_wxRealPoint, __get)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9345,6 +9685,8 @@ void php_wxRect_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxRect::wxRect()
+   Default constructor. */
 PHP_METHOD(php_wxRect, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9664,6 +10006,8 @@ PHP_METHOD(php_wxRect, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 PHP_METHOD(php_wxRect, __get)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9737,6 +10081,8 @@ PHP_METHOD(php_wxRect, __get)
 		RETVAL_NULL();
 	}
 }
+/* {{{ proto  wxRect::SetX(int x)
+   Sets the x position. */
 PHP_METHOD(php_wxRect, SetX)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9834,6 +10180,10 @@ PHP_METHOD(php_wxRect, SetX)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRect::SetX\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRect::SetY(int y)
+   Sets the y position. */
 PHP_METHOD(php_wxRect, SetY)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -9931,6 +10281,10 @@ PHP_METHOD(php_wxRect, SetY)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRect::SetY\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRect wxRect::Union(wxRect rect)
+   Modifies the rectangle to contain the bounding box of this rectangle and the one passed in as parameter. */
 PHP_METHOD(php_wxRect, Union)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10066,6 +10420,10 @@ PHP_METHOD(php_wxRect, Union)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRect::Union\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRect::SetWidth(int width)
+   Sets the width. */
 PHP_METHOD(php_wxRect, SetWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10163,6 +10521,10 @@ PHP_METHOD(php_wxRect, SetWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRect::SetWidth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRect::SetSize(wxSize s)
+   Sets the size. */
 PHP_METHOD(php_wxRect, SetSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10278,6 +10640,10 @@ PHP_METHOD(php_wxRect, SetSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRect::SetSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRect::SetHeight(int height)
+   Sets the height. */
 PHP_METHOD(php_wxRect, SetHeight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10375,6 +10741,10 @@ PHP_METHOD(php_wxRect, SetHeight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRect::SetHeight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRect::Offset(int dx, int dy)
+   Moves the rectangle by the specified offset. */
 PHP_METHOD(php_wxRect, Offset)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10528,6 +10898,10 @@ PHP_METHOD(php_wxRect, Offset)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRect::Offset\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRect::IsEmpty()
+   Returns true if this rectangle has a width or height less than or equal to 0 and false otherwise. */
 PHP_METHOD(php_wxRect, IsEmpty)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10620,6 +10994,10 @@ PHP_METHOD(php_wxRect, IsEmpty)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRect::IsEmpty\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRect::Intersects(wxRect rect)
+   Returns true if this rectangle has a non-empty intersection with the rectangle rect and false otherwise. */
 PHP_METHOD(php_wxRect, Intersects)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10735,6 +11113,10 @@ PHP_METHOD(php_wxRect, Intersects)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRect::Intersects\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRect wxRect::Intersect(wxRect rect)
+   Returns the overlapping portion of this rectangle and the one passed in as parameter. */
 PHP_METHOD(php_wxRect, Intersect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -10930,6 +11312,10 @@ PHP_METHOD(php_wxRect, Intersect)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRect::Intersect\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRect wxRect::Inflate(int dx, int dy)
+   Increases the size of the rectangle. */
 PHP_METHOD(php_wxRect, Inflate)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11223,6 +11609,10 @@ PHP_METHOD(php_wxRect, Inflate)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRect::Inflate\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxRect::GetY()
+   Gets the y member. */
 PHP_METHOD(php_wxRect, GetY)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11315,6 +11705,10 @@ PHP_METHOD(php_wxRect, GetY)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRect::GetY\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxRect::GetX()
+   Gets the x member. */
 PHP_METHOD(php_wxRect, GetX)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11407,6 +11801,10 @@ PHP_METHOD(php_wxRect, GetX)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRect::GetX\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxRect::GetWidth()
+   Gets the width member. */
 PHP_METHOD(php_wxRect, GetWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11499,6 +11897,10 @@ PHP_METHOD(php_wxRect, GetWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRect::GetWidth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPoint wxRect::GetTopRight()
+   Gets the position of the top right corner. */
 PHP_METHOD(php_wxRect, GetTopRight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11596,6 +11998,10 @@ PHP_METHOD(php_wxRect, GetTopRight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRect::GetTopRight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPoint wxRect::GetTopLeft()
+   Gets the position of the top left corner of the rectangle, same as GetPosition(). */
 PHP_METHOD(php_wxRect, GetTopLeft)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11693,6 +12099,10 @@ PHP_METHOD(php_wxRect, GetTopLeft)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRect::GetTopLeft\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxRect::GetTop()
+   Gets the top point of the rectangle (the same as GetY()). */
 PHP_METHOD(php_wxRect, GetTop)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11785,6 +12195,10 @@ PHP_METHOD(php_wxRect, GetTop)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRect::GetTop\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxRect::GetSize()
+   Gets the size. */
 PHP_METHOD(php_wxRect, GetSize)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11882,6 +12296,10 @@ PHP_METHOD(php_wxRect, GetSize)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRect::GetSize\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxRect::GetRight()
+   Gets the right point of the rectangle. */
 PHP_METHOD(php_wxRect, GetRight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -11974,6 +12392,10 @@ PHP_METHOD(php_wxRect, GetRight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRect::GetRight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPoint wxRect::GetPosition()
+   Gets the position. */
 PHP_METHOD(php_wxRect, GetPosition)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12071,6 +12493,10 @@ PHP_METHOD(php_wxRect, GetPosition)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRect::GetPosition\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRect wxRect::CenterIn(wxRect r, int dir)
+   Returns the rectangle having the same size as this one but centered relatively to the given rectangle r. */
 PHP_METHOD(php_wxRect, CenterIn)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12209,6 +12635,10 @@ PHP_METHOD(php_wxRect, CenterIn)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRect::CenterIn\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRect wxRect::CentreIn(wxRect r, int dir)
+   Returns the rectangle having the same size as this one but centered relatively to the given rectangle r. */
 PHP_METHOD(php_wxRect, CentreIn)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12347,6 +12777,10 @@ PHP_METHOD(php_wxRect, CentreIn)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRect::CentreIn\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRect::Contains(int x, int y)
+   Returns true if the given point is inside the rectangle (or on its boundary) and false otherwise. */
 PHP_METHOD(php_wxRect, Contains)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12555,6 +12989,10 @@ PHP_METHOD(php_wxRect, Contains)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRect::Contains\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRect wxRect::Deflate(int dx, int dy)
+   Decrease the rectangle size. */
 PHP_METHOD(php_wxRect, Deflate)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12848,6 +13286,10 @@ PHP_METHOD(php_wxRect, Deflate)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRect::Deflate\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxRect::GetBottom()
+   Gets the bottom point of the rectangle. */
 PHP_METHOD(php_wxRect, GetBottom)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -12940,6 +13382,10 @@ PHP_METHOD(php_wxRect, GetBottom)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRect::GetBottom\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPoint wxRect::GetBottomLeft()
+   Gets the position of the bottom left corner. */
 PHP_METHOD(php_wxRect, GetBottomLeft)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13037,6 +13483,10 @@ PHP_METHOD(php_wxRect, GetBottomLeft)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRect::GetBottomLeft\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxPoint wxRect::GetBottomRight()
+   Gets the position of the bottom right corner. */
 PHP_METHOD(php_wxRect, GetBottomRight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13134,6 +13584,10 @@ PHP_METHOD(php_wxRect, GetBottomRight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRect::GetBottomRight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxRect::GetHeight()
+   Gets the height member. */
 PHP_METHOD(php_wxRect, GetHeight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13226,6 +13680,10 @@ PHP_METHOD(php_wxRect, GetHeight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRect::GetHeight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxRect::GetLeft()
+   Gets the left point of the rectangle (the same as GetX()). */
 PHP_METHOD(php_wxRect, GetLeft)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13318,6 +13776,8 @@ PHP_METHOD(php_wxRect, GetLeft)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRect::GetLeft\n");
 	}
 }
+/* }}} */
+
 void php_wxPoint_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13358,6 +13818,8 @@ void php_wxPoint_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxPoint::wxPoint()
+   Constructs a point. */
 PHP_METHOD(php_wxPoint, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13529,6 +13991,8 @@ PHP_METHOD(php_wxPoint, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 PHP_METHOD(php_wxPoint, __get)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13594,6 +14058,8 @@ PHP_METHOD(php_wxPoint, __get)
 		RETVAL_NULL();
 	}
 }
+/* {{{ proto bool wxPoint::IsFullySpecified()
+   Returns true if neither of the point components is equal to wxDefaultCoord. */
 PHP_METHOD(php_wxPoint, IsFullySpecified)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13686,6 +14152,8 @@ PHP_METHOD(php_wxPoint, IsFullySpecified)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPoint::IsFullySpecified\n");
 	}
 }
+/* }}} */
+
 void php_wxSize_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13726,6 +14194,8 @@ void php_wxSize_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxSize::wxSize()
+   Initializes this size object with zero width and height. */
 PHP_METHOD(php_wxSize, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13843,6 +14313,10 @@ PHP_METHOD(php_wxSize, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxSize::SetWidth(int width)
+   Sets the width. */
 PHP_METHOD(php_wxSize, SetWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -13940,6 +14414,10 @@ PHP_METHOD(php_wxSize, SetWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSize::SetWidth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSize::SetHeight(int height)
+   Sets the height. */
 PHP_METHOD(php_wxSize, SetHeight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14037,6 +14515,10 @@ PHP_METHOD(php_wxSize, SetHeight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSize::SetHeight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSize::SetDefaults(wxSize sizeDefault)
+   Combine this size object with another one replacing the default (i.e. */
 PHP_METHOD(php_wxSize, SetDefaults)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14152,6 +14634,10 @@ PHP_METHOD(php_wxSize, SetDefaults)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSize::SetDefaults\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSize::Set(int width, int height)
+   Sets the width and height members. */
 PHP_METHOD(php_wxSize, Set)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14250,6 +14736,10 @@ PHP_METHOD(php_wxSize, Set)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSize::Set\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxSize::GetHeight()
+   Gets the height member. */
 PHP_METHOD(php_wxSize, GetHeight)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14342,6 +14832,10 @@ PHP_METHOD(php_wxSize, GetHeight)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSize::GetHeight\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxSize::GetWidth()
+   Gets the width member. */
 PHP_METHOD(php_wxSize, GetWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14434,6 +14928,10 @@ PHP_METHOD(php_wxSize, GetWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSize::GetWidth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxSize::IsFullySpecified()
+   Returns true if neither of the size object components is equal to -1, which is used as default for the size values in wxWidgets (hence the predefined wxDefaultSize has both of its components equal to -1). */
 PHP_METHOD(php_wxSize, IsFullySpecified)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14526,6 +15024,10 @@ PHP_METHOD(php_wxSize, IsFullySpecified)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSize::IsFullySpecified\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxSize wxSize::Scale(float xscale, float yscale)
+   Scales the dimensions of this object by the given factors. */
 PHP_METHOD(php_wxSize, Scale)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14644,6 +15146,10 @@ PHP_METHOD(php_wxSize, Scale)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSize::Scale\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSize::DecTo(wxSize size)
+   Decrements this object so that both of its dimensions are not greater than the corresponding dimensions of the size. */
 PHP_METHOD(php_wxSize, DecTo)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14759,6 +15265,10 @@ PHP_METHOD(php_wxSize, DecTo)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSize::DecTo\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxSize::IncTo(wxSize size)
+   Increments this object so that both of its dimensions are not less than the corresponding dimensions of the size. */
 PHP_METHOD(php_wxSize, IncTo)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14874,6 +15384,8 @@ PHP_METHOD(php_wxSize, IncTo)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxSize::IncTo\n");
 	}
 }
+/* }}} */
+
 void php_wxListItemAttr_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -14914,6 +15426,8 @@ void php_wxListItemAttr_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC
 		#endif
 	}
 }
+/* {{{ proto wxColour wxListItemAttr::GetBackgroundColour()
+   Returns the currently set background color. */
 PHP_METHOD(php_wxListItemAttr, GetBackgroundColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15026,6 +15540,10 @@ PHP_METHOD(php_wxListItemAttr, GetBackgroundColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItemAttr::GetBackgroundColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxListItemAttr::wxListItemAttr()
+   Default Constructor. */
 PHP_METHOD(php_wxListItemAttr, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15198,6 +15716,10 @@ PHP_METHOD(php_wxListItemAttr, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxListItemAttr::SetTextColour(wxColour colour)
+   Sets a new text color. */
 PHP_METHOD(php_wxListItemAttr, SetTextColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15313,6 +15835,10 @@ PHP_METHOD(php_wxListItemAttr, SetTextColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItemAttr::SetTextColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxListItemAttr::SetFont(wxFont font)
+   Sets a new font. */
 PHP_METHOD(php_wxListItemAttr, SetFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15428,6 +15954,10 @@ PHP_METHOD(php_wxListItemAttr, SetFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItemAttr::SetFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxListItemAttr::SetBackgroundColour(wxColour colour)
+   Sets a new background color. */
 PHP_METHOD(php_wxListItemAttr, SetBackgroundColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15543,6 +16073,10 @@ PHP_METHOD(php_wxListItemAttr, SetBackgroundColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItemAttr::SetBackgroundColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxListItemAttr::HasTextColour()
+   Returns true if the currently set text color is valid. */
 PHP_METHOD(php_wxListItemAttr, HasTextColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15635,6 +16169,10 @@ PHP_METHOD(php_wxListItemAttr, HasTextColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItemAttr::HasTextColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxListItemAttr::HasFont()
+   Returns true if the currently set font is valid. */
 PHP_METHOD(php_wxListItemAttr, HasFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15727,6 +16265,10 @@ PHP_METHOD(php_wxListItemAttr, HasFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItemAttr::HasFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxListItemAttr::HasBackgroundColour()
+   Returns true if the currently set background color is valid. */
 PHP_METHOD(php_wxListItemAttr, HasBackgroundColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15819,6 +16361,10 @@ PHP_METHOD(php_wxListItemAttr, HasBackgroundColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItemAttr::HasBackgroundColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxListItemAttr::GetTextColour()
+   Returns the currently set text color. */
 PHP_METHOD(php_wxListItemAttr, GetTextColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -15931,6 +16477,10 @@ PHP_METHOD(php_wxListItemAttr, GetTextColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItemAttr::GetTextColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFont wxListItemAttr::GetFont()
+   Returns the currently set font. */
 PHP_METHOD(php_wxListItemAttr, GetFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16043,6 +16593,8 @@ PHP_METHOD(php_wxListItemAttr, GetFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItemAttr::GetFont\n");
 	}
 }
+/* }}} */
+
 void php_wxListItem_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16083,6 +16635,8 @@ void php_wxListItem_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxListItem::Clear()
+   Resets the item state to the default. */
 PHP_METHOD(php_wxListItem, Clear)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16175,6 +16729,10 @@ PHP_METHOD(php_wxListItem, Clear)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItem::Clear\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxListItem::wxListItem()
+   Constructor. */
 PHP_METHOD(php_wxListItem, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16255,6 +16813,10 @@ PHP_METHOD(php_wxListItem, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto  wxListItem::SetWidth(int width)
+   Meaningful only for column headers in report mode. */
 PHP_METHOD(php_wxListItem, SetWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16352,6 +16914,10 @@ PHP_METHOD(php_wxListItem, SetWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItem::SetWidth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxListItem::SetTextColour(wxColour colText)
+   Sets the text colour for the item. */
 PHP_METHOD(php_wxListItem, SetTextColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16467,6 +17033,10 @@ PHP_METHOD(php_wxListItem, SetTextColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItem::SetTextColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxListItem::SetText(string text)
+   Sets the text label for the item. */
 PHP_METHOD(php_wxListItem, SetText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16565,6 +17135,10 @@ PHP_METHOD(php_wxListItem, SetText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItem::SetText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxListItem::SetStateMask(int stateMask)
+   Sets the bitmask that is used to determine which of the state flags are to be set. */
 PHP_METHOD(php_wxListItem, SetStateMask)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16662,6 +17236,10 @@ PHP_METHOD(php_wxListItem, SetStateMask)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItem::SetStateMask\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxListItem::SetState(int state)
+   Sets the item state flags (note that the valid state flags are influenced by the value of the state mask, see wxListItem::SetStateMask). */
 PHP_METHOD(php_wxListItem, SetState)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16759,6 +17337,10 @@ PHP_METHOD(php_wxListItem, SetState)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItem::SetState\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxListItem::SetMask(int mask)
+   Sets the mask of valid fields. */
 PHP_METHOD(php_wxListItem, SetMask)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16856,6 +17438,10 @@ PHP_METHOD(php_wxListItem, SetMask)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItem::SetMask\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxListItem::SetImage(int image)
+   Sets the zero-based index of the image associated with the item into the image list. */
 PHP_METHOD(php_wxListItem, SetImage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -16953,6 +17539,10 @@ PHP_METHOD(php_wxListItem, SetImage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItem::SetImage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxListItem::SetId(int id)
+   Sets the zero-based item position. */
 PHP_METHOD(php_wxListItem, SetId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17050,6 +17640,10 @@ PHP_METHOD(php_wxListItem, SetId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItem::SetId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxListItem::SetFont(wxFont font)
+   Sets the font for the item. */
 PHP_METHOD(php_wxListItem, SetFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17165,6 +17759,10 @@ PHP_METHOD(php_wxListItem, SetFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItem::SetFont\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxListItem::SetData(int data)
+   Sets client data for the item. */
 PHP_METHOD(php_wxListItem, SetData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17262,6 +17860,10 @@ PHP_METHOD(php_wxListItem, SetData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItem::SetData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxListItem::SetColumn(int col)
+   Sets the zero-based column. */
 PHP_METHOD(php_wxListItem, SetColumn)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17359,6 +17961,10 @@ PHP_METHOD(php_wxListItem, SetColumn)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItem::SetColumn\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxListItem::SetBackgroundColour(wxColour colBack)
+   Sets the background colour for the item. */
 PHP_METHOD(php_wxListItem, SetBackgroundColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17474,6 +18080,10 @@ PHP_METHOD(php_wxListItem, SetBackgroundColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItem::SetBackgroundColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxListItem::SetAlign(wxListColumnFormat align)
+   Sets the alignment for the item. */
 PHP_METHOD(php_wxListItem, SetAlign)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17571,6 +18181,10 @@ PHP_METHOD(php_wxListItem, SetAlign)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItem::SetAlign\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxListItem::GetWidth()
+   Meaningful only for column headers in report mode. */
 PHP_METHOD(php_wxListItem, GetWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17663,6 +18277,10 @@ PHP_METHOD(php_wxListItem, GetWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItem::GetWidth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxListItem::GetTextColour()
+   Returns the text colour. */
 PHP_METHOD(php_wxListItem, GetTextColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17760,6 +18378,10 @@ PHP_METHOD(php_wxListItem, GetTextColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItem::GetTextColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxListItem::GetText()
+   Returns the label/header text. */
 PHP_METHOD(php_wxListItem, GetText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17858,6 +18480,10 @@ PHP_METHOD(php_wxListItem, GetText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItem::GetText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxListItem::GetState()
+   Returns a bit field representing the state of the item. */
 PHP_METHOD(php_wxListItem, GetState)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -17950,6 +18576,10 @@ PHP_METHOD(php_wxListItem, GetState)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItem::GetState\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxListItem::GetMask()
+   Returns a bit mask indicating which fields of the structure are valid. */
 PHP_METHOD(php_wxListItem, GetMask)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18042,6 +18672,10 @@ PHP_METHOD(php_wxListItem, GetMask)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItem::GetMask\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxListItem::GetImage()
+   Returns the zero-based index of the image associated with the item into the image list. */
 PHP_METHOD(php_wxListItem, GetImage)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18134,6 +18768,10 @@ PHP_METHOD(php_wxListItem, GetImage)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItem::GetImage\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxListItem::GetId()
+   Returns the zero-based item position. */
 PHP_METHOD(php_wxListItem, GetId)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18226,6 +18864,10 @@ PHP_METHOD(php_wxListItem, GetId)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItem::GetId\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxListColumnFormat wxListItem::GetAlign()
+   Returns the alignment for this item. */
 PHP_METHOD(php_wxListItem, GetAlign)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18318,6 +18960,10 @@ PHP_METHOD(php_wxListItem, GetAlign)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItem::GetAlign\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxColour wxListItem::GetBackgroundColour()
+   Returns the background colour for this item. */
 PHP_METHOD(php_wxListItem, GetBackgroundColour)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18415,6 +19061,10 @@ PHP_METHOD(php_wxListItem, GetBackgroundColour)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItem::GetBackgroundColour\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxListItem::GetColumn()
+   Returns the zero-based column; meaningful only in report mode. */
 PHP_METHOD(php_wxListItem, GetColumn)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18507,6 +19157,10 @@ PHP_METHOD(php_wxListItem, GetColumn)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItem::GetColumn\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxFont wxListItem::GetFont()
+   Returns the font used to display the item. */
 PHP_METHOD(php_wxListItem, GetFont)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18604,6 +19258,8 @@ PHP_METHOD(php_wxListItem, GetFont)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxListItem::GetFont\n");
 	}
 }
+/* }}} */
+
 void php_wxFileType_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18644,6 +19300,8 @@ void php_wxFileType_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto bool wxFileType::GetDescription(string &desc)
+   If the function returns true, the string pointed to by desc is filled with a brief description for this file type: for example, "text document" for the "text/plain" MIME type. */
 PHP_METHOD(php_wxFileType, GetDescription)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18753,6 +19411,10 @@ PHP_METHOD(php_wxFileType, GetDescription)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileType::GetDescription\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileType::GetExtensions(array &extensions)
+   If the function returns true, the array extensions is filled with all extensions associated with this file type: for example, it may contain the following two elements for the MIME type "text/html" (notice the absence of the leading dot): "html" and "htm". */
 PHP_METHOD(php_wxFileType, GetExtensions)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18879,6 +19541,10 @@ PHP_METHOD(php_wxFileType, GetExtensions)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileType::GetExtensions\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileType::GetMimeType(string &mimeType)
+   If the function returns true, the string pointed to by mimeType is filled with full MIME type specification for this file type: for example, "text/plain". */
 PHP_METHOD(php_wxFileType, GetMimeType)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -18988,6 +19654,10 @@ PHP_METHOD(php_wxFileType, GetMimeType)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileType::GetMimeType\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxFileType::GetMimeTypes(array &mimeTypes)
+   Same as GetMimeType() but returns array of MIME types. */
 PHP_METHOD(php_wxFileType, GetMimeTypes)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19114,6 +19784,10 @@ PHP_METHOD(php_wxFileType, GetMimeTypes)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileType::GetMimeTypes\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxFileType::GetOpenCommand(string filename)
+   With the first version of this method, if the true is returned, the string pointed to by command is filled with the command which must be executed (see wxExecute()) in order to open the file of the given type. */
 PHP_METHOD(php_wxFileType, GetOpenCommand)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19218,6 +19892,10 @@ PHP_METHOD(php_wxFileType, GetOpenCommand)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxFileType::GetOpenCommand\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxFileType::wxFileType(wxFileTypeInfo ftInfo)
+   Copy ctor. */
 PHP_METHOD(php_wxFileType, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19321,6 +19999,8 @@ PHP_METHOD(php_wxFileType, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxPosition_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19361,6 +20041,8 @@ void php_wxPosition_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto int wxPosition::GetCol()
+   A synonym for GetColumn(). */
 PHP_METHOD(php_wxPosition, GetCol)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19453,6 +20135,10 @@ PHP_METHOD(php_wxPosition, GetCol)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPosition::GetCol\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxPosition::GetColumn()
+   Get the current row value. */
 PHP_METHOD(php_wxPosition, GetColumn)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19545,6 +20231,10 @@ PHP_METHOD(php_wxPosition, GetColumn)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPosition::GetColumn\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxPosition::GetRow()
+   Get the current row value. */
 PHP_METHOD(php_wxPosition, GetRow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19637,6 +20327,10 @@ PHP_METHOD(php_wxPosition, GetRow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPosition::GetRow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPosition::SetCol(int column)
+   A synonym for SetColumn(). */
 PHP_METHOD(php_wxPosition, SetCol)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19734,6 +20428,10 @@ PHP_METHOD(php_wxPosition, SetCol)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPosition::SetCol\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPosition::SetColumn(int column)
+   Set a new column value. */
 PHP_METHOD(php_wxPosition, SetColumn)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19831,6 +20529,10 @@ PHP_METHOD(php_wxPosition, SetColumn)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPosition::SetColumn\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPosition::SetRow(int row)
+   Set a new row value. */
 PHP_METHOD(php_wxPosition, SetRow)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -19928,6 +20630,10 @@ PHP_METHOD(php_wxPosition, SetRow)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxPosition::SetRow\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxPosition::wxPosition()
+   Construct a new wxPosition, setting the row and column to the default value of (0, 0). */
 PHP_METHOD(php_wxPosition, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20045,6 +20751,8 @@ PHP_METHOD(php_wxPosition, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxRegion_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20085,6 +20793,8 @@ void php_wxRegion_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxRegion::Clear()
+   Clears the current region. */
 PHP_METHOD(php_wxRegion, Clear)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20177,6 +20887,10 @@ PHP_METHOD(php_wxRegion, Clear)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRegion::Clear\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxRegionContain wxRegion::Contains(int x, int y)
+   Returns a value indicating whether the given point is contained within the region. */
 PHP_METHOD(php_wxRegion, Contains)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20425,6 +21139,10 @@ PHP_METHOD(php_wxRegion, Contains)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRegion::Contains\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxBitmap wxRegion::ConvertToBitmap()
+   Convert the region to a black and white bitmap with the white pixels being inside the region. */
 PHP_METHOD(php_wxRegion, ConvertToBitmap)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20522,6 +21240,10 @@ PHP_METHOD(php_wxRegion, ConvertToBitmap)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRegion::ConvertToBitmap\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRegion::GetBox(int x, int y, int width, int height)
+   Returns the outer bounds of the region. */
 PHP_METHOD(php_wxRegion, GetBox)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20659,6 +21381,10 @@ PHP_METHOD(php_wxRegion, GetBox)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRegion::GetBox\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRegion::Intersect(int x, int y, int width, int height)
+   Finds the intersection of this region and another, rectangular region, specified using position and size. */
 PHP_METHOD(php_wxRegion, Intersect)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20869,6 +21595,10 @@ PHP_METHOD(php_wxRegion, Intersect)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRegion::Intersect\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRegion::IsEmpty()
+   Returns true if the region is empty, false otherwise. */
 PHP_METHOD(php_wxRegion, IsEmpty)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -20961,6 +21691,10 @@ PHP_METHOD(php_wxRegion, IsEmpty)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRegion::IsEmpty\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRegion::IsEqual(wxRegion region)
+   Returns true if the region is equal to, i.e. */
 PHP_METHOD(php_wxRegion, IsEqual)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21076,6 +21810,10 @@ PHP_METHOD(php_wxRegion, IsEqual)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRegion::IsEqual\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRegion::Offset(int x, int y)
+   Moves the region by the specified offsets in horizontal and vertical directions. */
 PHP_METHOD(php_wxRegion, Offset)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21229,6 +21967,10 @@ PHP_METHOD(php_wxRegion, Offset)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRegion::Offset\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRegion::Subtract(wxRect rect)
+   Subtracts a rectangular region from this region. */
 PHP_METHOD(php_wxRegion, Subtract)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21399,6 +22141,10 @@ PHP_METHOD(php_wxRegion, Subtract)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRegion::Subtract\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRegion::Union(int x, int y, int width, int height)
+   Finds the union of this region and another, rectangular region, specified using position and size. */
 PHP_METHOD(php_wxRegion, Union)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21752,6 +22498,10 @@ PHP_METHOD(php_wxRegion, Union)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRegion::Union\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxRegion::Xor(int x, int y, int width, int height)
+   Finds the Xor of this region and another, rectangular region, specified using position and size. */
 PHP_METHOD(php_wxRegion, Xor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -21962,6 +22712,10 @@ PHP_METHOD(php_wxRegion, Xor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxRegion::Xor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxRegion::wxRegion()
+   Default constructor. */
 PHP_METHOD(php_wxRegion, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22469,6 +23223,8 @@ PHP_METHOD(php_wxRegion, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxStatusBarPane_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22509,6 +23265,8 @@ void php_wxStatusBarPane_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_D
 		#endif
 	}
 }
+/* {{{ proto string wxStatusBarPane::GetText()
+   Returns the text currently shown in this pane. */
 PHP_METHOD(php_wxStatusBarPane, GetText)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22607,6 +23365,10 @@ PHP_METHOD(php_wxStatusBarPane, GetText)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStatusBarPane::GetText\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStatusBarPane::GetStyle()
+   Returns the pane style. */
 PHP_METHOD(php_wxStatusBarPane, GetStyle)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22699,6 +23461,10 @@ PHP_METHOD(php_wxStatusBarPane, GetStyle)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStatusBarPane::GetStyle\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxStatusBarPane::GetWidth()
+   Returns the pane width; it maybe negative, indicating a variable-width field. */
 PHP_METHOD(php_wxStatusBarPane, GetWidth)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22791,6 +23557,10 @@ PHP_METHOD(php_wxStatusBarPane, GetWidth)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxStatusBarPane::GetWidth\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxStatusBarPane::wxStatusBarPane(int style, int width)
+   Constructs the pane with the given style and width. */
 PHP_METHOD(php_wxStatusBarPane, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22897,6 +23667,8 @@ PHP_METHOD(php_wxStatusBarPane, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxTreeItemId_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -22937,6 +23709,8 @@ void php_wxTreeItemId_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxTreeItemId::wxTreeItemId()
+   Default constructor. */
 PHP_METHOD(php_wxTreeItemId, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23017,6 +23791,10 @@ PHP_METHOD(php_wxTreeItemId, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto bool wxTreeItemId::IsOk()
+   Returns true if this instance is referencing a valid tree item. */
 PHP_METHOD(php_wxTreeItemId, IsOk)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23109,6 +23887,8 @@ PHP_METHOD(php_wxTreeItemId, IsOk)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxTreeItemId::IsOk\n");
 	}
 }
+/* }}} */
+
 void php_wxVariant_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23149,6 +23929,8 @@ void php_wxVariant_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto  wxVariant::Append(wxVariant value)
+   Appends a value to the list. */
 PHP_METHOD(php_wxVariant, Append)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23264,6 +24046,10 @@ PHP_METHOD(php_wxVariant, Append)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariant::Append\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxVariant::Clear()
+   Makes the variant null by deleting the internal data and set the name to wxEmptyString. */
 PHP_METHOD(php_wxVariant, Clear)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23356,6 +24142,10 @@ PHP_METHOD(php_wxVariant, Clear)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariant::Clear\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxVariant::ClearList()
+   Deletes the contents of the list. */
 PHP_METHOD(php_wxVariant, ClearList)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23448,6 +24238,10 @@ PHP_METHOD(php_wxVariant, ClearList)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariant::ClearList\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxVariant::Convert(int &value)
+   Retrieves and converts the value of this variant to the type that value is. */
 PHP_METHOD(php_wxVariant, Convert)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23741,6 +24535,10 @@ PHP_METHOD(php_wxVariant, Convert)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariant::Convert\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxVariant::Delete(int item)
+   Deletes the zero-based item from the list. */
 PHP_METHOD(php_wxVariant, Delete)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23838,6 +24636,10 @@ PHP_METHOD(php_wxVariant, Delete)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariant::Delete\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto array wxVariant::GetArrayString()
+   Returns the string array value. */
 PHP_METHOD(php_wxVariant, GetArrayString)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -23940,6 +24742,10 @@ PHP_METHOD(php_wxVariant, GetArrayString)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariant::GetArrayString\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxVariant::GetBool()
+   Returns the boolean value. */
 PHP_METHOD(php_wxVariant, GetBool)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24032,6 +24838,10 @@ PHP_METHOD(php_wxVariant, GetBool)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariant::GetBool\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxVariantData wxVariant::GetData()
+   Returns a pointer to the internal variant data. */
 PHP_METHOD(php_wxVariant, GetData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24147,6 +24957,10 @@ PHP_METHOD(php_wxVariant, GetData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariant::GetData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto timestamp wxVariant::GetDateTime()
+   Returns the date value. */
 PHP_METHOD(php_wxVariant, GetDateTime)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24241,6 +25055,10 @@ PHP_METHOD(php_wxVariant, GetDateTime)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariant::GetDateTime\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto float wxVariant::GetDouble()
+   Returns the floating point value. */
 PHP_METHOD(php_wxVariant, GetDouble)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24333,6 +25151,10 @@ PHP_METHOD(php_wxVariant, GetDouble)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariant::GetDouble\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxVariant::GetLong()
+   Returns the integer value. */
 PHP_METHOD(php_wxVariant, GetLong)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24425,6 +25247,10 @@ PHP_METHOD(php_wxVariant, GetLong)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariant::GetLong\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxVariant::GetName()
+   Returns a constant reference to the variant name. */
 PHP_METHOD(php_wxVariant, GetName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24523,6 +25349,10 @@ PHP_METHOD(php_wxVariant, GetName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariant::GetName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxVariant::GetType()
+   Returns the value type as a string. */
 PHP_METHOD(php_wxVariant, GetType)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24621,6 +25451,10 @@ PHP_METHOD(php_wxVariant, GetType)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariant::GetType\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto void wxVariant::GetVoidPtr()
+   Gets the void pointer value. */
 PHP_METHOD(php_wxVariant, GetVoidPtr)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24713,6 +25547,10 @@ PHP_METHOD(php_wxVariant, GetVoidPtr)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariant::GetVoidPtr\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto wxObject wxVariant::GetWxObjectPtr()
+   Gets the wxObject pointer value. */
 PHP_METHOD(php_wxVariant, GetWxObjectPtr)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24828,6 +25666,10 @@ PHP_METHOD(php_wxVariant, GetWxObjectPtr)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariant::GetWxObjectPtr\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxVariant::Insert(wxVariant value)
+   Inserts a value at the front of the list. */
 PHP_METHOD(php_wxVariant, Insert)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -24943,6 +25785,10 @@ PHP_METHOD(php_wxVariant, Insert)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariant::Insert\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxVariant::IsNull()
+   Returns true if there is no data associated with this variant, false if there is data. */
 PHP_METHOD(php_wxVariant, IsNull)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25035,6 +25881,10 @@ PHP_METHOD(php_wxVariant, IsNull)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariant::IsNull\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxVariant::IsValueKindOf(wxClassInfo type)
+   Returns true if the data is derived from the class described by type, false otherwise. */
 PHP_METHOD(php_wxVariant, IsValueKindOf)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25150,6 +26000,10 @@ PHP_METHOD(php_wxVariant, IsValueKindOf)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariant::IsValueKindOf\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxVariant::MakeNull()
+   Makes the variant null by deleting the internal data. */
 PHP_METHOD(php_wxVariant, MakeNull)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25242,6 +26096,10 @@ PHP_METHOD(php_wxVariant, MakeNull)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariant::MakeNull\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxVariant::MakeString()
+   Makes a string representation of the variant value (for any type). */
 PHP_METHOD(php_wxVariant, MakeString)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25340,6 +26198,10 @@ PHP_METHOD(php_wxVariant, MakeString)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariant::MakeString\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxVariant::Member(wxVariant value)
+   Returns true if value matches an element in the list. */
 PHP_METHOD(php_wxVariant, Member)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25455,6 +26317,10 @@ PHP_METHOD(php_wxVariant, Member)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariant::Member\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxVariant::IsType(string type)
+   Returns true if type matches the type of the variant, false otherwise. */
 PHP_METHOD(php_wxVariant, IsType)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25553,6 +26419,10 @@ PHP_METHOD(php_wxVariant, IsType)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariant::IsType\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxVariant::GetString()
+   Gets the string value. */
 PHP_METHOD(php_wxVariant, GetString)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25651,6 +26521,10 @@ PHP_METHOD(php_wxVariant, GetString)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariant::GetString\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxVariant::GetCount()
+   Returns the number of elements in the list. */
 PHP_METHOD(php_wxVariant, GetCount)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25743,6 +26617,10 @@ PHP_METHOD(php_wxVariant, GetCount)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariant::GetCount\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxVariant::NullList()
+   Makes an empty list. */
 PHP_METHOD(php_wxVariant, NullList)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25835,6 +26713,10 @@ PHP_METHOD(php_wxVariant, NullList)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariant::NullList\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxVariant::SetData(wxVariantData &data)
+   Sets the internal variant data, deleting the existing data if there is any. */
 PHP_METHOD(php_wxVariant, SetData)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -25950,6 +26832,10 @@ PHP_METHOD(php_wxVariant, SetData)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariant::SetData\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxVariant::wxVariant(string value, string name)
+   Constructs a variant from a string. */
 PHP_METHOD(php_wxVariant, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26495,6 +27381,8 @@ PHP_METHOD(php_wxVariant, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxVariantData_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26503,6 +27391,8 @@ void php_wxVariantData_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 	#endif
 	
 }
+/* {{{ proto wxVariantData wxVariantData::Clone()
+   This function can be overridden to clone the data. */
 PHP_METHOD(php_wxVariantData, Clone)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26618,6 +27508,10 @@ PHP_METHOD(php_wxVariantData, Clone)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariantData::Clone\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxVariantData::DecRef()
+   Decreases reference count. */
 PHP_METHOD(php_wxVariantData, DecRef)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26710,6 +27604,10 @@ PHP_METHOD(php_wxVariantData, DecRef)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariantData::DecRef\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxVariantData::Eq(wxVariantData &data)
+   Returns true if this object is equal to data. */
 bool wxVariantData_php::Eq(wxVariantData& data)const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26759,6 +27657,10 @@ bool wxVariantData_php::Eq(wxVariantData& data)const
 		return Z_BVAL_P(return_value);
 	
 }
+/* }}} */
+
+/* {{{ proto string wxVariantData::GetType()
+   Returns the string type of the data. */
 wxString wxVariantData_php::GetType()const
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26801,6 +27703,10 @@ wxString wxVariantData_php::GetType()const
 		return wxString(Z_STRVAL_P(return_value), wxConvUTF8);
 	
 }
+/* }}} */
+
+/* {{{ proto wxClassInfo wxVariantData::GetValueClassInfo()
+   If the data is a wxObject returns a pointer to the objects wxClassInfo structure, if the data isn't a wxObject the method returns NULL. */
 PHP_METHOD(php_wxVariantData, GetValueClassInfo)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -26916,6 +27822,10 @@ PHP_METHOD(php_wxVariantData, GetValueClassInfo)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariantData::GetValueClassInfo\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxVariantData::IncRef()
+   Increases reference count. */
 PHP_METHOD(php_wxVariantData, IncRef)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27008,6 +27918,10 @@ PHP_METHOD(php_wxVariantData, IncRef)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariantData::IncRef\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxVariantData::Read(string &string)
+   Reads the data from string. */
 PHP_METHOD(php_wxVariantData, Read)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27117,6 +28031,10 @@ PHP_METHOD(php_wxVariantData, Read)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariantData::Read\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxVariantData::Write(string &string)
+   Writes the data to string. */
 PHP_METHOD(php_wxVariantData, Write)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27226,6 +28144,10 @@ PHP_METHOD(php_wxVariantData, Write)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVariantData::Write\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxVariantData::wxVariantData()
+   Default constructor. */
 PHP_METHOD(php_wxVariantData, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27306,6 +28228,8 @@ PHP_METHOD(php_wxVariantData, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
 void php_wxVersionInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC) 
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27346,6 +28270,8 @@ void php_wxVersionInfo_destruction_handler(zend_rsrc_list_entry *rsrc TSRMLS_DC)
 		#endif
 	}
 }
+/* {{{ proto string wxVersionInfo::ToString()
+   Get the string representation of this version object. */
 PHP_METHOD(php_wxVersionInfo, ToString)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27444,6 +28370,10 @@ PHP_METHOD(php_wxVersionInfo, ToString)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVersionInfo::ToString\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto bool wxVersionInfo::HasCopyright()
+   Returns true if a copyright string has been specified. */
 PHP_METHOD(php_wxVersionInfo, HasCopyright)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27536,6 +28466,10 @@ PHP_METHOD(php_wxVersionInfo, HasCopyright)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVersionInfo::HasCopyright\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxVersionInfo::GetVersionString()
+   Get the string representation. */
 PHP_METHOD(php_wxVersionInfo, GetVersionString)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27634,6 +28568,10 @@ PHP_METHOD(php_wxVersionInfo, GetVersionString)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVersionInfo::GetVersionString\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxVersionInfo::GetName()
+   Get the name of the object (library). */
 PHP_METHOD(php_wxVersionInfo, GetName)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27732,6 +28670,10 @@ PHP_METHOD(php_wxVersionInfo, GetName)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVersionInfo::GetName\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxVersionInfo::GetMinor()
+   Get the minor version number. */
 PHP_METHOD(php_wxVersionInfo, GetMinor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27824,6 +28766,10 @@ PHP_METHOD(php_wxVersionInfo, GetMinor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVersionInfo::GetMinor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxVersionInfo::GetMicro()
+   Get the micro version, or release number. */
 PHP_METHOD(php_wxVersionInfo, GetMicro)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -27916,6 +28862,10 @@ PHP_METHOD(php_wxVersionInfo, GetMicro)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVersionInfo::GetMicro\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto int wxVersionInfo::GetMajor()
+   Get the major version number. */
 PHP_METHOD(php_wxVersionInfo, GetMajor)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28008,6 +28958,10 @@ PHP_METHOD(php_wxVersionInfo, GetMajor)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVersionInfo::GetMajor\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxVersionInfo::GetDescription()
+   Get the description string. */
 PHP_METHOD(php_wxVersionInfo, GetDescription)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28106,6 +29060,10 @@ PHP_METHOD(php_wxVersionInfo, GetDescription)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVersionInfo::GetDescription\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto string wxVersionInfo::GetCopyright()
+   Get the copyright string. */
 PHP_METHOD(php_wxVersionInfo, GetCopyright)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28204,6 +29162,10 @@ PHP_METHOD(php_wxVersionInfo, GetCopyright)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVersionInfo::GetCopyright\n");
 	}
 }
+/* }}} */
+
+/* {{{ proto  wxVersionInfo::wxVersionInfo(string name, int major, int minor, int micro, string description, string copyright)
+   Constructor. */
 PHP_METHOD(php_wxVersionInfo, __construct)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28357,6 +29319,10 @@ PHP_METHOD(php_wxVersionInfo, __construct)
 		php_printf("===========================================\n\n");
 	#endif
 }
+/* }}} */
+
+/* {{{ proto bool wxVersionInfo::HasDescription()
+   Return true if a description string has been specified. */
 PHP_METHOD(php_wxVersionInfo, HasDescription)
 {
 	#ifdef USE_WXPHP_DEBUG
@@ -28449,3 +29415,5 @@ PHP_METHOD(php_wxVersionInfo, HasDescription)
 		zend_error(E_ERROR, "Wrong type or count of parameters passed to: wxVersionInfo::HasDescription\n");
 	}
 }
+/* }}} */
+
