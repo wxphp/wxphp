@@ -602,14 +602,18 @@ foreach($defGlobals as $variable_name => $variable_type)
 			{
 				case "pointer":
 				case "const_pointer":
-					$object_constants .= tabs(2) . "wxPHP_REGISTER_RESOURCE_CONSTANT(\"$variable_name\", (void*) {$variable_name}, php_{$plain_type}_entry, le_{$plain_type}, CONST_CS | CONST_PERSISTENT);\n";
+					$object_constants .= tabs(2) . "void* {$variable_name}_copy = malloc(sizeof({$plain_type}_php));\n";
+					$object_constants .= tabs(2) . "memcpy({$variable_name}_copy, $variable_name, sizeof({$plain_type}));\n";
+					$object_constants .= tabs(2) . "wxPHP_REGISTER_RESOURCE_CONSTANT(\"$variable_name\", (void*) {$variable_name}_copy, php_{$plain_type}_entry, le_{$plain_type}, CONST_CS | CONST_PERSISTENT);\n\n";
 					break;
 					
 				case "reference":
 				case "const_reference":
 				case "none":
 				case "const_none":
-					$object_constants .= tabs(2) . "wxPHP_REGISTER_RESOURCE_CONSTANT(\"$variable_name\", (void*) &{$variable_name}, php_{$plain_type}_entry, le_{$plain_type}, CONST_CS | CONST_PERSISTENT);\n";
+					$object_constants .= tabs(2) . "void* {$variable_name}_copy = malloc(sizeof({$plain_type}_php));\n";
+					$object_constants .= tabs(2) . "memcpy({$variable_name}_copy, &{$variable_name}, sizeof({$plain_type}));\n";
+					$object_constants .= tabs(2) . "wxPHP_REGISTER_RESOURCE_CONSTANT(\"$variable_name\", (void*) {$variable_name}_copy, php_{$plain_type}_entry, le_{$plain_type}, CONST_CS | CONST_PERSISTENT);\n\n";
 					break;
 			}
 			break;
