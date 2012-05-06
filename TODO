@@ -16,6 +16,10 @@ Short term TODO
   wxLogWindow_php::OnFrameClose(wxFrame* frame) since they are possible 
   memory leaks.
 
+* (FIXED) Strange behaviour on wxOSX where the application receives mouse
+  events correctly but not keyboard ones. I suspect of the way
+  we are initliazing the wxPHP library to run applications.
+
 * (DONE) Update config.m4 and configd.w32 to use new wxWidgets 2.9.x
 
 * (DONE) The PHP_METHODs should have some "proto" comment. This helps 
@@ -29,10 +33,6 @@ Short term TODO
 
 * Implement compare_objects handler for wxWidget classes that implement
   operator== etc...
-  
-* Fix strange behaviour on wxOSX where the application receives mouse
-  events correctly but not keyboard ones. I suspect of the way
-  we are initliazing the wxPHP library to run applications.
   
 * Replace call_user_function_ex() with zend_call_method[_with_[1-3]_param[s]
   family of functions from zend_interfaces.h on virtual methods 

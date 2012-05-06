@@ -90,6 +90,6 @@ wxInitAllImageHandlers();
 $gridApp = new myApp();
 
 wxApp::SetInstance($gridApp);
-wxEntry();
 
+wxEntry();
 ?>
