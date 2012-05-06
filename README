@@ -5,6 +5,7 @@ Table of Contents
  * Introduction
  * Building on Windows
  * Building and Installing on Linux/Unix Environments
+ * Building on MacOSX Lion
  * Running the examples
  * Third Party Tools
  * Development
@@ -116,7 +117,7 @@ Building on Windows
 
 	Get wxPHP sources:
 		
-		svn co http://wxphp.svn.sourceforge.net/svnroot/wxphp/trunk wxphp
+		git clone git@github.com:wxphp/wxphp.git wxphp
 	
 	Put the source code in the ext folder of your php build folder:
 	
@@ -132,7 +133,7 @@ Building on Windows
 		bin\phpsdk_setvars.bat
 		cd c:\php-sdk\php53dev\vc9\x86\php5.3.x
 		buildconf
-		configure --disable-all --disable-zts --enable-cli --with-wxwidgets=C:\wxWidgets_installation_path,shared
+		configure --disable-all --disable-zts --enable-cli --with-wxwidgets=C:\wxWidgets_installation_path
 		nmake
 		
 	Copy the resulting php_wxwidgets.dll file on the Release directory 
@@ -143,7 +144,7 @@ Building on Windows
 	add the following lines to the end of your php.ini:
 	
 		[PHP_WXWIDGETS]
-		extension=php_wxWidgets.dll
+		extension=php_wxwidgets.dll
 
 	
 	
@@ -158,7 +159,7 @@ Building and Installing on Linux/Unix Environments
 		sudo apt-get install build-essential
 
 . Compile wxWidgets library and development packages, currently we have
-  tested with latest svn revision 71250 distributed on wxwidgets.org
+  tested with latest 2.9.4 svn revisions.
 
 	Download wxWidgets tar file and uncompress it on your
 	directory of choice or svn checkout with:
@@ -177,7 +178,7 @@ Building and Installing on Linux/Unix Environments
 	
 . Configure and build the extension
 	
-	cd wxPHP
+	cd wxphp
 	phpize
 	./configure --with-wxwidgets=/opt/wxWidgets-svn
 	make
@@ -190,10 +191,14 @@ Building and Installing on Linux/Unix Environments
 	
 		strip modules/wxwidgets.so
 		
-	Copy the resulting wxwidgets.so file on the modules directory to the php 
-	extensions directory (you can make this file smaller by running strip
-	on it). PHP extensions directory is usually found on /usr/lib/php5/
-	On ubuntu 10.04 - 11.10 this directory is /usr/lib/php5/20090626/
+	Then you can copy the resulting wxwidgets.so file on the modules 
+    directory to the php extensions directory. PHP extensions directory 
+    is usually found on /usr/lib/php5/ On ubuntu 10.04 - 11.10 this 
+    directory is /usr/lib/php5/20090626/
+
+    To automate the installation process just use:
+
+        sudo make install
 	
 	If you want the wxWidget extension to be automatically loaded, add the
 	following lines to your php.ini:
@@ -207,6 +212,58 @@ Building and Installing on Linux/Unix Environments
 		
 		modify enable_dl = off to enable_dl = on
 	
+
+
+
+Building on MacOSX Lion
+========================================================================
+
+The process of building on mac is the same as on linux the only
+differences are the way we configure wxWidgets build, as the applications
+needed. We tested with the php version available on mac ports.
+
+. Requirements
+    
+    Xcode (for working compiling environment) - https://developer.apple.com/technologies/tools/
+    Mac Ports (for PHP development environment and binaries) - http://www.macports.org/
+
+. Install PHP from Mac Ports
+
+    This process could take a long time since mac ports application
+    downloads php sources and dependency sources and compiles.
+
+        sudo port install php5
+
+. Get wxWidgets sources and build
+
+    svn checkout http://svn.wxwidgets.org/svn/wx/wxWidgets/trunk wxWidgets
+
+    cd wxWidgets
+
+    mkdir mybuild
+
+    cd mybuild
+
+    ../configure -with-osx_cocoa --disable-compat24 --with-macosx-version-min=10.6 --with-macosx-sdk=/Developer/SDKs/MacOSX10.6.sdk --prefix=/opt/wxWidgets-svn CFLAGS="-arch x86_64" CXXFLAGS="-arch x86_64" CPPFLAGS="-arch x86_64" LDFLAGS="-arch x86_64" OBJCFLAGS="-arch x86_64" OBJCXXFLAGS="-arch x86_64"
+
+        Note: if non 64 bit architecture just remove the x86_64 flags
+
+    make
+
+    sudo make install
+
+. Compile wxPHP as usual
+
+    cd wxphp
+
+    phpize
+
+    ./configure --with-wxwidgets=/opt/wxWidgets-svn
+
+    make
+
+    sudo make install
+
 
 
 
