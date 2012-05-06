@@ -14,6 +14,9 @@ Short term TODO
 
 * (DONE) Update config.m4 and configd.w32 to use new wxWidgets 2.9.x
 
+* (DONE) The PHP_METHODs should have some "proto" comment. This helps 
+  with some documentation tools.
+
 * (PARTIALLY) Compilation testing and troubleshooting on windows
 
 * (PARTIALLY) Compilation testing and troubleshooting on mac
@@ -35,9 +38,6 @@ Short term TODO
   
 * Use zend_parse_parameters_none() to produce a nicer error on 
   methods/functions that dont accept parameters.
-  
-* The PHP_METHODs should have some "proto" comment. This helps with some
-  documentation tools.
   
 * Don't use zend_error outside the engine, but use
   php_error_docref which gives a nicer error message.
